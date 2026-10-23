@@ -207,10 +207,21 @@ Como no hay intercambios entre partidas, se han cambiado todas:
 - Para no destriparse nada: o cada uno compila la suya, o uno compila las dos sin mirar los archivos generados.
 - Alternativa descartada por ahora: randomizer dentro del juego, al empezar partida (como Heart & Soul). Es más trabajo.
 
+### Parámetros de equilibrio (decididos por Miguel, 23/10/2026)
+
+Están en **`tools/dualocke/randomizer_config.json`**, que es el archivo que debe leer la herramienta de Jorge. Si necesita otro formato, se cambia hablándolo. Lo nuevo respecto al preset de Platino:
+
+- **Legendarios** = legendarios y singulares (`isLegendary` / `isMythical` de la especie base). Ultraentes y paradójicos cuentan como Pokémon normales. Los legendarios solo pueden salir como estáticos y en los jefes de la Liga.
+- **Iniciales:** forma base de una línea de 3 fases, sin legendarios, y los tres forman un **triángulo de tipos**: A gana a B, B gana a C y C gana a A. Por ejemplo, Fuego/Planta/Agua o Roca/Volador/Lucha. El rival lleva el que gana al del jugador.
+- **Salvajes según el nivel:** la especie es libre, pero se ajusta a la fase que le toca por el nivel de la zona, con las mismas reglas que los entrenadores (por nivel a su nivel normal; piedra, amistad… a 30 y 40). Se evita repetir especies entre zonas mientras queden.
+- **Jefes e importantes:** el equipo es **totalmente aleatorio**, pero **el as es de su tipo o temática** (Petra Roca, Magno Fuego/Tierra, Aquiles Agua/Siniestro, Blasco Psíquico/Hada…). Desde el aro, ese as es una **especie con mega de su tipo** y lleva su megapiedra. Hay megas de sobra para cada tipo: hasta Roca tiene 4 sin contar legendarios.
+- **Rival:** su as es su inicial. Si la línea de su inicial no tiene mega, desde el aro lleva además, como as, una mega del mismo tipo.
+- **Respetar lo que ya está hecho a mano:** niveles, tamaño de los equipos y la regla de evolucionar según el nivel.
+
 ### Ajustes a replicar (los del preset de Platino, adaptados)
 
 **Pokémon**
-- Iniciales completamente aleatorios.
+- Iniciales aleatorios (forma base de 3 fases y en triángulo de tipos, ver arriba).
 - Habilidades aleatorias, permitiendo Superguarda.
 - Pokémon estáticos completamente aleatorios.
 - Estadísticas base de Gen 9 (ya vienen así en el motor) sin aleatorizar sus valores.
@@ -220,7 +231,7 @@ Como no hay intercambios entre partidas, se han cambiado todas:
 - Los equipos de los entrenadores evolucionan según el nivel y pueden usar formas alternativas.
 - +1 Pokémon a los entrenadores importantes y +2 a los jefes.
 - Los Pokémon de entrenadores importantes y jefes pueden llevar objetos aleatorios, priorizando objetos coherentes.
-- **Nuevo:** desde el aro, el as de cada jefe debe ser una especie con mega y llevar su megapiedra.
+- **Nuevo:** el as de cada jefe es de su tipo y, desde el aro, una especie con mega de ese tipo con su megapiedra (ver arriba).
 
 **Salvajes**
 - Aleatorios por ubicación: cada especie de una zona se sustituye por otra aleatoria (mapeo 1 a 1 por zona).
@@ -293,6 +304,7 @@ Hubo una traducción antigua de la expansion al castellano (fork de Xhyzi, rama 
 - Caramelos Raros limitados por el cap.
 - Evoluciones por intercambio convertidas (sección 6).
 - Paso 1 del orden de trabajo (detalles en la sección 12).
+- Equilibrio (Miguel): reescalado de niveles por tramos, equipos de los jefes con megas, evoluciones de los entrenadores normales y parámetros del randomizer (secciones 5, 6 y 7).
 - Vidas y caja de muertos (Jorge). Cómo funciona:
   - Se empieza con 20 vidas (`VAR_DUALOCKE_LIVES`). Cada Pokémon que acaba un combate debilitado muere: va a la última caja del PC ("DEAD", la 14) y se resta una vida.
   - Con 0 vidas se sigue jugando; la siguiente muerte pierde el locke (`FLAG_DUALOCKE_LOCKE_LOST`). Perder un combate también lo pierde, sin mover a nadie (el equipo no puede quedarse vacío). El juego no se bloquea: se marca y se ve en el menú.
@@ -310,10 +322,11 @@ Hubo una traducción antigua de la expansion al castellano (fork de Xhyzi, rama 
 ### Orden de trabajo propuesto
 
 1. ~~Lo fácil: mote obligatorio, quitar curativos y Objetos X de las tiendas, Caramelos Raros a 1 ₽, bloquear Objetos X en combate, correr sin Deportivas, Pokédex Nacional desde el inicio, MTs reutilizables, MOs olvidables.~~ **Hecho.**
-2. Combate con Máximo y el aro. Segundo dependiente en las tiendas.
-3. Reglas del locke: vidas + caja de muertos, primera captura por ruta con sus excepciones, límite de una compra por objeto.
-4. Randomizer con semilla + reescalado de niveles.
-5. Traducción.
+2. Combate con Máximo y el aro. Segundo dependiente y contenido de las tiendas.
+3. Reglas del locke: ~~vidas + caja de muertos~~ (hecho), primera captura por zona con sus excepciones (reglas cerradas, falta implementarlas), límite de una compra por objeto, aviso al morir.
+4. Randomizer con semilla (~~reescalado de niveles~~, ~~equipos de jefes~~ y ~~parámetros~~ hechos).
+5. Revanchas y postgame (niveles).
+6. Traducción.
 
 Quién hace cada cosa y cómo se sube: sección 13.
 
@@ -420,7 +433,7 @@ Para editar mapas y NPCs de forma visual existe **Porymap**; para scripts y diá
 
 ### Reparto
 
-Decidido por Miguel el 23/10/2026 (pendiente de que Jorge lo confirme): **Miguel se encarga del equilibrio** (dificultad, combates, niveles, equipos) y **Jorge, de las funcionalidades** (sistemas nuevos en el juego y herramientas).
+Decidido el 23/10/2026 y en marcha: **Miguel se encarga del equilibrio** (dificultad, combates, niveles, equipos) y **Jorge, de las funcionalidades** (sistemas nuevos en el juego y herramientas).
 
 | Tarea | Quién | Zona principal | Choca con |
 | --- | --- | --- | --- |
@@ -429,10 +442,10 @@ Decidido por Miguel el 23/10/2026 (pendiente de que Jorge lo confirme): **Miguel
 | ~~Reescalado de niveles de entrenadores y salvajes según la curva de la sección 5~~ (hecho, salvo revanchas y postgame) | Miguel | `src/data/trainers.party`, `src/data/wild_encounters.json` | Randomizer, combate con Máximo |
 | ~~Equipos de jefes: +1/+2 Pokémon, objetos y qué mega lleva cada jefe~~ (hecho) | Miguel | `src/data/trainers.party` | Randomizer |
 | Equipo de Máximo en la Ruta 120 | Miguel | `src/data/trainers.party` | Combate con Máximo |
-| Parámetros del randomizer (qué se baraja, preferencias de movimientos, objetos de los jefes…) | Miguel | archivo de configuración del randomizer | Randomizer |
+| ~~Parámetros del randomizer~~ (hecho: `tools/dualocke/randomizer_config.json`) | Miguel | archivo de configuración del randomizer | Randomizer |
 | Contenido de las tiendas: precios, objetos del segundo dependiente, qué megapiedras y cuándo | Miguel | listas de las tiendas | Segundo dependiente |
 | **Funcionalidades** | | | |
-| Vidas + caja de muertos | Jorge (pendiente de empezar) | combate (desmayos), PC (`src/pokemon_storage_system.c`), HUD | — |
+| ~~Vidas + caja de muertos~~ (hecho, PR #4; falta el aviso al morir) | Jorge | combate (desmayos), PC (`src/pokemon_storage_system.c`), HUD | — |
 | Primera captura por ruta (+ dupes, sin legendarios, shiny libre) | Jorge | `src/item_use.c` (Balls), `src/battle_script_commands.c`, flags por zona | — |
 | Una compra por objeto | Jorge | `src/shop.c` (compra) | — |
 | Evento del combate con Máximo y entrega del Aro Mega | Jorge (pendiente de empezar) | `data/maps/Route120/` | Equipo de Máximo |
