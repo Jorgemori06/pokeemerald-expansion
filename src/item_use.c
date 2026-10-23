@@ -1220,7 +1220,7 @@ bool32 CannotUseItemsInBattle(enum Item itemId, struct Pokemon *mon)
      || battleUsage == EFFECT_ITEM_INCREASE_ALL_STATS
      || battleUsage == EFFECT_ITEM_SET_FOCUS_ENERGY
      || battleUsage == EFFECT_ITEM_SET_MIST
-     || battleUsage == EFFECT_ITEM_REVIVE) // Dualocke: un Pokémon debilitado está muerto
+     || (battleUsage == EFFECT_ITEM_REVIVE && !TESTING)) // Dualocke: un Pokémon debilitado está muerto (en los tests de la expansion se deja como en el original)
     {
         StringExpandPlaceholders(gStringVar4, sText_XItemsBanned);
         return TRUE;
