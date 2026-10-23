@@ -164,6 +164,7 @@ Regla general: **el as de cada jefe va exactamente al nivel del cap**, el resto 
 - Las megas están activadas en el motor, incluidas las de Z-A (`P_MEGA_EVOLUTIONS`, `P_GEN_9_MEGA_EVOLUTIONS`).
 - Para megaevolucionar, el jugador necesita el objeto **Aro Mega** (`ITEM_MEGA_RING`) en la mochila (lo comprueba `src/battle_util.c`).
 - **Cómo se consigue el aro (decidido el 23/10/2026):** combate con **Máximo en la Ruta 120**, justo antes del gym 6 (Alana). Al ganar, te da el aro. Encaja con la historia (en ROZA Máximo está metido en lo de las megas) y llega en un punto equilibrado: equipo ya formado, cap 62, toda la segunda mitad del juego para usarlas.
+- **Equipo de Máximo (decidido por Miguel, 23/10/2026):** entrenador `TRAINER_STEVEN_ROUTE_120`, todo a **nivel 62** (el cap del tramo). Lleva Aggron, Aegislash, Excadrill, Mawile, Empoleon y, como as, **Metagross con Metagrossita**. El equipo es **fijo**: el randomizer no lo toca. Ya existe en `src/data/trainers.party`; Jorge solo tiene que montar el evento en `data/maps/Route120/` con `trainerbattle_single TRAINER_STEVEN_ROUTE_120, …` y dar el Aro Mega al ganar.
 - **Desde que el jugador tiene el aro, todos los jefes llevan un Pokémon con mega** (y la usan). Lista de "jefes" (decidida el 23/10/2026): líderes de gimnasio, Alto Mando, Plubio, rival (Bruno/Aura), Blasco y los líderes Magma/Aqua (Magno, Aquiles).
 - **Equipos de los jefes (hecho, Miguel, 23/10/2026)** con `tools/dualocke/equipos_jefes.py` (se lanza después de `reescalar_niveles.py`):
   - **+2 Pokémon** a líderes, Alto Mando y Plubio; **+1** al rival, Blasco, Magno, Aquiles y los admins (Tatiano, Silvina, Matías). Máximo 6.
@@ -478,7 +479,7 @@ Decidido el 23/10/2026 y en marcha: **Miguel se encarga del equilibrio** (dificu
 | **Equilibrio** | | | |
 | ~~Reescalado de niveles de entrenadores y salvajes según la curva de la sección 5~~ (hecho, salvo revanchas y postgame) | Miguel | `src/data/trainers.party`, `src/data/wild_encounters.json` | Randomizer, combate con Máximo |
 | ~~Equipos de jefes: +1/+2 Pokémon, objetos y qué mega lleva cada jefe~~ (hecho) | Miguel | `src/data/trainers.party` | Randomizer |
-| Equipo de Máximo en la Ruta 120 | Miguel | `src/data/trainers.party` | Combate con Máximo |
+| ~~Equipo de Máximo en la Ruta 120~~ (hecho: `TRAINER_STEVEN_ROUTE_120`) | Miguel | `src/data/trainers.party` | Combate con Máximo |
 | ~~Parámetros del randomizer~~ (hecho: `tools/dualocke/randomizer_config.json`) | Miguel | archivo de configuración del randomizer | Randomizer |
 | Contenido de las tiendas: precios, objetos del segundo dependiente, qué megapiedras y cuándo | Miguel | listas de las tiendas | Segundo dependiente |
 | **Funcionalidades** | | | |
