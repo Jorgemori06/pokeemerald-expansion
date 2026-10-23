@@ -147,8 +147,8 @@ Regla general: **el as de cada jefe va exactamente al nivel del cap**, el resto 
 
 - Las megas están activadas en el motor, incluidas las de Z-A (`P_MEGA_EVOLUTIONS`, `P_GEN_9_MEGA_EVOLUTIONS`).
 - Para megaevolucionar, el jugador necesita el objeto **Aro Mega** (`ITEM_MEGA_RING`) en la mochila (lo comprueba `src/battle_util.c`).
-- **Cómo se consigue el aro (propuesta de Claude, pendiente de confirmar):** combate con **Máximo en la Ruta 120**, justo antes del gym 6 (Alana). Al ganar, te da el aro. Encaja con la historia (en ROZA Máximo está metido en lo de las megas) y llega en un punto equilibrado: equipo ya formado, cap 62, toda la segunda mitad del juego para usarlas.
-- **Desde que el jugador tiene el aro, todos los jefes llevan un Pokémon con mega** (y la usan). Lista propuesta de "jefes", **pendiente de confirmar**: líderes de gimnasio, Alto Mando, Plubio, rival (Bruno/Aura), Blasco y los líderes Magma/Aqua (Magno, Aquiles).
+- **Cómo se consigue el aro (decidido el 23/10/2026):** combate con **Máximo en la Ruta 120**, justo antes del gym 6 (Alana). Al ganar, te da el aro. Encaja con la historia (en ROZA Máximo está metido en lo de las megas) y llega en un punto equilibrado: equipo ya formado, cap 62, toda la segunda mitad del juego para usarlas.
+- **Desde que el jugador tiene el aro, todos los jefes llevan un Pokémon con mega** (y la usan). Lista de "jefes" (decidida el 23/10/2026): líderes de gimnasio, Alto Mando, Plubio, rival (Bruno/Aura), Blasco y los líderes Magma/Aqua (Magno, Aquiles).
 - Las **megapiedras** se consiguen:
   - Aleatorias entre los objetos del suelo.
   - En el **segundo dependiente** de cada tienda (ver abajo).
@@ -274,8 +274,6 @@ Hubo una traducción antigua de la expansion al castellano (fork de Xhyzi, rama 
 
 ### Pendiente de decidir
 
-- Confirmar la **lista de jefes** que llevarán mega (sección 6).
-- Confirmar que el **aro lo da Máximo en la Ruta 120** antes del gym 6.
 - ¿Se consigue la **ROM de Esmeralda española** para los diálogos oficiales?
 
 ### Orden de trabajo propuesto
@@ -351,7 +349,7 @@ Para editar mapas y NPCs de forma visual existe **Porymap**; para scripts y diá
 
 ## 13. Cómo trabajamos los dos en paralelo
 
-**Propuesta de Miguel (23/10/2026), pendiente de que Jorge la confirme.**
+**Propuesta de Miguel (23/10/2026), confirmada por Jorge.** Miguel trabaja desde su fork `Mike360mine/pokeemerald-expansion` y abre los PR desde allí; Jorge, con ramas en este repo. Regla en `master`: PR obligatorio con una aprobación del otro.
 
 ### Preparación (una vez, la hace Jorge)
 
@@ -392,9 +390,9 @@ Se reparte por **zonas del código** para no pisarse:
 | Vidas + caja de muertos | Miguel | combate (desmayos), PC (`src/pokemon_storage_system.c`), HUD | — |
 | Primera captura por ruta (+ dupes, sin legendarios, shiny libre) | Miguel | `src/item_use.c` (Balls), `src/battle_script_commands.c`, flags por zona | — |
 | Una compra por objeto | Miguel | `src/shop.c` (compra) | Segundo dependiente |
-| Combate con Máximo en la Ruta 120 y el Aro Mega | Jorge | `data/maps/Route120/`, `src/data/trainers.party` | — |
+| Combate con Máximo en la Ruta 120 y el Aro Mega | Jorge (pendiente de empezar) | `data/maps/Route120/`, `src/data/trainers.party` | — |
 | Segundo dependiente en las tiendas (+ megapiedras desde el aro) | Jorge | `data/maps/*_Mart/`, `src/shop_criteria.c`, `src/shop.c` (listas) | Una compra por objeto |
-| Randomizer con semilla + reescalado de niveles | Jorge | script nuevo en `tools/` + `Makefile`; genera `wild_encounters.json`, `trainers.party`, etc. | Todo lo que edite esos datos a mano |
+| Randomizer con semilla + reescalado de niveles | Jorge (pendiente de empezar) | script nuevo en `tools/` + `Makefile`; genera `wild_encounters.json`, `trainers.party`, etc. | Todo lo que edite esos datos a mano |
 | Traducción | Por decidir, cuando lo demás esté estable | casi todo `data/` y `src/` | Todo |
 
 Notas del reparto:
