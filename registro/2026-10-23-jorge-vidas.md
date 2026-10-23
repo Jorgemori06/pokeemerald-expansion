@@ -37,3 +37,7 @@ Implementar la regla de las vidas del locke: 20 vidas más la "vida 0", y los Po
 - Aviso al morir ("X ha muerto. Te quedan N vidas."). Ahora solo se nota porque desaparece del equipo y por el menú.
 - Revival Blessing (el movimiento) sí puede revivir en combate; es muy raro y se deja por honor.
 - Los textos nuevos están en inglés como el resto del juego; se traducen con todo lo demás.
+
+## Arreglo posterior (PR aparte)
+
+El CI de la PR #4 falló en `test`: el test de la expansion "Revive can only be used if the selected Pokémon has fainted" (`test/battle/item_effect/revive.c`) espera que Revivir se pueda usar en combate, justo lo que bloquea la regla. Se arregla como el level cap: el bloqueo de revivir no se aplica al compilar los tests (`!TESTING` en `src/item_use.c`). En el juego no cambia nada.
