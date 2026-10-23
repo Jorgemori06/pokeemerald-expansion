@@ -2,9 +2,11 @@
 #include "battle.h"
 #include "dualocke.h"
 #include "event_data.h"
+#include "global.fieldmap.h"
 #include "pokemon.h"
 #include "pokemon_storage_system.h"
 #include "test/test.h"
+#include "constants/region_map_sections.h"
 
 // Dualocke: tests del sistema de vidas y la caja de muertos.
 
@@ -123,4 +125,239 @@ TEST("Dualocke: los Pokémon nuevos no se envían a la caja de muertos")
     CreateMon(&mon, SPECIES_WYNAUT, 5, 0, OTID_STRUCT_PLAYER_ID);
     EXPECT_EQ(CopyMonToPC(&mon), MON_CANT_GIVE);
     EXPECT_EQ(GetBoxMonDataAt(DUALOCKE_DEAD_BOX, 0, MON_DATA_SPECIES), SPECIES_NONE);
+}
+
+// Dualocke: tests de la primera captura por zona.
+
+static void SetupCapture(void)
+{
+    u32 box, pos;
+
+    ZeroPlayerPartyMons();
+    for (box = 0; box < TOTAL_BOXES_COUNT; box++)
+    {
+        for (pos = 0; pos < IN_BOX_COUNT; pos++)
+            ZeroBoxMonAt(box, pos);
+    }
+    for (pos = VAR_DUALOCKE_ZONES_0; pos <= VAR_DUALOCKE_ZONES_6; pos++)
+        VarSet(pos, 0);
+    FlagSet(FLAG_ADVENTURE_STARTED);
+    gBattleTypeFlags = 0;
+}
+
+static void GiveMon(u32 partyIndex, enum Species species)
+{
+    CreateMon(&gParties[B_TRAINER_PLAYER][partyIndex], species, 20, 0, OTID_STRUCT_PLAYER_ID);
+    CalculateMonStats(&gParties[B_TRAINER_PLAYER][partyIndex]);
+    CalculatePlayerPartyCount();
+}
+
+static struct Pokemon *Wild(enum Species species, bool32 shiny)
+{
+    struct Pokemon *mon = &gParties[B_TRAINER_OPPONENT_A][0];
+
+    CreateMon(mon, species, 5, 0, OTID_STRUCT_PLAYER_ID);
+    SetMonData(mon, MON_DATA_IS_SHINY, &shiny);
+    return mon;
+}
+
+TEST("Dualocke: el primer salvaje válido de una zona se puede capturar y la gasta")
+{
+    SetupCapture();
+    GiveMon(0, SPECIES_TREECKO);
+
+    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_ZIGZAGOON, FALSE), MAPSEC_ROUTE_101), DUALOCKE_ENCOUNTER_FIRST);
+
+    Dualocke_UseZoneCapture(MAPSEC_ROUTE_101);
+    EXPECT(Dualocke_IsZoneCaptureUsed(MAPSEC_ROUTE_101));
+    EXPECT(!Dualocke_IsZoneCaptureUsed(MAPSEC_ROUTE_102));
+    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_WURMPLE, FALSE), MAPSEC_ROUTE_101), DUALOCKE_ENCOUNTER_ZONE_USED);
+    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_WURMPLE, FALSE), MAPSEC_ROUTE_102), DUALOCKE_ENCOUNTER_FIRST);
+}
+
+TEST("Dualocke: las zonas propias de Esmeralda también se guardan")
+{
+    SetupCapture();
+    Dualocke_UseZoneCapture(MAPSEC_ALTERING_CAVE);
+    Dualocke_UseZoneCapture(MAPSEC_TRAINER_HILL);
+    EXPECT(Dualocke_IsZoneCaptureUsed(MAPSEC_ALTERING_CAVE));
+    EXPECT(Dualocke_IsZoneCaptureUsed(MAPSEC_TRAINER_HILL));
+    EXPECT(!Dualocke_IsZoneCaptureUsed(MAPSEC_DESERT_UNDERPASS));
+    EXPECT(!Dualocke_IsZoneCaptureUsed(MAPSEC_ROUTE_134));
+}
+
+TEST("Dualocke: un salvaje de una línea que ya tienes no cuenta")
+{
+    SetupCapture();
+    GiveMon(0, SPECIES_PIKACHU);
+
+    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_PICHU, FALSE), MAPSEC_ROUTE_110), DUALOCKE_ENCOUNTER_DUPE);
+    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_RAICHU, FALSE), MAPSEC_ROUTE_110), DUALOCKE_ENCOUNTER_DUPE);
+    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_RAICHU_ALOLA, FALSE), MAPSEC_ROUTE_110), DUALOCKE_ENCOUNTER_DUPE);
+    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_PLUSLE, FALSE), MAPSEC_ROUTE_110), DUALOCKE_ENCOUNTER_FIRST);
+}
+
+TEST("Dualocke: con una rama elegida, las demás ramas de la línea sí cuentan")
+{
+    SetupCapture();
+    GiveMon(0, SPECIES_GARDEVOIR);
+    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_RALTS, FALSE), MAPSEC_ROUTE_102), DUALOCKE_ENCOUNTER_FIRST);
+    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_KIRLIA, FALSE), MAPSEC_ROUTE_102), DUALOCKE_ENCOUNTER_FIRST);
+    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_GALLADE, FALSE), MAPSEC_ROUTE_102), DUALOCKE_ENCOUNTER_FIRST);
+    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_GARDEVOIR, FALSE), MAPSEC_ROUTE_102), DUALOCKE_ENCOUNTER_DUPE);
+
+    // Con las dos ramas ocupadas, ya nada de la línea cuenta
+    GiveMon(1, SPECIES_GALLADE);
+    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_RALTS, FALSE), MAPSEC_ROUTE_102), DUALOCKE_ENCOUNTER_DUPE);
+
+    SetupCapture();
+    GiveMon(0, SPECIES_VAPOREON);
+    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_EEVEE, FALSE), MAPSEC_ROUTE_102), DUALOCKE_ENCOUNTER_FIRST);
+    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_SYLVEON, FALSE), MAPSEC_ROUTE_102), DUALOCKE_ENCOUNTER_FIRST);
+    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_VAPOREON, FALSE), MAPSEC_ROUTE_102), DUALOCKE_ENCOUNTER_DUPE);
+}
+
+TEST("Dualocke: uno sin rama elegida ocupa toda la línea")
+{
+    SetupCapture();
+    GiveMon(0, SPECIES_KIRLIA);
+    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_RALTS, FALSE), MAPSEC_ROUTE_102), DUALOCKE_ENCOUNTER_DUPE);
+    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_GALLADE, FALSE), MAPSEC_ROUTE_102), DUALOCKE_ENCOUNTER_DUPE);
+
+    SetupCapture();
+    GiveMon(0, SPECIES_VAPOREON);
+    GiveMon(1, SPECIES_EEVEE);
+    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_SYLVEON, FALSE), MAPSEC_ROUTE_102), DUALOCKE_ENCOUNTER_DUPE);
+
+    // Las líneas sin ramas, como siempre
+    SetupCapture();
+    GiveMon(0, SPECIES_ZIGZAGOON);
+    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_OBSTAGOON, FALSE), MAPSEC_ROUTE_101), DUALOCKE_ENCOUNTER_DUPE);
+}
+
+TEST("Dualocke: no se puede evolucionar a una rama que ya tienes viva")
+{
+    struct Pokemon *kirlia = &gParties[B_TRAINER_PLAYER][1];
+    u32 hp = 0;
+
+    SetupCapture();
+    GiveMon(0, SPECIES_GARDEVOIR);
+    CreateMaleMon(kirlia, SPECIES_KIRLIA, 40);
+    CalculateMonStats(kirlia);
+    CalculatePlayerPartyCount();
+
+    // A Gardevoir no; a Gallade (Piedra Alba) sí
+    EXPECT_EQ(GetEvolutionTargetSpecies(kirlia, EVO_MODE_NORMAL, ITEM_NONE, NULL, NULL, CHECK_EVO), SPECIES_NONE);
+    EXPECT_EQ(GetEvolutionTargetSpecies(kirlia, EVO_MODE_ITEM_CHECK, ITEM_DAWN_STONE, NULL, NULL, CHECK_EVO), SPECIES_GALLADE);
+
+    // Si el Gardevoir muere, la rama se libera
+    SetMonData(&gParties[B_TRAINER_PLAYER][0], MON_DATA_HP, &hp);
+    EXPECT_EQ(GetEvolutionTargetSpecies(kirlia, EVO_MODE_NORMAL, ITEM_NONE, NULL, NULL, CHECK_EVO), SPECIES_GARDEVOIR);
+}
+
+TEST("Dualocke: Eevee no evoluciona a la eeveelución que ya tienes")
+{
+    struct Pokemon *eevee = &gParties[B_TRAINER_PLAYER][1];
+
+    SetupCapture();
+    GiveMon(0, SPECIES_VAPOREON);
+    GiveMon(1, SPECIES_EEVEE);
+    EXPECT_EQ(GetEvolutionTargetSpecies(eevee, EVO_MODE_ITEM_CHECK, ITEM_WATER_STONE, NULL, NULL, CHECK_EVO), SPECIES_NONE);
+    EXPECT_EQ(GetEvolutionTargetSpecies(eevee, EVO_MODE_ITEM_CHECK, ITEM_FIRE_STONE, NULL, NULL, CHECK_EVO), SPECIES_FLAREON);
+}
+
+TEST("Dualocke: los de la caja de muertos no cuentan como línea que ya tienes")
+{
+    struct Pokemon mon;
+
+    SetupCapture();
+    GiveMon(0, SPECIES_TREECKO);
+    CreateMon(&mon, SPECIES_PIKACHU, 20, 0, OTID_STRUCT_PLAYER_ID);
+    SetBoxMonAt(DUALOCKE_DEAD_BOX, 0, &mon.box);
+    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_PIKACHU, FALSE), MAPSEC_ROUTE_110), DUALOCKE_ENCOUNTER_FIRST);
+
+    // En cualquier otra caja sí
+    SetBoxMonAt(0, 0, &mon.box);
+    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_PIKACHU, FALSE), MAPSEC_ROUTE_110), DUALOCKE_ENCOUNTER_DUPE);
+}
+
+TEST("Dualocke: los legendarios no cuentan")
+{
+    SetupCapture();
+    GiveMon(0, SPECIES_TREECKO);
+    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_LATIAS, FALSE), MAPSEC_ROUTE_101), DUALOCKE_ENCOUNTER_LEGENDARY);
+    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_JIRACHI, FALSE), MAPSEC_ROUTE_101), DUALOCKE_ENCOUNTER_LEGENDARY);
+    // Ultraentes y paradójicos son Pokémon normales
+    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_NIHILEGO, FALSE), MAPSEC_ROUTE_101), DUALOCKE_ENCOUNTER_FIRST);
+}
+
+TEST("Dualocke: los shiny se pueden capturar siempre y no gastan la zona")
+{
+    SetupCapture();
+    GiveMon(0, SPECIES_PIKACHU);
+    Dualocke_UseZoneCapture(MAPSEC_ROUTE_102);
+    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_PIKACHU, TRUE), MAPSEC_ROUTE_102), DUALOCKE_ENCOUNTER_SHINY);
+    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_LATIAS, TRUE), MAPSEC_ROUTE_101), DUALOCKE_ENCOUNTER_SHINY);
+
+    Dualocke_SetRandomEncounter();
+    Wild(SPECIES_ZIGZAGOON, TRUE);
+    gMapHeader.regionMapSectionId = MAPSEC_ROUTE_101;
+    Dualocke_OnBattleStart();
+    EXPECT(Dualocke_CanCatchCurrentEncounter());
+    EXPECT(!Dualocke_IsZoneCaptureUsed(MAPSEC_ROUTE_101));
+}
+
+TEST("Dualocke: antes de recibir las Poké Balls no cuenta nada")
+{
+    SetupCapture();
+    FlagClear(FLAG_ADVENTURE_STARTED);
+    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_ZIGZAGOON, FALSE), MAPSEC_ROUTE_101), DUALOCKE_ENCOUNTER_NO_RULE);
+}
+
+TEST("Dualocke: el combate aleatorio gasta la zona al empezar y bloquea los siguientes")
+{
+    SetupCapture();
+    GiveMon(0, SPECIES_TREECKO);
+    gMapHeader.regionMapSectionId = MAPSEC_ROUTE_101;
+
+    Dualocke_SetRandomEncounter();
+    Wild(SPECIES_ZIGZAGOON, FALSE);
+    Dualocke_OnBattleStart();
+    EXPECT_EQ(Dualocke_GetCurrentEncounter(), DUALOCKE_ENCOUNTER_FIRST);
+    EXPECT(Dualocke_CanCatchCurrentEncounter());
+    EXPECT(Dualocke_IsZoneCaptureUsed(MAPSEC_ROUTE_101));
+
+    Dualocke_SetRandomEncounter();
+    Wild(SPECIES_WURMPLE, FALSE);
+    Dualocke_OnBattleStart();
+    EXPECT_EQ(Dualocke_GetCurrentEncounter(), DUALOCKE_ENCOUNTER_ZONE_USED);
+    EXPECT(!Dualocke_CanCatchCurrentEncounter());
+}
+
+TEST("Dualocke: un repetido no gasta la zona")
+{
+    SetupCapture();
+    GiveMon(0, SPECIES_ZIGZAGOON);
+    gMapHeader.regionMapSectionId = MAPSEC_ROUTE_101;
+
+    Dualocke_SetRandomEncounter();
+    Wild(SPECIES_LINOONE, FALSE);
+    Dualocke_OnBattleStart();
+    EXPECT_EQ(Dualocke_GetCurrentEncounter(), DUALOCKE_ENCOUNTER_DUPE);
+    EXPECT(!Dualocke_CanCatchCurrentEncounter());
+    EXPECT(!Dualocke_IsZoneCaptureUsed(MAPSEC_ROUTE_101));
+}
+
+TEST("Dualocke: los combates de evento no gastan la zona y se pueden capturar")
+{
+    SetupCapture();
+    GiveMon(0, SPECIES_TREECKO);
+    gMapHeader.regionMapSectionId = MAPSEC_ROUTE_120;
+    Dualocke_UseZoneCapture(MAPSEC_ROUTE_120);
+
+    // Sin Dualocke_SetRandomEncounter: es un estático (el Kecleon, por ejemplo)
+    Wild(SPECIES_KECLEON, FALSE);
+    Dualocke_OnBattleStart();
+    EXPECT_EQ(Dualocke_GetCurrentEncounter(), DUALOCKE_ENCOUNTER_NO_RULE);
+    EXPECT(Dualocke_CanCatchCurrentEncounter());
 }
