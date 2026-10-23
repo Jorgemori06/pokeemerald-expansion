@@ -225,11 +225,12 @@ def main():
 
     with open(TRAINERS, encoding="utf-8", newline="") as f:
         texto = f.read()
-    actuales = leer_entrenadores(texto)
-    nuevos = {t: n for t, n in nuevos.items() if t in actuales and len(actuales[t]) == len(n)}
-
     salvajes = json.loads(git_show(WILD))
     resumen_salvajes = calcular_salvajes(salvajes, nuevos, tramo_de, mapas, bandas)
+
+    # Los equipos que han cambiado de tamaño (jefes) los reescribe equipos_jefes.py
+    actuales = leer_entrenadores(texto)
+    nuevos = {t: n for t, n in nuevos.items() if t in actuales and len(actuales[t]) == len(n)}
 
     print("Tramo  Cap  Normales   Jefes (equipo)                 Salvajes")
     for s in TRAMOS:
