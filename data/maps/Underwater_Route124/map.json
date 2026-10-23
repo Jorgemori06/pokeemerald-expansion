@@ -84,6 +84,14 @@
       "elevation": 3,
       "item": "ITEM_HEART_SCALE",
       "flag": "FLAG_HIDDEN_ITEM_UNDERWATER_124_HEART_SCALE_2"
+    },
+    {
+      "type": "hidden_item",
+      "x": 14,
+      "y": 35,
+      "elevation": 3,
+      "item": "ITEM_SHARPEDONITE",
+      "flag": "FLAG_ITEM_MEGA_SHARPEDONITE"
     }
   ]
 }

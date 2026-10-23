@@ -520,6 +520,22 @@
       "elevation": 0,
       "item": "ITEM_POKE_BALL",
       "flag": "FLAG_HIDDEN_ITEM_LILYCOVE_CITY_POKE_BALL"
+    },
+    {
+      "type": "hidden_item",
+      "x": 63,
+      "y": 37,
+      "elevation": 5,
+      "item": "ITEM_MALAMARITE",
+      "flag": "FLAG_ITEM_MEGA_MALAMARITE"
+    },
+    {
+      "type": "hidden_item",
+      "x": 63,
+      "y": 35,
+      "elevation": 5,
+      "item": "ITEM_ROOM_SERVICE",
+      "flag": "FLAG_ITEM_COMP_ROOM_SERVICE"
     }
   ]
 }

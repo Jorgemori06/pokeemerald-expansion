@@ -13,7 +13,9 @@ LavaridgeTown_HerbShop_EventScript_Clerk::
 
 	.align 2
 LavaridgeTown_HerbShop_Pokemart:
-	.2byte ITEM_RARE_CANDY
+	.2byte ITEM_WHITE_HERB
+	.2byte ITEM_MENTAL_HERB
+	.2byte ITEM_POWER_HERB
 	pokemartlistend
 
 LavaridgeTown_HerbShop_EventScript_ExpertM::

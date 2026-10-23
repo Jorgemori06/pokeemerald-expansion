@@ -13,11 +13,20 @@ MossdeepCity_Mart_EventScript_Clerk::
 
 	.align 2
 MossdeepCity_Mart_Pokemart:
+	.2byte ITEM_POKE_BALL
+	.2byte ITEM_GREAT_BALL
 	.2byte ITEM_ULTRA_BALL
+	.2byte ITEM_REPEL
+	.2byte ITEM_SUPER_REPEL
+	.2byte ITEM_MAX_REPEL
+	.2byte ITEM_ESCAPE_ROPE
+	.2byte ITEM_RARE_CANDY
 	.2byte ITEM_NET_BALL
 	.2byte ITEM_DIVE_BALL
-	.2byte ITEM_MAX_REPEL
-	.2byte ITEM_RARE_CANDY
+	.2byte ITEM_DAWN_STONE
+	.2byte ITEM_SHINY_STONE
+	.2byte ITEM_ICE_STONE
+	.2byte ITEM_PROTECTOR
 	pokemartlistend
 
 MossdeepCity_Mart_EventScript_Woman::

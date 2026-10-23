@@ -90,6 +90,13 @@ Estas son las reglas que usaban en Platino. La idea es mantenerlas lo más parec
   - No se pueden capturar repetidos de una misma línea evolutiva.
   - No se pueden capturar singulares/legendarios.
   - Los **shiny** se pueden capturar siempre.
+  - **Detalle decidido el 23/10/2026 (Jorge y Miguel) para implementarlo en el juego:**
+    - Cada "ruta" es **cada zona con nombre propio** (Ruta 104, Bosque Petalia, Cueva Granito…). Pescar o hacer surf en la misma zona no da otra captura.
+    - Si el primer Pokémon de una zona es de una **línea evolutiva que ya tienes** o es **legendario/singular**, **no cuenta**: se escapa y sigues buscando hasta que salga uno válido.
+    - "Ya tener una línea" significa tener un Pokémon **vivo** de esa línea (equipo o PC, sin contar la caja de muertos ni la de prohibidos). Si el que tenías muere, esa línea vuelve a estar disponible.
+    - Los Pokémon de **regalo, evento o fósil** (inicial, Beldum, fósiles, los que dan los NPCs…) **no gastan la captura de la zona**.
+    - Si un regalo/evento/fósil es **repetido o legendario**, va a una **caja de prohibidos** del PC. Los repetidos se quedan ahí **hasta que muere el de su línea que ya tenías**, y entonces se pueden usar. Los legendarios se quedan bloqueados.
+    - Los **shiny** se pueden capturar y usar siempre, aunque sean repetidos o legendarios, y **no gastan** la captura de la zona (confirmado por Jorge).
 - **Nick Clause:** todos los Pokémon llevan mote.
 - **Items Clause:**
   - No se pueden comprar objetos curativos ni Objetos X en las tiendas.
@@ -114,7 +121,7 @@ Estas son las reglas que usaban en Platino. La idea es mantenerlas lo más parec
 | No usar Objetos X en combate | Bloquearlos en combate | Poco | **Hecho** |
 | Una compra por objeto (salvo Balls, Repelentes, Bayas, Caramelos) | Limitar compras en tiendas | Medio | Pendiente |
 | 20 vidas + caja de muertos | Contador de vidas en el menú de pausa y caja bloqueada | Medio | **Hecho** (aviso al morir pendiente) |
-| Primera captura por ruta + dupes + sin legendarios + shiny libre | El juego bloquea lanzar Balls cuando no se puede capturar | Medio | Pendiente |
+| Primera captura por ruta + dupes + sin legendarios + shiny libre + caja de prohibidos | El juego bloquea lanzar Balls cuando no se puede capturar; los regalos repetidos/legendarios van a la caja de prohibidos | Medio | Pendiente (reglas cerradas, ver arriba) |
 | Victoria, combates en Showdown, capturas extra | Fuera del juego, por honor | — | — |
 | No farmear | Por honor | — | — |
 
@@ -165,9 +172,17 @@ Regla general: **el as de cada jefe va exactamente al nivel del cap**, el resto 
   - **Megas canónicas** desde el aro (el as, último del equipo, lleva su megapiedra): Alana Altaria, Vito y Leti Metagross, Galano Starmie, Sidney Absol, Fátima Banette, Nívea Glalie, Dracón Salamence, Plubio Gyarados, Blasco Gardevoir, Magno Camerupt, Aquiles Sharpedo y el rival su inicial (desde Ciudad Calagua).
   - **Objetos:** solo se añade la megapiedra; los que ya llevaban (Baya Zidra…) se quedan, y el resto lo pondrá el randomizer.
   - Los rivales y la IA megaevolucionan sin aro, con solo llevar la piedra.
-- Las **megapiedras** se consiguen:
-  - Aleatorias entre los objetos del suelo.
-  - En el **segundo dependiente** de cada tienda (ver abajo).
+- Las **megapiedras** (decidido por Miguel el 23/10/2026) **se encuentran explorando el mapa**: no se venden.
+  - Hay **81**, todas las de Pokémon no legendarios, cada una en un sitio que encaja con ella. Por ejemplo: Cameruptita en Jagged Pass, Garchompita en el desierto, Sharpedonita bajo el agua en la Ruta 124, Glalitita en Shoal Cave…
+  - Unas van en **bola de objeto** y otras **ocultas** (para el Buscaobjetos).
+  - Las coloca `tools/dualocke/colocar_objetos.py`, que tiene la tabla completa. Cada una tiene su flag `FLAG_ITEM_MEGA_...`, del **0x264 al 0x2B4** de `include/constants/flags.h`. El script busca solo una casilla transitable cerca de algo que ya se pueda alcanzar.
+  - Las de antes del aro se pueden recoger, pero no usar hasta tenerlo.
+  - **Para el randomizer:** estas ubicaciones son **fijas**. Al barajar los objetos del suelo hay que saltarse los que tienen flag `FLAG_ITEM_MEGA_...` o `FLAG_ITEM_COMP_...`.
+- **Objetos competitivos de generaciones nuevas** (decidido por Miguel el 23/10/2026): existían en el motor, pero no se podían conseguir. Ahora hay **55 repartidos por el mapa**, como las megapiedras: Mineral Evolutivo, Banda Focus, Casco Dentado, Botas Gruesas, Pañuelo Elegido, Chaleco Asalto, Gafas Elegidas, Vidasfera, rocas de clima, semillas de terreno, Cápsula y Parche Habilidad, 8 Mentas…
+  - Están ordenados por tramo: los más fuertes (Pañuelo Elegido, Chaleco Asalto, Gafas Elegidas, Vidasfera) salen a partir del tramo 6.
+  - Los coloca el mismo script. Sus flags son `FLAG_ITEM_COMP_...`, del **0x493 al 0x4C9**.
+  - La tabla está en el script y en `registro/2026-10-23-miguel-objetos-competitivos.md`.
+  - **Flags libres que quedan para Jorge:** 0x2B5-0x2BB, 0x4CA-0x4EF y el resto de `FLAG_UNUSED_...`.
 
 ### Tiendas
 
@@ -177,6 +192,33 @@ Cada tienda tendrá **dos dependientes**:
 2. **Secundario:** objetos **aleatorios** (distintos en cada partida/semilla), garantizando algún objeto evolutivo. **Desde que el jugador consiga el aro**, este dependiente vende además **2-3 megapiedras aleatorias**, en todas las ciudades, incluidas las ya visitadas.
 
 Regla de compra: una unidad de cada objeto por tienda, salvo Balls, Repelentes, Bayas y Caramelos Raros.
+
+**Contenido del dependiente principal (hecho, Miguel, 23/10/2026):**
+
+- **Básicos en todas las tiendas:** Poké Ball, Super Ball (desde 1 medalla), Ultra Ball (5), Repelente, Superrepelente (2), Máximo Repelente (5), Cuerda Huida y Caramelo Raro.
+- **Propios de cada ciudad:**
+
+| Tienda | Balls | Objetos evolutivos |
+| --- | --- | --- |
+| Pueblo Escaso, Ciudad Petalia | — | — |
+| Ciudad Férrica (Devon) | Turno, Acopio | Revestimiento Metálico, Mejora, Disco Extraño |
+| Ciudad Portual (puerto) | Buceo, Malla | Piedra Agua, Escama Bella, Diente Marino, Escama Marina |
+| Ciudad Malvalona (electricidad) | Veloz | Piedra Trueno, Electrizador |
+| Pueblo Verdegal (verde) | Nido | Piedra Hoja, Saquito Fragante, Dulce de Nata |
+| Pueblo Pardal (meteorito) | Ocaso | Piedra Lunar, Piedra Noche |
+| Pueblo Lavacalda (volcán) | Sana | Piedra Fuego, Magmatizador |
+| Herboristería de Lavacalda | — | Hierba Blanca, Hierba Mental, Hierba Única (objetos equipables) |
+| Ciudad Arborada (bosque) | Nido | Piedra Solar, Garra Afilada, Colmillo Agudo |
+| Grandes Almacenes Calagua (2.ª planta) | Lujo, Ocaso, Veloz | — |
+| Grandes Almacenes Calagua (3.ª planta) | — | **Todos** los objetos evolutivos |
+| Ciudad Algaria (espacio, Cueva Cardumen) | Malla, Buceo | Piedra Alba, Piedra Día, Piedra Hielo, Protector |
+| Ciudad Arrecípolis | Buceo, Lujo | Roca del Rey, Escama Dragón, Tela Terrible |
+| Liga, Cima Entrenador | — | — |
+| Frente Batalla | — | Vitaminas (como en el original) |
+
+- **Medallas necesarias** (en todas las tiendas a la vez): las piedras evolutivas desde la **2.ª**, y los objetos de las antiguas evoluciones por intercambio (y Garra/Colmillo) desde la **4.ª**. La tabla está en `src/shop_criteria.c` (`sDualockeShopBadges`); los objetos que no salen en ella se venden siempre.
+- Se han quitado las Cartas de las tiendas de ciudad, salvo en Calagua.
+- **Las megapiedras no se venden:** se encuentran explorando el mapa (ver más abajo). El segundo dependiente de Jorge sigue en pie para los objetos aleatorios.
 
 ### Evoluciones por intercambio (hecho)
 
@@ -201,10 +243,21 @@ Como no hay intercambios entre partidas, se han cambiado todas:
 - Para no destriparse nada: o cada uno compila la suya, o uno compila las dos sin mirar los archivos generados.
 - Alternativa descartada por ahora: randomizer dentro del juego, al empezar partida (como Heart & Soul). Es más trabajo.
 
+### Parámetros de equilibrio (decididos por Miguel, 23/10/2026)
+
+Están en **`tools/dualocke/randomizer_config.json`**, que es el archivo que debe leer la herramienta de Jorge. Si necesita otro formato, se cambia hablándolo. Lo nuevo respecto al preset de Platino:
+
+- **Legendarios** = legendarios y singulares (`isLegendary` / `isMythical` de la especie base). Ultraentes y paradójicos cuentan como Pokémon normales. Los legendarios solo pueden salir como estáticos y en los jefes de la Liga.
+- **Iniciales:** forma base de una línea de 3 fases, sin legendarios, y los tres forman un **triángulo de tipos**: A gana a B, B gana a C y C gana a A. Por ejemplo, Fuego/Planta/Agua o Roca/Volador/Lucha. El rival lleva el que gana al del jugador.
+- **Salvajes según el nivel:** la especie es libre, pero se ajusta a la fase que le toca por el nivel de la zona, con las mismas reglas que los entrenadores (por nivel a su nivel normal; piedra, amistad… a 30 y 40). Se evita repetir especies entre zonas mientras queden.
+- **Jefes e importantes:** el equipo es **totalmente aleatorio**, pero **el as es de su tipo o temática** (Petra Roca, Magno Fuego/Tierra, Aquiles Agua/Siniestro, Blasco Psíquico/Hada…). Desde el aro, ese as es una **especie con mega de su tipo** y lleva su megapiedra. Hay megas de sobra para cada tipo: hasta Roca tiene 4 sin contar legendarios.
+- **Rival:** su as es su inicial. Si la línea de su inicial no tiene mega, desde el aro lleva además, como as, una mega del mismo tipo.
+- **Respetar lo que ya está hecho a mano:** niveles, tamaño de los equipos y la regla de evolucionar según el nivel.
+
 ### Ajustes a replicar (los del preset de Platino, adaptados)
 
 **Pokémon**
-- Iniciales completamente aleatorios.
+- Iniciales aleatorios (forma base de 3 fases y en triángulo de tipos, ver arriba).
 - Habilidades aleatorias, permitiendo Superguarda.
 - Pokémon estáticos completamente aleatorios.
 - Estadísticas base de Gen 9 (ya vienen así en el motor) sin aleatorizar sus valores.
@@ -214,7 +267,7 @@ Como no hay intercambios entre partidas, se han cambiado todas:
 - Los equipos de los entrenadores evolucionan según el nivel y pueden usar formas alternativas.
 - +1 Pokémon a los entrenadores importantes y +2 a los jefes.
 - Los Pokémon de entrenadores importantes y jefes pueden llevar objetos aleatorios, priorizando objetos coherentes.
-- **Nuevo:** desde el aro, el as de cada jefe debe ser una especie con mega y llevar su megapiedra.
+- **Nuevo:** el as de cada jefe es de su tipo y, desde el aro, una especie con mega de ese tipo con su megapiedra (ver arriba).
 
 **Salvajes**
 - Aleatorios por ubicación: cada especie de una zona se sustituye por otra aleatoria (mapeo 1 a 1 por zona).
@@ -287,6 +340,7 @@ Hubo una traducción antigua de la expansion al castellano (fork de Xhyzi, rama 
 - Caramelos Raros limitados por el cap.
 - Evoluciones por intercambio convertidas (sección 6).
 - Paso 1 del orden de trabajo (detalles en la sección 12).
+- Equilibrio (Miguel): reescalado de niveles por tramos, equipos de los jefes con megas, evoluciones de los entrenadores normales y parámetros del randomizer (secciones 5, 6 y 7).
 - Vidas y caja de muertos (Jorge). Cómo funciona:
   - Se empieza con 20 vidas (`VAR_DUALOCKE_LIVES`). Cada Pokémon que acaba un combate debilitado muere: va a la última caja del PC ("DEAD", la 14) y se resta una vida.
   - Con 0 vidas se sigue jugando; la siguiente muerte pierde el locke (`FLAG_DUALOCKE_LOCKE_LOST`). Perder un combate también lo pierde, sin mover a nadie (el equipo no puede quedarse vacío). El juego no se bloquea: se marca y se ve en el menú.
@@ -304,10 +358,11 @@ Hubo una traducción antigua de la expansion al castellano (fork de Xhyzi, rama 
 ### Orden de trabajo propuesto
 
 1. ~~Lo fácil: mote obligatorio, quitar curativos y Objetos X de las tiendas, Caramelos Raros a 1 ₽, bloquear Objetos X en combate, correr sin Deportivas, Pokédex Nacional desde el inicio, MTs reutilizables, MOs olvidables.~~ **Hecho.**
-2. Combate con Máximo y el aro. Segundo dependiente en las tiendas.
-3. Reglas del locke: vidas + caja de muertos, primera captura por ruta con sus excepciones, límite de una compra por objeto.
-4. Randomizer con semilla + reescalado de niveles.
-5. Traducción.
+2. Combate con Máximo y el aro. Segundo dependiente y contenido de las tiendas.
+3. Reglas del locke: ~~vidas + caja de muertos~~ (hecho), primera captura por zona con sus excepciones (reglas cerradas, falta implementarlas), límite de una compra por objeto, aviso al morir.
+4. Randomizer con semilla (~~reescalado de niveles~~, ~~equipos de jefes~~ y ~~parámetros~~ hechos).
+5. Revanchas y postgame (niveles).
+6. Traducción.
 
 Quién hace cada cosa y cómo se sube: sección 13.
 
@@ -326,6 +381,7 @@ Quién hace cada cosa y cómo se sube: sección 13.
 | Encuentros salvajes | `src/data/wild_encounters.json` |
 | Reescalado de niveles por tramos (tabla de mapas y reglas) | `tools/dualocke/reescalar_niveles.py` |
 | Equipos de los jefes (+1/+2, megas) | `tools/dualocke/equipos_jefes.py` |
+| Megapiedras y objetos competitivos por el mapa | `tools/dualocke/colocar_objetos.py` |
 | Evolución por nivel de los entrenadores normales | `tools/dualocke/evolucionar_entrenadores.py` |
 | Entrenadores | `src/data/trainers.party` |
 | Tiendas | scripts de cada mapa en `data/maps/*/scripts.inc` (`pokemart`) |
@@ -354,6 +410,7 @@ Para editar mapas y NPCs de forma visual existe **Porymap**; para scripts y diá
 - **Conversaciones nuevas por tarea**, empezando con: *"Lee DUALOCKE.md del repo Jorgemori06/pokeemerald-expansion y luego ayúdame con X"*. Hay que tener la cuenta de GitHub conectada a Claude (Ajustes → Conectores → GitHub).
 - Para tareas repetitivas (traducir textos en masa) puede bastar un modelo más ligero.
 - **Skills y agentes de Claude recomendados** (y cómo instalarlos): `HERRAMIENTAS_CLAUDE.md`.
+- **Ideas para personalizar el juego** cuando esté terminado (no se implementan todavía): `IDEAS.md`.
 - Antes de que dos personas toquen lo mismo, hablarlo para no pisarse los cambios. El reparto y el flujo de trabajo están en la sección 13.
 
 ### Para Claude
@@ -414,7 +471,7 @@ Para editar mapas y NPCs de forma visual existe **Porymap**; para scripts y diá
 
 ### Reparto
 
-Decidido por Miguel el 23/10/2026 (pendiente de que Jorge lo confirme): **Miguel se encarga del equilibrio** (dificultad, combates, niveles, equipos) y **Jorge, de las funcionalidades** (sistemas nuevos en el juego y herramientas).
+Decidido el 23/10/2026 y en marcha: **Miguel se encarga del equilibrio** (dificultad, combates, niveles, equipos) y **Jorge, de las funcionalidades** (sistemas nuevos en el juego y herramientas).
 
 | Tarea | Quién | Zona principal | Choca con |
 | --- | --- | --- | --- |
@@ -423,10 +480,10 @@ Decidido por Miguel el 23/10/2026 (pendiente de que Jorge lo confirme): **Miguel
 | ~~Reescalado de niveles de entrenadores y salvajes según la curva de la sección 5~~ (hecho, salvo revanchas y postgame) | Miguel | `src/data/trainers.party`, `src/data/wild_encounters.json` | Randomizer, combate con Máximo |
 | ~~Equipos de jefes: +1/+2 Pokémon, objetos y qué mega lleva cada jefe~~ (hecho) | Miguel | `src/data/trainers.party` | Randomizer |
 | ~~Equipo de Máximo en la Ruta 120~~ (hecho: `TRAINER_STEVEN_ROUTE_120`) | Miguel | `src/data/trainers.party` | Combate con Máximo |
-| Parámetros del randomizer (qué se baraja, preferencias de movimientos, objetos de los jefes…) | Miguel | archivo de configuración del randomizer | Randomizer |
+| ~~Parámetros del randomizer~~ (hecho: `tools/dualocke/randomizer_config.json`) | Miguel | archivo de configuración del randomizer | Randomizer |
 | Contenido de las tiendas: precios, objetos del segundo dependiente, qué megapiedras y cuándo | Miguel | listas de las tiendas | Segundo dependiente |
 | **Funcionalidades** | | | |
-| Vidas + caja de muertos | Jorge (pendiente de empezar) | combate (desmayos), PC (`src/pokemon_storage_system.c`), HUD | — |
+| ~~Vidas + caja de muertos~~ (hecho, PR #4; falta el aviso al morir) | Jorge | combate (desmayos), PC (`src/pokemon_storage_system.c`), HUD | — |
 | Primera captura por ruta (+ dupes, sin legendarios, shiny libre) | Jorge | `src/item_use.c` (Balls), `src/battle_script_commands.c`, flags por zona | — |
 | Una compra por objeto | Jorge | `src/shop.c` (compra) | — |
 | Evento del combate con Máximo y entrega del Aro Mega | Jorge (pendiente de empezar) | `data/maps/Route120/` | Equipo de Máximo |
