@@ -139,7 +139,15 @@ Regla general: **el as de cada jefe va exactamente al nivel del cap**, el resto 
 - El cap es **duro**: al llegar al cap, el Pokémon no gana experiencia.
 - En los tests de la expansion (`make check`) el cap no se aplica (`TESTING` en `src/caps.c`), porque allí no hay medallas y el cap de 16 rompería los tests de experiencia.
 - El último salto es grande, pero no obliga a farmear porque las tiendas venderán **Caramelos Raros a 1 ₽**, y estos **no funcionan por encima del cap**.
-- Los niveles de entrenadores y salvajes **todavía no están reescalados**: solo están puestos los caps. El reescalado va junto al randomizer (sección 7).
+- **Reescalado hecho** (Miguel, 23/10/2026) con `tools/dualocke/reescalar_niveles.py`, que lee los niveles originales de la expansion y se puede volver a lanzar tras tocar la tabla. Cómo funciona:
+  - Cada mapa de Hoenn está asignado a su **tramo** (entre una medalla y la siguiente, en orden de historia).
+  - **Entrenadores normales:** suben del cap anterior − 3 al cap del tramo − 3, según lo fuertes que eran en el original dentro de su tramo.
+  - **Líderes de gimnasio:** el equipo entero al cap.
+  - **Alto Mando:** Sidney 92, Fátima 94, Nívea 95 y Dracón 97, el equipo entero a ese nivel. **Plubio** 100 y **Blasco** en Calle Victoria 90.
+  - **Jefes a mitad de tramo** (rival, Magno, Aquiles, Blasco en Malvalona): el equipo entero 3 niveles por encima de los entrenadores de ese punto, sin pasar del cap.
+  - **Salvajes:** los entrenadores de su zona − 3, con un margen de ±2. Las tres cañas dan el mismo nivel.
+- **Sin reescalar todavía:** revanchas (Match Call), postgame (Cueva de Máximo, Frente Batalla, S.S. Marea, Cueva Ancestral, Cueva Alterada, Túnel del Desierto) y la Casa Trampa.
+- El randomizer **no debe tocar los niveles ni el tamaño de los equipos**: solo especies, movimientos, habilidades y objetos.
 
 ## 6. Megas, tiendas y evoluciones
 
@@ -299,6 +307,7 @@ Quién hace cada cosa y cómo se sube: sección 13.
 | Especies activadas (megas, gens) | `include/config/species_enabled.h` |
 | Configuración del mundo (seguidores, etc.) | `include/config/overworld.h` |
 | Encuentros salvajes | `src/data/wild_encounters.json` |
+| Reescalado de niveles por tramos (tabla de mapas y reglas) | `tools/dualocke/reescalar_niveles.py` |
 | Entrenadores | `src/data/trainers.party` |
 | Tiendas | scripts de cada mapa en `data/maps/*/scripts.inc` (`pokemart`) |
 | Comprobación del Aro Mega | `src/battle_util.c` (busca `ITEM_MEGA_RING`) |
@@ -389,7 +398,7 @@ Decidido por Miguel el 23/10/2026 (pendiente de que Jorge lo confirme): **Miguel
 | --- | --- | --- | --- |
 | ~~Paso 1: reglas fáciles y mote obligatorio~~ (hecho, PR #1) | Miguel | — | — |
 | **Equilibrio** | | | |
-| Reescalado de niveles de entrenadores y salvajes según la curva de la sección 5 | Miguel | `src/data/trainers.party`, `src/data/wild_encounters.json` | Randomizer, combate con Máximo |
+| ~~Reescalado de niveles de entrenadores y salvajes según la curva de la sección 5~~ (hecho, salvo revanchas y postgame) | Miguel | `src/data/trainers.party`, `src/data/wild_encounters.json` | Randomizer, combate con Máximo |
 | Equipos de jefes: +1/+2 Pokémon, objetos y qué mega lleva cada jefe (la lista de jefes ya está decidida, sección 6) | Miguel | `src/data/trainers.party` | Randomizer |
 | Equipo de Máximo en la Ruta 120 | Miguel | `src/data/trainers.party` | Combate con Máximo |
 | Parámetros del randomizer (qué se baraja, preferencias de movimientos, objetos de los jefes…) | Miguel | archivo de configuración del randomizer | Randomizer |
