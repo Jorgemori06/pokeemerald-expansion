@@ -1,0 +1,120 @@
+{
+  "_comentario": "Parámetros de equilibrio del randomizer. Los valores los decide Miguel y los lee la herramienta de Jorge. Explicación de cada campo en DUALOCKE.md, sección 7. Si la herramienta necesita otro formato, se cambia hablándolo.",
+  "version": 1,
+
+  "legendarios": {
+    "_comentario": "Qué cuenta como legendario: isLegendary o isMythical de la especie base (las formas mega de Mewtwo, Latios, Rayquaza… no tienen la marca, hay que mirar la base). Ultraentes y paradójicos NO cuentan.",
+    "incluye": ["isLegendary", "isMythical"],
+    "permitidos_en": ["estaticos", "jefes_liga"]
+  },
+
+  "iniciales": {
+    "lineas_de_fases": 3,
+    "forma_base": true,
+    "sin_legendarios": true,
+    "triangulo_de_tipos": true,
+    "_triangulo": "Los tres iniciales forman un ciclo de ventajas: A gana a B, B gana a C y C gana a A (por su tipo principal, con la tabla de tipos del juego). Ej.: Fuego > Planta > Agua > Fuego, o Roca > Volador > Lucha > Roca.",
+    "rival_lleva": "el_que_gana_al_del_jugador",
+    "rival_mantiene_inicial": true
+  },
+
+  "salvajes": {
+    "mapeo": "1_a_1_por_zona",
+    "sin_legendarios": true,
+    "evolucion_segun_nivel": true,
+    "_evolucion": "La especie se elige libremente y luego se ajusta a la fase que le toca por el nivel de la zona con las mismas reglas que los entrenadores (sección evoluciones). Así no hay Garchomp a nivel 5 ni Gible a nivel 60.",
+    "evitar_repetir_entre_zonas": true,
+    "objetos_aleatorios": true,
+    "respetar_niveles": true
+  },
+
+  "evoluciones": {
+    "_comentario": "Las mismas reglas que tools/dualocke/evolucionar_entrenadores.py.",
+    "por_nivel": "su_nivel_normal",
+    "sin_nivel_primera": 30,
+    "sin_nivel_segunda": 40
+  },
+
+  "entrenadores": {
+    "especies": "aleatorias",
+    "sin_duplicados_en_equipo": true,
+    "sin_legendarios": true,
+    "evolucion_segun_nivel": true,
+    "formas_alternativas": true,
+    "respetar_niveles_y_tamano_de_equipo": true,
+    "movimientos": {
+      "aleatorios": true,
+      "garantizados": 3,
+      "preferencia_daninos_potentes": "ligera",
+      "diversidad_de_tipos": true
+    },
+    "objetos_jefes_e_importantes": "aleatorios_coherentes",
+    "combates": "individuales"
+  },
+
+  "jefes": {
+    "_comentario": "Equipos totalmente aleatorios, pero el as (el último Pokémon del equipo) es del tipo o temática del jefe. Desde el aro, los marcados con mega llevan un as con mega de ese tipo y su megapiedra. Si el as tiene varios tipos permitidos, vale cualquiera de ellos.",
+    "as_por_tipo": {
+      "TRAINER_ROXANNE_1": ["ROCK"],
+      "TRAINER_BRAWLY_1": ["FIGHTING"],
+      "TRAINER_WATTSON_1": ["ELECTRIC"],
+      "TRAINER_FLANNERY_1": ["FIRE"],
+      "TRAINER_NORMAN_1": ["NORMAL"],
+      "TRAINER_WINONA_1": ["FLYING"],
+      "TRAINER_TATE_AND_LIZA_1": ["PSYCHIC"],
+      "TRAINER_JUAN_1": ["WATER"],
+      "TRAINER_SIDNEY": ["DARK"],
+      "TRAINER_PHOEBE": ["GHOST"],
+      "TRAINER_GLACIA": ["ICE"],
+      "TRAINER_DRAKE": ["DRAGON"],
+      "TRAINER_WALLACE": ["WATER"],
+      "TRAINER_WALLY_MAUVILLE": ["PSYCHIC", "FAIRY"],
+      "TRAINER_WALLY_VR_1": ["PSYCHIC", "FAIRY"],
+      "TRAINER_MAXIE_MT_CHIMNEY": ["FIRE", "GROUND"],
+      "TRAINER_MAXIE_MAGMA_HIDEOUT": ["FIRE", "GROUND"],
+      "TRAINER_MAXIE_MOSSDEEP": ["FIRE", "GROUND"],
+      "TRAINER_ARCHIE": ["WATER", "DARK"],
+      "TRAINER_TABITHA_MT_CHIMNEY": ["FIRE", "GROUND"],
+      "TRAINER_TABITHA_MAGMA_HIDEOUT": ["FIRE", "GROUND"],
+      "TRAINER_TABITHA_MOSSDEEP": ["FIRE", "GROUND"],
+      "TRAINER_SHELLY_WEATHER_INSTITUTE": ["WATER", "DARK"],
+      "TRAINER_SHELLY_SEAFLOOR_CAVERN": ["WATER", "DARK"],
+      "TRAINER_MATT": ["WATER", "DARK"],
+      "RIVAL": ["TIPO_DE_SU_INICIAL"]
+    },
+    "con_mega_desde_el_aro": [
+      "TRAINER_WINONA_1", "TRAINER_TATE_AND_LIZA_1", "TRAINER_JUAN_1",
+      "TRAINER_SIDNEY", "TRAINER_PHOEBE", "TRAINER_GLACIA", "TRAINER_DRAKE", "TRAINER_WALLACE",
+      "TRAINER_WALLY_VR_1", "TRAINER_MAXIE_MAGMA_HIDEOUT", "TRAINER_MAXIE_MOSSDEEP", "TRAINER_ARCHIE",
+      "RIVAL_LILYCOVE"
+    ],
+    "rival": {
+      "_comentario": "El as del rival es su inicial (evolucionado según el nivel). Si esa línea no tiene mega, desde el aro el rival lleva como as una mega del tipo de su inicial, y el inicial se queda en el equipo.",
+      "as": "su_inicial",
+      "si_su_inicial_no_tiene_mega": "as_mega_del_mismo_tipo"
+    }
+  },
+
+  "pokemon": {
+    "habilidades_aleatorias": true,
+    "permitir_superguarda": true,
+    "estaticos": "aleatorios",
+    "niveles_estaticos": "segun_curva",
+    "estadisticas_base": "gen_9_sin_aleatorizar",
+    "totales_barajados_por_linea_evolutiva": true
+  },
+
+  "movimientos_y_mt": {
+    "mt_aleatorias": true,
+    "compatibilidad_mt": "aleatoria",
+    "conservar_movimientos_de_campo": true,
+    "tutores_aleatorios": true
+  },
+
+  "objetos": {
+    "suelo": "aleatorios_con_megapiedras",
+    "excluir": ["Pulsera Z", "cristales Z", "Maximuñequera", "Maxisetas", "Orbe Teracristal", "teralitas"],
+    "recogida": "aleatorios",
+    "intercambios_internos": "totalmente_aleatorios"
+  }
+}
