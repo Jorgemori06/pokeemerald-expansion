@@ -96,7 +96,7 @@ Estas son las reglas que usaban en Platino. La idea es mantenerlas lo más parec
     - "Ya tener una línea" significa tener un Pokémon **vivo** de esa línea (equipo o PC, sin contar la caja de muertos ni la de prohibidos). Si el que tenías muere, esa línea vuelve a estar disponible.
     - Los Pokémon de **regalo, evento o fósil** (inicial, Beldum, fósiles, los que dan los NPCs…) **no gastan la captura de la zona**.
     - Si un regalo/evento/fósil es **repetido o legendario**, va a una **caja de prohibidos** del PC. Los repetidos se quedan ahí **hasta que muere el de su línea que ya tenías**, y entonces se pueden usar. Los legendarios se quedan bloqueados.
-    - Supuesto pendiente de confirmar: un shiny tampoco gasta la captura de la zona.
+    - Los **shiny** se pueden capturar y usar siempre, aunque sean repetidos o legendarios, y **no gastan** la captura de la zona (confirmado por Jorge).
 - **Nick Clause:** todos los Pokémon llevan mote.
 - **Items Clause:**
   - No se pueden comprar objetos curativos ni Objetos X en las tiendas.

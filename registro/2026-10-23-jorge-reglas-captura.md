@@ -7,10 +7,10 @@
 - Los regalos, eventos y fósiles no gastan la captura de la zona.
 - Si un regalo/evento/fósil es repetido o legendario, va a una caja de prohibidos. Los repetidos se pueden usar cuando muere el de su línea; los legendarios se quedan bloqueados.
 
-## Supuestos (a confirmar)
+## Supuestos confirmados por Jorge
 
 - "Tener una línea" = tener un Pokémon vivo de esa línea (equipo o PC, sin la caja de muertos ni la de prohibidos).
-- Un shiny tampoco gasta la captura de la zona.
+- Los shiny se pueden capturar y usar siempre (aunque sean repetidos o legendarios) y no gastan la captura de la zona.
 
 ## Cambios
 
