@@ -359,12 +359,12 @@ Para editar mapas y NPCs de forma visual existe **Porymap**; para scripts y diá
 
 ## 13. Cómo trabajamos los dos en paralelo
 
-**Propuesta de Miguel (23/10/2026), confirmada por Jorge.** Miguel trabaja desde su fork `Mike360mine/pokeemerald-expansion` y abre los PR desde allí; Jorge, con ramas en este repo. Regla en `master`: PR obligatorio con una aprobación del otro.
+**Propuesta de Miguel (23/10/2026), confirmada por Jorge.** Desde el 23/10/2026 Miguel es colaborador, así que **los dos trabajan con ramas en este repo** (`jorge/...`, `miguel/...`) y ya no hace falta el fork de Miguel. Regla en `master`: PR obligatorio con una aprobación del otro.
 
 ### Preparación (una vez, la hace Jorge)
 
-1. **Añadir a Miguel como colaborador**: Settings → Collaborators → `Mike360mine`. Así los dos trabajáis con ramas en este mismo repo y no hacen falta forks. Mientras no esté hecho, Miguel trabaja desde su fork `Mike360mine/pokeemerald-expansion` con PRs.
-2. **Activar Actions**: pestaña Actions → *I understand my workflows, go ahead and enable them*. Sin esto, el CI no se ejecuta (GitHub lo desactiva en los forks).
+1. ~~**Añadir a Miguel como colaborador**~~ (hecho): Settings → Collaborators → `Mike360mine`. Así los dos trabajáis con ramas en este mismo repo y no hacen falta forks. Mientras no esté hecho, Miguel trabaja desde su fork `Mike360mine/pokeemerald-expansion` con PRs.
+2. ~~**Activar Actions**~~ (hecho): pestaña Actions → *I understand my workflows, go ahead and enable them*. Sin esto, el CI no se ejecuta (GitHub lo desactiva en los forks).
 3. **Opcional, recomendado:** Settings → Branches → regla para `master` que exija PR y que el check **CI** esté en verde antes de fusionar. Así nadie sube a `master` algo que no compila.
 
 ### Flujo para cada tarea
