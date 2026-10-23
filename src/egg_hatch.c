@@ -265,16 +265,6 @@ static const struct WindowTemplate sWinTemplates_EggHatch[] =
     DUMMY_WIN_TEMPLATE
 };
 
-static const struct WindowTemplate sYesNoWinTemplate =
-{
-    .bg = 0,
-    .tilemapLeft = 21,
-    .tilemapTop = 9,
-    .width = 5,
-    .height = 4,
-    .paletteNum = 15,
-    .baseBlock = 424
-};
 
 static const s16 sEggShardVelocities[][2] =
 {
@@ -545,6 +535,16 @@ static void CB2_LoadEggHatch(void)
 
 static void EggHatchSetMonNickname(void)
 {
+    struct Pokemon *mon = &gParties[B_TRAINER_PLAYER][gSpecialVar_0x8004];
+    enum Species species = GetMonData(mon, MON_DATA_SPECIES);
+
+    // Dualocke (Nick Clause): si se deja el nombre de la especie, se vuelve a pedir el mote
+    if (StringCompare(gStringVar3, GetSpeciesName(species)) == 0)
+    {
+        DoNamingScreen(NAMING_SCREEN_NICKNAME, gStringVar3, species, GetMonGender(mon), GetMonData(mon, MON_DATA_PERSONALITY), EggHatchSetMonNickname);
+        return;
+    }
+
     SetMonData(&gParties[B_TRAINER_PLAYER][gSpecialVar_0x8004], MON_DATA_NICKNAME, gStringVar3);
     FreeMonSpritesGfx();
     Free(sEggHatchData);
@@ -644,44 +644,15 @@ static void CB2_EggHatch(void)
         sEggHatchData->state++;
         break;
     case 9:
-        // Print the nickname prompt
-        if (!IsTextPrinterActiveOnWindow(sEggHatchData->windowId))
+        // Dualocke (Nick Clause): no hay opción de Sí/No, el mote es obligatorio
+        if (!IsTextPrinterActiveOnWindow(sEggHatchData->windowId) && JOY_NEW(A_BUTTON | B_BUTTON))
         {
-            LoadUserWindowBorderGfx(sEggHatchData->windowId, 0x140, BG_PLTT_ID(14));
-            CreateYesNoMenu(&sYesNoWinTemplate, 0x140, 0xE, 0);
-            sEggHatchData->state++;
-        }
-        break;
-    case 10:
-        // Handle the nickname prompt input
-        switch (Menu_ProcessInputNoWrapClearOnChoose())
-        {
-        case 0: // Yes
+            PlaySE(SE_SELECT);
             GetMonNickname(&gParties[B_TRAINER_PLAYER][sEggHatchData->eggPartyId], gStringVar3);
             species = GetMonData(&gParties[B_TRAINER_PLAYER][sEggHatchData->eggPartyId], MON_DATA_SPECIES);
             gender = GetMonGender(&gParties[B_TRAINER_PLAYER][sEggHatchData->eggPartyId]);
             personality = GetMonData(&gParties[B_TRAINER_PLAYER][sEggHatchData->eggPartyId], MON_DATA_PERSONALITY, 0);
             DoNamingScreen(NAMING_SCREEN_NICKNAME, gStringVar3, species, gender, personality, EggHatchSetMonNickname);
-            break;
-        case 1: // No
-        case MENU_B_PRESSED:
-            sEggHatchData->state++;
-            break;
-        }
-        break;
-    case 11:
-        BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
-        sEggHatchData->state++;
-        break;
-    case 12:
-        if (!gPaletteFade.active)
-        {
-            FreeMonSpritesGfx();
-            RemoveWindow(sEggHatchData->windowId);
-            UnsetBgTilemapBuffer(0);
-            UnsetBgTilemapBuffer(1);
-            Free(sEggHatchData);
-            SetMainCallback2(CB2_ReturnToField);
         }
         break;
     }

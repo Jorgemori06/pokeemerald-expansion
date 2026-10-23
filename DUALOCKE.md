@@ -74,6 +74,7 @@ make -j$(nproc)
 
 ### Notas
 
+- Si `git clone` en Windows (fuera de WSL) da `Filename too long`, ejecutar `git config core.longpaths true` y `git checkout -- .` dentro del repo.
 - Para compilar **no hace falta ninguna ROM**: el código genera el juego entero.
 - **Nunca** subir ROMs (`.gba`) ni saves al repo. Ya están en el `.gitignore`.
 - El repo es **público** (los forks de GitHub no pueden ser privados). Solo contiene código, no la ROM.
@@ -108,9 +109,9 @@ Estas son las reglas que usaban en Platino. La idea es mantenerlas lo más parec
 | --- | --- | --- | --- |
 | Level cap | Sistema del motor, por medallas | Poco | **Hecho** |
 | Caramelos Raros no pasan el cap | Opción del motor | Poco | **Hecho** |
-| Mote obligatorio | Forzar la pantalla de mote al capturar | Poco | Pendiente |
-| No comprar curativos ni Objetos X | Quitarlos de las tiendas | Poco | Pendiente |
-| No usar Objetos X en combate | Bloquearlos en combate | Poco | Pendiente |
+| Mote obligatorio | Forzar la pantalla de mote al capturar, al recibir regalos y al eclosionar huevos | Poco | **Hecho** |
+| No comprar curativos ni Objetos X | Quitarlos de las tiendas | Poco | **Hecho** |
+| No usar Objetos X en combate | Bloquearlos en combate | Poco | **Hecho** |
 | Una compra por objeto (salvo Balls, Repelentes, Bayas, Caramelos) | Limitar compras en tiendas | Medio | Pendiente |
 | 20 vidas + caja de muertos | Contador de vidas visible y caja bloqueada | Medio | Pendiente |
 | Primera captura por ruta + dupes + sin legendarios + shiny libre | El juego bloquea lanzar Balls cuando no se puede capturar | Medio | Pendiente |
@@ -136,6 +137,7 @@ Regla general: **el as de cada jefe va exactamente al nivel del cap**, el resto 
 | 100 | Liga | Calle Victoria (Blasco ~90), Alto Mando con ases entre 92 y 97, **Plubio 100** | +16 |
 
 - El cap es **duro**: al llegar al cap, el Pokémon no gana experiencia.
+- En los tests de la expansion (`make check`) el cap no se aplica (`TESTING` en `src/caps.c`), porque allí no hay medallas y el cap de 16 rompería los tests de experiencia.
 - El último salto es grande, pero no obliga a farmear porque las tiendas venderán **Caramelos Raros a 1 ₽**, y estos **no funcionan por encima del cap**.
 - Los niveles de entrenadores y salvajes **todavía no están reescalados**: solo están puestos los caps. El reescalado va junto al randomizer (sección 7).
 
@@ -268,6 +270,7 @@ Hubo una traducción antigua de la expansion al castellano (fork de Xhyzi, rama 
 - Level caps duros con la curva de la sección 5.
 - Caramelos Raros limitados por el cap.
 - Evoluciones por intercambio convertidas (sección 6).
+- Paso 1 del orden de trabajo (detalles en la sección 12).
 
 ### Pendiente de decidir
 
@@ -277,11 +280,13 @@ Hubo una traducción antigua de la expansion al castellano (fork de Xhyzi, rama 
 
 ### Orden de trabajo propuesto
 
-1. Lo fácil: mote obligatorio, quitar curativos y Objetos X de las tiendas, Caramelos Raros a 1 ₽, bloquear Objetos X en combate, correr sin Deportivas, Pokédex Nacional desde el inicio, MTs reutilizables, MOs olvidables.
+1. ~~Lo fácil: mote obligatorio, quitar curativos y Objetos X de las tiendas, Caramelos Raros a 1 ₽, bloquear Objetos X en combate, correr sin Deportivas, Pokédex Nacional desde el inicio, MTs reutilizables, MOs olvidables.~~ **Hecho.**
 2. Combate con Máximo y el aro. Segundo dependiente en las tiendas.
 3. Reglas del locke: vidas + caja de muertos, primera captura por ruta con sus excepciones, límite de una compra por objeto.
 4. Randomizer con semilla + reescalado de niveles.
 5. Traducción.
+
+Quién hace cada cosa y cómo se sube: sección 13.
 
 ## 10. Mapa del código (lo que ya se ha tocado y dónde está cada cosa)
 
@@ -299,6 +304,14 @@ Hubo una traducción antigua de la expansion al castellano (fork de Xhyzi, rama 
 | Entrenadores | `src/data/trainers.party` |
 | Tiendas | scripts de cada mapa en `data/maps/*/scripts.inc` (`pokemart`) |
 | Comprobación del Aro Mega | `src/battle_util.c` (busca `ITEM_MEGA_RING`) |
+| Datos al empezar partida nueva (correr, Pokédex Nacional) | `src/new_game.c` (`NewGameInitData`) |
+| Mote obligatorio al capturar | `src/battle_script_commands.c` (`Cmd_trygivecaughtmonnick`) |
+| Mote obligatorio en regalos | `src/tv.c` (`ChangeBoxPokemonNickname_CB`) y scripts con `gText_NicknameThisPokemon` |
+| Mote obligatorio al eclosionar | `src/egg_hatch.c` (`EggHatchSetMonNickname`, estado 9 de `CB2_EggHatch`) |
+| Objetos que no se pueden usar en combate | `src/item_use.c` (`CannotUseItemsInBattle`) |
+| MTs reutilizables | `include/config/item.h` (`I_REUSABLE_TMS`) |
+| MOs olvidables | `include/config/pokemon.h` (`P_CAN_FORGET_HIDDEN_MOVE`) |
+| Filtrar tiendas por medallas/flags (útil para las megapiedras) | `src/shop_criteria.c` |
 | Documentación oficial de la expansion | `docs/` y https://rh-hideout.github.io/pokeemerald-expansion/ |
 
 Para editar mapas y NPCs de forma visual existe **Porymap**; para scripts y diálogos, **poryscript**.
@@ -311,16 +324,82 @@ Para editar mapas y NPCs de forma visual existe **Porymap**; para scripts y diá
 - **Repartíos el trabajo** para aprovechar los límites de los dos (por ejemplo, uno la traducción y otro las reglas o el randomizer).
 - **Conversaciones nuevas por tarea**, empezando con: *"Lee DUALOCKE.md del repo Jorgemori06/pokeemerald-expansion y luego ayúdame con X"*. Hay que tener la cuenta de GitHub conectada a Claude (Ajustes → Conectores → GitHub).
 - Para tareas repetitivas (traducir textos en masa) puede bastar un modelo más ligero.
-- Antes de que dos personas toquen lo mismo, hablarlo para no pisarse los cambios.
+- Antes de que dos personas toquen lo mismo, hablarlo para no pisarse los cambios. El reparto y el flujo de trabajo están en la sección 13.
 
 ### Para Claude
 
 - Idioma: español, tono directo e informal. Jorge y Miguel son estudiantes de ingeniería del software; no hace falta explicar lo básico de programación, pero sí lo específico de GBA o de la decomp.
 - **Compila antes de subir** (`make -j$(nproc)`). No subas cambios que no compilen. Si el entorno no tiene el compilador: `sudo apt-get install -y gcc-arm-none-eabi binutils-arm-none-eabi libnewlib-arm-none-eabi libpng-dev`.
 - Commits pequeños, uno por tema, con el mensaje en español explicando qué cambia para el jugador.
-- Trabaja en `master` salvo que te digan otra cosa, y haz `git pull` antes de empezar por si el otro ha subido algo.
+- **No trabajes directamente en `master`**: rama por tarea y PR, como dice la sección 13. Antes de empezar, actualiza `master` (`git pull`) por si el otro ha subido algo, y crea la rama desde ahí.
+- **Al terminar una sesión**, escribe su registro en `registro/AAAA-MM-DD-nombre-tarea.md` (un archivo nuevo por sesión, ver la sección 13) y súbelo en la misma rama.
+- Si no puedes compilar en local, di claramente que no está compilado y deja que lo compruebe el CI del PR antes de fusionar.
 - **Actualiza este archivo** cuando se tome una decisión o se termine algo, en el mismo commit.
 - No inventes nombres oficiales en español (Pokémon, movimientos, objetos…): búscalos.
 - Cuando algo no esté decidido en este archivo, **pregunta** antes de implementarlo, sobre todo si cambia el equilibrio del juego.
 - No subas ROMs ni saves, ni datos personales: el repo es público.
 - Para actualizar la expansion original: `git remote add rhh https://github.com/rh-hideout/pokeemerald-expansion` y `git pull rhh master` (puede haber conflictos con nuestros cambios). Mejor hacerlo pocas veces y en un commit aparte.
+
+## 12. Paso 1: qué se ha hecho exactamente
+
+- **Mote obligatorio:** ya no hay Sí/No en ningún sitio: al capturar, al recibir un regalo (inicial, iniciales de Johto, Castform, fósiles, Beldum) y al eclosionar un huevo sale un aviso, se abre la pantalla de mote y, si se deja el nombre de la especie (o se borra todo), se vuelve a abrir hasta poner un mote. Los textos cambian de pregunta a orden ("Give X a nickname!"). El Calificanombres también exige un nombre distinto al de la especie, lo que da igual porque todos llevan mote.
+- **Tiendas:** se han quitado de todas las tiendas de Hoenn (incluidas Liga, Frontera y Cima Entrenador) los curativos de PS, los de estado (Antídoto, Antiparalizador, Despertar, Antiquemar, Antihielo, Cura Total), los Revivir, las hierbas de la Herboristería de Lavacalda y todos los Objetos X (incluidos Directo y Protección X). **Interpretación:** "curativos" incluye los de estado; si no se quería así, se vuelven a poner.
+- **Caramelos Raros a 1 ₽:** se venden en todas las tiendas que vendían curativos u Objetos X (incluida la Herboristería y el mostrador de Objetos X de Grandes Almacenes Calagua, que si no se quedarían vacíos).
+- **Objetos X en combate:** el jugador no puede usar Objetos X, Directo, Protección X ni Maxisetas (`EFFECT_ITEM_INCREASE_STAT`, `INCREASE_ALL_STATS`, `SET_FOCUS_ENERGY`, `SET_MIST`). Los entrenadores rivales sí pueden.
+- **Correr sin Deportivas** y **Pokédex Nacional** desde el principio de la partida (`NewGameInitData`).
+- **MTs reutilizables** y **MOs olvidables** activados por config.
+
+## 13. Cómo trabajamos los dos en paralelo
+
+**Propuesta de Miguel (23/10/2026), pendiente de que Jorge la confirme.**
+
+### Preparación (una vez, la hace Jorge)
+
+1. **Añadir a Miguel como colaborador**: Settings → Collaborators → `Mike360mine`. Así los dos trabajáis con ramas en este mismo repo y no hacen falta forks. Mientras no esté hecho, Miguel trabaja desde su fork `Mike360mine/pokeemerald-expansion` con PRs.
+2. **Activar Actions**: pestaña Actions → *I understand my workflows, go ahead and enable them*. Sin esto, el CI no se ejecuta (GitHub lo desactiva en los forks).
+3. **Opcional, recomendado:** Settings → Branches → regla para `master` que exija PR y que el check **CI** esté en verde antes de fusionar. Así nadie sube a `master` algo que no compila.
+
+### Flujo para cada tarea
+
+1. **Reservar la tarea**: poner tu nombre en la tabla del reparto (abajo) o abrir un *issue* en GitHub, y avisar al otro.
+2. **Rama nueva desde `master` actualizado:**
+   ```bash
+   git checkout master && git pull
+   git checkout -b jorge/maximo-aro      # o miguel/vidas, etc.
+   ```
+3. Trabajar con **commits pequeños**, uno por tema, en español.
+4. **Compilar** (`make -j$(nproc)`) y, para cambios de juego, **probar en mGBA** lo que has tocado.
+5. Actualizar **`DUALOCKE.md`**, tocando solo las líneas de tu tarea (estado, decisiones, mapa del código), y escribir el **registro de la sesión** en `registro/`.
+6. `git push -u origin <rama>` y abrir un **PR a `master`**.
+7. **El CI tiene que salir en verde.** Los dos tests `CRASH` del log son intencionados y no cuentan.
+   - El CI (`.github/workflows/build.yml`) compila Esmeralda (~5 min), la versión release (~6 min) y pasa los tests (~25 min), en paralelo. El check de Esmeralda sale antes que los tests, así que el "compila / no compila" se ve en unos minutos. Se quitaron los trabajos de FireRed y LeafGreen porque no los usamos y tardaban hasta 50 min; si se actualiza desde la expansion original, hay que volver a quitarlos al resolver conflictos en ese archivo.
+8. **El otro lo mira por encima** (cinco minutos, sobre todo si cambia el equilibrio del juego) y se fusiona. Después se borra la rama.
+9. Si el PR tarda y `master` avanza, actualizar la rama con `git pull origin master` y resolver los conflictos en tu rama, nunca en `master`.
+
+### Registros de sesión (`registro/`)
+
+- **Un archivo nuevo por sesión**: `registro/AAAA-MM-DD-nombre-tarea.md`. Al ser archivos distintos, nunca hay conflictos entre los dos.
+- Contenido: qué se pidió, qué se cambió (archivos), decisiones tomadas por el camino, cómo quedó el CI y qué queda pendiente. Ejemplo: `registro/2026-10-23-miguel-paso1.md`.
+- `DUALOCKE.md` sigue siendo el resumen del estado actual; el registro es el historial.
+
+### Reparto propuesto
+
+Se reparte por **zonas del código** para no pisarse:
+
+| Tarea | Quién | Zona principal | Choca con |
+| --- | --- | --- | --- |
+| ~~Mote obligatorio en regalos y huevos~~ (hecho, PR #1) | Miguel | `src/tv.c`, `src/egg_hatch.c`, scripts de regalos | — |
+| Vidas + caja de muertos | Miguel | combate (desmayos), PC (`src/pokemon_storage_system.c`), HUD | — |
+| Primera captura por ruta (+ dupes, sin legendarios, shiny libre) | Miguel | `src/item_use.c` (Balls), `src/battle_script_commands.c`, flags por zona | — |
+| Una compra por objeto | Miguel | `src/shop.c` (compra) | Segundo dependiente |
+| Combate con Máximo en la Ruta 120 y el Aro Mega | Jorge | `data/maps/Route120/`, `src/data/trainers.party` | — |
+| Segundo dependiente en las tiendas (+ megapiedras desde el aro) | Jorge | `data/maps/*_Mart/`, `src/shop_criteria.c`, `src/shop.c` (listas) | Una compra por objeto |
+| Randomizer con semilla + reescalado de niveles | Jorge | script nuevo en `tools/` + `Makefile`; genera `wild_encounters.json`, `trainers.party`, etc. | Todo lo que edite esos datos a mano |
+| Traducción | Por decidir, cuando lo demás esté estable | casi todo `data/` y `src/` | Todo |
+
+Notas del reparto:
+
+- **`src/shop.c`**: "una compra por objeto" y "segundo dependiente" tocan el mismo archivo. Se hace primero una y la otra se monta encima, o se habla antes.
+- **Randomizer**: mientras se hace, nadie más debería tocar a mano `src/data/wild_encounters.json` ni `src/data/trainers.party`. Si hace falta, se avisa.
+- **Traducción**: toca casi todos los archivos de texto. Mejor empezarla cuando las reglas estén cerradas, o en una rama larga que se actualice a menudo desde `master`.
+- **Decisiones pendientes** (sección 9: jefes con mega, aro en la Ruta 120, ROM española): las decide quien vaya a implementar esa parte, hablándolo con el otro antes.

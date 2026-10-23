@@ -234,6 +234,9 @@ void NewGameInitData(void)
     ResetItemFlags();
     ResetDexNav();
     ClearFollowerNPCData();
+    // Dualocke: se puede correr desde el principio y la Pokédex es la Nacional desde el inicio
+    FlagSet(FLAG_SYS_B_DASH);
+    EnableNationalPokedex();
 }
 
 static void ResetMiniGamesRecords(void)

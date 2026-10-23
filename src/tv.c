@@ -3093,6 +3093,14 @@ bool8 TryPutNameRaterShowOnTheAir(void)
 
 static void ChangeBoxPokemonNickname_CB(void)
 {
+    // Dualocke (Nick Clause): si se deja el nombre de la especie, se vuelve a pedir el mote.
+    // Afecta a los regalos y también al Calificanombres, donde da igual porque todos llevan mote.
+    if (StringCompare(gStringVar2, GetSpeciesName(GetBoxMonData(GetSelectedBoxMonFromPcOrParty(), MON_DATA_SPECIES))) == 0)
+    {
+        ChangePokemonNicknameWithCallback(ChangeBoxPokemonNickname_CB);
+        return;
+    }
+
     SetBoxMonData(GetSelectedBoxMonFromPcOrParty(), MON_DATA_NICKNAME, gStringVar2);
     CB2_ReturnToFieldContinueScriptPlayMapMusic();
 }
