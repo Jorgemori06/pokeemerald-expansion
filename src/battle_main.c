@@ -9,6 +9,7 @@
 #include "battle_hold_effects.h"
 #include "battle_interface.h"
 #include "battle_main.h"
+#include "dualocke.h"
 #include "battle_message.h"
 #include "battle_pyramid.h"
 #include "battle_scripts.h"
@@ -2724,6 +2725,7 @@ void BeginBattleIntroDummy(void)
 void BeginBattleIntro(void)
 {
     BattleStartClearSetData();
+    Dualocke_OnBattleStart();
     gBattleCommunication[1] = 0;
     gBattleStruct->eventState.battleIntro = 0;
     gBattleMainFunc = DoBattleIntro;
@@ -3531,6 +3533,31 @@ static void TryDoEventsBeforeFirstTurn(void)
             BattleScriptExecute(BattleScript_TrainerPartnerSlideMsgEnd);
         gBattleStruct->eventState.beforeFirstTurn++;
         break;
+    case FIRST_TURN_EVENTS_DUALOCKE_ZONE:
+        // Dualocke: avisa si este salvaje es el primero de la zona, si no cuenta o si es shiny
+        gBattleStruct->eventState.beforeFirstTurn++;
+        switch (Dualocke_GetCurrentEncounter())
+        {
+        case DUALOCKE_ENCOUNTER_FIRST:
+            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_DUALOCKE_FIRST_IN_ZONE;
+            BattleScriptExecute(BattleScript_DualockeZoneMsg);
+            break;
+        case DUALOCKE_ENCOUNTER_SHINY:
+            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_DUALOCKE_SHINY;
+            BattleScriptExecute(BattleScript_DualockeZoneMsg);
+            break;
+        case DUALOCKE_ENCOUNTER_DUPE:
+            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_DUALOCKE_DUPE;
+            BattleScriptExecute(BattleScript_DualockeZoneMsg);
+            break;
+        case DUALOCKE_ENCOUNTER_LEGENDARY:
+            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_DUALOCKE_LEGENDARY;
+            BattleScriptExecute(BattleScript_DualockeZoneMsg);
+            break;
+        default:
+            break;
+        }
+        break;
     case FIRST_TURN_EVENTS_END:
         for (enum BattlerId battler = 0; battler < MAX_BATTLERS_COUNT; battler++)
         {
@@ -3971,6 +3998,14 @@ static void HandleTurnActionSelectionState(void)
                     if (IsPlayerPartyAndPokemonStorageFull())
                     {
                         gSelectionBattleScripts[battler] = BattleScript_PrintFullBox;
+                        gBattleCommunication[battler] = STATE_SELECTION_SCRIPT;
+                        gBattleStruct->battlerState[battler].selectionScriptFinished = FALSE;
+                        gBattleStruct->stateIdAfterSelScript[battler] = STATE_BEFORE_ACTION_CHOSEN;
+                        return;
+                    }
+                    if (!Dualocke_CanCatchCurrentEncounter()) // Dualocke: la zona ya tuvo su captura o este no cuenta
+                    {
+                        gSelectionBattleScripts[battler] = BattleScript_DualockeCantCatch;
                         gBattleCommunication[battler] = STATE_SELECTION_SCRIPT;
                         gBattleStruct->battlerState[battler].selectionScriptFinished = FALSE;
                         gBattleStruct->stateIdAfterSelScript[battler] = STATE_BEFORE_ACTION_CHOSEN;

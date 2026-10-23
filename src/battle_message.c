@@ -904,6 +904,12 @@ const u8 *const gBattleStringsTable[STRINGID_COUNT] =
     [STRINGID_S]                                    = COMPOUND_STRING("s"),
     [STRINGID_LOSTSOMEOFITSHP]                      = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} lost some of its HP!"),
     [STRINGID_BELCHCANTUSE]                         = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX} hasn't eaten any held Berries, so it can't possibly belch!\p"),
+    // Dualocke: primera captura por zona
+    [STRINGID_DUALOCKEFIRSTINZONE]                  = COMPOUND_STRING("It's the first Pokémon in this area. You can catch it!"),
+    [STRINGID_DUALOCKESHINY]                        = COMPOUND_STRING("It's shiny! Shiny Pokémon can always be caught."),
+    [STRINGID_DUALOCKEDUPE]                         = COMPOUND_STRING("You already have a Pokémon of this line, so it doesn't count for this area."),
+    [STRINGID_DUALOCKELEGENDARY]                    = COMPOUND_STRING("Legendary Pokémon can't be caught, so it doesn't count for this area."),
+    [STRINGID_DUALOCKECANTCATCH]                    = COMPOUND_STRING("The locke rules don't let you catch this Pokémon!\p"),
 };
 
 const u16 gTrainerUsedItemStringIds[] =
@@ -1127,6 +1133,14 @@ const u16 gUproarAwakeStringIds[] =
 {
     [B_MSG_CANT_SLEEP_UPROAR]  = STRINGID_PKMNCANTSLEEPINUPROAR2,
     [B_MSG_UPROAR_KEPT_AWAKE]  = STRINGID_UPROARKEPTPKMNAWAKE,
+};
+
+const u16 gDualockeZoneStringIds[] =
+{
+    [B_MSG_DUALOCKE_FIRST_IN_ZONE] = STRINGID_DUALOCKEFIRSTINZONE,
+    [B_MSG_DUALOCKE_SHINY]         = STRINGID_DUALOCKESHINY,
+    [B_MSG_DUALOCKE_DUPE]          = STRINGID_DUALOCKEDUPE,
+    [B_MSG_DUALOCKE_LEGENDARY]     = STRINGID_DUALOCKELEGENDARY,
 };
 
 const u16 gStatUpStringIds[] =
