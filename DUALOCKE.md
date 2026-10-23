@@ -356,6 +356,7 @@ Para editar mapas y NPCs de forma visual existe **Porymap**; para scripts y diá
 - **Conversaciones nuevas por tarea**, empezando con: *"Lee DUALOCKE.md del repo Jorgemori06/pokeemerald-expansion y luego ayúdame con X"*. Hay que tener la cuenta de GitHub conectada a Claude (Ajustes → Conectores → GitHub).
 - Para tareas repetitivas (traducir textos en masa) puede bastar un modelo más ligero.
 - **Skills y agentes de Claude recomendados** (y cómo instalarlos): `HERRAMIENTAS_CLAUDE.md`.
+- **Ideas para personalizar el juego** cuando esté terminado (no se implementan todavía): `IDEAS.md`.
 - Antes de que dos personas toquen lo mismo, hablarlo para no pisarse los cambios. El reparto y el flujo de trabajo están en la sección 13.
 
 ### Para Claude
