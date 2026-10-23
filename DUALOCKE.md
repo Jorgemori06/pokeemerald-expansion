@@ -147,7 +147,8 @@ Regla general: **el as de cada jefe va exactamente al nivel del cap**, el resto 
   - **Jefes a mitad de tramo** (rival, Magno, Aquiles, Blasco en Malvalona): el equipo entero 3 niveles por encima de los entrenadores de ese punto, sin pasar del cap.
   - **Salvajes:** los entrenadores de su zona − 3, con un margen de ±2. Las tres cañas dan el mismo nivel.
 - **Sin reescalar todavía:** revanchas (Match Call), postgame (Cueva de Máximo, Frente Batalla, S.S. Marea, Cueva Ancestral, Cueva Alterada, Túnel del Desierto) y la Casa Trampa.
-- El randomizer **no debe tocar los niveles ni el tamaño de los equipos**: solo especies, movimientos, habilidades y objetos.
+- **Evoluciones de los entrenadores normales (hecho):** `tools/dualocke/evolucionar_entrenadores.py` evoluciona sus Pokémon según el nivel. Las evoluciones por nivel van a su nivel normal; las que no son por nivel (piedra, amistad…) van a 30 la primera y a 40 la segunda. Los tres scripts se lanzan en orden: `reescalar_niveles.py`, `equipos_jefes.py` y `evolucionar_entrenadores.py`.
+- El randomizer **no debe tocar los niveles ni el tamaño de los equipos**: solo especies, movimientos, habilidades y objetos. Al cambiar especies, debe mantener la regla de evolucionar según el nivel.
 
 ## 6. Megas, tiendas y evoluciones
 
@@ -315,6 +316,7 @@ Quién hace cada cosa y cómo se sube: sección 13.
 | Encuentros salvajes | `src/data/wild_encounters.json` |
 | Reescalado de niveles por tramos (tabla de mapas y reglas) | `tools/dualocke/reescalar_niveles.py` |
 | Equipos de los jefes (+1/+2, megas) | `tools/dualocke/equipos_jefes.py` |
+| Evolución por nivel de los entrenadores normales | `tools/dualocke/evolucionar_entrenadores.py` |
 | Entrenadores | `src/data/trainers.party` |
 | Tiendas | scripts de cada mapa en `data/maps/*/scripts.inc` (`pokemart`) |
 | Comprobación del Aro Mega | `src/battle_util.c` (busca `ITEM_MEGA_RING`) |

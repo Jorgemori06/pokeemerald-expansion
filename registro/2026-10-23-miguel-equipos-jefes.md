@@ -57,4 +57,4 @@ Tercera tarea de equilibrio de la sesión de Miguel. Rama `miguel/equipos-jefes`
 ## Queda
 
 - **Probar jugando**, sobre todo los primeros gimnasios con 5 Pokémon y los combates contra megas.
-- **Evolucionar por nivel a los entrenadores normales** (ahora hay Pokémon sin evolucionar a niveles altos, por ejemplo en las rutas del tramo 6). En el diseño lo hace el randomizer, pero quizá convenga hacerlo antes.
+- ~~Evolucionar por nivel a los entrenadores normales~~: hecho en la rama siguiente (`miguel/evoluciones-entrenadores`).
