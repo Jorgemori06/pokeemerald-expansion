@@ -164,9 +164,12 @@ Regla general: **el as de cada jefe va exactamente al nivel del cap**, el resto 
   - **Megas canónicas** desde el aro (el as, último del equipo, lleva su megapiedra): Alana Altaria, Vito y Leti Metagross, Galano Starmie, Sidney Absol, Fátima Banette, Nívea Glalie, Dracón Salamence, Plubio Gyarados, Blasco Gardevoir, Magno Camerupt, Aquiles Sharpedo y el rival su inicial (desde Ciudad Calagua).
   - **Objetos:** solo se añade la megapiedra; los que ya llevaban (Baya Zidra…) se quedan, y el resto lo pondrá el randomizer.
   - Los rivales y la IA megaevolucionan sin aro, con solo llevar la piedra.
-- Las **megapiedras** se consiguen:
-  - Aleatorias entre los objetos del suelo.
-  - En el **segundo dependiente** de cada tienda (ver abajo).
+- Las **megapiedras** (decidido por Miguel el 23/10/2026) **se encuentran explorando el mapa**: no se venden.
+  - Hay **81**, todas las de Pokémon no legendarios, cada una en un sitio que encaja con ella. Por ejemplo: Cameruptita en Jagged Pass, Garchompita en el desierto, Sharpedonita bajo el agua en la Ruta 124, Glalitita en Shoal Cave…
+  - Unas van en **bola de objeto** y otras **ocultas** (para el Buscaobjetos).
+  - Las coloca `tools/dualocke/colocar_megapiedras.py`, que tiene la tabla completa. Cada una tiene su flag `FLAG_ITEM_MEGA_...`, en el bloque 0x264-0x283 de `include/constants/flags.h`. El script busca solo una casilla transitable cerca de algo que ya se pueda alcanzar.
+  - Las de antes del aro se pueden recoger, pero no usar hasta tenerlo.
+  - **Para el randomizer:** estas ubicaciones son **fijas**. Al barajar los objetos del suelo hay que saltarse los que tienen flag `FLAG_ITEM_MEGA_...`.
 
 ### Tiendas
 

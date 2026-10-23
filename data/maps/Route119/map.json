@@ -587,6 +587,58 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
       "flag": "FLAG_HIDE_ROUTE_119_SCOTT"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 13,
+      "y": 123,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_HERACRONITE",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_MEGA_HERACRONITE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 11,
+      "y": 123,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_SCIZORITE",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_MEGA_SCIZORITE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 12,
+      "y": 124,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_VICTREEBELITE",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_MEGA_VICTREEBELITE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 12,
+      "y": 122,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_SCEPTILITE",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_MEGA_SCEPTILITE"
     }
   ],
   "warp_events": [
@@ -919,6 +971,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route119_EventScript_TrainerTipsDecoration"
+    },
+    {
+      "type": "hidden_item",
+      "x": 15,
+      "y": 123,
+      "elevation": 3,
+      "item": "ITEM_CHESNAUGHTITE",
+      "flag": "FLAG_ITEM_MEGA_CHESNAUGHTITE"
     }
   ]
 }

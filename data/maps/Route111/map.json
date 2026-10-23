@@ -640,6 +640,32 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route111_EventScript_RockSmashTipFatMan",
       "flag": "FLAG_HIDE_ROUTE_111_ROCK_SMASH_TIP_GUY"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 33,
+      "y": 103,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_GARCHOMPITE",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_MEGA_GARCHOMPITE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 32,
+      "y": 103,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_TYRANITARITE",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_MEGA_TYRANITARITE"
     }
   ],
   "warp_events": [
@@ -1123,6 +1149,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route111_EventScript_TrainerHillSign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 32,
+      "y": 102,
+      "elevation": 3,
+      "item": "ITEM_SCOVILLAINITE",
+      "flag": "FLAG_ITEM_MEGA_SCOVILLAINITE"
     }
   ]
 }

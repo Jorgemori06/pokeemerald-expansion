@@ -664,87 +664,87 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_123_RARE_CANDY                (FLAG_HIDDEN_ITEMS_START + 0x6E)
 #define FLAG_HIDDEN_ITEM_ROUTE_105_BIG_PEARL                 (FLAG_HIDDEN_ITEMS_START + 0x6F)
 
-#define FLAG_UNUSED_0x264  0x264 // Unused Flag
-#define FLAG_UNUSED_0x265  0x265 // Unused Flag
-#define FLAG_UNUSED_0x266  0x266 // Unused Flag
-#define FLAG_UNUSED_0x267  0x267 // Unused Flag
-#define FLAG_UNUSED_0x268  0x268 // Unused Flag
-#define FLAG_UNUSED_0x269  0x269 // Unused Flag
-#define FLAG_UNUSED_0x26A  0x26A // Unused Flag
-#define FLAG_UNUSED_0x26B  0x26B // Unused Flag
-#define FLAG_UNUSED_0x26C  0x26C // Unused Flag
-#define FLAG_UNUSED_0x26D  0x26D // Unused Flag
-#define FLAG_UNUSED_0x26E  0x26E // Unused Flag
-#define FLAG_UNUSED_0x26F  0x26F // Unused Flag
-#define FLAG_UNUSED_0x270  0x270 // Unused Flag
-#define FLAG_UNUSED_0x271  0x271 // Unused Flag
-#define FLAG_UNUSED_0x272  0x272 // Unused Flag
-#define FLAG_UNUSED_0x273  0x273 // Unused Flag
-#define FLAG_UNUSED_0x274  0x274 // Unused Flag
-#define FLAG_UNUSED_0x275  0x275 // Unused Flag
-#define FLAG_UNUSED_0x276  0x276 // Unused Flag
-#define FLAG_UNUSED_0x277  0x277 // Unused Flag
-#define FLAG_UNUSED_0x278  0x278 // Unused Flag
-#define FLAG_UNUSED_0x279  0x279 // Unused Flag
-#define FLAG_UNUSED_0x27A  0x27A // Unused Flag
-#define FLAG_UNUSED_0x27B  0x27B // Unused Flag
-#define FLAG_UNUSED_0x27C  0x27C // Unused Flag
-#define FLAG_UNUSED_0x27D  0x27D // Unused Flag
-#define FLAG_UNUSED_0x27E  0x27E // Unused Flag
-#define FLAG_UNUSED_0x27F  0x27F // Unused Flag
-#define FLAG_UNUSED_0x280  0x280 // Unused Flag
-#define FLAG_UNUSED_0x281  0x281 // Unused Flag
-#define FLAG_UNUSED_0x282  0x282 // Unused Flag
-#define FLAG_UNUSED_0x283  0x283 // Unused Flag
-#define FLAG_UNUSED_0x284  0x284 // Unused Flag
-#define FLAG_UNUSED_0x285  0x285 // Unused Flag
-#define FLAG_UNUSED_0x286  0x286 // Unused Flag
-#define FLAG_UNUSED_0x287  0x287 // Unused Flag
-#define FLAG_UNUSED_0x288  0x288 // Unused Flag
-#define FLAG_UNUSED_0x289  0x289 // Unused Flag
-#define FLAG_UNUSED_0x28A  0x28A // Unused Flag
-#define FLAG_UNUSED_0x28B  0x28B // Unused Flag
-#define FLAG_UNUSED_0x28C  0x28C // Unused Flag
-#define FLAG_UNUSED_0x28D  0x28D // Unused Flag
-#define FLAG_UNUSED_0x28E  0x28E // Unused Flag
-#define FLAG_UNUSED_0x28F  0x28F // Unused Flag
-#define FLAG_UNUSED_0x290  0x290 // Unused Flag
-#define FLAG_UNUSED_0x291  0x291 // Unused Flag
-#define FLAG_UNUSED_0x292  0x292 // Unused Flag
-#define FLAG_UNUSED_0x293  0x293 // Unused Flag
-#define FLAG_UNUSED_0x294  0x294 // Unused Flag
-#define FLAG_UNUSED_0x295  0x295 // Unused Flag
-#define FLAG_UNUSED_0x296  0x296 // Unused Flag
-#define FLAG_UNUSED_0x297  0x297 // Unused Flag
-#define FLAG_UNUSED_0x298  0x298 // Unused Flag
-#define FLAG_UNUSED_0x299  0x299 // Unused Flag
-#define FLAG_UNUSED_0x29A  0x29A // Unused Flag
-#define FLAG_UNUSED_0x29B  0x29B // Unused Flag
-#define FLAG_UNUSED_0x29C  0x29C // Unused Flag
-#define FLAG_UNUSED_0x29D  0x29D // Unused Flag
-#define FLAG_UNUSED_0x29E  0x29E // Unused Flag
-#define FLAG_UNUSED_0x29F  0x29F // Unused Flag
-#define FLAG_UNUSED_0x2A0  0x2A0 // Unused Flag
-#define FLAG_UNUSED_0x2A1  0x2A1 // Unused Flag
-#define FLAG_UNUSED_0x2A2  0x2A2 // Unused Flag
-#define FLAG_UNUSED_0x2A3  0x2A3 // Unused Flag
-#define FLAG_UNUSED_0x2A4  0x2A4 // Unused Flag
-#define FLAG_UNUSED_0x2A5  0x2A5 // Unused Flag
-#define FLAG_UNUSED_0x2A6  0x2A6 // Unused Flag
-#define FLAG_UNUSED_0x2A7  0x2A7 // Unused Flag
-#define FLAG_UNUSED_0x2A8  0x2A8 // Unused Flag
-#define FLAG_UNUSED_0x2A9  0x2A9 // Unused Flag
-#define FLAG_UNUSED_0x2AA  0x2AA // Unused Flag
-#define FLAG_UNUSED_0x2AB  0x2AB // Unused Flag
-#define FLAG_UNUSED_0x2AC  0x2AC // Unused Flag
-#define FLAG_UNUSED_0x2AD  0x2AD // Unused Flag
-#define FLAG_UNUSED_0x2AE  0x2AE // Unused Flag
-#define FLAG_UNUSED_0x2AF  0x2AF // Unused Flag
-#define FLAG_UNUSED_0x2B0  0x2B0 // Unused Flag
-#define FLAG_UNUSED_0x2B1  0x2B1 // Unused Flag
-#define FLAG_UNUSED_0x2B2  0x2B2 // Unused Flag
-#define FLAG_UNUSED_0x2B3  0x2B3 // Unused Flag
-#define FLAG_UNUSED_0x2B4  0x2B4 // Unused Flag
+#define FLAG_ITEM_MEGA_BEEDRILLITE         0x264 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_SCOLIPITE           0x265 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_VENUSAURITE         0x266 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_AGGRONITE           0x267 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_SABLENITE           0x268 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_STEELIXITE          0x269 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_MAWILITE            0x26A // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_EXCADRITE           0x26B // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_FLOETTITE           0x26C // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_ALAKAZITE           0x26D // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_MEGANIUMITE         0x26E // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_LOPUNNITE           0x26F // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_AUDINITE            0x270 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_MEOWSTICITE         0x271 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_CHARIZARDITE_X      0x272 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_HOUNDOOMINITE       0x273 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_EMBOARITE           0x274 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_CAMERUPTITE         0x275 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_CHARIZARDITE_Y      0x276 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_PYROARITE           0x277 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_GARCHOMPITE         0x278 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_TYRANITARITE        0x279 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_SCOVILLAINITE       0x27A // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_AERODACTYLITE       0x27B // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_CLEFABLITE          0x27C // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_GLIMMORANITE        0x27D // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_SKARMORITE          0x27E // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_SCRAFTINITE         0x27F // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_MANECTITE           0x280 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_AMPHAROSITE         0x281 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_RAICHUNITE_X        0x282 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_RAICHUNITE_Y        0x283 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_EELEKTROSSITE       0x284 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_GOLISOPITE          0x285 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_GRENINJITE          0x286 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_HAWLUCHANITE        0x287 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_HERACRONITE         0x288 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_SCIZORITE           0x289 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_VICTREEBELITE       0x28A // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_CHESNAUGHTITE       0x28B // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_SCEPTILITE          0x28C // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_ABSOLITE            0x28D // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_ABSOLITE_Z          0x28E // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_LUCARIONITE         0x28F // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_PIDGEOTITE          0x290 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_STARAPTITE          0x291 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_KANGASKHANITE       0x292 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_PINSIRITE           0x293 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_BANETTITE           0x294 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_CHANDELURITE        0x295 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_GOLURKITE           0x296 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_DELPHOXITE          0x297 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_CHIMECHITE          0x298 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_GENGARITE           0x299 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_BLAZIKENITE         0x29A // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_SWAMPERTITE         0x29B // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_MALAMARITE          0x29C // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_GLALITITE           0x29D // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_ABOMASITE           0x29E // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_FROSLASSITE         0x29F // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_CRABOMINITE         0x2A0 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_BAXCALIBRITE        0x2A1 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_SHARPEDONITE        0x2A2 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_TATSUGIRINITE       0x2A3 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_DRAGALGITE          0x2A4 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_SLOWBRONITE         0x2A5 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_FERALIGITE          0x2A6 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_BLASTOISINITE       0x2A7 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_GYARADOSITE         0x2A8 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_METAGROSSITE        0x2A9 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_STARMINITE          0x2AA // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_ALTARIANITE         0x2AB // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_DRAGONINITE         0x2AC // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_DRAMPANITE          0x2AD // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_GALLADITE           0x2AE // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_GARDEVOIRITE        0x2AF // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_GARCHOMPITE_Z       0x2B0 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_LUCARIONITE_Z       0x2B1 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_FALINKSITE          0x2B2 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_MEDICHAMITE         0x2B3 // Dualocke: megapiedra en el mapa
+#define FLAG_ITEM_MEGA_SALAMENCITE         0x2B4 // Dualocke: megapiedra en el mapa
 #define FLAG_UNUSED_0x2B5  0x2B5 // Unused Flag
 #define FLAG_UNUSED_0x2B6  0x2B6 // Unused Flag
 #define FLAG_UNUSED_0x2B7  0x2B7 // Unused Flag
