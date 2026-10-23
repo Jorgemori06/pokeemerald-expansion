@@ -1222,61 +1222,61 @@
 #define FLAG_ITEM_SAFARI_ZONE_NORTH_EAST_NUGGET                     0x491
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0x492
 
-#define FLAG_UNUSED_0x493                                           0x493 // Unused Flag
-#define FLAG_UNUSED_0x494                                           0x494 // Unused Flag
-#define FLAG_UNUSED_0x495                                           0x495 // Unused Flag
-#define FLAG_UNUSED_0x496                                           0x496 // Unused Flag
-#define FLAG_UNUSED_0x497                                           0x497 // Unused Flag
-#define FLAG_UNUSED_0x498                                           0x498 // Unused Flag
-#define FLAG_UNUSED_0x499                                           0x499 // Unused Flag
-#define FLAG_UNUSED_0x49A                                           0x49A // Unused Flag
-#define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag
-#define FLAG_UNUSED_0x49C                                           0x49C // Unused Flag
-#define FLAG_UNUSED_0x49D                                           0x49D // Unused Flag
-#define FLAG_UNUSED_0x49E                                           0x49E // Unused Flag
-#define FLAG_UNUSED_0x49F                                           0x49F // Unused Flag
-#define FLAG_UNUSED_0x4A0                                           0x4A0 // Unused Flag
-#define FLAG_UNUSED_0x4A1                                           0x4A1 // Unused Flag
-#define FLAG_UNUSED_0x4A2                                           0x4A2 // Unused Flag
-#define FLAG_UNUSED_0x4A3                                           0x4A3 // Unused Flag
-#define FLAG_UNUSED_0x4A4                                           0x4A4 // Unused Flag
-#define FLAG_UNUSED_0x4A5                                           0x4A5 // Unused Flag
-#define FLAG_UNUSED_0x4A6                                           0x4A6 // Unused Flag
-#define FLAG_UNUSED_0x4A7                                           0x4A7 // Unused Flag
-#define FLAG_UNUSED_0x4A8                                           0x4A8 // Unused Flag
-#define FLAG_UNUSED_0x4A9                                           0x4A9 // Unused Flag
-#define FLAG_UNUSED_0x4AA                                           0x4AA // Unused Flag
-#define FLAG_UNUSED_0x4AB                                           0x4AB // Unused Flag
-#define FLAG_UNUSED_0x4AC                                           0x4AC // Unused Flag
-#define FLAG_UNUSED_0x4AD                                           0x4AD // Unused Flag
-#define FLAG_UNUSED_0x4AE                                           0x4AE // Unused Flag
-#define FLAG_UNUSED_0x4AF                                           0x4AF // Unused Flag
-#define FLAG_UNUSED_0x4B0                                           0x4B0 // Unused Flag
-#define FLAG_UNUSED_0x4B1                                           0x4B1 // Unused Flag
-#define FLAG_UNUSED_0x4B2                                           0x4B2 // Unused Flag
-#define FLAG_UNUSED_0x4B3                                           0x4B3 // Unused Flag
-#define FLAG_UNUSED_0x4B4                                           0x4B4 // Unused Flag
-#define FLAG_UNUSED_0x4B5                                           0x4B5 // Unused Flag
-#define FLAG_UNUSED_0x4B6                                           0x4B6 // Unused Flag
-#define FLAG_UNUSED_0x4B7                                           0x4B7 // Unused Flag
-#define FLAG_UNUSED_0x4B8                                           0x4B8 // Unused Flag
-#define FLAG_UNUSED_0x4B9                                           0x4B9 // Unused Flag
-#define FLAG_UNUSED_0x4BA                                           0x4BA // Unused Flag
-#define FLAG_UNUSED_0x4BB                                           0x4BB // Unused Flag
-#define FLAG_UNUSED_0x4BC                                           0x4BC // Unused Flag
-#define FLAG_UNUSED_0x4BD                                           0x4BD // Unused Flag
-#define FLAG_UNUSED_0x4BE                                           0x4BE // Unused Flag
-#define FLAG_UNUSED_0x4BF                                           0x4BF // Unused Flag
-#define FLAG_UNUSED_0x4C0                                           0x4C0 // Unused Flag
-#define FLAG_UNUSED_0x4C1                                           0x4C1 // Unused Flag
-#define FLAG_UNUSED_0x4C2                                           0x4C2 // Unused Flag
-#define FLAG_UNUSED_0x4C3                                           0x4C3 // Unused Flag
-#define FLAG_UNUSED_0x4C4                                           0x4C4 // Unused Flag
-#define FLAG_UNUSED_0x4C5                                           0x4C5 // Unused Flag
-#define FLAG_UNUSED_0x4C6                                           0x4C6 // Unused Flag
-#define FLAG_UNUSED_0x4C7                                           0x4C7 // Unused Flag
-#define FLAG_UNUSED_0x4C8                                           0x4C8 // Unused Flag
-#define FLAG_UNUSED_0x4C9                                           0x4C9 // Unused Flag
+#define FLAG_ITEM_COMP_EVIOLITE            0x493 // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_FOCUS_SASH          0x494 // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_PUNCHING_GLOVE      0x495 // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_MUSCLE_BAND         0x496 // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_BLUNDER_POLICY      0x497 // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_RED_CARD            0x498 // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_WISE_GLASSES        0x499 // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_WEAKNESS_POLICY     0x49A // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_EJECT_BUTTON        0x49B // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_TOXIC_ORB           0x49C // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_JOLLY_MINT          0x49D // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_TIMID_MINT          0x49E // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_EJECT_PACK          0x49F // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_THROAT_SPRAY        0x4A0 // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_LOADED_DICE         0x4A1 // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_FLAME_ORB           0x4A2 // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_HEAT_ROCK           0x4A3 // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_SMOOTH_ROCK         0x4A4 // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_SAFETY_GOGGLES      0x4A5 // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_ROCKY_HELMET        0x4A6 // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_LIGHT_CLAY          0x4A7 // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_PROTECTIVE_PADS     0x4A8 // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_WIDE_LENS           0x4A9 // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_HEAVY_DUTY_BOOTS    0x4AA // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_EXPERT_BELT         0x4AB // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_BLACK_SLUDGE        0x4AC // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_ELECTRIC_SEED       0x4AD // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_BOOSTER_ENERGY      0x4AE // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_AIR_BALLOON         0x4AF // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_UTILITY_UMBRELLA    0x4B0 // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_CHOICE_SCARF        0x4B1 // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_BIG_ROOT            0x4B2 // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_IMPISH_MINT         0x4B3 // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_CAREFUL_MINT        0x4B4 // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_DAMP_ROCK           0x4B5 // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_ASSAULT_VEST        0x4B6 // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_GRASSY_SEED         0x4B7 // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_MIRROR_HERB         0x4B8 // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_BOLD_MINT           0x4B9 // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_CALM_MINT           0x4BA // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_CHOICE_SPECS        0x4BB // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_ADAMANT_MINT        0x4BC // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_MODEST_MINT         0x4BD // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_LIFE_ORB            0x4BE // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_MISTY_SEED          0x4BF // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_ROOM_SERVICE        0x4C0 // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_COVERT_CLOAK        0x4C1 // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_ICY_ROCK            0x4C2 // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_PSYCHIC_SEED        0x4C3 // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_ZOOM_LENS           0x4C4 // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_ABILITY_CAPSULE     0x4C5 // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_CLEAR_AMULET        0x4C6 // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_TERRAIN_EXTENDER    0x4C7 // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_ABILITY_SHIELD      0x4C8 // Dualocke: objeto competitivo en el mapa
+#define FLAG_ITEM_COMP_ABILITY_PATCH       0x4C9 // Dualocke: objeto competitivo en el mapa
 #define FLAG_UNUSED_0x4CA                                           0x4CA // Unused Flag
 #define FLAG_UNUSED_0x4CB                                           0x4CB // Unused Flag
 #define FLAG_UNUSED_0x4CC                                           0x4CC // Unused Flag

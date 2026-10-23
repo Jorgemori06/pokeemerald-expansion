@@ -109,6 +109,14 @@
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "AbandonedShip_Corridors_B1F_EventScript_StorageRoomDoor"
+    },
+    {
+      "type": "hidden_item",
+      "x": 11,
+      "y": 5,
+      "elevation": 3,
+      "item": "ITEM_BLACK_SLUDGE",
+      "flag": "FLAG_ITEM_COMP_BLACK_SLUDGE"
     }
   ]
 }

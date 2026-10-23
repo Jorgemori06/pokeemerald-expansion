@@ -528,6 +528,14 @@
       "elevation": 5,
       "item": "ITEM_MALAMARITE",
       "flag": "FLAG_ITEM_MEGA_MALAMARITE"
+    },
+    {
+      "type": "hidden_item",
+      "x": 63,
+      "y": 35,
+      "elevation": 5,
+      "item": "ITEM_ROOM_SERVICE",
+      "flag": "FLAG_ITEM_COMP_ROOM_SERVICE"
     }
   ]
 }

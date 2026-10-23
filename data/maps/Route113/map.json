@@ -474,6 +474,14 @@
       "elevation": 3,
       "item": "ITEM_NUGGET",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_113_NUGGET"
+    },
+    {
+      "type": "hidden_item",
+      "x": 64,
+      "y": 9,
+      "elevation": 3,
+      "item": "ITEM_WIDE_LENS",
+      "flag": "FLAG_ITEM_COMP_WIDE_LENS"
     }
   ]
 }

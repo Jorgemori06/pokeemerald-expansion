@@ -110,6 +110,14 @@
       "elevation": 0,
       "item": "ITEM_FULL_RESTORE",
       "flag": "FLAG_HIDDEN_ITEM_SAFARI_ZONE_SOUTH_EAST_FULL_RESTORE"
+    },
+    {
+      "type": "hidden_item",
+      "x": 28,
+      "y": 15,
+      "elevation": 3,
+      "item": "ITEM_MODEST_MINT",
+      "flag": "FLAG_ITEM_COMP_MODEST_MINT"
     }
   ]
 }

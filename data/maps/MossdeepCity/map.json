@@ -495,6 +495,14 @@
       "elevation": 5,
       "item": "ITEM_METAGROSSITE",
       "flag": "FLAG_ITEM_MEGA_METAGROSSITE"
+    },
+    {
+      "type": "hidden_item",
+      "x": 58,
+      "y": 35,
+      "elevation": 5,
+      "item": "ITEM_PSYCHIC_SEED",
+      "flag": "FLAG_ITEM_COMP_PSYCHIC_SEED"
     }
   ]
 }

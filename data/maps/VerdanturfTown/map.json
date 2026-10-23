@@ -196,6 +196,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "VerdanturfTown_EventScript_RusturfTunnelSign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 5,
+      "y": 8,
+      "elevation": 3,
+      "item": "ITEM_THROAT_SPRAY",
+      "flag": "FLAG_ITEM_COMP_THROAT_SPRAY"
     }
   ]
 }

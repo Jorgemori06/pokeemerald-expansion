@@ -666,6 +666,45 @@
       "trainer_sight_or_berry_tree_id": "ITEM_TYRANITARITE",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_MEGA_TYRANITARITE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 33,
+      "y": 102,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_SMOOTH_ROCK",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_COMP_SMOOTH_ROCK"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 31,
+      "y": 102,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_SAFETY_GOGGLES",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_COMP_SAFETY_GOGGLES"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 29,
+      "y": 51,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_ROCKY_HELMET",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_COMP_ROCKY_HELMET"
     }
   ],
   "warp_events": [

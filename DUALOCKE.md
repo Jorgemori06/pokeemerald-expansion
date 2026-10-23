@@ -167,9 +167,14 @@ Regla general: **el as de cada jefe va exactamente al nivel del cap**, el resto 
 - Las **megapiedras** (decidido por Miguel el 23/10/2026) **se encuentran explorando el mapa**: no se venden.
   - Hay **81**, todas las de Pokémon no legendarios, cada una en un sitio que encaja con ella. Por ejemplo: Cameruptita en Jagged Pass, Garchompita en el desierto, Sharpedonita bajo el agua en la Ruta 124, Glalitita en Shoal Cave…
   - Unas van en **bola de objeto** y otras **ocultas** (para el Buscaobjetos).
-  - Las coloca `tools/dualocke/colocar_megapiedras.py`, que tiene la tabla completa. Cada una tiene su flag `FLAG_ITEM_MEGA_...`, en el bloque 0x264-0x283 de `include/constants/flags.h`. El script busca solo una casilla transitable cerca de algo que ya se pueda alcanzar.
+  - Las coloca `tools/dualocke/colocar_objetos.py`, que tiene la tabla completa. Cada una tiene su flag `FLAG_ITEM_MEGA_...`, del **0x264 al 0x2B4** de `include/constants/flags.h`. El script busca solo una casilla transitable cerca de algo que ya se pueda alcanzar.
   - Las de antes del aro se pueden recoger, pero no usar hasta tenerlo.
-  - **Para el randomizer:** estas ubicaciones son **fijas**. Al barajar los objetos del suelo hay que saltarse los que tienen flag `FLAG_ITEM_MEGA_...`.
+  - **Para el randomizer:** estas ubicaciones son **fijas**. Al barajar los objetos del suelo hay que saltarse los que tienen flag `FLAG_ITEM_MEGA_...` o `FLAG_ITEM_COMP_...`.
+- **Objetos competitivos de generaciones nuevas** (decidido por Miguel el 23/10/2026): existían en el motor, pero no se podían conseguir. Ahora hay **55 repartidos por el mapa**, como las megapiedras: Mineral Evolutivo, Banda Focus, Casco Dentado, Botas Gruesas, Pañuelo Elegido, Chaleco Asalto, Gafas Elegidas, Vidasfera, rocas de clima, semillas de terreno, Cápsula y Parche Habilidad, 8 Mentas…
+  - Están ordenados por tramo: los más fuertes (Pañuelo Elegido, Chaleco Asalto, Gafas Elegidas, Vidasfera) salen a partir del tramo 6.
+  - Los coloca el mismo script. Sus flags son `FLAG_ITEM_COMP_...`, del **0x493 al 0x4C9**.
+  - La tabla está en el script y en `registro/2026-10-23-miguel-objetos-competitivos.md`.
+  - **Flags libres que quedan para Jorge:** 0x2B5-0x2BB, 0x4CA-0x4EF y el resto de `FLAG_UNUSED_...`.
 
 ### Tiendas
 
@@ -328,6 +333,7 @@ Quién hace cada cosa y cómo se sube: sección 13.
 | Encuentros salvajes | `src/data/wild_encounters.json` |
 | Reescalado de niveles por tramos (tabla de mapas y reglas) | `tools/dualocke/reescalar_niveles.py` |
 | Equipos de los jefes (+1/+2, megas) | `tools/dualocke/equipos_jefes.py` |
+| Megapiedras y objetos competitivos por el mapa | `tools/dualocke/colocar_objetos.py` |
 | Evolución por nivel de los entrenadores normales | `tools/dualocke/evolucionar_entrenadores.py` |
 | Entrenadores | `src/data/trainers.party` |
 | Tiendas | scripts de cada mapa en `data/maps/*/scripts.inc` (`pokemart`) |

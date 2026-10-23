@@ -235,6 +235,14 @@
       "elevation": 3,
       "item": "ITEM_RARE_CANDY",
       "flag": "FLAG_HIDDEN_ITEM_MT_PYRE_SUMMIT_RARE_CANDY"
+    },
+    {
+      "type": "hidden_item",
+      "x": 24,
+      "y": 15,
+      "elevation": 3,
+      "item": "ITEM_MISTY_SEED",
+      "flag": "FLAG_ITEM_COMP_MISTY_SEED"
     }
   ]
 }

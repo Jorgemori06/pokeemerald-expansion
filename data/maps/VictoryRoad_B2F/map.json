@@ -180,6 +180,14 @@
       "elevation": 3,
       "item": "ITEM_MAX_REPEL",
       "flag": "FLAG_HIDDEN_ITEM_VICTORY_ROAD_B2F_MAX_REPEL"
+    },
+    {
+      "type": "hidden_item",
+      "x": 18,
+      "y": 6,
+      "elevation": 3,
+      "item": "ITEM_ABILITY_PATCH",
+      "flag": "FLAG_ITEM_COMP_ABILITY_PATCH"
     }
   ]
 }
