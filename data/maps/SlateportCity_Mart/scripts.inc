@@ -15,10 +15,18 @@ SlateportCity_Mart_EventScript_Clerk::
 SlateportCity_Mart_Pokemart:
 	.2byte ITEM_POKE_BALL
 	.2byte ITEM_GREAT_BALL
-	.2byte ITEM_ESCAPE_ROPE
+	.2byte ITEM_ULTRA_BALL
 	.2byte ITEM_REPEL
-	.2byte ITEM_HARBOR_MAIL
+	.2byte ITEM_SUPER_REPEL
+	.2byte ITEM_MAX_REPEL
+	.2byte ITEM_ESCAPE_ROPE
 	.2byte ITEM_RARE_CANDY
+	.2byte ITEM_DIVE_BALL
+	.2byte ITEM_NET_BALL
+	.2byte ITEM_WATER_STONE
+	.2byte ITEM_PRISM_SCALE
+	.2byte ITEM_DEEP_SEA_TOOTH
+	.2byte ITEM_DEEP_SEA_SCALE
 	pokemartlistend
 
 SlateportCity_Mart_EventScript_BlackBelt::
