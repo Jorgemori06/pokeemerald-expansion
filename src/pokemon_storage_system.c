@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke.h"
 #include "malloc.h"
 #include "bg.h"
 #include "data.h"
@@ -6492,7 +6493,7 @@ static void SetShiftedMonData(u8 boxId, u8 position)
 static bool8 TryStorePartyMonInBox(u8 boxId)
 {
     s16 boxPosition = GetFirstFreeBoxSpot(boxId);
-    if (boxPosition == -1)
+    if (boxPosition == -1 || Dualocke_IsDeadBox(boxId)) // Dualocke: no se puede dejar nada en la caja de muertos
         return FALSE;
 
     if (sIsMonBeingMoved)
@@ -7251,6 +7252,10 @@ static u8 InBoxInput_Normal(void)
                     return INPUT_SELECT_MON;
                 }
             }
+            else if (Dualocke_IsDeadBox(StorageGetCurrentBox()))
+            {
+                return INPUT_IN_MENU; // Dualocke: no se puede sacar nada de la caja de muertos
+            }
             else
             {
                 sStorage->inBoxMovingMode = MOVE_MODE_MULTIPLE_SELECTING;
@@ -7758,6 +7763,16 @@ static u8 SetSelectionMenuTexts(void)
 static bool8 SetMenuTexts_Mon(void)
 {
     enum Species species = GetSpeciesAtCursorPosition();
+
+    // Dualocke: la caja de muertos está bloqueada; solo se puede ver el resumen
+    if (sCursorArea == CURSOR_AREA_IN_BOX && Dualocke_IsDeadBox(StorageGetCurrentBox()))
+    {
+        if (species == SPECIES_NONE || sIsMonBeingMoved)
+            return FALSE;
+        SetMenuText(MENU_SUMMARY);
+        SetMenuText(MENU_CANCEL);
+        return TRUE;
+    }
 
     switch (sStorage->boxOption)
     {
@@ -8746,6 +8761,9 @@ static bool8 MultiMove_CanPlaceSelection(void)
     s32 columnCount = sMultiMove->minColumn + sMultiMove->columnsTotal;
     s32 rowCount = sMultiMove->minRow + sMultiMove->rowsTotal;
     u8 monArrayId = 0;
+
+    if (Dualocke_IsDeadBox(StorageGetCurrentBox()))
+        return FALSE;
 
     for (i = sMultiMove->minRow; i < rowCount; i++)
     {

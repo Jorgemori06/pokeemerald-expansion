@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke.h"
 #include "clock.h"
 #include "new_game.h"
 #include "random.h"
@@ -237,6 +238,8 @@ void NewGameInitData(void)
     // Dualocke: se puede correr desde el principio y la Pokédex es la Nacional desde el inicio
     FlagSet(FLAG_SYS_B_DASH);
     EnableNationalPokedex();
+    // Dualocke: 20 vidas y caja de muertos
+    Dualocke_InitNewGame();
 }
 
 static void ResetMiniGamesRecords(void)
