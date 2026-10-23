@@ -287,6 +287,32 @@
       "trainer_sight_or_berry_tree_id": "3",
       "script": "VictoryRoad_B1F_EventScript_Halle",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 38,
+      "y": 12,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_GARCHOMPITE_Z",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_MEGA_GARCHOMPITE_Z"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 36,
+      "y": 12,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_ABILITY_SHIELD",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_COMP_ABILITY_SHIELD"
     }
   ],
   "warp_events": [
@@ -341,5 +367,14 @@
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 38,
+      "y": 14,
+      "elevation": 3,
+      "item": "ITEM_FALINKSITE",
+      "flag": "FLAG_ITEM_MEGA_FALINKSITE"
+    }
+  ]
 }

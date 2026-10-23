@@ -409,6 +409,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "SootopolisCity_EventScript_CitySign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 45,
+      "y": 32,
+      "elevation": 3,
+      "item": "ITEM_ABILITY_CAPSULE",
+      "flag": "FLAG_ITEM_COMP_ABILITY_CAPSULE"
     }
   ]
 }
