@@ -380,24 +380,33 @@ Para editar mapas y NPCs de forma visual existe **Porymap**; para scripts y diá
 - Contenido: qué se pidió, qué se cambió (archivos), decisiones tomadas por el camino, cómo quedó el CI y qué queda pendiente. Ejemplo: `registro/2026-10-23-miguel-paso1.md`.
 - `DUALOCKE.md` sigue siendo el resumen del estado actual; el registro es el historial.
 
-### Reparto propuesto
+### Reparto
 
-Se reparte por **zonas del código** para no pisarse:
+Decidido por Miguel el 23/10/2026 (pendiente de que Jorge lo confirme): **Miguel se encarga del equilibrio** (dificultad, combates, niveles, equipos) y **Jorge, de las funcionalidades** (sistemas nuevos en el juego y herramientas).
 
 | Tarea | Quién | Zona principal | Choca con |
 | --- | --- | --- | --- |
-| ~~Mote obligatorio en regalos y huevos~~ (hecho, PR #1) | Miguel | `src/tv.c`, `src/egg_hatch.c`, scripts de regalos | — |
-| Vidas + caja de muertos | Miguel | combate (desmayos), PC (`src/pokemon_storage_system.c`), HUD | — |
-| Primera captura por ruta (+ dupes, sin legendarios, shiny libre) | Miguel | `src/item_use.c` (Balls), `src/battle_script_commands.c`, flags por zona | — |
-| Una compra por objeto | Miguel | `src/shop.c` (compra) | Segundo dependiente |
-| Combate con Máximo en la Ruta 120 y el Aro Mega | Jorge (pendiente de empezar) | `data/maps/Route120/`, `src/data/trainers.party` | — |
-| Segundo dependiente en las tiendas (+ megapiedras desde el aro) | Jorge | `data/maps/*_Mart/`, `src/shop_criteria.c`, `src/shop.c` (listas) | Una compra por objeto |
-| Randomizer con semilla + reescalado de niveles | Jorge (pendiente de empezar) | script nuevo en `tools/` + `Makefile`; genera `wild_encounters.json`, `trainers.party`, etc. | Todo lo que edite esos datos a mano |
+| ~~Paso 1: reglas fáciles y mote obligatorio~~ (hecho, PR #1) | Miguel | — | — |
+| **Equilibrio** | | | |
+| Reescalado de niveles de entrenadores y salvajes según la curva de la sección 5 | Miguel | `src/data/trainers.party`, `src/data/wild_encounters.json` | Randomizer, combate con Máximo |
+| Equipos de jefes: +1/+2 Pokémon, objetos y qué mega lleva cada jefe (la lista de jefes ya está decidida, sección 6) | Miguel | `src/data/trainers.party` | Randomizer |
+| Equipo de Máximo en la Ruta 120 | Miguel | `src/data/trainers.party` | Combate con Máximo |
+| Parámetros del randomizer (qué se baraja, preferencias de movimientos, objetos de los jefes…) | Miguel | archivo de configuración del randomizer | Randomizer |
+| Contenido de las tiendas: precios, objetos del segundo dependiente, qué megapiedras y cuándo | Miguel | listas de las tiendas | Segundo dependiente |
+| **Funcionalidades** | | | |
+| Vidas + caja de muertos | Jorge (pendiente de empezar) | combate (desmayos), PC (`src/pokemon_storage_system.c`), HUD | — |
+| Primera captura por ruta (+ dupes, sin legendarios, shiny libre) | Jorge | `src/item_use.c` (Balls), `src/battle_script_commands.c`, flags por zona | — |
+| Una compra por objeto | Jorge | `src/shop.c` (compra) | — |
+| Evento del combate con Máximo y entrega del Aro Mega | Jorge (pendiente de empezar) | `data/maps/Route120/` | Equipo de Máximo |
+| Segundo dependiente en las tiendas (mecánica) | Jorge | `data/maps/*_Mart/`, `src/shop_criteria.c`, `src/shop.c` | Contenido de las tiendas |
+| Randomizer con semilla (la herramienta) | Jorge (pendiente de empezar) | script nuevo en `tools/` + `Makefile` | Todo lo de equilibrio en `trainers.party` y `wild_encounters.json` |
 | Traducción | Por decidir, cuando lo demás esté estable | casi todo `data/` y `src/` | Todo |
 
-Notas del reparto:
+Cómo encajan las dos partes:
 
-- **`src/shop.c`**: "una compra por objeto" y "segundo dependiente" tocan el mismo archivo. Se hace primero una y la otra se monta encima, o se habla antes.
-- **Randomizer**: mientras se hace, nadie más debería tocar a mano `src/data/wild_encounters.json` ni `src/data/trainers.party`. Si hace falta, se avisa.
-- **Traducción**: toca casi todos los archivos de texto. Mejor empezarla cuando las reglas estén cerradas, o en una rama larga que se actualice a menudo desde `master`.
-- **Decisiones pendientes** (sección 9: jefes con mega, aro en la Ruta 120, ROM española): las decide quien vaya a implementar esa parte, hablándolo con el otro antes.
+- **Los niveles y el tamaño de los equipos los pone Miguel a mano** en `trainers.party` y `wild_encounters.json`. **El randomizer de Jorge los respeta**: solo cambia especies, movimientos, habilidades y objetos, y lee sus parámetros de un archivo de configuración cuyos valores decide Miguel.
+- **Máximo:** Jorge hace el evento (script, mapa, entrega del aro) y Miguel decide su equipo. Hay que acordar el nombre del entrenador (`TRAINER_...`) antes de empezar.
+- **Segundo dependiente:** Jorge hace la mecánica y Miguel decide qué vende. Hay que acordar el formato de las listas antes de empezar.
+- **Choques en archivos:** `trainers.party` lo tocan los dos (Miguel los niveles y equipos, Jorge solo la entrada nueva de Máximo si hace falta). `src/shop.c` ya solo lo toca Jorge.
+- **Traducción:** toca casi todos los archivos de texto. Mejor empezarla cuando las reglas estén cerradas, o en una rama larga que se actualice a menudo desde `master`.
+- **Decisiones:** las de equilibrio las toma Miguel y las demás quien implemente esa parte, hablándolo antes con el otro. Ya decididas por Jorge (23/10/2026): el aro lo da Máximo en la Ruta 120 y la lista de jefes con mega (sección 6). Pendiente: la ROM española (sección 9).
