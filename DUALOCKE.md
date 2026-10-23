@@ -109,7 +109,7 @@ Estas son las reglas que usaban en Platino. La idea es mantenerlas lo más parec
 | --- | --- | --- | --- |
 | Level cap | Sistema del motor, por medallas | Poco | **Hecho** |
 | Caramelos Raros no pasan el cap | Opción del motor | Poco | **Hecho** |
-| Mote obligatorio | Forzar la pantalla de mote al capturar | Poco | **Hecho** (capturas; regalos y huevos pendientes) |
+| Mote obligatorio | Forzar la pantalla de mote al capturar, al recibir regalos y al eclosionar huevos | Poco | **Hecho** |
 | No comprar curativos ni Objetos X | Quitarlos de las tiendas | Poco | **Hecho** |
 | No usar Objetos X en combate | Bloquearlos en combate | Poco | **Hecho** |
 | Una compra por objeto (salvo Balls, Repelentes, Bayas, Caramelos) | Limitar compras en tiendas | Medio | Pendiente |
@@ -280,7 +280,7 @@ Hubo una traducción antigua de la expansion al castellano (fork de Xhyzi, rama 
 
 ### Orden de trabajo propuesto
 
-1. ~~Lo fácil: mote obligatorio, quitar curativos y Objetos X de las tiendas, Caramelos Raros a 1 ₽, bloquear Objetos X en combate, correr sin Deportivas, Pokédex Nacional desde el inicio, MTs reutilizables, MOs olvidables.~~ **Hecho.** Queda el mote obligatorio en Pokémon regalados y huevos.
+1. ~~Lo fácil: mote obligatorio, quitar curativos y Objetos X de las tiendas, Caramelos Raros a 1 ₽, bloquear Objetos X en combate, correr sin Deportivas, Pokédex Nacional desde el inicio, MTs reutilizables, MOs olvidables.~~ **Hecho.**
 2. Combate con Máximo y el aro. Segundo dependiente en las tiendas.
 3. Reglas del locke: vidas + caja de muertos, primera captura por ruta con sus excepciones, límite de una compra por objeto.
 4. Randomizer con semilla + reescalado de niveles.
@@ -306,6 +306,8 @@ Quién hace cada cosa y cómo se sube: sección 13.
 | Comprobación del Aro Mega | `src/battle_util.c` (busca `ITEM_MEGA_RING`) |
 | Datos al empezar partida nueva (correr, Pokédex Nacional) | `src/new_game.c` (`NewGameInitData`) |
 | Mote obligatorio al capturar | `src/battle_script_commands.c` (`Cmd_trygivecaughtmonnick`) |
+| Mote obligatorio en regalos | `src/tv.c` (`ChangeBoxPokemonNickname_CB`) y scripts con `gText_NicknameThisPokemon` |
+| Mote obligatorio al eclosionar | `src/egg_hatch.c` (`EggHatchSetMonNickname`, estado 9 de `CB2_EggHatch`) |
 | Objetos que no se pueden usar en combate | `src/item_use.c` (`CannotUseItemsInBattle`) |
 | MTs reutilizables | `include/config/item.h` (`I_REUSABLE_TMS`) |
 | MOs olvidables | `include/config/pokemon.h` (`P_CAN_FORGET_HIDDEN_MOVE`) |
@@ -340,7 +342,7 @@ Para editar mapas y NPCs de forma visual existe **Porymap**; para scripts y diá
 
 ## 12. Paso 1: qué se ha hecho exactamente
 
-- **Mote obligatorio (capturas):** al capturar ya no sale el Sí/No: sale "Give X a nickname!", al pulsar A/B se abre la pantalla de mote, y si se deja el nombre de la especie (o se borra todo) se vuelve a abrir hasta poner un mote. **Pendiente:** Pokémon regalados (inicial, Beldum, fósiles…) y huevos siguen preguntando con Sí/No.
+- **Mote obligatorio:** ya no hay Sí/No en ningún sitio: al capturar, al recibir un regalo (inicial, iniciales de Johto, Castform, fósiles, Beldum) y al eclosionar un huevo sale un aviso, se abre la pantalla de mote y, si se deja el nombre de la especie (o se borra todo), se vuelve a abrir hasta poner un mote. Los textos cambian de pregunta a orden ("Give X a nickname!"). El Calificanombres también exige un nombre distinto al de la especie, lo que da igual porque todos llevan mote.
 - **Tiendas:** se han quitado de todas las tiendas de Hoenn (incluidas Liga, Frontera y Cima Entrenador) los curativos de PS, los de estado (Antídoto, Antiparalizador, Despertar, Antiquemar, Antihielo, Cura Total), los Revivir, las hierbas de la Herboristería de Lavacalda y todos los Objetos X (incluidos Directo y Protección X). **Interpretación:** "curativos" incluye los de estado; si no se quería así, se vuelven a poner.
 - **Caramelos Raros a 1 ₽:** se venden en todas las tiendas que vendían curativos u Objetos X (incluida la Herboristería y el mostrador de Objetos X de Grandes Almacenes Calagua, que si no se quedarían vacíos).
 - **Objetos X en combate:** el jugador no puede usar Objetos X, Directo, Protección X ni Maxisetas (`EFFECT_ITEM_INCREASE_STAT`, `INCREASE_ALL_STATS`, `SET_FOCUS_ENERGY`, `SET_MIST`). Los entrenadores rivales sí pueden.
@@ -385,7 +387,7 @@ Se reparte por **zonas del código** para no pisarse:
 
 | Tarea | Quién | Zona principal | Choca con |
 | --- | --- | --- | --- |
-| Mote obligatorio en regalos y huevos | Miguel | `data/event_scripts.s`, `src/egg_hatch.c` | — |
+| ~~Mote obligatorio en regalos y huevos~~ (hecho, PR #1) | Miguel | `src/tv.c`, `src/egg_hatch.c`, scripts de regalos | — |
 | Vidas + caja de muertos | Miguel | combate (desmayos), PC (`src/pokemon_storage_system.c`), HUD | — |
 | Primera captura por ruta (+ dupes, sin legendarios, shiny libre) | Miguel | `src/item_use.c` (Balls), `src/battle_script_commands.c`, flags por zona | — |
 | Una compra por objeto | Miguel | `src/shop.c` (compra) | Segundo dependiente |

@@ -46,5 +46,5 @@ gText_NoMoreRoomForPokemon::
 	.string "can't accept any more!$"
 
 gText_NicknameThisPokemon::
-	.string "Do you want to give a nickname to\n"
-	.string "this {STR_VAR_1}?$"
+	.string "Give a nickname to\n"
+	.string "this {STR_VAR_1}!$"

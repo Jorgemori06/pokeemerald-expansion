@@ -19,7 +19,7 @@ Sesión de Miguel con Claude (Claude Code, escritorio de Windows). Resumen de lo
 - La cuenta de GitHub de Miguel (**Mike360mine**) no tiene permiso de escritura en el repo de Jorge, así que se creó el fork `Mike360mine/pokeemerald-expansion` y se abrió el PR [Jorgemori06/pokeemerald-expansion#1](https://github.com/Jorgemori06/pokeemerald-expansion/pull/1) desde la rama `dualocke/paso1`.
 - **El CI nunca se había ejecutado en el repo de Jorge.** GitHub desactiva Actions en los forks hasta que el dueño lo activa en la pestaña Actions. Miguel lo activó en su fork, y el CI se ejecutó allí (al subir a `master` del fork).
 
-### Cambios (5 commits)
+### Cambios
 
 | Commit | Qué cambia para el jugador | Archivos |
 | --- | --- | --- |
@@ -28,6 +28,7 @@ Sesión de Miguel con Claude (Claude Code, escritorio de Windows). Resumen de lo
 | Tiendas | Sin curativos (PS, estados, Revivir, hierbas) ni Objetos X; Caramelos Raros a 1 ₽ en todas esas tiendas | 17 `data/maps/*/scripts.inc`, `src/data/items.h` |
 | Objetos X en combate | El jugador no puede usar Objetos X, Directo, Protección X ni Maxisetas | `src/item_use.c` |
 | Level cap en los tests | Nada en el juego; el cap no se aplica al compilar los tests | `src/caps.c` |
+| Mote obligatorio en regalos y huevos | Sin Sí/No al recibir un regalo, al elegir inicial ni al eclosionar; se repite si se deja el nombre de la especie | `src/tv.c`, `src/egg_hatch.c`, `src/strings.c`, `data/text/pc_transfer.inc`, scripts de regalos |
 
 ### Decisiones tomadas por el camino (revisables)
 
@@ -35,6 +36,7 @@ Sesión de Miguel con Claude (Claude Code, escritorio de Windows). Resumen de lo
 - La **Herboristería de Lavacalda** y el mostrador de **Objetos X de Grandes Almacenes Calagua** venden ahora Caramelos Raros, para no quedarse vacíos.
 - Los **Maxisetas** también cuentan como Objeto X.
 - Los **rivales sí pueden** usar Objetos X; la regla es solo para el jugador.
+- El **Calificanombres** también obliga a poner un nombre distinto al de la especie (comparte código con los regalos). Da igual, porque todos llevan mote.
 - Mensajes nuevos en inglés, como el resto del juego: "Give X a nickname!" y "The locke rules don't allow using this item in battle!".
 
 ### CI
@@ -45,7 +47,6 @@ Sesión de Miguel con Claude (Claude Code, escritorio de Windows). Resumen de lo
 
 ## Lo que queda
 
-- **Mote obligatorio en Pokémon regalados y huevos** (siguen con Sí/No).
 - **Probar jugando** en mGBA: pantalla de mote, tiendas, Objetos X, correr y Pokédex.
 - Jorge: activar Actions en su repo, revisar y fusionar el PR #1, y decidir si añade a Miguel como colaborador (ver sección 13 de `DUALOCKE.md`).
 - Visto de pasada, sin tocar: en `include/config/caps.h`, la línea de `B_EV_CAP_TYPE` tiene un `#define B_EV_CAP_VARIABLE 12` metido en el comentario. No afecta a nada, pero está feo.
