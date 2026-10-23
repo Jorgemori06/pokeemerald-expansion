@@ -90,6 +90,13 @@ Estas son las reglas que usaban en Platino. La idea es mantenerlas lo más parec
   - No se pueden capturar repetidos de una misma línea evolutiva.
   - No se pueden capturar singulares/legendarios.
   - Los **shiny** se pueden capturar siempre.
+  - **Detalle decidido el 23/10/2026 (Jorge y Miguel) para implementarlo en el juego:**
+    - Cada "ruta" es **cada zona con nombre propio** (Ruta 104, Bosque Petalia, Cueva Granito…). Pescar o hacer surf en la misma zona no da otra captura.
+    - Si el primer Pokémon de una zona es de una **línea evolutiva que ya tienes** o es **legendario/singular**, **no cuenta**: se escapa y sigues buscando hasta que salga uno válido.
+    - "Ya tener una línea" significa tener un Pokémon **vivo** de esa línea (equipo o PC, sin contar la caja de muertos ni la de prohibidos). Si el que tenías muere, esa línea vuelve a estar disponible.
+    - Los Pokémon de **regalo, evento o fósil** (inicial, Beldum, fósiles, los que dan los NPCs…) **no gastan la captura de la zona**.
+    - Si un regalo/evento/fósil es **repetido o legendario**, va a una **caja de prohibidos** del PC. Los repetidos se quedan ahí **hasta que muere el de su línea que ya tenías**, y entonces se pueden usar. Los legendarios se quedan bloqueados.
+    - Los **shiny** se pueden capturar y usar siempre, aunque sean repetidos o legendarios, y **no gastan** la captura de la zona (confirmado por Jorge).
 - **Nick Clause:** todos los Pokémon llevan mote.
 - **Items Clause:**
   - No se pueden comprar objetos curativos ni Objetos X en las tiendas.
@@ -114,7 +121,7 @@ Estas son las reglas que usaban en Platino. La idea es mantenerlas lo más parec
 | No usar Objetos X en combate | Bloquearlos en combate | Poco | **Hecho** |
 | Una compra por objeto (salvo Balls, Repelentes, Bayas, Caramelos) | Limitar compras en tiendas | Medio | Pendiente |
 | 20 vidas + caja de muertos | Contador de vidas en el menú de pausa y caja bloqueada | Medio | **Hecho** (aviso al morir pendiente) |
-| Primera captura por ruta + dupes + sin legendarios + shiny libre | El juego bloquea lanzar Balls cuando no se puede capturar | Medio | Pendiente |
+| Primera captura por ruta + dupes + sin legendarios + shiny libre + caja de prohibidos | El juego bloquea lanzar Balls cuando no se puede capturar; los regalos repetidos/legendarios van a la caja de prohibidos | Medio | Pendiente (reglas cerradas, ver arriba) |
 | Victoria, combates en Showdown, capturas extra | Fuera del juego, por honor | — | — |
 | No farmear | Por honor | — | — |
 
