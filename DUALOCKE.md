@@ -154,7 +154,8 @@ Regla general: **el as de cada jefe va exactamente al nivel del cap**, el resto 
   - **Jefes a mitad de tramo** (rival, Magno, Aquiles, Blasco en Malvalona): el equipo entero 3 niveles por encima de los entrenadores de ese punto, sin pasar del cap.
   - **Salvajes:** los entrenadores de su zona − 3, con un margen de ±2. Las tres cañas dan el mismo nivel.
 - **Sin reescalar todavía:** revanchas (Match Call), postgame (Cueva de Máximo, Frente Batalla, S.S. Marea, Cueva Ancestral, Cueva Alterada, Túnel del Desierto) y la Casa Trampa.
-- El randomizer **no debe tocar los niveles ni el tamaño de los equipos**: solo especies, movimientos, habilidades y objetos.
+- **Evoluciones de los entrenadores normales (hecho):** `tools/dualocke/evolucionar_entrenadores.py` evoluciona sus Pokémon según el nivel. Las evoluciones por nivel van a su nivel normal; las que no son por nivel (piedra, amistad…) van a 30 la primera y a 40 la segunda. Los tres scripts se lanzan en orden: `reescalar_niveles.py`, `equipos_jefes.py` y `evolucionar_entrenadores.py`.
+- El randomizer **no debe tocar los niveles ni el tamaño de los equipos**: solo especies, movimientos, habilidades y objetos. Al cambiar especies, debe mantener la regla de evolucionar según el nivel.
 
 ## 6. Megas, tiendas y evoluciones
 
@@ -164,6 +165,12 @@ Regla general: **el as de cada jefe va exactamente al nivel del cap**, el resto 
 - Para megaevolucionar, el jugador necesita el objeto **Aro Mega** (`ITEM_MEGA_RING`) en la mochila (lo comprueba `src/battle_util.c`).
 - **Cómo se consigue el aro (decidido el 23/10/2026):** combate con **Máximo en la Ruta 120**, justo antes del gym 6 (Alana). Al ganar, te da el aro. Encaja con la historia (en ROZA Máximo está metido en lo de las megas) y llega en un punto equilibrado: equipo ya formado, cap 62, toda la segunda mitad del juego para usarlas.
 - **Desde que el jugador tiene el aro, todos los jefes llevan un Pokémon con mega** (y la usan). Lista de "jefes" (decidida el 23/10/2026): líderes de gimnasio, Alto Mando, Plubio, rival (Bruno/Aura), Blasco y los líderes Magma/Aqua (Magno, Aquiles).
+- **Equipos de los jefes (hecho, Miguel, 23/10/2026)** con `tools/dualocke/equipos_jefes.py` (se lanza después de `reescalar_niveles.py`):
+  - **+2 Pokémon** a líderes, Alto Mando y Plubio; **+1** al rival, Blasco, Magno, Aquiles y los admins (Tatiano, Silvina, Matías). Máximo 6.
+  - Los huecos nuevos son Pokémon **del tipo del jefe**; los originales **evolucionan** según su nivel. El randomizer los cambiará igualmente.
+  - **Megas canónicas** desde el aro (el as, último del equipo, lleva su megapiedra): Alana Altaria, Vito y Leti Metagross, Galano Starmie, Sidney Absol, Fátima Banette, Nívea Glalie, Dracón Salamence, Plubio Gyarados, Blasco Gardevoir, Magno Camerupt, Aquiles Sharpedo y el rival su inicial (desde Ciudad Calagua).
+  - **Objetos:** solo se añade la megapiedra; los que ya llevaban (Baya Zidra…) se quedan, y el resto lo pondrá el randomizer.
+  - Los rivales y la IA megaevolucionan sin aro, con solo llevar la piedra.
 - Las **megapiedras** se consiguen:
   - Aleatorias entre los objetos del suelo.
   - En el **segundo dependiente** de cada tienda (ver abajo).
@@ -324,6 +331,8 @@ Quién hace cada cosa y cómo se sube: sección 13.
 | Configuración del mundo (seguidores, etc.) | `include/config/overworld.h` |
 | Encuentros salvajes | `src/data/wild_encounters.json` |
 | Reescalado de niveles por tramos (tabla de mapas y reglas) | `tools/dualocke/reescalar_niveles.py` |
+| Equipos de los jefes (+1/+2, megas) | `tools/dualocke/equipos_jefes.py` |
+| Evolución por nivel de los entrenadores normales | `tools/dualocke/evolucionar_entrenadores.py` |
 | Entrenadores | `src/data/trainers.party` |
 | Tiendas | scripts de cada mapa en `data/maps/*/scripts.inc` (`pokemart`) |
 | Comprobación del Aro Mega | `src/battle_util.c` (busca `ITEM_MEGA_RING`) |
@@ -418,7 +427,7 @@ Decidido por Miguel el 23/10/2026 (pendiente de que Jorge lo confirme): **Miguel
 | ~~Paso 1: reglas fáciles y mote obligatorio~~ (hecho, PR #1) | Miguel | — | — |
 | **Equilibrio** | | | |
 | ~~Reescalado de niveles de entrenadores y salvajes según la curva de la sección 5~~ (hecho, salvo revanchas y postgame) | Miguel | `src/data/trainers.party`, `src/data/wild_encounters.json` | Randomizer, combate con Máximo |
-| Equipos de jefes: +1/+2 Pokémon, objetos y qué mega lleva cada jefe (la lista de jefes ya está decidida, sección 6) | Miguel | `src/data/trainers.party` | Randomizer |
+| ~~Equipos de jefes: +1/+2 Pokémon, objetos y qué mega lleva cada jefe~~ (hecho) | Miguel | `src/data/trainers.party` | Randomizer |
 | Equipo de Máximo en la Ruta 120 | Miguel | `src/data/trainers.party` | Combate con Máximo |
 | Parámetros del randomizer (qué se baraja, preferencias de movimientos, objetos de los jefes…) | Miguel | archivo de configuración del randomizer | Randomizer |
 | Contenido de las tiendas: precios, objetos del segundo dependiente, qué megapiedras y cuándo | Miguel | listas de las tiendas | Segundo dependiente |
