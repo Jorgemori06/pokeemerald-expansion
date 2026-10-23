@@ -74,6 +74,7 @@ make -j$(nproc)
 
 ### Notas
 
+- Si `git clone` en Windows (fuera de WSL) da `Filename too long`, ejecutar `git config core.longpaths true` y `git checkout -- .` dentro del repo.
 - Para compilar **no hace falta ninguna ROM**: el código genera el juego entero.
 - **Nunca** subir ROMs (`.gba`) ni saves al repo. Ya están en el `.gitignore`.
 - El repo es **público** (los forks de GitHub no pueden ser privados). Solo contiene código, no la ROM.
@@ -108,9 +109,9 @@ Estas son las reglas que usaban en Platino. La idea es mantenerlas lo más parec
 | --- | --- | --- | --- |
 | Level cap | Sistema del motor, por medallas | Poco | **Hecho** |
 | Caramelos Raros no pasan el cap | Opción del motor | Poco | **Hecho** |
-| Mote obligatorio | Forzar la pantalla de mote al capturar | Poco | Pendiente |
-| No comprar curativos ni Objetos X | Quitarlos de las tiendas | Poco | Pendiente |
-| No usar Objetos X en combate | Bloquearlos en combate | Poco | Pendiente |
+| Mote obligatorio | Forzar la pantalla de mote al capturar | Poco | **Hecho** (capturas; regalos y huevos pendientes) |
+| No comprar curativos ni Objetos X | Quitarlos de las tiendas | Poco | **Hecho** |
+| No usar Objetos X en combate | Bloquearlos en combate | Poco | **Hecho** |
 | Una compra por objeto (salvo Balls, Repelentes, Bayas, Caramelos) | Limitar compras en tiendas | Medio | Pendiente |
 | 20 vidas + caja de muertos | Contador de vidas visible y caja bloqueada | Medio | Pendiente |
 | Primera captura por ruta + dupes + sin legendarios + shiny libre | El juego bloquea lanzar Balls cuando no se puede capturar | Medio | Pendiente |
@@ -268,6 +269,7 @@ Hubo una traducción antigua de la expansion al castellano (fork de Xhyzi, rama 
 - Level caps duros con la curva de la sección 5.
 - Caramelos Raros limitados por el cap.
 - Evoluciones por intercambio convertidas (sección 6).
+- Paso 1 del orden de trabajo (detalles en la sección 12).
 
 ### Pendiente de decidir
 
@@ -277,7 +279,7 @@ Hubo una traducción antigua de la expansion al castellano (fork de Xhyzi, rama 
 
 ### Orden de trabajo propuesto
 
-1. Lo fácil: mote obligatorio, quitar curativos y Objetos X de las tiendas, Caramelos Raros a 1 ₽, bloquear Objetos X en combate, correr sin Deportivas, Pokédex Nacional desde el inicio, MTs reutilizables, MOs olvidables.
+1. ~~Lo fácil: mote obligatorio, quitar curativos y Objetos X de las tiendas, Caramelos Raros a 1 ₽, bloquear Objetos X en combate, correr sin Deportivas, Pokédex Nacional desde el inicio, MTs reutilizables, MOs olvidables.~~ **Hecho.** Queda el mote obligatorio en Pokémon regalados y huevos.
 2. Combate con Máximo y el aro. Segundo dependiente en las tiendas.
 3. Reglas del locke: vidas + caja de muertos, primera captura por ruta con sus excepciones, límite de una compra por objeto.
 4. Randomizer con semilla + reescalado de niveles.
@@ -299,6 +301,12 @@ Hubo una traducción antigua de la expansion al castellano (fork de Xhyzi, rama 
 | Entrenadores | `src/data/trainers.party` |
 | Tiendas | scripts de cada mapa en `data/maps/*/scripts.inc` (`pokemart`) |
 | Comprobación del Aro Mega | `src/battle_util.c` (busca `ITEM_MEGA_RING`) |
+| Datos al empezar partida nueva (correr, Pokédex Nacional) | `src/new_game.c` (`NewGameInitData`) |
+| Mote obligatorio al capturar | `src/battle_script_commands.c` (`Cmd_trygivecaughtmonnick`) |
+| Objetos que no se pueden usar en combate | `src/item_use.c` (`CannotUseItemsInBattle`) |
+| MTs reutilizables | `include/config/item.h` (`I_REUSABLE_TMS`) |
+| MOs olvidables | `include/config/pokemon.h` (`P_CAN_FORGET_HIDDEN_MOVE`) |
+| Filtrar tiendas por medallas/flags (útil para las megapiedras) | `src/shop_criteria.c` |
 | Documentación oficial de la expansion | `docs/` y https://rh-hideout.github.io/pokeemerald-expansion/ |
 
 Para editar mapas y NPCs de forma visual existe **Porymap**; para scripts y diálogos, **poryscript**.
@@ -324,3 +332,12 @@ Para editar mapas y NPCs de forma visual existe **Porymap**; para scripts y diá
 - Cuando algo no esté decidido en este archivo, **pregunta** antes de implementarlo, sobre todo si cambia el equilibrio del juego.
 - No subas ROMs ni saves, ni datos personales: el repo es público.
 - Para actualizar la expansion original: `git remote add rhh https://github.com/rh-hideout/pokeemerald-expansion` y `git pull rhh master` (puede haber conflictos con nuestros cambios). Mejor hacerlo pocas veces y en un commit aparte.
+
+## 12. Paso 1: qué se ha hecho exactamente
+
+- **Mote obligatorio (capturas):** al capturar ya no sale el Sí/No: sale "Give X a nickname!", al pulsar A/B se abre la pantalla de mote, y si se deja el nombre de la especie (o se borra todo) se vuelve a abrir hasta poner un mote. **Pendiente:** Pokémon regalados (inicial, Beldum, fósiles…) y huevos siguen preguntando con Sí/No.
+- **Tiendas:** se han quitado de todas las tiendas de Hoenn (incluidas Liga, Frontera y Cima Entrenador) los curativos de PS, los de estado (Antídoto, Antiparalizador, Despertar, Antiquemar, Antihielo, Cura Total), los Revivir, las hierbas de la Herboristería de Lavacalda y todos los Objetos X (incluidos Directo y Protección X). **Interpretación:** "curativos" incluye los de estado; si no se quería así, se vuelven a poner.
+- **Caramelos Raros a 1 ₽:** se venden en todas las tiendas que vendían curativos u Objetos X (incluida la Herboristería y el mostrador de Objetos X de Grandes Almacenes Calagua, que si no se quedarían vacíos).
+- **Objetos X en combate:** el jugador no puede usar Objetos X, Directo, Protección X ni Maxisetas (`EFFECT_ITEM_INCREASE_STAT`, `INCREASE_ALL_STATS`, `SET_FOCUS_ENERGY`, `SET_MIST`). Los entrenadores rivales sí pueden.
+- **Correr sin Deportivas** y **Pokédex Nacional** desde el principio de la partida (`NewGameInitData`).
+- **MTs reutilizables** y **MOs olvidables** activados por config.

@@ -1142,6 +1142,7 @@ bool32 CanThrowBall(void)
 static const u8 sText_CantThrowPokeBall_TwoMons[] = _("Cannot throw a ball!\nThere are two Pokémon out there!\p");
 static const u8 sText_CantThrowPokeBall_SemiInvulnerable[] = _("Cannot throw a ball!\nThere's no Pokémon in sight!\p");
 static const u8 sText_CantThrowPokeBall_Disabled[] = _("POKé BALLS cannot be used\nright now!\p");
+static const u8 sText_XItemsBanned[] = _("The locke rules don't allow\nusing this item in battle!{PAUSE_UNTIL_PRESS}");
 
 static void ItemUseInBattle_ShowPartyMenu(u8 taskId)
 {
@@ -1212,6 +1213,16 @@ bool32 CannotUseItemsInBattle(enum Item itemId, struct Pokemon *mon)
     {
         if (gBattleMons[battlerTarget].volatiles.embargoTimer)
             return TRUE;
+    }
+
+    // Dualocke (Items Clause): los Objetos X (incluidos Directo, Protección X y Maxisetas) no se pueden usar
+    if (battleUsage == EFFECT_ITEM_INCREASE_STAT
+     || battleUsage == EFFECT_ITEM_INCREASE_ALL_STATS
+     || battleUsage == EFFECT_ITEM_SET_FOCUS_ENERGY
+     || battleUsage == EFFECT_ITEM_SET_MIST)
+    {
+        StringExpandPlaceholders(gStringVar4, sText_XItemsBanned);
+        return TRUE;
     }
 
     // battleUsage checks
