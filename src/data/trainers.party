@@ -9375,15 +9375,15 @@ AI: Check Bad Move
 Multi Party: Half
 
 Camerupt
-Level: 36
+Level: 75
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 Mightyena
-Level: 38
+Level: 78
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 Golbat
-Level: 40
+Level: 81
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_EDWIN_2 ===
@@ -13540,15 +13540,15 @@ AI: Basic Trainer
 Multi Party: Half
 
 Mightyena
-Level: 42
+Level: 84
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
 Crobat
-Level: 43
+Level: 84
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
 Camerupt
-Level: 44
+Level: 84
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
 === TRAINER_PETE ===

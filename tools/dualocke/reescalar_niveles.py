@@ -122,8 +122,10 @@ def mapas_de_entrenadores():
         with open(os.path.join("data/maps", carpeta, "map.json"), encoding="utf-8") as f:
             map_id = json.load(f)["id"]
         with open(script, encoding="utf-8") as f:
-            for t in re.findall(r"trainerbattle\w*\s+(?:\w+,\s*)?(TRAINER_\w+)", f.read()):
-                resultado.setdefault(t, map_id)
+            # trainerbattle_* y multi_2_vs_2 (Magno y Tatiano en el Centro Espacial)
+            for linea in re.findall(r"^\s*(?:trainerbattle|multi_)\w*\s+.*$", f.read(), re.M):
+                for t in re.findall(r"\bTRAINER_\w+", linea):
+                    resultado.setdefault(t, map_id)
     return resultado
 
 
