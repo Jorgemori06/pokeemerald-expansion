@@ -31,7 +31,7 @@ Segunda tarea de la sesión de Miguel con Claude, ya con el nuevo reparto: Migue
 | 8 | 84 | 70-81 | Galano 84, Aquiles 84 | 67-73 |
 | 9 | 100 | 81-97 | Sidney 92, Fátima 94, Nívea 95, Dracón 97, Plubio 100, Blasco 90 | 78-85 |
 
-475 entrenadores reescalados, más todas las zonas salvajes de Hoenn de la historia principal.
+477 entrenadores reescalados (475 en la primera versión; Magno y Tatiano del Centro Espacial se añadieron después), más todas las zonas salvajes de Hoenn de la historia principal.
 
 ## Decisiones de Claude por el camino (revisables)
 
