@@ -139,7 +139,15 @@ Regla general: **el as de cada jefe va exactamente al nivel del cap**, el resto 
 - El cap es **duro**: al llegar al cap, el Pokémon no gana experiencia.
 - En los tests de la expansion (`make check`) el cap no se aplica (`TESTING` en `src/caps.c`), porque allí no hay medallas y el cap de 16 rompería los tests de experiencia.
 - El último salto es grande, pero no obliga a farmear porque las tiendas venderán **Caramelos Raros a 1 ₽**, y estos **no funcionan por encima del cap**.
-- Los niveles de entrenadores y salvajes **todavía no están reescalados**: solo están puestos los caps. El reescalado va junto al randomizer (sección 7).
+- **Reescalado hecho** (Miguel, 23/10/2026) con `tools/dualocke/reescalar_niveles.py`, que lee los niveles originales de la expansion y se puede volver a lanzar tras tocar la tabla. Cómo funciona:
+  - Cada mapa de Hoenn está asignado a su **tramo** (entre una medalla y la siguiente, en orden de historia).
+  - **Entrenadores normales:** suben del cap anterior − 3 al cap del tramo − 3, según lo fuertes que eran en el original dentro de su tramo.
+  - **Líderes de gimnasio:** el equipo entero al cap.
+  - **Alto Mando:** Sidney 92, Fátima 94, Nívea 95 y Dracón 97, el equipo entero a ese nivel. **Plubio** 100 y **Blasco** en Calle Victoria 90.
+  - **Jefes a mitad de tramo** (rival, Magno, Aquiles, Blasco en Malvalona): el equipo entero 3 niveles por encima de los entrenadores de ese punto, sin pasar del cap.
+  - **Salvajes:** los entrenadores de su zona − 3, con un margen de ±2. Las tres cañas dan el mismo nivel.
+- **Sin reescalar todavía:** revanchas (Match Call), postgame (Cueva de Máximo, Frente Batalla, S.S. Marea, Cueva Ancestral, Cueva Alterada, Túnel del Desierto) y la Casa Trampa.
+- El randomizer **no debe tocar los niveles ni el tamaño de los equipos**: solo especies, movimientos, habilidades y objetos.
 
 ## 6. Megas, tiendas y evoluciones
 
@@ -308,6 +316,7 @@ Quién hace cada cosa y cómo se sube: sección 13.
 | Especies activadas (megas, gens) | `include/config/species_enabled.h` |
 | Configuración del mundo (seguidores, etc.) | `include/config/overworld.h` |
 | Encuentros salvajes | `src/data/wild_encounters.json` |
+| Reescalado de niveles por tramos (tabla de mapas y reglas) | `tools/dualocke/reescalar_niveles.py` |
 | Entrenadores | `src/data/trainers.party` |
 | Tiendas | scripts de cada mapa en `data/maps/*/scripts.inc` (`pokemart`) |
 | Comprobación del Aro Mega | `src/battle_util.c` (busca `ITEM_MEGA_RING`) |
@@ -334,6 +343,7 @@ Para editar mapas y NPCs de forma visual existe **Porymap**; para scripts y diá
 - **Repartíos el trabajo** para aprovechar los límites de los dos (por ejemplo, uno la traducción y otro las reglas o el randomizer).
 - **Conversaciones nuevas por tarea**, empezando con: *"Lee DUALOCKE.md del repo Jorgemori06/pokeemerald-expansion y luego ayúdame con X"*. Hay que tener la cuenta de GitHub conectada a Claude (Ajustes → Conectores → GitHub).
 - Para tareas repetitivas (traducir textos en masa) puede bastar un modelo más ligero.
+- **Skills y agentes de Claude recomendados** (y cómo instalarlos): `HERRAMIENTAS_CLAUDE.md`.
 - Antes de que dos personas toquen lo mismo, hablarlo para no pisarse los cambios. El reparto y el flujo de trabajo están en la sección 13.
 
 ### Para Claude
@@ -361,12 +371,12 @@ Para editar mapas y NPCs de forma visual existe **Porymap**; para scripts y diá
 
 ## 13. Cómo trabajamos los dos en paralelo
 
-**Propuesta de Miguel (23/10/2026), confirmada por Jorge.** Miguel trabaja desde su fork `Mike360mine/pokeemerald-expansion` y abre los PR desde allí; Jorge, con ramas en este repo. Regla en `master`: PR obligatorio con una aprobación del otro.
+**Propuesta de Miguel (23/10/2026), confirmada por Jorge.** Desde el 23/10/2026 Miguel es colaborador, así que **los dos trabajan con ramas en este repo** (`jorge/...`, `miguel/...`) y ya no hace falta el fork de Miguel. Regla en `master`: PR obligatorio con una aprobación del otro.
 
 ### Preparación (una vez, la hace Jorge)
 
-1. **Añadir a Miguel como colaborador**: Settings → Collaborators → `Mike360mine`. Así los dos trabajáis con ramas en este mismo repo y no hacen falta forks. Mientras no esté hecho, Miguel trabaja desde su fork `Mike360mine/pokeemerald-expansion` con PRs.
-2. **Activar Actions**: pestaña Actions → *I understand my workflows, go ahead and enable them*. Sin esto, el CI no se ejecuta (GitHub lo desactiva en los forks).
+1. ~~**Añadir a Miguel como colaborador**~~ (hecho): Settings → Collaborators → `Mike360mine`. Así los dos trabajáis con ramas en este mismo repo y no hacen falta forks. Mientras no esté hecho, Miguel trabaja desde su fork `Mike360mine/pokeemerald-expansion` con PRs.
+2. ~~**Activar Actions**~~ (hecho): pestaña Actions → *I understand my workflows, go ahead and enable them*. Sin esto, el CI no se ejecuta (GitHub lo desactiva en los forks).
 3. **Opcional, recomendado:** Settings → Branches → regla para `master` que exija PR y que el check **CI** esté en verde antes de fusionar. Así nadie sube a `master` algo que no compila.
 
 ### Flujo para cada tarea
@@ -392,24 +402,33 @@ Para editar mapas y NPCs de forma visual existe **Porymap**; para scripts y diá
 - Contenido: qué se pidió, qué se cambió (archivos), decisiones tomadas por el camino, cómo quedó el CI y qué queda pendiente. Ejemplo: `registro/2026-10-23-miguel-paso1.md`.
 - `DUALOCKE.md` sigue siendo el resumen del estado actual; el registro es el historial.
 
-### Reparto propuesto
+### Reparto
 
-Se reparte por **zonas del código** para no pisarse:
+Decidido por Miguel el 23/10/2026 (pendiente de que Jorge lo confirme): **Miguel se encarga del equilibrio** (dificultad, combates, niveles, equipos) y **Jorge, de las funcionalidades** (sistemas nuevos en el juego y herramientas).
 
 | Tarea | Quién | Zona principal | Choca con |
 | --- | --- | --- | --- |
-| ~~Mote obligatorio en regalos y huevos~~ (hecho, PR #1) | Miguel | `src/tv.c`, `src/egg_hatch.c`, scripts de regalos | — |
-| Vidas + caja de muertos | Miguel | combate (desmayos), PC (`src/pokemon_storage_system.c`), HUD | — |
-| Primera captura por ruta (+ dupes, sin legendarios, shiny libre) | Miguel | `src/item_use.c` (Balls), `src/battle_script_commands.c`, flags por zona | — |
-| Una compra por objeto | Miguel | `src/shop.c` (compra) | Segundo dependiente |
-| Combate con Máximo en la Ruta 120 y el Aro Mega | Jorge (pendiente de empezar) | `data/maps/Route120/`, `src/data/trainers.party` | — |
-| Segundo dependiente en las tiendas (+ megapiedras desde el aro) | Jorge | `data/maps/*_Mart/`, `src/shop_criteria.c`, `src/shop.c` (listas) | Una compra por objeto |
-| Randomizer con semilla + reescalado de niveles | Jorge (pendiente de empezar) | script nuevo en `tools/` + `Makefile`; genera `wild_encounters.json`, `trainers.party`, etc. | Todo lo que edite esos datos a mano |
+| ~~Paso 1: reglas fáciles y mote obligatorio~~ (hecho, PR #1) | Miguel | — | — |
+| **Equilibrio** | | | |
+| ~~Reescalado de niveles de entrenadores y salvajes según la curva de la sección 5~~ (hecho, salvo revanchas y postgame) | Miguel | `src/data/trainers.party`, `src/data/wild_encounters.json` | Randomizer, combate con Máximo |
+| Equipos de jefes: +1/+2 Pokémon, objetos y qué mega lleva cada jefe (la lista de jefes ya está decidida, sección 6) | Miguel | `src/data/trainers.party` | Randomizer |
+| Equipo de Máximo en la Ruta 120 | Miguel | `src/data/trainers.party` | Combate con Máximo |
+| Parámetros del randomizer (qué se baraja, preferencias de movimientos, objetos de los jefes…) | Miguel | archivo de configuración del randomizer | Randomizer |
+| Contenido de las tiendas: precios, objetos del segundo dependiente, qué megapiedras y cuándo | Miguel | listas de las tiendas | Segundo dependiente |
+| **Funcionalidades** | | | |
+| Vidas + caja de muertos | Jorge (pendiente de empezar) | combate (desmayos), PC (`src/pokemon_storage_system.c`), HUD | — |
+| Primera captura por ruta (+ dupes, sin legendarios, shiny libre) | Jorge | `src/item_use.c` (Balls), `src/battle_script_commands.c`, flags por zona | — |
+| Una compra por objeto | Jorge | `src/shop.c` (compra) | — |
+| Evento del combate con Máximo y entrega del Aro Mega | Jorge (pendiente de empezar) | `data/maps/Route120/` | Equipo de Máximo |
+| Segundo dependiente en las tiendas (mecánica) | Jorge | `data/maps/*_Mart/`, `src/shop_criteria.c`, `src/shop.c` | Contenido de las tiendas |
+| Randomizer con semilla (la herramienta) | Jorge (pendiente de empezar) | script nuevo en `tools/` + `Makefile` | Todo lo de equilibrio en `trainers.party` y `wild_encounters.json` |
 | Traducción | Por decidir, cuando lo demás esté estable | casi todo `data/` y `src/` | Todo |
 
-Notas del reparto:
+Cómo encajan las dos partes:
 
-- **`src/shop.c`**: "una compra por objeto" y "segundo dependiente" tocan el mismo archivo. Se hace primero una y la otra se monta encima, o se habla antes.
-- **Randomizer**: mientras se hace, nadie más debería tocar a mano `src/data/wild_encounters.json` ni `src/data/trainers.party`. Si hace falta, se avisa.
-- **Traducción**: toca casi todos los archivos de texto. Mejor empezarla cuando las reglas estén cerradas, o en una rama larga que se actualice a menudo desde `master`.
-- **Decisiones pendientes** (sección 9: jefes con mega, aro en la Ruta 120, ROM española): las decide quien vaya a implementar esa parte, hablándolo con el otro antes.
+- **Los niveles y el tamaño de los equipos los pone Miguel a mano** en `trainers.party` y `wild_encounters.json`. **El randomizer de Jorge los respeta**: solo cambia especies, movimientos, habilidades y objetos, y lee sus parámetros de un archivo de configuración cuyos valores decide Miguel.
+- **Máximo:** Jorge hace el evento (script, mapa, entrega del aro) y Miguel decide su equipo. Hay que acordar el nombre del entrenador (`TRAINER_...`) antes de empezar.
+- **Segundo dependiente:** Jorge hace la mecánica y Miguel decide qué vende. Hay que acordar el formato de las listas antes de empezar.
+- **Choques en archivos:** `trainers.party` lo tocan los dos (Miguel los niveles y equipos, Jorge solo la entrada nueva de Máximo si hace falta). `src/shop.c` ya solo lo toca Jorge.
+- **Traducción:** toca casi todos los archivos de texto. Mejor empezarla cuando las reglas estén cerradas, o en una rama larga que se actualice a menudo desde `master`.
+- **Decisiones:** las de equilibrio las toma Miguel y las demás quien implemente esa parte, hablándolo antes con el otro. Ya decididas por Jorge (23/10/2026): el aro lo da Máximo en la Ruta 120 y la lista de jefes con mega (sección 6). Pendiente: la ROM española (sección 9).

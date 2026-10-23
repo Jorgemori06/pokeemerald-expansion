@@ -42,7 +42,8 @@ Sesión de Miguel con Claude (Claude Code, escritorio de Windows). Resumen de lo
 ### CI
 
 - Primera ejecución: compilan Esmeralda, FireRed, LeafGreen y la release. Los tests fallaban (4 tests de experiencia), **igual que en el commit de Jorge sin los cambios**: el level cap duro deja el cap en 16 en los tests, porque allí no hay medallas.
-- Arreglo: `GetCurrentLevelCap()` devuelve `MAX_LEVEL` si `TESTING`. Resultado de esa ejecución: en curso al escribir esto (se apunta aquí cuando termine).
+- Arreglo: `GetCurrentLevelCap()` devuelve `MAX_LEVEL` si `TESTING`. Resultado: **todo en verde** (compilación y tests).
+- Después se quitaron del CI los trabajos de FireRed y LeafGreen. Última ejecución, con todos los cambios del PR (commit `ea024ae2b`): **todo en verde**. `build-emerald` tardó 6 min y `test` 26 min. `release` tardó 34 min esta vez (en la anterior, 6): las máquinas gratuitas de GitHub varían bastante.
 - Los tests `Tests resume after CRASH` y `fatalf counts as CRASH` salen como `CRASH` a propósito; no son fallos.
 
 ## Lo que queda
