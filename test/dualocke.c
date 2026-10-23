@@ -197,16 +197,73 @@ TEST("Dualocke: un salvaje de una línea que ya tienes no cuenta")
     EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_PLUSLE, FALSE), MAPSEC_ROUTE_110), DUALOCKE_ENCOUNTER_FIRST);
 }
 
-TEST("Dualocke: las líneas con varias ramas cuentan como una")
+TEST("Dualocke: con una rama elegida, las demás ramas de la línea sí cuentan")
 {
     SetupCapture();
-    GiveMon(0, SPECIES_UMBREON);
-    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_EEVEE, FALSE), MAPSEC_ROUTE_101), DUALOCKE_ENCOUNTER_DUPE);
-    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_SYLVEON, FALSE), MAPSEC_ROUTE_101), DUALOCKE_ENCOUNTER_DUPE);
+    GiveMon(0, SPECIES_GARDEVOIR);
+    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_RALTS, FALSE), MAPSEC_ROUTE_102), DUALOCKE_ENCOUNTER_FIRST);
+    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_KIRLIA, FALSE), MAPSEC_ROUTE_102), DUALOCKE_ENCOUNTER_FIRST);
+    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_GALLADE, FALSE), MAPSEC_ROUTE_102), DUALOCKE_ENCOUNTER_FIRST);
+    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_GARDEVOIR, FALSE), MAPSEC_ROUTE_102), DUALOCKE_ENCOUNTER_DUPE);
 
+    // Con las dos ramas ocupadas, ya nada de la línea cuenta
+    GiveMon(1, SPECIES_GALLADE);
+    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_RALTS, FALSE), MAPSEC_ROUTE_102), DUALOCKE_ENCOUNTER_DUPE);
+
+    SetupCapture();
+    GiveMon(0, SPECIES_VAPOREON);
+    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_EEVEE, FALSE), MAPSEC_ROUTE_102), DUALOCKE_ENCOUNTER_FIRST);
+    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_SYLVEON, FALSE), MAPSEC_ROUTE_102), DUALOCKE_ENCOUNTER_FIRST);
+    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_VAPOREON, FALSE), MAPSEC_ROUTE_102), DUALOCKE_ENCOUNTER_DUPE);
+}
+
+TEST("Dualocke: uno sin rama elegida ocupa toda la línea")
+{
+    SetupCapture();
+    GiveMon(0, SPECIES_KIRLIA);
+    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_RALTS, FALSE), MAPSEC_ROUTE_102), DUALOCKE_ENCOUNTER_DUPE);
+    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_GALLADE, FALSE), MAPSEC_ROUTE_102), DUALOCKE_ENCOUNTER_DUPE);
+
+    SetupCapture();
+    GiveMon(0, SPECIES_VAPOREON);
+    GiveMon(1, SPECIES_EEVEE);
+    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_SYLVEON, FALSE), MAPSEC_ROUTE_102), DUALOCKE_ENCOUNTER_DUPE);
+
+    // Las líneas sin ramas, como siempre
     SetupCapture();
     GiveMon(0, SPECIES_ZIGZAGOON);
     EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_OBSTAGOON, FALSE), MAPSEC_ROUTE_101), DUALOCKE_ENCOUNTER_DUPE);
+}
+
+TEST("Dualocke: no se puede evolucionar a una rama que ya tienes viva")
+{
+    struct Pokemon *kirlia = &gParties[B_TRAINER_PLAYER][1];
+    u32 hp = 0;
+
+    SetupCapture();
+    GiveMon(0, SPECIES_GARDEVOIR);
+    CreateMaleMon(kirlia, SPECIES_KIRLIA, 40);
+    CalculateMonStats(kirlia);
+    CalculatePlayerPartyCount();
+
+    // A Gardevoir no; a Gallade (Piedra Alba) sí
+    EXPECT_EQ(GetEvolutionTargetSpecies(kirlia, EVO_MODE_NORMAL, ITEM_NONE, NULL, NULL, CHECK_EVO), SPECIES_NONE);
+    EXPECT_EQ(GetEvolutionTargetSpecies(kirlia, EVO_MODE_ITEM_CHECK, ITEM_DAWN_STONE, NULL, NULL, CHECK_EVO), SPECIES_GALLADE);
+
+    // Si el Gardevoir muere, la rama se libera
+    SetMonData(&gParties[B_TRAINER_PLAYER][0], MON_DATA_HP, &hp);
+    EXPECT_EQ(GetEvolutionTargetSpecies(kirlia, EVO_MODE_NORMAL, ITEM_NONE, NULL, NULL, CHECK_EVO), SPECIES_GARDEVOIR);
+}
+
+TEST("Dualocke: Eevee no evoluciona a la eeveelución que ya tienes")
+{
+    struct Pokemon *eevee = &gParties[B_TRAINER_PLAYER][1];
+
+    SetupCapture();
+    GiveMon(0, SPECIES_VAPOREON);
+    GiveMon(1, SPECIES_EEVEE);
+    EXPECT_EQ(GetEvolutionTargetSpecies(eevee, EVO_MODE_ITEM_CHECK, ITEM_WATER_STONE, NULL, NULL, CHECK_EVO), SPECIES_NONE);
+    EXPECT_EQ(GetEvolutionTargetSpecies(eevee, EVO_MODE_ITEM_CHECK, ITEM_FIRE_STONE, NULL, NULL, CHECK_EVO), SPECIES_FLAREON);
 }
 
 TEST("Dualocke: los de la caja de muertos no cuentan como línea que ya tienes")

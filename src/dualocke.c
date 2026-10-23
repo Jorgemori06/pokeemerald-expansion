@@ -193,47 +193,56 @@ bool32 Dualocke_IsSpeciesLegendary(enum Species species)
     return info->isRestrictedLegendary || info->isSubLegendary || info->isMythical;
 }
 
-// Línea evolutiva: todas las especies (en su forma base) que salen de la misma raíz.
-// Las formas regionales y las megas cuentan como su especie base.
-#define MAX_LINE_SPECIES 32
+// Ramas: las evoluciones finales a las que puede llegar una especie. Las formas
+// regionales y las megas cuentan como su especie base (Raichu de Alola es la rama
+// Raichu de la línea de Pikachu).
+// - Un Pokémon con una sola rama posible (Gardevoir, Silcoon, Pikachu…) ocupa esa rama.
+// - Uno con varias (Ralts, Kirlia, Eevee…) todavía no ha elegido y ocupa toda la línea.
+// Dos especies son de la misma línea si comparten alguna rama.
+#define MAX_EVO_NODES 32
+#define MAX_BRANCHES  16
 
-static bool32 IsInLine(const u16 *line, u32 count, enum Species species)
+static bool32 IsInList(const u16 *list, u32 count, u32 species)
 {
     u32 i;
 
     for (i = 0; i < count; i++)
     {
-        if (line[i] == species)
+        if (list[i] == species)
             return TRUE;
     }
     return FALSE;
 }
 
-static u32 GetEvolutionLine(enum Species species, u16 *line)
+static bool32 ListsIntersect(const u16 *a, u32 countA, const u16 *b, u32 countB)
 {
-    enum Species current = SanitizeSpeciesId(species), preEvo;
-    u32 i, j, k, count;
+    u32 i;
 
-    // Raíz: se sube por las preevoluciones (también desde la forma base, para las
-    // evoluciones que salen de una forma regional, como Obstagoon o Sirfetch'd).
-    for (i = 0; i < 4; i++)
+    for (i = 0; i < countA; i++)
     {
-        preEvo = GetSpeciesPreEvolution(current);
-        if (preEvo == SPECIES_NONE && GET_BASE_SPECIES_ID(current) != current)
-            preEvo = GetSpeciesPreEvolution(GET_BASE_SPECIES_ID(current));
-        if (preEvo == SPECIES_NONE)
-            break;
-        current = preEvo;
+        if (IsInList(b, countB, a[i]))
+            return TRUE;
     }
+    return FALSE;
+}
 
-    line[0] = GET_BASE_SPECIES_ID(current);
-    count = 1;
+static u32 GetSpeciesBranches(enum Species species, u16 *branches)
+{
+    u16 nodes[MAX_EVO_NODES];
+    u32 head = 0, nodeCount = 0, branchCount = 0;
+    u32 j, k;
 
-    // Descendientes de todas las formas de cada miembro de la línea.
-    for (i = 0; i < count; i++)
+    species = GET_BASE_SPECIES_ID(SanitizeSpeciesId(species));
+    if (species == SPECIES_NONE)
+        return 0;
+    nodes[nodeCount++] = species;
+
+    while (head < nodeCount)
     {
-        const u16 *forms = GetSpeciesFormTable(line[i]);
-        u16 single[2] = {line[i], FORM_SPECIES_END};
+        u32 current = nodes[head++];
+        const u16 *forms = GetSpeciesFormTable(current);
+        u16 single[2] = {current, FORM_SPECIES_END};
+        bool32 evolves = FALSE;
 
         if (forms == NULL || forms[0] == FORM_SPECIES_END)
             forms = single;
@@ -246,52 +255,113 @@ static u32 GetEvolutionLine(enum Species species, u16 *line)
                 continue;
             for (k = 0; evolutions[k].method != EVOLUTIONS_END; k++)
             {
-                enum Species target = GET_BASE_SPECIES_ID(SanitizeSpeciesId(evolutions[k].targetSpecies));
+                u32 target = GET_BASE_SPECIES_ID(SanitizeSpeciesId(evolutions[k].targetSpecies));
 
-                if (target != SPECIES_NONE && !IsInLine(line, count, target) && count < MAX_LINE_SPECIES)
-                    line[count++] = target;
+                if (target == SPECIES_NONE || target == current)
+                    continue;
+                evolves = TRUE;
+                if (!IsInList(nodes, nodeCount, target) && nodeCount < MAX_EVO_NODES)
+                    nodes[nodeCount++] = target;
             }
         }
+
+        if (!evolves && branchCount < MAX_BRANCHES)
+            branches[branchCount++] = current;
     }
-    return count;
+    return branchCount;
 }
 
-static bool32 IsBoxMonOfLine(struct BoxPokemon *boxMon, const u16 *line, u32 count)
+// Recorre los Pokémon vivos del jugador (equipo con PS y PC sin la caja de muertos),
+// sin contar `exclude`, que comparten alguna rama con `branches`. Marca en `occupied`
+// las ramas que ya tienen dueño. Devuelve TRUE si alguno no ha elegido rama todavía.
+static bool32 GetOccupiedBranches(const u16 *branches, u32 branchCount, struct BoxPokemon *exclude, bool8 *occupied)
 {
-    enum Species species = GetBoxMonData(boxMon, MON_DATA_SPECIES_OR_EGG);
+    u16 monBranches[MAX_BRANCHES];
+    bool32 anyUndecided = FALSE;
+    u32 i, j, box, monBranchCount;
 
-    if (species == SPECIES_NONE || species == SPECIES_EGG)
-        return FALSE;
-    return IsInLine(line, count, GET_BASE_SPECIES_ID(species));
-}
-
-// "Tener una línea" = tener un Pokémon vivo de esa línea en el equipo o en el PC,
-// sin contar la caja de muertos.
-bool32 Dualocke_PlayerHasLiveMonOfLine(enum Species species)
-{
-    u16 line[MAX_LINE_SPECIES];
-    u32 count = GetEvolutionLine(species, line);
-    u32 i, box;
-
-    for (i = 0; i < PARTY_SIZE; i++)
+    for (i = 0; i < PARTY_SIZE + TOTAL_BOXES_COUNT * IN_BOX_COUNT; i++)
     {
-        struct Pokemon *mon = &gParties[B_TRAINER_PLAYER][i];
+        struct BoxPokemon *boxMon;
+        enum Species species;
 
-        if (GetMonData(mon, MON_DATA_HP) != 0 && IsBoxMonOfLine(&mon->box, line, count))
-            return TRUE;
-    }
-
-    for (box = 0; box < TOTAL_BOXES_COUNT; box++)
-    {
-        if (Dualocke_IsDeadBox(box))
-            continue;
-        for (i = 0; i < IN_BOX_COUNT; i++)
+        if (i < PARTY_SIZE)
         {
-            if (IsBoxMonOfLine(GetBoxedMonPtr(box, i), line, count))
-                return TRUE;
+            if (GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_HP) == 0)
+                continue;
+            boxMon = &gParties[B_TRAINER_PLAYER][i].box;
+        }
+        else
+        {
+            box = (i - PARTY_SIZE) / IN_BOX_COUNT;
+            if (Dualocke_IsDeadBox(box))
+                continue;
+            boxMon = GetBoxedMonPtr(box, (i - PARTY_SIZE) % IN_BOX_COUNT);
+        }
+        if (boxMon == exclude)
+            continue;
+
+        species = GetBoxMonData(boxMon, MON_DATA_SPECIES_OR_EGG);
+        if (species == SPECIES_NONE || species == SPECIES_EGG)
+            continue;
+
+        monBranchCount = GetSpeciesBranches(species, monBranches);
+        if (!ListsIntersect(monBranches, monBranchCount, branches, branchCount))
+            continue;
+        if (monBranchCount > 1)
+        {
+            anyUndecided = TRUE;
+            continue;
+        }
+        for (j = 0; j < branchCount; j++)
+        {
+            if (branches[j] == monBranches[0])
+                occupied[j] = TRUE;
         }
     }
-    return FALSE;
+    return anyUndecided;
+}
+
+static bool32 AreAllBranchesOccupied(const bool8 *occupied, u32 branchCount)
+{
+    u32 i;
+
+    for (i = 0; i < branchCount; i++)
+    {
+        if (!occupied[i])
+            return FALSE;
+    }
+    return branchCount > 0;
+}
+
+// Repetido: tienes vivo uno de la línea que todavía no ha elegido rama, o todas las
+// ramas a las que puede llegar esta especie ya las tienes.
+bool32 Dualocke_IsDupe(enum Species species)
+{
+    u16 branches[MAX_BRANCHES];
+    bool8 occupied[MAX_BRANCHES] = {0};
+    u32 count = GetSpeciesBranches(species, branches);
+
+    if (GetOccupiedBranches(branches, count, NULL, occupied))
+        return TRUE;
+    return AreAllBranchesOccupied(occupied, count);
+}
+
+// Un Pokémon del equipo no puede evolucionar a una especie cuyas ramas ya tienes
+// todas, con otros Pokémon vivos que ya las eligieron (si tienes Gardevoir, tu Kirlia
+// no evoluciona a Gardevoir, pero sí a Gallade). Si el que tenías muere, se libera.
+bool32 Dualocke_IsEvolutionBlocked(struct Pokemon *mon, enum Species targetSpecies)
+{
+    u16 branches[MAX_BRANCHES];
+    bool8 occupied[MAX_BRANCHES] = {0};
+    u32 count;
+
+    if (mon < &gParties[B_TRAINER_PLAYER][0] || mon >= &gParties[B_TRAINER_PLAYER][PARTY_SIZE])
+        return FALSE;
+
+    count = GetSpeciesBranches(targetSpecies, branches);
+    GetOccupiedBranches(branches, count, &mon->box, occupied);
+    return AreAllBranchesOccupied(occupied, count);
 }
 
 enum DualockeEncounter Dualocke_GetWildEncounterStatus(struct Pokemon *wildMon, u32 mapsec)
@@ -306,7 +376,7 @@ enum DualockeEncounter Dualocke_GetWildEncounterStatus(struct Pokemon *wildMon, 
         return DUALOCKE_ENCOUNTER_ZONE_USED;
     if (Dualocke_IsSpeciesLegendary(species))
         return DUALOCKE_ENCOUNTER_LEGENDARY;
-    if (Dualocke_PlayerHasLiveMonOfLine(species))
+    if (Dualocke_IsDupe(species))
         return DUALOCKE_ENCOUNTER_DUPE;
     return DUALOCKE_ENCOUNTER_FIRST;
 }

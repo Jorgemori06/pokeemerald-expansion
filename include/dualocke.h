@@ -23,14 +23,15 @@ enum DualockeEncounter
     DUALOCKE_ENCOUNTER_NO_RULE,     // La regla no se aplica (evento, estático, entrenador, antes de tener Balls…): se puede capturar
     DUALOCKE_ENCOUNTER_FIRST,       // Primer Pokémon válido de la zona: se puede capturar y gasta la zona
     DUALOCKE_ENCOUNTER_SHINY,       // Shiny: se puede capturar siempre y no gasta la zona
-    DUALOCKE_ENCOUNTER_DUPE,        // Línea que ya tienes viva: no cuenta, no se puede capturar y la zona sigue libre
+    DUALOCKE_ENCOUNTER_DUPE,        // Repetido (línea sin rama elegida o ramas que ya tienes): no cuenta, no se puede capturar y la zona sigue libre
     DUALOCKE_ENCOUNTER_LEGENDARY,   // Legendario o singular: no cuenta, no se puede capturar y la zona sigue libre
     DUALOCKE_ENCOUNTER_ZONE_USED,   // La zona ya tuvo su encuentro: no se puede capturar
 };
 
 bool32 Dualocke_IsZoneCaptureUsed(u32 mapsec);
 void Dualocke_UseZoneCapture(u32 mapsec);
-bool32 Dualocke_PlayerHasLiveMonOfLine(enum Species species);
+bool32 Dualocke_IsDupe(enum Species species);
+bool32 Dualocke_IsEvolutionBlocked(struct Pokemon *mon, enum Species targetSpecies);
 bool32 Dualocke_IsSpeciesLegendary(enum Species species);
 enum DualockeEncounter Dualocke_GetWildEncounterStatus(struct Pokemon *wildMon, u32 mapsec);
 void Dualocke_SetRandomEncounter(void);
