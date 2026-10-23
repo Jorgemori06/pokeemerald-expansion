@@ -83,8 +83,9 @@ def main():
     partes_base = re.split(r"^=== (TRAINER_\w+) ===[ \t]*$", base_txt, flags=re.M)
     bloques_base = {partes_base[i]: partes_base[i + 1] for i in range(1, len(partes_base), 2)}
     base = rn.leer_entrenadores(base_txt)
-    _, tramo_de, _ = rn.calcular_entrenadores(base, rn.mapas_de_entrenadores())
-    normales = {t for t in tramo_de if t not in rn.LIDERES and t not in rn.JEFES_FIJOS
+    # Entrenadores normales, revanchas (también las de los líderes) y postgame
+    nuevos, _, _ = rn.calcular_entrenadores(base, rn.mapas_de_entrenadores())
+    normales = {t for t in nuevos if t not in rn.LIDERES and t not in rn.JEFES_FIJOS
                 and t not in ej.EQUIPOS and not ej.RIVAL.match(t)}
 
     with open(rn.TRAINERS, encoding="utf-8", newline="") as f:

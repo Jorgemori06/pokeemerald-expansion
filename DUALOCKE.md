@@ -146,7 +146,12 @@ Regla general: **el as de cada jefe va exactamente al nivel del cap**, el resto 
   - **Alto Mando:** Sidney 92, Fátima 94, Nívea 95 y Dracón 97, el equipo entero a ese nivel. **Plubio** 100 y **Blasco** en Calle Victoria 90.
   - **Jefes a mitad de tramo** (rival, Magno, Aquiles, Blasco en Malvalona): el equipo entero 3 niveles por encima de los entrenadores de ese punto, sin pasar del cap.
   - **Salvajes:** los entrenadores de su zona − 3, con un margen de ±2. Las tres cañas dan el mismo nivel.
-- **Sin reescalar todavía:** revanchas (Match Call), postgame (Cueva de Máximo, Frente Batalla, S.S. Marea, Cueva Ancestral, Cueva Alterada, Túnel del Desierto) y la Casa Trampa.
+- **Revanchas, postgame y Casa Trampa (hecho, Miguel, 23/10/2026):**
+  - **Revanchas (Match Call):** se activan con 5 medallas. Cada escalón sube respecto al primer combate en la misma proporción que en el original, pero repartido dentro de unos límites: \_2 entre 47 y 59, \_3 entre 59 y 70, \_4 entre 70 y 81 y \_5 entre 81 y 97. Así nunca te retan muy por encima del cap que puedes tener. Ejemplo: Rosa 47 → 59 → 70 → 81 → 97.
+  - **Revanchas de los líderes y de Blasco** (postgame): todo a **100**.
+  - **Postgame** (S.S. Marea, Cueva de Máximo en la Cascada Meteoro, Túnel del Desierto, Cueva Ancestral, Cueva Alterada, cuevas Terra y Marina): entrenadores a **100** y salvajes a **97**.
+  - **Casa Trampa:** la prueba 1 al tramo 3, y cada prueba N al tramo de la medalla N+1 que la abre (la 8, a la Liga). No cuenta para la banda de su tramo, así que no mueve los niveles de la historia principal.
+  - **No se tocan:** el Frente Batalla y la Cima Entrenador, que tienen su propio sistema de niveles.
 - **Evoluciones de los entrenadores normales (hecho):** `tools/dualocke/evolucionar_entrenadores.py` evoluciona sus Pokémon según el nivel. Las evoluciones por nivel van a su nivel normal; las que no son por nivel (piedra, amistad…) van a 30 la primera y a 40 la segunda. Los tres scripts se lanzan en orden: `reescalar_niveles.py`, `equipos_jefes.py` y `evolucionar_entrenadores.py`.
 - El randomizer **no debe tocar los niveles ni el tamaño de los equipos**: solo especies, movimientos, habilidades y objetos. Al cambiar especies, debe mantener la regla de evolucionar según el nivel.
 

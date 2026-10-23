@@ -20,6 +20,12 @@ Reglas (decididas por Miguel, ver DUALOCKE.md, sección 5):
 - Jefes a mitad de tramo (rival, Magno, Aquiles, Blasco en Malvalona): el equipo entero
   3 niveles por encima de los entrenadores de ese punto, sin pasar del cap.
 - Salvajes: 3 niveles por debajo de los entrenadores de su zona, con un margen de +-2.
+- Casa Trampa: cada prueba va al tramo de la medalla que la abre.
+- Revanchas (Match Call): cada escalón sube respecto al primer combate en la misma
+  proporción que en el original, repartido dentro de los límites de su escalón
+  (_2: 47-59, _3: 59-70, _4: 70-81, _5: 81-97). Las de los líderes y Blasco, a 100.
+- Postgame (S.S. Marea, Cueva de Máximo, cuevas del postgame): entrenadores a 100 y
+  salvajes a 97.
 """
 
 import fnmatch
@@ -35,7 +41,9 @@ TRAINERS = "src/data/trainers.party"
 WILD = "src/data/wild_encounters.json"
 
 # Cap que se sube al ganar la medalla de cada tramo (src/caps.c)
-CAPS = {1: 16, 2: 23, 3: 32, 4: 43, 5: 50, 6: 62, 7: 73, 8: 84, 9: 100}
+CAPS = {1: 16, 2: 23, 3: 32, 4: 43, 5: 50, 6: 62, 7: 73, 8: 84, 9: 100, 10: 100}  # 10 = postgame
+# Límites de nivel de cada escalón de revancha (_2 a _5): los rangos de los tramos 6 a 9
+LIMITES_REVANCHAS = {2: (47, 59), 3: (59, 70), 4: (70, 81), 5: (81, 97)}
 INICIO_TRAMO_1 = 3   # nivel de los primeros entrenadores del juego
 MARGEN_NORMALES = 3  # los entrenadores normales llegan hasta cap - 3
 MARGEN_SALVAJES = 3  # salvajes = entrenadores de la zona - 3
@@ -49,22 +57,25 @@ TRAMOS = {
         "DEWFORD_TOWN_GYM"],
     3: ["ROUTE109", "ROUTE109_SEASHORE_HOUSE", "SLATEPORT_CITY",
         "SLATEPORT_CITY_OCEANIC_MUSEUM_*", "ROUTE110", "MAUVILLE_CITY", "ROUTE117",
-        "MAUVILLE_CITY_GYM"],
+        "MAUVILLE_CITY_GYM", "ROUTE110_TRICK_HOUSE_PUZZLE1"],
     4: ["ROUTE111", "ROUTE112", "FIERY_PATH", "ROUTE113", "ROUTE114", "METEOR_FALLS_1F_1R",
-        "ROUTE115", "MT_CHIMNEY", "JAGGED_PASS", "LAVARIDGE_TOWN_GYM_*"],
-    5: ["PETALBURG_CITY_GYM"],
+        "ROUTE115", "MT_CHIMNEY", "JAGGED_PASS", "LAVARIDGE_TOWN_GYM_*", "ROUTE110_TRICK_HOUSE_PUZZLE2"],
+    5: ["PETALBURG_CITY_GYM", "ROUTE110_TRICK_HOUSE_PUZZLE3"],
     6: ["PETALBURG_CITY", "ROUTE105", "ROUTE107", "ROUTE108", "ABANDONED_SHIP_*",
         "NEW_MAUVILLE_*", "MIRAGE_TOWER_*", "ROUTE118", "ROUTE123", "ROUTE119",
-        "ROUTE119_WEATHER_INSTITUTE_*", "ROUTE120", "FORTREE_CITY_GYM"],
+        "ROUTE119_WEATHER_INSTITUTE_*", "ROUTE120", "FORTREE_CITY_GYM", "ROUTE110_TRICK_HOUSE_PUZZLE4"],
     7: ["ROUTE121", "SAFARI_ZONE_*", "LILYCOVE_CITY", "MT_PYRE_*", "ROUTE122",
         "MAGMA_HIDEOUT_*", "AQUA_HIDEOUT_*", "ROUTE124", "ROUTE125", "SHOAL_CAVE_*",
-        "ROUTE126", "ROUTE127", "MOSSDEEP_CITY", "MOSSDEEP_CITY_GYM"],
+        "ROUTE126", "ROUTE127", "MOSSDEEP_CITY", "MOSSDEEP_CITY_GYM", "ROUTE110_TRICK_HOUSE_PUZZLE5"],
     8: ["MOSSDEEP_CITY_SPACE_CENTER_*", "UNDERWATER_*", "ROUTE128", "SEAFLOOR_CAVERN_*",
         "SOOTOPOLIS_CITY", "CAVE_OF_ORIGIN_*", "SKY_PILLAR_*", "ROUTE129", "ROUTE130",
         "ROUTE131", "PACIFIDLOG_TOWN", "ROUTE132", "ROUTE133", "ROUTE134",
-        "SOOTOPOLIS_CITY_GYM_*"],
+        "SOOTOPOLIS_CITY_GYM_*", "ROUTE110_TRICK_HOUSE_PUZZLE6"],
     9: ["EVER_GRANDE_CITY", "VICTORY_ROAD_*", "METEOR_FALLS_1F_2R", "METEOR_FALLS_B1F_*",
-        "EVER_GRANDE_CITY_*S_ROOM"],
+        "EVER_GRANDE_CITY_*S_ROOM", "ROUTE110_TRICK_HOUSE_PUZZLE7", "ROUTE110_TRICK_HOUSE_PUZZLE8"],
+    # Postgame: entrenadores a 100 y salvajes a 97
+    10: ["SS_TIDAL_*", "METEOR_FALLS_STEVENS_CAVE", "DESERT_UNDERPASS", "ARTISAN_CAVE_*", "ALTERING_CAVE",
+         "TERRA_CAVE_*", "MARINE_CAVE_*", "UNDERWATER_MARINE_CAVE"],
 }
 
 LIDERES = {"TRAINER_ROXANNE_1", "TRAINER_BRAWLY_1", "TRAINER_WATTSON_1", "TRAINER_FLANNERY_1",
@@ -92,6 +103,8 @@ def tramo_de_mapa(map_id):
 
 
 def rango_tramo(tramo):
+    if tramo == 10:  # postgame: todo a 100
+        return CAPS[10], CAPS[10]
     inicio = INICIO_TRAMO_1 if tramo == 1 else CAPS[tramo - 1] - MARGEN_NORMALES
     return inicio, CAPS[tramo] - MARGEN_NORMALES
 
@@ -144,7 +157,8 @@ def calcular_entrenadores(base, mapas):
     # Banda original de cada tramo: nivel del Pokémon más fuerte de cada entrenador normal
     bandas = {}
     for s in TRAMOS:
-        maximos = [max(base[t]) for t, ts in tramo_de.items() if ts == s
+        # La Casa Trampa (opcional) no cuenta para la banda, para no mover la historia principal
+        maximos = [max(base[t]) for t, ts in tramo_de.items() if ts == s and "TRICK_HOUSE" not in mapas[t]
                    and t not in LIDERES and t not in JEFES_FIJOS and not es_jefe_medio(t)]
         if maximos:
             bandas[s] = (percentil(maximos, 0.10), percentil(maximos, 0.95))
@@ -163,7 +177,40 @@ def calcular_entrenadores(base, mapas):
             nuevos[t] = [nivel] * len(lv)
         else:
             nuevos[t] = [max(2, interpolar(v, vmin, vmax, nmin, nmax)) for v in lv]
+
+    # Revanchas: cada escalón sube respecto al primer combate en la misma proporción que en
+    # el original, y luego se reparte dentro de los límites de su escalón (las revanchas
+    # empiezan con 5 medallas, así que nunca superan mucho el cap que se puede tener).
+    # Las de los líderes (y de Blasco) son de postgame: todo a 100.
+    proporcional = {}
+    for revanchas in leer_revanchas():
+        primero = revanchas[0]
+        if primero not in nuevos or primero not in base:
+            continue
+        postgame = primero in LIDERES or primero in JEFES_FIJOS
+        factor = max(nuevos[primero]) / max(base[primero])
+        for escalon, t in enumerate(revanchas[1:], start=2):
+            if t in base and base[t] and t not in nuevos:
+                if postgame:
+                    nuevos[t] = [CAPS[10]] * len(base[t])
+                else:
+                    proporcional[t] = (escalon, [v * factor for v in base[t]])
+    for escalon, (lo, hi) in LIMITES_REVANCHAS.items():
+        del_escalon = {t: lv for t, (e, lv) in proporcional.items() if e == escalon}
+        if not del_escalon:
+            continue
+        vmin = min(min(lv) for lv in del_escalon.values())
+        vmax = max(max(lv) for lv in del_escalon.values())
+        for t, lv in del_escalon.items():
+            nuevos[t] = [interpolar(v, vmin, vmax, lo, hi) for v in lv]
     return nuevos, tramo_de, bandas
+
+
+def leer_revanchas():
+    """Devuelve las filas de gRematchTable: [primer combate, revancha 2, 3...]."""
+    with open("src/battle_setup.c", encoding="utf-8") as f:
+        texto = f.read()
+    return [re.findall(r"TRAINER_\w+", fila) for fila in re.findall(r"=\s*REMATCH\(([^)]*)\)", texto)]
 
 
 def aplicar_entrenadores(texto, nuevos):
