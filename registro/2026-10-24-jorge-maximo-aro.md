@@ -52,12 +52,12 @@ Ahora (`data/maps/Route120/scripts.inc`):
 - **No probado jugando.** Hay que comprobar en mGBA: que el combate salta al decir "sí", que al ganar aparece "Obtained MEGA RING!", que después se puede megaevolucionar, y el caso de perder.
 - Sin test automático: el evento son movimientos, combates y mensajes en el mapa, y el framework de tests de la expansion no cubre eso.
 
-## Para Miguel (equilibrio, no tocado)
+## Los Kecleon del Detector
 
-- El **Kecleon del puente** sigue a **nivel 30** (`setwildbattle SPECIES_KECLEON, 30`), igual que los otros Kecleon que se ven con el Detector. En el tramo 6 los salvajes van de 44 a 53, así que quizá quieras subirlos.
-- Cuando esté la regla de captura por zona, ese Kecleon es un salvaje de la Ruta 120: habrá que decidir si cuenta como su primer encuentro.
+- Son **Pokémon de evento**: no gastan la captura de la zona, así que se pueden capturar todos (lo dice ya la sección 4 de `DUALOCKE.md`).
+- Siguen a **nivel 30** (`setwildbattle SPECIES_KECLEON, 30` en la Ruta 120 y en `data/scripts/kecleon.inc`). Como el resto de estáticos, el randomizer los cambiará por especies aleatorias y les pondrá el nivel de la curva (sección 7).
 
 ## Pendiente
 
-- Probarlo jugando.
+- Probarlo con el menú de depuración (R + START): llevar un equipo a nivel 62 y volar a la Ruta 120.
 - Mis siguientes tareas: segundo dependiente de las tiendas, primera captura por zona, una compra por objeto, aviso al morir y randomizer.
