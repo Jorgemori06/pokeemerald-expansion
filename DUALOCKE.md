@@ -177,6 +177,33 @@ Cada tienda tendrá **dos dependientes**:
 
 Regla de compra: una unidad de cada objeto por tienda, salvo Balls, Repelentes, Bayas y Caramelos Raros.
 
+**Contenido del dependiente principal (hecho, Miguel, 23/10/2026):**
+
+- **Básicos en todas las tiendas:** Poké Ball, Super Ball (desde 1 medalla), Ultra Ball (5), Repelente, Superrepelente (2), Máximo Repelente (5), Cuerda Huida y Caramelo Raro.
+- **Propios de cada ciudad:**
+
+| Tienda | Balls | Objetos evolutivos |
+| --- | --- | --- |
+| Pueblo Escaso, Ciudad Petalia | — | — |
+| Ciudad Férrica (Devon) | Turno, Acopio | Revestimiento Metálico, Mejora, Disco Extraño |
+| Ciudad Portual (puerto) | Buceo, Malla | Piedra Agua, Escama Bella, Diente Marino, Escama Marina |
+| Ciudad Malvalona (electricidad) | Veloz | Piedra Trueno, Electrizador |
+| Pueblo Verdegal (verde) | Nido | Piedra Hoja, Saquito Fragante, Dulce de Nata |
+| Pueblo Pardal (meteorito) | Ocaso | Piedra Lunar, Piedra Noche |
+| Pueblo Lavacalda (volcán) | Sana | Piedra Fuego, Magmatizador |
+| Herboristería de Lavacalda | — | Hierba Blanca, Hierba Mental, Hierba Única (objetos equipables) |
+| Ciudad Arborada (bosque) | Nido | Piedra Solar, Garra Afilada, Colmillo Agudo |
+| Grandes Almacenes Calagua (2.ª planta) | Lujo, Ocaso, Veloz | — |
+| Grandes Almacenes Calagua (3.ª planta) | — | **Todos** los objetos evolutivos |
+| Ciudad Algaria (espacio, Cueva Cardumen) | Malla, Buceo | Piedra Alba, Piedra Día, Piedra Hielo, Protector |
+| Ciudad Arrecípolis | Buceo, Lujo | Roca del Rey, Escama Dragón, Tela Terrible |
+| Liga, Cima Entrenador | — | — |
+| Frente Batalla | — | Vitaminas (como en el original) |
+
+- **Medallas necesarias** (en todas las tiendas a la vez): las piedras evolutivas desde la **2.ª**, y los objetos de las antiguas evoluciones por intercambio (y Garra/Colmillo) desde la **4.ª**. La tabla está en `src/shop_criteria.c` (`sDualockeShopBadges`); los objetos que no salen en ella se venden siempre.
+- Se han quitado las Cartas de las tiendas de ciudad, salvo en Calagua.
+- **Las megapiedras no se venden:** se encuentran explorando el mapa (ver más abajo). El segundo dependiente de Jorge sigue en pie para los objetos aleatorios.
+
 ### Evoluciones por intercambio (hecho)
 
 Como no hay intercambios entre partidas, se han cambiado todas:

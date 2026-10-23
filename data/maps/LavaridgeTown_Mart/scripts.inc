@@ -13,9 +13,17 @@ LavaridgeTown_Mart_EventScript_Clerk::
 
 	.align 2
 LavaridgeTown_Mart_Pokemart:
+	.2byte ITEM_POKE_BALL
 	.2byte ITEM_GREAT_BALL
+	.2byte ITEM_ULTRA_BALL
+	.2byte ITEM_REPEL
 	.2byte ITEM_SUPER_REPEL
+	.2byte ITEM_MAX_REPEL
+	.2byte ITEM_ESCAPE_ROPE
 	.2byte ITEM_RARE_CANDY
+	.2byte ITEM_HEAL_BALL
+	.2byte ITEM_FIRE_STONE
+	.2byte ITEM_MAGMARIZER
 	pokemartlistend
 
 LavaridgeTown_Mart_EventScript_ExpertM::

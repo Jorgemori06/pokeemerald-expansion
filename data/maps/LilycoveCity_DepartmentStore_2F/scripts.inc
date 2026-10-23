@@ -29,8 +29,10 @@ LilycoveCity_DepartmentStore_2F_Pokemart1:
 	.2byte ITEM_GREAT_BALL
 	.2byte ITEM_ULTRA_BALL
 	.2byte ITEM_ESCAPE_ROPE
-	.2byte ITEM_FLUFFY_TAIL
 	.2byte ITEM_RARE_CANDY
+	.2byte ITEM_LUXURY_BALL
+	.2byte ITEM_DUSK_BALL
+	.2byte ITEM_QUICK_BALL
 	pokemartlistend
 
 LilycoveCity_DepartmentStore_2F_EventScript_ClerkRight::
@@ -48,9 +50,9 @@ LilycoveCity_DepartmentStore_2F_Pokemart2:
 	.2byte ITEM_REPEL
 	.2byte ITEM_SUPER_REPEL
 	.2byte ITEM_MAX_REPEL
+	.2byte ITEM_RARE_CANDY
 	.2byte ITEM_WAVE_MAIL
 	.2byte ITEM_MECH_MAIL
-	.2byte ITEM_RARE_CANDY
 	pokemartlistend
 
 LilycoveCity_DepartmentStore_2F_Text_LearnToUseItemsProperly:

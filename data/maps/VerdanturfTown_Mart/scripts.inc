@@ -13,11 +13,18 @@ VerdanturfTown_Mart_EventScript_Clerk::
 
 	.align 2
 VerdanturfTown_Mart_Pokemart:
+	.2byte ITEM_POKE_BALL
 	.2byte ITEM_GREAT_BALL
-	.2byte ITEM_NEST_BALL
+	.2byte ITEM_ULTRA_BALL
 	.2byte ITEM_REPEL
-	.2byte ITEM_FLUFFY_TAIL
+	.2byte ITEM_SUPER_REPEL
+	.2byte ITEM_MAX_REPEL
+	.2byte ITEM_ESCAPE_ROPE
 	.2byte ITEM_RARE_CANDY
+	.2byte ITEM_NEST_BALL
+	.2byte ITEM_LEAF_STONE
+	.2byte ITEM_SACHET
+	.2byte ITEM_WHIPPED_DREAM
 	pokemartlistend
 
 VerdanturfTown_Mart_EventScript_Boy::
