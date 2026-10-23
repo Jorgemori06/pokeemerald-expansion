@@ -113,7 +113,7 @@ Estas son las reglas que usaban en Platino. La idea es mantenerlas lo más parec
 | No comprar curativos ni Objetos X | Quitarlos de las tiendas | Poco | **Hecho** |
 | No usar Objetos X en combate | Bloquearlos en combate | Poco | **Hecho** |
 | Una compra por objeto (salvo Balls, Repelentes, Bayas, Caramelos) | Limitar compras en tiendas | Medio | Pendiente |
-| 20 vidas + caja de muertos | Contador de vidas visible y caja bloqueada | Medio | Pendiente |
+| 20 vidas + caja de muertos | Contador de vidas en el menú de pausa y caja bloqueada | Medio | **Hecho** (aviso al morir pendiente) |
 | Primera captura por ruta + dupes + sin legendarios + shiny libre | El juego bloquea lanzar Balls cuando no se puede capturar | Medio | Pendiente |
 | Victoria, combates en Showdown, capturas extra | Fuera del juego, por honor | — | — |
 | No farmear | Por honor | — | — |
@@ -297,6 +297,15 @@ Hubo una traducción antigua de la expansion al castellano (fork de Xhyzi, rama 
 - Caramelos Raros limitados por el cap.
 - Evoluciones por intercambio convertidas (sección 6).
 - Paso 1 del orden de trabajo (detalles en la sección 12).
+- Vidas y caja de muertos (Jorge). Cómo funciona:
+  - Se empieza con 20 vidas (`VAR_DUALOCKE_LIVES`). Cada Pokémon que acaba un combate debilitado muere: va a la última caja del PC ("DEAD", la 14) y se resta una vida.
+  - Con 0 vidas se sigue jugando; la siguiente muerte pierde el locke (`FLAG_DUALOCKE_LOCKE_LOST`). Perder un combate también lo pierde, sin mover a nadie (el equipo no puede quedarse vacío). El juego no se bloquea: se marca y se ve en el menú.
+  - El menú de pausa muestra "Lives: N" o "LOCKE LOST".
+  - La caja de muertos solo deja ver el resumen: no se puede sacar, mover, soltar ni meter nada, y los Pokémon nuevos nunca van ahí.
+  - Los objetos de revivir no se pueden usar en combate.
+  - No cuentan: Frontera, Pirámide, Pike, Cima Entrenador, combates por cable, Safari, el primer combate y las bases secretas.
+  - Tests en `test/dualocke.c` (`make check TESTS="Dualocke"`).
+  - Pendiente: un aviso al morir ("X ha muerto, te quedan N vidas"); de momento solo se ve que desaparece del equipo y en el menú.
 
 ### Pendiente de decidir
 
@@ -339,6 +348,9 @@ Quién hace cada cosa y cómo se sube: sección 13.
 | MTs reutilizables | `include/config/item.h` (`I_REUSABLE_TMS`) |
 | MOs olvidables | `include/config/pokemon.h` (`P_CAN_FORGET_HIDDEN_MOVE`) |
 | Filtrar tiendas por medallas/flags (útil para las megapiedras) | `src/shop_criteria.c` |
+| Vidas y caja de muertos | `src/dualocke.c`, `include/dualocke.h`; se llama desde `src/battle_setup.c` (final de combate) |
+| Bloqueo de la caja de muertos | `src/pokemon_storage_system.c` (busca `Dualocke_IsDeadBox`) y `src/pokemon.c` (`CopyMonToPC`) |
+| Ventana de vidas en el menú de pausa | `src/start_menu.c` (`ShowDualockeLivesWindow`) |
 | Documentación oficial de la expansion | `docs/` y https://rh-hideout.github.io/pokeemerald-expansion/ |
 
 Para editar mapas y NPCs de forma visual existe **Porymap**; para scripts y diálogos, **poryscript**.

@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke.h"
 #include "config/save.h"
 #include "battle_pike.h"
 #include "battle_pyramid.h"
@@ -85,6 +86,7 @@ COMMON_DATA bool8 (*gMenuCallback)(void) = NULL;
 
 // EWRAM
 EWRAM_DATA static u8 sSafariBallsWindowId = 0;
+EWRAM_DATA static u8 sDualockeLivesWindowId = 0;
 EWRAM_DATA static u8 sBattlePyramidFloorWindowId = 0;
 EWRAM_DATA static u8 sStartMenuCursorPos = 0;
 EWRAM_DATA static u8 sNumStartMenuActions = 0;
@@ -154,6 +156,43 @@ static const struct WindowTemplate sWindowTemplate_SafariBalls = {
     .paletteNum = 15,
     .baseBlock = 0x8
 };
+
+// Dualocke: ventana con las vidas que quedan, en la esquina del menú de pausa
+static const struct WindowTemplate sWindowTemplate_DualockeLives = {
+    .bg = 0,
+    .tilemapLeft = 1,
+    .tilemapTop = 1,
+    .width = 9,
+    .height = 2,
+    .paletteNum = 15,
+    .baseBlock = 0x8
+};
+
+static const u8 sText_DualockeLives[] = _("Lives: {STR_VAR_1}");
+static const u8 sText_DualockeLockeLost[] = _("LOCKE LOST");
+
+static bool32 ShouldShowDualockeLivesWindow(void)
+{
+    return !GetSafariZoneFlag() && CurrentBattlePyramidLocation() == PYRAMID_LOCATION_NONE;
+}
+
+static void ShowDualockeLivesWindow(void)
+{
+    sDualockeLivesWindowId = AddWindow(&sWindowTemplate_DualockeLives);
+    PutWindowTilemap(sDualockeLivesWindowId);
+    DrawStdWindowFrame(sDualockeLivesWindowId, FALSE);
+    if (Dualocke_IsLockeLost())
+    {
+        StringCopy(gStringVar4, sText_DualockeLockeLost);
+    }
+    else
+    {
+        ConvertIntToDecimalStringN(gStringVar1, Dualocke_GetLives(), STR_CONV_MODE_LEFT_ALIGN, 2);
+        StringExpandPlaceholders(gStringVar4, sText_DualockeLives);
+    }
+    AddTextPrinterParameterized(sDualockeLivesWindowId, FONT_NORMAL, gStringVar4, 0, 1, TEXT_SKIP_DRAW, NULL);
+    CopyWindowToVram(sDualockeLivesWindowId, COPYWIN_GFX);
+}
 
 static const u8 *const sPyramidFloorNames[FRONTIER_STAGES_PER_CHALLENGE + 1] =
 {
@@ -478,6 +517,12 @@ static void RemoveExtraStartMenuWindows(void)
         ClearStdWindowAndFrameToTransparent(sBattlePyramidFloorWindowId, FALSE);
         RemoveWindow(sBattlePyramidFloorWindowId);
     }
+    if (ShouldShowDualockeLivesWindow())
+    {
+        ClearStdWindowAndFrameToTransparent(sDualockeLivesWindowId, FALSE);
+        CopyWindowToVram(sDualockeLivesWindowId, COPYWIN_GFX);
+        RemoveWindow(sDualockeLivesWindowId);
+    }
 }
 
 static bool32 PrintStartMenuActions(s8 *pIndex, u32 count)
@@ -535,6 +580,8 @@ static bool32 InitStartMenuStep(void)
             ShowSafariBallsWindow();
         if (CurrentBattlePyramidLocation() != PYRAMID_LOCATION_NONE)
             ShowPyramidFloorWindow();
+        if (ShouldShowDualockeLivesWindow())
+            ShowDualockeLivesWindow();
         sInitStartMenuData[0]++;
         break;
     case 4:
