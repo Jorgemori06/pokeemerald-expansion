@@ -137,6 +137,7 @@ Regla general: **el as de cada jefe va exactamente al nivel del cap**, el resto 
 | 100 | Liga | Calle Victoria (Blasco ~90), Alto Mando con ases entre 92 y 97, **Plubio 100** | +16 |
 
 - El cap es **duro**: al llegar al cap, el Pokémon no gana experiencia.
+- En los tests de la expansion (`make check`) el cap no se aplica (`TESTING` en `src/caps.c`), porque allí no hay medallas y el cap de 16 rompería los tests de experiencia.
 - El último salto es grande, pero no obliga a farmear porque las tiendas venderán **Caramelos Raros a 1 ₽**, y estos **no funcionan por encima del cap**.
 - Los niveles de entrenadores y salvajes **todavía no están reescalados**: solo están puestos los caps. El reescalado va junto al randomizer (sección 7).
 
