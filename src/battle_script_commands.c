@@ -8564,44 +8564,12 @@ static void Cmd_trygivecaughtmonnick(void)
     switch (gBattleCommunication[MULTIUSE_STATE])
     {
     case 0:
-        HandleBattleWindow(YESNOBOX_X_Y, 0);
-        BattlePutTextOnWindow(gText_BattleYesNoChoice, B_WIN_YESNO);
-        gBattleCommunication[MULTIUSE_STATE]++;
-        gBattleCommunication[CURSOR_POSITION] = 0;
-        BattleCreateYesNoCursorAt(0);
-        break;
-    case 1:
-        if (JOY_NEW(DPAD_UP) && gBattleCommunication[CURSOR_POSITION] != 0)
+        // Dualocke (Nick Clause): no hay opción de Sí/No, el mote es obligatorio
+        if (JOY_NEW(A_BUTTON | B_BUTTON))
         {
             PlaySE(SE_SELECT);
-            BattleDestroyYesNoCursorAt(gBattleCommunication[CURSOR_POSITION]);
-            gBattleCommunication[CURSOR_POSITION] = 0;
-            BattleCreateYesNoCursorAt(0);
-        }
-        if (JOY_NEW(DPAD_DOWN) && gBattleCommunication[CURSOR_POSITION] == 0)
-        {
-            PlaySE(SE_SELECT);
-            BattleDestroyYesNoCursorAt(gBattleCommunication[CURSOR_POSITION]);
-            gBattleCommunication[CURSOR_POSITION] = 1;
-            BattleCreateYesNoCursorAt(1);
-        }
-        if (JOY_NEW(A_BUTTON))
-        {
-            PlaySE(SE_SELECT);
-            if (gBattleCommunication[CURSOR_POSITION] == 0)
-            {
-                gBattleCommunication[MULTIUSE_STATE]++;
-                BeginFastPaletteFade(3);
-            }
-            else
-            {
-                gBattleCommunication[MULTIUSE_STATE] = 4;
-            }
-        }
-        else if (JOY_NEW(B_BUTTON))
-        {
-            PlaySE(SE_SELECT);
-            gBattleCommunication[MULTIUSE_STATE] = 4;
+            BeginFastPaletteFade(3);
+            gBattleCommunication[MULTIUSE_STATE] = 2;
         }
         break;
     case 2:
@@ -8624,6 +8592,13 @@ static void Cmd_trygivecaughtmonnick(void)
     case 3:
         if (gMain.callback2 == BattleMainCB2 && !gPaletteFade.active)
         {
+            // Dualocke (Nick Clause): si se deja el nombre de la especie, se vuelve a pedir el mote
+            if (StringCompare(gBattleStruct->caughtMonNick, GetSpeciesName(GetMonData(GetBattlerMon(gBattlerTarget), MON_DATA_SPECIES))) == 0)
+            {
+                BeginFastPaletteFade(3);
+                gBattleCommunication[MULTIUSE_STATE] = 2;
+                break;
+            }
             SetMonData(GetBattlerMon(gBattlerTarget), MON_DATA_NICKNAME, gBattleStruct->caughtMonNick);
             gBattleCommunication[MULTIUSE_STATE]++;
         }
