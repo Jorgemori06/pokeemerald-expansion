@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke.h"
 #include "data.h"
 #include "main.h"
 #include "battle.h"
@@ -703,6 +704,8 @@ static void CB2_EndWildBattle(void)
             HealPlayerParty();
     }
 
+    Dualocke_OnBattleEnd(IsPlayerDefeated(gBattleOutcome));
+
     if (IsPlayerDefeated(gBattleOutcome) == TRUE && CurrentBattlePyramidLocation() == PYRAMID_LOCATION_NONE && !InBattlePike())
     {
         SetMainCallback2(CB2_WhiteOut);
@@ -719,6 +722,8 @@ static void CB2_EndScriptedWildBattle(void)
 {
     CpuFill16(0, (void *)(BG_PLTT), BG_PLTT_SIZE);
     ResetOamRange(0, 128);
+
+    Dualocke_OnBattleEnd(IsPlayerDefeated(gBattleOutcome));
 
     if (IsPlayerDefeated(gBattleOutcome) == TRUE)
     {
@@ -1583,6 +1588,9 @@ static void CB2_EndTrainerBattle(void)
             HealPlayerParty();
     }
 
+    if (TRAINER_BATTLE_PARAM.opponentA != TRAINER_SECRET_BASE)
+        Dualocke_OnBattleEnd(IsPlayerDefeated(gBattleOutcome));
+
     if (TRAINER_BATTLE_PARAM.earlyRival)
     {
         if (IsPlayerDefeated(gBattleOutcome) == TRUE)
@@ -1632,6 +1640,9 @@ static void CB2_EndTrainerBattle(void)
 
 static void CB2_EndRematchBattle(void)
 {
+    if (TRAINER_BATTLE_PARAM.opponentA != TRAINER_SECRET_BASE)
+        Dualocke_OnBattleEnd(IsPlayerDefeated(gBattleOutcome));
+
     if (TRAINER_BATTLE_PARAM.opponentA == TRAINER_SECRET_BASE)
     {
         DowngradeBadPoison();
