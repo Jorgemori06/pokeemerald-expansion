@@ -39,7 +39,19 @@ Este repo es un **fork** de [rh-hideout/pokeemerald-expansion](https://github.co
 
 ## 3. Cómo compilar y jugar
 
-### Entorno (Windows)
+### Forma rápida (Windows): un script lo hace todo
+
+```powershell
+powershell -ExecutionPolicy Bypass -File tools\dualocke\instalar_windows.ps1
+```
+
+- **Primera vez:** si no tienes WSL, ábrelo en **PowerShell como administrador**. Instala WSL con Ubuntu y te pide reiniciar. Después abre "Ubuntu" una vez desde el menú Inicio para crear tu usuario y vuelve a lanzar el script, ya sin administrador.
+- **Qué hace luego:** instala el compilador (te pide la contraseña de Ubuntu), clona el repo en `~/romhack`, compila y copia la ROM al **escritorio como `Dualocke.gba`**.
+- **Para actualizar el juego** cuando se suban cambios, se vuelve a lanzar el mismo script. Si mGBA guarda la partida al lado (`Dualocke.sav`), se conserva.
+- Con `-Rama nombre-de-rama` compila otra rama, por ejemplo para probar un PR antes de fusionarlo.
+- Si no tienes el repo en Windows, descarga solo el script desde GitHub (`tools/dualocke/instalar_windows.ps1`).
+
+### Entorno (Windows), paso a paso
 
 1. WSL con Ubuntu: en PowerShell como administrador, `wsl --install`, y reiniciar si lo pide.
 2. Dependencias, dentro de Ubuntu:
