@@ -171,6 +171,12 @@ Regla general: **el as de cada jefe va exactamente al nivel del cap**, el resto 
   - **Postgame** (S.S. Marea, Cueva de Máximo en la Cascada Meteoro, Túnel del Desierto, Cueva Ancestral, Cueva Alterada, cuevas Terra y Marina): entrenadores a **100** y salvajes a **97**.
   - **Casa Trampa:** la prueba 1 al tramo 3, y cada prueba N al tramo de la medalla N+1 que la abre (la 8, a la Liga). No cuenta para la banda de su tramo, así que no mueve los niveles de la historia principal.
   - **No se tocan:** el Frente Batalla y la Cima Entrenador, que tienen su propio sistema de niveles.
+- **Estáticos y regalos (hecho, Miguel, 24/10/2026):**
+  - **Estáticos normales** (Kecleon de las rutas 119-120, Voltorb de Nuevo Malvalona, Electrode de la Guarida Aqua): como jefes de zona, es decir, entrenadores de su mapa + 3, sin pasar del cap. Quedan a 58, 56 y 65.
+  - **Legendarios:** al cap de su tramo. Los Regis a 84 (hace falta Buceo, tramo 8); Rayquaza, Groudon y Kyogre a 100 (postgame). Sudowoodo del Frente Batalla, también a 100.
+  - **Regalos** (Castform, fósiles, Beldum, iniciales de Johto, huevo de Wynaut): se quedan con su nivel original, para entrenarlos (con Caramelos Raros a 1 ₽).
+  - Lo hace `reescalar_niveles.py` (tabla `ESTATICOS`).
+  - **Captura de estáticos (decidido, falta implementarlo encima del PR #17):** de los estáticos normales solo se puede capturar el primero de cada tipo (un Kecleon, un Voltorb, un Electrode), sin gastar la zona.
 - **Evoluciones de los entrenadores normales (hecho):** `tools/dualocke/evolucionar_entrenadores.py` evoluciona sus Pokémon según el nivel. Las evoluciones por nivel van a su nivel normal; las que no son por nivel (piedra, amistad…) van a 30 la primera y a 40 la segunda. Los tres scripts se lanzan en orden: `reescalar_niveles.py`, `equipos_jefes.py` y `evolucionar_entrenadores.py`.
 - El randomizer **no debe tocar los niveles ni el tamaño de los equipos**: solo especies, movimientos, habilidades y objetos. Al cambiar especies, debe mantener la regla de evolucionar según el nivel.
 
