@@ -161,8 +161,7 @@ static void BuyMenuPrintItemDescriptionAndShowItemIcon(s32 item, bool8 onInit, s
 static void BuyMenuPrintPriceInList(u8 windowId, u32 itemId, u8 y);
 
 // Dualocke (Items Clause): una unidad de cada objeto por tienda
-static const u8 sText_DualockeYaComprado[] = _("You've already bought one of
-these here.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_DualockeYaComprado[] = _("You've already bought one of\nthese here.{PAUSE_UNTIL_PRESS}");
 
 static const struct YesNoFuncTable sShopPurchaseYesNoFuncs =
 {
