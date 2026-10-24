@@ -1,0 +1,57 @@
+# RUTA 102 (con sus entrenadores) y CIUDAD PETALIA (calles, casas, tienda, CENTRO POKéMON, casa de BLASCO)
+Route102_Text_WatchMeCatchPokemon	BLASCO: {PLAYER}…\nLos POKéMON se esconden en la hierba\lalta así, ¿verdad?\pMírame, a ver si consigo atrapar\nuno bien.\p…¡Uy!$
+Route102_Text_WallyIDidIt	BLASCO: Lo he conseguido… Es mi…\n¡Mi POKéMON!$
+Route102_Text_LetsGoBack	¡{PLAYER}, gracias!\n¡Volvamos al GIMNASIO!$
+Route102_Text_ImNotVeryTall	No soy muy alto, así que me hundo\nen la hierba alta.\pSe me mete la hierba en la nariz y…\nFuafuafuafuafua…\p¡Fuachís!$
+Route102_Text_CatchWholeBunchOfPokemon	¡Voy a atrapar un montón de\nPOKéMON!$
+Route102_Text_RouteSignOldale	RUTA 102\n{RIGHT_ARROW} PUEBLO ESCASO$
+Route102_Text_RouteSignPetalburg	RUTA 102\n{LEFT_ARROW} CIUDAD PETALIA$
+Route102_Text_CalvinIntro	¡Si llevas POKéMON, eres un\nENTRENADOR POKéMON de verdad!\l¡No puedes rechazar mi desafío!$
+Route102_Text_CalvinDefeated	Arg, he perdido…\nTendría que haber entrenado más…$
+Route102_Text_CalvinPostBattle	Oye, tú. Si eras tan fuerte,\n¡haberlo dicho antes!$
+Route102_Text_CalvinRegister	He entrenado mucho desde la última\nvez que te vi.\pQuiero volver a luchar contigo.\n¿Me registras en tu POKéNAV?$
+Route102_Text_CalvinRegisterShort	Quiero volver a luchar contigo.\n¿Me registras en tu POKéNAV?$
+Route102_Text_CalvinRematchIntro	Desde que perdí contigo, he entrenado\na mis POKéMON sin descanso.\l¡No puedes rechazar mi desafío!$
+Route102_Text_CalvinRematchDefeated	Arg, he perdido…\n¿Será que entreno mal?$
+Route102_Text_CalvinRematchPostBattle	Si tú te haces más fuerte,\nyo también me haré más fuerte.$
+Route102_Text_AllenIntro	¿Acabas de hacerte ENTRENADOR?\n¡Somos principiantes los dos!$
+Route102_Text_AllenDefeated	Te he llamado porque creía\nque podía ganarte…$
+Route102_Text_AllenPostBattle	Todavía no he ganado ni una vez…\nOjalá gane pronto…$
+Route102_Text_RickIntro	¡Jajá! ¡Nuestras miradas se han\ncruzado! ¡Te reto con mis BICHO!$
+Route102_Text_RickDefeated	¡Ay! ¡Fuera de combate!$
+Route102_Text_RickPostBattle	¡Si se cruzan las miradas con un\nENTRENADOR, ¡hay que luchar! ¡Es ley!$
+Route102_Text_TianaIntro	Voy a seguir ganando para ser la\nmejor ENTRENADORA.\p¡Ayúdame a avanzar en mi carrera!$
+Route102_Text_TianaDefeated	Al final he ayudado yo a la tuya…$
+Route102_Text_TianaPostBattle	Para seguir subiendo, veo que tengo\nque atrapar más POKéMON.$
+PetalburgCity_Text_WhereIsWally	¿Dónde se ha metido nuestro BLASCO?\p¡Tenemos que irnos a PUEBLO VERDEGAL\nmuy pronto…$
+PetalburgCity_Text_AreYouRookieTrainer	¡Hola! ¿Por casualidad…\nacabas de empezar a entrenar?\p¿Sabes qué hacen los ENTRENADORES\nPOKéMON al llegar a una ciudad?\pLo primero, mirar qué GIMNASIO\nhay en la ciudad.$
+PetalburgCity_Text_ThisIsPetalburgGym	¿Ves? Este es el GIMNASIO de\nCIUDAD PETALIA.$
+PetalburgCity_Text_ThisIsGymSign	Este es el cartel del GIMNASIO.\nBúscalo cuando quieras encontrar uno.$
+PetalburgCity_Text_WaterReflection	Mi cara se refleja en el agua.\pEs una sonrisa radiante llena de\nesperanza…\pO quizá un gesto serio y callado\nque lucha contra el miedo…\p¿Qué ves tú reflejado en tu cara?$
+PetalburgCity_Text_FullPartyExplanation	Imagina que llevas seis POKéMON.\nSi atrapas otro…\pSe envía solo a una CAJA del\nsistema de almacenamiento del PC.$
+PetalburgCity_Text_GymSign	GIMNASIO POKéMON DE CIUDAD PETALIA\nLÍDER: NORMAN\l“¡Un hombre que busca la fuerza!”$
+PetalburgCity_Text_CitySign	CIUDAD PETALIA\n“Donde las personas se unen a la\lnaturaleza”.$
+PetalburgCity_Text_WallyHouseSign	CASA DE BLASCO$
+PetalburgCity_Text_AreYouATrainer	¡Disculpa!\pDéjame adivinar por tu ropa…\n¿Entrenas POKéMON?$
+PetalburgCity_Text_WellMaybeNot	… … … … … …\pBueno, quizá no.\nTu ropa no está tan sucia.\pO acabas de empezar a entrenar\no no entrenas POKéMON.$
+PetalburgCity_Text_ImLookingForTalentedTrainers	Recorro la región buscando\nENTRENADORES con talento.\pPerdona por haberte entretenido.$
+PetalburgCity_House1_Text_TravelingIsWonderful	¡Viajar es maravilloso!\p¡Cuando era joven, recorrí mares\ny montañas!$
+PetalburgCity_House1_Text_GoOnAdventure	Ay…\pOjalá pudiera irme de aventura\ncon algunos POKéMON…\pArrastrarme por la hierba húmeda…\nEscalar montañas escarpadas…\pCruzar mares embravecidos…\nVagar por cuevas oscuras…\pY, a veces, echar un poco de\nmenos mi casa…\p¡Viajar tiene que ser fabuloso!$
+PetalburgCity_House2_Text_NormanBecameGymLeader	NORMAN es el nuevo LÍDER del\nGIMNASIO de la ciudad.\pCreo que ha traído a su familia desde\nun sitio muy lejano.$
+PetalburgCity_House2_Text_BattledNormanOnce	Una vez luché contra NORMAN, pero, uf,\nera demasiado fuerte.\p¿Cómo lo diría?\pMe dio la impresión de que vive\npara los POKéMON.$
+PetalburgCity_Mart_Text_WeakWillGrowStronger	Aunque un POKéMON sea débil ahora,\nse hará más fuerte.\p¡Lo más importante es el cariño!\n¡El cariño a tus POKéMON!$
+PetalburgCity_Mart_Text_RepelIsUseful	¿Usas REPELENTE?\nAleja a los POKéMON, así que\lviene bien cuando tienes prisa.$
+PetalburgCity_Mart_Text_TakeSomeAntidotesWithYou	¿Llevas ANTÍDOTOS?\pSi vas por ahí con un POKéMON\nenvenenado, perderá PS hasta\ldebilitarse. Lleva ANTÍDOTOS.$
+PetalburgCity_PokemonCenter_1F_Text_PCStorageSystem	El sistema de almacenamiento\nPOKéMON del PC…\p¡Quien lo hizo tiene que ser\nun genio de la ciencia!$
+PetalburgCity_PokemonCenter_1F_Text_OranBerryRegainedHP	¡Cuando mi POKéMON se comió una\nBAYA ARANJA, recuperó PS!$
+PetalburgCity_PokemonCenter_1F_Text_ManyTypesOfPokemon	Hay muchos tipos de POKéMON.\pCada tipo tiene sus puntos fuertes\ny débiles frente a otros tipos.\pSegún los tipos de los POKéMON,\nun combate puede ser fácil o difícil.$
+PetalburgCity_PokemonCenter_1F_Text_TreeckoIsGrassType	Por ejemplo, tu TREECKO\nes de tipo PLANTA.\pEs fuerte contra los tipos AGUA\ny TIERRA.\pPero es débil contra los POKéMON\nde tipo FUEGO.$
+PetalburgCity_PokemonCenter_1F_Text_TorchicIsFireType	Por ejemplo, tu TORCHIC\nes de tipo FUEGO.\pEs fuerte contra los tipos PLANTA\ny BICHO.\pPero es débil contra los POKéMON\nde tipo AGUA.$
+PetalburgCity_PokemonCenter_1F_Text_MudkipIsWaterType	Por ejemplo, tu MUDKIP\nes de tipo AGUA.\pEs fuerte contra el tipo FUEGO.\pPero es débil contra los POKéMON\nde tipo PLANTA y ELÉCTRICO.$
+PetalburgCity_WallysHouse_Text_ThanksForPlayingWithWally	Tú eres…\nAh, debes de ser {PLAYER}{KUN}, ¿no?\pGracias por estar con BLASCO\nhace un rato.\pHa sido débil y enfermizo desde\nque era un bebé.\pLo hemos mandado una temporada con\nmis parientes de PUEBLO VERDEGAL.\pAllí el aire es mucho más limpio\nque aquí.\p¿Cómo? ¿Dónde está BLASCO?\nYa se ha ido.\p¿Por dónde andará ahora?$
+PetalburgCity_WallysHouse_Text_WonderHowWallyIsDoing	¿Qué tal estará nuestro BLASCO?$
+PetalburgCity_WallysHouse_Text_PleaseExcuseUs	¡{PLAYER}{KUN}! Perdona por\ntraerte así.\pPero nuestro BLASCO está mucho mejor\ndesde que se fue a PUEBLO VERDEGAL.\p¡Y te lo debemos a ti!\pCuando BLASCO se fue, le ayudaste\na atrapar un POKéMON, ¿verdad?\pCreo que eso le hizo muy feliz.\pY no solo a él.\nA mí, su padre, también.\pFeliz de que tenga un amigo tan\nbueno como tú.\pNo es un soborno ni nada, pero\nme gustaría que te quedaras esto.$
+PetalburgCity_WallysHouse_Text_SurfGoAllSortsOfPlaces	Si tu POKéMON sabe hacer SURF,\npodrás ir a muchísimos sitios.$
+PetalburgCity_WallysHouse_Text_WallyIsComingHomeSoon	BLASCO vuelve pronto a casa.\nTengo muchas ganas de verlo.$
+PetalburgCity_WallysHouse_Text_WallyWasReallyHappy	BLASCO estaba feliz cuando nos dijo\nque había atrapado un POKéMON.\pHacía siglos que no lo veía\nsonreír así.$
+PetalburgCity_WallysHouse_Text_WallyLeftWithoutTelling	Que no se entere mi marido…\pPero nuestro BLASCO se ha ido de\nPUEBLO VERDEGAL sin decir nada.\pBLASCO es débil, pero tiene una\nfuerza de voluntad increíble.\p¡Seguro que un día vuelve sano\ny salvo!$

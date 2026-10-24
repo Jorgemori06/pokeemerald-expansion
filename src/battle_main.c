@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke_es.h"
 #include "battle.h"
 #include "battle_anim.h"
 #include "battle_ai_main.h"

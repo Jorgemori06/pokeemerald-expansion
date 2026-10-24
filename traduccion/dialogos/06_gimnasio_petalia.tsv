@@ -1,0 +1,69 @@
+# GIMNASIO PETALIA: primera visita con BLASCO, entrenadores y combate con PAPÁ (NORMAN). Sin la revancha del postgame.
+PetalburgCity_Gym_Text_DadYoureHereWithYourPokemon	PAPÁ: ¿Mm?\p¡Anda, si es {PLAYER}!\n¿Ya has terminado con la mudanza?\pMe sorprende que hayas llegado\nhasta aquí tú solo.\pAh, ya veo.\nVienes con tu POKéMON.\pMm… Entonces vas a ser ENTRENADOR\ncomo yo, {PLAYER}.\p¡Qué buena noticia!\n¡Tengo muchas ganas de verlo!$
+PetalburgCity_Gym_Text_WallyIdLikeAPokemon	Eh… Yo…\nQuería un POKéMON, por favor…$
+PetalburgCity_Gym_Text_DadOhYoureWallyRight	PAPÁ: ¿Mm? Tú eres… Eh… Ah, claro.\nEres BLASCO, ¿verdad?$
+PetalburgCity_Gym_Text_WallyIveNeverCaughtAPokemon	BLASCO: Me voy a vivir con mis\nparientes a PUEBLO VERDEGAL.\pPensé que me sentiría solo, así que\nquería llevarme un POKéMON.\pPero nunca he atrapado un POKéMON.\nNo sé cómo se hace…$
+PetalburgCity_Gym_Text_DadHmISee	PAPÁ: Mm. Ya veo.$
+PetalburgCity_Gym_Text_DadPlayerGoWithWally	PAPÁ: {PLAYER}, lo has oído,\n¿verdad?\pVe con BLASCO y asegúrate de que\natrapa un POKéMON sin problemas.$
+PetalburgCity_Gym_Text_IllLoanYouMyZigzagoon	BLASCO, toma, te presto mi POKéMON.\p¡BLASCO ha recibido un ZIGZAGOON!$
+PetalburgCity_Gym_Text_WallyThankYouAndDadGivesPokeBall	BLASCO: ¡Hala!\n¡Un POKéMON!\pPAPÁ: Mm. También te doy una POKé BALL.\n¡A por ello!\p¡BLASCO ha recibido una POKé BALL!$
+PetalburgCity_Gym_Text_WallyOhWowThankYou	BLASCO: ¡Hala!\n¡Gracias!$
+PetalburgCity_Gym_Text_WouldYouReallyComeWithMe	{PLAYER}… ¿De verdad vendrías\nconmigo?$
+PetalburgCity_Gym_Text_DadSoDidItWorkOut	PAPÁ: ¿Qué, ha ido bien?$
+PetalburgCity_Gym_Text_WallyThankYouBye	BLASCO: Sí, gracias.\nAquí tienes tu POKéMON.\p{PLAYER}, gracias por acompañarme.\pGracias a vosotros he podido atrapar\na mi POKéMON.\pTe prometo que lo cuidaré\nmuy bien.\p¡Oh! Mi madre me está esperando,\n¡tengo que irme!\p¡Adiós, {PLAYER}!$
+PetalburgCity_Gym_Text_DadGoCollectBadges	PAPÁ: Bueno…\p{PLAYER}, si quieres ser un ENTRENADOR\nfuerte, te doy un consejo.\pVe a CIUDAD FÉRRICA, más allá\nde esta ciudad.\pAllí deberías desafiar a la\nLÍDER del GIMNASIO, PETRA.\pDespués, ve a otros GIMNASIOS\nPOKéMON y vence a sus LÍDERES.\pConsigue sus MEDALLAS,\n¿entendido?\pYo también soy LÍDER de GIMNASIO.\nAlgún día lucharemos, {PLAYER}.\pPero solo cuando seas más\nfuerte.$
+PetalburgCity_Gym_Text_NormanGoToRustboro	PAPÁ: ¿Mm? ¿No vas al GIMNASIO\nPOKéMON de CIUDAD FÉRRICA?\pNo tiene gracia luchar contra un\nENTRENADOR novato.\p{PLAYER}, quiero que me desafíes\ncuando seas mucho más fuerte.\pLucharé contigo, {PLAYER}, cuando me\nenseñes cuatro MEDALLAS, ¿de acuerdo?$
+PetalburgCity_Gym_Text_NormanGoToDewford	PAPÁ: Ya veo… Así que has vencido\na la LÍDER de CIUDAD FÉRRICA.\pPero hay muchos ENTRENADORES\nmás fuertes que tú, {PLAYER}.\pAl otro lado del mar, en PUEBLO\nAZULIZA, está el LÍDER MARCIAL.\pDeberías ir a desafiarle.$
+PetalburgCity_Gym_Text_YouHaveGottenStronger	PAPÁ: Mm… {PLAYER}, te has hecho\nmás fuerte.\pSe nota por las MEDALLAS que\nhas conseguido.$
+PetalburgCity_Gym_Text_NormanIntro	PAPÁ: Mm…\nAsí que tienes cuatro MEDALLAS.\pBien. Como te prometí, tendremos\nun combate POKéMON.\p{PLAYER}…\pMe hace muy feliz poder luchar\nde verdad contra ti.\p¡Pero un combate es un combate!\pComo LÍDER de GIMNASIO, haré todo\nlo que pueda para ganar.\p¡{PLAYER}, tú también tienes que\ndarlo todo!$
+PetalburgCity_Gym_Text_NormanDefeat	…\pNo… No puede…\pNo me lo puedo creer. {PLAYER}…\p¿He perdido contra {PLAYER}?\p¡Pero las reglas son las reglas!\nToma, esto es tuyo.$
+PetalburgCity_Gym_Text_ReceivedBalanceBadge	¡{PLAYER} ha recibido la MEDALLA\nEQUILIBRIO de PAPÁ!$
+PetalburgCity_Gym_Text_ExplainBalanceBadgeTakeThis	PAPÁ: Con esa MEDALLA sube la DEFENSA\nde todos tus POKéMON.\pLos POKéMON que sepan el movimiento\nde MO SURF podrán viajar por el agua.\pEste es mi regalo. {PLAYER}, seguro\nque sabes usarlo bien.$
+PetalburgCity_Gym_Text_ExplainFacade	PAPÁ: La MT42 contiene IMAGEN.\pDuplica su potencia si el POKéMON\nestá envenenado, paralizado\lo quemado.\pPuede convertir una mala situación\nen una ventaja.$
+PetalburgCity_Gym_Text_DadHappyAndSad	PAPÁ: Como LÍDER de GIMNASIO, no sabes\nlo que me fastidia…\pPero como padre, me pone contento\ny un poco triste a la vez. Qué raro…$
+PetalburgCity_Gym_Text_PleaseComeWithMe	¡Ah, estás aquí, {PLAYER}{KUN}!\pVen conmigo, por favor.\nQuiero darte una cosa.$
+PetalburgCity_Gym_Text_LetMeBorrowPlayer	NORMAN, no te importa, ¿verdad?\p¿Me prestas a {PLAYER}{KUN}\nun par de minutos?$
+PetalburgCity_Gym_Text_DadGoingToKeepTraining	PAPÁ: {PLAYER}, deberías ir a ver\na tu madre de vez en cuando.\pYo me quedo aquí a entrenar\nel doble.\p¡Como ENTRENADOR, no puedo quedarme\nsin la revancha, {PLAYER}!$
+PetalburgCity_Gym_Text_DadNoAmountOfTrainingIsEnough	PAPÁ: {PLAYER}, ¿qué tal te va?\pEl mundo de los POKéMON es profundo.\pDe verdad creo que nunca se\nentrena lo suficiente.$
+PetalburgCity_Gym_Text_GymGuideAdvice	¡Eh! ¿Qué tal, {PLAYER}, futuro\nCAMPEÓN?\pLas puertas de este GIMNASIO se abren\nal vencer a los ENTRENADORES.\p¡Ojo! Las puertas de esta sala ya\nestán abiertas, ¡así que no me ataques!\pLos ENTRENADORES del GIMNASIO PETALIA\nusan todo tipo de objetos.\pLa puerta de la izquierda lleva a\nla SALA VELOCIDAD.\pLa de la derecha lleva a\nla SALA PRECISIÓN.\pEl nombre de la sala está en la\npuerta, así que elige bien.\pCuando elijas la puerta…\n¡Pues a por todas!$
+PetalburgCity_Gym_Text_GymGuidePostVictory	¡{PLAYER}! ¡Hala! ¡Has superado incluso\na tu propio padre!\p¡Pero bueno!\n¡Qué giro tan impresionante!$
+PetalburgCity_Gym_Text_RandallIntro	Poder atacar antes que el\nrival…\pSolo con eso tengo una gran\nventaja, ¿no crees?$
+PetalburgCity_Gym_Text_RandallDefeat	¡Ha sido un combate magnífico!$
+PetalburgCity_Gym_Text_RandallPostBattle	Sigue a la siguiente sala, donde te\nespera un nuevo desafío.\pA la izquierda está la SALA CONFUSIÓN.\pLa puerta de la derecha lleva a la\nSALA DEFENSA.$
+PetalburgCity_Gym_Text_RandallPostBadge	Ganes a quien ganes y pierdas con\nquien pierdas, nunca dejas de\lentrenarte a ti y a tus POKéMON.\pPara mí, eso es lo que significa\nser LÍDER de GIMNASIO.$
+PetalburgCity_Gym_Text_ParkerIntro	Esta es la SALA CONFUSIÓN.\p¡A ver lo unido que estás\na tus POKéMON!$
+PetalburgCity_Gym_Text_ParkerDefeat	No he podido confundir a tu equipo…\nEstáis muy unidos.$
+PetalburgCity_Gym_Text_ParkerPostBattle	La siguiente es la SALA FUERZA.\n¿Aguantarás la fuerza bruta?$
+PetalburgCity_Gym_Text_ParkerPostBadge	Desde que venciste a nuestro LÍDER,\nel entrenamiento es mucho más duro.$
+PetalburgCity_Gym_Text_GeorgeIntro	Cuando crees que vas a ganar,\ntu rival recupera PS…\p¿Te imaginas lo horrible que\ndebe de ser?\p¡Te voy a enseñar lo horrible\nque es!$
+PetalburgCity_Gym_Text_GeorgeDefeat	No he recuperado bastantes PS…\n¡Qué ATAQUE!$
+PetalburgCity_Gym_Text_GeorgePostBattle	Era de esperar de la familia de\nnuestro LÍDER.\p¡No, espera! La habilidad de un\nENTRENADOR solo se gana con esfuerzo.\pHe perdido porque no me he\nesforzado lo suficiente.\p¡Sigue! Ahora viene la SALA KO.$
+PetalburgCity_Gym_Text_GeorgePostBadge	Seguiré entrenando en GIMNASIOS.\nAlgún día seré LÍDER.$
+PetalburgCity_Gym_Text_BerkeIntro	No me lo voy a tomar con calma por\nser de la familia de nuestro LÍDER.\p¡Te enseñaré lo horrible que es\npara un POKéMON recibir un crítico!$
+PetalburgCity_Gym_Text_BerkeDefeat	Tu fuerza…\nVas en serio.$
+PetalburgCity_Gym_Text_BerkePostBattle	Tu padre es fuerte de verdad.\nEs un ENTRENADOR que respeto.\pY noto en ti el mismo brillo\nque en tu padre.\p¡Espero que tengas un combate\nincreíble con él!$
+PetalburgCity_Gym_Text_BerkePostBadge	Desde que tu padre es el LÍDER,\nlos ENTRENADORES de CIUDAD PETALIA\lse han hecho mucho más duros.$
+PetalburgCity_Gym_Text_MaryIntro	Jijiji…\nEsta es la SALA PRECISIÓN.\pEs muy fastidioso que todos los\nataques acierten siempre.$
+PetalburgCity_Gym_Text_MaryDefeat	Estabas un paso por encima…$
+PetalburgCity_Gym_Text_MaryPostBattle	Te esperan ENTRENADORES aún\nmás fuertes.\pA la izquierda está la SALA DEFENSA\ny a la derecha la SALA RECUPERACIÓN.\pSe pondrá a prueba el ATAQUE de tus\nPOKéMON en las dos.$
+PetalburgCity_Gym_Text_MaryPostBadge	¿Sabes qué buscamos los\nENTRENADORES?\pQueremos ser almas gemelas de\nnuestros POKéMON.$
+PetalburgCity_Gym_Text_AlexiaIntro	Cuanta más DEFENSA, más temeraria\npuedo ser al atacar.$
+PetalburgCity_Gym_Text_AlexiaDefeat	Nuestras defensas no bastaron…$
+PetalburgCity_Gym_Text_AlexiaPostBattle	Creo que me has dado una buena\nlección.\p¡Sigue! La puerta de la izquierda\nlleva a la SALA FUERZA.\pLa de la derecha lleva a\nla SALA KO.\pEn las dos hay ENTRENADORES que\nsaben atacar muy bien.$
+PetalburgCity_Gym_Text_AlexiaPostBadge	¡Hola! ¿Has probado a usar SURF?$
+PetalburgCity_Gym_Text_JodyIntro	Nuestro LÍDER nos ha dicho que lo\ndemos todo para vencerte.\p¡Aunque seas de la familia\ndel LÍDER!$
+PetalburgCity_Gym_Text_JodyDefeat	Pero… ¡Lo he dado todo!$
+PetalburgCity_Gym_Text_JodyPostBattle	Tu forma de usar a los POKéMON…\nSe parece a la de tu padre.\p¡Adelante! ¡El LÍDER del GIMNASIO,\ntu padre, te espera!$
+PetalburgCity_Gym_Text_JodyPostBadge	Claro, está bien hacer más\nfuertes a tus POKéMON.\pPero ¿qué decide quién gana?\pPues lo que sienten los\nENTRENADORES por sus POKéMON.$
+PetalburgCity_Gym_Text_DoorAppearsLocked	Parece que esta puerta está\ncerrada ahora mismo…$
+PetalburgCity_Gym_Text_EnterSpeedRoom	El cartel dice “SALA VELOCIDAD”.\p¿Quieres entrar?$
+PetalburgCity_Gym_Text_DoorAppearsLocked2	Parece que esta puerta está\ncerrada ahora mismo…$
+PetalburgCity_Gym_Text_EnterAccuracyRoom	El cartel dice “SALA PRECISIÓN”.\p¿Quieres entrar?$
+PetalburgCity_Gym_Text_EnterConfusionRoom	El cartel dice “SALA CONFUSIÓN”.\p¿Quieres entrar?$
+PetalburgCity_Gym_Text_EnterDefenseRoom	El cartel dice “SALA DEFENSA”.\p¿Quieres entrar?$
+PetalburgCity_Gym_Text_EnterRecoveryRoom	El cartel dice “SALA RECUPERACIÓN”.\p¿Quieres entrar?$
+PetalburgCity_Gym_Text_EnterStrengthRoom	El cartel dice “SALA FUERZA”.\p¿Quieres entrar?$
+PetalburgCity_Gym_Text_EnterOHKORoom	El cartel dice “SALA KO”.\p¿Quieres entrar?$
+PetalburgCity_Gym_Text_EnterGymLeadersRoom	“SALA DEL LÍDER DE GIMNASIO\p”¡Mira tú mismo qué POKéMON te\nesperan!”, dice el cartel.\p¿Quieres entrar?$
+PetalburgCity_Gym_Text_GymStatue	GIMNASIO POKéMON DE CIUDAD PETALIA$
+PetalburgCity_Gym_Text_GymStatueCertified	GIMNASIO POKéMON DE CIUDAD PETALIA\pENTRENADORES RECONOCIDOS POR NORMAN:\n{PLAYER}$

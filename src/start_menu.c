@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke_es.h"
 #include "dualocke.h"
 #include "config/save.h"
 #include "battle_pike.h"
@@ -168,8 +169,8 @@ static const struct WindowTemplate sWindowTemplate_DualockeLives = {
     .baseBlock = 0x8
 };
 
-static const u8 sText_DualockeLives[] = _("Lives: {STR_VAR_1}");
-static const u8 sText_DualockeLockeLost[] = _("LOCKE LOST");
+static const u8 sText_DualockeLives[] = ES(_("Lives: {STR_VAR_1}"), _("Vidas: {STR_VAR_1}"));
+static const u8 sText_DualockeLockeLost[] = ES(_("LOCKE LOST"), _("LOCKE PERDIDO"));
 
 static bool32 ShouldShowDualockeLivesWindow(void)
 {

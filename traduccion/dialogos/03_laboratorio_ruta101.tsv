@@ -1,0 +1,33 @@
+# LABORATORIO del PROF. ABEDUL y RUTA 101 (sin lo de después de la Liga)
+LittlerootTown_ProfessorBirchsLab_Text_BirchAwayOnFieldwork	¿Eh? ¿El PROF. ABEDUL?\pEl PROFESOR está de trabajo de campo.\nO sea, que no está aquí.\pAh, te explico qué es eso.\pEs estudiar las cosas en la naturaleza,\ncomo en prados y montañas,\len vez de en un laboratorio.\pAl PROFESOR no le va el trabajo de mesa.\nEs de los que prefieren salir y vivir\llas cosas antes que leerlas aquí.$
+LittlerootTown_ProfessorBirchsLab_Text_BirchIsntOneForDeskWork	Al PROFESOR no le va el trabajo de mesa.\nEs de los que prefieren salir y vivir\llas cosas antes que leerlas aquí.$
+LittlerootTown_ProfessorBirchsLab_Text_BirchEnjoysRivalsHelpToo	El PROF. ABEDUL estudia dónde viven\ny cómo se reparten los POKéMON.\pAl PROFESOR le encanta que {RIVAL}\nle ayude. Se quieren mucho.$
+LittlerootTown_ProfessorBirchsLab_Text_LikeYouToHavePokemon	PROF. ABEDUL: Bueno, {PLAYER}{KUN}.\pTu padre me ha hablado mucho de ti.\pMe había dicho que todavía no\ntenías tu propio POKéMON.\p¡Pero has combatido de maravilla!\p¡Está claro que llevas la sangre de\ntu padre!\pAh, sí. Para darte las gracias por\nsalvarme, quiero que te quedes con\lel POKéMON que has usado.\p¡{PLAYER} ha recibido a {STR_VAR_1}!$
+LittlerootTown_ProfessorBirchsLab_Text_WhyNotGiveNicknameToMon	PROF. ABEDUL: Ya que estás,\n¡ponle un mote a {STR_VAR_1}!$
+LittlerootTown_ProfessorBirchsLab_Text_MightBeGoodIdeaToGoSeeRival	PROF. ABEDUL: Si te esfuerzas con los\nPOKéMON y ganas experiencia, creo que\lserás un ENTRENADOR excelente.\pMi hijo, {RIVAL}, también estudia\nPOKéMON mientras me ayuda.\p{PLAYER}{KUN}, ¿no crees que sería\nbuena idea ir a ver a {RIVAL}?$
+LittlerootTown_ProfessorBirchsLab_Text_GetRivalToTeachYou	PROF. ABEDUL: ¡Genial!\n{RIVAL} también se alegrará.\pQue {RIVAL} te enseñe lo que\nsignifica ser ENTRENADOR.$
+LittlerootTown_ProfessorBirchsLab_Text_DontBeThatWay	PROF. ABEDUL: Venga, no seas así.\nDeberías ir a conocer a mi hijo.$
+LittlerootTown_ProfessorBirchsLab_Text_BirchRivalGoneHome	PROF. ABEDUL: ¿{RIVAL}?\nSe ha ido a casa, creo.\pO estará otra vez correteando\npor la hierba alta…\pSi tú o tus POKéMON os cansáis,\ndeberíais descansar en casa.$
+LittlerootTown_ProfessorBirchsLab_Text_HeardYouBeatRivalTakePokedex	PROF. ABEDUL: ¡Hola, {PLAYER}{KUN}!\pMe han dicho que has ganado a {RIVAL}\na la primera. ¡Estupendo!\p{RIVAL} lleva mucho tiempo\nayudándome a investigar.\p{RIVAL} ya tiene mucha experiencia\ncomo ENTRENADOR.\pToma, {PLAYER}{KUN}. La pedí para\ninvestigar, pero creo que deberías\ltenerla tú. Es una POKéDEX.$
+LittlerootTown_ProfessorBirchsLab_Text_ReceivedPokedex	¡{PLAYER} ha recibido la POKéDEX!$
+LittlerootTown_ProfessorBirchsLab_Text_ExplainPokedex	PROF. ABEDUL: La POKéDEX es un aparato\nde alta tecnología que registra solo\llos POKéMON que ves o atrapas.\pMi hijo, {RIVAL}, la lleva a todas\npartes.\pCada vez que atrapa un POKéMON raro\ny lo registra en la POKéDEX,\l{RIVAL} me busca mientras hago\ltrabajo de campo para enseñármelo.$
+LittlerootTown_ProfessorBirchsLab_Text_CountlessPokemonAwait	PROF. ABEDUL: ¡Te esperan\nmuchísimos POKéMON!\p¡Ay, me están entrando ganas de salir\notra vez a hacer trabajo de campo!$
+LittlerootTown_ProfessorBirchsLab_Text_MayGotPokedexTooTakeThese	AURA: ¡Hala, {PLAYER}{KUN}!\n¡Tú también tienes POKéDEX!\p¡Genial! ¡Igual que yo!\n¡Yo también tengo algo para ti!$
+LittlerootTown_ProfessorBirchsLab_Text_CatchCutePokemonWithPokeBalls	AURA: ¡Es divertido tener muchos\nPOKéMON!\pVoy a buscar por todas partes\nporque quiero POKéMON distintos.\p¡Si encuentro POKéMON monos,\nlos atraparé con POKé BALLS!$
+LittlerootTown_ProfessorBirchsLab_Text_OhYourBagsFull	¿Oh? Tienes la MOCHILA llena.$
+LittlerootTown_ProfessorBirchsLab_Text_MayWhereShouldIGoNext	AURA: ¿Dónde iré ahora a buscar\nPOKéMON?$
+LittlerootTown_ProfessorBirchsLab_Text_BrendanGotPokedexTooTakeThese	BRUNO: Vaya…\nAsí que tú también tienes POKéDEX.\pPues toma.\nTe doy esto.$
+LittlerootTown_ProfessorBirchsLab_Text_CatchCoolPokemonWithPokeBalls	BRUNO: Ya sabes que es más divertido\ntener un montón de POKéMON.\pVoy a explorar por todas partes\npara encontrar POKéMON distintos.\pSi encuentro POKéMON chulos,\nintentaré atraparlos con POKé BALLS.$
+LittlerootTown_ProfessorBirchsLab_Text_HeyYourBagsFull	Oye, tienes la MOCHILA llena.$
+LittlerootTown_ProfessorBirchsLab_Text_BrendanWhereShouldIGoNext	BRUNO: ¿Dónde buscaré POKéMON\nahora…?$
+LittlerootTown_ProfessorBirchsLab_Text_SeriousLookingMachine	Es una máquina de aspecto serio.\nEl PROFESOR la usará para investigar.$
+LittlerootTown_ProfessorBirchsLab_Text_PCUsedForResearch	Es un PC para investigar.\nMejor no tocarlo.$
+LittlerootTown_ProfessorBirchsLab_Text_CrammedWithBooksOnPokemon	Está lleno de libros sobre POKéMON.$
+LittlerootTown_ProfessorBirchsLab_Text_BookTooHardToRead	Es un libro demasiado difícil de leer.$
+Route101_Text_HelpMe	¡A-ayuda!$
+Route101_Text_PleaseHelp	¡Hola! ¡Tú, el de ahí!\n¡Por favor! ¡Ayúdame!\p¡En mi MOCHILA!\n¡Hay una POKé BALL!$
+Route101_Text_DontLeaveMe	¿A-A dónde vas?\n¡No me dejes así!$
+Route101_Text_YouSavedMe	PROF. ABEDUL: Uf…\pEstaba en la hierba alta estudiando\nPOKéMON salvajes y me atacaron.\pMe has salvado.\n¡Muchas gracias!\p¿Oh?\p¡Hola, eres {PLAYER}{KUN}!\pEste no es sitio para charlar, así que\nven luego a mi LABORATORIO, ¿vale?$
+Route101_Text_TakeTiredPokemonToPokeCenter	Si tus POKéMON se cansan, llévalos\na un CENTRO POKéMON.\pHay uno en PUEBLO ESCASO,\naquí al lado.$
+Route101_Text_WildPokemonInTallGrass	En la hierba alta te saldrán\nPOKéMON salvajes.\pSi quieres atrapar POKéMON, tienes\nque meterte en la hierba alta y buscar.$
+Route101_Text_RouteSign	RUTA 101\n{UP_ARROW} PUEBLO ESCASO$

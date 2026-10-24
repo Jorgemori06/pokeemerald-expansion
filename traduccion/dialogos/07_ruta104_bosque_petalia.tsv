@@ -1,0 +1,112 @@
+# RUTA 104 (con la casa del SR. ARENQUE y sus entrenadores) y BOSQUE PETALIA
+Route104_Text_BrineyLivesInSeasideCottage	En esa casita junto al mar vive\nel SR. ARENQUE.\pFue un gran marinero que nunca temió\nal mar, por muy bravo que estuviera.$
+Route104_Text_WhatsItLikeAtBottomOfSea	El mar, ¿eh?\p¿Cómo será el fondo del mar?$
+Route104_Text_ThrowBallAtWeakenedPokemon	Si vas a lanzar una POKé BALL,\ndebilita antes al POKéMON salvaje.\pEs más fácil atraparlo si está\nenvenenado, quemado o dormido.$
+Route104_Text_OnlyThrowBallAtWildPokemon	Intentar quitarle un POKéMON a otro\nes robar.\pLanza las POKé BALLS solo a\nPOKéMON salvajes.$
+Route104_Text_ImNotATrainer	No, no, yo no soy ENTRENADORA.\pPero es verdad: si dos ENTRENADORES\ncruzan la mirada, hay combate.\pSi no quieres luchar, que no\nte vean.$
+Route104_Text_LikeFillingMouthWithSeedsTakeThis	¡Me encanta llenarme la boca de\nsemillas y escupirlas muy rápido!\p¡Toma esto y pruébalo tú!\pÚsalo en un POKéMON y aprenderá\nun movimiento que dispara semillas.$
+Route104_Text_TMsAreOneTimeUse	¡Un consejo!\pUna MT, MÁQUINA TÉCNICA, solo\nsirve para usarla una vez.\pCuando la usas, se acaba.\n¡Piénsalo bien antes de usarla!$
+Route104_Text_DontNeedThisTakeIt	Esta FLORISTERÍA ha empezado a\nvender plantones hace poco.\pMe hizo tanta ilusión que me pasé\ncomprando.\pYa no necesito esta HIERBA BLANCA.\n¿Te la quedas, por favor?$
+Route104_Text_FlowerShopSellingSaplings	Esta FLORISTERÍA ha empezado a\nvender plantones hace poco.\pMe hizo tanta ilusión que me pasé\ncomprando. ¿Dónde los pongo?$
+Route104_Text_MrBrineysCottage	CASITA DEL SR. ARENQUE$
+Route104_Text_RouteSignPetalburg	RUTA 104\n{RIGHT_ARROW} CIUDAD PETALIA$
+Route104_Text_RouteSignRustboro	RUTA 104\n{UP_ARROW} CIUDAD FÉRRICA$
+Route104_Text_PrettyPetalFlowShop	FLORISTERÍA PÉTALO BONITO$
+Route104_Text_TrainerTipsDoubleBattles	CONSEJOS PARA ENTRENADORES\pEn HOENN hay parejas de ENTRENADORES\nque retan a combates de dos contra\ldos llamados COMBATES DOBLES.\pEn un COMBATE DOBLE hay que sacar\ndos POKéMON: los dos primeros de\lla lista. Fíjate en su orden.$
+Route104_Text_MayWeShouldRegister	AURA: ¡Ah, hola, {PLAYER}{KUN}!\pDEVON te ha puesto la AGENDA en el\nPOKéNAV, ¿no?\pDeberíamos registrarnos para poder\nhablar cuando queramos.$
+Route104_Text_RegisteredMay	{PLAYER} ha registrado a AURA\nen el POKéNAV.$
+Route104_Text_MayHowsYourPokedex	AURA: Por cierto, {PLAYER}{KUN},\n¿qué tal va tu POKéDEX?$
+Route104_Text_MayMinesDecentLetsBattle	La mía va bastante bien.\nAsí que…\l¿Qué tal un combate?$
+Route104_Text_MayHaventRaisedPokemon	AURA: ¿Qué pasa?\p¿No has atrapado ni entrenado\nmucho a tus POKéMON?\p¡Eso no está bien para un ENTRENADOR!$
+Route104_Text_MayLetsBattle	AURA: Bueno, ¿qué te parece?\n¿Hacemos un combate aquí?$
+Route104_Text_MayIntro	AURA: Acabas de empezar a entrenar,\n{PLAYER}{KUN}. ¡No pienso perder!$
+Route104_Text_MayDefeat	¡Ay!\n¡Eres mejor de lo que esperaba!$
+Route104_Text_MayPostBattle	AURA: Se nota que manejas bien\na tus POKéMON.\pPero en vez de solo hacerles luchar,\ndeberías ser como el SR. ARENQUE.\pTambién es importante hacerse\namigo de los POKéMON.$
+Route104_Text_BrendanWeShouldRegister	BRUNO: ¡Anda, {PLAYER}!\p¡Qué bien, DEVON te ha puesto la\nAGENDA en el POKéNAV!\pVamos a registrarnos en los\nPOKéNAV para estar en contacto.$
+Route104_Text_RegisteredBrendan	{PLAYER} ha registrado a BRUNO\nen el POKéNAV.$
+Route104_Text_BrendanHowsYourPokedex	BRUNO: {PLAYER}, ¿qué tal tu POKéDEX?\n¿Has rellenado ya alguna página?$
+Route104_Text_BrendanDoingGreatLetsBattle	¡A mí me va genial!\p¿Quieres ver lo bueno que soy con\nun combate?$
+Route104_Text_BrendanNoConfidence	BRUNO: ¿Qué pasa? ¿No confías en\ntus POKéMON?$
+Route104_Text_BrendanLetsBattle	BRUNO: ¿Qué tal?\n¿Quieres un combate conmigo?$
+Route104_Text_BrendanIntro	BRUNO: Ya sé que acabas de empezar\na entrenar, ¡pero no te lo pondré fácil!$
+Route104_Text_BrendanDefeat	Mmm…\nNo lo haces nada mal.$
+Route104_Text_BrendanPostBattle	BRUNO: Ya manejas bastante bien\na los POKéMON.\pPero, ¿sabes?, no solo hay que\nhacerles luchar.\pComo el SR. ARENQUE, es importante\nser amigo de tus POKéMON.$
+Route104_MrBrineysHouse_Text_WaitUpPeeko	SR. ARENQUE: ¡Espera, pequeña!\n¡Espérame, PEEKO!$
+Route104_MrBrineysHouse_Text_ItsYouLetsSailToDewford	¿Mm? ¡Eres {PLAYER}{KUN}!\n¡Salvaste a mi querida PEEKO!\l¡Te debemos muchísimo!\p¿Qué dices?\n¿Que quieres navegar conmigo?\pJmjm…\p¿Llevas una CARTA para AZULIZA\ny un paquete para PORTUAL?\p¡Sí que vas ocupado!\pPero claro, lo que me pides no es\nningún problema.\p¡Has dado con el hombre adecuado!\nZarparemos hacia AZULIZA.$
+Route104_MrBrineysHouse_Text_SetSailForDewford	SR. ARENQUE: ¡Pues a AZULIZA!\p¡Leven anclas!\n¡PEEKO, zarpamos, cariño!$
+Route104_MrBrineysHouse_Text_DeclineDeliverySail	SR. ARENQUE: ¿Ah, sí?\n¿Tus recados pueden esperar?\p¡Avísame cuando quieras\nzarpar!$
+Route104_MrBrineysHouse_Text_NeedToMakeDeliveriesSailToDewford	SR. ARENQUE: ¡Ah del barco!\n¡Sé muy bien lo que vas a decir!\pTienes que llevar una CARTA a AZULIZA\ny un paquete a PORTUAL.\pLo que necesitas no es problema.\n¡Soy el hombre indicado!\pPrimero, zarparemos hacia AZULIZA.$
+Route104_MrBrineysHouse_Text_NeedToDeliverPackageSailToDewford	SR. ARENQUE: ¡Ah del barco!\n¡Sé muy bien lo que vas a decir!\pTienes que llevar un paquete al\nCAPITÁN BABOR de PORTUAL.\pLo que necesitas no es problema.\n¡Soy el hombre indicado!\pPrimero, zarparemos hacia AZULIZA.$
+Route104_MrBrineysHouse_Text_WhereAreWeBound	SR. ARENQUE: ¡Ah del barco!\n¡Por ti salgo al mar cuando sea!\pBueno, ¿adónde vamos?$
+Route104_MrBrineysHouse_Text_TellMeWheneverYouWantToSail	SR. ARENQUE: ¿Ah, sí?\nBueno, PEEKO te debe la vida.\p¡Avísame cuando quieras\nzarpar!$
+Route104_MrBrineysHouse_Text_Peeko	PEEKO: ¡Pii piihyoro!$
+PetalburgWoods_Text_NotAOneToBeFound	Mmm…\nNo hay ni uno…$
+PetalburgWoods_Text_HaveYouSeenShroomish	Hola, ¿has visto por aquí algún\nPOKéMON llamado SHROOMISH?\pMe encanta ese POKéMON.$
+PetalburgWoods_Text_IWasGoingToAmbushYou	Iba a tenderte una emboscada, pero\nhas tardado una eternidad en salir\ldel BOSQUE PETALIA, ¿eh?\p¡Me he hartado de esperar y aquí estoy!$
+PetalburgWoods_Text_HandOverThosePapers	¡Tú! ¡INVESTIGADOR de DEVON!\p¡Dame esos documentos!$
+PetalburgWoods_Text_YouHaveToHelpMe	¡Aaaah!\p¿Entrenas POKéMON, verdad?\n¡Tienes que ayudarme, por favor!$
+PetalburgWoods_Text_NoOneCrossesTeamAqua	¿Eh? ¿Qué te crees que haces?\n¿Qué pasa, vas a protegerlo?\p¡Nadie que se cruce con el EQUIPO AQUA\ntiene piedad, aunque sea un crío!\p¡Venga, lucha contra mí!$
+PetalburgWoods_Text_YoureKiddingMe	¡No me lo creo! ¡Eres duro de pelar!$
+PetalburgWoods_Text_YouveGotSomeNerve	Grrr… ¡Qué valor tienes, meterte\ncon el EQUIPO AQUA!\l¡Venga, lucha otra vez!\pEso me gustaría decir, pero no me\nquedan POKéMON…\pY, oye, el EQUIPO AQUA también busca\nalgo en FÉRRICA.\p¡Por hoy te dejo ir!$
+PetalburgWoods_Text_ThatWasAwfullyClose	Uf…\n¡Por poco!\pGracias a ti no me ha robado\nestos documentos tan importantes.\p¡Ya sé! ¡Te daré una SUPER BALL\nen agradecimiento!$
+PetalburgWoods_Text_TeamAquaAfterSomethingInRustboro	¿No ha dicho ese matón del EQUIPO AQUA\nque también buscaban algo\len FÉRRICA?$
+PetalburgWoods_Text_ICantBeWastingTime	¡Ay, no! ¡Es una crisis!\n¡No puedo perder el tiempo!$
+PetalburgWoods_Text_YoureLoadedWithItems	Vas cargado de objetos.\nNo puedo darte esta SUPER BALL.$
+PetalburgWoods_Text_GoBugPokemonTeam	¡He atrapado un montón de POKéMON!\p¡Vamos, vamos, vamos!\n¡Mi equipo de BICHOS!$
+PetalburgWoods_Text_ICouldntWin	Tengo todos estos POKéMON,\npero no he podido ganar…$
+PetalburgWoods_Text_ImOutOfPokeBalls	He atrapado un montón de POKéMON.\nAhora no me quedan POKé BALLS.$
+PetalburgWoods_Text_InstantlyPopularWithBugPokemon	¡Si llevas POKéMON BICHO al cole,\nte haces popular al momento!$
+PetalburgWoods_Text_CantBePopularIfILose	Si pierdo, no puedo ser popular.$
+PetalburgWoods_Text_PeopleRespectYou	Si tienes un POKéMON BICHO grande,\nla gente te respeta.$
+PetalburgWoods_Text_IWantRematch1	¡Quiero la revancha cuando crezcan\nmis BICHOS!\p¡Te registro en mi POKéNAV!$
+PetalburgWoods_Text_IWantRematch2	¡Quiero la revancha cuando crezcan\nmis BICHOS!\p¡Te registro en mi POKéNAV!$
+PetalburgWoods_Text_MyPokemonHaveGrown	Mis BICHOS han crecido.\nVolveré a ser popular.$
+PetalburgWoods_Text_CantBePopularIfLose	Si pierdo, no puedo ser popular.$
+PetalburgWoods_Text_IveBeenTrainingHard	Con POKéMON fuertes te haces\npopular, ¿verdad?\lAsí que he entrenado mucho.$
+PetalburgWoods_Text_StayOutOfTallGrass	¡Eh, tú!\n¿Tus POKéMON están bien?\pSi son débiles y quieres evitar\ncombates, no te metas en\lla hierba alta.$
+PetalburgWoods_Text_HiddenItemsExplanation	A veces hay cosas en el suelo\naunque no se vean.\pPor eso siempre miro por\ndónde piso.$
+PetalburgWoods_Text_TryUsingThisItem	¡Anda, qué guay!\n¡Es la MEDALLA del GIMNASIO FÉRRICA!\pSeguro que entrenas POKéMON.\nDeberías probar este objeto.$
+PetalburgWoods_Text_MiracleSeedExplanation	Es una SEMILLA MILAGRO.\nSi la lleva un POKéMON, sus\lmovimientos PLANTA son más fuertes.\pAdemás de esa, creo que hay otros\nobjetos útiles para que lleven\llos POKéMON.$
+PetalburgWoods_Text_TrainerTipsExperience	CONSEJOS PARA ENTRENADORES\pTodo POKéMON que salga aunque sea\nuna vez en combate gana EXPERIENCIA.\pPara entrenar a uno débil, ponlo\nel primero de la lista.\pEn cuanto empiece el combate,\ncámbialo. Ganará EXPERIENCIA sin\lrecibir ningún daño.$
+PetalburgWoods_Text_TrainerTipsPP	CONSEJOS PARA ENTRENADORES\pAdemás de los PS, los POKéMON tienen\nPUNTOS DE PODER (PP) para usar\lsus movimientos en combate.\pSi un POKéMON se queda sin PP,\nhay que llevarlo al CENTRO POKéMON.$
+Route104_Text_GinaIntro	GINA: ¡Venga, a luchar con\nnuestros POKéMON!$
+Route104_Text_GinaDefeat	GINA: ¡Perder me enfada!$
+Route104_Text_GinaPostBattle	GINA: ¡Qué fuerte eres!\n¡Tenemos que entrenar mucho más!$
+Route104_Text_GinaNotEnoughMons	GINA: ¿Eh? ¿Solo un POKéMON?\nEntonces no luchamos contigo.\pSi solo hay un POKéMON, estará\nsolito. Eso no está bien.$
+Route104_Text_MiaIntro	MÍA: Somos gemelas, así que\nluchamos juntas.$
+Route104_Text_MiaDefeat	MÍA: Hemos luchado juntas, pero\nhemos perdido las dos…$
+Route104_Text_MiaPostBattle	MÍA: Entrenaremos más a nuestros\nPOKéMON para ser fuertes como tú.$
+Route104_Text_MiaNotEnoughMons	MÍA: ¿Quieres luchar contra nosotras?\p¡Ni hablar si no llevas dos\nPOKéMON!\l¡Somos demasiado fuertes!$
+Route104_Text_IvanIntro	¿Para qué ocultarlo?\n¡Soy experto en POKéMON de AGUA!\p¿Eh?\n¿No me conoces?$
+Route104_Text_IvanDefeat	Creía que no se me daba mal, pero\nparece que sí… Puaj…$
+Route104_Text_IvanPostBattle	Me he enganchado demasiado a pescar.\nSe me olvidó entrenar a mis POKéMON…$
+Route104_Text_BillyIntro	¡Dejar huellas en la arena es\nmuy divertido!$
+Route104_Text_BillyDefeat	¡Buaa! ¡Se me ha metido arena en\nlas zapatillas! ¡Qué asco!$
+Route104_Text_BillyPostBattle	Quiero dejar mis huellas en la arena\npor todas partes, pero se borran\lenseguida…$
+Route104_Text_HaleyIntro	¿Lucho…\no no lucho?\p¡Venga, vale, lucho!$
+Route104_Text_HaleyDefeat	No tendría que haber luchado…$
+Route104_Text_HaleyPostBattle	Si tienes que decidir algo y dejas\nque otro decida por ti, te\larrepentirás, salga como salga.$
+Route104_Text_HaleyRegister1	Eres fuerte, pero ¿te registro en\nmi POKéNAV?\lA lo mejor no debería…\p¡Venga, vale, te registro!$
+Route104_Text_HaleyRegister2	Eres fuerte, pero ¿te registro en\nmi POKéNAV?\lA lo mejor no debería…\p¡Venga, vale, te registro!$
+Route104_Text_HaleyRematchIntro	¡Venga, lucha conmigo!$
+Route104_Text_HaleyRematchDefeat	Oh…\nCreía que podía ganar…$
+Route104_Text_HaleyPostRematch	Decidí luchar yo, así que acepto\nla derrota con elegancia.\p¡Pero me sigue fastidiando perder!$
+Route104_Text_WinstonIntro	Claro, acepto tu desafío.\nTengo mucho dinero.$
+Route104_Text_WinstonDefeat	¿Por qué no he ganado?$
+Route104_Text_WinstonPostBattle	Hay cosas que el dinero no compra.\nComo los POKéMON…$
+Route104_Text_WinstonRegister1	¿Mm?\nAh, tienes un POKéNAV.\pTe registro encantado.\nAl fin y al cabo, me sobra el dinero.$
+Route104_Text_WinstonRegister2	¿Mm?\nAh, tienes un POKéNAV.\pTe registro encantado.\nAl fin y al cabo, me sobra el dinero.$
+Route104_Text_WinstonRematchIntro	Desde que perdí contigo, he aprendido\nmuchas cosas de los POKéMON.$
+Route104_Text_WinstonRematchDefeat	¿He vuelto a perder?\n¿Por qué no gano?$
+Route104_Text_WinstonPostRematch	Soy riquísimo, pero no consigo\nganar con los POKéMON…\p¡Qué profundo es el mundo POKéMON!$
+Route104_Text_CindyIntro	El destino ha querido que nos\nencontremos. ¿Me concedes un combate?$
+Route104_Text_CindyDefeat	¡Vaya por Dios!$
+Route104_Text_CindyPostBattle	Todo “hola” es el principio de\nun “adiós”. Ojalá nos veamos pronto.$
+Route104_Text_CindyRegister1	Hola, nos volvemos a ver.\pParece que algo nos une. Vamos a\nregistrarnos en los POKéNAV.$
+Route104_Text_CindyRegister2	Deberíamos celebrar que algo\nparece unirnos.\pVamos a registrarnos en los\nPOKéNAV.$
+Route104_Text_CindyRematchIntro	Hola, nos volvemos a ver.\n¿Me concedes un combate?$
+Route104_Text_CindyRematchDefeat	Vaya…\nHe hecho lo que he podido…$
+Route104_Text_CindyPostRematch	Todo “hola” es el principio de\nun “adiós”. Ojalá nos veamos pronto.$
+Route104_Text_DarianIntro	¡He pescado un POKéMON con pinta\nde duro!\p¡Tiene algo mágico!\n¡Parece duro, ya lo creo que sí!$
+Route104_Text_DarianDefeat	Pero qué…$
+Route104_Text_DarianPostBattle	Oye, MAGIKARP, no estás a la\naltura de lo que pareces, ¿eh?$

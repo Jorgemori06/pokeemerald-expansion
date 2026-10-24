@@ -1,0 +1,68 @@
+# CIUDAD FÉRRICA (calles) y su GIMNASIO (PETRA). Sin las revanchas del postgame.
+RustboroCity_Text_WeShortenItToDevon	La CORPORACIÓN DEVON…\nTodos la llamamos DEVON a secas.\pEsa empresa hace todo tipo de\nproductos muy prácticos.$
+RustboroCity_Text_SneakyLookingManWentAroundCorner	¿Mm? ¿Un hombre sospechoso?\pAhora que lo dices, sí, un tipo con\nmala pinta ha doblado la esquina.$
+RustboroCity_Text_HaveYouChallengedGym	¿Has desafiado al GIMNASIO\nPOKéMON?\pCuando tienes en la mano esa MEDALLA\nbrillante, supongo que entiendes\llo que se espera de un ENTRENADOR.$
+RustboroCity_Text_HeyThatsRustborosGymBadge	¡Eh, esa es la MEDALLA de FÉRRICA!\pDe todas las MEDALLAS de GIMNASIO,\nla de FÉRRICA es la más chula.$
+RustboroCity_Text_YoureNewAroundHere	¿Eh? ¿Quién eres?\nNo te había visto por aquí.\p¿Acabas de llegar a la ESCUELA\nde ENTRENADORES POKéMON?$
+RustboroCity_Text_GymLeaderIsntEasyWithFire	He desafiado a la LÍDER, pero…\pNo va a ser fácil ganar con mis\nPOKéMON de tipo FUEGO…\pEl tipo FUEGO no se lleva bien\ncon el tipo ROCA…$
+RustboroCity_Text_MrBrineyWalksInTheTunnel	El viejo marinero SR. ARENQUE vive\nen una casita junto al mar.\pDe vez en cuando sale a pasear\npor el túnel.$
+RustboroCity_Text_MrBrineyLovesPeeko	El viejo marinero SR. ARENQUE vive\nen una casita junto al mar.\pDijo que iba a PORTUAL a comprar\ncosas para su mascota, PEEKO.\p¡Cómo quiere ese lobo de mar\na su PEEKO!$
+RustboroCity_Text_WowYouHavePokemon	¡Hala, tú también llevas POKéMON!\pCuando sea mayor, yo también iré\na muchos sitios con POKéMON.$
+RustboroCity_Text_CatchRarePokemonIfIGoToSchool	¡La ESCUELA de ENTRENADORES POKéMON!\pSi voy a esta escuela, ¿podré atrapar\nPOKéMON raros fácilmente?$
+RustboroCity_Text_PokemonCanChangeLookFromExp	Si un POKéMON gana experiencia en\ncombate, a veces puede cambiar\lde aspecto.$
+RustboroCity_Text_PokemonChangeShape	¿Un POKéMON cambia de forma?\n¡Si lo viera, me llevaría un susto!$
+RustboroCity_Text_TradePokemonGrowFast	Un POKéMON que te dan en un\nintercambio crece rápido.\pPero si no tienes ciertas MEDALLAS,\npuede que no te obedezca…$
+RustboroCity_Text_OutOfTheWay	¡Fuera!\n¡Apártate!$
+RustboroCity_Text_WaitDontTakeMyGoods	¡Espera! ¡Por favooor!\p¡No te lleves mis PIEZAS!$
+RustboroCity_Text_HelpMeIWasRobbed	¡Ah, eres tú!\p¡Quien me ayudó en el\nBOSQUE PETALIA!\p¡Ayúdame! ¡Me ha robado el EQUIPO AQUA!\n¡Tengo que recuperar las PIEZAS DEVON!\pSi no…\nMe voy a meter en un buen lío.$
+RustboroCity_Text_ShadyCharacterTookOffTowardsTunnel	Creo que ese tipo sospechoso se ha\nido hacia el túnel de allí.$
+RustboroCity_Text_YouGotItThankYou	¡Oh! ¿Qué tal ha ido?\n¿Y las PIEZAS DEVON?\p¡Las tienes!\n¡Las has recuperado!\p¡Qué bien combates!\p¡Ya sé! ¡Para darte las gracias,\nte daré otra SUPER BALL!$
+RustboroCity_Text_YoureLoadedWithItems	Vas cargado de objetos.\nNo puedo darte esta SUPER BALL.$
+RustboroCity_Text_PleaseComeWithMe	¡Disculpa!\n¡Ven conmigo, por favor!$
+RustboroCity_Text_MayHiLetsRegister	AURA: ¡Ah, hola, {PLAYER}{KUN}!\p¡Te han puesto la AGENDA en el\nPOKéNAV!\p¡Vamos a registrarnos para poder\nhablar cuando queramos!\p… … … … … …$
+RustboroCity_Text_RegisteredMay	Has registrado a AURA\nen el POKéNAV.$
+RustboroCity_Text_MayPassedBrineyWantToBattle	AURA: Por cierto, me he cruzado con\nel SR. ARENQUE en el BOSQUE PETALIA.\pSupongo que volvía a su casita\njunto al mar.\p¿Qué tal tu POKéDEX, {PLAYER}{KUN}?\n¡La mía va bastante bien!\pAsí que…\n¿Qué tal un combate?$
+RustboroCity_Text_MayOhHaventRaisedPokemonEnough	AURA: ¿Qué pasa?\p¿No has atrapado ni entrenado\nmucho a tus POKéMON?\p¡Eso no está bien para un ENTRENADOR!$
+RustboroCity_Text_MayWantToBattle	AURA: Bueno, ¿qué te parece?\n¿Hacemos un combate aquí?$
+RustboroCity_Text_MayImNotGoingToLose	AURA: Acabas de empezar a entrenar,\n{PLAYER}{KUN}. ¡No pienso perder!$
+RustboroCity_Text_MayDefeat	¡Ay!\n¡Eres mejor de lo que esperaba!$
+RustboroCity_Text_MayMrBrineyHint	AURA: Por cierto, el SR. ARENQUE,\ncon quien me he cruzado…\p{PLAYER}{KUN}, como eres nuevo aquí,\nno lo sabrás, pero el SR. ARENQUE\lfue un marinero muy respetado.$
+RustboroCity_Text_BrendanHiLetsRegister	BRUNO: ¡Anda, {PLAYER}!\p¡Te han puesto la AGENDA en el\nPOKéNAV! ¡Qué guay!\p¡Vamos a registrarnos para poder\nhablar cuando queramos!\p… … … … … …$
+RustboroCity_Text_RegisteredBrendan	Has registrado a BRUNO\nen el POKéNAV.$
+RustboroCity_Text_BrendanPassedBrineyWantToBattle	BRUNO: Por cierto, {PLAYER}, me he\ncruzado con el SR. ARENQUE en el\lBOSQUE PETALIA.\pSeguro que volvía a su casita\njunto al mar.\p{PLAYER}, ¿qué tal tu POKéDEX?\n¿Has rellenado ya alguna página?\pLa mía es la mejor.\p¿Quieres un combate para ver\ncuánto has mejorado?$
+RustboroCity_Text_BrendanNoConfidenceInPokemon	BRUNO: ¿Qué pasa? ¿No confías en\ntus POKéMON?$
+RustboroCity_Text_BrendanWantToBattle	BRUNO: ¿Qué tal?\n¿Quieres un combate conmigo?$
+RustboroCity_Text_BrendanIWontGoEasy	BRUNO: Ya sé que acabas de empezar\na entrenar, ¡pero no te lo pondré fácil!$
+RustboroCity_Text_BrendanDefeat	Mmm…\nNo lo haces nada mal.$
+RustboroCity_Text_BrendanMrBrineyHint	BRUNO: Por cierto, ¿conoces al\nSR. ARENQUE? ¿Con el que me he cruzado?\pComo te acabas de mudar, {PLAYER},\nseguro que no lo sabes, pero el\lSR. ARENQUE fue un gran marinero.$
+RustboroCity_Text_TunnelNearingCompletion	“¡Túnel para ahorrar tiempo, a punto\nde terminarse!”\p…Eso dice el cartel, pero tiene\nuna gran “X” pintada encima\lcon pintura roja…$
+RustboroCity_Text_DevonCorpSign	CORPORACIÓN DEVON\p“Para todo lo que necesites,\nlo fabricamos todo”.$
+RustboroCity_Text_GymSign	GIMNASIO POKéMON DE CIUDAD FÉRRICA\nLÍDER: PETRA\p“¡La alumna modelo que ama las rocas!”$
+RustboroCity_Text_DevonCorpBranchOfficeSign	OFICINA DE LA CORPORACIÓN DEVON\p“Solo para empleados de DEVON y\npersonal autorizado”.$
+RustboroCity_Text_CitySign	CIUDAD FÉRRICA\p“La ciudad que busca unir naturaleza\ny ciencia”.$
+RustboroCity_Text_TrainersSchoolSign	ESCUELA DE ENTRENADORES POKéMON\p“¡Te enseñamos todo sobre\nlos POKéMON!”$
+RustboroCity_Text_CuttersHouse	CASA DEL LEÑADOR$
+RustboroCity_Text_DevelopedNewPokenavFeature	He estado creando una función nueva\npara el POKéNAV…\p¡Y ha quedado genial!\p{PLAYER}, ¿me dejas ver el POKéNAV?\n¿El que te dio nuestro PRESIDENTE?$
+RustboroCity_Text_AddedMatchCallPleaseCallMrStone	¡Listo, {PLAYER}!\pHe añadido a tu POKéNAV una función\nnueva llamada AGENDA.\pCon la AGENDA puedes hablar con\nla gente que tengas registrada\len el POKéNAV.\p{PLAYER}, nuestro PRESIDENTE PEÑA ya\ndebería estar registrado.\pPruébala.\nLlama a nuestro PRESIDENTE, por favor.$
+RustboroCity_Text_PleaseSelectPokenav	Elige el POKéNAV, por favor.$
+RustboroCity_Text_IdBetterGetBackToWork	Bueno, tengo que volver al trabajo.\n¡Cuídate mucho, {PLAYER}!$
+RustboroCity_Text_YouCanHave2On2Battle	¿Sabías esto?\pPuedes tener un combate de dos contra\ndos aunque no vayas con nadie.\pSi te ven dos ENTRENADORES y llevas\ndos POKéMON o más,\llos dos te retarán a la vez.\p¿A que molaría ganar a dos\nENTRENADORES tú solo?$
+RustboroCity_Gym_Text_GymGuideAdvice	¡Eh! ¿Qué tal?\p¡Escúchame!\n¿Te gustaría ganar el CAMPEONATO?\pYo no soy ENTRENADOR, pero sé\ndarte consejos para ganar.\p¡Pues decidido! ¡Iremos a por el\nCAMPEONATO POKéMON juntos!\pTu trabajo como ENTRENADOR es\nconseguir MEDALLAS, ¿verdad?\p¡Pero los LÍDERES no son blandos!\p¡Y ahí entro yo!\n¡Estoy aquí para darte consejos!\pPETRA, la LÍDER del GIMNASIO, usa\nPOKéMON de tipo ROCA.\pEl tipo ROCA es muy resistente, pero\nno aguanta los movimientos de\ltipo AGUA y PLANTA.\pVen a verme después si vences\na la LÍDER.\p¡Venga, a por ella!$
+RustboroCity_Gym_Text_GymGuidePostVictory	¡Hala! ¡Qué victoria tan increíble!\n¡Mis ánimos han funcionado!\p¡Genial!\nMira tu FICHA DE ENTRENADOR.\pLa MEDALLA PIEDRA que has ganado\ndebería estar registrada.\pO sea…\p¡Has subido el primer escalón\nhacia el CAMPEONATO!\p¡Eso tiene que sentar de maravilla!$
+RustboroCity_Gym_Text_JoshIntro	¡No subestimes a los ENTRENADORES del\nGIMNASIO! ¡Te enseñaré por qué!$
+RustboroCity_Gym_Text_JoshDefeat	Tienes demasiado nivel para mí…$
+RustboroCity_Gym_Text_JoshPostBattle	¡Aún no has visto el terrible poder\ndel tipo ROCA!$
+RustboroCity_Gym_Text_TommyIntro	¡Si no me ganas a mí, no tendrás nada\nque hacer contra PETRA!$
+RustboroCity_Gym_Text_TommyDefeat	¡Hala! ¡Tienes potencial!$
+RustboroCity_Gym_Text_TommyPostBattle	PETRA es mucho más fuerte\nque yo.\p¡Ve con cuidado!$
+RustboroCity_Gym_Text_MarcIntro	Estaremos en mitad de la ciudad,\npero ¿y qué?\p¡Mis POKéMON ROCA necesitan sitio\npara arrasar!$
+RustboroCity_Gym_Text_MarcDefeat	¡Madre mía!\n¡Qué rival tan peleón!$
+RustboroCity_Gym_Text_MarcPostBattle	Hay que reconocérselo a nuestra LÍDER.\pTuvo cabeza para elegir el tipo ROCA\ntan joven.$
+RustboroCity_Gym_Text_RoxanneIntro	Hola, soy PETRA, la LÍDER del\nGIMNASIO POKÉMON de FÉRRICA.\pMe hice LÍDER para poner en práctica\nen combate lo que aprendí en la\lESCUELA de ENTRENADORES POKéMON.\p¿Serías tan amable de enseñarme cómo\ncombates y con qué POKéMON?$
+RustboroCity_Gym_Text_RoxanneDefeat	Así que…\nHe perdido…\pParece que todavía me queda mucho\npor aprender…\pLo entiendo.\pLas normas de la LIGA POKéMON dicen\nque hay que dar esto a quien venza\la un LÍDER de GIMNASIO.\pAcepta la MEDALLA PIEDRA oficial de\nla LIGA POKéMON.$
+RustboroCity_Gym_Text_ReceivedStoneBadge	¡{PLAYER} ha recibido la MEDALLA\nPIEDRA de PETRA!$
+RustboroCity_Gym_Text_StoneBadgeInfoTakeThis	La MEDALLA PIEDRA sube el ATAQUE\nde tus POKéMON.\pTambién les permite usar el movimiento\nde MO CORTE fuera de los combates.\pToma también esto, por favor.$
+RustboroCity_Gym_Text_ExplainRockTomb	Esa MÁQUINA TÉCNICA, la MT39,\ncontiene TUMBA ROCAS.\pNo solo hace daño tirando rocas,\nsino que también baja la VELOCIDAD.\pUna MT enseña al instante el\nmovimiento a un POKéMON.\pRecuerda que una MT solo se usa\nuna vez, así que piénsalo bien.$
+RustboroCity_Gym_Text_RoxannePostBattle	Como eres tan fuerte, deberías\ndesafiar a otros LÍDERES.\pLuchando contra muchos ENTRENADORES\naprenderás muchas cosas.$
+RustboroCity_Gym_Text_GymStatue	GIMNASIO POKéMON DE CIUDAD FÉRRICA$
+RustboroCity_Gym_Text_GymStatueCertified	GIMNASIO POKéMON DE CIUDAD FÉRRICA\pENTRENADORES RECONOCIDOS POR PETRA:\n{PLAYER}$
