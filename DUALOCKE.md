@@ -337,7 +337,7 @@ En total, unas 210.000 palabras: más o menos dos novelas largas.
 
 1. **Nombres oficiales** de Pokémon, movimientos, habilidades, objetos, tipos y naturalezas. No inventarlos: sacarlos de listas oficiales.
 2. **Mensajes de combate, menús y gráficos con texto:** reaprovechar la traducción de Heart & Soul ([SergioBonet/hns_es](https://github.com/SergioBonet/hns_es)), que tradujo este mismo motor (aunque una versión algo anterior). Incluye los arreglos de código para artículos y concordancias ("¡El Pikachu salvaje usó…!") y los gráficos con texto (iconos de tipo, barras de PS/Nv…).
-3. **Diálogos de Hoenn:** lo ideal es sacarlos con un script de una copia de la **Esmeralda española oficial**. Es mucho más barato en uso de Claude que traducirlos y son los textos oficiales. Si no hay ROM española, se traducen.
+3. **Diálogos de Hoenn (en curso):** decidido el 24/10/2026 traducirlos nosotros por tramos, en el orden de la historia, y sin el postgame. Cómo se hace: `traduccion/dialogos/LEEME.md`.
 4. **Pruebas jugando:** recuadros donde no cabe el texto, frases sin traducir, erratas.
 
 ### Dificultades técnicas

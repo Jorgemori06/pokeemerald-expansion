@@ -1,0 +1,52 @@
+# VILLA RAÍZ: casa del jugador y casa del rival (AURA / BRUNO)
+PlayersHouse_1F_Text_IsntItNiceInHere	MAMÁ: ¿Ves, {PLAYER}?\n¿A que dentro también es bonito?$
+PlayersHouse_1F_Text_MoversPokemonGoSetClock	Los POKéMON de la mudanza lo han\nmetido y limpiado todo.\l¡Qué cómodo!\p{PLAYER}, tu habitación está arriba.\n¡Ve a echarle un vistazo, cielo!\pPAPÁ te ha comprado un reloj nuevo\npor la mudanza.\l¡No te olvides de ponerlo en hora!$
+PlayersHouse_1F_Text_ArentYouInterestedInRoom	MAMÁ: ¿Qué pasa, {PLAYER}?\p¿No quieres ver tu propia\nhabitación?$
+PlayersHouse_1F_Text_GoSetTheClock	MAMÁ: {PLAYER}.\pVe a poner en hora el reloj de tu\nhabitación, cielo.$
+PlayersHouse_1F_Text_OhComeQuickly	MAMÁ: ¡Oh! ¡{PLAYER}, {PLAYER}!\n¡Rápido! ¡Ven corriendo!$
+PlayersHouse_1F_Text_MaybeDadWillBeOn	MAMÁ: ¡Mira! ¡Es el GIMNASIO PETALIA!\n¡A lo mejor sale PAPÁ!$
+PlayersHouse_1F_Text_ItsOverWeMissedHim	MAMÁ: Oh… Ya ha terminado.\pCreo que ha salido PAPÁ, pero nos\nlo hemos perdido. ¡Qué pena!$
+PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor	Ah, sí.\nUn amigo de PAPÁ vive en el pueblo.\pSe llama PROF. ABEDUL.\pVive justo al lado, así que deberías\nir a presentarte.$
+PlayersHouse_1F_Text_SeeYouHoney	MAMÁ: ¡Hasta luego, cielo!$
+PlayersHouse_1F_Text_DidYouMeetProfBirch	MAMÁ: ¿Te has presentado al\nPROF. ABEDUL?$
+PlayersHouse_1F_Text_YouShouldRestABit	MAMÁ: ¿Qué tal, {PLAYER}?\nPareces un poco cansado.\pCreo que deberías descansar un poco.$
+PlayersHouse_1F_Text_TakeCareHoney	MAMÁ: ¡Cuídate, cielo!$
+PlayersHouse_1F_Text_GotDadsBadgeHeresSomethingFromMom	MAMÁ: ¿Esa MEDALLA te la ha dado PAPÁ?\p¡Pues aquí tienes algo de tu MAMÁ!$
+PlayersHouse_1F_Text_DontPushYourselfTooHard	No te esfuerces demasiado, cielo.\nSiempre puedes volver a casa.\p¡A por ellos!$
+PlayersHouse_1F_Text_IsThatAPokenav	MAMÁ: ¿Qué es eso, cielo? ¿Un POKéNAV?\n¿Te lo ha dado alguien de DEVON?\pBueno, cielo, ¿por qué no registras\na tu mamá?\p… … …$
+PlayersHouse_1F_Text_RegisteredMom	Has registrado a MAMÁ\nen el POKéNAV.$
+PlayersHouse_1F_Text_Vigoroth1	¡Fugiiiiih!$
+PlayersHouse_1F_Text_Vigoroth2	Huggoh, uggo uggo…$
+PlayersHouse_1F_Text_ReportFromPetalburgGym	REPORTERA: …Les hemos ofrecido este\nreportaje desde el GIMNASIO PETALIA.$
+PlayersHouse_1F_Text_TheresAMovieOnTV	Están echando una película.\pDos hombres bailan sobre el teclado\nde un piano gigante.\p¡Hay que ponerse en marcha!$
+PlayersHouse_1F_Text_RunningShoesManual	Es el folleto de instrucciones de\nlas DEPORTIVAS.\p“Pulsa el Botón B para correr con\nlas DEPORTIVAS puestas.\p”¡Átate las DEPORTIVAS y sal\ncorriendo!”$
+PlayersHouse_1F_Text_TicketFromBrineyCameForYou	PAPÁ: ¿Mm?\p¡Anda, si es {PLAYER}!\pHacía tiempo que no te veía, pero\nte veo… más fuerte, no sé.\pEsa es la impresión que me das.\n¡Pero tu viejo aún no se rinde!\pAh, sí, tengo algo para ti.\nTe lo ha enviado un tal\lSR. ARENQUE.$
+PlayersHouse_1F_Text_PortsInSlateportLilycove	PAPÁ: Mm, ¿un BILLETE de ferry?\pSi no recuerdo mal, hay puertos en\nCIUDAD PORTUAL y CIUDAD CALAGUA.$
+PlayersHouse_1F_Text_BetterGetBackToGym	Tengo que volver al GIMNASIO PETALIA.\pMAMÁ, gracias por cuidar de la casa\nmientras estoy fuera.$
+PlayersHouse_1F_Text_DadShouldStayLonger	MAMÁ: Tu padre…\pViene a casa después de mucho\ntiempo y solo habla de POKéMON.\pDebería relajarse y quedarse más.$
+PlayersHouse_1F_Text_IsThatABreakingStory	MAMÁ: ¿Es una noticia de última hora?$
+PlayersHouse_1F_Text_LatiEmergencyNewsFlash	¡Interrumpimos la emisión para dar\nuna noticia urgente!\pEn varios lugares de HOENN se ha visto\nun POKéMON de color BZZT…\lsurcando el cielo.\pDe momento no se sabe de qué\nPOKéMON se trata.\pAhora seguimos con la película.$
+PlayersHouse_1F_Text_WhatColorDidTheySay	MAMÁ: {PLAYER}, ¿lo has oído?\p¿De qué color ha dicho el locutor\nque era ese POKéMON?$
+PlayersHouse_1F_Text_StillUnknownPokemon	MAMÁ: ¡Vaya, qué cosas!\nTodavía hay POKéMON desconocidos.$
+PlayersHouse_2F_Text_ClockIsStopped	El reloj está parado…\p¡Habrá que ponerlo en hora!$
+PlayersHouse_2F_Text_HowDoYouLikeYourRoom	MAMÁ: {PLAYER}, ¿te gusta tu nueva\nhabitación?\p¡Bien! ¡Todo está bien colocado!\pAbajo también han terminado de\nmeterlo todo.\p¡Qué cómodos son los POKéMON de\nmudanzas!\pAh, comprueba que está todo en tu\nescritorio.$
+PlayersHouse_2F_Text_Notebook	{PLAYER} ha abierto el cuaderno.\pREGLA DE AVENTURA N.º 1\nAbre el MENÚ con START.\pREGLA DE AVENTURA N.º 2\nGuarda tu progreso con GUARDAR.\pEl resto de páginas está en blanco…$
+Common_Text_LookCloserAtMap	{PLAYER} ha mirado de cerca el\nmapa de la región de {REGION}.$
+PlayersHouse_2F_Text_ItsAGameCube	Es una Nintendo GameCube.\pTiene conectada una Game Boy Advance\nque hace de mando.$
+RivalsHouse_1F_Text_OhYoureTheNewNeighbor	Hola. ¿Y tú eres…?\p… … … … … … … … …\n… … … … … … … … …\p¡Eres {PLAYER}{KUN}, el vecino nuevo!\n¡Hola!\pTenemos un {STR_VAR_1} de tu misma\nedad.\pNuestro {STR_VAR_1} estaba deseando\nhacer un nuevo amigo.\pCreo que nuestro {STR_VAR_1} está arriba.$
+RivalsHouse_1F_Text_LikeChildLikeFather	De tal palo, tal astilla.\pA mi marido le encantan los POKéMON\ntanto como a nuestro hijo.\pSi no está en su LABORATORIO, estará\ncorreteando por la hierba.$
+RivalsHouse_1F_Text_TooBusyToNoticeVisit	¡Ay, {RIVAL}!\pCreo que está tan ocupado con los\nPOKéMON que no se ha dado cuenta\lde que has venido, {PLAYER}{KUN}.$
+RivalsHouse_1F_Text_WentOutToRoute103	Ah, {RIVAL} se ha ido a la RUTA 103\nhace un ratito.\pDe tal palo, tal astilla.\n{RIVAL} no se está quieto en casa.$
+RivalsHouse_1F_Text_ShouldGoHomeEverySoOften	Me parece genial viajar con\nPOKéMON.\pPero deberías volver a casa de vez\nen cuando para que tu madre te vea.\pNo te lo dirá, pero seguro que se\npreocupa por ti, {PLAYER}{KUN}.$
+RivalsHouse_1F_Text_MayWhoAreYou	¿Eh?\n¿Quién… Quién eres?\p… … … … … … … …\n… … … … … … … …\pAh, eres {PLAYER}{KUN}.\nAsí que la mudanza era hoy.\pEh… Soy AURA.\n¡Encantada!\pYo…\nSueño con hacerme amiga de\llos POKéMON de todo el mundo.\pMe… Me habló de ti mi padre,\nel PROF. ABEDUL.\pEsperaba que fueras simpático,\n{PLAYER}{KUN}, y que fuéramos amigos.\pQué tontería, ¿verdad?\nSi… Si acabo de conocerte.\pJijiji…\p¡Oh, no! ¡Se me olvidaba!\p¡Tenía que ayudar a papá a atrapar\nPOKéMON salvajes!\p¡{PLAYER}{KUN}, ya nos veremos!$
+RivalsHouse_1F_Text_BrendanWhoAreYou	¡Eh!\nTú…\p¿Quién eres?\pEres {PLAYER}, ¿no?\nLa que se ha mudado al lado, ¿verdad?\pNo sabía que eras una chica.\pMi padre, el PROF. ABEDUL, dijo que\nla nueva vecina era hija de un LÍDER\lde GIMNASIO, y creí que eras un chico.\pMe llamo BRUNO.\n¡Hola, vecina!\p¿Eh? Oye, {PLAYER}, ¿no tienes\nningún POKéMON?\p¿Quieres que te atrape uno?\pVaya, se me olvidaba…\pTengo que ayudar a mi padre a atrapar\nPOKéMON salvajes.\pEn otro momento, ¿vale?$
+RivalsHouse_1F_Text_DoYouHavePokemon	¡Hola, vecina!\p¿Ya tienes tu propio\nPOKéMON?$
+RivalsHouse_2F_Text_MayWhoAreYou	¿Eh?\n¿Quién… Quién eres?\p… … … … … … … …\n… … … … … … … …\pAh, eres {PLAYER}{KUN}.\nAsí que la mudanza era hoy.\pEh… Soy AURA.\n¡Encantada!\pYo…\nSueño con hacerme amiga de\llos POKéMON de todo el mundo.\pMe… Me habló de ti mi padre,\nel PROF. ABEDUL.\pEsperaba que fueras simpático,\n{PLAYER}{KUN}, y que fuéramos amigos.\pQué tontería, ¿verdad?\nSi… Si acabo de conocerte.\pJijiji…\p¡Oh, no! ¡Se me olvidaba!\p¡Tenía que ayudar a papá a atrapar\nPOKéMON salvajes!\p¡{PLAYER}{KUN}, ya nos veremos!$
+RivalsHouse_2F_Text_MayGettingReady	¡POKéMON curados del todo!\nObjetos preparados y…$
+RivalsHouse_2F_Text_BrendanWhoAreYou	¡Eh!\nTú…\p¿Quién eres?\pEres {PLAYER}, ¿no?\nLa que se ha mudado al lado, ¿verdad?\pNo sabía que eras una chica.\pMi padre, el PROF. ABEDUL, dijo que\nla nueva vecina era hija de un LÍDER\lde GIMNASIO, y creí que eras un chico.\pMe llamo BRUNO.\n¡Hola, vecina!\p¿Eh? Oye, {PLAYER}, ¿no tienes\nningún POKéMON?\p¿Quieres que te atrape uno?\pVaya, se me olvidaba…\pTengo que ayudar a mi padre a atrapar\nPOKéMON salvajes.\pEn otro momento, ¿vale?$
+RivalsHouse_2F_Text_BrendanGettingReady	POKéMON curados del todo…\nObjetos guardados y…$
+RivalsHouse_2F_Text_ItsRivalsPokeBall	¡Es la POKé BALL de {RIVAL}!\pMejor dejarla donde está.$
+RivalsHouse_2F_Text_MayJustCheckingMyPokedex	AURA: ¡{PLAYER}{KUN}!\pEstaba mirando mi POKéDEX.\pTodavía hay muchos POKéMON que he\nvisto pero no he atrapado.\pY creo que muchos otros\nevolucionarán.\p¿Dónde iré ahora a atrapar\nPOKéMON?$
+RivalsHouse_2F_Text_MayWhereShouldIGoNext	AURA: ¿Dónde iré ahora a atrapar\nPOKéMON?\p¿A que tendría gracia que nos\nencontráramos, {PLAYER}{KUN}?$
+RivalsHouse_2F_Text_BrendanJustCheckingMyPokedex	BRUNO: Anda, es {PLAYER}.\pEstaba mirando mi POKéDEX.\pYa sé que aún me faltan muchos\nPOKéMON por atrapar, pero\lno está nada mal.\pMirar la POKéDEX me da ganas de\nvolver a ponerme en camino.$
+RivalsHouse_2F_Text_BrendanWhereShouldIGoNext	BRUNO: No sé dónde ir ahora a\natrapar POKéMON.\pOye, {PLAYER}, si te veo mientras\natrapo POKéMON, te reto a un\lcombate si quieres.$
