@@ -67,7 +67,8 @@ static void BuryMon(struct Pokemon *mon)
     ZeroMonData(mon);
 }
 
-static bool32 IsDualockeBattle(void)
+// No es static: la usa también el aviso al morir (src/dualocke_aviso.c)
+bool32 IsDualockeBattle(void)
 {
     if (gBattleTypeFlags & (BATTLE_TYPE_LINK
                           | BATTLE_TYPE_RECORDED

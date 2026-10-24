@@ -8,6 +8,7 @@
 #include "battle_special.h"
 #include "battle_z_move.h"
 #include "data.h"
+#include "dualocke_aviso.h"
 #include "dualocke_es.h"
 #include "event_data.h"
 #include "frontier_util.h"
@@ -2800,6 +2801,14 @@ void BufferStringBattle(enum StringID stringID, enum BattlerId battler)
         break;
     case STRINGID_TRAINERSLIDE:
         stringPtr = gBattleStruct->trainerSlideMsg;
+        break;
+    case STRINGID_BATTLERFAINTED:
+        // Dualocke: si cuentan las vidas, "X has died!" con las vidas que quedan
+        stringPtr = Dualocke_GetFaintString(gBattleScripting.battler);
+        if (stringPtr == NULL) // si no, el mensaje normal (en español si está traducido)
+            stringPtr = Dualocke_GetBattleStringES(stringID);
+        if (stringPtr == NULL)
+            stringPtr = gBattleStringsTable[stringID];
         break;
     default: // load a string from the table
         if (stringID >= STRINGID_COUNT)

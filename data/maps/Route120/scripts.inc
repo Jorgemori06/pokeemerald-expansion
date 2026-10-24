@@ -154,10 +154,11 @@ Route120_EventScript_BerryNotLove::
 Route120_EventScript_Steven::
 	lock
 	faceplayer
+	goto_if_defeated TRAINER_STEVEN_ROUTE_120, Route120_EventScript_StevenAlreadyBattled
 	goto_if_set FLAG_NOT_READY_FOR_BATTLE_ROUTE_120, Route120_EventScript_StevenAskReadyForBattle
 	msgbox Route120_Text_StevenGreeting, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, Route120_EventScript_StevenNotReady
-	goto Route120_EventScript_StevenBattleKecleon
+	goto Route120_EventScript_StevenBattle
 	end
 
 Route120_EventScript_StevenNotReady::
@@ -169,11 +170,33 @@ Route120_EventScript_StevenNotReady::
 Route120_EventScript_StevenAskReadyForBattle::
 	msgbox Route120_Text_StevenReadyForBattle, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, Route120_EventScript_StevenNotReady
+	goto Route120_EventScript_StevenBattle
+	end
+
+@ Dualocke: Máximo combate con su equipo (TRAINER_STEVEN_ROUTE_120) y, al ganarle, da el Aro Mega.
+@ Si pierdes, hay whiteout y Máximo sigue aquí para volver a intentarlo.
+Route120_EventScript_StevenBattle::
+	trainerbattle_single TRAINER_STEVEN_ROUTE_120, Route120_Text_StevenShowMeYourPower, Route120_Text_StevenDefeat, Route120_EventScript_StevenDefeated
+	goto Route120_EventScript_StevenAlreadyBattled
+	end
+
+Route120_EventScript_StevenDefeated::
+	msgbox Route120_Text_StevenGiveMegaRing, MSGBOX_DEFAULT
+	giveitem ITEM_MEGA_RING
+	msgbox Route120_Text_StevenMegaRingExplanation, MSGBOX_DEFAULT
+	goto Route120_EventScript_StevenBattleKecleon
+	end
+
+@ Ya le has ganado pero Máximo sigue aquí (por ejemplo, perdiste contra el Kecleon).
+@ Si por lo que sea no tienes el aro, te lo vuelve a dar; luego sigue con el Kecleon.
+Route120_EventScript_StevenAlreadyBattled::
+	checkitem ITEM_MEGA_RING
+	goto_if_eq VAR_RESULT, FALSE, Route120_EventScript_StevenDefeated
 	goto Route120_EventScript_StevenBattleKecleon
 	end
 
 Route120_EventScript_StevenBattleKecleon::
-	msgbox Route120_Text_StevenShowMeYourPower, MSGBOX_DEFAULT
+	msgbox Route120_Text_StevenNowTheObstacle, MSGBOX_DEFAULT
 	closemessage
 	call_if_eq VAR_FACING, DIR_NORTH, Route120_EventScript_PlayerApproachKecleonNorth
 	call_if_eq VAR_FACING, DIR_WEST, Route120_EventScript_PlayerApproachKecleonWest
@@ -190,7 +213,7 @@ Route120_EventScript_StevenBattleKecleon::
 	playmoncry SPECIES_KECLEON, CRY_MODE_ENCOUNTER
 	delay 40
 	waitmoncry
-	setwildbattle SPECIES_KECLEON, 30
+	setwildbattle SPECIES_KECLEON, 58
 	setvar VAR_0x8009, 0
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	dowildbattle
@@ -362,13 +385,12 @@ Route120_EventScript_Callie::
 Route120_Text_StevenGreeting:
 	.string "STEVEN: Hm? {PLAYER}{KUN}, hi.\n"
 	.string "It's been a while.\p"
-	.string "There's something here that you can't\n"
-	.string "see, right?\p"
-	.string "Now, if I were to use this device on\n"
-	.string "the invisible obstacle…\p"
-	.string "No, no. Rather than describing it,\n"
-	.string "I should just show you.\l"
-	.string "That would be more fun.\p"
+	.string "Lately I've been studying something\n"
+	.string "called MEGA EVOLUTION.\p"
+	.string "Some POKéMON can go beyond their\n"
+	.string "final form in battle, but only for\l"
+	.string "a TRAINER who has earned it.\p"
+	.string "I'd like to see if that could be you.\p"
 	.string "{PLAYER}{KUN}, are your POKéMON ready for\n"
 	.string "battle?$"
 
@@ -384,6 +406,31 @@ Route120_Text_StevenShowMeYourPower:
 	.string "STEVEN: {PLAYER}{KUN}, show me your true\n"
 	.string "power as a TRAINER!$"
 
+Route120_Text_StevenDefeat:
+	.string "I see…\n"
+	.string "You're even stronger than I thought.$"
+
+Route120_Text_StevenGiveMegaRing:
+	.string "STEVEN: Your battle style is\n"
+	.string "intriguing.\p"
+	.string "Your POKéMON have obviously grown\n"
+	.string "since I first met you in DEWFORD.\p"
+	.string "I'd like you to have this\n"
+	.string "MEGA RING.$"
+
+Route120_Text_StevenMegaRingExplanation:
+	.string "STEVEN: With the MEGA RING, a POKéMON\n"
+	.string "holding its own MEGA STONE can\l"
+	.string "MEGA EVOLVE in battle.\p"
+	.string "MEGA STONES are hidden all over\n"
+	.string "HOENN. Keep your eyes open.$"
+
+Route120_Text_StevenNowTheObstacle:
+	.string "STEVEN: Now, there's something here\n"
+	.string "that you can't see, right?\p"
+	.string "Rather than describing it,\n"
+	.string "I should just show you.$"
+
 Route120_Text_StevenUsedDevonScope:
 	.string "STEVEN used the DEVON SCOPE.\p"
 	.string "An invisible POKéMON became completely\n"
@@ -391,12 +438,8 @@ Route120_Text_StevenUsedDevonScope:
 	.string "The startled POKéMON attacked!$"
 
 Route120_Text_StevenGiveDevonScope:
-	.string "STEVEN: I see…\n"
-	.string "Your battle style is intriguing.\p"
-	.string "Your POKéMON have obviously grown\n"
-	.string "since I first met you in DEWFORD.\p"
-	.string "I'd like you to have this\n"
-	.string "DEVON SCOPE.\p"
+	.string "STEVEN: I'd like you to have this\n"
+	.string "DEVON SCOPE too.\p"
 	.string "Who knows, there may be other\n"
 	.string "concealed POKéMON.$"
 
