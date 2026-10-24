@@ -213,7 +213,13 @@ Regla general: **el as de cada jefe va exactamente al nivel del cap**, el resto 
 Cada tienda tendrá **dos dependientes**:
 
 1. **Principal:** lo de siempre (Balls, Repelentes, etc.), **sin curativos ni Objetos X**, y con **Caramelos Raros a 1 ₽**.
-2. **Secundario:** objetos **aleatorios** (distintos en cada partida/semilla), garantizando algún objeto evolutivo. **Desde que el jugador consiga el aro**, este dependiente vende además **2-3 megapiedras aleatorias**, en todas las ciudades, incluidas las ya visitadas.
+2. **Secundario (hecho, Miguel, 24/10/2026):** está en las 11 tiendas de ciudad (no en Calagua, la Liga, el Frente ni la Cima), detrás del mostrador, encima del principal (casilla 1, 2). Vende **4 objetos: 1 evolutivo y 3 equipables** al azar.
+   - Los evolutivos son piedras y objetos de los antiguos intercambios. Los equipables son clásicos que no se venden en ningún otro sitio: Restos, Garra Rápida, Periscopio, Polvo Brillo, Campana Concha, Cinta Focus, Campana Alivio, Metrónomo, Muda Concha y los potenciadores de tipo.
+   - Son **distintos en cada partida** (la semilla sale del ID de entrenador) y **fijos durante toda la partida**.
+   - Pasan por el filtro de medallas de las tiendas, así que un evolutivo no sale hasta tener su medalla.
+   - **Ya no vende megapiedras:** se encuentran por el mapa.
+   - Código: `src/dualocke_segundo_dependiente.c` (special `Dualocke_AbrirSegundoDependiente`) y `data/scripts/dualocke_segundo_dependiente.inc`.
+   - **Pendiente:** que la regla de "una compra por objeto" (PR #19) se aplique también a este dependiente.
 
 Regla de compra: una unidad de cada objeto por tienda, salvo Balls, Repelentes, Bayas y Caramelos Raros.
 
@@ -515,13 +521,13 @@ Decidido el 23/10/2026 y en marcha: **Miguel se encarga del equilibrio** (dificu
 | ~~Equipos de jefes: +1/+2 Pokémon, objetos y qué mega lleva cada jefe~~ (hecho) | Miguel | `src/data/trainers.party` | Randomizer |
 | ~~Equipo de Máximo en la Ruta 120~~ (hecho: `TRAINER_STEVEN_ROUTE_120`) | Miguel | `src/data/trainers.party` | Combate con Máximo |
 | ~~Parámetros del randomizer~~ (hecho: `tools/dualocke/randomizer_config.json`) | Miguel | archivo de configuración del randomizer | Randomizer |
-| Contenido de las tiendas: precios, objetos del segundo dependiente, qué megapiedras y cuándo | Miguel | listas de las tiendas | Segundo dependiente |
+| ~~Contenido de las tiendas~~ (hecho: principal por ciudad, segundo dependiente, megapiedras por el mapa) | Miguel | listas de las tiendas | Segundo dependiente |
 | **Funcionalidades** | | | |
 | ~~Vidas + caja de muertos~~ (hecho, PR #4; falta el aviso al morir) | Jorge | combate (desmayos), PC (`src/pokemon_storage_system.c`), HUD | — |
 | Primera captura por ruta (+ dupes, sin legendarios, shiny libre) | Jorge | `src/item_use.c` (Balls), `src/battle_script_commands.c`, flags por zona | — |
 | Una compra por objeto | Jorge | `src/shop.c` (compra) | — |
 | ~~Evento del combate con Máximo y entrega del Aro Mega~~ (hecho) | Jorge | `data/maps/Route120/` | Equipo de Máximo |
-| Segundo dependiente en las tiendas (mecánica) | Jorge | `data/maps/*_Mart/`, `src/shop_criteria.c`, `src/shop.c` | Contenido de las tiendas |
+| ~~Segundo dependiente en las tiendas (mecánica)~~ (hecho por Miguel) | Jorge | `data/maps/*_Mart/`, `src/shop_criteria.c`, `src/shop.c` | Contenido de las tiendas |
 | Randomizer con semilla (la herramienta) | Jorge (pendiente de empezar) | script nuevo en `tools/` + `Makefile` | Todo lo de equilibrio en `trainers.party` y `wild_encounters.json` |
 | Traducción | Por decidir, cuando lo demás esté estable | casi todo `data/` y `src/` | Todo |
 

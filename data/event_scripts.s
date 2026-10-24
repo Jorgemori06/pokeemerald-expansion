@@ -1332,6 +1332,7 @@ Common_EventScript_FerryDepartIsland::
 
 	.include "data/scripts/cave_of_origin.inc"
 	.include "data/scripts/kecleon.inc"
+	.include "data/scripts/dualocke_segundo_dependiente.inc"
 
 Common_EventScript_NameReceivedPartyMon::
 	fadescreen FADE_TO_BLACK
