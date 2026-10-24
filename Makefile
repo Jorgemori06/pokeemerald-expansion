@@ -250,8 +250,58 @@ AUTO_GEN_TARGETS += $(DATA_SRC_SUBDIR)/wild_encounters.h
 MISC_TOOL_DIR := $(TOOLS_DIR)/misc
 AUTO_GEN_TARGETS +=  $(INCLUDE_DIRS)/constants/script_commands.h
 
-$(DATA_SRC_SUBDIR)/wild_encounters.h: $(DATA_SRC_SUBDIR)/wild_encounters.json $(WILD_ENCOUNTERS_TOOL_DIR)/wild_encounters_to_header.py $(INCLUDE_DIRS)/config/overworld.h $(INCLUDE_DIRS)/config/dexnav.h
-	python3 $(WILD_ENCOUNTERS_TOOL_DIR)/wild_encounters_to_header.py
+# Dualocke: randomizer con semilla (tools/dualocke/randomizer.py).
+#   make                    -> partida randomizada. La primera vez se inventa una semilla al azar y
+#                              la guarda en dualocke_semilla.txt; las siguientes la reutiliza, así
+#                              que actualizar el juego no cambia la partida en curso.
+#   make nueva-partida      -> otra semilla al azar: partida nueva.
+#   make SEED=loquesea      -> una semilla concreta (para regenerar una partida).
+#   make SIN_RANDOM=1       -> el juego sin randomizar (para probar). make check nunca randomiza.
+# Los datos barajados se escriben en build/dualocke/ y se compilan en vez de los originales,
+# que no se tocan.
+DUALOCKE_DIR := build/dualocke
+DUALOCKE_SEMILLA_FILE := dualocke_semilla.txt
+DUALOCKE_SEED_STAMP := $(DUALOCKE_DIR)/semilla.txt
+ifneq ($(DUALOCKE_SEED_SET),1)
+  ifeq ($(TEST),1)
+    DUALOCKE_SEED :=
+  else ifneq ($(SIN_RANDOM),)
+    DUALOCKE_SEED :=
+  else ifneq ($(SEED),)
+    DUALOCKE_SEED := $(SEED)
+  else
+    DUALOCKE_SEED := $(shell [ -s $(DUALOCKE_SEMILLA_FILE) ] || python3 -c "import secrets; print(secrets.randbelow(10**10))" > $(DUALOCKE_SEMILLA_FILE); cat $(DUALOCKE_SEMILLA_FILE))
+  endif
+endif
+# Para las llamadas internas a make (make generated), que ya no tienen que decidir la semilla
+DUALOCKE_MAKE_ARGS := DUALOCKE_SEED_SET=1 DUALOCKE_SEED='$(DUALOCKE_SEED)'
+
+DUALOCKE_RANDOMIZER_DEPS := tools/dualocke/randomizer.py $(wildcard tools/dualocke/aleatorio/*.py) tools/dualocke/randomizer_config.json \
+                            $(wildcard $(DATA_SRC_SUBDIR)/pokemon/species_info/*.h) $(INCLUDE_DIRS)/config/species_enabled.h
+# El randomizer pasa src/pokemon.c por el preprocesador, así que necesita antes estas cabeceras generadas
+DUALOCKE_RANDOMIZER_DEPS += $(INCLUDE_DIRS)/constants/map_groups.h $(INCLUDE_DIRS)/constants/layouts.h $(INCLUDE_DIRS)/constants/map_event_ids.h \
+                            $(DATA_SRC_SUBDIR)/map_group_count.h $(INCLUDE_DIRS)/constants/wild_encounter.h $(INCLUDE_DIRS)/constants/region_map_sections.h \
+                            $(INCLUDE_DIRS)/constants/heal_locations.h $(INCLUDE_DIRS)/constants/script_commands.h
+
+# Cambia cuando cambia la semilla (o se quita), para regenerar todo lo que depende de ella
+$(DUALOCKE_SEED_STAMP): FORCE
+	@mkdir -p $(@D)
+	@echo '$(DUALOCKE_SEED)' | cmp -s - $@ || echo '$(DUALOCKE_SEED)' > $@
+
+ifneq ($(DUALOCKE_SEED),)
+WILD_ENCOUNTERS_JSON := $(DUALOCKE_DIR)/wild_encounters.json
+$(WILD_ENCOUNTERS_JSON): $(DATA_SRC_SUBDIR)/wild_encounters.json $(DUALOCKE_SEED_STAMP) $(DUALOCKE_RANDOMIZER_DEPS)
+	python3 tools/dualocke/randomizer.py --semilla '$(DUALOCKE_SEED)' --salida $(DUALOCKE_DIR) --cpp '$(CPP)' --cppflags '$(INCLUDE_CPP_ARGS) -Wno-trigraphs -DMODERN=1 -DTESTING=0 -D$(GAME_VERSION) -std=gnu17'
+else
+WILD_ENCOUNTERS_JSON := $(DATA_SRC_SUBDIR)/wild_encounters.json
+endif
+
+nueva-partida:
+	@rm -f $(DUALOCKE_SEMILLA_FILE)
+	@$(MAKE) --no-print-directory
+
+$(DATA_SRC_SUBDIR)/wild_encounters.h: $(WILD_ENCOUNTERS_JSON) $(DUALOCKE_SEED_STAMP) $(WILD_ENCOUNTERS_TOOL_DIR)/wild_encounters_to_header.py $(INCLUDE_DIRS)/config/overworld.h $(INCLUDE_DIRS)/config/dexnav.h
+	python3 $(WILD_ENCOUNTERS_TOOL_DIR)/wild_encounters_to_header.py $(WILD_ENCOUNTERS_JSON)
 
 $(INCLUDE_DIRS)/constants/script_commands.h: $(MISC_TOOL_DIR)/make_scr_cmd_constants.py $(DATA_ASM_SUBDIR)/script_cmd_table.inc
 	python3  $(MISC_TOOL_DIR)/make_scr_cmd_constants.py
@@ -268,7 +318,7 @@ MAKEFLAGS += --no-print-directory
 # Delete files that weren't built properly
 .DELETE_ON_ERROR:
 
-RULES_NO_SCAN += libagbsyscall clean clean-assets tidy tidymodern tidycheck tidyrelease generated clean-generated clean-teachables clean-teachables_intermediates
+RULES_NO_SCAN += nueva-partida libagbsyscall clean clean-assets tidy tidymodern tidycheck tidyrelease generated clean-generated clean-teachables clean-teachables_intermediates
 .PHONY: all rom agbcc modern compare check debug release
 .PHONY: $(RULES_NO_SCAN)
 
@@ -296,7 +346,7 @@ ifeq ($(SETUP_PREREQS),1)
     $(error Errors occurred while building tools. See error messages above for more details)
   endif
   # Oh and also generate mapjson sources before we use `SCANINC`.
-  $(foreach line, $(shell $(MAKE) MAP_VERSION=$(MAP_VERSION) generated | sed "s/ /__SPACE__/g"), $(info $(subst __SPACE__, ,$(line))))
+  $(foreach line, $(shell $(MAKE) MAP_VERSION=$(MAP_VERSION) $(DUALOCKE_MAKE_ARGS) generated | sed "s/ /__SPACE__/g"), $(info $(subst __SPACE__, ,$(line))))
   ifneq ($(.SHELLSTATUS),0)
     $(error Errors occurred while generating map-related sources. See error messages above for more details)
   endif

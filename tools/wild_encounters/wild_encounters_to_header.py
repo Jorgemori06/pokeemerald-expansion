@@ -1,4 +1,5 @@
 import json
+import sys
 import re
 
 class Config:
@@ -268,7 +269,9 @@ def ConvertToHeaderFile(json_data):
         assembler.WriteEncounters()
 
 def main():
-    with open('src/data/wild_encounters.json', 'r') as json_file:
+    # Dualocke: se puede pasar otro JSON (el randomizado, en build/dualocke/)
+    ruta = sys.argv[1] if len(sys.argv) > 1 else 'src/data/wild_encounters.json'
+    with open(ruta, 'r') as json_file:
         json_data = json.load(json_file)
         ConvertToHeaderFile(json_data)
         
