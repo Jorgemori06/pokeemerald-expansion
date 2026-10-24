@@ -14,7 +14,7 @@ Son unas 187.000 palabras (los `.string` de `data/maps/*/scripts.inc`, `data/tex
 
 ## Nombres de Hoenn (oficiales)
 
-VILLA RAÍZ, PUEBLO ESCASO, CIUDAD PETALIA, CIUDAD FÉRRICA, PUEBLO AZULIZA, PUEBLO VERDEGAL, CIUDAD PORTUAL, CIUDAD CALAGUA; NORMAN, PETRA (Roxanne), MARCIAL (Brawly), CAPITÁN BABOR (Capt. Stern), EQUIPO AQUA; PROF. ABEDUL, AURA (May), BRUNO (Brendan), BLASCO (Wally), SR. ARENQUE (Mr. Briney), AREDIA (Lanette). Las DEPORTIVAS (Running Shoes).
+VILLA RAÍZ, PUEBLO ESCASO, CIUDAD PETALIA, CIUDAD FÉRRICA, PUEBLO AZULIZA, PUEBLO VERDEGAL, CIUDAD PORTUAL, CIUDAD CALAGUA; NORMAN, PETRA (Roxanne), SR. PEÑA (Mr. Stone), MÁXIMO (Steven), SCOTT, MARCIAL (Brawly), CAPITÁN BABOR (Capt. Stern), EQUIPO AQUA; PROF. ABEDUL, AURA (May), BRUNO (Brendan), BLASCO (Wally), SR. ARENQUE (Mr. Briney), AREDIA (Lanette). Las DEPORTIVAS (Running Shoes).
 
 ## Hecho
 
@@ -27,8 +27,11 @@ VILLA RAÍZ, PUEBLO ESCASO, CIUDAD PETALIA, CIUDAD FÉRRICA, PUEBLO AZULIZA, PUE
 | RUTA 102 (y sus entrenadores) y CIUDAD PETALIA | `05_ruta102_petalia.tsv` |
 | GIMNASIO PETALIA (sin la revancha del postgame) | `06_gimnasio_petalia.tsv` |
 | RUTA 104, casa del SR. ARENQUE y BOSQUE PETALIA | `07_ruta104_bosque_petalia.tsv` |
+| CIUDAD FÉRRICA (calles) y su GIMNASIO | `08_ciudad_ferrica.tsv` |
+| CIUDAD FÉRRICA: DEVON, ESCUELA, casas, tienda, CENTRO POKéMON | `09_ferrica_edificios.tsv` |
+| RUTA 116 y TÚNEL FERVERGAL | `10_ruta116_tunel_fervergal.tsv` |
 
-Siguiente: CIUDAD FÉRRICA (con su GIMNASIO y DEVON), RUTA 116 y TÚNEL FERVERGAL.
+Siguiente: PUEBLO AZULIZA (con su GIMNASIO), CUEVA GRANITO y RUTAS 105-109 (el mar hasta PORTUAL).
 
 ## Género del jugador
 
