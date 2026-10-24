@@ -4,7 +4,7 @@ Este archivo resume **todo lo decidido y hecho** en el proyecto, para que cualqu
 
 > **Si eres Claude y te acaban de pedir que leas este archivo:** léelo entero antes de tocar nada. Al final hay una sección con instrucciones de trabajo para ti. Cuando cambies algo importante del proyecto, actualiza también este archivo en el mismo commit.
 
-Última actualización: 23/10/2026.
+Última actualización: 24/10/2026.
 
 ---
 
@@ -131,7 +131,7 @@ Estas son las reglas que usaban en Platino. La idea es mantenerlas lo más parec
 | Mote obligatorio | Forzar la pantalla de mote al capturar, al recibir regalos y al eclosionar huevos | Poco | **Hecho** |
 | No comprar curativos ni Objetos X | Quitarlos de las tiendas | Poco | **Hecho** |
 | No usar Objetos X en combate | Bloquearlos en combate | Poco | **Hecho** |
-| Una compra por objeto (salvo Balls, Repelentes, Bayas, Caramelos) | Limitar compras en tiendas | Medio | Pendiente |
+| Una compra por objeto (salvo Balls, Repelentes, Bayas, Caramelos) | Limitar compras en tiendas | Medio | **Hecho** (Miguel, 24/10/2026) |
 | 20 vidas + caja de muertos | Contador de vidas en el menú de pausa y caja bloqueada | Medio | **Hecho** (aviso al morir pendiente) |
 | Primera captura por ruta + dupes + sin legendarios + shiny libre + caja de prohibidos | El juego bloquea lanzar Balls cuando no se puede capturar; los regalos repetidos/legendarios van a la caja de prohibidos | Medio | Pendiente (reglas cerradas, ver arriba) |
 | Victoria, combates en Showdown, capturas extra | Fuera del juego, por honor | — | — |
@@ -171,6 +171,12 @@ Regla general: **el as de cada jefe va exactamente al nivel del cap**, el resto 
   - **Postgame** (S.S. Marea, Cueva de Máximo en la Cascada Meteoro, Túnel del Desierto, Cueva Ancestral, Cueva Alterada, cuevas Terra y Marina): entrenadores a **100** y salvajes a **97**.
   - **Casa Trampa:** la prueba 1 al tramo 3, y cada prueba N al tramo de la medalla N+1 que la abre (la 8, a la Liga). No cuenta para la banda de su tramo, así que no mueve los niveles de la historia principal.
   - **No se tocan:** el Frente Batalla y la Cima Entrenador, que tienen su propio sistema de niveles.
+- **Estáticos y regalos (hecho, Miguel, 24/10/2026):**
+  - **Estáticos normales** (Kecleon de las rutas 119-120, Voltorb de Nuevo Malvalona, Electrode de la Guarida Aqua): como jefes de zona, es decir, entrenadores de su mapa + 3, sin pasar del cap. Quedan a 58, 56 y 65.
+  - **Legendarios:** al cap de su tramo. Los Regis a 84 (hace falta Buceo, tramo 8); Rayquaza, Groudon y Kyogre a 100 (postgame). Sudowoodo del Frente Batalla, también a 100.
+  - **Regalos** (Castform, fósiles, Beldum, iniciales de Johto, huevo de Wynaut): se quedan con su nivel original, para entrenarlos (con Caramelos Raros a 1 ₽).
+  - Lo hace `reescalar_niveles.py` (tabla `ESTATICOS`).
+  - **Captura de estáticos (decidido, falta implementarlo encima del PR #17):** de los estáticos normales solo se puede capturar el primero de cada tipo (un Kecleon, un Voltorb, un Electrode), sin gastar la zona.
 - **Evoluciones de los entrenadores normales (hecho):** `tools/dualocke/evolucionar_entrenadores.py` evoluciona sus Pokémon según el nivel. Las evoluciones por nivel van a su nivel normal; las que no son por nivel (piedra, amistad…) van a 30 la primera y a 40 la segunda. Los tres scripts se lanzan en orden: `reescalar_niveles.py`, `equipos_jefes.py` y `evolucionar_entrenadores.py`.
 - El randomizer **no debe tocar los niveles ni el tamaño de los equipos**: solo especies, movimientos, habilidades y objetos. Al cambiar especies, debe mantener la regla de evolucionar según el nivel.
 
@@ -182,6 +188,7 @@ Regla general: **el as de cada jefe va exactamente al nivel del cap**, el resto 
 - Para megaevolucionar, el jugador necesita el objeto **Aro Mega** (`ITEM_MEGA_RING`) en la mochila (lo comprueba `src/battle_util.c`).
 - **Cómo se consigue el aro (decidido el 23/10/2026):** combate con **Máximo en la Ruta 120**, justo antes del gym 6 (Alana). Al ganar, te da el aro. Encaja con la historia (en ROZA Máximo está metido en lo de las megas) y llega en un punto equilibrado: equipo ya formado, cap 62, toda la segunda mitad del juego para usarlas.
 - **Equipo de Máximo (decidido por Miguel, 23/10/2026):** entrenador `TRAINER_STEVEN_ROUTE_120`, todo a **nivel 62** (el cap del tramo). Lleva Aggron, Aegislash, Excadrill, Mawile, Empoleon y, como as, **Metagross con Metagrossita**. El equipo es **fijo**: el randomizer no lo toca. Ya existe en `src/data/trainers.party`; Jorge solo tiene que montar el evento en `data/maps/Route120/` con `trainerbattle_single TRAINER_STEVEN_ROUTE_120, …` y dar el Aro Mega al ganar.
+- **Evento de Máximo (hecho, Jorge, 24/10/2026):** al hablar con Máximo en el puente de la Ruta 120 te reta con `TRAINER_STEVEN_ROUTE_120`. Si ganas, te da el **Aro Mega** y te cuenta que las megapiedras están escondidas por Hoenn; después sigue el evento original (usa el Detector Devon, combate con el Kecleon y te da el Detector). Si pierdes, *whiteout* y te sigue esperando. Si ya le habías ganado pero sigue ahí (por ejemplo, perdiste contra el Kecleon), no vuelve a combatir: te da el aro si no lo tienes y sigue con el Kecleon. Como el Detector hace falta para llegar al gimnasio de Arborada, el combate es obligatorio antes de Alana. Script en `data/maps/Route120/scripts.inc` (`Route120_EventScript_Steven`).
 - **Desde que el jugador tiene el aro, todos los jefes llevan un Pokémon con mega** (y la usan). Lista de "jefes" (decidida el 23/10/2026): líderes de gimnasio, Alto Mando, Plubio, rival (Bruno/Aura), Blasco y los líderes Magma/Aqua (Magno, Aquiles).
 - **Equipos de los jefes (hecho, Miguel, 23/10/2026)** con `tools/dualocke/equipos_jefes.py` (se lanza después de `reescalar_niveles.py`):
   - **+2 Pokémon** a líderes, Alto Mando y Plubio; **+1** al rival, Blasco, Magno, Aquiles y los admins (Tatiano, Silvina, Matías). Máximo 6.
@@ -215,6 +222,14 @@ Cada tienda tendrá **dos dependientes**:
    - **Pendiente:** que la regla de "una compra por objeto" (PR #19) se aplique también a este dependiente.
 
 Regla de compra: una unidad de cada objeto por tienda, salvo Balls, Repelentes, Bayas y Caramelos Raros.
+
+**Una compra por objeto (hecho, Miguel, 24/10/2026):**
+
+- En cada tienda, de cada objeto que no sea Ball, Repelente, Baya, Caramelo Raro o Cuerda Huida **solo se puede comprar una unidad**. La cantidad máxima es 1, y si vuelves a elegirlo sale "You've already bought one of these here.".
+- **Es por tienda:** el mismo objeto se puede comprar otra vez en otra ciudad que también lo venda.
+- `tools/dualocke/compras_limitadas.py` genera la tabla de parejas (tienda, objeto) en `src/data/dualocke_compras.h` a partir de las listas de las tiendas. Ahora son 86 en 15 tiendas. **Hay que relanzarlo si se cambian las listas.**
+- Lo comprado se guarda en 6 variables (`VAR_DUALOCKE_COMPRAS_0`-`5`, 0x4083-0x40A1), un bit por pareja.
+- Código: `src/dualocke_compras.c` y tres enganches en `src/shop.c` (al elegir, en la cantidad y al pagar).
 
 **Contenido del dependiente principal (hecho, Miguel, 23/10/2026):**
 
@@ -372,7 +387,8 @@ Hubo una traducción antigua de la expansion al castellano (fork de Xhyzi, rama 
   - Los objetos de revivir no se pueden usar en combate.
   - No cuentan: Frontera, Pirámide, Pike, Cima Entrenador, combates por cable, Safari, el primer combate y las bases secretas.
   - Tests en `test/dualocke.c` (`make check TESTS="Dualocke"`).
-  - Pendiente: un aviso al morir ("X ha muerto, te quedan N vidas"); de momento solo se ve que desaparece del equipo y en el menú.
+  - **Aviso al morir (hecho, Miguel, 24/10/2026):** cuando se debilita un Pokémon tuyo en un combate en el que cuentan las vidas, en vez de "X fainted!" sale "X has died! Lives left: N." (las vidas que quedarán al acabar el combate). Si ya no quedan vidas, o se han debilitado todos, sale "X has died! The locke is lost!". Los Pokémon del compañero (combates dobles con compañero) no cuentan. En los tests de la expansion se deja el texto original. Código: `src/dualocke_aviso.c`, enganchado en `BufferStringBattle` (`src/battle_message.c`).
+- Combate con Máximo en la Ruta 120 que da el Aro Mega (Jorge, sección 6).
 
 ### Pendiente de decidir
 
@@ -381,7 +397,7 @@ Hubo una traducción antigua de la expansion al castellano (fork de Xhyzi, rama 
 ### Orden de trabajo propuesto
 
 1. ~~Lo fácil: mote obligatorio, quitar curativos y Objetos X de las tiendas, Caramelos Raros a 1 ₽, bloquear Objetos X en combate, correr sin Deportivas, Pokédex Nacional desde el inicio, MTs reutilizables, MOs olvidables.~~ **Hecho.**
-2. Combate con Máximo y el aro. Segundo dependiente y contenido de las tiendas.
+2. ~~Combate con Máximo y el aro~~ (hecho). Segundo dependiente y contenido de las tiendas.
 3. Reglas del locke: ~~vidas + caja de muertos~~ (hecho), primera captura por zona con sus excepciones (reglas cerradas, falta implementarlas), límite de una compra por objeto, aviso al morir.
 4. Randomizer con semilla (~~reescalado de niveles~~, ~~equipos de jefes~~ y ~~parámetros~~ hechos).
 5. Revanchas y postgame (niveles).
@@ -409,6 +425,7 @@ Quién hace cada cosa y cómo se sube: sección 13.
 | Entrenadores | `src/data/trainers.party` |
 | Tiendas | scripts de cada mapa en `data/maps/*/scripts.inc` (`pokemart`) |
 | Comprobación del Aro Mega | `src/battle_util.c` (busca `ITEM_MEGA_RING`) |
+| Evento de Máximo y entrega del Aro Mega | `data/maps/Route120/scripts.inc` (`Route120_EventScript_Steven`) |
 | Datos al empezar partida nueva (correr, Pokédex Nacional) | `src/new_game.c` (`NewGameInitData`) |
 | Mote obligatorio al capturar | `src/battle_script_commands.c` (`Cmd_trygivecaughtmonnick`) |
 | Mote obligatorio en regalos | `src/tv.c` (`ChangeBoxPokemonNickname_CB`) y scripts con `gText_NicknameThisPokemon` |
@@ -509,7 +526,7 @@ Decidido el 23/10/2026 y en marcha: **Miguel se encarga del equilibrio** (dificu
 | ~~Vidas + caja de muertos~~ (hecho, PR #4; falta el aviso al morir) | Jorge | combate (desmayos), PC (`src/pokemon_storage_system.c`), HUD | — |
 | Primera captura por ruta (+ dupes, sin legendarios, shiny libre) | Jorge | `src/item_use.c` (Balls), `src/battle_script_commands.c`, flags por zona | — |
 | Una compra por objeto | Jorge | `src/shop.c` (compra) | — |
-| Evento del combate con Máximo y entrega del Aro Mega | Jorge (pendiente de empezar) | `data/maps/Route120/` | Equipo de Máximo |
+| ~~Evento del combate con Máximo y entrega del Aro Mega~~ (hecho) | Jorge | `data/maps/Route120/` | Equipo de Máximo |
 | ~~Segundo dependiente en las tiendas (mecánica)~~ (hecho por Miguel) | Jorge | `data/maps/*_Mart/`, `src/shop_criteria.c`, `src/shop.c` | Contenido de las tiendas |
 | Randomizer con semilla (la herramienta) | Jorge (pendiente de empezar) | script nuevo en `tools/` + `Makefile` | Todo lo de equilibrio en `trainers.party` y `wild_encounters.json` |
 | Traducción | Por decidir, cuando lo demás esté estable | casi todo `data/` y `src/` | Todo |
