@@ -428,580 +428,582 @@ Route104_Text_DarianPostBattle:
 	.string "altura de lo que pareces, ¿eh?$"
 
 Route105_Text_FosterIntro:
-	.string "There's supposed to be a mystical\n"
-	.string "rock around here.\l"
-	.string "Do you know anything about it?$"
+	.string "Por aquí tiene que haber una roca\n"
+	.string "mística.\l"
+	.string "¿Sabes algo de ella?$"
 
 Route105_Text_FosterDefeated:
-	.string "I was thinking too much about that\n"
-	.string "rock, while my POKéMON remained weak…$"
+	.string "Pensaba tanto en esa roca que mis\n"
+	.string "POKéMON se han quedado débiles…$"
 
 Route105_Text_FosterPostBattle:
-	.string "I can spend hours and hours staring\n"
-	.string "at a nice rock without growing bored.$"
+	.string "Puedo pasarme horas y horas mirando\n"
+	.string "una roca bonita sin aburrirme.$"
 
 Route105_Text_LuisIntro:
-	.string "Whew! I was worried that a kid was\n"
-	.string "drowning when I saw you.\p"
-	.string "You seem to be okay, so what do you\n"
-	.string "say to a battle?$"
+	.string "¡Uf! Al verte creí que se ahogaba\n"
+	.string "alguien.\p"
+	.string "Parece que estás bien, así que\n"
+	.string "¿qué tal un combate?$"
 
 Route105_Text_LuisDefeated:
 	.string "Glub… Glub…$"
 
 Route105_Text_LuisPostBattle:
-	.string "If you are drowning, the signal is to\n"
-	.string "wave one arm toward the beach.$"
+	.string "Si te ahogas, la señal es mover un\n"
+	.string "brazo hacia la playa.$"
 
 Route105_Text_DominikIntro:
-	.string "Swimming the deep blue sea…\n"
-	.string "It feels the greatest!$"
+	.string "Nadar por el mar azul…\n"
+	.string "¡Es lo mejor!$"
 
 Route105_Text_DominikDefeated:
-	.string "I lost…\n"
-	.string "Now I'm feeling blue…$"
+	.string "He perdido…\n"
+	.string "Ahora estoy de bajón…$"
 
 Route105_Text_DominikPostBattle:
-	.string "Why is the sea blue?\p"
-	.string "I learned about that at the MUSEUM in\n"
-	.string "SLATEPORT, but I forgot.$"
+	.string "¿Por qué el mar es azul?\p"
+	.string "Lo aprendí en el MUSEO de PORTUAL,\n"
+	.string "pero se me ha olvidado.$"
 
 Route105_Text_BeverlyIntro:
-	.string "My body feels lighter in the water.\n"
-	.string "It's as if I've gotten slimmer!$"
+	.string "En el agua me siento más ligera.\n"
+	.string "¡Es como si hubiera adelgazado!$"
 
 Route105_Text_BeverlyDefeated:
-	.string "I'm floating…$"
+	.string "Estoy flotando…$"
 
 Route105_Text_PostBattle:
-	.string "Your body weight is reduced to just\n"
-	.string "one tenth in the water.\p"
-	.string "That would make me…\n"
-	.string "Whoops! I'm not telling you my weight!$"
+	.string "En el agua tu peso se queda en\n"
+	.string "una décima parte.\p"
+	.string "Así que yo pesaría…\n"
+	.string "¡Uy! ¡No pienso decirte mi peso!$"
 
 Route105_Text_ImaniIntro:
-	.string "The blue, blue sky…\n"
-	.string "The vast sea…\l"
-	.string "It's so peaceful…$"
+	.string "El cielo azul…\n"
+	.string "El mar inmenso…\l"
+	.string "¡Qué tranquilidad…!$"
 
 Route105_Text_ImaniDefeated:
-	.string "I lost while I was lounging!$"
+	.string "¡He perdido mientras descansaba!$"
 
 Route105_Text_ImaniPostBattle:
-	.string "I want to be told I'm relaxing to be\n"
-	.string "with. Giggle.$"
+	.string "Quiero que me digan que soy\n"
+	.string "relajante. Jijiji.$"
 
 Route105_Text_AndresIntro:
-	.string "I'm convinced that the sea keeps\n"
-	.string "secrets from us.$"
+	.string "Estoy convencido de que el mar\n"
+	.string "nos guarda secretos.$"
 
 Route105_Text_AndresDefeated:
-	.string "Yes…\n"
-	.string "I am no good at battling…$"
+	.string "Ya…\n"
+	.string "No se me da bien combatir…$"
 
 Route105_Text_AndresPostBattle:
-	.string "I'm sure there are many secrets to be\n"
-	.string "discovered in the world's seas.\p"
-	.string "I mean to find them all!$"
+	.string "Seguro que hay muchos secretos por\n"
+	.string "descubrir en los mares del mundo.\p"
+	.string "¡Pienso encontrarlos todos!$"
 
 Route105_Text_AndresRegister:
-	.string "Huh? I'm so weak, but you're willing\n"
-	.string "to register me in your POKéNAV?$"
+	.string "¿Eh? Soy muy débil, ¿y aun así\n"
+	.string "quieres registrarme en tu POKéNAV?$"
 
 Route105_Text_AndresRematchIntro:
-	.string "I've told you that I'm weak…\n"
-	.string "Are you sure you want to do this?$"
+	.string "Ya te dije que soy débil…\n"
+	.string "¿Seguro que quieres hacerlo?$"
 
 Route105_Text_AndresRematchDefeated:
-	.string "Yes…\n"
-	.string "I didn't think I could win.$"
+	.string "Ya…\n"
+	.string "No creía que pudiera ganar.$"
 
 Route105_Text_AndresRematchPostBattle:
-	.string "I may be weak at battling, but my\n"
-	.string "drive to explore can't be bested.\p"
-	.string "I will travel the seas all around\n"
-	.string "the world!$"
+	.string "Puede que sea débil combatiendo, pero\n"
+	.string "mis ganas de explorar no tienen rival.\p"
+	.string "¡Recorreré los mares de todo\n"
+	.string "el mundo!$"
 
 Route105_Text_JosueIntro:
-	.string "I'm exhausted from swimming.\n"
-	.string "I'm just not used to it.\p"
-	.string "I need a battle for a change of pace!$"
+	.string "Estoy agotado de nadar.\n"
+	.string "No estoy acostumbrado.\p"
+	.string "¡Necesito un combate para variar!$"
 
 Route105_Text_JosueDefeated:
-	.string "I lost because I battled at sea.$"
+	.string "He perdido por luchar en el mar.$"
 
 Route105_Text_JosuePostBattle:
-	.string "Yeah, for me, the sky is a much better\n"
-	.string "match than the sea.$"
+	.string "Sí, a mí me va mucho más el cielo\n"
+	.string "que el mar.$"
 
 Route106_Text_ElliotIntro:
-	.string "Which do you prefer, fishing in the\n"
-	.string "sea or a stream?$"
+	.string "¿Qué prefieres, pescar en el mar\n"
+	.string "o en un río?$"
 
 Route106_Text_ElliotDefeated:
-	.string "Like in deep-sea fishing, I lost\n"
-	.string "spectacularly!$"
+	.string "¡Como en la pesca de altura,\n"
+	.string "he perdido a lo grande!$"
 
 Route106_Text_ElliotPostBattle:
-	.string "Fishing is the greatest whether it's\n"
-	.string "in the sea or a stream.\l"
-	.string "You agree with me, right?$"
+	.string "Pescar es lo mejor, sea en el mar\n"
+	.string "o en un río.\l"
+	.string "¿A que tengo razón?$"
 
 Route106_Text_ElliotRegister:
-	.string "Fishing's great, but so is battling.\n"
-	.string "If you don't mind, can we meet again?$"
+	.string "Pescar está genial, pero combatir\n"
+	.string "también. Si no te importa, ¿nos vemos\l"
+	.string "otra vez?$"
 
 Route106_Text_ElliotRematchIntro:
-	.string "I caught a bunch of POKéMON fishing.\n"
-	.string "I'll show you an impressive battle!$"
+	.string "He pescado un montón de POKéMON.\n"
+	.string "¡Te enseñaré un combate impresionante!$"
 
 Route106_Text_ElliotRematchDefeated:
-	.string "I lost again spectacularly!$"
+	.string "¡He vuelto a perder a lo grande!$"
 
 Route106_Text_ElliotRematchPostBattle:
-	.string "Win or lose, POKéMON are the greatest!\n"
-	.string "You agree with me, right?$"
+	.string "¡Ganes o pierdas, los POKéMON\n"
+	.string "son lo mejor! ¿A que sí?$"
 
 Route106_Text_NedIntro:
-	.string "What do people do if they need to go\n"
-	.string "to a washroom?\p"
-	.string "What if my ROD hooks a big one while\n"
-	.string "I'm in the washroom? I just can't go…$"
+	.string "¿Qué hace la gente cuando tiene que\n"
+	.string "ir al baño?\p"
+	.string "¿Y si pica uno grande mientras estoy\n"
+	.string "en el baño? No puedo ir…$"
 
 Route106_Text_NedDefeated:
-	.string "I lost because I'm trying to not go\n"
-	.string "to the washroom…$"
+	.string "He perdido por aguantarme las\n"
+	.string "ganas de ir al baño…$"
 
 Route106_Text_NedPostBattle:
-	.string "Oh, no! I've got this feeling I'll hook\n"
-	.string "a big one!$"
+	.string "¡Oh, no! ¡Me da que va a picar\n"
+	.string "uno grande!$"
 
 Route106_Text_DouglasIntro:
-	.string "Hahahah! I'm a lousy runner, but in\n"
-	.string "the water you can't catch me!$"
+	.string "¡Jajajá! Corro fatal, pero en el agua\n"
+	.string "no me alcanzas!$"
 
 Route106_Text_DouglasDefeated:
-	.string "I give up!$"
+	.string "¡Me rindo!$"
 
 Route106_Text_DouglasPostBattle:
-	.string "I wouldn't lose in a swim race…$"
+	.string "En una carrera de natación no\n"
+	.string "perdería…$"
 
 Route106_Text_KylaIntro:
-	.string "The sea is my backyard. I'm not going\n"
-	.string "to take it easy because you're a kid!$"
+	.string "El mar es mi jardín. ¡No me lo voy a\n"
+	.string "tomar con calma porque seas joven!$"
 
 Route106_Text_KylaDefeated:
-	.string "Did you take it easy on me by any\n"
-	.string "chance?$"
+	.string "¿Te has dejado ganar o algo?$"
 
 Route106_Text_KylaPostBattle:
-	.string "Drifting along with the waves…\n"
-	.string "I love it! Why don't you give it a try?$"
+	.string "Dejarse llevar por las olas…\n"
+	.string "¡Me encanta! ¿Por qué no lo pruebas?$"
 
 Route107_Text_DarrinIntro:
-	.string "Yawn…\p"
-	.string "I must have drifted off to sleep while\n"
-	.string "I was drifting in the waves.$"
+	.string "Aaah…\p"
+	.string "Me habré quedado dormido mientras\n"
+	.string "me llevaban las olas.$"
 
 Route107_Text_DarrinDefeated:
-	.string "Ahaha, I lost…\n"
-	.string "I'll take a snooze, I think…$"
+	.string "Jaja, he perdido…\n"
+	.string "Creo que me echaré una siestecita…$"
 
 Route107_Text_DarrinPostBattle:
-	.string "Floating and being rocked by\n"
-	.string "the waves--it's like sleeping in\l"
-	.string "a plush, comfy bed.$"
+	.string "Flotar y dejarse mecer por las olas\n"
+	.string "es como dormir en una cama\l"
+	.string "mullidita y cómoda.$"
 
 Route107_Text_TonyIntro:
-	.string "The sea is like my backyard.\n"
-	.string "Let's battle!$"
+	.string "El mar es como mi jardín.\n"
+	.string "¡A luchar!$"
 
 Route107_Text_TonyDefeated:
-	.string "I lost on my home field…\n"
-	.string "I'm in shock!$"
+	.string "He perdido en mi propio terreno…\n"
+	.string "¡No me lo creo!$"
 
 Route107_Text_TonyPostBattle:
-	.string "I swim the seas with a heart full of\n"
-	.string "dreams…\p"
-	.string "It's a song!\n"
-	.string "Anyways, I'm swimming some more.$"
+	.string "Nado por los mares con el corazón\n"
+	.string "lleno de sueños…\p"
+	.string "¡Es una canción!\n"
+	.string "Bueno, voy a nadar un poco más.$"
 
 Route107_Text_TonyRegister:
-	.string "You've shocked me to the bone!\n"
-	.string "Well, so you won't forget me…$"
+	.string "¡Me has dejado de piedra!\n"
+	.string "Bueno, para que no me olvides…$"
 
 Route107_Text_TonyRematchIntro:
-	.string "Swimming in the big, wide sea,\n"
-	.string "my POKéMON has grown stronger!$"
+	.string "¡Nadando por el inmenso mar,\n"
+	.string "mi POKéMON se ha hecho más fuerte!$"
 
 Route107_Text_TonyRematchDefeated:
-	.string "What a shock!\p"
-	.string "My POKéMON has gotten stronger, but\n"
-	.string "I stayed weak as a TRAINER!$"
+	.string "¡No me lo creo!\p"
+	.string "¡Mi POKéMON se ha hecho más fuerte,\n"
+	.string "pero yo sigo igual de débil!$"
 
 Route107_Text_TonyRematchPostBattle:
-	.string "What you learn in battle makes you\n"
-	.string "a stronger TRAINER.\l"
-	.string "The waves taught me that.$"
+	.string "Lo que aprendes en combate te hace\n"
+	.string "mejor ENTRENADOR.\l"
+	.string "Me lo enseñaron las olas.$"
 
 Route107_Text_DeniseIntro:
-	.string "Do you know a little town called\n"
-	.string "DEWFORD?$"
+	.string "¿Conoces un pueblecito llamado\n"
+	.string "AZULIZA?$"
 
 Route107_Text_DeniseDefeated:
-	.string "I hate this!$"
+	.string "¡Qué rabia!$"
 
 Route107_Text_DenisePostBattle:
-	.string "A weird saying is getting really\n"
-	.string "trendy at DEWFORD HALL.$"
+	.string "En el SALÓN AZULIZA se ha puesto de\n"
+	.string "moda una frase muy rara.$"
 
 Route107_Text_BethIntro:
-	.string "Did you want to battle me?\n"
-	.string "Sure, I'll go with you!$"
+	.string "¿Querías luchar contra mí?\n"
+	.string "¡Claro, vamos allá!$"
 
 Route107_Text_BethDefeated:
-	.string "I wasn't good enough for you.$"
+	.string "No he estado a tu altura.$"
 
 Route107_Text_BethPostBattle:
-	.string "I think you're going to keep getting\n"
-	.string "better. I'll go for it, too!$"
+	.string "Creo que vas a seguir mejorando.\n"
+	.string "¡Yo también lo intentaré!$"
 
 Route107_Text_LisaIntro:
-	.string "LISA: We challenge you as a sister\n"
-	.string "and brother!$"
+	.string "LISA: ¡Te desafiamos como hermana\n"
+	.string "y hermano!$"
 
 Route107_Text_LisaDefeated:
-	.string "LISA: Awesome.\n"
-	.string "You're in a different class of tough.$"
+	.string "LISA: Increíble.\n"
+	.string "Estás a otro nivel.$"
 
 Route107_Text_LisaPostBattle:
-	.string "LISA: Do you have any friends who\n"
-	.string "would go to the beach with you?$"
+	.string "LISA: ¿Tienes amigos que vayan\n"
+	.string "contigo a la playa?$"
 
 Route107_Text_LisaNotEnoughPokemon:
-	.string "LISA: If you want to battle with us,\n"
-	.string "bring more POKéMON.$"
+	.string "LISA: Si quieres luchar contra\n"
+	.string "nosotros, trae más POKéMON.$"
 
 Route107_Text_RayIntro:
-	.string "RAY: We always battle POKéMON,\n"
-	.string "me and my sister.\p"
-	.string "I always lose, but we can beat you\n"
-	.string "2-on-2!$"
+	.string "RAY: Mi hermana y yo siempre\n"
+	.string "luchamos con POKéMON.\p"
+	.string "Yo siempre pierdo, ¡pero juntos te\n"
+	.string "ganamos dos contra dos!$"
 
 Route107_Text_RayDefeated:
-	.string "RAY: Wowee, you're at a higher level\n"
-	.string "than us!$"
+	.string "RAY: ¡Hala, estás a un nivel más\n"
+	.string "alto que nosotros!$"
 
 Route107_Text_RayPostBattle:
-	.string "RAY: My sister gave me my POKéMON.\n"
-	.string "I raised it, and now it's my important\l"
-	.string "partner!$"
+	.string "RAY: Mi hermana me dio mi POKéMON.\n"
+	.string "Lo he criado y ahora es mi\l"
+	.string "compañero más importante.$"
 
 Route107_Text_RayNotEnoughPokemon:
-	.string "RAY: If you want to battle us,\n"
-	.string "go bring some more POKéMON!$"
+	.string "RAY: ¡Si quieres luchar contra\n"
+	.string "nosotros, ve a por más POKéMON!$"
 
 Route107_Text_CamronIntro:
-	.string "I'm in the middle of a triathlon,\n"
-	.string "but I'm nowhere near tired!$"
+	.string "Estoy en mitad de un triatlón,\n"
+	.string "¡pero no estoy nada cansado!$"
 
 Route107_Text_CamronDefeated:
-	.string "That exhausted me…$"
+	.string "Esto me ha agotado…$"
 
 Route107_Text_CamronPostBattle:
-	.string "I still have swimming and running left\n"
-	.string "to do after this.\p"
-	.string "Am I going to be okay?$"
+	.string "Después de esto aún me queda nadar\n"
+	.string "y correr.\p"
+	.string "¿Aguantaré?$"
 
 Route108_Text_JeromeIntro:
-	.string "My dream is to swim the world's seven\n"
-	.string "seas!$"
+	.string "¡Mi sueño es nadar por los siete\n"
+	.string "mares del mundo!$"
 
 Route108_Text_JeromeDefeated:
-	.string "I won't be able to swim the seven seas\n"
-	.string "like this…$"
+	.string "Así no podré nadar por los siete\n"
+	.string "mares…$"
 
 Route108_Text_JeromePostBattle:
-	.string "Playing with marine POKéMON is one of\n"
-	.string "the pleasures of swimming!$"
+	.string "¡Jugar con POKéMON marinos es uno de\n"
+	.string "los placeres de nadar!$"
 
 Route108_Text_MatthewIntro:
-	.string "Ahoy, there! Are you going out to\n"
-	.string "the ABANDONED SHIP, too?$"
+	.string "¡Ah del barco! ¿Tú también vas al\n"
+	.string "BARCO ABANDONADO?$"
 
 Route108_Text_MatthewDefeated:
-	.string "I'm sinking!\n"
+	.string "¡Me hundo!\n"
 	.string "Glub… Glub…$"
 
 Route108_Text_MatthewPostBattle:
-	.string "Some people even go inside that\n"
-	.string "ABANDONED SHIP.$"
+	.string "Hay gente que incluso se mete dentro\n"
+	.string "de ese BARCO ABANDONADO.$"
 
 Route108_Text_TaraIntro:
-	.string "My liar of a boyfriend told me that\n"
-	.string "I look great in a bikini…$"
+	.string "El mentiroso de mi novio me dijo que\n"
+	.string "el biquini me queda genial…$"
 
 Route108_Text_TaraDefeated:
-	.string "Oh, boo!$"
+	.string "¡Jo!$"
 
 Route108_Text_TaraPostBattle:
-	.string "Even if it's a lie, I love being told\n"
-	.string "I look great…\l"
-	.string "We girls are so complex…$"
+	.string "Aunque sea mentira, me encanta que\n"
+	.string "me digan que estoy guapa…\l"
+	.string "¡Qué complicadas somos!$"
 
 Route108_Text_MissyIntro:
-	.string "I love the sea!\n"
-	.string "I forget all my worries when I swim!$"
+	.string "¡Me encanta el mar!\n"
+	.string "¡Al nadar se me olvidan las penas!$"
 
 Route108_Text_MissyDefeated:
-	.string "When I lose a battle, I get all\n"
-	.string "stressed out!$"
+	.string "¡Cuando pierdo un combate, me pongo\n"
+	.string "de los nervios!$"
 
 Route108_Text_MissyPostBattle:
-	.string "Work off your stress by swimming!\n"
-	.string "It's so healthy!$"
+	.string "¡Quita el estrés nadando!\n"
+	.string "¡Es muy sano!$"
 
 Route108_Text_CoryIntro:
-	.string "I love WATER-type POKéMON.\n"
-	.string "I love other POKéMON, too!$"
+	.string "Me encantan los POKéMON de tipo AGUA.\n"
+	.string "¡Y los demás también!$"
 
 Route108_Text_CoryDefeated:
-	.string "Waaah! I lost!\n"
-	.string "Waaah! Waaah!$"
+	.string "¡Buaaa! ¡He perdido!\n"
+	.string "¡Buaaa! ¡Buaaa!$"
 
 Route108_Text_CoryPostBattle:
-	.string "Shouting is good for me!\n"
-	.string "It uplifts me!$"
+	.string "¡Gritar me sienta bien!\n"
+	.string "¡Me anima!$"
 
 Route108_Text_CoryRegister:
-	.string "I love tough TRAINERS, too!\n"
-	.string "Register me in your POKéNAV!$"
+	.string "¡También me encantan los ENTRENADORES\n"
+	.string "duros! ¡Regístrame en tu POKéNAV!$"
 
 Route108_Text_CoryRematchIntro:
-	.string "Win or lose, I love battling at sea!$"
+	.string "¡Gane o pierda, me encanta combatir\n"
+	.string "en el mar!$"
 
 Route108_Text_CoryRematchDefeated:
-	.string "Waaah! I lost again!\n"
-	.string "Waaah! Waaah!$"
+	.string "¡Buaaa! ¡He vuelto a perder!\n"
+	.string "¡Buaaa! ¡Buaaa!$"
 
 Route108_Text_CoryRematchPostBattle:
-	.string "If you're faced with a challenge,\n"
-	.string "try shouting at the sea!$"
+	.string "¡Si tienes un reto delante, prueba\n"
+	.string "a gritarle al mar!$"
 
 Route108_Text_CarolinaIntro:
-	.string "I take huge pride in my POKéMON.\n"
-	.string "We'll show you one speedy battle!$"
+	.string "Estoy muy orgullosa de mis POKéMON.\n"
+	.string "¡Te enseñaremos un combate rapidísimo!$"
 
 Route108_Text_CarolinaDefeated:
-	.string "That wasn't cute at all.$"
+	.string "No ha sido nada mono.$"
 
 Route108_Text_CarolinaPostBattle:
-	.string "Since I'm at sea like this, I wouldn't\n"
-	.string "mind putting on a pink, frilly swimsuit…$"
+	.string "Ya que estoy en el mar, no me\n"
+	.string "importaría ponerme un bañador rosa\l"
+	.string "con volantes…$"
 
 Route109_Text_DavidIntro:
-	.string "Hiyah! Look at my chiseled abs!\n"
-	.string "This is what you call “cut”!$"
+	.string "¡Hiyah! ¡Mira mis abdominales!\n"
+	.string "¡Esto es estar “cortado”!$"
 
 Route109_Text_DavidDefeated:
-	.string "Aiyah!\n"
-	.string "Flubbed out!$"
+	.string "¡Ayah!\n"
+	.string "¡Me he desinflado!$"
 
 Route109_Text_DavidPostBattle:
-	.string "Hiyah!\p"
-	.string "My sculpted abs have nothing to do\n"
-	.string "with POKéMON battles!$"
+	.string "¡Hiyah!\p"
+	.string "¡Mis abdominales no tienen nada que\n"
+	.string "ver con los combates POKéMON!$"
 
 Route109_Text_AliceIntro:
-	.string "Are you properly protected against\n"
-	.string "the sun?$"
+	.string "¿Te has protegido bien del sol?$"
 
 Route109_Text_AliceDefeated:
-	.string "Ouch, ouch, ouch!$"
+	.string "¡Ay, ay, ay!$"
 
 Route109_Text_AlicePostBattle:
-	.string "Cheeks are the most prone to burning!$"
+	.string "¡Las mejillas son lo que más\n"
+	.string "se quema!$"
 
 Route109_Text_HueyIntro:
-	.string "I've laid anchor in ports around\n"
-	.string "the world, but SLATEPORT's the best.$"
+	.string "He echado el ancla en puertos de todo\n"
+	.string "el mundo, pero PORTUAL es el mejor.$"
 
 Route109_Text_HueyDefeated:
-	.string "You're the best!$"
+	.string "¡Eres lo mejor!$"
 
 Route109_Text_HueyPostBattle:
-	.string "In the best port was the best\n"
-	.string "TRAINER…$"
+	.string "En el mejor puerto estaba la mejor\n"
+	.string "persona entrenando…$"
 
 Route109_Text_EdmondIntro:
-	.string "Urrrrppp…\n"
-	.string "Battle? With me?$"
+	.string "Uuuuurp…\n"
+	.string "¿Un combate? ¿Conmigo?$"
 
 Route109_Text_EdmondDefeated:
 	.string "Urp… Ooooooohhhhhh…\n"
-	.string "Urrrrpppp…$"
+	.string "Uuuurrp…$"
 
 Route109_Text_EdmondPostBattle:
-	.string "I'm usually stronger than this!\n"
-	.string "I'm just seasick as a dog!\p"
-	.string "I'm a SAILOR, but…$"
+	.string "¡Normalmente soy más fuerte!\n"
+	.string "¡Es que me mareo un montón!\p"
+	.string "Soy MARINERO, pero…$"
 
 Route109_Text_RickyIntro:
-	.string "I'm thirsty… I could go for a SODA POP\n"
-	.string "at the SEASHORE HOUSE…$"
+	.string "Tengo sed… Me tomaría un REFRESCO\n"
+	.string "en la CASA DE LA PLAYA…$"
 
 Route109_Text_RickyDefeated:
-	.string "Groan…$"
+	.string "Ugh…$"
 
 Route109_Text_RickyPostBattle:
-	.string "I'm getting famished… My inner tube\n"
-	.string "looks like a giant doughnut…$"
+	.string "Tengo un hambre… Mi flotador parece\n"
+	.string "un donut gigante…$"
 
 Route109_Text_RickyRegister:
-	.string "Will you have another match with me\n"
-	.string "when I'm not all thirsty?$"
+	.string "¿Lucharás otra vez conmigo cuando\n"
+	.string "no tenga tanta sed?$"
 
 Route109_Text_RickyRematchIntro:
-	.string "I'm hungry, but I've got enough pep in\n"
-	.string "me for a battle!$"
+	.string "Tengo hambre, ¡pero me quedan\n"
+	.string "fuerzas para un combate!$"
 
 Route109_Text_RickyRematchDefeated:
-	.string "I lost…\n"
-	.string "It's because I'm hungry…$"
+	.string "He perdido…\n"
+	.string "Es porque tengo hambre…$"
 
 Route109_Text_RickyRematchPostBattle:
-	.string "When you eat on a beach, everything\n"
-	.string "seems to taste a little better.$"
+	.string "Cuando comes en la playa, todo sabe\n"
+	.string "un poco mejor.$"
 
 Route109_Text_LolaIntro:
-	.string "Doesn't a beach umbrella look like\n"
-	.string "a giant flower?$"
+	.string "¿A que una sombrilla parece una\n"
+	.string "flor gigante?$"
 
 Route109_Text_LolaDefeated:
-	.string "Mommy!$"
+	.string "¡Mamá!$"
 
 Route109_Text_LolaPostBattle:
-	.string "If you look at the beach from the sky,\n"
-	.string "it looks like a big flower garden!$"
+	.string "¡Si miras la playa desde el cielo,\n"
+	.string "parece un gran jardín de flores!$"
 
 Route109_Text_LolaRegister:
-	.string "Me?\n"
-	.string "I'm here every day!$"
+	.string "¿Yo?\n"
+	.string "¡Vengo aquí todos los días!$"
 
 Route109_Text_LolaRematchIntro:
-	.string "I'm not losing to you again!\n"
-	.string "That's why I have my inner tube!$"
+	.string "¡No voy a volver a perder!\n"
+	.string "¡Por eso llevo mi flotador!$"
 
 Route109_Text_LolaRematchDefeated:
-	.string "Mommy!$"
+	.string "¡Mamá!$"
 
 Route109_Text_LolaRematchPostBattle:
-	.string "If I have an inner tube, me and my\n"
-	.string "POKéMON's cuteness goes way up!$"
+	.string "¡Con el flotador, mi POKéMON y yo\n"
+	.string "somos mucho más monos!$"
 
 Route109_Text_AustinaIntro:
-	.string "I can't swim without my inner tube,\n"
-	.string "but I won't lose at POKéMON!$"
+	.string "No sé nadar sin flotador, ¡pero no\n"
+	.string "perderé con los POKéMON!$"
 
 Route109_Text_AustinaDefeated:
-	.string "Did I lose because I have an inner\n"
-	.string "tube?$"
+	.string "¿He perdido por llevar flotador?$"
 
 Route109_Text_AustinaPostBattle:
-	.string "My inner tube is a fashion item.\n"
-	.string "I can't be seen without it.$"
+	.string "Mi flotador es un complemento de moda.\n"
+	.string "No pueden verme sin él.$"
 
 Route109_Text_GwenIntro:
-	.string "Hi, big TRAINER.\n"
-	.string "Will you battle with me?$"
+	.string "Hola, entrenas muy bien.\n"
+	.string "¿Luchas conmigo?$"
 
 Route109_Text_GwenDefeated:
-	.string "Oh, you're strong.$"
+	.string "Oh, qué fuerte eres.$"
 
 Route109_Text_GwenPostBattle:
-	.string "How did you get to be so strong?$"
+	.string "¿Cómo te has hecho tan fuerte?$"
 
 Route109_Text_CarterIntro:
-	.string "Wahahah! This dude's going to catch\n"
-	.string "himself a big one!$"
+	.string "¡Jajajá! ¡Este tío va a pescar\n"
+	.string "uno grande!$"
 
 Route109_Text_CarterDefeated:
-	.string "This dude just lost one…$"
+	.string "Este tío ha perdido uno…$"
 
 Route109_Text_CarterPostBattle:
-	.string "This dude thinks you're a big one.\n"
-	.string "No, you're a big-one-to-be!$"
+	.string "Este tío cree que eres de los grandes.\n"
+	.string "¡No, que vas a ser de los grandes!$"
 
 Route109_Text_PaulIntro:
-	.string "PAUL: Well, this is a mood-breaker.\p"
-	.string "I wish you wouldn't disturb our\n"
-	.string "precious time together.$"
+	.string "PAUL: Vaya, nos has cortado el rollo.\p"
+	.string "Ojalá no molestaras nuestro\n"
+	.string "precioso momento juntos.$"
 
 Route109_Text_PaulDefeated:
-	.string "PAUL: Well, I give up.$"
+	.string "PAUL: Bueno, me rindo.$"
 
 Route109_Text_PaulPostBattle:
-	.string "PAUL: Well, don't tell anyone that\n"
-	.string "we're here.\l"
-	.string "This is just our private world of two!$"
+	.string "PAUL: Bueno, no le digas a nadie que\n"
+	.string "estamos aquí.\l"
+	.string "¡Este es nuestro mundo de dos!$"
 
 Route109_Text_PaulNotEnoughPokemon:
-	.string "PAUL: We're totally, deeply in love.\n"
-	.string "That's why we make our POKéMON battle\l"
-	.string "together.$"
+	.string "PAUL: Estamos locamente enamorados.\n"
+	.string "Por eso hacemos que nuestros POKéMON\l"
+	.string "luchen juntos.$"
 
 Route109_Text_MelIntro:
-	.string "MEL: We're, like, totally in love.\n"
-	.string "Our romance is heating up all of HOENN!$"
+	.string "MEL: Estamos supermegaenamorados.\n"
+	.string "¡Nuestro amor está calentando HOENN!$"
 
 Route109_Text_MelDefeated:
-	.string "MEL: We lost, and it's my fault!\n"
-	.string "PAUL will hate me!$"
+	.string "MEL: ¡Hemos perdido por mi culpa!\n"
+	.string "¡PAUL me va a odiar!$"
 
 Route109_Text_MelPostBattle:
-	.string "MEL: Um, PAUL, are you angry with me?\n"
-	.string "Please don't be angry.$"
+	.string "MEL: Eh, PAUL, ¿estás enfadado?\n"
+	.string "Por favor, no te enfades.$"
 
 Route109_Text_MelNotEnoughPokemon:
-	.string "MEL: We're, like, deeply and truly in love.\n"
-	.string "That's why we make our POKéMON\l"
-	.string "battle together.$"
+	.string "MEL: Estamos súper enamorados de\n"
+	.string "verdad. Por eso hacemos que nuestros\l"
+	.string "POKéMON luchen juntos.$"
 
 Route109_Text_ChandlerIntro:
-	.string "Tadaah! See?\n"
-	.string "My inner tube's round!$"
+	.string "¡Tachán! ¿Ves?\n"
+	.string "¡Mi flotador es redondo!$"
 
 Route109_Text_ChandlerDefeated:
-	.string "Oh, oh!\n"
-	.string "Too bad!$"
+	.string "¡Oh, oh!\n"
+	.string "¡Qué pena!$"
 
 Route109_Text_ChandlerPostBattle:
-	.string "After I showed you my round inner\n"
-	.string "tube, too…$"
+	.string "Con lo que me ha costado enseñarte\n"
+	.string "mi flotador redondo…$"
 
 Route109_Text_HaileyIntro:
-	.string "I can't swim, so I'm pretending\n"
-	.string "to swim.$"
+	.string "No sé nadar, así que hago como\n"
+	.string "que nado.$"
 
 Route109_Text_HaileyDefeated:
-	.string "I thought so!\n"
-	.string "I didn't think we could win.$"
+	.string "¡Lo sabía!\n"
+	.string "No creía que pudiéramos ganar.$"
 
 Route109_Text_HaileyPostBattle:
-	.string "When I learn how to swim, I think\n"
-	.string "my POKéMON will become tougher.$"
+	.string "Cuando aprenda a nadar, creo que mis\n"
+	.string "POKéMON se harán más fuertes.$"
 
 Route109_Text_ElijahIntro:
-	.string "For a guy as macho as me, this kind\n"
-	.string "of POKéMON is the perfect match!$"
+	.string "¡Para un tío tan macho como yo, este\n"
+	.string "POKéMON es perfecto!$"
 
 Route109_Text_ElijahDefeated:
-	.string "I'm cool even in defeat, hey?$"
+	.string "Hasta perdiendo soy guay, ¿eh?$"
 
 Route109_Text_ElijahPostBattle:
-	.string "For a guy as macho as me, a port\n"
-	.string "is the perfect setting!\p"
-	.string "I guess I'll head for SLATEPORT.$"
+	.string "¡Para un tío tan macho como yo, un\n"
+	.string "puerto es el sitio perfecto!\p"
+	.string "Creo que me iré a PORTUAL.$"
 
 Route110_Text_JacobIntro:
 	.string "Whoa! Watch it!\n"
