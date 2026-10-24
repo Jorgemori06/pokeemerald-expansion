@@ -298,6 +298,52 @@ def main():
     with open(WILD, "w", encoding="utf-8", newline="") as f:
         f.write(json.dumps(salvajes, indent=2, ensure_ascii=False) + "\n")
     print(f"\nReescalados {len(nuevos)} entrenadores y las zonas salvajes de Hoenn.")
+    aplicar_estaticos(nuevos, tramo_de, mapas)
+
+
+# Estáticos (combates con setwildbattle en los scripts):
+# - Normales (Kecleon, Voltorb, Electrode): como jefes de zona, entrenadores de su mapa + 3,
+#   sin pasar del cap del tramo.
+# - Legendarios: al cap del tramo en que se puede llegar a ellos.
+# Los regalos (givemon) se quedan con su nivel original, para entrenarlos.
+# (archivo con el setwildbattle, mapa cuyo nivel se usa, regla)
+ESTATICOS = [
+    ("data/scripts/kecleon.inc", "MAP_ROUTE120", "zona"),        # Kecleon invisibles de las rutas 119 y 120
+    ("data/maps/Route120/scripts.inc", "MAP_ROUTE120", "zona"),  # Kecleon del puente de Máximo
+    ("data/maps/NewMauville_Inside/scripts.inc", "MAP_NEW_MAUVILLE_INSIDE", "zona"),
+    ("data/maps/AquaHideout_B1F/scripts.inc", "MAP_AQUA_HIDEOUT_B1F", "zona"),
+    ("data/maps/DesertRuins/scripts.inc", None, 8),   # Regis: hace falta Buceo (tramo 8)
+    ("data/maps/IslandCave/scripts.inc", None, 8),
+    ("data/maps/AncientTomb/scripts.inc", None, 8),
+    ("data/maps/SkyPillar_Top/scripts.inc", None, 10),  # Rayquaza, Groudon y Kyogre: postgame
+    ("data/maps/MarineCave_End/scripts.inc", None, 10),
+    ("data/maps/TerraCave_End/scripts.inc", None, 10),
+    ("data/maps/BattleFrontier_OutsideEast/scripts.inc", None, 10),  # Sudowoodo
+]
+
+
+def aplicar_estaticos(nuevos, tramo_de, mapas):
+    # Nivel de cada mapa: el Pokémon más fuerte de sus entrenadores normales, de media
+    por_mapa = {}
+    for t, s in tramo_de.items():
+        if t in nuevos and t not in LIDERES and t not in JEFES_FIJOS and not es_jefe_medio(t):
+            por_mapa.setdefault(mapas[t], []).append(max(nuevos[t]))
+    for ruta, mapa, regla in ESTATICOS:
+        if regla == "zona":
+            tramo = tramo_de_mapa(mapa)
+            if mapa in por_mapa:
+                zona = round(sum(por_mapa[mapa]) / len(por_mapa[mapa]))
+            else:
+                zona = sum(rango_tramo(tramo)) // 2
+            nivel = min(CAPS[tramo], zona + SUBIDA_JEFES_MEDIO)
+        else:
+            nivel = CAPS[regla]
+        with open(ruta, encoding="utf-8", newline="") as f:
+            texto = f.read()
+        texto = re.sub(r"(^\s*setwildbattle\s+SPECIES_\w+,\s*)\d+", lambda m: f"{m.group(1)}{nivel}", texto, flags=re.M)
+        with open(ruta, "w", encoding="utf-8", newline="") as f:
+            f.write(texto)
+        print(f"Estáticos de {ruta}: nivel {nivel}")
 
 
 if __name__ == "__main__":
