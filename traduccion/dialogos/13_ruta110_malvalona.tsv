@@ -1,0 +1,201 @@
+# RUTA 110, CAMINO DE BICIS y sus entrenadores (sin la CASA TRAMPA)
+Route110_Text_WeCantTalkAboutAquaActivities	Las actividades del EQUIPO AQUA…\nTodavía no podemos hablar de ellas.$
+Route110_Text_KickUpARuckus	¡Quiero ir ya a PORTUAL y armar\nun buen jaleo!$
+Route110_Text_MyFirstJobInAqua	Es mi primer trabajo desde que entré\nen el EQUIPO AQUA. Da un poco de miedo.$
+Route110_Text_AquaActionsBringSmiles	¡Lo que hace el EQUIPO AQUA debería\nsacarle una sonrisa a la gente!$
+Route110_Text_MayLetsBattle	AURA: ¡Hola, {PLAYER}{KUN}!\n¡Cuánto tiempo!\pMientras buscaba otros POKéMON,\nmis POKéMON se han hecho más fuertes.\pAsí que…\n¿Qué te parece un combatillo?$
+Route110_Text_MayDefeated	¡Vaya!\n¡Eres mejor de lo que pensaba!$
+Route110_Text_MayTakeThis	AURA: {PLAYER}{KUN}, tú también has\nestado entrenando, ¿eh?\p¡Creo que te mereces un premio!\n¡Toma, es de mi parte!$
+Route110_Text_MayExplainItemfinder	AURA: Es un ZAHORÍ.\pPruébalo. Si hay un objeto que no\nse ve, emite un sonido.\p¡Hasta otra, {PLAYER}{KUN}!\pSé que es raro que lo diga yo, pero\ncreo que deberías entrenar mucho\lmás para la próxima vez.$
+Route110_Text_BrendanLetsBattle	BRUNO: Hola, {PLAYER}.\nAsí que estabas aquí.\l¿Qué tal te va?\p¿Has estado criando a tus POKéMON?\nVoy a comprobarlo.$
+Route110_Text_BrendanDefeated	Mmm…\nNo lo haces nada mal.$
+Route110_Text_BrendanTakeThis	BRUNO: {PLAYER}, has entrenado sin\nque yo me diera cuenta…\p¡Bastante bien!\nToma, quédate esto.$
+Route110_Text_BrendanExplainItemfinder	BRUNO: Es un ZAHORÍ.\pÚsalo para rebuscar objetos que\nno se ven.\pSi detecta algo, emite\nun sonido.\pBueno, me voy a buscar POKéMON\nnuevos.$
+Route110_Text_RideBikeAtFullSpeed	¿No sería genial ir en BICI a toda\nvelocidad por el CAMINO DE BICIS?$
+Route110_Text_HairStreamsBehindMe	¿Qué te parece cómo ondea al viento\nmi melena negra como el azabache?\pMe dejé el pelo largo solo para eso.$
+Route110_Text_YouGotBikeFromRydel	¡Anda, esa BICI te la ha dado RYDEL!\pSe nota a la legua.\nLo pone en toda la bici…\pRYDEL, RYDEL, RYDEL, RYDEL, RYDEL,\nRYDEL, RYDEL, RYDEL, RYDEL, RYDEL,\pRYDEL, RYDEL, RYDEL, RYDEL, RYDEL,\nRYDEL, RYDEL, RYDEL, RYDEL, RYDEL,\pRYDEL, RYDEL, RYDEL, RYDEL, RYDEL,\nRYDEL, RYDEL, RYDEL, RYDEL, RYDEL,\pRYDEL, RYDEL, RYDEL, RYDEL, RYDEL,\nRYDEL, RYDEL, RYDEL, RYDEL, RYDEL,\pRYDEL, RYDEL, RYDEL, RYDEL, RYDEL…\nEse nombre está por todas partes.\p¡Deberías pasearte con ella por\ntodos lados! ¡Es buena publicidad!$
+Route110_Text_TwoRoads	Dos caminos, uno arriba y otro abajo…\pUno para las personas y otro para\nlos POKéMON. Quizá sea lo justo.$
+Route110_Text_WalkOnTheLowRoad	No tengo BICI, así que daré un paseo\ntranquilo por el camino de abajo.$
+Route110_Text_BikeTechniques	Si aprendes técnicas, montar en BICI\nes todavía más divertido.\pHay sitios a los que solo se llega\nusando una técnica con la BICI.$
+Route110_Text_WhichShouldIChoose	¿Qué hago?\p¿Voy directo a MALVALONA por el\nCAMINO DE BICIS, o voy por abajo\ly busco POKéMON?$
+Route110_Text_CyclingChallengeResultSummary	Número de choques:\n… … ¡{STR_VAR_1}!\pTiempo total:\n… … ¡{STR_VAR_2}!$
+Route110_Text_ChallengeReactionBest	¡Bravo! ¡Una actuación espléndida!\pTu amor por la bici sale de lo más\nhondo de tu corazón.\l¡Me has llegado al alma!$
+Route110_Text_ChallengeReactionGood	Tu técnica es admirable.\pTe sugiero que vayas un poco más\nrápido sin dejar de esquivar.$
+Route110_Text_ChallengeReactionOk	Diría que aún te queda por mejorar.\pAun así, espero que no olvides lo\nmucho que se disfruta en bici.$
+Route110_Text_ChallengeReactionBad	Madre mía… Tu forma de ir en bici\nroza lo aterrador.\pSin duda, necesitas practicar\nmucho más.$
+Route110_Text_ChallengeReactionWorst	… Estoy horrorizado…\pQuizá esto de la bici no esté\nhecho para ti.\pDeberías plantearte seriamente\ndevolverle esa BICI a RYDEL.$
+Route110_Text_RatedForNumberOfCollisions	Esto es el CAMINO DE BICIS.\pSi vas de MALVALONA a PORTUAL en\nBICI DE CARRERAS, se puntúa el número\lde choques y el tiempo total.$
+Route110_Text_AlwaysAimHigher	Sea cual sea el resultado, espero\nverte intentarlo más veces.\l¡Apunta siempre más alto!$
+Route110_Text_AcroBikesDoNotQualify	En este CAMINO DE BICIS se puntúa a\nquien va en BICI DE CARRERAS por sus\lchoques y su tiempo total.\pLas BICIS ACROBÁTICAS no puntúan.\nGiran muy fácil y no sería justo.$
+Route110_Text_SlateportCitySign	RUTA 110\n{DOWN_ARROW} CIUDAD PORTUAL$
+Route110_Text_CyclingRoadSign	CAMINO DE BICIS COSTERO$
+Route110_Text_AquaWasHere	“¡El EQUIPO AQUA estuvo aquí!”\pAlguien lo pintó en este cartel,\npero luego otro lo tapó.\pAhora pone: “¡El EQUIPO MAGMA\nmanda!”.$
+Route110_Text_Route103Sign	RUTA 110\n{LEFT_ARROW} RUTA 103$
+Route110_Text_SeasideParkingSign	APARCAMIENTO COSTERO$
+Route110_Text_MauvilleCitySign	RUTA 110\n{UP_ARROW} CIUDAD MALVALONA$
+Route110_Text_TrainerTipsPrlzSleep	CONSEJOS PARA ENTRENADORES\pSi paralizas o duermes al rival,\nlo dejas indefenso.\pEs una técnica importante en los\ncombates POKéMON.$
+Route110_Text_TrainerTipsRegisterItems	CONSEJOS PARA ENTRENADORES\pLos objetos de la MOCHILA se pueden\nreordenar pulsando SELECT.$
+Route110_Text_TrickHouseSign	“Tres pasos {RIGHT_ARROW} y dos pasos {UP_ARROW}\nhasta la asombrosa CASA TRAMPA”.$
+Route110_Text_BestRecord	EL MEJOR RÉCORD HASTA HOY…\pN.º de choques: {STR_VAR_1}\pTiempo: {STR_VAR_2}$
+Route110_Text_ThereIsNoRecord	EL MEJOR RÉCORD HASTA HOY…\pParece que nadie lo ha intentado.\nNo hay ningún récord…$
+Route110_Text_ImagineSeeingYouHere	PROF. ABEDUL: ¡Oh, {PLAYER}{KUN}!\n¡Quién iba a decir que te vería aquí!\p¿Y dónde andará {RIVAL}?$
+Route110_Text_HeardYouInstallMatchCall	¡Ah, ya veo!\nVais por separado.\lBueno, no pasa nada.\pAh, sí, me han dicho que tu POKéNAV\ntiene instalada la AGENDA.\pEntonces debería registrarte también\nen mi POKéNAV.\pAsí, aunque no estemos juntos, podré\nevaluar tu POKéDEX cuando quiera.\p… … … … … …$
+Route110_Text_RegisteredBirchInPokenav	Has registrado al PROF. ABEDUL\nen el POKéNAV.$
+Route110_Text_KeepAnEyeOutForRival	PROF. ABEDUL: {PLAYER}{KUN}…\pEcha un ojo a {RIVAL}, por favor.\n… … … … … …\pBueno, tengo que irme.\n¡Hasta otra, {PLAYER}{KUN}!$
+Route110_SeasideCyclingRoadNorthEntrance_Text_GoAllOutOnCyclingRoad	En el CAMINO DE BICIS puedes ir tan\nrápido como quieras.\pIr así de rápido es una gozada, pero\n¡intenta no chocar con nadie!$
+Route110_SeasideCyclingRoadNorthEntrance_Text_TooDangerousToWalk	Lo siento, no se puede ir a pie por\nel CAMINO DE BICIS. Es peligroso.\pVuelve cuando tengas una BICI.$
+Route110_SeasideCyclingRoadSouthEntrance_Text_GoAllOutOnCyclingRoad	En el CAMINO DE BICIS puedes ir tan\nrápido como quieras.\pIr así de rápido es una gozada, pero\n¡intenta no chocar con nadie!$
+Route110_SeasideCyclingRoadSouthEntrance_Text_TooDangerousToWalk	Lo siento, no se puede ir a pie por\nel CAMINO DE BICIS. Es peligroso.\pVuelve cuando tengas una BICI.$
+Route110_Text_JacobIntro	¡Eh! ¡Cuidado!\nSe ve que correr en BICI no es lo tuyo.$
+Route110_Text_JacobDefeated	¡Uaaah!\n¡Me han fallado los frenos!$
+Route110_Text_JacobPostBattle	¡Una rueda pinchada o un fallo de\nfrenos pueden hacerte mucho daño!\l¡Revisa bien tu BICI!$
+Route110_Text_AnthonyIntro	¡Eh, tú!\n¿Puedes seguir mi ritmo?$
+Route110_Text_AnthonyDefeated	¡Menudo trompazo!$
+Route110_Text_AnthonyPostBattle	Con la velocidad no basta para ganar.\nTengo que replanteármelo…$
+Route110_Text_BenjaminIntro	¡Que no cunda el pánico si tu BICI\nva muy rápido!$
+Route110_Text_BenjaminDefeated	No debo ponerme nervioso en los\ncombates POKéMON…$
+Route110_Text_BenjaminPostBattle	No hace falta agobiarse.\nTranquilidad. Hay tiempo de sobra.$
+Route110_Text_BenjaminRegister	Seguiré a mi ritmo, sin agobios.\nAvísame si te apetece.$
+Route110_Text_BenjaminRematchIntro	¿No vas un poco demasiado rápido?\nTranquilidad, y vamos a combatir.$
+Route110_Text_BenjaminRematchDefeated	No me he puesto nervioso, pero he\nperdido igual…$
+Route110_Text_BenjaminRematchPostBattle	No hace falta agobiarse.\nTranquilidad. Hay tiempo de sobra.$
+Route110_Text_AbigailIntro	El triatlón es durísimo.\pHay que hacer tres pruebas: natación,\nciclismo y carrera.$
+Route110_Text_AbigailDefeated	¡Los combates POKéMON también son\nduros!$
+Route110_Text_AbigailPostBattle	Estoy agotada, necesito un descanso.\nEs importante descansar bien.$
+Route110_Text_AbigailRegister	¿Sabes? ¡Me caes bien!\nRepitamos en el CAMINO DE BICIS.$
+Route110_Text_AbigailRematchIntro	¿A que mola combatir mientras vas\nen bici?$
+Route110_Text_AbigailRematchDefeated	Hala…\n¿Cómo puedes ser tan fuerte?$
+Route110_Text_AbigailRematchPostBattle	¿Ibas a por un récord?\p¡Perdona si te he hecho perder tiempo!$
+Route110_Text_JasmineIntro	Llevo pedaleando sin parar.\n¡Tengo los muslos como piedras!$
+Route110_Text_JasmineDefeated	Me preocupan los calambres…$
+Route110_Text_JasminePostBattle	¿Oh, tienes MEDALLAS de GIMNASIO?\n¡Con razón eres tan fuerte!$
+Route110_Text_EdwardIntro	¡He previsto tus intenciones!\n¡Es imposible que pierda!$
+Route110_Text_EdwardDefeated	¡No supe predecir mi propia derrota!$
+Route110_Text_EdwardPostBattle	Veo tu futuro…\pMmm…\nVeo una luz brillante…$
+Route110_Text_JaclynIntro	¡Jajajajaja!\n¡Te deslumbraré con mis prodigios!$
+Route110_Text_JaclynDefeated	¡He perdido de forma prodigiosa!$
+Route110_Text_JaclynPostBattle	¡Has ganado solo porque ha sido un\nprodigio! ¡Sí, un prodigio!\l¡No creas que siempre vas a ganar!$
+Route110_Text_EdwinIntro	¿Me dejas ver tus POKéMON?\nSolo un vistazo, ¿vale?$
+Route110_Text_EdwinDefeated	Quería completar\nmi colección…$
+Route110_Text_EdwinPostBattle	¡Cuando veo un POKéMON que no conozco,\nme arde el alma de coleccionista!$
+Route110_Text_EdwinRegister	También me gusta coleccionar\ncontactos de la AGENDA…$
+Route110_Text_EdwinRematchIntro	Hola, ¿has atrapado algún POKéMON\nnuevo?\p¿Me dejas ver tus POKéMON?\nSolo un vistazo, ¿vale?$
+Route110_Text_EdwinRematchDefeated	Tus POKéMON…\nQué envidia me das.$
+Route110_Text_EdwinRematchPostBattle	¡Ay, cómo me gustaría tener todos los\nPOKéMON raros!$
+Route110_Text_DaleIntro	¡Eh!\n¡No te acerques así por detrás!$
+Route110_Text_DaleDefeated	¡He perdido!\n¡Rayos!$
+Route110_Text_DalePostBattle	Pescar es cuestión de concentración.\nHay que fijarse en el flotador.$
+Route110_Text_IsabelIntro	¡Jajaja! Iría a cualquier parte para\nlucir mis encantadores POKéMON.$
+Route110_Text_IsabelDefeated	Ay, querida, esto no puede ser.$
+Route110_Text_IsabelPostBattle	En vez de combatir, quizá debería lucir\nmis POKéMON en el CLUB DE FANS.$
+Route110_Text_IsabelRegister	Eso no ha sido nada comparado con\nlo que puedo lucir mis POKéMON.\p¡Serás mi público siempre que\npueda!$
+Route110_Text_IsabelRematchIntro	¡Jajajaja! ¡Te enseñaré mis POKéMON\nlas veces que quieras!$
+Route110_Text_IsabelRematchDefeated	Ay, querida, esto no puede ser.$
+Route110_Text_IsabelRematchPostBattle	Creo que nunca podré dejar de\npresumir de mis POKéMON.\p¡Pero también me gusta combatir!$
+Route110_Text_TimmyIntro	¡He encontrado POKéMON chulísimos\nen la hierba de por aquí!$
+Route110_Text_TimmyDefeated	Ser chulo no basta para ganar…$
+Route110_Text_TimmyPostBattle	Cuesta combatir con POKéMON que\nacabas de atrapar.$
+Route110_Text_AlyssaIntro	Me he caído del CAMINO DE BICIS…\p¡Se me pasará la vergüenza\ncombatiendo contigo!$
+Route110_Text_AlyssaDefeated	¡Huy!\n¡Al final he perdido!$
+Route110_Text_AlyssaPostBattle	Caerme… Perder…\n¡Qué humillación!$
+Route110_Text_JosephIntro	¡Vale! ¡A todo gas! ¡Si no coges el\nritmo, te quedas atrás!$
+Route110_Text_JosephDefeated	Sí que has cogido el ritmo, sí…$
+Route110_Text_JosephPostBattle	¡Esto no me va a hundir!\n¡Perder me ha hecho mejorar!$
+Route110_Text_KalebIntro	Cuando los POKéMON monos se ayudan…\n¡No hay nada más adorable!$
+Route110_Text_KalebDefeated	¿No tienes compasión ni piedad?$
+Route110_Text_KalebPostBattle	Vale, vale, habéis hecho lo que\nhabéis podido, preciosos.$
+# CIUDAD MALVALONA: calles, BLASCO, BICIS RYDEL, GIMNASIO de ERICO (sin la revancha), casas, tienda y CENTRO POKéMON
+MauvilleCity_Text_UncleHesTooPeppy	TÍO: Supongo que es gracias a los\nPOKéMON que este chico tiene más\lenergía… Pero se ha pasado un poco…$
+MauvilleCity_Text_WallyWantToChallengeGym	BLASCO: Venga, TÍO, ¿por favor?\pQuiero desafiar a este GIMNASIO y\nver cuánto he mejorado.\p¿Porfa? ¿Me dejas, porfa?$
+MauvilleCity_Text_UncleYourePushingIt	TÍO: Espera un momento, BLASCO.\pDesde que vives con POKéMON, te has\nvuelto mucho más fuerte.\pPero ¿no crees que es pasarse\ndesafiar de golpe a un GIMNASIO?$
+MauvilleCity_Text_WallyWeCanBeatAnyone	BLASCO: No me estoy pasando.\p¡Si uno fuerzas con RALTS,\npodemos ganar a cualquiera!$
+MauvilleCity_Text_WallyWillYouBattleMe	BLASCO: ¡Oh! ¡Hola, {PLAYER}!\pMe he hecho mucho más fuerte desde\nque nos conocimos.\p{PLAYER}, quiero que mi TÍO y tú\nlo veáis.\p{PLAYER}, por favor, ¿combates\nconmigo?$
+MauvilleCity_Text_WallyMyUncleWontKnowImStrong	BLASCO: Oh… Si no combates conmigo,\n{PLAYER}, mi TÍO no sabrá lo fuerte\lque me he hecho.$
+MauvilleCity_Text_UncleCanYouBattleWally	TÍO: Eres {PLAYER}{KUN}, ¿no?\nDe parte de BLASCO, ¿podrías\lcombatir con él solo esta vez?\pTal como está ahora, no creo que\natienda a razones.$
+MauvilleCity_Text_WallyPleaseBattleMe	BLASCO: ¡{PLAYER}, por favor!\nCombate conmigo, por favor.$
+MauvilleCity_Text_WallyHereICome	BLASCO: {PLAYER}, gracias.\p¡Vale… allá voy!$
+MauvilleCity_Text_WallyDefeat	BLASCO: … … … … … … …\p… … … … … … … …\pHe perdido…$
+MauvilleCity_Text_WallyIllGoBackToVerdanturf	BLASCO: TÍO…\nVolveré a VERDEGAL…$
+MauvilleCity_Text_ThankYouNotEnoughToBattle	{PLAYER}, gracias.\nSer ENTRENADOR es duro, ¿verdad?\pNo basta con tener POKéMON y\nhacerlos combatir. Ser un ENTRENADOR\lde verdad no consiste en eso.$
+MauvilleCity_Text_UncleNoNeedToBeDown	TÍO: BLASCO, no hace falta que\nte vengas abajo.\pVamos, ¿qué te impide hacerte cada\nvez más fuerte?\pVenga, vámonos a casa.\nTodos te están esperando.$
+MauvilleCity_Text_UncleVisitUsSometime	TÍO: {PLAYER}{KUN}, ahora caigo:\ntú debes de ser quien acompañó a\lBLASCO cuando atrapó a su\lPOKéMON.\p¿Por qué no vienes a vernos a\nVERDEGAL algún día?\lSeguro que a BLASCO le encantaría.$
+MauvilleCity_Text_WallyPokenavCall	… … … … … …\n… … … … … ¡Bip!\pBLASCO: ¡Oh, hola, {PLAYER}!\pSolo quería decirte que ¡mi tío\nme ha comprado un POKéNAV!\p¡Ahora puedo hablar contigo cuando\nquiera, {PLAYER}!\p… … … … … …\n… … … … … ¡Clic!$
+MauvilleCity_Text_RegisteredWally	Has registrado a BLASCO\nen el POKéNAV.$
+MauvilleCity_Text_ScottYouDidntHoldBack	SCOTT: Jeje…\n¡He visto el combate!\pEres amigo de ese chico, BLASCO,\n¿verdad?\pPero no te has contenido y le has\nganado de forma impresionante.\p¡Sí! ¡Así es un combate POKéMON\nde verdad!\p¡Admiro a los ENTRENADORES así!\p… … … … … …\n¡Te estaré animando!$
+MauvilleCity_Text_WattsonNeedFavorTakeKey	ERICO: ¡Oh, {PLAYER}{KUN}!\n¡Se te ve con mucha chispa!\l¡Eso es bueno, juajuajuajua!\p¡Bien! ¡Decidido!\n¡Necesito un favor, {PLAYER}{KUN}!\pCIUDAD MALVALONA tiene una zona\nsubterránea llamada NUEVA MALVALONA.\p{PLAYER}{KUN}, quiero que vayas allí\ny apagues el GENERADOR.\pEl GENERADOR se ha vuelto un poco\nloco. Empieza a ser peligroso.\pToma, esta es la LLAVE para entrar\nen NUEVA MALVALONA.$
+MauvilleCity_Text_WattsonWontBeChallenge	ERICO: No te preocupes.\nPara ti no será ningún reto.\pLa entrada a NUEVA MALVALONA está\na un poco de SURF de la RUTA 110.\p¡Pues ya está, confío en ti!\n¡Juajuajuajua!$
+MauvilleCity_Text_WattsonThanksTakeTM	ERICO: ¡Juajuajuajua!\p¡Lo sabía, {PLAYER}{KUN}! ¡Sabía que\nhabía acertado al pedírtelo!\pAquí tienes mi agradecimiento:\n¡una MT con RAYO!\p¡Venga, te lo has ganado!$
+MauvilleCity_Text_WattsonYoungTakeCharge	ERICO: ¡Juajuajuajua!\p¡Me encanta ver a los jóvenes dar\nun paso al frente!$
+MauvilleCity_Text_NurseHurtMonBackToHealth	Los combates POKéMON y todo eso\nmolan mucho…\pPero si tu POKéMON se hace daño,\ntienes que cuidarlo hasta que se cure.$
+MauvilleCity_Text_AllSortsOfPeopleComeThrough	Las calles de esta ciudad van de\nnorte a sur y de este a oeste.\pPor eso pasa por aquí gente\nde todo tipo.$
+MauvilleCity_Text_RydelVeryGenerous	¿Has ido ya a BICIS RYDEL?\pRYDEL, el dueño, es un hombre\nmuy generoso.$
+MauvilleCity_Text_PokemonCanJumpYouOnBike	Aunque vayas en BICI, te pueden\nsaltar encima POKéMON salvajes.$
+MauvilleCity_Text_CitySign	CIUDAD MALVALONA\n“¡La ciudad brillante de la diversión!”$
+MauvilleCity_Text_GymSign	GIMNASIO POKéMON DE MALVALONA\nLÍDER: ERICO\l“¡El hombre alegremente electrizante!”$
+MauvilleCity_Text_BikeShopSign	“¡Rueda por la grava y agita\ntu alma!”\lBICIS RYDEL$
+MauvilleCity_Text_GameCornerSign	“¡El sitio de juegos para todos!”\nCASINO DE MALVALONA$
+MauvilleCity_Text_ExplainTV	Hola, ¿tú ves la tele?\pHace poco han puesto un montón de\nprogramas nuevos muy chulos.\pLa tele mola. He visto a mis amigos\nen la tele de repente.\pY a veces hasta te sacan en la tele\nsin avisarte.\pOjalá saliera yo algún día.\pPor eso creo que deberías ver la\ntele siempre que puedas.$
+MauvilleCity_Text_BeenCheckingOutTV	Hola, ¿has estado viendo la tele?$
+MauvilleCity_BikeShop_Text_RydelGreeting	Vaya, vaya, ¿qué tenemos aquí?\n¡Un cliente de lo más enérgico!\p¿Yo? Puedes llamarme RYDEL.\nSoy el dueño de esta tienda de bicis.$
+MauvilleCity_BikeShop_Text_DidYouComeFromFarAway	RYDEL: Tus DEPORTIVAS…\nEstán hechas un asco.\p¿Vienes de muy lejos?$
+MauvilleCity_BikeShop_Text_GuessYouDontNeedBike	RYDEL: ¿Ah, sí?\pEntonces supongo que no necesitas\nninguna de mis BICIS.$
+MauvilleCity_BikeShop_Text_ExplainBikesChooseWhichOne	RYDEL: Mmm, mmm… … … … …\p¿Dices que has venido hasta aquí\ndesde VILLA RAÍZ?\p¡Madre mía!\n¡Eso está lejísimos!\pCon una de mis BICIS podrías ir a\ncualquier parte fácilmente, sintiendo\lla suave caricia del viento.\p¡Ya sé!\n¡Te voy a regalar una BICI!\p¡Ah, espera un momento!\p¡Se me olvidaba decirte que hay\ndos tipos de BICIS!\p¡La BICI DE CARRERAS y la\nBICI ACROBÁTICA!\p¡La BICI DE CARRERAS es para quien\nquiere sentir el viento en la cara!\p¡Y la BICI ACROBÁTICA es para quien\nprefiere la técnica!\p¡Como soy un cielo, puedes quedarte\nla que más te guste!\p¿Cuál eliges?$
+MauvilleCity_BikeShop_Text_ChoseMachBike	{PLAYER} ha elegido la BICI DE CARRERAS.$
+MauvilleCity_BikeShop_Text_ChoseAcroBike	{PLAYER} ha elegido la BICI ACROBÁTICA.$
+MauvilleCity_BikeShop_Text_ComeBackToSwitchBikes	RYDEL: Si te entran ganas de cambiar\nde BICI, ¡ven a verme!$
+MauvilleCity_BikeShop_Text_WantToSwitchBikes	RYDEL: ¿Oh? ¿Estabas pensando en\ncambiar de BICI?$
+MauvilleCity_BikeShop_Text_IllSwitchBikes	RYDEL: ¡Vale, sin problema!\n¡Te la cambio!$
+MauvilleCity_BikeShop_Text_ExchangedMachForAcro	{PLAYER} ha cambiado la BICI DE\nCARRERAS por la BICI ACROBÁTICA.$
+MauvilleCity_BikeShop_Text_ExchangedAcroForMach	{PLAYER} ha cambiado la BICI\nACROBÁTICA por la BICI DE CARRERAS.$
+MauvilleCity_BikeShop_Text_HappyYouLikeIt	RYDEL: ¡Bien, bien!\n¡Me alegra que te guste!$
+MauvilleCity_BikeShop_Text_OhYourBikeIsInPC	¿Oh? ¿Qué ha pasado con la BICI\nque te di?\pAh, ya lo entiendo, la has guardado\nen el PC.\pBueno, sácala del PC y te la\ncambiaré encantado.\p¡Que el viento sople siempre a tu\nfavor en tu aventura!$
+MauvilleCity_BikeShop_Text_HandbooksAreInBack	Trabajo aquí mientras aprendo\nsobre BICIS.\pSi necesitas consejos para montar en\nBICI, hay un par de manuales\lal fondo.$
+MauvilleCity_BikeShop_Text_MachHandbookWhichPage	Es un manual de la BICI DE CARRERAS.\p¿Qué página quieres leer?$
+MauvilleCity_BikeShop_Text_HowToRideMachBike	La BICI va en la dirección en la que\npulses la + Cruceta de Control.\pAcelera cuando coge carrerilla.\pPara parar, suelta la + Cruceta.\nLa BICI irá frenando hasta pararse.\p¿Quieres leer otra página?$
+MauvilleCity_BikeShop_Text_HowToTurnMachBike	La BICI DE CARRERAS es rápida, pero\nno frena muy deprisa.\pTomar las curvas es un poco\ncomplicado.\pSuelta la + Cruceta un poco antes de\nla curva y reduce la velocidad.\p¿Quieres leer otra página?$
+MauvilleCity_BikeShop_Text_SandySlopes	En la región de HOENN hay pequeñas\ncuestas de arena.\pLa arena suelta hace imposible\nsubirlas de forma normal.\pPero con una BICI DE CARRERAS puedes\nsubir una cuesta de arena a toda prisa.\p¿Quieres leer otra página?$
+MauvilleCity_BikeShop_Text_AcroHandbookWhichPage	Es un manual de la BICI ACROBÁTICA.\p¿Qué página quieres leer?$
+MauvilleCity_BikeShop_Text_Wheelies	Pulsa el Botón B mientras vas en\nBICI y se levantará la rueda delantera.\pPuedes moverte así con la\n+ Cruceta de Control.\pEsta técnica se llama caballito.\p¿Quieres leer otra página?$
+MauvilleCity_BikeShop_Text_BunnyHops	Si mantienes pulsado el Botón B,\nla BICI saltará sin moverse.\pEsta técnica se llama salto de\nconejo.\pTambién puedes avanzar saltando.\p¿Quieres leer otra página?$
+MauvilleCity_BikeShop_Text_Jumps	Pulsa a la vez el Botón B y la\n+ Cruceta de Control para saltar.\pPulsa la + Cruceta hacia un lado\npara saltar de lado.\pPúlsala hacia atrás para que la BICI\ncambie de dirección al saltar.\p¿Quieres leer otra página?$
+MauvilleCity_Gym_Text_GymGuideAdvice	¡Eh! ¿Qué tal, futura estrella\nde la LIGA, {PLAYER}?\pERICO, el LÍDER del GIMNASIO de\nMALVALONA, usa el tipo ELÉCTRICO.\p¡Si lo desafías con POKéMON de tipo\nAGUA, los electrocutará! ¡Bzzzt!\p¡Y ha llenado el GIMNASIO de puertas\ncon interruptores! ¡Qué excéntrico!\p¡Venga, a por ello!$
+MauvilleCity_Gym_Text_GymGuidePostVictory	¡Hala, eres electrizante!\n¡Has abierto la puerta con tu energía!$
+MauvilleCity_Gym_Text_KirkIntro	¡Mi alma eléctrica va a hacer añicos\ntus sueños, uoh-yeah!$
+MauvilleCity_Gym_Text_KirkDefeat	¡Eso ha sido enchufado, a tope,\nsobrecargado y eléctrico, tío!$
+MauvilleCity_Gym_Text_KirkPostBattle	¡Los POKéMON y el rock son cosa del\ncorazón, uoh-yeah!$
+MauvilleCity_Gym_Text_ShawnIntro	¡Me ha entrenado ERICO!\n¡No pienso perder tan fácilmente!$
+MauvilleCity_Gym_Text_ShawnDefeat	Desenchufado y apagado…$
+MauvilleCity_Gym_Text_ShawnPostBattle	ERICO, nuestro LÍDER, lleva aquí\nmuchísimo tiempo.\pYa combatía antes de que naciera\ntu padre, el viejo duro de pelar.$
+MauvilleCity_Gym_Text_BenIntro	¡Este GIMNASIO tiene puzles!\n¿A que es divertido?$
+MauvilleCity_Gym_Text_BenDefeat	Perder no tiene gracia…$
+MauvilleCity_Gym_Text_BenPostBattle	ERICO dice que le gusta preparar\ntrampitas con interruptores.$
+MauvilleCity_Gym_Text_VivianIntro	¡Con mi encanto y los movimientos de\nmis POKéMON, te vas a electrocutar!$
+MauvilleCity_Gym_Text_VivianDefeat	¡Tu poder me ha dejado de piedra!$
+MauvilleCity_Gym_Text_VivianPostBattle	He oído que MALVALONA la fundó\nERICO.\pYa era ENTRENADOR mucho antes que\nnosotros.\l¡Seguro que sabe de todo!$
+MauvilleCity_Gym_Text_AngeloIntro	¡Me encantan las cosas brillantes!$
+MauvilleCity_Gym_Text_AngeloDefeat	Oh…\nMe ha deslumbrado…$
+MauvilleCity_Gym_Text_AngeloPostBattle	ERICO, del GIMNASIO de MALVALONA,\ntiene la frente brillante. ¡Me encanta!$
+MauvilleCity_Gym_Text_WattsonIntro	He renunciado a mis planes de\ntransformar la ciudad, sí señor.\pAsí que me dedico a poner puertas\ntrampa en mi GIMNASIO.\p¿Oh? ¿Y tú qué haces aquí?\p¿Cómo? ¿Dices que has pasado todas\nmis puertas trucadas?\p¡Juajuajuajua!\n¡Eso sí que tiene gracia!\p¡Entonces yo, ERICO, LÍDER del\nGIMNASIO de MALVALONA, te electrizaré!$
+MauvilleCity_Gym_Text_WattsonDefeat	¡Juajuajuajua!\n¡Vale, he perdido!\p¡Me has hecho vibrar!\n¡Toma esta MEDALLA!$
+MauvilleCity_Gym_Text_ReceivedDynamoBadge	{PLAYER} ha recibido la MEDALLA\nDINAMO de ERICO.$
+MauvilleCity_Gym_Text_ExplainDynamoBadgeTakeThis	Con la MEDALLA DINAMO, los POKéMON\npueden usar GOLPE ROCA fuera de\lcombate.\pY además harán que tus POKéMON sean\nun poco más rápidos.\pMmm…\n¡Llévate esto también!$
+MauvilleCity_Gym_Text_ExplainShockWave	Esa MT34 contiene ONDA VOLTIO.\p¡Es un movimiento fiable que nunca\nfalla! ¡Puedes contar con él!\p… … … … … …$
+MauvilleCity_Gym_Text_RegisteredWattson	Has registrado al LÍDER de GIMNASIO\nERICO en el POKéNAV.$
+MauvilleCity_Gym_Text_WattsonPostBattle	¡Me lleno de optimismo al ver a una\njoven promesa como tú!$
+MauvilleCity_Gym_Text_WattsonGoForthAndEndeavor	¡Juajuajuajua!\n¡Adelante, y esfuérzate, joven!$
+MauvilleCity_Gym_Text_GymStatue	GIMNASIO POKéMON DE MALVALONA$
+MauvilleCity_Gym_Text_GymStatueCertified	GIMNASIO POKéMON DE MALVALONA\pRECONOCIDOS POR ERICO:\n{PLAYER}$
+MauvilleCity_House1_Text_ImRockSmashDudeTakeThis	¡Yuju!\pLa gente me llama el TÍO DE GOLPE\nROCA, pero eso me parece poco.\pCreo que merezco más respeto, algo\ncomo el MAESTRO DE GOLPE ROCA.\p¡Yuju!\pEn fin, tus POKéMON parecen\nbastante fuertes.\p¡Eso me gusta!\n¡Toma, esta MÁQUINA OCULTA!$
+MauvilleCity_House1_Text_ExplainRockSmash	Esa MO contiene GOLPE ROCA.\pSi te encuentras rocas grandes que\nte cortan el paso…\p¡Usa ese movimiento de MO y quítalas\nde en medio a golpes!\p¡Eso es! ¡Rompe las rocas, digo yo!\n¡Yuju!$
+MauvilleCity_House1_Text_MonCanFlyOutOfSmashedRock	Ah, sí: si rompes una roca, puede\nsalir un POKéMON de su escondite.\p¡Yuju!$
+MauvilleCity_House2_Text_BuyHarborMailAtSlateport	Si tuviera BICI, podría ir fácilmente\na PORTUAL a hacer compras.\pPodría comprar CARTA PUERTO en la\nTIENDA POKéMON de PORTUAL…$
+MauvilleCity_House2_Text_TradeHarborMailForCoinCase	¡Oh! ¿Tienes una CARTA PUERTO?\n¿Me la cambias por un MONEDERO?$
+MauvilleCity_House2_Text_IllTradeYouCoinCase	¡Ay, qué ilusión!\n¡Vale, te doy un MONEDERO!$
+MauvilleCity_House2_Text_UseCoinCaseAtGameCorner	Ese MONEDERO se puede usar\nen el CASINO.$
+MauvilleCity_House2_Text_ThatsDisappointing	Oh, qué decepción.\pPara el CASINO hace falta\nun MONEDERO.$
+MauvilleCity_Mart_Text_ItemsToTemporarilyElevateStats	Hay objetos que suben por un rato\nlas características de los POKéMON.\pLos que sé que se usan en combate\nson ATAQUE X y DEFENSA X…\pCreo que hay otros parecidos.$
+MauvilleCity_Mart_Text_DecisionsDetermineBattle	Usar un movimiento, o usar un objeto\nen su lugar…\pCreo que las decisiones del ENTRENADOR\ndeciden cómo acaban los combates.$
+MauvilleCity_PokemonCenter_1F_Text_ManOverThereSaysWeirdThings	¡Ese hombre de ahí dice cosas muy\nraras!\pEs gracioso, pero de una forma rara.\n¡No creo que me olvide de él!$
+MauvilleCity_PokemonCenter_1F_Text_MyDataUpdatedFromRecordCorner	Cuando entré en el RINCÓN RÉCORDS,\nse actualizaron los datos de lo que\lse lleva en AZULIZA.\p¡Ahora esos datos son iguales\nque los de mi amigo!$
+MauvilleCity_PokemonCenter_1F_Text_RecordCornerSoundsFun	Han abierto un RINCÓN RÉCORDS arriba,\nen el CENTRO POKéMON.\pNo sé de qué va, pero suena\ndivertido. ¡Voy a echar un vistazo!$
+MauvilleCity_PokemonCenter_2F_Text_Youngster	¿Sabías que aquí, en el COLISEO, se\npuede combatir por cable?\pPonen tu récord en la pared para\nque lo vea todo el mundo.\p¡Qué vergüenza si pierdes más\nveces de las que ganas!…$

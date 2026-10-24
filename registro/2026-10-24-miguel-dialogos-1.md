@@ -11,6 +11,7 @@ Rama: `miguel/dialogos-1`
 - Tercer tramo (unos 250 textos): CIUDAD FÉRRICA (calles, GIMNASIO de PETRA, DEVON, ESCUELA DE ENTRENADORES, casas, tienda, CENTRO POKéMON), RUTA 116 con sus entrenadores y TÚNEL FERVERGAL.
 - Cuarto tramo (unos 330 textos): PUEBLO AZULIZA con el GIMNASIO de MARCIAL (sin la revancha), CUEVA GRANITO con MÁXIMO, RUTAS 105 a 109 con sus entrenadores y la CASA DE LA PLAYA.
 - Quinto tramo (unos 200 textos): CIUDAD PORTUAL entera: calles, mercado, la cola del EQUIPO AQUA, la entrevista de GABI y TY, el PUERTO con AQUILES y el submarino, el ASTILLERO de BABOR, el MUSEO OCEÁNICO, el CLUB DE FANS, el EVALUADOR DE NOMBRES, casas, tienda y CENTRO POKéMON.
+- Sexto tramo (unos 200 textos): RUTA 110 con sus entrenadores y el CAMINO DE BICIS, y CIUDAD MALVALONA (BLASCO, BICIS RYDEL, GIMNASIO de ERICO sin revancha, casas, tienda, CENTRO POKéMON).
 - Repasadas las frases con género del jugador para que valgan para chico y chica.
 - Explicación y lista de nombres en `traduccion/dialogos/LEEME.md`.
 
@@ -22,4 +23,4 @@ Rama: `miguel/dialogos-1`
 ## Pendiente
 
 - Probarlo jugando.
-- Los siguientes tramos (RUTA 110, CIUDAD MALVALONA…).
+- Los siguientes tramos (CASINO de MALVALONA, NUEVA MALVALONA, RUTA 117, RUTA 111…).

@@ -14,7 +14,7 @@ Son unas 187.000 palabras (los `.string` de `data/maps/*/scripts.inc`, `data/tex
 
 ## Nombres de Hoenn (oficiales)
 
-VILLA RAÍZ, PUEBLO ESCASO, CIUDAD PETALIA, CIUDAD FÉRRICA, PUEBLO AZULIZA, PUEBLO VERDEGAL, CIUDAD PORTUAL, CIUDAD CALAGUA, CIUDAD ALGARIA, MALVALONA; NORMAN, PETRA (Roxanne), SR. PEÑA (Mr. Stone), MÁXIMO (Steven), SCOTT, MARCIAL (Brawly), CAPITÁN BABOR (Capt. Stern), DOCK, GABI y TY, EQUIPO AQUA, AQUILES (Archie), EQUIPO MAGMA; PROF. ABEDUL, AURA (May), BRUNO (Brendan), BLASCO (Wally), SR. ARENQUE (Mr. Briney), AREDIA (Lanette). Las DEPORTIVAS (Running Shoes).
+VILLA RAÍZ, PUEBLO ESCASO, CIUDAD PETALIA, CIUDAD FÉRRICA, PUEBLO AZULIZA, PUEBLO VERDEGAL, CIUDAD PORTUAL, CIUDAD CALAGUA, CIUDAD ALGARIA, MALVALONA; NORMAN, PETRA (Roxanne), SR. PEÑA (Mr. Stone), MÁXIMO (Steven), SCOTT, MARCIAL (Brawly), CAPITÁN BABOR (Capt. Stern), DOCK, GABI y TY, EQUIPO AQUA, AQUILES (Archie), EQUIPO MAGMA, ERICO (Wattson), RYDEL (sin confirmar), CAMINO DE BICIS (sin confirmar); PROF. ABEDUL, AURA (May), BRUNO (Brendan), BLASCO (Wally), SR. ARENQUE (Mr. Briney), AREDIA (Lanette). Las DEPORTIVAS (Running Shoes).
 
 ## Hecho
 
@@ -32,8 +32,9 @@ VILLA RAÍZ, PUEBLO ESCASO, CIUDAD PETALIA, CIUDAD FÉRRICA, PUEBLO AZULIZA, PUE
 | RUTA 116 y TÚNEL FERVERGAL | `10_ruta116_tunel_fervergal.tsv` |
 | PUEBLO AZULIZA y su GIMNASIO, CUEVA GRANITO, RUTAS 105-109 y CASA DE LA PLAYA | `11_azuliza_cueva_granito_rutas105_109.tsv` |
 | CIUDAD PORTUAL: calles, PUERTO, ASTILLERO, MUSEO OCEÁNICO, CLUB DE FANS, casas, tienda, CENTRO POKéMON | `12_ciudad_portual.tsv` |
+| RUTA 110 y sus entrenadores, CIUDAD MALVALONA (calles, BLASCO, BICIS RYDEL, GIMNASIO de ERICO sin revancha, casas, tienda, CENTRO POKéMON) | `13_ruta110_malvalona.tsv` |
 
-Siguiente: RUTA 110, CIUDAD MALVALONA (con su GIMNASIO) y RUTAS 117 y 111 sur.
+Siguiente: CASINO de MALVALONA, NUEVA MALVALONA, RUTA 117 con la GUARDERÍA y RUTA 111 (luego la CASA TRAMPA).
 
 La CARPA DE COMBATE y el FRENTE BATALLA se traducen igual cuando salen en una conversación normal, pero sus edificios se dejan para el final (son de después de la historia o secundarios).
 
