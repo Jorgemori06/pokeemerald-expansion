@@ -363,7 +363,9 @@ Cómo funciona:
 
 Hecho: **toda la tabla de mensajes de combate** (693 de 699; los 6 restantes son solo códigos, como el texto de derrota de cada entrenador, que viene de sus datos) y 105 textos sueltos.
 
-**Menús (`src/strings.c`), en curso:** 524 de los 974 textos que se usan, con el mismo `ES()`. Están los de jugar normal: menú de pausa, mochila, tienda, equipo, datos del Pokémon, PC, guardado, ficha de entrenador, decoración, guardería, recordador de movimientos, Safari, huevos y Salón de la Fama. Falta lo que casi no se ve en un Dualocke: Frente Batalla, juegos por cable (Baya-Licuadora, Dodrio, Saltos), Regalo Misterioso, chat y frases de Easy Chat. Tampoco están los textos de otros archivos (por ejemplo el menú de opciones, en `src/option_menu.c`).
+**Menús (`src/strings.c`), en curso:** 524 de los 974 textos que se usan, con el mismo `ES()`. Están los de jugar normal: menú de pausa, mochila, tienda, equipo, datos del Pokémon, PC, guardado, ficha de entrenador, decoración, guardería, recordador de movimientos, Safari, huevos y Salón de la Fama. Falta lo que casi no se ve en un Dualocke: Frente Batalla, juegos por cable (Baya-Licuadora, Dodrio, Saltos), Regalo Misterioso, chat y frases de Easy Chat. 
+
+**Menús de otros archivos (hecho):** 233 textos más en `option_menu.c` (opciones), `start_menu.c` (vidas del locke), `party_menu.c`, `item_menu.c`, `item_use.c`, `player_pc.c`, `main_menu.c` (pantalla de inicio), `naming_screen.c`, `pokemon_summary_screen.c`, `map_name_popup.c`, `pokemon_storage_system.c` (cajas del PC) y `pokedex.c`. Se sustituye cada `_("…")` o `COMPOUND_STRING("…")` por `ES(…)` con las dos versiones. No se tocan los nombres de entrenadores de ejemplo de `main_menu.c` ni el abecedario de `naming_screen.c`. Quedan en inglés archivos menos vistos (Pokédex HGSS y DexNav, desactivados; concursos; Baya-Licuadora; depuración).
 
 Reglas para los menús: mantener los códigos y el mismo número de saltos `\n`, `\l` y `\p`, y que cada línea no sea mucho más larga que la inglesa (los recuadros tienen ancho fijo). Los nombres van en mayúsculas como en el original (MOCHILA, GUARDAR, CARTA…).
 

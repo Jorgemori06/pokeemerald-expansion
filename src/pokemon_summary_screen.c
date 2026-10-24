@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke_es.h"
 #include "main.h"
 #include "battle.h"
 #include "battle_anim.h"
@@ -767,7 +768,7 @@ static const TaskFunc sTextPrinterTasks[] =
     [PSS_PAGE_CONTEST_MOVES] = Task_PrintContestMoves
 };
 
-static const u8 sText_Relearn[] = _("{START_BUTTON} RELEARN"); // future note: don't decap this, because it mimics the summary screen BG graphics which will not get decapped
+static const u8 sText_Relearn[] = ES(_("{START_BUTTON} RELEARN"), _("{START_BUTTON} RECORDAR")); // future note: don't decap this, because it mimics the summary screen BG graphics which will not get decapped
 
 static const u8 sMemoNatureTextColor[] = _("{COLOR LIGHT_RED}{SHADOW GREEN}");
 static const u8 sMemoMiscTextColor[] = _("{COLOR WHITE}{SHADOW DARK_GRAY}"); // This is also affected by palettes, apparently
@@ -4777,8 +4778,8 @@ static inline void ShowUtilityPrompt(s16 mode)
     const u8* promptText = NULL;
     const u8* gText_SkillPageIvs = COMPOUND_STRING("IVs");
     const u8* gText_SkillPageEvs = COMPOUND_STRING("EVs");
-    const u8* gText_SkillPageStats = COMPOUND_STRING("STATS");
-    const u8* gText_Rename = COMPOUND_STRING("RENAME");
+    const u8* gText_SkillPageStats = ES(COMPOUND_STRING("STATS"), COMPOUND_STRING("CARACT."));
+    const u8* gText_Rename = ES(COMPOUND_STRING("RENAME"), COMPOUND_STRING("MOTE"));
 
     if (sMonSummaryScreen->currPageIndex == PSS_PAGE_INFO)
     {

@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke_es.h"
 #include "dualocke.h"
 #include "malloc.h"
 #include "bg.h"
@@ -859,20 +860,20 @@ void SetMonFormPSS(struct BoxPokemon *boxMon, enum FormChanges method);
 void SetMonFormPSS_ItemHold(struct BoxPokemon *boxMon);
 void UpdateSpeciesSpritePSS(struct BoxPokemon *boxmon);
 
-static const u8 gText_JustOnePkmn[] = _("There is just one POKéMON with you.");
-static const u8 gText_PartyFull[] = _("Your party is full!");
-static const u8 gText_Box[] = _("BOX");
+static const u8 gText_JustOnePkmn[] = ES(_("There is just one POKéMON with you."), _("Solo llevas un POKéMON."));
+static const u8 gText_PartyFull[] = ES(_("Your party is full!"), _("¡Tu equipo está lleno!"));
+static const u8 gText_Box[] = ES(_("BOX"), _("CAJA"));
 
 struct {
     const u8 *text;
     const u8 *desc;
 } static const sMainMenuTexts[OPTIONS_COUNT] =
 {
-    [OPTION_WITHDRAW]   = {COMPOUND_STRING("WITHDRAW POKéMON"), COMPOUND_STRING("Move POKéMON stored in BOXES to\nyour party.")},
-    [OPTION_DEPOSIT]    = {COMPOUND_STRING("DEPOSIT POKéMON"),  COMPOUND_STRING("Store POKéMON in your party in BOXES.")},
-    [OPTION_MOVE_MONS]  = {COMPOUND_STRING("MOVE POKéMON"),     COMPOUND_STRING("Organize the POKéMON in BOXES and\nin your party.")},
-    [OPTION_MOVE_ITEMS] = {COMPOUND_STRING("MOVE ITEMS"),       COMPOUND_STRING("Move items held by any POKéMON\nin a BOX or your party.")},
-    [OPTION_EXIT]       = {COMPOUND_STRING("SEE YA!"),          COMPOUND_STRING("Return to the previous menu.")}
+    [OPTION_WITHDRAW]   = {ES(COMPOUND_STRING("WITHDRAW POKéMON"), COMPOUND_STRING("SACAR POKéMON")), ES(COMPOUND_STRING("Move POKéMON stored in BOXES to\nyour party."), COMPOUND_STRING("Pasa POKéMON de las CAJAS a\ntu equipo."))},
+    [OPTION_DEPOSIT]    = {ES(COMPOUND_STRING("DEPOSIT POKéMON"), COMPOUND_STRING("DEJAR POKéMON")),  ES(COMPOUND_STRING("Store POKéMON in your party in BOXES."), COMPOUND_STRING("Deja POKéMON del equipo en CAJAS."))},
+    [OPTION_MOVE_MONS]  = {ES(COMPOUND_STRING("MOVE POKéMON"), COMPOUND_STRING("MOVER POKéMON")),     ES(COMPOUND_STRING("Organize the POKéMON in BOXES and\nin your party."), COMPOUND_STRING("Ordena los POKéMON de las CAJAS\ny de tu equipo."))},
+    [OPTION_MOVE_ITEMS] = {ES(COMPOUND_STRING("MOVE ITEMS"), COMPOUND_STRING("MOVER OBJETOS")),       ES(COMPOUND_STRING("Move items held by any POKéMON\nin a BOX or your party."), COMPOUND_STRING("Mueve objetos de los POKéMON\nde una CAJA o del equipo."))},
+    [OPTION_EXIT]       = {ES(COMPOUND_STRING("SEE YA!"), COMPOUND_STRING("¡ADIÓS!")),          ES(COMPOUND_STRING("Return to the previous menu."), COMPOUND_STRING("Volver al menú anterior."))}
 };
 
 static const struct WindowTemplate sWindowTemplate_MainMenu =
@@ -1045,41 +1046,41 @@ static const struct SpriteTemplate sSpriteTemplate_DisplayMon =
     .oam = &sOamData_DisplayMon,
 };
 
-static const u8 gText_PkmnIsSelected[] = _("{DYNAMIC 0} is selected.");
+static const u8 gText_PkmnIsSelected[] = ES(_("{DYNAMIC 0} is selected."), _("Has elegido a {DYNAMIC 0}."));
 
 static const struct StorageMessage sMessages[] =
 {
-    [MSG_EXIT_BOX]             = {COMPOUND_STRING("Exit from the BOX?"),         MSG_VAR_NONE},
-    [MSG_WHAT_YOU_DO]          = {COMPOUND_STRING("What do you want to do?"),    MSG_VAR_NONE},
-    [MSG_PICK_A_THEME]         = {COMPOUND_STRING("Please pick a theme."),       MSG_VAR_NONE},
-    [MSG_PICK_A_WALLPAPER]     = {COMPOUND_STRING("Pick the wallpaper."),        MSG_VAR_NONE},
+    [MSG_EXIT_BOX]             = {ES(COMPOUND_STRING("Exit from the BOX?"), COMPOUND_STRING("¿Salir de la CAJA?")),         MSG_VAR_NONE},
+    [MSG_WHAT_YOU_DO]          = {ES(COMPOUND_STRING("What do you want to do?"), COMPOUND_STRING("¿Qué quieres hacer?")),    MSG_VAR_NONE},
+    [MSG_PICK_A_THEME]         = {ES(COMPOUND_STRING("Please pick a theme."), COMPOUND_STRING("Elige un tema.")),       MSG_VAR_NONE},
+    [MSG_PICK_A_WALLPAPER]     = {ES(COMPOUND_STRING("Pick the wallpaper."), COMPOUND_STRING("Elige el fondo.")),        MSG_VAR_NONE},
     [MSG_IS_SELECTED]          = {gText_PkmnIsSelected,                          MSG_VAR_MON_NAME_1},
-    [MSG_JUMP_TO_WHICH_BOX]    = {COMPOUND_STRING("Jump to which BOX?"),         MSG_VAR_NONE},
-    [MSG_DEPOSIT_IN_WHICH_BOX] = {COMPOUND_STRING("Deposit in which BOX?"),      MSG_VAR_NONE},
-    [MSG_WAS_DEPOSITED]        = {COMPOUND_STRING("{DYNAMIC 0} was deposited."), MSG_VAR_MON_NAME_1},
-    [MSG_BOX_IS_FULL]          = {COMPOUND_STRING("The BOX is full."),           MSG_VAR_NONE},
-    [MSG_RELEASE_POKE]         = {COMPOUND_STRING("Release this POKéMON?"),      MSG_VAR_NONE},
-    [MSG_WAS_RELEASED]         = {COMPOUND_STRING("{DYNAMIC 0} was released."),  MSG_VAR_RELEASE_MON_1},
-    [MSG_BYE_BYE]              = {COMPOUND_STRING("Bye-bye, {DYNAMIC 0}!"),      MSG_VAR_RELEASE_MON_3},
-    [MSG_MARK_POKE]            = {COMPOUND_STRING("Mark your POKéMON."),         MSG_VAR_NONE},
-    [MSG_LAST_POKE]            = {COMPOUND_STRING("That's your last POKéMON!"),  MSG_VAR_NONE},
+    [MSG_JUMP_TO_WHICH_BOX]    = {ES(COMPOUND_STRING("Jump to which BOX?"), COMPOUND_STRING("¿A qué CAJA quieres ir?")),         MSG_VAR_NONE},
+    [MSG_DEPOSIT_IN_WHICH_BOX] = {ES(COMPOUND_STRING("Deposit in which BOX?"), COMPOUND_STRING("¿En qué CAJA lo dejas?")),      MSG_VAR_NONE},
+    [MSG_WAS_DEPOSITED]        = {ES(COMPOUND_STRING("{DYNAMIC 0} was deposited."), COMPOUND_STRING("Has dejado a {DYNAMIC 0}.")), MSG_VAR_MON_NAME_1},
+    [MSG_BOX_IS_FULL]          = {ES(COMPOUND_STRING("The BOX is full."), COMPOUND_STRING("La CAJA está llena.")),           MSG_VAR_NONE},
+    [MSG_RELEASE_POKE]         = {ES(COMPOUND_STRING("Release this POKéMON?"), COMPOUND_STRING("¿Liberar a este POKéMON?")),      MSG_VAR_NONE},
+    [MSG_WAS_RELEASED]         = {ES(COMPOUND_STRING("{DYNAMIC 0} was released."), COMPOUND_STRING("Has liberado a {DYNAMIC 0}.")),  MSG_VAR_RELEASE_MON_1},
+    [MSG_BYE_BYE]              = {ES(COMPOUND_STRING("Bye-bye, {DYNAMIC 0}!"), COMPOUND_STRING("¡Adiós, {DYNAMIC 0}!")),      MSG_VAR_RELEASE_MON_3},
+    [MSG_MARK_POKE]            = {ES(COMPOUND_STRING("Mark your POKéMON."), COMPOUND_STRING("Marca tu POKéMON.")),         MSG_VAR_NONE},
+    [MSG_LAST_POKE]            = {ES(COMPOUND_STRING("That's your last POKéMON!"), COMPOUND_STRING("¡Es tu último POKéMON!")),  MSG_VAR_NONE},
     [MSG_PARTY_FULL]           = {gText_YourPartysFull,                          MSG_VAR_NONE},
-    [MSG_HOLDING_POKE]         = {COMPOUND_STRING("You're holding a POKéMON!"),  MSG_VAR_NONE},
-    [MSG_WHICH_ONE_WILL_TAKE]  = {COMPOUND_STRING("Which one will you take?"),   MSG_VAR_NONE},
-    [MSG_CANT_RELEASE_EGG]     = {COMPOUND_STRING("You can't release an EGG."),  MSG_VAR_NONE},
-    [MSG_CONTINUE_BOX]         = {COMPOUND_STRING("Continue BOX operations?"),   MSG_VAR_NONE},
-    [MSG_CAME_BACK]            = {COMPOUND_STRING("{DYNAMIC 0} came back!"),     MSG_VAR_MON_NAME_1},
-    [MSG_WORRIED]              = {COMPOUND_STRING("Was it worried about you?"),  MSG_VAR_NONE},
+    [MSG_HOLDING_POKE]         = {ES(COMPOUND_STRING("You're holding a POKéMON!"), COMPOUND_STRING("¡Llevas un POKéMON cogido!")),  MSG_VAR_NONE},
+    [MSG_WHICH_ONE_WILL_TAKE]  = {ES(COMPOUND_STRING("Which one will you take?"), COMPOUND_STRING("¿Cuál vas a coger?")),   MSG_VAR_NONE},
+    [MSG_CANT_RELEASE_EGG]     = {ES(COMPOUND_STRING("You can't release an EGG."), COMPOUND_STRING("No puedes liberar un HUEVO.")),  MSG_VAR_NONE},
+    [MSG_CONTINUE_BOX]         = {ES(COMPOUND_STRING("Continue BOX operations?"), COMPOUND_STRING("¿Seguir con las CAJAS?")),   MSG_VAR_NONE},
+    [MSG_CAME_BACK]            = {ES(COMPOUND_STRING("{DYNAMIC 0} came back!"), COMPOUND_STRING("¡{DYNAMIC 0} ha vuelto!")),     MSG_VAR_MON_NAME_1},
+    [MSG_WORRIED]              = {ES(COMPOUND_STRING("Was it worried about you?"), COMPOUND_STRING("¿Estaría preocupado por ti?")),  MSG_VAR_NONE},
     [MSG_SURPRISE]             = {COMPOUND_STRING("… … … … !"),                  MSG_VAR_NONE},
-    [MSG_PLEASE_REMOVE_MAIL]   = {COMPOUND_STRING("Please remove the MAIL."),    MSG_VAR_NONE},
+    [MSG_PLEASE_REMOVE_MAIL]   = {ES(COMPOUND_STRING("Please remove the MAIL."), COMPOUND_STRING("Quita la CARTA, por favor.")),    MSG_VAR_NONE},
     [MSG_IS_SELECTED2]         = {gText_PkmnIsSelected,                          MSG_VAR_ITEM_NAME},
-    [MSG_GIVE_TO_MON]          = {COMPOUND_STRING("GIVE to a POKéMON?"),         MSG_VAR_NONE},
-    [MSG_PLACED_IN_BAG]        = {COMPOUND_STRING("Placed item in the BAG."),    MSG_VAR_ITEM_NAME},
-    [MSG_BAG_FULL]             = {COMPOUND_STRING("The BAG is full."),           MSG_VAR_NONE},
-    [MSG_PUT_IN_BAG]           = {COMPOUND_STRING("Put this item in the BAG?"),  MSG_VAR_NONE},
-    [MSG_ITEM_IS_HELD]         = {COMPOUND_STRING("{DYNAMIC 0} is now held."),   MSG_VAR_ITEM_NAME},
-    [MSG_CHANGED_TO_ITEM]      = {COMPOUND_STRING("Changed to {DYNAMIC 0}."),    MSG_VAR_ITEM_NAME},
-    [MSG_CANT_STORE_MAIL]      = {COMPOUND_STRING("MAIL can't be stored!"),      MSG_VAR_NONE},
+    [MSG_GIVE_TO_MON]          = {ES(COMPOUND_STRING("GIVE to a POKéMON?"), COMPOUND_STRING("¿DAR a un POKéMON?")),         MSG_VAR_NONE},
+    [MSG_PLACED_IN_BAG]        = {ES(COMPOUND_STRING("Placed item in the BAG."), COMPOUND_STRING("Guardado en la MOCHILA.")),    MSG_VAR_ITEM_NAME},
+    [MSG_BAG_FULL]             = {ES(COMPOUND_STRING("The BAG is full."), COMPOUND_STRING("La MOCHILA está llena.")),           MSG_VAR_NONE},
+    [MSG_PUT_IN_BAG]           = {ES(COMPOUND_STRING("Put this item in the BAG?"), COMPOUND_STRING("¿Guardar en la MOCHILA?")),  MSG_VAR_NONE},
+    [MSG_ITEM_IS_HELD]         = {ES(COMPOUND_STRING("{DYNAMIC 0} is now held."), COMPOUND_STRING("Ahora lleva {DYNAMIC 0}.")),   MSG_VAR_ITEM_NAME},
+    [MSG_CHANGED_TO_ITEM]      = {ES(COMPOUND_STRING("Changed to {DYNAMIC 0}."), COMPOUND_STRING("Cambiado por {DYNAMIC 0}.")),    MSG_VAR_ITEM_NAME},
+    [MSG_CANT_STORE_MAIL]      = {ES(COMPOUND_STRING("MAIL can't be stored!"), COMPOUND_STRING("¡No se guardan CARTAS!")),      MSG_VAR_NONE},
 };
 
 static const struct WindowTemplate sYesNoWindowTemplate =
@@ -8078,50 +8079,50 @@ static void InitMenu(void)
     sStorage->menuWindow.baseBlock = 92;
 }
 
-static const u8 gPCText_Give[] = _("GIVE");
+static const u8 gPCText_Give[] = ES(_("GIVE"), _("DAR"));
 
 static const u8 *const sMenuTexts[] =
 {
-    [MENU_CANCEL]     = COMPOUND_STRING("CANCEL"),
-    [MENU_STORE]      = COMPOUND_STRING("STORE"),
-    [MENU_WITHDRAW]   = COMPOUND_STRING("WITHDRAW"),
-    [MENU_MOVE]       = COMPOUND_STRING("MOVE"),
-    [MENU_SHIFT]      = COMPOUND_STRING("SHIFT"),
-    [MENU_PLACE]      = COMPOUND_STRING("PLACE"),
-    [MENU_SUMMARY]    = COMPOUND_STRING("SUMMARY"),
-    [MENU_RELEASE]    = COMPOUND_STRING("RELEASE"),
-    [MENU_MARK]       = COMPOUND_STRING("MARK"),
-    [MENU_JUMP]       = COMPOUND_STRING("JUMP"),
-    [MENU_WALLPAPER]  = COMPOUND_STRING("WALLPAPER"),
-    [MENU_NAME]       = COMPOUND_STRING("NAME"),
-    [MENU_TAKE]       = COMPOUND_STRING("TAKE"),
+    [MENU_CANCEL]     = ES(COMPOUND_STRING("CANCEL"), COMPOUND_STRING("SALIR")),
+    [MENU_STORE]      = ES(COMPOUND_STRING("STORE"), COMPOUND_STRING("DEJAR")),
+    [MENU_WITHDRAW]   = ES(COMPOUND_STRING("WITHDRAW"), COMPOUND_STRING("SACAR")),
+    [MENU_MOVE]       = ES(COMPOUND_STRING("MOVE"), COMPOUND_STRING("MOVER")),
+    [MENU_SHIFT]      = ES(COMPOUND_STRING("SHIFT"), COMPOUND_STRING("CAMBIAR")),
+    [MENU_PLACE]      = ES(COMPOUND_STRING("PLACE"), COMPOUND_STRING("PONER")),
+    [MENU_SUMMARY]    = ES(COMPOUND_STRING("SUMMARY"), COMPOUND_STRING("DATOS")),
+    [MENU_RELEASE]    = ES(COMPOUND_STRING("RELEASE"), COMPOUND_STRING("LIBERAR")),
+    [MENU_MARK]       = ES(COMPOUND_STRING("MARK"), COMPOUND_STRING("MARCAR")),
+    [MENU_JUMP]       = ES(COMPOUND_STRING("JUMP"), COMPOUND_STRING("IR A")),
+    [MENU_WALLPAPER]  = ES(COMPOUND_STRING("WALLPAPER"), COMPOUND_STRING("FONDO")),
+    [MENU_NAME]       = ES(COMPOUND_STRING("NAME"), COMPOUND_STRING("NOMBRE")),
+    [MENU_TAKE]       = ES(COMPOUND_STRING("TAKE"), COMPOUND_STRING("QUITAR")),
     [MENU_GIVE]       = gPCText_Give,
     [MENU_GIVE_2]     = gPCText_Give,
-    [MENU_SWITCH]     = COMPOUND_STRING("SWITCH"),
-    [MENU_BAG]        = COMPOUND_STRING("BAG"),
-    [MENU_INFO]       = COMPOUND_STRING("INFO"),
-    [MENU_SCENERY_1]  = COMPOUND_STRING("SCENERY 1"),
-    [MENU_SCENERY_2]  = COMPOUND_STRING("SCENERY 2"),
-    [MENU_SCENERY_3]  = COMPOUND_STRING("SCENERY 3"),
-    [MENU_ETCETERA]   = COMPOUND_STRING("ETCETERA"),
-    [MENU_FRIENDS]    = COMPOUND_STRING("FRIENDS"),
-    [MENU_FOREST]     = COMPOUND_STRING("FOREST"),
-    [MENU_CITY]       = COMPOUND_STRING("CITY"),
-    [MENU_DESERT]     = COMPOUND_STRING("DESERT"),
-    [MENU_SAVANNA]    = COMPOUND_STRING("SAVANNA"),
-    [MENU_CRAG]       = COMPOUND_STRING("CRAG"),
-    [MENU_VOLCANO]    = COMPOUND_STRING("VOLCANO"),
-    [MENU_SNOW]       = COMPOUND_STRING("SNOW"),
-    [MENU_CAVE]       = COMPOUND_STRING("CAVE"),
-    [MENU_BEACH]      = COMPOUND_STRING("BEACH"),
-    [MENU_SEAFLOOR]   = COMPOUND_STRING("SEAFLOOR"),
-    [MENU_RIVER]      = COMPOUND_STRING("RIVER"),
-    [MENU_SKY]        = COMPOUND_STRING("SKY"),
-    [MENU_POLKADOT]   = COMPOUND_STRING("POLKA-DOT"),
+    [MENU_SWITCH]     = ES(COMPOUND_STRING("SWITCH"), COMPOUND_STRING("CAMBIAR")),
+    [MENU_BAG]        = ES(COMPOUND_STRING("BAG"), COMPOUND_STRING("MOCHILA")),
+    [MENU_INFO]       = ES(COMPOUND_STRING("INFO"), COMPOUND_STRING("INFO")),
+    [MENU_SCENERY_1]  = ES(COMPOUND_STRING("SCENERY 1"), COMPOUND_STRING("PAISAJE 1")),
+    [MENU_SCENERY_2]  = ES(COMPOUND_STRING("SCENERY 2"), COMPOUND_STRING("PAISAJE 2")),
+    [MENU_SCENERY_3]  = ES(COMPOUND_STRING("SCENERY 3"), COMPOUND_STRING("PAISAJE 3")),
+    [MENU_ETCETERA]   = ES(COMPOUND_STRING("ETCETERA"), COMPOUND_STRING("OTROS")),
+    [MENU_FRIENDS]    = ES(COMPOUND_STRING("FRIENDS"), COMPOUND_STRING("AMIGOS")),
+    [MENU_FOREST]     = ES(COMPOUND_STRING("FOREST"), COMPOUND_STRING("BOSQUE")),
+    [MENU_CITY]       = ES(COMPOUND_STRING("CITY"), COMPOUND_STRING("CIUDAD")),
+    [MENU_DESERT]     = ES(COMPOUND_STRING("DESERT"), COMPOUND_STRING("DESIERTO")),
+    [MENU_SAVANNA]    = ES(COMPOUND_STRING("SAVANNA"), COMPOUND_STRING("SABANA")),
+    [MENU_CRAG]       = ES(COMPOUND_STRING("CRAG"), COMPOUND_STRING("RISCO")),
+    [MENU_VOLCANO]    = ES(COMPOUND_STRING("VOLCANO"), COMPOUND_STRING("VOLCÁN")),
+    [MENU_SNOW]       = ES(COMPOUND_STRING("SNOW"), COMPOUND_STRING("NIEVE")),
+    [MENU_CAVE]       = ES(COMPOUND_STRING("CAVE"), COMPOUND_STRING("CUEVA")),
+    [MENU_BEACH]      = ES(COMPOUND_STRING("BEACH"), COMPOUND_STRING("PLAYA")),
+    [MENU_SEAFLOOR]   = ES(COMPOUND_STRING("SEAFLOOR"), COMPOUND_STRING("FONDO MAR")),
+    [MENU_RIVER]      = ES(COMPOUND_STRING("RIVER"), COMPOUND_STRING("RÍO")),
+    [MENU_SKY]        = ES(COMPOUND_STRING("SKY"), COMPOUND_STRING("CIELO")),
+    [MENU_POLKADOT]   = ES(COMPOUND_STRING("POLKA-DOT"), COMPOUND_STRING("LUNARES")),
     [MENU_POKECENTER] = COMPOUND_STRING("POKéCENTER"),
-    [MENU_MACHINE]    = COMPOUND_STRING("MACHINE"),
-    [MENU_SIMPLE]     = COMPOUND_STRING("SIMPLE"),
-    [MENU_SELECT]     = COMPOUND_STRING("SELECT"),
+    [MENU_MACHINE]    = ES(COMPOUND_STRING("MACHINE"), COMPOUND_STRING("MÁQUINA")),
+    [MENU_SIMPLE]     = ES(COMPOUND_STRING("SIMPLE"), COMPOUND_STRING("SENCILLO")),
+    [MENU_SELECT]     = ES(COMPOUND_STRING("SELECT"), COMPOUND_STRING("ELEGIR")),
 };
 
 static void SetMenuText(u8 textId)

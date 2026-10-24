@@ -26,6 +26,7 @@ Rama: `miguel/traduccion-combate`
 - **Siguiente tarea pedida por Miguel:** mejorar la pantalla de datos del Pokémon (IVs, EVs, naturaleza con lo que sube y baja, habilidad y la otra posible, info de los movimientos). Apuntada en DUALOCKE §9.
 - Tipo Hada: comprobado que ya está activo (tipos de Pokémon, movimientos y tabla de tipos modernos).
 
-- Menús de fuera del combate: hechos 524 de 974 en `src/strings.c` (lo de jugar normal). Faltan Frente Batalla, juegos por cable, Regalo Misterioso, chat y otros archivos como `src/option_menu.c`.
+- Menús de fuera del combate: hechos 524 de 974 en `src/strings.c` (lo de jugar normal). Faltan Frente Batalla, juegos por cable, Regalo Misterioso y chat.
+- Menús de otros archivos: 233 textos (opciones, inicio, cajas del PC, Pokédex, mochila, PC de objetos, pantalla de nombre…).
 - Probarlo jugando: frases raras, textos que no caben.
 - Respuesta del autor de Heart & Soul.

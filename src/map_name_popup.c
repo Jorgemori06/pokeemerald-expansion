@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke_es.h"
 #include "battle_pyramid.h"
 #include "bg.h"
 #include "event_data.h"
@@ -315,14 +316,14 @@ static const u8 sRegionMapSectionId_To_PopUpThemeIdMapping_BW[] =
     [MAPSEC_TRAINER_HILL - KANTO_MAPSEC_COUNT] = MAPPOPUP_THEME_BW_DEFAULT,
 };
 
-static const u8 sText_PyramidFloor1[] = _("PYRAMID FLOOR 1");
-static const u8 sText_PyramidFloor2[] = _("PYRAMID FLOOR 2");
-static const u8 sText_PyramidFloor3[] = _("PYRAMID FLOOR 3");
-static const u8 sText_PyramidFloor4[] = _("PYRAMID FLOOR 4");
-static const u8 sText_PyramidFloor5[] = _("PYRAMID FLOOR 5");
-static const u8 sText_PyramidFloor6[] = _("PYRAMID FLOOR 6");
-static const u8 sText_PyramidFloor7[] = _("PYRAMID FLOOR 7");
-static const u8 sText_Pyramid[] = _("PYRAMID");
+static const u8 sText_PyramidFloor1[] = ES(_("PYRAMID FLOOR 1"), _("PIRÁMIDE PLANTA 1"));
+static const u8 sText_PyramidFloor2[] = ES(_("PYRAMID FLOOR 2"), _("PIRÁMIDE PLANTA 2"));
+static const u8 sText_PyramidFloor3[] = ES(_("PYRAMID FLOOR 3"), _("PIRÁMIDE PLANTA 3"));
+static const u8 sText_PyramidFloor4[] = ES(_("PYRAMID FLOOR 4"), _("PIRÁMIDE PLANTA 4"));
+static const u8 sText_PyramidFloor5[] = ES(_("PYRAMID FLOOR 5"), _("PIRÁMIDE PLANTA 5"));
+static const u8 sText_PyramidFloor6[] = ES(_("PYRAMID FLOOR 6"), _("PIRÁMIDE PLANTA 6"));
+static const u8 sText_PyramidFloor7[] = ES(_("PYRAMID FLOOR 7"), _("PIRÁMIDE PLANTA 7"));
+static const u8 sText_Pyramid[] = ES(_("PYRAMID"), _("PIRÁMIDE"));
 
 static const u8 *const sBattlePyramid_MapHeaderStrings[FRONTIER_STAGES_PER_CHALLENGE + 1] =
 {

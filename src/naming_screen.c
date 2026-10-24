@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke_es.h"
 #include "naming_screen.h"
 #include "malloc.h"
 #include "palette.h"
@@ -200,7 +201,7 @@ static const u8 *const sTransferredToPCMessages[] =
 };
 
 
-static const u8 sText_RivalsName[] = _("RIVAL's NAME?");
+static const u8 sText_RivalsName[] = ES(_("RIVAL's NAME?"), _("¿NOMBRE DEL RIVAL?"));
 static const u8 sText_AlphabetUpperLower[] = _("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!");
 
 static const struct BgTemplate sBgTemplates[] =
@@ -398,7 +399,7 @@ static void VBlankCB_NamingScreen(void);
 static void NamingScreen_ShowBgs(void);
 static bool8 IsWideLetter(u8);
 
-static const u8 sText_MoveOkBack[] = _("{DPAD_NONE}MOVE  {A_BUTTON}OK  {B_BUTTON}BACK");
+static const u8 sText_MoveOkBack[] = ES(_("{DPAD_NONE}MOVE  {A_BUTTON}OK  {B_BUTTON}BACK"), _("{DPAD_NONE}MOVER  {A_BUTTON}OK  {B_BUTTON}ATRÁS"));
 
 void DoNamingScreen(u8 templateNum, u8 *destBuffer, u16 monSpeciesOrPlayerGender, u16 monGender, u32 monPersonality, MainCallback returnCallback)
 {
@@ -2155,7 +2156,7 @@ static const struct NamingScreenTemplate sPlayerNamingScreenTemplate =
     .addGenderIcon = FALSE,
     .initialPage = KBPAGE_LETTERS_UPPER,
     .unused = 35,
-    .title = COMPOUND_STRING("YOUR NAME?"),
+    .title = ES(COMPOUND_STRING("YOUR NAME?"), COMPOUND_STRING("¿CÓMO TE LLAMAS?")),
 };
 
 static const struct NamingScreenTemplate sPCBoxNamingTemplate =
@@ -2166,7 +2167,7 @@ static const struct NamingScreenTemplate sPCBoxNamingTemplate =
     .addGenderIcon = FALSE,
     .initialPage = KBPAGE_LETTERS_UPPER,
     .unused = 19,
-    .title = COMPOUND_STRING("BOX NAME?"),
+    .title = ES(COMPOUND_STRING("BOX NAME?"), COMPOUND_STRING("¿NOMBRE DE LA CAJA?")),
 };
 
 static const struct NamingScreenTemplate sMonNamingScreenTemplate =
@@ -2177,7 +2178,7 @@ static const struct NamingScreenTemplate sMonNamingScreenTemplate =
     .addGenderIcon = TRUE,
     .initialPage = KBPAGE_LETTERS_UPPER,
     .unused = 35,
-    .title = COMPOUND_STRING("{STR_VAR_1}'s nickname?"),
+    .title = ES(COMPOUND_STRING("{STR_VAR_1}'s nickname?"), COMPOUND_STRING("¿Mote de {STR_VAR_1}?")),
 };
 
 static const struct NamingScreenTemplate sWaldaWordsScreenTemplate =
@@ -2199,7 +2200,7 @@ static const struct NamingScreenTemplate sCodeScreenTemplate =
     .addGenderIcon = FALSE,
     .initialPage = KBPAGE_LETTERS_UPPER,
     .unused = 35,
-    .title = COMPOUND_STRING("Enter code:"),
+    .title = ES(COMPOUND_STRING("Enter code:"), COMPOUND_STRING("Escribe el código:")),
 };
 
 static const struct NamingScreenTemplate sRivalNamingScreenTemplate =
