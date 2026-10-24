@@ -16,6 +16,8 @@ Rama: `miguel/traduccion-combate`
 - Última tanda: mensajes 501–699 (clima extremo, movimientos Z, Dinamax, Teracristal, Gen 9, Safari de Kanto…). **Tabla completa: 693 de 699** (los 6 que faltan son solo códigos).
 - Nombres: Wally es BLASCO y Lanette es AREDIA, como en la Esmeralda española.
 
+- **Nombres en el juego:** se juntó aquí la rama de las tablas de nombres (PR #22). Se decidieron las abreviaturas y los nombres que faltaban (`traduccion/nombres/decididos.csv`) y se aplicaron con `tools/dualocke/aplicar_nombres.py`: 929 movimientos, 866 objetos, 314 habilidades, los tipos, las 25 naturalezas y los Pokémon cuyo nombre cambia. `TYPE_NAME_LENGTH` pasa de 8 a 9 (Eléctrico, Siniestro). En español no hay plural de objetos.
+
 ## Cómo se comprobó
 
 - En el PC de Miguel no hay compilador: lo compila el CI de GitHub.
@@ -29,4 +31,6 @@ Rama: `miguel/traduccion-combate`
 - Menús de fuera del combate: hechos 524 de 974 en `src/strings.c` (lo de jugar normal). Faltan Frente Batalla, juegos por cable, Regalo Misterioso y chat.
 - Menús de otros archivos: 233 textos (opciones, inicio, cajas del PC, Pokédex, mochila, PC de objetos, pantalla de nombre…).
 - Probarlo jugando: frases raras, textos que no caben.
-- Respuesta del autor de Heart & Soul.
+- Respuesta del autor de Heart & Soul (Miguel le escribe por Twitter/X).
+- Decidir si se meten en el juego los 15 objetos con nombre provisional.
+- Descripciones de movimientos, objetos y habilidades, y entradas de la Pokédex.
