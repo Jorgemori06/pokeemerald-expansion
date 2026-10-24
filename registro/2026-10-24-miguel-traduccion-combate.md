@@ -32,5 +32,5 @@ Rama: `miguel/traduccion-combate`
 - Menús de otros archivos: 233 textos (opciones, inicio, cajas del PC, Pokédex, mochila, PC de objetos, pantalla de nombre…).
 - Probarlo jugando: frases raras, textos que no caben.
 - Respuesta del autor de Heart & Soul (Miguel le escribe por Twitter/X).
-- Decidir si se meten en el juego los 15 objetos con nombre provisional.
+- Los 15 objetos con nombre provisional se quedan fuera del juego (excluidos también del randomizer).
 - Descripciones de movimientos, objetos y habilidades, y entradas de la Pokédex.
