@@ -11,7 +11,8 @@ Rama: `miguel/traduccion-combate`
   - `src/dualocke_traduccion.c`: artículo y "salvaje"/"enemigo" para los Pokémon rivales, y las contracciones "del"/"al".
   - `src/battle_message.c`: usa la tabla en español, el artículo y las contracciones (solo fuera de los tests), y los textos sueltos con `ES()`.
 - Traducido: los 180 primeros mensajes de la tabla, las subidas y bajadas de características y 105 textos sueltos (presentación del combate, sacar y retirar Pokémon, características, estados, menú de combate, evolución).
-- Segunda tanda: mensajes 181–330 (clima, capturas, objetos equipados, Safari, desobediencia…). En total, 325 de 699.
+- Segunda tanda: mensajes 181–330 (clima, capturas, objetos equipados, Safari, desobediencia…). 
+- Tercera tanda: mensajes 331–500 (campos, megaevolución, habilidades al entrar, objetos de Gen 5+…). En total, 495 de 699.
 - Nombres: Wally es BLASCO y Lanette es AREDIA, como en la Esmeralda española.
 
 ## Cómo se comprobó
@@ -24,7 +25,7 @@ Rama: `miguel/traduccion-combate`
 - **Siguiente tarea pedida por Miguel:** mejorar la pantalla de datos del Pokémon (IVs, EVs, naturaleza con lo que sube y baja, habilidad y la otra posible, info de los movimientos). Apuntada en DUALOCKE §9.
 - Tipo Hada: comprobado que ya está activo (tipos de Pokémon, movimientos y tabla de tipos modernos).
 
-- Traducir el resto de la tabla (~375 mensajes) en más tandas.
+- Traducir el resto de la tabla (~200 mensajes) en más tandas.
 - Menús de fuera del combate (`src/strings.c`).
 - Probarlo jugando: frases raras, textos que no caben.
 - Respuesta del autor de Heart & Soul.

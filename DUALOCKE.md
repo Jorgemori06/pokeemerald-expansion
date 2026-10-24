@@ -361,7 +361,7 @@ Cómo funciona:
 - **Características con artículo:** "La Defensa", "Los PS"… porque el género cambia. Por eso en las traducciones van al principio: "¡La Defensa del Zigzagoon salvaje bajó!".
 - **Reglas al traducir** (están al principio del archivo de traducciones): mantener todos los códigos `{B_...}`; `{..._NAME_WITH_PREFIX}` al principio de la frase y `{..._NAME_WITH_PREFIX2}` en medio; "X's Y" se escribe "Y de X"; no hace falta poner saltos de línea, se cortan solos.
 
-Hecho: 325 de los 699 mensajes de la tabla (los 330 primeros, menos los que solo copian otro texto) y 105 textos sueltos. Falta: el resto de la tabla (~375) y los menús de fuera del combate (`src/strings.c`).
+Hecho: 495 de los 699 mensajes de la tabla (los 500 primeros, menos los que solo copian otro texto) y 105 textos sueltos. Falta: el resto de la tabla (~200) y los menús de fuera del combate (`src/strings.c`).
 
 Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos códigos `{...}` que el inglés y solo caracteres que existan en `charmap.txt`.
 
