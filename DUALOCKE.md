@@ -348,7 +348,7 @@ En total, unas 210.000 palabras: más o menos dos novelas largas.
 
 Hubo una traducción antigua de la expansion al castellano (fork de Xhyzi, rama `pokeemerald-expansion-es`, compilando con `LANG=ES`), pero tiene más de tres años y no sirve tal cual.
 
-### Paso 2: mensajes de combate (en curso)
+### Paso 2: mensajes de combate (hecho)
 
 La traducción de Heart & Soul **no tiene licencia**, así que no se copia su texto: solo se mira cómo resolvió los problemas técnicos. Los textos los traducimos nosotros. Le pedimos permiso al autor por si se pudiera reaprovechar algo con créditos (pendiente de respuesta).
 
@@ -361,7 +361,7 @@ Cómo funciona:
 - **Características con artículo:** "La Defensa", "Los PS"… porque el género cambia. Por eso en las traducciones van al principio: "¡La Defensa del Zigzagoon salvaje bajó!".
 - **Reglas al traducir** (están al principio del archivo de traducciones): mantener todos los códigos `{B_...}`; `{..._NAME_WITH_PREFIX}` al principio de la frase y `{..._NAME_WITH_PREFIX2}` en medio; "X's Y" se escribe "Y de X"; no hace falta poner saltos de línea, se cortan solos.
 
-Hecho: 495 de los 699 mensajes de la tabla (los 500 primeros, menos los que solo copian otro texto) y 105 textos sueltos. Falta: el resto de la tabla (~200) y los menús de fuera del combate (`src/strings.c`).
+Hecho: **toda la tabla de mensajes de combate** (693 de 699; los 6 restantes son solo códigos, como el texto de derrota de cada entrenador, que viene de sus datos) y 105 textos sueltos. Falta: los menús de fuera del combate (`src/strings.c`) y probarlo jugando.
 
 Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos códigos `{...}` que el inglés y solo caracteres que existan en `charmap.txt`.
 
