@@ -2346,241 +2346,242 @@ Route116_Text_JohnsonPostBattle:
 	.string "compañía?$"
 
 Route117_Text_IsaacIntro:
-	.string "Listen, could I get you to battle\n"
-	.string "the POKéMON I'm raising?$"
+	.string "Oye, ¿te importaría combatir contra\n"
+	.string "los POKéMON que estoy criando?$"
 
 Route117_Text_IsaacDefeat:
-	.string "You've raised yours superbly…$"
+	.string "Los tuyos están muy bien criados…$"
 
 Route117_Text_IsaacPostBattle:
-	.string "POKéMON isn't all about power.\p"
-	.string "Polishing a unique aspect of one's\n"
-	.string "character is another way of enjoying\l"
+	.string "Los POKéMON no son solo fuerza.\p"
+	.string "Pulir algo único de su carácter es\n"
+	.string "otra forma de disfrutar de los\l"
 	.string "POKéMON.$"
 
 Route117_Text_IsaacRegister:
-	.string "I'm going to redouble my training.\n"
-	.string "Would you come look in on us?$"
+	.string "Voy a entrenar el doble.\n"
+	.string "¿Vendrás a vernos?$"
 
 Route117_Text_IsaacRematchIntro:
-	.string "The POKéMON I've been raising are\n"
-	.string "looking good, just like before.$"
+	.string "Los POKéMON que crío tienen muy\n"
+	.string "buena pinta, como la otra vez.$"
 
 Route117_Text_IsaacRematchDefeat:
-	.string "You know how to raise them properly.\n"
-	.string "You might have DAY CARE skills…$"
+	.string "Sabes criarlos como es debido.\n"
+	.string "Podrías trabajar en una GUARDERÍA…$"
 
 Route117_Text_IsaacPostRematch:
-	.string "Your POKéMON are growing good!\n"
-	.string "You should enter them in CONTESTS.$"
+	.string "¡Tus POKéMON están creciendo bien!\n"
+	.string "Deberías apuntarlos a CONCURSOS.$"
 
 Route117_Text_LydiaIntro:
-	.string "Please, allow me to evaluate if you\n"
-	.string "have raised your POKéMON properly.$"
+	.string "Déjame evaluar si has criado bien\n"
+	.string "a tus POKéMON, por favor.$"
 
 Route117_Text_LydiaDefeat:
-	.string "Yes, they are growing properly.$"
+	.string "Sí, están creciendo bien.$"
 
 Route117_Text_LydiaPostBattle:
-	.string "Try raising POKéMON with more\n"
-	.string "attention to their character traits.$"
+	.string "Prueba a criar a los POKéMON fijándote\n"
+	.string "más en su carácter.$"
 
 Route117_Text_LydiaRegister:
-	.string "I'm glad I met a superb TRAINER in you.\n"
-	.string "I hope to see you again.$"
+	.string "Me alegro de haber conocido a\n"
+	.string "alguien que entrena tan bien.\l"
+	.string "Espero volver a verte.$"
 
 Route117_Text_LydiaRematchIntro:
-	.string "Allow me to reevaluate if you have\n"
-	.string "raised your POKéMON properly.$"
+	.string "Déjame volver a evaluar si has\n"
+	.string "criado bien a tus POKéMON.$"
 
 Route117_Text_LydiaRematchDefeat:
-	.string "They are growing admirably.$"
+	.string "Están creciendo de maravilla.$"
 
 Route117_Text_LydiaPostRematch:
-	.string "POKéMON seem to like different kinds\n"
-	.string "of {POKEBLOCK}S, depending on their nature.$"
+	.string "Parece que a cada POKéMON le gustan\n"
+	.string "unos {POKEBLOCK}S según su naturaleza.$"
 
 Route117_Text_DylanIntro:
-	.string "I'm in the middle of a triathlon, but,\n"
-	.string "whatever, let's have a battle!$"
+	.string "Estoy en mitad de un triatlón, pero\n"
+	.string "¡qué más da, vamos a combatir!$"
 
 Route117_Text_DylanDefeat:
-	.string "I ran out of energy!$"
+	.string "¡Me he quedado sin fuerzas!$"
 
 Route117_Text_DylanPostBattle:
-	.string "I may have blown it…\p"
-	.string "I might have dropped to last during\n"
-	.string "that battle…$"
+	.string "Igual la he fastidiado…\p"
+	.string "Puede que haya caído al último puesto\n"
+	.string "con este combate…$"
 
 Route117_Text_DylanRegister:
-	.string "POKéMON have to be strong, too?\n"
-	.string "I'd like you to train me!$"
+	.string "¿Los POKéMON también tienen que\n"
+	.string "ser fuertes? ¡Entréname!$"
 
 Route117_Text_DylanRematchIntro:
-	.string "I'm smack in the middle of a triathlon,\n"
-	.string "but I'm comfortably ahead.\l"
-	.string "Let's make this a quick battle!$"
+	.string "Estoy en pleno triatlón, pero voy\n"
+	.string "muy por delante.\l"
+	.string "¡Hagamos un combate rápido!$"
 
 Route117_Text_DylanRematchDefeat:
-	.string "I ran out of energy again!$"
+	.string "¡Otra vez sin fuerzas!$"
 
 Route117_Text_DylanPostRematch:
-	.string "I was tops in swimming and cycling,\n"
-	.string "but I'm not quite that confident with\l"
-	.string "POKéMON yet.$"
+	.string "Fui el mejor nadando y en bici, pero\n"
+	.string "con los POKéMON aún no me veo tan\l"
+	.string "seguro.$"
 
 Route117_Text_MariaIntro:
-	.string "I do my triathlon training with POKéMON,\n"
-	.string "so I'm pretty confident about my speed.$"
+	.string "Entreno para el triatlón con POKéMON,\n"
+	.string "así que confío en mi velocidad.$"
 
 Route117_Text_MariaDefeat:
-	.string "I need to get more practices in,\n"
-	.string "I guess.$"
+	.string "Supongo que tengo que practicar\n"
+	.string "más.$"
 
 Route117_Text_MariaPostBattle:
-	.string "Training is meaningful only if you\n"
-	.string "keep it up regularly.\p"
-	.string "Okay! I'll resume my training!\n"
-	.string "Tomorrow!$"
+	.string "Entrenar solo sirve si lo haces\n"
+	.string "con constancia.\p"
+	.string "¡Vale! ¡Volveré a entrenar!\n"
+	.string "¡Mañana!$"
 
 Route117_Text_MariaRegister:
-	.string "You appear to be training properly…\n"
-	.string "If you'd like, I'll battle you later!$"
+	.string "Parece que entrenas como es debido…\n"
+	.string "Si quieres, ¡combatimos más tarde!$"
 
 Route117_Text_MariaRematchIntro:
-	.string "Are you keeping up with your training?\n"
-	.string "I sure am!\l"
-	.string "Let me show you the evidence!$"
+	.string "¿Sigues entrenando?\n"
+	.string "¡Yo sí!\l"
+	.string "¡Te voy a enseñar la prueba!$"
 
 Route117_Text_MariaRematchDefeat:
-	.string "I need to get more practices in,\n"
-	.string "I guess.$"
+	.string "Supongo que tengo que practicar\n"
+	.string "más.$"
 
 Route117_Text_MariaPostRematch:
-	.string "I'll resume training tomorrow.\n"
-	.string "Let's battle again sometime!$"
+	.string "Mañana vuelvo a entrenar.\n"
+	.string "¡Ya combatiremos otra vez!$"
 
 Route117_Text_DerekIntro:
-	.string "Once a BUG CATCHER!\n"
-	.string "And now a BUG MANIAC!\p"
-	.string "But my love for POKéMON remains\n"
-	.string "unchanged!$"
+	.string "¡Antes era CAZABICHOS!\n"
+	.string "¡Y ahora soy OBSESO BICHO!\p"
+	.string "¡Pero mi amor por los POKéMON\n"
+	.string "sigue igual!$"
 
 Route117_Text_DerekDefeat:
-	.string "My ineptitude also remains\n"
-	.string "unchanged…$"
+	.string "Mi torpeza también sigue\n"
+	.string "igual…$"
 
 Route117_Text_DerekPostBattle:
-	.string "All I did was follow my heart, and now\n"
-	.string "they call me a BUG MANIAC…\p"
-	.string "Still, I am an expert on BUG POKéMON,\n"
-	.string "so it's only natural that they call me\l"
-	.string "a BUG MANIAC.$"
+	.string "Solo seguí a mi corazón, y ahora me\n"
+	.string "llaman OBSESO BICHO…\p"
+	.string "Aun así, soy experto en POKéMON de\n"
+	.string "tipo BICHO, así que es normal que\l"
+	.string "me llamen OBSESO BICHO.$"
 
 Route117_Text_AnnaIntro:
-	.string "ANNA: I'm with my pretty junior student\n"
-	.string "partner. I have to do good!$"
+	.string "ANA: Voy con mi compañera, que es\n"
+	.string "de un curso menos. ¡Tengo que lucirme!$"
 
 Route117_Text_AnnaDefeat:
-	.string "ANNA: I'm with my pretty junior student\n"
-	.string "partner! Let me win!$"
+	.string "ANA: ¡Voy con mi compañera de un\n"
+	.string "curso menos! ¡Déjame ganar!$"
 
 Route117_Text_AnnaPostBattle:
-	.string "ANNA: Your POKéMON have some good\n"
-	.string "combinations.\p"
-	.string "I'd say you're second only to us!$"
+	.string "ANA: Tus POKéMON combinan muy bien.\p"
+	.string "¡Diría que solo te superamos\n"
+	.string "nosotras!$"
 
 Route117_Text_AnnaAndMegRegister:
-	.string "ANNA: We can't take this lying down!\n"
-	.string "You will come back, won't you?$"
+	.string "ANA: ¡No nos vamos a quedar así!\n"
+	.string "Volverás, ¿verdad?$"
 
 Route117_Text_AnnaNotEnoughMons:
-	.string "ANNA: If you want to battle us,\n"
-	.string "bring two POKéMON with you.$"
+	.string "ANA: Si quieres combatir con\n"
+	.string "nosotras, trae dos POKéMON.$"
 
 Route117_Text_MegIntro:
-	.string "MEG: I'm going to tag up with my super\n"
-	.string "senior student partner and beat you!$"
+	.string "MEGAN: ¡Voy a hacer equipo con mi\n"
+	.string "súper compañera mayor y ganarte!$"
 
 Route117_Text_MegDefeat:
-	.string "MEG: Oh, no!\n"
-	.string "I'm sorry, ANNA! I let you down…$"
+	.string "MEGAN: ¡Oh, no!\n"
+	.string "¡Lo siento, ANA! Te he fallado…$"
 
 Route117_Text_MegPostBattle:
-	.string "MEG: I dragged ANNA down…\n"
-	.string "If I didn't, she would have won!$"
+	.string "MEGAN: He arrastrado a ANA…\n"
+	.string "¡Si no, ella habría ganado!$"
 
 Route117_Text_MegNotEnoughMons:
-	.string "MEG: Do you only have one POKéMON?\n"
-	.string "We can't battle with you, then.\p"
-	.string "We want to have a 2-on-2 battle.$"
+	.string "MEGAN: ¿Solo tienes un POKéMON?\n"
+	.string "Entonces no podemos combatir.\p"
+	.string "Queremos un combate de 2 contra 2.$"
 
 Route117_Text_AnnaRematchIntro:
-	.string "ANNA: I can't keep losing in front of\n"
-	.string "my junior partner, right?$"
+	.string "ANA: No puedo seguir perdiendo\n"
+	.string "delante de mi compañera, ¿no?$"
 
 Route117_Text_AnnaRematchDefeat:
-	.string "ANNA: I couldn't get into the groove.$"
+	.string "ANA: No he cogido el ritmo.$"
 
 Route117_Text_AnnaPostRematch:
-	.string "ANNA: Your POKéMON have some good\n"
-	.string "combinations.\p"
-	.string "I'd say you're second only to us!$"
+	.string "ANA: Tus POKéMON combinan muy bien.\p"
+	.string "¡Diría que solo te superamos\n"
+	.string "nosotras!$"
 
 Route117_Text_AnnaRematchNotEnoughMons:
-	.string "ANNA: If you want to battle us,\n"
-	.string "bring two POKéMON with you.$"
+	.string "ANA: Si quieres combatir con\n"
+	.string "nosotras, trae dos POKéMON.$"
 
 Route117_Text_MegRematchIntro:
-	.string "MEG: I'm going to tag up with my\n"
-	.string "senior partner and win this time!$"
+	.string "MEGAN: ¡Voy a hacer equipo con mi\n"
+	.string "compañera mayor y esta vez ganaremos!$"
 
 Route117_Text_MegRematchDefeat:
-	.string "MEG: Too strong!$"
+	.string "MEGAN: ¡Qué fuerza!$"
 
 Route117_Text_MegPostRematch:
-	.string "MEG: I battled together with my\n"
-	.string "senior partner, but we lost…\p"
-	.string "That's so discouraging…$"
+	.string "MEGAN: He combatido junto a mi\n"
+	.string "compañera mayor, pero hemos perdido…\p"
+	.string "¡Qué desánimo…!$"
 
 Route117_Text_MegRematchNotEnoughMons:
-	.string "MEG: Do you only have one POKéMON?\n"
-	.string "We can't battle with you, then.\p"
-	.string "We want to have a 2-on-2 battle.$"
+	.string "MEGAN: ¿Solo tienes un POKéMON?\n"
+	.string "Entonces no podemos combatir.\p"
+	.string "Queremos un combate de 2 contra 2.$"
 
 Route117_Text_MelinaIntro:
-	.string "Isn't it nice? To battle while looking\n"
-	.string "at pretty flowers?$"
+	.string "¿No es bonito combatir mientras\n"
+	.string "miras flores preciosas?$"
 
 Route117_Text_MelinaDefeat:
-	.string "Oh, that's quite impressive!$"
+	.string "¡Oh, qué impresionante!$"
 
 Route117_Text_MelinaPostBattle:
-	.string "It feels wonderful to go for a jog\n"
-	.string "while looking at flowers.$"
+	.string "Es una gozada salir a correr\n"
+	.string "mirando las flores.$"
 
 Route117_Text_BrandiIntro:
-	.string "Let me demonstrate the power\n"
-	.string "hidden within a PSYCHIC POKéMON!$"
+	.string "¡Te mostraré el poder oculto\n"
+	.string "de un POKéMON PSÍQUICO!$"
 
 Route117_Text_BrandiDefeat:
-	.string "Astonishing!$"
+	.string "¡Asombroso!$"
 
 Route117_Text_BrandiPostBattle:
-	.string "PSYCHIC POKéMON are complex.\n"
-	.string "You should try catching some.$"
+	.string "Los POKéMON PSÍQUICOS son complejos.\n"
+	.string "Deberías atrapar alguno.$"
 
 Route117_Text_AishaIntro:
-	.string "Concentrate on getting the win.\n"
-	.string "That's how I battle!$"
+	.string "Me centro en ganar.\n"
+	.string "¡Así es como combato!$"
 
 Route117_Text_AishaDefeat:
-	.string "I don't waste any time being angry\n"
-	.string "over a loss--I would rather train.$"
+	.string "No pierdo el tiempo enfadándome por\n"
+	.string "perder; prefiero entrenar.$"
 
 Route117_Text_AishaPostBattle:
-	.string "I think that if you worry about losing,\n"
-	.string "you're more likely to lose.$"
+	.string "Creo que si te preocupa perder,\n"
+	.string "es más fácil que pierdas.$"
 
 Route118_Text_RoseIntro:
 	.string "The aroma of flowers has a magical\n"

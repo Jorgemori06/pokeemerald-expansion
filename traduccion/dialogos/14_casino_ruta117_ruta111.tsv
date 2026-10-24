@@ -1,0 +1,177 @@
+# CASINO DE MALVALONA
+MauvilleCity_GameCorner_Text_ThisIsMauvilleGameCorner	Esto es el CASINO DE MALVALONA.$
+MauvilleCity_GameCorner_Text_NeedCoinCaseForCoins	Vale, ¿querías FICHAS para jugar?\pPero no tienes un MONEDERO para\nguardarlas.$
+MauvilleCity_GameCorner_Text_WereYouLookingForCoins	¿Buscabas FICHAS?\p50 FICHAS cuestan 1000 ¥.\n¿Quieres comprar?$
+MauvilleCity_GameCorner_Text_ThankYouHereAreYourCoins	¡Muchas gracias!\n¡Aquí tienes tus FICHAS!$
+MauvilleCity_GameCorner_Text_DontHaveEnoughMoney	Esto… Parece que no tienes\nbastante dinero…$
+MauvilleCity_GameCorner_Text_CoinCaseIsFull	¿Oh?\nTu MONEDERO está lleno.$
+MauvilleCity_GameCorner_Text_DontNeedCoinsThen	Oh… ¿Entonces no quieres FICHAS?\n¡Suerte en tu aventura!$
+MauvilleCity_GameCorner_Text_ExchangeCoinsForPrizes	Te damos la bienvenida.\pAquí puedes cambiar tus FICHAS\npor premios.$
+MauvilleCity_GameCorner_Text_WhichPrize	¿Qué premio quieres?$
+MauvilleCity_GameCorner_Text_SoYourChoiceIsTheTMX	¿Entonces eliges la\n{STR_VAR_1} {STR_VAR_2}?$
+MauvilleCity_GameCorner_Text_SendToYourHomePC	¡Gracias!\nTe lo enviaremos al PC de tu casa.$
+MauvilleCity_GameCorner_Text_NotEnoughCoins	No tienes bastantes FICHAS.$
+MauvilleCity_GameCorner_Text_NoRoomForPlacingDecor	No queda sitio para guardar\n{STR_VAR_1}.$
+MauvilleCity_GameCorner_Text_OhIsThatSo	¿Ah, sí?\nAhorra algunas FICHAS antes de\lvolver por aquí.$
+MauvilleCity_GameCorner_Text_SoYourChoiceIsX	¿Entonces eliges {STR_VAR_1}?$
+MauvilleCity_GameCorner_Text_HereYouGo	¡Aquí tienes!$
+MauvilleCity_GameCorner_Text_CantCarryAnyMore	Vaya, no puedes llevar más.$
+MauvilleCity_GameCorner_Text_GotTwoOfSameDollWantOne	Me equivoqué y me llevé dos\nMUÑECOS iguales.\p¿Quieres uno?$
+MauvilleCity_GameCorner_Text_HereYouGo2	¡Aquí tienes!$
+MauvilleCity_GameCorner_Text_YouWantItButNotNow	¿Eh?\n¿Lo quieres, pero no ahora?$
+MauvilleCity_GameCorner_Text_DontBeNegative	¡Venga, no seas así!\n¡Quédatelo!$
+MauvilleCity_GameCorner_Text_CantWinJackpot	Hay un premio que quiero, pero no\nconsigo el gran premio.$
+MauvilleCity_GameCorner_Text_NeedCoinCaseGoNextDoor	Oye, si quieres jugar aquí,\nnecesitas un MONEDERO.\pCreo que la chica de la casa de al\nlado tenía uno. ¡Ve a verla!$
+MauvilleCity_GameCorner_Text_LuckOnlyLastSoLongTakeCoins	La suerte no me va a durar siempre.\nEsto es demasiado para mí.\l¡Toma, quédate unas FICHAS!$
+MauvilleCity_GameCorner_Text_MauvilleSomethingForEveryone	MALVALONA tiene algo para\ntodo el mundo.\pPara mí, es el CASINO.$
+MauvilleCity_GameCorner_Text_RouletteTablesDifferentRates	Las mesas de RULETA tienen apuestas\ndistintas.\pMira tus FICHAS antes de elegir\nuna mesa.$
+MauvilleCity_GameCorner_Text_EasyToLoseTrackOfTime	Aquí dentro se pierde la noción del\ntiempo. Debería volver al trabajo.$
+MauvilleCity_GameCorner_Text_CoinsAreNeededToPlay	Para jugar en el CASINO hacen\nfalta FICHAS.$
+MauvilleCity_GameCorner_Text_RouletteOnlyLuck	Esto de la RULETA…\nEs bastante exigente.\pGanes o pierdas, todo es suerte.$
+MauvilleCity_GameCorner_Text_UpTo3CoinsCanBeUsed	En las TRAGAPERRAS se pueden usar\nhasta tres FICHAS por partida.$
+MauvilleCity_GameCorner_Text_DifficultToStopOn7	Es muy difícil que se pare justo\nen el “7”.\pSi se para en el “7” durante la\nRONDA EXTRA, te dan más FICHAS.$
+MauvilleCity_GameCorner_Text_HeresSomeSlotsInfo	Te voy a dar información sobre\nlas TRAGAPERRAS.\pCuantos más rayos acumules, más\noportunidades de RONDA EXTRA tendrás.\pEn una partida con el máximo de\ncinco RONDAS EXTRA…\pSe pueden ganar cuatro premios\nnormales y luego un premio gordo.\pEso suma 660 FICHAS, pero es\nmuy difícil de conseguir.$
+MauvilleCity_GameCorner_Text_CantPlayWithNoCoinCase	No puedes jugar si no tienes\nun MONEDERO.$
+# NUEVA MALVALONA
+NewMauville_Entrance_Text_DoorIsLocked	La puerta está cerrada con llave.$
+NewMauville_Entrance_Text_UseBasementKey	¿Usar la LLAVE DEL SÓTANO?$
+NewMauville_Entrance_Text_UsedBasementKey	{PLAYER} ha usado la LLAVE DEL SÓTANO.\p¡La puerta se ha abierto!$
+NewMauville_Inside_Text_GeneratorRadiatingHeat	El generador desprende un calor que\nse nota incluso desde lejos.\pParece que habría que apagarlo\ncuanto antes.$
+NewMauville_Inside_Text_GeneratorQuietedDown	El generador se ha calmado.$
+NewMauville_Inside_Text_SteppedOnSwitchGeneratorStopped	{PLAYER} ha pisado el interruptor.\pClic…\p… … … … … … … …\n… … … … … … … …\pParece que el generador\nse ha parado…$
+# RUTA 117 y GUARDERÍA
+Route117_Text_DayCarePokemonHadNewMove	Dejé a mi POKéMON en la GUARDERÍA.\pCuando lo recogí, sabía un movimiento\nnuevo que yo no le había enseñado.\l¡Me llevé una sorpresa enorme!$
+Route117_Text_ArentTheseFlowersPretty	¿Qué te parecen?\n¿A que son bonitas estas flores?\p¡Las he plantado yo todas!$
+Route117_Text_AirIsTastyHere	¡Qué rico está el aire aquí!$
+Route117_Text_RouteSignVerdanturf	RUTA 117\n{LEFT_ARROW} PUEBLO VERDEGAL$
+Route117_Text_RouteSignMauville	RUTA 117\n{RIGHT_ARROW} CIUDAD MALVALONA$
+Route117_Text_DayCareSign	GUARDERÍA POKéMON\n“Deja que criemos a tus POKéMON”.$
+Route117_Text_IsaacIntro	Oye, ¿te importaría combatir contra\nlos POKéMON que estoy criando?$
+Route117_Text_IsaacDefeat	Los tuyos están muy bien criados…$
+Route117_Text_IsaacPostBattle	Los POKéMON no son solo fuerza.\pPulir algo único de su carácter es\notra forma de disfrutar de los\lPOKéMON.$
+Route117_Text_IsaacRegister	Voy a entrenar el doble.\n¿Vendrás a vernos?$
+Route117_Text_IsaacRematchIntro	Los POKéMON que crío tienen muy\nbuena pinta, como la otra vez.$
+Route117_Text_IsaacRematchDefeat	Sabes criarlos como es debido.\nPodrías trabajar en una GUARDERÍA…$
+Route117_Text_IsaacPostRematch	¡Tus POKéMON están creciendo bien!\nDeberías apuntarlos a CONCURSOS.$
+Route117_Text_LydiaIntro	Déjame evaluar si has criado bien\na tus POKéMON, por favor.$
+Route117_Text_LydiaDefeat	Sí, están creciendo bien.$
+Route117_Text_LydiaPostBattle	Prueba a criar a los POKéMON fijándote\nmás en su carácter.$
+Route117_Text_LydiaRegister	Me alegro de haber conocido a\nalguien que entrena tan bien.\lEspero volver a verte.$
+Route117_Text_LydiaRematchIntro	Déjame volver a evaluar si has\ncriado bien a tus POKéMON.$
+Route117_Text_LydiaRematchDefeat	Están creciendo de maravilla.$
+Route117_Text_LydiaPostRematch	Parece que a cada POKéMON le gustan\nunos {POKEBLOCK}S según su naturaleza.$
+Route117_Text_DylanIntro	Estoy en mitad de un triatlón, pero\n¡qué más da, vamos a combatir!$
+Route117_Text_DylanDefeat	¡Me he quedado sin fuerzas!$
+Route117_Text_DylanPostBattle	Igual la he fastidiado…\pPuede que haya caído al último puesto\ncon este combate…$
+Route117_Text_DylanRegister	¿Los POKéMON también tienen que\nser fuertes? ¡Entréname!$
+Route117_Text_DylanRematchIntro	Estoy en pleno triatlón, pero voy\nmuy por delante.\l¡Hagamos un combate rápido!$
+Route117_Text_DylanRematchDefeat	¡Otra vez sin fuerzas!$
+Route117_Text_DylanPostRematch	Fui el mejor nadando y en bici, pero\ncon los POKéMON aún no me veo tan\lseguro.$
+Route117_Text_MariaIntro	Entreno para el triatlón con POKéMON,\nasí que confío en mi velocidad.$
+Route117_Text_MariaDefeat	Supongo que tengo que practicar\nmás.$
+Route117_Text_MariaPostBattle	Entrenar solo sirve si lo haces\ncon constancia.\p¡Vale! ¡Volveré a entrenar!\n¡Mañana!$
+Route117_Text_MariaRegister	Parece que entrenas como es debido…\nSi quieres, ¡combatimos más tarde!$
+Route117_Text_MariaRematchIntro	¿Sigues entrenando?\n¡Yo sí!\l¡Te voy a enseñar la prueba!$
+Route117_Text_MariaRematchDefeat	Supongo que tengo que practicar\nmás.$
+Route117_Text_MariaPostRematch	Mañana vuelvo a entrenar.\n¡Ya combatiremos otra vez!$
+Route117_Text_DerekIntro	¡Antes era CAZABICHOS!\n¡Y ahora soy OBSESO BICHO!\p¡Pero mi amor por los POKéMON\nsigue igual!$
+Route117_Text_DerekDefeat	Mi torpeza también sigue\nigual…$
+Route117_Text_DerekPostBattle	Solo seguí a mi corazón, y ahora me\nllaman OBSESO BICHO…\pAun así, soy experto en POKéMON de\ntipo BICHO, así que es normal que\lme llamen OBSESO BICHO.$
+Route117_Text_AnnaIntro	ANA: Voy con mi compañera, que es\nde un curso menos. ¡Tengo que lucirme!$
+Route117_Text_AnnaDefeat	ANA: ¡Voy con mi compañera de un\ncurso menos! ¡Déjame ganar!$
+Route117_Text_AnnaPostBattle	ANA: Tus POKéMON combinan muy bien.\p¡Diría que solo te superamos\nnosotras!$
+Route117_Text_AnnaAndMegRegister	ANA: ¡No nos vamos a quedar así!\nVolverás, ¿verdad?$
+Route117_Text_AnnaNotEnoughMons	ANA: Si quieres combatir con\nnosotras, trae dos POKéMON.$
+Route117_Text_MegIntro	MEGAN: ¡Voy a hacer equipo con mi\nsúper compañera mayor y ganarte!$
+Route117_Text_MegDefeat	MEGAN: ¡Oh, no!\n¡Lo siento, ANA! Te he fallado…$
+Route117_Text_MegPostBattle	MEGAN: He arrastrado a ANA…\n¡Si no, ella habría ganado!$
+Route117_Text_MegNotEnoughMons	MEGAN: ¿Solo tienes un POKéMON?\nEntonces no podemos combatir.\pQueremos un combate de 2 contra 2.$
+Route117_Text_AnnaRematchIntro	ANA: No puedo seguir perdiendo\ndelante de mi compañera, ¿no?$
+Route117_Text_AnnaRematchDefeat	ANA: No he cogido el ritmo.$
+Route117_Text_AnnaPostRematch	ANA: Tus POKéMON combinan muy bien.\p¡Diría que solo te superamos\nnosotras!$
+Route117_Text_AnnaRematchNotEnoughMons	ANA: Si quieres combatir con\nnosotras, trae dos POKéMON.$
+Route117_Text_MegRematchIntro	MEGAN: ¡Voy a hacer equipo con mi\ncompañera mayor y esta vez ganaremos!$
+Route117_Text_MegRematchDefeat	MEGAN: ¡Qué fuerza!$
+Route117_Text_MegPostRematch	MEGAN: He combatido junto a mi\ncompañera mayor, pero hemos perdido…\p¡Qué desánimo…!$
+Route117_Text_MegRematchNotEnoughMons	MEGAN: ¿Solo tienes un POKéMON?\nEntonces no podemos combatir.\pQueremos un combate de 2 contra 2.$
+Route117_Text_MelinaIntro	¿No es bonito combatir mientras\nmiras flores preciosas?$
+Route117_Text_MelinaDefeat	¡Oh, qué impresionante!$
+Route117_Text_MelinaPostBattle	Es una gozada salir a correr\nmirando las flores.$
+Route117_Text_BrandiIntro	¡Te mostraré el poder oculto\nde un POKéMON PSÍQUICO!$
+Route117_Text_BrandiDefeat	¡Asombroso!$
+Route117_Text_BrandiPostBattle	Los POKéMON PSÍQUICOS son complejos.\nDeberías atrapar alguno.$
+Route117_Text_AishaIntro	Me centro en ganar.\n¡Así es como combato!$
+Route117_Text_AishaDefeat	No pierdo el tiempo enfadándome por\nperder; prefiero entrenar.$
+Route117_Text_AishaPostBattle	Creo que si te preocupa perder,\nes más fácil que pierdas.$
+Route117_Text_SeeWifeIfYoudLikeMeToRaiseMon	Soy el ABUELO de la GUARDERÍA.\pAyudo a cuidar de los valiosos\nPOKéMON de los ENTRENADORES.\pSi quieres que críe a tu POKéMON,\nhabla con mi mujer.$
+Route117_Text_DoYouWantEgg	¡Ah, eres tú!\pEstábamos criando a tus POKéMON y,\nmadre mía, ¡qué sorpresa!\p¡Tu POKéMON tenía un HUEVO!\pNo sabemos cómo ha llegado ahí,\npero tu POKéMON lo tenía.\pLo quieres, ¿verdad?$
+Route117_Text_YourMonIsDoingFine	¡Ah, eres tú! Me alegro de verte.\nTu {STR_VAR_1} está estupendamente.$
+Route117_Text_IllKeepIt	Bueno, pues me lo quedo yo.\n¡Gracias!$
+Route117_Text_YouHaveNoRoomForIt	No tienes sitio para él…\nVuelve cuando hayas hecho hueco.$
+Route117_Text_ReceivedEgg	{PLAYER} ha recibido el HUEVO del\nABUELO de la GUARDERÍA.$
+Route117_Text_TakeGoodCareOfIt	Cuídalo bien.$
+Route117_Text_FriendlyWithOtherTrainersMon	Por cierto, tu {STR_VAR_1} parecía\nllevarse bien con el {STR_VAR_3}\lde {STR_VAR_2}.\pCreo que hasta le vi recibir\nuna CARTA.$
+Route117_Text_SeeWifeIfYouWantToPickUpMon	Si quieres recoger a tu POKéMON,\nhabla con mi mujer.$
+Route117_Text_YourMonsAreDoingFine	¡Ah, eres tú! Tus {STR_VAR_1} y\n{STR_VAR_2} están estupendamente.$
+Route117_Text_IWillKeepDoYouWantIt	Mira que me lo quedo, ¿eh?\nLo quieres, ¿verdad?$
+Route117_PokemonDayCare_Text_WouldYouLikeUsToRaiseAMon	Soy la ABUELA de la GUARDERÍA.\pPodemos criar POKéMON por ti.\p¿Quieres que criemos alguno?$
+Route117_PokemonDayCare_Text_WhichMonShouldWeRaise	¿Qué POKéMON quieres que\ncriemos?$
+Route117_PokemonDayCare_Text_WellRaiseYourMon	Muy bien, criaremos a tu {STR_VAR_1}\nuna temporada.\pVuelve a por él más tarde.$
+Route117_PokemonDayCare_Text_WeCanRaiseOneMore	Podemos criar dos de tus POKéMON.\n¿Quieres que criemos otro más?$
+Route117_PokemonDayCare_Text_HusbandWasLookingForYou	Mi marido te estaba buscando.$
+Route117_PokemonDayCare_Text_FineThenComeAgain	Bueno, vale.\nVuelve cuando quieras.$
+Route117_PokemonDayCare_Text_NotEnoughMoney	No tienes bastante dinero…$
+Route117_PokemonDayCare_Text_TakeOtherOneBackToo	¿Te llevas también el otro?$
+Route117_PokemonDayCare_Text_ComeAgain	Muy bien.\nVuelve cuando quieras.$
+Route117_PokemonDayCare_Text_GoodToSeeYou	¡Ah, eres tú! Me alegro de verte.\n¡Tu POKéMON no podría estar mejor!$
+Route117_PokemonDayCare_Text_YourMonHasGrownXLevels	Tu {STR_VAR_1} ha subido\n{STR_VAR_2} nivel(es).$
+Route117_PokemonDayCare_Text_YourTeamIsFull	Tu equipo POKéMON está lleno.\nHaz sitio y luego ven a verme.$
+Route117_PokemonDayCare_Text_TakeBackWhichMon	¿Qué POKéMON te llevas?$
+Route117_PokemonDayCare_Text_ItWillCostX	Si quieres recuperar a tu {STR_VAR_1},\nte costará {STR_VAR_2} ¥.$
+Route117_PokemonDayCare_Text_HeresYourMon	¡Perfecto!\nAquí tienes a tu POKéMON.$
+Route117_PokemonDayCare_Text_TookBackMon	{PLAYER} ha recogido a {STR_VAR_1}\nde la ABUELA de la GUARDERÍA.$
+Route117_PokemonDayCare_Text_YouHaveJustOneMon	¿Oh? Pero si solo tienes un\nPOKéMON.\pVuelve en otro momento.$
+Route117_PokemonDayCare_Text_TakeYourMonBack	¿Te llevas a tu POKéMON?$
+Route117_PokemonDayCare_Text_WhatWillYouBattleWith	Si me dejas ese POKéMON, ¿con qué\nvas a combatir?\pVuelve en otro momento.$
+Text_EggHatchHuh	¿Eh?$
+Route117_PokemonDayCare_Text_YoullBeLeftWithJustOne	¿Eh?\nVamos, vamos.\pSi me dejas ese POKéMON, te\nquedarás con uno solo.\pYo que tú atraparía alguno más,\nla verdad.$
+# RUTA 111: familia VENCEDOR, carteles, TORRE ESPEJISMO y casa de la abuela (sin el MONTE ENTRENADOR del postgame)
+Route111_Text_BattleOurFamily	¡Hola! Supongo que vas de viaje.\p¿Qué te parece? ¿Te atreves con\nnuestra familia de cuatro en una\lserie de combates POKéMON?$
+Route111_Text_IsThatSo	¿Ah, sí?\n¡Pásate si cambias de idea!$
+Route111_Text_VictorIntro	¡Así me gusta! ¡Me caes bien!$
+Route111_Text_VictorDefeat	¡Ayayay!\n¡Eres mucho más duro de lo que pensaba!$
+Route111_Text_VictorPostBattle	¡Eh, todos!\n¡He encontrado a alguien muy fuerte!$
+Route111_Text_VictoriaIntro	¡Madre mía! ¡Qué joven eres!\pPero para ganar a mi marido, tienes\nque entrenar muy bien.\p¡Ahora me toca a mí!$
+Route111_Text_VictoriaDefeat	¡Ay, Dios!\n¡No me puedo creer lo fuerte que eres!$
+Route111_Text_VictoriaPostBattle	¡Aquí hay alguien muy fuerte!\n¡Pero que muy fuerte!$
+Route111_Text_ViviIntro	¿Eres más fuerte que mamá? ¡Hala!\p¡Pero yo también soy fuerte!\n¡De verdad! ¡En serio!$
+Route111_Text_ViviDefeat	¿Eh? ¿He perdido?$
+Route111_Text_ViviPostBattle	Qué rabia…\p… Snif… ¡Abuela!$
+Route111_Text_VickyIntro	¡Cómo te atreves a hacer llorar a\nmi nieta!\p¡Por eso te voy a dar una lección!\n¡Prepárate para perder!$
+Route111_Text_VickyDefeat	¡Cuac! Sí que eres fuerte…\nMi nieta tenía razón…$
+Route111_Text_VickyPostBattle	Si no tienes prisa, quédate\nun rato con nosotros.$
+Route111_Text_ToughToKeepWinningUpTheRanks	Si no crías más a tus POKéMON, te\nva a costar seguir ganando cuando\lsubas de nivel.\pHe oído que el ALTO MANDO de la LIGA\nPOKéMON es mucho más fuerte que\lcualquier LÍDER de GIMNASIO.$
+Route111_Text_WinstrateFamilyDestroyedMe	Desafié a la familia VENCEDOR, pero\ncuatro combates seguidos es mucho…\lMe hicieron polvo.$
+Route111_Text_RouteSignMauville	RUTA 111\n{DOWN_ARROW} CIUDAD MALVALONA$
+Route111_Text_WinstrateHouseSign	“¡Nuestros corazones laten a una!”\nCASA DE LOS VENCEDOR$
+Route111_Text_RouteSign112	RUTA 111\n{LEFT_ARROW} RUTA 112$
+Route111_Text_RouteSign113	RUTA 111\n{LEFT_ARROW} RUTA 113$
+Route111_Text_OldLadysRestStopSign	CASA DE REPOSO DE LA ABUELA\n“Entra y descansa los huesos”.$
+Route111_Text_TrainerTipsSpAtkSpDef	CONSEJOS PARA ENTRENADORES\pUna de las medidas del poder de un\nPOKéMON es el AT. ESP., que quiere\ldecir “ATAQUE ESPECIAL”.\pDel mismo modo, DEF. ESP. quiere\ndecir “DEFENSA ESPECIAL”.$
+Route111_Text_ShouldBeMirageTowerAroundHere	Por aquí debería haber una torre\nhecha de arena.\pPero, por algún motivo, a veces se\nve y a veces no.\pPor eso la llamo TORRE ESPEJISMO.$
+Route111_Text_MirageTowerClearlyVisible	¡La veo!\n¡La torre de arena!\p¡La torre de arena a la que llamaban\nespejismo se ve perfectamente!\pPero parece tan frágil…\nSe podría derrumbar en nada…\pQuiero entrar, pero no me atrevo…$
+Route111_Text_ThatWasShockingSandRainedDown	Uf…\nQué susto.\pDe repente cayeron trozos enormes\nde arena.\p¿Qué había dentro?\n¿Fantasmas de arena o algo así?$
+Route111_Text_MirageTowerHasntBeenSeenSince	Desde que hablé contigo, no se ha\nvuelto a ver la torre de arena.\pQuizá sí que era la\nTORRE ESPEJISMO…$
+Route111_Text_ClawFossilDisappeared	El FÓSIL GARRA se ha hundido en\nla arena…$
+Route111_Text_RootFossilDisappeared	El FÓSIL RAÍZ se ha hundido en\nla arena…$
+Route111_Text_MauvilleUncleToldMeToTakeRockSmash	¡Oh, no!\p¡Mi tío de MALVALONA me dijo que me\nllevara GOLPE ROCA si iba a la\lRUTA 111!\p¿Mi tío? Vive enfrente de la tienda\nde bicis de MALVALONA.$
+Route111_OldLadysRestStop_Text_RestUpHere	Ay, ay, ay.\n¿No están agotados tus POKéMON?\pSi quieres, descansa aquí.\n¡Es buena idea! Deberías hacerlo.$
+Route111_OldLadysRestStop_Text_TakeYourTimeRestUp	Eso es.\n¡Descansa todo lo que quieras!$
+Route111_OldLadysRestStop_Text_StillTiredTakeAnotherRest	Ay, ay, ay.\n¿Tus POKéMON siguen cansados?\pDeberías descansar otra vez aquí.\nEs buena idea. Deberías hacerlo.$
+Route111_OldLadysRestStop_Text_DontNeedToBeShy	¿Ah, sí?\nNo hace falta que te dé vergüenza.$
+Route111_WinstrateFamilysHouse_Text_MySonIsStrongerThanYou	Eres la primera persona que veo que\nmaneja los POKéMON con tanta maestría.\pPero te lo advierto: mi hijo es\nmás fuerte que tú.\pQue sepas que hasta se ha atrevido\ncon la LIGA POKéMON.$
+Route111_WinstrateFamilysHouse_Text_LikeYouToHaveMachoBrace	Usamos este BRAZAL FIRME para\nfortalecer mejor a nuestros POKéMON\lcuando entrenan.\pComo nos has ganado a todos, no sé\nsi te hará falta, pero nos gustaría\lque te quedaras nuestro BRAZAL FIRME.$
+Route111_WinstrateFamilysHouse_Text_PassionateAboutBattles	Con los combates POKéMON nos\nsolemos poner muy apasionados.$
+Route111_WinstrateFamilysHouse_Text_StrongerFamilyMembers	Mamá es más fuerte que papá.\pYo soy más fuerte que mamá.\p¡Y la abuela es más fuerte que yo!\pPero mi hermano mayor es todavía\nmás fuerte que la abuela.$
+Route111_WinstrateFamilysHouse_Text_GrandsonStrong	No hay duda de que eres fuerte.\pPero si combatieras con mi nieto,\nacabarías llorando de rabia.\pEs muchísimo más fuerte que cualquier\nENTRENADOR que conozcamos.\pSeguro que ya está desafiando al\nCAMPEÓN de la LIGA POKéMON.\p¡Conociéndolo, puede que ya sea\nel CAMPEÓN!$
+Route111_WinstrateFamilysHouse_Text_GrandsonStrongShort	Seguro que mi nieto ya está\ndesafiando al CAMPEÓN de la LIGA.\p¡Conociéndolo, puede que ya sea\nel CAMPEÓN!$
