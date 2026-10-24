@@ -336,7 +336,7 @@ PlayersHouse_1F_Text_DidYouMeetProfBirch:
 
 PlayersHouse_1F_Text_YouShouldRestABit:
 	.string "MAMÁ: ¿Qué tal, {PLAYER}?\n"
-	.string "Pareces un poco cansado.\p"
+	.string "Te veo con poca energía.\p"
 	.string "Creo que deberías descansar un poco.$"
 
 PlayersHouse_1F_Text_TakeCareHoney:

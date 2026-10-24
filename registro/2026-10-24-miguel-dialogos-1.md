@@ -7,6 +7,8 @@ Rama: `miguel/dialogos-1`
 - Decidido: los diálogos de los mapas los traducimos nosotros por tramos, en el orden de la historia, sin el postgame.
 - `tools/dualocke/dialogos.py`: exporta el inglés, comprueba las traducciones (ancho en píxeles con la fuente del juego, códigos, `$`) y las aplica a los `.inc`.
 - Primer tramo (149 textos): presentación del PROF. ABEDUL, VILLA RAÍZ, las dos casas, el LABORATORIO, RUTA 101, PUEBLO ESCASO (con su tienda, casas y CENTRO POKéMON), la enfermera de todos los CENTROS POKéMON y RUTA 103.
+- Segundo tramo (235 textos): RUTA 102 con sus entrenadores, CIUDAD PETALIA (calles, casas, tienda, CENTRO POKéMON, casa de BLASCO), el GIMNASIO PETALIA (sin la revancha del postgame), RUTA 104 con la casa del SR. ARENQUE y sus entrenadores, y BOSQUE PETALIA.
+- Repasadas las frases con género del jugador para que valgan para chico y chica.
 - Explicación y lista de nombres en `traduccion/dialogos/LEEME.md`.
 
 ## Cómo se comprobó
@@ -17,4 +19,4 @@ Rama: `miguel/dialogos-1`
 ## Pendiente
 
 - Probarlo jugando.
-- Los siguientes tramos (RUTA 102, CIUDAD PETALIA…).
+- Los siguientes tramos (CIUDAD FÉRRICA…).
