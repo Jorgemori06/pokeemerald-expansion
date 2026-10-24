@@ -35,6 +35,7 @@
 #include "text_window.h"
 #include "tv.h"
 #include "shop_criteria.h"
+#include "dualocke_compras.h"
 #include "constants/decorations.h"
 #include "constants/event_objects.h"
 #include "constants/items.h"
@@ -158,6 +159,10 @@ static void Task_HandleShopMenuBuy(u8 taskId);
 static void Task_HandleShopMenuSell(u8 taskId);
 static void BuyMenuPrintItemDescriptionAndShowItemIcon(s32 item, bool8 onInit, struct ListMenu *list);
 static void BuyMenuPrintPriceInList(u8 windowId, u32 itemId, u8 y);
+
+// Dualocke (Items Clause): una unidad de cada objeto por tienda
+static const u8 sText_DualockeYaComprado[] = _("You've already bought one of
+these here.{PAUSE_UNTIL_PRESS}");
 
 static const struct YesNoFuncTable sShopPurchaseYesNoFuncs =
 {
@@ -1023,6 +1028,8 @@ static void Task_BuyMenu(u8 taskId)
 
             if (GetItemImportance(itemId) && (CheckBagHasItem(itemId, 1) || CheckPCHasItem(itemId, 1)))
                 BuyMenuDisplayMessage(taskId, gText_ThatItemIsSoldOut, BuyMenuReturnToItemList);
+            else if (sMartInfo.martType == MART_TYPE_NORMAL && Dualocke_YaComprado(itemId))
+                BuyMenuDisplayMessage(taskId, sText_DualockeYaComprado, BuyMenuReturnToItemList);
             else if (!IsEnoughMoney(&gSaveBlock1Ptr->money, sShopData->totalCost))
             {
                 BuyMenuDisplayMessage(taskId, gText_YouDontHaveMoney, BuyMenuReturnToItemList);
@@ -1095,6 +1102,10 @@ static void Task_BuyHowManyDialogueInit(u8 taskId)
     else
         sShopData->maxQuantity = maxQuantity;
 
+    // Dualocke: de los objetos limitados solo se puede comprar una unidad
+    if (Dualocke_IsCompraLimitada(tItemId) && sShopData->maxQuantity > 1)
+        sShopData->maxQuantity = 1;
+
     gTasks[taskId].func = Task_BuyHowManyDialogueHandleInput;
 }
 
@@ -1150,6 +1161,7 @@ static void BuyMenuTryMakePurchase(u8 taskId)
         if (AddBagItem(tItemId, tItemCount) == TRUE)
         {
             GetSetItemObtained(tItemId, FLAG_SET_ITEM_OBTAINED);
+            Dualocke_MarcarComprado(tItemId);
             RecordItemPurchase(taskId);
             BuyMenuDisplayMessage(taskId, gText_HereYouGoThankYou, BuyMenuSubtractMoney);
         }
