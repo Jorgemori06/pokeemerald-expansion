@@ -131,7 +131,7 @@ Estas son las reglas que usaban en Platino. La idea es mantenerlas lo más parec
 | Mote obligatorio | Forzar la pantalla de mote al capturar, al recibir regalos y al eclosionar huevos | Poco | **Hecho** |
 | No comprar curativos ni Objetos X | Quitarlos de las tiendas | Poco | **Hecho** |
 | No usar Objetos X en combate | Bloquearlos en combate | Poco | **Hecho** |
-| Una compra por objeto (salvo Balls, Repelentes, Bayas, Caramelos) | Limitar compras en tiendas | Medio | Pendiente |
+| Una compra por objeto (salvo Balls, Repelentes, Bayas, Caramelos) | Limitar compras en tiendas | Medio | **Hecho** (Miguel, 24/10/2026) |
 | 20 vidas + caja de muertos | Contador de vidas en el menú de pausa y caja bloqueada | Medio | **Hecho** (aviso al morir pendiente) |
 | Primera captura por ruta + dupes + sin legendarios + shiny libre + caja de prohibidos | El juego bloquea lanzar Balls cuando no se puede capturar; los regalos repetidos/legendarios van a la caja de prohibidos | Medio | Pendiente (reglas cerradas, ver arriba) |
 | Victoria, combates en Showdown, capturas extra | Fuera del juego, por honor | — | — |
@@ -216,6 +216,14 @@ Cada tienda tendrá **dos dependientes**:
 2. **Secundario:** objetos **aleatorios** (distintos en cada partida/semilla), garantizando algún objeto evolutivo. **Desde que el jugador consiga el aro**, este dependiente vende además **2-3 megapiedras aleatorias**, en todas las ciudades, incluidas las ya visitadas.
 
 Regla de compra: una unidad de cada objeto por tienda, salvo Balls, Repelentes, Bayas y Caramelos Raros.
+
+**Una compra por objeto (hecho, Miguel, 24/10/2026):**
+
+- En cada tienda, de cada objeto que no sea Ball, Repelente, Baya, Caramelo Raro o Cuerda Huida **solo se puede comprar una unidad**. La cantidad máxima es 1, y si vuelves a elegirlo sale "You've already bought one of these here.".
+- **Es por tienda:** el mismo objeto se puede comprar otra vez en otra ciudad que también lo venda.
+- `tools/dualocke/compras_limitadas.py` genera la tabla de parejas (tienda, objeto) en `src/data/dualocke_compras.h` a partir de las listas de las tiendas. Ahora son 86 en 15 tiendas. **Hay que relanzarlo si se cambian las listas.**
+- Lo comprado se guarda en 6 variables (`VAR_DUALOCKE_COMPRAS_0`-`5`, 0x4083-0x40A1), un bit por pareja.
+- Código: `src/dualocke_compras.c` y tres enganches en `src/shop.c` (al elegir, en la cantidad y al pagar).
 
 **Contenido del dependiente principal (hecho, Miguel, 23/10/2026):**
 
