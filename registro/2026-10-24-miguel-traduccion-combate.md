@@ -17,6 +17,7 @@ Rama: `miguel/traduccion-combate`
 - Nombres: Wally es BLASCO y Lanette es AREDIA, como en la Esmeralda española.
 
 - **Nombres en el juego:** se juntó aquí la rama de las tablas de nombres (PR #22). Se decidieron las abreviaturas y los nombres que faltaban (`traduccion/nombres/decididos.csv`) y se aplicaron con `tools/dualocke/aplicar_nombres.py`: 929 movimientos, 866 objetos, 314 habilidades, los tipos, las 25 naturalezas y los Pokémon cuyo nombre cambia. `TYPE_NAME_LENGTH` pasa de 8 a 9 (Eléctrico, Siniestro). En español no hay plural de objetos.
+- **Descripciones:** 874 movimientos, 786 objetos y 306 habilidades (`traduccion/descripciones/`). Se usa el texto oficial cuando cabe (unas 260) y el resto lo traducimos desde el inglés del juego, porque las oficiales modernas no caben en los recuadros. Las aplica `tools/dualocke/aplicar_descripciones.py`.
 
 ## Cómo se comprobó
 
@@ -33,4 +34,4 @@ Rama: `miguel/traduccion-combate`
 - Probarlo jugando: frases raras, textos que no caben.
 - Respuesta del autor de Heart & Soul (Miguel le escribe por Twitter/X).
 - Los 15 objetos con nombre provisional se quedan fuera del juego (excluidos también del randomizer).
-- Descripciones de movimientos, objetos y habilidades, y entradas de la Pokédex.
+- Entradas de la Pokédex.
