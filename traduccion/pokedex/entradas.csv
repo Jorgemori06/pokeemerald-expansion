@@ -1,0 +1,1285 @@
+constante,espanol,origen
+SPECIES_ABOMASNOW,"Posee la capacidad de generar ventiscas. Si agita su enorme cuerpo, el terreno circundante queda inmediatamente cubierto de nieve.",oficial
+SPECIES_ABOMASNOW_MEGA,Sus brotes se vuelven grandes pilares de hielo al megaevolucionar. Prefiere vivir solo en la montaña.,propia
+SPECIES_ABRA,"Puede teletransportarse mientras duerme. Se dice que, cuanto más profundo sea su sueño, mayor será la distancia a la que se desplace.",oficial
+SPECIES_ABSOL,"Debido a su capacidad para predecir desastres, se lo ha considerado desacertadamente un Pokémon portador de desgracias.",oficial
+SPECIES_ABSOL_MEGA,Al llenarse de energía se le eriza el pelo. Lo de su espalda no son alas de verdad; no puede volar.,propia
+SPECIES_ABSOL_MEGA_Z,"Con su pelo en forma de garras afiladas derriba al rival de un golpe, para que no sufra.",propia
+SPECIES_ACCELGOR,"Tras deshacerse del caparazón, su agilidad ha aumentado. Las membranas que le recubren el cuerpo evitan que se deshidrate.",oficial
+SPECIES_AEGISLASH_BLADE,"Hace mucho, un rey con un Aegislash gobernó la región. Su Pokémon le absorbió la vida y el reino cayó.",propia
+SPECIES_AEGISLASH_SHIELD,"Mediante el control ejercido con su inmenso poder espectral, logró que humanos y Pokémon le forjaran un país a medida de sus necesidades.",oficial
+SPECIES_AERODACTYL,"Sus colmillos, afilados como sierras, pueden hacer trizas incluso la piel de Pokémon de tipo Acero.",oficial
+SPECIES_AERODACTYL_MEGA,La megaevolución ha restaurado del todo sus genes. Las rocas de su cuerpo son más duras que el diamante.,propia
+SPECIES_AGGRON,"En la antigüedad, hubo un monarca que llevaba un casco hecho a imagen de Aggron para que le otorgase fuerza.",oficial
+SPECIES_AGGRON_MEGA,"Al megaevolucionar, sus cuernos pueden convertir un tanque blindado en chatarra.",propia
+SPECIES_AIPOM,"Sube a las copas de los árboles para buscar presas. Si encuentra un Bounsweet, su manjar predilecto, se alboroza y se abalanza sobre él.",oficial
+SPECIES_ALAKAZAM,"Posee unos poderes psíquicos extraordinarios con los que, según se dice, creó las cucharas que lleva en las manos.",oficial
+SPECIES_ALAKAZAM_MEGA,Ha cambiado sus músculos por poder psíquico. Ahora puede prever todo lo que va a pasar.,propia
+SPECIES_ALCREMIE_GMAX,La nata que le brota de las manos es más dulce y sustanciosa cuando está feliz.,oficial
+SPECIES_ALOMOMOLA,Se cree que ayuda a los Pokémon heridos y debilitados de forma que los depredadores naturales de estos no le ataquen a él también.,oficial
+SPECIES_ALTARIA,"Es de carácter amable, pero, si monta en cólera, intimidará al oponente con estridentes chillidos y atacará sin piedad.",oficial
+SPECIES_ALTARIA_MEGA,Canta aún más bonito que antes. Sus plumas han crecido para protegerse y brillan con reflejos.,propia
+SPECIES_AMAURA,Un Pokémon prehistórico extinto. Se han hallado algunos ejemplares conservados bajo el hielo.,oficial
+SPECIES_AMBIPOM,Utiliza las dos colas para todo. Cuando abraza a alguien con ellas significa que esa persona se ha ganado por completo su confianza.,oficial
+SPECIES_AMOONGUSS,Por lo general no se mueve demasiado. Suele permanecer quieto al lado de Poké Balls que haya por el suelo.,oficial
+SPECIES_AMPHAROS,Su cola emite un brillo claro e intenso. Se lo venera desde tiempos remotos como guía de los marineros.,oficial
+SPECIES_AMPHAROS_MEGA,Una enorme energía estimuló sus células y despertó la sangre de dragón que tenía dormida.,propia
+SPECIES_ANNIHILAPE,"Cuando su ira supera cierto límite, obtiene un poder que no conoce los límites de su cuerpo.",propia
+SPECIES_ANORITH,Puede nadar rápidamente gracias a sus ocho alas que usa a modo de remo. Es uno de los antepasados de los Pokémon insecto.,oficial
+SPECIES_APPLETUN,Su cuerpo está recubierto de néctar. La piel de la espalda es tan dulce que los niños de antaño solían tomarla como merienda.,oficial
+SPECIES_APPLIN,"Nada más nacer se refugia en una manzana, cuyo interior va devorando a medida que crece. El sabor de la fruta determina la evolución.",oficial
+SPECIES_ARBOK,Se han llegado a identificar hasta seis variaciones distintas de los espeluznantes dibujos de su piel.,oficial
+SPECIES_ARBOLIVA,Ahuyenta a sus enemigos lanzándoles su aceite aromático con fuerza para romper una roca.,propia
+SPECIES_ARCANINE,Muchos han quedado cautivados por su belleza desde la antigüedad. Corre ágilmente como si tuviera alas.,oficial
+SPECIES_ARCANINE_HISUI,"Muerde con colmillos en llamas. Pese a su tamaño, esquiva con agilidad y despista a sus rivales.",propia
+SPECIES_ARCHALUDON,Recoge electricidad estática a su alrededor. Los rayos que lanza a cuatro patas son potentísimos.,propia
+SPECIES_ARCHEN,Se dice que es el antepasado de los Pokémon pájaro. Vivía en las copas de los árboles y se alimentaba de bayas y Pokémon insecto.,oficial
+SPECIES_ARCHEOPS,"Si bien era capaz de volar, parece ser que se le daba mucho mejor cazar presas en tierra firme que en el aire.",oficial
+SPECIES_ARCTIBAX,Congela el aire para protegerse la cara con una máscara de hielo y volver su aleta una cuchilla.,propia
+SPECIES_ARCTOVISH,"Aunque la piel de su rostro era capaz de resistir cualquier ataque, su dificultad para respirar acabó provocando su extinción.",oficial
+SPECIES_ARCTOZOLT,"Antiguamente vivía en el mar y usaba el hielo del cuerpo para conservar los alimentos. Su extrema lentitud, sin embargo, lo condenó a la extinción.",oficial
+SPECIES_ARIADOS,"Captura a sus presas con el hilo que segrega. Al caer la noche, abandona su tela y sale a cazar activamente.",oficial
+SPECIES_ARMALDO,"Vive en tierra firme, pero es un hábil nadador. Se zambulle en el agua en busca de presas y las atrapa con sus afiladas pinzas.",oficial
+SPECIES_ARMAROUGE,Evolucionó con la armadura de un guerrero ilustre. Es increíblemente leal.,propia
+SPECIES_AROMATISSE,Puede emanar tanto un olor desagradable para desmotivar al rival como un dulce aroma para reconfortar a los aliados en combate.,oficial
+SPECIES_ARON,Antiguamente se recogía la coraza de acero que este Pokémon desprende al evolucionar y se empleaba para distintos usos.,oficial
+SPECIES_ARROKUDA,"Cuando tiene el estómago lleno, le cuesta moverse y corre el riesgo de ser engullido por algún Cramorant.",oficial
+SPECIES_ARTICUNO,Posee el poder de controlar el hielo a su antojo. Se dice que este Pokémon habita en montañas de nieves perpetuas.,oficial
+SPECIES_ARTICUNO_GALAR,Lanza rayos que inmovilizan como si congelaran. Sus plumas psíquicas cortan el hierro como papel.,propia
+SPECIES_AUDINO,Un Pokémon gentil que es capaz de comprender los sentimientos y averiguar el estado de salud de todo aquel que toque con sus antenas.,oficial
+SPECIES_AUDINO_MEGA,Emite un pulso calmante que reduce la hostilidad. Quien toca sus segundas antenas cae en un sueño profundo.,propia
+SPECIES_AURORUS,"Cuando se deja llevar por la ira, emite un vaho extremadamente gélido que lo congela todo a su alrededor.",oficial
+SPECIES_AVALUGG,"Las fisuras de su cuerpo se agrandan durante el día, pero por la noche vuelven a cerrarse.",oficial
+SPECIES_AVALUGG_HISUI,La coraza de hielo de su mandíbula es más dura que el acero y rompe rocas con facilidad.,propia
+SPECIES_AXEW,"Juega con sus congéneres chocando sus enormes colmillos con la tranquilidad de saber que, si se le rompen, se regenerarán enseguida.",oficial
+SPECIES_AZELF,"Se cree que Uxie, Mesprit y Azelf provienen del mismo huevo.",oficial
+SPECIES_AZUMARILL,Crea burbujas llenas de aire con las que cubre a los Azurill cuando juegan en el río.,oficial
+SPECIES_AZURILL,"Es un Pokémon tranquilo, pero, si se le hace enfadar, atacará utilizando la enorme bola que tiene en la cola.",oficial
+SPECIES_BAGON,"Vive en solitario, sin formar manadas, y posee una cabeza dura como la piedra que le permite hacer añicos rocas enormes de un solo golpe.",oficial
+SPECIES_BALTOY,Fue hallado en unas ruinas antiguas. Se desplaza girando sobre sí mismo y se mantiene sobre una extremidad incluso cuando duerme.,oficial
+SPECIES_BANETTE,El rencor de haber sido tirado a la basura fue lo que le dio vida. Se dice que puede convertirse de nuevo en muñeco si se le trata con cariño.,oficial
+SPECIES_BANETTE_MEGA,Una energía extraordinaria potencia tanto su maldición que no puede evitar maldecir a su Entrenador.,propia
+SPECIES_BARBARACLE,"Los ojos de las manos le permiten ver en todas direcciones. En caso de apuro, sus extremidades se mueven solas para derribar al enemigo.",oficial
+SPECIES_BARBARACLE_MEGA,Juega con sus rivales usando sus muchos brazos. Eso tiene muy ocupada a la cabeza.,propia
+SPECIES_BARBOACH,Examina los lechos lodosos de los ríos con los largos bigotes que tiene. Está protegido por una capa viscosa.,oficial
+SPECIES_BARRASKEWDA,"Hace girar su aleta caudal para impulsarse y arremeter contra la presa, a la que ensarta a una velocidad que supera los 100 nudos.",oficial
+SPECIES_BASCULEGION_F,Las almas de sus compañeros lo envuelven y lo impulsan sin esfuerzo por los rápidos.,propia
+SPECIES_BASCULEGION_M,Se viste con las almas de compañeros que murieron sin llegar río arriba. No hay rival para él en Hisui.,propia
+SPECIES_BASCULIN_BLUE_STRIPED,Forma bancos con los de su color. Su mayor enemigo es un banco de Basculin rojos. Tiene un sabor suave.,propia
+SPECIES_BASCULIN_RED_STRIPED,Un alimento básico de la dieta de antaño. A los jóvenes se les daba Basculin de raya roja por su alto contenido en ácidos grasos.,oficial
+SPECIES_BASCULIN_WHITE_STRIPED,"Esta forma antigua de Basculin se parece a las demás, pero es mucho más tranquila.",propia
+SPECIES_BASTIODON,"Un Pokémon con una antigüedad de unos cien millones de años. Su rostro posee una dureza impresionante, superior incluso a la del acero.",oficial
+SPECIES_BAXCALIBUR,Se lanza al combate dándose la vuelta y soltando aire helado. Remata al rival con su aleta.,propia
+SPECIES_BAXCALIBUR_MEGA,Su aleta ha crecido aún más con la megaevolución. Dispara rayos desde la empuñadura de su pecho.,propia
+SPECIES_BAYLEEF,Su cuello desprende un dulce aroma que anima a quien lo huele.,oficial
+SPECIES_BEARTIC,"Nada plácidamente en mares fríos. Cuando se cansa, congela el agua con su aliento y reposa sobre el hielo.",oficial
+SPECIES_BEAUTIFLY,Es un Pokémon agresivo. Con su boca larga y afilada ataca a sus rivales para drenar sus fluidos.,oficial
+SPECIES_BEEDRILL,"Tiene tres aguijones venenosos, dos en las patas anteriores y uno en la parte baja del abdomen, con los que ataca a sus enemigos una y otra vez.",oficial
+SPECIES_BEEDRILL_MEGA,Sus patas son ahora aguijones venenosos. Pincha a su presa sin parar y la remata con el aguijón trasero.,propia
+SPECIES_BEHEEYEM,Es capaz de manipular los recuerdos del rival. Se lo avista en ocasiones vagando por campos de trigo.,oficial
+SPECIES_BELDUM,"Las células de su cuerpo están hechas de imanes. En lugar de sangre, una fuerza magnética recorre su cuerpo.",oficial
+SPECIES_BELLIBOLT,"Al estirar y encoger su cuerpo, la dinamo de su ombligo produce muchísima electricidad.",propia
+SPECIES_BELLOSSOM,"Los Bellossom se reúnen en ocasiones para ejecutar una especie de danza, considerada un ritual para invocar al sol.",oficial
+SPECIES_BELLSPROUT,Prefiere lugares cálidos y húmedos. Atrapa pequeños Pokémon insectos con sus lianas para devorarlos.,oficial
+SPECIES_BERGMITE,Vive en regiones sumamente frías. Se aferra al lomo de los Avalugg congelando sus propias extremidades.,oficial
+SPECIES_BEWEAR,"Después de abatir a su presa con movimientos que harían palidecer a un luchador profesional, la carga en brazos y se la lleva a su madriguera.",oficial
+SPECIES_BIBAREL,"Para anidar, crea presas en los ríos con maderas y barro. Tiene fama de trabajador.",oficial
+SPECIES_BIDOOF,Roe constantemente los troncos y las rocas para limarse los dientes. Anida cerca del agua.,oficial
+SPECIES_BINACLE,"Si no se llevan bien, no consiguen ni atacar ni defenderse de forma eficaz y sus probabilidades de supervivencia se reducen.",oficial
+SPECIES_BISHARP,Libra encarnizados combates con los Fraxure por el control de los emplazamientos donde se hallan las piedras con las que afila sus cuchillas.,oficial
+SPECIES_BLACEPHALON,Un Ultraente surgido de un Ultraumbral. Crea una explosión para sorprender al oponente y aprovecha para absorber su energía vital.,oficial
+SPECIES_BLASTOISE,"Dispara chorros de agua a través de los cañones de su caparazón, capaces de agujerear incluso el acero.",oficial
+SPECIES_BLASTOISE_MEGA,El cañón de su espalda es tan potente como el de un tanque. Su espalda y sus patas aguantan el retroceso.,propia
+SPECIES_BLAZIKEN,"Ante un rival difícil, expulsa llamas por las muñecas. Tiene mucha fuerza en las patas; hasta puede saltar edificios.",oficial
+SPECIES_BLAZIKEN_MEGA,"Cuando da una lluvia de patadas, sus piernas arden por el roce con el aire. Está muy orgulloso de ellas.",propia
+SPECIES_BLIPBUG,Es habitual verlo en el campo. Los pelos que tiene son sensores con los que percibe lo que ocurre a su alrededor.,oficial
+SPECIES_BLISSEY,Pone unos extraños huevos llenos de felicidad. Dicen que aquellos que los prueban se vuelven amables con todo el mundo.,oficial
+SPECIES_BLITZLE,Su crin brilla cuando emite una descarga eléctrica. Se comunica con los suyos mediante el ritmo y el número de brillos.,oficial
+SPECIES_BOLDORE,"Se vale del sonido para percibir el entorno. Si alguien despierta su ira, lo perseguirá sin cambiar la orientación del cuerpo.",oficial
+SPECIES_BOLTUND,La electricidad le confiere una enorme fuerza en las patas. Su velocidad punta puede superar los 90 km/h sin problema.,oficial
+SPECIES_BOMBIRDIER,Envuelve la comida con su delantal y la lleva al nido. Le encanta tirar cosas que hagan mucho ruido.,propia
+SPECIES_BONSLY,"Vive en entornos áridos y pedregosos. Cuanto más se secan sus esferas verdes, más destaca su sutil lustre.",oficial
+SPECIES_BOUFFALANT,"Forman manadas de unos veinte individuos. Se desconoce el motivo, pero los que traicionan la confianza del grupo pierden la melena.",oficial
+SPECIES_BOUNSWEET,"Cuando lo atacan, produce un sudor dulce y delicioso cuyo aroma atrae a más enemigos.",oficial
+SPECIES_BRAIXEN,"Al extraer la rama que tiene en la cola, esta prende debido a la fricción. Usa esa rama candente para enviar señales a sus compañeros.",oficial
+SPECIES_BRAMBLEGHAST,"Abre las ramas de su cabeza para envolver a su presa. Cuando le saca la energía, la suelta.",propia
+SPECIES_BRAMBLIN,Un alma que no pudo ir al más allá voló con el viento hasta enredarse en hierba seca y volverse Pokémon.,propia
+SPECIES_BRAVIARY,Su carácter agresivo e irascible le ha hecho perder su puesto como transportista en Galar en favor de los Corviknight.,oficial
+SPECIES_BRAVIARY_HISUI,"Lanzando un grito de guerra escalofriante, esta enorme y feroz ave sale a cazar.",propia
+SPECIES_BRELOOM,Esparce esporas venenosas muy nocivas y asesta puñetazos de gran intensidad a sus enemigos.,oficial
+SPECIES_BRIONNE,"Las noches en las que el mar está en calma, baila junto a sus congéneres al compás del canto de su líder, Primarina.",oficial
+SPECIES_BRONZONG,"Basándose en los motivos de su cuerpo, muchos eruditos creen que este Pokémon no es originario de Galar.",oficial
+SPECIES_BRONZOR,"Se dice que brilla y refleja la verdad al pulirlo, aunque es algo que detesta.",oficial
+SPECIES_BRUTE_BONNET,Se parece a un Pokémon que una revista dudosa describió como mezcla de dinosaurio y seta.,propia
+SPECIES_BRUXISH,Su piel es tan gruesa que ni las espinas de Mareanie pueden perforarla. Con su fuerte dentadura tritura y engulle dichas espinas.,oficial
+SPECIES_BUDEW,Es muy sensible a los cambios de temperatura. Anuncia la llegada inminente de la primavera cuando florece.,oficial
+SPECIES_BUIZEL,Hincha el flotador de su cuello para flotar y saca la cabeza de la superficie del agua para explorar sus alrededores.,oficial
+SPECIES_BULBASAUR,"Desde que nace, crece alimentándose de los nutrientes que contiene la semilla de su lomo.",oficial
+SPECIES_BUNEARY,"Ataca estirando con un fuerte impulso las orejas enrolladas. Cuanto más entrena esta técnica, con más potencia la ejecuta.",oficial
+SPECIES_BUNNELBY,"Está en alerta permanente. En cuanto oye el batir de alas de un Corviknight, cava un agujero y se oculta bajo tierra.",oficial
+SPECIES_BURMY_PLANT,"Si su caparazón se rompe en combate, lo rehace rápidamente con lo que tenga a mano.",oficial
+SPECIES_BURMY_SANDY,"Teje una capa de arena, barro y seda. El viento y la lluvia la estropean, así que se esconde en cuevas.",propia
+SPECIES_BURMY_TRASH,"Si no tiene otros materiales, hace su capa con polvo y basura. Parece más cómoda de lo que se cree.",propia
+SPECIES_BUTTERFREE,Recoge néctar a diario y se lo adhiere al pelo de las patas para llevarlo a su nido.,oficial
+SPECIES_BUZZWOLE,Uno de los Ultraentes. Posee una musculatura excesivamente desarrollada.,oficial
+SPECIES_CACNEA,"Prefiere los medios hostiles como los desiertos. Puede sobrevivir 30 días sin beber, gracias al agua que almacena.",oficial
+SPECIES_CACTURNE,Persiguen en grupo a los viajeros del desierto y los acechan hasta que el cansancio los agote.,oficial
+SPECIES_CALYREX,Legendario monarca del antiguo Galar. Posee el poder de sanar el espíritu y de hacer brotar la vegetación.,oficial
+SPECIES_CALYREX_ICE,"Según la leyenda, no tenía piedad con quien se cruzaba en su camino, pero curaba al rival tras luchar.",propia
+SPECIES_CALYREX_SHADOW,Se dice que Calyrex y un Pokémon unido a él recorrieron Galar llevando el verde a las tierras yermas.,propia
+SPECIES_CAMERUPT,"Las jorobas de Camerupt se originaron por una deformación de los huesos. A veces escupen magma líquido, sobre todo cuando el Pokémon se enfada.",oficial
+SPECIES_CAMERUPT_MEGA,Sus jorobas son ahora un gran volcán muy activo. Odia el agua y tiene un carácter explosivo.,propia
+SPECIES_CAPSAKID,"Cuanto más sol toma, más sustancias picantes produce y más pican sus movimientos.",propia
+SPECIES_CARBINK,Se cree que en algún lugar de este mundo existe un filón rebosante de Carbink que viven bajo las órdenes de una reina.,oficial
+SPECIES_CARKOL,Forma carbón en el interior de su cuerpo. Los antiguos habitantes de Galar lo aprovechaban para sus labores diarias.,oficial
+SPECIES_CARNIVINE,Se cuelga de los árboles en los pantanos. Atrae a sus presas con su dulce olor y las engulle.,oficial
+SPECIES_CARRACOSTA,"Aunque se mueva con mayor lentitud sobre la superficie terrestre que en el agua, emerge a tierra en busca de presas.",oficial
+SPECIES_CARVANHA,Los marineros evitan por completo las zonas donde habita este Pokémon de afilados colmillos y fuertes mandíbulas.,oficial
+SPECIES_CASCOON,"Jamás olvida a quienes lo atacaron mientras estaba en su capullo. Cuando evoluciona, busca venganza.",oficial
+SPECIES_CASTFORM_NORMAL,"El tiempo atmosférico cambia tanto su aspecto como su estado de ánimo. Cuanto más arrecia, más agresivo se vuelve.",oficial
+SPECIES_CASTFORM_RAINY,Toma esta forma cuando llueve. Bajo una ducha no cambia. Su cuerpo está blando e hinchado de agua.,propia
+SPECIES_CASTFORM_SNOWY,Toma esta forma con granizo. Dentro de un congelador no cambia. Su piel es fría y lisa como el hielo.,propia
+SPECIES_CASTFORM_SUNNY,Toma esta forma en los días soleados. Junto a una estufa no cambia. Su cuerpo está calentito.,propia
+SPECIES_CATERPIE,Sus cortas patas están recubiertas de ventosas que le permiten subir incansable por muros y cuestas.,oficial
+SPECIES_CELEBI,"Vino del futuro haciendo un viaje en el tiempo. Además de curar las heridas, posee la capacidad de revitalizar la hierba y los árboles.",oficial
+SPECIES_CELESTEELA,"Para los seres de este mundo resulta extraño y peligroso, pero en el mundo del que procede es una criatura muy común.",oficial
+SPECIES_CENTISKORCH,"Posee una naturaleza agresiva. El peligro que entraña su cuerpo candente es considerable, aunque sus afilados colmillos no le van a la zaga.",oficial
+SPECIES_CERULEDGE,Sus espadas arden con el rencor de un espadachín que murió sin cumplir su objetivo.,propia
+SPECIES_CETITAN,La energía de hielo se acumula en su cuerno y lo enfría tanto que congela todo a su alrededor.,propia
+SPECIES_CETODDLE,Dejó el océano para vivir en tierra hace muchísimo tiempo. Parece emparentado con Wailmer.,propia
+SPECIES_CHANDELURE,"Cuentan que, en las mansiones donde se usaba para la iluminación, los funerales se sucedían de forma incesante.",oficial
+SPECIES_CHANDELURE_MEGA,Uno de sus ojos une nuestro mundo con el más allá. Atrae el odio y lo convierte en poder.,propia
+SPECIES_CHANSEY,"Este Pokémon solía ser lento de reflejos, pero ha desarrollado una gran velocidad para evitar que le roben sus preciados huevos.",oficial
+SPECIES_CHARCADET,Un carbón quemado cobró vida. Tiene un espíritu de lucha ardiente y se enfrenta a rivales duros.,propia
+SPECIES_CHARIZARD,Sus potentes alas le permiten volar a una altura de 1400 m. Escupe llamaradas que llegan a alcanzar temperaturas elevadísimas.,oficial
+SPECIES_CHARIZARD_MEGA_X,El inmenso poder que llena su cuerpo lo vuelve negro y crea intensas llamas azules.,propia
+SPECIES_CHARIZARD_MEGA_Y,Su poder nace del vínculo con su Entrenador. Es más rápido y ágil que un avión de combate.,propia
+SPECIES_CHARJABUG,"Al digerir la hojarasca de la que se alimenta, genera energía eléctrica que almacena en la bolsa que posee para tal efecto.",oficial
+SPECIES_CHARMANDER,"Este Pokémon nace con una llama en la punta de la cola. Si se le apagara, fallecería.",oficial
+SPECIES_CHARMELEON,"Si se exalta en combate, expulsa intensas llamaradas que incineran todo a su alrededor.",oficial
+SPECIES_CHATOT,"Puede imitar el lenguaje humano. Si se juntan varios, todos aprenden las mismas palabras.",oficial
+SPECIES_CHERRIM_OVERCAST,"Al cerrarse, sus pétalos son tan duros que resultan inmunes a los picotazos de los Pokémon pájaro.",oficial
+SPECIES_CHERRIM_SUNSHINE,"Toma esta forma en días soleados. Su aroma atrae a los Bicho. Si el sol se esconde, se cierra.",propia
+SPECIES_CHERUBI,"Cuanto más rojo sea su cuerpo, más dulce y deliciosa será su pequeña esfera repleta de nutrientes.",oficial
+SPECIES_CHESNAUGHT,"Cuando adopta una postura defensiva juntando ambos puños delante de la cara, es capaz de resistir incluso el impacto directo de una bomba.",oficial
+SPECIES_CHESNAUGHT_MEGA,Tiene una armadura reforzada y una voluntad de defender a toda costa. Ambas son durísimas.,propia
+SPECIES_CHESPIN,La robusta coraza que le recubre la cabeza y la espalda lo protege de tal manera que podría chocar contra un camión y permanecer impasible.,oficial
+SPECIES_CHEWTLE,"El cuerno que tiene en la cabeza es duro como una roca. Lo usa para atacar al rival y, cuando este baja la guardia, lo muerde y no lo suelta.",oficial
+SPECIES_CHIEN_PAO,Controla 100 toneladas de nieve. Juega con inocencia saltando por los aludes que provoca.,propia
+SPECIES_CHIKORITA,Con la hoja de su cabeza puede medir la temperatura y la humedad. Le encanta tomar el sol.,oficial
+SPECIES_CHIMCHAR,El fuego que arde en su cola lo generan los gases de su estómago y disminuye cuando está débil.,oficial
+SPECIES_CHIMECHO,Emite ondas ultrasónicas que le permiten flotar en el viento para viajar grandes distancias.,oficial
+SPECIES_CHIMECHO_MEGA,Vibra todo el cuerpo para atacar con ondas sonoras. Quien las oye se confunde y olvida quién es.,propia
+SPECIES_CHINCHOU,"En el oscuro fondo del océano, su único modo de comunicarse son las luces parpadeantes que emite por las antenas.",oficial
+SPECIES_CHINGLING,"Tiene una esfera en la boca. Cuando salta, la esfera rebota y emite un tintineo.",oficial
+SPECIES_CHI_YU,Controla llamas de casi 3000 grados. Nada tan tranquilo por el mar de lava que crea.,propia
+SPECIES_CINCCINO,Su pelaje está recubierto por una grasa especial que repele los ataques enemigos y por la que se llegan a pagar auténticas fortunas.,oficial
+SPECIES_CINDERACE,"Destaca tanto en ataque como en defensa. Se crece cuando recibe una ovación, pero a veces se luce tanto que termina viéndose en apuros.",oficial
+SPECIES_CLAMPERL,"La perla que contiene vale un potosí. De hecho, su precio puede llegar a ser incluso más de diez veces superior al de la perla de Shellder.",oficial
+SPECIES_CLAUNCHER,Acalla a sus enemigos con balas de agua que dispara haciendo explotar el gas de su pinza derecha.,oficial
+SPECIES_CLAWITZER,Con el cañón de su brazo derecho dispara proyectiles de agua marina con tanta potencia que son capaces de hundir un petrolero.,oficial
+SPECIES_CLAYDOL,Dicen que surgió de una figurilla de barro hecha por una antigua civilización. Usa telequinesia para levitar y moverse.,oficial
+SPECIES_CLEFABLE,Su oído es tan fino que puede percibir cómo cae una aguja a 1 km de distancia. Por eso suele habitar en lugares tranquilos.,oficial
+SPECIES_CLEFABLE_MEGA,Vuela usando el poder de la luz de la luna para controlar la gravedad a su alrededor.,propia
+SPECIES_CLEFAIRY,"Su adorable grito y comportamiento lo hacen muy popular. Sin embargo, raramente se avista.",oficial
+SPECIES_CLEFFA,"Por su inusual forma estrellada, la gente cree que procede de un meteorito que cayó a la tierra.",oficial
+SPECIES_CLOBBOPUS,"Su inteligencia es similar a la de un niño de tres años. Sus tentáculos se desprenden a menudo, pero ni se inmuta, ya que se regeneran solos.",oficial
+SPECIES_CLODSIRE,"Si le atacan, saca gruesas púas de su cuerpo. Es un movimiento arriesgado en el que lo apuesta todo.",propia
+SPECIES_CLOYSTER,"Una vez que ha cerrado la concha, es imposible abrirla, independientemente de la fuerza que se ejerza.",oficial
+SPECIES_COALOSSAL,"Cuando se enzarza en un combate, la montaña de carbón arde al rojo vivo y esparce chispas que calcinan todo lo que le rodea.",oficial
+SPECIES_COBALION,Un líder nato. Incluso los Pokémon más agresivos se muestran dóciles en su presencia.,oficial
+SPECIES_COFAGRIGUS,Aparece representado en los muros de antiguas sepulturas como símbolo de riqueza de reyes de antaño.,oficial
+SPECIES_COMBEE,Recolecta néctar de sol a sol para entregarlo a la colonia y a Vespiquen.,oficial
+SPECIES_COMBUSKEN,"Al pelear, el fuego de su interior se intensifica. Es capaz de propinar unas patadas demoledoras.",oficial
+SPECIES_COMFEY,"Este Pokémon libera una agradable fragancia, que varía de individuo a individuo debido a que cada uno se engalana con flores diferentes.",oficial
+SPECIES_CONKELDURR,"Cuando decide ponerse en serio, suelta sus pilares de hormigón y se abalanza sobre el rival con solo un puño como arma.",oficial
+SPECIES_COPPERAJAH,Viven en manadas. La fuerza prensil de su trompa es tan extraordinaria que le permite hacer añicos incluso grandes rocas.,oficial
+SPECIES_CORPHISH,"Si bien procede del extranjero, ahora se halla en estado salvaje. Puede vivir hasta en los ríos más sucios.",oficial
+SPECIES_CORSOLA,Habita en mares cálidos. Antiguamente vivían en las aguas costeras de Galar un gran número de ejemplares.,oficial
+SPECIES_CORSOLA_GALAR,Un antiguo Corsola extinto por el cambio climático. Con sus ramas absorbe la vida de los demás.,propia
+SPECIES_CORVIKNIGHT,"Debido a su excelente capacidad de vuelo y a su gran inteligencia, ejerce de taxi volador en Galar.",oficial
+SPECIES_CORVISQUIRE,"Tras haber librado combates muy duros, ha desarrollado la habilidad de determinar con precisión la fuerza de su adversario.",oficial
+SPECIES_COSMOEM,Absorbe impetuoso polvo de la atmósfera y pone todo su empeño en crear en su núcleo la energía necesaria para evolucionar.,oficial
+SPECIES_COSMOG,"Su escasa prudencia y gran curiosidad lo llevan a menudo a ponerse en peligro. En caso de apuro, se teletransporta para huir.",oficial
+SPECIES_COTTONEE,"Combinando los algodones de los Cottonee y Eldegoss se obtiene una tela exquisita, que usan las marcas más exclusivas.",oficial
+SPECIES_CRABOMINABLE,No se lo piensa dos veces a la hora de zurrar. Se tiene constancia de que sus puñetazos frenéticos han llegado a detener aludes.,oficial
+SPECIES_CRABOMINABLE_MEGA,"Pulveriza el hormigón con un leve golpe de sus puños, cubiertos de una gruesa capa de hielo.",propia
+SPECIES_CRABRAWLER,"A veces trepa por Exeggutor al confundirlo con una palmera de verdad. Este, presa de la ira, se desembaraza de él a sacudidas y lo pisotea.",oficial
+SPECIES_CRADILY,Atrapa a sus presas con los tentáculos y enseguida las disuelve con sus jugos gástricos para absorber los nutrientes.,oficial
+SPECIES_CRAMORANT,"Traga Arrokuda enteros debido a su glotonería, tan notable que en ocasiones ingiere hasta otros Pokémon sin querer.",oficial
+SPECIES_CRAMORANT_GORGING,"Se le ha atascado un Pikachu en el buche. Se ahoga un poco, pero no le importa mucho.",propia
+SPECIES_CRAMORANT_GULPING,"Por glotón intentó tragarse un Arrokuda entero, y se le ha quedado atascado en la garganta.",propia
+SPECIES_CRANIDOS,Se caracteriza por la dureza de su cráneo. Derribaba árboles a cabezazos para comerse las bayas maduras que colgaban de ellos.,oficial
+SPECIES_CRAWDAUNT,"Le encanta pelear, debido a su naturaleza. Si alguien se acerca a su madriguera, le propinará una paliza sin ningún tipo de miramiento.",oficial
+SPECIES_CRESSELIA,"Si alguien se duerme con una pluma suya, tendrá sueños maravillosos. Encarna el creciente lunar.",oficial
+SPECIES_CROAGUNK,Su veneno posee propiedades medicinales si se diluye. Se ha vuelto muy popular desde que una empresa farmacéutica lo adoptó como mascota.,oficial
+SPECIES_CROBAT,Controla de forma independiente cada una de sus cuatro alas. Puede revolotear por cuevas estrechas sin aminorar la velocidad.,oficial
+SPECIES_CROCALOR,Su energía ígnea y su vitalidad desbordante han creado una bola de fuego con forma de huevo en su cabeza.,propia
+SPECIES_CROCONAW,"Cuando muerde algo, no lo suelta hasta que pierde sus colmillos. Estos se regeneran rápidamente.",oficial
+SPECIES_CRUSTLE,"Su arma más potente son sus gruesas pinzas, tan duras que pueden abrir una brecha incluso en el Protector de Rhyperior.",oficial
+SPECIES_CRYOGONAL,"Cuando aumenta su temperatura corporal, se convierte en vapor, por lo que es muy difícil de avistar durante el verano.",oficial
+SPECIES_CUBCHOO,"Antes de ejecutar un movimiento, se sorbe los mocos. El frío intenso de estos constituye la base de sus movimientos de tipo Hielo.",oficial
+SPECIES_CUBONE,"Lleva puesto el cráneo de su difunta madre. A veces llora en sueños, pero cada lágrima vertida le hace más fuerte.",oficial
+SPECIES_CUFANT,"Realiza tareas que requieren de esfuerzo físico, es su fuerte. Con la lluvia, su cuerpo de cobre se oxida y adquiere una tonalidad verde intensa.",oficial
+SPECIES_CURSOLA,"Conviene tener cuidado con el cuerpo espectral que recubre su alma, pues quien lo toque podría acabar inerte como una piedra.",oficial
+SPECIES_CUTIEFLY,"Al percibir el aura del rival, puede predecir sus movimientos y esquivarlos sin problema mientras lanza su contraataque.",oficial
+SPECIES_CYCLIZAR,Corre a más de 110 km/h con una persona encima. El calor del jinete le anima.,propia
+SPECIES_CYNDAQUIL,"Es un Pokémon muy tímido. Si se asusta, las llamas de su lomo arden con más fuerza.",oficial
+SPECIES_DACHSBUN,"Su agradable aroma ayuda a crecer al trigo, y por eso los pueblos agrícolas lo aprecian mucho.",propia
+SPECIES_DARKRAI,Puede adormecer a la gente y hacerles soñar. Está activo en las noches de luna nueva.,oficial
+SPECIES_DARKRAI_MEGA,Su poder oscuro tapa el sol y sume todo en la oscuridad. Nadie escapa de su mirada malvada.,propia
+SPECIES_DARMANITAN_GALAR_STANDARD,Con las ventiscas baja a los pueblos. Guarda comida en la bola de nieve de su cabeza.,propia
+SPECIES_DARMANITAN_GALAR_ZEN,"Toma esta forma cuando se enfada. Escupe fuego hasta calmarse, aunque su cuerpo empiece a derretirse.",propia
+SPECIES_DARMANITAN_STANDARD,Un Pokémon sumamente enérgico. Tiene tanta fuerza en los brazos que es capaz de destrozar un camión a base de puñetazos.,oficial
+SPECIES_DARMANITAN_ZEN,"Si está herido, deja de moverse. Se queda quieto como una piedra para meditar y afinar su mente.",propia
+SPECIES_DARTRIX,"Jamás desatiende el cuidado de sus alas, no solo por mera cuestión estética, sino también para mantener las plumas perfectamente afiladas.",oficial
+SPECIES_DARUMAKA,Cuando duerme es imposible tumbarlo por más que lo zarandeen. Es muy popular como amuleto de la suerte.,oficial
+SPECIES_DARUMAKA_GALAR,"Cuanto más frío hace, más energía tiene. Congela su aliento para hacer bolas de nieve y jugar.",propia
+SPECIES_DECIDUEYE,"Tan solo le lleva una décima de segundo sacar una pluma y disparar al rival, a quien acierta en un punto vital antes de que pueda darse cuenta.",oficial
+SPECIES_DECIDUEYE_HISUI,El aire guardado en sus plumas le protege del frío extremo de Hisui.,propia
+SPECIES_DEDENNE,"Su capacidad para producir electricidad es muy limitada, de modo que tiene que robarla de las tomas de corriente o de otros Pokémon.",oficial
+SPECIES_DEERLING_AUTUMN,Su olor cambia con las estaciones. En esta forma tiene un olor dulce y suave.,propia
+SPECIES_DEERLING_SPRING,"Durante los cambios de estación, su pelaje y olor cambian. Esto anuncia el comienzo de una estación.",oficial
+SPECIES_DEERLING_SUMMER,"Para que no entre en sus campos, los granjeros ponen de guardia a Lycanroc, su enemigo natural.",propia
+SPECIES_DEERLING_WINTER,"Su olor cambia con las estaciones, pero en su forma de invierno casi no huele a nada.",propia
+SPECIES_DEINO,"Al no poder ver, su forma de orientarse y percibir el entorno consiste en chocarse a diestro y siniestro, mordiendo todo lo que se encuentra.",oficial
+SPECIES_DELCATTY,Tiene mucho éxito entre las Entrenadoras por su suave pelaje. No vive en un sitio fijo.,oficial
+SPECIES_DELIBIRD,"Tiene la costumbre de compartir su comida con todo el mundo, sea humano o Pokémon, por lo que está constantemente en busca de alimento.",oficial
+SPECIES_DELPHOX,Fija la mirada en la llama que arde en la punta de su bastón para concentrarse y prever sucesos que tienen lugar en el futuro.,oficial
+SPECIES_DELPHOX_MEGA,Deslumbra a sus rivales con ramas en llamas y luego los calcina con una gran bola de fuego.,propia
+SPECIES_DEOXYS_ATTACK,Este Deoxys se ha transformado en su forma agresiva. Engaña a sus enemigos cambiando de aspecto.,propia
+SPECIES_DEOXYS_DEFENSE,"Cuando cambia de forma, aparece una aurora. Absorbe ataques alterando sus células.",propia
+SPECIES_DEOXYS_NORMAL,Pokémon surgido a raíz de la mutación de un virus alienígena. Aparece cerca de la aurora.,oficial
+SPECIES_DEOXYS_SPEED,Mutó de un virus espacial expuesto a un láser. Su cuerpo está hecho para la agilidad y la velocidad.,propia
+SPECIES_DEWGONG,Su cuerpo es blanco como la nieve. Puede nadar plácidamente en mares gélidos gracias a su resistencia al frío.,oficial
+SPECIES_DEWOTT,"Tras un exhaustivo entrenamiento, Dewott puede dominar diversas técnicas para usar con sus vieiras.",oficial
+SPECIES_DEWPIDER,"Vive bajo el agua y, cuando emerge a tierra firme en busca de presas, se recubre la cabeza con una burbuja.",oficial
+SPECIES_DHELMISE,Acecha a su presa hundiendo el ancla en el mar. Es capaz de drenar la vitalidad incluso de presas del tamaño de un Wailord.,oficial
+SPECIES_DIALGA,Tiene el poder de controlar el tiempo. Aparece en los mitos de Sinnoh como una vieja deidad.,oficial
+SPECIES_DIALGA_ORIGIN,Una luz radiante le dio una forma parecida al Pokémon creador. Tiene tanta fuerza que quizá sea su forma real.,propia
+SPECIES_DIANCIE,Puede crear una gran cantidad de diamantes en un instante comprimiendo con las manos el carbono que flota en el aire.,oficial
+SPECIES_DIANCIE_MEGA,Ha perdido sus impurezas y brilla tanto que no se le puede mirar. La llaman “la Princesa Rosa Real”.,propia
+SPECIES_DIGGERSBY,"El pelaje de su abdomen es un aislante térmico excelente, tanto que antaño se usaba el que mudaba para confeccionar prendas de abrigo.",oficial
+SPECIES_DIGLETT,Este Pokémon avanza horadando la tierra a poca profundidad. Resulta fácil localizarlo por los montículos que deja como rastro.,oficial
+SPECIES_DIGLETT_ALOLA,El metal del suelo donde vive le ha hecho crecer bigotes de acero que cambian de forma según su humor.,propia
+SPECIES_DIPPLIN,Son dos criaturas en un Pokémon. Evolucionó gracias a una manzana especial que solo crece en un sitio.,propia
+SPECIES_DITTO,"Cuando se encuentra con otro Ditto, se mueve más rápido de lo normal para intentar adoptar su aspecto.",oficial
+SPECIES_DODRIO,Este Pokémon surge al dividirse una de las cabezas de Doduo. Es capaz de correr por las praderas a 60 km/h.,oficial
+SPECIES_DODUO,"Las diminutas alas apenas le permiten volar, pero puede correr a gran velocidad gracias a sus patas hiperdesarrolladas.",oficial
+SPECIES_DOLLIV,Comparte su sabroso aceite con los demás. Convive con las personas desde hace mucho tiempo.,propia
+SPECIES_DONDOZO,"Trata a Tatsugiri como su jefe y lo sigue con lealtad. Es poderoso, pero no muy listo.",propia
+SPECIES_DONPHAN,"A Donphan le encanta enrollarse como una pelota y cargar contra el enemigo rodando a toda velocidad. Una vez que ha comenzado a rodar, no es fácil pararlo.",oficial
+SPECIES_DOTTLER,"Está en constante crecimiento dentro del caparazón. Mientras se prepara para evolucionar, examina el exterior con sus poderes psíquicos.",oficial
+SPECIES_DOUBLADE,Su táctica para abatir a las presas consiste en alternar ataque y defensa de forma frenética entre ambas espadas.,oficial
+SPECIES_DRACOVISH,"Exhibe con orgullo su inmensa capacidad motriz, que le permite superar los 60 km/h, pero solo puede respirar bajo el agua.",oficial
+SPECIES_DRACOZOLT,Produce electricidad con la robusta musculatura de la cola. El tamaño de la parte superior del cuerpo palidece en comparación con la inferior.,oficial
+SPECIES_DRAGALGE,Asoma la cresta de la cabeza sobre la superficie del agua y transforma la luz que absorbe del sol en energía dragón.,oficial
+SPECIES_DRAGALGE_MEGA,Escupe un líquido que descontrola la regeneración de las células. Es veneno mortal para todos menos él.,propia
+SPECIES_DRAGAPULT,"Al parecer, los Dreepy que residen en sus cuernos esperan con ilusión el momento de ser propulsados a velocidad supersónica.",oficial
+SPECIES_DRAGONAIR,Acumula energía en las esferas de la cola para controlar el clima. La sutil aura que lo rodea le confiere un aspecto misterioso y místico.,oficial
+SPECIES_DRAGONITE,Se lo conoce como el Avatar de la Mar. Muchos barcos lucen una talla de Dragonite como mascarón de proa.,oficial
+SPECIES_DRAGONITE_MEGA,La megaevolución ha disparado su bondad. Remata a sus rivales con compasión.,propia
+SPECIES_DRAKLOAK,"Si no lleva un Dreepy del que cuidar encima de la cabeza, se intranquiliza y trata de sustituirlo con otro Pokémon.",oficial
+SPECIES_DRAMPA,"Es de naturaleza mansa y amable, pero, si se enfurece, puede desatar fuertes vientos capaces de llevarse cualquier cosa por delante.",oficial
+SPECIES_DRAMPA_MEGA,Sus células se han revitalizado y ha recuperado la juventud. Manipula el aire para invocar tormentas.,propia
+SPECIES_DRAPION,"Su ferocidad le ha granjeado el sobrenombre del Diablo de la Arena, pero en presencia de los Hippowdon se muestra dócil y pacífico.",oficial
+SPECIES_DRATINI,Durante mucho tiempo se dudó de su existencia. La pequeña protuberancia de la frente es en realidad un cuerno incipiente.,oficial
+SPECIES_DREDNAW,"Su cuello extensible le permite alcanzar a los rivales a distancia. Hundiendo sus afilados dientes, les da el golpe de gracia.",oficial
+SPECIES_DREEPY,"En solitario es tan débil que no sería rival ni para un niño, pero, al entrenarse con sus congéneres, evoluciona y se vuelve más fuerte.",oficial
+SPECIES_DRIFBLIM,"Agarra a gente y a Pokémon para llevárselos a algún sitio, aunque nadie sabe exactamente adónde.",oficial
+SPECIES_DRIFLOON,Está formado por una aglomeración de espíritus. Suele aparecer en grandes números durante las estaciones húmedas.,oficial
+SPECIES_DRILBUR,"Su costumbre de horadar túneles bajo tierra le ha granjeado la antipatía de los agricultores, ya que puede echar a perder cosechas enteras.",oficial
+SPECIES_DRIZZILE,"Es inteligente, pero no muestra especial interés por nada. Distribuye trampas por su territorio para mantener alejados a sus enemigos.",oficial
+SPECIES_DROWZEE,"Si se duerme siempre en compañía de un Pokémon de esta especie, puede mostrar sueños que haya ingerido con anterioridad.",oficial
+SPECIES_DRUDDIGON,Posee una personalidad despiadada y ladina. Se apropia de los túneles excavados por otros Pokémon y los habita.,oficial
+SPECIES_DUBWOOL,Sus espléndidos cuernos sirven de reclamo para atraer al sexo opuesto. No los utiliza como arma.,oficial
+SPECIES_DUCKLETT,"Nada a mayor velocidad de la que puede volar. Se sumerge en el agua para buscar musgo acuático, su comida favorita.",oficial
+SPECIES_DUDUNSPARCE_THREE_SEGMENT,Un estudio ha revelado que sus genes deciden cuántos segmentos tiene su cuerpo.,propia
+SPECIES_DUDUNSPARCE_TWO_SEGMENT,Hace su nido taladrando la roca con su cola. El nido puede medir más de 10 km.,propia
+SPECIES_DUGTRIO,Estos trillizos cavan a una profundidad de hasta 100 km. Se desconoce el aspecto de la parte de sus cuerpos que se oculta bajo tierra.,oficial
+SPECIES_DUGTRIO_ALOLA,Sus bonitos bigotes metálicos forman un casco protector y le sirven como sensores muy precisos.,propia
+SPECIES_DUNSPARCE,"Habita en madrigueras laberínticas. Gracias a su capacidad para ubicarse por el olor de la tierra que lo rodea, nunca se pierde.",oficial
+SPECIES_DUOSION,"Las dos partes de su cerebro casi nunca piensan lo mismo, por lo que es imposible predecir sus intenciones.",oficial
+SPECIES_DURALUDON,"Hace gala de una agilidad extraordinaria, ya que su cuerpo está compuesto de un metal especial. Detesta la lluvia, por lo que habita en cuevas.",oficial
+SPECIES_DURANT,Con sus grandes mandíbulas puede destrozar incluso rocas. Lucha en grupo para proteger sus larvas del ataque de los Sandaconda.,oficial
+SPECIES_DUSCLOPS,Busca fuegos fatuos y los absorbe en su cuerpo hueco. Lo que pasa dentro luego es un misterio.,oficial
+SPECIES_DUSKNOIR,"Engulle a los rivales con la boca del estómago y, tras haber devorado el alma, escupe el cuerpo.",oficial
+SPECIES_DUSKULL,Se vuelve invisible para acercarse sigilosamente a su presa. Es capaz de atravesar anchos muros.,oficial
+SPECIES_DUSTOX,"Cuando se le ataca, bate las alas con fuerza para esparcir polvo tóxico. Es un Pokémon nocturno.",oficial
+SPECIES_DWEBBLE,"Si no encuentra una piedra que sea idónea como morada, se instala en los orificios de algún Hippowdon.",oficial
+SPECIES_EELEKTRIK,"Pokémon de apetito voraz. En cuanto encuentra una presa, la paraliza con electricidad y la engulle.",oficial
+SPECIES_EELEKTROSS,Sale del mar con la fuerza de sus brazos y ataca a sus presas en la costa. Luego se las lleva de vuelta al mar.,oficial
+SPECIES_EELEKTROSS_MEGA,Genera 10 veces más electricidad que antes y la suelta desde un falso Eelektrik hecho de moco.,propia
+SPECIES_EISCUE_ICE,Se enfría constantemente la cara con hielo por su escasa resistencia al calor. Utiliza el pelo de la cabeza para pescar en el mar.,oficial
+SPECIES_EISCUE_NOICE,"Su pelo está conectado a su cerebro. Cuando algo le preocupa, su pelo enfría el aire.",propia
+SPECIES_EKANS,"La longitud de este Pokémon aumenta con el tiempo. Por la noche, se enrosca en las ramas de los árboles para descansar.",oficial
+SPECIES_ELDEGOSS,El hilo fabricado a partir de su algodón es muy bello y brillante; uno de los productos estrella de la región de Galar.,oficial
+SPECIES_ELECTABUZZ,"Al desatarse una tormenta, se reúnen en torno a los árboles de mayor altura y esperan inmóviles a que caiga algún rayo.",oficial
+SPECIES_ELECTIVIRE,Es de los Pokémon de tipo Eléctrico que más electricidad producen. Genera una corriente de alta tensión desde las puntas de las colas.,oficial
+SPECIES_ELECTRIKE,"Almacena electricidad estática en su pelaje. En estaciones secas, suelta chispas por todo el cuerpo.",oficial
+SPECIES_ELECTRODE,Almacena tal cantidad de energía eléctrica en su cuerpo que el más leve impacto puede provocar una gran explosión.,oficial
+SPECIES_ELECTRODE_HISUI,"Su piel es parecida a un bonguri. Si se enfada, suelta una corriente como de 20 rayos.",propia
+SPECIES_ELEKID,"No se le da bien acumular electricidad, por lo que se cuela en las casas en busca de enchufes para alimentarse.",oficial
+SPECIES_ELGYEM,Fue descubierto hace aproximadamente 50 años. Posee un cerebro muy desarrollado que le otorga poderes psíquicos.,oficial
+SPECIES_EMBOAR,"Posee una tupida barba fogosa. Es tanto rápido como poderoso, y su principal baza es la lucha cuerpo a cuerpo.",oficial
+SPECIES_EMBOAR_MEGA,"Blandiendo una llama con forma de lanza, corre a salvar a sus aliados en apuros.",propia
+SPECIES_EMOLGA,Le encantan las bayas dulces. A veces almacena tanta comida en los carrillos que no puede volar bien.,oficial
+SPECIES_EMPOLEON,Los tres cuernos de su pico son muestra de su fuerza. El líder tiene los cuernos más grandes.,oficial
+SPECIES_ENAMORUS_INCARNATE,"Su llegada pone fin al invierno. Según la leyenda, su amor hace brotar nueva vida en la tierra.",propia
+SPECIES_ENAMORUS_THERIAN,Baja de las nubes para castigar sin piedad a quien no respeta la vida.,propia
+SPECIES_ENTEI,"Se dice que, cuando ruge, un volcán entra en erupción en algún punto del globo.",oficial
+SPECIES_ESCAVALIER,Ataca a los enemigos con sus lanzas. Aparece representado en pleno duelo contra un Sirfetch’d en un famoso cuadro.,oficial
+SPECIES_ESPATHRA,"Inmoviliza a sus rivales con el poder psíquico de sus grandes ojos. Pese a su aspecto, es muy cruel.",propia
+SPECIES_ESPEON,"Lucha con los poderes psíquicos que brotan de la esfera de su frente, que se oscurece cuando su energía disminuye.",oficial
+SPECIES_ESPURR,"Es capaz de mandar por los aires a un luchador profesional gracias a sus poderes psíquicos, pero tiene serios problemas para controlarlos.",oficial
+SPECIES_ETERNATUS,"Fue hallado en el interior de un meteorito caído hace 20 000 años. Por lo visto, está relacionado con el misterio que rodea al fenómeno Dinamax.",oficial
+SPECIES_ETERNATUS_ETERNAMAX,"Por culpa de Rose, absorbió toda la energía de Galar. Ahora su poder está desbordado.",propia
+SPECIES_EXCADRILL,Se lo conoce como el Rey del Taladro. Puede horadar túneles bajo tierra a una velocidad de 150 km/h.,oficial
+SPECIES_EXCADRILL_MEGA,"Si junta brazos y cabeza en una forma aerodinámica y gira a gran velocidad, puede destruir cualquier cosa.",propia
+SPECIES_EXEGGCUTE,"Necesita contar con la totalidad de sus seis miembros para mantener la calma. Si desaparece uno siquiera, le entran ganas de salir huyendo.",oficial
+SPECIES_EXEGGUTOR,"Puede lanzar ataques psíquicos de gran potencia si sus tres cabezas se ponen de acuerdo. Cuando se nubla el cielo, sus movimientos se ralentizan.",oficial
+SPECIES_EXEGGUTOR_ALOLA,Alola es su hábitat ideal. Los lugareños dicen con orgullo que así es como debe ser Exeggutor.,propia
+SPECIES_EXPLOUD,"Además de sus bramidos, es capaz de emitir distintos tonos por los tubos de su cuerpo, que le permiten comunicarse con sus semejantes.",oficial
+SPECIES_FALINKS,"Este Pokémon está formado por seis individuos que cambian de formación al luchar, haciendo gala de un notable espíritu de equipo.",oficial
+SPECIES_FALINKS_MEGA,"Ha adoptado la formación de combate definitiva, que solo logran tropas y jefe con un vínculo fortísimo.",propia
+SPECIES_FARFETCHD,Combate empuñando un puerro como arma. La forma de blandirlo es tan variada que ha llegado a generar sus propias escuelas.,oficial
+SPECIES_FARFETCHD_GALAR,En Galar los puerros son más gruesos y largos. Los guerreros que se adaptaron a ellos cambiaron de forma.,propia
+SPECIES_FARIGIRAF,"Ahora que sus dos cabezas están sincronizadas, su poder psíquico es 10 veces mayor que el de Girafarig.",propia
+SPECIES_FEAROW,"Este Pokémon ha existido desde tiempos remotos. Al menor atisbo de peligro, alza el vuelo y huye.",oficial
+SPECIES_FEEBAS,"Su apariencia deja bastante que desear, pero es muy resistente y puede sobrevivir con poca agua.",oficial
+SPECIES_FENNEKIN,"Mordisquea una ramita mientras camina, como si de un aperitivo se tratase. Intimida a su enemigo expulsando aire caliente por las orejas.",oficial
+SPECIES_FERALIGATR,"Al morder con sus feroces fauces, mueve su cabeza despedazando salvajemente a su víctima.",oficial
+SPECIES_FERALIGATR_MEGA,Con los brazos y la aleta forma unas fauces gigantes que muerden 10 veces más fuerte que su boca.,propia
+SPECIES_FERROSEED,"Prefiere las cuevas de paredes musgosas, ya que las enzimas contenidas en el musgo le permiten desarrollar unas púas grandes y robustas.",oficial
+SPECIES_FERROTHORN,Sus púas son más duras que el acero. Se aferra y desplaza por paredes rocosas usando las que tiene en los tentáculos como ganchos.,oficial
+SPECIES_FEZANDIPITI,Debe su belleza y su voz preciosa a los estimulantes tóxicos de la cadena que lo rodea.,propia
+SPECIES_FIDOUGH,Es suave y húmedo al tacto. La levadura de su aliento hace fermentar lo que tiene cerca.,propia
+SPECIES_FINIZEN,Su anillo de agua está hecho de agua de mar y un líquido pegajoso que suelta por el espiráculo.,propia
+SPECIES_FINNEON,"Las marcas rosadas de su piel brillan al caer la noche. Triunfa entre los buceadores, por eso en los resorts turísticos le proporcionan alimento.",oficial
+SPECIES_FLAAFFY,Su lana sedosa acumula tanta electricidad que algunas partes de su cuerpo se han quedado desprovistas de pelo.,oficial
+SPECIES_FLABEBE_BLUE,Le gustan las flores azules. Flota con el poder de su flor y se deja llevar por el aire.,propia
+SPECIES_FLABEBE_ORANGE,Recibe fuerza de las flores y les da energía a cambio. Las que más le gustan son las naranjas.,propia
+SPECIES_FLABEBE_RED,"Este Flabébé va montado en una flor roja. Nada más nacer, vuela buscando una flor que le guste.",propia
+SPECIES_FLABEBE_WHITE,Confiere su poder a las flores y cuida de ellas con mucho esmero; no perdona que destruyan los campos donde estas crecen.,oficial
+SPECIES_FLABEBE_YELLOW,Saca el poder oculto de las flores para sus movimientos. Le gustan mucho las flores amarillas.,propia
+SPECIES_FLAMIGO,"Gracias a su “sincronización”, toda la bandada puede atacar a la vez en perfecta armonía.",propia
+SPECIES_FLAPPLE,"Escupe una saliva sumamente ácida y vuela con sus alas compuestas por piel de manzana, cuyo aspecto es capaz de adoptar.",oficial
+SPECIES_FLAREON,"Antes de hincarle el diente a algo, ya sean bayas o alguna presa, lo cocina con sus llamas hasta que queda bien hecho.",oficial
+SPECIES_FLETCHINDER,Defienden su territorio con suma agresividad. Se pelean entre sí por el control de las áreas de caza.,oficial
+SPECIES_FLETCHLING,Su temperatura corporal aumenta de repente cuando se exalta y puede causar quemaduras al contacto con la piel.,oficial
+SPECIES_FLITTLE,Sus patas flotan un poco sobre el suelo gracias al poder psíquico de los volantes de su barriga.,propia
+SPECIES_FLOATZEL,Su flotador se desarrolló a raíz de perseguir presas acuáticas. También sirve como balsa.,oficial
+SPECIES_FLOETTE_BLUE,"Si encuentra plantas marchitas, se las lleva a su territorio y las cuida.",propia
+SPECIES_FLOETTE_ETERNAL,Su esperanza de vida asciende a varios siglos y dedica toda su dilatada existencia al cuidado de los jardines.,oficial
+SPECIES_FLOETTE_MEGA,La Flor Eterna ha absorbido toda la energía de la megaevolución y ahora ataca por su cuenta.,propia
+SPECIES_FLOETTE_ORANGE,Saca más poder cuando está en sintonía con flores naranjas que con flores de otros colores.,propia
+SPECIES_FLOETTE_RED,Usa la luz roja para dar su energía a las flores y sacar su poder oculto.,propia
+SPECIES_FLOETTE_WHITE,Ataca sin piedad a quien estropee un jardín. Este Floette cuida mucho las flores blancas.,propia
+SPECIES_FLOETTE_YELLOW,Saca el poder de las flores amarillas y lo usa en sus movimientos para protegerse.,propia
+SPECIES_FLORAGATO,Maneja con habilidad la liana que esconde bajo el pelo y golpea al rival con su capullo duro.,propia
+SPECIES_FLORGES_BLUE,"El pigmento azul era carísimo, así que los cuadros de Florges azules valen mucho.",propia
+SPECIES_FLORGES_ORANGE,"Antiguamente, los señores de los castillos criaban a Florges para cuidar sus jardines.",propia
+SPECIES_FLORGES_RED,Crea un jardín impresionante en su territorio. Saca el poder de las flores rojas de su cuello.,propia
+SPECIES_FLORGES_WHITE,El jardín de un Florges blanco se llena de plantas con flores de muchos colores.,propia
+SPECIES_FLORGES_YELLOW,Lucha sacando el poder de las flores amarillas. Castiga sin piedad a quien pisa las plantas.,propia
+SPECIES_FLUTTER_MANE,"Se parece a un pterosaurio fantasmal de una revista paranormal, pero tienen poco más en común.",propia
+SPECIES_FLYGON,El batir de sus alas suena como un bello canto de mujer. Se lo conoce como el Alma del Desierto.,oficial
+SPECIES_FOMANTIS,"De día duerme tranquilamente a la luz del sol y, al ocaso, despierta e inicia su actividad nocturna.",oficial
+SPECIES_FOONGUS,"Las esporas que expulsa por las extremidades son altamente tóxicas, pero, si se secan bien, sirven como remedio estomacal.",oficial
+SPECIES_FORRETRESS,"El momento en el que engulle a su presa es el único instante donde muestra su cuerpo, pero hasta ahora ningún humano lo ha visto.",oficial
+SPECIES_FRAXURE,Su piel es dura como una coraza. Su técnica predilecta consiste en embestir al rival para hincarle los colmillos.,oficial
+SPECIES_FRIGIBAX,Vive en bosques y riscos. Con el poder de su aleta enfría su nido como una nevera.,propia
+SPECIES_FRILLISH,Cuenta la leyenda que los Frillish son en realidad los habitantes de una antigua ciudad sumergida convertidos en Pokémon.,oficial
+SPECIES_FROAKIE,"Protege su piel cubriendo el cuerpo con una fina capa de burbujas. Aunque parezca despreocupado, no deja de vigilar con astucia lo que le rodea.",oficial
+SPECIES_FROGADIER,"Su agilidad no tiene parangón. De hecho, es capaz de escalar una torre de más de 600 metros en tan solo un minuto.",oficial
+SPECIES_FROSLASS,Nació del resentimiento de mujeres fallecidas en montañas nevadas. Su manjar predilecto son las almas congeladas.,oficial
+SPECIES_FROSLASS_MEGA,Usa un aire frío con energía fantasmal para congelar incluso cosas como el fuego o el viento.,propia
+SPECIES_FROSMOTH,No muestra la menor compasión con quien asole el campo: lo escarmienta batiendo sus gélidas alas para provocar una ventisca.,oficial
+SPECIES_FUECOCO,"Su saco de fuego es pequeño y la energía se le escapa por el hueco de la cabeza, donde parpadea.",propia
+SPECIES_FURRET,"Construye un nido donde introducir su largo y delgado cuerpo, en el que no pueden entrar otros Pokémon.",oficial
+SPECIES_GABITE,Entierra gemas en la cueva que le sirve de nido y hace trizas con sus garras y colmillos a cualquier intruso.,oficial
+SPECIES_GALLADE,Es capaz de percibir al instante cuando alguien está en un aprieto y corre raudo a su lado para prestarle ayuda.,oficial
+SPECIES_GALLADE_MEGA,Tiene aspecto de caballero. Con su poder psíquico convierte los dos brazos en espadas a la vez.,propia
+SPECIES_GALVANTULA,Teje una tela con hilo electrificado junto a los nidos de Pokémon pájaro para atrapar a los polluelos que aún no saben volar bien.,oficial
+SPECIES_GARBODOR,El veneno líquido que brota de su brazo derecho es tan nocivo que puede acabar con una criatura ya débil al menor contacto.,oficial
+SPECIES_GARCHOMP,Se mueve a gran velocidad incluso por tierra. Es capaz de cazar una presa en una montaña nevada y volver a su guarida sin llegar a pasar frío.,oficial
+SPECIES_GARCHOMP_MEGA,La energía le fundió brazos y alas en guadañas gigantes y lo enloqueció. Las agita y destroza el suelo.,propia
+SPECIES_GARCHOMP_MEGA_Z,Una nueva megaevolución de Garchomp. Vuela alrededor del rival a velocidad Mach y lo despedaza.,propia
+SPECIES_GARDEVOIR,"Para proteger a su Entrenador, emplea todo su poder psíquico en crear un pequeño agujero negro.",oficial
+SPECIES_GARDEVOIR_MEGA,"Al abrir su corazón, usa un poder psíquico enorme. Se dice que la placa roja de su pecho es su corazón.",propia
+SPECIES_GARGANACL,Se frota los dedos y echa sal sobre Pokémon heridos. Hasta las heridas graves se curan enseguida.,propia
+SPECIES_GASTLY,"Con su cuerpo gaseoso puede colarse por donde quiera, aunque con un golpe de viento sale despedido.",oficial
+SPECIES_GASTRODON_EAST,"Se ve más en tierra que en el mar. Vive en costas rocosas, pero con lluvia sube hasta las montañas.",propia
+SPECIES_GASTRODON_WEST,"Aunque blando, su cuerpo es tremendamente resistente, ya que dispersa cualquier impacto que recibe dada su flexibilidad.",oficial
+SPECIES_GENGAR,Dicen que sale de la oscuridad para robarles el alma a los que se pierden por las montañas.,oficial
+SPECIES_GENGAR_MEGA,"Su mente es retorcida. Intenta quitarle la vida a cualquiera, incluso maldecir a su propio Entrenador.",propia
+SPECIES_GEODUDE,Se suele encontrar en senderos de montaña y sitios parecidos. Conviene andar con cuidado para no pisarlo sin querer y provocar su enfado.,oficial
+SPECIES_GEODUDE_ALOLA,"Su cuerpo es una piedra imantada. Si lo pisas, te dará un cabezazo con descarga.",propia
+SPECIES_GHOLDENGO,Su cuerpo resistente está hecho de monedas apiladas. Abruma al rival lanzando monedas sin parar.,propia
+SPECIES_GIBLE,"Ataca indiscriminadamente a cualquier cosa que se mueva y la arrastra a su agujero. Pese a tener una boca enorme, su estómago es pequeño.",oficial
+SPECIES_GIGALITH,Las bolas de energía que lanza solo en días soleados son tan potentes que pueden hacer saltar un camión por los aires.,oficial
+SPECIES_GIMMIGHOUL_CHEST,Vive en un viejo cofre. A veces se queda en un rincón de una tienda porque nadie sabe que es un Pokémon.,propia
+SPECIES_GIMMIGHOUL_ROAMING,Deambula con una moneda antigua a la espalda. Absorbe la vida de quien intenta coger la moneda.,propia
+SPECIES_GIRAFARIG,"Su cola tiene un pequeño cerebro. ¡Cuidado! Si te acercas, puede reaccionar a tu olor y morder.",oficial
+SPECIES_GIRATINA_ALTERED,Fue desterrado por su violencia. Observa el mundo en silencio desde el Mundo Distorsión.,oficial
+SPECIES_GIRATINA_ORIGIN,Pierde las patas en esta forma. Se cree que viene de un mundo donde el cielo y la tierra son uno.,propia
+SPECIES_GLACEON,El aire gélido que exhala crea una suerte de cristales de hielo que lo hace muy demandado en las estaciones de esquí.,oficial
+SPECIES_GLALIE,Congela a sus presas helando en un momento la humedad contenida en el aire que lo rodea.,oficial
+SPECIES_GLALIE_MEGA,La megaevolución fue tan fuerte que le rompió la mandíbula. No poder comer bien lo irrita.,propia
+SPECIES_GLAMEOW,"Dependiendo de su humor, mueve grácilmente su cola, que se asemeja a un lazo de gimnasia rítmica.",oficial
+SPECIES_GLASTRIER,Cuenta con una fuerza física sobrecogedora. La máscara de hielo que le cubre el rostro es cien veces más dura que el diamante.,oficial
+SPECIES_GLIGAR,Vuela directo a la cara del objetivo y acaba con su aterrada víctima inyectándole veneno.,oficial
+SPECIES_GLIMMET,Sus cristales tóxicos parecen pétalos. Esparce un polvo venenoso como polen para protegerse.,propia
+SPECIES_GLIMMORA,Sus pétalos son energía venenosa cristalizada. Hace poco se ha visto que se parecen a teralitas.,propia
+SPECIES_GLIMMORA_MEGA,"Sus pétalos, ahora más grandes y separados, giran a su alrededor para protegerlo y esparcir veneno.",propia
+SPECIES_GLISCOR,Vuela sin hacer nada de ruido. Con su larga cola captura a sus presas y las muerde con sus colmillos.,oficial
+SPECIES_GLOOM,Lo que parece baba es realmente un néctar muy pegajoso que se adhiere sin remisión al tocarlo.,oficial
+SPECIES_GOGOAT,Habita en regiones montañosas. El líder de la manada se decide en una demostración de fuerza en la que los contendientes luchan con los cuernos.,oficial
+SPECIES_GOLBAT,Camina con soltura sobre sus pequeñas patas. Se acerca con sigilo a su presa mientras esta duerme y le clava los colmillos para chuparle la sangre.,oficial
+SPECIES_GOLDEEN,La aleta dorsal y las aletas pectorales están tan desarrolladas que actúan como músculos. Puede nadar a una velocidad de cinco nudos.,oficial
+SPECIES_GOLDUCK,Cuenta una antigua leyenda que los Golduck arrastraban a quienes contaminaran sus ríos al fondo de las aguas.,oficial
+SPECIES_GOLEM,"Nada más mudar la piel, su cuerpo se vuelve blando y blanquecino, pero se endurece al poco tiempo de entrar en contacto con el aire.",oficial
+SPECIES_GOLEM_ALOLA,"Dispara rocas cargadas de electricidad. Con solo rozar al rival, lo deja entumecido.",propia
+SPECIES_GOLETT,Fue creado a partir del barro para emplearlo como sirviente. Todavía acata las órdenes que le dio su amo hace milenios.,oficial
+SPECIES_GOLISOPOD,Vive en cavernas del fondo marino o en barcos hundidos. Lucha contra los Grapploct y el que pierde se convierte en una suculenta presa.,oficial
+SPECIES_GOLISOPOD_MEGA,"Ataca con cuatro brazos. Cuando el rival está al límite, lo remata con los brazos que tenía ocultos.",propia
+SPECIES_GOLURK,"Se dice que su cuerpo alberga un móvil perpetuo que genera energía, pero no se ha constatado la veracidad de tamaña afirmación.",oficial
+SPECIES_GOLURK_MEGA,La megaevolución ha estimulado la energía de su interior. Podría explotar en cualquier momento.,propia
+SPECIES_GOODRA,Ataca extendiendo sus largas antenas. La fuerza que despliega es 100 veces superior a la del puñetazo de un boxeador de peso pesado.,oficial
+SPECIES_GOODRA_HISUI,Odia la soledad y es muy pegajoso. Se enfada y lo destroza todo si sus seres queridos se alejan.,propia
+SPECIES_GOOMY,Sus antenas son órganos sensoriales sumamente desarrollados. Poder esconderse nada más detectar enemigos le ha permitido sobrevivir.,oficial
+SPECIES_GOREBYSS,Absorbe los fluidos corporales de su presa. Los restos que deja caen hasta el lecho marino y se convierten en alimento para otros Pokémon.,oficial
+SPECIES_GOSSIFLEUR,Muchos los crían tras quedar prendados de lo adorables que resultan cuando cantan dando vueltas empujados por la brisa.,oficial
+SPECIES_GOTHITA,A veces susurra aunque no haya nadie alrededor. Por eso se cree que tal vez hable con alguien o algo imperceptible para los demás.,oficial
+SPECIES_GOTHITELLE,Los malhechores a los que revela sus últimos momentos pierden la vida el mismo día.,oficial
+SPECIES_GOTHORITA,"Sus poderes psíquicos alcanzan su apogeo en las noches estrelladas, aunque su posible vínculo con el espacio está envuelto en misterio.",oficial
+SPECIES_GOUGING_FIRE,Hay muy pocos avistamientos. En un vídeo corto se le ve arrasando y lanzando columnas de fuego.,propia
+SPECIES_GOURGEIST_AVERAGE,Las noches de luna nueva llama a la puerta de las casas y se lleva al otro mundo a quien abra.,oficial
+SPECIES_GOURGEIST_LARGE,Un Pumpkaboo grande evoluciona a Gourgeist grande. Su tamaño pasa a sus descendientes.,propia
+SPECIES_GOURGEIST_SMALL,Un Pumpkaboo pequeño evoluciona a Gourgeist pequeño. Su tamaño pasa a sus descendientes.,propia
+SPECIES_GOURGEIST_SUPER,Un Pumpkaboo enorme evoluciona a Gourgeist enorme. Su tamaño pasa a sus descendientes.,propia
+SPECIES_GRAFAIAI,Cada uno pinta su propio dibujo y lo repite una y otra vez durante toda su vida.,propia
+SPECIES_GRANBULL,"Es muy popular entre la gente joven, pero su personalidad afable y algo miedosa hacen de él un pésimo guardián.",oficial
+SPECIES_GRAPPLOCT,"Se aventura en tierra firme para buscar rivales contra los que luchar para medir su valía. Tras terminar el combate, regresa al mar.",oficial
+SPECIES_GRAVELER,"Se le suele ver rodando montaña abajo. No evita los obstáculos, sino que los arrolla.",oficial
+SPECIES_GRAVELER_ALOLA,"Cuando dos chocan por su comida favorita, sueltan destellos y estruendos. Los llaman fuegos de la tierra.",propia
+SPECIES_GREAT_TUSK,Se ha visto en los últimos años. Su nombre viene de una criatura que aparece en cierto libro.,propia
+SPECIES_GREAVARD,"Es amistoso y no le gusta estar solo. Si le haces un poco de caso, te seguirá para siempre.",propia
+SPECIES_GREEDENT,"Sus incisivos, de fuerza y dureza extraordinarias, le permiten mordisquear incluso las bayas más duras. Es un Pokémon muy común en Galar.",oficial
+SPECIES_GRENINJA_MEGA,Hace girar un shuriken gigante para que flote y se agarra a él boca abajo para sorprender al rival.,propia
+SPECIES_GRIMER,Está hecho de lodo endurecido. Pocos se atreven a tocarlo debido a su pestilencia y composición nociva. Allá por donde pasa no crece la hierba.,oficial
+SPECIES_GRIMER_ALOLA,Unos cien viven en el vertedero de Alola. Son muy trabajadores y comen toda clase de basura.,propia
+SPECIES_GRIMMSNARL,"Su cabello desempeña una función similar a la de fibras musculares. Al soltárselo, su movimiento tentacular le permite reducir a su objetivo.",oficial
+SPECIES_GROOKEY,"Ataca golpeando sin cesar con su baqueta, con un entusiasmo que crece a medida que acelera el ritmo.",oficial
+SPECIES_GROTLE,Sabe dónde encontrar manantiales de agua pura y lleva a los Pokémon amigos hasta allí en su lomo.,oficial
+SPECIES_GROUDON,Dicen que este Pokémon legendario simboliza la tierra. Tras batirse en duelo con Kyogre se echó a dormir.,oficial
+SPECIES_GROUDON_PRIMAL,"Cuando Groudon bramó, la tierra se alzó y se extendió. El sol ardía y todo se llenó de calor.",propia
+SPECIES_GROVYLE,"Este Pokémon revolotea de rama en rama con maestría. Cuando Grovyle va volando por el bosque, no hay quien lo alcance por muy rápido que sea.",oficial
+SPECIES_GROWLITHE,"Extremadamente fiel, ladrará furioso a cualquiera que suponga una amenaza para su Entrenador con tal de defenderlo.",oficial
+SPECIES_GROWLITHE_HISUI,Patrulla en pareja. Se cree que su pelaje tiene roca volcánica por la actividad de su hábitat.,propia
+SPECIES_GRUBBIN,Cava su madriguera en el lecho boscoso con sus grandes mandíbulas. Le encanta la savia dulce de los árboles.,oficial
+SPECIES_GRUMPIG,Usa perlas negras para potenciar sus poderes psíquicos. Con su raro baile controla a los rivales.,oficial
+SPECIES_GULPIN,"Es capaz de digerir cualquier cosa. Para hacer la digestión, se ayuda de un fluido y un gas capaces de corroerlo todo.",oficial
+SPECIES_GURDURR,"Blande vigas de acero con gran destreza, pero la construcción no se le da muy bien; de hecho, su especialidad es la demolición.",oficial
+SPECIES_GUZZLORD,"Uno de los extraños Ultraentes. Siempre está comiendo algo, como poseído de un hambre insaciable.",oficial
+SPECIES_GYARADOS,"Cuando monta en cólera, puede quemarlo todo, incluso en medio de la más violenta tormenta.",oficial
+SPECIES_GYARADOS_MEGA,"Aunque su instinto le empuja a destruirlo todo, obedece a un Entrenador en quien confía.",propia
+SPECIES_HAKAMO_O,"Tras hacer sonar sus escamas y proferir su grito de guerra, carga contra el enemigo y lo hace trizas con sus afiladas garras.",oficial
+SPECIES_HAPPINY,"Les deja su preciada roca redonda a aquellos con los que se lleva bien. Si no se la devuelven, se echa a llorar, presa de una rabieta.",oficial
+SPECIES_HARIYAMA,"No todos los Hariyama son grandotes, recios y fuertes. También los hay de menor tamaño pero mayor agilidad y precisión en los movimientos.",oficial
+SPECIES_HATENNA,"Siente predilección por los lugares despoblados. Si percibe una emoción intensa, emprende la huida a toda prisa.",oficial
+SPECIES_HATTERENE,Recibe el apodo de Hechicera del Bosque. Quienes arman demasiado barullo se exponen a ser despedazados por las garras de su tentáculo.,oficial
+SPECIES_HATTREM,Silencia al objetivo atizándole con los mechones. Despliega una potencia devastadora capaz de noquear a un boxeador profesional.,oficial
+SPECIES_HAUNTER,"Cuando se tiene la sensación de ser observado en la oscuridad sin que haya nadie alrededor, seguro que es porque un Haunter anda cerca.",oficial
+SPECIES_HAWLUCHA,"Siempre se exhibe con alguna pose justo antes de propinar el golpe de gracia, momento que algunos rivales aprovechan para contraatacar.",oficial
+SPECIES_HAWLUCHA_MEGA,La megaevolución le ha hinchado los músculos. Saca músculo para presumir de fuerza.,propia
+SPECIES_HAXORUS,"Amable por naturaleza, infunde auténtico pavor al enfadarse. Su mayor baza son los colmillos, con los que puede cortar un armazón de acero.",oficial
+SPECIES_HEATMOR,Usa llamas a modo de lengua para derretir el duro exoesqueleto de los Durant antes de devorarlos.,oficial
+SPECIES_HEATRAN,Su sangre fluye ardiendo como si fuera magma. Vive en cráteres de volcanes.,oficial
+SPECIES_HEATRAN_MEGA,"Se dice que, si lo da todo, puede calentar su cuerpo a más de un millón de grados.",propia
+SPECIES_HELIOLISK,"Al extender su gorguera y exponerse a la luz solar, genera la energía eléctrica suficiente para cubrir el consumo de una metrópoli entera.",oficial
+SPECIES_HELIOPTILE,"Es capaz de generar electricidad a partir de la luz del sol. Si lo interrumpen en pleno proceso, se pone nervioso y pierde las fuerzas.",oficial
+SPECIES_HERACROSS,"Este Pokémon muestra una fuerza hercúlea, que le permite levantar cien veces su propio peso sin inmutarse.",oficial
+SPECIES_HERACROSS_MEGA,"Se llena de energía, pero cuando acaba la megaevolución le duelen mucho los músculos.",propia
+SPECIES_HERDIER,El pelaje negro que lo recubre es tan denso y elástico que puede repeler incluso los colmillos más afilados.,oficial
+SPECIES_HIPPOPOTAS,Este Pokémon de hábitos diurnos se entierra en la arena para dormir cuando la temperatura en el desierto se desploma al caer la noche.,oficial
+SPECIES_HIPPOWDON,Puede ser muy agresivo cuando se enfada. Provoca auténticas tempestades de arena al expeler la que ha tragado.,oficial
+SPECIES_HITMONCHAN,"Sus puñetazos son capaces incluso de cortar el aire, aunque parece necesitar un descanso tras estar luchando durante 3 min.",oficial
+SPECIES_HITMONLEE,"Encoge y estira las piernas a su antojo. De hecho, hasta puede propinar una patada a un rival que se encuentre lejos.",oficial
+SPECIES_HITMONTOP,"Tras hacer el pino para desconcertar a su rival, comienza a propinar sus espectaculares patadas.",oficial
+SPECIES_HONCHKROW,Delega el combate en sus leales súbditos y solo se involucra cuando llega la hora de asestarle el golpe de gracia al enemigo.,oficial
+SPECIES_HONEDGE,El ojo azul de la empuñadura es su verdadero cuerpo. Absorbe la energía vital de las personas con su paño de aspecto andrajoso.,oficial
+SPECIES_HOOPA_CONFINED,Dicen que gracias a sus seis anillos y seis enormes brazos puede robar todo lo que se le antoja. Adquirió una forma reducida cuando alguien selló su poder.,oficial
+SPECIES_HOOPA_UNBOUND,"La verdadera forma de Hoopa, con su poder liberado. Sus aros doblan las dimensiones y lo atrapan todo.",propia
+SPECIES_HOOTHOOT,"Todos los días empieza a ulular a la misma hora, por lo que algunos Entrenadores lo usan a modo de reloj.",oficial
+SPECIES_HOPPIP,"Flotan en el aire. Se dice que, cuando los Hoppip se reúnen, es que la primavera está al caer.",oficial
+SPECIES_HORSEA,"Nada con la gracilidad de un bailarín, creando remolinos a su paso, y juega con sus congéneres a ver quién forma el más grande.",oficial
+SPECIES_HOUNDOOM,"Su rasgo distintivo son los escalofriantes aullidos que profiere. Antiguamente, era temido y considerado un emisario del inframundo.",oficial
+SPECIES_HOUNDOOM_MEGA,"Sus garras y su cola se funden por el calor de su cuerpo, que hasta a él le hace daño.",propia
+SPECIES_HOUNDOUR,Los escalofriantes aullidos que profiere justo antes del alba son para señalar la presencia de su manada.,oficial
+SPECIES_HOUNDSTONE,Pasa casi todo el tiempo durmiendo en cementerios. Es el perro más leal a su amo.,propia
+SPECIES_HO_OH,Se revelará ante Entrenadores de corazón puro mostrando sus brillantes alas arcoíris.,oficial
+SPECIES_HUNTAIL,"Vive en los fondos marinos. Según una leyenda, que un Huntail aparezca varado en la playa es señal de mal augurio.",oficial
+SPECIES_HYDRAPPLE,"Estos caprichosos dragones se han unido. Las pocas veces que se ponen de acuerdo, liberan su poder.",propia
+SPECIES_HYDREIGON,Sus tres cabezas se alternan para dar mordiscos y no cejarán en su ataque hasta que el rival haya caído redondo.,oficial
+SPECIES_HYPNO,"Conviene evitar el contacto visual en caso de encontrarse con este Pokémon, ya que puede hipnotizar con su péndulo.",oficial
+SPECIES_IGGLYBUFF,"Se desplaza dando botes con su cuerpo mullido. Cuando aumenta su temperatura corporal, se va poniendo de un color rosa cada vez más intenso.",oficial
+SPECIES_ILLUMISE,Su suave aroma guía a Volbeat para que haga señales luminosas en el cielo nocturno.,oficial
+SPECIES_IMPIDIMP,"Se infiltra en las casas para hurtar a sus anchas y, por si fuera poco, nutrirse de la energía negativa que liberan sus contrariados habitantes.",oficial
+SPECIES_INCINEROAR,"A pesar de que a menudo se comporta de forma violenta, tiene un lado amable que se manifiesta cuando ayuda a Pokémon más pequeños.",oficial
+SPECIES_INDEEDEE_F,Sirven con esmero a personas y Pokémon para reunir gratitud. Las hembras son muy buenas cuidando niños.,propia
+SPECIES_INDEEDEE_M,Con sus cuernos percibe las emociones de los seres vivos que se hallen cerca. Los sentimientos positivos constituyen su fuente de energía.,oficial
+SPECIES_INFERNAPE,Maneja a sus rivales con tremenda agilidad. En su especial forma de luchar usa todos sus miembros.,oficial
+SPECIES_INKAY,"Los destellos de luz intermitente que emite aplacan el ánimo de lucha del enemigo, tras lo que aprovecha para esconderse.",oficial
+SPECIES_INTELEON,Dispara chorros de agua por la punta de los dedos a 3 mach de velocidad. Con su membrana nictitante puede ver los puntos débiles del rival.,oficial
+SPECIES_IRON_BOULDER,Su nombre viene de un objeto misterioso de un libro antiguo. Su cuerpo parece metálico.,propia
+SPECIES_IRON_BUNDLE,Se parece a un robot de una revista paranormal que habría creado una civilización antigua.,propia
+SPECIES_IRON_CROWN,Se parece a un arma con forma de Cobalion que salió en una revista paranormal.,propia
+SPECIES_IRON_HANDS,"Es muy parecido a un cíborg de una revista paranormal, que sería un atleta modificado.",propia
+SPECIES_IRON_JUGULIS,"Se parece a un Pokémon de una revista paranormal, hijo de un Hydreigon enamorado de un robot.",propia
+SPECIES_IRON_LEAVES,"Según los pocos testigos, cortaba árboles y rocas en tiras con sus hojas brillantes.",propia
+SPECIES_IRON_MOTH,"No hay registros de su captura, pero sus rasgos coinciden con un objeto de un libro antiguo.",propia
+SPECIES_IRON_THORNS,Se parece a un Pokémon que una revista dudosa presentó como un Tyranitar del futuro.,propia
+SPECIES_IRON_TREADS,Se ha visto en los últimos años. Se parece a un objeto misterioso de un viejo diario de expedición.,propia
+SPECIES_IRON_VALIANT,Se parece al invento de un científico loco que salió en una revista paranormal.,propia
+SPECIES_IVYSAUR,La luz del sol lo fortalece y hace que le crezca el capullo que tiene en el lomo.,oficial
+SPECIES_JANGMO_O,"Se comunica con sus congéneres mediante los sonidos que produce al golpear sus escamas, duras como el acero.",oficial
+SPECIES_JELLICENT,"Las noches de luna llena, bancos enteros de Jellicent emergen a la superficie y aguardan la llegada de alguna presa incauta.",oficial
+SPECIES_JIGGLYPUFF,Posee la capacidad de modular su voz a voluntad cambiando la longitud de onda para entonar una melodía misteriosa que provoca adormecimiento.,oficial
+SPECIES_JIRACHI,Se dice que concederá los deseos escritos en las notas de su cabeza cuando se despierte de su sueño milenario.,oficial
+SPECIES_JOLTEON,Acumula iones negativos de la atmósfera para lanzar rayos de 10 000 V de potencia.,oficial
+SPECIES_JOLTIK,Se agarra a otros Pokémon para absorber su electricidad estática. Es muy común verlo aferrado a las posaderas de un Yamper.,oficial
+SPECIES_JUMPLUFF,"Jumpluff se vale de los cálidos vientos del sur para volar a tierras lejanas. Si llega a zonas de aire frío en pleno vuelo, descenderá y tomará tierra.",oficial
+SPECIES_JYNX,Los ejemplares que habitan en Galar poseen una voz tan delicada y hermosa que incluso cuentan con su propio grupo de admiradores.,oficial
+SPECIES_KABUTO,"Se consideraba extinto, pero, al parecer, existen determinadas zonas en las que es posible hallar ejemplares con facilidad.",oficial
+SPECIES_KABUTOPS,Se desconoce el motivo de la extinción de este feroz Pokémon prehistórico que habitaba en los cálidos mares de antaño.,oficial
+SPECIES_KADABRA,La potencia de su telequinesis es inmensa. Acumula poder psíquico en la estrella de la frente como preparativo de cara a su evolución.,oficial
+SPECIES_KAKUNA,"Aunque es casi incapaz de moverse, en caso de sentirse amenazado puede envenenar a los enemigos con su aguijón.",oficial
+SPECIES_KANGASKHAN,Se han documentado casos de Kangaskhan sin crías que han adoptado bebés humanos cuyos padres habían sido víctimas de accidentes.,oficial
+SPECIES_KANGASKHAN_MEGA,"Al ver a su cría megaevolucionada, la madre piensa en el día en que esta la dejará.",propia
+SPECIES_KARRABLAST,Escupe un líquido corrosivo con el que disuelve el caparazón de los Shelmet para luego devorar el contenido.,oficial
+SPECIES_KARTANA,"Para los seres de este mundo resulta extraño y peligroso, pero en el mundo del que procede es una criatura muy común.",oficial
+SPECIES_KECLEON,"Incluso cuando no se está mimetizando, el color de su cuerpo cambia según cómo se encuentre. Un color más intenso indica mayor vitalidad.",oficial
+SPECIES_KELDEO_ORDINARY,"A base de superar encarnizados combates, su cuerno se fortalece y, entonces, despierta su verdadero poder.",oficial
+SPECIES_KELDEO_RESOLUTE,El poder oculto en su cuerpo cubre ahora su cuerno y lo vuelve una espada que lo corta todo.,propia
+SPECIES_KILOWATTREL,Guarda en el buche la electricidad de sus alas. Sus plumas casi no tienen grasa y nada fatal.,propia
+SPECIES_KINGAMBIT,"Dirige un gran ejército, pero no sabe idear estrategias complejas. Solo avanza a base de fuerza bruta.",propia
+SPECIES_KINGDRA,Las escamas que se le desprenden poseen una calidad tan excelsa y un resplandor tan intenso que han sido ofrecidas a la realeza como regalos.,oficial
+SPECIES_KINGLER,"Su gran pinza posee una potencia devastadora, pero su peso excesivo la convierte en un estorbo fuera del terreno de combate.",oficial
+SPECIES_KIRLIA,Con sus poderes psíquicos puede deformar el espacio a su alrededor y predecir el futuro.,oficial
+SPECIES_KLANG,Muchas empresas de Galar usan su imagen en sus logotipos como símbolo de tecnología industrial.,oficial
+SPECIES_KLAWF,"Espera a sus presas colgado boca abajo de un acantilado, pero no aguanta mucho: se le sube la sangre.",propia
+SPECIES_KLEAVOR,"Tala árboles con sus toscas hachas y se protege con piedra dura. Si te lo encuentras, lo mejor es huir.",propia
+SPECIES_KLEFKI,"Según parece, absorbe iones metálicos por el apéndice de la cabeza para adoptar una forma similar a la de sus amadas llaves.",oficial
+SPECIES_KLINK,Se dice que en tiempos remotos los seres humanos se inspiraron en este Pokémon para inventar el mecanismo de engranaje.,oficial
+SPECIES_KLINKLANG,Las tres ruedas dentadas giran a gran velocidad. El aro metálico dotado de púas no es materia viva.,oficial
+SPECIES_KOFFING,"Se nutre de aire contaminado. Al parecer, antaño eran mucho más numerosos en Galar.",oficial
+SPECIES_KOMALA,El motivo de su letargo vitalicio es la sustancia somnífera que contienen las hojas de las que se alimenta.,oficial
+SPECIES_KORAIDON,"Se parece a Cyclizar, pero es mucho más robusto y feroz. No se sabe nada de su forma de vida.",propia
+SPECIES_KRABBY,"Ante el peligro, se camufla con las burbujas que desprende por la boca para parecer más grande.",oficial
+SPECIES_KRICKETOT,"Si choca sus antenas, emite un sonido similar al de un xilófono.",oficial
+SPECIES_KRICKETUNE,"Los científicos tratan de estudiar sus melodías, que son reflejo de sus emociones.",oficial
+SPECIES_KROKOROK,"Tiene unos ojos especiales que le permiten ver en la oscuridad, pero suele permanecer inmóvil en las frías noches del desierto.",oficial
+SPECIES_KROOKODILE,"Es de naturaleza violenta, pero también tiene la paciencia necesaria para esperar a su presa oculto en la arena durante varios días.",oficial
+SPECIES_KUBFU,"Al tirar de los mechones blancos de la cabeza, acrecienta su espíritu luchador y empieza a acumular fuerza en el órgano de su bajo vientre.",oficial
+SPECIES_KYOGRE,Se dice que aumentó el nivel del mar a base de aguaceros. Ha estado durmiendo en una fosa marina.,oficial
+SPECIES_KYOGRE_PRIMAL,"Cuando Kyogre rugió, brotó el agua y los mares se extendieron. Nubes negras cubrieron el mundo.",propia
+SPECIES_KYUREM,Mantiene su cuerpo congelado con la intensa energía gélida que él mismo produce para estabilizar su estructura celular.,oficial
+SPECIES_KYUREM_BLACK,"Sus genes, iguales a los de Zekrom, le permitieron absorberlo. Ahora usa la electricidad y el hielo.",propia
+SPECIES_KYUREM_WHITE,"Sus genes, iguales a los de Reshiram, le permitieron absorberlo. Ahora usa el fuego y el hielo.",propia
+SPECIES_LAIRON,Resuelven sus disputas territoriales embistiendo y golpeando con el cuerpo. En sus corazas de acero se pueden apreciar hendiduras y rasguños.,oficial
+SPECIES_LAMPENT,"Se oculta en entornos urbanos haciéndose pasar por una lámpara corriente. Si se topa con alguien moribundo, lo sigue en silencio.",oficial
+SPECIES_LANDORUS_INCARNATE,Utiliza energía que obtiene del viento y del relámpago para nutrir el suelo y generar abundantes cosechas.,oficial
+SPECIES_LANDORUS_THERIAN,"Surca el cielo con esta forma y trae buenas cosechas, por lo que la gente lo venera.",propia
+SPECIES_LANTURN,"Ciega a sus presas con una luz intensa. Si tiene la ocasión, les propina una descarga eléctrica.",oficial
+SPECIES_LAPRAS,Nada sin problema en aguas heladas gracias a la soberbia resistencia al frío que posee. Su tersa piel es ligeramente fría al tacto.,oficial
+SPECIES_LARVESTA,Su cuerpo es cálido. Expulsa llamaradas por los cuernos con el fin de intimidar a sus enemigos y presas.,oficial
+SPECIES_LARVITAR,"Se alimenta de tierra. Después de devorar el equivalente a una montaña, se duerme y empieza a crecer.",oficial
+SPECIES_LATIAS,Se comunica por telepatía con la gente. Cambia de aspecto refractando luz con el plumaje.,oficial
+SPECIES_LATIAS_MEGA,"Es más pequeña que Mega-Latios, más ágil y gira muy cerrado. Su defensa crece mucho al megaevolucionar.",propia
+SPECIES_LATIOS,Es muy inteligente y entiende el lenguaje humano. Es un Pokémon muy dócil y no le gusta nada combatir.,oficial
+SPECIES_LATIOS_MEGA,Es más grande que Mega-Latias y vuela más rápido. Usa su velocidad para lanzar ataques sin parar.,propia
+SPECIES_LEAFEON,"Se siente muy orgulloso de su cola afilada como una espada, con la que es capaz de cortar en dos el tronco de un árbol grueso.",oficial
+SPECIES_LEAVANNY,Calienta sus huevos con el calor desprendido por el humus. Hace mantillas con las hojas para Sewaddle.,oficial
+SPECIES_LECHONK,"Busca comida todo el día. Tiene buen olfato, pero solo lo usa para buscar comida.",propia
+SPECIES_LEDIAN,Vuela por el cielo nocturno esparciendo un polvo brillante. Dicen que entrar en contacto con este polvo trae buena suerte.,oficial
+SPECIES_LEDYBA,"Un Pokémon bastante temeroso. Junto con sus congéneres, protege su nido usando Reflejo.",oficial
+SPECIES_LICKILICKY,"Es tan diestro con la lengua como un ser humano con las manos. Por el contrario, muestra escasa maña con los dedos.",oficial
+SPECIES_LICKITUNG,"Se nutre principalmente de Pokémon insecto, a los que paraliza primero lamiéndolos con su larga lengua y luego engulle de un bocado.",oficial
+SPECIES_LIEPARD,Libra disputas territoriales con los Thievul. Se acerca a sus rivales por la espalda sin hacer el menor ruido.,oficial
+SPECIES_LILEEP,Se ancla a una roca en el lecho marino y atrapa a las presas que se le acercan con sus tentáculos en forma de pétalos.,oficial
+SPECIES_LILLIGANT,"El aceite esencial que se extrae de su flor emana un aroma sublime, aunque su precio resulta desorbitado.",oficial
+SPECIES_LILLIGANT_HISUI,Sus fuertes piernas se deben a vivir en montañas nevadas. El aroma de su corona de flores anima a los demás.,propia
+SPECIES_LILLIPUP,Muestra una inteligencia muy superior a la media de los niños humanos. No olvida ni el amor ni los malos tratos que recibe.,oficial
+SPECIES_LINOONE,Abate a sus presas con su vertiginosa velocidad y sus afiladas garras. Los trayectos sinuosos merman notablemente su capacidad para correr.,oficial
+SPECIES_LINOONE_GALAR,"Muy agresivo, reta a rivales más fuertes. Los provoca con su larga lengua y luego embiste.",propia
+SPECIES_LITLEO,"Este enérgico Pokémon es de naturaleza curiosa e inquieta y, tanto al comienzo de un combate como cuando se enoja, su crin prende fuego.",oficial
+SPECIES_LITTEN,Quien trate de acariciarlo antes de ganarse su plena confianza se arriesga a comprobar de primera mano lo afiladas que están sus garras.,oficial
+SPECIES_LITWICK,"Cuanto más joven sea la energía vital que ha absorbido, mayor tamaño tendrá la llama de la cabeza y más siniestro será su brillo.",oficial
+SPECIES_LOKIX,"Cuando lucha en serio, se pone sobre sus patas plegadas y entra en Modo Duelo. Vence en poco tiempo.",propia
+SPECIES_LOMBRE,Vive en las riberas bañadas por el sol. De día duerme sobre un lecho de plantas acuáticas y de noche entra en acción.,oficial
+SPECIES_LOPUNNY,"Cuando acaba la estación más tórrida, le crece un nuevo pelaje muy mullido que lo prepara para el frío.",oficial
+SPECIES_LOPUNNY_MEGA,La megaevolución despierta su instinto de lucha. Ha soltado el pelo que le estorbaba al atacar.,propia
+SPECIES_LOTAD,El excesivo tamaño y peso de la hoja que tiene en la cabeza ha propiciado que viva flotando en el agua.,oficial
+SPECIES_LOUDRED,Su voz no afecta solo al oído. Sus ondas sonoras provocan variaciones de presión en el aire que hacen que sus enemigos salgan despedidos.,oficial
+SPECIES_LUCARIO,"Puede leer los pensamientos de la gente, por lo que establece lazos afectivos únicamente con Entrenadores de corazón noble.",oficial
+SPECIES_LUCARIO_MEGA,Se prepara para luchar concentrando su energía mental. Su estilo se resume en una palabra: despiadado.,propia
+SPECIES_LUCARIO_MEGA_Z,"Cubierto por completo de aura, desvía todo tipo de ataques y lucha como si bailara.",propia
+SPECIES_LUDICOLO,Mover su cuerpo al ritmo de música festiva puede hacer que aumente su fuerza.,oficial
+SPECIES_LUGIA,Dicen que es el guardián de los mares. Hay rumores de que fue visto en una noche de tormenta.,oficial
+SPECIES_LUMINEON,Nada arrastrándose por el lecho marino. Sus espléndidas aletas brillan como las estrellas del firmamento.,oficial
+SPECIES_LUNALA,Devora toda la luz que haya a su alrededor y adopta la forma de una luna llena que ilumina la oscura noche.,oficial
+SPECIES_LUNATONE,Fue descubierto hace 40 años en el lugar donde había caído un meteorito. Le basta fulminar a sus enemigos con la mirada para dormirlos.,oficial
+SPECIES_LUVDISC,Vive en los arrecifes de coral de mares cálidos. Dormir entre las ramas de los Corsola es algo por lo que siente una especial predilección.,oficial
+SPECIES_LUXIO,"Cuando encuentra a un adversario, se prepara para combatir sacando las garras, que emiten una corriente eléctrica de un millón de voltios.",oficial
+SPECIES_LUXRAY,Duerme durante largos períodos para recuperar la enorme cantidad de electricidad que consume al usar su capacidad para ver a través de objetos.,oficial
+SPECIES_LYCANROC_DUSK,Es tranquilo y feroz a la vez. Se dice que esta forma es la más difícil de criar.,propia
+SPECIES_LYCANROC_MIDDAY,Va acorralando pacientemente a su presa con movimientos raudos para finalmente clavarle los colmillos en sus puntos vitales.,oficial
+SPECIES_LYCANROC_MIDNIGHT,Corta a quien se acerca con su melena de roca. Desobedece a su Entrenador si no le gustan las órdenes.,propia
+SPECIES_MABOSSTIFF,"Le encanta jugar con niños. Es tranquilo, pero pone cara temible cuando protege a su familia.",propia
+SPECIES_MACHAMP,Puede dar varios puñetazos de una sola vez gracias a sus cuatro brazos. Golpea más rápido de lo que piensa.,oficial
+SPECIES_MACHOKE,Tiene una complexión tan fuerte que nunca se cansa. Suele ayudar a la gente a cargar objetos pesados.,oficial
+SPECIES_MACHOP,"Siempre rebosante de energía, pasa el tiempo levantando piedras para hacerse aún más fuerte.",oficial
+SPECIES_MAGBY,"Vive en los alrededores de los volcanes. Al final del día, se baña en magma para aliviar el cansancio.",oficial
+SPECIES_MAGCARGO,Tiene un cuerpo que no deja de hincharse y tan caliente como la lava. La concha suelta llamas.,oficial
+SPECIES_MAGEARNA,Pokémon artificial creado por científicos hace unos 500 años. Su verdadera esencia es una pieza llamada Coránima.,oficial
+SPECIES_MAGEARNA_MEGA,Magearna con un modo oculto activado. Esconde sus emociones mientras derriba a un rival tras otro.,propia
+SPECIES_MAGEARNA_ORIGINAL,Su forma de hace casi 500 años. Su cuerpo es solo un recipiente; la vida está en su corazón artificial.,propia
+SPECIES_MAGEARNA_ORIGINAL_MEGA,Un mecanismo que quita sus límites estuvo oculto 500 años. Se activa con una megapiedra.,propia
+SPECIES_MAGIKARP,Este Pokémon débil y patético se limita a dejarse llevar por la corriente cuando esta tiene fuerza.,oficial
+SPECIES_MAGMAR,Un Pokémon cuyo cuerpo está siempre envuelto en llamas. Es temido porque se lo considera un causante potencial de incendios.,oficial
+SPECIES_MAGMORTAR,"Al vivir en un cráter, su cuerpo ha adquirido un aspecto similar al de un volcán y ha desarrollado un órgano parecido a una cámara magmática.",oficial
+SPECIES_MAGNEMITE,Se nutre de electricidad. Puede flotar en el aire gracias a las ondas electromagnéticas que emite a través de las unidades de sus extremidades.,oficial
+SPECIES_MAGNETON,Emite de forma constante una potente fuerza magnética que causa estragos en prácticamente cualquier ordenador al que se acerque.,oficial
+SPECIES_MAGNEZONE,Se piensa que estuvo expuesto a un campo magnético especial que alteró su estructura molecular e hizo que evolucionara.,oficial
+SPECIES_MAKUHITA,Dicen que los Entrenadores dan de comer a sus Makuhita un guiso tradicional para que se hagan más fuertes todavía.,oficial
+SPECIES_MALAMAR,Se dice que sus poderes hipnóticos han influido en grandes acontecimientos que han cambiado el curso de la historia.,oficial
+SPECIES_MALAMAR_MEGA,Usa sus luces de colores para reescribir la personalidad y los recuerdos de otros y controlarlos.,propia
+SPECIES_MAMOSWINE,"Es tan fuerte como parece. Cuanto más frío hace, más gruesos, largos e imponentes se vuelven sus colmillos de hielo.",oficial
+SPECIES_MANAPHY,Posee un poder singular que hace que entable amistad con casi cualquier Pokémon.,oficial
+SPECIES_MANDIBUZZ,"Se engalana con los huesos que va recogiendo. Al parecer, la elección no es casual, sino que obedece a los dictados de la moda.",oficial
+SPECIES_MANECTRIC,Rara vez aparece ante la gente. Dicen que suele colocar su madriguera donde caen rayos.,oficial
+SPECIES_MANECTRIC_MEGA,Ha acumulado tanta electricidad que está irritado. Es tan rápido como un rayo.,propia
+SPECIES_MANKEY,"Este ágil Pokémon vive en los árboles. Se enfada con facilidad y, cuando lo hace, se abalanza contra todo lo que se encuentre a su alrededor.",oficial
+SPECIES_MANTINE,"Mientras nada plácidamente, no le importa que los Remoraid se aferren a él para comerse sus sobras.",oficial
+SPECIES_MANTYKE,Nada con los bancos de Remoraid y lucha junto a ellos cuando los ataca un enemigo.,oficial
+SPECIES_MARACTUS,"Una vez al año, esparce sus semillas, cuyo alto valor nutritivo las convierte en una inestimable fuente de alimento en el desierto.",oficial
+SPECIES_MAREANIE,"A diferencia de sus congéneres de Alola, los ejemplares de Galar aún no saben lo deliciosas que están las ramas de Corsola.",oficial
+SPECIES_MAREEP,"Su lana acumula electricidad estática con la fricción. Al ser tan adorable, la gente se acerca para acariciarlo y se lleva un doloroso chispazo.",oficial
+SPECIES_MARILL,"Su pelaje repele el agua, lo que evita que pase frío al salir de mares gélidos porque se seca al momento.",oficial
+SPECIES_MAROWAK,"Al evolucionar, se ha fusionado con el cráneo de su madre y, además, ha adquirido un carácter agresivo.",oficial
+SPECIES_MARSHADOW,"Posee la extraordinaria capacidad de infiltrarse en cualquier sombra, por lo que nadie lo había visto en mucho tiempo.",oficial
+SPECIES_MARSHTOMP,"Vive en el lodo, lo que contribuye a que sus piernas sean extremadamente robustas.",oficial
+SPECIES_MASCHIFF,"Sus mandíbulas y colmillos rompen rocas, y su gruesa grasa le sirve de buena defensa.",propia
+SPECIES_MASQUERAIN,"Sus grandes antenas en forma de ojos tienden a absorber humedad. Los días de lluvia, se refugia en cavidades de los árboles y espera paciente.",oficial
+SPECIES_MAUSHOLD_FOUR,"Los dos grandes protegen a los pequeños. Ante rivales fuertes, luchan todos juntos.",propia
+SPECIES_MAUSHOLD_THREE,"El pequeño apareció un día. Viven juntos como una familia, pero no se sabe qué relación tienen.",propia
+SPECIES_MAWILE,Sus otrora cuernos de acero se han transformado en grandes fauces con las que muerde a sus enemigos.,oficial
+SPECIES_MAWILE_MEGA,Sus dos fauces se agitan como si tuvieran voluntad propia. De un mordisco convierten una roca en polvo.,propia
+SPECIES_MEDICHAM,"Puede prever los movimientos de su rival usando sus poderes psíquicos, fortalecidos por el yoga.",oficial
+SPECIES_MEDICHAM_MEGA,"Usa su fuerza de voluntad para crear brazos extra. Cuanto más entrena, más reales parecen.",propia
+SPECIES_MEDITITE,Meditite aumenta su energía interior mediante meditación. Para subsistir le basta con una baya al día. El comer poco entra dentro de su entrenamiento.,oficial
+SPECIES_MEGANIUM,"El aliento de Meganium tiene el poder de revivir los rastrojos, además de regenerarlos.",oficial
+SPECIES_MEGANIUM_MEGA,Lanza un Rayo Solar potentísimo desde sus cuatro flores. También lo llaman Megacañón Solar.,propia
+SPECIES_MELMETAL,"Gracias a la inercia y la fuerza centrífuga, los puñetazos que propina con sus pesadas tuercas son los más potentes del mundo Pokémon.",oficial
+SPECIES_MELOETTA_ARIA,Controla los sentimientos de los que escuchan las melodías que emite con su singular vocalización.,oficial
+SPECIES_MELOETTA_PIROUETTE,Canta con una técnica especial que controla los sentimientos de quien la escucha.,propia
+SPECIES_MELTAN,"Viven en grupos, pero, llegado el momento, el ejemplar más fuerte absorbe a sus camaradas y evoluciona.",oficial
+SPECIES_MEOWSCARADA,"Camufla el tallo de su flor con el forro de su capa, y parece que la flor flota en el aire.",propia
+SPECIES_MEOWSTIC_F,"Las hembras son más egoístas y agresivas. Si no consiguen lo que quieren, te atormentan con su poder.",propia
+SPECIES_MEOWSTIC_F_MEGA,Puede comprimir o expandir cualquier cosa con su poder psíquico. Abruma al rival deformando el espacio.,propia
+SPECIES_MEOWSTIC_M,El fuerte instinto protector de los machos los lleva a liberar todo su poder cuando se trata de defenderse a sí mismos o a su Entrenador.,oficial
+SPECIES_MEOWSTIC_M_MEGA,Puede comprimir o expandir cualquier cosa con su poder psíquico. Abruma al rival deformando el espacio.,propia
+SPECIES_MEOWTH,Se lava cuidadosamente la cara para que no se le ensucie la moneda de oro que tiene en la frente. No se lleva nada bien con los Meowth de Galar.,oficial
+SPECIES_MEOWTH_ALOLA,"Vivía con la realeza de Alola y está acostumbrado al lujo. Es listo y orgulloso, y difícil de tratar.",propia
+SPECIES_MEOWTH_GALAR,Vivir con un pueblo marinero y rudo ha endurecido su cuerpo hasta volver de hierro algunas partes.,propia
+SPECIES_MESPRIT,Duerme en el fondo de un lago. Se dice que su espíritu deja el cuerpo para volar sobre el agua.,oficial
+SPECIES_METAGROSS,"Formado a partir de la unión de dos Metang. Emplea su inteligencia, comparable a la de un superordenador, para derrotar a sus rivales.",oficial
+SPECIES_METAGROSS_MEGA,"Cuando sabe que no puede ganar, clava sus garras en el rival y empieza la cuenta atrás de una explosión.",propia
+SPECIES_METANG,Levita gracias al magnetismo. Es capaz de sortear escarpadas montañas mientras vuela a altas velocidades en pos de su presa.,oficial
+SPECIES_METAPOD,"Aunque cuenta con una coraza muy dura, tiene un cuerpo bastante blando. Un ataque violento puede acabar con él.",oficial
+SPECIES_MEW,"Si se observa a través de un microscopio, puede distinguirse cuán corto, fino y delicado es el pelaje de este Pokémon.",oficial
+SPECIES_MEWTWO,"Su ADN es casi el mismo que el de Mew. Sin embargo, su tamaño y carácter son muy diferentes.",oficial
+SPECIES_MEWTWO_MEGA_X,Su poder psíquico ha reforzado sus músculos. Aprieta con una tonelada y corre 100 m en 2 segundos.,propia
+SPECIES_MEWTWO_MEGA_Y,"Es más pequeño, pero su poder mental ha crecido muchísimo. Con un pensamiento destroza un rascacielos.",propia
+SPECIES_MIENFOO,Su apariencia menuda contrasta con su carácter poco afable. Abruma a los rivales que se acercan a él con gráciles oleadas de ataques sucesivos.,oficial
+SPECIES_MIENSHAO,"Sus veloces patadas, que escapan al ojo humano, son capaces de reducir a escombros incluso rocas de gran tamaño.",oficial
+SPECIES_MIGHTYENA,Forman manadas de diez individuos y cercan a sus presas valiéndose de un trabajo en equipo impecable.,oficial
+SPECIES_MILCERY,Se dice que las pastelerías donde ha aparecido Milcery tienen casi todas las papeletas para saborear las mieles del éxito.,oficial
+SPECIES_MILOTIC,Se dice que su hermosa figura puede apaciguar el corazón de aquellos que tengan el ánimo alterado.,oficial
+SPECIES_MILTANK,"Si no se ordeña a Miltank a diario, enferma. El sabor de la leche que produce cambia según la época del año.",oficial
+SPECIES_MIME_JR,"Su admiración por Mr. Rime, un consumado danzarín, lo lleva a seguirlo para aprender de él e imitar con esmero sus pasos de baile.",oficial
+SPECIES_MINCCINO,"Se saludan entre sí frotándose la cola. Cuanto más voluminosa es, más orgullosos se muestran.",oficial
+SPECIES_MINUN,"Le gusta animar a sus amigos. Si pierden, su cuerpo suelta cada vez más chispas.",oficial
+SPECIES_MIRAIDON,"Parece la Serpiente de Hierro del Libro Violeta, que según dicen arrasó la tierra con sus rayos.",propia
+SPECIES_MISDREAVUS,Disfruta imitando llantos humanos para asustar a la gente. Los valientes no le caen demasiado bien.,oficial
+SPECIES_MISMAGIUS,Murmura conjuros para atormentar al enemigo y provocarle dolores de cabeza insoportables o visiones terroríficas.,oficial
+SPECIES_MOLTRES,Se cuenta que alguna vez ha iluminado el camino con sus alas flamígeras para rescatar a alguien que se había perdido en la montaña.,oficial
+SPECIES_MOLTRES_GALAR,Su aura siniestra consume el espíritu de quien toca. Sus víctimas quedan como sombras de sí mismas.,propia
+SPECIES_MONFERNO,Utiliza techos y paredes para lanzar ataques aéreos. También emplea su cola ígnea como arma.,oficial
+SPECIES_MORELULL,Vive en bosques umbríos. Esparce a su alrededor esporas titilantes que adormecen a sus enemigos.,oficial
+SPECIES_MORGREM,"De noche, atrae con astucia a su objetivo hasta el bosque. Al parecer, tiene la capacidad de hacer crecer productos agrícolas.",oficial
+SPECIES_MORPEKO_FULL_BELLY,"Siempre tiene apetito, sin importar lo mucho que coma. Lleva con sumo cuidado las semillas que ha tostado con su propia electricidad.",oficial
+SPECIES_MORPEKO_HANGRY,"El hambre lo vuelve muy violento, y la electricidad de sus mejillas se convierte en energía Siniestra.",propia
+SPECIES_MR_MIME,Domina con maestría la pantomima. La barrera generada con las ondas que emite por los dedos le permite protegerse de numerosos ataques.,oficial
+SPECIES_MR_MIME_GALAR,Su talento es el claqué. Enfría el suelo con los pies para crear hielo y lo usa como barrera.,propia
+SPECIES_MR_RIME,Se ha granjeado la simpatía de todo el mundo por sus cómicos movimientos. Emite poderes psíquicos por el motivo de su barriga.,oficial
+SPECIES_MUDBRAY,"Tras recubrir sus patas con el lodo que crea masticando tierra, puede recorrer los peores caminos sin temor a resbalar.",oficial
+SPECIES_MUDKIP,La aleta de su cabeza detecta las corrientes de agua y los peligros. Tiene fuerza para levantar rocas.,oficial
+SPECIES_MUDSDALE,Su resistencia le permitiría recorrer Galar de punta a punta sin un solo descanso portando cargas de más de diez toneladas.,oficial
+SPECIES_MUK,Huele tan mal que puede provocar desmayos. Su nariz se ha atrofiado de tal manera que ha perdido por completo el sentido del olfato.,oficial
+SPECIES_MUK_ALOLA,"Es tranquilo y amistoso, pero si pasa tiempo sin comer basura, rompe los muebles y se los come.",propia
+SPECIES_MUNCHLAX,Guarda alimentos bajo el pelaje. Compartirá un pequeño bocado de vez en cuando con quien logre ganarse su confianza.,oficial
+SPECIES_MUNKIDORI,La cadena tóxica le estimuló el cerebro e hizo florecer sus poderes psíquicos.,propia
+SPECIES_MUNNA,"El humo que despide cambia de color en función del sueño que haya consumido. Si es alegre, será rosa, o negruzco en el caso de una pesadilla.",oficial
+SPECIES_MURKROW,"Busca objetos brillantes para su patrón. No cuenta con muchas simpatías, pues la gente lo considera ave de mal agüero.",oficial
+SPECIES_MUSHARNA,"Siempre está soñando o adormecido. Se pone de muy mal humor al despertar, por lo que es mejor no perturbarlo.",oficial
+SPECIES_NACLI,Al moverse roza el suelo y deja sal. En su cuerpo se crea y se repone sal sin parar.,propia
+SPECIES_NACLSTACK,Comprime sal gema en su cuerpo y dispara bolitas tan duras que perforan una plancha de hierro.,propia
+SPECIES_NAGANADEL,Uno de los Ultraentes. Su aguijón segrega un líquido tóxico cuya viscosidad le da una apariencia brillante.,oficial
+SPECIES_NATU,Se desplaza dando saltitos porque sus alas no han crecido lo suficiente. Siempre está mirando algo fijamente.,oficial
+SPECIES_NECROZMA,Con sus rayos láser destruye todo a su paso en busca de luz para sustentarse.,oficial
+SPECIES_NECROZMA_DAWN_WINGS,Su forma al devorar la luz de Lunala. Atrapa al rival con sus garras gigantes y lo destroza.,propia
+SPECIES_NECROZMA_DUSK_MANE,Su forma al devorar la luz de Solgaleo. Salta sobre el rival y lo corta con las garras.,propia
+SPECIES_NECROZMA_ULTRA,La luz que sale de todo su cuerpo afecta de muchas formas a los seres vivos y a la naturaleza.,propia
+SPECIES_NICKIT,"Prudente y astuto, borra con la cola las huellas que deja al huir tras robarle el alimento a otro Pokémon.",oficial
+SPECIES_NIDOKING,"Presume de su hercúlea fuerza y combate vigorosamente con su robusta cola y su cuerno, con el que hasta puede pulverizar diamantes.",oficial
+SPECIES_NIDOQUEEN,"Para mecer a sus crías, las coloca en los huecos que tiene entre las púas dorsales, momento durante el cual no secretan veneno.",oficial
+SPECIES_NIDORAN_F,Parte las bayas con sus duros incisivos para comérselas. La punta del cuerno de las hembras es más redondeada que la de los machos.,oficial
+SPECIES_NIDORAN_M,Pequeño pero valiente. Arriesgaría la vida en combate con tal de proteger a su compañera.,oficial
+SPECIES_NIDORINA,"Cuando el peligro se cierne sobre la manada, los miembros unen fuerzas para defenderse emitiendo un coro de ondas ultrasónicas.",oficial
+SPECIES_NIDORINO,"Es nervioso y agresivo por naturaleza. Cuando suben sus niveles de adrenalina, la concentración de toxinas en su veneno aumenta.",oficial
+SPECIES_NIHILEGO,Llegó a este mundo a través de un Ultraumbral. Es un parásito que se aprovecha de Pokémon y personas.,oficial
+SPECIES_NINCADA,Pueden pasar más de diez años bajo tierra. Absorben nutrientes de las raíces de los árboles.,oficial
+SPECIES_NINETALES,Muy inteligente y vengativo. Agarrar una de sus colas podría traer 1000 años de mala suerte.,oficial
+SPECIES_NINETALES_ALOLA,"Guía montaña abajo a quien se pierde en la nieve, pero no perdona a quien daña la naturaleza.",propia
+SPECIES_NINJASK,"Este Pokémon es tan rápido que, según dicen, puede esquivar cualquier ataque. Le encanta alimentarse de la dulce savia de los árboles.",oficial
+SPECIES_NOCTOWL,Tiene los ojos muy desarrollados y puede ver con increíble claridad en la oscuridad más absoluta.,oficial
+SPECIES_NOIBAT,Su registro vocal cubre todo el espectro de frecuencias. Ni los Pokémon más grandes soportan las ondas ultrasónicas que emite.,oficial
+SPECIES_NOIVERN,Vuela en la oscuridad atormentando al enemigo con ondas ultrasónicas capaces de partir rocas antes de rematarlo con sus afilados colmillos.,oficial
+SPECIES_NOSEPASS,"Su potente fuerza magnética le permite atraer a sus presas sin necesidad de moverse, aunque a veces también atrae a sus enemigos naturales.",oficial
+SPECIES_NUMEL,En su joroba almacena magma ardiente que se enfría cuando llueve y lo ralentiza.,oficial
+SPECIES_NUZLEAF,Vive en las oquedades de los árboles grandes. El sonido que emite al usar la hoja de la cabeza como flauta asusta a quienes lo escuchan.,oficial
+SPECIES_NYMBLE,"Tiene el tercer par de patas plegado. En apuros, salta más de 10 metros con la fuerza de sus patas.",propia
+SPECIES_OBSTAGOON,Evoluciona tras haber librado numerosas peleas. El grito de guerra que profiere mientras pone los brazos en cruz atemoriza a cualquier rival.,oficial
+SPECIES_OCTILLERY,Atrapa a sus enemigos con los tentáculos y después los golpea con su dura cabeza.,oficial
+SPECIES_ODDISH,"Durante el día, se agazapa en el frío subsuelo huyendo del sol. La luz de la luna le hace crecer.",oficial
+SPECIES_OINKOLOGNE_F,Es meticulosa y le gusta el orden. Se envuelve en un aroma floral que calma a los Pokémon cercanos.,propia
+SPECIES_OINKOLOGNE_M,Está orgulloso de su piel fina y brillante. Suelta un olor concentrado por la punta de la cola.,propia
+SPECIES_OKIDOGI,La cadena tóxica de su cuello le estimuló los músculos y le dio un físico poderoso.,propia
+SPECIES_OMANYTE,"Un Pokémon de la era prehistórica, ahora extinto. Solía nadar moviendo sus diez tentáculos para desplazarse por el agua como si flotara.",oficial
+SPECIES_OMASTAR,"Posee unos colmillos afilados con los que puede partir piedras, pero solo ataca a presas que se hallan al alcance de sus tentáculos.",oficial
+SPECIES_ONIX,Perfora el suelo a una velocidad de 80 km/h girando y retorciendo su robusto y enorme cuerpo.,oficial
+SPECIES_ORANGURU,"Conoce hasta el último rincón del bosque y, si encuentra un Pokémon herido, va en busca de hierbas medicinales para curarlo.",oficial
+SPECIES_ORBEETLE,"Se sirve de sus poderes psíquicos, con los que es capaz de percibir lo que ocurre en un radio de 10 km, para examinar sus alrededores.",oficial
+SPECIES_ORICORIO_BAILE,Forma que toma Oricorio al libar Néctar Rojo. Su vehemencia le lleva a ponerse hecho una furia si el Entrenador le imparte la orden equivocada.,oficial
+SPECIES_ORICORIO_PAU,Ha tomado néctar rosa. Eleva su mente con pasos suaves y luego libera su energía psíquica.,propia
+SPECIES_ORICORIO_POM_POM,Ha tomado néctar amarillo. Se acerca con pasos ágiles y noquea con puñetazos eléctricos.,propia
+SPECIES_ORICORIO_SENSU,"Hechiza a sus rivales con su baile. Cuando bajan la guardia, les echa una maldición mortal.",propia
+SPECIES_ORTHWORM,"Si le atacan, usa los tentáculos de su cuerpo como puños y lanza una lluvia de puñetazos.",propia
+SPECIES_OSHAWOTT,"Ataca con la vieira de su ombligo. En cuanto para un ataque, pasa al contraataque sin dilación.",oficial
+SPECIES_OVERQWIL,Por sus púas como lanzas y su carácter salvaje lo llaman “Demonio Marino”. Se alimenta de veneno.,propia
+SPECIES_PACHIRISU,A veces se ve a dos frotándose las bolsas de las mejillas para compartir electricidad almacenada.,oficial
+SPECIES_PALAFIN_HERO,Sus genes antiguos han despertado. Es tan fuerte que levanta un crucero con una aleta.,propia
+SPECIES_PALAFIN_ZERO,Cambia de aspecto si oye a sus aliados pedir ayuda. Nunca deja que nadie vea cómo se transforma.,propia
+SPECIES_PALKIA,Tiene la habilidad de distorsionar el espacio. La mitología de Sinnoh lo describe como una deidad.,oficial
+SPECIES_PALKIA_ORIGIN,Surca el cielo con una forma parecida al creador de todo. Quizá la imita para obtener el poder de Arceus.,propia
+SPECIES_PALOSSAND,"Habita en las playas, aunque odia el agua. Cuando caen fuertes lluvias, no es capaz de preservar su forma de castillo.",oficial
+SPECIES_PALPITOAD,"A veces emiten un bello canto. Cuanto mayores son las protuberancias del cuerpo, más extenso es su registro vocal.",oficial
+SPECIES_PANCHAM,"Siempre lanza una mirada fulminante al rival para que no lo menosprecie, pero en cuanto se relaja esboza sin querer una sonrisa.",oficial
+SPECIES_PANGORO,La hoja que lleva en la boca le permite predecir los movimientos del rival. Puede reducir un camión a chatarra de un solo puñetazo.,oficial
+SPECIES_PANPOUR,"La acuosidad que acumula en su mata de pelo es rica en nutrientes, ideal para regar plantas y que crezcan mucho.",oficial
+SPECIES_PANSAGE,Es todo un experto en la búsqueda de bayas y es tan gentil que las comparte con todos sus compañeros.,oficial
+SPECIES_PANSEAR,Pokémon muy inteligente que tiene la costumbre de tostar las bayas antes de comérselas. Ayuda mucho a los humanos.,oficial
+SPECIES_PARAS,"Escarba en el suelo para extraer nutrientes de las raíces de los árboles, que las setas del lomo absorben después casi por completo.",oficial
+SPECIES_PARASECT,"Tras largo tiempo absorbiendo la energía del huésped, la seta parásita del lomo es la que parece controlar la voluntad de este Pokémon.",oficial
+SPECIES_PASSIMIAN,"Viven en grupos de unos veinte ejemplares. Cada individuo tiene un rol definido, lo que les permite sobrevivir en entornos hostiles.",oficial
+SPECIES_PATRAT,"Aunque es un Pokémon muy precavido y siempre hay uno montando guardia, si se acercan por detrás, no se dará cuenta.",oficial
+SPECIES_PAWMI,Sus almohadillas sueltan electricidad. Dispara desde las patas delanteras mientras se tambalea.,propia
+SPECIES_PAWMO,"Cuando atacan a su grupo, es el primero en luchar, con una técnica que usa descargas eléctricas.",propia
+SPECIES_PAWMOT,"Suele ser lento, pero en combate derriba a sus enemigos con movimientos rápidos como el rayo.",propia
+SPECIES_PAWNIARD,Forman grupos encabezados por un Bisharp. Se entrenan a diario soñando con llegar a liderar el grupo algún día.,oficial
+SPECIES_PECHARUNT,"Da mochis tóxicos que despiertan deseos. Quien los come queda bajo su control, encadenado a él.",propia
+SPECIES_PELIPPER,"Vuela a ras de la superficie marina para llenar su inmenso pico de agua y comida, que se lleva consigo.",oficial
+SPECIES_PERRSERKER,Su devoción por la lucha ha propiciado que evolucionara y le ha conferido unas peligrosas garras que se convierten en dagas al extenderse.,oficial
+SPECIES_PERSIAN,Hace gala de un porte elegante y majestuoso. No congenia con los toscos Perrserker y ambos se profesan un mutuo desprecio.,oficial
+SPECIES_PERSIAN_ALOLA,"Desprecia a todos menos a sí mismo. Pese a su cara bonita, es cruel y tortura a sus presas.",propia
+SPECIES_PETILIL,"Cuanto más sano está este Pokémon, más intenso se vuelve el color de sus hojas. A veces se asienta en huertos o jardines de flores bien cuidados.",oficial
+SPECIES_PHANPY,"A pesar de su tamaño reducido, es tan fuerte que puede llevar a un humano a su espalda con facilidad.",oficial
+SPECIES_PHANTUMP,Imita el llanto de un niño con la intención de que algún adulto se adentre y se pierda en lo más profundo del bosque.,oficial
+SPECIES_PHEROMOSA,"Para los seres de este mundo resulta extraño y peligroso, pero en el mundo del que procede es una criatura muy común.",oficial
+SPECIES_PHIONE,"Va a la deriva por mares cálidos. Siempre vuelve a donde nació, por mucho que se haya alejado.",oficial
+SPECIES_PIDGEOT,Este Pokémon vuela a una velocidad de 2 mach en busca de presas. Sus grandes garras son armas muy peligrosas.,oficial
+SPECIES_PIDGEOTTO,Su extraordinaria vitalidad y resistencia le permiten cubrir grandes distancias del territorio que habita en busca de presas.,oficial
+SPECIES_PIDGEOT_MEGA,Sus músculos se han fortalecido tanto que puede volar dos semanas seguidas sin descansar.,propia
+SPECIES_PIDGEY,Su docilidad es tal que suelen defenderse levantando arena en lugar de contraatacar.,oficial
+SPECIES_PIDOVE,"Es muy olvidadizo y no demasiado avispado, pero muchos Entrenadores le tienen simpatía por su carácter afable y sincero.",oficial
+SPECIES_PIGNITE,"Cuando las llamas de su interior se avivan, aumenta su velocidad y agilidad. Emite humo si está en peligro.",oficial
+SPECIES_PIKACHU_ALOLA,"Lleva la gorra de su compañero, prueba del fuerte vínculo que forjaron viajando juntos por Alola.",propia
+SPECIES_PIKACHU_HOENN,"Lleva la gorra de su compañero, prueba del fuerte vínculo que forjaron viajando juntos por Hoenn.",propia
+SPECIES_PIKACHU_KALOS,"Lleva la gorra de su compañero, prueba del fuerte vínculo que forjaron viajando juntos por Kalos.",propia
+SPECIES_PIKACHU_ORIGINAL,"Lleva la gorra de su compañero, prueba del fuerte vínculo que forjaron viajando por muchas regiones.",propia
+SPECIES_PIKACHU_PARTNER,"Lleva la gorra de su compañero, prueba del fuerte vínculo que forjaron superando juntos muchas dificultades.",propia
+SPECIES_PIKACHU_SINNOH,"Lleva la gorra de su compañero, prueba del fuerte vínculo que forjaron viajando juntos por Sinnoh.",propia
+SPECIES_PIKACHU_UNOVA,"Lleva la gorra de su compañero, prueba del fuerte vínculo que forjaron viajando juntos por Teselia.",propia
+SPECIES_PIKACHU_WORLD,"Lleva la gorra de su compañero, prueba del fuerte vínculo que forjaron viajando juntos por el mundo.",propia
+SPECIES_PIKIPEK,"Pese a su fino aspecto, tiene la musculatura del cuello muy desarrollada: agujerea los árboles a una velocidad de 16 picotazos por segundo.",oficial
+SPECIES_PILOSWINE,"Aunque tiene las patas cortas, sus fuertes pezuñas le permiten caminar por la nieve sin resbalar.",oficial
+SPECIES_PINCURCHIN,"Acumula electricidad en cada una de sus púas. Aunque estas se rompan, son capaces de seguir descargando energía durante 3 h.",oficial
+SPECIES_PINECO,Usa saliva para adherir corteza de árbol a su cuerpo y así aumentar de volumen. Con la edad puede alcanzar un tamaño gigantesco.,oficial
+SPECIES_PINSIR,"Usa la cornamenta a modo de pinza para atrapar a sus presas. Acto seguido, las parte por la mitad o las arroja lejos.",oficial
+SPECIES_PINSIR_MEGA,La megaevolución lo deja siempre excitado. Atraviesa a sus enemigos con sus dos grandes cuernos.,propia
+SPECIES_PIPLUP,"Es muy orgulloso, por lo que odia aceptar comida de la gente. Su grueso plumón lo protege del frío.",oficial
+SPECIES_PLUSLE,Absorbe electricidad de los postes de teléfono. La almacena en su cuerpo y crea cortocircuitos.,oficial
+SPECIES_POIPOLE,Un Ultraente originario de otro mundo. Se burla del oponente mientras lo rocía de veneno con el aguijón que tiene en la cabeza.,oficial
+SPECIES_POLITOED,Los machos emiten gritos muy potentes. Las hembras sienten predilección por los de voz grave e imponente.,oficial
+SPECIES_POLIWAG,"En ríos de aguas bravas, usa sus gruesos labios a modo de ventosa para adherirse a las rocas.",oficial
+SPECIES_POLIWHIRL,Secreta un sudor viscoso que le sirve para escurrirse y escapar del agarre de sus enemigos.,oficial
+SPECIES_POLIWRATH,"No solo es un experto nadador, sino que también domina las artes marciales. Propina enérgicos puñetazos gracias a sus musculosos brazos.",oficial
+SPECIES_POLTCHAGEIST_ARTISAN,Vive en un bote de té carísimo. Solo un experto distingue los botes caros de los baratos.,propia
+SPECIES_POLTCHAGEIST_COUNTERFEIT,El pesar de un maestro del té que murió sin perfeccionar su arte quedó en un matcha y se volvió Pokémon.,propia
+SPECIES_POLTEAGEIST_ANTIQUE,Solo deja probar un poco de su té a los Entrenadores en quienes confía.,propia
+SPECIES_POLTEAGEIST_PHONY,"Si avista una taza de té abandonada a su suerte, la rellena vertiendo parte de su propio cuerpo para generar otro Polteageist.",oficial
+SPECIES_PONYTA,"Por extraño que parezca, una vez que alguien se ha hecho merecedor de su confianza, puede tocarle la ardiente crin sin quemarse.",oficial
+SPECIES_PONYTA_GALAR,"Su cuerno tiene poder curativo. Te mira a los ojos y lee tu corazón. Si ve maldad, se esconde.",propia
+SPECIES_POOCHYENA,Es tenaz por naturaleza. Tiene un sentido del olfato tan agudo que nunca se le escapa la presa que quiere.,oficial
+SPECIES_POPPLIO,Entrena con ahínco a diario hasta que por fin es capaz de crear globos de un tamaño y eficacia adecuados.,oficial
+SPECIES_PORYGON,"Durante los últimos años, ha estado muy activo en el ciberespacio comprobando que no haya datos sospechosos.",oficial
+SPECIES_PORYGON2,"Al dotarlo de inteligencia artificial, desarrolló un misterioso lenguaje que solo los miembros de su especie son capaces de comprender.",oficial
+SPECIES_PORYGON_Z,"Se dice que evolucionó con la instalación de un nuevo software, pero la comunidad científica está dividida respecto a si es o no una evolución.",oficial
+SPECIES_PRIMARINA,Considera el terreno de combate un escenario desde el que encandilar al público con su canto y la coreografía de sus globos.,oficial
+SPECIES_PRIMEAPE,"Solo se calma cuando no hay nadie cerca, por lo que llegar a ver ese momento resulta verdaderamente difícil.",oficial
+SPECIES_PRINPLUP,No hace amigos. Puede partir en dos un árbol gigantesco de un fuerte aletazo.,oficial
+SPECIES_PROBOPASS,"Usa sus tres pequeñas unidades para capturar presas o combatir, mientras que el resto de su cuerpo se dedica casi solo a impartir órdenes.",oficial
+SPECIES_PSYDUCK,Sus dolores de cabeza empeoran a medida que aumenta su nivel de estrés. Su increíble poder psíquico puede causar estragos a su alrededor.,oficial
+SPECIES_PUMPKABOO_AVERAGE,La luz que emite por los orificios de la calabaza hipnotiza a humanos y Pokémon y los deja bajo su control.,oficial
+SPECIES_PUMPKABOO_LARGE,"Al llevar almas al más allá, los Pumpkaboo grandes prefieren las de los adultos.",propia
+SPECIES_PUMPKABOO_SMALL,"Al llevar almas al más allá, los Pumpkaboo pequeños prefieren las de los niños.",propia
+SPECIES_PUMPKABOO_SUPER,Los Pumpkaboo enormes prefieren las almas de personas también enormes.,propia
+SPECIES_PUPITAR,No se está quieto ni aun siendo una pupa. Sus extremidades ya se han formado bajo su robusta coraza.,oficial
+SPECIES_PURRLOIN,"Una vez que ha logrado distraer al rival mediante sus gestos adorables, lo araña de improviso con las garras mientras muestra un semblante risueño.",oficial
+SPECIES_PURUGLY,"Para intimidar y parecer más corpulento, se aprieta la cintura con su cola bífida.",oficial
+SPECIES_PYROAR,"Su aliento alcanza temperaturas de 6000 ºC, aunque no lo emplea contra sus presas, ya que prefiere la carne más bien cruda.",oficial
+SPECIES_PYROAR_MEGA,Escupe llamas de más de 10.000 grados. Agita su gran melena ardiente para proteger a sus aliados.,propia
+SPECIES_PYUKUMUKU,La formidable mucosidad que envuelve su piel lo mantiene hidratado y le permite permanecer en tierra firme varios días sin secarse.,oficial
+SPECIES_QUAGSIRE,"Su cuerpo siempre resulta escurridizo al tacto. Suele chocarse contra el lecho del río al nadar, pero no le importa demasiado.",oficial
+SPECIES_QUAQUAVAL,Una patada suya puede volcar un camión. Usa sus potentes patas para bailar danzas de tierras lejanas.,propia
+SPECIES_QUAXLY,Sus fuertes patas le permiten nadar en ríos con corriente. Le gusta el orden y le da mil vueltas a todo.,propia
+SPECIES_QUAXWELL,Observa a gente y Pokémon de muchas regiones e incorpora sus movimientos a sus bailes.,propia
+SPECIES_QUILAVA,Ten cuidado si te da la espalda en combate. Significa que te va a atacar con su lomo de fuego.,oficial
+SPECIES_QUILLADIN,"Chocan contra sus congéneres para fortalecer sus piernas. Debido a su carácter afable, nunca son los que provocan un combate.",oficial
+SPECIES_QWILFISH,Las pequeñas púas que cubren su cuerpo eran escamas. Inyectan una toxina que hace perder el conocimiento.,oficial
+SPECIES_QWILFISH_HISUI,Una forma antigua de Qwilfish. Los pescadores lo odian porque suelta veneno por sus púas.,propia
+SPECIES_RABOOT,"Para mejorar su habilidad con los pies, toma bayas de las ramas de los árboles sin usar las manos y juega a darles toques.",oficial
+SPECIES_RABSCA,El cuerpo que sujeta la bola casi no se mueve. Se cree que su cuerpo real está dentro de la bola.,propia
+SPECIES_RAGING_BOLT,Se parece a un Pokémon que una revista paranormal presentó como antepasado de Raikou.,propia
+SPECIES_RAICHU,"Cuando ha descargado las bolsas de las mejillas, levanta la cola y absorbe la carga eléctrica que hay en el ambiente.",oficial
+SPECIES_RAICHU_ALOLA,Controla la electricidad con su mente. Concentra energía psíquica en la cola y la usa como tabla de surf.,propia
+SPECIES_RAICHU_MEGA_X,Parece una X cuando vuela con 50 millones de voltios saliendo de sus orejas y su cola.,propia
+SPECIES_RAICHU_MEGA_Y,Lanza rayos desde la punta de la cola y los mechones de la cabeza. La electricidad forma una Y.,propia
+SPECIES_RAIKOU,"Este duro Pokémon almacena energía en su cuerpo. Después, cuando se desplaza por tierra, la suelta.",oficial
+SPECIES_RALTS,"Si sus cuernos perciben emociones positivas de personas o Pokémon, su cuerpo se calienta un poco.",oficial
+SPECIES_RAMPARDOS,Pokémon prehistórico especializado en dar cabezazos. Una teoría atribuye su extinción a su cerebro pequeño y a su poca inteligencia.,oficial
+SPECIES_RAPIDASH,El ejemplar más rápido se convierte en el líder de la manada y decide tanto el ritmo de galope como su destino.,oficial
+SPECIES_RAPIDASH_GALAR,"Pocos aguantan su Psicocorte. Lanzado desde su cuerno, atraviesa una plancha de metal gruesa.",propia
+SPECIES_RATICATE,"Gracias a las pequeñas membranas de las patas traseras, puede nadar por los ríos para capturar presas.",oficial
+SPECIES_RATTATA,"Es propenso a hincar los incisivos en cualquier cosa que se le ponga por delante. Si se ve alguno, seguramente haya cuarenta cerca.",oficial
+SPECIES_RATTATA_ALOLA,"Roe puertas con sus incisivos para entrar en las casas. Luego, guiado por sus bigotes, roba la comida.",propia
+SPECIES_RAYQUAZA,Dicen que Rayquaza ha vivido durante millones de años. Las leyendas cuentan que puso fin al continuo enfrentamiento entre Groudon y Kyogre.,oficial
+SPECIES_RAYQUAZA_MEGA,"Sus filamentos sueltan partículas que controlan la densidad y la humedad del aire, y así el tiempo.",propia
+SPECIES_REGICE,Todo su cuerpo está compuesto de hielo. Se dice que surgió bajo una gruesa placa de hielo durante alguna glaciación.,oficial
+SPECIES_REGIDRAGO,Todo su cuerpo es una gema de energía dragón cristalizada. Se cree que posee los poderes de todos los Pokémon dragón.,oficial
+SPECIES_REGIELEKI,"Todo su cuerpo es un órgano electrógeno, cuya potencia sería suficiente para abastecer la región de Galar por completo.",oficial
+SPECIES_REGIGIGAS,"Dicen que creó a otros Pokémon a partir de distintos materiales y que, después, colocó los continentes en su posición actual.",oficial
+SPECIES_REGIROCK,"Su cuerpo rocoso ha sido examinado con las técnicas científicas más avanzadas, pero no se han encontrado ni su cerebro ni su corazón.",oficial
+SPECIES_REGISTEEL,Dicen que se formó en el manto terrestre y ascendió a la superficie hace aproximadamente diez mil años.,oficial
+SPECIES_RELICANTH,"Fue descubierto durante una expedición marina. Se lo considera un fósil viviente, pues no ha cambiado en cien millones de años.",oficial
+SPECIES_RELLOR,"Hace una bola de barro con arena, tierra y energía psíquica. La cuida más que a su propia vida.",propia
+SPECIES_REMORAID,Usa su aleta dorsal a modo de ventosa para aferrarse a un Mantine en busca de restos de comida.,oficial
+SPECIES_RESHIRAM,Cuenta la leyenda que sus llamas reducirán a cenizas todo país cuyas gentes desprecien la verdad y estén mancilladas por la codicia.,oficial
+SPECIES_REUNICLUS,"Al parecer, beber su líquido especial otorga un intelecto sin par, pero resulta muy venenoso, excepto para los propios Reuniclus.",oficial
+SPECIES_REVAVROOM,Crea un gas con veneno y minerales y lo hace explotar en sus ocho cilindros para tener energía.,propia
+SPECIES_RHYDON,"Cuando evoluciona, comienza a andar con las patas traseras. Es capaz de horadar rocas con el cuerno que tiene.",oficial
+SPECIES_RHYHORN,"La cabeza no le da para retener más de una cosa. Si se pone a correr, se le olvida al instante por qué empezó a hacerlo.",oficial
+SPECIES_RHYPERIOR,Repele los ataques usando un Protector y aprovecha el momento en que el rival baja la guardia para perforarlo con su taladro.,oficial
+SPECIES_RILLABOOM,El percusionista con la técnica más depurada se convierte en líder. Son de carácter tranquilo y dan mucha importancia a la armonía del grupo.,oficial
+SPECIES_RIOLU,"Percibe los sentimientos de quienes lo rodean, así como las condiciones del entorno, mediante unas ondas conocidas como auras.",oficial
+SPECIES_ROARING_MOON,"Según una revista dudosa, tiene relación con la megaevolución que ocurre en Hoenn.",propia
+SPECIES_ROGGENROLA,"Se dirige hacia cualquier sonido que perciba. Es ligeramente cálido al tacto, debido al efecto de su núcleo energético.",oficial
+SPECIES_ROLYCOLY,Recorre incluso los caminos más impracticables y pedregosos como si de un monociclo se tratase. La combustión de carbón es su fuente vital.,oficial
+SPECIES_ROOKIDEE,Su pequeño cuerpo le permite volar a gran velocidad para golpear los puntos débiles de rivales mucho más grandes que él.,oficial
+SPECIES_ROSELIA,"Ataca con sus manos, cada una de las cuales contiene un tipo de veneno diferente. Cuanto más intenso es su aroma, mejor salud tiene.",oficial
+SPECIES_ROSERADE,"Las toxinas de la mano derecha son de efecto inmediato, y las de la izquierda, retardado. No obstante, ambas pueden ser letales.",oficial
+SPECIES_ROTOM,Su cuerpo de plasma le permite infiltrarse en toda clase de dispositivos electrónicos. Adora sobresaltar a la gente.,oficial
+SPECIES_ROTOM_FAN,El primer aparato que pudo ocupar fue el ventilador. Usa el viento para volar papeles importantes.,propia
+SPECIES_ROTOM_FROST,"En esta forma le gusta gastar bromas heladas, como congelar el agua de la bañera. Lucha con aire frío.",propia
+SPECIES_ROTOM_HEAT,"Si el horno microondas no funciona bien, el Rotom que lo ocupa se aletarga. Hace travesuras con el calor.",propia
+SPECIES_ROTOM_MOW,El cortacésped llevó a crear la Rotomdex. Corta hierba y flores y luego presume de lo que ha hecho.,propia
+SPECIES_ROTOM_WASH,Le encantan las bromas con agua. Su modelo de lavadora ya no se fabrica y se vende muy caro.,propia
+SPECIES_ROWLET,"Durante el día acumula energía mediante la fotosíntesis y, al caer la noche, vuela sin hacer ruido en busca de presas.",oficial
+SPECIES_RUFFLET,"Es capaz de partir hasta la baya más dura gracias a la fuerza de sus extremidades. Belicoso por naturaleza, planta cara a cualquiera.",oficial
+SPECIES_RUNERIGUS,"Su cuerpo, similar a una sombra, no debe tocarse bajo ningún concepto o se visualizarán los horribles recuerdos impregnados en la imagen.",oficial
+SPECIES_SABLEYE,"Se alimenta de gemas. En la oscuridad, los ojos le brillan con el destello de las piedras preciosas.",oficial
+SPECIES_SABLEYE_MEGA,"Con la energía de la megaevolución, la gema de su pecho crece, le rasga la piel y se le cae.",propia
+SPECIES_SALAMENCE,"Feliz de ver cumplido su deseo, surca los cielos con buen ánimo, pero, si se enfada, se vuelve violento e incontrolable.",oficial
+SPECIES_SALAMENCE_MEGA,La megaevolución alimenta su brutalidad y puede atacar a quien lo crio. Lo llaman la luna sangrienta.,propia
+SPECIES_SALANDIT,"Se aproxima a su presa por la espalda y, antes de que pueda advertirlo, la inmoviliza con un gas venenoso.",oficial
+SPECIES_SAMUROTT,Derriba a su rival con un solo tajo del sable que lleva en su coraza. Acalla al enemigo con una simple mirada.,oficial
+SPECIES_SAMUROTT_HISUI,"De corazón frío y espada hábil, esta forma rara de Samurott evolucionó así en la región de Hisui.",propia
+SPECIES_SANDACONDA,La manera tan particular que tiene de enrollarse sobre sí mismo le permite expulsar con mayor eficacia la arena que almacena en la bolsa.,oficial
+SPECIES_SANDILE,"Es pequeño, pero cuenta con un tren inferior fuerte. Se desplaza por el desierto abriéndose paso entre la arena, como si nadase.",oficial
+SPECIES_SANDSHREW,"Excava madrigueras profundas en las que vive. Parte con sus afiladas garras cualquier roca, por dura que sea, que le entorpezca el camino.",oficial
+SPECIES_SANDSHREW_ALOLA,Vivir en montañas nevadas le ha dado un cuerpo de hielo duro como el acero. Su punto débil es la barriga.,propia
+SPECIES_SANDSLASH,Trepa a los árboles con sus afiladas garras y deja caer bayas para los Sandshrew que esperan debajo.,oficial
+SPECIES_SANDSLASH_ALOLA,Abre camino en la nieve con sus grandes garras. En la montaña nevada no hay Pokémon más rápido.,propia
+SPECIES_SANDYGAST,Suele habitar en playas. Aumenta de tamaño al tomar control de todo aquel que se atreva a introducir la mano en su boca.,oficial
+SPECIES_SANDY_SHOCKS,Se parece a un Magneton de 10.000 años que salió en una revista paranormal.,propia
+SPECIES_SAWK,"Cuando un Sawk ha entrenado duro, es capaz de separar las aguas del océano con la potencia de sus técnicas de kárate.",oficial
+SPECIES_SAWSBUCK_AUTUMN,En su forma de otoño tiene muy mal genio. Los machos se pelean sin parar.,propia
+SPECIES_SAWSBUCK_SPRING,"Migra con el cambio de estación, por lo que hay quien considera a Sawsbuck el heraldo de la primavera.",oficial
+SPECIES_SAWSBUCK_SUMMER,"Cuanto más grandes son las ramas y hojas de su cornamenta, más majestuoso se le considera.",propia
+SPECIES_SAWSBUCK_WINTER,"Aunque la especie tiene muchos fans, esta forma de invierno no es muy popular.",propia
+SPECIES_SCEPTILE,Corre con elegancia de un lugar a otro de la selva y usa las afiladas hojas de sus brazos para cazar.,oficial
+SPECIES_SCEPTILE_MEGA,Sus patas rápidas le permiten llegar al rival en un instante. Puede lanzar parte de su cola como un misil.,propia
+SPECIES_SCIZOR,"Su potencia de ataque, que asombra dada su delgadez, se debe a que sus músculos están hechos de metal.",oficial
+SPECIES_SCIZOR_MEGA,Rebosa de energía y corre el riesgo de desbordarse. No aguanta combates largos.,propia
+SPECIES_SCOLIPEDE,Las disputas territoriales con Centiskorch son extremadamente violentas. El perdedor se convierte en la presa del ganador.,oficial
+SPECIES_SCOLIPEDE_MEGA,Su veneno mortal brilla un poco. Le afecta a la mente y lo vuelve aún más feroz.,propia
+SPECIES_SCORBUNNY,"Cuando se prepara para combatir, irradia calor por la punta de la nariz y el pelo que le recubre las patas.",oficial
+SPECIES_SCOVILLAIN,"La cabeza verde se ha vuelto cruel por el picante que le estimula el cerebro. Desbocado, nadie lo para.",propia
+SPECIES_SCOVILLAIN_MEGA,La megaevolución ha subido su picante. Agita su “corbata” para golpear a sus enemigos.,propia
+SPECIES_SCRAFTY,"A pesar de su carácter agresivo, se muestra muy protector con sus allegados y su territorio.",oficial
+SPECIES_SCRAFTY_MEGA,"La piel mudada se ha vuelto blanca, dura y flexible. Sigue siendo igual de peleón.",propia
+SPECIES_SCRAGGY,"Su robusta piel le sirve de protección. Cuando ya no puede estirarse más, es señal de que va a evolucionar pronto.",oficial
+SPECIES_SCREAM_TAIL,Solo se ha visto una vez. Se parece a una criatura misteriosa de un viejo diario de expedición.,propia
+SPECIES_SCYTHER,Sus guadañas se vuelven más afiladas con cada combate. Es capaz de rebanar troncos gruesos de un tajo.,oficial
+SPECIES_SEADRA,Su estrecho morro posee tal fuerza de succión que es capaz de aspirar presas de mayor tamaño y engullirlas enteras.,oficial
+SPECIES_SEAKING,Perfora las piedras del lecho del río con su cuerno para hacer un nido y que la corriente no arrastre sus huevos.,oficial
+SPECIES_SEALEO,"Tiene la costumbre de hacer girar en la punta del morro cualquier objeto redondeado, ya sea una Poké Ball o un Spheal.",oficial
+SPECIES_SEEDOT,Se cuelga de las ramas con el extremo de la cabeza. A veces se cae cuando soplan vientos fuertes.,oficial
+SPECIES_SEEL,La gruesa capa de grasa que le permite nadar sin problemas en aguas frías le da más de un sofoco en climas más cálidos.,oficial
+SPECIES_SEISMITOAD,"Las vibraciones de sus bultos resultan perfectas para dar masajes, lo que lo ha hecho muy popular entre la tercera edad.",oficial
+SPECIES_SENTRET,"Se apoya sobre su cola para ver a mucha distancia. Si divisa a un enemigo, dará la alarma a gritos.",oficial
+SPECIES_SERPERIOR,Detiene los movimientos del rival con una sola mirada. Expande la energía solar dentro de su cuerpo.,oficial
+SPECIES_SERVINE,"Cuando su cuerpo está sucio, no puede realizar la fotosíntesis con sus hojas, así que cuida mucho su higiene personal.",oficial
+SPECIES_SEVIPER,Le une una relación de enemistad con Zangoose. Se lima con las rocas su cola en forma de espada para tenerla afilada.,oficial
+SPECIES_SEWADDLE,"Usa hojas como material para fabricar su propia ropa, por lo que los diseñadores más famosos los tienen como mascota.",oficial
+SPECIES_SHARPEDO,"Conocido como el Terror de los Mares, ataca sin excepción a todo barco que ose adentrarse en su territorio oceánico.",oficial
+SPECIES_SHARPEDO_MEGA,Sus marcas amarillas son viejas cicatrices. La energía de la megaevolución las recorre y le duele.,propia
+SPECIES_SHAYMIN_LAND,"Se dice que, cuando florecen las Gracídeas, Shaymin alza el vuelo para mostrar su gratitud.",oficial
+SPECIES_SHAYMIN_SKY,"Al oler cierta flor rara, lo envuelve una luz y su pequeño cuerpo cambia para poder volar.",propia
+SPECIES_SHEDINJA,"Es un Pokémon muy peculiar: revolotea sin batir las alas, no respira y su cuerpo está hueco por dentro.",oficial
+SPECIES_SHELGON,"Aguanta el hambre sin comer nada. Al parecer, inicia el proceso evolutivo cuando se agota toda la energía que tenía acumulada.",oficial
+SPECIES_SHELLDER,La concha lo protege de cualquier tipo de ataque. Solo es vulnerable cuando se abre.,oficial
+SPECIES_SHELLOS_EAST,Aguanta poco en tierra antes de que su piel se seque. Se cree que el mar frío le da esta forma.,propia
+SPECIES_SHELLOS_WEST,"Si se le aprieta muy fuerte, secreta un misterioso fluido morado que, aunque inofensivo, resulta desagradable por su viscosidad.",oficial
+SPECIES_SHELMET,"Debido a su peculiar constitución, reacciona ante la energía eléctrica. Por alguna misteriosa razón, evoluciona en presencia de Karrablast.",oficial
+SPECIES_SHIELDON,Los fósiles que se han encontrado hasta ahora en estratos prehistóricos pertenecen solo a su cara.,oficial
+SPECIES_SHIFTRY,Vive sigiloso en lo más profundo del bosque. Se dice que con sus abanicos puede generar vientos gélidos.,oficial
+SPECIES_SHIINOTIC,"Conviene no acercarse si se avistan luces en la espesura del bosque en plena noche, ya que podrían ser las esporas soporíferas de Shiinotic.",oficial
+SPECIES_SHINX,Su pelaje brilla gracias a la electricidad. Envía señales a sus semejantes agitando la punta luminosa de la cola.,oficial
+SPECIES_SHROODLE,"Para alejar a los enemigos, pinta marcas alrededor de su nido con un líquido venenoso y apestoso.",propia
+SPECIES_SHROOMISH,Lanza esporas venenosas desde la parte superior de la cabeza. Inhalarlas es muy doloroso.,oficial
+SPECIES_SHUCKLE,Las bayas que almacena en su caparazón con forma de vasija se convierten al final en un espeso zumo.,oficial
+SPECIES_SHUPPET,"Según un viejo proverbio, conviene mantenerse alejado de aquellas casas a las que se arrime una multitud de Shuppet cuando cae la noche.",oficial
+SPECIES_SIGILYPH,"Explorando la zona desértica que sobrevuela, se han descubierto los vestigios de lo que parece ser una antigua ciudad.",oficial
+SPECIES_SILCOON,Bebe el rocío que recoge con su seda mientras espera evolucionar. Se defiende en su capullo.,oficial
+SPECIES_SILICOBRA,"Expulsa arena por los orificios nasales. Una vez que aturde al enemigo, aprovecha la ocasión para ocultarse bajo tierra.",oficial
+SPECIES_SIMIPOUR,"Le encantan los lugares con agua limpia. Cuando desciende el nivel de agua de su pelo, se abastece a través de su cola.",oficial
+SPECIES_SIMISAGE,Pokémon muy temperamental que lucha con su cola revestida de púas. Las hojas de su cabeza están muy amargas.,oficial
+SPECIES_SIMISEAR,"Cuando se emociona, echa chispas por la cola y la cabeza, y calienta su cuerpo. Por alguna razón le encantan los dulces.",oficial
+SPECIES_SINISTCHA_MASTERPIECE,"Cuanto más remueve con el batidor de su cabeza, más energía acumula. Así se prepara para luchar.",propia
+SPECIES_SINISTCHA_UNREMARKABLE,Se hace pasar por té para que lo beban y absorberles la vida. Casi nunca le funciona.,propia
+SPECIES_SINISTEA_ANTIQUE,"Su punto débil es el remolino de su cuerpo. Si lo remueven, el remolino se deforma y se marea.",propia
+SPECIES_SINISTEA_PHONY,"La taza de té donde se hospeda forma parte de una antigua y valiosa vajilla, de la que circulan numerosas falsificaciones.",oficial
+SPECIES_SIRFETCHD,Repele ataques con las hojas de su duro puerro y contraataca con su tallo afilado. El puerro que le sirve de armamento sigue siendo comestible.,oficial
+SPECIES_SIZZLIPEDE,"Oprime a sus presas con su cuerpo candente. Una vez bien tostadas, las devora con fruición.",oficial
+SPECIES_SKARMORY,"Aparece a menudo en escudos heráldicos, pues se pueden forjar espadas a partir de las plumas que pierde.",oficial
+SPECIES_SKARMORY_MEGA,"Con la megaevolución, sus pinzas tienen una forma diabólica que desgarra todo lo que atraviesan.",propia
+SPECIES_SKELEDIRGE,Su canto suave calma las almas. Quema a sus enemigos con llamas de casi 3000 grados.,propia
+SPECIES_SKIDDO,Puede generar energía con las hojas que tiene en la espalda disponiendo tan solo de agua y luz solar. Gracias a ello puede sobrevivir sin comer.,oficial
+SPECIES_SKIPLOOM,Abre sus pétalos para absorber la luz solar. También flota en el aire para estar más cerca del sol.,oficial
+SPECIES_SKITTY,"A Skitty le encanta mover cosas e ir detrás de ellas. Es de todos sabido que se dedica a ir detrás de su propia cola y que, al final, acaba mareándose.",oficial
+SPECIES_SKORUPI,"Ataca con las pinzas venenosas de la cola. Tras clavarlas, inyecta una toxina que inmoviliza a la presa.",oficial
+SPECIES_SKRELP,Su aspecto de alga podrida le permite ocultarse entre los restos que flotan a la deriva y pasar desapercibido ante sus enemigos.,oficial
+SPECIES_SKUNTANK,El fluido que expulsa por la punta de la cola emana una hediondez insoportable. Construye sus madrigueras cavando hoyos en la tierra.,oficial
+SPECIES_SKWOVET,"Siempre están comiendo bayas, por lo que son más robustos de lo que aparentan. Frecuentan los huertos en busca de su preciado manjar.",oficial
+SPECIES_SLAKING,"Slaking se pasa todo el día tumbado vagueando. Se come la hierba que tiene a su alcance y, una vez que ha acabado con ella, se va de mala gana a otro sitio.",oficial
+SPECIES_SLAKOTH,"Si se come tres hojas al día, ya se queda satisfecho. Aparte de eso, se pasa durmiendo 20 horas al día.",oficial
+SPECIES_SLIGGOO,"La protuberancia del lomo contiene su pequeño cerebro, que solo piensa en buscar comida y huir de los enemigos.",oficial
+SPECIES_SLIGGOO_HISUI,Una criatura melancólica. Su concha metálica salió de su moco al reaccionar con el hierro del agua.,propia
+SPECIES_SLITHER_WING,Tiene parecido con una criatura que un libro antiguo llamaba Reptalada.,propia
+SPECIES_SLOWBRO,"Se volvió bípedo por el impacto que le causó la mordedura del Shellder. Si este se desprende, vuelve a convertirse en un Slowpoke.",oficial
+SPECIES_SLOWBRO_GALAR,El mordisco de Shellder reaccionó con las especias de su cuerpo y lo volvió de tipo Veneno.,propia
+SPECIES_SLOWBRO_MEGA,"Con la energía de la megaevolución, Shellder se vuelve una coraza impenetrable. Slowpoke casi no cambia.",propia
+SPECIES_SLOWKING,"Es capaz de dar respuesta a cualquier cuestión que se le formule, pero, por desgracia, nadie logra descifrar una sola palabra de lo que dice.",oficial
+SPECIES_SLOWKING_GALAR,Las toxinas y el impacto de evolucionar hicieron tan listo a Shellder que ahora controla a Slowking.,propia
+SPECIES_SLOWPOKE,Hunde la cola en el agua y la usa cual caña de pescar. La sustancia dulce que secreta le sirve de cebo para atraer a sus presas.,oficial
+SPECIES_SLOWPOKE_GALAR,"Suele estar en las nubes, pero a veces se espabila. Parece que se debe a su dieta, que le da cola picante.",propia
+SPECIES_SLUGMA,"Slugma no tiene sangre en su organismo, sino ardiente magma que hace circular por todo el cuerpo los nutrientes y el oxígeno que necesitan sus órganos.",oficial
+SPECIES_SLURPUFF,La gran cantidad de aire acumulada en su pelaje le confiere un tacto aterciopelado y un peso muy inferior al que aparenta.,oficial
+SPECIES_SMEARGLE,Dibuja marcas con el líquido que secreta por la cola. Algunos de sus admiradores han llegado a pagar auténticas fortunas por ellas.,oficial
+SPECIES_SMOLIV,Convierte los nutrientes en aceite y lo guarda en el fruto de su cabeza. Aguanta una semana sin comer.,propia
+SPECIES_SMOOCHUM,Este Pokémon rebosante de curiosidad lo toca todo con los labios para determinar qué cosas le gustan y cuáles no.,oficial
+SPECIES_SNEASEL,Es un Pokémon de naturaleza astuta y fiera. Se cuela en los nidos de otros Pokémon cuando no están y roba sus huevos.,oficial
+SPECIES_SNEASEL_HISUI,Sus garras curvas le sirven para trepar acantilados. De ellas gotea un veneno que paraliza.,propia
+SPECIES_SNEASLER,"Por su veneno y su fuerza física, nadie le gana en las tierras heladas. Prefiere ir solo.",propia
+SPECIES_SNIVY,Sintetiza la luz del sol que recoge con su cola. Esta se le queda abatida cuando le fallan las energías.,oficial
+SPECIES_SNOM,"Se nutre de la nieve acumulada en el terreno. Cuanta más ingiere, más imponentes se vuelven las púas que presenta en el lomo.",oficial
+SPECIES_SNORLAX,"Este Pokémon tiene un estómago a prueba de bomba, por lo que es capaz de ingerir incluso comida podrida o mohosa.",oficial
+SPECIES_SNORUNT,"Dicen que, si aparece a medianoche, provoca grandes nevadas. Se alimenta de nieve y hielo.",oficial
+SPECIES_SNOVER,Las bayas con aspecto de helado que le crecen alrededor de la barriga son la comida favorita de los Darumaka que habitan en Galar.,oficial
+SPECIES_SNUBBULL,"A pesar de su aspecto, es muy tímido y afable. A menudo es objeto de burla cuando se junta con Pokémon Perrito.",oficial
+SPECIES_SOBBLE,"Al mojarse, su piel cambia de color y pasa a ser invisible, como si se hubiese camuflado.",oficial
+SPECIES_SOLGALEO,Antiguamente era conocido como la Criatura que se Nutre del Sol. Emite sin cesar una energía luminosa.,oficial
+SPECIES_SOLOSIS,Se cree que la sustancia viscosa que lo envuelve le permite sobrevivir en el espacio exterior.,oficial
+SPECIES_SOLROCK,"Usa el sol como fuente de energía, por lo que es más poderoso de día. Brilla al rotar.",oficial
+SPECIES_SPEAROW,"A la hora de proteger su territorio, compensa su incapacidad para volar a gran altura con una increíble velocidad.",oficial
+SPECIES_SPECTRIER,"Amante de la quietud y la soledad, galopa por las tinieblas nocturnas absorbiendo la energía vital de toda criatura que esté durmiendo.",oficial
+SPECIES_SPHEAL,"Flota entre las olas para examinar el océano. Si encuentra una presa, avisa enseguida a los Walrein de su manada.",oficial
+SPECIES_SPIDOPS,Se agarra a ramas y techos con sus hilos y se mueve sin hacer ruido. Atrapa a su presa sin que se entere.,propia
+SPECIES_SPINARAK,"El veneno de sus colmillos no es demasiado tóxico, pero basta para mantener inmovilizadas a las presas que caen en sus redes.",oficial
+SPECIES_SPINDA,Los dibujos en el pelaje de cada Spinda son diferentes. Esquiva de forma asombrosa los ataques de los rivales gracias a sus tambaleos.,oficial
+SPECIES_SPIRITOMB,Un viajero utilizó un misterioso hechizo para unirlo a una Piedra Espíritu por sus constantes fechorías.,oficial
+SPECIES_SPOINK,"Spoink lleva una perla en la cabeza, que sirve para amplificar los poderes psicoquinéticos que tiene. Por eso, está continuamente buscando una perla mayor.",oficial
+SPECIES_SPRIGATITO,El dulce aroma de su cuerpo hipnotiza a quien lo rodea. Huele más fuerte cuando le da el sol.,propia
+SPECIES_SPRITZEE,Su cuerpo emana una fragancia que embelesa a quien la huele. Llegó a ser muy apreciado entre las damas de la nobleza.,oficial
+SPECIES_SQUAWKABILLY_BLUE,Sus bandadas pueden tener más de 50 individuos. Vuelan por pueblos y bosques armando jaleo.,propia
+SPECIES_SQUAWKABILLY_GREEN,Las bandadas de plumas verdes son las que mandan. Por la mañana y la tarde hacen mucho ruido.,propia
+SPECIES_SQUAWKABILLY_WHITE,"Son los menos numerosos, pero viven bien en los pueblos porque se camuflan con las casas blancas.",propia
+SPECIES_SQUAWKABILLY_YELLOW,Son impulsivos y luchan con saña. Saltan cerca del rival para pelear cuerpo a cuerpo.,propia
+SPECIES_SQUIRTLE,"Cuando se siente en peligro, se esconde en su caparazón y escupe chorros de agua por la boca.",oficial
+SPECIES_STAKATAKA,Extraña criatura que podría ser un Ultraente. Parece un muro rocoso hasta que se mueve de repente y ataca.,oficial
+SPECIES_STANTLER,Su cornamenta cambia el flujo del aire para crear un espacio de realidad distorsionada.,oficial
+SPECIES_STARAPTOR,Al evolucionar a Staraptor deja su bandada y pasa a vivir en soledad. Sus alas son inmensas.,oficial
+SPECIES_STARAPTOR_MEGA,Vuela como nadie. Puede surcar el cielo llevando un Steelix de más de 400 kg.,propia
+SPECIES_STARAVIA,"Vive en bosques y campos. Si dos bandadas se encuentran, pelean por el territorio.",oficial
+SPECIES_STARLY,Sobrevuela los campos buscando Pokémon de tipo Bicho. Chilla de forma muy estridente.,oficial
+SPECIES_STARMIE,Starmie absorbe plancton al tiempo que nada por el mar haciendo girar su cuerpo a gran velocidad.,oficial
+SPECIES_STARMIE_MEGA,Se mueve de forma más humana. No se sabe si quiere comunicarse o sustituir a la humanidad.,propia
+SPECIES_STARYU,"No le importa que le mordisqueen el cuerpo los Pokémon pez, ya que las partes desgarradas se regeneran casi al instante.",oficial
+SPECIES_STEELIX,Se cree que su cuerpo se ha ido transformando por el hierro acumulado en la tierra que ha ingerido.,oficial
+SPECIES_STEELIX_MEGA,"Sus células, cristalizadas por la megaevolución, son más duras que cualquier mineral.",propia
+SPECIES_STEENEE,"Si un Corvisquire viene a picotearlo, se defiende golpeándolo con el cáliz de la cabeza y con fuertes patadas.",oficial
+SPECIES_STONJOURNER,"Una vez al año y en una fecha concreta, tienen la costumbre de aparecer de la nada para reunirse y formar un círculo.",oficial
+SPECIES_STOUTLAND,Sus impresionantes bigotes son su orgullo. Entre los de su especie se establece una jerarquía según su longitud.,oficial
+SPECIES_STUFFUL,"Cuando patalea para tratar de defenderse resulta adorable, pero conviene no fiarse, ya que su fuerza sería capaz de derribar un árbol.",oficial
+SPECIES_STUNFISK,"Se desconoce la razón, pero esboza una leve sonrisa al liberar potentes descargas eléctricas a través de las zonas amarillentas de su cuerpo.",oficial
+SPECIES_STUNFISK_GALAR,"Espera en el barro y atrae a sus presas con los labios. Cuando se acercan, las atrapa con sus aletas.",propia
+SPECIES_STUNKY,"Si levanta la cola y apunta los cuartos traseros, es señal de que se dispone a expulsar un líquido cuyo hedor llega a provocar desmayos.",oficial
+SPECIES_SUDOWOODO,Finge ser un árbol para evitar que lo ataquen. Odia tanto el agua que desaparecerá si empieza a llover.,oficial
+SPECIES_SUICUNE,"Conocido como la reencarnación de los vientos del norte, puede purificar aguas turbias y sucias.",oficial
+SPECIES_SUNFLORA,"Sunflora transforma la energía solar en nutrientes. De día, cuando hace calor, está en continuo movimiento. Solo para cuando comienza a anochecer.",oficial
+SPECIES_SUNKERN,Se alimenta del rocío que hay sobre las hojas de las plantas. Dicen que no come nada más.,oficial
+SPECIES_SURSKIT,Vive en estanques y pantanales donde abunde la flora acuática y compite fieramente con los Dewpider por el territorio y el sustento.,oficial
+SPECIES_SWABLU,Sus alas parecen nubes algodonadas y lo ocultan de sus rivales. Se cree que se volvieron blancas con el paso de las generaciones.,oficial
+SPECIES_SWADLOON,Se guarece del frío envolviéndose en hojas. Se desplaza por el bosque comiendo a su paso las hojas caídas.,oficial
+SPECIES_SWALOT,"Swalot no tiene dientes, así que lo que come se lo traga de una vez; da igual lo que sea. A este Pokémon le cabría un neumático en la boca sin problema.",oficial
+SPECIES_SWAMPERT,Puede nadar y arrastrar un barco grande. Golpea a sus enemigos con sus gruesos brazos.,oficial
+SPECIES_SWAMPERT_MEGA,Al megaevolucionar gana la fuerza para moverse en el agua. Usa su poder en tierra y en el agua.,propia
+SPECIES_SWANNA,Comienzan a danzar al amanecer. El líder de la bandada se sitúa en el centro.,oficial
+SPECIES_SWELLOW,"Swellow se preocupa a conciencia del mantenimiento de sus lustrosas alas. Cuando hay dos juntos, el uno se ocupa de limpiarle las alas al otro.",oficial
+SPECIES_SWINUB,"Si percibe un aroma tentador, se lanza de cabeza sin pensárselo dos veces para hallar su origen.",oficial
+SPECIES_SWIRLIX,Su esponjoso pelaje desprende un olor dulzón como el del algodón de azúcar. Escupe hebras pegajosas con las que envuelve a sus enemigos.,oficial
+SPECIES_SWOOBAT,"En algunas regiones se venera a este Pokémon, ya que consideran la forma de su nariz como un símbolo de felicidad.",oficial
+SPECIES_SYLVEON,En un cuento infantil de Galar se narra la victoria de un Sylveon de extraordinaria belleza sobre un temible Pokémon de tipo Dragón.,oficial
+SPECIES_TADBULB,"Agita la cola para generar electricidad. Si nota peligro, hace parpadear su cabeza para avisar.",propia
+SPECIES_TAILLOW,No le gustan las bajas temperaturas. En las estaciones frías se recorre casi 300 km al día en busca de zonas cálidas.,oficial
+SPECIES_TALONFLAME,"Arremete contra sus presas a una velocidad de 500 km/h y les asesta el golpe de gracia con una patada muy potente, sin dejarles escapatoria.",oficial
+SPECIES_TANDEMAUS,"Con gran trabajo en equipo, cortan con sus incisivos materiales para su nido y se los llevan.",propia
+SPECIES_TANGELA,Sus lianas despiden una fragancia peculiar. En cierta zona de Galar se usan como aderezo.,oficial
+SPECIES_TANGROWTH,"Las lianas le crecen más rápidamente si vive en regiones cálidas. Cuando alcanzan cierta longitud, se las corta.",oficial
+SPECIES_TAPU_BULU,"El espíritu guardián de Ula-Ula, que gobierna la flora. Hace repicar su cola para alertar de su presencia y prevenir riñas sin sentido.",oficial
+SPECIES_TAPU_FINI,"A pesar de ser un espíritu guardián, trae desgracias a aquellos que se le acercan sin la debida cortesía.",oficial
+SPECIES_TAPU_KOKO,"El espíritu guardián de Melemele, capaz de blandir el rayo. Su eterna curiosidad le lleva a veces a mostrarse ante las personas.",oficial
+SPECIES_TAPU_LELE,"Este espíritu guardián es tan candoroso como despiadado, por lo que se podría decir que es la encarnación de la naturaleza misma.",oficial
+SPECIES_TAROUNTULA,El hilo que segrega es tan fuerte como un alambre. Se sigue investigando el secreto de su fuerza.,propia
+SPECIES_TATSUGIRI_CURLY,Un pequeño Pokémon dragón. Vive dentro de la boca de Dondozo para protegerse de los enemigos.,propia
+SPECIES_TATSUGIRI_CURLY_MEGA,La megaevolución ha vuelto su mente aún más astuta. Puede crear y dirigir copias de sí mismo.,propia
+SPECIES_TATSUGIRI_DROOPY,"Engaña a sus rivales haciéndose el muerto. Es pequeño y débil, pero sobrevive gracias a su astucia.",propia
+SPECIES_TATSUGIRI_DROOPY_MEGA,Solidifica la energía de la megaevolución y la lanza como proyectiles que explotan al tocar.,propia
+SPECIES_TATSUGIRI_STRETCHY,Es uno de los dragones más listos. Se camufla hinchando el saco de la garganta.,propia
+SPECIES_TATSUGIRI_STRETCHY_MEGA,"Crea un plato con la energía de la megaevolución y se sube a él para moverse, incluso por el aire.",propia
+SPECIES_TAUROS,Los Tauros que habitan en la región de Galar son de temperamento irascible y no permiten que los humanos monten en su lomo.,oficial
+SPECIES_TAUROS_PALDEA_AQUA,Lanza agua a presión por los agujeros de sus cuernos y atraviesa a sus enemigos.,propia
+SPECIES_TAUROS_PALDEA_BLAZE,Sus cuernos pueden superar los 1000 grados. Quien recibe una cornada sufre heridas y quemaduras.,propia
+SPECIES_TAUROS_PALDEA_COMBAT,Tiene un cuerpo musculoso y destaca en el cuerpo a cuerpo. Golpea los puntos débiles con sus cuernos.,propia
+SPECIES_TEDDIURSA,A Teddiursa le encanta chuparse las palmas impregnadas de dulce miel. Este Pokémon fabrica su propia miel mezclando frutos y el polen que recoge Beedrill.,oficial
+SPECIES_TENTACOOL,"Su cuerpo está compuesto casi por completo de agua, por lo que resulta muy difícil distinguirlo cuando está sumergido en el mar.",oficial
+SPECIES_TENTACRUEL,Puede estirar y contraer con total libertad sus 80 tentáculos. Con ellos atrapa a sus presas y les inyecta un veneno debilitante.,oficial
+SPECIES_TEPIG,"Le encanta comer bayas tostadas, pero a veces se emociona demasiado y termina churruscándolas.",oficial
+SPECIES_TERAPAGOS_NORMAL,Se protege convirtiendo la energía en cristales duros. Es el origen del fenómeno Teracristal.,propia
+SPECIES_TERAPAGOS_STELLAR,Un viejo diario lo describe enterrado en las profundidades como un planeta flotando en el espacio.,propia
+SPECIES_TERAPAGOS_TERASTAL,Su caparazón es energía teracristal. Absorbe la energía de los ataques y se la pasa a Terapagos.,propia
+SPECIES_TERRAKION,Las leyendas de Teselia narran la lucha que libró contra los humanos para proteger a los Pokémon.,oficial
+SPECIES_THIEVUL,Un Pokémon ágil y de afiladas garras que se alimenta de huevos y comida robados. Los Boltund son su enemigo natural.,oficial
+SPECIES_THROH,"Entrenan en grupos de cinco individuos. Si alguno es incapaz de seguir el ritmo, arroja el cinturón y abandona la cuadrilla.",oficial
+SPECIES_THUNDURUS_INCARNATE,Su gusto por surcar el cielo lanzando rayos y provocando incendios forestales le ha granjeado pocas simpatías.,oficial
+SPECIES_THUNDURUS_THERIAN,Pulveriza a sus enemigos con rayos potentísimos que lanza desde las esferas de su cola.,propia
+SPECIES_THWACKEY,"Se concentra tanto en marcar el ritmo que, cuando su rival se debilita en combate, no se da ni cuenta.",oficial
+SPECIES_TIMBURR,"Cuando logra transportar una viga de madera que triplica su altura y peso, es señal de que va a evolucionar.",oficial
+SPECIES_TING_LU,Baja despacio su pesadísima cabeza al suelo y abre grietas de más de 50 metros de profundidad.,propia
+SPECIES_TINKATINK,Golpea chatarra para hacerse un martillo y lo rehace hasta quedar satisfecho.,propia
+SPECIES_TINKATON,"Su martillo pesa más de 100 kg, pero lo maneja con facilidad para robar lo que quiere.",propia
+SPECIES_TINKATUFF,Viven en montones de chatarra. Prueban la fuerza de sus martillos chocándolos entre sí.,propia
+SPECIES_TIRTOUGA,Se piensa que es el antepasado de numerosos Pokémon tortuga. Fue regenerado a partir de un fósil.,oficial
+SPECIES_TOEDSCOOL,"Parece un Tentacool, pero es otra especie. Tiene patas finas, pero corre a casi 50 km/h.",propia
+SPECIES_TOEDSCRUEL,Se juntan en colonias en lo profundo del bosque. Odian que se acerquen extraños.,propia
+SPECIES_TOGEKISS,"Se dice que es portador de buena suerte. Por ello, su imagen aparece representada en talismanes y amuletos desde la antigüedad.",oficial
+SPECIES_TOGEPI,"Se lo considera un símbolo de buena suerte y, según se dice, su cascarón está lleno de alegría.",oficial
+SPECIES_TOGETIC,"Si no está con gente amable, se entristece. Puede flotar en el aire sin mover las alas.",oficial
+SPECIES_TORCHIC,"En su interior, guarda una llama que arde sin cesar. Si se le abraza, se nota que tiene una temperatura muy alta.",oficial
+SPECIES_TORKOAL,"Se junta con numerosos congéneres para establecer su morada en minas abandonadas, donde se afanan en localizar y extraer carbón.",oficial
+SPECIES_TORNADUS_INCARNATE,La energía que desprende de su cola genera violentas tempestades capaces de echar abajo casas.,oficial
+SPECIES_TORNADUS_THERIAN,Un ejemplo de cambio de forma. Se ha visto a Tornadus cruzar el océano con esta forma.,propia
+SPECIES_TORRACAT,Enfrentarse a un adversario formidable aviva tanto su espíritu combativo como la energía térmica de su cascabel.,oficial
+SPECIES_TORTERRA,Algunos Pokémon pequeños se juntan en su espalda para hacer sus nidos.,oficial
+SPECIES_TOTODILE,"Totodile tiene cuerpo pequeño, pero fuertes mandíbulas. A veces, piensa que solo está dando un mordisquito y hace unas heridas bastante considerables.",oficial
+SPECIES_TOUCANNON,Las parejas de Toucannon son famosas por la armonía que reina entre ellas. Por eso se llevan a las bodas como portadores de buena fortuna.,oficial
+SPECIES_TOXAPEX,La bolsa de veneno en el interior de su cuerpo contiene toxinas tan potentes que provocarían tres días de dolores intensos hasta a un Wailord.,oficial
+SPECIES_TOXEL,"Provoca una reacción química para generar energía eléctrica con sus toxinas. Aunque de bajo voltaje, puede causar entumecimiento.",oficial
+SPECIES_TOXICROAK,"Cuando abate una presa, emite un croar de victoria a pleno pulmón. Está emparentado con los Seismitoad.",oficial
+SPECIES_TOXTRICITY_AMPED,Posee un carácter belicoso e irascible. Bebe una gran cantidad de agua estancada para absorber sus toxinas.,oficial
+SPECIES_TOXTRICITY_LOW_KEY,Genera 15.000 voltios y desprecia a todo el que le desafía.,propia
+SPECIES_TRANQUILL,Posee una mente ágil y muy buena memoria. Tal vez por eso muchos repartidores lo eligen como compañero.,oficial
+SPECIES_TRAPINCH,"Excava fosas cóncavas, de las cuales resulta imposible escapar, y espera a que una presa caiga en su interior.",oficial
+SPECIES_TREECKO,Tiene pequeñas púas en las plantas de los pies que le permiten andar por techos y paredes sin caerse.,oficial
+SPECIES_TREVENANT,Puede extender las finas raíces que le brotan de las extremidades inferiores para conectarse con el resto de los árboles y controlarlos a voluntad.,oficial
+SPECIES_TROPIUS,A la gente le encanta la deliciosa fruta de sus racimos. En las regiones cálidas abundan las granjas que se dedican a criar Tropius.,oficial
+SPECIES_TRUBBISH,Nació a partir de una rebosante bolsa de basura. Los gases nocivos que eructa son un manjar para los Weezing de Galar.,oficial
+SPECIES_TRUMBEAK,"Dispara por el pico las semillas de las bayas ingeridas. Al dispersarse por el suelo, de ellas acaban germinando nuevas plantas.",oficial
+SPECIES_TSAREENA,"Propina patadas con sus duras y puntiagudas piernas, con las que deja heridas indelebles en el cuerpo y el corazón del adversario.",oficial
+SPECIES_TURTONATOR,El material explosivo de su caparazón está compuesto por el azufre del que se alimenta. Sus excrementos explosivos son muy peligrosos.,oficial
+SPECIES_TURTWIG,"Realiza la fotosíntesis para obtener oxígeno. Si tiene sed, las hojas de la cabeza se marchitan.",oficial
+SPECIES_TYMPOLE,Se comunica con los suyos mediante ondas sonoras. Su grito de alerta es imperceptible para los humanos y el resto de los Pokémon.,oficial
+SPECIES_TYNAMO,"Apenas puede generar energía por sí mismo, pero un banco de Tynamo puede crear violentas descargas eléctricas.",oficial
+SPECIES_TYPE_NULL,Fue creado a imagen de un Pokémon mitológico. Lleva una máscara de contención para evitar que su poder se descontrole.,oficial
+SPECIES_TYPHLOSION,Tiene una habilidad secreta y devastadora. Causa explosiones al frotar su pelaje.,oficial
+SPECIES_TYPHLOSION_HISUI,Dicen que purifica con sus llamas las almas perdidas y las guía al más allá.,propia
+SPECIES_TYRANITAR,Sus estrepitosos pasos derrumban montañas y hacen que el terreno a su alrededor cambie drásticamente.,oficial
+SPECIES_TYRANITAR_MEGA,Recibió tanto poder que se le abrió la espalda. Solo le mueve su instinto destructor.,propia
+SPECIES_TYRANTRUM,Puede hacer trizas un coche de un solo mordisco gracias a sus potentes mandíbulas. Antaño era considerado un rey.,oficial
+SPECIES_TYROGUE,"Su pequeño tamaño no debe ser motivo para subestimarlo, ya que se liará de inmediato a golpes con cualquier rival que estime oportuno.",oficial
+SPECIES_TYRUNT,Un Pokémon un tanto egoísta y malcriado. Puede ocasionar graves lesiones a su Entrenador incluso jugando.,oficial
+SPECIES_UMBREON,"En las noches de luna llena, o cuando se exalta, le empiezan a brillar los anillos de color dorado.",oficial
+SPECIES_UNFEZANT,Es un Pokémon muy inteligente y orgulloso. Se tiene en alta estima a aquellos que se convierten en sus Entrenadores.,oficial
+SPECIES_URSALUNA,El terreno pantanoso le ha dado un cuerpo robusto y la capacidad de manejar la turba.,propia
+SPECIES_URSALUNA_BLOODMOON,Cruzó el mar hasta una tierra nueva. Sobrevivir allí le dio un aspecto único y poderes especiales.,propia
+SPECIES_URSARING,"Aunque es muy grande, no se le da nada mal lo de trepar árboles. Come y duerme en las copas.",oficial
+SPECIES_URSHIFU_RAPID_STRIKE,"Esta forma cree en vencer con una lluvia de golpes. Ataca sin parar, fluyendo como un río.",propia
+SPECIES_URSHIFU_SINGLE_STRIKE,"Vive en zonas montañosas en áreas recónditas, donde entrena corriendo por escarpados riscos para fortalecer sus piernas y refinar su técnica.",oficial
+SPECIES_UXIE,Se dice que su aparición otorgó a los humanos la inteligencia para mejorar sus vidas.,oficial
+SPECIES_VANILLISH,Bebe agua pura para agrandar su cuerpo de hielo. Apenas se ven ejemplares durante los días soleados.,oficial
+SPECIES_VANILLITE,No puede vivir en lugares muy cálidos. Provoca nevadas exhalando un vaho gélido y luego se acurruca en la nieve acumulada para dormir.,oficial
+SPECIES_VANILLUXE,"Cuando su rabia alcanza el punto máximo, genera una ventisca que congela tanto a amigos como a enemigos.",oficial
+SPECIES_VAPOREON,La composición celular de su cuerpo es tan similar a la estructura molecular del agua que se vuelve invisible al fundirse en ella.,oficial
+SPECIES_VAROOM,La parte de acero es su cuerpo real. Se agarra a las rocas y convierte sus minerales en energía.,propia
+SPECIES_VELUZA,Se regenera muy bien. Suelta carne sobrante para ser más ágil y embestir a su presa.,propia
+SPECIES_VENIPEDE,"Sus colmillos contienen un veneno letal. Si encuentra una presa que parece comestible, se abalanza sobre ella sin pensárselo dos veces.",oficial
+SPECIES_VENOMOTH,Las alas desprenden un polvillo de escamas impregnado de toxinas que se adhiere al contacto y resulta difícil de quitar.,oficial
+SPECIES_VENONAT,"Sus grandes ojos actúan como radares. A plena luz se percibe que son, en realidad, grupos de ojos diminutos.",oficial
+SPECIES_VENUSAUR,"La flor que tiene en el lomo libera un delicado aroma, que tiene un efecto relajante en combate.",oficial
+SPECIES_VENUSAUR_MEGA,"Su espalda y sus patas se han fortalecido para sostener la flor, que ha crecido con la megaevolución.",propia
+SPECIES_VESPIQUEN,"Cuanto mayor sea la cantidad de feromonas que segregue, mayor será el número de Combee que pueda controlar.",oficial
+SPECIES_VIBRAVA,"Para terminar de desarrollar sus alas, se nutre a diario de un gran número de presas, a las que disuelve con ácido antes de devorarlas.",oficial
+SPECIES_VICTINI,"Cuando Victini comparte su energía ilimitada, esa persona o Pokémon irradia abundante poder.",oficial
+SPECIES_VICTREEBEL,"Atrae a su presa con un dulce aroma a miel. Una vez atrapada en la boca, la disuelve en tan solo un día, huesos incluidos.",oficial
+SPECIES_VICTREEBEL_MEGA,"Con la megaevolución, su ácido ha aumentado tanto que le llena la boca y puede derramarse.",propia
+SPECIES_VIGOROTH,"Si no puede estar en continuo movimiento, su nivel de estrés se dispara y puede llegar a enfermar.",oficial
+SPECIES_VILEPLUME,"Cuanto mayores son sus pétalos, más tóxico es su polen. Le pesa la cabeza y le cuesta mantenerla erguida.",oficial
+SPECIES_VIRIZION,Confunde a los enemigos con sus movimientos relampagueantes y luego los rebana sin piedad con sus afilados cuernos.,oficial
+SPECIES_VIVILLON_ARCHIPELAGO,Su dibujo depende del clima y el terreno donde nació. Esta forma es de sitios con muchas islas.,propia
+SPECIES_VIVILLON_CONTINENTAL,Su dibujo depende del clima y el terreno donde nació. Esta forma es de tierras muy extensas.,propia
+SPECIES_VIVILLON_ELEGANT,Su dibujo depende del clima y el terreno donde nació. Esta forma es de tierras con estaciones marcadas.,propia
+SPECIES_VIVILLON_FANCY,Su dibujo depende del clima y el terreno donde nació. Esta forma es de una tierra misteriosa.,propia
+SPECIES_VIVILLON_GARDEN,Su dibujo depende del clima y el terreno donde nació. Esta forma es de tierras verdes.,propia
+SPECIES_VIVILLON_HIGH_PLAINS,Su dibujo depende del clima y el terreno donde nació. Esta forma es de tierras con poca lluvia.,propia
+SPECIES_VIVILLON_ICY_SNOW,Su dibujo depende del clima y el terreno donde nació. Esta forma es de tierras heladas.,propia
+SPECIES_VIVILLON_JUNGLE,Su dibujo depende del clima y el terreno donde nació. Esta forma es de selvas tropicales.,propia
+SPECIES_VIVILLON_MARINE,Su dibujo depende del clima y el terreno donde nació. Esta forma es de tierras con brisa marina.,propia
+SPECIES_VIVILLON_MEADOW,Su dibujo depende del clima y el terreno donde nació. Esta forma es de tierras llenas de flores.,propia
+SPECIES_VIVILLON_MODERN,Su dibujo depende del clima y el terreno donde nació. Esta forma es de tierras muy soleadas.,propia
+SPECIES_VIVILLON_MONSOON,Su dibujo depende del clima y el terreno donde nació. Esta forma es de tierras muy lluviosas.,propia
+SPECIES_VIVILLON_OCEAN,Su dibujo depende del clima y el terreno donde nació. Esta forma es de tierras de verano eterno.,propia
+SPECIES_VIVILLON_POKEBALL,Su dibujo depende del clima y el terreno donde nació. Esta forma es de una tierra especial.,propia
+SPECIES_VIVILLON_POLAR,Su dibujo depende del clima y el terreno donde nació. Esta forma es de tierras nevadas.,propia
+SPECIES_VIVILLON_RIVER,Su dibujo depende del clima y el terreno donde nació. Esta forma es de tierras con grandes ríos.,propia
+SPECIES_VIVILLON_SANDSTORM,Su dibujo depende del clima y el terreno donde nació. Esta forma es de tierras áridas.,propia
+SPECIES_VIVILLON_SAVANNA,Su dibujo depende del clima y el terreno donde nació. Esta forma es de tierras tropicales.,propia
+SPECIES_VIVILLON_SUN,Su dibujo depende del clima y el terreno donde nació. Esta forma es de tierras bañadas de luz.,propia
+SPECIES_VIVILLON_TUNDRA,Su dibujo depende del clima y el terreno donde nació. Esta forma es de tierras muy frías.,propia
+SPECIES_VOLBEAT,"Vive cerca de estanques de agua clara. De noche, enciende la luz de la cola para comunicarse con otros de su especie.",oficial
+SPECIES_VOLCANION,Expulsa vapor de agua por los brazos que tiene en la espalda. Sale a tal potencia que sería capaz de arrasar una montaña entera.,oficial
+SPECIES_VOLCARONA,Nace de una pupa envuelta en llamas. En algunas pinturas rupestres aparece representado como una deidad del fuego.,oficial
+SPECIES_VOLTORB,Se dice que se camufla como una Poké Ball. Al más mínimo estímulo se autodestruirá.,oficial
+SPECIES_VOLTORB_HISUI,"Se parece a una Poké Ball antigua. Cuando se emociona, suelta su electricidad y se ríe a carcajadas.",propia
+SPECIES_VULLABY,Deja en el nido las calaveras que va descartando a medida que crece con celeridad para que las reutilicen futuras generaciones.,oficial
+SPECIES_VULPIX,"Su pelaje se va volviendo más suave, lustroso y bello a medida que le crecen las seis colas. Al abrazarlo, emana una ligera calidez.",oficial
+SPECIES_VULPIX_ALOLA,"Viven en grupo y se ayudan. Cuando hace calor, crea trozos de hielo con sus colas para refrescarse.",propia
+SPECIES_WAILMER,"Cuando traga una gran cantidad de agua marina, se hincha hasta parecer una pelota. Necesita una tonelada de alimento al día.",oficial
+SPECIES_WAILORD,Su descomunal tamaño lo convierte en un Pokémon muy popular. Los enclaves turísticos donde se avistan Wailord son todo un éxito.,oficial
+SPECIES_WALKING_WAKE,Una criatura feroz y misteriosa. Su nombre viene de un monstruo acuático de un viejo diario.,propia
+SPECIES_WALREIN,"Sus colmillos nunca dejan de crecer. Aunque los pierda en un combate, al cabo de un año ya los habrá regenerado por completo.",oficial
+SPECIES_WARTORTLE,Utiliza hábilmente sus peludas orejas y la cola para mantener el equilibrio al nadar.,oficial
+SPECIES_WATCHOG,Ataca lanzando las semillas de las bayas que acumula en sus mofletes. Su cola se tensa al avistar a un enemigo.,oficial
+SPECIES_WATTREL,Los huesos de sus alas producen electricidad con el viento. Se lanza al mar y electrocuta a sus presas.,propia
+SPECIES_WEAVILE,Se comunican mediante marcas que tallan con sus garras. Se cree que tienen un repertorio de más de 500.,oficial
+SPECIES_WEEDLE,El aguijón de la cabeza es muy puntiagudo. Se alimenta de hojas oculto en la espesura de bosques y praderas.,oficial
+SPECIES_WEEPINBELL,"Cuando tiene hambre, engulle a todo lo que se mueve. La pobre presa acaba disuelta en sus ácidos.",oficial
+SPECIES_WEEZING,"Posee una capacidad de succión inferior a la del Weezing de Galar, pero las toxinas que genera son más potentes.",oficial
+SPECIES_WEEZING_GALAR,Cambió a esta forma cuando las fábricas contaminaban el aire. Absorbe la polución y suelta aire limpio.,propia
+SPECIES_WHIMSICOTT,"Su algodón se expande cuando recibe los rayos del sol, pero acaba desprendiéndose si se vuelve demasiado voluminoso.",oficial
+SPECIES_WHIRLIPEDE,Se defiende con su duro caparazón y sus púas venenosas mientras acumula la energía necesaria para evolucionar.,oficial
+SPECIES_WHISCASH,"Habita en grandes pantanos. Si se acerca un enemigo, monta en cólera y causa temblores monumentales.",oficial
+SPECIES_WHISMUR,"Al chillar, se asusta con su propia voz, lo cual le lleva a gritar más fuerte todavía. Cuando se cansa, se echa a dormir.",oficial
+SPECIES_WIGGLYTUFF,"Se enorgullece de su pelaje fino y sedoso. El rizo de la frente, en especial, posee un tacto sublime.",oficial
+SPECIES_WIGLETT,Huele a un Veluza a 20 metros y se esconde en la arena.,propia
+SPECIES_WIMPOD,"Forman colonias y permanecen siempre alerta. En cuanto perciben a un enemigo, salen huyendo en todas direcciones.",oficial
+SPECIES_WINGULL,Aprovecha las corrientes de aire para ganar altura sin necesidad de batir las alas. Anida en acantilados costeros.,oficial
+SPECIES_WISHIWASHI_SCHOOL,"Ante rivales duros, se ponen en formación. Si los hieren, se dispersan y vuelven a estar solos.",propia
+SPECIES_WISHIWASHI_SOLO,"Al sentirse amenazado, le lloran los ojos. La luz que se refleja en sus lágrimas sirve de señal a sus congéneres para agruparse en gran número.",oficial
+SPECIES_WOBBUFFET,"Para mantener oculta su negra cola, vive en silencio en la oscuridad. Nunca ataca primero.",oficial
+SPECIES_WOOBAT,Emite ultrasonidos mientras revolotea en busca de los Pokémon insecto con los que se sustenta.,oficial
+SPECIES_WOOLOO,"Si le crece el pelo demasiado, no puede moverse. Las telas confeccionadas con lana de Wooloo son sorprendentemente resistentes.",oficial
+SPECIES_WOOPER,"Cuando se desplaza en tierra firme, cubre su cuerpo con una membrana mucosa y venenosa para mantener hidratada la piel.",oficial
+SPECIES_WOOPER_PALDEA,"Tras perder una lucha territorial, se fue a vivir a tierra y desarrolló una capa venenosa.",propia
+SPECIES_WORMADAM_PLANT,"Cuando Burmy evolucionó, su caparazón pasó a formar parte de este Pokémon.",oficial
+SPECIES_WORMADAM_SANDY,"Su piel de tierra es dura y aguanta los picotazos de Starly. Si evoluciona en un día frío, es más gruesa.",propia
+SPECIES_WORMADAM_TRASH,Su cuerpo de basura se confunde con el entorno. Es la forma perfecta de esconderse de los depredadores.,propia
+SPECIES_WO_CHIEN,El rencor de alguien castigado por escribir los crímenes del rey se cubrió de hojas secas y se volvió Pokémon.,propia
+SPECIES_WUGTRIO,Es un Pokémon pez. Antes se creía que era una forma regional de Dugtrio.,propia
+SPECIES_WURMPLE,"Vive en bosques y zonas de hierba alta. Si le atacan, se defiende con las púas venenosas de su cola.",oficial
+SPECIES_WYNAUT,"Suelen ir en grupo y, a la hora de dormir, se pegan unos a otros para descansar resguardados en cuevas.",oficial
+SPECIES_WYRDEER,Las esferas negras brillan cuando crea barreras invisibles. El pelo de su barba abriga mucho.,propia
+SPECIES_XATU,Este extraño Pokémon puede ver el pasado y el futuro. Se pasa el día mirando al sol.,oficial
+SPECIES_XURKITREE,Uno de los llamados Ultraentes. Algunos ejemplares plantan sus extremidades en el suelo como si fueran árboles y permanecen inmóviles.,oficial
+SPECIES_YAMASK,Surgió del alma de una persona que vivió en tiempos remotos. Merodea por las ruinas en busca de alguien que reconozca su rostro.,oficial
+SPECIES_YAMASK_GALAR,Una tabla de arcilla con grabados malditos se apoderó de un Yamask y absorbe su poder oscuro.,propia
+SPECIES_YAMPER,"Son muy glotones, por lo que ayudan a la gente a cambio de comida. Echan chispas al correr.",oficial
+SPECIES_YANMA,"Si aletea muy rápido, genera ondas expansivas capaces de hacer añicos todas las ventanas próximas.",oficial
+SPECIES_YANMEGA,Con sus seis patas puede llevar a un adulto y volar con comodidad. Se equilibra con las alas de su cola.,oficial
+SPECIES_YUNGOOS,"Pese a ser omnívoro, siente predilección por los alimentos frescos o incluso seres vivos. Por eso marcha por los caminos en busca de presas.",oficial
+SPECIES_YVELTAL,"Cuando su vida se extingue, absorbe la vitalidad de todos los seres vivos y regresa a su forma de crisálida.",oficial
+SPECIES_ZACIAN_CROWNED,"Capaz de cortarlo todo de un golpe, lo llaman la Espada del Rey de las Hadas. Lo temen amigos y rivales.",propia
+SPECIES_ZACIAN_HERO,"Hay quien lo considera una suerte de figura fraterna a la par que rival de Zamazenta, un Pokémon sumido en un profundo letargo.",oficial
+SPECIES_ZAMAZENTA_CROWNED,"Como desvía cualquier ataque, lo llaman el Escudo del Maestro Luchador. Todos lo temen y respetan.",propia
+SPECIES_ZAMAZENTA_HERO,"Con la apariencia de una estatua de piedra, este Pokémon se sumió en un letargo tan profundo que acabó cayendo en el olvido.",oficial
+SPECIES_ZANGOOSE,Se le eriza todo el pelaje con solo oler un Seviper. Con sus afiladas zarpas puede rajar a sus enemigos.,oficial
+SPECIES_ZAPDOS,"Una de las aves legendarias. Dicen que, cuando este Pokémon frota las alas, cae al instante un relámpago del cielo.",oficial
+SPECIES_ZAPDOS_GALAR,Sus plumas crepitan como la electricidad al rozarse. Corre por las montañas a más de 300 km/h.,propia
+SPECIES_ZARUDE,Las lianas que le brotan del cuerpo nutren y fertilizan el mantillo del bosque cuando se le desprenden.,oficial
+SPECIES_ZARUDE_DADA,Su fuerza especial nace del cariño por un niño huérfano al que ha criado.,propia
+SPECIES_ZEBSTRIKA,"Su velocidad se asemeja a la de un rayo. Si corre al máximo, se dejan oír truenos por doquier.",oficial
+SPECIES_ZEKROM,"Según las leyendas, la furia de sus rayos fulminará todo país cuyas gentes hayan perdido el sentido de la justicia.",oficial
+SPECIES_ZERAORA,"Las almohadillas de sus patas desprenden descargas eléctricas. Cuando corre, hace que caigan rayos y reverberen los truenos.",oficial
+SPECIES_ZERAORA_MEGA,"Guarda la electricidad de 10 rayos. Cuando no se contiene, es de los Eléctrico más fuertes.",propia
+SPECIES_ZIGZAGOON,El Zigzagoon de Galar desarrolló este aspecto tras adaptarse a otras regiones. Muestra una gran habilidad a la hora de encontrar cosas.,oficial
+SPECIES_ZIGZAGOON_GALAR,Es tan inquieto que se mueve en zigzag. Choca con otros Pokémon para pelear. Es su forma más antigua.,propia
+SPECIES_ZOROARK,Los Entrenadores solitarios le piden a Zoroark que les muestre ilusiones con las que combatir la desazón de la soledad.,oficial
+SPECIES_ZOROARK_HISUI,"Sin pensar en sí mismo, ataca con una energía tan amarga que le hiere su propio cuerpo.",propia
+SPECIES_ZORUA,"Suele transformarse en personas, sobre todo en niños, y se adentra en pueblos buscando comida.",oficial
+SPECIES_ZORUA_HISUI,"Saca fuerza del rencor, que flota sobre su cabeza con la forma de sus enemigos.",propia
+SPECIES_ZUBAT,"Habitan en cuevas donde no llegan los rayos del sol. De día, se acurrucan unos junto a otros para entrar en calor mientras duermen.",oficial
+SPECIES_ZWEILOUS,"Las dos cabezas se disputan la comida con brutalidad. Por eso siempre está cubierto de heridas, aunque no haya combatido contra nadie.",oficial
+SPECIES_ZYGARDE_COMPLETE,La forma perfecta de Zygarde. Desde su pecho lanza una energía potentísima que lo elimina todo.,propia
+SPECIES_ZYGARDE_MEGA,"Ante las emociones de la gente en una crisis sin igual, megaevoluciona y la calma con su poder.",propia
