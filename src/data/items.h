@@ -14229,7 +14229,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_BOOSTER_ENERGY] =
     {
-        .name = ES(ITEM_NAME("Booster Energy"), ITEM_NAME("Energía Potenciadora")),
+        .name = ES(ITEM_NAME("Booster Energy"), ITEM_NAME("Energía Potenc.")),
         .pluralName = ITEM_PLURAL_NAME("Booster Energies"),
         .price = 0,
         .holdEffect = HOLD_EFFECT_BOOSTER_ENERGY,
@@ -14263,7 +14263,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_GIMMIGHOUL_COIN] =
     {
-        .name = ES(ITEM_NAME("Gimmighoul Coin"), ITEM_NAME("Moneda de Gimmighoul")),
+        .name = ES(ITEM_NAME("Gimmighoul Coin"), ITEM_NAME("Moneda Gimmighoul")),
         .price = 400,
         .description = ES(COMPOUND_STRING("A dropped material\n"
             "Gimmighoul hoard\n"
