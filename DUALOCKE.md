@@ -366,7 +366,7 @@ Hubo una traducción antigua de la expansion al castellano (fork de Xhyzi, rama 
   - Los objetos de revivir no se pueden usar en combate.
   - No cuentan: Frontera, Pirámide, Pike, Cima Entrenador, combates por cable, Safari, el primer combate y las bases secretas.
   - Tests en `test/dualocke.c` (`make check TESTS="Dualocke"`).
-  - Pendiente: un aviso al morir ("X ha muerto, te quedan N vidas"); de momento solo se ve que desaparece del equipo y en el menú.
+  - **Aviso al morir (hecho, Miguel, 24/10/2026):** cuando se debilita un Pokémon tuyo en un combate en el que cuentan las vidas, en vez de "X fainted!" sale "X has died! Lives left: N." (las vidas que quedarán al acabar el combate). Si ya no quedan vidas, o se han debilitado todos, sale "X has died! The locke is lost!". Los Pokémon del compañero (combates dobles con compañero) no cuentan. En los tests de la expansion se deja el texto original. Código: `src/dualocke_aviso.c`, enganchado en `BufferStringBattle` (`src/battle_message.c`).
 
 ### Pendiente de decidir
 
