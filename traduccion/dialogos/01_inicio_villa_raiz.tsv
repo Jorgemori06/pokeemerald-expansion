@@ -1,0 +1,28 @@
+# Presentación del PROF. ABEDUL y VILLA RAÍZ (calles)
+gText_Birch_Welcome	¡Hola! ¡Perdona por la espera!\p¡Te doy la bienvenida al mundo\nde los POKéMON!\pMe llamo ABEDUL.\pPero todos me llaman el PROFESOR\nPOKéMON.\p$
+gText_Birch_Pokemon	Esto es lo que llamamos un “POKéMON”.\p\n$
+gText_Birch_MainSpeech	En este mundo viven unas criaturas\nllamadas POKéMON.\pLas personas convivimos con ellos,\na veces como compañeros de juegos\ly a veces como compañeros de trabajo.\pY otras veces nos unimos a ellos\npara luchar contra otros.\pPero, aunque estemos tan unidos,\nno lo sabemos todo de los POKéMON.\pDe hecho, los POKéMON todavía\nesconden muchísimos secretos.\pYo me dedico a investigar para\ndesvelar sus misterios.\lEse es mi trabajo.\p$
+gText_Birch_AndYouAre	¿Y tú eres…?$
+gText_Birch_BoyOrGirl	¿Eres un chico?\n¿O eres una chica?$
+gText_Birch_WhatsYourName	Muy bien.\n¿Cómo te llamas?$
+gText_Birch_SoItsPlayer	¿Te llamas {PLAYER}{KUN}?$
+gText_Birch_YourePlayer	¡Ah, claro!\p¡Eres {PLAYER}{KUN}, que se muda a mi\npueblo, VILLA RAÍZ!\l¡Ahora caigo!\p$
+gText_Birch_AreYouReady	Muy bien, ¿todo a punto?\pTu propia aventura está a punto\nde empezar.\p¡Ten valor y lánzate al mundo de\nlos POKéMON, donde te esperan sueños,\laventuras y amistades!\pBueno, te espero más tarde.\nVen a verme a mi LABORATORIO.\p$
+LittlerootTown_Text_OurNewHomeLetsGoInside	MAMÁ: ¡{PLAYER}, ya hemos llegado, cielo!\pTiene que ser cansado viajar en el\ncamión de la mudanza con las cosas.\pBueno, esto es VILLA RAÍZ.\p¿Qué te parece?\n¡Es nuestra nueva casa!\pEs un sitio tranquilo, pero parece\nque se vive bien, ¿no crees?\p¡Y tienes tu habitación, {PLAYER}!\nVamos dentro.$
+LittlerootTown_Text_WaitPlayer	MAMÁ: ¡Espera, {PLAYER}!$
+LittlerootTown_Text_WearTheseRunningShoes	MAMÁ: ¡{PLAYER}! ¡{PLAYER}!\n¿Has saludado al PROF. ABEDUL?\p¡Oh! ¡Qué POKéMON tan bonito!\nTe lo ha dado el PROF. ABEDUL. ¡Qué bien!\pDesde luego, eres igual que tu padre.\n¡Te queda muy bien un POKéMON!\pToma, cielo. Si te vas de aventura,\nponte estas DEPORTIVAS.\p¡Irás mucho más rápido!$
+LittlerootTown_Text_SwitchShoesWithRunningShoes	{PLAYER} se ha puesto las\nDEPORTIVAS.$
+LittlerootTown_Text_ExplainRunningShoes	MAMÁ: {PLAYER}, las zapatillas venían\ncon instrucciones.\p“¡Pulsa el Botón B con las DEPORTIVAS\npuestas para correr muy rápido!\p”¡Ponte estas DEPORTIVAS y corre por\nel aire libre!”$
+LittlerootTown_Text_ComeHomeIfAnythingHappens	… … … … … … … …\n… … … … … … … …\p¡Pensar que ya tienes tu propio\nPOKéMON…!\lTu padre se va a poner contentísimo.\p…Pero ten cuidado, por favor.\nSi pasa algo, puedes volver a casa.\p¡Venga, a por ellos, cielo!$
+LittlerootTown_Text_CanUsePCToStoreItems	En un PC puedes guardar objetos\ny POKéMON.\p¡Lo que llega a hacer la ciencia!$
+LittlerootTown_Text_BirchSpendsDaysInLab	El PROF. ABEDUL se pasa días en su\nLABORATORIO y luego, de repente, se va\la investigar a la naturaleza…\p¿Cuándo estará el PROF. ABEDUL\nen su casa?$
+LittlerootTown_Text_IfYouGoInGrassPokemonWillJumpOut	¡Eh, eh, eh!\p¡Si sales y te metes en la hierba,\nte saldrán POKéMON salvajes!$
+LittlerootTown_Text_DangerousIfYouDontHavePokemon	Es peligroso si no tienes\ntu propio POKéMON.$
+LittlerootTown_Text_CanYouGoSeeWhatsHappening	¡Eh, hola!\p¡Ahí fuera hay POKéMON que dan miedo!\n¡Se les oye gritar!\pQuiero ir a ver qué pasa,\npero no tengo ningún POKéMON…\p¿Puedes ir tú a ver qué pasa\npor mí?$
+LittlerootTown_Text_YouSavedBirch	¡Has salvado al PROF. ABEDUL!\n¡Qué alegría!$
+LittlerootTown_Text_GoodLuckCatchingPokemon	¿Vas a atrapar POKéMON?\n¡Mucha suerte!$
+LittlerootTown_Text_TownSign	VILLA RAÍZ\n“Un pueblo sin un color definido”.$
+LittlerootTown_Text_ProfBirchsLab	LABORATORIO POKéMON DEL PROF. ABEDUL$
+LittlerootTown_Text_PlayersHouse	CASA DE {PLAYER}$
+LittlerootTown_Text_ProfBirchsHouse	CASA DEL PROF. ABEDUL$
+LittlerootTown_Text_BirchSomethingToShowYouAtLab	PROF. ABEDUL: ¡Vaya, {PLAYER}{KUN}!\n¡Lo has hecho muy bien!\pSupe que tenías algo especial\nla primera vez que te vi,\lpero no me esperaba esto.\pAh, sí. ¿Todavía tienes la POKéDEX\nque te di?\pTengo algo que enseñarte.\nVamos a mi LABORATORIO.$

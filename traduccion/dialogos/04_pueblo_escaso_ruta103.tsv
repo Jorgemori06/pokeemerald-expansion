@@ -1,0 +1,40 @@
+# PUEBLO ESCASO, enfermera del CENTRO POKéMON y RUTA 103
+OldaleTown_Text_SavingMyProgress	Quiero descansar, así que voy a guardar\nla partida.$
+OldaleTown_Text_IWorkAtPokemonMart	¡Hola!\nTrabajo en una TIENDA POKéMON.\p¿Me acompañas un momento?$
+OldaleTown_Text_ThisIsAPokemonMart	Esto es una TIENDA POKéMON.\nBúscala por el tejado azul.\pVendemos de todo, también POKé BALLS\npara atrapar POKéMON.\pToma, quiero darte esto como\nmuestra de regalo.$
+OldaleTown_Text_PotionExplanation	Una POCIÓN se puede usar en cualquier\nmomento, así que a veces es más útil\lque un CENTRO POKéMON.$
+OldaleTown_Text_WaitDontComeInHere	¡Aaaah! ¡Espera!\nNo entres aquí, por favor.\p¡Acabo de descubrir las huellas de\nun POKéMON raro!\pEspera a que termine de dibujarlas,\n¿vale?$
+OldaleTown_Text_DiscoveredFootprints	¡Acabo de descubrir las huellas de\nun POKéMON raro!\pEspera a que termine de dibujarlas,\n¿vale?$
+OldaleTown_Text_FinishedSketchingFootprints	He terminado de dibujar las huellas\nde un POKéMON raro.\pPero resulta que eran mis propias\nhuellas…$
+OldaleTown_Text_MayLetsGoBack	AURA: ¡{PLAYER}{KUN}!\n¡Por aquí!\l¡Vamos rápido a casa!$
+OldaleTown_Text_BrendanLetsGoBack	BRUNO: Me vuelvo al LABORATORIO\nde mi padre.\l{PLAYER}, tú también deberías volver.$
+OldaleTown_Text_TownSign	PUEBLO ESCASO\n“Donde todo empieza poco a poco”.$
+OldaleTown_House1_Text_LeftPokemonGoesOutFirst	Al empezar un combate POKéMON, sale\nprimero el que está arriba en la lista.\pAsí que, cuando tengas más POKéMON\nen el equipo, prueba a cambiar\lel orden.\pTe puede dar ventaja.$
+OldaleTown_House2_Text_PokemonLevelUp	Al combatir, los POKéMON acaban\nsubiendo de nivel y haciéndose fuertes.$
+OldaleTown_House2_Text_YoullGoFurtherWithStrongPokemon	Si tus POKéMON se hacen más fuertes,\npodrás ir más lejos.$
+OldaleTown_Mart_Text_PokeBallsAreSoldOut	Dice el dependiente que no quedan.\nNo puedo comprar POKé BALLS.$
+OldaleTown_Mart_Text_ImGoingToBuyPokeBalls	¡Voy a comprar un montón de POKé BALLS\ny a atrapar un montón de POKéMON!$
+OldaleTown_Mart_Text_RestoreHPWithPotion	Si un POKéMON pierde sus PS y se\ndebilita, no podrá combatir.\pPara que no se debilite, cúrale\nlos PS con una POCIÓN.$
+OldaleTown_PokemonCenter_1F_Text_TrainersCanUsePC	El PC de ese rincón lo puede usar\ncualquier ENTRENADOR POKéMON.\pClaro, eso quiere decir que tú\ntambién puedes usarlo.$
+OldaleTown_PokemonCenter_1F_Text_PokemonCentersAreGreat	¡Los CENTROS POKéMON son geniales!\pPuedes usarlos todo lo que quieras\ny además son gratis.\l¡No hay de qué preocuparse!$
+OldaleTown_PokemonCenter_1F_Text_WirelessClubNotAvailable	El CLUB INALÁMBRICO POKéMON del\nsegundo piso es nuevo.\pPero dicen que todavía lo están\najustando.$
+OldaleTown_PokemonCenter_1F_Text_TradedInWirelessClub	El CLUB INALÁMBRICO POKéMON del\nsegundo piso es nuevo.\pYo ya he cambiado POKéMON.$
+gText_WouldYouLikeToRestYourPkmn	Hola, te damos la bienvenida al\nCENTRO POKéMON.\pAquí curamos del todo a tus\nPOKéMON cansados.\p¿Quieres que descansen tus POKéMON?$
+gText_IllTakeYourPkmn	Muy bien, me quedo tus POKéMON\nunos segundos.$
+gText_RestoredPkmnToFullHealth	Gracias por esperar.\pTus POKéMON ya están totalmente\nrecuperados.$
+gText_WeHopeToSeeYouAgain	¡Esperamos volver a verte!$
+gText_WelcomeCutShort	Hola, te damos la bienvenida al\nCENTRO POKéMON.\pAquí curamos del todo a tus\nPOKéMON cansados.\p¿Quieres que…$
+gText_IllTakeYourPkmn2	Muy bien, me quedo tus POKéMON\nunos segundos.$
+gText_ThankYouForWaiting	Gracias por esperar.$
+gText_WeHopeToSeeYouAgain2	¡Esperamos volver a verte!$
+Route103_Text_MayRoute103Pokemon	AURA: A ver… Los POKéMON que hay\nen la RUTA 103 son…$
+Route103_Text_MayLetsBattle	¡Ah, hola, {PLAYER}{KUN}!\p…Ya veo, mi padre te ha regalado\nun POKéMON.\pYa que estamos aquí, ¡vamos a\ncombatir un poco!\pTe enseñaré lo que es ser\nENTRENADOR.$
+Route103_Text_MayDefeated	¡Hala! ¡Qué bien!\n¡{PLAYER}{KUN}, eres muy bueno!$
+Route103_Text_MayTimeToHeadBack	AURA: Ahora entiendo por qué mi\npadre se fija tanto en ti.\pAcabas de conseguir ese POKéMON\ny ya te tiene cariño.\pA lo mejor te haces amigo de\ncualquier POKéMON con facilidad.\pBueno, es hora de volver al\nLABORATORIO.$
+Route103_Text_BrendanRoute103Pokemon	BRUNO: Vale, en la RUTA 103 viven\neste y este…$
+Route103_Text_BrendanLetsBattle	¡Anda, es {PLAYER}!\p…Ah, sí, mi padre te dio un POKéMON.\pYa que estamos aquí, ¿qué tal un\ncombate?\p¡Te enseñaré lo que es ser\nENTRENADOR!$
+Route103_Text_BrendanDefeated	Vaya, {PLAYER}, no lo haces nada mal.$
+Route103_Text_BrendanTimeToHeadBack	BRUNO: Creo que lo entiendo.\nYa sé por qué mi padre se fija\ltanto en ti.\pMira, tu POKéMON ya te tiene cariño,\naunque acabas de conseguirlo.\p{PLAYER}, me da que podrías hacerte\namiga de cualquier POKéMON.\pTenemos que volver al LABORATORIO.$
+Route103_Text_ShouldHaveBroughtPotion	Mi POKéMON está agotadísimo…\nTendría que haber traído una POCIÓN…$
+Route103_Text_ShortcutToOldale	Si cruzas el mar desde aquí, llegas\nantes a PUEBLO ESCASO.\p¡Jujuju! Qué útil, ¿verdad?$
+Route103_Text_RouteSign	RUTA 103\n{DOWN_ARROW} PUEBLO ESCASO$

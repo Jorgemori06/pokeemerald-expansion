@@ -1,0 +1,105 @@
+# CIUDAD FÉRRICA: DEVON, ESCUELA DE ENTRENADORES, casas, tienda y CENTRO POKéMON
+RustboroCity_CuttersHouse_Text_YouCanPutThisHMToGoodUse	Esa expresión decidida…\nEsa forma ágil de moverte…\lY tus POKéMON bien entrenados…\p¡Está claro que tienes talento!\pNo, espera, no digas nada.\nSe nota con solo mirarte.\pSeguro que sabrás sacarle partido\na esta MÁQUINA OCULTA.\pNada de modestia ni timidez.\n¡Venga, tómala!$
+RustboroCity_CuttersHouse_Text_ExplainCut	Esa MÁQUINA OCULTA, o MO,\ncontiene CORTE.\pUn movimiento de MO lo pueden usar\nlos POKéMON fuera de los combates.\pUn POKéMON que sepa CORTE puede talar\nárboles finos si su ENTRENADOR\ltiene la MEDALLA PIEDRA.\pY, al contrario que una MT, una MO\nse puede usar más de una vez.$
+RustboroCity_CuttersHouse_Text_DadHelpedClearLandOfTrees	Cuando ampliaron CIUDAD FÉRRICA,\nmi padre echó una mano.\pHizo que sus POKéMON usaran CORTE\npara despejar el terreno de árboles.$
+RustboroCity_DevonCorp_1F_Text_WelcomeToDevonCorp	Hola, te damos la bienvenida a la\nCORPORACIÓN DEVON.\pFabricamos con orgullo objetos y\nmedicinas que mejoran tu vida.$
+RustboroCity_DevonCorp_1F_Text_StaffGotRobbed	A uno de nuestros investigadores le han\nrobado un paquete. ¡Qué torpe!$
+RustboroCity_DevonCorp_1F_Text_ThoseShoesAreOurProduct	¡Eh, esas DEPORTIVAS!\n¡Son un producto nuestro!\pMe alegra ver a alguien usando\nalgo que hemos fabricado.$
+RustboroCity_DevonCorp_1F_Text_RobberWasntVeryBright	Ese paquete robado…\pBueno, es importante, pero nadie\nmás puede usarlo.\pYo diría que ese ladrón no era\nmuy listo.$
+RustboroCity_DevonCorp_1F_Text_SoundsLikeStolenGoodsRecovered	Parece que han recuperado las\nPIEZAS DEVON robadas.$
+RustboroCity_DevonCorp_1F_Text_OnlyAuthorizedPeopleEnter	Lo siento, aquí solo puede entrar\nel personal autorizado.$
+RustboroCity_DevonCorp_1F_Text_HowCouldWeGetRobbed	Es el colmo.\n¿Cómo han podido robarnos?$
+RustboroCity_DevonCorp_1F_Text_YoureAlwaysWelcomeHere	¡Hola!\n¡Aquí siempre se te recibe con gusto!$
+RustboroCity_DevonCorp_1F_Text_RocksMetalDisplay	En la vitrina hay muestras de rocas\ny metales.\pHay un panel con algo escrito…\p“La CORPORACIÓN DEVON empezó\nsacando piedra de canteras.\p”También sacaba hierro de las\nlimaduras de la arena.\p”Desde ese humilde comienzo como\nproductora de materias primas, DEVON\lcreció.\p”Hoy DEVON fabrica una gran variedad\nde productos industriales”.$
+RustboroCity_DevonCorp_1F_Text_ProductDisplay	La vitrina está llena de prototipos\ny productos de prueba.\pHay un panel con una descripción…\p“Además de productos industriales,\nDEVON vende artículos y medicinas\lpara vivir mejor.\p”Hace poco, DEVON ha empezado a vender\nherramientas para ENTRENADORES, como\llas POKé BALLS y el POKéNAV”.$
+RustboroCity_DevonCorp_2F_Text_DeviceForTalkingToPokemon	Estamos creando un aparato para\nhablar con los POKéMON.\pPero no está saliendo muy bien…$
+RustboroCity_DevonCorp_2F_Text_DevelopingNewBalls	Estoy creando nuevas clases de\nPOKé BALLS…\pPero no avanzo mucho…$
+RustboroCity_DevonCorp_2F_Text_WeFinallyMadeNewBalls	¡Por fin hemos creado nuevas clases\nde POKé BALLS!\pLa ACOPIO BALL atrapa mejor a los\nPOKéMON que ya has atrapado.\pLa TURNO BALL atrapa mejor cuanto\nmás dura el combate.\pLas dos las ha creado con orgullo\nla CORPORACIÓN DEVON.\p¡Pruébalas!$
+RustboroCity_DevonCorp_2F_Text_IMadePokenav	¡Yo hice el POKéNAV!\p¡Como ingeniero, me siento afortunado\nde haber hecho algo tan genial!$
+RustboroCity_DevonCorp_2F_Text_WowThatsAPokenav	¡Anda!\n¡Es un POKéNAV!\pNació de las ganas de nuestro\nPRESIDENTE de entender lo que\lsienten los POKéMON.\p¿Quieres que te explique todas\nsus funciones?\pNo, no. Creo que lo descubrirás\nusando el POKéNAV.$
+RustboroCity_DevonCorp_2F_Text_DeviceToVisualizePokemonDreams	Intento crear un aparato que muestre\nen imágenes los sueños de los\lPOKéMON…\pPero no va bien.$
+RustboroCity_DevonCorp_2F_Text_DevelopDeviceToResurrectFossils	Estoy creando un aparato que\nrevive POKéMON a partir de fósiles…\p¡Y funciona!$
+RustboroCity_DevonCorp_2F_Text_WantToBringFossilBackToLife	¡Espera! Eso que llevas…\n¿Es un fósil de POKéMON?\p¿Quieres devolver la vida a ese\nPOKéMON?\pPuedo hacerlo con mi nuevo\nREGENERADOR DE FÓSILES.$
+RustboroCity_DevonCorp_2F_Text_OhIsThatSo	Ah, ¿sí?\pLa tecnología de DEVON es increíble,\nte lo digo yo.$
+RustboroCity_DevonCorp_2F_Text_TwoFossilsPickOne	¡Vaya, qué sorpresa!\n¿Tienes dos fósiles?\pPor desgracia, mi máquina solo puede\nregenerar un POKéMON cada vez.\p¿Qué fósil quieres que\nregenere?$
+RustboroCity_DevonCorp_2F_Text_HandedFossilToResearcher	¡Genial!\nVamos a ello.\p{PLAYER} ha dado {STR_VAR_1} al\nINVESTIGADOR de DEVON.$
+RustboroCity_DevonCorp_2F_Text_FossilRegeneratorTakesTime	El REGENERADOR DE FÓSILES que he\ncreado es increíble.\pPero tiene un problema: tarda\nmucho en funcionar.\pAsí que… ¿Por qué no te das una\nvuelta mientras tanto?$
+RustboroCity_DevonCorp_2F_Text_FossilizedMonBroughtBackToLife	¡Gracias por esperar!\p¡Tu POKéMON fosilizado ha vuelto\na la vida!\pEl fósil era de un POKéMON antiguo.\n¡Era {STR_VAR_2}!$
+RustboroCity_DevonCorp_2F_Text_ReceivedMonFromResearcher	{PLAYER} ha recibido a {STR_VAR_2}\ndel INVESTIGADOR de DEVON.$
+RustboroCity_DevonCorp_2F_Text_TooManyPokemon	Vaya, tienes demasiados POKéMON.\nNo te cabe este.$
+RustboroCity_DevonCorp_2F_Text_DevelopNewPokenavFeature	Intento crear una función nueva\npara el POKéNAV…\pPero no va bien.$
+RustboroCity_DevonCorp_2F_Text_WhatToWorkOnNext	Bueno, ¿qué será lo próximo que\ninvente?\pLa empresa nos deja hacer realidad\nnuestras ideas.\pComo ingeniero, no se puede pedir\nun sitio mejor.$
+RustboroCity_DevonCorp_3F_Text_MrStoneIHaveFavor	Soy el SR. PEÑA, PRESIDENTE de la\nCORPORACIÓN DEVON.\p¡Me acaban de hablar de ti!\p¡Has salvado a nuestro empleado\nno una, sino dos veces!\pTengo que pedirle un favor a alguien\ntan increíble como tú.\pSé que vas a llevar un paquete al\nASTILLERO de PORTUAL.\pPues, de camino, ¿podrías pasar\npor PUEBLO AZULIZA?\pQuería que le llevaras una CARTA\na MÁXIMO, que está en AZULIZA.$
+RustboroCity_DevonCorp_3F_Text_MrStoneWantYouToHaveThis	SR. PEÑA: Has de saber que soy\nun gran PRESIDENTE.\pNunca sería tan rácano como para\npedir un favor a cambio de nada.\p¡Por eso quiero que tengas esto!$
+RustboroCity_DevonCorp_3F_Text_ReceivedPokenav	{PLAYER} ha recibido un POKéNAV.$
+RustboroCity_DevonCorp_3F_Text_MrStoneExplainPokenavRestUp	SR. PEÑA: Ese aparato…\pEs un NAVEGADOR POKéMON, o POKéNAV\npara abreviar.\pEs imprescindible para cualquier\nENTRENADOR que viaje.\pTiene un mapa de la región de HOENN.\p¡Así verás fácilmente dónde están\nAZULIZA y PORTUAL!\pPor cierto, he oído que unos\ncriminales, MAGMA y AQUA, creo,\ldan problemas por todas partes.\pCreo que sería mejor que descansaras\nantes de ponerte en camino.$
+RustboroCity_DevonCorp_3F_Text_MrStoneGoWithCautionAndCare	SR. PEÑA: Bueno, {PLAYER}{KUN},\n¡ve con mucho cuidado!$
+RustboroCity_DevonCorp_3F_Text_CountingOnYou	SR. PEÑA: ¡Cuento contigo!$
+RustboroCity_DevonCorp_3F_Text_ThankYouForDeliveringLetter	SR. PEÑA: ¿Has entregado mi CARTA?\n¡Muchísimas gracias!\pEsto es para darte las gracias.\nTe será útil como ENTRENADOR.$
+RustboroCity_DevonCorp_3F_Text_ExplainExpShare	SR. PEÑA: El POKéMON que lleve el\nREPARTIR EXP. recibirá parte de\lla EXPERIENCIA del combate.\pLa recibirá aunque no haya\nluchado.\pDiría que el REPARTIR EXP. es muy útil\npara entrenar POKéMON débiles.$
+RustboroCity_DevonCorp_3F_Text_NotFamiliarWithTrends	SR. PEÑA: Desde joven me he volcado\nen el trabajo.\pPor eso no sé mucho de modas\nni de esas cosas.\p¿Es verdad que todos los jóvenes\nquieren competir en la LIGA POKéMON?$
+RustboroCity_DevonCorp_3F_Text_ThisIs3rdFloorWaitHere	Esta es la tercera planta de la\nCORPORACIÓN DEVON.\pEn esta planta está el DESPACHO\nde nuestro PRESIDENTE.\pEn fin, no sabes lo agradecido que\nestoy por lo que has hecho.\pEh… Por cierto, ese paquete que\nnos has recuperado…\p¿Podrías llevarlo al ASTILLERO\nde PORTUAL?\pSería horrible que esos ladrones\nintentaran robarlo otra vez.\pEh… Jejeje, ¿puedo contar\ncontigo para eso?\pAh, es verdad.\n¿Puedes esperar aquí un momento?$
+RustboroCity_DevonCorp_3F_Text_WordWithPresidentComeWithMe	Nuestro PRESIDENTE quiere hablar\ncontigo.\pVen conmigo, por favor.$
+RustboroCity_DevonCorp_3F_Text_PleaseGoAhead	Adelante, por favor.$
+RustboroCity_DevonCorp_3F_Text_VisitCaptSternShipyard	Si vas al ASTILLERO de PORTUAL,\ndeberías ver al CAPITÁN BABOR.$
+RustboroCity_DevonCorp_3F_Text_RepeatAndTimerHugelyPopular	Los nuevos productos de DEVON, la\nACOPIO BALL y la TURNO BALL, son muy\lpopulares entre los ENTRENADORES.$
+RustboroCity_DevonCorp_3F_Text_RareRocksDisplay	Es una colección de rocas y piedras\nraras que ha reunido el PRESIDENTE.$
+RustboroCity_Flat1_1F_Text_EveryPokemonHasAbility	Todos los POKéMON tienen una\nhabilidad especial.$
+RustboroCity_Flat1_1F_Text_PokemonStrange	Los POKéMON son unas criaturas\nmuy raras.$
+RustboroCity_Flat1_2F_Text_ComingUpWithMealsIsHard	Ay, todos los días igual…\p¿El qué?\n¿Hace falta que lo preguntes?\pPensar qué hacer de comer\ncada día.\pDe verdad que no es fácil pensar\nun menú todos los días.$
+RustboroCity_Flat1_2F_Text_HelloDoYouKnowFunnyPhrase	¡Ah, hola!\nEsta es la casa de los PEPPER.\pTengo una pregunta para ti.\n¿Alguna vez has cuidado de un bebé?\pVerás, soy padre primerizo y criar\na una niña es nuevo para mí.\pY tengo un problema: mi hija\nWALDA no se ríe mucho.\pCreo que se reiría si le dijera\nalgo gracioso.\p¿Sabes alguna palabra o frase\ngraciosa que me puedas decir?$
+RustboroCity_Flat1_2F_Text_BeenSayingXDoYouKnowBetterPhrase	Últimamente le digo “{STR_VAR_1}”\npara hacerla reír.\p¿Sabes alguna palabra o frase\nmejor que pueda funcionar?$
+RustboroCity_Flat1_2F_Text_WonderfulLetsHearSuggestion	Oh, qué maravilla.\nA ver, dime tu idea.$
+RustboroCity_Flat1_2F_Text_OhIsThatRight	Ah, ¿sí?\pBueno, si se te ocurre algo bueno,\nsoy todo oídos.$
+RustboroCity_Flat1_2F_Text_LetsGiveItATry2	Ah, ya veo.\nBueno, vamos a probar, ¿no?$
+RustboroCity_Flat1_2F_Text_OhShesLaughing	{STR_VAR_1}.\n{STR_VAR_1}.\p¡Oh, sí! ¡Se está riendo!\n¡Estoy tan contento como ella!$
+RustboroCity_Flat1_2F_Text_LetsGiveItATry	Ah, ya veo.\nBueno, vamos a probar, ¿no?$
+RustboroCity_Flat1_2F_Text_ShesNotSmilingAtAll	{STR_VAR_1}.\n{STR_VAR_1}.\pMmm… No sonríe nada.\nA lo mejor WALDA es muy seria…$
+RustboroCity_Flat1_2F_Text_ThinkOfMyOwnPhrase	Ah, así que no sabes ninguna.\nPues tendré que pensarla yo.\pMmm…\n¿Qué tal “{STR_VAR_1}”?\lA ver si funciona.$
+RustboroCity_Flat1_2F_Text_ShesNotSmilingAtAll2	{STR_VAR_1}.\n{STR_VAR_1}.\pMmm… No sonríe nada.\nA lo mejor WALDA es muy seria…$
+RustboroCity_Flat1_2F_Text_OhYouDontKnowAny	Ah, así que no sabes ninguna.\nSeguiré intentándolo con la frase\lde antes.\pEn todo caso, si se te ocurre algo\nbueno, no dudes en decírmelo, ¿vale?$
+RustboroCity_Flat1_2F_Text_ThankYouIllGiveYouWallpaper	¡Gracias!\p¡Gracias a ti, mi querida WALDA\nse ha reído!\pAunque no lo parezca, soy uno de\nlos mejores investigadores de\lla CORPORACIÓN DEVON.\pAsí que, ¿qué tal si te devuelvo\nel favor?\pYa sé, añadiré fondos nuevos para\nlas CAJAS del sistema de\lalmacenamiento del PC.\pEn el menú de fondos, elige\n“AMIGOS”.\pAsí podrás usar los fondos\nnuevos.$
+RustboroCity_Flat1_2F_Text_ItsAPokemonPlushDoll	¡Es un MUÑECO de peluche POKéMON!$
+RustboroCity_Flat2_1F_Text_DevonWorkersLiveHere	En este edificio viven los empleados\nde la CORPORACIÓN DEVON.$
+RustboroCity_Flat2_1F_Text_Skitty	SKITTY: ¡Gyaaaah!$
+RustboroCity_Flat2_2F_Text_DevonWasTinyInOldDays	Hace mucho tiempo, DEVON era una\nempresa pequeñita.$
+RustboroCity_Flat2_2F_Text_MyDaddyMadeThisYouCanHaveIt	Mi papá trabaja en la CORPORACIÓN.\p¡Esto lo ha hecho mi papá!\nPero yo no lo puedo usar, así que toma.$
+RustboroCity_Flat2_2F_Text_GoingToWorkAtDevonToo	Mi papá trabaja en la CORPORACIÓN.\pCuando sea mayor, yo también\ntrabajaré en DEVON.$
+RustboroCity_Flat2_3F_Text_PresidentCollectsRareStones	Al PRESIDENTE de DEVON le gusta\ncoleccionar piedras raras.$
+RustboroCity_Flat2_3F_Text_PresidentsSonAlsoCollectsRareStones	Creo que el hijo del PRESIDENTE\ntambién colecciona piedras raras.$
+RustboroCity_House1_Text_IllTradeIfYouWant	¿Eh? ¿Que mi POKéMON es mono?\nClaro, ya lo sé.\pPero si de verdad lo quieres,\nte lo cambio.\pTe cambio mi {STR_VAR_2} por\nun {STR_VAR_1}, si quieres.$
+RustboroCity_House1_Text_PleaseBeGoodToMyPokemon	Jejeje…\nCuida bien de mi POKéMON, por favor.$
+RustboroCity_House1_Text_DoesntLookLikeMonToMe	¿Eh? Eso no se parece en nada\na un {STR_VAR_1}.$
+RustboroCity_House1_Text_YouDontWantToThatsOkay	Ah, si no quieres, no pasa nada.\nPero mi POKéMON es muy mono, ¿eh?…$
+RustboroCity_House1_Text_AnyPokemonCanBeCute	Cualquier POKéMON puede ser mono\nsi lo crías con cariño.$
+RustboroCity_House1_Text_AllSortsOfPlaces	En todos los sitios hay todo tipo\nde POKéMON y de personas.\pMe parece fascinante, así que voy\na todo tipo de sitios.$
+RustboroCity_House2_Text_TrainerSchoolExcellent	La ESCUELA DE ENTRENADORES es\nexcelente.\pSi estudias allí, hasta podrías\nllegar a ser LÍDER de GIMNASIO.$
+RustboroCity_House2_Text_RoxanneKnowsALot	PETRA, la LÍDER del GIMNASIO, sabe\nmuchísimo de POKéMON.\p¡Y además es muy fuerte!$
+RustboroCity_House3_Text_IGivePerfectlySuitedNicknames	¡A mis POKéMON les pongo motes\nque les van como anillo al dedo!\pEs mi forma de expresar mi…\noriginalidad, ¡eso es!$
+RustboroCity_House3_Text_NamingPikachuPekachu	Pero ¿llamar PEKACHU a un\nPIKACHU? No tiene mucho sentido.\pSupongo que está bien usar un nombre\nfácil de entender, pero…$
+RustboroCity_House3_Text_Pekachu	PEKACHU: ¡Peka!$
+RustboroCity_Mart_Text_BuyingHealsInCaseOfShroomish	Voy a comprar ANTIPARALIZADORES\ny ANTÍDOTOS.\pPor si me cruzo con algún SHROOMISH\nen el BOSQUE PETALIA.$
+RustboroCity_Mart_Text_ShouldBuySuperPotionsInstead	Mi POKéMON ha evolucionado.\nAhora tiene muchos PS.\pDebería comprarle SUPERPOCIONES\nen vez de POCIONES normales.$
+RustboroCity_Mart_Text_GettingEscapeRopeJustInCase	Me llevo una CUERDA HUIDA por si\nme pierdo en una cueva.\pSolo hay que usarla para volver\na la entrada.$
+RustboroCity_PokemonCenter_1F_Text_PokemonHavePersonalities	Mi POKéMON tiene naturaleza ALOCADA\ny el de mi amigo, ALEGRE.\p¡Es fascinante que los POKéMON\ntengan personalidad!$
+RustboroCity_PokemonCenter_1F_Text_MaleAndFemalePokemon	Igual que las personas, hay POKéMON\nmachos y hembras.\pPero nadie parece saber en qué\nse diferencian.$
+RustboroCity_PokemonCenter_1F_Text_HMCutNextDoor	¡El hombre de al lado me ha dado\nuna MO!\pLa he usado para enseñar a mi\nPOKéMON a CORTAR árboles finos.$
+RustboroCity_PokemonSchool_Text_BlackboardListsStatusChanges	En la pizarra están los problemas\nde estado que hay en combate.$
+RustboroCity_PokemonSchool_Text_ReadWhichTopic	¿Qué tema quieres leer?$
+RustboroCity_PokemonSchool_Text_ExplainPoison	Un POKéMON envenenado pierde PS\npoco a poco.\pEl veneno sigue después del\ncombate.\pUn POKéMON envenenado pierde PS\nmientras viajas.\pCura el envenenamiento con un\nANTÍDOTO.$
+RustboroCity_PokemonSchool_Text_ExplainParalysis	Si un POKéMON se paraliza,\nbaja su VELOCIDAD.\pAdemás, a veces no podrá moverse\nen el combate.\pLa parálisis sigue tras el combate.\nCúrala con un ANTIPARALIZADOR.$
+RustboroCity_PokemonSchool_Text_ExplainSleep	Un POKéMON dormido no puede\natacar.\pPuede despertarse solo, pero si el\ncombate acaba mientras duerme,\lseguirá dormido.\pDespiértalo con un DESPERTAR.$
+RustboroCity_PokemonSchool_Text_ExplainBurn	Una quemadura baja el ATAQUE y\nresta PS poco a poco.\pSigue después del combate.\nCúrala con un ANTIQUEMAR.$
+RustboroCity_PokemonSchool_Text_ExplainFreeze	Un POKéMON congelado no puede\nhacer nada.\pSigue congelado tras el combate.\nDescongélalo con un ANTIHIELO.$
+RustboroCity_PokemonSchool_Text_StudentsWhoDontStudyGetQuickClaw	Los alumnos que no estudian prueban\nmi GARRA RÁPIDA.\pSe verá si eres buen alumno por\ncómo usas este objeto.$
+RustboroCity_PokemonSchool_Text_ExplainQuickClaw	Un POKéMON con GARRA RÁPIDA a veces\nse acelera y actúa antes que\lsu rival.\pHay muchos otros objetos para que\nlos lleven los POKéMON.\p¡Solo con eso ya tienes muchos\ntemas que estudiar!$
+RustboroCity_PokemonSchool_Text_TradingRightNow	Estoy cambiando POKéMON con mi\namigo ahora mismo.$
+RustboroCity_PokemonSchool_Text_AlwaysWantedSeedot	Siempre he querido un SEEDOT,\n¡y por fin voy a tenerlo!$
+RustboroCity_PokemonSchool_Text_PokemontCantUseManMadeItems	Los POKéMON pueden llevar objetos,\npero no saben usar cosas fabricadas\lcomo POCIONES o ANTÍDOTOS.$
+RustboroCity_PokemonSchool_Text_ConfusedPokemonAttacksItself	¿Sabes que algunos movimientos\npueden confundir a un POKéMON?\pUn POKéMON confuso a veces se ataca\na sí mismo sin querer.\pPero al salir del combate vuelve\na la normalidad.$
+RustboroCity_PokemonSchool_Text_PokemonHealItselfWithBerry	Un POKéMON con una BAYA se\ncura solo…\pHay muchos objetos que pueden\nllevar los POKéMON…\p¡Uf, qué difícil es tomar\napuntes…!$
+RustboroCity_PokemonSchool_Text_StudentsNotes	Es el cuaderno de un alumno…\pLos POKéMON se atrapan con\nPOKé BALLS.\pUn ENTRENADOR puede llevar hasta\nseis POKéMON.\pUn ENTRENADOR es quien atrapa\nPOKéMON, los cría y combate\lcon ellos.\pSu misión es vencer a los ENTRENADORES\nfuertes que esperan rivales en los\lGIMNASIOS POKéMON.$
+RustboroCity_PokemonSchool_Text_ScottMetAlreadyCut	¿Hola? ¿No nos hemos visto antes?\nCreo que en CIUDAD PETALIA.\pDeja que me presente.\nMe llamo SCOTT.\pViajo por todas partes buscando\nENTRENADORES excepcionales.\pMás bien, busco expertos en\ncombates POKéMON.\pY bien, ¿qué te trae a esta ESCUELA?\n¿También entrenas POKéMON?\pLo primero que deberías hacer es\nenseñarle CORTE a un POKéMON.\pSi no recuerdo mal, alguien de esta\nciudad tiene CORTE.$
+RustboroCity_PokemonSchool_Text_StudentTalentLevelUnknown	SCOTT: Mmm…\pNo se sabe el talento de los alumnos\nde aquí. Pero potencial hay.$
+RustboroCity_PokemonSchool_Text_ScottStoneBadge	SCOTT: Oh, ¿qué es eso?\p¿Es la MEDALLA PIEDRA?\nYo diría que es impresionante.\pPero, ¿sabes?, me habría encantado\nverte combatir.\pCon una MEDALLA no se sabe cómo\ncombate un ENTRENADOR.$
+RustboroCity_PokemonSchool_Text_ScottMetAlreadyStoneBadge	¿Hola? ¿No nos hemos visto antes?\nCreo que en CIUDAD PETALIA.\pDeja que me presente.\nMe llamo SCOTT.\pViajo por todas partes buscando\nENTRENADORES excepcionales.\pMás bien, busco expertos en\ncombates POKéMON.\pOh, ¿qué es eso?\n¿Es la MEDALLA PIEDRA?\pPara alguien que acaba de empezar,\nyo diría que es impresionante.\pPero, ¿sabes?, me habría encantado\nverte combatir.\pCon una MEDALLA no se sabe cómo\ncombate un ENTRENADOR.$

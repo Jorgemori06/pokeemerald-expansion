@@ -79,66 +79,66 @@ RustboroCity_DevonCorp_1F_EventScript_ProductsDisplay::
 	end
 
 RustboroCity_DevonCorp_1F_Text_WelcomeToDevonCorp:
-	.string "Hello and welcome to the DEVON\n"
-	.string "CORPORATION.\p"
-	.string "We're proud producers of items and\n"
-	.string "medicine that enhance your life.$"
+	.string "Hola, te damos la bienvenida a la\n"
+	.string "CORPORACIÓN DEVON.\p"
+	.string "Fabricamos con orgullo objetos y\n"
+	.string "medicinas que mejoran tu vida.$"
 
 RustboroCity_DevonCorp_1F_Text_StaffGotRobbed:
-	.string "One of our research staff stupidly\n"
-	.string "got robbed of an important parcel.$"
+	.string "A uno de nuestros investigadores le han\n"
+	.string "robado un paquete. ¡Qué torpe!$"
 
 RustboroCity_DevonCorp_1F_Text_ThoseShoesAreOurProduct:
-	.string "Hey, those RUNNING SHOES!\n"
-	.string "They're one of our products!\p"
-	.string "It makes me happy when I see someone\n"
-	.string "using something we made.$"
+	.string "¡Eh, esas DEPORTIVAS!\n"
+	.string "¡Son un producto nuestro!\p"
+	.string "Me alegra ver a alguien usando\n"
+	.string "algo que hemos fabricado.$"
 
 RustboroCity_DevonCorp_1F_Text_RobberWasntVeryBright:
-	.string "That stolen parcel…\p"
-	.string "Well, sure it's important, but it's not\n"
-	.string "anything that anyone can use.\p"
-	.string "In my estimation, that robber must not\n"
-	.string "have been very bright.$"
+	.string "Ese paquete robado…\p"
+	.string "Bueno, es importante, pero nadie\n"
+	.string "más puede usarlo.\p"
+	.string "Yo diría que ese ladrón no era\n"
+	.string "muy listo.$"
 
 RustboroCity_DevonCorp_1F_Text_SoundsLikeStolenGoodsRecovered:
-	.string "It sounds like they've recovered\n"
-	.string "the ripped-off DEVON GOODS.$"
+	.string "Parece que han recuperado las\n"
+	.string "PIEZAS DEVON robadas.$"
 
 RustboroCity_DevonCorp_1F_Text_OnlyAuthorizedPeopleEnter:
-	.string "I'm sorry, only authorized people\n"
-	.string "are allowed to enter here.$"
+	.string "Lo siento, aquí solo puede entrar\n"
+	.string "el personal autorizado.$"
 
 RustboroCity_DevonCorp_1F_Text_HowCouldWeGetRobbed:
-	.string "It's beyond stupid.\n"
-	.string "How could we get robbed?$"
+	.string "Es el colmo.\n"
+	.string "¿Cómo han podido robarnos?$"
 
 RustboroCity_DevonCorp_1F_Text_YoureAlwaysWelcomeHere:
-	.string "Hi, there!\n"
-	.string "You're always welcome here!$"
+	.string "¡Hola!\n"
+	.string "¡Aquí siempre se te recibe con gusto!$"
 
 RustboroCity_DevonCorp_1F_Text_RocksMetalDisplay:
-	.string "Samples of rocks and metal are\n"
-	.string "displayed in the glass case.\p"
-	.string "There's a panel with some writing\n"
-	.string "on it…\p"
-	.string "“DEVON CORPORATION got its start as\n"
-	.string "a producer of stones from quarries.\p"
-	.string "“The company also produced iron from\n"
-	.string "filings in the sand.\p"
-	.string "“From that humble start as a producer\n"
-	.string "of raw materials, DEVON developed.\p"
-	.string "“DEVON is now a manufacturer of a wide\n"
-	.string "range of industrial products.”$"
+	.string "En la vitrina hay muestras de rocas\n"
+	.string "y metales.\p"
+	.string "Hay un panel con algo escrito…\p"
+	.string "“La CORPORACIÓN DEVON empezó\n"
+	.string "sacando piedra de canteras.\p"
+	.string "”También sacaba hierro de las\n"
+	.string "limaduras de la arena.\p"
+	.string "”Desde ese humilde comienzo como\n"
+	.string "productora de materias primas, DEVON\l"
+	.string "creció.\p"
+	.string "”Hoy DEVON fabrica una gran variedad\n"
+	.string "de productos industriales”.$"
 
 RustboroCity_DevonCorp_1F_Text_ProductDisplay:
-	.string "Prototypes and test products fill\n"
-	.string "the glass display case.\p"
-	.string "There's a panel with a description…\p"
-	.string "“In addition to industrial products,\n"
-	.string "DEVON now markets sundries and\l"
-	.string "pharmaceuticals for better lifestyles.\p"
-	.string "“Recently, DEVON has begun marketing\n"
-	.string "tools for POKéMON TRAINERS, including\l"
-	.string "POKé BALLS and POKéNAV systems.”$"
+	.string "La vitrina está llena de prototipos\n"
+	.string "y productos de prueba.\p"
+	.string "Hay un panel con una descripción…\p"
+	.string "“Además de productos industriales,\n"
+	.string "DEVON vende artículos y medicinas\l"
+	.string "para vivir mejor.\p"
+	.string "”Hace poco, DEVON ha empezado a vender\n"
+	.string "herramientas para ENTRENADORES, como\l"
+	.string "las POKé BALLS y el POKéNAV”.$"
 

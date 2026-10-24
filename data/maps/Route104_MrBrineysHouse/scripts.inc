@@ -95,64 +95,64 @@ Route104_MrBrineysHouse_EventScript_Peeko::
 	end
 
 Route104_MrBrineysHouse_Text_WaitUpPeeko:
-	.string "MR. BRINEY: Hold on, lass!\n"
-	.string "Wait up, PEEKO!$"
+	.string "SR. ARENQUE: ¡Espera, pequeña!\n"
+	.string "¡Espérame, PEEKO!$"
 
 Route104_MrBrineysHouse_Text_ItsYouLetsSailToDewford:
-	.string "Hm? You're {PLAYER}{KUN}!\n"
-	.string "You saved my darling PEEKO!\l"
-	.string "We owe so much to you!\p"
-	.string "What's that?\n"
-	.string "You want to sail with me?\p"
-	.string "Hmhm…\p"
-	.string "You have a LETTER bound for DEWFORD\n"
-	.string "and a package for SLATEPORT, then?\p"
-	.string "Quite the busy life you must lead!\p"
-	.string "But, certainly, what you're asking is\n"
-	.string "no problem at all.\p"
-	.string "You've come to the right man!\n"
-	.string "We'll set sail for DEWFORD.$"
+	.string "¿Mm? ¡Eres {PLAYER}{KUN}!\n"
+	.string "¡Salvaste a mi querida PEEKO!\l"
+	.string "¡Te debemos muchísimo!\p"
+	.string "¿Qué dices?\n"
+	.string "¿Que quieres navegar conmigo?\p"
+	.string "Jmjm…\p"
+	.string "¿Llevas una CARTA para AZULIZA\n"
+	.string "y un paquete para PORTUAL?\p"
+	.string "¡Sí que vas ocupado!\p"
+	.string "Pero claro, lo que me pides no es\n"
+	.string "ningún problema.\p"
+	.string "¡Has dado con el hombre adecuado!\n"
+	.string "Zarparemos hacia AZULIZA.$"
 
 Route104_MrBrineysHouse_Text_SetSailForDewford:
-	.string "MR. BRINEY: DEWFORD it is, then!\p"
-	.string "Anchors aweigh!\n"
-	.string "PEEKO, we're setting sail, my darling!$"
+	.string "SR. ARENQUE: ¡Pues a AZULIZA!\p"
+	.string "¡Leven anclas!\n"
+	.string "¡PEEKO, zarpamos, cariño!$"
 
 Route104_MrBrineysHouse_Text_DeclineDeliverySail:
-	.string "MR. BRINEY: Is that so?\n"
-	.string "Your deliveries can wait?\p"
-	.string "You just go on and tell me whenever\n"
-	.string "you want to set sail!$"
+	.string "SR. ARENQUE: ¿Ah, sí?\n"
+	.string "¿Tus recados pueden esperar?\p"
+	.string "¡Avísame cuando quieras\n"
+	.string "zarpar!$"
 
 Route104_MrBrineysHouse_Text_NeedToMakeDeliveriesSailToDewford:
-	.string "MR. BRINEY: Ahoy!\n"
-	.string "I know exactly what you want to say!\p"
-	.string "You're to deliver a LETTER to DEWFORD\n"
-	.string "and a package to SLATEPORT.\p"
-	.string "What you need me to do is no problem\n"
-	.string "at all--I'm the man for the job!\p"
-	.string "First, we'll set sail for DEWFORD.$"
+	.string "SR. ARENQUE: ¡Ah del barco!\n"
+	.string "¡Sé muy bien lo que vas a decir!\p"
+	.string "Tienes que llevar una CARTA a AZULIZA\n"
+	.string "y un paquete a PORTUAL.\p"
+	.string "Lo que necesitas no es problema.\n"
+	.string "¡Soy el hombre indicado!\p"
+	.string "Primero, zarparemos hacia AZULIZA.$"
 
 Route104_MrBrineysHouse_Text_NeedToDeliverPackageSailToDewford:
-	.string "MR. BRINEY: Ahoy!\n"
-	.string "I know exactly what you want to say!\p"
-	.string "You're to deliver a package to\n"
-	.string "CAPT. STERN in SLATEPORT.\p"
-	.string "What you need me to do is no problem\n"
-	.string "at all--I'm the man for the job!\p"
-	.string "First, we'll set sail for DEWFORD.$"
+	.string "SR. ARENQUE: ¡Ah del barco!\n"
+	.string "¡Sé muy bien lo que vas a decir!\p"
+	.string "Tienes que llevar un paquete al\n"
+	.string "CAPITÁN BABOR de PORTUAL.\p"
+	.string "Lo que necesitas no es problema.\n"
+	.string "¡Soy el hombre indicado!\p"
+	.string "Primero, zarparemos hacia AZULIZA.$"
 
 Route104_MrBrineysHouse_Text_WhereAreWeBound:
-	.string "MR. BRINEY: Ahoy!\n"
-	.string "For you, I'll go out to sea anytime!\p"
-	.string "Now, my friend, where are we bound?$"
+	.string "SR. ARENQUE: ¡Ah del barco!\n"
+	.string "¡Por ti salgo al mar cuando sea!\p"
+	.string "Bueno, ¿adónde vamos?$"
 
 Route104_MrBrineysHouse_Text_TellMeWheneverYouWantToSail:
-	.string "MR. BRINEY: Is that so?\n"
-	.string "Well, PEEKO owes her life to you.\p"
-	.string "You just go on and tell me whenever\n"
-	.string "you want to set sail!$"
+	.string "SR. ARENQUE: ¿Ah, sí?\n"
+	.string "Bueno, PEEKO te debe la vida.\p"
+	.string "¡Avísame cuando quieras\n"
+	.string "zarpar!$"
 
 Route104_MrBrineysHouse_Text_Peeko:
-	.string "PEEKO: Pii piihyoro!$"
+	.string "PEEKO: ¡Pii piihyoro!$"
 

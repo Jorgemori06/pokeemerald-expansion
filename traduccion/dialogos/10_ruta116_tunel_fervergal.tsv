@@ -1,0 +1,79 @@
+# RUTA 116 (con sus entrenadores y la CASA DE DESCANSO) y TÚNEL FERVERGAL
+Route116_Text_ScoundrelMadeOffWithPeeko	Ay, ¿qué voy a hacer?\pEstábamos paseando PEEKO y yo cuando\nnos asaltó un matón muy raro…\p¡Ese granuja se ha llevado a mi\nquerida PEEKO!\p¡Buaaaaaaah! ¡PEEKO!$
+Route116_Text_WantToDigTunnel	Mmm… ¡Grrr!\p¡Quiero cavar ese túnel!$
+Route116_Text_DiggingTunnelWhenGoonOrderedMeOut	Mmm… ¡Grrr!\n¿Qué pasa aquí?\pEstaba cavando el túnel sin\nherramientas cuando un matón\lme ha echado.\pEse túnel está lleno de POKéMON a los\nque no les gusta nada el ruido.\lPodrían montar un alboroto.\pPor eso dejamos de usar maquinaria\npesada para cavar…\pMe preocupa que ese matón haga\nalguna tontería y asuste\la los POKéMON.$
+Route116_Text_GoonHightailedItOutOfTunnel	Mmm… ¡Grrr!\p¡Ese matón ha salido pitando del\ntúnel! ¡Puedo volver a cavar!$
+Route116_Text_ThankYouTokenOfAppreciation	¡Oh! ¡Eres tú!\p¡Me ayudaste en el BOSQUE PETALIA,\nrecuperaste el paquete robado\ly encima lo llevaste a PORTUAL!\p¡El CAPITÁN BABOR nos ha dicho que\nel paquete ha llegado!\p¡Muchísimas gracias!\pSi fuera una nube, ¡te llovería\nagradecimiento a raudales!\p¡Te traigo buenas noticias!\pHace poco, nuestra empresa ha creado\nun nuevo tipo de POKé BALL.\p¡Como agradecimiento, aquí\ntienes nuestro regalo!$
+Route116_Text_NewBallAvailableAtMart	Nuestra nueva POKé BALL estará a la\nventa en la TIENDA POKéMON de FÉRRICA.\p¡Pruébala, por favor!\n¡Gracias y hasta luego!$
+Route116_Text_BagIsJamPacked	Tienes la MOCHILA a reventar.\nNo puedo darte esta ACOPIO BALL.$
+Route116_Text_TokenOfAppreciation	¡Como agradecimiento por llevar\nnuestro paquete, aquí tienes una\lPOKé BALL de un tipo nuevo!$
+Route116_Text_CanYouHelpMeFindGlasses	Se me han caído las gafas…\n¿Me ayudas a encontrarlas?$
+Route116_Text_MayISeeThoseGlasses	¡Esas gafas!\n¿Me las dejas un segundo?$
+Route116_Text_NotWhatImLookingForMaybeTheyArentHere	Mmm…\nSon GAFAS DE SOL.\lNo son las que busco…\pA lo mejor mis gafas no están\npor aquí…$
+Route116_Text_CantFindGlassesNotHere	Mmm…\nNo encuentro mis gafas…\lA lo mejor no están por aquí…$
+Route116_Text_NotWhatImLookingFor	Mmm…\nSon GAFAS DE SOL.\lNo son las que busco…$
+Route116_Text_RouteSignRustboro	RUTA 116\n{LEFT_ARROW} CIUDAD FÉRRICA$
+Route116_Text_RusturfTunnelSign	TÚNEL FERVERGAL\n“Une FÉRRICA y VERDEGAL\p”El proyecto del túnel se ha\ncancelado”.$
+Route116_Text_TunnelersRestHouse	CASA DE DESCANSO DE LOS OBREROS$
+Route116_Text_TrainerTipsBToStopEvolution	CONSEJOS PARA ENTRENADORES\pSi no quieres que un POKéMON\nevolucione, pulsa el Botón B\lmientras intenta evolucionar.\lEl POKéMON se sorprenderá y parará.\pEsto se llama cancelar la evolución.$
+Route116_Text_TrainerTipsBagHasPockets	CONSEJOS PARA ENTRENADORES\pTu MOCHILA tiene varios BOLSILLOS.\pLos objetos que consigues se guardan\nsolos en el BOLSILLO adecuado.\pTodo ENTRENADOR necesita su\npropia MOCHILA.$
+Route116_TunnelersRestHouse_Text_WeHadToStopBoring	Ese TÚNEL FERVERGAL de ahí…\pAl principio, un montón de obreros\nperforaban la roca con máquinas\lmodernas. Pero tuvimos que parar.\pResulta que habríamos perjudicado\na los POKéMON salvajes de la zona.\pAsí que no tenemos nada que hacer\nmás que holgazanear aquí.$
+Route116_TunnelersRestHouse_Text_ManDiggingHisWayToVerdanturf	Hay un hombre cavando él solo hasta\nVERDEGAL.\lEstá desesperado por llegar.\pDice que si cava poco a poco sin\nmáquinas, no molestará a los\lPOKéMON ni dañará la naturaleza.\p¿Habrá llegado ya al otro lado?$
+Route116_TunnelersRestHouse_Text_GetToVerdanturfWithoutTunnel	Para ir a VERDEGAL sin usar este\nTÚNEL, tendrías que cruzar el mar\lhasta AZULIZA, navegar hasta PORTUAL\ly luego pasar por MALVALONA.$
+Route116_TunnelersRestHouse_Text_TunnelHasGoneThrough	¿Te has enterado? ¡El TÚNEL a VERDEGAL\nya está abierto!\pA veces, si lo deseas con muchas\nganas, los sueños se cumplen.$
+RusturfTunnel_Text_ComeAndGetSome	¿Qué pasa, vienes?\n¡Pues ven, si te atreves!$
+RusturfTunnel_Text_Peeko	PEEKO: ¡Pii pihyoh!$
+RusturfTunnel_Text_GruntIntro	¡Grr, maldita sea!\p¡Ese POKéMON rehén no vale nada!\p¡Y yo que me he escapado…\npor este túnel sin salida!\p¡Eh! ¡Tú!\n¿Quieres luchar contra mí?$
+RusturfTunnel_Text_GruntDefeat	¡Arrrg! ¡Mi carrera criminal acaba\nen un callejón sin salida!$
+RusturfTunnel_Text_GruntTakePackage	Esto no es justo…\pEl JEFE me dijo que sería un trabajo\nfácil y rápido.\pSolo tenía que robar un paquete\na DEVON.\p¡Tsk!\nSi tanto lo quieres, ¡toma!$
+RusturfTunnel_Text_PeekoGladToSeeYouSafe	¡PEEKO!\n¡Qué alegría verte sana y salva!$
+RusturfTunnel_Text_ThankYouLetsGoHomePeeko	¡PEEKO te debe la vida!\pMe llaman SR. ARENQUE.\n¿Y tú eres…?\p… … … … … … … …\n… … … … … … … …\p¡Ah, así que eres {PLAYER}{KUN}!\n¡Te lo agradezco de corazón!\p¡Si alguna vez tienes algún problema,\nno dudes en decírmelo!\pSuelo estar en mi casita junto al mar,\ncerca del BOSQUE PETALIA.\pVen, PEEKO, vámonos a casa.\pPEEKO: ¡Pihyoh!$
+RusturfTunnel_Text_WhyCantTheyKeepDigging	… …\p¿Por qué no pueden seguir cavando?\n¿Es la roca demasiado dura?\pMi amada me espera en PUEBLO VERDEGAL,\naquí al lado…\pSi FÉRRICA y VERDEGAL estuvieran\nunidas por este túnel, podría verla\ltodos los días…\pPero esto…\n¿Qué voy a hacer?$
+RusturfTunnel_Text_ToGetToVerdanturf	Para ir de FÉRRICA a VERDEGAL hay\nque ir a AZULIZA y luego pasar por\lPORTUAL y MALVALONA…$
+RusturfTunnel_Text_YouShatteredBoulderTakeHM	¡Hala! Has roto la roca que\nbloqueaba el paso.\pPara demostrarte lo agradecido que\nestoy, quiero darte esta MO.$
+RusturfTunnel_Text_ExplainStrength	Esa MO contiene FUERZA.\pSi la aprende un POKéMON musculoso,\npodrá mover incluso rocas\lenormes.$
+RusturfTunnel_Text_WandaReunion	¡WANDA!\n¡Ahora puedo verte cuando quiera!\pWANDA: Eso es… maravilloso.\pPor favor, ven a descansar a mi casa.$
+RusturfTunnel_Text_BoyfriendOnOtherSideOfRock	Al otro lado de esta roca…\nestá mi novio.\pNo… No cava el túnel solo para\nvenir a verme.\pSe destroza las manos trabajando\npor el bien de todos.$
+RusturfTunnel_Text_MikeIntro	A un hombre salvaje de la montaña se\nle llama montañés, ¿no?\p¿Por qué a un POKéMON de la montaña\nno se le llama POKéMON montañés?$
+RusturfTunnel_Text_MikeDefeat	Mis POKéMON…\nSe han quedado sin fuerzas…$
+RusturfTunnel_Text_MikePostBattle	Pararon las obras para proteger a\nlos POKéMON, ¿verdad?\l¡Qué historia tan bonita!$
+Route116_Text_ClarkIntro	Si el túnel no atraviesa, pasaré\npor encima.$
+Route116_Text_ClarkDefeat	Uf… Uf…\nPerder me ha cansado…$
+Route116_Text_ClarkPostBattle	No pasa nada si no hay túnel.\n¡Para un MONTAÑERO, las montañas son\lcaminos!$
+Route116_Text_JoeyIntro	¡Mis POKéMON son lo más!\n¡Míralos!$
+Route116_Text_JoeyDefeat	¡Ay! ¡Un rasguño!\n¡Tengo que ponerme una tirita!$
+Route116_Text_JoeyPostBattle	¡Las tiritas son señal de dureza!\n¡Ya tengo otra!$
+Route116_Text_JoseIntro	¡Mis POKéMON BICHO son duros!\n¡A luchar!$
+Route116_Text_JoseDefeat	¡He perdido!\n¡Creía que te tenía!$
+Route116_Text_JosePostBattle	Los POKéMON BICHO evolucionan rápido.\nAsí que se hacen fuertes rápido.$
+Route116_Text_JaniceIntro	¡Te enseñaré lo fuerte que es mi\nadorable POKéMON!$
+Route116_Text_JaniceDefeat	Estás un paso por encima…$
+Route116_Text_JanicePostBattle	Lo ideal son POKéMON monos y\nfuertes a la vez, creo yo.$
+Route116_Text_JerryIntro	En la ESCUELA DE ENTRENADORES\naprendemos de todo.\p¡Quiero ponerlo a prueba de verdad!$
+Route116_Text_JerryDefeat	No he estudiado en la escuela…\nPor eso he perdido.$
+Route116_Text_JerryPostBattle	Tendré que repetir algunas clases\nen la ESCUELA DE ENTRENADORES.\lSi no, PETRA se enfadará.$
+Route116_Text_JerryRegister1	En la ESCUELA aprendí que el\nPOKéNAV registra ENTRENADORES.\pNo sé muy bien qué quiere decir,\n¿puedo probarlo?$
+Route116_Text_JerryRegister2	En la ESCUELA aprendí que el\nPOKéNAV registra ENTRENADORES.\pNo sé muy bien qué quiere decir,\n¿puedo probarlo?$
+Route116_Text_JerryRematchIntro	He estudiado en serio en la\nESCUELA DE ENTRENADORES.\lNo perderé como la última vez.$
+Route116_Text_JerryRematchDefeat	¿Eh?\nSi he estudiado mucho…$
+Route116_Text_JerryPostRematch	Tendré que repetir algunas clases\nen la ESCUELA DE ENTRENADORES.\lSi no, PETRA se enfadará.$
+Route116_Text_KarenIntro	¡Estudio en la escuela y también\nde camino a casa!$
+Route116_Text_KarenDefeat	No me lo creo… ¿He perdido?$
+Route116_Text_KarenPostBattle	¡Ay, así nunca seré una ENTRENADORA\nelegante como PETRA!$
+Route116_Text_KarenRegister1	¡Anda! ¿Eso es un POKéNAV?\n¡Yo también tengo uno! ¡Regístrame!$
+Route116_Text_KarenRegister2	¡Anda! ¿Eso es un POKéNAV?\n¡Yo también tengo uno! ¡Regístrame!$
+Route116_Text_KarenRematchIntro	He estudiado muchísimo desde que te vi.\n¡Tienes que ver lo que he aprendido!$
+Route116_Text_KarenRematchDefeat	No me lo creo.\n¿He vuelto a perder?$
+Route116_Text_KarenPostRematch	¿Has vencido a PETRA?\nEntonces no puedo ganarte. Aún no.$
+Route116_Text_SarahIntro	Que lo sepas: nadie me ha ganado\nnunca en nada.$
+Route116_Text_SarahDefeat	Madre mía.\nEsto es nuevo para mí.$
+Route116_Text_SarahPostBattle	Mi vida de lujo me da todo lo que\npuedo desear.\pPero con los POKéMON, mi fortuna\nno sirve de nada.$
+Route116_Text_DawsonIntro	¡Cuando veas el precioso pelaje de\nmis POKéMON, su belleza te dejará\lsin defensa!$
+Route116_Text_DawsonDefeat	¡Ay, no, dime que no es verdad!$
+Route116_Text_DawsonPostBattle	¡No, no, no!\n¡Has despeinado a mi POKéMON!\l¡Y a mí también!\l¡Tendré que llamar a mi estilista!$
+Route116_Text_DevanIntro	¡Te vamos a dar caña!$
+Route116_Text_DevanDefeat	¡Ayayay!\n¡No ha habido color!$
+Route116_Text_DevanPostBattle	Debería probar con otros tipos\nde POKéMON, eso es lo que haré.$
+Route116_Text_JohnsonIntro	Esto es un callejón sin salida.\nMe aburro, ¿luchamos?$
+Route116_Text_JohnsonDefeat	Ha sido divertido aunque haya perdido.$
+Route116_Text_JohnsonPostBattle	¿Te quedas aquí a hacerme\ncompañía?$
