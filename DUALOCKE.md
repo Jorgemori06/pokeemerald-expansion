@@ -361,7 +361,7 @@ Cómo funciona:
 - **Características con artículo:** "La Defensa", "Los PS"… porque el género cambia. Por eso en las traducciones van al principio: "¡La Defensa del Zigzagoon salvaje bajó!".
 - **Reglas al traducir** (están al principio del archivo de traducciones): mantener todos los códigos `{B_...}`; `{..._NAME_WITH_PREFIX}` al principio de la frase y `{..._NAME_WITH_PREFIX2}` en medio; "X's Y" se escribe "Y de X"; no hace falta poner saltos de línea, se cortan solos.
 
-Hecho: los 180 primeros mensajes de la tabla y los de subir/bajar características, y 105 textos sueltos. Falta: el resto de la tabla (~510) y los menús de fuera del combate (`src/strings.c`).
+Hecho: 325 de los 699 mensajes de la tabla (los 330 primeros, menos los que solo copian otro texto) y 105 textos sueltos. Falta: el resto de la tabla (~375) y los menús de fuera del combate (`src/strings.c`).
 
 Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos códigos `{...}` que el inglés y solo caracteres que existan en `charmap.txt`.
 
@@ -397,6 +397,14 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
 4. Randomizer con semilla (~~reescalado de niveles~~, ~~equipos de jefes~~ y ~~parámetros~~ hechos).
 5. Revanchas y postgame (niveles).
 6. Traducción.
+7. **Siguiente tarea (pedida por Miguel, 24/10/2026): mejorar la pantalla de datos del Pokémon.** Que se vea todo sin herramientas externas:
+   - Características, **IVs** y **EVs** (número exacto, no la letra).
+   - **Naturaleza** con lo que sube y lo que baja ("Firme: +Ataque, −At. Esp.").
+   - **Habilidad** con su descripción y **cuál sería su otra habilidad** (y la oculta).
+   - **Movimientos** con su información: tipo, categoría (físico/especial/estado), potencia, precisión, PP y descripción.
+   - Parte ya la trae la expansion y solo hay que activarla en `include/config/summary_screen.h` (`P_SUMMARY_SCREEN_IV_EV_INFO`, `P_SUMMARY_SCREEN_IV_EV_VALUES`; los colores de la naturaleza ya están activos). Lo de la otra habilidad y la naturaleza en texto hay que programarlo.
+
+**Tipo Hada:** ya está en el juego. La configuración usa los datos de la última generación (`P_UPDATED_TYPES`, `B_UPDATED_MOVE_TYPES` y `B_UPDATED_TYPE_MATCHUPS` en `GEN_LATEST`), así que Gardevoir, Mawile, Azumarill, Altaria mega, etc. son Hada, Encanto/Beso Drenaje/Carantoña son Hada y la tabla de tipos es la moderna. El randomizer tiene que contar con él.
 
 Quién hace cada cosa y cómo se sube: sección 13.
 
