@@ -357,6 +357,19 @@ En total, unas 210.000 palabras: más o menos dos novelas largas.
 ### Plan
 
 1. **Nombres oficiales** de Pokémon, movimientos, habilidades, objetos, tipos y naturalezas. No inventarlos: sacarlos de listas oficiales.
+   - **Tablas preparadas (Miguel, 24/10/2026):** `traduccion/nombres/*.csv` tiene cada constante del juego con su nombre inglés y su **nombre oficial en español**: 1013 especies, 934 movimientos, 873 objetos, 319 habilidades, 20 tipos y 25 naturalezas. Cada tabla dice además si el nombre cabe en el límite de caracteres del juego.
+     - Fuente: PokéAPI (español de España), con los nombres **tal como salen en los juegos**, incluidas sus abreviaturas oficiales (por ejemplo, "Mineral Evol").
+     - Las genera `tools/dualocke/nombres_oficiales.py`, que necesita los CSV de PokéAPI (no están en el repo).
+     - **Pendientes** (`traduccion/nombres/PENDIENTES.md`):
+       - Sin nombre oficial: los movimientos Gigamax (aquí no se usan), algunos objetos de Leyendas Arceus y Escarlata/Púrpura que no salen en el juego, y 3 habilidades nuevas de Z-A (Eelevate, Fire Mane, Aura Guard).
+       - No caben: casi todos son movimientos Z (no se usan). Los que importan son Patada Salto Alta, Tormenta de Arena, Velocidad Extrema y Placaje Eléctrico (16 caracteres), Electricidad Estática y Absorbe Electricidad (16), y los tipos Eléctrico y Siniestro (8). Hay que abreviarlos o subir el límite.
+     - **Decididos** (`traduccion/nombres/decididos.csv`, mandan sobre las tablas): abreviaturas de los que no caben (Pat. Salto Alta, Tormenta Arena, Vel. Extrema, Placaje Eléc., Elec. Estática, Absorbe Elec., los movimientos Z…), nombres de los movimientos Gigamax, y nombres **provisionales** de 3 habilidades nuevas y 15 objetos sin nombre oficial.
+     - **Esos 15 objetos no salen en el juego** (decidido por Miguel el 24/10/2026): son de Leyendas Arceus, Escarlata/Púrpura y Oro/Plata (Remedios, Aux., comidas, Gen Furia, Mochi Reinicio, Teralito Astral…). No están en ningún mapa ni tienda, y están en la lista `excluir` del randomizer (`tools/dualocke/randomizer_config.json`). El nombre provisional queda solo por si acaso.
+     - Tipos: se ha subido `TYPE_NAME_LENGTH` de 8 a 9 para que quepan Eléctrico y Siniestro sin abreviar.
+     - **Aplicados al juego** con `tools/dualocke/aplicar_nombres.py` (`--aplicar` escribe; sin él solo comprueba). Cada nombre queda como `ES(inglés, español)`, así que los tests siguen en inglés. Se puede volver a ejecutar si cambian las tablas. Los plurales de objetos no se usan en español ("5 Poción", como en los juegos oficiales).
+     - **Ojo con la documentación:** algunos nombres que se escribieron de memoria no son los oficiales. El oficial es **Mega-Aro** (no "Aro Mega") y **Repelente Máximo** (no "Máximo Repelente"); hay que consultar estas tablas.
+   - **Descripciones (hecho, 24/10/2026):** 874 movimientos, 786 objetos y 306 habilidades, en `traduccion/descripciones/*.csv` (`constante,espanol,origen`). `origen` = `oficial` si es el texto oficial de los juegos (PokéAPI) y cabe; `propia` si lo hemos traducido nosotros desde el inglés del juego, porque las oficiales modernas son demasiado largas para los recuadros de Esmeralda. Se escriben en una línea; `tools/dualocke/aplicar_descripciones.py` corta las líneas (movimientos: 2 de 29 letras; objetos: 3 de 20; habilidades: 1 de 30) y avisa si no caben. `--aplicar` escribe los archivos; se puede volver a ejecutar.
+   - **Pokédex (hecho, 24/10/2026):** 1284 entradas y las categorías, en `traduccion/pokedex/` (`entradas.csv`, `categorias.csv`). Unas 870 son las oficiales (PokéAPI) y el resto (megas, formas regionales, especies nuevas sin texto que quepa) son traducción propia. Las 31 formas Gigamax se quedan en inglés porque el Dinamax no se usa. La ficha pone "POKéMON Semilla" en vez de "Seed POKéMON" (`src/international_string_util.c`). La categoría tiene como mucho 12 letras (`categoryName` es `u8[13]`). Las aplica `tools/dualocke/aplicar_pokedex.py`.
 2. **Mensajes de combate, menús y gráficos con texto:** reaprovechar la traducción de Heart & Soul ([SergioBonet/hns_es](https://github.com/SergioBonet/hns_es)), que tradujo este mismo motor (aunque una versión algo anterior). Incluye los arreglos de código para artículos y concordancias ("¡El Pikachu salvaje usó…!") y los gráficos con texto (iconos de tipo, barras de PS/Nv…).
 3. **Diálogos de Hoenn:** lo ideal es sacarlos con un script de una copia de la **Esmeralda española oficial**. Es mucho más barato en uso de Claude que traducirlos y son los textos oficiales. Si no hay ROM española, se traducen.
 4. **Pruebas jugando:** recuadros donde no cabe el texto, frases sin traducir, erratas.
@@ -368,6 +381,31 @@ En total, unas 210.000 palabras: más o menos dos novelas largas.
 - Mensajes de combate montados por trozos que necesitan cambios de código para el género y los artículos.
 
 Hubo una traducción antigua de la expansion al castellano (fork de Xhyzi, rama `pokeemerald-expansion-es`, compilando con `LANG=ES`), pero tiene más de tres años y no sirve tal cual.
+
+### Paso 2: mensajes de combate (hecho)
+
+La traducción de Heart & Soul **no tiene licencia**, así que no se copia su texto: solo se mira cómo resolvió los problemas técnicos. Los textos los traducimos nosotros. Le pedimos permiso al autor por si se pudiera reaprovechar algo con créditos (pendiente de respuesta).
+
+Cómo funciona:
+
+- **Los tests siguen en inglés.** La expansion tiene miles de tests que comprueban los mensajes exactos. Todo lo traducido se elige al compilar: en los tests (`TESTING`) sale el inglés y en el juego el español.
+- **Mensajes de la tabla** (`gBattleStringsTable`, 699): las traducciones van en `src/data/dualocke_textos_combate_es.h`, con la misma clave `STRINGID_...`. Si un mensaje no está ahí, sale en inglés, así que se puede traducir por tandas.
+- **Textos sueltos** de `src/battle_message.c` (presentación del combate, "¡Adelante, X!", nombres de las características, estados, menú de combate…): se escriben con `ES(_("inglés"), _("español"))` (macro en `include/dualocke_es.h`).
+- **Pokémon rival:** artículo delante y "salvaje"/"enemigo" detrás ("¡El Zigzagoon salvaje usó Placaje!"). Al final se juntan "de el" → "del" y "a el" → "al". El código está en `src/dualocke_traduccion.c`.
+- **Características con artículo:** "La Defensa", "Los PS"… porque el género cambia. Por eso en las traducciones van al principio: "¡La Defensa del Zigzagoon salvaje bajó!".
+- **Reglas al traducir** (están al principio del archivo de traducciones): mantener todos los códigos `{B_...}`; `{..._NAME_WITH_PREFIX}` al principio de la frase y `{..._NAME_WITH_PREFIX2}` en medio; "X's Y" se escribe "Y de X"; no hace falta poner saltos de línea, se cortan solos.
+
+Hecho: **toda la tabla de mensajes de combate** (693 de 699; los 6 restantes son solo códigos, como el texto de derrota de cada entrenador, que viene de sus datos) y 105 textos sueltos.
+
+**Menús (`src/strings.c`), en curso:** 524 de los 974 textos que se usan, con el mismo `ES()`. Están los de jugar normal: menú de pausa, mochila, tienda, equipo, datos del Pokémon, PC, guardado, ficha de entrenador, decoración, guardería, recordador de movimientos, Safari, huevos y Salón de la Fama. Falta lo que casi no se ve en un Dualocke: Frente Batalla, juegos por cable (Baya-Licuadora, Dodrio, Saltos), Regalo Misterioso, chat y frases de Easy Chat. 
+
+**Menús de otros archivos (hecho):** 233 textos más en `option_menu.c` (opciones), `start_menu.c` (vidas del locke), `party_menu.c`, `item_menu.c`, `item_use.c`, `player_pc.c`, `main_menu.c` (pantalla de inicio), `naming_screen.c`, `pokemon_summary_screen.c`, `map_name_popup.c`, `pokemon_storage_system.c` (cajas del PC) y `pokedex.c`. Se sustituye cada `_("…")` o `COMPOUND_STRING("…")` por `ES(…)` con las dos versiones. No se tocan los nombres de entrenadores de ejemplo de `main_menu.c` ni el abecedario de `naming_screen.c`. Quedan en inglés archivos menos vistos (Pokédex HGSS y DexNav, desactivados; concursos; Baya-Licuadora; depuración).
+
+Reglas para los menús: mantener los códigos y el mismo número de saltos `\n`, `\l` y `\p`, y que cada línea no sea mucho más larga que la inglesa (los recuadros tienen ancho fijo). Los nombres van en mayúsculas como en el original (MOCHILA, GUARDAR, CARTA…).
+
+Falta probarlo jugando.
+
+Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos códigos `{...}` que el inglés y solo caracteres que existan en `charmap.txt`.
 
 ## 9. Estado y siguientes pasos
 
@@ -402,6 +440,14 @@ Hubo una traducción antigua de la expansion al castellano (fork de Xhyzi, rama 
 4. Randomizer con semilla (~~reescalado de niveles~~, ~~equipos de jefes~~ y ~~parámetros~~ hechos).
 5. Revanchas y postgame (niveles).
 6. Traducción.
+7. **Siguiente tarea (pedida por Miguel, 24/10/2026): mejorar la pantalla de datos del Pokémon.** Que se vea todo sin herramientas externas:
+   - Características, **IVs** y **EVs** (número exacto, no la letra).
+   - **Naturaleza** con lo que sube y lo que baja ("Firme: +Ataque, −At. Esp.").
+   - **Habilidad** con su descripción y **cuál sería su otra habilidad** (y la oculta).
+   - **Movimientos** con su información: tipo, categoría (físico/especial/estado), potencia, precisión, PP y descripción.
+   - Parte ya la trae la expansion y solo hay que activarla en `include/config/summary_screen.h` (`P_SUMMARY_SCREEN_IV_EV_INFO`, `P_SUMMARY_SCREEN_IV_EV_VALUES`; los colores de la naturaleza ya están activos). Lo de la otra habilidad y la naturaleza en texto hay que programarlo.
+
+**Tipo Hada:** ya está en el juego. La configuración usa los datos de la última generación (`P_UPDATED_TYPES`, `B_UPDATED_MOVE_TYPES` y `B_UPDATED_TYPE_MATCHUPS` en `GEN_LATEST`), así que Gardevoir, Mawile, Azumarill, Altaria mega, etc. son Hada, Encanto/Beso Drenaje/Carantoña son Hada y la tabla de tipos es la moderna. El randomizer tiene que contar con él.
 
 Quién hace cada cosa y cómo se sube: sección 13.
 
@@ -529,7 +575,7 @@ Decidido el 23/10/2026 y en marcha: **Miguel se encarga del equilibrio** (dificu
 | ~~Evento del combate con Máximo y entrega del Aro Mega~~ (hecho) | Jorge | `data/maps/Route120/` | Equipo de Máximo |
 | ~~Segundo dependiente en las tiendas (mecánica)~~ (hecho por Miguel) | Jorge | `data/maps/*_Mart/`, `src/shop_criteria.c`, `src/shop.c` | Contenido de las tiendas |
 | Randomizer con semilla (la herramienta) | Jorge (pendiente de empezar) | script nuevo en `tools/` + `Makefile` | Todo lo de equilibrio en `trainers.party` y `wild_encounters.json` |
-| Traducción | Por decidir, cuando lo demás esté estable | casi todo `data/` y `src/` | Todo |
+| Traducción (empezada por Miguel: nombres oficiales, sección 8) | Por decidir, cuando lo demás esté estable | casi todo `data/` y `src/` | Todo |
 
 Cómo encajan las dos partes:
 

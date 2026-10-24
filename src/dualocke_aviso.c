@@ -3,6 +3,7 @@
 #include "battle_message.h"
 #include "dualocke.h"
 #include "dualocke_aviso.h"
+#include "dualocke_es.h"
 #include "pokemon.h"
 
 // Dualocke: aviso al morir.
@@ -11,8 +12,10 @@
 // (los muertos se entierran y se restan las vidas en Dualocke_OnBattleEnd). Si ya no
 // quedan vidas, o se han debilitado todos, avisa de que el locke está perdido.
 
-static const u8 sText_DualockeDied[] = _("{B_SCR_NAME_WITH_PREFIX} has died!\nLives left: {B_BUFF1}.\p");
-static const u8 sText_DualockeDiedLockeLost[] = _("{B_SCR_NAME_WITH_PREFIX} has died!\nThe locke is lost!\p");
+static const u8 sText_DualockeDied[] = _(ES("{B_SCR_NAME_WITH_PREFIX} has died!\nLives left: {B_BUFF1}.\p",
+                                             "¡{B_SCR_NAME_WITH_PREFIX} ha muerto!\nVidas restantes: {B_BUFF1}.\p"));
+static const u8 sText_DualockeDiedLockeLost[] = _(ES("{B_SCR_NAME_WITH_PREFIX} has died!\nThe locke is lost!\p",
+                                                     "¡{B_SCR_NAME_WITH_PREFIX} ha muerto!\n¡Has perdido el locke!\p"));
 
 const u8 *Dualocke_GetFaintString(enum BattlerId battler)
 {

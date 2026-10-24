@@ -1,0 +1,308 @@
+constante,espanol,origen
+ABILITY_314,Sin habilidad especial.,propia
+ABILITY_317,Sin habilidad especial.,propia
+ABILITY_ADAPTABILITY,Potencia mov. de su tipo.,propia
+ABILITY_AERILATE,Mov. Normal pasan a Volador.,propia
+ABILITY_AFTERMATH,Daña al rival si se debilita.,propia
+ABILITY_AIR_LOCK,Anula los efectos del tiempo.,propia
+ABILITY_ANALYTIC,Más potencia si va el último.,propia
+ABILITY_ANGER_POINT,Crítico: Ataque al máximo.,propia
+ABILITY_ANGER_SHELL,Cambia caract. a mitad PS.,propia
+ABILITY_ANTICIPATION,Detecta mov. peligrosos.,propia
+ABILITY_ARENA_TRAP,Evita que el rival huya.,oficial
+ABILITY_ARMOR_TAIL,Bloquea mov. con prioridad.,propia
+ABILITY_AROMA_VEIL,Protege de bloqueos a aliados.,propia
+ABILITY_AS_ONE_ICE_RIDER,Nerviosismo y Relincho Blanco.,propia
+ABILITY_AS_ONE_SHADOW_RIDER,Nerviosismo y Relincho Negro.,propia
+ABILITY_AURA_BREAK,Invierte las auras.,propia
+ABILITY_AURA_GUARD,Sin implementar.,propia
+ABILITY_BAD_DREAMS,Daña a rivales dormidos.,propia
+ABILITY_BALL_FETCH,Recoge la 1.ª Ball fallida.,propia
+ABILITY_BATTERY,Sube At. Esp. de aliados.,propia
+ABILITY_BATTLE_ARMOR,Bloquea los golpes críticos.,oficial
+ABILITY_BATTLE_BOND,Cambia de forma al debilitar.,propia
+ABILITY_BEADS_OF_RUIN,Baja Def. Esp. a los demás.,propia
+ABILITY_BEAST_BOOST,Sube su mejor caract. al KO.,propia
+ABILITY_BERSERK,Sube At. Esp. a mitad de PS.,propia
+ABILITY_BIG_PECKS,No le baja la Defensa.,propia
+ABILITY_BLAZE,Potencia Fuego con pocos PS.,propia
+ABILITY_BULLETPROOF,Inmune a bolas y bombas.,propia
+ABILITY_CHEEK_POUCH,Recupera PS al comer bayas.,oficial
+ABILITY_CHILLING_NEIGH,Sube Ataque al debilitar.,propia
+ABILITY_CHLOROPHYLL,Más Velocidad con sol.,propia
+ABILITY_CLEAR_BODY,No le bajan características.,propia
+ABILITY_CLOUD_NINE,Anula los efectos del tiempo.,propia
+ABILITY_COLOR_CHANGE,Toma el tipo del ataque rival.,propia
+ABILITY_COMATOSE,Siempre está medio dormido.,propia
+ABILITY_COMMANDER,Dirige desde un Dondozo.,propia
+ABILITY_COMPETITIVE,Si le bajan algo: +At. Esp.,propia
+ABILITY_COMPOUND_EYES,Sube la precisión.,propia
+ABILITY_CONTRARY,Invierte cambios de caract.,propia
+ABILITY_CORROSION,Envenena a Acero y Veneno.,propia
+ABILITY_COSTAR,Copia cambios del aliado.,propia
+ABILITY_COTTON_DOWN,"Si le golpean, baja Velocidad.",propia
+ABILITY_CUD_CHEW,Repite la baya al turno sig.,propia
+ABILITY_CURIOUS_MEDICINE,Anula cambios de aliados.,propia
+ABILITY_CURSED_BODY,Puede anular mov. al tocarlo.,propia
+ABILITY_CUTE_CHARM,Puede enamorar al tocarlo.,propia
+ABILITY_DAMP,Impide autodestruirse.,propia
+ABILITY_DANCER,Baila cuando otros bailan.,propia
+ABILITY_DARK_AURA,Potencia todo mov. Siniestro.,propia
+ABILITY_DAZZLING,Bloquea mov. con prioridad.,propia
+ABILITY_DEFEATIST,Mitad de ataque a mitad de PS.,propia
+ABILITY_DEFIANT,"Si le bajan algo, sube Ataque.",propia
+ABILITY_DELTA_STREAM,Crea turbulencias.,propia
+ABILITY_DESOLATE_LAND,Crea un sol abrasador.,propia
+ABILITY_DISGUISE,El disfraz le protege 1 vez.,propia
+ABILITY_DOWNLOAD,Sube ataque según el rival.,propia
+ABILITY_DRAGONIZE,Mov. Normal pasan a Dragón.,propia
+ABILITY_DRAGONS_MAW,Potencia mov. Dragón.,propia
+ABILITY_DRIZZLE,Hace que llueva.,propia
+ABILITY_DROUGHT,Hace que salga el sol.,propia
+ABILITY_DRY_SKIN,"El Fuego daña, el Agua cura.",propia
+ABILITY_EARLY_BIRD,Se despierta antes.,propia
+ABILITY_EARTH_EATER,Cura si le da un mov. Tierra.,propia
+ABILITY_EELEVATE,Levitación y Ultraimpulso.,propia
+ABILITY_EFFECT_SPORE,Al tocarlo: ven./sueño/par.,propia
+ABILITY_ELECTRIC_SURGE,Crea un campo eléctrico.,propia
+ABILITY_ELECTROMORPHOSIS,Se carga al recibir golpes.,propia
+ABILITY_EMBODY_ASPECT_CORNERSTONE_MASK,Teracristal: +Defensa.,propia
+ABILITY_EMBODY_ASPECT_HEARTHFLAME_MASK,Teracristal: +Ataque.,propia
+ABILITY_EMBODY_ASPECT_TEAL_MASK,Teracristal: +Velocidad.,propia
+ABILITY_EMBODY_ASPECT_WELLSPRING_MASK,Teracristal: +Def. Esp.,propia
+ABILITY_EMERGENCY_EXIT,Se retira a mitad de PS.,propia
+ABILITY_FAIRY_AURA,Potencia todo mov. Hada.,propia
+ABILITY_FILTER,Reduce los supereficaces.,propia
+ABILITY_FIRE_MANE,Potencia mov. Fuego.,propia
+ABILITY_FLAME_BODY,Puede quemar al tocarlo.,propia
+ABILITY_FLARE_BOOST,Más At. Esp. si está quemado.,propia
+ABILITY_FLASH_FIRE,El fuego potencia su Fuego.,propia
+ABILITY_FLOWER_GIFT,"Al sol, más Atq y Def. Esp.",propia
+ABILITY_FLOWER_VEIL,Protege a aliados Planta.,propia
+ABILITY_FLUFFY,Mitad daño contacto; Fuego x2.,propia
+ABILITY_FORECAST,Cambia con el tiempo.,propia
+ABILITY_FOREWARN,Revela un mov. del rival.,propia
+ABILITY_FRIEND_GUARD,Reduce el daño a aliados.,propia
+ABILITY_FRISK,Ve el objeto del rival.,propia
+ABILITY_FULL_METAL_BODY,No le bajan características.,propia
+ABILITY_FUR_COAT,Mitad de daño físico.,propia
+ABILITY_GALE_WINGS,Mov. Volador con prioridad.,propia
+ABILITY_GALVANIZE,Mov. Normal pasan a Eléctrico.,propia
+ABILITY_GLUTTONY,Come bayas a mitad de PS.,propia
+ABILITY_GOOD_AS_GOLD,Inmune a mov. de estado.,propia
+ABILITY_GOOEY,Contacto: baja Velocidad.,propia
+ABILITY_GORILLA_TACTICS,"Más Ataque, un solo mov.",propia
+ABILITY_GRASSY_SURGE,Crea un campo de hierba.,propia
+ABILITY_GRASS_PELT,Campo de Hierba: +Defensa.,propia
+ABILITY_GRIM_NEIGH,Sube At. Esp. al debilitar.,propia
+ABILITY_GUARD_DOG,Intimidarle sube su Ataque.,propia
+ABILITY_GULP_MISSILE,Escupe al ser golpeado.,propia
+ABILITY_GUTS,Más Ataque si tiene estado.,propia
+ABILITY_HADRON_ENGINE,Campo Eléctrico y +At. Esp.,propia
+ABILITY_HARVEST,Puede regenerar una baya.,propia
+ABILITY_HEALER,Puede curar a un aliado.,propia
+ABILITY_HEATPROOF,Mitad de daño de Fuego.,propia
+ABILITY_HEAVY_METAL,Duplica su peso.,oficial
+ABILITY_HONEY_GATHER,Puede recoger Miel.,propia
+ABILITY_HOSPITALITY,Cura a un aliado al entrar.,propia
+ABILITY_HUGE_POWER,Aumenta el Ataque.,oficial
+ABILITY_HUNGER_SWITCH,Cambia de forma cada turno.,propia
+ABILITY_HUSTLE,"Más Ataque, menos precisión.",propia
+ABILITY_HYDRATION,Se cura el estado con lluvia.,propia
+ABILITY_HYPER_CUTTER,No le baja el Ataque.,propia
+ABILITY_ICE_SCALES,Mitad de daño especial.,propia
+ABILITY_ILLUSION,Se disfraza de un compañero.,propia
+ABILITY_IMMUNITY,Evita el envenenamiento.,oficial
+ABILITY_IMPOSTER,Se transforma en el rival.,propia
+ABILITY_INFILTRATOR,Atraviesa las barreras.,propia
+ABILITY_INNARDS_OUT,Daña al rival al debilitarse.,propia
+ABILITY_INNER_FOCUS,Evita el retroceso.,oficial
+ABILITY_INSOMNIA,Evita el quedarse dormido.,oficial
+ABILITY_INTIMIDATE,Baja el Ataque del rival.,oficial
+ABILITY_IRON_BARBS,Hiere al hacer contacto.,oficial
+ABILITY_IRON_FIST,Potencia los puñetazos.,propia
+ABILITY_JUSTIFIED,Siniestro le sube el Ataque.,propia
+ABILITY_KEEN_EYE,No le baja la precisión.,propia
+ABILITY_KLUTZ,No puede usar su objeto.,propia
+ABILITY_LEAF_GUARD,"Al sol, sin problemas estado.",propia
+ABILITY_LEVITATE,Inmune a mov. Tierra.,propia
+ABILITY_LIBERO,Toma el tipo del mov. usado.,propia
+ABILITY_LIGHT_METAL,Reduce a la mitad su peso.,oficial
+ABILITY_LIMBER,Evita ser paralizado.,oficial
+ABILITY_LINGERING_AROMA,Contagia su habilidad.,propia
+ABILITY_LIQUID_OOZE,Daña a quien le absorbe PS.,propia
+ABILITY_LIQUID_VOICE,Mov. de sonido pasan a Agua.,propia
+ABILITY_LONG_REACH,Sus mov. no hacen contacto.,propia
+ABILITY_MAGICIAN,Roba el objeto del rival.,propia
+ABILITY_MAGIC_BOUNCE,Devuelve mov. de estado.,propia
+ABILITY_MAGIC_GUARD,Solo recibe daño de ataques.,oficial
+ABILITY_MAGMA_ARMOR,Evita la congelación.,oficial
+ABILITY_MAGNET_PULL,Atrapa a rivales Acero.,propia
+ABILITY_MARVEL_SCALE,Más Defensa si tiene estado.,propia
+ABILITY_MEGA_LAUNCHER,Potencia mov. de pulso.,propia
+ABILITY_MEGA_SOL,Actúa como si hiciera sol.,propia
+ABILITY_MERCILESS,Crítico seguro si hay veneno.,propia
+ABILITY_MIMICRY,Cambia de tipo según el campo.,propia
+ABILITY_MINDS_EYE,Da a Fantasma; precisión fija.,propia
+ABILITY_MIRROR_ARMOR,Devuelve bajadas de caract.,propia
+ABILITY_MISTY_SURGE,Crea un campo de niebla.,propia
+ABILITY_MOLD_BREAKER,Ignora las habilidades.,propia
+ABILITY_MOODY,Cambia caract. cada turno.,propia
+ABILITY_MOTOR_DRIVE,Lo eléctrico le da Velocidad.,propia
+ABILITY_MOXIE,Sube Ataque al debilitar.,propia
+ABILITY_MULTISCALE,Menos daño con PS al máximo.,propia
+ABILITY_MULTITYPE,Tipo según tabla o cristal Z.,propia
+ABILITY_MUMMY,Contagia su habilidad.,propia
+ABILITY_MYCELIUM_MIGHT,Mov. de estado no fallan.,propia
+ABILITY_NATURAL_CURE,Se cura el estado al cambiar.,propia
+ABILITY_NEUROFORCE,Potencia los supereficaces.,propia
+ABILITY_NEUTRALIZING_GAS,Anula las otras habilidades.,propia
+ABILITY_NONE,Sin habilidad.,propia
+ABILITY_NORMALIZE,Sus mov. pasan a ser Normal.,propia
+ABILITY_NO_GUARD,Todos los ataques aciertan.,propia
+ABILITY_OPPORTUNIST,Copia subidas del rival.,propia
+ABILITY_ORICHALCUM_PULSE,Saca el sol y sube Ataque.,propia
+ABILITY_OVERGROW,Potencia Planta con pocos PS.,propia
+ABILITY_OWN_TEMPO,Evita ser confundido.,oficial
+ABILITY_PARENTAL_BOND,Ataque doble en familia.,oficial
+ABILITY_PASTEL_VEIL,Evita el veneno al equipo.,propia
+ABILITY_PERISH_BODY,Contacto: KO en 3 turnos.,propia
+ABILITY_PICKPOCKET,Roba el objeto si le golpean.,propia
+ABILITY_PICKUP,Puede recoger objetos.,propia
+ABILITY_PIERCING_DRILL,Contacto atraviesa protección.,propia
+ABILITY_PIXILATE,Mov. Normal pasan a Hada.,propia
+ABILITY_POISON_HEAL,El veneno le cura PS.,propia
+ABILITY_POISON_POINT,Puede envenenar al tocarlo.,propia
+ABILITY_POISON_PUPPETEER,Su veneno también confunde.,propia
+ABILITY_POISON_TOUCH,Puede envenenar al tocar.,propia
+ABILITY_POWER_CONSTRUCT,Cambia de forma a mitad PS.,propia
+ABILITY_POWER_OF_ALCHEMY,Copia hab. del aliado caído.,propia
+ABILITY_POWER_SPOT,Potencia mov. de aliados.,propia
+ABILITY_PRANKSTER,Mov. de estado con prioridad.,propia
+ABILITY_PRESSURE,El rival gasta más PP.,propia
+ABILITY_PRIMORDIAL_SEA,Crea un diluvio.,propia
+ABILITY_PRISM_ARMOR,Reduce los supereficaces.,propia
+ABILITY_PROPELLER_TAIL,Ignora redirecciones.,propia
+ABILITY_PROTEAN,Toma el tipo del mov. usado.,propia
+ABILITY_PROTOSYNTHESIS,Sol: sube su mejor caract.,propia
+ABILITY_PSYCHIC_SURGE,Crea un campo psíquico.,propia
+ABILITY_PUNK_ROCK,Potencia y resiste el sonido.,propia
+ABILITY_PURE_POWER,Aumenta el Ataque.,oficial
+ABILITY_PURIFYING_SALT,Sin estado; resiste Fantasma.,propia
+ABILITY_QUARK_DRIVE,C. Eléctrico: sube su mejor.,propia
+ABILITY_QUEENLY_MAJESTY,Bloquea mov. con prioridad.,propia
+ABILITY_QUICK_DRAW,A veces ataca primero.,propia
+ABILITY_QUICK_FEET,Más Velocidad si tiene estado.,propia
+ABILITY_RAIN_DISH,Recupera PS con lluvia.,propia
+ABILITY_RATTLED,El miedo le da Velocidad.,propia
+ABILITY_RECEIVER,Copia hab. del aliado caído.,propia
+ABILITY_RECKLESS,Potencia mov. con retroceso.,propia
+ABILITY_REFRIGERATE,Mov. Normal pasan a Hielo.,propia
+ABILITY_REGENERATOR,Recupera PS al cambiarse.,propia
+ABILITY_RIPEN,Duplica el efecto de bayas.,propia
+ABILITY_RIVALRY,Fuerte contra su mismo sexo.,propia
+ABILITY_RKS_SYSTEM,Tipo según su disco.,propia
+ABILITY_ROCKY_PAYLOAD,Potencia mov. Roca.,propia
+ABILITY_ROCK_HEAD,No recibe daño de retroceso.,propia
+ABILITY_ROUGH_SKIN,Hiere al hacer contacto.,oficial
+ABILITY_RUN_AWAY,Siempre puede huir.,propia
+ABILITY_SAND_FORCE,Más fuerza con arena.,propia
+ABILITY_SAND_RUSH,Más Velocidad con arena.,propia
+ABILITY_SAND_SPIT,Crea arena si le golpean.,propia
+ABILITY_SAND_STREAM,Crea una tormenta de arena.,propia
+ABILITY_SAND_VEIL,Más evasión con arena.,propia
+ABILITY_SAP_SIPPER,Planta le sube el Ataque.,propia
+ABILITY_SCHOOLING,Forma un banco con muchos PS.,propia
+ABILITY_SCRAPPY,Normal y Lucha dan a Fantasma.,propia
+ABILITY_SCREEN_CLEANER,Anula barreras al entrar.,propia
+ABILITY_SEED_SOWER,Crea hierba si le golpean.,propia
+ABILITY_SERENE_GRACE,Más efectos secundarios.,propia
+ABILITY_SHADOW_SHIELD,Menos daño con PS al máximo.,propia
+ABILITY_SHADOW_TAG,Evita que el enemigo huya.,oficial
+ABILITY_SHARPNESS,Potencia mov. cortantes.,propia
+ABILITY_SHED_SKIN,Puede curarse el estado.,propia
+ABILITY_SHEER_FORCE,"Sin efectos, más potencia.",propia
+ABILITY_SHELL_ARMOR,Bloquea los golpes críticos.,oficial
+ABILITY_SHIELDS_DOWN,Rompe su coraza a mitad PS.,propia
+ABILITY_SHIELD_DUST,Bloquea efectos secundarios.,propia
+ABILITY_SIMPLE,Duplica cambios de caract.,propia
+ABILITY_SKILL_LINK,Máx. golpes en mov. múltiples.,propia
+ABILITY_SLOW_START,Tarda 5 turnos en arrancar.,propia
+ABILITY_SNIPER,Potencia los golpes críticos.,propia
+ABILITY_SNOW_WARNING,Hace que nieve.,propia
+ABILITY_SOLAR_POWER,El sol potencia pero daña.,propia
+ABILITY_SOLID_ROCK,Reduce los supereficaces.,propia
+ABILITY_SOUL_HEART,"Si alguien cae, sube At. Esp.",propia
+ABILITY_SOUNDPROOF,Evita ataques de sonido.,oficial
+ABILITY_SPEED_BOOST,Sube la Velocidad cada turno.,propia
+ABILITY_SPICY_SPRAY,Quema al rival si le dañan.,propia
+ABILITY_STAKEOUT,Más fuerte si el rival entra.,propia
+ABILITY_STALL,Siempre ataca el último.,propia
+ABILITY_STALWART,Ignora redirecciones.,propia
+ABILITY_STAMINA,Sube Defensa al recibir daño.,propia
+ABILITY_STANCE_CHANGE,Cambia de forma al luchar.,propia
+ABILITY_STATIC,Puede paralizar al tocarlo.,propia
+ABILITY_STEADFAST,Amedrentarlo sube Velocidad.,propia
+ABILITY_STEAM_ENGINE,Fuego o Agua: +Velocidad.,propia
+ABILITY_STEELWORKER,Potencia mov. Acero.,propia
+ABILITY_STEELY_SPIRIT,Potencia mov. Acero aliados.,propia
+ABILITY_STENCH,Puede amedrentar al atacar.,propia
+ABILITY_STICKY_HOLD,No le quitan el objeto.,propia
+ABILITY_STRONG_JAW,Potencia los mordiscos.,propia
+ABILITY_STURDY,Anula los KO de un golpe.,propia
+ABILITY_SUCTION_CUPS,No pueden obligarle a cambiar.,propia
+ABILITY_SUPERSWEET_SYRUP,Baja la evasión rival 1 vez.,propia
+ABILITY_SUPER_LUCK,Más golpes críticos.,propia
+ABILITY_SUPREME_OVERLORD,Aliados caídos dan potencia.,propia
+ABILITY_SURGE_SURFER,Campo Eléctrico: +Velocidad.,propia
+ABILITY_SWARM,Potencia Bicho con pocos PS.,propia
+ABILITY_SWEET_VEIL,Evita que el equipo duerma.,propia
+ABILITY_SWIFT_SWIM,Más Velocidad con lluvia.,propia
+ABILITY_SWORD_OF_RUIN,Baja Defensa a los demás.,propia
+ABILITY_SYMBIOSIS,Pasa su objeto a un aliado.,propia
+ABILITY_SYNCHRONIZE,Contagia quem./par./ven.,propia
+ABILITY_TABLETS_OF_RUIN,Baja Ataque a los demás.,propia
+ABILITY_TANGLED_FEET,Más evasión si está confuso.,propia
+ABILITY_TANGLING_HAIR,Contacto: baja Velocidad.,propia
+ABILITY_TECHNICIAN,Potencia mov. débiles.,propia
+ABILITY_TELEPATHY,Esquiva ataques de aliados.,propia
+ABILITY_TERAFORM_ZERO,Anula tiempo y campos.,propia
+ABILITY_TERAVOLT,Ignora las habilidades.,propia
+ABILITY_TERA_SHELL,Resiste todo con PS al máx.,propia
+ABILITY_TERA_SHIFT,Cambia de forma al entrar.,propia
+ABILITY_THERMAL_EXCHANGE,El Fuego le sube el Ataque.,propia
+ABILITY_THICK_FAT,Mitad de daño Fuego y Hielo.,propia
+ABILITY_TINTED_LENS,Potencia los poco eficaces.,propia
+ABILITY_TORRENT,Potencia Agua con pocos PS.,propia
+ABILITY_TOUGH_CLAWS,Potencia mov. de contacto.,propia
+ABILITY_TOXIC_BOOST,Más Ataque si está envenenado.,propia
+ABILITY_TOXIC_CHAIN,Puede envenenar gravemente.,propia
+ABILITY_TOXIC_DEBRIS,Pone púas tóxicas al recibir.,propia
+ABILITY_TRACE,Copia la habilidad rival.,propia
+ABILITY_TRANSISTOR,Potencia mov. Eléctrico.,propia
+ABILITY_TRIAGE,Mov. curativos con prioridad.,propia
+ABILITY_TRUANT,Ataca solo un turno de cada 2.,propia
+ABILITY_TURBOBLAZE,Ignora las habilidades.,propia
+ABILITY_UNAWARE,Ignora cambios del rival.,propia
+ABILITY_UNBURDEN,Perder objeto da Velocidad.,propia
+ABILITY_UNNERVE,El rival no puede comer bayas.,propia
+ABILITY_UNSEEN_FIST,Contacto atraviesa protección.,propia
+ABILITY_VESSEL_OF_RUIN,Baja At. Esp. a los demás.,propia
+ABILITY_VICTORY_STAR,Más precisión al equipo.,propia
+ABILITY_VITAL_SPIRIT,Evita el quedarse dormido.,oficial
+ABILITY_VOLT_ABSORB,Lo Eléctrico le cura PS.,propia
+ABILITY_WANDERING_SPIRIT,Cambia habilidad al tocar.,propia
+ABILITY_WATER_ABSORB,Cura si le da un mov. Agua.,propia
+ABILITY_WATER_BUBBLE,Protege del Fuego y quemar.,propia
+ABILITY_WATER_COMPACTION,El Agua le sube la Defensa.,propia
+ABILITY_WATER_VEIL,Evita las quemaduras.,oficial
+ABILITY_WEAK_ARMOR,Golpes: -Def. y +Velocidad.,propia
+ABILITY_WELL_BAKED_BODY,El Fuego le sube la Defensa.,propia
+ABILITY_WHITE_SMOKE,No le bajan características.,propia
+ABILITY_WIMP_OUT,Se retira a mitad de PS.,propia
+ABILITY_WIND_POWER,Se carga si recibe viento.,propia
+ABILITY_WIND_RIDER,El viento le sube el Ataque.,propia
+ABILITY_WONDER_GUARD,Solo le dañan supereficaces.,propia
+ABILITY_WONDER_SKIN,Puede evitar mov. de estado.,propia
+ABILITY_ZEN_MODE,Cambia de forma en un apuro.,oficial
+ABILITY_ZERO_TO_HERO,Cambia de forma al cambiarse.,propia

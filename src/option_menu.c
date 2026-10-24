@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke_es.h"
 #include "option_menu.h"
 #include "bg.h"
 #include "gpu_regs.h"
@@ -72,17 +73,17 @@ static void DrawBgWindowFrames(void);
 
 EWRAM_DATA static bool8 sArrowPressed = FALSE;
 
-static const u8 gText_Option[]             = _("OPTION");
-static const u8 gText_TextSpeedSlow[]      = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}SLOW");
-static const u8 gText_TextSpeedMid[]       = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}MID");
-static const u8 gText_TextSpeedFast[]      = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}FAST");
-static const u8 gText_BattleSceneOn[]      = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}ON");
-static const u8 gText_BattleSceneOff[]     = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}OFF");
-static const u8 gText_BattleStyleShift[]   = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}SHIFT");
-static const u8 gText_BattleStyleSet[]     = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}SET");
-static const u8 gText_SoundMono[]          = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}MONO");
-static const u8 gText_SoundStereo[]        = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}STEREO");
-static const u8 gText_FrameType[]          = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}TYPE");
+static const u8 gText_Option[]             = ES(_("OPTION"), _("OPCIONES"));
+static const u8 gText_TextSpeedSlow[]      = ES(_("{COLOR GREEN}{SHADOW LIGHT_GREEN}SLOW"), _("{COLOR GREEN}{SHADOW LIGHT_GREEN}LENTA"));
+static const u8 gText_TextSpeedMid[]       = ES(_("{COLOR GREEN}{SHADOW LIGHT_GREEN}MID"), _("{COLOR GREEN}{SHADOW LIGHT_GREEN}MEDIA"));
+static const u8 gText_TextSpeedFast[]      = ES(_("{COLOR GREEN}{SHADOW LIGHT_GREEN}FAST"), _("{COLOR GREEN}{SHADOW LIGHT_GREEN}RÁPIDA"));
+static const u8 gText_BattleSceneOn[]      = ES(_("{COLOR GREEN}{SHADOW LIGHT_GREEN}ON"), _("{COLOR GREEN}{SHADOW LIGHT_GREEN}SÍ"));
+static const u8 gText_BattleSceneOff[]     = ES(_("{COLOR GREEN}{SHADOW LIGHT_GREEN}OFF"), _("{COLOR GREEN}{SHADOW LIGHT_GREEN}NO"));
+static const u8 gText_BattleStyleShift[]   = ES(_("{COLOR GREEN}{SHADOW LIGHT_GREEN}SHIFT"), _("{COLOR GREEN}{SHADOW LIGHT_GREEN}CAMBIO"));
+static const u8 gText_BattleStyleSet[]     = ES(_("{COLOR GREEN}{SHADOW LIGHT_GREEN}SET"), _("{COLOR GREEN}{SHADOW LIGHT_GREEN}FIJO"));
+static const u8 gText_SoundMono[]          = ES(_("{COLOR GREEN}{SHADOW LIGHT_GREEN}MONO"), _("{COLOR GREEN}{SHADOW LIGHT_GREEN}MONO"));
+static const u8 gText_SoundStereo[]        = ES(_("{COLOR GREEN}{SHADOW LIGHT_GREEN}STEREO"), _("{COLOR GREEN}{SHADOW LIGHT_GREEN}ESTÉREO"));
+static const u8 gText_FrameType[]          = ES(_("{COLOR GREEN}{SHADOW LIGHT_GREEN}TYPE"), _("{COLOR GREEN}{SHADOW LIGHT_GREEN}TIPO"));
 static const u8 gText_FrameTypeNumber[]    = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}");
 static const u8 gText_ButtonTypeNormal[]   = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}NORMAL");
 static const u8 gText_ButtonTypeLR[]       = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}LR");
@@ -94,13 +95,13 @@ static const u8 sEqualSignGfx[] = INCGFX_U8("graphics/interface/option_menu_equa
 
 static const u8 *const sOptionMenuItemsNames[MENUITEM_COUNT] =
 {
-    [MENUITEM_TEXTSPEED]   = COMPOUND_STRING("TEXT SPEED"),
-    [MENUITEM_BATTLESCENE] = COMPOUND_STRING("BATTLE SCENE"),
-    [MENUITEM_BATTLESTYLE] = COMPOUND_STRING("BATTLE STYLE"),
-    [MENUITEM_SOUND]       = COMPOUND_STRING("SOUND"),
-    [MENUITEM_BUTTONMODE]  = COMPOUND_STRING("BUTTON MODE"),
-    [MENUITEM_FRAMETYPE]   = COMPOUND_STRING("FRAME"),
-    [MENUITEM_CANCEL]      = COMPOUND_STRING("CANCEL"),
+    [MENUITEM_TEXTSPEED]   = ES(COMPOUND_STRING("TEXT SPEED"), COMPOUND_STRING("VEL. TEXTO")),
+    [MENUITEM_BATTLESCENE] = ES(COMPOUND_STRING("BATTLE SCENE"), COMPOUND_STRING("ANIMACIÓN")),
+    [MENUITEM_BATTLESTYLE] = ES(COMPOUND_STRING("BATTLE STYLE"), COMPOUND_STRING("ESTILO")),
+    [MENUITEM_SOUND]       = ES(COMPOUND_STRING("SOUND"), COMPOUND_STRING("SONIDO")),
+    [MENUITEM_BUTTONMODE]  = ES(COMPOUND_STRING("BUTTON MODE"), COMPOUND_STRING("BOTONES")),
+    [MENUITEM_FRAMETYPE]   = ES(COMPOUND_STRING("FRAME"), COMPOUND_STRING("MARCO")),
+    [MENUITEM_CANCEL]      = ES(COMPOUND_STRING("CANCEL"), COMPOUND_STRING("SALIR")),
 };
 
 static const struct WindowTemplate sOptionMenuWinTemplates[] =

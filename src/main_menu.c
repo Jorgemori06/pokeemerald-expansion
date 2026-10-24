@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke_es.h"
 #include "trainer_pokemon_sprites.h"
 #include "bg.h"
 #include "constants/rgb.h"
@@ -256,25 +257,25 @@ static const u32 sBirchSpeechShadowGfx[] = INCGFX_U32("graphics/birch_speech/sha
 static const u32 sBirchSpeechBgMap[] = INCGFX_U32("graphics/birch_speech/map.bin", ".smolTM");
 static const u16 sBirchSpeechBgGradientPal[] = INCGFX_U16("graphics/birch_speech/bg2.pal", ".gbapal");
 
-static const u8 gText_SaveFileCorrupted[] = _("The save file is corrupted. The\nprevious save file will be loaded.");
-static const u8 gText_SaveFileErased[] = _("The save file has been erased\ndue to corruption or damage.");
+static const u8 gText_SaveFileCorrupted[] = ES(_("The save file is corrupted. The\nprevious save file will be loaded."), _("La partida está dañada. Se cargará\nla partida anterior."));
+static const u8 gText_SaveFileErased[] = ES(_("The save file has been erased\ndue to corruption or damage."), _("La partida se ha borrado porque\nestaba dañada."));
 static const u8 gJPText_No1MSubCircuit[] = _("1Mサブきばんが ささっていません！");
-static const u8 gText_BatteryRunDry[] = _("The internal battery has run dry.\nThe game can be played.\pHowever, clock-based events will\nno longer occur.");
+static const u8 gText_BatteryRunDry[] = ES(_("The internal battery has run dry.\nThe game can be played.\pHowever, clock-based events will\nno longer occur."), _("Se ha agotado la pila interna.\nPuedes seguir jugando.\pPero ya no habrá eventos que\ndependan del reloj."));
 
-static const u8 gText_MainMenuNewGame[] = _("NEW GAME");
-static const u8 gText_MainMenuContinue[] = _("CONTINUE");
-static const u8 gText_MainMenuOption[] = _("OPTION");
-static const u8 gText_MainMenuMysteryGift[] = _("MYSTERY GIFT");
-static const u8 gText_MainMenuMysteryGift2[] = _("MYSTERY GIFT");
-static const u8 gText_MainMenuMysteryEvents[] = _("MYSTERY EVENTS");
+static const u8 gText_MainMenuNewGame[] = ES(_("NEW GAME"), _("NUEVA PARTIDA"));
+static const u8 gText_MainMenuContinue[] = ES(_("CONTINUE"), _("CONTINUAR"));
+static const u8 gText_MainMenuOption[] = ES(_("OPTION"), _("OPCIONES"));
+static const u8 gText_MainMenuMysteryGift[] = ES(_("MYSTERY GIFT"), _("REGALO MISTERIOSO"));
+static const u8 gText_MainMenuMysteryGift2[] = ES(_("MYSTERY GIFT"), _("REGALO MISTERIOSO"));
+static const u8 gText_MainMenuMysteryEvents[] = ES(_("MYSTERY EVENTS"), _("EVENTOS MISTERIOSOS"));
 static const u8 gText_WirelessNotConnected[] = _("The Wireless Adapter is not\nconnected.");
 static const u8 gText_MysteryGiftCantUse[] = _("MYSTERY GIFT can't be used while\nthe Wireless Adapter is attached.");
 static const u8 gText_MysteryEventsCantUse[] = _("MYSTERY EVENTS can't be used while\nthe Wireless Adapter is attached.");
 
-static const u8 gText_ContinueMenuPlayer[] = _("PLAYER");
-static const u8 gText_ContinueMenuTime[] = _("TIME");
+static const u8 gText_ContinueMenuPlayer[] = ES(_("PLAYER"), _("JUGADOR"));
+static const u8 gText_ContinueMenuTime[] = ES(_("TIME"), _("TIEMPO"));
 static const u8 gText_ContinueMenuPokedex[] = _("POKéDEX");
-static const u8 gText_ContinueMenuBadges[] = _("BADGES");
+static const u8 gText_ContinueMenuBadges[] = ES(_("BADGES"), _("MEDALLAS"));
 
 #define MENU_LEFT 2
 #define MENU_TOP_WIN0 1

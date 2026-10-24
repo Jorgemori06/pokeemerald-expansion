@@ -84,7 +84,17 @@ int Intl_GetListMenuWidth(const struct ListMenuTemplate *listMenu)
 
 void CopyMonCategoryText(enum Species species, u8 *dest)
 {
-    u8 *str = StringCopy(dest, GetSpeciesCategory(species));
+    u8 *str;
+
+    // Dualocke: en español va al revés, "POKéMON Semilla" (en los tests se queda el inglés)
+    if (!TESTING)
+    {
+        str = StringCopy(dest, gText_Pokemon);
+        *str = CHAR_SPACE;
+        StringCopy(str + 1, GetSpeciesCategory(species));
+        return;
+    }
+    str = StringCopy(dest, GetSpeciesCategory(species));
     *str = CHAR_SPACE;
     StringCopy(str + 1, gText_Pokemon);
 }
