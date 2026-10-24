@@ -1,0 +1,320 @@
+constante,ingles,espanol,caracteres,cabe_en_16
+ABILITY_STENCH,Stench,Hedor,5,si
+ABILITY_DRIZZLE,Drizzle,Llovizna,8,si
+ABILITY_SPEED_BOOST,Speed Boost,Impulso,7,si
+ABILITY_BATTLE_ARMOR,Battle Armor,Armadura Batalla,16,si
+ABILITY_STURDY,Sturdy,Robustez,8,si
+ABILITY_DAMP,Damp,Humedad,7,si
+ABILITY_LIMBER,Limber,Flexibilidad,12,si
+ABILITY_SAND_VEIL,Sand Veil,Velo Arena,10,si
+ABILITY_STATIC,Static,Electricidad Estática,21,NO
+ABILITY_VOLT_ABSORB,Volt Absorb,Absorbe Electricidad,20,NO
+ABILITY_WATER_ABSORB,Water Absorb,Absorbe Agua,12,si
+ABILITY_OBLIVIOUS,Oblivious,Despiste,8,si
+ABILITY_CLOUD_NINE,Cloud Nine,Aclimatación,12,si
+ABILITY_COMPOUND_EYES,Compound Eyes,Ojo Compuesto,13,si
+ABILITY_INSOMNIA,Insomnia,Insomnio,8,si
+ABILITY_COLOR_CHANGE,Color Change,Cambio Color,12,si
+ABILITY_IMMUNITY,Immunity,Inmunidad,9,si
+ABILITY_FLASH_FIRE,Flash Fire,Absorbe Fuego,13,si
+ABILITY_SHIELD_DUST,Shield Dust,Polvo Escudo,12,si
+ABILITY_OWN_TEMPO,Own Tempo,Ritmo Propio,12,si
+ABILITY_SUCTION_CUPS,Suction Cups,Ventosas,8,si
+ABILITY_INTIMIDATE,Intimidate,Intimidación,12,si
+ABILITY_SHADOW_TAG,Shadow Tag,Sombra Trampa,13,si
+ABILITY_ROUGH_SKIN,Rough Skin,Piel Tosca,10,si
+ABILITY_WONDER_GUARD,Wonder Guard,Superguarda,11,si
+ABILITY_LEVITATE,Levitate,Levitación,10,si
+ABILITY_EFFECT_SPORE,Effect Spore,Efecto Espora,13,si
+ABILITY_SYNCHRONIZE,Synchronize,Sincronía,9,si
+ABILITY_CLEAR_BODY,Clear Body,Cuerpo Puro,11,si
+ABILITY_NATURAL_CURE,Natural Cure,Cura Natural,12,si
+ABILITY_LIGHTNING_ROD,Lightning Rod,Pararrayos,10,si
+ABILITY_SERENE_GRACE,Serene Grace,Dicha,5,si
+ABILITY_SWIFT_SWIM,Swift Swim,Nado Rápido,11,si
+ABILITY_CHLOROPHYLL,Chlorophyll,Clorofila,9,si
+ABILITY_ILLUMINATE,Illuminate,Iluminación,11,si
+ABILITY_TRACE,Trace,Calco,5,si
+ABILITY_HUGE_POWER,Huge Power,Potencia,8,si
+ABILITY_POISON_POINT,Poison Point,Punto Tóxico,12,si
+ABILITY_INNER_FOCUS,Inner Focus,Fuerza Mental,13,si
+ABILITY_MAGMA_ARMOR,Magma Armor,Escudo Magma,12,si
+ABILITY_WATER_VEIL,Water Veil,Velo Agua,9,si
+ABILITY_MAGNET_PULL,Magnet Pull,Imán,4,si
+ABILITY_SOUNDPROOF,Soundproof,Insonorizar,11,si
+ABILITY_RAIN_DISH,Rain Dish,Cura Lluvia,11,si
+ABILITY_SAND_STREAM,Sand Stream,Chorro Arena,12,si
+ABILITY_PRESSURE,Pressure,Presión,7,si
+ABILITY_THICK_FAT,Thick Fat,Sebo,4,si
+ABILITY_EARLY_BIRD,Early Bird,Madrugar,8,si
+ABILITY_FLAME_BODY,Flame Body,Cuerpo Llama,12,si
+ABILITY_RUN_AWAY,Run Away,Fuga,4,si
+ABILITY_KEEN_EYE,Keen Eye,Vista Lince,11,si
+ABILITY_HYPER_CUTTER,Hyper Cutter,Corte Fuerte,12,si
+ABILITY_PICKUP,Pickup,Recogida,8,si
+ABILITY_TRUANT,Truant,Ausente,7,si
+ABILITY_HUSTLE,Hustle,Entusiasmo,10,si
+ABILITY_CUTE_CHARM,Cute Charm,Gran Encanto,12,si
+ABILITY_PLUS,Plus,Más,3,si
+ABILITY_MINUS,Minus,Menos,5,si
+ABILITY_FORECAST,Forecast,Predicción,10,si
+ABILITY_STICKY_HOLD,Sticky Hold,Viscosidad,10,si
+ABILITY_SHED_SKIN,Shed Skin,Mudar,5,si
+ABILITY_GUTS,Guts,Agallas,7,si
+ABILITY_MARVEL_SCALE,Marvel Scale,Escama Especial,15,si
+ABILITY_LIQUID_OOZE,Liquid Ooze,Lodo Líquido,12,si
+ABILITY_OVERGROW,Overgrow,Espesura,8,si
+ABILITY_BLAZE,Blaze,Mar Llamas,10,si
+ABILITY_TORRENT,Torrent,Torrente,8,si
+ABILITY_SWARM,Swarm,Enjambre,8,si
+ABILITY_ROCK_HEAD,Rock Head,Cabeza Roca,11,si
+ABILITY_DROUGHT,Drought,Sequía,6,si
+ABILITY_ARENA_TRAP,Arena Trap,Trampa Arena,12,si
+ABILITY_VITAL_SPIRIT,Vital Spirit,Espíritu Vital,14,si
+ABILITY_WHITE_SMOKE,White Smoke,Humo Blanco,11,si
+ABILITY_PURE_POWER,Pure Power,Energía Pura,12,si
+ABILITY_SHELL_ARMOR,Shell Armor,Caparazón,9,si
+ABILITY_AIR_LOCK,Air Lock,Bucle Aire,10,si
+ABILITY_TANGLED_FEET,Tangled Feet,Tumbos,6,si
+ABILITY_MOTOR_DRIVE,Motor Drive,Electromotor,12,si
+ABILITY_RIVALRY,Rivalry,Rivalidad,9,si
+ABILITY_STEADFAST,Steadfast,Impasible,9,si
+ABILITY_SNOW_CLOAK,Snow Cloak,Manto Níveo,11,si
+ABILITY_GLUTTONY,Gluttony,Gula,4,si
+ABILITY_ANGER_POINT,Anger Point,Irascible,9,si
+ABILITY_UNBURDEN,Unburden,Liviano,7,si
+ABILITY_HEATPROOF,Heatproof,Ignífugo,8,si
+ABILITY_SIMPLE,Simple,Simple,6,si
+ABILITY_DRY_SKIN,Dry Skin,Piel Seca,9,si
+ABILITY_DOWNLOAD,Download,Descarga,8,si
+ABILITY_IRON_FIST,Iron Fist,Puño Férreo,11,si
+ABILITY_POISON_HEAL,Poison Heal,Antídoto,8,si
+ABILITY_ADAPTABILITY,Adaptability,Adaptable,9,si
+ABILITY_SKILL_LINK,Skill Link,Encadenado,10,si
+ABILITY_HYDRATION,Hydration,Hidratación,11,si
+ABILITY_SOLAR_POWER,Solar Power,Poder Solar,11,si
+ABILITY_QUICK_FEET,Quick Feet,Pies Rápidos,12,si
+ABILITY_NORMALIZE,Normalize,Normalidad,10,si
+ABILITY_SNIPER,Sniper,Francotirador,13,si
+ABILITY_MAGIC_GUARD,Magic Guard,Muro Mágico,11,si
+ABILITY_NO_GUARD,No Guard,Indefenso,9,si
+ABILITY_STALL,Stall,Rezagado,8,si
+ABILITY_TECHNICIAN,Technician,Experto,7,si
+ABILITY_LEAF_GUARD,Leaf Guard,Defensa Hoja,12,si
+ABILITY_KLUTZ,Klutz,Zoquete,7,si
+ABILITY_MOLD_BREAKER,Mold Breaker,Rompemoldes,11,si
+ABILITY_SUPER_LUCK,Super Luck,Afortunado,10,si
+ABILITY_AFTERMATH,Aftermath,Detonación,10,si
+ABILITY_ANTICIPATION,Anticipation,Anticipación,12,si
+ABILITY_FOREWARN,Forewarn,Alerta,6,si
+ABILITY_UNAWARE,Unaware,Ignorante,9,si
+ABILITY_TINTED_LENS,Tinted Lens,Cromolente,10,si
+ABILITY_FILTER,Filter,Filtro,6,si
+ABILITY_SLOW_START,Slow Start,Inicio Lento,12,si
+ABILITY_SCRAPPY,Scrappy,Intrépido,9,si
+ABILITY_STORM_DRAIN,Storm Drain,Colector,8,si
+ABILITY_ICE_BODY,Ice Body,Gélido,6,si
+ABILITY_SOLID_ROCK,Solid Rock,Roca Sólida,11,si
+ABILITY_SNOW_WARNING,Snow Warning,Nevada,6,si
+ABILITY_HONEY_GATHER,Honey Gather,Recogemiel,10,si
+ABILITY_FRISK,Frisk,Cacheo,6,si
+ABILITY_RECKLESS,Reckless,Audaz,5,si
+ABILITY_MULTITYPE,Multitype,Multitipo,9,si
+ABILITY_FLOWER_GIFT,Flower Gift,Don Floral,10,si
+ABILITY_BAD_DREAMS,Bad Dreams,Mal Sueño,9,si
+ABILITY_PICKPOCKET,Pickpocket,Hurto,5,si
+ABILITY_SHEER_FORCE,Sheer Force,Potencia Bruta,14,si
+ABILITY_CONTRARY,Contrary,Respondón,9,si
+ABILITY_UNNERVE,Unnerve,Nerviosismo,11,si
+ABILITY_DEFIANT,Defiant,Competitivo,11,si
+ABILITY_DEFEATIST,Defeatist,Flaqueza,8,si
+ABILITY_CURSED_BODY,Cursed Body,Cuerpo Maldito,14,si
+ABILITY_HEALER,Healer,Alma Cura,9,si
+ABILITY_FRIEND_GUARD,Friend Guard,Compiescolta,12,si
+ABILITY_WEAK_ARMOR,Weak Armor,Armadura Frágil,15,si
+ABILITY_HEAVY_METAL,Heavy Metal,Metal Pesado,12,si
+ABILITY_LIGHT_METAL,Light Metal,Metal Liviano,13,si
+ABILITY_MULTISCALE,Multiscale,Multiescamas,12,si
+ABILITY_TOXIC_BOOST,Toxic Boost,Ímpetu Tóxico,13,si
+ABILITY_FLARE_BOOST,Flare Boost,Ímpetu Ardiente,15,si
+ABILITY_HARVEST,Harvest,Cosecha,7,si
+ABILITY_TELEPATHY,Telepathy,Telepatía,9,si
+ABILITY_MOODY,Moody,Veleta,6,si
+ABILITY_OVERCOAT,Overcoat,Funda,5,si
+ABILITY_POISON_TOUCH,Poison Touch,Toque Tóxico,12,si
+ABILITY_REGENERATOR,Regenerator,Regeneración,12,si
+ABILITY_BIG_PECKS,Big Pecks,Sacapecho,9,si
+ABILITY_SAND_RUSH,Sand Rush,Ímpetu Arena,12,si
+ABILITY_WONDER_SKIN,Wonder Skin,Piel Milagro,12,si
+ABILITY_ANALYTIC,Analytic,Cálculo Final,13,si
+ABILITY_ILLUSION,Illusion,Ilusión,7,si
+ABILITY_IMPOSTER,Imposter,Impostor,8,si
+ABILITY_INFILTRATOR,Infiltrator,Allanamiento,12,si
+ABILITY_MUMMY,Mummy,Momia,5,si
+ABILITY_MOXIE,Moxie,Autoestima,10,si
+ABILITY_JUSTIFIED,Justified,Justiciero,10,si
+ABILITY_RATTLED,Rattled,Cobardía,8,si
+ABILITY_MAGIC_BOUNCE,Magic Bounce,Espejo Mágico,13,si
+ABILITY_SAP_SIPPER,Sap Sipper,Herbívoro,9,si
+ABILITY_PRANKSTER,Prankster,Bromista,8,si
+ABILITY_SAND_FORCE,Sand Force,Poder Arena,11,si
+ABILITY_IRON_BARBS,Iron Barbs,Punta Acero,11,si
+ABILITY_ZEN_MODE,Zen Mode,Modo Daruma,11,si
+ABILITY_VICTORY_STAR,Victory Star,Tinovictoria,12,si
+ABILITY_TURBOBLAZE,Turboblaze,Turbollama,10,si
+ABILITY_TERAVOLT,Teravolt,Terravoltaje,12,si
+ABILITY_AROMA_VEIL,Aroma Veil,Velo Aroma,10,si
+ABILITY_FLOWER_VEIL,Flower Veil,Velo Flor,9,si
+ABILITY_CHEEK_POUCH,Cheek Pouch,Carrillo,8,si
+ABILITY_PROTEAN,Protean,Mutatipo,8,si
+ABILITY_FUR_COAT,Fur Coat,Pelaje Recio,12,si
+ABILITY_MAGICIAN,Magician,Prestidigitador,15,si
+ABILITY_BULLETPROOF,Bulletproof,Antibalas,9,si
+ABILITY_COMPETITIVE,Competitive,Tenacidad,9,si
+ABILITY_STRONG_JAW,Strong Jaw,Mandíbula Fuerte,16,si
+ABILITY_REFRIGERATE,Refrigerate,Piel Helada,11,si
+ABILITY_SWEET_VEIL,Sweet Veil,Velo Dulce,10,si
+ABILITY_STANCE_CHANGE,Stance Change,Cambio Táctico,14,si
+ABILITY_GALE_WINGS,Gale Wings,Alas Vendaval,13,si
+ABILITY_MEGA_LAUNCHER,Mega Launcher,Megadisparador,14,si
+ABILITY_GRASS_PELT,Grass Pelt,Manto Frondoso,14,si
+ABILITY_SYMBIOSIS,Symbiosis,Simbiosis,9,si
+ABILITY_TOUGH_CLAWS,Tough Claws,Garra Dura,10,si
+ABILITY_PIXILATE,Pixilate,Piel Feérica,12,si
+ABILITY_GOOEY,Gooey,Baba,4,si
+ABILITY_AERILATE,Aerilate,Piel Celeste,12,si
+ABILITY_PARENTAL_BOND,Parental Bond,Amor Filial,11,si
+ABILITY_DARK_AURA,Dark Aura,Aura Oscura,11,si
+ABILITY_FAIRY_AURA,Fairy Aura,Aura Feérica,12,si
+ABILITY_AURA_BREAK,Aura Break,Rompeaura,9,si
+ABILITY_PRIMORDIAL_SEA,Primordial Sea,Mar del Albor,13,si
+ABILITY_DESOLATE_LAND,Desolate Land,Tierra del Ocaso,16,si
+ABILITY_DELTA_STREAM,Delta Stream,Ráfaga Delta,12,si
+ABILITY_STAMINA,Stamina,Firmeza,7,si
+ABILITY_WIMP_OUT,Wimp Out,Huida,5,si
+ABILITY_EMERGENCY_EXIT,Emergency Exit,Retirada,8,si
+ABILITY_WATER_COMPACTION,Water Compaction,Hidrorrefuerzo,14,si
+ABILITY_MERCILESS,Merciless,Ensañamiento,12,si
+ABILITY_SHIELDS_DOWN,Shields Down,Escudo Limitado,15,si
+ABILITY_STAKEOUT,Stakeout,Vigilante,9,si
+ABILITY_WATER_BUBBLE,Water Bubble,Pompa,5,si
+ABILITY_STEELWORKER,Steelworker,Acero Templado,14,si
+ABILITY_BERSERK,Berserk,Cólera,6,si
+ABILITY_SLUSH_RUSH,Slush Rush,Quitanieves,11,si
+ABILITY_LONG_REACH,Long Reach,Remoto,6,si
+ABILITY_LIQUID_VOICE,Liquid Voice,Voz Fluida,10,si
+ABILITY_TRIAGE,Triage,Primer Auxilio,14,si
+ABILITY_GALVANIZE,Galvanize,Piel Eléctrica,14,si
+ABILITY_SURGE_SURFER,Surge Surfer,Cola Surf,9,si
+ABILITY_SCHOOLING,Schooling,Banco,5,si
+ABILITY_DISGUISE,Disguise,Disfraz,7,si
+ABILITY_BATTLE_BOND,Battle Bond,Fuerte Afecto,13,si
+ABILITY_POWER_CONSTRUCT,Power Construct,Agrupamiento,12,si
+ABILITY_CORROSION,Corrosion,Corrosión,9,si
+ABILITY_COMATOSE,Comatose,Letargo Perenne,15,si
+ABILITY_QUEENLY_MAJESTY,Queenly Majesty,Regia Presencia,15,si
+ABILITY_INNARDS_OUT,Innards Out,Revés,5,si
+ABILITY_DANCER,Dancer,Pareja de Baile,15,si
+ABILITY_BATTERY,Battery,Batería,7,si
+ABILITY_FLUFFY,Fluffy,Peluche,7,si
+ABILITY_DAZZLING,Dazzling,Cuerpo Vívido,13,si
+ABILITY_SOUL_HEART,Soul-Heart,Coránima,8,si
+ABILITY_TANGLING_HAIR,Tangling Hair,Rizos Rebeldes,14,si
+ABILITY_RECEIVER,Receiver,Receptor,8,si
+ABILITY_POWER_OF_ALCHEMY,Power Of Alchemy,Reacción Química,16,si
+ABILITY_BEAST_BOOST,Beast Boost,Ultraimpulso,12,si
+ABILITY_RKS_SYSTEM,RKS System,Sistema Alfa,12,si
+ABILITY_ELECTRIC_SURGE,Electric Surge,Electrogénesis,14,si
+ABILITY_PSYCHIC_SURGE,Psychic Surge,Psicogénesis,12,si
+ABILITY_MISTY_SURGE,Misty Surge,Nebulogénesis,13,si
+ABILITY_GRASSY_SURGE,Grassy Surge,Herbogénesis,12,si
+ABILITY_FULL_METAL_BODY,Full Metal Body,Guardia Metálica,16,si
+ABILITY_SHADOW_SHIELD,Shadow Shield,Guardia Espectro,16,si
+ABILITY_PRISM_ARMOR,Prism Armor,Armadura Prisma,15,si
+ABILITY_NEUROFORCE,Neuroforce,Fuerza Cerebral,15,si
+ABILITY_INTREPID_SWORD,Intrepid Sword,Espada Indómita,15,si
+ABILITY_DAUNTLESS_SHIELD,Dauntless Shield,Escudo Recio,12,si
+ABILITY_LIBERO,Libero,Líbero,6,si
+ABILITY_BALL_FETCH,Ball Fetch,Recogebolas,11,si
+ABILITY_COTTON_DOWN,Cotton Down,Pelusa,6,si
+ABILITY_PROPELLER_TAIL,Propeller Tail,Hélice Caudal,13,si
+ABILITY_MIRROR_ARMOR,Mirror Armor,Coraza Reflejo,14,si
+ABILITY_GULP_MISSILE,Gulp Missile,Tragamisil,10,si
+ABILITY_STALWART,Stalwart,Acérrimo,8,si
+ABILITY_STEAM_ENGINE,Steam Engine,Combustible,11,si
+ABILITY_PUNK_ROCK,Punk Rock,Punk Rock,9,si
+ABILITY_SAND_SPIT,Sand Spit,Expulsarena,11,si
+ABILITY_ICE_SCALES,Ice Scales,Escama de Hielo,15,si
+ABILITY_RIPEN,Ripen,Maduración,10,si
+ABILITY_ICE_FACE,Ice Face,Cara de Hielo,13,si
+ABILITY_POWER_SPOT,Power Spot,Fuente Energía,14,si
+ABILITY_MIMICRY,Mimicry,Mimetismo,9,si
+ABILITY_SCREEN_CLEANER,Screen Cleaner,Antibarrera,11,si
+ABILITY_STEELY_SPIRIT,Steely Spirit,Alma Acerada,12,si
+ABILITY_PERISH_BODY,Perish Body,Cuerpo Mortal,13,si
+ABILITY_WANDERING_SPIRIT,Wandering Spirit,Alma Errante,12,si
+ABILITY_GORILLA_TACTICS,Gorilla Tactics,Monotema,8,si
+ABILITY_NEUTRALIZING_GAS,Neutralizing Gas,Gas Reactivo,12,si
+ABILITY_PASTEL_VEIL,Pastel Veil,Velo Pastel,11,si
+ABILITY_HUNGER_SWITCH,Hunger Switch,Mutapetito,10,si
+ABILITY_QUICK_DRAW,Quick Draw,Mano Rápida,11,si
+ABILITY_UNSEEN_FIST,Unseen Fist,Puño Invisible,14,si
+ABILITY_CURIOUS_MEDICINE,Curious Medicine,Medicina Extraña,16,si
+ABILITY_TRANSISTOR,Transistor,Transistor,10,si
+ABILITY_DRAGONS_MAW,Dragon's Maw,Mandíbula Dragón,16,si
+ABILITY_CHILLING_NEIGH,Chilling Neigh,Relincho Blanco,15,si
+ABILITY_GRIM_NEIGH,Grim Neigh,Relincho Negro,14,si
+ABILITY_AS_ONE_ICE_RIDER,As One,Unidad Ecuestre,15,si
+ABILITY_AS_ONE_SHADOW_RIDER,As One,Unidad Ecuestre,15,si
+ABILITY_LINGERING_AROMA,Lingering Aroma,Olor Persistente,16,si
+ABILITY_SEED_SOWER,Seed Sower,Disemillar,10,si
+ABILITY_THERMAL_EXCHANGE,Thermal Exchange,Termoconversión,15,si
+ABILITY_ANGER_SHELL,Anger Shell,Coraza Ira,10,si
+ABILITY_PURIFYING_SALT,Purifying Salt,Sal Purificadora,16,si
+ABILITY_WELL_BAKED_BODY,Well-Baked Body,Cuerpo Horneado,15,si
+ABILITY_WIND_RIDER,Wind Rider,Surcavientos,12,si
+ABILITY_GUARD_DOG,Guard Dog,Perro Guardián,14,si
+ABILITY_ROCKY_PAYLOAD,Rocky Payload,Transportarrocas,16,si
+ABILITY_WIND_POWER,Wind Power,Energía Eólica,14,si
+ABILITY_ZERO_TO_HERO,Zero to Hero,Cambio Heroico,14,si
+ABILITY_COMMANDER,Commander,Comandar,8,si
+ABILITY_ELECTROMORPHOSIS,Electromorphosis,Dinamo,6,si
+ABILITY_PROTOSYNTHESIS,Protosynthesis,Paleosíntesis,13,si
+ABILITY_QUARK_DRIVE,Quark Drive,Carga Cuark,11,si
+ABILITY_GOOD_AS_GOLD,Good as Gold,Cuerpo Áureo,12,si
+ABILITY_VESSEL_OF_RUIN,Vessel of Ruin,Caldero Debacle,15,si
+ABILITY_SWORD_OF_RUIN,Sword of Ruin,Espada Debacle,14,si
+ABILITY_TABLETS_OF_RUIN,Tablets of Ruin,Tablilla Debacle,16,si
+ABILITY_BEADS_OF_RUIN,Beads of Ruin,Abalorio Debacle,16,si
+ABILITY_ORICHALCUM_PULSE,Orichalcum Pulse,Latido Oricalco,15,si
+ABILITY_HADRON_ENGINE,Hadron Engine,Motor Hadrónico,15,si
+ABILITY_OPPORTUNIST,Opportunist,Oportunista,11,si
+ABILITY_CUD_CHEW,Cud Chew,Rumia,5,si
+ABILITY_SHARPNESS,Sharpness,Cortante,8,si
+ABILITY_SUPREME_OVERLORD,Supreme Overlord,General Supremo,15,si
+ABILITY_COSTAR,Costar,Unísono,7,si
+ABILITY_TOXIC_DEBRIS,Toxic Debris,Capa Tóxica,11,si
+ABILITY_ARMOR_TAIL,Armor Tail,Cola Armadura,13,si
+ABILITY_EARTH_EATER,Earth Eater,Geofagia,8,si
+ABILITY_MYCELIUM_MIGHT,Mycelium Might,Poder Fúngico,13,si
+ABILITY_HOSPITALITY,Hospitality,Hospitalidad,12,si
+ABILITY_MINDS_EYE,Mind's Eye,Ojo Mental,10,si
+ABILITY_EMBODY_ASPECT_TEAL_MASK,Embody Aspect,Evocarrecuerdos,15,si
+ABILITY_EMBODY_ASPECT_HEARTHFLAME_MASK,Embody Aspect,Evocarrecuerdos,15,si
+ABILITY_EMBODY_ASPECT_WELLSPRING_MASK,Embody Aspect,Evocarrecuerdos,15,si
+ABILITY_EMBODY_ASPECT_CORNERSTONE_MASK,Embody Aspect,Evocarrecuerdos,15,si
+ABILITY_TOXIC_CHAIN,Toxic Chain,Cadena Tóxica,13,si
+ABILITY_SUPERSWEET_SYRUP,Supersweet Syrup,Néctar Dulce,12,si
+ABILITY_TERA_SHIFT,Tera Shift,Teracambio,10,si
+ABILITY_TERA_SHELL,Tera Shell,Teracaparazón,13,si
+ABILITY_TERAFORM_ZERO,Teraform Zero,Teraformación 0,15,si
+ABILITY_POISON_PUPPETEER,Poison Puppeteer,Títere Tóxico,13,si
+ABILITY_PIERCING_DRILL,Piercing Drill,Turbotaladro,12,si
+ABILITY_DRAGONIZE,Dragonize,Piel Dragontina,15,si
+ABILITY_EELEVATE,Eelevate,,,
+ABILITY_314,-------,,,
+ABILITY_MEGA_SOL,Mega Sol,Megasolar,9,si
+ABILITY_FIRE_MANE,Fire Mane,,,
+ABILITY_317,-------,,,
+ABILITY_SPICY_SPRAY,Spicy Spray,Salpicante,10,si
+ABILITY_AURA_GUARD,Aura Guard,,,

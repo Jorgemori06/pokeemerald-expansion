@@ -1,0 +1,874 @@
+constante,ingles,espanol,caracteres,cabe_en_20
+ITEM_STRANGE_BALL,Strange Ball,Extraña Ball,12,si
+ITEM_POKE_BALL,Poké Ball,Poké Ball,9,si
+ITEM_GREAT_BALL,Great Ball,Super Ball,10,si
+ITEM_ULTRA_BALL,Ultra Ball,Ultra Ball,10,si
+ITEM_MASTER_BALL,Master Ball,Master Ball,11,si
+ITEM_PREMIER_BALL,Premier Ball,Honor Ball,10,si
+ITEM_HEAL_BALL,Heal Ball,Sana Ball,9,si
+ITEM_NET_BALL,Net Ball,Malla Ball,10,si
+ITEM_NEST_BALL,Nest Ball,Nido Ball,9,si
+ITEM_DIVE_BALL,Dive Ball,Buceo Ball,10,si
+ITEM_DUSK_BALL,Dusk Ball,Ocaso Ball,10,si
+ITEM_TIMER_BALL,Timer Ball,Turno Ball,10,si
+ITEM_QUICK_BALL,Quick Ball,Veloz Ball,10,si
+ITEM_REPEAT_BALL,Repeat Ball,Acopio Ball,11,si
+ITEM_LUXURY_BALL,Luxury Ball,Lujo Ball,9,si
+ITEM_LEVEL_BALL,Level Ball,Nivel Ball,10,si
+ITEM_LURE_BALL,Lure Ball,Cebo Ball,9,si
+ITEM_MOON_BALL,Moon Ball,Luna Ball,9,si
+ITEM_FRIEND_BALL,Friend Ball,Amigo Ball,10,si
+ITEM_LOVE_BALL,Love Ball,Amor Ball,9,si
+ITEM_FAST_BALL,Fast Ball,Rapid Ball,10,si
+ITEM_HEAVY_BALL,Heavy Ball,Peso Ball,9,si
+ITEM_DREAM_BALL,Dream Ball,Ensueño Ball,12,si
+ITEM_SAFARI_BALL,Safari Ball,Safari Ball,11,si
+ITEM_SPORT_BALL,Sport Ball,Competi Ball,12,si
+ITEM_PARK_BALL,Park Ball,Parque Ball,11,si
+ITEM_BEAST_BALL,Beast Ball,Ente Ball,9,si
+ITEM_CHERISH_BALL,Cherish Ball,Gloria Ball,11,si
+ITEM_POTION,Potion,Poción,6,si
+ITEM_SUPER_POTION,Super Potion,Superpoción,11,si
+ITEM_HYPER_POTION,Hyper Potion,Hiperpoción,11,si
+ITEM_MAX_POTION,Max Potion,Poción Máxima,13,si
+ITEM_FULL_RESTORE,Full Restore,Restaurar Todo,14,si
+ITEM_REVIVE,Revive,Revivir,7,si
+ITEM_MAX_REVIVE,Max Revive,Revivir Máximo,14,si
+ITEM_FRESH_WATER,Fresh Water,Agua Fresca,11,si
+ITEM_SODA_POP,Soda Pop,Refresco,8,si
+ITEM_LEMONADE,Lemonade,Limonada,8,si
+ITEM_MOOMOO_MILK,Moomoo Milk,Leche Mu-mu,11,si
+ITEM_ENERGY_POWDER,Energy Powder,Polvo Energía,13,si
+ITEM_ENERGY_ROOT,Energy Root,Raíz Energía,12,si
+ITEM_HEAL_POWDER,Heal Powder,Polvo Curación,14,si
+ITEM_REVIVAL_HERB,Revival Herb,Hierba Revivir,14,si
+ITEM_ANTIDOTE,Antidote,Antídoto,8,si
+ITEM_PARALYZE_HEAL,Paralyze Heal,Antiparalizador,15,si
+ITEM_BURN_HEAL,Burn Heal,Antiquemar,10,si
+ITEM_ICE_HEAL,Ice Heal,Antihielo,9,si
+ITEM_AWAKENING,Awakening,Despertar,9,si
+ITEM_FULL_HEAL,Full Heal,Cura Total,10,si
+ITEM_ETHER,Ether,Éter,4,si
+ITEM_MAX_ETHER,Max Ether,Éter Máximo,11,si
+ITEM_ELIXIR,Elixir,Elixir,6,si
+ITEM_MAX_ELIXIR,Max Elixir,Elixir Máximo,13,si
+ITEM_BERRY_JUICE,Berry Juice,Zumo de Baya,12,si
+ITEM_SACRED_ASH,Sacred Ash,Ceniza Sagrada,14,si
+ITEM_SWEET_HEART,Sweet Heart,Corazón Dulce,13,si
+ITEM_MAX_HONEY,Max Honey,Maxipanal,9,si
+ITEM_PEWTER_CRUNCHIES,Pewter Crunchies,Rokikos,7,si
+ITEM_RAGE_CANDY_BAR,Rage Candy Bar,Caramelo Furia,14,si
+ITEM_LAVA_COOKIE,Lava Cookie,Galleta Lava,12,si
+ITEM_OLD_GATEAU,Old Gateau,Barrita Plus,12,si
+ITEM_CASTELIACONE,Casteliacone,Porcehelado,11,si
+ITEM_LUMIOSE_GALETTE,Lumiose Galette,Crêpe Luminalia,15,si
+ITEM_SHALOUR_SABLE,Shalour Sable,Galleta Yantra,14,si
+ITEM_BIG_MALASADA,Big Malasada,Malasada Maxi,13,si
+ITEM_HP_UP,HP Up,Más PS,6,si
+ITEM_PROTEIN,Protein,Proteína,8,si
+ITEM_IRON,Iron,Hierro,6,si
+ITEM_CALCIUM,Calcium,Calcio,6,si
+ITEM_ZINC,Zinc,Zinc,4,si
+ITEM_CARBOS,Carbos,Carburante,10,si
+ITEM_PP_UP,PP Up,Más PP,6,si
+ITEM_PP_MAX,PP Max,PP Máximos,10,si
+ITEM_HEALTH_FEATHER,Health Feather,Pluma Vigor,11,si
+ITEM_MUSCLE_FEATHER,Muscle Feather,Pluma Músculo,13,si
+ITEM_RESIST_FEATHER,Resist Feather,Pluma Aguante,13,si
+ITEM_GENIUS_FEATHER,Genius Feather,Pluma Intelecto,15,si
+ITEM_CLEVER_FEATHER,Clever Feather,Pluma Mente,11,si
+ITEM_SWIFT_FEATHER,Swift Feather,Pluma Ímpetu,12,si
+ITEM_ABILITY_CAPSULE,Ability Capsule,Cáps. Habilidad,15,si
+ITEM_ABILITY_PATCH,Ability Patch,Parche Habilidad,16,si
+ITEM_LONELY_MINT,Lonely Mint,Menta Huraña,12,si
+ITEM_ADAMANT_MINT,Adamant Mint,Menta Firme,11,si
+ITEM_NAUGHTY_MINT,Naughty Mint,Menta Pícara,12,si
+ITEM_BRAVE_MINT,Brave Mint,Menta Audaz,11,si
+ITEM_BOLD_MINT,Bold Mint,Menta Osada,11,si
+ITEM_IMPISH_MINT,Impish Mint,Menta Agitada,13,si
+ITEM_LAX_MINT,Lax Mint,Menta Floja,11,si
+ITEM_RELAXED_MINT,Relaxed Mint,Menta Plácida,13,si
+ITEM_MODEST_MINT,Modest Mint,Menta Modesta,13,si
+ITEM_MILD_MINT,Mild Mint,Menta Afable,12,si
+ITEM_RASH_MINT,Rash Mint,Menta Alocada,13,si
+ITEM_QUIET_MINT,Quiet Mint,Menta Mansa,11,si
+ITEM_CALM_MINT,Calm Mint,Menta Serena,12,si
+ITEM_GENTLE_MINT,Gentle Mint,Menta Amable,12,si
+ITEM_CAREFUL_MINT,Careful Mint,Menta Cauta,11,si
+ITEM_SASSY_MINT,Sassy Mint,Menta Grosera,13,si
+ITEM_TIMID_MINT,Timid Mint,Menta Miedosa,13,si
+ITEM_HASTY_MINT,Hasty Mint,Menta Activa,12,si
+ITEM_JOLLY_MINT,Jolly Mint,Menta Alegre,12,si
+ITEM_NAIVE_MINT,Naive Mint,Menta Ingenua,13,si
+ITEM_SERIOUS_MINT,Serious Mint,Menta Seria,11,si
+ITEM_RARE_CANDY,Rare Candy,Caramelo Raro,13,si
+ITEM_EXP_CANDY_XS,Exp. Candy XS,Caramelo Exp. XS,16,si
+ITEM_EXP_CANDY_S,Exp. Candy S,Caramelo Exp. S,15,si
+ITEM_EXP_CANDY_M,Exp. Candy M,Caramelo Exp. M,15,si
+ITEM_EXP_CANDY_L,Exp. Candy L,Caramelo Exp. L,15,si
+ITEM_EXP_CANDY_XL,Exp. Candy XL,Caramelo Exp. XL,16,si
+ITEM_DYNAMAX_CANDY,Dynamax Candy,Caramelo Dinamax,16,si
+ITEM_BLUE_FLUTE,Blue Flute,Flauta Azul,11,si
+ITEM_YELLOW_FLUTE,Yellow Flute,Flauta Amarilla,15,si
+ITEM_RED_FLUTE,Red Flute,Flauta Roja,11,si
+ITEM_BLACK_FLUTE,Black Flute,Flauta Negra,12,si
+ITEM_WHITE_FLUTE,White Flute,Flauta Blanca,13,si
+ITEM_REPEL,Repel,Repelente,9,si
+ITEM_SUPER_REPEL,Super Repel,Superrepelente,14,si
+ITEM_MAX_REPEL,Max Repel,Repelente Máximo,16,si
+ITEM_LURE,Lure,Colonia,7,si
+ITEM_SUPER_LURE,Super Lure,Supercolonia,12,si
+ITEM_MAX_LURE,Max Lure,Colonia Máxima,14,si
+ITEM_ESCAPE_ROPE,Escape Rope,Cuerda Huida,12,si
+ITEM_X_ATTACK,X Attack,Ataque X,8,si
+ITEM_X_DEFENSE,X Defense,Defensa X,9,si
+ITEM_X_SP_ATK,X Sp. Atk,At. Especial X,14,si
+ITEM_X_SP_DEF,X Sp. Def,Def. Especial X,15,si
+ITEM_X_SPEED,X Speed,Velocidad X,11,si
+ITEM_X_ACCURACY,X Accuracy,Precisión X,11,si
+ITEM_DIRE_HIT,Dire Hit,Crítico X,9,si
+ITEM_GUARD_SPEC,Guard Spec.,Protección X,12,si
+ITEM_POKE_DOLL,Poké Doll,Poké Muñeco,11,si
+ITEM_FLUFFY_TAIL,Fluffy Tail,Cola Skitty,11,si
+ITEM_POKE_TOY,Poké Toy,Pokéseñuelo,11,si
+ITEM_MAX_MUSHROOMS,Max Mushrooms,Maxiseta,8,si
+ITEM_BOTTLE_CAP,Bottle Cap,Chapa Plateada,14,si
+ITEM_GOLD_BOTTLE_CAP,Gold Bottle Cap,Chapa Dorada,12,si
+ITEM_NUGGET,Nugget,Pepita,6,si
+ITEM_BIG_NUGGET,Big Nugget,Maxipepita,10,si
+ITEM_TINY_MUSHROOM,Tiny Mushroom,Miniseta,8,si
+ITEM_BIG_MUSHROOM,Big Mushroom,Seta Grande,11,si
+ITEM_BALM_MUSHROOM,Balm Mushroom,Seta Aroma,10,si
+ITEM_PEARL,Pearl,Perla,5,si
+ITEM_BIG_PEARL,Big Pearl,Perla Grande,12,si
+ITEM_PEARL_STRING,Pearl String,Sarta Perlas,12,si
+ITEM_STARDUST,Stardust,Polvo Estelar,13,si
+ITEM_STAR_PIECE,Star Piece,Trozo Estrella,14,si
+ITEM_COMET_SHARD,Comet Shard,Fragmento Cometa,16,si
+ITEM_SHOAL_SALT,Shoal Salt,Sal Cardumen,12,si
+ITEM_SHOAL_SHELL,Shoal Shell,Concha Cardumen,15,si
+ITEM_RED_SHARD,Red Shard,Parte Roja,10,si
+ITEM_BLUE_SHARD,Blue Shard,Parte Azul,10,si
+ITEM_YELLOW_SHARD,Yellow Shard,Parte Amarilla,14,si
+ITEM_GREEN_SHARD,Green Shard,Parte Verde,11,si
+ITEM_HEART_SCALE,Heart Scale,Escama Corazón,14,si
+ITEM_HONEY,Honey,Miel,4,si
+ITEM_RARE_BONE,Rare Bone,Hueso Raro,10,si
+ITEM_ODD_KEYSTONE,Odd Keystone,Piedra Espíritu,15,si
+ITEM_PRETTY_FEATHER,Pretty Feather,Pluma Bella,11,si
+ITEM_RELIC_COPPER,Relic Copper,Real Cobre,10,si
+ITEM_RELIC_SILVER,Relic Silver,Real Plata,10,si
+ITEM_RELIC_GOLD,Relic Gold,Real Oro,8,si
+ITEM_RELIC_VASE,Relic Vase,Ánfora,6,si
+ITEM_RELIC_BAND,Relic Band,Brazal,6,si
+ITEM_RELIC_STATUE,Relic Statue,Efigie Antigua,14,si
+ITEM_RELIC_CROWN,Relic Crown,Corona Antigua,14,si
+ITEM_STRANGE_SOUVENIR,Strange Souvenir,Estatuilla Rara,15,si
+ITEM_HELIX_FOSSIL,Helix Fossil,Fósil Hélix,11,si
+ITEM_DOME_FOSSIL,Dome Fossil,Fósil Domo,10,si
+ITEM_OLD_AMBER,Old Amber,Ámbar Viejo,11,si
+ITEM_ROOT_FOSSIL,Root Fossil,Fósil Raíz,10,si
+ITEM_CLAW_FOSSIL,Claw Fossil,Fósil Garra,11,si
+ITEM_ARMOR_FOSSIL,Armor Fossil,Fósil Coraza,12,si
+ITEM_SKULL_FOSSIL,Skull Fossil,Fósil Cráneo,12,si
+ITEM_COVER_FOSSIL,Cover Fossil,Fósil Tapa,10,si
+ITEM_PLUME_FOSSIL,Plume Fossil,Fósil Pluma,11,si
+ITEM_JAW_FOSSIL,Jaw Fossil,Fósil Mandíbula,15,si
+ITEM_SAIL_FOSSIL,Sail Fossil,Fósil Aleta,11,si
+ITEM_FOSSILIZED_BIRD,Fossilized Bird,Ornitofósil,11,si
+ITEM_FOSSILIZED_FISH,Fossilized Fish,Ictiofósil,10,si
+ITEM_FOSSILIZED_DRAKE,Fossilized Drake,Dracofósil,10,si
+ITEM_FOSSILIZED_DINO,Fossilized Dino,Plesiofósil,11,si
+ITEM_GROWTH_MULCH,Growth Mulch,Abono Rápido,12,si
+ITEM_DAMP_MULCH,Damp Mulch,Abono Lento,11,si
+ITEM_STABLE_MULCH,Stable Mulch,Abono Fijador,13,si
+ITEM_GOOEY_MULCH,Gooey Mulch,Abono Brote,11,si
+ITEM_RICH_MULCH,Rich Mulch,Abono Fértil,12,si
+ITEM_SURPRISE_MULCH,Surprise Mulch,Abono Sorpresa,14,si
+ITEM_BOOST_MULCH,Boost Mulch,Abono Fructífero,16,si
+ITEM_AMAZE_MULCH,Amaze Mulch,Abono Insólito,14,si
+ITEM_RED_APRICORN,Red Apricorn,Bonguri Rojo,12,si
+ITEM_BLUE_APRICORN,Blue Apricorn,Bonguri Azul,12,si
+ITEM_YELLOW_APRICORN,Yellow Apricorn,Bonguri Amarillo,16,si
+ITEM_GREEN_APRICORN,Green Apricorn,Bonguri Verde,13,si
+ITEM_PINK_APRICORN,Pink Apricorn,Bonguri Rosa,12,si
+ITEM_WHITE_APRICORN,White Apricorn,Bonguri Blanco,14,si
+ITEM_BLACK_APRICORN,Black Apricorn,Bonguri Negro,13,si
+ITEM_WISHING_PIECE,Wishing Piece,Trozo Deseo,11,si
+ITEM_GALARICA_TWIG,Galarica Twig,Rama de Galanuez,16,si
+ITEM_ARMORITE_ORE,Armorite Ore,Duralium,8,si
+ITEM_DYNITE_ORE,Dynite Ore,Maxinium,8,si
+ITEM_ORANGE_MAIL,Orange Mail,Car. Naranja,12,si
+ITEM_HARBOR_MAIL,Harbor Mail,Carta Puerto,12,si
+ITEM_GLITTER_MAIL,Glitter Mail,Carta Brillo,12,si
+ITEM_MECH_MAIL,Mech Mail,Carta Imán,10,si
+ITEM_WOOD_MAIL,Wood Mail,Carta Madera,12,si
+ITEM_WAVE_MAIL,Wave Mail,Carta Ola,9,si
+ITEM_BEAD_MAIL,Bead Mail,Carta Imagen,12,si
+ITEM_SHADOW_MAIL,Shadow Mail,Carta Sombra,12,si
+ITEM_TROPIC_MAIL,Tropic Mail,Car. Tropic.,12,si
+ITEM_DREAM_MAIL,Dream Mail,Carta Sueño,11,si
+ITEM_FAB_MAIL,Fab Mail,Carta Fab.,10,si
+ITEM_RETRO_MAIL,Retro Mail,Carta Retro.,12,si
+ITEM_FIRE_STONE,Fire Stone,Piedra Fuego,12,si
+ITEM_WATER_STONE,Water Stone,Piedra Agua,11,si
+ITEM_THUNDER_STONE,Thunder Stone,Piedra Trueno,13,si
+ITEM_LEAF_STONE,Leaf Stone,Piedra Hoja,11,si
+ITEM_ICE_STONE,Ice Stone,Piedra Hielo,12,si
+ITEM_SUN_STONE,Sun Stone,Piedra Solar,12,si
+ITEM_MOON_STONE,Moon Stone,Piedra Lunar,12,si
+ITEM_SHINY_STONE,Shiny Stone,Piedra Día,10,si
+ITEM_DUSK_STONE,Dusk Stone,Piedra Noche,12,si
+ITEM_DAWN_STONE,Dawn Stone,Piedra Alba,11,si
+ITEM_SWEET_APPLE,Sweet Apple,Manzana Dulce,13,si
+ITEM_TART_APPLE,Tart Apple,Manzana Ácida,13,si
+ITEM_CRACKED_POT,Cracked Pot,Tetera Agrietada,16,si
+ITEM_CHIPPED_POT,Chipped Pot,Tetera Rota,11,si
+ITEM_GALARICA_CUFF,Galarica Cuff,Brazal Galanuez,15,si
+ITEM_GALARICA_WREATH,Galarica Wreath,Corona Galanuez,15,si
+ITEM_DRAGON_SCALE,Dragon Scale,Escama Dragón,13,si
+ITEM_UPGRADE,Upgrade,Mejora,6,si
+ITEM_PROTECTOR,Protector,Protector,9,si
+ITEM_ELECTIRIZER,Electirizer,Electrizador,12,si
+ITEM_MAGMARIZER,Magmarizer,Magmatizador,12,si
+ITEM_DUBIOUS_DISC,Dubious Disc,Disco Extraño,13,si
+ITEM_REAPER_CLOTH,Reaper Cloth,Tela Terrible,13,si
+ITEM_PRISM_SCALE,Prism Scale,Escama Bella,12,si
+ITEM_WHIPPED_DREAM,Whipped Dream,Dulce de Nata,13,si
+ITEM_SACHET,Sachet,Saquito Fragante,16,si
+ITEM_OVAL_STONE,Oval Stone,Piedra Oval,11,si
+ITEM_STRAWBERRY_SWEET,Strawberry Sweet,Confite Fresa,13,si
+ITEM_LOVE_SWEET,Love Sweet,Confite Corazón,15,si
+ITEM_BERRY_SWEET,Berry Sweet,Confite Fruto,13,si
+ITEM_CLOVER_SWEET,Clover Sweet,Confite Trébol,14,si
+ITEM_FLOWER_SWEET,Flower Sweet,Confite Flor,12,si
+ITEM_STAR_SWEET,Star Sweet,Confite Estrella,16,si
+ITEM_RIBBON_SWEET,Ribbon Sweet,Confite Lazo,12,si
+ITEM_EVERSTONE,Everstone,Piedra Eterna,13,si
+ITEM_RED_NECTAR,Red Nectar,Néctar Rojo,11,si
+ITEM_YELLOW_NECTAR,Yellow Nectar,Néctar Amarillo,15,si
+ITEM_PINK_NECTAR,Pink Nectar,Néctar Rosa,11,si
+ITEM_PURPLE_NECTAR,Purple Nectar,Néctar Violeta,14,si
+ITEM_FLAME_PLATE,Flame Plate,Tabla Llama,11,si
+ITEM_SPLASH_PLATE,Splash Plate,Tabla Linfa,11,si
+ITEM_ZAP_PLATE,Zap Plate,Tabla Trueno,12,si
+ITEM_MEADOW_PLATE,Meadow Plate,Tabla Pradal,12,si
+ITEM_ICICLE_PLATE,Icicle Plate,Tabla Helada,12,si
+ITEM_FIST_PLATE,Fist Plate,Tabla Fuerte,12,si
+ITEM_TOXIC_PLATE,Toxic Plate,Tabla Tóxica,12,si
+ITEM_EARTH_PLATE,Earth Plate,Tabla Terrax,12,si
+ITEM_SKY_PLATE,Sky Plate,Tabla Cielo,11,si
+ITEM_MIND_PLATE,Mind Plate,Tabla Mental,12,si
+ITEM_INSECT_PLATE,Insect Plate,Tabla Bicho,11,si
+ITEM_STONE_PLATE,Stone Plate,Tabla Pétrea,12,si
+ITEM_SPOOKY_PLATE,Spooky Plate,Tabla Terror,12,si
+ITEM_DRACO_PLATE,Draco Plate,Tabla Draco,11,si
+ITEM_DREAD_PLATE,Dread Plate,Tabla Oscura,12,si
+ITEM_IRON_PLATE,Iron Plate,Tabla Acero,11,si
+ITEM_PIXIE_PLATE,Pixie Plate,Tabla Duende,12,si
+ITEM_DOUSE_DRIVE,Douse Drive,HidroROM,8,si
+ITEM_SHOCK_DRIVE,Shock Drive,FulgoROM,8,si
+ITEM_BURN_DRIVE,Burn Drive,PiroROM,7,si
+ITEM_CHILL_DRIVE,Chill Drive,CrioROM,7,si
+ITEM_FIRE_MEMORY,Fire Memory,Disco Fuego,11,si
+ITEM_WATER_MEMORY,Water Memory,Disco Agua,10,si
+ITEM_ELECTRIC_MEMORY,Electric Memory,Disco Eléctrico,15,si
+ITEM_GRASS_MEMORY,Grass Memory,Disco Planta,12,si
+ITEM_ICE_MEMORY,Ice Memory,Disco Hielo,11,si
+ITEM_FIGHTING_MEMORY,Fighting Memory,Disco Lucha,11,si
+ITEM_POISON_MEMORY,Poison Memory,Disco Veneno,12,si
+ITEM_GROUND_MEMORY,Ground Memory,Disco Tierra,12,si
+ITEM_FLYING_MEMORY,Flying Memory,Disco Volador,13,si
+ITEM_PSYCHIC_MEMORY,Psychic Memory,Disco Psíquico,14,si
+ITEM_BUG_MEMORY,Bug Memory,Disco Bicho,11,si
+ITEM_ROCK_MEMORY,Rock Memory,Disco Roca,10,si
+ITEM_GHOST_MEMORY,Ghost Memory,Disco Fantasma,14,si
+ITEM_DRAGON_MEMORY,Dragon Memory,Disco Dragón,12,si
+ITEM_DARK_MEMORY,Dark Memory,Disco Siniestro,15,si
+ITEM_STEEL_MEMORY,Steel Memory,Disco Acero,11,si
+ITEM_FAIRY_MEMORY,Fairy Memory,Disco Hada,10,si
+ITEM_RUSTED_SWORD,Rusted Sword,Espada Oxidada,14,si
+ITEM_RUSTED_SHIELD,Rusted Shield,Escudo Oxidado,14,si
+ITEM_RED_ORB,Red Orb,Prisma Rojo,11,si
+ITEM_BLUE_ORB,Blue Orb,Prisma Azul,11,si
+ITEM_VENUSAURITE,Venusaurite,Venusaurita,11,si
+ITEM_CHARIZARDITE_X,Charizardite X,Charizardita X,14,si
+ITEM_CHARIZARDITE_Y,Charizardite Y,Charizardita Y,14,si
+ITEM_BLASTOISINITE,Blastoisinite,Blastoisita,11,si
+ITEM_BEEDRILLITE,Beedrillite,Beedrillita,11,si
+ITEM_PIDGEOTITE,Pidgeotite,Pidgeotita,10,si
+ITEM_ALAKAZITE,Alakazite,Alakazamita,11,si
+ITEM_SLOWBRONITE,Slowbronite,Slowbronita,11,si
+ITEM_GENGARITE,Gengarite,Gengarita,9,si
+ITEM_KANGASKHANITE,Kangaskhanite,Kangaskhanita,13,si
+ITEM_PINSIRITE,Pinsirite,Pinsirita,9,si
+ITEM_GYARADOSITE,Gyaradosite,Gyaradosita,11,si
+ITEM_AERODACTYLITE,Aerodactylite,Aerodactylita,13,si
+ITEM_MEWTWONITE_X,Mewtwonite X,Mewtwoita X,11,si
+ITEM_MEWTWONITE_Y,Mewtwonite Y,Mewtwoita Y,11,si
+ITEM_AMPHAROSITE,Ampharosite,Ampharosita,11,si
+ITEM_STEELIXITE,Steelixite,Steelixita,10,si
+ITEM_SCIZORITE,Scizorite,Scizorita,9,si
+ITEM_HERACRONITE,Heracronite,Heracrossita,12,si
+ITEM_HOUNDOOMINITE,Houndoominite,Houndoomita,11,si
+ITEM_TYRANITARITE,Tyranitarite,Tyranitarita,12,si
+ITEM_SCEPTILITE,Sceptilite,Sceptilita,10,si
+ITEM_BLAZIKENITE,Blazikenite,Blazikenita,11,si
+ITEM_SWAMPERTITE,Swampertite,Swampertita,11,si
+ITEM_GARDEVOIRITE,Gardevoirite,Gardevoirita,12,si
+ITEM_SABLENITE,Sablenite,Sableynita,10,si
+ITEM_MAWILITE,Mawilite,Mawilita,8,si
+ITEM_AGGRONITE,Aggronite,Aggronita,9,si
+ITEM_MEDICHAMITE,Medichamite,Medichamita,11,si
+ITEM_MANECTITE,Manectite,Manectricita,12,si
+ITEM_SHARPEDONITE,Sharpedonite,Sharpedonita,12,si
+ITEM_CAMERUPTITE,Cameruptite,Cameruptita,11,si
+ITEM_ALTARIANITE,Altarianite,Altarianita,11,si
+ITEM_BANETTITE,Banettite,Banettita,9,si
+ITEM_ABSOLITE,Absolite,Absolita,8,si
+ITEM_GLALITITE,Glalitite,Glalita,7,si
+ITEM_SALAMENCITE,Salamencite,Salamencita,11,si
+ITEM_METAGROSSITE,Metagrossite,Metagrossita,12,si
+ITEM_LATIASITE,Latiasite,Latiasita,9,si
+ITEM_LATIOSITE,Latiosite,Latiosita,9,si
+ITEM_LOPUNNITE,Lopunnite,Lopunnita,9,si
+ITEM_GARCHOMPITE,Garchompite,Garchompita,11,si
+ITEM_LUCARIONITE,Lucarionite,Lucarita,8,si
+ITEM_ABOMASITE,Abomasite,Abomasnowita,12,si
+ITEM_GALLADITE,Galladite,Galladita,9,si
+ITEM_AUDINITE,Audinite,Audinita,8,si
+ITEM_DIANCITE,Diancite,Diancita,8,si
+ITEM_CLEFABLITE,Clefablite,Clefablita,10,si
+ITEM_VICTREEBELITE,Victreebelite,Victreebelita,13,si
+ITEM_STARMINITE,Starminite,Starmita,8,si
+ITEM_DRAGONINITE,Dragoninite,Dragonitita,11,si
+ITEM_MEGANIUMITE,Meganiumite,Meganiumita,11,si
+ITEM_FERALIGITE,Feraligite,Feraligatrita,13,si
+ITEM_SKARMORITE,Skarmorite,Skarmorita,10,si
+ITEM_FROSLASSITE,Froslassite,Froslassita,11,si
+ITEM_EMBOARITE,Emboarite,Emboarita,9,si
+ITEM_EXCADRITE,Excadrite,Excadrillita,12,si
+ITEM_SCOLIPITE,Scolipite,Scolipedita,11,si
+ITEM_SCRAFTINITE,Scraftinite,Scraftita,9,si
+ITEM_EELEKTROSSITE,Eelektrossite,Eelektrossita,13,si
+ITEM_CHANDELURITE,Chandelurite,Chandelurita,12,si
+ITEM_CHESNAUGHTITE,Chesnaughtite,Chesnaughtita,13,si
+ITEM_DELPHOXITE,Delphoxite,Delphoxita,10,si
+ITEM_GRENINJITE,Greninjite,Greninjanita,12,si
+ITEM_PYROARITE,Pyroarite,Pyroarita,9,si
+ITEM_FLOETTITE,Floettite,Floettita,9,si
+ITEM_MALAMARITE,Malamarite,Malamarita,10,si
+ITEM_BARBARACITE,Barbaracite,Barbaraclita,12,si
+ITEM_DRAGALGITE,Dragalgite,Dragalgita,10,si
+ITEM_HAWLUCHANITE,Hawluchanite,Hawluchanita,12,si
+ITEM_ZYGARDITE,Zygardite,Zygardita,9,si
+ITEM_DRAMPANITE,Drampanite,Drampanita,10,si
+ITEM_FALINKSITE,Falinksite,Falinksita,10,si
+ITEM_HEATRANITE,Heatranite,Heatranita,10,si
+ITEM_DARKRANITE,Darkranite,Darkrainita,11,si
+ITEM_ZERAORITE,Zeraorite,Zeraoranita,11,si
+ITEM_RAICHUNITE_X,Raichunite X,Raichunita X,12,si
+ITEM_RAICHUNITE_Y,Raichunite Y,Raichunita Y,12,si
+ITEM_CHIMECHITE,Chimechite,Chimechita,10,si
+ITEM_ABSOLITE_Z,Absolite Z,Absolita Z,10,si
+ITEM_STARAPTITE,Staraptite,Staraptorita,12,si
+ITEM_GARCHOMPITE_Z,Garchompite Z,Garchompita Z,13,si
+ITEM_LUCARIONITE_Z,Lucarionite Z,Lucarita Z,10,si
+ITEM_GOLURKITE,Golurkite,Golurkita,9,si
+ITEM_MEOWSTICITE,Meowsticite,Meowsticita,11,si
+ITEM_CRABOMINITE,Crabominite,Crabominablita,14,si
+ITEM_GOLISOPITE,Golisopite,Golisopodita,12,si
+ITEM_MAGEARNITE,Magearnite,Magearnita,10,si
+ITEM_SCOVILLAINITE,Scovillainite,Scovillainita,13,si
+ITEM_BAXCALIBRITE,Baxcalibrite,Baxcaliburita,13,si
+ITEM_TATSUGIRINITE,Tatsugirinite,Tatsugirita,11,si
+ITEM_GLIMMORANITE,Glimmoranite,Glimmoranita,12,si
+ITEM_NORMAL_GEM,Normal Gem,Gema Normal,11,si
+ITEM_FIRE_GEM,Fire Gem,Gema Fuego,10,si
+ITEM_WATER_GEM,Water Gem,Gema Agua,9,si
+ITEM_ELECTRIC_GEM,Electric Gem,Gema Eléctrica,14,si
+ITEM_GRASS_GEM,Grass Gem,Gema Planta,11,si
+ITEM_ICE_GEM,Ice Gem,Gema Hielo,10,si
+ITEM_FIGHTING_GEM,Fighting Gem,Gema Lucha,10,si
+ITEM_POISON_GEM,Poison Gem,Gema Veneno,11,si
+ITEM_GROUND_GEM,Ground Gem,Gema Tierra,11,si
+ITEM_FLYING_GEM,Flying Gem,Gema Voladora,13,si
+ITEM_PSYCHIC_GEM,Psychic Gem,Gema Psíquica,13,si
+ITEM_BUG_GEM,Bug Gem,Gema Bicho,10,si
+ITEM_ROCK_GEM,Rock Gem,Gema Roca,9,si
+ITEM_GHOST_GEM,Ghost Gem,Gema Fantasma,13,si
+ITEM_DRAGON_GEM,Dragon Gem,Gema Dragón,11,si
+ITEM_DARK_GEM,Dark Gem,Gema Siniestra,14,si
+ITEM_STEEL_GEM,Steel Gem,Gema Acero,10,si
+ITEM_FAIRY_GEM,Fairy Gem,Gema Hada,9,si
+ITEM_NORMALIUM_Z,Normalium Z,Normastal Z,11,si
+ITEM_FIRIUM_Z,Firium Z,Pirostal Z,10,si
+ITEM_WATERIUM_Z,Waterium Z,Hidrostal Z,11,si
+ITEM_ELECTRIUM_Z,Electrium Z,Electrostal Z,13,si
+ITEM_GRASSIUM_Z,Grassium Z,Fitostal Z,10,si
+ITEM_ICIUM_Z,Icium Z,Criostal Z,10,si
+ITEM_FIGHTINIUM_Z,Fightinium Z,Lizastal Z,10,si
+ITEM_POISONIUM_Z,Poisonium Z,Toxistal Z,10,si
+ITEM_GROUNDIUM_Z,Groundium Z,Geostal Z,9,si
+ITEM_FLYINIUM_Z,Flyinium Z,Aerostal Z,10,si
+ITEM_PSYCHIUM_Z,Psychium Z,Psicostal Z,11,si
+ITEM_BUGINIUM_Z,Buginium Z,Insectostal Z,13,si
+ITEM_ROCKIUM_Z,Rockium Z,Litostal Z,10,si
+ITEM_GHOSTIUM_Z,Ghostium Z,Espectrostal Z,14,si
+ITEM_DRAGONIUM_Z,Dragonium Z,Dracostal Z,11,si
+ITEM_DARKINIUM_Z,Darkinium Z,Nictostal Z,11,si
+ITEM_STEELIUM_Z,Steelium Z,Metalostal Z,12,si
+ITEM_FAIRIUM_Z,Fairium Z,Feeristal Z,11,si
+ITEM_PIKANIUM_Z,Pikanium Z,Pikastal Z,10,si
+ITEM_EEVIUM_Z,Eevium Z,Eeveestal Z,11,si
+ITEM_SNORLIUM_Z,Snorlium Z,Snorlastal Z,12,si
+ITEM_MEWNIUM_Z,Mewnium Z,Mewstal Z,9,si
+ITEM_DECIDIUM_Z,Decidium Z,Dueyestal Z,11,si
+ITEM_INCINIUM_Z,Incinium Z,Incinostal Z,12,si
+ITEM_PRIMARIUM_Z,Primarium Z,Primastal Z,11,si
+ITEM_LYCANIUM_Z,Lycanium Z,Lycanrostal Z,13,si
+ITEM_MIMIKIUM_Z,Mimikium Z,Mimikyustal Z,13,si
+ITEM_KOMMONIUM_Z,Kommonium Z,Kommostal Z,11,si
+ITEM_TAPUNIUM_Z,Tapunium Z,Tapistal Z,10,si
+ITEM_SOLGANIUM_Z,Solganium Z,Solgaleostal Z,14,si
+ITEM_LUNALIUM_Z,Lunalium Z,Lunalastal Z,12,si
+ITEM_MARSHADIUM_Z,Marshadium Z,Marshastal Z,12,si
+ITEM_ALORAICHIUM_Z,Aloraichium Z,Alo-Raistal Z,13,si
+ITEM_PIKASHUNIUM_Z,Pikashunium Z,Ash-Pikastal Z,14,si
+ITEM_ULTRANECROZIUM_Z,Ultranecrozium Z,Ultranecrostal Z,16,si
+ITEM_LIGHT_BALL,Light Ball,Bola Luminosa,13,si
+ITEM_LEEK,Leek,Puerro,6,si
+ITEM_THICK_CLUB,Thick Club,Hueso Grueso,12,si
+ITEM_LUCKY_PUNCH,Lucky Punch,Puño Suerte,11,si
+ITEM_METAL_POWDER,Metal Powder,Polvo Metálico,14,si
+ITEM_QUICK_POWDER,Quick Powder,Polvo Veloz,11,si
+ITEM_DEEP_SEA_SCALE,Deep Sea Scale,Escama Marina,13,si
+ITEM_DEEP_SEA_TOOTH,Deep Sea Tooth,Diente Marino,13,si
+ITEM_SOUL_DEW,Soul Dew,Rocío Bondad,12,si
+ITEM_ADAMANT_ORB,Adamant Orb,Diamansfera,11,si
+ITEM_LUSTROUS_ORB,Lustrous Orb,Lustresfera,11,si
+ITEM_GRISEOUS_ORB,Griseous Orb,Griseosfera,11,si
+ITEM_SEA_INCENSE,Sea Incense,Incienso Marino,15,si
+ITEM_LAX_INCENSE,Lax Incense,Incienso Suave,14,si
+ITEM_ODD_INCENSE,Odd Incense,Incienso Raro,13,si
+ITEM_ROCK_INCENSE,Rock Incense,Incienso Roca,13,si
+ITEM_FULL_INCENSE,Full Incense,Incienso Lento,14,si
+ITEM_WAVE_INCENSE,Wave Incense,Incienso Acua,13,si
+ITEM_ROSE_INCENSE,Rose Incense,Incienso Floral,15,si
+ITEM_LUCK_INCENSE,Luck Incense,Incienso Duplo,14,si
+ITEM_PURE_INCENSE,Pure Incense,Incienso Puro,13,si
+ITEM_RED_SCARF,Red Scarf,Pañuelo Rojo,12,si
+ITEM_BLUE_SCARF,Blue Scarf,Pañuelo Azul,12,si
+ITEM_PINK_SCARF,Pink Scarf,Pañuelo Rosa,12,si
+ITEM_GREEN_SCARF,Green Scarf,Pañuelo Verde,13,si
+ITEM_YELLOW_SCARF,Yellow Scarf,Pañuelo Amarillo,16,si
+ITEM_MACHO_BRACE,Macho Brace,Brazal Firme,12,si
+ITEM_POWER_WEIGHT,Power Weight,Pesa Recia,10,si
+ITEM_POWER_BRACER,Power Bracer,Brazal Recio,12,si
+ITEM_POWER_BELT,Power Belt,Cinto Recio,11,si
+ITEM_POWER_LENS,Power Lens,Lente Recia,11,si
+ITEM_POWER_BAND,Power Band,Banda Recia,11,si
+ITEM_POWER_ANKLET,Power Anklet,Franja Recia,12,si
+ITEM_SILK_SCARF,Silk Scarf,Pañuelo de Seda,15,si
+ITEM_CHARCOAL,Charcoal,Carbón,6,si
+ITEM_MYSTIC_WATER,Mystic Water,Agua Mística,12,si
+ITEM_MAGNET,Magnet,Imán,4,si
+ITEM_MIRACLE_SEED,Miracle Seed,Semilla Milagro,15,si
+ITEM_NEVER_MELT_ICE,Never-Melt Ice,Hielo Perpetuo,14,si
+ITEM_BLACK_BELT,Black Belt,Cinturón Negro,14,si
+ITEM_POISON_BARB,Poison Barb,Flecha Venenosa,15,si
+ITEM_SOFT_SAND,Soft Sand,Arena Fina,10,si
+ITEM_SHARP_BEAK,Sharp Beak,Pico Afilado,12,si
+ITEM_TWISTED_SPOON,Twisted Spoon,Cuchara Torcida,15,si
+ITEM_SILVER_POWDER,Silver Powder,Polvo Plata,11,si
+ITEM_HARD_STONE,Hard Stone,Piedra Dura,11,si
+ITEM_SPELL_TAG,Spell Tag,Hechizo,7,si
+ITEM_DRAGON_FANG,Dragon Fang,Colmillo de Dragón,18,si
+ITEM_BLACK_GLASSES,Black Glasses,Gafas de Sol,12,si
+ITEM_METAL_COAT,Metal Coat,Revest. Metálico,16,si
+ITEM_CHOICE_BAND,Choice Band,Cinta Elección,14,si
+ITEM_CHOICE_SPECS,Choice Specs,Gafas Elección,14,si
+ITEM_CHOICE_SCARF,Choice Scarf,Pañuelo Elección,16,si
+ITEM_FLAME_ORB,Flame Orb,Llamasfera,10,si
+ITEM_TOXIC_ORB,Toxic Orb,Toxisfera,9,si
+ITEM_DAMP_ROCK,Damp Rock,Roca Lluvia,11,si
+ITEM_HEAT_ROCK,Heat Rock,Roca Calor,10,si
+ITEM_SMOOTH_ROCK,Smooth Rock,Roca Suave,10,si
+ITEM_ICY_ROCK,Icy Rock,Roca Helada,11,si
+ITEM_ELECTRIC_SEED,Electric Seed,Semilla Electro,15,si
+ITEM_PSYCHIC_SEED,Psychic Seed,Semilla Psique,14,si
+ITEM_MISTY_SEED,Misty Seed,Semilla Bruma,13,si
+ITEM_GRASSY_SEED,Grassy Seed,Semilla Hierba,14,si
+ITEM_ABSORB_BULB,Absorb Bulb,Tubérculo,9,si
+ITEM_CELL_BATTERY,Cell Battery,Pila,4,si
+ITEM_LUMINOUS_MOSS,Luminous Moss,Musgo Brillante,15,si
+ITEM_SNOWBALL,Snowball,Bola de Nieve,13,si
+ITEM_BRIGHT_POWDER,Bright Powder,Polvo Brillo,12,si
+ITEM_WHITE_HERB,White Herb,Hierba Blanca,13,si
+ITEM_EXP_SHARE,Exp. Share,Repartir Exp,12,si
+ITEM_QUICK_CLAW,Quick Claw,Garra Rápida,12,si
+ITEM_SOOTHE_BELL,Soothe Bell,Cascabel Alivio,15,si
+ITEM_MENTAL_HERB,Mental Herb,Hierba Mental,13,si
+ITEM_KINGS_ROCK,King's Rock,Roca del Rey,12,si
+ITEM_AMULET_COIN,Amulet Coin,Moneda Amuleto,14,si
+ITEM_CLEANSE_TAG,Cleanse Tag,Amuleto,7,si
+ITEM_SMOKE_BALL,Smoke Ball,Bola de Humo,12,si
+ITEM_FOCUS_BAND,Focus Band,Cinta Aguante,13,si
+ITEM_LUCKY_EGG,Lucky Egg,Huevo Suerte,12,si
+ITEM_SCOPE_LENS,Scope Lens,Periscopio,10,si
+ITEM_LEFTOVERS,Leftovers,Restos,6,si
+ITEM_SHELL_BELL,Shell Bell,Cascabel Concha,15,si
+ITEM_WIDE_LENS,Wide Lens,Lupa,4,si
+ITEM_MUSCLE_BAND,Muscle Band,Cinta Fuerte,12,si
+ITEM_WISE_GLASSES,Wise Glasses,Gafas Especiales,16,si
+ITEM_EXPERT_BELT,Expert Belt,Cinta Experto,13,si
+ITEM_LIGHT_CLAY,Light Clay,Refleluz,8,si
+ITEM_LIFE_ORB,Life Orb,Vidasfera,9,si
+ITEM_POWER_HERB,Power Herb,Hierba Única,12,si
+ITEM_FOCUS_SASH,Focus Sash,Banda Aguante,13,si
+ITEM_ZOOM_LENS,Zoom Lens,Telescopio,10,si
+ITEM_METRONOME,Metronome,Metrónomo,9,si
+ITEM_IRON_BALL,Iron Ball,Bola Férrea,11,si
+ITEM_LAGGING_TAIL,Lagging Tail,Cola Plúmbea,12,si
+ITEM_DESTINY_KNOT,Destiny Knot,Lazo Destino,12,si
+ITEM_BLACK_SLUDGE,Black Sludge,Lodo Negro,10,si
+ITEM_GRIP_CLAW,Grip Claw,Garra Garfio,12,si
+ITEM_STICKY_BARB,Sticky Barb,Toxiestrella,12,si
+ITEM_SHED_SHELL,Shed Shell,Muda Concha,11,si
+ITEM_BIG_ROOT,Big Root,Raíz Grande,11,si
+ITEM_RAZOR_CLAW,Razor Claw,Garra Afilada,13,si
+ITEM_RAZOR_FANG,Razor Fang,Colmillo Agudo,14,si
+ITEM_EVIOLITE,Eviolite,Mineral Evol,12,si
+ITEM_FLOAT_STONE,Float Stone,Piedra Pómez,12,si
+ITEM_ROCKY_HELMET,Rocky Helmet,Casco Dentado,13,si
+ITEM_AIR_BALLOON,Air Balloon,Globo Helio,11,si
+ITEM_RED_CARD,Red Card,Tarjeta Roja,12,si
+ITEM_RING_TARGET,Ring Target,Blanco,6,si
+ITEM_BINDING_BAND,Binding Band,Banda Atadura,13,si
+ITEM_EJECT_BUTTON,Eject Button,Botón Escape,12,si
+ITEM_WEAKNESS_POLICY,Weakness Policy,Seguro Debilidad,16,si
+ITEM_ASSAULT_VEST,Assault Vest,Chaleco Asalto,14,si
+ITEM_SAFETY_GOGGLES,Safety Goggles,Gafa Protectora,15,si
+ITEM_ADRENALINE_ORB,Adrenaline Orb,Nerviosfera,11,si
+ITEM_TERRAIN_EXTENDER,Terrain Extender,Cubresuelos,11,si
+ITEM_PROTECTIVE_PADS,Protective Pads,Paracontacto,12,si
+ITEM_THROAT_SPRAY,Throat Spray,Espray Bucal,12,si
+ITEM_EJECT_PACK,Eject Pack,Mochila Escape,14,si
+ITEM_HEAVY_DUTY_BOOTS,Heavy-Duty Boots,Botas Gruesas,13,si
+ITEM_BLUNDER_POLICY,Blunder Policy,Seguro Fallo,12,si
+ITEM_ROOM_SERVICE,Room Service,Servicio Raro,13,si
+ITEM_UTILITY_UMBRELLA,Utility Umbrella,Parasol Multiuso,16,si
+ITEM_CHERI_BERRY,Cheri Berry,Baya Zreza,10,si
+ITEM_CHESTO_BERRY,Chesto Berry,Baya Atania,11,si
+ITEM_PECHA_BERRY,Pecha Berry,Baya Meloc,10,si
+ITEM_RAWST_BERRY,Rawst Berry,Baya Safre,10,si
+ITEM_ASPEAR_BERRY,Aspear Berry,Baya Perasi,11,si
+ITEM_LEPPA_BERRY,Leppa Berry,Baya Zanama,11,si
+ITEM_ORAN_BERRY,Oran Berry,Baya Aranja,11,si
+ITEM_PERSIM_BERRY,Persim Berry,Baya Caquic,11,si
+ITEM_LUM_BERRY,Lum Berry,Baya Ziuela,11,si
+ITEM_SITRUS_BERRY,Sitrus Berry,Baya Zidra,10,si
+ITEM_FIGY_BERRY,Figy Berry,Baya Higog,10,si
+ITEM_WIKI_BERRY,Wiki Berry,Baya Wiki,9,si
+ITEM_MAGO_BERRY,Mago Berry,Baya Ango,9,si
+ITEM_AGUAV_BERRY,Aguav Berry,Baya Guaya,10,si
+ITEM_IAPAPA_BERRY,Iapapa Berry,Baya Pabaya,11,si
+ITEM_RAZZ_BERRY,Razz Berry,Baya Frambu,11,si
+ITEM_BLUK_BERRY,Bluk Berry,Baya Oram,9,si
+ITEM_NANAB_BERRY,Nanab Berry,Baya Latano,11,si
+ITEM_WEPEAR_BERRY,Wepear Berry,Baya Peragu,11,si
+ITEM_PINAP_BERRY,Pinap Berry,Baya Pinia,10,si
+ITEM_POMEG_BERRY,Pomeg Berry,Baya Grana,10,si
+ITEM_KELPSY_BERRY,Kelpsy Berry,Baya Algama,11,si
+ITEM_QUALOT_BERRY,Qualot Berry,Baya Ispero,11,si
+ITEM_HONDEW_BERRY,Hondew Berry,Baya Meluce,11,si
+ITEM_GREPA_BERRY,Grepa Berry,Baya Uvav,9,si
+ITEM_TAMATO_BERRY,Tamato Berry,Baya Tamate,11,si
+ITEM_CORNN_BERRY,Cornn Berry,Baya Mais,9,si
+ITEM_MAGOST_BERRY,Magost Berry,Baya Aostan,11,si
+ITEM_RABUTA_BERRY,Rabuta Berry,Baya Rautan,11,si
+ITEM_NOMEL_BERRY,Nomel Berry,Baya Monli,10,si
+ITEM_SPELON_BERRY,Spelon Berry,Baya Wikano,11,si
+ITEM_PAMTRE_BERRY,Pamtre Berry,Baya Plama,10,si
+ITEM_WATMEL_BERRY,Watmel Berry,Baya Sambia,11,si
+ITEM_DURIN_BERRY,Durin Berry,Baya Rudion,11,si
+ITEM_BELUE_BERRY,Belue Berry,Baya Andano,11,si
+ITEM_CHILAN_BERRY,Chilan Berry,Baya Chilan,11,si
+ITEM_OCCA_BERRY,Occa Berry,Baya Caoca,10,si
+ITEM_PASSHO_BERRY,Passho Berry,Baya Pasio,10,si
+ITEM_WACAN_BERRY,Wacan Berry,Baya Gualot,11,si
+ITEM_RINDO_BERRY,Rindo Berry,Baya Tamar,10,si
+ITEM_YACHE_BERRY,Yache Berry,Baya Rimoya,11,si
+ITEM_CHOPLE_BERRY,Chople Berry,Baya Pomaro,11,si
+ITEM_KEBIA_BERRY,Kebia Berry,Baya Kebia,10,si
+ITEM_SHUCA_BERRY,Shuca Berry,Baya Acardo,11,si
+ITEM_COBA_BERRY,Coba Berry,Baya Kouba,10,si
+ITEM_PAYAPA_BERRY,Payapa Berry,Baya Payapa,11,si
+ITEM_TANGA_BERRY,Tanga Berry,Baya Yecana,11,si
+ITEM_CHARTI_BERRY,Charti Berry,Baya Alcho,10,si
+ITEM_KASIB_BERRY,Kasib Berry,Baya Drasi,10,si
+ITEM_HABAN_BERRY,Haban Berry,Baya Anjiro,11,si
+ITEM_COLBUR_BERRY,Colbur Berry,Baya Dillo,10,si
+ITEM_BABIRI_BERRY,Babiri Berry,Baya Baribá,11,si
+ITEM_ROSELI_BERRY,Roseli Berry,Baya Hibis,10,si
+ITEM_LIECHI_BERRY,Liechi Berry,Baya Lichi,10,si
+ITEM_GANLON_BERRY,Ganlon Berry,Baya Gonlan,11,si
+ITEM_SALAC_BERRY,Salac Berry,Baya Aslac,10,si
+ITEM_PETAYA_BERRY,Petaya Berry,Baya Yapati,11,si
+ITEM_APICOT_BERRY,Apicot Berry,Baya Aricoc,11,si
+ITEM_LANSAT_BERRY,Lansat Berry,Baya Zonlan,11,si
+ITEM_STARF_BERRY,Starf Berry,Baya Arabol,11,si
+ITEM_ENIGMA_BERRY,Enigma Berry,Baya Enigma,11,si
+ITEM_MICLE_BERRY,Micle Berry,Baya Lagro,10,si
+ITEM_CUSTAP_BERRY,Custap Berry,Baya Chiri,10,si
+ITEM_JABOCA_BERRY,Jaboca Berry,Baya Jaboca,11,si
+ITEM_ROWAP_BERRY,Rowap Berry,Baya Magua,10,si
+ITEM_KEE_BERRY,Kee Berry,Baya Biglia,11,si
+ITEM_MARANGA_BERRY,Maranga Berry,Baya Maranga,12,si
+ITEM_ENIGMA_BERRY_E_READER,Enigma Berry,Baya Enigma,11,si
+ITEM_TM_FOCUS_PUNCH,TM01,MT01,4,si
+ITEM_TM_DRAGON_CLAW,TM02,MT02,4,si
+ITEM_TM_WATER_PULSE,TM03,MT03,4,si
+ITEM_TM_CALM_MIND,TM04,MT04,4,si
+ITEM_TM_ROAR,TM05,MT05,4,si
+ITEM_TM_TOXIC,TM06,MT06,4,si
+ITEM_TM_HAIL,TM07,MT07,4,si
+ITEM_TM_BULK_UP,TM08,MT08,4,si
+ITEM_TM_BULLET_SEED,TM09,MT09,4,si
+ITEM_TM_HIDDEN_POWER,TM10,MT10,4,si
+ITEM_TM_SUNNY_DAY,TM11,MT11,4,si
+ITEM_TM_TAUNT,TM12,MT12,4,si
+ITEM_TM_ICE_BEAM,TM13,MT13,4,si
+ITEM_TM_BLIZZARD,TM14,MT14,4,si
+ITEM_TM_HYPER_BEAM,TM15,MT15,4,si
+ITEM_TM_LIGHT_SCREEN,TM16,MT16,4,si
+ITEM_TM_PROTECT,TM17,MT17,4,si
+ITEM_TM_RAIN_DANCE,TM18,MT18,4,si
+ITEM_TM_GIGA_DRAIN,TM19,MT19,4,si
+ITEM_TM_SAFEGUARD,TM20,MT20,4,si
+ITEM_TM_FRUSTRATION,TM21,MT21,4,si
+ITEM_TM_SOLAR_BEAM,TM22,MT22,4,si
+ITEM_TM_IRON_TAIL,TM23,MT23,4,si
+ITEM_TM_THUNDERBOLT,TM24,MT24,4,si
+ITEM_TM_THUNDER,TM25,MT25,4,si
+ITEM_TM_EARTHQUAKE,TM26,MT26,4,si
+ITEM_TM_RETURN,TM27,MT27,4,si
+ITEM_TM_DIG,TM28,MT28,4,si
+ITEM_TM_PSYCHIC,TM29,MT29,4,si
+ITEM_TM_SHADOW_BALL,TM30,MT30,4,si
+ITEM_TM_BRICK_BREAK,TM31,MT31,4,si
+ITEM_TM_DOUBLE_TEAM,TM32,MT32,4,si
+ITEM_TM_REFLECT,TM33,MT33,4,si
+ITEM_TM_SHOCK_WAVE,TM34,MT34,4,si
+ITEM_TM_FLAMETHROWER,TM35,MT35,4,si
+ITEM_TM_SLUDGE_BOMB,TM36,MT36,4,si
+ITEM_TM_SANDSTORM,TM37,MT37,4,si
+ITEM_TM_FIRE_BLAST,TM38,MT38,4,si
+ITEM_TM_ROCK_TOMB,TM39,MT39,4,si
+ITEM_TM_AERIAL_ACE,TM40,MT40,4,si
+ITEM_TM_TORMENT,TM41,MT41,4,si
+ITEM_TM_FACADE,TM42,MT42,4,si
+ITEM_TM_SECRET_POWER,TM43,MT43,4,si
+ITEM_TM_REST,TM44,MT44,4,si
+ITEM_TM_ATTRACT,TM45,MT45,4,si
+ITEM_TM_THIEF,TM46,MT46,4,si
+ITEM_TM_STEEL_WING,TM47,MT47,4,si
+ITEM_TM_SKILL_SWAP,TM48,MT48,4,si
+ITEM_TM_SNATCH,TM49,MT49,4,si
+ITEM_TM_OVERHEAT,TM50,MT50,4,si
+ITEM_TM51,TM51,MT51,4,si
+ITEM_TM52,TM52,MT52,4,si
+ITEM_TM53,TM53,MT53,4,si
+ITEM_TM54,TM54,MT54,4,si
+ITEM_TM55,TM55,MT55,4,si
+ITEM_TM56,TM56,MT56,4,si
+ITEM_TM57,TM57,MT57,4,si
+ITEM_TM58,TM58,MT58,4,si
+ITEM_TM59,TM59,MT59,4,si
+ITEM_TM60,TM60,MT60,4,si
+ITEM_TM61,TM61,MT61,4,si
+ITEM_TM62,TM62,MT62,4,si
+ITEM_TM63,TM63,MT63,4,si
+ITEM_TM64,TM64,MT64,4,si
+ITEM_TM65,TM65,MT65,4,si
+ITEM_TM66,TM66,MT66,4,si
+ITEM_TM67,TM67,MT67,4,si
+ITEM_TM68,TM68,MT68,4,si
+ITEM_TM69,TM69,MT69,4,si
+ITEM_TM70,TM70,MT70,4,si
+ITEM_TM71,TM71,MT71,4,si
+ITEM_TM72,TM72,MT72,4,si
+ITEM_TM73,TM73,MT73,4,si
+ITEM_TM74,TM74,MT74,4,si
+ITEM_TM75,TM75,MT75,4,si
+ITEM_TM76,TM76,MT76,4,si
+ITEM_TM77,TM77,MT77,4,si
+ITEM_TM78,TM78,MT78,4,si
+ITEM_TM79,TM79,MT79,4,si
+ITEM_TM80,TM80,MT80,4,si
+ITEM_TM81,TM81,MT81,4,si
+ITEM_TM82,TM82,MT82,4,si
+ITEM_TM83,TM83,MT83,4,si
+ITEM_TM84,TM84,MT84,4,si
+ITEM_TM85,TM85,MT85,4,si
+ITEM_TM86,TM86,MT86,4,si
+ITEM_TM87,TM87,MT87,4,si
+ITEM_TM88,TM88,MT88,4,si
+ITEM_TM89,TM89,MT89,4,si
+ITEM_TM90,TM90,MT90,4,si
+ITEM_TM91,TM91,MT91,4,si
+ITEM_TM92,TM92,MT92,4,si
+ITEM_TM93,TM93,MT93,4,si
+ITEM_TM94,TM94,MT94,4,si
+ITEM_TM95,TM95,MT95,4,si
+ITEM_TM96,TM96,MT96,4,si
+ITEM_TM97,TM97,MT97,4,si
+ITEM_TM98,TM98,MT98,4,si
+ITEM_TM99,TM99,MT99,4,si
+ITEM_TM100,TM100,MT100,5,si
+ITEM_HM_CUT,HM01,MO01,4,si
+ITEM_HM_FLY,HM02,MO02,4,si
+ITEM_HM_SURF,HM03,MO03,4,si
+ITEM_HM_STRENGTH,HM04,MO04,4,si
+ITEM_HM_FLASH,HM05,MO05,4,si
+ITEM_HM_ROCK_SMASH,HM06,MO06,4,si
+ITEM_HM_WATERFALL,HM07,MO07,4,si
+ITEM_HM_DIVE,HM08,MO08,4,si
+ITEM_OVAL_CHARM,Oval Charm,Amuleto Oval,12,si
+ITEM_SHINY_CHARM,Shiny Charm,Amuleto Iris,12,si
+ITEM_CATCHING_CHARM,Catching Charm,Amuleto Captura,15,si
+ITEM_EXP_CHARM,Exp. Charm,Amuleto Exp,11,si
+ITEM_ROTOM_CATALOG,Rotom Catalog,Catálogo Rotom,14,si
+ITEM_GRACIDEA,Gracidea,Gracídea,8,si
+ITEM_REVEAL_GLASS,Reveal Glass,Espejo Veraz,12,si
+ITEM_DNA_SPLICERS,DNA Splicers,Punta ADN,9,si
+ITEM_ZYGARDE_CUBE,Zygarde Cube,Arca de Zygarde,15,si
+ITEM_PRISON_BOTTLE,Prison Bottle,Vasija Castigo,14,si
+ITEM_N_SOLARIZER,N-Solarizer,Necrosol,8,si
+ITEM_N_LUNARIZER,N-Lunarizer,Necroluna,9,si
+ITEM_REINS_OF_UNITY,Reins of Unity,Riendas Unión,13,si
+ITEM_MEGA_RING,Mega Ring,Mega-Aro,8,si
+ITEM_Z_POWER_RING,Z-Power Ring,Superpulsera Z,14,si
+ITEM_DYNAMAX_BAND,Dynamax Band,Maximuñequera,13,si
+ITEM_BICYCLE,Bike,Bici,4,si
+ITEM_MACH_BIKE,Mach Bike,Bici de Carreras,16,si
+ITEM_ACRO_BIKE,Acro Bike,Bici Acrobática,15,si
+ITEM_OLD_ROD,Old Rod,Caña Vieja,10,si
+ITEM_GOOD_ROD,Good Rod,Caña Buena,10,si
+ITEM_SUPER_ROD,Super Rod,Supercaña,9,si
+ITEM_DOWSING_MACHINE,Dowsing Machine,Zahorí,6,si
+ITEM_TOWN_MAP,Town Map,Mapa,4,si
+ITEM_VS_SEEKER,Vs. Seeker,Buscapelea,10,si
+ITEM_TM_CASE,TM Case,Estuche de MT,13,si
+ITEM_BERRY_POUCH,Berry Pouch,Saco Bayas,10,si
+ITEM_POKEMON_BOX_LINK,{PKMN} Box Link,Caja de Pokémon,15,si
+ITEM_COIN_CASE,Coin Case,Monedero,8,si
+ITEM_POWDER_JAR,Powder Jar,Bote Polvos,11,si
+ITEM_WAILMER_PAIL,Wailmer Pail,Wailmegadera,12,si
+ITEM_POKE_RADAR,Poké Radar,Pokéradar,9,si
+ITEM_POKEBLOCK_CASE,{POKEBLOCK} Case,Tubo Pokécubos,14,si
+ITEM_SOOT_SACK,Soot Sack,Saco Hollín,11,si
+ITEM_POKE_FLUTE,Poké Flute,Poké Flauta,11,si
+ITEM_FAME_CHECKER,Fame Checker,Memorín,7,si
+ITEM_TEACHY_TV,Teachy TV,Poké Tele,9,si
+ITEM_SS_TICKET,S.S. Ticket,Ticket del Barco,16,si
+ITEM_EON_TICKET,Eon Ticket,Ticket Eón,10,si
+ITEM_MYSTIC_TICKET,Mystic Ticket,Misti-Ticket,12,si
+ITEM_AURORA_TICKET,Aurora Ticket,Ori-Ticket,10,si
+ITEM_OLD_SEA_MAP,Old Sea Map,Mapa Viejo,10,si
+ITEM_LETTER,Letter,Carta a Máximo,14,si
+ITEM_DEVON_PARTS,Devon Parts,Piezas Devon,12,si
+ITEM_GO_GOGGLES,Go-Goggles,Gafas Aislantes,15,si
+ITEM_DEVON_SCOPE,Devon Scope,Detector Devon,14,si
+ITEM_BASEMENT_KEY,Basement Key,Llave del Sótano,16,si
+ITEM_SCANNER,Scanner,Escáner,7,si
+ITEM_STORAGE_KEY,Storage Key,Llave Almacén,13,si
+ITEM_KEY_TO_ROOM_1,Key to Room 1,Ll. Habitación 1,16,si
+ITEM_KEY_TO_ROOM_2,Key to Room 2,Ll. Habitación 2,16,si
+ITEM_KEY_TO_ROOM_4,Key to Room 4,Ll. Habitación 4,16,si
+ITEM_KEY_TO_ROOM_6,Key to Room 6,Ll. Habitación 6,16,si
+ITEM_METEORITE,Meteorite,Meteorito,9,si
+ITEM_MAGMA_EMBLEM,Magma Emblem,Signo Magma,11,si
+ITEM_CONTEST_PASS,Contest Pass,Pase Concurso,13,si
+ITEM_PARCEL,Parcel,Paquete,7,si
+ITEM_SECRET_KEY,Secret Key,Llave Secreta,13,si
+ITEM_BIKE_VOUCHER,Bike Voucher,Bono Bici,9,si
+ITEM_GOLD_TEETH,Gold Teeth,Dentadura de Oro,16,si
+ITEM_CARD_KEY,Card Key,Llave Magnética,15,si
+ITEM_LIFT_KEY,Lift Key,Llave Ascensor,14,si
+ITEM_SILPH_SCOPE,Silph Scope,Visor Silph,11,si
+ITEM_TRI_PASS,Tri-Pass,Tri-Ticket,10,si
+ITEM_RAINBOW_PASS,Rainbow Pass,Iris-Ticket,11,si
+ITEM_TEA,Tea,Té,2,si
+ITEM_RUBY,Ruby,Rubí,4,si
+ITEM_SAPPHIRE,Sapphire,Zafiro,6,si
+ITEM_ABILITY_SHIELD,Ability Shield,Escudo Habilidad,16,si
+ITEM_CLEAR_AMULET,Clear Amulet,Amuleto Puro,12,si
+ITEM_PUNCHING_GLOVE,Punching Glove,Guante de Boxeo,15,si
+ITEM_COVERT_CLOAK,Covert Cloak,Capa Furtiva,12,si
+ITEM_LOADED_DICE,Loaded Dice,Dado Trucado,12,si
+ITEM_AUSPICIOUS_ARMOR,Auspicious Armor,Armadura Auspiciosa,19,si
+ITEM_BOOSTER_ENERGY,Booster Energy,Energía Potenciadora,20,si
+ITEM_BIG_BAMBOO_SHOOT,Big Bamboo Shoot,Bambú Grande,12,si
+ITEM_GIMMIGHOUL_COIN,Gimmighoul Coin,Moneda de Gimmighoul,20,si
+ITEM_LEADERS_CREST,Leader's Crest,Distintivo de Líder,19,si
+ITEM_MALICIOUS_ARMOR,Malicious Armor,Armadura Maldita,16,si
+ITEM_MIRROR_HERB,Mirror Herb,Hierba Copia,12,si
+ITEM_SCROLL_OF_DARKNESS,Scroll of Darkness,Manuscrito Sombras,18,si
+ITEM_SCROLL_OF_WATERS,Scroll of Waters,Manuscrito Aguas,16,si
+ITEM_TERA_ORB,Tera Orb,Orbe Teracristal,16,si
+ITEM_TINY_BAMBOO_SHOOT,Tiny Bamboo Shoot,Bambú Pequeño,13,si
+ITEM_BUG_TERA_SHARD,Bug Tera Shard,Teralito Bicho,14,si
+ITEM_DARK_TERA_SHARD,Dark Tera Shard,Teralito Siniestro,18,si
+ITEM_DRAGON_TERA_SHARD,Dragon Tera Shard,Teralito Dragón,15,si
+ITEM_ELECTRIC_TERA_SHARD,Electric Tera Shard,Teralito Eléctrico,18,si
+ITEM_FAIRY_TERA_SHARD,Fairy Tera Shard,Teralito Hada,13,si
+ITEM_FIGHTING_TERA_SHARD,Fighting Tera Shard,Teralito Lucha,14,si
+ITEM_FIRE_TERA_SHARD,Fire Tera Shard,Teralito Fuego,14,si
+ITEM_FLYING_TERA_SHARD,Flying Tera Shard,Teralito Volador,16,si
+ITEM_GHOST_TERA_SHARD,Ghost Tera Shard,Teralito Fantasma,17,si
+ITEM_GRASS_TERA_SHARD,Grass Tera Shard,Teralito Planta,15,si
+ITEM_GROUND_TERA_SHARD,Ground Tera Shard,Teralito Tierra,15,si
+ITEM_ICE_TERA_SHARD,Ice Tera Shard,Teralito Hielo,14,si
+ITEM_NORMAL_TERA_SHARD,Normal Tera Shard,Teralito Normal,15,si
+ITEM_POISON_TERA_SHARD,Poison Tera Shard,Teralito Veneno,15,si
+ITEM_PSYCHIC_TERA_SHARD,Psychic Tera Shard,Teralito Psíquico,17,si
+ITEM_ROCK_TERA_SHARD,Rock Tera Shard,Teralito Roca,13,si
+ITEM_STEEL_TERA_SHARD,Steel Tera Shard,Teralito Acero,14,si
+ITEM_WATER_TERA_SHARD,Water Tera Shard,Teralito Agua,13,si
+ITEM_ADAMANT_CRYSTAL,Adamant Crystal,Gran Diamansfera,16,si
+ITEM_GRISEOUS_CORE,Griseous Core,Gran Griseosfera,16,si
+ITEM_LUSTROUS_GLOBE,Lustrous Globe,Gran Lustresfera,16,si
+ITEM_BLACK_AUGURITE,Black Augurite,Mineral Negro,13,si
+ITEM_LINKING_CORD,Linking Cord,Cordón Unión,12,si
+ITEM_PEAT_BLOCK,Peat Block,Bloque de Turba,15,si
+ITEM_BERSERK_GENE,Berserk Gene,,,
+ITEM_FAIRY_FEATHER,Fairy Feather,Pluma Feérica,13,si
+ITEM_SYRUPY_APPLE,Syrupy Apple,Manzana Melosa,14,si
+ITEM_UNREMARKABLE_TEACUP,Unremarkable Teacup,Cuenco Mediocre,15,si
+ITEM_MASTERPIECE_TEACUP,Masterpiece Teacup,Cuenco Exquisito,16,si
+ITEM_CORNERSTONE_MASK,Cornerstone Mask,Máscara Cimiento,16,si
+ITEM_WELLSPRING_MASK,Wellspring Mask,Máscara Fuente,14,si
+ITEM_HEARTHFLAME_MASK,Hearthflame Mask,Máscara Horno,13,si
+ITEM_HEALTH_MOCHI,Health Mochi,Mochi Vigor,11,si
+ITEM_MUSCLE_MOCHI,Muscle Mochi,Mochi Músculo,13,si
+ITEM_RESIST_MOCHI,Resist Mochi,Mochi Aguante,13,si
+ITEM_GENIUS_MOCHI,Genius Mochi,Mochi Intelecto,15,si
+ITEM_CLEVER_MOCHI,Clever Mochi,Mochi Mente,11,si
+ITEM_SWIFT_MOCHI,Swift Mochi,Mochi Ímpetu,12,si
+ITEM_FRESH_START_MOCHI,Fresh-Start Mochi,,,
+ITEM_GLIMMERING_CHARM,Glimmering Charm,Amuleto Cristalino,18,si
+ITEM_METAL_ALLOY,Metal Alloy,Metal Compuesto,15,si
+ITEM_STELLAR_TERA_SHARD,Stellar Tera Shard,,,
+ITEM_JUBILIFE_MUFFIN,Jubilife Muffin,,,
+ITEM_REMEDY,Remedy,,,
+ITEM_FINE_REMEDY,Fine Remedy,,,
+ITEM_SUPERB_REMEDY,Superb Remedy,,,
+ITEM_AUX_EVASION,Aux Evasion,,,
+ITEM_AUX_GUARD,Aux Guard,,,
+ITEM_AUX_POWER,Aux Power,,,
+ITEM_AUX_POWERGUARD,Aux Powerguard,,,
+ITEM_CHOICE_DUMPLING,Choice Dumpling,,,
+ITEM_SWAP_SNACK,Swap Snack,,,
+ITEM_TWICE_SPICED_RADISH,Twice-Spiced Radish,,,
+ITEM_POKESHI_DOLL,Pokéshi Doll,,,
