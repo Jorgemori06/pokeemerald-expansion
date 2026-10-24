@@ -2948,6 +2948,10 @@ u8 GiveCapturedMonToPlayer(struct Pokemon *mon)
     SetMonData(mon, MON_DATA_OT_GENDER, &gSaveBlock2Ptr->playerGender);
     SetMonData(mon, MON_DATA_OT_ID, gSaveBlock2Ptr->playerTrainerId);
 
+    // Dualocke: un estático o de evento repetido o legendario va a la caja de prohibidos
+    if (Dualocke_ShouldBanMon(mon))
+        return Dualocke_SendMonToBannedBox(mon);
+
     for (i = 0; i < PARTY_SIZE; i++)
     {
         if (GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_SPECIES) == SPECIES_NONE)
@@ -2972,8 +2976,8 @@ u8 CopyMonToPC(struct Pokemon *mon)
 
     do
     {
-        // Dualocke: los Pokémon nuevos nunca van a la caja de muertos
-        for (boxPos = 0; boxPos < IN_BOX_COUNT && !Dualocke_IsDeadBox(boxNo); boxPos++)
+        // Dualocke: los Pokémon nuevos nunca van a la caja de muertos ni a la de prohibidos
+        for (boxPos = 0; boxPos < IN_BOX_COUNT && !Dualocke_IsLockedBox(boxNo); boxPos++)
         {
             struct BoxPokemon *checkingMon = GetBoxedMonPtr(boxNo, boxPos);
             if (GetBoxMonData(checkingMon, MON_DATA_SPECIES) == SPECIES_NONE)
@@ -6716,7 +6720,12 @@ u32 GiveScriptedMonToPlayer(struct Pokemon *mon, u8 slot)
 {
     u32 sentToPc;
     u32 i = 0;
-    if (slot < PARTY_SIZE)
+    if (Dualocke_ShouldBanMon(mon))
+    {
+        // Dualocke: un regalo, evento o fósil repetido o legendario va a la caja de prohibidos
+        sentToPc = Dualocke_SendMonToBannedBox(mon);
+    }
+    else if (slot < PARTY_SIZE)
     {
         CopyMon(&gParties[B_TRAINER_PLAYER][slot], mon, sizeof(struct Pokemon));
         sentToPc = MON_GIVEN_TO_PARTY;
