@@ -57,6 +57,8 @@ enum {
     BALL_THROW_UNABLE_SEMI_INVULNERABLE,
     BALL_THROW_ABLE,
     BALL_THROW_UNABLE_DISABLED_FLAG,
+    BALL_THROW_UNABLE_DUALOCKE_ZONE_USED,  // Dualocke: la zona ya tuvo su captura
+    BALL_THROW_UNABLE_DUALOCKE_NOT_COUNTED, // Dualocke: línea repetida o legendario
 };
 
 bool32 CanThrowBall(void);

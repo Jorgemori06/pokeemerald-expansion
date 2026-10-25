@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke_es.h"
 #include "dualocke.h"
 #include "malloc.h"
 #include "apprentice.h"
@@ -157,7 +158,7 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
 {
     [NATURE_HARDY] =
     {
-        .name = COMPOUND_STRING("Hardy"),
+        .name = ES(COMPOUND_STRING("Hardy"), COMPOUND_STRING("Fuerte")),
         .statUp = STAT_ATK,
         .statDown = STAT_ATK,
         .backAnim = 0,
@@ -169,7 +170,7 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
     },
     [NATURE_LONELY] =
     {
-        .name = COMPOUND_STRING("Lonely"),
+        .name = ES(COMPOUND_STRING("Lonely"), COMPOUND_STRING("Huraña")),
         .statUp = STAT_ATK,
         .statDown = STAT_DEF,
         .backAnim = 2,
@@ -181,7 +182,7 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
     },
     [NATURE_BRAVE] =
     {
-        .name = COMPOUND_STRING("Brave"),
+        .name = ES(COMPOUND_STRING("Brave"), COMPOUND_STRING("Audaz")),
         .statUp = STAT_ATK,
         .statDown = STAT_SPEED,
         .backAnim = 0,
@@ -193,7 +194,7 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
     },
     [NATURE_ADAMANT] =
     {
-        .name = COMPOUND_STRING("Adamant"),
+        .name = ES(COMPOUND_STRING("Adamant"), COMPOUND_STRING("Firme")),
         .statUp = STAT_ATK,
         .statDown = STAT_SPATK,
         .backAnim = 0,
@@ -205,7 +206,7 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
     },
     [NATURE_NAUGHTY] =
     {
-        .name = COMPOUND_STRING("Naughty"),
+        .name = ES(COMPOUND_STRING("Naughty"), COMPOUND_STRING("Pícara")),
         .statUp = STAT_ATK,
         .statDown = STAT_SPDEF,
         .backAnim = 0,
@@ -217,7 +218,7 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
     },
     [NATURE_BOLD] =
     {
-        .name = COMPOUND_STRING("Bold"),
+        .name = ES(COMPOUND_STRING("Bold"), COMPOUND_STRING("Osada")),
         .statUp = STAT_DEF,
         .statDown = STAT_ATK,
         .backAnim = 1,
@@ -229,7 +230,7 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
     },
     [NATURE_DOCILE] =
     {
-        .name = COMPOUND_STRING("Docile"),
+        .name = ES(COMPOUND_STRING("Docile"), COMPOUND_STRING("Dócil")),
         .statUp = STAT_DEF,
         .statDown = STAT_DEF,
         .backAnim = 1,
@@ -241,7 +242,7 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
     },
     [NATURE_RELAXED] =
     {
-        .name = COMPOUND_STRING("Relaxed"),
+        .name = ES(COMPOUND_STRING("Relaxed"), COMPOUND_STRING("Plácida")),
         .statUp = STAT_DEF,
         .statDown = STAT_SPEED,
         .backAnim = 1,
@@ -253,7 +254,7 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
     },
     [NATURE_IMPISH] =
     {
-        .name = COMPOUND_STRING("Impish"),
+        .name = ES(COMPOUND_STRING("Impish"), COMPOUND_STRING("Agitada")),
         .statUp = STAT_DEF,
         .statDown = STAT_SPATK,
         .backAnim = 0,
@@ -265,7 +266,7 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
     },
     [NATURE_LAX] =
     {
-        .name = COMPOUND_STRING("Lax"),
+        .name = ES(COMPOUND_STRING("Lax"), COMPOUND_STRING("Floja")),
         .statUp = STAT_DEF,
         .statDown = STAT_SPDEF,
         .backAnim = 1,
@@ -277,7 +278,7 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
     },
     [NATURE_TIMID] =
     {
-        .name = COMPOUND_STRING("Timid"),
+        .name = ES(COMPOUND_STRING("Timid"), COMPOUND_STRING("Miedosa")),
         .statUp = STAT_SPEED,
         .statDown = STAT_ATK,
         .backAnim = 2,
@@ -289,7 +290,7 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
     },
     [NATURE_HASTY] =
     {
-        .name = COMPOUND_STRING("Hasty"),
+        .name = ES(COMPOUND_STRING("Hasty"), COMPOUND_STRING("Activa")),
         .statUp = STAT_SPEED,
         .statDown = STAT_DEF,
         .backAnim = 0,
@@ -301,7 +302,7 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
     },
     [NATURE_SERIOUS] =
     {
-        .name = COMPOUND_STRING("Serious"),
+        .name = ES(COMPOUND_STRING("Serious"), COMPOUND_STRING("Seria")),
         .statUp = STAT_SPEED,
         .statDown = STAT_SPEED,
         .backAnim = 1,
@@ -313,7 +314,7 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
     },
     [NATURE_JOLLY] =
     {
-        .name = COMPOUND_STRING("Jolly"),
+        .name = ES(COMPOUND_STRING("Jolly"), COMPOUND_STRING("Alegre")),
         .statUp = STAT_SPEED,
         .statDown = STAT_SPATK,
         .backAnim = 0,
@@ -325,7 +326,7 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
     },
     [NATURE_NAIVE] =
     {
-        .name = COMPOUND_STRING("Naive"),
+        .name = ES(COMPOUND_STRING("Naive"), COMPOUND_STRING("Ingenua")),
         .statUp = STAT_SPEED,
         .statDown = STAT_SPDEF,
         .backAnim = 0,
@@ -337,7 +338,7 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
     },
     [NATURE_MODEST] =
     {
-        .name = COMPOUND_STRING("Modest"),
+        .name = ES(COMPOUND_STRING("Modest"), COMPOUND_STRING("Modesta")),
         .statUp = STAT_SPATK,
         .statDown = STAT_ATK,
         .backAnim = 2,
@@ -349,7 +350,7 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
     },
     [NATURE_MILD] =
     {
-        .name = COMPOUND_STRING("Mild"),
+        .name = ES(COMPOUND_STRING("Mild"), COMPOUND_STRING("Afable")),
         .statUp = STAT_SPATK,
         .statDown = STAT_DEF,
         .backAnim = 2,
@@ -361,7 +362,7 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
     },
     [NATURE_QUIET] =
     {
-        .name = COMPOUND_STRING("Quiet"),
+        .name = ES(COMPOUND_STRING("Quiet"), COMPOUND_STRING("Mansa")),
         .statUp = STAT_SPATK,
         .statDown = STAT_SPEED,
         .backAnim = 2,
@@ -373,7 +374,7 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
     },
     [NATURE_BASHFUL] =
     {
-        .name = COMPOUND_STRING("Bashful"),
+        .name = ES(COMPOUND_STRING("Bashful"), COMPOUND_STRING("Tímida")),
         .statUp = STAT_SPATK,
         .statDown = STAT_SPATK,
         .backAnim = 2,
@@ -385,7 +386,7 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
     },
     [NATURE_RASH] =
     {
-        .name = COMPOUND_STRING("Rash"),
+        .name = ES(COMPOUND_STRING("Rash"), COMPOUND_STRING("Alocada")),
         .statUp = STAT_SPATK,
         .statDown = STAT_SPDEF,
         .backAnim = 1,
@@ -397,7 +398,7 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
     },
     [NATURE_CALM] =
     {
-        .name = COMPOUND_STRING("Calm"),
+        .name = ES(COMPOUND_STRING("Calm"), COMPOUND_STRING("Serena")),
         .statUp = STAT_SPDEF,
         .statDown = STAT_ATK,
         .backAnim = 1,
@@ -409,7 +410,7 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
     },
     [NATURE_GENTLE] =
     {
-        .name = COMPOUND_STRING("Gentle"),
+        .name = ES(COMPOUND_STRING("Gentle"), COMPOUND_STRING("Amable")),
         .statUp = STAT_SPDEF,
         .statDown = STAT_DEF,
         .backAnim = 2,
@@ -421,7 +422,7 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
     },
     [NATURE_SASSY] =
     {
-        .name = COMPOUND_STRING("Sassy"),
+        .name = ES(COMPOUND_STRING("Sassy"), COMPOUND_STRING("Grosera")),
         .statUp = STAT_SPDEF,
         .statDown = STAT_SPEED,
         .backAnim = 1,
@@ -433,7 +434,7 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
     },
     [NATURE_CAREFUL] =
     {
-        .name = COMPOUND_STRING("Careful"),
+        .name = ES(COMPOUND_STRING("Careful"), COMPOUND_STRING("Cauta")),
         .statUp = STAT_SPDEF,
         .statDown = STAT_SPATK,
         .backAnim = 2,
@@ -445,7 +446,7 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
     },
     [NATURE_QUIRKY] =
     {
-        .name = COMPOUND_STRING("Quirky"),
+        .name = ES(COMPOUND_STRING("Quirky"), COMPOUND_STRING("Rara")),
         .statUp = STAT_SPDEF,
         .statDown = STAT_SPDEF,
         .backAnim = 1,
@@ -2947,6 +2948,10 @@ u8 GiveCapturedMonToPlayer(struct Pokemon *mon)
     SetMonData(mon, MON_DATA_OT_GENDER, &gSaveBlock2Ptr->playerGender);
     SetMonData(mon, MON_DATA_OT_ID, gSaveBlock2Ptr->playerTrainerId);
 
+    // Dualocke: un estático o de evento repetido o legendario va a la caja de prohibidos
+    if (Dualocke_ShouldBanMon(mon))
+        return Dualocke_SendMonToBannedBox(mon);
+
     for (i = 0; i < PARTY_SIZE; i++)
     {
         if (GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_SPECIES) == SPECIES_NONE)
@@ -2971,8 +2976,8 @@ u8 CopyMonToPC(struct Pokemon *mon)
 
     do
     {
-        // Dualocke: los Pokémon nuevos nunca van a la caja de muertos
-        for (boxPos = 0; boxPos < IN_BOX_COUNT && !Dualocke_IsDeadBox(boxNo); boxPos++)
+        // Dualocke: los Pokémon nuevos nunca van a la caja de muertos ni a la de prohibidos
+        for (boxPos = 0; boxPos < IN_BOX_COUNT && !Dualocke_IsLockedBox(boxNo); boxPos++)
         {
             struct BoxPokemon *checkingMon = GetBoxedMonPtr(boxNo, boxPos);
             if (GetBoxMonData(checkingMon, MON_DATA_SPECIES) == SPECIES_NONE)
@@ -4448,7 +4453,7 @@ enum Species GetEvolutionTargetSpecies(struct Pokemon *mon, enum EvolutionMode m
                 break;
             }
 
-            if (conditionsMet && DoesMonMeetAdditionalConditions(mon, evolutions[i].params, NULL, PARTY_SIZE, canStopEvo, evoState))
+            if (conditionsMet && !Dualocke_IsEvolutionBlocked(mon, evolutions[i].targetSpecies) && DoesMonMeetAdditionalConditions(mon, evolutions[i].params, NULL, PARTY_SIZE, canStopEvo, evoState))
             {
                 // All checks passed, so stop checking the rest of the evolutions.
                 // This is different from vanilla where the loop continues.
@@ -4472,7 +4477,7 @@ enum Species GetEvolutionTargetSpecies(struct Pokemon *mon, enum EvolutionMode m
                 break;
             }
 
-            if (conditionsMet && DoesMonMeetAdditionalConditions(mon, evolutions[i].params, tradePartner, PARTY_SIZE, canStopEvo, evoState))
+            if (conditionsMet && !Dualocke_IsEvolutionBlocked(mon, evolutions[i].targetSpecies) && DoesMonMeetAdditionalConditions(mon, evolutions[i].params, tradePartner, PARTY_SIZE, canStopEvo, evoState))
             {
                 // All checks passed, so stop checking the rest of the evolutions.
                 // This is different from vanilla where the loop continues.
@@ -4498,7 +4503,7 @@ enum Species GetEvolutionTargetSpecies(struct Pokemon *mon, enum EvolutionMode m
                 break;
             }
 
-            if (conditionsMet && DoesMonMeetAdditionalConditions(mon, evolutions[i].params, NULL, PARTY_SIZE, canStopEvo, evoState))
+            if (conditionsMet && !Dualocke_IsEvolutionBlocked(mon, evolutions[i].targetSpecies) && DoesMonMeetAdditionalConditions(mon, evolutions[i].params, NULL, PARTY_SIZE, canStopEvo, evoState))
             {
                 // All checks passed, so stop checking the rest of the evolutions.
                 // This is different from vanilla where the loop continues.
@@ -4525,7 +4530,7 @@ enum Species GetEvolutionTargetSpecies(struct Pokemon *mon, enum EvolutionMode m
                 break;
             }
 
-            if (conditionsMet && DoesMonMeetAdditionalConditions(mon, evolutions[i].params, NULL, evolutionItem, canStopEvo, evoState))
+            if (conditionsMet && !Dualocke_IsEvolutionBlocked(mon, evolutions[i].targetSpecies) && DoesMonMeetAdditionalConditions(mon, evolutions[i].params, NULL, evolutionItem, canStopEvo, evoState))
             {
                 // All checks passed, so stop checking the rest of the evolutions.
                 // This is different from vanilla where the loop continues.
@@ -4551,7 +4556,7 @@ enum Species GetEvolutionTargetSpecies(struct Pokemon *mon, enum EvolutionMode m
                 break;
             }
 
-            if (conditionsMet && DoesMonMeetAdditionalConditions(mon, evolutions[i].params, NULL, PARTY_SIZE, canStopEvo, evoState))
+            if (conditionsMet && !Dualocke_IsEvolutionBlocked(mon, evolutions[i].targetSpecies) && DoesMonMeetAdditionalConditions(mon, evolutions[i].params, NULL, PARTY_SIZE, canStopEvo, evoState))
             {
                 // All checks passed, so stop checking the rest of the evolutions.
                 // This is different from vanilla where the loop continues.
@@ -4570,7 +4575,7 @@ enum Species GetEvolutionTargetSpecies(struct Pokemon *mon, enum EvolutionMode m
                 continue;
             if (evolutions[i].param != evolutionItem)
                 continue;
-            if (DoesMonMeetAdditionalConditions(mon, evolutions[i].params, NULL, PARTY_SIZE, canStopEvo, evoState))
+            if (!Dualocke_IsEvolutionBlocked(mon, evolutions[i].targetSpecies) && DoesMonMeetAdditionalConditions(mon, evolutions[i].params, NULL, PARTY_SIZE, canStopEvo, evoState))
             {
                 // All checks passed, so stop checking the rest of the evolutions.
                 // This is different from vanilla where the loop continues.
@@ -4587,7 +4592,7 @@ enum Species GetEvolutionTargetSpecies(struct Pokemon *mon, enum EvolutionMode m
             if (evolutions[i].method != EVO_SPIN)
                 continue;
 
-            if (DoesMonMeetAdditionalConditions(mon, evolutions[i].params, NULL, PARTY_SIZE, canStopEvo, evoState))
+            if (!Dualocke_IsEvolutionBlocked(mon, evolutions[i].targetSpecies) && DoesMonMeetAdditionalConditions(mon, evolutions[i].params, NULL, PARTY_SIZE, canStopEvo, evoState))
             {
                 targetSpecies = evolutions[i].targetSpecies;
                 break;
@@ -6715,7 +6720,12 @@ u32 GiveScriptedMonToPlayer(struct Pokemon *mon, u8 slot)
 {
     u32 sentToPc;
     u32 i = 0;
-    if (slot < PARTY_SIZE)
+    if (Dualocke_ShouldBanMon(mon))
+    {
+        // Dualocke: un regalo, evento o fósil repetido o legendario va a la caja de prohibidos
+        sentToPc = Dualocke_SendMonToBannedBox(mon);
+    }
+    else if (slot < PARTY_SIZE)
     {
         CopyMon(&gParties[B_TRAINER_PLAYER][slot], mon, sizeof(struct Pokemon));
         sentToPc = MON_GIVEN_TO_PARTY;

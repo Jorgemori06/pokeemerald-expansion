@@ -113,7 +113,10 @@
 
   "objetos": {
     "suelo": "aleatorios_con_megapiedras",
-    "excluir": ["Pulsera Z", "cristales Z", "Maximuñequera", "Maxisetas", "Orbe Teracristal", "teralitas"],
+    "excluir": ["Pulsera Z", "cristales Z", "Maximuñequera", "Maxisetas", "Orbe Teracristal", "teralitas",
+                "Gen Furia", "Mochi Reinicio", "Bollo Jubileo", "Remedio", "Remedio Fino", "Remedio Excelso",
+                "Aux. Ataque", "Aux. Defensa", "Aux. Evasión", "Aux. Total", "Dango Elección",
+                "Tentempié Cambio", "Rábano Picante", "Muñeca Pokéshi"],
     "recogida": "aleatorios",
     "intercambios_internos": "totalmente_aleatorios"
   }

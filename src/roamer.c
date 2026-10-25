@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke_aleatorio.h"
 #include "event_data.h"
 #include "ow_abilities.h"
 #include "pokemon.h"
@@ -144,7 +145,7 @@ bool8 TryAddRoamer(enum Species species, u8 level)
     if (index < ROAMER_COUNT)
     {
         // Create the roamer and stop searching
-        CreateInitialRoamerMon(index, species, level);
+        CreateInitialRoamerMon(index, Dualocke_EstaticoAleatorio(species), level); // Dualocke: errantes del randomizer
         return TRUE;
     }
 

@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke_es.h"
 #include "item_use.h"
 #include "battle.h"
 #include "battle_anim.h"
@@ -10,6 +11,7 @@
 #include "bike.h"
 #include "coins.h"
 #include "data.h"
+#include "dualocke.h"
 #include "event_data.h"
 #include "event_object_lock.h"
 #include "event_object_movement.h"
@@ -82,20 +84,20 @@ static void CB2_OpenPokeblockFromBag(void);
 static void ItemUseOnFieldCB_Honey(u8 taskId);
 static bool32 IsValidLocationForVsSeeker(void);
 
-static const u8 sText_CantDismountBike[] = _("You can't dismount your BIKE here.{PAUSE_UNTIL_PRESS}");
-static const u8 sText_ItemFinderNearby[] = _("Huh?\nThe ITEMFINDER's responding!\pThere's an item buried around here!{PAUSE_UNTIL_PRESS}");
-static const u8 sText_ItemFinderOnTop[] = _("Oh!\nThe ITEMFINDER's shaking wildly!{PAUSE_UNTIL_PRESS}");
-static const u8 sText_ItemFinderNothing[] = _("… … … …Nope!\nThere's no response.{PAUSE_UNTIL_PRESS}");
-static const u8 sText_CoinCase[] = _("Your COINS:\n{STR_VAR_1}{PAUSE_UNTIL_PRESS}");
-static const u8 sText_PowderQty[] = _("POWDER QTY: {STR_VAR_1}{PAUSE_UNTIL_PRESS}");
-static const u8 sText_BootedUpTM[] = _("Booted up a TM.");
-static const u8 sText_BootedUpHM[] = _("Booted up an HM.");
-static const u8 sText_TMHMContainedVar1[] = _("It contained\n{STR_VAR_1}.\pTeach {STR_VAR_1}\nto a POKéMON?");
-static const u8 sText_UsedVar2WildLured[] = _("{PLAYER} used the\n{STR_VAR_2}.\pWild POKéMON will be lured.{PAUSE_UNTIL_PRESS}");
-static const u8 sText_UsedVar2WildRepelled[] = _("{PLAYER} used the\n{STR_VAR_2}.\pWild POKéMON will be repelled.{PAUSE_UNTIL_PRESS}");
-static const u8 sText_PlayedPokeFluteCatchy[] = _("Played the POKé FLUTE.\pNow, that's a catchy tune!{PAUSE_UNTIL_PRESS}");
-static const u8 sText_PlayedPokeFlute[] = _("Played the POKé FLUTE.");
-static const u8 sText_PokeFluteAwakenedMon[] = _("The POKé FLUTE awakened sleeping\nPOKéMON.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_CantDismountBike[] = ES(_("You can't dismount your BIKE here.{PAUSE_UNTIL_PRESS}"), _("Aquí no puedes bajarte de la BICI.{PAUSE_UNTIL_PRESS}"));
+static const u8 sText_ItemFinderNearby[] = ES(_("Huh?\nThe ITEMFINDER's responding!\pThere's an item buried around here!{PAUSE_UNTIL_PRESS}"), _("¿Eh?\n¡El BUSCAOBJETOS reacciona!\p¡Hay un objeto enterrado cerca!{PAUSE_UNTIL_PRESS}"));
+static const u8 sText_ItemFinderOnTop[] = ES(_("Oh!\nThe ITEMFINDER's shaking wildly!{PAUSE_UNTIL_PRESS}"), _("¡Oh!\n¡El BUSCAOBJETOS vibra muchísimo!{PAUSE_UNTIL_PRESS}"));
+static const u8 sText_ItemFinderNothing[] = ES(_("… … … …Nope!\nThere's no response.{PAUSE_UNTIL_PRESS}"), _("… … … …¡Nada!\nNo reacciona.{PAUSE_UNTIL_PRESS}"));
+static const u8 sText_CoinCase[] = ES(_("Your COINS:\n{STR_VAR_1}{PAUSE_UNTIL_PRESS}"), _("Tus FICHAS:\n{STR_VAR_1}{PAUSE_UNTIL_PRESS}"));
+static const u8 sText_PowderQty[] = ES(_("POWDER QTY: {STR_VAR_1}{PAUSE_UNTIL_PRESS}"), _("POLVO: {STR_VAR_1}{PAUSE_UNTIL_PRESS}"));
+static const u8 sText_BootedUpTM[] = ES(_("Booted up a TM."), _("Has encendido una MT."));
+static const u8 sText_BootedUpHM[] = ES(_("Booted up an HM."), _("Has encendido una MO."));
+static const u8 sText_TMHMContainedVar1[] = ES(_("It contained\n{STR_VAR_1}.\pTeach {STR_VAR_1}\nto a POKéMON?"), _("Contiene\n{STR_VAR_1}.\p¿Enseñar {STR_VAR_1}\na un POKéMON?"));
+static const u8 sText_UsedVar2WildLured[] = ES(_("{PLAYER} used the\n{STR_VAR_2}.\pWild POKéMON will be lured.{PAUSE_UNTIL_PRESS}"), _("{PLAYER} ha usado\n{STR_VAR_2}.\pAtraerá a POKéMON salvajes.{PAUSE_UNTIL_PRESS}"));
+static const u8 sText_UsedVar2WildRepelled[] = ES(_("{PLAYER} used the\n{STR_VAR_2}.\pWild POKéMON will be repelled.{PAUSE_UNTIL_PRESS}"), _("{PLAYER} ha usado\n{STR_VAR_2}.\pAhuyentará a POKéMON salvajes.{PAUSE_UNTIL_PRESS}"));
+static const u8 sText_PlayedPokeFluteCatchy[] = ES(_("Played the POKé FLUTE.\pNow, that's a catchy tune!{PAUSE_UNTIL_PRESS}"), _("Has tocado la POKéFLAUTA.\p¡Qué melodía tan pegadiza!{PAUSE_UNTIL_PRESS}"));
+static const u8 sText_PlayedPokeFlute[] = ES(_("Played the POKé FLUTE."), _("Has tocado la POKéFLAUTA."));
+static const u8 sText_PokeFluteAwakenedMon[] = ES(_("The POKé FLUTE awakened sleeping\nPOKéMON.{PAUSE_UNTIL_PRESS}"), _("La POKéFLAUTA ha despertado a\nlos POKéMON dormidos.{PAUSE_UNTIL_PRESS}"));
 
 // EWRAM variables
 EWRAM_DATA static TaskFunc sItemUseOnFieldCB = NULL;
@@ -1130,6 +1132,10 @@ static u32 GetBallThrowableState(void)
         return BALL_THROW_UNABLE_SEMI_INVULNERABLE;
     else if (FlagGet(WE_FLAG_NO_CATCHING) || !IsAllowedToUseBag())
         return BALL_THROW_UNABLE_DISABLED_FLAG;
+    else if (Dualocke_GetCurrentEncounter() == DUALOCKE_ENCOUNTER_ZONE_USED)
+        return BALL_THROW_UNABLE_DUALOCKE_ZONE_USED;
+    else if (!Dualocke_CanCatchCurrentEncounter())
+        return BALL_THROW_UNABLE_DUALOCKE_NOT_COUNTED;
 
     return BALL_THROW_ABLE;
 }
@@ -1139,10 +1145,12 @@ bool32 CanThrowBall(void)
     return (GetBallThrowableState() == BALL_THROW_ABLE);
 }
 
-static const u8 sText_CantThrowPokeBall_TwoMons[] = _("Cannot throw a ball!\nThere are two Pokémon out there!\p");
-static const u8 sText_CantThrowPokeBall_SemiInvulnerable[] = _("Cannot throw a ball!\nThere's no Pokémon in sight!\p");
-static const u8 sText_CantThrowPokeBall_Disabled[] = _("POKé BALLS cannot be used\nright now!\p");
-static const u8 sText_XItemsBanned[] = _("The locke rules don't allow\nusing this item in battle!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_CantThrowPokeBall_TwoMons[] = ES(_("Cannot throw a ball!\nThere are two Pokémon out there!\p"), _("¡No puedes lanzar una Ball!\n¡Hay dos Pokémon!\p"));
+static const u8 sText_CantThrowPokeBall_SemiInvulnerable[] = ES(_("Cannot throw a ball!\nThere's no Pokémon in sight!\p"), _("¡No puedes lanzar una Ball!\n¡No se ve ningún Pokémon!\p"));
+static const u8 sText_CantThrowPokeBall_Disabled[] = ES(_("POKé BALLS cannot be used\nright now!\p"), _("¡Ahora no se pueden usar\nPOKé BALLS!\p"));
+static const u8 sText_CantThrowPokeBall_ZoneUsed[] = ES(_("You already had this area's\nencounter! You can't catch it.\p"), _("¡Ya tuviste el encuentro de esta\nzona! No puedes capturarlo.\p"));
+static const u8 sText_CantThrowPokeBall_NotCounted[] = ES(_("This Pokémon doesn't count for\nthis area. You can't catch it.\p"), _("Este Pokémon no cuenta para esta\nzona. No puedes capturarlo.\p"));
+static const u8 sText_XItemsBanned[] = ES(_("The locke rules don't allow\nusing this item in battle!{PAUSE_UNTIL_PRESS}"), _("¡Las reglas del locke no dejan\nusar este objeto en combate!{PAUSE_UNTIL_PRESS}"));
 
 static void ItemUseInBattle_ShowPartyMenu(u8 taskId)
 {
@@ -1266,6 +1274,14 @@ bool32 CannotUseItemsInBattle(enum Item itemId, struct Pokemon *mon)
             break;
         case BALL_THROW_UNABLE_DISABLED_FLAG:
             failStr = sText_CantThrowPokeBall_Disabled;
+            cannotUse = TRUE;
+            break;
+        case BALL_THROW_UNABLE_DUALOCKE_ZONE_USED:
+            failStr = sText_CantThrowPokeBall_ZoneUsed;
+            cannotUse = TRUE;
+            break;
+        case BALL_THROW_UNABLE_DUALOCKE_NOT_COUNTED:
+            failStr = sText_CantThrowPokeBall_NotCounted;
             cannotUse = TRUE;
             break;
         }

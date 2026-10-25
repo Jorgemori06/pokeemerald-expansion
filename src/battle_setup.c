@@ -411,6 +411,10 @@ static void DoStandardWildBattle(bool32 isDouble)
         VarSet(VAR_TEMP_E, 0);
         gBattleTypeFlags |= BATTLE_TYPE_PYRAMID;
     }
+    else
+    {
+        Dualocke_SetRandomEncounter(); // Encuentro aleatorio: cuenta para la captura de la zona
+    }
     CreateBattleStartTask(GetWildBattleTransition(), 0);
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_WILD_BATTLES);
@@ -430,6 +434,10 @@ void DoStandardWildBattle_Debug(void)
         VarSet(VAR_TEMP_PLAYING_PYRAMID_MUSIC, 0);
         gBattleTypeFlags |= BATTLE_TYPE_PYRAMID;
     }
+    else
+    {
+        Dualocke_SetRandomEncounter();
+    }
     CreateBattleStartTask_Debug(GetWildBattleTransition(), 0);
     //IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     //IncrementGameStat(GAME_STAT_WILD_BATTLES);
@@ -444,6 +452,7 @@ void BattleSetup_StartRoamerBattle(void)
     StopPlayerAvatar();
     gMain.savedCallback = CB2_EndWildBattle;
     gBattleTypeFlags = BATTLE_TYPE_ROAMER;
+    Dualocke_SetRandomEncounter(); // Los errantes salen como encuentros aleatorios (y son legendarios)
     CreateBattleStartTask(GetWildBattleTransition(), 0);
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_WILD_BATTLES);
@@ -458,6 +467,7 @@ static void DoSafariBattle(void)
     StopPlayerAvatar();
     gMain.savedCallback = CB2_EndSafariBattle;
     gBattleTypeFlags = BATTLE_TYPE_SAFARI;
+    Dualocke_SetRandomEncounter();
     CreateBattleStartTask(GetWildBattleTransition(), 0);
 }
 

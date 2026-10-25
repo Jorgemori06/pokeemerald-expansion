@@ -4,7 +4,7 @@ Este archivo resume **todo lo decidido y hecho** en el proyecto, para que cualqu
 
 > **Si eres Claude y te acaban de pedir que leas este archivo:** léelo entero antes de tocar nada. Al final hay una sección con instrucciones de trabajo para ti. Cuando cambies algo importante del proyecto, actualiza también este archivo en el mismo commit.
 
-Última actualización: 23/10/2026.
+Última actualización: 25/10/2026.
 
 ---
 
@@ -80,6 +80,14 @@ git pull
 make -j$(nproc)
 ```
 
+### Partida randomizada (semilla)
+
+- **`make`** compila una partida **randomizada**. La primera vez se inventa una semilla al azar y la guarda en `dualocke_semilla.txt`, en la carpeta del repo (no se sube a GitHub). Las siguientes veces la reutiliza: **actualizar el juego (`git pull` + `make`) no cambia los Pokémon de tu partida en curso**.
+- **`make nueva-partida`**: otra semilla al azar, así que la partida es nueva. La ROM nueva sustituye a la anterior; si quieres conservar la vieja, renombra antes la `.gba` y la `.sav`.
+- `make SEED=loquesea`: una semilla concreta, para regenerar una partida (está en `dualocke_semilla.txt`).
+- `make SIN_RANDOM=1`: el juego sin randomizar, para probar cosas. `make check` (los tests) nunca randomiza.
+- Lo que ha salido (el "solucionario") queda en `build/dualocke/solucionario.json`. **No lo abras** si no quieres destriparte la partida.
+
 ### Emulador
 
 **mGBA** (mgba.io). Es preciso y permite conectar dos instancias por cable link. No usar MyBoy. melonDS, DeSmuME y Citra no sirven aquí (son de DS/3DS).
@@ -109,6 +117,25 @@ Estas son las reglas que usaban en Platino. La idea es mantenerlas lo más parec
     - Los Pokémon de **regalo, evento o fósil** (inicial, Beldum, fósiles, los que dan los NPCs…) **no gastan la captura de la zona**.
     - Si un regalo/evento/fósil es **repetido o legendario**, va a una **caja de prohibidos** del PC. Los repetidos se quedan ahí **hasta que muere el de su línea que ya tenías**, y entonces se pueden usar. Los legendarios se quedan bloqueados.
     - Los **shiny** se pueden capturar y usar siempre, aunque sean repetidos o legendarios, y **no gastan** la captura de la zona (confirmado por Jorge).
+    - **Líneas con ramas** (decidido por Jorge el 24/10/2026): cada evolución final distinta es una **rama** (Gardevoir y Gallade, cada eeveelución, Beautifly y Dustox…). Se puede tener un Pokémon de cada rama: si tienes Gardevoir, un Ralts, Kirlia o Gallade sí cuentan, pero el nuevo **no puede evolucionar a la rama que ya tienes**. Un Pokémon que **todavía no ha elegido rama** (Ralts, Kirlia, Eevee…) ocupa **toda la línea** hasta que evolucione a una rama concreta. Las **formas regionales** cuentan como su especie (si tienes Pikachu, un Raichu de Alola es repetido). Si el que tenías muere, su rama se libera, también para evolucionar.
+    - **Antes de que te den las primeras Poké Balls** (en el laboratorio de Abedul, al recibir la Pokédex) no cuenta ningún encuentro. Después sí, aunque no tengas Balls porque se te olvidó comprarlas (decidido por Jorge el 24/10/2026).
+  - **Cómo funciona en el juego (hecho, Jorge, 24-25/10/2026):**
+    - Solo cuentan los **encuentros aleatorios**: hierba, cuevas, surf, pesca, Golpe Roca, Dulce Aroma, Safari y los errantes. Los combates de evento y los estáticos (Kecleon, Electrode, legendarios…) no gastan la zona y se pueden capturar.
+    - Al **empezar** el combate con el primer salvaje válido, la zona queda gastada, pase lo que pase (lo capturas, huyes, lo debilitas o pierdes).
+    - Al empezar el combate sale un aviso: "¡Es el primer Pokémon de esta zona!…", "¡Es variocolor!…", o, si no cuenta, por qué (repetido o legendario).
+    - Si no se puede capturar, las Balls (y la Safari Ball) dan un mensaje y no se gastan. El combate es normal: puedes huir o debilitarlo.
+    - **Ramas:** las evoluciones finales a las que puede llegar cada especie, contando las formas regionales y las megas como su especie base. Un Pokémon con una sola rama posible (Gardevoir, Silcoon, Pikachu…) ocupa esa rama; uno con varias (Ralts, Kirlia, Eevee…) ocupa toda la línea. Un salvaje es repetido si tienes vivo uno de su línea sin rama elegida, o si ya tienes todas las ramas a las que puede llegar.
+    - **Evolución bloqueada:** un Pokémon del equipo no evoluciona a una especie cuyas ramas ya tienes todas con otros Pokémon vivos. Si sube de nivel, simplemente no evoluciona; con una piedra, sale "no tendrá efecto" y no se gasta. Es `Dualocke_IsEvolutionBlocked` en `src/dualocke.c`, llamado desde `GetEvolutionTargetSpecies` (`src/pokemon.c`).
+    - Las zonas son las secciones del mapa regional: cada ruta, ciudad, cueva… La Zona Safari es una sola zona. Las zonas submarinas (Buceo) tienen nombre propio y son zonas aparte.
+    - **Caja de prohibidos** (la caja 13, "VETADOS"; la 14 es la de muertos): los Pokémon que no pasan por la regla de la zona y son **repetidos o legendarios** van ahí en vez de al equipo o al PC. Son:
+      - regalos, eventos y fósiles;
+      - estáticos capturados (Kecleon, Electrode, legendarios…);
+      - **huevos**, al eclosionar (decidido por Jorge el 25/10/2026: se aplica la regla de los eventos; criar no se prohíbe, se controla por honor);
+      - **intercambios con NPCs** (decidido por Jorge el 25/10/2026: cuentan como regalo).
+    - En la caja de prohibidos solo se puede ver el resumen y no se puede dejar nada. Un **repetido se desbloquea solo** cuando deja de serlo (muere el de su línea que tenías) y entonces se puede sacar o mover. Los **legendarios** se quedan bloqueados. Los **variocolor** nunca van ahí.
+    - Los de la caja de prohibidos no cuentan como "línea que ya tienes".
+    - Al recibirlo sale el mensaje de siempre de "se ha enviado a la caja VETADOS".
+    - Nunca deja el equipo vacío: si el huevo o el intercambio es tu único Pokémon, se queda en el equipo.
 - **Nick Clause:** todos los Pokémon llevan mote.
 - **Items Clause:**
   - No se pueden comprar objetos curativos ni Objetos X en las tiendas.
@@ -131,9 +158,9 @@ Estas son las reglas que usaban en Platino. La idea es mantenerlas lo más parec
 | Mote obligatorio | Forzar la pantalla de mote al capturar, al recibir regalos y al eclosionar huevos | Poco | **Hecho** |
 | No comprar curativos ni Objetos X | Quitarlos de las tiendas | Poco | **Hecho** |
 | No usar Objetos X en combate | Bloquearlos en combate | Poco | **Hecho** |
-| Una compra por objeto (salvo Balls, Repelentes, Bayas, Caramelos) | Limitar compras en tiendas | Medio | Pendiente |
-| 20 vidas + caja de muertos | Contador de vidas en el menú de pausa y caja bloqueada | Medio | **Hecho** (aviso al morir pendiente) |
-| Primera captura por ruta + dupes + sin legendarios + shiny libre + caja de prohibidos | El juego bloquea lanzar Balls cuando no se puede capturar; los regalos repetidos/legendarios van a la caja de prohibidos | Medio | Pendiente (reglas cerradas, ver arriba) |
+| Una compra por objeto (salvo Balls, Repelentes, Bayas, Caramelos) | Limitar compras en tiendas | Medio | **Hecho** (Miguel, 24/10/2026) |
+| 20 vidas + caja de muertos | Contador de vidas en el menú de pausa y caja bloqueada | Medio | **Hecho** (aviso al morir incluido) |
+| Primera captura por ruta + dupes + sin legendarios + shiny libre + caja de prohibidos | El juego bloquea lanzar Balls cuando no se puede capturar; los regalos repetidos/legendarios van a la caja de prohibidos | Medio | **Hecho** |
 | Victoria, combates en Showdown, capturas extra | Fuera del juego, por honor | — | — |
 | No farmear | Por honor | — | — |
 
@@ -171,6 +198,12 @@ Regla general: **el as de cada jefe va exactamente al nivel del cap**, el resto 
   - **Postgame** (S.S. Marea, Cueva de Máximo en la Cascada Meteoro, Túnel del Desierto, Cueva Ancestral, Cueva Alterada, cuevas Terra y Marina): entrenadores a **100** y salvajes a **97**.
   - **Casa Trampa:** la prueba 1 al tramo 3, y cada prueba N al tramo de la medalla N+1 que la abre (la 8, a la Liga). No cuenta para la banda de su tramo, así que no mueve los niveles de la historia principal.
   - **No se tocan:** el Frente Batalla y la Cima Entrenador, que tienen su propio sistema de niveles.
+- **Estáticos y regalos (hecho, Miguel, 24/10/2026):**
+  - **Estáticos normales** (Kecleon de las rutas 119-120, Voltorb de Nuevo Malvalona, Electrode de la Guarida Aqua): como jefes de zona, es decir, entrenadores de su mapa + 3, sin pasar del cap. Quedan a 58, 56 y 65.
+  - **Legendarios:** al cap de su tramo. Los Regis a 84 (hace falta Buceo, tramo 8); Rayquaza, Groudon y Kyogre a 100 (postgame). Sudowoodo del Frente Batalla, también a 100.
+  - **Regalos** (Castform, fósiles, Beldum, iniciales de Johto, huevo de Wynaut): se quedan con su nivel original, para entrenarlos (con Caramelos Raros a 1 ₽).
+  - Lo hace `reescalar_niveles.py` (tabla `ESTATICOS`).
+  - **Captura de estáticos (decidido, falta implementarlo encima del PR #17):** de los estáticos normales solo se puede capturar el primero de cada tipo (un Kecleon, un Voltorb, un Electrode), sin gastar la zona.
 - **Evoluciones de los entrenadores normales (hecho):** `tools/dualocke/evolucionar_entrenadores.py` evoluciona sus Pokémon según el nivel. Las evoluciones por nivel van a su nivel normal; las que no son por nivel (piedra, amistad…) van a 30 la primera y a 40 la segunda. Los tres scripts se lanzan en orden: `reescalar_niveles.py`, `equipos_jefes.py` y `evolucionar_entrenadores.py`.
 - El randomizer **no debe tocar los niveles ni el tamaño de los equipos**: solo especies, movimientos, habilidades y objetos. Al cambiar especies, debe mantener la regla de evolucionar según el nivel.
 
@@ -179,9 +212,10 @@ Regla general: **el as de cada jefe va exactamente al nivel del cap**, el resto 
 ### Megaevoluciones
 
 - Las megas están activadas en el motor, incluidas las de Z-A (`P_MEGA_EVOLUTIONS`, `P_GEN_9_MEGA_EVOLUTIONS`).
-- Para megaevolucionar, el jugador necesita el objeto **Aro Mega** (`ITEM_MEGA_RING`) en la mochila (lo comprueba `src/battle_util.c`).
+- Para megaevolucionar, el jugador necesita el objeto **Mega-Aro** (`ITEM_MEGA_RING`) en la mochila (lo comprueba `src/battle_util.c`).
 - **Cómo se consigue el aro (decidido el 23/10/2026):** combate con **Máximo en la Ruta 120**, justo antes del gym 6 (Alana). Al ganar, te da el aro. Encaja con la historia (en ROZA Máximo está metido en lo de las megas) y llega en un punto equilibrado: equipo ya formado, cap 62, toda la segunda mitad del juego para usarlas.
-- **Equipo de Máximo (decidido por Miguel, 23/10/2026):** entrenador `TRAINER_STEVEN_ROUTE_120`, todo a **nivel 62** (el cap del tramo). Lleva Aggron, Aegislash, Excadrill, Mawile, Empoleon y, como as, **Metagross con Metagrossita**. El equipo es **fijo**: el randomizer no lo toca. Ya existe en `src/data/trainers.party`; Jorge solo tiene que montar el evento en `data/maps/Route120/` con `trainerbattle_single TRAINER_STEVEN_ROUTE_120, …` y dar el Aro Mega al ganar.
+- **Equipo de Máximo (decidido por Miguel, 23/10/2026):** entrenador `TRAINER_STEVEN_ROUTE_120`, todo a **nivel 62** (el cap del tramo). Lleva Aggron, Aegislash, Excadrill, Mawile, Empoleon y, como as, **Metagross con Metagrossita**. El equipo es **fijo**: el randomizer no lo toca. Ya existe en `src/data/trainers.party`; Jorge solo tiene que montar el evento en `data/maps/Route120/` con `trainerbattle_single TRAINER_STEVEN_ROUTE_120, …` y dar el Mega-Aro al ganar.
+- **Evento de Máximo (hecho, Jorge, 24/10/2026):** al hablar con Máximo en el puente de la Ruta 120 te reta con `TRAINER_STEVEN_ROUTE_120`. Si ganas, te da el **Mega-Aro** y te cuenta que las megapiedras están escondidas por Hoenn; después sigue el evento original (usa el Detector Devon, combate con el Kecleon y te da el Detector). Si pierdes, *whiteout* y te sigue esperando, pero **perder un combate es perder el locke** (como cualquier otro), y este es obligatorio: 6 Pokémon a nivel 62 con Mega Metagross. Si ya le habías ganado pero sigue ahí (por ejemplo, perdiste contra el Kecleon), no vuelve a combatir: te da el aro si no lo tienes y sigue con el Kecleon. Como el Detector hace falta para llegar al gimnasio de Arborada, el combate es obligatorio antes de Alana. Script en `data/maps/Route120/scripts.inc` (`Route120_EventScript_Steven`).
 - **Desde que el jugador tiene el aro, todos los jefes llevan un Pokémon con mega** (y la usan). Lista de "jefes" (decidida el 23/10/2026): líderes de gimnasio, Alto Mando, Plubio, rival (Bruno/Aura), Blasco y los líderes Magma/Aqua (Magno, Aquiles).
 - **Equipos de los jefes (hecho, Miguel, 23/10/2026)** con `tools/dualocke/equipos_jefes.py` (se lanza después de `reescalar_niveles.py`):
   - **+2 Pokémon** a líderes, Alto Mando y Plubio; **+1** al rival, Blasco, Magno, Aquiles y los admins (Tatiano, Silvina, Matías). Máximo 6.
@@ -206,9 +240,23 @@ Regla general: **el as de cada jefe va exactamente al nivel del cap**, el resto 
 Cada tienda tendrá **dos dependientes**:
 
 1. **Principal:** lo de siempre (Balls, Repelentes, etc.), **sin curativos ni Objetos X**, y con **Caramelos Raros a 1 ₽**.
-2. **Secundario:** objetos **aleatorios** (distintos en cada partida/semilla), garantizando algún objeto evolutivo. **Desde que el jugador consiga el aro**, este dependiente vende además **2-3 megapiedras aleatorias**, en todas las ciudades, incluidas las ya visitadas.
+2. **Secundario (hecho, Miguel, 24/10/2026):** está en las 11 tiendas de ciudad (no en Calagua, la Liga, el Frente ni la Cima), detrás del mostrador, encima del principal (casilla 1, 2). Vende **4 objetos: 1 evolutivo y 3 equipables** al azar.
+   - Los evolutivos son piedras y objetos de los antiguos intercambios. Los equipables son clásicos que no se venden en ningún otro sitio: Restos, Garra Rápida, Periscopio, Polvo Brillo, Campana Concha, Cinta Focus, Campana Alivio, Metrónomo, Muda Concha y los potenciadores de tipo.
+   - Son **distintos en cada partida** (la semilla sale del ID de entrenador) y **fijos durante toda la partida**.
+   - Pasan por el filtro de medallas de las tiendas, así que un evolutivo no sale hasta tener su medalla.
+   - **Ya no vende megapiedras:** se encuentran por el mapa.
+   - Código: `src/dualocke_segundo_dependiente.c` (special `Dualocke_AbrirSegundoDependiente`) y `data/scripts/dualocke_segundo_dependiente.inc`.
+   - **Pendiente:** que la regla de "una compra por objeto" (PR #19) se aplique también a este dependiente.
 
 Regla de compra: una unidad de cada objeto por tienda, salvo Balls, Repelentes, Bayas y Caramelos Raros.
+
+**Una compra por objeto (hecho, Miguel, 24/10/2026):**
+
+- En cada tienda, de cada objeto que no sea Ball, Repelente, Baya, Caramelo Raro o Cuerda Huida **solo se puede comprar una unidad**. La cantidad máxima es 1, y si vuelves a elegirlo sale "You've already bought one of these here.".
+- **Es por tienda:** el mismo objeto se puede comprar otra vez en otra ciudad que también lo venda.
+- `tools/dualocke/compras_limitadas.py` genera la tabla de parejas (tienda, objeto) en `src/data/dualocke_compras.h` a partir de las listas de las tiendas. Ahora son 86 en 15 tiendas. **Hay que relanzarlo si se cambian las listas.**
+- Lo comprado se guarda en 6 variables (`VAR_DUALOCKE_COMPRAS_0`-`5`, 0x4083-0x40A1), un bit por pareja.
+- Código: `src/dualocke_compras.c` y tres enganches en `src/shop.c` (al elegir, en la cantidad y al pagar).
 
 **Contenido del dependiente principal (hecho, Miguel, 23/10/2026):**
 
@@ -251,12 +299,26 @@ Como no hay intercambios entre partidas, se han cambiado todas:
 
 **Z, Dinamax y Tera no se usan.** No hace falta tocar el código: solo se activan con objetos (Pulsera Z, Maximuñequera, Orbe Teracristal) que no se pueden conseguir. El randomizer debe **excluir** del reparto esos objetos, los cristales Z, las teralitas y los Maxisetas.
 
-## 7. Randomizer (pendiente, el trabajo grande)
+### Pantalla de datos del Pokémon
+
+Para ver todo sin herramientas externas (pedido por Miguel el 24/10/2026):
+
+- **Página de información:**
+  - Detrás de la naturaleza, lo que sube y lo que baja en letra pequeña: "Firme (+Atq -AtE)", o "(neutra)". Si se ha usado una menta, sale el efecto de la menta.
+  - **START** pasa por todas las habilidades que puede tener la especie, con su descripción. A la derecha sale "Actual" (azul), "Posible" u "Oculta" (rojo) y cuántas hay ("2/3"). Al cambiar de Pokémon vuelve a la actual.
+- **Página de características:** **A** pasa de características a IVs y a EVs, con el número exacto. La etiqueta de arriba cambia a IVs/EVs. Lo que sube la naturaleza sale en rojo y lo que baja en azul (ya venía activado).
+- **Movimientos:** ya enseñaban tipo, categoría (físico/especial/estado), PP, potencia, precisión y descripción.
+- Código: `include/config/summary_screen.h` (opciones `P_SUMMARY_SCREEN_IV_EV_*`) y `src/pokemon_summary_screen.c` (busca "Dualocke").
+- Pendiente: hacerla más bonita con gráficos nuevos (fondos, iconos). Hace falta dibujarlos y probarlos en el emulador.
+
+## 7. Randomizer (en marcha: falta movimientos, habilidades y objetos)
 
 ### Diseño
 
 - **Script propio** (Python) que baraja los datos del juego **antes de compilar**, usando una **semilla**.
-- **Cada jugador tiene una partida completamente distinta**: cada uno compila con su semilla, por ejemplo `make SEED=jorge123` y `make SEED=miguel456`. La semilla también sirve para regenerar exactamente la misma partida si hace falta.
+- **Cada jugador tiene una partida completamente distinta**: `make` se inventa una semilla al azar la primera vez y la guarda (decidido por Jorge el 25/10/2026: la semilla no se elige, es aleatoria). Cómo se usa: sección 3, "Partida randomizada".
+- **Cómo está hecho (Jorge):** `tools/dualocke/randomizer.py`, con los módulos en `tools/dualocke/aleatorio/`. Lo lanza el `Makefile` (bloque "Dualocke: randomizer con semilla"). Lee los originales (`wild_encounters.json`, y más adelante `trainers.party`…) y escribe las versiones barajadas en `build/dualocke/`, que son las que se compilan. **Los archivos de Miguel no se tocan.** Los datos de las especies (evoluciones, formas, legendarios) salen de pasar `src/pokemon.c` por el preprocesador de C, así que son exactamente los de la ROM. Comprueba el resultado antes de compilar (solo cambian las especies, no hay legendarios en los salvajes…) y para si algo falla.
+- **Hecho:** salvajes, entrenadores, iniciales, rival, estáticos y regalos. **Pendiente:** movimientos, habilidades y objetos.
 - Para no destriparse nada: o cada uno compila la suya, o uno compila las dos sin mirar los archivos generados.
 - Alternativa descartada por ahora: randomizer dentro del juego, al empezar partida (como Heart & Soul). Es más trabajo.
 
@@ -274,26 +336,40 @@ Están en **`tools/dualocke/randomizer_config.json`**, que es el archivo que deb
 ### Ajustes a replicar (los del preset de Platino, adaptados)
 
 **Pokémon**
-- Iniciales aleatorios (forma base de 3 fases y en triángulo de tipos, ver arriba).
+- Iniciales aleatorios (forma base de 3 fases y en triángulo de tipos, ver arriba). **Hecho** (`tools/dualocke/aleatorio/iniciales.py`): además, las dos evoluciones tienen que ser por nivel o con objeto, para poder hacerlas en el juego. Salen en `src/data/dualocke_iniciales.h` (generado; lo usa `src/starter_choose.c`).
 - Habilidades aleatorias, permitiendo Superguarda.
-- Pokémon estáticos completamente aleatorios.
+- Pokémon estáticos completamente aleatorios. **Hecho** (`tools/dualocke/aleatorio/estaticos.py`; decidido por Jorge el 25/10/2026):
+  - **Estáticos** (`setwildbattle`: Kecleon, Voltorb, Electrode, Regis, Groudon, Kyogre, Rayquaza, Sudowoodo; y los errantes Latios/Latias): **todo al azar**, legendarios incluidos, a su nivel. Cada especie original cambia por la misma en todos sus sitios (todos los Kecleon del Detector son la misma especie nueva).
+  - **Regalos** (Beldum, fósiles, Castform, iniciales de Johto) **y huevos** (Wynaut, Pichu): al azar, sin legendarios, a su nivel; los huevos, siempre la forma base.
+  - El **sprite del mapa** y los **textos** siguen siendo los del original ("Has recibido un BELDUM"): se descubre al combatir o al recibirlo (decidido por Jorge: da igual). El mensaje de "enviado al PC" sí nombra al nuevo.
+  - No se tocan los scripts: `src/dualocke_aleatorio.c` cambia la especie al vuelo en `setwildbattle`, `givemon`, `giveegg` y los errantes, con la tabla generada `src/data/dualocke_aleatorio.h` (vacía sin semilla).
 - Estadísticas base de Gen 9 (ya vienen así en el motor) sin aleatorizar sus valores.
 - Totales de estadísticas base barajados siguiendo las líneas evolutivas.
 - Pokémon de los entrenadores aleatorios, sin duplicados dentro de un mismo equipo.
-- El inicial del rival se mantiene durante toda la aventura.
+- El inicial del rival se mantiene durante toda la aventura. **Hecho:** lleva el que gana al del jugador, evolucionado según el nivel; el resto de su equipo es al azar y el mismo en todos sus combates. Desde Calagua su as lleva mega: su inicial si tiene, y si no, una especie con mega del tipo de su inicial (y el inicial pasa al hueco anterior).
 - Los equipos de los entrenadores evolucionan según el nivel y pueden usar formas alternativas.
 - +1 Pokémon a los entrenadores importantes y +2 a los jefes.
 - Los Pokémon de entrenadores importantes y jefes pueden llevar objetos aleatorios, priorizando objetos coherentes.
 - **Nuevo:** el as de cada jefe es de su tipo y, desde el aro, una especie con mega de ese tipo con su megapiedra (ver arriba).
 
-**Salvajes**
-- Aleatorios por ubicación: cada especie de una zona se sustituye por otra aleatoria (mapeo 1 a 1 por zona).
+**Salvajes** (hecho, `tools/dualocke/aleatorio/salvajes.py`)
+- Aleatorios por ubicación: cada especie de una zona se sustituye por otra aleatoria (mapeo 1 a 1 por zona). Es por mapa: la misma línea en hierba, surf, pesca y Golpe Roca, y con la misma rama en todos los huecos.
+- La especie se ajusta a la fase que le toca por el **nivel mínimo** de su hueco (mismas reglas que los entrenadores; si hay varias ramas, una al azar).
+- Se evita repetir líneas entre zonas hasta que se han usado todas (hay unas 470 líneas sin legendarios).
+- Pueden salir formas regionales (Vulpix de Alola…) y Ultraentes y paradójicos (no cuentan como legendarios). No salen megas, Gigamax, formas de combate (Darmanitan Zen…) ni formas cosméticas.
+- Solo los mapas de Hoenn: la Pirámide y el Pike del Frente Batalla se quedan como están.
 - (En Platino se mantenían los encuentros por hora del día; Esmeralda no tiene encuentros por hora, así que no aplica.)
 - Pueden llevar objetos aleatorios.
 - Niveles según la curva de la sección 5 (sustituye al "+10%").
 - Sin legendarios en salvajes.
 
 **Entrenadores y combates**
+- **Hecho** (`tools/dualocke/aleatorio/entrenadores.py`), sobre los equipos de Miguel (`trainers.party`, sin tocarlo):
+  - Especies al azar, sin repetir dentro de un equipo, evolucionadas según el nivel de cada Pokémon y con formas regionales. Sin legendarios, salvo en el Alto Mando y Plubio (`permitidos_en: jefes_liga`).
+  - Jefes (`as_por_tipo`): el as, el último, es de su tipo o temática. Los de `con_mega_desde_el_aro` llevan como as una especie con mega de ese tipo y su megapiedra. Las revanchas de un jefe mantienen el tipo, la mega y la misma línea del as.
+  - Las revanchas de cualquier entrenador (`_2`, `_3`…) usan las mismas líneas que el primer combate, evolucionadas a su nivel.
+  - Al cambiar la especie se quitan los movimientos y la habilidad que tenía escritos: sale con los movimientos de su nivel (hasta la fase de movimientos). Se mantienen nivel, objeto, IVs/EVs y naturaleza.
+  - **No se toca** Máximo en la Ruta 120 (equipo fijo).
 - Niveles según la curva de la sección 5 (sustituye al "+15%").
 - Movimientos aleatorios con 3 movimientos garantizados y una ligera preferencia por movimientos dañinos potentes.
 - Mejores movimientos y diversidad de tipos en jefes, importantes y normales.
@@ -336,6 +412,19 @@ En total, unas 210.000 palabras: más o menos dos novelas largas.
 ### Plan
 
 1. **Nombres oficiales** de Pokémon, movimientos, habilidades, objetos, tipos y naturalezas. No inventarlos: sacarlos de listas oficiales.
+   - **Tablas preparadas (Miguel, 24/10/2026):** `traduccion/nombres/*.csv` tiene cada constante del juego con su nombre inglés y su **nombre oficial en español**: 1013 especies, 934 movimientos, 873 objetos, 319 habilidades, 20 tipos y 25 naturalezas. Cada tabla dice además si el nombre cabe en el límite de caracteres del juego.
+     - Fuente: PokéAPI (español de España), con los nombres **tal como salen en los juegos**, incluidas sus abreviaturas oficiales (por ejemplo, "Mineral Evol").
+     - Las genera `tools/dualocke/nombres_oficiales.py`, que necesita los CSV de PokéAPI (no están en el repo).
+     - **Pendientes** (`traduccion/nombres/PENDIENTES.md`):
+       - Sin nombre oficial: los movimientos Gigamax (aquí no se usan), algunos objetos de Leyendas Arceus y Escarlata/Púrpura que no salen en el juego, y 3 habilidades nuevas de Z-A (Eelevate, Fire Mane, Aura Guard).
+       - No caben: casi todos son movimientos Z (no se usan). Los que importan son Patada Salto Alta, Tormenta de Arena, Velocidad Extrema y Placaje Eléctrico (16 caracteres), Electricidad Estática y Absorbe Electricidad (16), y los tipos Eléctrico y Siniestro (8). Hay que abreviarlos o subir el límite.
+     - **Decididos** (`traduccion/nombres/decididos.csv`, mandan sobre las tablas): abreviaturas de los que no caben (Pat. Salto Alta, Tormenta Arena, Vel. Extrema, Placaje Eléc., Elec. Estática, Absorbe Elec., los movimientos Z…), nombres de los movimientos Gigamax, y nombres **provisionales** de 3 habilidades nuevas y 15 objetos sin nombre oficial.
+     - **Esos 15 objetos no salen en el juego** (decidido por Miguel el 24/10/2026): son de Leyendas Arceus, Escarlata/Púrpura y Oro/Plata (Remedios, Aux., comidas, Gen Furia, Mochi Reinicio, Teralito Astral…). No están en ningún mapa ni tienda, y están en la lista `excluir` del randomizer (`tools/dualocke/randomizer_config.json`). El nombre provisional queda solo por si acaso.
+     - Tipos: se ha subido `TYPE_NAME_LENGTH` de 8 a 9 para que quepan Eléctrico y Siniestro sin abreviar.
+     - **Aplicados al juego** con `tools/dualocke/aplicar_nombres.py` (`--aplicar` escribe; sin él solo comprueba). Cada nombre queda como `ES(inglés, español)`, así que los tests siguen en inglés. Se puede volver a ejecutar si cambian las tablas. Los plurales de objetos no se usan en español ("5 Poción", como en los juegos oficiales).
+     - **Ojo con la documentación:** algunos nombres que se escribieron de memoria no son los oficiales. El oficial es **Mega-Aro** (no "Aro Mega") y **Repelente Máximo** (no "Máximo Repelente"); hay que consultar estas tablas.
+   - **Descripciones (hecho, 24/10/2026):** 874 movimientos, 786 objetos y 306 habilidades, en `traduccion/descripciones/*.csv` (`constante,espanol,origen`). `origen` = `oficial` si es el texto oficial de los juegos (PokéAPI) y cabe; `propia` si lo hemos traducido nosotros desde el inglés del juego, porque las oficiales modernas son demasiado largas para los recuadros de Esmeralda. Se escriben en una línea; `tools/dualocke/aplicar_descripciones.py` corta las líneas (movimientos: 2 de 29 letras; objetos: 3 de 20; habilidades: 1 de 30) y avisa si no caben. `--aplicar` escribe los archivos; se puede volver a ejecutar.
+   - **Pokédex (hecho, 24/10/2026):** 1284 entradas y las categorías, en `traduccion/pokedex/` (`entradas.csv`, `categorias.csv`). Unas 870 son las oficiales (PokéAPI) y el resto (megas, formas regionales, especies nuevas sin texto que quepa) son traducción propia. Las 31 formas Gigamax se quedan en inglés porque el Dinamax no se usa. La ficha pone "POKéMON Semilla" en vez de "Seed POKéMON" (`src/international_string_util.c`). La categoría tiene como mucho 12 letras (`categoryName` es `u8[13]`). Las aplica `tools/dualocke/aplicar_pokedex.py`.
 2. **Mensajes de combate, menús y gráficos con texto:** reaprovechar la traducción de Heart & Soul ([SergioBonet/hns_es](https://github.com/SergioBonet/hns_es)), que tradujo este mismo motor (aunque una versión algo anterior). Incluye los arreglos de código para artículos y concordancias ("¡El Pikachu salvaje usó…!") y los gráficos con texto (iconos de tipo, barras de PS/Nv…).
 3. **Diálogos de Hoenn (en curso):** decidido el 24/10/2026 traducirlos nosotros por tramos, en el orden de la historia, y sin el postgame. Cómo se hace: `traduccion/dialogos/LEEME.md`.
 4. **Pruebas jugando:** recuadros donde no cabe el texto, frases sin traducir, erratas.
@@ -347,6 +436,31 @@ En total, unas 210.000 palabras: más o menos dos novelas largas.
 - Mensajes de combate montados por trozos que necesitan cambios de código para el género y los artículos.
 
 Hubo una traducción antigua de la expansion al castellano (fork de Xhyzi, rama `pokeemerald-expansion-es`, compilando con `LANG=ES`), pero tiene más de tres años y no sirve tal cual.
+
+### Paso 2: mensajes de combate (hecho)
+
+La traducción de Heart & Soul **no tiene licencia**, así que no se copia su texto: solo se mira cómo resolvió los problemas técnicos. Los textos los traducimos nosotros. Le pedimos permiso al autor por si se pudiera reaprovechar algo con créditos (pendiente de respuesta).
+
+Cómo funciona:
+
+- **Los tests siguen en inglés.** La expansion tiene miles de tests que comprueban los mensajes exactos. Todo lo traducido se elige al compilar: en los tests (`TESTING`) sale el inglés y en el juego el español.
+- **Mensajes de la tabla** (`gBattleStringsTable`, 699): las traducciones van en `src/data/dualocke_textos_combate_es.h`, con la misma clave `STRINGID_...`. Si un mensaje no está ahí, sale en inglés, así que se puede traducir por tandas.
+- **Textos sueltos** de `src/battle_message.c` (presentación del combate, "¡Adelante, X!", nombres de las características, estados, menú de combate…): se escriben con `ES(_("inglés"), _("español"))` (macro en `include/dualocke_es.h`).
+- **Pokémon rival:** artículo delante y "salvaje"/"enemigo" detrás ("¡El Zigzagoon salvaje usó Placaje!"). Al final se juntan "de el" → "del" y "a el" → "al". El código está en `src/dualocke_traduccion.c`.
+- **Características con artículo:** "La Defensa", "Los PS"… porque el género cambia. Por eso en las traducciones van al principio: "¡La Defensa del Zigzagoon salvaje bajó!".
+- **Reglas al traducir** (están al principio del archivo de traducciones): mantener todos los códigos `{B_...}`; `{..._NAME_WITH_PREFIX}` al principio de la frase y `{..._NAME_WITH_PREFIX2}` en medio; "X's Y" se escribe "Y de X"; no hace falta poner saltos de línea, se cortan solos.
+
+Hecho: **toda la tabla de mensajes de combate** (693 de 699; los 6 restantes son solo códigos, como el texto de derrota de cada entrenador, que viene de sus datos) y 105 textos sueltos.
+
+**Menús (`src/strings.c`), en curso:** 524 de los 974 textos que se usan, con el mismo `ES()`. Están los de jugar normal: menú de pausa, mochila, tienda, equipo, datos del Pokémon, PC, guardado, ficha de entrenador, decoración, guardería, recordador de movimientos, Safari, huevos y Salón de la Fama. Falta lo que casi no se ve en un Dualocke: Frente Batalla, juegos por cable (Baya-Licuadora, Dodrio, Saltos), Regalo Misterioso, chat y frases de Easy Chat. 
+
+**Menús de otros archivos (hecho):** 233 textos más en `option_menu.c` (opciones), `start_menu.c` (vidas del locke), `party_menu.c`, `item_menu.c`, `item_use.c`, `player_pc.c`, `main_menu.c` (pantalla de inicio), `naming_screen.c`, `pokemon_summary_screen.c`, `map_name_popup.c`, `pokemon_storage_system.c` (cajas del PC) y `pokedex.c`. Se sustituye cada `_("…")` o `COMPOUND_STRING("…")` por `ES(…)` con las dos versiones. No se tocan los nombres de entrenadores de ejemplo de `main_menu.c` ni el abecedario de `naming_screen.c`. Quedan en inglés archivos menos vistos (Pokédex HGSS y DexNav, desactivados; concursos; Baya-Licuadora; depuración).
+
+Reglas para los menús: mantener los códigos y el mismo número de saltos `\n`, `\l` y `\p`, y que cada línea no sea mucho más larga que la inglesa (los recuadros tienen ancho fijo). Los nombres van en mayúsculas como en el original (MOCHILA, GUARDAR, CARTA…).
+
+Falta probarlo jugando.
+
+Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos códigos `{...}` que el inglés y solo caracteres que existan en `charmap.txt`.
 
 ## 9. Estado y siguientes pasos
 
@@ -366,7 +480,10 @@ Hubo una traducción antigua de la expansion al castellano (fork de Xhyzi, rama 
   - Los objetos de revivir no se pueden usar en combate.
   - No cuentan: Frontera, Pirámide, Pike, Cima Entrenador, combates por cable, Safari, el primer combate y las bases secretas.
   - Tests en `test/dualocke.c` (`make check TESTS="Dualocke"`).
-  - Pendiente: un aviso al morir ("X ha muerto, te quedan N vidas"); de momento solo se ve que desaparece del equipo y en el menú.
+  - **Aviso al morir (hecho, Miguel, 24/10/2026):** cuando se debilita un Pokémon tuyo en un combate en el que cuentan las vidas, en vez de "X fainted!" sale "X has died! Lives left: N." (las vidas que quedarán al acabar el combate). Si ya no quedan vidas, o se han debilitado todos, sale "X has died! The locke is lost!". Los Pokémon del compañero (combates dobles con compañero) no cuentan. En los tests de la expansion se deja el texto original. Código: `src/dualocke_aviso.c`, enganchado en `BufferStringBattle` (`src/battle_message.c`).
+- Combate con Máximo en la Ruta 120 que da el Mega-Aro (Jorge, sección 6).
+- Primera captura por zona para los salvajes (Jorge, sección 4). Las zonas gastadas se guardan en `VAR_DUALOCKE_ZONES_0` a `_6` (7 variables libres, un bit por zona; no gasta flags). Tests en `test/dualocke.c`.
+- Caja de prohibidos (Jorge, sección 4): regalos, eventos, fósiles, estáticos, huevos e intercambios repetidos o legendarios van a la caja 13 ("VETADOS"), bloqueada hasta que dejan de ser repetidos.
 
 ### Pendiente de decidir
 
@@ -375,11 +492,19 @@ Hubo una traducción antigua de la expansion al castellano (fork de Xhyzi, rama 
 ### Orden de trabajo propuesto
 
 1. ~~Lo fácil: mote obligatorio, quitar curativos y Objetos X de las tiendas, Caramelos Raros a 1 ₽, bloquear Objetos X en combate, correr sin Deportivas, Pokédex Nacional desde el inicio, MTs reutilizables, MOs olvidables.~~ **Hecho.**
-2. Combate con Máximo y el aro. Segundo dependiente y contenido de las tiendas.
-3. Reglas del locke: ~~vidas + caja de muertos~~ (hecho), primera captura por zona con sus excepciones (reglas cerradas, falta implementarlas), límite de una compra por objeto, aviso al morir.
+2. ~~Combate con Máximo y el aro~~ (hecho). ~~Segundo dependiente y contenido de las tiendas~~ (hecho).
+3. Reglas del locke: ~~vidas + caja de muertos~~, ~~límite de una compra por objeto~~ y ~~aviso al morir~~ (hechos); ~~primera captura por zona y caja de prohibidos~~ (hechas).
 4. Randomizer con semilla (~~reescalado de niveles~~, ~~equipos de jefes~~ y ~~parámetros~~ hechos).
 5. Revanchas y postgame (niveles).
 6. Traducción.
+7. **Siguiente tarea (pedida por Miguel, 24/10/2026): mejorar la pantalla de datos del Pokémon.** Que se vea todo sin herramientas externas:
+   - Características, **IVs** y **EVs** (número exacto, no la letra).
+   - **Naturaleza** con lo que sube y lo que baja ("Firme: +Ataque, −At. Esp.").
+   - **Habilidad** con su descripción y **cuál sería su otra habilidad** (y la oculta).
+   - **Movimientos** con su información: tipo, categoría (físico/especial/estado), potencia, precisión, PP y descripción.
+   - Parte ya la trae la expansion y solo hay que activarla en `include/config/summary_screen.h` (`P_SUMMARY_SCREEN_IV_EV_INFO`, `P_SUMMARY_SCREEN_IV_EV_VALUES`; los colores de la naturaleza ya están activos). Lo de la otra habilidad y la naturaleza en texto hay que programarlo.
+
+**Tipo Hada:** ya está en el juego. La configuración usa los datos de la última generación (`P_UPDATED_TYPES`, `B_UPDATED_MOVE_TYPES` y `B_UPDATED_TYPE_MATCHUPS` en `GEN_LATEST`), así que Gardevoir, Mawile, Azumarill, Altaria mega, etc. son Hada, Encanto/Beso Drenaje/Carantoña son Hada y la tabla de tipos es la moderna. El randomizer tiene que contar con él.
 
 Quién hace cada cosa y cómo se sube: sección 13.
 
@@ -396,13 +521,15 @@ Quién hace cada cosa y cómo se sube: sección 13.
 | Especies activadas (megas, gens) | `include/config/species_enabled.h` |
 | Configuración del mundo (seguidores, etc.) | `include/config/overworld.h` |
 | Encuentros salvajes | `src/data/wild_encounters.json` |
+| Randomizer (semilla, salvajes, entrenadores, datos de las especies) | `tools/dualocke/randomizer.py`, `tools/dualocke/aleatorio/`; integración en el `Makefile` (bloque "Dualocke: randomizer con semilla") |
 | Reescalado de niveles por tramos (tabla de mapas y reglas) | `tools/dualocke/reescalar_niveles.py` |
 | Equipos de los jefes (+1/+2, megas) | `tools/dualocke/equipos_jefes.py` |
 | Megapiedras y objetos competitivos por el mapa | `tools/dualocke/colocar_objetos.py` |
 | Evolución por nivel de los entrenadores normales | `tools/dualocke/evolucionar_entrenadores.py` |
 | Entrenadores | `src/data/trainers.party` |
 | Tiendas | scripts de cada mapa en `data/maps/*/scripts.inc` (`pokemart`) |
-| Comprobación del Aro Mega | `src/battle_util.c` (busca `ITEM_MEGA_RING`) |
+| Comprobación del Mega-Aro | `src/battle_util.c` (busca `ITEM_MEGA_RING`) |
+| Evento de Máximo y entrega del Mega-Aro | `data/maps/Route120/scripts.inc` (`Route120_EventScript_Steven`) |
 | Datos al empezar partida nueva (correr, Pokédex Nacional) | `src/new_game.c` (`NewGameInitData`) |
 | Mote obligatorio al capturar | `src/battle_script_commands.c` (`Cmd_trygivecaughtmonnick`) |
 | Mote obligatorio en regalos | `src/tv.c` (`ChangeBoxPokemonNickname_CB`) y scripts con `gText_NicknameThisPokemon` |
@@ -412,8 +539,13 @@ Quién hace cada cosa y cómo se sube: sección 13.
 | MOs olvidables | `include/config/pokemon.h` (`P_CAN_FORGET_HIDDEN_MOVE`) |
 | Filtrar tiendas por medallas/flags (útil para las megapiedras) | `src/shop_criteria.c` |
 | Vidas y caja de muertos | `src/dualocke.c`, `include/dualocke.h`; se llama desde `src/battle_setup.c` (final de combate) |
-| Bloqueo de la caja de muertos | `src/pokemon_storage_system.c` (busca `Dualocke_IsDeadBox`) y `src/pokemon.c` (`CopyMonToPC`) |
+| Bloqueo de las cajas de muertos y prohibidos | `src/pokemon_storage_system.c` (busca `Dualocke_IsLockedBox` y `Dualocke_IsBoxMonLocked`) y `src/pokemon.c` (`CopyMonToPC`) |
+| Caja de prohibidos (qué va, cuándo se desbloquea) | `src/dualocke.c` (`Dualocke_ShouldBanMon`, `Dualocke_SendMonToBannedBox`); se llama desde `GiveScriptedMonToPlayer` y `GiveCapturedMonToPlayer` (`src/pokemon.c`), `EggHatchSetMonNickname` (`src/egg_hatch.c`) y `TradeMons` (`src/trade.c`) |
 | Ventana de vidas en el menú de pausa | `src/start_menu.c` (`ShowDualockeLivesWindow`) |
+| Primera captura por zona (estado del encuentro, líneas evolutivas, zonas gastadas) | `src/dualocke.c` (`Dualocke_GetWildEncounterStatus`, `Dualocke_OnBattleStart`) |
+| Qué combates son encuentros aleatorios | `src/battle_setup.c` (busca `Dualocke_SetRandomEncounter`) |
+| Bloqueo de las Balls y la Safari Ball | `src/item_use.c` (`GetBallThrowableState`) y `src/battle_main.c` (`B_ACTION_SAFARI_BALL`) |
+| Aviso al empezar el combate | `src/battle_main.c` (`FIRST_TURN_EVENTS_DUALOCKE_ZONE`) y `data/battle_scripts_1.s` (`BattleScript_DualockeZoneMsg`) |
 | Documentación oficial de la expansion | `docs/` y https://rh-hideout.github.io/pokeemerald-expansion/ |
 
 Para editar mapas y NPCs de forma visual existe **Porymap**; para scripts y diálogos, **poryscript**.
@@ -498,15 +630,16 @@ Decidido el 23/10/2026 y en marcha: **Miguel se encarga del equilibrio** (dificu
 | ~~Equipos de jefes: +1/+2 Pokémon, objetos y qué mega lleva cada jefe~~ (hecho) | Miguel | `src/data/trainers.party` | Randomizer |
 | ~~Equipo de Máximo en la Ruta 120~~ (hecho: `TRAINER_STEVEN_ROUTE_120`) | Miguel | `src/data/trainers.party` | Combate con Máximo |
 | ~~Parámetros del randomizer~~ (hecho: `tools/dualocke/randomizer_config.json`) | Miguel | archivo de configuración del randomizer | Randomizer |
-| Contenido de las tiendas: precios, objetos del segundo dependiente, qué megapiedras y cuándo | Miguel | listas de las tiendas | Segundo dependiente |
+| ~~Contenido de las tiendas~~ (hecho: principal por ciudad, segundo dependiente, megapiedras por el mapa) | Miguel | listas de las tiendas | Segundo dependiente |
 | **Funcionalidades** | | | |
-| ~~Vidas + caja de muertos~~ (hecho, PR #4; falta el aviso al morir) | Jorge | combate (desmayos), PC (`src/pokemon_storage_system.c`), HUD | — |
-| Primera captura por ruta (+ dupes, sin legendarios, shiny libre) | Jorge | `src/item_use.c` (Balls), `src/battle_script_commands.c`, flags por zona | — |
-| Una compra por objeto | Jorge | `src/shop.c` (compra) | — |
-| Evento del combate con Máximo y entrega del Aro Mega | Jorge (pendiente de empezar) | `data/maps/Route120/` | Equipo de Máximo |
-| Segundo dependiente en las tiendas (mecánica) | Jorge | `data/maps/*_Mart/`, `src/shop_criteria.c`, `src/shop.c` | Contenido de las tiendas |
-| Randomizer con semilla (la herramienta) | Jorge (pendiente de empezar) | script nuevo en `tools/` + `Makefile` | Todo lo de equilibrio en `trainers.party` y `wild_encounters.json` |
-| Traducción | Por decidir, cuando lo demás esté estable | casi todo `data/` y `src/` | Todo |
+| ~~Vidas + caja de muertos~~ (hecho, PR #4; el aviso al morir lo hizo Miguel) | Jorge | combate (desmayos), PC (`src/pokemon_storage_system.c`), HUD | — |
+| ~~Primera captura por zona (+ dupes, sin legendarios, shiny libre)~~ (hecho para los salvajes) | Jorge | `src/dualocke.c`, `src/item_use.c`, `src/battle_main.c` | — |
+| ~~Caja de prohibidos (regalos, eventos, fósiles, estáticos, huevos e intercambios)~~ (hecho) | Jorge | `src/dualocke.c`, PC | — |
+| ~~Una compra por objeto~~ (hecho por Miguel) | Jorge | `src/shop.c` (compra) | — |
+| ~~Evento del combate con Máximo y entrega del Mega-Aro~~ (hecho) | Jorge | `data/maps/Route120/` | Equipo de Máximo |
+| ~~Segundo dependiente en las tiendas (mecánica)~~ (hecho por Miguel) | Jorge | `data/maps/*_Mart/`, `src/shop_criteria.c`, `src/shop.c` | Contenido de las tiendas |
+| Randomizer con semilla (la herramienta; hechos la semilla, los salvajes y los entrenadores) | Jorge | script nuevo en `tools/` + `Makefile` | Todo lo de equilibrio en `trainers.party` y `wild_encounters.json` |
+| Traducción (empezada por Miguel: nombres oficiales, sección 8) | Por decidir, cuando lo demás esté estable | casi todo `data/` y `src/` | Todo |
 
 Cómo encajan las dos partes:
 

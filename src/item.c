@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke_es.h"
 #include "item.h"
 #include "berry.h"
 #include "pokeball.h"
@@ -174,7 +175,9 @@ const u8 sText_s[] =_("s");
 
 u8 *CopyItemNameHandlePlural(enum Item itemId, u8 *dst, u32 quantity)
 {
-    if (quantity == 1)
+    // Dualocke: en español no se hace el plural ("Baya Aranja" no pasa a "Baya Aranjas"),
+    // como en los juegos oficiales: "5 Poción". En los tests se queda el plural inglés.
+    if (quantity == 1 || !TESTING)
     {
         return StringCopy(dst, GetItemName(itemId));
     }

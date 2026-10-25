@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke_es.h"
 #include "battle_main.h"
 #include "battle_script_commands.h"
 #include "bg.h"
@@ -686,24 +687,24 @@ static const u8 sText_UnkHeight[] = _("{CLEAR_TO 12}??'??”");
 static const u8 sText_UnkHeightMetric[] = _("???.? m");
 static const u8 sText_UnkWeight[] = _("????.? lbs.");
 static const u8 sText_UnkWeightMetric[] = _("???.? kg.");
-static const u8 sText_PokedexRegistration[] = _("POKéDEX registration completed.");
-static const u8 sText_HTHeight[] = _("HT");
-static const u8 sText_WTWeight[] = _("WT");
-static const u8 sText_SearchingPleaseWait[] = _("Searching…\nPlease wait.");
-static const u8 sText_SearchCompleted[] = _("Search completed.");
-static const u8 sText_NoMatchingPkmnWereFound[] = _("No matching POKéMON were found.");
-static const u8 sText_SearchForPkmnBasedOnParameters[] = _("Search for POKéMON based on\nselected parameters.");
-static const u8 sText_SwitchPokedexListings[] = _("Switch POKéDEX listings.");
-static const u8 sText_ReturnToPokedex[] = _("Return to the POKéDEX.");
-static const u8 sText_SelectPokedexMode[] = _("Select the POKéDEX mode.");
-static const u8 sText_SelectPokedexListingMode[] = _("Select the POKéDEX listing mode.");
-static const u8 sText_ListByFirstLetter[] = _("List by the first letter in the name.\nSpotted POKéMON only.");
-static const u8 sText_ListByBodyColor[] = _("List by body color.\nSpotted POKéMON only.");
-static const u8 sText_ListByType[] = _("List by type.\nOwned POKéMON only.");
-static const u8 sText_ExecuteSearchSwitch[] = _("Execute search/switch.");
+static const u8 sText_PokedexRegistration[] = ES(_("POKéDEX registration completed."), _("Registrado en la POKéDEX."));
+static const u8 sText_HTHeight[] = ES(_("HT"), _("ALT"));
+static const u8 sText_WTWeight[] = ES(_("WT"), _("PESO"));
+static const u8 sText_SearchingPleaseWait[] = ES(_("Searching…\nPlease wait."), _("Buscando…\nEspera, por favor."));
+static const u8 sText_SearchCompleted[] = ES(_("Search completed."), _("Búsqueda terminada."));
+static const u8 sText_NoMatchingPkmnWereFound[] = ES(_("No matching POKéMON were found."), _("No se ha encontrado ninguno."));
+static const u8 sText_SearchForPkmnBasedOnParameters[] = ES(_("Search for POKéMON based on\nselected parameters."), _("Busca POKéMON según lo que\nhayas elegido."));
+static const u8 sText_SwitchPokedexListings[] = ES(_("Switch POKéDEX listings."), _("Cambia la lista POKéDEX."));
+static const u8 sText_ReturnToPokedex[] = ES(_("Return to the POKéDEX."), _("Vuelve a la POKéDEX."));
+static const u8 sText_SelectPokedexMode[] = ES(_("Select the POKéDEX mode."), _("Elige el modo POKéDEX."));
+static const u8 sText_SelectPokedexListingMode[] = ES(_("Select the POKéDEX listing mode."), _("Elige cómo ordenar la lista."));
+static const u8 sText_ListByFirstLetter[] = ES(_("List by the first letter in the name.\nSpotted POKéMON only."), _("Por la primera letra del nombre.\nSolo POKéMON vistos."));
+static const u8 sText_ListByBodyColor[] = ES(_("List by body color.\nSpotted POKéMON only."), _("Por el color.\nSolo POKéMON vistos."));
+static const u8 sText_ListByType[] = ES(_("List by type.\nOwned POKéMON only."), _("Por el tipo.\nSolo POKéMON atrapados."));
+static const u8 sText_ExecuteSearchSwitch[] = ES(_("Execute search/switch."), _("Buscar/cambiar."));
 static const u8 sText_DexEmptyString[] = _("");
-static const u8 sText_DexSearchDontSpecify[] = _("DON'T SPECIFY.");
-static const u8 sText_DexSearchTypeNone[] = _("NONE");
+static const u8 sText_DexSearchDontSpecify[] = ES(_("DON'T SPECIFY."), _("CUALQUIERA."));
+static const u8 sText_DexSearchTypeNone[] = ES(_("NONE"), _("NINGUNO"));
 
 ALIGNED(4) static const u8 sExpandedPlaceholder_PokedexDescription[] = _("");
 
@@ -1181,19 +1182,19 @@ static const u8 sSearchMovementMap_ShiftHoennDex[SEARCH_COUNT][4] =
 
 static const struct SearchOptionText sDexModeOptions[] =
 {
-    [DEX_MODE_HOENN]    = {COMPOUND_STRING("HOENN region's POKéDEX"),   COMPOUND_STRING("HOENN DEX")},
-    [DEX_MODE_NATIONAL] = {COMPOUND_STRING("National edition POKéDEX"), COMPOUND_STRING("NATIONAL DEX")},
+    [DEX_MODE_HOENN]    = {ES(COMPOUND_STRING("HOENN region's POKéDEX"), COMPOUND_STRING("POKéDEX de HOENN")),   COMPOUND_STRING("HOENN DEX")},
+    [DEX_MODE_NATIONAL] = {ES(COMPOUND_STRING("National edition POKéDEX"), COMPOUND_STRING("POKéDEX Nacional")), ES(COMPOUND_STRING("NATIONAL DEX"), COMPOUND_STRING("DEX NACIONAL"))},
     {},
 };
 
 static const struct SearchOptionText sDexOrderOptions[] =
 {
-    [ORDER_NUMERICAL]    = {COMPOUND_STRING("POKéMON are listed according to their\nnumber."),               COMPOUND_STRING("NUMERICAL MODE")},
-    [ORDER_ALPHABETICAL] = {COMPOUND_STRING("Spotted and owned POKéMON are listed\nalphabetically."),        COMPOUND_STRING("A TO Z MODE")},
-    [ORDER_HEAVIEST]     = {COMPOUND_STRING("Owned POKéMON are listed from the\nheaviest to the lightest."), COMPOUND_STRING("HEAVIEST MODE")},
-    [ORDER_LIGHTEST]     = {COMPOUND_STRING("Owned POKéMON are listed from the\nlightest to the heaviest."), COMPOUND_STRING("LIGHTEST MODE")},
-    [ORDER_TALLEST]      = {COMPOUND_STRING("Owned POKéMON are listed from the\ntallest to the smallest."),  COMPOUND_STRING("TALLEST MODE")},
-    [ORDER_SMALLEST]     = {COMPOUND_STRING("Owned POKéMON are listed from the\nsmallest to the tallest."),  COMPOUND_STRING("SMALLEST MODE")},
+    [ORDER_NUMERICAL]    = {ES(COMPOUND_STRING("POKéMON are listed according to their\nnumber."), COMPOUND_STRING("Los POKéMON salen ordenados por su\nnúmero.")),               ES(COMPOUND_STRING("NUMERICAL MODE"), COMPOUND_STRING("MODO NUMÉRICO"))},
+    [ORDER_ALPHABETICAL] = {ES(COMPOUND_STRING("Spotted and owned POKéMON are listed\nalphabetically."), COMPOUND_STRING("Los POKéMON vistos y atrapados salen\npor orden alfabético.")),        ES(COMPOUND_STRING("A TO Z MODE"), COMPOUND_STRING("MODO A-Z"))},
+    [ORDER_HEAVIEST]     = {ES(COMPOUND_STRING("Owned POKéMON are listed from the\nheaviest to the lightest."), COMPOUND_STRING("Los POKéMON atrapados salen del\nmás pesado al más ligero.")), ES(COMPOUND_STRING("HEAVIEST MODE"), COMPOUND_STRING("MÁS PESADOS"))},
+    [ORDER_LIGHTEST]     = {ES(COMPOUND_STRING("Owned POKéMON are listed from the\nlightest to the heaviest."), COMPOUND_STRING("Los POKéMON atrapados salen del\nmás ligero al más pesado.")), ES(COMPOUND_STRING("LIGHTEST MODE"), COMPOUND_STRING("MÁS LIGEROS"))},
+    [ORDER_TALLEST]      = {ES(COMPOUND_STRING("Owned POKéMON are listed from the\ntallest to the smallest."), COMPOUND_STRING("Los POKéMON atrapados salen del\nmás alto al más bajo.")),  ES(COMPOUND_STRING("TALLEST MODE"), COMPOUND_STRING("MÁS ALTOS"))},
+    [ORDER_SMALLEST]     = {ES(COMPOUND_STRING("Owned POKéMON are listed from the\nsmallest to the tallest."), COMPOUND_STRING("Los POKéMON atrapados salen del\nmás bajo al más alto.")),  ES(COMPOUND_STRING("SMALLEST MODE"), COMPOUND_STRING("MÁS BAJOS"))},
     {},
 };
 
@@ -1215,16 +1216,16 @@ static const struct SearchOptionText sDexSearchNameOptions[] =
 static const struct SearchOptionText sDexSearchColorOptions[] =
 {
     {sText_DexEmptyString, sText_DexSearchDontSpecify},
-    [BODY_COLOR_RED + 1]    = {sText_DexEmptyString, COMPOUND_STRING("RED")},
-    [BODY_COLOR_BLUE + 1]   = {sText_DexEmptyString, COMPOUND_STRING("BLUE")},
-    [BODY_COLOR_YELLOW + 1] = {sText_DexEmptyString, COMPOUND_STRING("YELLOW")},
-    [BODY_COLOR_GREEN + 1]  = {sText_DexEmptyString, COMPOUND_STRING("GREEN")},
-    [BODY_COLOR_BLACK + 1]  = {sText_DexEmptyString, COMPOUND_STRING("BLACK")},
-    [BODY_COLOR_BROWN + 1]  = {sText_DexEmptyString, COMPOUND_STRING("BROWN")},
-    [BODY_COLOR_PURPLE + 1] = {sText_DexEmptyString, COMPOUND_STRING("PURPLE")},
-    [BODY_COLOR_GRAY + 1]   = {sText_DexEmptyString, COMPOUND_STRING("GRAY")},
-    [BODY_COLOR_WHITE + 1]  = {sText_DexEmptyString, COMPOUND_STRING("WHITE")},
-    [BODY_COLOR_PINK + 1]   = {sText_DexEmptyString, COMPOUND_STRING("PINK")},
+    [BODY_COLOR_RED + 1]    = {sText_DexEmptyString, ES(COMPOUND_STRING("RED"), COMPOUND_STRING("ROJO"))},
+    [BODY_COLOR_BLUE + 1]   = {sText_DexEmptyString, ES(COMPOUND_STRING("BLUE"), COMPOUND_STRING("AZUL"))},
+    [BODY_COLOR_YELLOW + 1] = {sText_DexEmptyString, ES(COMPOUND_STRING("YELLOW"), COMPOUND_STRING("AMARILLO"))},
+    [BODY_COLOR_GREEN + 1]  = {sText_DexEmptyString, ES(COMPOUND_STRING("GREEN"), COMPOUND_STRING("VERDE"))},
+    [BODY_COLOR_BLACK + 1]  = {sText_DexEmptyString, ES(COMPOUND_STRING("BLACK"), COMPOUND_STRING("NEGRO"))},
+    [BODY_COLOR_BROWN + 1]  = {sText_DexEmptyString, ES(COMPOUND_STRING("BROWN"), COMPOUND_STRING("MARRÓN"))},
+    [BODY_COLOR_PURPLE + 1] = {sText_DexEmptyString, ES(COMPOUND_STRING("PURPLE"), COMPOUND_STRING("MORADO"))},
+    [BODY_COLOR_GRAY + 1]   = {sText_DexEmptyString, ES(COMPOUND_STRING("GRAY"), COMPOUND_STRING("GRIS"))},
+    [BODY_COLOR_WHITE + 1]  = {sText_DexEmptyString, ES(COMPOUND_STRING("WHITE"), COMPOUND_STRING("BLANCO"))},
+    [BODY_COLOR_PINK + 1]   = {sText_DexEmptyString, ES(COMPOUND_STRING("PINK"), COMPOUND_STRING("ROSA"))},
     {},
 };
 

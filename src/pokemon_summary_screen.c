@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke_es.h"
 #include "main.h"
 #include "battle.h"
 #include "battle_anim.h"
@@ -166,6 +167,7 @@ static EWRAM_DATA struct PokemonSummaryScreenData
         u32 OTID; // 0x48
         enum Type teraType;
         u8 mintNature;
+        u8 dualockeHabilidadVista; // Dualocke: posición de la habilidad que se ve (0xFF = la actual)
     } summary;
     u16 bgTilemapBuffers[PSS_PAGE_COUNT][2][0x400];
     u8 mode;
@@ -260,6 +262,7 @@ static void PrintMonOTName(void);
 static void PrintMonOTID(void);
 static void PrintMonAbilityName(void);
 static void PrintMonAbilityDescription(void);
+static bool32 Dualocke_CambiarHabilidadVista(void);
 static void BufferMonTrainerMemo(void);
 static void PrintMonTrainerMemo(void);
 static void BufferNatureString(void);
@@ -767,7 +770,7 @@ static const TaskFunc sTextPrinterTasks[] =
     [PSS_PAGE_CONTEST_MOVES] = Task_PrintContestMoves
 };
 
-static const u8 sText_Relearn[] = _("{START_BUTTON} RELEARN"); // future note: don't decap this, because it mimics the summary screen BG graphics which will not get decapped
+static const u8 sText_Relearn[] = ES(_("{START_BUTTON} RELEARN"), _("{START_BUTTON} RECORDAR")); // future note: don't decap this, because it mimics the summary screen BG graphics which will not get decapped
 
 static const u8 sMemoNatureTextColor[] = _("{COLOR LIGHT_RED}{SHADOW GREEN}");
 static const u8 sMemoMiscTextColor[] = _("{COLOR WHITE}{SHADOW DARK_GRAY}"); // This is also affected by palettes, apparently
@@ -1531,6 +1534,7 @@ static bool8 ExtractMonDataToSummaryStruct(struct Pokemon *mon)
         sum->exp = GetMonData(mon, MON_DATA_EXP);
         sum->level = GetMonData(mon, MON_DATA_LEVEL);
         sum->abilityNum = GetMonData(mon, MON_DATA_ABILITY_NUM);
+        sum->dualockeHabilidadVista = 0xFF;
         sum->item = GetMonData(mon, MON_DATA_HELD_ITEM);
         sum->pid = GetMonData(mon, MON_DATA_PERSONALITY);
         sum->sanity = GetMonData(mon, MON_DATA_SANITY_IS_BAD_EGG);
@@ -1808,6 +1812,13 @@ static void Task_HandleInput(u8 taskId)
             StopPokemonAnimations();
             PlaySE(SE_SELECT);
             CloseSummaryScreen(taskId);
+        }
+        else if (JOY_NEW(START_BUTTON) && sMonSummaryScreen->currPageIndex == PSS_PAGE_INFO
+              && !sMonSummaryScreen->summary.isEgg)
+        {
+            // Dualocke: START enseña las otras habilidades que puede tener la especie
+            if (Dualocke_CambiarHabilidadVista())
+                PlaySE(SE_SELECT);
         }
         else if (ShouldShowMoveRelearner() && IS_MOVE_PAGE(sMonSummaryScreen->currPageIndex))
         {
@@ -3524,15 +3535,126 @@ static void PrintMonOTID(void)
     }
 }
 
+// Dualocke: la página de info enseña la habilidad actual y, pulsando START, las otras que puede
+// tener la especie (la oculta incluida), con una etiqueta "Actual", "Posible" u "Oculta".
+
+// Rellena los huecos de habilidad de la especie sin repetir habilidades. Devuelve cuántas hay.
+static u32 Dualocke_ListaHabilidades(enum Species species, u8 *slots)
+{
+    u32 i, j, n = 0;
+
+    for (i = 0; i < NUM_ABILITY_SLOTS; i++)
+    {
+        enum Ability ability = GetSpeciesAbility(species, i);
+        if (ability == ABILITY_NONE)
+            continue;
+        for (j = 0; j < n; j++)
+        {
+            if (GetSpeciesAbility(species, slots[j]) == ability)
+                break;
+        }
+        if (j == n)
+            slots[n++] = i;
+    }
+    return n;
+}
+
+// Habilidad que se está viendo, su hueco, su posición en la lista y cuántas hay.
+static enum Ability Dualocke_HabilidadVista(u32 *slot, u32 *posicion, u32 *total)
+{
+    struct PokeSummary *sum = &sMonSummaryScreen->summary;
+    enum Ability actual = GetAbilityBySpecies(sum->species, sum->abilityNum);
+    u8 slots[NUM_ABILITY_SLOTS];
+    u32 i, n = Dualocke_ListaHabilidades(sum->species, slots);
+
+    *total = n;
+    if (sum->dualockeHabilidadVista < n)
+    {
+        *posicion = sum->dualockeHabilidadVista;
+        *slot = slots[*posicion];
+        return GetSpeciesAbility(sum->species, *slot);
+    }
+
+    for (i = 0; i < n; i++)
+    {
+        if (GetSpeciesAbility(sum->species, slots[i]) == actual)
+            break;
+    }
+    if (i == n) // no debería pasar: la actual no está en la lista
+    {
+        *posicion = 0;
+        *total = 0;
+        *slot = sum->abilityNum;
+    }
+    else
+    {
+        *posicion = i;
+        *slot = slots[i];
+    }
+    return actual;
+}
+
+static bool32 Dualocke_CambiarHabilidadVista(void)
+{
+    struct PokeSummary *sum = &sMonSummaryScreen->summary;
+    u32 slot, posicion, total;
+    u8 windowId;
+
+    Dualocke_HabilidadVista(&slot, &posicion, &total);
+    if (total <= 1)
+        return FALSE;
+
+    sum->dualockeHabilidadVista = (posicion + 1) % total;
+    windowId = AddWindowFromTemplateList(sPageInfoTemplate, PSS_DATA_WINDOW_INFO_ABILITY);
+    FillWindowPixelBuffer(windowId, PIXEL_FILL(0));
+    PrintMonAbilityName();
+    PrintMonAbilityDescription();
+    return TRUE;
+}
+
 static void PrintMonAbilityName(void)
 {
-    enum Ability ability = GetAbilityBySpecies(sMonSummaryScreen->summary.species, sMonSummaryScreen->summary.abilityNum);
-    PrintTextOnWindow(AddWindowFromTemplateList(sPageInfoTemplate, PSS_DATA_WINDOW_INFO_ABILITY), gAbilitiesInfo[ability].name, 0, 1, 0, 1);
+    struct PokeSummary *sum = &sMonSummaryScreen->summary;
+    u32 slot, posicion, total, x, color;
+    enum Ability ability = Dualocke_HabilidadVista(&slot, &posicion, &total);
+    u8 windowId = AddWindowFromTemplateList(sPageInfoTemplate, PSS_DATA_WINDOW_INFO_ABILITY);
+    const u8 *etiqueta;
+    u8 *txt;
+
+    PrintTextOnWindow(windowId, gAbilitiesInfo[ability].name, 0, 1, 0, 1);
+
+    if (ability == GetAbilityBySpecies(sum->species, sum->abilityNum))
+    {
+        etiqueta = COMPOUND_STRING("Actual");
+        color = 5;
+    }
+    else if (slot >= NUM_NORMAL_ABILITY_SLOTS)
+    {
+        etiqueta = COMPOUND_STRING("Oculta");
+        color = 6;
+    }
+    else
+    {
+        etiqueta = COMPOUND_STRING("Posible");
+        color = 0;
+    }
+
+    txt = StringCopy(gStringVar1, etiqueta);
+    if (total > 1)
+    {
+        *txt++ = CHAR_SPACE;
+        txt = ConvertIntToDecimalStringN(txt, posicion + 1, STR_CONV_MODE_LEFT_ALIGN, 1);
+        *txt++ = CHAR_SLASH;
+        ConvertIntToDecimalStringN(txt, total, STR_CONV_MODE_LEFT_ALIGN, 1);
+    }
+    x = WindowWidthPx(windowId) - GetStringWidth(FONT_SMALL, gStringVar1, 0) - 2;
+    PrintTextOnWindowWithFont(windowId, gStringVar1, x, 3, 0, color, FONT_SMALL);
 }
 
 static void PrintMonAbilityDescription(void)
 {
-    enum Ability ability = GetAbilityBySpecies(sMonSummaryScreen->summary.species, sMonSummaryScreen->summary.abilityNum);
+    u32 slot, posicion, total;
+    enum Ability ability = Dualocke_HabilidadVista(&slot, &posicion, &total);
     PrintTextOnWindowToFit(AddWindowFromTemplateList(sPageInfoTemplate, PSS_DATA_WINDOW_INFO_ABILITY), gAbilitiesInfo[ability].description, 0, 17, 0, 0);
 }
 
@@ -3593,11 +3715,46 @@ static void PrintMonTrainerMemo(void)
     PrintTextOnWindow(AddWindowFromTemplateList(sPageInfoTemplate, PSS_DATA_WINDOW_INFO_MEMO), gStringVar4, 0, 1, 0, 0);
 }
 
+// Dualocke: detrás del nombre de la naturaleza, lo que sube y lo que baja ("+Atq -AtE")
+static EWRAM_DATA u8 sDualockeNaturalezaEfecto[32] = {0};
+
+static const u8 *const sDualockeStatCorta[NUM_STATS] =
+{
+    [STAT_HP]    = COMPOUND_STRING("PS"),
+    [STAT_ATK]   = COMPOUND_STRING("Atq"),
+    [STAT_DEF]   = COMPOUND_STRING("Def"),
+    [STAT_SPEED] = COMPOUND_STRING("Vel"),
+    [STAT_SPATK] = COMPOUND_STRING("AtE"),
+    [STAT_SPDEF] = COMPOUND_STRING("DfE"),
+};
+
+static void Dualocke_BufferNaturalezaEfecto(u32 nature)
+{
+    enum Stat sube = gNaturesInfo[nature].statUp;
+    enum Stat baja = gNaturesInfo[nature].statDown;
+    u8 *txt = StringCopy(sDualockeNaturalezaEfecto, COMPOUND_STRING("{FONT_SMALL} ("));
+
+    if (sube == baja)
+    {
+        txt = StringCopy(txt, COMPOUND_STRING("neutra"));
+    }
+    else
+    {
+        txt = StringCopy(txt, COMPOUND_STRING("+"));
+        txt = StringCopy(txt, sDualockeStatCorta[sube]);
+        txt = StringCopy(txt, COMPOUND_STRING(" -"));
+        txt = StringCopy(txt, sDualockeStatCorta[baja]);
+    }
+    StringCopy(txt, COMPOUND_STRING("){FONT_NORMAL}"));
+}
+
 static void BufferNatureString(void)
 {
     struct PokemonSummaryScreenData *sumStruct = sMonSummaryScreen;
     DynamicPlaceholderTextUtil_SetPlaceholderPtr(2, gNaturesInfo[sumStruct->summary.nature].name);
-    DynamicPlaceholderTextUtil_SetPlaceholderPtr(5, gText_EmptyString5);
+    // Dualocke: la naturaleza que cuenta para las características es la de la menta, si tiene
+    Dualocke_BufferNaturalezaEfecto(sumStruct->summary.mintNature);
+    DynamicPlaceholderTextUtil_SetPlaceholderPtr(5, sDualockeNaturalezaEfecto);
 }
 
 static void GetMetLevelString(u8 *output)
@@ -4777,8 +4934,8 @@ static inline void ShowUtilityPrompt(s16 mode)
     const u8* promptText = NULL;
     const u8* gText_SkillPageIvs = COMPOUND_STRING("IVs");
     const u8* gText_SkillPageEvs = COMPOUND_STRING("EVs");
-    const u8* gText_SkillPageStats = COMPOUND_STRING("STATS");
-    const u8* gText_Rename = COMPOUND_STRING("RENAME");
+    const u8* gText_SkillPageStats = ES(COMPOUND_STRING("STATS"), COMPOUND_STRING("CARACT."));
+    const u8* gText_Rename = ES(COMPOUND_STRING("RENAME"), COMPOUND_STRING("MOTE"));
 
     if (sMonSummaryScreen->currPageIndex == PSS_PAGE_INFO)
     {

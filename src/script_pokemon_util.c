@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke_aleatorio.h"
 #include "battle.h"
 #include "battle_gfx_sfx_util.h"
 #include "berry.h"
@@ -464,6 +465,13 @@ void ScrCmd_createmon(struct ScriptContext *ctx)
 
     monTemplate.ignoreTotalEvCheck = flags >> 26;
 
+    // Dualocke: los regalos salen del randomizer (sin semilla, los mismos). Así el mensaje de
+    // "enviado al PC" también nombra al nuevo.
+    if (side == B_SIDE_PLAYER && Dualocke_RegaloAleatorio(monTemplate.species) != monTemplate.species)
+    {
+        monTemplate.species = Dualocke_RegaloAleatorio(monTemplate.species);
+        VarSet(VAR_TEMP_TRANSFERRED_SPECIES, monTemplate.species);
+    }
     gSpecialVar_Result = ScriptGiveMonParameterized(side, slot, &monTemplate);
 }
 

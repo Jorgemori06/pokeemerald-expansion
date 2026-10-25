@@ -1,0 +1,935 @@
+constante,ingles,espanol,caracteres,cabe_en_16
+MOVE_POUND,Pound,Destructor,10,si
+MOVE_KARATE_CHOP,Karate Chop,Golpe Kárate,12,si
+MOVE_DOUBLE_SLAP,Double Slap,Doble Bofetón,13,si
+MOVE_COMET_PUNCH,Comet Punch,Puño Cometa,11,si
+MOVE_MEGA_PUNCH,Mega Punch,Megapuño,8,si
+MOVE_PAY_DAY,Pay Day,Día de Pago,11,si
+MOVE_FIRE_PUNCH,Fire Punch,Puño Fuego,10,si
+MOVE_ICE_PUNCH,Ice Punch,Puño Hielo,10,si
+MOVE_THUNDER_PUNCH,Thunder Punch,Puño Trueno,11,si
+MOVE_SCRATCH,Scratch,Arañazo,7,si
+MOVE_VISE_GRIP,Vise Grip,Agarre,6,si
+MOVE_GUILLOTINE,Guillotine,Guillotina,10,si
+MOVE_RAZOR_WIND,Razor Wind,Viento Cortante,15,si
+MOVE_SWORDS_DANCE,Swords Dance,Danza Espada,12,si
+MOVE_CUT,Cut,Corte,5,si
+MOVE_GUST,Gust,Tornado,7,si
+MOVE_WING_ATTACK,Wing Attack,Ataque Ala,10,si
+MOVE_WHIRLWIND,Whirlwind,Remolino,8,si
+MOVE_FLY,Fly,Vuelo,5,si
+MOVE_BIND,Bind,Atadura,7,si
+MOVE_SLAM,Slam,Atizar,6,si
+MOVE_VINE_WHIP,Vine Whip,Látigo Cepa,11,si
+MOVE_STOMP,Stomp,Pisotón,7,si
+MOVE_DOUBLE_KICK,Double Kick,Doble Patada,12,si
+MOVE_MEGA_KICK,Mega Kick,Megapatada,10,si
+MOVE_JUMP_KICK,Jump Kick,Patada Salto,12,si
+MOVE_ROLLING_KICK,Rolling Kick,Patada Giro,11,si
+MOVE_SAND_ATTACK,Sand Attack,Ataque Arena,12,si
+MOVE_HEADBUTT,Headbutt,Golpe Cabeza,12,si
+MOVE_HORN_ATTACK,Horn Attack,Cornada,7,si
+MOVE_FURY_ATTACK,Fury Attack,Ataque Furia,12,si
+MOVE_HORN_DRILL,Horn Drill,Perforador,10,si
+MOVE_TACKLE,Tackle,Placaje,7,si
+MOVE_BODY_SLAM,Body Slam,Golpe Cuerpo,12,si
+MOVE_WRAP,Wrap,Constricción,12,si
+MOVE_TAKE_DOWN,Take Down,Derribo,7,si
+MOVE_THRASH,Thrash,Saña,4,si
+MOVE_DOUBLE_EDGE,Double-Edge,Doble Filo,10,si
+MOVE_TAIL_WHIP,Tail Whip,Agitacola,9,si
+MOVE_POISON_STING,Poison Sting,Picotazo Veneno,15,si
+MOVE_TWINEEDLE,Twineedle,Doble Ataque,12,si
+MOVE_PIN_MISSILE,Pin Missile,Pin Misil,9,si
+MOVE_LEER,Leer,Malicioso,9,si
+MOVE_BITE,Bite,Mordisco,8,si
+MOVE_GROWL,Growl,Gruñido,7,si
+MOVE_ROAR,Roar,Rugido,6,si
+MOVE_SING,Sing,Canto,5,si
+MOVE_SUPERSONIC,Supersonic,Supersónico,11,si
+MOVE_SONIC_BOOM,Sonic Boom,Bomba Sónica,12,si
+MOVE_DISABLE,Disable,Anulación,9,si
+MOVE_ACID,Acid,Ácido,5,si
+MOVE_EMBER,Ember,Ascuas,6,si
+MOVE_FLAMETHROWER,Flamethrower,Lanzallamas,11,si
+MOVE_MIST,Mist,Neblina,7,si
+MOVE_WATER_GUN,Water Gun,Pistola Agua,12,si
+MOVE_HYDRO_PUMP,Hydro Pump,Hidrobomba,10,si
+MOVE_SURF,Surf,Surf,4,si
+MOVE_ICE_BEAM,Ice Beam,Rayo Hielo,10,si
+MOVE_BLIZZARD,Blizzard,Ventisca,8,si
+MOVE_PSYBEAM,Psybeam,Psicorrayo,10,si
+MOVE_BUBBLE_BEAM,Bubble Beam,Rayo Burbuja,12,si
+MOVE_AURORA_BEAM,Aurora Beam,Rayo Aurora,11,si
+MOVE_HYPER_BEAM,Hyper Beam,Hiperrayo,9,si
+MOVE_PECK,Peck,Picotazo,8,si
+MOVE_DRILL_PECK,Drill Peck,Pico Taladro,12,si
+MOVE_SUBMISSION,Submission,Sumisión,8,si
+MOVE_LOW_KICK,Low Kick,Patada Baja,11,si
+MOVE_COUNTER,Counter,Contraataque,12,si
+MOVE_SEISMIC_TOSS,Seismic Toss,Sísmico,7,si
+MOVE_STRENGTH,Strength,Fuerza,6,si
+MOVE_ABSORB,Absorb,Absorber,8,si
+MOVE_MEGA_DRAIN,Mega Drain,Megaagotar,10,si
+MOVE_LEECH_SEED,Leech Seed,Drenadoras,10,si
+MOVE_GROWTH,Growth,Desarrollo,10,si
+MOVE_RAZOR_LEAF,Razor Leaf,Hoja Afilada,12,si
+MOVE_SOLAR_BEAM,Solar Beam,Rayo Solar,10,si
+MOVE_POISON_POWDER,Poison Powder,Polvo Veneno,12,si
+MOVE_STUN_SPORE,Stun Spore,Paralizador,11,si
+MOVE_SLEEP_POWDER,Sleep Powder,Somnífero,9,si
+MOVE_PETAL_DANCE,Petal Dance,Danza Pétalo,12,si
+MOVE_STRING_SHOT,String Shot,Disparo Demora,14,si
+MOVE_DRAGON_RAGE,Dragon Rage,Furia Dragón,12,si
+MOVE_FIRE_SPIN,Fire Spin,Giro Fuego,10,si
+MOVE_THUNDER_SHOCK,Thunder Shock,Impactrueno,11,si
+MOVE_THUNDERBOLT,Thunderbolt,Rayo,4,si
+MOVE_THUNDER_WAVE,Thunder Wave,Onda Trueno,11,si
+MOVE_THUNDER,Thunder,Trueno,6,si
+MOVE_ROCK_THROW,Rock Throw,Lanzarrocas,11,si
+MOVE_EARTHQUAKE,Earthquake,Terremoto,9,si
+MOVE_FISSURE,Fissure,Fisura,6,si
+MOVE_DIG,Dig,Excavar,7,si
+MOVE_TOXIC,Toxic,Tóxico,6,si
+MOVE_CONFUSION,Confusion,Confusión,9,si
+MOVE_PSYCHIC,Psychic,Psíquico,8,si
+MOVE_HYPNOSIS,Hypnosis,Hipnosis,8,si
+MOVE_MEDITATE,Meditate,Meditación,10,si
+MOVE_AGILITY,Agility,Agilidad,8,si
+MOVE_QUICK_ATTACK,Quick Attack,Ataque Rápido,13,si
+MOVE_RAGE,Rage,Furia,5,si
+MOVE_TELEPORT,Teleport,Teletransporte,14,si
+MOVE_NIGHT_SHADE,Night Shade,Tinieblas,9,si
+MOVE_MIMIC,Mimic,Mimético,8,si
+MOVE_SCREECH,Screech,Chirrido,8,si
+MOVE_DOUBLE_TEAM,Double Team,Doble Equipo,12,si
+MOVE_RECOVER,Recover,Recuperación,12,si
+MOVE_HARDEN,Harden,Fortaleza,9,si
+MOVE_MINIMIZE,Minimize,Reducción,9,si
+MOVE_SMOKESCREEN,Smokescreen,Pantalla de Humo,16,si
+MOVE_CONFUSE_RAY,Confuse Ray,Rayo Confuso,12,si
+MOVE_WITHDRAW,Withdraw,Refugio,7,si
+MOVE_DEFENSE_CURL,Defense Curl,Rizo Defensa,12,si
+MOVE_BARRIER,Barrier,Barrera,7,si
+MOVE_LIGHT_SCREEN,Light Screen,Pantalla de Luz,15,si
+MOVE_HAZE,Haze,Niebla,6,si
+MOVE_REFLECT,Reflect,Reflejo,7,si
+MOVE_FOCUS_ENERGY,Focus Energy,Foco Energía,12,si
+MOVE_BIDE,Bide,Venganza,8,si
+MOVE_METRONOME,Metronome,Metrónomo,9,si
+MOVE_MIRROR_MOVE,Mirror Move,Espejo,6,si
+MOVE_SELF_DESTRUCT,Self-Destruct,Autodestrucción,15,si
+MOVE_EGG_BOMB,Egg Bomb,Bomba Huevo,11,si
+MOVE_LICK,Lick,Lengüetazo,10,si
+MOVE_SMOG,Smog,Polución,8,si
+MOVE_SLUDGE,Sludge,Residuos,8,si
+MOVE_BONE_CLUB,Bone Club,Hueso Palo,10,si
+MOVE_FIRE_BLAST,Fire Blast,Llamarada,9,si
+MOVE_WATERFALL,Waterfall,Cascada,7,si
+MOVE_CLAMP,Clamp,Tenaza,6,si
+MOVE_SWIFT,Swift,Meteoros,8,si
+MOVE_SKULL_BASH,Skull Bash,Cabezazo,8,si
+MOVE_SPIKE_CANNON,Spike Cannon,Clavo Cañón,11,si
+MOVE_CONSTRICT,Constrict,Restricción,11,si
+MOVE_AMNESIA,Amnesia,Amnesia,7,si
+MOVE_KINESIS,Kinesis,Kinético,8,si
+MOVE_SOFT_BOILED,Soft-Boiled,Ovocuración,11,si
+MOVE_HIGH_JUMP_KICK,High Jump Kick,Patada Salto Alta,17,NO
+MOVE_GLARE,Glare,Deslumbrar,10,si
+MOVE_DREAM_EATER,Dream Eater,Comesueños,10,si
+MOVE_POISON_GAS,Poison Gas,Gas Venenoso,12,si
+MOVE_BARRAGE,Barrage,Bombardeo,9,si
+MOVE_LEECH_LIFE,Leech Life,Chupavidas,10,si
+MOVE_LOVELY_KISS,Lovely Kiss,Beso Amoroso,12,si
+MOVE_SKY_ATTACK,Sky Attack,Ataque Aéreo,12,si
+MOVE_TRANSFORM,Transform,Transformación,14,si
+MOVE_BUBBLE,Bubble,Burbuja,7,si
+MOVE_DIZZY_PUNCH,Dizzy Punch,Puño Mareo,10,si
+MOVE_SPORE,Spore,Espora,6,si
+MOVE_FLASH,Flash,Destello,8,si
+MOVE_PSYWAVE,Psywave,Psicoonda,9,si
+MOVE_SPLASH,Splash,Salpicadura,11,si
+MOVE_ACID_ARMOR,Acid Armor,Armadura Ácida,14,si
+MOVE_CRABHAMMER,Crabhammer,Martillazo,10,si
+MOVE_EXPLOSION,Explosion,Explosión,9,si
+MOVE_FURY_SWIPES,Fury Swipes,Golpes Furia,12,si
+MOVE_BONEMERANG,Bonemerang,Huesomerang,11,si
+MOVE_REST,Rest,Descanso,8,si
+MOVE_ROCK_SLIDE,Rock Slide,Avalancha,9,si
+MOVE_HYPER_FANG,Hyper Fang,Hipercolmillo,13,si
+MOVE_SHARPEN,Sharpen,Afilar,6,si
+MOVE_CONVERSION,Conversion,Conversión,10,si
+MOVE_TRI_ATTACK,Tri Attack,Triataque,9,si
+MOVE_SUPER_FANG,Super Fang,Superdiente,11,si
+MOVE_SLASH,Slash,Cuchillada,10,si
+MOVE_SUBSTITUTE,Substitute,Sustituto,9,si
+MOVE_STRUGGLE,Struggle,Forcejeo,8,si
+MOVE_SKETCH,Sketch,Esquema,7,si
+MOVE_TRIPLE_KICK,Triple Kick,Triple Patada,13,si
+MOVE_THIEF,Thief,Ladrón,6,si
+MOVE_SPIDER_WEB,Spider Web,Telaraña,8,si
+MOVE_MIND_READER,Mind Reader,Telépata,8,si
+MOVE_NIGHTMARE,Nightmare,Pesadilla,9,si
+MOVE_FLAME_WHEEL,Flame Wheel,Rueda Fuego,11,si
+MOVE_SNORE,Snore,Ronquido,8,si
+MOVE_CURSE,Curse,Maldición,9,si
+MOVE_FLAIL,Flail,Azote,5,si
+MOVE_CONVERSION_2,Conversion 2,Conversión 2,12,si
+MOVE_AEROBLAST,Aeroblast,Aerochorro,10,si
+MOVE_COTTON_SPORE,Cotton Spore,Esporagodón,11,si
+MOVE_REVERSAL,Reversal,Inversión,9,si
+MOVE_SPITE,Spite,Rencor,6,si
+MOVE_POWDER_SNOW,Powder Snow,Nieve Polvo,11,si
+MOVE_PROTECT,Protect,Protección,10,si
+MOVE_MACH_PUNCH,Mach Punch,Ultrapuño,9,si
+MOVE_SCARY_FACE,Scary Face,Cara Susto,10,si
+MOVE_FEINT_ATTACK,Feint Attack,Finta,5,si
+MOVE_SWEET_KISS,Sweet Kiss,Beso Dulce,10,si
+MOVE_BELLY_DRUM,Belly Drum,Tambor,6,si
+MOVE_SLUDGE_BOMB,Sludge Bomb,Bomba Lodo,10,si
+MOVE_MUD_SLAP,Mud-Slap,Bofetón Lodo,12,si
+MOVE_OCTAZOOKA,Octazooka,Pulpocañón,10,si
+MOVE_SPIKES,Spikes,Púas,4,si
+MOVE_ZAP_CANNON,Zap Cannon,Electrocañón,12,si
+MOVE_FORESIGHT,Foresight,Profecía,8,si
+MOVE_DESTINY_BOND,Destiny Bond,Mismo Destino,13,si
+MOVE_PERISH_SONG,Perish Song,Canto Mortal,12,si
+MOVE_ICY_WIND,Icy Wind,Viento Hielo,12,si
+MOVE_DETECT,Detect,Detección,9,si
+MOVE_BONE_RUSH,Bone Rush,Ataque Óseo,11,si
+MOVE_LOCK_ON,Lock-On,Fijar Blanco,12,si
+MOVE_OUTRAGE,Outrage,Enfado,6,si
+MOVE_SANDSTORM,Sandstorm,Tormenta de Arena,17,NO
+MOVE_GIGA_DRAIN,Giga Drain,Gigadrenado,11,si
+MOVE_ENDURE,Endure,Aguante,7,si
+MOVE_CHARM,Charm,Encanto,7,si
+MOVE_ROLLOUT,Rollout,Rodar,5,si
+MOVE_FALSE_SWIPE,False Swipe,Falso Tortazo,13,si
+MOVE_SWAGGER,Swagger,Fanfarronear,12,si
+MOVE_MILK_DRINK,Milk Drink,Batido,6,si
+MOVE_SPARK,Spark,Chispa,6,si
+MOVE_FURY_CUTTER,Fury Cutter,Corte Furia,11,si
+MOVE_STEEL_WING,Steel Wing,Ala de Acero,12,si
+MOVE_MEAN_LOOK,Mean Look,Mal de Ojo,10,si
+MOVE_ATTRACT,Attract,Atracción,9,si
+MOVE_SLEEP_TALK,Sleep Talk,Sonámbulo,9,si
+MOVE_HEAL_BELL,Heal Bell,Cascabel Cura,13,si
+MOVE_RETURN,Return,Retribución,11,si
+MOVE_PRESENT,Present,Presente,8,si
+MOVE_FRUSTRATION,Frustration,Frustración,11,si
+MOVE_SAFEGUARD,Safeguard,Velo Sagrado,12,si
+MOVE_PAIN_SPLIT,Pain Split,Divide Dolor,12,si
+MOVE_SACRED_FIRE,Sacred Fire,Fuego Sagrado,13,si
+MOVE_MAGNITUDE,Magnitude,Magnitud,8,si
+MOVE_DYNAMIC_PUNCH,Dynamic Punch,Puño Dinámico,13,si
+MOVE_MEGAHORN,Megahorn,Megacuerno,10,si
+MOVE_DRAGON_BREATH,Dragon Breath,Dragoaliento,12,si
+MOVE_BATON_PASS,Baton Pass,Relevo,6,si
+MOVE_ENCORE,Encore,Otra Vez,8,si
+MOVE_PURSUIT,Pursuit,Persecución,11,si
+MOVE_RAPID_SPIN,Rapid Spin,Giro Rápido,11,si
+MOVE_SWEET_SCENT,Sweet Scent,Dulce Aroma,11,si
+MOVE_IRON_TAIL,Iron Tail,Cola Férrea,11,si
+MOVE_METAL_CLAW,Metal Claw,Garra Metal,11,si
+MOVE_VITAL_THROW,Vital Throw,Llave Vital,11,si
+MOVE_MORNING_SUN,Morning Sun,Sol Matinal,11,si
+MOVE_SYNTHESIS,Synthesis,Fotosíntesis,12,si
+MOVE_MOONLIGHT,Moonlight,Luz Lunar,9,si
+MOVE_HIDDEN_POWER,Hidden Power,Poder Oculto,12,si
+MOVE_CROSS_CHOP,Cross Chop,Tajo Cruzado,12,si
+MOVE_TWISTER,Twister,Ciclón,6,si
+MOVE_RAIN_DANCE,Rain Dance,Danza Lluvia,12,si
+MOVE_SUNNY_DAY,Sunny Day,Día Soleado,11,si
+MOVE_CRUNCH,Crunch,Triturar,8,si
+MOVE_MIRROR_COAT,Mirror Coat,Manto Espejo,12,si
+MOVE_PSYCH_UP,Psych Up,Autosugestión,13,si
+MOVE_EXTREME_SPEED,Extreme Speed,Velocidad Extrema,17,NO
+MOVE_ANCIENT_POWER,Ancient Power,Poder Pasado,12,si
+MOVE_SHADOW_BALL,Shadow Ball,Bola Sombra,11,si
+MOVE_FUTURE_SIGHT,Future Sight,Premonición,11,si
+MOVE_ROCK_SMASH,Rock Smash,Golpe Roca,10,si
+MOVE_WHIRLPOOL,Whirlpool,Torbellino,10,si
+MOVE_BEAT_UP,Beat Up,Paliza,6,si
+MOVE_FAKE_OUT,Fake Out,Sorpresa,8,si
+MOVE_UPROAR,Uproar,Alboroto,8,si
+MOVE_STOCKPILE,Stockpile,Reserva,7,si
+MOVE_SPIT_UP,Spit Up,Escupir,7,si
+MOVE_SWALLOW,Swallow,Tragar,6,si
+MOVE_HEAT_WAVE,Heat Wave,Onda Ígnea,10,si
+MOVE_HAIL,Hail,Granizo,7,si
+MOVE_TORMENT,Torment,Tormento,8,si
+MOVE_FLATTER,Flatter,Camelo,6,si
+MOVE_WILL_O_WISP,Will-O-Wisp,Fuego Fatuo,11,si
+MOVE_MEMENTO,Memento,Legado,6,si
+MOVE_FACADE,Facade,Fachada,7,si
+MOVE_FOCUS_PUNCH,Focus Punch,Puño Certero,12,si
+MOVE_SMELLING_SALTS,Smelling Salts,Estímulo,8,si
+MOVE_FOLLOW_ME,Follow Me,Señuelo,7,si
+MOVE_NATURE_POWER,Nature Power,Adaptación,10,si
+MOVE_CHARGE,Charge,Carga,5,si
+MOVE_TAUNT,Taunt,Mofa,4,si
+MOVE_HELPING_HAND,Helping Hand,Refuerzo,8,si
+MOVE_TRICK,Trick,Truco,5,si
+MOVE_ROLE_PLAY,Role Play,Imitación,9,si
+MOVE_WISH,Wish,Deseo,5,si
+MOVE_ASSIST,Assist,Ayuda,5,si
+MOVE_INGRAIN,Ingrain,Arraigo,7,si
+MOVE_SUPERPOWER,Superpower,Fuerza Bruta,12,si
+MOVE_MAGIC_COAT,Magic Coat,Capa Mágica,11,si
+MOVE_RECYCLE,Recycle,Reciclaje,9,si
+MOVE_REVENGE,Revenge,Desquite,8,si
+MOVE_BRICK_BREAK,Brick Break,Demolición,10,si
+MOVE_YAWN,Yawn,Bostezo,7,si
+MOVE_KNOCK_OFF,Knock Off,Desarme,7,si
+MOVE_ENDEAVOR,Endeavor,Esfuerzo,8,si
+MOVE_ERUPTION,Eruption,Estallido,9,si
+MOVE_SKILL_SWAP,Skill Swap,Intercambio,11,si
+MOVE_IMPRISON,Imprison,Sellar,6,si
+MOVE_REFRESH,Refresh,Alivio,6,si
+MOVE_GRUDGE,Grudge,Rabia,5,si
+MOVE_SNATCH,Snatch,Robo,4,si
+MOVE_SECRET_POWER,Secret Power,Daño Secreto,12,si
+MOVE_DIVE,Dive,Buceo,5,si
+MOVE_ARM_THRUST,Arm Thrust,Empujón,7,si
+MOVE_CAMOUFLAGE,Camouflage,Camuflaje,9,si
+MOVE_TAIL_GLOW,Tail Glow,Luminicola,10,si
+MOVE_LUSTER_PURGE,Luster Purge,Resplandor,10,si
+MOVE_MIST_BALL,Mist Ball,Bola Neblina,12,si
+MOVE_FEATHER_DANCE,Feather Dance,Danza Pluma,11,si
+MOVE_TEETER_DANCE,Teeter Dance,Danza Caos,10,si
+MOVE_BLAZE_KICK,Blaze Kick,Patada Ígnea,12,si
+MOVE_MUD_SPORT,Mud Sport,Chapoteo Lodo,13,si
+MOVE_ICE_BALL,Ice Ball,Bola Hielo,10,si
+MOVE_NEEDLE_ARM,Needle Arm,Brazo Pincho,12,si
+MOVE_SLACK_OFF,Slack Off,Relajo,6,si
+MOVE_HYPER_VOICE,Hyper Voice,Vozarrón,8,si
+MOVE_POISON_FANG,Poison Fang,Colmillo Veneno,15,si
+MOVE_CRUSH_CLAW,Crush Claw,Garra Brutal,12,si
+MOVE_BLAST_BURN,Blast Burn,Anillo Ígneo,12,si
+MOVE_HYDRO_CANNON,Hydro Cannon,Hidrocañón,10,si
+MOVE_METEOR_MASH,Meteor Mash,Puño Meteoro,12,si
+MOVE_ASTONISH,Astonish,Impresionar,11,si
+MOVE_WEATHER_BALL,Weather Ball,Meteorobola,11,si
+MOVE_AROMATHERAPY,Aromatherapy,Aromaterapia,12,si
+MOVE_FAKE_TEARS,Fake Tears,Llanto Falso,12,si
+MOVE_AIR_CUTTER,Air Cutter,Aire Afilado,12,si
+MOVE_OVERHEAT,Overheat,Sofoco,6,si
+MOVE_ODOR_SLEUTH,Odor Sleuth,Rastreo,7,si
+MOVE_ROCK_TOMB,Rock Tomb,Tumba Rocas,11,si
+MOVE_SILVER_WIND,Silver Wind,Viento Plata,12,si
+MOVE_METAL_SOUND,Metal Sound,Eco Metálico,12,si
+MOVE_GRASS_WHISTLE,Grass Whistle,Silbato,7,si
+MOVE_TICKLE,Tickle,Cosquillas,10,si
+MOVE_COSMIC_POWER,Cosmic Power,Masa Cósmica,12,si
+MOVE_WATER_SPOUT,Water Spout,Salpicar,8,si
+MOVE_SIGNAL_BEAM,Signal Beam,Rayo Señal,10,si
+MOVE_SHADOW_PUNCH,Shadow Punch,Puño Sombra,11,si
+MOVE_EXTRASENSORY,Extrasensory,Paranormal,10,si
+MOVE_SKY_UPPERCUT,Sky Uppercut,Gancho Alto,11,si
+MOVE_SAND_TOMB,Sand Tomb,Bucle Arena,11,si
+MOVE_SHEER_COLD,Sheer Cold,Frío Polar,10,si
+MOVE_MUDDY_WATER,Muddy Water,Agua Lodosa,11,si
+MOVE_BULLET_SEED,Bullet Seed,Semilladora,11,si
+MOVE_AERIAL_ACE,Aerial Ace,Golpe Aéreo,11,si
+MOVE_ICICLE_SPEAR,Icicle Spear,Carámbano,9,si
+MOVE_IRON_DEFENSE,Iron Defense,Defensa Férrea,14,si
+MOVE_BLOCK,Block,Bloqueo,7,si
+MOVE_HOWL,Howl,Aullido,7,si
+MOVE_DRAGON_CLAW,Dragon Claw,Garra Dragón,12,si
+MOVE_FRENZY_PLANT,Frenzy Plant,Planta Feroz,12,si
+MOVE_BULK_UP,Bulk Up,Corpulencia,11,si
+MOVE_BOUNCE,Bounce,Bote,4,si
+MOVE_MUD_SHOT,Mud Shot,Disparo Lodo,12,si
+MOVE_POISON_TAIL,Poison Tail,Cola Veneno,11,si
+MOVE_COVET,Covet,Antojo,6,si
+MOVE_VOLT_TACKLE,Volt Tackle,Placaje Eléctrico,17,NO
+MOVE_MAGICAL_LEAF,Magical Leaf,Hoja Mágica,11,si
+MOVE_WATER_SPORT,Water Sport,Hidrochorro,11,si
+MOVE_CALM_MIND,Calm Mind,Paz Mental,10,si
+MOVE_LEAF_BLADE,Leaf Blade,Hoja Aguda,10,si
+MOVE_DRAGON_DANCE,Dragon Dance,Danza Dragón,12,si
+MOVE_ROCK_BLAST,Rock Blast,Pedrada,7,si
+MOVE_SHOCK_WAVE,Shock Wave,Onda Voltio,11,si
+MOVE_WATER_PULSE,Water Pulse,Hidropulso,10,si
+MOVE_DOOM_DESIRE,Doom Desire,Deseo Oculto,12,si
+MOVE_PSYCHO_BOOST,Psycho Boost,Psicoataque,11,si
+MOVE_ROOST,Roost,Respiro,7,si
+MOVE_GRAVITY,Gravity,Gravedad,8,si
+MOVE_MIRACLE_EYE,Miracle Eye,Gran Ojo,8,si
+MOVE_WAKE_UP_SLAP,Wake-Up Slap,Espabila,8,si
+MOVE_HAMMER_ARM,Hammer Arm,Machada,7,si
+MOVE_GYRO_BALL,Gyro Ball,Giro Bola,9,si
+MOVE_HEALING_WISH,Healing Wish,Deseo Cura,10,si
+MOVE_BRINE,Brine,Salmuera,8,si
+MOVE_NATURAL_GIFT,Natural Gift,Don Natural,11,si
+MOVE_FEINT,Feint,Amago,5,si
+MOVE_PLUCK,Pluck,Picoteo,7,si
+MOVE_TAILWIND,Tailwind,Viento Afín,11,si
+MOVE_ACUPRESSURE,Acupressure,Acupresión,10,si
+MOVE_METAL_BURST,Metal Burst,Represión Metal,15,si
+MOVE_U_TURN,U-turn,Ida y Vuelta,12,si
+MOVE_CLOSE_COMBAT,Close Combat,A Bocajarro,11,si
+MOVE_PAYBACK,Payback,Vendetta,8,si
+MOVE_ASSURANCE,Assurance,Buena Baza,10,si
+MOVE_EMBARGO,Embargo,Embargo,7,si
+MOVE_FLING,Fling,Lanzamiento,11,si
+MOVE_PSYCHO_SHIFT,Psycho Shift,Psicocambio,11,si
+MOVE_TRUMP_CARD,Trump Card,As Oculto,9,si
+MOVE_HEAL_BLOCK,Heal Block,Anticura,8,si
+MOVE_WRING_OUT,Wring Out,Estrujón,8,si
+MOVE_POWER_TRICK,Power Trick,Truco Fuerza,12,si
+MOVE_GASTRO_ACID,Gastro Acid,Bilis,5,si
+MOVE_LUCKY_CHANT,Lucky Chant,Conjuro,7,si
+MOVE_ME_FIRST,Me First,Yo Primero,10,si
+MOVE_COPYCAT,Copycat,Copión,6,si
+MOVE_POWER_SWAP,Power Swap,Cambiafuerza,12,si
+MOVE_GUARD_SWAP,Guard Swap,Cambiadefensa,13,si
+MOVE_PUNISHMENT,Punishment,Castigo,7,si
+MOVE_LAST_RESORT,Last Resort,Última Baza,11,si
+MOVE_WORRY_SEED,Worry Seed,Abatidoras,10,si
+MOVE_SUCKER_PUNCH,Sucker Punch,Golpe Bajo,10,si
+MOVE_TOXIC_SPIKES,Toxic Spikes,Púas Tóxicas,12,si
+MOVE_HEART_SWAP,Heart Swap,Cambiaalmas,11,si
+MOVE_AQUA_RING,Aqua Ring,Acua Aro,8,si
+MOVE_MAGNET_RISE,Magnet Rise,Levitón,7,si
+MOVE_FLARE_BLITZ,Flare Blitz,Envite Ígneo,12,si
+MOVE_FORCE_PALM,Force Palm,Palmeo,6,si
+MOVE_AURA_SPHERE,Aura Sphere,Esfera Aural,12,si
+MOVE_ROCK_POLISH,Rock Polish,Pulimento,9,si
+MOVE_POISON_JAB,Poison Jab,Puya Nociva,11,si
+MOVE_DARK_PULSE,Dark Pulse,Pulso Umbrío,12,si
+MOVE_NIGHT_SLASH,Night Slash,Tajo Umbrío,11,si
+MOVE_AQUA_TAIL,Aqua Tail,Acua Cola,9,si
+MOVE_SEED_BOMB,Seed Bomb,Bomba Germen,12,si
+MOVE_AIR_SLASH,Air Slash,Tajo Aéreo,10,si
+MOVE_X_SCISSOR,X-Scissor,Tijera X,8,si
+MOVE_BUG_BUZZ,Bug Buzz,Zumbido,7,si
+MOVE_DRAGON_PULSE,Dragon Pulse,Pulso Dragón,12,si
+MOVE_DRAGON_RUSH,Dragon Rush,Carga Dragón,12,si
+MOVE_POWER_GEM,Power Gem,Joya de Luz,11,si
+MOVE_DRAIN_PUNCH,Drain Punch,Puño Drenaje,12,si
+MOVE_VACUUM_WAVE,Vacuum Wave,Onda Vacío,10,si
+MOVE_FOCUS_BLAST,Focus Blast,Onda Certera,12,si
+MOVE_ENERGY_BALL,Energy Ball,Energibola,10,si
+MOVE_BRAVE_BIRD,Brave Bird,Pájaro Osado,12,si
+MOVE_EARTH_POWER,Earth Power,Tierra Viva,11,si
+MOVE_SWITCHEROO,Switcheroo,Trapicheo,9,si
+MOVE_GIGA_IMPACT,Giga Impact,Gigaimpacto,11,si
+MOVE_NASTY_PLOT,Nasty Plot,Maquinación,11,si
+MOVE_BULLET_PUNCH,Bullet Punch,Puño Bala,9,si
+MOVE_AVALANCHE,Avalanche,Alud,4,si
+MOVE_ICE_SHARD,Ice Shard,Esquirla Helada,15,si
+MOVE_SHADOW_CLAW,Shadow Claw,Garra Umbría,12,si
+MOVE_THUNDER_FANG,Thunder Fang,Colmillo Rayo,13,si
+MOVE_ICE_FANG,Ice Fang,Colmillo Hielo,14,si
+MOVE_FIRE_FANG,Fire Fang,Colmillo Ígneo,14,si
+MOVE_SHADOW_SNEAK,Shadow Sneak,Sombra Vil,10,si
+MOVE_MUD_BOMB,Mud Bomb,Bomba Fango,11,si
+MOVE_PSYCHO_CUT,Psycho Cut,Psicocorte,10,si
+MOVE_ZEN_HEADBUTT,Zen Headbutt,Cabezazo Zen,12,si
+MOVE_MIRROR_SHOT,Mirror Shot,Disparo Espejo,14,si
+MOVE_FLASH_CANNON,Flash Cannon,Cañón Resplandor,16,si
+MOVE_ROCK_CLIMB,Rock Climb,Treparrocas,11,si
+MOVE_DEFOG,Defog,Despejar,8,si
+MOVE_TRICK_ROOM,Trick Room,Espacio Raro,12,si
+MOVE_DRACO_METEOR,Draco Meteor,Cometa Draco,12,si
+MOVE_DISCHARGE,Discharge,Chispazo,8,si
+MOVE_LAVA_PLUME,Lava Plume,Humareda,8,si
+MOVE_LEAF_STORM,Leaf Storm,Lluevehojas,11,si
+MOVE_POWER_WHIP,Power Whip,Latigazo,8,si
+MOVE_ROCK_WRECKER,Rock Wrecker,Romperrocas,11,si
+MOVE_CROSS_POISON,Cross Poison,Veneno X,8,si
+MOVE_GUNK_SHOT,Gunk Shot,Lanzamugre,10,si
+MOVE_IRON_HEAD,Iron Head,Cabeza de Hierro,16,si
+MOVE_MAGNET_BOMB,Magnet Bomb,Bomba Imán,10,si
+MOVE_STONE_EDGE,Stone Edge,Roca Afilada,12,si
+MOVE_CAPTIVATE,Captivate,Seducción,9,si
+MOVE_STEALTH_ROCK,Stealth Rock,Trampa Rocas,12,si
+MOVE_GRASS_KNOT,Grass Knot,Hierba Lazo,11,si
+MOVE_CHATTER,Chatter,Cháchara,8,si
+MOVE_JUDGMENT,Judgment,Sentencia,9,si
+MOVE_BUG_BITE,Bug Bite,Picadura,8,si
+MOVE_CHARGE_BEAM,Charge Beam,Rayo Carga,10,si
+MOVE_WOOD_HAMMER,Wood Hammer,Mazazo,6,si
+MOVE_AQUA_JET,Aqua Jet,Acua Jet,8,si
+MOVE_ATTACK_ORDER,Attack Order,Al Ataque,9,si
+MOVE_DEFEND_ORDER,Defend Order,A Defender,10,si
+MOVE_HEAL_ORDER,Heal Order,Auxilio,7,si
+MOVE_HEAD_SMASH,Head Smash,Testarazo,9,si
+MOVE_DOUBLE_HIT,Double Hit,Doble Golpe,11,si
+MOVE_ROAR_OF_TIME,Roar of Time,Distorsión,10,si
+MOVE_SPACIAL_REND,Spacial Rend,Corte Vacío,11,si
+MOVE_LUNAR_DANCE,Lunar Dance,Danza Lunar,11,si
+MOVE_CRUSH_GRIP,Crush Grip,Agarrón,7,si
+MOVE_MAGMA_STORM,Magma Storm,Lluvia Ígnea,12,si
+MOVE_DARK_VOID,Dark Void,Brecha Negra,12,si
+MOVE_SEED_FLARE,Seed Flare,Fulgor Semilla,14,si
+MOVE_OMINOUS_WIND,Ominous Wind,Viento Aciago,13,si
+MOVE_SHADOW_FORCE,Shadow Force,Golpe Umbrío,12,si
+MOVE_HONE_CLAWS,Hone Claws,Afilagarras,11,si
+MOVE_WIDE_GUARD,Wide Guard,Vasta Guardia,13,si
+MOVE_GUARD_SPLIT,Guard Split,Isoguardia,10,si
+MOVE_POWER_SPLIT,Power Split,Isofuerza,9,si
+MOVE_WONDER_ROOM,Wonder Room,Zona Extraña,12,si
+MOVE_PSYSHOCK,Psyshock,Psicocarga,10,si
+MOVE_VENOSHOCK,Venoshock,Carga Tóxica,12,si
+MOVE_AUTOTOMIZE,Autotomize,Aligerar,8,si
+MOVE_RAGE_POWDER,Rage Powder,Polvo Ira,9,si
+MOVE_TELEKINESIS,Telekinesis,Telequinesis,12,si
+MOVE_MAGIC_ROOM,Magic Room,Zona Mágica,11,si
+MOVE_SMACK_DOWN,Smack Down,Antiaéreo,9,si
+MOVE_STORM_THROW,Storm Throw,Llave Corsé,11,si
+MOVE_FLAME_BURST,Flame Burst,Pirotecnia,10,si
+MOVE_SLUDGE_WAVE,Sludge Wave,Onda Tóxica,11,si
+MOVE_QUIVER_DANCE,Quiver Dance,Danza Aleteo,12,si
+MOVE_HEAVY_SLAM,Heavy Slam,Cuerpo Pesado,13,si
+MOVE_SYNCHRONOISE,Synchronoise,Sincrorruido,12,si
+MOVE_ELECTRO_BALL,Electro Ball,Bola Voltio,11,si
+MOVE_SOAK,Soak,Empapar,7,si
+MOVE_FLAME_CHARGE,Flame Charge,Nitrocarga,10,si
+MOVE_COIL,Coil,Enrosque,8,si
+MOVE_LOW_SWEEP,Low Sweep,Puntapié,8,si
+MOVE_ACID_SPRAY,Acid Spray,Bomba Ácida,11,si
+MOVE_FOUL_PLAY,Foul Play,Juego Sucio,11,si
+MOVE_SIMPLE_BEAM,Simple Beam,Onda Simple,11,si
+MOVE_ENTRAINMENT,Entrainment,Danza Amiga,11,si
+MOVE_AFTER_YOU,After You,Cede Paso,9,si
+MOVE_ROUND,Round,Canon,5,si
+MOVE_ECHOED_VOICE,Echoed Voice,Eco Voz,7,si
+MOVE_CHIP_AWAY,Chip Away,Guardia Baja,12,si
+MOVE_CLEAR_SMOG,Clear Smog,Niebla Clara,12,si
+MOVE_STORED_POWER,Stored Power,Poder Reserva,13,si
+MOVE_QUICK_GUARD,Quick Guard,Anticipo,8,si
+MOVE_ALLY_SWITCH,Ally Switch,Cambio de Banda,15,si
+MOVE_SCALD,Scald,Escaldar,8,si
+MOVE_SHELL_SMASH,Shell Smash,Rompecoraza,11,si
+MOVE_HEAL_PULSE,Heal Pulse,Pulso Cura,10,si
+MOVE_HEX,Hex,Infortunio,10,si
+MOVE_SKY_DROP,Sky Drop,Caída Libre,11,si
+MOVE_SHIFT_GEAR,Shift Gear,Cambio de Marcha,16,si
+MOVE_CIRCLE_THROW,Circle Throw,Llave Giro,10,si
+MOVE_INCINERATE,Incinerate,Calcinación,11,si
+MOVE_QUASH,Quash,Último Lugar,12,si
+MOVE_ACROBATICS,Acrobatics,Acróbata,8,si
+MOVE_REFLECT_TYPE,Reflect Type,Clonatipo,9,si
+MOVE_RETALIATE,Retaliate,Represalia,10,si
+MOVE_FINAL_GAMBIT,Final Gambit,Sacrificio,10,si
+MOVE_BESTOW,Bestow,Ofrenda,7,si
+MOVE_INFERNO,Inferno,Infierno,8,si
+MOVE_WATER_PLEDGE,Water Pledge,Voto Agua,9,si
+MOVE_FIRE_PLEDGE,Fire Pledge,Voto Fuego,10,si
+MOVE_GRASS_PLEDGE,Grass Pledge,Voto Planta,11,si
+MOVE_VOLT_SWITCH,Volt Switch,Voltiocambio,12,si
+MOVE_STRUGGLE_BUG,Struggle Bug,Estoicismo,10,si
+MOVE_BULLDOZE,Bulldoze,Terratemblor,12,si
+MOVE_FROST_BREATH,Frost Breath,Vaho Gélido,11,si
+MOVE_DRAGON_TAIL,Dragon Tail,Cola Dragón,11,si
+MOVE_WORK_UP,Work Up,Avivar,6,si
+MOVE_ELECTROWEB,Electroweb,Electrotela,11,si
+MOVE_WILD_CHARGE,Wild Charge,Voltio Cruel,12,si
+MOVE_DRILL_RUN,Drill Run,Taladradora,11,si
+MOVE_DUAL_CHOP,Dual Chop,Golpe Bis,9,si
+MOVE_HEART_STAMP,Heart Stamp,Arrumaco,8,si
+MOVE_HORN_LEECH,Horn Leech,Asta Drenaje,12,si
+MOVE_SACRED_SWORD,Sacred Sword,Espada Santa,12,si
+MOVE_RAZOR_SHELL,Razor Shell,Concha Filo,11,si
+MOVE_HEAT_CRASH,Heat Crash,Golpe Calor,11,si
+MOVE_LEAF_TORNADO,Leaf Tornado,Ciclón de Hojas,15,si
+MOVE_STEAMROLLER,Steamroller,Rodillo de Púas,15,si
+MOVE_COTTON_GUARD,Cotton Guard,Rizo Algodón,12,si
+MOVE_NIGHT_DAZE,Night Daze,Pulso Noche,11,si
+MOVE_PSYSTRIKE,Psystrike,Onda Mental,11,si
+MOVE_TAIL_SLAP,Tail Slap,Plumerazo,9,si
+MOVE_HURRICANE,Hurricane,Vendaval,8,si
+MOVE_HEAD_CHARGE,Head Charge,Ariete,6,si
+MOVE_GEAR_GRIND,Gear Grind,Rueda Doble,11,si
+MOVE_SEARING_SHOT,Searing Shot,Bomba Ígnea,11,si
+MOVE_TECHNO_BLAST,Techno Blast,Tecno Shock,11,si
+MOVE_RELIC_SONG,Relic Song,Canto Arcaico,13,si
+MOVE_SECRET_SWORD,Secret Sword,Sable Místico,13,si
+MOVE_GLACIATE,Glaciate,Mundo Gélido,12,si
+MOVE_BOLT_STRIKE,Bolt Strike,Ataque Fulgor,13,si
+MOVE_BLUE_FLARE,Blue Flare,Llama Azul,10,si
+MOVE_FIERY_DANCE,Fiery Dance,Danza Llama,11,si
+MOVE_FREEZE_SHOCK,Freeze Shock,Rayo Gélido,11,si
+MOVE_ICE_BURN,Ice Burn,Llama Gélida,12,si
+MOVE_SNARL,Snarl,Alarido,7,si
+MOVE_ICICLE_CRASH,Icicle Crash,Chuzos,6,si
+MOVE_V_CREATE,V-create,V de Fuego,10,si
+MOVE_FUSION_FLARE,Fusion Flare,Llama Fusión,12,si
+MOVE_FUSION_BOLT,Fusion Bolt,Rayo Fusión,11,si
+MOVE_FLYING_PRESS,Flying Press,Plancha Voladora,16,si
+MOVE_MAT_BLOCK,Mat Block,Escudo Tatami,13,si
+MOVE_BELCH,Belch,Eructo,6,si
+MOVE_ROTOTILLER,Rototiller,Fertilizante,12,si
+MOVE_STICKY_WEB,Sticky Web,Red Viscosa,11,si
+MOVE_FELL_STINGER,Fell Stinger,Aguijón Letal,13,si
+MOVE_PHANTOM_FORCE,Phantom Force,Golpe Fantasma,14,si
+MOVE_TRICK_OR_TREAT,Trick-or-Treat,Halloween,9,si
+MOVE_NOBLE_ROAR,Noble Roar,Rugido de Guerra,16,si
+MOVE_ION_DELUGE,Ion Deluge,Cortina Plasma,14,si
+MOVE_PARABOLIC_CHARGE,Parabolic Charge,Carga Parábola,14,si
+MOVE_FORESTS_CURSE,Forest's Curse,Condena Silvana,15,si
+MOVE_PETAL_BLIZZARD,Petal Blizzard,Tormenta Floral,15,si
+MOVE_FREEZE_DRY,Freeze-Dry,Liofilización,13,si
+MOVE_DISARMING_VOICE,Disarming Voice,Voz Cautivadora,15,si
+MOVE_PARTING_SHOT,Parting Shot,Última Palabra,14,si
+MOVE_TOPSY_TURVY,Topsy-Turvy,Reversión,9,si
+MOVE_DRAINING_KISS,Draining Kiss,Beso Drenaje,12,si
+MOVE_CRAFTY_SHIELD,Crafty Shield,Truco Defensa,13,si
+MOVE_FLOWER_SHIELD,Flower Shield,Defensa Floral,14,si
+MOVE_GRASSY_TERRAIN,Grassy Terrain,Campo de Hierba,15,si
+MOVE_MISTY_TERRAIN,Misty Terrain,Campo de Niebla,15,si
+MOVE_ELECTRIFY,Electrify,Electrificación,15,si
+MOVE_PLAY_ROUGH,Play Rough,Carantoña,9,si
+MOVE_FAIRY_WIND,Fairy Wind,Viento Feérico,14,si
+MOVE_MOONBLAST,Moonblast,Fuerza Lunar,12,si
+MOVE_BOOMBURST,Boomburst,Estruendo,9,si
+MOVE_FAIRY_LOCK,Fairy Lock,Cerrojo Feérico,15,si
+MOVE_KINGS_SHIELD,King's Shield,Escudo Real,11,si
+MOVE_PLAY_NICE,Play Nice,Camaradería,11,si
+MOVE_CONFIDE,Confide,Confidencia,11,si
+MOVE_DIAMOND_STORM,Diamond Storm,Tormenta de Diamantes,21,NO
+MOVE_STEAM_ERUPTION,Steam Eruption,Chorro de Vapor,15,si
+MOVE_HYPERSPACE_HOLE,Hyperspace Hole,Paso Dimensional,16,si
+MOVE_WATER_SHURIKEN,Water Shuriken,Shuriken de Agua,16,si
+MOVE_MYSTICAL_FIRE,Mystical Fire,Llama Embrujada,15,si
+MOVE_SPIKY_SHIELD,Spiky Shield,Barrera Espinosa,16,si
+MOVE_AROMATIC_MIST,Aromatic Mist,Niebla Aromática,16,si
+MOVE_EERIE_IMPULSE,Eerie Impulse,Onda Anómala,12,si
+MOVE_VENOM_DRENCH,Venom Drench,Trampa Venenosa,15,si
+MOVE_POWDER,Powder,Polvo Explosivo,15,si
+MOVE_GEOMANCY,Geomancy,Geocontrol,10,si
+MOVE_MAGNETIC_FLUX,Magnetic Flux,Aura Magnética,14,si
+MOVE_HAPPY_HOUR,Happy Hour,Paga Extra,10,si
+MOVE_ELECTRIC_TERRAIN,Electric Terrain,Campo Eléctrico,15,si
+MOVE_DAZZLING_GLEAM,Dazzling Gleam,Brillo Mágico,13,si
+MOVE_CELEBRATE,Celebrate,Celebración,11,si
+MOVE_HOLD_HANDS,Hold Hands,Manos Juntas,12,si
+MOVE_BABY_DOLL_EYES,Baby-Doll Eyes,Ojitos Tiernos,14,si
+MOVE_NUZZLE,Nuzzle,Moflete Estático,16,si
+MOVE_HOLD_BACK,Hold Back,Clemencia,9,si
+MOVE_INFESTATION,Infestation,Acoso,5,si
+MOVE_POWER_UP_PUNCH,Power-Up Punch,Puño Incremento,15,si
+MOVE_OBLIVION_WING,Oblivion Wing,Ala Mortífera,13,si
+MOVE_THOUSAND_ARROWS,Thousand Arrows,Mil Flechas,11,si
+MOVE_THOUSAND_WAVES,Thousand Waves,Mil Temblores,13,si
+MOVE_LANDS_WRATH,Land's Wrath,Fuerza Telúrica,15,si
+MOVE_LIGHT_OF_RUIN,Light Of Ruin,Luz Aniquiladora,16,si
+MOVE_ORIGIN_PULSE,Origin Pulse,Pulso Primigenio,16,si
+MOVE_PRECIPICE_BLADES,Precipice Blades,Filo del Abismo,15,si
+MOVE_DRAGON_ASCENT,Dragon Ascent,Ascenso Draco,13,si
+MOVE_HYPERSPACE_FURY,Hyperspace Fury,Cerco Dimensión,15,si
+MOVE_SHORE_UP,Shore Up,Recogearena,11,si
+MOVE_FIRST_IMPRESSION,First Impression,Escaramuza,10,si
+MOVE_BANEFUL_BUNKER,Baneful Bunker,Búnker,6,si
+MOVE_SPIRIT_SHACKLE,Spirit Shackle,Puntada Sombría,15,si
+MOVE_DARKEST_LARIAT,Darkest Lariat,Lariat Oscuro,13,si
+MOVE_SPARKLING_ARIA,Sparkling Aria,Aria Burbuja,12,si
+MOVE_ICE_HAMMER,Ice Hammer,Martillo Hielo,14,si
+MOVE_FLORAL_HEALING,Floral Healing,Cura Floral,11,si
+MOVE_HIGH_HORSEPOWER,High Horsepower,Fuerza Equina,13,si
+MOVE_STRENGTH_SAP,Strength Sap,Absorbefuerza,13,si
+MOVE_SOLAR_BLADE,Solar Blade,Cuchilla Solar,14,si
+MOVE_LEAFAGE,Leafage,Follaje,7,si
+MOVE_SPOTLIGHT,Spotlight,Foco,4,si
+MOVE_TOXIC_THREAD,Toxic Thread,Hilo Venenoso,13,si
+MOVE_LASER_FOCUS,Laser Focus,Aguzar,6,si
+MOVE_GEAR_UP,Gear Up,Piñón Auxiliar,14,si
+MOVE_THROAT_CHOP,Throat Chop,Golpe Mordaza,13,si
+MOVE_POLLEN_PUFF,Pollen Puff,Bola de Polen,13,si
+MOVE_ANCHOR_SHOT,Anchor Shot,Anclaje,7,si
+MOVE_PSYCHIC_TERRAIN,Psychic Terrain,Campo Psíquico,14,si
+MOVE_LUNGE,Lunge,Plancha,7,si
+MOVE_FIRE_LASH,Fire Lash,Látigo Ígneo,12,si
+MOVE_POWER_TRIP,Power Trip,Chulería,8,si
+MOVE_BURN_UP,Burn Up,Llama Final,11,si
+MOVE_SPEED_SWAP,Speed Swap,Cambiavelocidad,15,si
+MOVE_SMART_STRIKE,Smart Strike,Cuerno Certero,14,si
+MOVE_PURIFY,Purify,Purificación,12,si
+MOVE_REVELATION_DANCE,Revelation Dance,Danza Despertar,15,si
+MOVE_CORE_ENFORCER,Core Enforcer,Núcleo Castigo,14,si
+MOVE_TROP_KICK,Trop Kick,Patada Tropical,15,si
+MOVE_INSTRUCT,Instruct,Mandato,7,si
+MOVE_BEAK_BLAST,Beak Blast,Pico Cañón,10,si
+MOVE_CLANGING_SCALES,Clanging Scales,Fragor Escamas,14,si
+MOVE_DRAGON_HAMMER,Dragon Hammer,Martillo Dragón,15,si
+MOVE_BRUTAL_SWING,Brutal Swing,Giro Vil,8,si
+MOVE_AURORA_VEIL,Aurora Veil,Velo Aurora,11,si
+MOVE_SHELL_TRAP,Shell Trap,Coraza Trampa,13,si
+MOVE_FLEUR_CANNON,Fleur Cannon,Cañón Floral,12,si
+MOVE_PSYCHIC_FANGS,Psychic Fangs,Psicocolmillo,13,si
+MOVE_STOMPING_TANTRUM,Stomping Tantrum,Pataleta,8,si
+MOVE_SHADOW_BONE,Shadow Bone,Hueso Sombrío,13,si
+MOVE_ACCELEROCK,Accelerock,Roca Veloz,10,si
+MOVE_LIQUIDATION,Liquidation,Hidroariete,11,si
+MOVE_PRISMATIC_LASER,Prismatic Laser,Láser Prisma,12,si
+MOVE_SPECTRAL_THIEF,Spectral Thief,Robasombra,10,si
+MOVE_SUNSTEEL_STRIKE,Sunsteel Strike,Meteoimpacto,12,si
+MOVE_MOONGEIST_BEAM,Moongeist Beam,Rayo Umbrío,11,si
+MOVE_TEARFUL_LOOK,Tearful Look,Ojos Llorosos,13,si
+MOVE_ZING_ZAP,Zing Zap,Electropunzada,14,si
+MOVE_NATURES_MADNESS,Nature's Madness,Furia Natural,13,si
+MOVE_MULTI_ATTACK,Multi-Attack,Multiataque,11,si
+MOVE_MIND_BLOWN,Mind Blown,Cabeza Sorpresa,15,si
+MOVE_PLASMA_FISTS,Plasma Fists,Puños Plasma,12,si
+MOVE_PHOTON_GEYSER,Photon Geyser,Géiser Fotónico,15,si
+MOVE_ZIPPY_ZAP,Zippy Zap,Pikaturbo,9,si
+MOVE_SPLISHY_SPLASH,Splishy Splash,Salpikasurf,11,si
+MOVE_FLOATY_FALL,Floaty Fall,Pikapicado,10,si
+MOVE_PIKA_PAPOW,Pika Papow,Pikatormenta,12,si
+MOVE_BOUNCY_BUBBLE,Bouncy Bubble,Vapodrenaje,11,si
+MOVE_BUZZY_BUZZ,Buzzy Buzz,Joltioparálisis,15,si
+MOVE_SIZZLY_SLIDE,Sizzly Slide,Flarembestida,13,si
+MOVE_GLITZY_GLOW,Glitzy Glow,Espeaura,8,si
+MOVE_BADDY_BAD,Baddy Bad,Umbreozona,10,si
+MOVE_SAPPY_SEED,Sappy Seed,Leafitobombas,13,si
+MOVE_FREEZY_FROST,Freezy Frost,Glaceoprisma,12,si
+MOVE_SPARKLY_SWIRL,Sparkly Swirl,Sylveotornado,13,si
+MOVE_VEEVEE_VOLLEY,Veevee Volley,Eevimpacto,10,si
+MOVE_DOUBLE_IRON_BASH,Double Iron Bash,Ferropuño Doble,15,si
+MOVE_DYNAMAX_CANNON,Dynamax Cannon,Cañón Dinamax,13,si
+MOVE_SNIPE_SHOT,Snipe Shot,Disparo Certero,15,si
+MOVE_JAW_LOCK,Jaw Lock,Presa Maxilar,13,si
+MOVE_STUFF_CHEEKS,Stuff Cheeks,Atiborramiento,14,si
+MOVE_NO_RETREAT,No Retreat,Bastión Final,13,si
+MOVE_TAR_SHOT,Tar Shot,Alquitranazo,12,si
+MOVE_MAGIC_POWDER,Magic Powder,Polvo Mágico,12,si
+MOVE_DRAGON_DARTS,Dragon Darts,Dracoflechas,12,si
+MOVE_TEATIME,Teatime,Hora del Té,11,si
+MOVE_OCTOLOCK,Octolock,Octopresa,9,si
+MOVE_BOLT_BEAK,Bolt Beak,Electropico,11,si
+MOVE_FISHIOUS_REND,Fishious Rend,Branquibocado,13,si
+MOVE_COURT_CHANGE,Court Change,Cambio de Cancha,16,si
+MOVE_CLANGOROUS_SOUL,Clangorous Soul,Estruendo Escama,16,si
+MOVE_BODY_PRESS,Body Press,Plancha Corporal,16,si
+MOVE_DECORATE,Decorate,Decoración,10,si
+MOVE_DRUM_BEATING,Drum Beating,Batería Asalto,14,si
+MOVE_SNAP_TRAP,Snap Trap,Cepo,4,si
+MOVE_PYRO_BALL,Pyro Ball,Balón Ígneo,11,si
+MOVE_BEHEMOTH_BLADE,Behemoth Blade,Tajo Supremo,12,si
+MOVE_BEHEMOTH_BASH,Behemoth Bash,Embate Supremo,14,si
+MOVE_AURA_WHEEL,Aura Wheel,Rueda Aural,11,si
+MOVE_BREAKING_SWIPE,Breaking Swipe,Vasto Impacto,13,si
+MOVE_BRANCH_POKE,Branch Poke,Punzada Rama,12,si
+MOVE_OVERDRIVE,Overdrive,Amplificador,12,si
+MOVE_APPLE_ACID,Apple Acid,Ácido Málico,12,si
+MOVE_GRAV_APPLE,Grav Apple,Fuerza G,8,si
+MOVE_SPIRIT_BREAK,Spirit Break,Choque Anímico,14,si
+MOVE_STRANGE_STEAM,Strange Steam,Cautivapor,10,si
+MOVE_LIFE_DEW,Life Dew,Gota Vital,10,si
+MOVE_OBSTRUCT,Obstruct,Obstrucción,11,si
+MOVE_FALSE_SURRENDER,False Surrender,Irreverencia,12,si
+MOVE_METEOR_ASSAULT,Meteor Assault,Asalto Estelar,14,si
+MOVE_ETERNABEAM,Eternabeam,Rayo Infinito,13,si
+MOVE_STEEL_BEAM,Steel Beam,Metaláser,9,si
+MOVE_EXPANDING_FORCE,Expanding Force,Vasta Fuerza,12,si
+MOVE_STEEL_ROLLER,Steel Roller,Allanador Férreo,16,si
+MOVE_SCALE_SHOT,Scale Shot,Ráfaga Escamas,14,si
+MOVE_METEOR_BEAM,Meteor Beam,Rayo Meteórico,14,si
+MOVE_SHELL_SIDE_ARM,Shell Side Arm,Moluscañón,10,si
+MOVE_MISTY_EXPLOSION,Misty Explosion,Bruma Explosiva,15,si
+MOVE_GRASSY_GLIDE,Grassy Glide,Fitoimpulso,11,si
+MOVE_RISING_VOLTAGE,Rising Voltage,Alto Voltaje,12,si
+MOVE_TERRAIN_PULSE,Terrain Pulse,Pulso de Campo,14,si
+MOVE_SKITTER_SMACK,Skitter Smack,Golpe Rastrero,14,si
+MOVE_BURNING_JEALOUSY,Burning Jealousy,Envidia Ardiente,16,si
+MOVE_LASH_OUT,Lash Out,Desahogo,8,si
+MOVE_POLTERGEIST,Poltergeist,Poltergeist,11,si
+MOVE_CORROSIVE_GAS,Corrosive Gas,Gas Corrosivo,13,si
+MOVE_COACHING,Coaching,Motivación,10,si
+MOVE_FLIP_TURN,Flip Turn,Viraje,6,si
+MOVE_TRIPLE_AXEL,Triple Axel,Triple Axel,11,si
+MOVE_DUAL_WINGBEAT,Dual Wingbeat,Ala Bis,7,si
+MOVE_SCORCHING_SANDS,Scorching Sands,Arenas Ardientes,16,si
+MOVE_JUNGLE_HEALING,Jungle Healing,Cura Selvática,14,si
+MOVE_WICKED_BLOW,Wicked Blow,Golpe Oscuro,12,si
+MOVE_SURGING_STRIKES,Surging Strikes,Azote Torrencial,16,si
+MOVE_THUNDER_CAGE,Thunder Cage,Electrojaula,12,si
+MOVE_DRAGON_ENERGY,Dragon Energy,Dracoenergía,12,si
+MOVE_FREEZING_GLARE,Freezing Glare,Mirada Heladora,15,si
+MOVE_FIERY_WRATH,Fiery Wrath,Furia Candente,14,si
+MOVE_THUNDEROUS_KICK,Thunderous Kick,Patada Relámpago,16,si
+MOVE_GLACIAL_LANCE,Glacial Lance,Lanza Glacial,13,si
+MOVE_ASTRAL_BARRAGE,Astral Barrage,Orbes Espectro,14,si
+MOVE_EERIE_SPELL,Eerie Spell,Conjuro Funesto,15,si
+MOVE_DIRE_CLAW,Dire Claw,Garra Nociva,12,si
+MOVE_PSYSHIELD_BASH,Psyshield Bash,Asalto Barrera,14,si
+MOVE_POWER_SHIFT,Power Shift,Cambiapoder,11,si
+MOVE_STONE_AXE,Stone Axe,Hachazo Pétreo,14,si
+MOVE_SPRINGTIDE_STORM,Springtide Storm,Ciclón Primavera,16,si
+MOVE_MYSTICAL_POWER,Mystical Power,Poder Místico,13,si
+MOVE_RAGING_FURY,Raging Fury,Erupción de Ira,15,si
+MOVE_WAVE_CRASH,Wave Crash,Envite Acuático,15,si
+MOVE_CHLOROBLAST,Chloroblast,Clorofiláser,12,si
+MOVE_MOUNTAIN_GALE,Mountain Gale,Viento Carámbano,16,si
+MOVE_VICTORY_DANCE,Victory Dance,Danza Triunfal,14,si
+MOVE_HEADLONG_RUSH,Headlong Rush,Arremetida,10,si
+MOVE_BARB_BARRAGE,Barb Barrage,Mil Púas Tóxicas,16,si
+MOVE_ESPER_WING,Esper Wing,Ala Aural,9,si
+MOVE_BITTER_MALICE,Bitter Malice,Rencor Reprimido,16,si
+MOVE_SHELTER,Shelter,Retracción,10,si
+MOVE_TRIPLE_ARROWS,Triple Arrows,Triple Flecha,13,si
+MOVE_INFERNAL_PARADE,Infernal Parade,Marcha Espectral,16,si
+MOVE_CEASELESS_EDGE,Ceaseless Edge,Tajo Metralla,13,si
+MOVE_BLEAKWIND_STORM,Bleakwind Storm,Vendaval Gélido,15,si
+MOVE_WILDBOLT_STORM,Wildbolt Storm,Electormenta,12,si
+MOVE_SANDSEAR_STORM,Sandsear Storm,Simún de Arena,14,si
+MOVE_LUNAR_BLESSING,Lunar Blessing,Plegaria Lunar,14,si
+MOVE_TAKE_HEART,Take Heart,Bálsamo Osado,13,si
+MOVE_TERA_BLAST,Tera Blast,Teraexplosión,13,si
+MOVE_SILK_TRAP,Silk Trap,Telatrampa,10,si
+MOVE_AXE_KICK,Axe Kick,Patada Hacha,12,si
+MOVE_LAST_RESPECTS,Last Respects,Homenaje Póstumo,16,si
+MOVE_LUMINA_CRASH,Lumina Crash,Fotocolisión,12,si
+MOVE_ORDER_UP,Order Up,Oído Cocina,11,si
+MOVE_JET_PUNCH,Jet Punch,Puño Jet,8,si
+MOVE_SPICY_EXTRACT,Spicy Extract,Extracto Picante,16,si
+MOVE_SPIN_OUT,Spin Out,Quemarrueda,11,si
+MOVE_POPULATION_BOMB,Population Bomb,Proliferación,13,si
+MOVE_ICE_SPINNER,Ice Spinner,Pirueta Helada,14,si
+MOVE_GLAIVE_RUSH,Glaive Rush,Asalto Espadón,14,si
+MOVE_REVIVAL_BLESSING,Revival Blessing,Plegaria Vital,14,si
+MOVE_SALT_CURE,Salt Cure,Salazón,7,si
+MOVE_TRIPLE_DIVE,Triple Dive,Triple Inmersión,16,si
+MOVE_MORTAL_SPIN,Mortal Spin,Giro Mortífero,14,si
+MOVE_DOODLE,Doodle,Decalcomanía,12,si
+MOVE_FILLET_AWAY,Fillet Away,Deslome,7,si
+MOVE_KOWTOW_CLEAVE,Kowtow Cleave,Genufendiente,13,si
+MOVE_FLOWER_TRICK,Flower Trick,Truco Floral,12,si
+MOVE_TORCH_SONG,Torch Song,Canto Ardiente,14,si
+MOVE_AQUA_STEP,Aqua Step,Danza Acuática,14,si
+MOVE_RAGING_BULL,Raging Bull,Furia Taurina,13,si
+MOVE_MAKE_IT_RAIN,Make It Rain,Fiebre Dorada,13,si
+MOVE_RUINATION,Ruination,Calamidad,9,si
+MOVE_COLLISION_COURSE,Collision Course,Nitrochoque,11,si
+MOVE_ELECTRO_DRIFT,Electro Drift,Electroderrape,14,si
+MOVE_SHED_TAIL,Shed Tail,Autotomía,9,si
+MOVE_CHILLY_RECEPTION,Chilly Reception,Fría Acogida,12,si
+MOVE_TIDY_UP,Tidy Up,Limpieza General,16,si
+MOVE_SNOWSCAPE,Snowscape,Paisaje Nevado,14,si
+MOVE_POUNCE,Pounce,Brinco,6,si
+MOVE_TRAILBLAZE,Trailblaze,Abrecaminos,11,si
+MOVE_CHILLING_WATER,Chilling Water,Agua Fría,9,si
+MOVE_HYPER_DRILL,Hyper Drill,Hipertaladro,12,si
+MOVE_TWIN_BEAM,Twin Beam,Láser Doble,11,si
+MOVE_RAGE_FIST,Rage Fist,Puño Furia,10,si
+MOVE_ARMOR_CANNON,Armor Cannon,Cañón Armadura,14,si
+MOVE_BITTER_BLADE,Bitter Blade,Espada Lamento,14,si
+MOVE_DOUBLE_SHOCK,Double Shock,Electropalmas,13,si
+MOVE_GIGATON_HAMMER,Gigaton Hammer,Martillo Colosal,16,si
+MOVE_COMEUPPANCE,Comeuppance,Resarcimiento,13,si
+MOVE_AQUA_CUTTER,Aqua Cutter,Tajo Acuático,13,si
+MOVE_BLAZING_TORQUE,Blazing Torque,Pirochoque,10,si
+MOVE_WICKED_TORQUE,Wicked Torque,Ominochoque,11,si
+MOVE_NOXIOUS_TORQUE,Noxious Torque,Ponzochoque,11,si
+MOVE_COMBAT_TORQUE,Combat Torque,Pugnachoque,11,si
+MOVE_MAGICAL_TORQUE,Magical Torque,Feerichoque,11,si
+MOVE_PSYBLADE,Psyblade,Psicohojas,10,si
+MOVE_HYDRO_STEAM,Hydro Steam,Hidrovapor,10,si
+MOVE_BLOOD_MOON,Blood Moon,Luna Roja,9,si
+MOVE_MATCHA_GOTCHA,Matcha Gotcha,Cañón Batidor,13,si
+MOVE_SYRUP_BOMB,Syrup Bomb,Bomba Caramelo,14,si
+MOVE_IVY_CUDGEL,Ivy Cudgel,Garrote Liana,13,si
+MOVE_ELECTRO_SHOT,Electro Shot,Electrorrayo,12,si
+MOVE_TERA_STARSTORM,Tera Starstorm,Teraclúster,11,si
+MOVE_FICKLE_BEAM,Fickle Beam,Láser Veleidoso,15,si
+MOVE_BURNING_BULWARK,Burning Bulwark,Llama Protectora,16,si
+MOVE_THUNDERCLAP,Thunderclap,Relámpago Súbito,16,si
+MOVE_MIGHTY_CLEAVE,Mighty Cleave,Filo Potente,12,si
+MOVE_TACHYON_CUTTER,Tachyon Cutter,Tajo Taquión,12,si
+MOVE_HARD_PRESS,Hard Press,Prensa Metálica,15,si
+MOVE_DRAGON_CHEER,Dragon Cheer,Bramido Dragón,14,si
+MOVE_ALLURING_VOICE,Alluring Voice,Canto Encantador,16,si
+MOVE_TEMPER_FLARE,Temper Flare,Cólera Ardiente,15,si
+MOVE_SUPERCELL_SLAM,Supercell Slam,Plancha Voltaica,16,si
+MOVE_PSYCHIC_NOISE,Psychic Noise,Psicorruido,11,si
+MOVE_UPPER_HAND,Upper Hand,Palma Rauda,11,si
+MOVE_MALIGNANT_CHAIN,Malignant Chain,Cadena Virulenta,16,si
+MOVE_BREAKNECK_BLITZ,Breakneck Blitz,Carrera Arrolladora,19,NO
+MOVE_ALL_OUT_PUMMELING,All-Out Pummeling,Ráfaga Demoledora,17,NO
+MOVE_SUPERSONIC_SKYSTRIKE,Supersonic Skystrike,Picado Supersónico,18,NO
+MOVE_ACID_DOWNPOUR,Acid Downpour,Diluvio Corrosivo,17,NO
+MOVE_TECTONIC_RAGE,Tectonic Rage,Barrena Telúrica,16,si
+MOVE_CONTINENTAL_CRUSH,Continental Crush,Aplastamiento Gigalítico,24,NO
+MOVE_SAVAGE_SPIN_OUT,Savage Spin-Out,Guadaña Sedosa,14,si
+MOVE_NEVER_ENDING_NIGHTMARE,Never-Ending Nightmare,Presa Espectral,15,si
+MOVE_CORKSCREW_CRASH,Corkscrew Crash,Hélice Trepanadora,18,NO
+MOVE_INFERNO_OVERDRIVE,Inferno Overdrive,Hecatombe Pírica,16,si
+MOVE_HYDRO_VORTEX,Hydro Vortex,Hidrovórtice Abisal,19,NO
+MOVE_BLOOM_DOOM,Bloom Doom,Megatón Floral,14,si
+MOVE_GIGAVOLT_HAVOC,Gigavolt Havoc,Gigavoltio Destructor,21,NO
+MOVE_SHATTERED_PSYCHE,Shattered Psyche,Disruptor Psíquico,18,NO
+MOVE_SUBZERO_SLAMMER,Subzero Slammer,Crioaliento Despiadado,22,NO
+MOVE_DEVASTATING_DRAKE,Devastating Drake,Dracoaliento Devastador,23,NO
+MOVE_BLACK_HOLE_ECLIPSE,Black Hole Eclipse,Agujero Negro Aniquilador,25,NO
+MOVE_TWINKLE_TACKLE,Twinkle Tackle,Arrumaco Sideral,16,si
+MOVE_CATASTROPIKA,Catastropika,Pikavoltio Letal,16,si
+MOVE_10000000_VOLT_THUNDERBOLT,"10,000,000 Volt Thunderbolt",Gigarrayo Fulminante,20,NO
+MOVE_STOKED_SPARKSURFER,Stoked Sparksurfer,Surfeo Galvánico,16,si
+MOVE_EXTREME_EVOBOOST,Extreme Evoboost,Novena Potencia,15,si
+MOVE_PULVERIZING_PANCAKE,Pulverizing Pancake,Arrojo Intempestivo,19,NO
+MOVE_GENESIS_SUPERNOVA,Genesis Supernova,Supernova Original,18,NO
+MOVE_SINISTER_ARROW_RAID,Sinister Arrow Raid,Aluvión de Flechas Sombrías,27,NO
+MOVE_MALICIOUS_MOONSAULT,Malicious Moonsault,Hiperplancha Oscura,19,NO
+MOVE_OCEANIC_OPERETTA,Oceanic Operetta,Sinfonía de la Diva Marina,26,NO
+MOVE_SPLINTERED_STORMSHARDS,Splintered Stormshards,Tempestad Rocosa,16,si
+MOVE_LETS_SNUGGLE_FOREVER,Let's Snuggle Forever,Somanta Amistosa,16,si
+MOVE_CLANGOROUS_SOULBLAZE,Clangorous Soulblaze,Estruendo Implacable,20,NO
+MOVE_GUARDIAN_OF_ALOLA,Guardian of Alola,Cólera del Guardián,19,NO
+MOVE_SEARING_SUNRAZE_SMASH,Searing Sunraze Smash,Embestida Solar,15,si
+MOVE_MENACING_MOONRAZE_MAELSTROM,Menacing Moonraze Maelstrom,Deflagración Lunar,18,NO
+MOVE_LIGHT_THAT_BURNS_THE_SKY,Light That Burns the Sky,Fotodestrucción Apocalíptica,28,NO
+MOVE_SOUL_STEALING_7_STAR_STRIKE,Soul-Stealing 7-Star Strike,Constelación Robaalmas,22,NO
+MOVE_MAX_GUARD,Max Guard,Maxibarrera,11,si
+MOVE_MAX_FLARE,Max Flare,Maxignición,11,si
+MOVE_MAX_FLUTTERBY,Max Flutterby,Maxinsecto,10,si
+MOVE_MAX_LIGHTNING,Max Lightning,Maxitormenta,12,si
+MOVE_MAX_STRIKE,Max Strike,Maxiataque,10,si
+MOVE_MAX_KNUCKLE,Max Knuckle,Maxipuño,8,si
+MOVE_MAX_PHANTASM,Max Phantasm,Maxiespectro,12,si
+MOVE_MAX_HAILSTORM,Max Hailstorm,Maxihelada,10,si
+MOVE_MAX_OOZE,Max Ooze,Maxiácido,9,si
+MOVE_MAX_GEYSER,Max Geyser,Maxichorro,10,si
+MOVE_MAX_AIRSTREAM,Max Airstream,Maxiciclón,10,si
+MOVE_MAX_STARFALL,Max Starfall,Maxiestela,10,si
+MOVE_MAX_WYRMWIND,Max Wyrmwind,Maxidraco,9,si
+MOVE_MAX_MINDSTORM,Max Mindstorm,Maxionda,8,si
+MOVE_MAX_ROCKFALL,Max Rockfall,Maxilito,8,si
+MOVE_MAX_QUAKE,Max Quake,Maxitemblor,11,si
+MOVE_MAX_DARKNESS,Max Darkness,Maxisombra,10,si
+MOVE_MAX_OVERGROWTH,Max Overgrowth,Maxiflora,9,si
+MOVE_MAX_STEELSPIKE,Max Steelspike,Maximetal,9,si
+MOVE_G_MAX_VINE_LASH,G-Max Vine Lash,,,
+MOVE_G_MAX_WILDFIRE,G-Max Wildfire,,,
+MOVE_G_MAX_CANNONADE,G-Max Cannonade,,,
+MOVE_G_MAX_BEFUDDLE,G-Max Befuddle,,,
+MOVE_G_MAX_VOLT_CRASH,G-Max Volt Crash,,,
+MOVE_G_MAX_GOLD_RUSH,G-Max Gold Rush,,,
+MOVE_G_MAX_CHI_STRIKE,G-Max Chi Strike,,,
+MOVE_G_MAX_TERROR,G-Max Terror,,,
+MOVE_G_MAX_FOAM_BURST,G-Max Foam Burst,,,
+MOVE_G_MAX_RESONANCE,G-Max Resonance,,,
+MOVE_G_MAX_CUDDLE,G-Max Cuddle,,,
+MOVE_G_MAX_REPLENISH,G-Max Replenish,,,
+MOVE_G_MAX_MALODOR,G-Max Malodor,,,
+MOVE_G_MAX_MELTDOWN,G-Max Meltdown,,,
+MOVE_G_MAX_DRUM_SOLO,G-Max Drum Solo,,,
+MOVE_G_MAX_FIREBALL,G-Max Fireball,,,
+MOVE_G_MAX_HYDROSNIPE,G-Max Hydrosnipe,,,
+MOVE_G_MAX_WIND_RAGE,G-Max Wind Rage,,,
+MOVE_G_MAX_GRAVITAS,G-Max Gravitas,,,
+MOVE_G_MAX_STONESURGE,G-Max Stonesurge,,,
+MOVE_G_MAX_VOLCALITH,G-Max Volcalith,,,
+MOVE_G_MAX_TARTNESS,G-Max Tartness,,,
+MOVE_G_MAX_SWEETNESS,G-Max Sweetness,,,
+MOVE_G_MAX_SANDBLAST,G-Max Sandblast,,,
+MOVE_G_MAX_STUN_SHOCK,G-Max Stun Shock,,,
+MOVE_G_MAX_CENTIFERNO,G-Max Centiferno,,,
+MOVE_G_MAX_SMITE,G-Max Smite,,,
+MOVE_G_MAX_SNOOZE,G-Max Snooze,,,
+MOVE_G_MAX_FINALE,G-Max Finale,,,
+MOVE_G_MAX_STEELSURGE,G-Max Steelsurge,,,
+MOVE_G_MAX_DEPLETION,G-Max Depletion,,,
+MOVE_G_MAX_ONE_BLOW,G-Max One Blow,,,
+MOVE_G_MAX_RAPID_FLOW,G-Max Rapid Flow,,,
