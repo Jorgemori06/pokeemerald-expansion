@@ -3,6 +3,7 @@
 #include "dualocke.h"
 #include "dualocke_aleatorio.h"
 #include "event_data.h"
+#include "item.h"
 #include "global.fieldmap.h"
 #include "pokemon.h"
 #include "pokemon_storage_system.h"
@@ -502,4 +503,9 @@ TEST("Dualocke: sin semilla, el randomizer no cambia nada")
     EXPECT(!Dualocke_ObjetosSalvajesAleatorios());
     EXPECT_EQ(Dualocke_ObjetoSalvaje(TRUE), ITEM_NONE);
     EXPECT(!Dualocke_IntercambioAleatorio(INGAME_TRADE_SEEDOT, &especie, &pide, &objeto, ivs));
+    EXPECT_EQ(Dualocke_HabilidadAleatoria(SPECIES_ZIGZAGOON), ABILITY_NONE);
+    EXPECT_EQ(GetSpeciesAbility(SPECIES_ZIGZAGOON, 0), ABILITY_PICKUP);
+    EXPECT_EQ(GetItemTMHMMoveId(ITEM_TM_EARTHQUAKE), MOVE_EARTHQUAKE);
+    EXPECT_EQ(GetTMHMItemIdFromMoveId(MOVE_EARTHQUAKE), ITEM_TM_EARTHQUAKE);
+    EXPECT_EQ(Dualocke_PuedeAprenderMT(SPECIES_ZIGZAGOON, MOVE_EARTHQUAKE), -1);
 }
