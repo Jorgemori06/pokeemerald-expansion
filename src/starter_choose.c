@@ -110,9 +110,12 @@ static const u8 sStarterLabelCoords[STARTER_MON_COUNT][2] =
     {8, 4},
 };
 
-#define GRASS_STARTER (IS_FRLG ? SPECIES_BULBASAUR  : SPECIES_TREECKO)
-#define FIRE_STARTER  (IS_FRLG ? SPECIES_CHARMANDER : SPECIES_TORCHIC)
-#define WATER_STARTER (IS_FRLG ? SPECIES_SQUIRTLE   : SPECIES_MUDKIP )
+// Dualocke: los iniciales salen del randomizer (Treecko, Torchic y Mudkip si no hay semilla).
+// El segundo gana al primero, el tercero al segundo y el primero al tercero, como en el original.
+#include "data/dualocke_iniciales.h"
+#define GRASS_STARTER (IS_FRLG ? SPECIES_BULBASAUR  : DUALOCKE_STARTER_GRASS)
+#define FIRE_STARTER  (IS_FRLG ? SPECIES_CHARMANDER : DUALOCKE_STARTER_FIRE)
+#define WATER_STARTER (IS_FRLG ? SPECIES_SQUIRTLE   : DUALOCKE_STARTER_WATER)
 
 static const u16 sStarterMon[STARTER_MON_COUNT] =
 {

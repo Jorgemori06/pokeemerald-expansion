@@ -4,7 +4,7 @@ Este archivo resume **todo lo decidido y hecho** en el proyecto, para que cualqu
 
 > **Si eres Claude y te acaban de pedir que leas este archivo:** léelo entero antes de tocar nada. Al final hay una sección con instrucciones de trabajo para ti. Cuando cambies algo importante del proyecto, actualiza también este archivo en el mismo commit.
 
-Última actualización: 24/10/2026.
+Última actualización: 25/10/2026.
 
 ---
 
@@ -79,6 +79,14 @@ cd ~/romhack/pokeemerald-expansion
 git pull
 make -j$(nproc)
 ```
+
+### Partida randomizada (semilla)
+
+- **`make`** compila una partida **randomizada**. La primera vez se inventa una semilla al azar y la guarda en `dualocke_semilla.txt`, en la carpeta del repo (no se sube a GitHub). Las siguientes veces la reutiliza: **actualizar el juego (`git pull` + `make`) no cambia los Pokémon de tu partida en curso**.
+- **`make nueva-partida`**: otra semilla al azar, así que la partida es nueva. La ROM nueva sustituye a la anterior; si quieres conservar la vieja, renombra antes la `.gba` y la `.sav`.
+- `make SEED=loquesea`: una semilla concreta, para regenerar una partida (está en `dualocke_semilla.txt`).
+- `make SIN_RANDOM=1`: el juego sin randomizar, para probar cosas. `make check` (los tests) nunca randomiza.
+- Lo que ha salido (el "solucionario") queda en `build/dualocke/solucionario.json`. **No lo abras** si no quieres destriparte la partida.
 
 ### Emulador
 
@@ -303,12 +311,14 @@ Para ver todo sin herramientas externas (pedido por Miguel el 24/10/2026):
 - Código: `include/config/summary_screen.h` (opciones `P_SUMMARY_SCREEN_IV_EV_*`) y `src/pokemon_summary_screen.c` (busca "Dualocke").
 - Pendiente: hacerla más bonita con gráficos nuevos (fondos, iconos). Hace falta dibujarlos y probarlos en el emulador.
 
-## 7. Randomizer (pendiente, el trabajo grande)
+## 7. Randomizer (en marcha: salvajes, entrenadores, iniciales y rival hechos)
 
 ### Diseño
 
 - **Script propio** (Python) que baraja los datos del juego **antes de compilar**, usando una **semilla**.
-- **Cada jugador tiene una partida completamente distinta**: cada uno compila con su semilla, por ejemplo `make SEED=jorge123` y `make SEED=miguel456`. La semilla también sirve para regenerar exactamente la misma partida si hace falta.
+- **Cada jugador tiene una partida completamente distinta**: `make` se inventa una semilla al azar la primera vez y la guarda (decidido por Jorge el 25/10/2026: la semilla no se elige, es aleatoria). Cómo se usa: sección 3, "Partida randomizada".
+- **Cómo está hecho (Jorge):** `tools/dualocke/randomizer.py`, con los módulos en `tools/dualocke/aleatorio/`. Lo lanza el `Makefile` (bloque "Dualocke: randomizer con semilla"). Lee los originales (`wild_encounters.json`, y más adelante `trainers.party`…) y escribe las versiones barajadas en `build/dualocke/`, que son las que se compilan. **Los archivos de Miguel no se tocan.** Los datos de las especies (evoluciones, formas, legendarios) salen de pasar `src/pokemon.c` por el preprocesador de C, así que son exactamente los de la ROM. Comprueba el resultado antes de compilar (solo cambian las especies, no hay legendarios en los salvajes…) y para si algo falla.
+- **Hecho:** salvajes, entrenadores, iniciales y rival. **Pendiente:** estáticos y regalos, movimientos, habilidades y objetos.
 - Para no destriparse nada: o cada uno compila la suya, o uno compila las dos sin mirar los archivos generados.
 - Alternativa descartada por ahora: randomizer dentro del juego, al empezar partida (como Heart & Soul). Es más trabajo.
 
@@ -326,26 +336,36 @@ Están en **`tools/dualocke/randomizer_config.json`**, que es el archivo que deb
 ### Ajustes a replicar (los del preset de Platino, adaptados)
 
 **Pokémon**
-- Iniciales aleatorios (forma base de 3 fases y en triángulo de tipos, ver arriba).
+- Iniciales aleatorios (forma base de 3 fases y en triángulo de tipos, ver arriba). **Hecho** (`tools/dualocke/aleatorio/iniciales.py`): además, las dos evoluciones tienen que ser por nivel o con objeto, para poder hacerlas en el juego. Salen en `src/data/dualocke_iniciales.h` (generado; lo usa `src/starter_choose.c`).
 - Habilidades aleatorias, permitiendo Superguarda.
 - Pokémon estáticos completamente aleatorios.
 - Estadísticas base de Gen 9 (ya vienen así en el motor) sin aleatorizar sus valores.
 - Totales de estadísticas base barajados siguiendo las líneas evolutivas.
 - Pokémon de los entrenadores aleatorios, sin duplicados dentro de un mismo equipo.
-- El inicial del rival se mantiene durante toda la aventura.
+- El inicial del rival se mantiene durante toda la aventura. **Hecho:** lleva el que gana al del jugador, evolucionado según el nivel; el resto de su equipo es al azar y el mismo en todos sus combates. Desde Calagua su as lleva mega: su inicial si tiene, y si no, una especie con mega del tipo de su inicial (y el inicial pasa al hueco anterior).
 - Los equipos de los entrenadores evolucionan según el nivel y pueden usar formas alternativas.
 - +1 Pokémon a los entrenadores importantes y +2 a los jefes.
 - Los Pokémon de entrenadores importantes y jefes pueden llevar objetos aleatorios, priorizando objetos coherentes.
 - **Nuevo:** el as de cada jefe es de su tipo y, desde el aro, una especie con mega de ese tipo con su megapiedra (ver arriba).
 
-**Salvajes**
-- Aleatorios por ubicación: cada especie de una zona se sustituye por otra aleatoria (mapeo 1 a 1 por zona).
+**Salvajes** (hecho, `tools/dualocke/aleatorio/salvajes.py`)
+- Aleatorios por ubicación: cada especie de una zona se sustituye por otra aleatoria (mapeo 1 a 1 por zona). Es por mapa: la misma línea en hierba, surf, pesca y Golpe Roca, y con la misma rama en todos los huecos.
+- La especie se ajusta a la fase que le toca por el **nivel mínimo** de su hueco (mismas reglas que los entrenadores; si hay varias ramas, una al azar).
+- Se evita repetir líneas entre zonas hasta que se han usado todas (hay unas 470 líneas sin legendarios).
+- Pueden salir formas regionales (Vulpix de Alola…) y Ultraentes y paradójicos (no cuentan como legendarios). No salen megas, Gigamax, formas de combate (Darmanitan Zen…) ni formas cosméticas.
+- Solo los mapas de Hoenn: la Pirámide y el Pike del Frente Batalla se quedan como están.
 - (En Platino se mantenían los encuentros por hora del día; Esmeralda no tiene encuentros por hora, así que no aplica.)
 - Pueden llevar objetos aleatorios.
 - Niveles según la curva de la sección 5 (sustituye al "+10%").
 - Sin legendarios en salvajes.
 
 **Entrenadores y combates**
+- **Hecho** (`tools/dualocke/aleatorio/entrenadores.py`), sobre los equipos de Miguel (`trainers.party`, sin tocarlo):
+  - Especies al azar, sin repetir dentro de un equipo, evolucionadas según el nivel de cada Pokémon y con formas regionales. Sin legendarios, salvo en el Alto Mando y Plubio (`permitidos_en: jefes_liga`).
+  - Jefes (`as_por_tipo`): el as, el último, es de su tipo o temática. Los de `con_mega_desde_el_aro` llevan como as una especie con mega de ese tipo y su megapiedra. Las revanchas de un jefe mantienen el tipo, la mega y la misma línea del as.
+  - Las revanchas de cualquier entrenador (`_2`, `_3`…) usan las mismas líneas que el primer combate, evolucionadas a su nivel.
+  - Al cambiar la especie se quitan los movimientos y la habilidad que tenía escritos: sale con los movimientos de su nivel (hasta la fase de movimientos). Se mantienen nivel, objeto, IVs/EVs y naturaleza.
+  - **No se toca** Máximo en la Ruta 120 (equipo fijo).
 - Niveles según la curva de la sección 5 (sustituye al "+15%").
 - Movimientos aleatorios con 3 movimientos garantizados y una ligera preferencia por movimientos dañinos potentes.
 - Mejores movimientos y diversidad de tipos en jefes, importantes y normales.
@@ -497,6 +517,7 @@ Quién hace cada cosa y cómo se sube: sección 13.
 | Especies activadas (megas, gens) | `include/config/species_enabled.h` |
 | Configuración del mundo (seguidores, etc.) | `include/config/overworld.h` |
 | Encuentros salvajes | `src/data/wild_encounters.json` |
+| Randomizer (semilla, salvajes, entrenadores, datos de las especies) | `tools/dualocke/randomizer.py`, `tools/dualocke/aleatorio/`; integración en el `Makefile` (bloque "Dualocke: randomizer con semilla") |
 | Reescalado de niveles por tramos (tabla de mapas y reglas) | `tools/dualocke/reescalar_niveles.py` |
 | Equipos de los jefes (+1/+2, megas) | `tools/dualocke/equipos_jefes.py` |
 | Megapiedras y objetos competitivos por el mapa | `tools/dualocke/colocar_objetos.py` |
@@ -613,7 +634,7 @@ Decidido el 23/10/2026 y en marcha: **Miguel se encarga del equilibrio** (dificu
 | ~~Una compra por objeto~~ (hecho por Miguel) | Jorge | `src/shop.c` (compra) | — |
 | ~~Evento del combate con Máximo y entrega del Mega-Aro~~ (hecho) | Jorge | `data/maps/Route120/` | Equipo de Máximo |
 | ~~Segundo dependiente en las tiendas (mecánica)~~ (hecho por Miguel) | Jorge | `data/maps/*_Mart/`, `src/shop_criteria.c`, `src/shop.c` | Contenido de las tiendas |
-| Randomizer con semilla (la herramienta) | Jorge (pendiente de empezar) | script nuevo en `tools/` + `Makefile` | Todo lo de equilibrio en `trainers.party` y `wild_encounters.json` |
+| Randomizer con semilla (la herramienta; hechos la semilla, los salvajes y los entrenadores) | Jorge | script nuevo en `tools/` + `Makefile` | Todo lo de equilibrio en `trainers.party` y `wild_encounters.json` |
 | Traducción (empezada por Miguel: nombres oficiales, sección 8) | Por decidir, cuando lo demás esté estable | casi todo `data/` y `src/` | Todo |
 
 Cómo encajan las dos partes:
