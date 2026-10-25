@@ -11,6 +11,7 @@
 #include "bike.h"
 #include "coins.h"
 #include "data.h"
+#include "dualocke.h"
 #include "event_data.h"
 #include "event_object_lock.h"
 #include "event_object_movement.h"
@@ -1131,6 +1132,10 @@ static u32 GetBallThrowableState(void)
         return BALL_THROW_UNABLE_SEMI_INVULNERABLE;
     else if (FlagGet(WE_FLAG_NO_CATCHING) || !IsAllowedToUseBag())
         return BALL_THROW_UNABLE_DISABLED_FLAG;
+    else if (Dualocke_GetCurrentEncounter() == DUALOCKE_ENCOUNTER_ZONE_USED)
+        return BALL_THROW_UNABLE_DUALOCKE_ZONE_USED;
+    else if (!Dualocke_CanCatchCurrentEncounter())
+        return BALL_THROW_UNABLE_DUALOCKE_NOT_COUNTED;
 
     return BALL_THROW_ABLE;
 }
@@ -1143,6 +1148,8 @@ bool32 CanThrowBall(void)
 static const u8 sText_CantThrowPokeBall_TwoMons[] = ES(_("Cannot throw a ball!\nThere are two Pokémon out there!\p"), _("¡No puedes lanzar una Ball!\n¡Hay dos Pokémon!\p"));
 static const u8 sText_CantThrowPokeBall_SemiInvulnerable[] = ES(_("Cannot throw a ball!\nThere's no Pokémon in sight!\p"), _("¡No puedes lanzar una Ball!\n¡No se ve ningún Pokémon!\p"));
 static const u8 sText_CantThrowPokeBall_Disabled[] = ES(_("POKé BALLS cannot be used\nright now!\p"), _("¡Ahora no se pueden usar\nPOKé BALLS!\p"));
+static const u8 sText_CantThrowPokeBall_ZoneUsed[] = ES(_("You already had this area's\nencounter! You can't catch it.\p"), _("¡Ya tuviste el encuentro de esta\nzona! No puedes capturarlo.\p"));
+static const u8 sText_CantThrowPokeBall_NotCounted[] = ES(_("This Pokémon doesn't count for\nthis area. You can't catch it.\p"), _("Este Pokémon no cuenta para esta\nzona. No puedes capturarlo.\p"));
 static const u8 sText_XItemsBanned[] = ES(_("The locke rules don't allow\nusing this item in battle!{PAUSE_UNTIL_PRESS}"), _("¡Las reglas del locke no dejan\nusar este objeto en combate!{PAUSE_UNTIL_PRESS}"));
 
 static void ItemUseInBattle_ShowPartyMenu(u8 taskId)
@@ -1267,6 +1274,14 @@ bool32 CannotUseItemsInBattle(enum Item itemId, struct Pokemon *mon)
             break;
         case BALL_THROW_UNABLE_DISABLED_FLAG:
             failStr = sText_CantThrowPokeBall_Disabled;
+            cannotUse = TRUE;
+            break;
+        case BALL_THROW_UNABLE_DUALOCKE_ZONE_USED:
+            failStr = sText_CantThrowPokeBall_ZoneUsed;
+            cannotUse = TRUE;
+            break;
+        case BALL_THROW_UNABLE_DUALOCKE_NOT_COUNTED:
+            failStr = sText_CantThrowPokeBall_NotCounted;
             cannotUse = TRUE;
             break;
         }

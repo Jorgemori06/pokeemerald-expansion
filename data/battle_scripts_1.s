@@ -3055,6 +3055,17 @@ BattleScript_PrintFullBox::
 	printselectionstring STRINGID_BOXISFULL
 	endselectionscript
 
+@ Dualocke: no se puede lanzar la Safari Ball (la zona ya tuvo su captura o este no cuenta)
+BattleScript_DualockeCantCatch::
+	printselectionstring STRINGID_DUALOCKECANTCATCH
+	endselectionscript
+
+@ Dualocke: aviso al empezar un combate salvaje (primero de la zona, shiny o no cuenta)
+BattleScript_DualockeZoneMsg::
+	printfromtable gDualockeZoneStringIds
+	waitmessage B_WAIT_TIME_LONG
+	end
+
 BattleScript_ActionSwitch::
 	hpthresholds2 BS_ATTACKER
 	printstring STRINGID_RETURNMON
