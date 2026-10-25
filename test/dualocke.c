@@ -508,4 +508,7 @@ TEST("Dualocke: sin semilla, el randomizer no cambia nada")
     EXPECT_EQ(GetItemTMHMMoveId(ITEM_TM_EARTHQUAKE), MOVE_EARTHQUAKE);
     EXPECT_EQ(GetTMHMItemIdFromMoveId(MOVE_EARTHQUAKE), ITEM_TM_EARTHQUAKE);
     EXPECT_EQ(Dualocke_PuedeAprenderMT(SPECIES_ZIGZAGOON, MOVE_EARTHQUAKE), -1);
+    gSpecialVar_0x8005 = MOVE_SWAGGER;
+    Dualocke_TutorAleatorio();
+    EXPECT_EQ(gSpecialVar_0x8005, MOVE_SWAGGER);
 }
