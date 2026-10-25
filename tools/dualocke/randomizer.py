@@ -11,7 +11,8 @@ Lo lanza el Makefile al compilar con una semilla:
     make SIN_RANDOM=1           # el juego sin randomizar (para probar); make check nunca randomiza
 
 No toca ningún archivo del repo: lee los originales (los niveles y equipos de Miguel) y
-escribe las versiones barajadas en build/dualocke/, que son las que se compilan.
+escribe las versiones barajadas en build/dualocke/ (wild_encounters.json, trainers.party), que
+son las que se compilan.
 Los parámetros están en tools/dualocke/randomizer_config.json (los decide Miguel).
 
 Uso directo (normalmente no hace falta):
@@ -26,10 +27,12 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from aleatorio import especies as esp  # noqa: E402
+from aleatorio import entrenadores  # noqa: E402
 from aleatorio import salvajes  # noqa: E402
 
 CONFIG = "tools/dualocke/randomizer_config.json"
 WILD = "src/data/wild_encounters.json"
+TRAINERS = "src/data/trainers.party"
 
 
 def main():
@@ -57,6 +60,15 @@ def main():
         sys.exit("Dualocke: el randomizer de salvajes ha fallado:\n  " + "\n  ".join(errores[:20]))
     with open(os.path.join(args.salida, "wild_encounters.json"), "w", encoding="utf-8", newline="\n") as f:
         f.write(json.dumps(datos, indent=2, ensure_ascii=False) + "\n")
+
+    with open(TRAINERS, encoding="utf-8") as f:
+        original = f.read()
+    randomizado, solucionario["entrenadores"] = entrenadores.Generador(pokedex, args.semilla, config).randomizar(original)
+    errores = entrenadores.comprobar(original, randomizado, pokedex)
+    if errores:
+        sys.exit("Dualocke: el randomizer de entrenadores ha fallado:\n  " + "\n  ".join(errores[:20]))
+    with open(os.path.join(args.salida, "trainers.party"), "w", encoding="utf-8", newline="\n") as f:
+        f.write(randomizado)
 
     # El solucionario es un destripe: está en build/ y no se sube al repo
     with open(os.path.join(args.salida, "solucionario.json"), "w", encoding="utf-8", newline="\n") as f:
