@@ -13,6 +13,7 @@ Rama: `miguel/dialogos-1`
 - Quinto tramo (unos 200 textos): CIUDAD PORTUAL entera: calles, mercado, la cola del EQUIPO AQUA, la entrevista de GABI y TY, el PUERTO con AQUILES y el submarino, el ASTILLERO de BABOR, el MUSEO OCEÁNICO, el CLUB DE FANS, el EVALUADOR DE NOMBRES, casas, tienda y CENTRO POKéMON.
 - Sexto tramo (unos 200 textos): RUTA 110 con sus entrenadores y el CAMINO DE BICIS, y CIUDAD MALVALONA (BLASCO, BICIS RYDEL, GIMNASIO de ERICO sin revancha, casas, tienda, CENTRO POKéMON).
 - Séptimo tramo (unos 170 textos): CASINO de MALVALONA, NUEVA MALVALONA, RUTA 117 con sus entrenadores y la GUARDERÍA, y RUTA 111 sur con la familia VENCEDOR.
+- Tramos 15 y 16 (unos 175 textos): la CASA TRAMPA (pruebas 1 a 7) y PUEBLO VERDEGAL.
 - Lo que queda se reparte entre Miguel y Jorge en `traduccion/dialogos/PLAN.md` (unos 1300 textos cada uno).
 - Repasadas las frases con género del jugador para que valgan para chico y chica.
 - Explicación y lista de nombres en `traduccion/dialogos/LEEME.md`.
