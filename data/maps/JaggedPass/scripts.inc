@@ -240,7 +240,7 @@ JaggedPass_Text_GoWhereverYouWant:
 
 JaggedPass_Text_BoulderShakingInResponseToEmblem:
 	.string "¡Oh! ¡Esta roca tiembla al acercarle\n"
-	.string "el EMBLEMA MAGMA!$"
+	.string "el SIGNO MAGMA!$"
 
 JaggedPass_Text_JulioIntro:
 	.string "¡Aaah! ¡Da muchísimo miedo bajar la\n"

@@ -1,0 +1,145 @@
+# RUTA 123 y MONTE PÍRICO (con la cima, AQUILES y los PRISMAS)
+Route123_Text_LoveGrassMonsHaveAny	¡Me encantan los POKéMON de tipo\nPLANTA!\p¿Tienes alguno de tipo PLANTA?$
+Route123_Text_YouLikeGrassMonsTooHaveThis	¿Oh?\pA ti también te gustan los POKéMON\nde tipo PLANTA, ¿verdad?\p¡Qué alegría! ¡Toma esto!\nEs una muestra de nuestra amistad.$
+Route123_Text_CheckTreesWithMyGrassMon	Reviso los árboles con mis POKéMON\nde tipo PLANTA. Soy como un médico\lde árboles.$
+Route123_Text_RouteSign	{RIGHT_ARROW} RUTA 123\n{LEFT_ARROW} RUTA 118$
+Route123_Text_RouteSignMtPyre	{UP_ARROW} MONTE PÍRICO\n“Prohibido a los débiles de corazón”.$
+Route123_Text_BerryMastersHouse	CASA DEL MAESTRO DE BAYAS$
+Route123_Text_WendyIntro	¿Quieres saber lo fuerte que eres?\n¡Yo seré la prueba!$
+Route123_Text_WendyDefeat	¡Aprobado con matrícula!$
+Route123_Text_WendyPostBattle	Ganarme incluso a mí…\n¡Tu fuerza es una maravilla!$
+Route123_Text_BraxtonIntro	Parece que tienes una buena colección\nde MEDALLAS.\p¡A ver si de verdad te las mereces!$
+Route123_Text_BraxtonDefeat	¡Oh, sí que te las mereces!$
+Route123_Text_BraxtonPostBattle	¡Has estado a la altura de tus\nMEDALLAS!$
+Route123_Text_VioletIntro	Dicen que los buenos momentos están\nllenos de buenos aromas.$
+Route123_Text_VioletDefeat	Oh…\nHuelo el amargo aroma de la derrota…$
+Route123_Text_VioletPostBattle	El jardín del MAESTRO DE BAYAS está\nlleno de aromas que animan.$
+Route123_Text_CameronIntro	Ser vidente es cuestión de voluntad.\pMe he propuesto no perder contra\nnadie. ¡Eso me hace fuerte!$
+Route123_Text_CameronDefeat	Qué pena…$
+Route123_Text_CameronPostBattle	Ser vidente es cuestión de voluntad.\nCreía que no perdería contra ti…$
+Route123_Text_CameronRegister	¡Lo presiento!\n¡Volveremos a combatir!\lAunque no sé si ganaré…\pA ver tu POKéNAV.$
+Route123_Text_CameronRematchIntro	Me he convencido de que ya no\nperderé más. ¡Eso me hace fuerte!$
+Route123_Text_CameronRematchDefeat	Qué pena…$
+Route123_Text_CameronPostRematch	Debería entrenar en el MONTE PÍRICO…\nAsí nunca te ganaré…$
+Route123_Text_JackiIntro	No te alegres demasiado si tus\nPOKéMON desarrollan poderes psíquicos.\pHay que pulirlos para que sirvan\nde verdad.$
+Route123_Text_JackiDefeat	¡Me has arrollado!$
+Route123_Text_JackiPostBattle	Todos tenemos poderes psíquicos.\nSolo hemos olvidado cómo usarlos.$
+Route123_Text_JackiRegister	Me gustaría volver a enfrentarme\na ti. ¿Te parece bien?$
+Route123_Text_JackiRematchIntro	¿Has despertado los poderes psíquicos\nque llevas dentro?$
+Route123_Text_JackiRematchDefeat	¡Asombroso!$
+Route123_Text_JackiPostRematch	Tu poder con los POKéMON…\nTambién podría ser un poder psíquico.$
+Route123_Text_MiuIntro	MIU: Hola. Espero que tus POKéMON\nno lloren cuando pierdan.$
+Route123_Text_MiuDefeat	MIU: Vaya, hemos perdido.$
+Route123_Text_MiuPostBattle	MIU: Tus POKéMON son fuertes porque\nsois amigos.$
+Route123_Text_MiuNotEnoughMons	MIU: No tiene gracia combatir si no\ntienes dos POKéMON.$
+Route123_Text_YukiIntro	YUKI: ¡Vale!\n¡Vamos a ganar a tus POKéMON!$
+Route123_Text_YukiDefeat	YUKI: Vaya, hemos perdido.$
+Route123_Text_YukiPostBattle	YUKI: ¿Por qué eres tan fuerte?\nNunca habíamos perdido.$
+Route123_Text_YukiNotEnoughMons	YUKI: No tiene gracia combatir si no\ntienes dos POKéMON.$
+Route123_Text_KindraIntro	El MONTE PÍRICO…\nDonde duermen los espíritus POKéMON…\l¿Dormirán tus POKéMON?$
+Route123_Text_KindraDefeat	Rebosan vitalidad…$
+Route123_Text_KindraPostBattle	El MONTE PÍRICO…\nDonde duermen los espíritus POKéMON…\pDebe de rebosar un poder que calma\nlos espíritus…$
+Route123_Text_FernandoIntro	¡Te voy a apagar las luces mientras\nmachaco esta canción!$
+Route123_Text_FernandoDefeat	¡Eh, para!\n¡Que aún estaba con la intro!$
+Route123_Text_FernandoPostBattle	Lo tuyo es puro rock.\nMe gustaría escribirte una canción.$
+Route123_Text_FernandoRegister	La próxima vez, escucha la canción\nentera, ¿vale?$
+Route123_Text_FernandoRematchIntro	¡Hoy es el día!\n¡Te apagaré las luces antes de\lacabar de cantar!$
+Route123_Text_FernandoRematchDefeat	¡Eh, para!\n¡Que aún no he llegado al estribillo!$
+Route123_Text_FernandoPostRematch	Creía que mi canción te iba a\nembobar tanto que perderías.$
+Route123_Text_DavisIntro	¡Este es mi increíble POKéMON BICHO!\nMe lo consiguió mi hermano mayor.$
+Route123_Text_DavisDefeat	¡Buaaah!\n¡Qué crueldad!$
+Route123_Text_DavisPostBattle	No le digas a mi hermano que he\nperdido. ¡Tiene que ser un secreto!$
+Route123_Text_JazmynIntro	¡Ganar a alguien que se ve que es\nfuerte me dará más confianza!$
+Route123_Text_JazmynDefeat	Adiós a mi confianza…$
+Route123_Text_JazmynPostBattle	Dicen que no hay que juzgar a la\ngente por su aspecto.\pPero muchas veces la pinta no\nengaña…$
+Route123_Text_FrederickIntro	¡Hola, criatura!\n¿Tienes un momento?$
+Route123_Text_FrederickDefeat	¡Ah, qué criatura más capaz!\nDeja que te dé algo para tus gastos.$
+Route123_Text_FrederickPostBattle	¿Para tus gastos?\n¿No te ha llegado con el premio?$
+Route123_Text_AlbertoIntro	¡Te lo digo ya: los POKéMON PÁJARO\nson mi obsesión!\p¡Los pájaros molan!\n¡Son los mejores!$
+Route123_Text_AlbertoDefeat	¡Aun perdiendo, los POKéMON PÁJARO\nmolan!$
+Route123_Text_AlbertoPostBattle	Recojo las plumas de POKéMON PÁJARO\nque caen en los combates.\pVoy a hacerme un sombrero con\nplumas de POKéMON PÁJARO.$
+Route123_Text_EdIntro	Cuando no hay ENTRENADORES, pongo a\nmis POKéMON a combatir entre ellos.\lY los miro.$
+Route123_Text_EdDefeat	Me gustan bastante tus POKéMON.$
+Route123_Text_EdPostBattle	¡Jeje, te estoy copiando las ideas!\nCreo que me harán mejorar.$
+Route123_Text_JonasIntro	¡Estaba al acecho y alguien ha\ncaído en mi trampa!$
+Route123_Text_JonasDefeat	Si no pierdes, ¿cómo me voy a\ndivertir jugando a los ninjas?$
+Route123_Text_JonasPostBattle	La próxima vez acecharé a alguien\nque parezca más débil.$
+Route123_Text_KayleyIntro	Me acabo de comprar esta sombrilla.\n¡Soy un tercio más mona!$
+Route123_Text_KayleyDefeat	¡Eres como cinco veces mejor\nque yo!$
+Route123_Text_KayleyPostBattle	Usar bien los complementos es el\nsecreto del encanto con estilo.$
+MtPyre_1F_Text_TakeThisForYourOwnGood	Por las laderas del MONTE PÍRICO\nvagan seres de todo tipo…\pNunca se sabe qué puede pasar.\nToma esto. Es por tu bien.$
+MtPyre_1F_Text_ExplainCleanseTag	Haz que un POKéMON lleve ese\nAMULETO.\pAyuda a alejar a los POKéMON\nsalvajes.$
+MtPyre_1F_Text_ComeToPayRespects	¿Has venido a rendir homenaje a los\nespíritus de los POKéMON fallecidos?\pSe nota que quieres mucho a tus\nPOKéMON.$
+MtPyre_1F_Text_RestingPlaceOfZigzagoon	Aquí descansa mi ZIGZAGOON.\nLo quería tanto…$
+MtPyre_2F_Text_MemoriesOfSkitty	Los recuerdos de mi querido SKITTY…\nSe me llenan los ojos de lágrimas.$
+MtPyre_2F_Text_TumbledFromFloorAbove	Ay, ay… Hay agujeros en el suelo\naquí y allá.\pNo me di cuenta y me caí del piso\nde arriba.$
+MtPyre_2F_Text_MarkIntro	¡Eh! ¿Buscas POKéMON?\n¡Me has seguido! ¡Qué descaro!$
+MtPyre_2F_Text_MarkDefeat	¡Aaaaah!\n¡Lo siento, perdóname, por favor!$
+MtPyre_2F_Text_MarkPostBattle	Aquí no viene mucha gente, así que\npensé que habría POKéMON raros.$
+MtPyre_2F_Text_LukeIntro	LUKE: Estamos aquí por una apuesta.\pJeje, si le demuestro lo guay que soy,\nse enamorará de mí. ¡Lo sé!\p¡Ya sé! ¡Te machacaré y le\ndemostraré lo guay que soy!$
+MtPyre_2F_Text_LukeDefeat	LUKE: ¡Huy!$
+MtPyre_2F_Text_LukePostBattle	LUKE: Bueno, hemos perdido, ¡pero\nno pasa nada! Estoy a tu lado.\l¡Superaremos esta apuesta!$
+MtPyre_2F_Text_LukeNotEnoughMons	LUKE: Si quieres enfrentarte a mí,\ntrae más POKéMON.\p¡Si no, no podré demostrarle a mi\nchica lo guay que soy!$
+MtPyre_2F_Text_DezIntro	DEZ: He venido por una apuesta con\nmi novio.\pDa muchísimo miedo, pero estoy con\nmi novio. No pasa nada.\p¡Ya sé! ¡Haré que mi novio quede\nguay ganándote!$
+MtPyre_2F_Text_DezDefeat	DEZ: ¡Buaaah! ¡Qué miedo!$
+MtPyre_2F_Text_DezPostBattle	DEZ: ¡Estamos tan enamorados que\nnos da igual perder!$
+MtPyre_2F_Text_DezNotEnoughMons	DEZ: Si quieres desafiarnos, trae al\nmenos dos POKéMON.\pMi novio es fuerte.\nCon un POKéMON no basta.$
+MtPyre_2F_Text_LeahIntro	No te conozco de nada…\n¡Vete antes de que te pase algo!$
+MtPyre_2F_Text_LeahDefeat	Mmm…\nAguantas bien.$
+MtPyre_2F_Text_LeahPostBattle	Mi familia entrena aquí desde la época\nde mi bisabuela…\pMi deber es proteger esta\nmontaña…$
+MtPyre_2F_Text_ZanderIntro	¡Kiyaaaaah!\n¡Qué miedo!$
+MtPyre_2F_Text_ZanderDefeat	¡Nooooooo!\n¡He perdido los nervios!$
+MtPyre_2F_Text_ZanderPostBattle	Me asusto cada vez que veo algo\nmoverse…\pNo tendría que haber venido aquí\na entrenar…$
+MtPyre_3F_Text_WilliamIntro	¡El ambiente de la montaña ha\naumentado mi poder psíquico!\p¿Una simple criatura como tú…?\n¿Sueñas con ganar?$
+MtPyre_3F_Text_WilliamDefeat	Me ahogo en la autocompasión…$
+MtPyre_3F_Text_WilliamPostBattle	Mi poder psíquico se ha multiplicado,\nseguro, pero…$
+MtPyre_3F_Text_KaylaIntro	¡Jajajajaja!\p¡Este no es sitio para críos, y\nmenos para ti!$
+MtPyre_3F_Text_KaylaDefeat	He perdido limpiamente…$
+MtPyre_3F_Text_KaylaPostBattle	Esto quiere decir que aún no he\nentrenado bastante…\pTengo que seguir hacia la cima…\p¡Vamos, yo!$
+MtPyre_3F_Text_GabrielleIntro	¿Por qué has venido aquí?$
+MtPyre_3F_Text_GabrielleDefeat	¡Ha sido increíble!\nEres alguien muy especial.$
+MtPyre_3F_Text_GabriellePostBattle	Los POKéMON que ya no están en este\nmundo. Los POKéMON que están contigo.\pY los POKéMON que conocerás en el\nfuturo…\pTodos merecen el mismo cariño.\nNo lo olvides, por favor.$
+MtPyre_3F_Text_GabrielleRegister	Me gustaría ver a tus POKéMON cuando\ncrezcan un poco más…\pPor favor, enséñame tu POKéNAV.$
+MtPyre_3F_Text_GabrielleRematchIntro	Oh, eres tú…\p¿Has venido a enseñarme a tus\nPOKéMON ya crecidos?$
+MtPyre_3F_Text_GabrielleRematchDefeat	¡Increíble!\nEres alguien especial.$
+MtPyre_3F_Text_GabriellePostRematch	Los POKéMON que ya no están en este\nmundo. Los POKéMON que están contigo.\pY los POKéMON que conocerás en el\nfuturo…\pTodos merecen el mismo cariño.\nVeo que no lo has olvidado.$
+MtPyre_5F_Text_AtsushiIntro	Maestro…\n¡Observa mis progresos!$
+MtPyre_5F_Text_AtsushiDefeat	Maestro…\n¡Perdóname!$
+MtPyre_5F_Text_AtsushiPostBattle	Hasta que mejore, mi maestro, que\ndescansa aquí, no encontrará la paz…$
+MtPyre_4F_Text_TashaIntro	Me encanta todo lo que da miedo…\nEs como una enfermedad…\pCuando estoy aquí…\ntiemblo de miedo…$
+MtPyre_4F_Text_TashaDefeat	Perder… no me gusta…$
+MtPyre_4F_Text_TashaPostBattle	Quiero ver cosas espantosas…\nNo puedo irme…\pQuédate…\n¿No te quedas conmigo?$
+MtPyre_6F_Text_ValerieIntro	Cuando estoy aquí…\nMe entra un poder curioso…$
+MtPyre_6F_Text_ValerieDefeat	El poder se está apagando…$
+MtPyre_6F_Text_ValeriePostBattle	Quizá el poder venga de los espíritus\nde los POKéMON que duermen inquietos…$
+MtPyre_6F_Text_ValerieRegister	Fufufu… He perdido, pero…\nTengo una pequeña habilidad…\pSin tocar siquiera tu POKéNAV…\n¡Hiyah!$
+MtPyre_6F_Text_ValerieRematchIntro	Detrás de ti…\n¿Qué es eso…?$
+MtPyre_6F_Text_ValerieRematchDefeat	Algo se ha desvanecido…$
+MtPyre_6F_Text_ValeriePostRematch	Los POKéMON que descansan aquí…\nA veces, juegan…$
+MtPyre_6F_Text_CedricIntro	¿Te has perdido?\n¡No temas, que aquí estoy yo!$
+MtPyre_6F_Text_CedricDefeat	¿No te habías perdido?$
+MtPyre_6F_Text_CedricPostBattle	Pensé que alguien que se ha perdido\nse pondría nervioso y sería fácil.\pEs un truco sucio y no lo repetiré…$
+MtPyre_Summit_Text_Grunt1Intro	¡No! ¡Esos matones del EQUIPO MAGMA\nhan llegado antes que nosotros!\p¡No podemos quedarnos atrás!$
+MtPyre_Summit_Text_Grunt1Defeat	Creía que eras de los MAGMA y que\nhabías vuelto…$
+MtPyre_Summit_Text_Grunt1PostBattle	Sí, vale, eres fuerte…\n¡Pero nosotros somos muchos!$
+MtPyre_Summit_Text_Grunt2Intro	¡Ja!\n¡Qué mala suerte la tuya!\pSi hubieras llegado antes, solo\nhabrías tenido que combatir con el\lEQUIPO MAGMA, que son unos blandos.\p¡Pero como llegas ahora, te toca\nenfrentarte a nosotros, los duros!$
+MtPyre_Summit_Text_Grunt2Defeat	Urgh… Tendría que haberte dejado al\nEQUIPO MAGMA primero…$
+MtPyre_Summit_Text_Grunt2PostBattle	¡No sabes nada!\n¿Por qué te metes con nosotros?$
+MtPyre_Summit_Text_Grunt3Intro	Tú…\nTe vimos en el MONTE CENIZO.\pNo eres de ningún EQUIPO, así que\n¿qué haces aquí?$
+MtPyre_Summit_Text_Grunt3Defeat	Si te vas a meter con alguien, que\nsea con el EQUIPO MAGMA…$
+MtPyre_Summit_Text_Grunt3PostBattle	Je, ¡da igual!\n¡Hemos ganado tiempo!\p¡El JEFE ya habrá conseguido lo que\nbuscaba!$
+MtPyre_Summit_Text_Grunt4Intro	¡Ah, ya sé!\nQuisiste entrar en el EQUIPO MAGMA,\l¡pero no te quisieron!\p¡Pues no creas que te vamos a dejar\nentrar en el EQUIPO AQUA!$
+MtPyre_Summit_Text_Grunt4Defeat	Si tantas ganas tienes de entrar en\nel EQUIPO AQUA, lo podemos pensar…$
+MtPyre_Summit_Text_Grunt4PostBattle	Los miembros y nuestro líder hacemos\nun equipo genial.$
+MtPyre_Summit_Text_ArchieWeGotTheOrbLetsGo	AQUILES: MAGNO, del EQUIPO MAGMA, se\nnos ha adelantado, pero ya tenemos\llo que queríamos.\p¡El PRISMA ROJO que se guardaba en el\nMONTE PÍRICO ya es mío, de AQUILES!\pFufufu… ¡Ahora podremos cumplir\nnuestro objetivo final!\p¡Vamos, EQUIPO!\n¡Nos retiramos!$
+MtPyre_Summit_Text_BothOrbsTakenMagmaLeftThis	Ay, no…\nEsto no puede estar pasando…\pNo solo el PRISMA AZUL, sino también\nel PRISMA ROJO se lo han llevado…\pEl PRISMA AZUL y el PRISMA ROJO no\ndeben separarse nunca. Van juntos.\p¿Qué pretenden hacer esos hombres\ncon los dos PRISMAS?\p… … … … … …\n… … … … … …\pAh, sí. ¿Fue el EQUIPO MAGMA el que\nvino primero y se llevó el PRISMA AZUL?\pCon las prisas, se dejaron esto.\pNo sé qué será exactamente.\pMe gustaría que te lo quedaras.\nQuizá te sirva de algo.$
+MtPyre_Summit_Text_OrbsHaveBeenTaken	El PRISMA AZUL y el PRISMA ROJO, en\nmanos de esos hombres siniestros…\pNo deben separarse nunca…\nMe temo que pasará algo terrible…$
+MtPyre_Summit_Text_GroudonKyogreAwakened	Ay, madre mía…\p¿Dices que han despertado tanto\nGROUDON como KYOGRE?\pDicen que el PRISMA AZUL y el PRISMA\nROJO calmaron la furia de esos\ldos POKéMON…\pTambién dicen que el verdadero dueño\nde los PRISMAS aún existe.\pPero nadie sabe quién, o qué, es el\ndueño de los PRISMAS.\pPodría ser una persona, o quizá un\nPOKéMON, pero nadie lo sabe.$
+MtPyre_Summit_Text_ThoseTwoMenReturnedOrbs	Los dos hombres que se llevaron los\nPRISMAS volvieron a devolverlos solos.\pEsos hombres…\nQuizá no sean tan malos…$
+MtPyre_Summit_Text_SuperAncientPokemonTaughtUs	Las encarnaciones de la tierra, el mar\ny el cielo…\pEso dicen que son los POKéMON\nsuperancestrales…\pIgual que las personas y los POKéMON\ntenemos vida, nuestro mundo también\lestá vivo…\pEso nos enseñaron los POKéMON\nsuperancestrales…$
+MtPyre_Summit_Text_WillYouHearOutMyTale	En el MONTE PÍRICO calmamos los\nespíritus de los POKéMON que se van…\pEs un lugar alto desde el que se ve\ntodo HOENN…\pAquí deben encontrar consuelo los\nespíritus de los POKéMON…\p¿Será casualidad que estés aquí?…\p¿Escucharás mi relato? ¿Un relato que\nse cuenta desde siempre en HOENN?$
+MtPyre_Summit_Text_GroudonKyogreTale	Pasó hace mucho, mucho tiempo…\pEl mundo sufrió un choque feroz entre\nel POKéMON de la tierra y el POKéMON\ldel mar…\pEl POKéMON de la tierra alzó\nmontañas y creó continentes…\pEl POKéMON del mar alzó olas\nenormes y excavó océanos…\pSu duelo feroz no tenía fin.\pEl mundo quedó envuelto en grandes\nincendios y tormentas terribles.\pEl PRISMA AZUL y el PRISMA ROJO\npusieron fin a la catástrofe.\pDe los dos PRISMAS salió una luz que\ncalmó a los furiosos rivales.\pLos dos, ya tranquilos, se sumergieron\nen lo más hondo del mar, donde al\lfinal desaparecieron…$
+MtPyre_Summit_Text_WellThatTooIsFine	Ya veo…\nBueno, también está bien…$
+MtPyre_Summit_Text_MaxieSilence	MAGNO: {PLAYER}…\p… … … … … …\n… … … … … …$
+MtPyre_Summit_Text_HearTheNewLegendOfHoenn	Mi papel es transmitir las leyendas\nde HOENN a las generaciones futuras.\pY la crisis que acaba de terminar en\nARRECÍPOLIS ha cambiado una leyenda…\p¿Tienes tiempo para escuchar la\nnueva leyenda de HOENN?$
+MtPyre_Summit_Text_HoennTrioTale	Pasó hace mucho, mucho tiempo…\pEl mundo sufrió un choque feroz entre\nel POKéMON de la tierra y el POKéMON\ldel mar…\pEl POKéMON de la tierra alzó\nmontañas y creó continentes…\pEl POKéMON del mar alzó olas\nenormes y excavó océanos…\pSu duelo feroz no tenía fin.\pEl mundo quedó envuelto en grandes\nincendios y tormentas terribles.\pFue entonces cuando el POKéMON del\ncielo bajó de una tormenta.\pEl POKéMON, de un verde intenso,\ncalmó a los dos POKéMON furiosos.\pY, cumplida su misión, el POKéMON\nverde se perdió volando en el cielo…$

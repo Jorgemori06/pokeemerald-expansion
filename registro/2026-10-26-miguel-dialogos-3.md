@@ -8,6 +8,9 @@ Seguir con la traducción por lo que importa para avanzar en la historia. La par
 
 - Tramo 30: calles de CALAGUA (combate con AURA/BRUNO, reclutas del EQUIPO AQUA, la cueva de la cala), PUERTO, MOTEL, casas, CENTRO POKéMON y OLVIDAMOVIMIENTOS.
 - Tramo 31: MUSEO (1.ª y 2.ª planta) y CENTRO COMERCIAL (plantas 1 a 5 y azotea).
+- Tramo 32: RUTA 123 con sus entrenadores y MONTE PÍRICO entero (pisos, cima con los reclutas AQUA, AQUILES y la leyenda de los PRISMAS).
+- Tramo 33: GUARIDA AQUA.
+- Corregidos en el tramo 17 dos nombres de objetos que no eran los de nuestra tabla: ESFERA → PRISMA y EMBLEMA MAGMA → SIGNO MAGMA.
 - Sin lo del FRENTE BATALLA (postgame).
 - `LEEME.md` (tabla y nombres) y `PLAN.md` (aviso del cambio de reparto).
 
@@ -19,4 +22,4 @@ Seguir con la traducción por lo que importa para avanzar en la historia. La par
 ## Pendiente
 
 - SALA DE CONCURSOS y CLUB DE FANS DE ENTRENADORES de CALAGUA (no afectan a la historia).
-- Siguiente: MONTE PÍRICO y GUARIDA AQUA.
+- Siguiente: CIUDAD ALGARIA, su GIMNASIO y el CENTRO ESPACIAL.

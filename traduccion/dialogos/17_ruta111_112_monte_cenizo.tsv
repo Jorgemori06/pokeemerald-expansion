@@ -101,7 +101,7 @@ MtChimney_CableCarStation_Text_RideAnotherTime	Te esperamos en otra ocasión.$
 MtChimney_Text_MeteoriteWillActivateVolcano	El poder del METEORITO…\pSi lo amplificamos con esta máquina,\nla actividad volcánica del MONTE\lCENIZO aumentará al instante…\pSu energía crecerá en lo más hondo\ndel cráter y…\lFufufu…$
 MtChimney_Text_MaxieIntro	MAGNO: ¿Mm?\n¿Quién eres?\p… … … … … …\n… … … … … …\pHe oído a AQUILES quejarse de una\ncriatura que se mete en los asuntos\ldel EQUIPO AQUA.\pDebía de referirse a ti.\p¡Hmpf! ¿Así que piensas meterte con\nnosotros, el EQUIPO MAGMA?\pEscúchame bien.\nHace mucho, los seres vivos usaban\lla tierra para vivir y crecer.\p¡Por eso la tierra es lo más\nimportante! ¡Es la cuna de todo!\pPor eso el EQUIPO MAGMA se dedica\na expandir la tierra firme.\p¡Por el progreso de la humanidad\ny de los POKéMON!\pY para eso necesitamos el poder de\nlo que duerme en esta montaña…\p¡Oh! No hacía falta que supieras\ntanto.\p¡Pero da igual!\nTe enseñaré lo que pasa por meterse\len nuestro gran plan.$
 MtChimney_Text_MaxieDefeat	¡¿Qué?!\p¡¿A mí, a MAGNO, me han pillado\ndesprevenido?!$
-MtChimney_Text_MaxieYouHaventSeenLastOfMagma	MAGNO: Pero basta.\nEsta vez me retiro.\pPero no creas que es lo último que\nverás del EQUIPO MAGMA.\pFufufu…\pAun sin el METEORITO, si conseguimos\nesa ESFERA… Fufufu…$
+MtChimney_Text_MaxieYouHaventSeenLastOfMagma	MAGNO: Pero basta.\nEsta vez me retiro.\pPero no creas que es lo último que\nverás del EQUIPO MAGMA.\pFufufu…\pAun sin el METEORITO, si conseguimos\nese PRISMA… Fufufu…$
 MtChimney_Text_TabithaIntro	¡Jejeje!\p¡Así que has llegado hasta aquí!\p¡Pero llegas tarde!\n¡Ya le he entregado al JEFE el\lMETEORITO de las CATARATAS METEORO!$
 MtChimney_Text_TabithaDefeat	Jejeje…\pAunque haya perdido, si nuestro líder\ndespierta a esa cosa…$
 MtChimney_Text_TabithaPostBattle	¡JEFE, deprisa!\n¡Dale la energía del METEORITO!\pJejeje…$
@@ -178,7 +178,7 @@ JaggedPass_Text_EthanPostRematch	Debería pedirle una BICI ACROBÁTICA a\nRYDEL,
 JaggedPass_Text_GruntIntro	¡Uah!\n¿Qué haces tú aquí?\p¿Que qué hago yo en un sitio así?\p¿Y a ti qué te importa?$
 JaggedPass_Text_GruntDefeat	Urrrgh…\pTendría que haberme metido en la\nGUARIDA enseguida…$
 JaggedPass_Text_GoWhereverYouWant	¡Vale, vale!\n¡Lo admito, eres fuerte!\pNo te preocupes por mí.\n¡Ve adonde quieras!$
-JaggedPass_Text_BoulderShakingInResponseToEmblem	¡Oh! ¡Esta roca tiembla al acercarle\nel EMBLEMA MAGMA!$
+JaggedPass_Text_BoulderShakingInResponseToEmblem	¡Oh! ¡Esta roca tiembla al acercarle\nel SIGNO MAGMA!$
 JaggedPass_Text_JulioIntro	¡Aaah! ¡Da muchísimo miedo bajar la\nmontaña de un tirón!$
 JaggedPass_Text_JulioDefeat	Me siento como si me desmontara…$
 JaggedPass_Text_JulioPostBattle	La bici ha botado tanto que me duele\nel trasero…$

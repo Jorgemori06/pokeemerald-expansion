@@ -30,7 +30,7 @@ Los textos comunes resultaron ser muchos más (~1500 de Hoenn). Los que quedan s
 
 ## Jorge: tramos 30 a 49 (unos 1300 textos)
 
-**Cambio (26/10/2026):** como Jorge está con el randomizer, Miguel ha empezado esta parte por CIUDAD CALAGUA (tramos 30 y 31: calles, PUERTO, MOTEL, casas, MUSEO y CENTRO COMERCIAL). Quedan la SALA DE CONCURSOS y el CLUB DE FANS de CALAGUA y todo lo demás de la lista. Antes de empezar un tramo, avisad en el PR para no repetirlo.
+**Cambio (26/10/2026):** como Jorge está con el randomizer, Miguel ha empezado esta parte por CIUDAD CALAGUA (tramos 30 y 31: calles, PUERTO, MOTEL, casas, MUSEO y CENTRO COMERCIAL), y luego RUTA 123, MONTE PÍRICO y GUARIDA AQUA (tramos 32 y 33). Quedan la SALA DE CONCURSOS y el CLUB DE FANS de CALAGUA y todo lo demás de la lista. Antes de empezar un tramo, avisad en el PR para no repetirlo.
 
 En orden de la historia:
 
