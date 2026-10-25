@@ -1,6 +1,9 @@
 #include "global.h"
 #include "dualocke_aleatorio.h"
+#include "event_data.h"
+#include "move.h"
 #include "random.h"
+#include "string_util.h"
 #include "constants/flags.h"
 #include "constants/abilities.h"
 #include "constants/items.h"
@@ -139,17 +142,18 @@ enum Item Dualocke_ObjetoMT(enum Move move, enum Item item)
     return item;
 }
 
-// ¿Puede aprender `species` el movimiento de una MT nueva? Siempre la misma respuesta para la misma
+// ¿Puede aprender `species` el movimiento de una MT nueva (o de un tutor nuevo)? Siempre la misma respuesta para la misma
 // especie, movimiento y semilla. -1 si el movimiento no es de una MT nueva (se mira la lista original).
 s32 Dualocke_PuedeAprenderMT(enum Species species, enum Move move)
 {
     u32 i, h;
 
-    if (DUALOCKE_COMPATIBILIDAD_MT == 0)
+    if (DUALOCKE_COMPATIBILIDAD_MT == 0 || move == MOVE_NONE)
         return -1;
-    for (i = 0; i < ARRAY_COUNT(sDualockeMT); i++)
+    for (i = 0; i < ARRAY_COUNT(sDualockeMT) + ARRAY_COUNT(sDualockeTutores); i++)
     {
-        if (sDualockeMT[i][1] != move)
+        u32 nuevo = (i < ARRAY_COUNT(sDualockeMT)) ? sDualockeMT[i][1] : sDualockeTutores[i - ARRAY_COUNT(sDualockeMT)][1];
+        if (nuevo != move)
             continue;
         h = DUALOCKE_SEMILLA_NUMERICA ^ (species * 0x9E3779B1u) ^ (move * 0x85EBCA77u);
         h ^= h >> 15;
@@ -158,4 +162,12 @@ s32 Dualocke_PuedeAprenderMT(enum Species species, enum Move move)
         return (h % 100) < DUALOCKE_COMPATIBILIDAD_MT;
     }
     return -1;
+}
+
+// Tutores (callnative en la macro move_tutor): cambia el movimiento de VAR_0x8005 por el de la
+// semilla y guarda su nombre en STR_VAR_1 para los textos del tutor.
+void Dualocke_TutorAleatorio(void)
+{
+    gSpecialVar_0x8005 = Buscar(sDualockeTutores, ARRAY_COUNT(sDualockeTutores), gSpecialVar_0x8005);
+    StringCopy(gStringVar1, GetMoveName(gSpecialVar_0x8005));
 }

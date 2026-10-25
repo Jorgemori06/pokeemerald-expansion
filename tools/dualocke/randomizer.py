@@ -96,6 +96,8 @@ def main():
     solucionario["habilidades"] = habilidades
     mapa_mts, compatibilidad = mts.randomizar(movs, args.semilla, config)
     solucionario["mt"] = {o: movs[m].nombre for o, m in mapa_mts.items()}
+    tutores = mts.randomizar_tutores(movs, args.semilla, config, mapa_mts)
+    solucionario["tutores"] = {movs[o].nombre: movs[n].nombre for o, n in tutores.items()}
     # Para la compatibilidad de las MT (la calcula el juego a partir de este número)
     numero = int(hashlib.sha256(args.semilla.encode()).hexdigest()[:8], 16)
 
@@ -103,7 +105,7 @@ def main():
         f.write(cabecera.generar(f"Semilla {args.semilla}", mapa_estaticos, mapa_regalos,
                                  res_objetos["suelo"], res_objetos["recogida"], res_objetos["salvajes"],
                                  res_objetos["probabilidad_salvajes"], res_intercambios, habilidades,
-                                 mapa_mts, compatibilidad, numero))
+                                 mapa_mts, compatibilidad, numero, tutores))
 
     with open(TRAINERS, encoding="utf-8") as f:
         original = f.read()

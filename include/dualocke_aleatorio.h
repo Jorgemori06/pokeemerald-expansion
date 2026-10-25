@@ -23,4 +23,7 @@ enum Ability Dualocke_HabilidadAleatoria(enum Species species);
 // MT (mts.py). Dualocke_MovimientoMT y Dualocke_ObjetoMT están declaradas en include/item.h.
 s32 Dualocke_PuedeAprenderMT(enum Species species, enum Move move);
 
+// Tutores (mts.py): callnative en la macro move_tutor (asm/macros/event.inc)
+void Dualocke_TutorAleatorio(void);
+
 #endif // GUARD_DUALOCKE_ALEATORIO_H
