@@ -10,6 +10,9 @@ Seguir con la traducción por lo que importa para avanzar en la historia. La par
 - Tramo 31: MUSEO (1.ª y 2.ª planta) y CENTRO COMERCIAL (plantas 1 a 5 y azotea).
 - Tramo 32: RUTA 123 con sus entrenadores y MONTE PÍRICO entero (pisos, cima con los reclutas AQUA, AQUILES y la leyenda de los PRISMAS).
 - Tramo 33: GUARIDA AQUA.
+- Tramo 34: CIUDAD ALGARIA, su GIMNASIO (VITO y LETI, sin la revancha), la casa de MÁXIMO (BUCEO, BELDUM), casas, tienda y CENTRO POKéMON.
+- Tramo 35: CENTRO ESPACIAL con el EQUIPO MAGMA y el combate doble con MÁXIMO.
+- Tramo 36: GUARIDA MAGMA con MAGNO y GROUDON.
 - Corregidos en el tramo 17 dos nombres de objetos que no eran los de nuestra tabla: ESFERA → PRISMA y EMBLEMA MAGMA → SIGNO MAGMA.
 - Sin lo del FRENTE BATALLA (postgame).
 - `LEEME.md` (tabla y nombres) y `PLAN.md` (aviso del cambio de reparto).
@@ -22,4 +25,4 @@ Seguir con la traducción por lo que importa para avanzar en la historia. La par
 ## Pendiente
 
 - SALA DE CONCURSOS y CLUB DE FANS DE ENTRENADORES de CALAGUA (no afectan a la historia).
-- Siguiente: CIUDAD ALGARIA, su GIMNASIO y el CENTRO ESPACIAL.
+- Siguiente: RUTAS 124 a 134, CUEVA CARDUMEN y zona submarina.
