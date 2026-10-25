@@ -11,7 +11,7 @@ Decidido por Jorge (25/10/2026):
 - El sprite del mapa sigue siendo el del original (da igual: se descubre al empezar el combate).
 
 No se tocan los scripts: el juego cambia la especie al vuelo con la tabla que se genera aquí
-(src/data/dualocke_aleatorio.h, la usa src/dualocke_aleatorio.c).
+(src/data/dualocke_aleatorio.h, la escribe cabecera.py y la usa src/dualocke_aleatorio.c).
 """
 
 import glob
@@ -67,15 +67,3 @@ def randomizar(pokedex, semilla):
         mapa_regalos[original] = raiz
     return mapa_estaticos, mapa_regalos
 
-
-def cabecera(mapa_estaticos, mapa_regalos, comentario):
-    def tabla(nombre, mapa):
-        filas = [f"    {{{a}, {b}}}," for a, b in sorted(mapa.items())] or ["    {SPECIES_NONE, SPECIES_NONE},"]
-        return [f"static const u16 {nombre}[][2] =", "{"] + filas + ["};"]
-    lineas = ["// Generado por el Makefile (Dualocke, tools/dualocke/randomizer.py): no editar.",
-              f"// {comentario}",
-              "// Estáticos (setwildbattle y errantes): especie original -> especie nueva"]
-    lineas += tabla("sDualockeEstaticos", mapa_estaticos)
-    lineas += ["// Regalos (givemon) y huevos (giveegg): especie original -> especie nueva"]
-    lineas += tabla("sDualockeRegalos", mapa_regalos)
-    return "\n".join(lineas) + "\n"

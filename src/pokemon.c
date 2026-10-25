@@ -1,6 +1,7 @@
 #include "global.h"
 #include "dualocke_es.h"
 #include "dualocke.h"
+#include "dualocke_aleatorio.h"
 #include "malloc.h"
 #include "apprentice.h"
 #include "battle.h"
@@ -5418,6 +5419,15 @@ void SetWildMonHeldItem(void)
     {
         if (GetMonData(&gParties[B_TRAINER_OPPONENT_A][i], MON_DATA_HELD_ITEM) != ITEM_NONE)
             continue; // prevent overwriting previously set item
+
+        // Dualocke: con el randomizer, cualquier salvaje puede llevar un objeto al azar
+        if (Dualocke_ObjetosSalvajesAleatorios())
+        {
+            enum Item item = Dualocke_ObjetoSalvaje(itemHeldBoost);
+            if (item != ITEM_NONE)
+                SetMonData(&gParties[B_TRAINER_OPPONENT_A][i], MON_DATA_HELD_ITEM, &item);
+            continue;
+        }
 
         rnd = Random() % 100;
         species = GetMonData(&gParties[B_TRAINER_OPPONENT_A][i], MON_DATA_SPECIES, 0);
