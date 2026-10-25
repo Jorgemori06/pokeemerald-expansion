@@ -12,7 +12,7 @@ Lo lanza el Makefile al compilar con una semilla:
 
 No toca ningún archivo del repo: lee los originales (los niveles y equipos de Miguel) y
 escribe las versiones barajadas en build/dualocke/ (wild_encounters.json, trainers.party,
-dualocke_iniciales.h), que son las que se compilan.
+dualocke_iniciales.h, dualocke_aleatorio.h), que son las que se compilan.
 Los parámetros están en tools/dualocke/randomizer_config.json (los decide Miguel).
 
 Uso directo (normalmente no hace falta):
@@ -28,6 +28,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from aleatorio import especies as esp  # noqa: E402
 from aleatorio import entrenadores  # noqa: E402
+from aleatorio import estaticos  # noqa: E402
 from aleatorio import iniciales as ini  # noqa: E402
 from aleatorio import salvajes  # noqa: E402
 
@@ -66,6 +67,14 @@ def main():
     solucionario["iniciales"] = iniciales
     with open(os.path.join(args.salida, "dualocke_iniciales.h"), "w", encoding="utf-8", newline="\n") as f:
         f.write(ini.cabecera(iniciales, f"Iniciales de la semilla {args.semilla}"))
+
+    mapa_estaticos, mapa_regalos = estaticos.randomizar(pokedex, args.semilla)
+    solucionario["estaticos"], solucionario["regalos"] = mapa_estaticos, mapa_regalos
+    for especie in list(mapa_estaticos.values()) + list(mapa_regalos.values()):
+        if especie not in pokedex.especies:
+            sys.exit(f"Dualocke: el randomizer de estáticos ha dado una especie desconocida: {especie}")
+    with open(os.path.join(args.salida, "dualocke_aleatorio.h"), "w", encoding="utf-8", newline="\n") as f:
+        f.write(estaticos.cabecera(mapa_estaticos, mapa_regalos, f"Semilla {args.semilla}"))
 
     with open(TRAINERS, encoding="utf-8") as f:
         original = f.read()

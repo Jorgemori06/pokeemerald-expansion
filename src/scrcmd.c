@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke_aleatorio.h"
 #include "frontier_util.h"
 #include "battle_setup.h"
 #include "battle_util.h"
@@ -2271,7 +2272,7 @@ bool8 ScrCmd_bufferboxname(struct ScriptContext *ctx)
 
 bool8 ScrCmd_giveegg(struct ScriptContext *ctx)
 {
-    enum Species species = VarGet(ScriptReadHalfword(ctx));
+    enum Species species = Dualocke_RegaloAleatorio(VarGet(ScriptReadHalfword(ctx))); // Dualocke: huevos del randomizer
 
     Script_RequestEffects(SCREFF_V1 | SCREFF_SAVE);
 
@@ -2477,6 +2478,11 @@ bool8 ScrCmd_setwildbattle(struct ScriptContext *ctx)
     enum Item item2 = ScriptReadHalfword(ctx);
 
     Script_RequestEffects(SCREFF_V1);
+
+    // Dualocke: los estáticos salen del randomizer (sin semilla, los mismos)
+    species = Dualocke_EstaticoAleatorio(species);
+    if (species2 != SPECIES_NONE)
+        species2 = Dualocke_EstaticoAleatorio(species2);
 
     if (species2 == SPECIES_NONE)
     {
