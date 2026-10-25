@@ -26,6 +26,7 @@ class Especie:
         self.evoluciones = []           # [(nivel o None, SPECIES_Y)]: las que se usan al evolucionar
         self.destinos = []              # todas las evoluciones, sea cual sea el método
         self.tabla_formas = None        # nombre de la tabla de formas, si tiene
+        self.megas = []                 # [(SPECIES_X_MEGA, ITEM_XITE)] si megaevoluciona con objeto
         self.nombre_es = ""
 
     @property
@@ -95,7 +96,7 @@ def _leer_evoluciones(cuerpo):
 
 
 def leer_especies(cpp="arm-none-eabi-cpp", cppflags=None):
-    """Devuelve ({SPECIES_X: Especie}, {tabla: [SPECIES_X, ...]})."""
+    """Devuelve ({SPECIES_X: Especie}, {tabla: [SPECIES_X, ...]}, {alias: SPECIES_X})."""
     if cppflags is None:
         cppflags = ["-iquote", "include", "-Wno-trigraphs", "-DMODERN=1", "-DTESTING=0",
                     "-DEMERALD", "-std=gnu17"]
@@ -110,13 +111,20 @@ def leer_especies(cpp="arm-none-eabi-cpp", cppflags=None):
         for a, b in re.findall(r"^\s*(SPECIES_\w+)\s*=\s*(SPECIES_\w+)\s*,", f.read(), re.M):
             alias[a] = b
 
-    # Formas que solo existen en combate (Zen, Filo, megas...): no pueden salir tal cual
+    # Formas que solo existen en combate (Zen, Filo, megas...): no pueden salir tal cual.
+    # Y las megas de cada tabla (megaevolución con objeto: la especie mega y su megapiedra).
     formas_de_combate = set()
-    for m in re.finditer(r"static const struct FormChange s\w+FormChangeTable\[\]\s*=\s*\{", texto):
+    megas_por_tabla = {}
+    for m in re.finditer(r"static const struct FormChange (s\w+FormChangeTable)\[\]\s*=\s*\{", texto):
         cuerpo = _cuerpo_entre_llaves(texto, m.end() - 1)
-        for tipo, destino in re.findall(r"\{\s*(FORM_CHANGE_\w+)\s*,\s*(SPECIES_\w+)", cuerpo):
+        for tipo, destino, resto in re.findall(r"\{\s*(FORM_CHANGE_\w+)\s*,\s*(SPECIES_\w+)\s*,?\s*([^}]*)\}", cuerpo):
+            destino = alias.get(destino, destino)
             if tipo.startswith("FORM_CHANGE_BATTLE_"):
-                formas_de_combate.add(alias.get(destino, destino))
+                formas_de_combate.add(destino)
+            if tipo == "FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM":
+                objeto = re.search(r"ITEM_\w+", resto)
+                if objeto:
+                    megas_por_tabla.setdefault(m.group(1), []).append((destino, objeto.group(0)))
 
     for m in re.finditer(r"static const u16 (s\w+FormSpeciesIdTable)\[\]\s*=\s*\{", texto):
         cuerpo = _cuerpo_entre_llaves(texto, m.end() - 1)
@@ -139,20 +147,24 @@ def leer_especies(cpp="arm-none-eabi-cpp", cppflags=None):
         e.destinos = [alias.get(d, d) for d in todas]
         if e.nombre in formas_de_combate:
             e.flags.add("formaDeCombate")
+        cambios = re.search(r"\.formChangeTable\s*=\s*(s\w+)", cuerpo)
+        if cambios and "isMegaEvolution" not in e.flags:
+            e.megas = megas_por_tabla.get(cambios.group(1), [])
         formas = re.search(r"\.formSpeciesIdTable\s*=\s*(s\w+)", cuerpo)
         e.tabla_formas = formas.group(1) if formas else None
         nombre = re.search(r'\.speciesName\s*=\s*_\("([^"]*)"\)', cuerpo)
         e.nombre_es = nombre.group(1) if nombre else ""
         especies[e.nombre] = e
-    return especies, tablas
+    return especies, tablas, alias
 
 
 class Pokedex:
     """Especies, líneas evolutivas y reglas de evolución por nivel."""
 
-    def __init__(self, especies, tablas):
+    def __init__(self, especies, tablas, alias=None):
         self.especies = especies
         self.tablas = tablas
+        self.alias = alias or {}
         self.preevo = {}
         for e in especies.values():
             for destino in e.destinos:
@@ -193,9 +205,9 @@ class Pokedex:
             pendientes += self.especies[n].destinos
         return resultado
 
-    def raices_validas(self):
+    def raices_validas(self, con_legendarios=False):
         """Raíces de línea que pueden salir en salvajes y entrenadores normales:
-        formas normales, sin legendarios ni singulares en la línea."""
+        formas normales, sin legendarios ni singulares en la línea (salvo con_legendarios)."""
         raices = []
         for nombre in self.especies:
             if nombre in ("SPECIES_NONE", "SPECIES_EGG") or nombre in self.preevo:
@@ -203,7 +215,7 @@ class Pokedex:
             if not self.es_forma_normal(nombre) or not self.especies[nombre].nombre_es:
                 continue
             linea = self.linea(nombre)
-            if any(self.especies[n].es_legendaria for n in linea):
+            if not con_legendarios and any(self.especies[n].es_legendaria for n in linea):
                 continue
             raices.append(nombre)
         return sorted(raices)
