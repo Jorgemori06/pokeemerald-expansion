@@ -6,8 +6,10 @@ src/pokemon.c por el preprocesador de C con la misma configuración que al compi
 exactamente las especies, evoluciones y formas que lleva la ROM.
 """
 
+import os
 import re
 import subprocess
+import tempfile
 
 # Evoluciones que no son por nivel (piedra, amistad, lugar...): la primera a partir de este
 # nivel y la segunda a partir del otro. Son las mismas reglas que usa Miguel para los
@@ -48,8 +50,22 @@ def _cuerpo_entre_llaves(texto, inicio):
 
 
 def _preprocesar(cpp, cppflags):
-    orden = [cpp] + cppflags + ["-P", "src/pokemon.c"]
-    return subprocess.run(orden, check=True, capture_output=True, text=True).stdout
+    """Pasa src/pokemon.c por el preprocesador. Si falta alguna cabecera que se genera más tarde
+    en la compilación (los movimientos que se enseñan, por ejemplo), se pone una vacía en una
+    carpeta temporal: no hace falta para leer las especies."""
+    with tempfile.TemporaryDirectory() as vacias:
+        for _ in range(20):
+            orden = [cpp] + cppflags + ["-iquote", vacias, "-P", "src/pokemon.c"]
+            r = subprocess.run(orden, capture_output=True, text=True)
+            if r.returncode == 0:
+                return r.stdout
+            falta = re.search(r"fatal error: ([^:]+\.h): No such file or directory", r.stderr)
+            if not falta:
+                break
+            ruta = os.path.join(vacias, falta.group(1))
+            os.makedirs(os.path.dirname(ruta), exist_ok=True)
+            open(ruta, "w").close()
+        raise RuntimeError("Dualocke: no se pudo preprocesar src/pokemon.c:\n" + r.stderr[-2000:])
 
 
 def _evolucion_valida_en_hoenn(condiciones):
