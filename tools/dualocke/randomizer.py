@@ -26,10 +26,13 @@ import shlex
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from aleatorio import cabecera  # noqa: E402
 from aleatorio import especies as esp  # noqa: E402
 from aleatorio import entrenadores  # noqa: E402
 from aleatorio import estaticos  # noqa: E402
 from aleatorio import iniciales as ini  # noqa: E402
+from aleatorio import intercambios  # noqa: E402
+from aleatorio import objetos as obj  # noqa: E402
 from aleatorio import salvajes  # noqa: E402
 
 CONFIG = "tools/dualocke/randomizer_config.json"
@@ -73,8 +76,21 @@ def main():
     for especie in list(mapa_estaticos.values()) + list(mapa_regalos.values()):
         if especie not in pokedex.especies:
             sys.exit(f"Dualocke: el randomizer de estáticos ha dado una especie desconocida: {especie}")
+
+    objetos = obj.leer_objetos(args.cpp, cppflags)
+    res_objetos = obj.randomizar(objetos, args.semilla, config)
+    errores = obj.comprobar(objetos, config, res_objetos)
+    if errores:
+        sys.exit("Dualocke: el randomizer de objetos ha fallado:\n  " + "\n  ".join(errores[:20]))
+    solucionario["objetos"] = obj.solucionario(objetos, res_objetos)
+
+    res_intercambios = intercambios.randomizar(pokedex, args.semilla, datos, obj.grupo_suelo(objetos, config))
+    solucionario["intercambios"] = res_intercambios
+
     with open(os.path.join(args.salida, "dualocke_aleatorio.h"), "w", encoding="utf-8", newline="\n") as f:
-        f.write(estaticos.cabecera(mapa_estaticos, mapa_regalos, f"Semilla {args.semilla}"))
+        f.write(cabecera.generar(f"Semilla {args.semilla}", mapa_estaticos, mapa_regalos,
+                                 res_objetos["suelo"], res_objetos["recogida"], res_objetos["salvajes"],
+                                 res_objetos["probabilidad_salvajes"], res_intercambios))
 
     with open(TRAINERS, encoding="utf-8") as f:
         original = f.read()

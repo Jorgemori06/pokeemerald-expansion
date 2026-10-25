@@ -1,6 +1,7 @@
 #include "global.h"
 #include "malloc.h"
 #include "dualocke.h"
+#include "dualocke_aleatorio.h"
 #include "battle_anim.h"
 #include "battle_interface.h"
 #include "bg.h"
@@ -325,6 +326,21 @@ static void Task_CloseCenterWhiteColumn(u8);
 static void CB2_SaveAndEndWirelessTrade(void);
 
 #include "data/trade.h"
+
+// Dualocke: intercambios con NPCs aleatorios (tools/dualocke/aleatorio/intercambios.py). Se usa
+// una copia del intercambio original en la que el randomizer cambia la especie que te dan, la que
+// te piden, el objeto y los IVs; el mote pasa a ser el nombre de la especie. Sin semilla, la copia
+// es igual que el original.
+static EWRAM_DATA struct InGameTrade sDualockeTrade = {0};
+
+static const struct InGameTrade *GetInGameTrade(u32 id)
+{
+    sDualockeTrade = sIngameTrades[id];
+    if (Dualocke_IntercambioAleatorio(id, &sDualockeTrade.species, &sDualockeTrade.requestedSpecies,
+                                      &sDualockeTrade.heldItem, sDualockeTrade.ivs))
+        StringCopy_Nickname(sDualockeTrade.nickname, GetSpeciesName(sDualockeTrade.species));
+    return &sDualockeTrade;
+}
 
 static bool8 SendLinkData(const void *linkData, u32 size)
 {
@@ -3351,7 +3367,7 @@ static void BufferTradeSceneStrings(void)
     }
     else
     {
-        ingameTrade = &sIngameTrades[gSpecialVar_0x8005];
+        ingameTrade = GetInGameTrade(gSpecialVar_0x8005);
         StringCopy(gStringVar1, ingameTrade->otName);
         StringCopy_Nickname(gStringVar3, ingameTrade->nickname);
         if (gSpecialVar_0x8004 == PC_MON_CHOSEN)
@@ -4557,7 +4573,7 @@ static void SpriteCB_BouncingPokeballArrive(struct Sprite *sprite)
 
 u16 GetInGameTradeSpeciesInfo(void)
 {
-    const struct InGameTrade *inGameTrade = &sIngameTrades[gSpecialVar_0x8005];
+    const struct InGameTrade *inGameTrade = GetInGameTrade(gSpecialVar_0x8005);
     StringCopy(gStringVar1, GetSpeciesName(inGameTrade->requestedSpecies));
     StringCopy(gStringVar2, GetSpeciesName(inGameTrade->species));
     return inGameTrade->requestedSpecies;
@@ -4579,7 +4595,7 @@ static void Dualocke_EndInGameTrade(void)
 static void BufferInGameTradeMonName(void)
 {
     u8 nickname[max(32, POKEMON_NAME_BUFFER_SIZE)];
-    const struct InGameTrade *inGameTrade = &sIngameTrades[gSpecialVar_0x8005];
+    const struct InGameTrade *inGameTrade = GetInGameTrade(gSpecialVar_0x8005);
     GetMonData(&gParties[B_TRAINER_PLAYER][gSpecialVar_0x8005], MON_DATA_NICKNAME, nickname);
     StringCopy_Nickname(gStringVar1, nickname);
     StringCopy(gStringVar2, GetSpeciesName(inGameTrade->species));
@@ -4587,7 +4603,7 @@ static void BufferInGameTradeMonName(void)
 
 static void CreateInGameTradePokemonInternal(u8 whichPlayerMon, u8 whichInGameTrade)
 {
-    const struct InGameTrade *inGameTrade = &sIngameTrades[whichInGameTrade];
+    const struct InGameTrade *inGameTrade = GetInGameTrade(whichInGameTrade);
     struct BoxPokemon *boxmon = GetSelectedBoxMonFromPcOrParty();
     u32 level = GetLevelFromBoxMonExp(boxmon);
 
