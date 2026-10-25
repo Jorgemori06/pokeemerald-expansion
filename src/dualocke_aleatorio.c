@@ -2,12 +2,15 @@
 #include "dualocke_aleatorio.h"
 #include "random.h"
 #include "constants/flags.h"
+#include "constants/abilities.h"
 #include "constants/items.h"
+#include "constants/moves.h"
 #include "constants/species.h"
 #include "constants/trade.h"
 
 // Dualocke: lo que el randomizer cambia al vuelo, sin tocar los mapas ni los scripts:
-// estáticos, regalos, objetos del suelo, Recogida, objetos de los salvajes e intercambios.
+// estáticos, regalos, objetos del suelo, Recogida, objetos de los salvajes, intercambios,
+// habilidades y MT.
 // Las tablas las genera tools/dualocke/randomizer.py según la semilla (sin semilla, están vacías
 // y todo sale como en el original).
 
@@ -93,4 +96,66 @@ bool32 Dualocke_IntercambioAleatorio(u32 intercambio, enum Species *especie, enu
         return TRUE;
     }
     return FALSE;
+}
+
+// Habilidad de la especie con el randomizer (una por especie), o ABILITY_NONE si no cambia
+enum Ability Dualocke_HabilidadAleatoria(enum Species species)
+{
+    if (species >= NUM_SPECIES)
+        return ABILITY_NONE;
+    return sDualockeHabilidades[species];
+}
+
+// Movimiento que enseña una MT (el original si no cambia)
+enum Move Dualocke_MovimientoMT(enum Item item, enum Move move)
+{
+    u32 i;
+
+    for (i = 0; i < ARRAY_COUNT(sDualockeMT); i++)
+    {
+        if (sDualockeMT[i][0] == item && sDualockeMT[i][1] != MOVE_NONE)
+            return sDualockeMT[i][1];
+    }
+    return move;
+}
+
+// La MT que enseña un movimiento (ITEM_NONE si con el randomizer ya no lo enseña ninguna)
+enum Item Dualocke_ObjetoMT(enum Move move, enum Item item)
+{
+    u32 i;
+
+    if (DUALOCKE_COMPATIBILIDAD_MT == 0)
+        return item;
+    for (i = 0; i < ARRAY_COUNT(sDualockeMT); i++)
+    {
+        if (sDualockeMT[i][1] == move)
+            return sDualockeMT[i][0];
+    }
+    for (i = 0; i < ARRAY_COUNT(sDualockeMT); i++)
+    {
+        if (sDualockeMT[i][0] == item)
+            return ITEM_NONE;
+    }
+    return item;
+}
+
+// ¿Puede aprender `species` el movimiento de una MT nueva? Siempre la misma respuesta para la misma
+// especie, movimiento y semilla. -1 si el movimiento no es de una MT nueva (se mira la lista original).
+s32 Dualocke_PuedeAprenderMT(enum Species species, enum Move move)
+{
+    u32 i, h;
+
+    if (DUALOCKE_COMPATIBILIDAD_MT == 0)
+        return -1;
+    for (i = 0; i < ARRAY_COUNT(sDualockeMT); i++)
+    {
+        if (sDualockeMT[i][1] != move)
+            continue;
+        h = DUALOCKE_SEMILLA_NUMERICA ^ (species * 0x9E3779B1u) ^ (move * 0x85EBCA77u);
+        h ^= h >> 15;
+        h *= 0x2C1B3C6Du;
+        h ^= h >> 12;
+        return (h % 100) < DUALOCKE_COMPATIBILIDAD_MT;
+    }
+    return -1;
 }
