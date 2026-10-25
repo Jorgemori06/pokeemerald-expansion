@@ -1,6 +1,6 @@
-# 25/10/2026 · Jorge · Randomizer (1): semilla y salvajes
+# 25/10/2026 · Jorge · Randomizer (1): semilla, salvajes, entrenadores, iniciales y rival
 
-Sesión de Jorge con Claude. Rama `jorge/randomizer`. Primera parte del randomizer (sección 7 de `DUALOCKE.md`): la herramienta con la semilla y los Pokémon salvajes.
+Sesión de Jorge con Claude. Rama `jorge/randomizer`. Primera parte del randomizer (sección 7 de `DUALOCKE.md`): la herramienta con la semilla, los salvajes, los entrenadores, los iniciales y el rival.
 
 ## Decisiones de Jorge
 
@@ -33,6 +33,16 @@ Sesión de Jorge con Claude. Rama `jorge/randomizer`. Primera parte del randomiz
   - Solo los mapas de Hoenn: la Pirámide y el Pike se quedan como están.
   - **Antes de escribir nada, comprueba el resultado:** que solo cambian las especies, que existen y que no hay legendarios. Si algo falla, para la compilación.
 
+- **Entrenadores** (`tools/dualocke/aleatorio/entrenadores.py`), sobre `trainers.party` sin tocarlo:
+  - especies al azar sin repetir en el equipo, evolucionadas según su nivel, sin legendarios salvo en el Alto Mando y Plubio;
+  - el as de cada jefe es de su tipo (`as_por_tipo`) y, en los de `con_mega_desde_el_aro`, una especie con mega de ese tipo con su megapiedra;
+  - las revanchas (`_2`…`_5`) usan las mismas líneas que el primer combate;
+  - al cambiar la especie se quitan los movimientos y la habilidad escritos (sale con los de su nivel);
+  - Máximo (Ruta 120) no se toca. Se comprueba que no cambian ni niveles ni tamaños de equipo.
+- **Iniciales** (`tools/dualocke/aleatorio/iniciales.py`): forma base de una línea de 3 fases, sin legendarios, con las dos evoluciones por nivel u objeto, en triángulo de tipos por el tipo principal. Van a `src/data/dualocke_iniciales.h`, que se genera siempre (sin semilla, Treecko/Torchic/Mudkip) y usa `src/starter_choose.c`.
+- **Rival:** el inicial que gana al del jugador (en la misma posición que en el original), evolucionado según el nivel, y el resto al azar y el mismo en todos sus combates. Desde Calagua, mega en el as: su inicial si tiene; si no, una especie con mega de su tipo en el último hueco y el inicial en el anterior.
+- **Compilación desde cero:** el preprocesador necesita cabeceras que aún no existen (`teachable_learnsets.h`); se ponen vacías en una carpeta temporal.
+
 ## Pruebas
 
 - Misma semilla, mismo resultado; otra semilla, otro resultado (comprobado con el script y con el md5 de la ROM).
@@ -51,5 +61,5 @@ Sesión de Jorge con Claude. Rama `jorge/randomizer`. Primera parte del randomiz
 
 ## Pendiente
 
-- Fases 3-5: entrenadores (con el as de los jefes y las megas), iniciales y estáticos (Kecleon, regalos…), movimientos, habilidades y objetos.
+- Siguientes fases: estáticos y regalos (Kecleon, Beldum, fósiles…), movimientos, habilidades y objetos.
 - **Para Miguel:** su `instalar_windows.ps1` compila con `make`, así que ya saldrá randomizado. Le falta una opción para pedir una partida nueva (`make nueva-partida`).

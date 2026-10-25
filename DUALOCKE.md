@@ -292,14 +292,14 @@ Para ver todo sin herramientas externas (pedido por Miguel el 24/10/2026):
 - Código: `include/config/summary_screen.h` (opciones `P_SUMMARY_SCREEN_IV_EV_*`) y `src/pokemon_summary_screen.c` (busca "Dualocke").
 - Pendiente: hacerla más bonita con gráficos nuevos (fondos, iconos). Hace falta dibujarlos y probarlos en el emulador.
 
-## 7. Randomizer (en marcha: salvajes y entrenadores hechos)
+## 7. Randomizer (en marcha: salvajes, entrenadores, iniciales y rival hechos)
 
 ### Diseño
 
 - **Script propio** (Python) que baraja los datos del juego **antes de compilar**, usando una **semilla**.
 - **Cada jugador tiene una partida completamente distinta**: `make` se inventa una semilla al azar la primera vez y la guarda (decidido por Jorge el 25/10/2026: la semilla no se elige, es aleatoria). Cómo se usa: sección 3, "Partida randomizada".
 - **Cómo está hecho (Jorge):** `tools/dualocke/randomizer.py`, con los módulos en `tools/dualocke/aleatorio/`. Lo lanza el `Makefile` (bloque "Dualocke: randomizer con semilla"). Lee los originales (`wild_encounters.json`, y más adelante `trainers.party`…) y escribe las versiones barajadas en `build/dualocke/`, que son las que se compilan. **Los archivos de Miguel no se tocan.** Los datos de las especies (evoluciones, formas, legendarios) salen de pasar `src/pokemon.c` por el preprocesador de C, así que son exactamente los de la ROM. Comprueba el resultado antes de compilar (solo cambian las especies, no hay legendarios en los salvajes…) y para si algo falla.
-- **Hecho:** salvajes y entrenadores (menos el rival). **Pendiente:** iniciales y rival, estáticos y regalos, movimientos, habilidades y objetos.
+- **Hecho:** salvajes, entrenadores, iniciales y rival. **Pendiente:** estáticos y regalos, movimientos, habilidades y objetos.
 - Para no destriparse nada: o cada uno compila la suya, o uno compila las dos sin mirar los archivos generados.
 - Alternativa descartada por ahora: randomizer dentro del juego, al empezar partida (como Heart & Soul). Es más trabajo.
 
@@ -317,13 +317,13 @@ Están en **`tools/dualocke/randomizer_config.json`**, que es el archivo que deb
 ### Ajustes a replicar (los del preset de Platino, adaptados)
 
 **Pokémon**
-- Iniciales aleatorios (forma base de 3 fases y en triángulo de tipos, ver arriba).
+- Iniciales aleatorios (forma base de 3 fases y en triángulo de tipos, ver arriba). **Hecho** (`tools/dualocke/aleatorio/iniciales.py`): además, las dos evoluciones tienen que ser por nivel o con objeto, para poder hacerlas en el juego. Salen en `src/data/dualocke_iniciales.h` (generado; lo usa `src/starter_choose.c`).
 - Habilidades aleatorias, permitiendo Superguarda.
 - Pokémon estáticos completamente aleatorios.
 - Estadísticas base de Gen 9 (ya vienen así en el motor) sin aleatorizar sus valores.
 - Totales de estadísticas base barajados siguiendo las líneas evolutivas.
 - Pokémon de los entrenadores aleatorios, sin duplicados dentro de un mismo equipo.
-- El inicial del rival se mantiene durante toda la aventura.
+- El inicial del rival se mantiene durante toda la aventura. **Hecho:** lleva el que gana al del jugador, evolucionado según el nivel; el resto de su equipo es al azar y el mismo en todos sus combates. Desde Calagua su as lleva mega: su inicial si tiene, y si no, una especie con mega del tipo de su inicial (y el inicial pasa al hueco anterior).
 - Los equipos de los entrenadores evolucionan según el nivel y pueden usar formas alternativas.
 - +1 Pokémon a los entrenadores importantes y +2 a los jefes.
 - Los Pokémon de entrenadores importantes y jefes pueden llevar objetos aleatorios, priorizando objetos coherentes.
@@ -346,7 +346,7 @@ Están en **`tools/dualocke/randomizer_config.json`**, que es el archivo que deb
   - Jefes (`as_por_tipo`): el as, el último, es de su tipo o temática. Los de `con_mega_desde_el_aro` llevan como as una especie con mega de ese tipo y su megapiedra. Las revanchas de un jefe mantienen el tipo, la mega y la misma línea del as.
   - Las revanchas de cualquier entrenador (`_2`, `_3`…) usan las mismas líneas que el primer combate, evolucionadas a su nivel.
   - Al cambiar la especie se quitan los movimientos y la habilidad que tenía escritos: sale con los movimientos de su nivel (hasta la fase de movimientos). Se mantienen nivel, objeto, IVs/EVs y naturaleza.
-  - **No se tocan:** Máximo en la Ruta 120 (equipo fijo) y el **rival**, que irá con los iniciales.
+  - **No se toca** Máximo en la Ruta 120 (equipo fijo).
 - Niveles según la curva de la sección 5 (sustituye al "+15%").
 - Movimientos aleatorios con 3 movimientos garantizados y una ligera preferencia por movimientos dañinos potentes.
 - Mejores movimientos y diversidad de tipos en jefes, importantes y normales.
