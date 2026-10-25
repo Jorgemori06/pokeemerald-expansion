@@ -131,7 +131,11 @@ static inline enum TMHMIndex GetItemTMHMIndex(enum Item item)
     }
 }
 
-static inline enum Move GetItemTMHMMoveId(enum Item item)
+// Dualocke: MT aleatorias (src/dualocke_aleatorio.c). Sin semilla devuelven lo original.
+enum Move Dualocke_MovimientoMT(enum Item item, enum Move move);
+enum Item Dualocke_ObjetoMT(enum Move move, enum Item item);
+
+static inline enum Move GetItemTMHMMoveIdOriginal(enum Item item)
 {
     switch (item)
     {
@@ -148,7 +152,12 @@ static inline enum Move GetItemTMHMMoveId(enum Item item)
     }
 }
 
-static inline enum Item GetTMHMItemIdFromMoveId(enum Move move)
+static inline enum Move GetItemTMHMMoveId(enum Item item)
+{
+    return Dualocke_MovimientoMT(item, GetItemTMHMMoveIdOriginal(item));
+}
+
+static inline enum Item GetTMHMItemIdFromMoveIdOriginal(enum Move move)
 {
     switch (move)
     {
@@ -165,6 +174,11 @@ static inline enum Item GetTMHMItemIdFromMoveId(enum Move move)
     }
 }
 
+static inline enum Item GetTMHMItemIdFromMoveId(enum Move move)
+{
+    return Dualocke_ObjetoMT(move, GetTMHMItemIdFromMoveIdOriginal(move));
+}
+
 #undef UNPACK_ITEM_TO_TM_INDEX
 #undef UNPACK_ITEM_TO_HM_INDEX
 #undef UNPACK_ITEM_TO_TM_MOVE_ID
@@ -179,7 +193,7 @@ static inline enum Item GetTMHMItemId(enum TMHMIndex index)
 
 static inline enum Move GetTMHMMoveId(enum TMHMIndex index)
 {
-    return gTMHMItemMoveIds[index].moveId;
+    return Dualocke_MovimientoMT(gTMHMItemMoveIds[index].itemId, gTMHMItemMoveIds[index].moveId);
 }
 
 #define GET_BERRY_ID(_berry) case ITEM_##_berry##_BERRY: return BERRY_ID_##_berry;
