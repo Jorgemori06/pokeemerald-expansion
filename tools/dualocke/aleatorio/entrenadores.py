@@ -11,7 +11,10 @@ Reglas (randomizer_config.json, "entrenadores" y "jefes"; decididas por Miguel):
 - Las revanchas del mismo entrenador (_2, _3...) usan las mismas líneas que el primer combate,
   evolucionadas a su nivel, como en el juego original.
 - Máximo en la Ruta 120 (TRAINER_STEVEN_ROUTE_120) tiene equipo fijo: no se toca.
-- El rival se queda como está hasta que se randomicen los iniciales (va con su inicial).
+- El rival lleva el inicial que gana al del jugador, evolucionado según el nivel, y el resto
+  del equipo al azar (el mismo en todos sus combates). Desde Ciudad Calagua ("RIVAL_LILYCOVE"
+  en con_mega_desde_el_aro) el as lleva mega: su inicial si tiene, y si no, una especie con mega
+  del tipo de su inicial (y el inicial pasa al hueco anterior).
 
 Al cambiar la especie se quitan los movimientos, la habilidad y el sexo que tenía escritos (no
 valdrían para la nueva): sale con los movimientos de su nivel y una habilidad normal. Se
@@ -23,7 +26,8 @@ import re
 
 FIJOS = {"TRAINER_STEVEN_ROUTE_120", "TRAINER_NONE"}
 JEFES_LIGA = {"TRAINER_SIDNEY", "TRAINER_PHOEBE", "TRAINER_GLACIA", "TRAINER_DRAKE", "TRAINER_WALLACE"}
-RIVAL = re.compile(r"TRAINER_(MAY|BRENDAN)_")
+RIVAL = re.compile(r"TRAINER_(MAY|BRENDAN)_(\w+)_(TREECKO|TORCHIC|MUDKIP)$")
+INICIALES_ORIGINALES = ["SPECIES_TREECKO", "SPECIES_TORCHIC", "SPECIES_MUDKIP"]
 CAMPOS_QUE_SE_QUITAN = ("Ability:", "- ")
 
 
@@ -77,6 +81,11 @@ def _nivel(lineas):
     return 100
 
 
+def _es_megapiedra(objeto):
+    # Las megapiedras del rival original (Blazikenita...) no valen para otra especie
+    return bool(objeto) and objeto.upper().replace(" ", "_").endswith(("ITE", "ITE_X", "ITE_Y"))
+
+
 def _reescribir(lineas, nueva, objeto):
     primera = nueva + (f" @ {objeto}" if objeto else "")
     resto = [l for l in lineas[1:] if not l.strip().startswith(CAMPOS_QUE_SE_QUITAN)]
@@ -84,8 +93,9 @@ def _reescribir(lineas, nueva, objeto):
 
 
 class Generador:
-    def __init__(self, pokedex, semilla, config):
+    def __init__(self, pokedex, semilla, config, iniciales=None):
         self.pokedex = pokedex
+        self.iniciales = iniciales or INICIALES_ORIGINALES
         self.semilla = semilla
         self.config = config
         self.raices = pokedex.raices_validas()
@@ -124,6 +134,68 @@ class Generador:
         self.lineas_familia.setdefault(clave, elegido[0])
         return elegido
 
+    def _rival(self, trainer, m, bloque, con_mega):
+        """Equipo del rival: su inicial (el que gana al del jugador) y el resto al azar."""
+        jugador = INICIALES_ORIGINALES.index("SPECIES_" + m.group(3))
+        inicial_original = INICIALES_ORIGINALES[(jugador + 1) % 3]
+        inicial_nuevo = self.iniciales[(jugador + 1) % 3]
+        tipos_inicial = set(self.pokedex.especies[inicial_nuevo].tipos[:1])
+        lugar = m.group(2)
+        quiere_mega = f"RIVAL_{lugar}" in con_mega
+        rng = random.Random(f"{self.semilla}|rival|{lugar}|{jugador}")
+
+        trozos = _pokemons(bloque)
+        indices = [i for i in range(1, len(trozos)) if trozos[i].strip()]
+        datos = []
+        for i in indices:
+            lineas, primera = _linea_especie(trozos[i])
+            nombre, objeto = _especie_y_objeto(primera)
+            datos.append([i, lineas, _a_constante(nombre or "", self.pokedex.alias), objeto, _nivel(lineas)])
+
+        usadas = {inicial_nuevo}
+        nuevas = {}
+        # El inicial: el hueco que tenía la línea del inicial original
+        hueco_inicial = next((d for d in datos if _es_de_linea(self.pokedex, d[2], inicial_original)), None)
+        if hueco_inicial:
+            rng_rama = random.Random(f"{self.semilla}|rival|inicial")
+            especie_inicial = self.pokedex.evolucionar(inicial_nuevo, hueco_inicial[4], rng_rama)
+            nuevas[hueco_inicial[0]] = (especie_inicial, None)
+            if quiere_mega:
+                megas = self.pokedex.especies[especie_inicial].megas
+                if megas:
+                    nuevas[hueco_inicial[0]] = (especie_inicial, megas[0][1])
+                else:
+                    # Una especie con mega del tipo del inicial como as (el último hueco)
+                    ultimo = datos[-1]
+                    elegido = self._as_de_jefe(trainer, "RIVAL_MEGA", None, ultimo[4], tipos_inicial,
+                                               True, self.raices, usadas, rng)
+                    if elegido and len(datos) >= 2:
+                        raiz, especie = elegido
+                        usadas.add(raiz)
+                        # El as con mega va al último hueco; si el inicial estaba ahí, pasa al anterior
+                        if ultimo[0] == hueco_inicial[0]:
+                            del nuevas[hueco_inicial[0]]
+                            penultimo = datos[-2]
+                            nuevas[penultimo[0]] = (self.pokedex.evolucionar(
+                                inicial_nuevo, penultimo[4], random.Random(f"{self.semilla}|rival|inicial")), None)
+                        nuevas[ultimo[0]] = (especie, self.pokedex.especies[especie].megas[0][1])
+        # El resto, al azar y el mismo en todos los combates del rival
+        for i, lineas, original, objeto, nivel in datos:
+            if i in nuevas or original not in self.pokedex.especies:
+                continue
+            raiz = self._raiz_para("RIVAL", original, self.raices, usadas, rng)
+            usadas.add(raiz)
+            nuevas[i] = (self.pokedex.evolucionar(raiz, nivel, random.Random(f"{self.semilla}|RIVAL|{raiz}")), None)
+        cambios = []
+        for i, lineas, original, objeto, nivel in datos:
+            if i not in nuevas:
+                cambios.append(original)
+                continue
+            especie, objeto_nuevo = nuevas[i]
+            trozos[i] = _reescribir(lineas, especie, objeto_nuevo or ("" if objeto_nuevo is None and _es_megapiedra(objeto) else objeto))
+            cambios.append(especie)
+        return "\n\n".join(trozos), cambios
+
     def randomizar(self, texto):
         cfg_jefes = self.config.get("jefes", {})
         as_por_tipo = {k: ["TYPE_" + t for t in v] for k, v in cfg_jefes.get("as_por_tipo", {}).items()
@@ -135,7 +207,12 @@ class Generador:
         for cabecera, bloque in partes[1:]:
             trainer = cabecera[4:-4]
             familia = _familia(trainer)
-            if trainer in FIJOS or "PLACEHOLDER" in trainer or RIVAL.match(trainer):
+            if trainer in FIJOS or "PLACEHOLDER" in trainer:
+                salida.append(cabecera + bloque)
+                continue
+            rival = RIVAL.match(trainer)
+            if rival:
+                bloque, solucionario[trainer] = self._rival(trainer, rival, bloque, con_mega)
                 salida.append(cabecera + bloque)
                 continue
             # El tipo del as y la mega valen también para las revanchas del mismo jefe
@@ -177,6 +254,10 @@ class Generador:
             solucionario[trainer] = cambios
             salida.append(cabecera + "\n\n".join(trozos))
         return "".join(salida), solucionario
+
+
+def _es_de_linea(pokedex, especie, raiz):
+    return especie in pokedex.linea(raiz)
 
 
 def comprobar(original, randomizado, pokedex):

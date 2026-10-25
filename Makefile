@@ -293,8 +293,10 @@ ifneq ($(DUALOCKE_SEED),)
 WILD_ENCOUNTERS_JSON := $(DUALOCKE_DIR)/wild_encounters.json
 $(WILD_ENCOUNTERS_JSON): $(DATA_SRC_SUBDIR)/wild_encounters.json $(DATA_SRC_SUBDIR)/trainers.party $(DUALOCKE_SEED_STAMP) $(DUALOCKE_RANDOMIZER_DEPS)
 	python3 tools/dualocke/randomizer.py --semilla '$(DUALOCKE_SEED)' --salida $(DUALOCKE_DIR) --cpp '$(CPP)' --cppflags '$(INCLUDE_CPP_ARGS) -Wno-trigraphs -DMODERN=1 -DTESTING=0 -D$(GAME_VERSION) -std=gnu17'
-$(DUALOCKE_DIR)/trainers.party: $(WILD_ENCOUNTERS_JSON)
+$(DUALOCKE_DIR)/trainers.party $(DUALOCKE_DIR)/dualocke_iniciales.h: $(WILD_ENCOUNTERS_JSON)
 	@:
+$(DATA_SRC_SUBDIR)/dualocke_iniciales.h: $(DUALOCKE_DIR)/dualocke_iniciales.h $(DUALOCKE_SEED_STAMP)
+	cp $< $@
 # Los equipos de los entrenadores salen del trainers.party barajado (misma receta que trainer_rules.mk)
 $(DATA_SRC_SUBDIR)/trainers.h: $(DUALOCKE_DIR)/trainers.party $(TRAINERPROC) $(DUALOCKE_SEED_STAMP)
 	$(CPP) $(CPPFLAGS) -traditional-cpp - < $< | $(TRAINERPROC) -o $@ -i $(DATA_SRC_SUBDIR)/trainers.party -
@@ -302,7 +304,11 @@ else
 WILD_ENCOUNTERS_JSON := $(DATA_SRC_SUBDIR)/wild_encounters.json
 # Sin semilla, la regla normal (trainer_rules.mk); la marca hace que se regenere al quitar la semilla
 $(DATA_SRC_SUBDIR)/trainers.h: $(DUALOCKE_SEED_STAMP)
+# Y los iniciales de siempre
+$(DATA_SRC_SUBDIR)/dualocke_iniciales.h: $(DUALOCKE_SEED_STAMP) tools/dualocke/aleatorio/iniciales.py
+	python3 -c "import sys; sys.path.insert(0, 'tools/dualocke'); from aleatorio import iniciales as i; open('$@', 'w').write(i.cabecera(['SPECIES_TREECKO', 'SPECIES_TORCHIC', 'SPECIES_MUDKIP'], 'Sin randomizar'))"
 endif
+AUTO_GEN_TARGETS += $(DATA_SRC_SUBDIR)/dualocke_iniciales.h
 
 nueva-partida:
 	@rm -f $(DUALOCKE_SEMILLA_FILE)
