@@ -25,6 +25,8 @@
     "_evolucion": "La especie se elige libremente y luego se ajusta a la fase que le toca por el nivel de la zona con las mismas reglas que los entrenadores (sección evoluciones). Así no hay Garchomp a nivel 5 ni Gible a nivel 60.",
     "evitar_repetir_entre_zonas": true,
     "objetos_aleatorios": true,
+    "probabilidad_objeto": 5,
+    "_probabilidad_objeto": "Miguel (#27): cualquier salvaje puede llevar un objeto, con poca probabilidad. % de que lleve uno (el doble con Ojo Compuesto). Valor provisional de Jorge.",
     "respetar_niveles": true
   },
 
@@ -45,10 +47,15 @@
     "movimientos": {
       "aleatorios": true,
       "garantizados": 3,
+      "_garantizados": "Miguel (#27): 3 de los que aprende por nivel y el cuarto al azar.",
       "preferencia_daninos_potentes": "ligera",
-      "diversidad_de_tipos": true
+      "_preferencia": "Igual para todos: los jefes no llevan mejores movimientos que el resto.",
+      "diversidad_de_tipos": true,
+      "potencia_maxima_del_cuarto": {"base": 40, "por_nivel": 1.5},
+      "_potencia_maxima_del_cuarto": "Jorge: tope de potencia del movimiento al azar, 40 + 1,5 por nivel (nivel 7: 50; nivel 40: 100; desde 74, sin tope). Para que uno de nivel 5 no lleve Hidrobomba. null = sin tope."
     },
     "objetos_jefes_e_importantes": "aleatorios_coherentes",
+    "_objetos_jefes": "Miguel (#27): un objeto que le sirva a cada Pokémon, en todo el equipo; la megapiedra del as se queda.",
     "combates": "individuales"
   },
 
@@ -97,27 +104,33 @@
 
   "pokemon": {
     "habilidades_aleatorias": true,
+    "_habilidades": "Miguel (#27): por especie (todos los Zigzagoon con la misma, también los del jugador). Ninguna prohibida.",
     "permitir_superguarda": true,
     "estaticos": "aleatorios",
     "niveles_estaticos": "segun_curva",
     "estadisticas_base": "gen_9_sin_aleatorizar",
-    "totales_barajados_por_linea_evolutiva": true
+    "totales_barajados_por_linea_evolutiva": false
   },
 
   "movimientos_y_mt": {
     "mt_aleatorias": true,
     "compatibilidad_mt": "aleatoria",
+    "compatibilidad_porcentaje": 50,
+    "_mt": "Miguel (#27): cada MT enseña un movimiento al azar y cada especie la aprende con un 50 %, sin excepción para las de su tipo. Las de campo y las MO se quedan como están.",
     "conservar_movimientos_de_campo": true,
     "tutores_aleatorios": true
   },
 
   "objetos": {
-    "suelo": "aleatorios_con_megapiedras",
+    "suelo": "aleatorios",
+    "_suelo": "Miguel (#27): las megapiedras se quedan donde están y ningún otro objeto puede ser una megapiedra. Los competitivos, totalmente aleatorios. Fuera objetos clave, MO y cartas; las bayas sí. Las MT se barajan entre ellas.",
     "excluir": ["Pulsera Z", "cristales Z", "Maximuñequera", "Maxisetas", "Orbe Teracristal", "teralitas",
                 "Gen Furia", "Mochi Reinicio", "Bollo Jubileo", "Remedio", "Remedio Fino", "Remedio Excelso",
                 "Aux. Ataque", "Aux. Defensa", "Aux. Evasión", "Aux. Total", "Dango Elección",
                 "Tentempié Cambio", "Rábano Picante", "Muñeca Pokéshi"],
     "recogida": "aleatorios",
-    "intercambios_internos": "totalmente_aleatorios"
+    "_recogida": "Miguel (#27): solo objetos de consumo (curas, bayas, caramelos).",
+    "intercambios_internos": "totalmente_aleatorios",
+    "_intercambios": "Miguel (#27): al azar el que te dan y el que te piden (sin legendarios). Jorge: el que te piden sale de entre los salvajes de la partida, para que se pueda conseguir."
   }
 }
