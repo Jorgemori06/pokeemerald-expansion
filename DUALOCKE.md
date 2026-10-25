@@ -49,6 +49,7 @@ powershell -ExecutionPolicy Bypass -File tools\dualocke\instalar_windows.ps1
 - **Qué hace luego:** instala el compilador (te pide la contraseña de Ubuntu), clona el repo en `~/romhack`, compila y copia la ROM al **escritorio como `Dualocke.gba`**.
 - **Para actualizar el juego** cuando se suban cambios, se vuelve a lanzar el mismo script. Si mGBA guarda la partida al lado (`Dualocke.sav`), se conserva.
 - Con `-Rama nombre-de-rama` compila otra rama, por ejemplo para probar un PR antes de fusionarlo.
+- El juego sale **randomizado** con tu semilla (la misma cada vez que actualizas). Con **`-NuevaPartida`** genera otra semilla para empezar un locke nuevo (pide confirmación, porque la partida guardada deja de cuadrar). Con **`-SinRandom`** compila el juego sin randomizar, para probar el equilibrio, y lo copia aparte como `Dualocke-sin-random.gba`.
 - Si no tienes el repo en Windows, descarga solo el script desde GitHub (`tools/dualocke/instalar_windows.ps1`).
 
 ### Entorno (Windows), paso a paso
@@ -200,7 +201,7 @@ Regla general: **el as de cada jefe va exactamente al nivel del cap**, el resto 
   - **No se tocan:** el Frente Batalla y la Cima Entrenador, que tienen su propio sistema de niveles.
 - **Estáticos y regalos (hecho, Miguel, 24/10/2026):**
   - **Estáticos normales** (Kecleon de las rutas 119-120, Voltorb de Nuevo Malvalona, Electrode de la Guarida Aqua): como jefes de zona, es decir, entrenadores de su mapa + 3, sin pasar del cap. Quedan a 58, 56 y 65.
-  - **Legendarios:** al cap de su tramo. Los Regis a 84 (hace falta Buceo, tramo 8); Rayquaza, Groudon y Kyogre a 100 (postgame). Sudowoodo del Frente Batalla, también a 100.
+  - **Legendarios:** al cap de su tramo. Los Regis a 84 (hace falta Buceo, tramo 8); Rayquaza, Groudon y Kyogre a 100 (postgame). Sudowoodo del Frente Batalla, también a 100. Los **errantes Latios/Latias** (salen después de la Liga), también a 100 (Miguel, 26/10/2026; `DUALOCKE_NIVEL_ERRANTE` en `src/roamer.c`).
   - **Regalos** (Castform, fósiles, Beldum, iniciales de Johto, huevo de Wynaut): se quedan con su nivel original, para entrenarlos (con Caramelos Raros a 1 ₽).
   - Lo hace `reescalar_niveles.py` (tabla `ESTATICOS`).
   - **Captura de estáticos (decidido, falta implementarlo encima del PR #17):** de los estáticos normales solo se puede capturar el primero de cada tipo (un Kecleon, un Voltorb, un Electrode), sin gastar la zona.
