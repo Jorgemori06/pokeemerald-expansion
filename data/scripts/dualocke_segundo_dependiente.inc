@@ -10,6 +10,6 @@ Dualocke_EventScript_SegundoDependiente::
 	end
 
 Dualocke_Text_SegundoDependiente:
-	.string "Hi there! I sell rare items brought\n"
-	.string "in from all over HOENN.\p"
-	.string "What would you like?$"
+	.string "¡Hola! Vendo objetos raros traídos\n"
+	.string "de todo HOENN.\p"
+	.string "¿Qué quieres?$"
