@@ -1,5 +1,6 @@
 #include "global.h"
 #include "malloc.h"
+#include "dualocke.h"
 #include "battle_anim.h"
 #include "battle_interface.h"
 #include "bg.h"
@@ -308,6 +309,9 @@ static void SpriteCB_BouncingPokeballDepart(struct Sprite *);
 static void SpriteCB_BouncingPokeballDepartEnd(struct Sprite *);
 static void SpriteCB_BouncingPokeballArrive(struct Sprite *);
 static void BufferInGameTradeMonName(void);
+static void Dualocke_EndInGameTrade(void);
+// Dualocke: hueco del equipo que recibió el Pokémon de un intercambio con un NPC (PARTY_SIZE = ninguno)
+static EWRAM_DATA u8 sDualockeTradeSlot = 0;
 static void GetInGameTradeMail(struct Mail *, const struct InGameTrade *);
 static void CB2_UpdateLinkTrade(void);
 static void CB2_WaitTradeComplete(void);
@@ -3119,8 +3123,15 @@ static void TradeMons(u8 playerPartyIdx, u8 partnerPartyIdx)
         }
     }
     UpdatePokedexForReceivedMon(playerPartyIdx);
-    if (playerPartyIdx == PC_MON_CHOSEN)
+    sDualockeTradeSlot = PARTY_SIZE;
+    // Dualocke: en los intercambios con NPCs, si el que recibes es repetido o legendario, va a la
+    // caja de prohibidos, como los regalos. El hueco del equipo se compacta al salir de la escena.
+    if (!sTradeAnim->isLinkTrade && playerPartyIdx == PC_MON_CHOSEN && Dualocke_ShouldBanMon(playerMon))
+        Dualocke_SendMonToBannedBox(playerMon);
+    else if (playerPartyIdx == PC_MON_CHOSEN)
         CopyMonToPC(playerMon);
+    else if (!sTradeAnim->isLinkTrade)
+        sDualockeTradeSlot = playerPartyIdx; // se comprueba al salir de la escena (Dualocke_EndInGameTrade)
     if (gReceivedRemoteLinkPlayers)
         TryEnableNationalDexFromLinkPartner();
 }
@@ -3899,6 +3910,7 @@ static bool8 DoTradeAnim_Cable(void)
             }
             SetMainCallback2(CB2_ReturnToField);
             BufferInGameTradeMonName();
+            Dualocke_EndInGameTrade();
         }
         break;
     }
@@ -4404,6 +4416,7 @@ static bool8 DoTradeAnim_Wireless(void)
             }
             SetMainCallback2(CB2_ReturnToField);
             BufferInGameTradeMonName();
+            Dualocke_EndInGameTrade();
         }
         break;
     }
@@ -4548,6 +4561,19 @@ u16 GetInGameTradeSpeciesInfo(void)
     StringCopy(gStringVar1, GetSpeciesName(inGameTrade->requestedSpecies));
     StringCopy(gStringVar2, GetSpeciesName(inGameTrade->species));
     return inGameTrade->requestedSpecies;
+}
+
+// Dualocke: al acabar un intercambio con un NPC, si el que recibes es repetido o legendario
+// va a la caja de prohibidos (como los regalos). Se hace después de guardar su nombre para
+// los textos del NPC.
+static void Dualocke_EndInGameTrade(void)
+{
+    if (sDualockeTradeSlot < PARTY_SIZE && Dualocke_TryBanPartyMon(sDualockeTradeSlot))
+    {
+        CompactPartySlots();
+        CalculatePlayerPartyCount();
+    }
+    sDualockeTradeSlot = PARTY_SIZE;
 }
 
 static void BufferInGameTradeMonName(void)

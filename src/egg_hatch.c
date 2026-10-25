@@ -1,5 +1,6 @@
 #include "global.h"
 #include "pokemon.h"
+#include "dualocke.h"
 #include "egg_hatch.h"
 #include "pokedex.h"
 #include "constants/items.h"
@@ -546,6 +547,12 @@ static void EggHatchSetMonNickname(void)
     }
 
     SetMonData(&gParties[B_TRAINER_PLAYER][gSpecialVar_0x8004], MON_DATA_NICKNAME, gStringVar3);
+    // Dualocke: un huevo que sale repetido o legendario va a la caja de prohibidos, como los eventos
+    if (Dualocke_TryBanPartyMon(gSpecialVar_0x8004))
+    {
+        CompactPartySlots();
+        CalculatePlayerPartyCount();
+    }
     FreeMonSpritesGfx();
     Free(sEggHatchData);
     SetMainCallback2(CB2_ReturnToField);
