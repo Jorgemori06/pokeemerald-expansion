@@ -68,3 +68,4 @@ __pycache__
 .map_version
 dualocke_semilla.txt
 src/data/dualocke_iniciales.h
+src/data/dualocke_aleatorio.h
