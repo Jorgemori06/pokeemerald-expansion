@@ -9,12 +9,20 @@
 
 // La última caja del PC guarda a los Pokémon muertos y está bloqueada.
 #define DUALOCKE_DEAD_BOX (TOTAL_BOXES_COUNT - 1)
+// La penúltima es la caja de prohibidos: regalos, eventos y fósiles repetidos o legendarios.
+#define DUALOCKE_BANNED_BOX (TOTAL_BOXES_COUNT - 2)
 
 void Dualocke_InitNewGame(void);
 void Dualocke_OnBattleEnd(bool32 playerDefeated);
 u32 Dualocke_GetLives(void);
 bool32 Dualocke_IsLockeLost(void);
 bool32 Dualocke_IsDeadBox(u32 boxId);
+bool32 Dualocke_IsBannedBox(u32 boxId);
+bool32 Dualocke_IsLockedBox(u32 boxId);
+bool32 Dualocke_IsBoxMonLocked(u32 boxId, u32 boxPos);
+bool32 Dualocke_ShouldBanMon(struct Pokemon *mon);
+u32 Dualocke_SendMonToBannedBox(struct Pokemon *mon);
+bool32 Dualocke_TryBanPartyMon(u32 partyIndex);
 
 // Primera captura por zona (Capture Clause).
 // Estado del encuentro salvaje del combate actual.

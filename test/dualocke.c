@@ -361,3 +361,126 @@ TEST("Dualocke: los combates de evento no gastan la zona y se pueden capturar")
     EXPECT_EQ(Dualocke_GetCurrentEncounter(), DUALOCKE_ENCOUNTER_NO_RULE);
     EXPECT(Dualocke_CanCatchCurrentEncounter());
 }
+
+// Dualocke: tests de la caja de prohibidos.
+
+static u32 Gift(enum Species species, bool32 shiny)
+{
+    struct Pokemon mon;
+
+    CreateMon(&mon, species, 10, 0, OTID_STRUCT_PLAYER_ID);
+    CalculateMonStats(&mon); // CreateMon no rellena los PS, y uno con 0 PS cuenta como muerto
+    SetMonData(&mon, MON_DATA_IS_SHINY, &shiny);
+    return GiveScriptedMonToPlayer(&mon, PARTY_SIZE);
+}
+
+TEST("Dualocke: un regalo repetido va a la caja de prohibidos")
+{
+    SetupCapture();
+    GiveMon(0, SPECIES_TREECKO);
+
+    EXPECT_EQ(Gift(SPECIES_BELDUM, FALSE), MON_GIVEN_TO_PARTY);
+    EXPECT_EQ(CalculatePlayerPartyCount(), 2);
+
+    EXPECT_EQ(Gift(SPECIES_METANG, FALSE), MON_GIVEN_TO_PC);
+    EXPECT_EQ(CalculatePlayerPartyCount(), 2);
+    EXPECT_EQ(GetBoxMonDataAt(DUALOCKE_BANNED_BOX, 0, MON_DATA_SPECIES), SPECIES_METANG);
+    EXPECT_EQ(gSpecialVar_MonBoxId, DUALOCKE_BANNED_BOX);
+    EXPECT(Dualocke_IsBoxMonLocked(DUALOCKE_BANNED_BOX, 0));
+}
+
+TEST("Dualocke: un regalo legendario va a la caja de prohibidos y no se desbloquea")
+{
+    SetupCapture();
+    GiveMon(0, SPECIES_TREECKO);
+
+    EXPECT_EQ(Gift(SPECIES_LATIOS, FALSE), MON_GIVEN_TO_PC);
+    EXPECT_EQ(GetBoxMonDataAt(DUALOCKE_BANNED_BOX, 0, MON_DATA_SPECIES), SPECIES_LATIOS);
+    EXPECT(Dualocke_IsBoxMonLocked(DUALOCKE_BANNED_BOX, 0));
+}
+
+TEST("Dualocke: los regalos variocolor nunca van a la caja de prohibidos")
+{
+    SetupCapture();
+    GiveMon(0, SPECIES_BELDUM);
+    EXPECT_EQ(Gift(SPECIES_BELDUM, TRUE), MON_GIVEN_TO_PARTY);
+    EXPECT_EQ(Gift(SPECIES_LATIAS, TRUE), MON_GIVEN_TO_PARTY);
+    EXPECT_EQ(CalculatePlayerPartyCount(), 3);
+}
+
+TEST("Dualocke: un repetido de la caja de prohibidos se desbloquea al morir el de su línea")
+{
+    u32 hp = 0;
+
+    SetupCapture();
+    GiveMon(0, SPECIES_TREECKO);
+    GiveMon(1, SPECIES_BELDUM);
+    Gift(SPECIES_BELDUM, FALSE);
+    EXPECT(Dualocke_IsBoxMonLocked(DUALOCKE_BANNED_BOX, 0));
+
+    SetMonData(&gParties[B_TRAINER_PLAYER][1], MON_DATA_HP, &hp);
+    EXPECT(!Dualocke_IsBoxMonLocked(DUALOCKE_BANNED_BOX, 0));
+}
+
+TEST("Dualocke: los de la caja de prohibidos no cuentan como línea que ya tienes")
+{
+    SetupCapture();
+    GiveMon(0, SPECIES_TREECKO);
+    GiveMon(1, SPECIES_BELDUM);
+    Gift(SPECIES_BELDUM, FALSE);
+    Gift(SPECIES_BELDUM, FALSE);
+
+    // Los dos Beldum de la caja no se bloquean entre ellos, solo por el del equipo
+    EXPECT(Dualocke_IsBoxMonLocked(DUALOCKE_BANNED_BOX, 0));
+    EXPECT(Dualocke_IsBoxMonLocked(DUALOCKE_BANNED_BOX, 1));
+    ZeroMonData(&gParties[B_TRAINER_PLAYER][1]);
+    CalculatePlayerPartyCount();
+    EXPECT(!Dualocke_IsBoxMonLocked(DUALOCKE_BANNED_BOX, 0));
+    EXPECT(!Dualocke_IsBoxMonLocked(DUALOCKE_BANNED_BOX, 1));
+
+    // Y un salvaje de esa línea sí cuenta
+    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_BELDUM, FALSE), MAPSEC_ROUTE_101), DUALOCKE_ENCOUNTER_FIRST);
+}
+
+TEST("Dualocke: un estático legendario capturado va a la caja de prohibidos")
+{
+    struct Pokemon mon;
+    bool32 shiny = FALSE;
+
+    SetupCapture();
+    GiveMon(0, SPECIES_TREECKO);
+    CreateMon(&mon, SPECIES_REGIROCK, 40, 0, OTID_STRUCT_PLAYER_ID);
+    SetMonData(&mon, MON_DATA_IS_SHINY, &shiny); // con personalidad 0 e ID 0 saldría variocolor
+    EXPECT_EQ(GiveCapturedMonToPlayer(&mon), MON_GIVEN_TO_PC);
+    EXPECT_EQ(GetBoxMonDataAt(DUALOCKE_BANNED_BOX, 0, MON_DATA_SPECIES), SPECIES_REGIROCK);
+    EXPECT_EQ(CalculatePlayerPartyCount(), 1);
+}
+
+TEST("Dualocke: el PC nunca manda Pokémon nuevos a la caja de prohibidos")
+{
+    u32 box, pos;
+    struct Pokemon mon;
+
+    SetupCapture();
+    for (box = 0; box < TOTAL_BOXES_COUNT; box++)
+    {
+        if (Dualocke_IsLockedBox(box))
+            continue;
+        for (pos = 0; pos < IN_BOX_COUNT; pos++)
+        {
+            CreateMon(&mon, SPECIES_WOBBUFFET, 5, 0, OTID_STRUCT_PLAYER_ID);
+            SetBoxMonAt(box, pos, &mon.box);
+        }
+    }
+    CreateMon(&mon, SPECIES_WYNAUT, 5, 0, OTID_STRUCT_PLAYER_ID);
+    EXPECT_EQ(CopyMonToPC(&mon), MON_CANT_GIVE);
+    EXPECT_EQ(GetBoxMonDataAt(DUALOCKE_BANNED_BOX, 0, MON_DATA_SPECIES), SPECIES_NONE);
+}
+
+TEST("Dualocke: antes de recibir las Poké Balls no se prohíbe nada")
+{
+    SetupCapture();
+    FlagClear(FLAG_ADVENTURE_STARTED);
+    GiveMon(0, SPECIES_BELDUM);
+    EXPECT_EQ(Gift(SPECIES_BELDUM, FALSE), MON_GIVEN_TO_PARTY);
+}

@@ -6494,7 +6494,7 @@ static void SetShiftedMonData(u8 boxId, u8 position)
 static bool8 TryStorePartyMonInBox(u8 boxId)
 {
     s16 boxPosition = GetFirstFreeBoxSpot(boxId);
-    if (boxPosition == -1 || Dualocke_IsDeadBox(boxId)) // Dualocke: no se puede dejar nada en la caja de muertos
+    if (boxPosition == -1 || Dualocke_IsLockedBox(boxId)) // Dualocke: no se puede dejar nada en la caja de muertos ni en la de prohibidos
         return FALSE;
 
     if (sIsMonBeingMoved)
@@ -7253,9 +7253,9 @@ static u8 InBoxInput_Normal(void)
                     return INPUT_SELECT_MON;
                 }
             }
-            else if (Dualocke_IsDeadBox(StorageGetCurrentBox()))
+            else if (Dualocke_IsLockedBox(StorageGetCurrentBox()))
             {
-                return INPUT_IN_MENU; // Dualocke: no se puede sacar nada de la caja de muertos
+                return INPUT_IN_MENU; // Dualocke: en las cajas de muertos y prohibidos no se mueven varios a la vez
             }
             else
             {
@@ -7765,14 +7765,18 @@ static bool8 SetMenuTexts_Mon(void)
 {
     enum Species species = GetSpeciesAtCursorPosition();
 
-    // Dualocke: la caja de muertos está bloqueada; solo se puede ver el resumen
-    if (sCursorArea == CURSOR_AREA_IN_BOX && Dualocke_IsDeadBox(StorageGetCurrentBox()))
+    // Dualocke: en la caja de muertos, y en la de prohibidos mientras el Pokémon siga siendo
+    // repetido o legendario, solo se puede ver el resumen. En ninguna de las dos se deja nada.
+    if (sCursorArea == CURSOR_AREA_IN_BOX && Dualocke_IsLockedBox(StorageGetCurrentBox()))
     {
         if (species == SPECIES_NONE || sIsMonBeingMoved)
             return FALSE;
-        SetMenuText(MENU_SUMMARY);
-        SetMenuText(MENU_CANCEL);
-        return TRUE;
+        if (Dualocke_IsBoxMonLocked(StorageGetCurrentBox(), sCursorPosition))
+        {
+            SetMenuText(MENU_SUMMARY);
+            SetMenuText(MENU_CANCEL);
+            return TRUE;
+        }
     }
 
     switch (sStorage->boxOption)
@@ -8763,7 +8767,7 @@ static bool8 MultiMove_CanPlaceSelection(void)
     s32 rowCount = sMultiMove->minRow + sMultiMove->rowsTotal;
     u8 monArrayId = 0;
 
-    if (Dualocke_IsDeadBox(StorageGetCurrentBox()))
+    if (Dualocke_IsLockedBox(StorageGetCurrentBox()))
         return FALSE;
 
     for (i = sMultiMove->minRow; i < rowCount; i++)

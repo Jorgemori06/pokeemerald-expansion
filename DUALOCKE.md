@@ -111,7 +111,7 @@ Estas son las reglas que usaban en Platino. La idea es mantenerlas lo más parec
     - Los **shiny** se pueden capturar y usar siempre, aunque sean repetidos o legendarios, y **no gastan** la captura de la zona (confirmado por Jorge).
     - **Líneas con ramas** (decidido por Jorge el 24/10/2026): cada evolución final distinta es una **rama** (Gardevoir y Gallade, cada eeveelución, Beautifly y Dustox…). Se puede tener un Pokémon de cada rama: si tienes Gardevoir, un Ralts, Kirlia o Gallade sí cuentan, pero el nuevo **no puede evolucionar a la rama que ya tienes**. Un Pokémon que **todavía no ha elegido rama** (Ralts, Kirlia, Eevee…) ocupa **toda la línea** hasta que evolucione a una rama concreta. Las **formas regionales** cuentan como su especie (si tienes Pikachu, un Raichu de Alola es repetido). Si el que tenías muere, su rama se libera, también para evolucionar.
     - **Antes de que te den las primeras Poké Balls** (en el laboratorio de Abedul, al recibir la Pokédex) no cuenta ningún encuentro. Después sí, aunque no tengas Balls porque se te olvidó comprarlas (decidido por Jorge el 24/10/2026).
-  - **Cómo funciona en el juego (hecho, Jorge, 24/10/2026; falta la caja de prohibidos):**
+  - **Cómo funciona en el juego (hecho, Jorge, 24-25/10/2026):**
     - Solo cuentan los **encuentros aleatorios**: hierba, cuevas, surf, pesca, Golpe Roca, Dulce Aroma, Safari y los errantes. Los combates de evento y los estáticos (Kecleon, Electrode, legendarios…) no gastan la zona y se pueden capturar.
     - Al **empezar** el combate con el primer salvaje válido, la zona queda gastada, pase lo que pase (lo capturas, huyes, lo debilitas o pierdes).
     - Al empezar el combate sale un aviso: "¡Es el primer Pokémon de esta zona!…", "¡Es variocolor!…", o, si no cuenta, por qué (repetido o legendario).
@@ -119,6 +119,15 @@ Estas son las reglas que usaban en Platino. La idea es mantenerlas lo más parec
     - **Ramas:** las evoluciones finales a las que puede llegar cada especie, contando las formas regionales y las megas como su especie base. Un Pokémon con una sola rama posible (Gardevoir, Silcoon, Pikachu…) ocupa esa rama; uno con varias (Ralts, Kirlia, Eevee…) ocupa toda la línea. Un salvaje es repetido si tienes vivo uno de su línea sin rama elegida, o si ya tienes todas las ramas a las que puede llegar.
     - **Evolución bloqueada:** un Pokémon del equipo no evoluciona a una especie cuyas ramas ya tienes todas con otros Pokémon vivos. Si sube de nivel, simplemente no evoluciona; con una piedra, sale "no tendrá efecto" y no se gasta. Es `Dualocke_IsEvolutionBlocked` en `src/dualocke.c`, llamado desde `GetEvolutionTargetSpecies` (`src/pokemon.c`).
     - Las zonas son las secciones del mapa regional: cada ruta, ciudad, cueva… La Zona Safari es una sola zona. Las zonas submarinas (Buceo) tienen nombre propio y son zonas aparte.
+    - **Caja de prohibidos** (la caja 13, "VETADOS"; la 14 es la de muertos): los Pokémon que no pasan por la regla de la zona y son **repetidos o legendarios** van ahí en vez de al equipo o al PC. Son:
+      - regalos, eventos y fósiles;
+      - estáticos capturados (Kecleon, Electrode, legendarios…);
+      - **huevos**, al eclosionar (decidido por Jorge el 25/10/2026: se aplica la regla de los eventos; criar no se prohíbe, se controla por honor);
+      - **intercambios con NPCs** (decidido por Jorge el 25/10/2026: cuentan como regalo).
+    - En la caja de prohibidos solo se puede ver el resumen y no se puede dejar nada. Un **repetido se desbloquea solo** cuando deja de serlo (muere el de su línea que tenías) y entonces se puede sacar o mover. Los **legendarios** se quedan bloqueados. Los **variocolor** nunca van ahí.
+    - Los de la caja de prohibidos no cuentan como "línea que ya tienes".
+    - Al recibirlo sale el mensaje de siempre de "se ha enviado a la caja VETADOS".
+    - Nunca deja el equipo vacío: si el huevo o el intercambio es tu único Pokémon, se queda en el equipo.
 - **Nick Clause:** todos los Pokémon llevan mote.
 - **Items Clause:**
   - No se pueden comprar objetos curativos ni Objetos X en las tiendas.
@@ -143,7 +152,7 @@ Estas son las reglas que usaban en Platino. La idea es mantenerlas lo más parec
 | No usar Objetos X en combate | Bloquearlos en combate | Poco | **Hecho** |
 | Una compra por objeto (salvo Balls, Repelentes, Bayas, Caramelos) | Limitar compras en tiendas | Medio | **Hecho** (Miguel, 24/10/2026) |
 | 20 vidas + caja de muertos | Contador de vidas en el menú de pausa y caja bloqueada | Medio | **Hecho** (aviso al morir incluido) |
-| Primera captura por ruta + dupes + sin legendarios + shiny libre + caja de prohibidos | El juego bloquea lanzar Balls cuando no se puede capturar; los regalos repetidos/legendarios van a la caja de prohibidos | Medio | **Hecho** para los salvajes; falta la caja de prohibidos |
+| Primera captura por ruta + dupes + sin legendarios + shiny libre + caja de prohibidos | El juego bloquea lanzar Balls cuando no se puede capturar; los regalos repetidos/legendarios van a la caja de prohibidos | Medio | **Hecho** |
 | Victoria, combates en Showdown, capturas extra | Fuera del juego, por honor | — | — |
 | No farmear | Por honor | — | — |
 
@@ -449,7 +458,8 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
   - Tests en `test/dualocke.c` (`make check TESTS="Dualocke"`).
   - **Aviso al morir (hecho, Miguel, 24/10/2026):** cuando se debilita un Pokémon tuyo en un combate en el que cuentan las vidas, en vez de "X fainted!" sale "X has died! Lives left: N." (las vidas que quedarán al acabar el combate). Si ya no quedan vidas, o se han debilitado todos, sale "X has died! The locke is lost!". Los Pokémon del compañero (combates dobles con compañero) no cuentan. En los tests de la expansion se deja el texto original. Código: `src/dualocke_aviso.c`, enganchado en `BufferStringBattle` (`src/battle_message.c`).
 - Combate con Máximo en la Ruta 120 que da el Mega-Aro (Jorge, sección 6).
-- Primera captura por zona para los salvajes (Jorge, sección 4). Las zonas gastadas se guardan en `VAR_DUALOCKE_ZONES_0` a `_6` (7 variables libres, un bit por zona; no gasta flags). Tests en `test/dualocke.c`. Falta la caja de prohibidos para regalos, eventos y fósiles.
+- Primera captura por zona para los salvajes (Jorge, sección 4). Las zonas gastadas se guardan en `VAR_DUALOCKE_ZONES_0` a `_6` (7 variables libres, un bit por zona; no gasta flags). Tests en `test/dualocke.c`.
+- Caja de prohibidos (Jorge, sección 4): regalos, eventos, fósiles, estáticos, huevos e intercambios repetidos o legendarios van a la caja 13 ("VETADOS"), bloqueada hasta que dejan de ser repetidos.
 
 ### Pendiente de decidir
 
@@ -459,7 +469,7 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
 
 1. ~~Lo fácil: mote obligatorio, quitar curativos y Objetos X de las tiendas, Caramelos Raros a 1 ₽, bloquear Objetos X en combate, correr sin Deportivas, Pokédex Nacional desde el inicio, MTs reutilizables, MOs olvidables.~~ **Hecho.**
 2. ~~Combate con Máximo y el aro~~ (hecho). ~~Segundo dependiente y contenido de las tiendas~~ (hecho).
-3. Reglas del locke: ~~vidas + caja de muertos~~, ~~límite de una compra por objeto~~ y ~~aviso al morir~~ (hechos); primera captura por zona (hecha para los salvajes; falta la caja de prohibidos).
+3. Reglas del locke: ~~vidas + caja de muertos~~, ~~límite de una compra por objeto~~ y ~~aviso al morir~~ (hechos); ~~primera captura por zona y caja de prohibidos~~ (hechas).
 4. Randomizer con semilla (~~reescalado de niveles~~, ~~equipos de jefes~~ y ~~parámetros~~ hechos).
 5. Revanchas y postgame (niveles).
 6. Traducción.
@@ -504,7 +514,8 @@ Quién hace cada cosa y cómo se sube: sección 13.
 | MOs olvidables | `include/config/pokemon.h` (`P_CAN_FORGET_HIDDEN_MOVE`) |
 | Filtrar tiendas por medallas/flags (útil para las megapiedras) | `src/shop_criteria.c` |
 | Vidas y caja de muertos | `src/dualocke.c`, `include/dualocke.h`; se llama desde `src/battle_setup.c` (final de combate) |
-| Bloqueo de la caja de muertos | `src/pokemon_storage_system.c` (busca `Dualocke_IsDeadBox`) y `src/pokemon.c` (`CopyMonToPC`) |
+| Bloqueo de las cajas de muertos y prohibidos | `src/pokemon_storage_system.c` (busca `Dualocke_IsLockedBox` y `Dualocke_IsBoxMonLocked`) y `src/pokemon.c` (`CopyMonToPC`) |
+| Caja de prohibidos (qué va, cuándo se desbloquea) | `src/dualocke.c` (`Dualocke_ShouldBanMon`, `Dualocke_SendMonToBannedBox`); se llama desde `GiveScriptedMonToPlayer` y `GiveCapturedMonToPlayer` (`src/pokemon.c`), `EggHatchSetMonNickname` (`src/egg_hatch.c`) y `TradeMons` (`src/trade.c`) |
 | Ventana de vidas en el menú de pausa | `src/start_menu.c` (`ShowDualockeLivesWindow`) |
 | Primera captura por zona (estado del encuentro, líneas evolutivas, zonas gastadas) | `src/dualocke.c` (`Dualocke_GetWildEncounterStatus`, `Dualocke_OnBattleStart`) |
 | Qué combates son encuentros aleatorios | `src/battle_setup.c` (busca `Dualocke_SetRandomEncounter`) |
@@ -598,7 +609,7 @@ Decidido el 23/10/2026 y en marcha: **Miguel se encarga del equilibrio** (dificu
 | **Funcionalidades** | | | |
 | ~~Vidas + caja de muertos~~ (hecho, PR #4; el aviso al morir lo hizo Miguel) | Jorge | combate (desmayos), PC (`src/pokemon_storage_system.c`), HUD | — |
 | ~~Primera captura por zona (+ dupes, sin legendarios, shiny libre)~~ (hecho para los salvajes) | Jorge | `src/dualocke.c`, `src/item_use.c`, `src/battle_main.c` | — |
-| Caja de prohibidos (regalos, eventos y fósiles repetidos o legendarios) | Jorge | `src/dualocke.c`, PC | — |
+| ~~Caja de prohibidos (regalos, eventos, fósiles, estáticos, huevos e intercambios)~~ (hecho) | Jorge | `src/dualocke.c`, PC | — |
 | ~~Una compra por objeto~~ (hecho por Miguel) | Jorge | `src/shop.c` (compra) | — |
 | ~~Evento del combate con Máximo y entrega del Mega-Aro~~ (hecho) | Jorge | `data/maps/Route120/` | Equipo de Máximo |
 | ~~Segundo dependiente en las tiendas (mecánica)~~ (hecho por Miguel) | Jorge | `data/maps/*_Mart/`, `src/shop_criteria.c`, `src/shop.c` | Contenido de las tiendas |

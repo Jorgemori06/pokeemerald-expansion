@@ -9,6 +9,7 @@
 #include "pokemon_storage_system.h"
 #include "string_util.h"
 #include "trainer_hill.h"
+#include "dualocke_es.h"
 #include "constants/battle.h"
 #include "constants/region_map_sections.h"
 
@@ -18,13 +19,15 @@
 // - Con 0 vidas se sigue jugando; la siguiente muerte, o perder un combate, hace
 //   perder el locke (FLAG_DUALOCKE_LOCKE_LOST). El juego no se bloquea: solo se marca.
 
-static const u8 sText_DeadBoxName[] = _("DEAD");
+static const u8 sText_DeadBoxName[] = _(ES("DEAD", "MUERTOS"));
+static const u8 sText_BannedBoxName[] = _(ES("BANNED", "VETADOS"));
 
 void Dualocke_InitNewGame(void)
 {
     VarSet(VAR_DUALOCKE_LIVES, DUALOCKE_START_LIVES);
     FlagClear(FLAG_DUALOCKE_LOCKE_LOST);
     StringCopy(GetBoxNamePtr(DUALOCKE_DEAD_BOX), sText_DeadBoxName);
+    StringCopy(GetBoxNamePtr(DUALOCKE_BANNED_BOX), sText_BannedBoxName);
 }
 
 u32 Dualocke_GetLives(void)
@@ -40,6 +43,17 @@ bool32 Dualocke_IsLockeLost(void)
 bool32 Dualocke_IsDeadBox(u32 boxId)
 {
     return boxId == DUALOCKE_DEAD_BOX;
+}
+
+bool32 Dualocke_IsBannedBox(u32 boxId)
+{
+    return boxId == DUALOCKE_BANNED_BOX;
+}
+
+// Cajas en las que no se puede dejar nada ni mandar Pokémon nuevos.
+bool32 Dualocke_IsLockedBox(u32 boxId)
+{
+    return Dualocke_IsDeadBox(boxId) || Dualocke_IsBannedBox(boxId);
 }
 
 static void LoseLife(void)
@@ -295,7 +309,7 @@ static bool32 GetOccupiedBranches(const u16 *branches, u32 branchCount, struct B
         else
         {
             box = (i - PARTY_SIZE) / IN_BOX_COUNT;
-            if (Dualocke_IsDeadBox(box))
+            if (Dualocke_IsLockedBox(box)) // ni los muertos ni los prohibidos cuentan
                 continue;
             boxMon = GetBoxedMonPtr(box, (i - PARTY_SIZE) % IN_BOX_COUNT);
         }
@@ -417,4 +431,94 @@ bool32 Dualocke_CanCatchCurrentEncounter(void)
     default:
         return TRUE;
     }
+}
+
+// ---------------------------------------------------------------------------
+// Dualocke: caja de prohibidos.
+// - Los regalos, eventos, fósiles y estáticos que son repetidos (ver Dualocke_IsDupe) o
+//   legendarios van a la caja de prohibidos en vez de al equipo o al PC.
+// - Los repetidos se pueden sacar en cuanto dejan de serlo (muere el de su línea que ya
+//   tenías); los legendarios se quedan bloqueados para siempre.
+// - Los variocolor nunca van ahí: se pueden usar siempre.
+// - No se aplica hasta que te dan las Poké Balls (FLAG_ADVENTURE_STARTED): así el inicial
+//   y los tests de la expansion no se ven afectados.
+// ---------------------------------------------------------------------------
+
+static bool32 IsBoxMonBanned(struct BoxPokemon *boxMon)
+{
+    enum Species species = GetBoxMonData(boxMon, MON_DATA_SPECIES_OR_EGG);
+    u16 branches[MAX_BRANCHES];
+    bool8 occupied[MAX_BRANCHES] = {0};
+    u32 count;
+
+    if (species == SPECIES_NONE || species == SPECIES_EGG)
+        return FALSE;
+    if (GetBoxMonData(boxMon, MON_DATA_IS_SHINY))
+        return FALSE;
+    if (Dualocke_IsSpeciesLegendary(species))
+        return TRUE;
+    count = GetSpeciesBranches(species, branches);
+    if (GetOccupiedBranches(branches, count, boxMon, occupied))
+        return TRUE;
+    return AreAllBranchesOccupied(occupied, count);
+}
+
+bool32 Dualocke_ShouldBanMon(struct Pokemon *mon)
+{
+    if (!FlagGet(FLAG_ADVENTURE_STARTED))
+        return FALSE;
+    return IsBoxMonBanned(&mon->box);
+}
+
+// Un Pokémon de una caja bloqueada no se puede sacar, mover ni soltar: siempre en la de
+// muertos, y en la de prohibidos mientras siga siendo repetido o legendario.
+bool32 Dualocke_IsBoxMonLocked(u32 boxId, u32 boxPos)
+{
+    if (Dualocke_IsDeadBox(boxId))
+        return TRUE;
+    if (Dualocke_IsBannedBox(boxId))
+        return IsBoxMonBanned(GetBoxedMonPtr(boxId, boxPos));
+    return FALSE;
+}
+
+// Manda el Pokémon a la caja de prohibidos. Devuelve MON_GIVEN_TO_PC (y deja la caja y la
+// posición en gSpecialVar_MonBoxId/Pos, para el mote) o MON_CANT_GIVE si está llena.
+u32 Dualocke_SendMonToBannedBox(struct Pokemon *mon)
+{
+    u32 boxPos;
+
+    for (boxPos = 0; boxPos < IN_BOX_COUNT; boxPos++)
+    {
+        struct BoxPokemon *slot = GetBoxedMonPtr(DUALOCKE_BANNED_BOX, boxPos);
+
+        if (GetBoxMonData(slot, MON_DATA_SPECIES) == SPECIES_NONE)
+        {
+            MonRestorePP(mon);
+            CopyMon(slot, &mon->box, sizeof(mon->box));
+            gSpecialVar_MonBoxId = DUALOCKE_BANNED_BOX;
+            gSpecialVar_MonBoxPos = boxPos;
+            // Para que el mensaje de siempre diga "se ha enviado a la caja VETADOS" (y no el de
+            // "la caja X estaba llena", que saldría al no ser la caja actual del PC)
+            VarSet(VAR_PC_BOX_TO_SEND_MON, DUALOCKE_BANNED_BOX);
+            FlagSet(FLAG_SHOWN_BOX_WAS_FULL_MESSAGE);
+            return MON_GIVEN_TO_PC;
+        }
+    }
+    return MON_CANT_GIVE;
+}
+
+// Para los Pokémon que llegan al equipo sin pasar por GiveScriptedMonToPlayer (huevos al
+// eclosionar, intercambios con NPCs): si es repetido o legendario, lo manda a la caja de
+// prohibidos y deja vacío su hueco (sin compactar el equipo: lo hace quien llama). Nunca
+// deja el equipo vacío. Devuelve TRUE si lo ha mandado.
+bool32 Dualocke_TryBanPartyMon(u32 partyIndex)
+{
+    struct Pokemon *mon = &gParties[B_TRAINER_PLAYER][partyIndex];
+
+    if (partyIndex >= PARTY_SIZE || CalculatePlayerPartyCount() <= 1 || !Dualocke_ShouldBanMon(mon))
+        return FALSE;
+    if (Dualocke_SendMonToBannedBox(mon) != MON_GIVEN_TO_PC)
+        return FALSE;
+    ZeroMonData(mon);
+    return TRUE;
 }
