@@ -17,6 +17,7 @@ Rama: `miguel/dialogos-1`
 - Tramo 17 (unos 185 textos): RUTA 111 con el desierto y sus entrenadores, RUTA 112, el TELEFÉRICO, MONTE CENIZO (MAGNO, AQUILES y el METEORITO) y CAMINO ESCABROSO.
 - Tramos 18 y 19 (unos 250 textos): RUTA 113 con el TALLER DE CRISTAL, PUEBLO PARDAL, RUTA 114, CATARATAS METEORO (sin la cueva de MÁXIMO del postgame) y RUTA 115.
 - Tramos 20 y 21 (unos 215 textos): PUEBLO LAVACALDA con el GIMNASIO de CANDELA (sin la revancha), RUTAS 118 y 119 con sus entrenadores y el INSTITUTO METEOROLÓGICO.
+- Tramos 22 y 23 (unos 225 textos): CIUDAD ARBORADA con el GIMNASIO de ALANA (sin la revancha), RUTA 120 con el combate de MÁXIMO y el MEGA-ARO, RUTA 121 y la ZONA SAFARI de Hoenn (sin la zona ampliada del postgame; los mapas del SAFARI de Kanto no se tocan).
 - Lo que queda se reparte entre Miguel y Jorge en `traduccion/dialogos/PLAN.md` (unos 1300 textos cada uno).
 - Repasadas las frases con género del jugador para que valgan para chico y chica.
 - Explicación y lista de nombres en `traduccion/dialogos/LEEME.md`.

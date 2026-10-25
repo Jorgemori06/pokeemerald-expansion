@@ -383,72 +383,72 @@ Route120_EventScript_Callie::
 	end
 
 Route120_Text_StevenGreeting:
-	.string "STEVEN: Hm? {PLAYER}{KUN}, hi.\n"
-	.string "It's been a while.\p"
-	.string "Lately I've been studying something\n"
-	.string "called MEGA EVOLUTION.\p"
-	.string "Some POKéMON can go beyond their\n"
-	.string "final form in battle, but only for\l"
-	.string "a TRAINER who has earned it.\p"
-	.string "I'd like to see if that could be you.\p"
-	.string "{PLAYER}{KUN}, are your POKéMON ready for\n"
-	.string "battle?$"
+	.string "MÁXIMO: ¿Mm? {PLAYER}{KUN}, hola.\n"
+	.string "Cuánto tiempo.\p"
+	.string "Últimamente estoy estudiando algo\n"
+	.string "llamado MEGAEVOLUCIÓN.\p"
+	.string "Algunos POKéMON pueden ir más allá de\n"
+	.string "su última forma en combate, pero solo\l"
+	.string "con un ENTRENADOR que se lo merezca.\p"
+	.string "Me gustaría ver si podrías ser tú.\p"
+	.string "{PLAYER}{KUN}, ¿tus POKéMON están\n"
+	.string "listos para combatir?$"
 
 Route120_Text_StevenIllWaitHere:
-	.string "STEVEN: No?\p"
-	.string "I'll wait here, so you can get ready.$"
+	.string "MÁXIMO: ¿No?\p"
+	.string "Te espero aquí mientras te preparas.$"
 
 Route120_Text_StevenReadyForBattle:
-	.string "STEVEN: {PLAYER}{KUN}, are your POKéMON\n"
-	.string "ready for battle?$"
+	.string "MÁXIMO: {PLAYER}{KUN}, ¿tus POKéMON\n"
+	.string "están listos para combatir?$"
 
 Route120_Text_StevenShowMeYourPower:
-	.string "STEVEN: {PLAYER}{KUN}, show me your true\n"
-	.string "power as a TRAINER!$"
+	.string "MÁXIMO: {PLAYER}{KUN}, ¡enséñame tu\n"
+	.string "verdadero poder como ENTRENADOR!$"
 
 Route120_Text_StevenDefeat:
-	.string "I see…\n"
-	.string "You're even stronger than I thought.$"
+	.string "Ya veo…\n"
+	.string "Eres aún más fuerte de lo que creía.$"
 
 Route120_Text_StevenGiveMegaRing:
-	.string "STEVEN: Your battle style is\n"
-	.string "intriguing.\p"
-	.string "Your POKéMON have obviously grown\n"
-	.string "since I first met you in DEWFORD.\p"
-	.string "I'd like you to have this\n"
-	.string "MEGA RING.$"
+	.string "MÁXIMO: Tu forma de combatir es\n"
+	.string "intrigante.\p"
+	.string "Se nota que tus POKéMON han crecido\n"
+	.string "mucho desde que nos vimos en AZULIZA.\p"
+	.string "Me gustaría que te quedaras este\n"
+	.string "MEGA-ARO.$"
 
 Route120_Text_StevenMegaRingExplanation:
-	.string "STEVEN: With the MEGA RING, a POKéMON\n"
-	.string "holding its own MEGA STONE can\l"
-	.string "MEGA EVOLVE in battle.\p"
-	.string "MEGA STONES are hidden all over\n"
-	.string "HOENN. Keep your eyes open.$"
+	.string "MÁXIMO: Con el MEGA-ARO, un POKéMON\n"
+	.string "que lleve su MEGAPIEDRA puede\l"
+	.string "MEGAEVOLUCIONAR en combate.\p"
+	.string "Hay MEGAPIEDRAS escondidas por todo\n"
+	.string "HOENN. Estate atento.$"
 
 Route120_Text_StevenNowTheObstacle:
-	.string "STEVEN: Now, there's something here\n"
-	.string "that you can't see, right?\p"
-	.string "Rather than describing it,\n"
-	.string "I should just show you.$"
+	.string "MÁXIMO: Bueno, aquí hay algo que no\n"
+	.string "puedes ver, ¿verdad?\p"
+	.string "En vez de explicártelo, mejor\n"
+	.string "te lo enseño.$"
 
 Route120_Text_StevenUsedDevonScope:
-	.string "STEVEN used the DEVON SCOPE.\p"
-	.string "An invisible POKéMON became completely\n"
-	.string "visible!\p"
-	.string "The startled POKéMON attacked!$"
+	.string "MÁXIMO ha usado el DETECTOR DEVON.\p"
+	.string "¡Un POKéMON invisible se ha vuelto\n"
+	.string "totalmente visible!\p"
+	.string "¡El POKéMON se ha asustado y ataca!$"
 
 Route120_Text_StevenGiveDevonScope:
-	.string "STEVEN: I'd like you to have this\n"
-	.string "DEVON SCOPE too.\p"
-	.string "Who knows, there may be other\n"
-	.string "concealed POKéMON.$"
+	.string "MÁXIMO: Quédate también este\n"
+	.string "DETECTOR DEVON.\p"
+	.string "Quién sabe, puede que haya otros\n"
+	.string "POKéMON escondidos.$"
 
 Route120_Text_StevenGoodbye:
-	.string "STEVEN: {PLAYER}{KUN}.\p"
-	.string "I enjoy seeing POKéMON and TRAINERS\n"
-	.string "who strive together.\p"
-	.string "I think you're doing great.\p"
-	.string "Well, let's meet again somewhere.$"
+	.string "MÁXIMO: {PLAYER}{KUN}.\p"
+	.string "Me gusta ver a POKéMON y ENTRENADORES\n"
+	.string "que se esfuerzan juntos.\p"
+	.string "Creo que lo estás haciendo genial.\p"
+	.string "Bueno, ya nos veremos por ahí.$"
 
 Kecleon_Text_SomethingUnseeable:
 	.string "Something unseeable is in the way.$"
@@ -464,9 +464,9 @@ Kecleon_Text_UseDevonScopeMonAttacked:
 	.string "The startled POKéMON attacked!$"
 
 Route120_Text_RouteSignFortree:
-	.string "ROUTE 120\n"
-	.string "{LEFT_ARROW} FORTREE CITY$"
+	.string "RUTA 120\n"
+	.string "{LEFT_ARROW} CIUDAD ARBORADA$"
 
 Route120_Text_RouteSign121:
-	.string "{RIGHT_ARROW} ROUTE 121\n"
-	.string "{LEFT_ARROW} ROUTE 120$"
+	.string "{RIGHT_ARROW} RUTA 121\n"
+	.string "{LEFT_ARROW} RUTA 120$"
