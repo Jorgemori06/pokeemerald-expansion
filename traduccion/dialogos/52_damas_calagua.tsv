@@ -1,0 +1,53 @@
+# Textos comunes (Jorge): las DAMAS del CENTRO POKéMON de CALAGUA (la DAMA DE LOS FAVORES, la DAMA DEL CONCURSO DE PREGUNTAS y la DAMA DE LOS CONCURSOS)
+LilycoveCity_PokemonCenter_1F_Text_ImTheFavorLady	Soy la DAMA DE LOS FAVORES…$
+LilycoveCity_PokemonCenter_1F_Text_ObsessedWithThing	Últimamente me obsesionan las\ncosas {STR_VAR_1}…$
+LilycoveCity_PokemonCenter_1F_Text_ThankYouForLastTime	Oh…\nGracias por lo de la otra vez…$
+LilycoveCity_PokemonCenter_1F_Text_PlayerGaveMeBadThing	Hace un tiempo, creo que fue {STR_VAR_3}…\p{STR_VAR_3} me dio un {STR_VAR_2}\ndiciendo que era {STR_VAR_1}.\pPero no era {STR_VAR_1}.\nNi lo más mínimo.$
+LilycoveCity_PokemonCenter_1F_Text_PlayerGaveMeGreatThing	Hace un tiempo, {STR_VAR_3} me dio\nun {STR_VAR_2} muy {STR_VAR_1}.\pAhora es mi tesoro.$
+LilycoveCity_PokemonCenter_1F_Text_WillYouShareThing	Oye, si tienes algo que sea\n{STR_VAR_1}, ¿me lo darías?$
+LilycoveCity_PokemonCenter_1F_Text_WhatWillYouGiveMe	…¿De verdad?\n¿Qué me vas a dar?$
+LilycoveCity_PokemonCenter_1F_Text_IsThatSoGoodbye	¿Ah, sí?\nPues adiós…$
+LilycoveCity_PokemonCenter_1F_Text_NotWillingToShare	Oh…\n¿No quieres compartirlo?$
+LilycoveCity_PokemonCenter_1F_Text_IllTryToCherishIt	¿Oh?\n¿Ese {STR_VAR_2} es {STR_VAR_1}?\p…¿Seguro?\pBueno, te lo agradezco de todas\nformas. Intentaré cuidarlo…$
+LilycoveCity_PokemonCenter_1F_Text_IWillCherishThis	Oh…\pEs un {STR_VAR_2} bastante\n{STR_VAR_1}…\p¿Verdad que es bonito?\nEs de ensueño…\pGracias…\nLo guardaré como un tesoro…$
+LilycoveCity_PokemonCenter_1F_Text_IWillTreasureThis	…Oh, oh, oh…\p¡Es increíble!\n¡Es de verdad {STR_VAR_1}!\p¡No sabía que un {STR_VAR_2}\npudiera ser tan {STR_VAR_1}!\p¡Gracias!\p¡Lo guardaré como un tesoro\ntoda mi vida!$
+LilycoveCity_PokemonCenter_1F_Text_IllGiveYouThisInReturn	Te doy este objeto maravilloso a\ncambio de tu fabuloso regalo.\pEspero que lo cuides mucho…$
+LilycoveCity_PokemonCenter_1F_Text_YouDontHaveSpaceForIt	Oh, no puedes llevártelo si no\ntienes sitio.\pVen a verme cuando hayas ordenado\nla MOCHILA…$
+LilycoveCity_PokemonCenter_1F_Text_ImTheQuizLady	¡Soy la DAMA DE LAS PREGUNTAS!\n¡Me encantan las preguntas!$
+LilycoveCity_PokemonCenter_1F_Text_WaitingToTakeYourQuiz	¿Oh?\pEstoy esperando a que alguien\nresponda a la pregunta que hiciste.\pYa charlaremos en otro momento, ¿vale?$
+LilycoveCity_PokemonCenter_1F_Text_WaitingForChallenger	¡Estoy esperando a que alguien se\natreva con la pregunta de {STR_VAR_1}!$
+LilycoveCity_PokemonCenter_1F_Text_TakeQuizChallenge	¡Si aciertas, puedes ganar premios\nfabulosos!\p¿Quieres intentar responder\na la pregunta?$
+LilycoveCity_PokemonCenter_1F_Text_WaitForAnswer	… … … … … …\n… … … … … …$
+LilycoveCity_PokemonCenter_1F_Text_HowBoringBye	¡Ay, qué aburrimiento!\n¡Adiós!$
+LilycoveCity_PokemonCenter_1F_Text_YoureGoingToQuit	¡Ooh!\n¿Te rindes?$
+LilycoveCity_PokemonCenter_1F_Text_TakeTheQuizAnotherTime	¡Inténtalo otro día!$
+LilycoveCity_PokemonCenter_1F_Text_YouGotItRight	¡Increíble! ¡Has acertado!\n¡Qué cabeza tienes!$
+LilycoveCity_PokemonCenter_1F_Text_YouGotItRightYouveWonPersonsPrize	¡Enhorabuena!\n¡Has acertado la pregunta!\p¡Has ganado el premio que puso\n{STR_VAR_1}!$
+LilycoveCity_PokemonCenter_1F_Text_XReceivedOneY	¡{STR_VAR_1} ha recibido\n{STR_VAR_2}!$
+LilycoveCity_PokemonCenter_1F_Text_YourBagIsFilledUp	¿Oh? ¡Tienes la MOCHILA llena!\nVen a verme cuando tengas sitio.$
+LilycoveCity_PokemonCenter_1F_Text_WrongTheCorrectAnswerIs	Mmm… ¡Fallo!\n¡La respuesta correcta es “{STR_VAR_3}”!$
+LilycoveCity_PokemonCenter_1F_Text_IGetToKeepPrize	¡Qué pena!\p¡Ahora el premio, {STR_VAR_1},\nme lo quedo yo!$
+LilycoveCity_PokemonCenter_1F_Text_MakeYourOwnQuiz	¡Oye, oye!\n¿Quieres inventarte una pregunta?$
+LilycoveCity_PokemonCenter_1F_Text_MaybeNextTime	Ah, ya veo…\n¡Bueno, otra vez será!$
+LilycoveCity_PokemonCenter_1F_Text_PickYourPrize	Vale, lo primero que tienes que hacer\nes elegir el premio para quien\lacierte tu pregunta.\pPero ojo: ¡si quien responde no\nacierta, el premio me lo quedo yo!$
+LilycoveCity_PokemonCenter_1F_Text_QuitChoosingPrize	Si no eliges un premio,\nno se puede hacer la pregunta.\p¿Lo dejas?$
+LilycoveCity_PokemonCenter_1F_Text_WriteYourQuiz	¡Oh, qué bien!\n¡Es un premio estupendo!\pAhora tienes que escribir la\npregunta y su respuesta.$
+LilycoveCity_PokemonCenter_1F_Text_QuitWritingQuizQuestion	¿Dejas de escribir la pregunta?$
+LilycoveCity_PokemonCenter_1F_Text_QuitWritingQuizAnswer	¿Dejas de elegir la respuesta?$
+LilycoveCity_PokemonCenter_1F_Text_IllLookForAChallenger	¡Gracias!\nTe ha quedado una pregunta muy buena.\pVoy ahora mismo a buscar a alguien\nque se atreva a responderla.$
+LilycoveCity_PokemonCenter_1F_Text_ImTheContestLady	¡Soy la DAMA DE LOS CONCURSOS!\n¡Me encantan los CONCURSOS!$
+LilycoveCity_PokemonCenter_1F_Text_ThankForPokeblock	¡Gracias por el {POKEBLOCK} de\nla otra vez!$
+LilycoveCity_PokemonCenter_1F_Text_MyFriendDisplaysQuality	¡Este es mi amigo {STR_VAR_1}!\n¡Es el colmo de la {STR_VAR_2}!\p¡Pero creo que puede tener\naún más {STR_VAR_2}!$
+LilycoveCity_PokemonCenter_1F_Text_DontHaveAPokeblockCase	¡Así que necesito tu ayuda!\p¿Me das un {POKEBLOCK}, por favor?\n¡Solo te pido uno!\p…Ah, pero…\n¿No tienes TUBO {POKEBLOCK}?\l¡Qué pena! ¡Otra vez será!$
+LilycoveCity_PokemonCenter_1F_Text_AskingForOnePokeblock	¡Así que necesito tu ayuda!\p¿Me das un {POKEBLOCK}, por favor?\n¡Solo te pido uno!$
+LilycoveCity_PokemonCenter_1F_Text_ICantHaveOnePokeblock	¡Ooh!\n¿¡No me das ni un {POKEBLOCK}!?$
+LilycoveCity_PokemonCenter_1F_Text_WhatACheapskate	¡Jo!\n¡Qué tacañería!$
+LilycoveCity_PokemonCenter_1F_Text_IllUseYourPokeblock	¡Bien!\n¡Gracias!\pAhora mismo le doy tu {POKEBLOCK}\na mi POKéMON.$
+LilycoveCity_PokemonCenter_1F_Text_NoChangeThanks	…Parece que no ha cambiado\nnada de nada…\pMmm…\p¡Bueno, qué se le va a hacer!\n¡Muchas gracias!$
+LilycoveCity_PokemonCenter_1F_Text_ReallyImprovedThanks	¡Oh, bien!\n¡Le ha encantado!\pCreo que también ha mejorado la\n{STR_VAR_2} de {STR_VAR_1}.\p¡Muchísimas gracias!$
+LilycoveCity_PokemonCenter_1F_Text_ReadyToEnterContests	Mmm…\pCreo que ya estamos listos para\nparticipar en algún CONCURSO.\pSi nos ves en alguno, espero que\nnos animes.$
+LilycoveCity_PokemonCenter_1F_Text_Zigzagoon	{STR_VAR_1}: ¡Guguuh!$
+LilycoveCity_PokemonCenter_1F_Text_Kecleon	{STR_VAR_1}: ¡Igigigiiih!$
+LilycoveCity_PokemonCenter_1F_Text_Poochyena	{STR_VAR_1}: Baaarun…$
+LilycoveCity_PokemonCenter_1F_Text_Pikachu	{STR_VAR_1}: ¡Pikka!$
+LilycoveCity_PokemonCenter_1F_Text_Skitty	{STR_VAR_1}: ¡Umyaaaan!$
