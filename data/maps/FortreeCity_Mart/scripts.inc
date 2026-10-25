@@ -40,18 +40,18 @@ FortreeCity_Mart_EventScript_Boy::
 	end
 
 FortreeCity_Mart_Text_SuperRepelBetter:
-	.string "SUPER REPEL lasts a long time,\n"
-	.string "and it gets the job done.\p"
-	.string "It's much better than an ordinary\n"
-	.string "REPEL.$"
+	.string "El SUPERREPELENTE dura mucho y\n"
+	.string "cumple de sobra.\p"
+	.string "Es mucho mejor que un REPELENTE\n"
+	.string "normal.$"
 
 FortreeCity_Mart_Text_StockUpOnItems:
-	.string "I always stock up on more items than\n"
-	.string "I'm sure I'll need.\p"
-	.string "You never know what might happen.\n"
-	.string "Better to be safe than sorry!$"
+	.string "Siempre compro más objetos de los\n"
+	.string "que creo que voy a necesitar.\p"
+	.string "Nunca se sabe lo que puede pasar.\n"
+	.string "¡Más vale prevenir que curar!$"
 
 FortreeCity_Mart_Text_RareCandyMakesMonGrow:
-	.string "A RARE CANDY makes a POKéMON grow\n"
-	.string "immediately by one level.$"
+	.string "Un CARAMELO RARO hace que un POKéMON\n"
+	.string "suba un nivel al instante.$"
 

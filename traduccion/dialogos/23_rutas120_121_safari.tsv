@@ -1,0 +1,152 @@
+# RUTA 120 (MÁXIMO y el MEGA-ARO), RUTA 121 y ZONA SAFARI de Hoenn (sin la zona ampliada del postgame ni el SAFARI de Kanto)
+Route120_Text_StevenGreeting	MÁXIMO: ¿Mm? {PLAYER}{KUN}, hola.\nCuánto tiempo.\pÚltimamente estoy estudiando algo\nllamado MEGAEVOLUCIÓN.\pAlgunos POKéMON pueden ir más allá de\nsu última forma en combate, pero solo\lcon un ENTRENADOR que se lo merezca.\pMe gustaría ver si podrías ser tú.\p{PLAYER}{KUN}, ¿tus POKéMON están\nlistos para combatir?$
+Route120_Text_StevenIllWaitHere	MÁXIMO: ¿No?\pTe espero aquí mientras te preparas.$
+Route120_Text_StevenReadyForBattle	MÁXIMO: {PLAYER}{KUN}, ¿tus POKéMON\nestán listos para combatir?$
+Route120_Text_StevenShowMeYourPower	MÁXIMO: {PLAYER}{KUN}, ¡enséñame tu\nverdadero poder como ENTRENADOR!$
+Route120_Text_StevenDefeat	Ya veo…\nEres aún más fuerte de lo que creía.$
+Route120_Text_StevenGiveMegaRing	MÁXIMO: Tu forma de combatir es\nintrigante.\pSe nota que tus POKéMON han crecido\nmucho desde que nos vimos en AZULIZA.\pMe gustaría que te quedaras este\nMEGA-ARO.$
+Route120_Text_StevenMegaRingExplanation	MÁXIMO: Con el MEGA-ARO, un POKéMON\nque lleve su MEGAPIEDRA puede\lMEGAEVOLUCIONAR en combate.\pHay MEGAPIEDRAS escondidas por todo\nHOENN. Estate atento.$
+Route120_Text_StevenNowTheObstacle	MÁXIMO: Bueno, aquí hay algo que no\npuedes ver, ¿verdad?\pEn vez de explicártelo, mejor\nte lo enseño.$
+Route120_Text_StevenUsedDevonScope	MÁXIMO ha usado el DETECTOR DEVON.\p¡Un POKéMON invisible se ha vuelto\ntotalmente visible!\p¡El POKéMON se ha asustado y ataca!$
+Route120_Text_StevenGiveDevonScope	MÁXIMO: Quédate también este\nDETECTOR DEVON.\pQuién sabe, puede que haya otros\nPOKéMON escondidos.$
+Route120_Text_StevenGoodbye	MÁXIMO: {PLAYER}{KUN}.\pMe gusta ver a POKéMON y ENTRENADORES\nque se esfuerzan juntos.\pCreo que lo estás haciendo genial.\pBueno, ya nos veremos por ahí.$
+Route120_Text_RouteSignFortree	RUTA 120\n{LEFT_ARROW} CIUDAD ARBORADA$
+Route120_Text_RouteSign121	{RIGHT_ARROW} RUTA 121\n{LEFT_ARROW} RUTA 120$
+Route120_Text_ColinIntro	¿Tienes algún movimiento que pueda\ngolpear a un POKéMON en el aire?$
+Route120_Text_ColinDefeat	¡Has volado por encima de mí!$
+Route120_Text_ColinPostBattle	VUELO es muy práctico,\n¿no crees?\pMientras el POKéMON vuela, casi\nningún movimiento le alcanza.$
+Route120_Text_RobertIntro	¡Mi POKéMON es fuerte!\n¿Y el tuyo?$
+Route120_Text_RobertDefeat	Tus POKéMON eran más fuertes…$
+Route120_Text_RobertPostBattle	Un POKéMON que crece poco a poco es\nun POKéMON con el que puedes contar.$
+Route120_Text_RobertRegister	Se ve que vas a mejorar mucho.\n¡Quiero registrarte en mi POKéNAV!$
+Route120_Text_RobertRematchIntro	Un POKéMON que crece poco a poco es\nun POKéMON con el que puedes contar.$
+Route120_Text_RobertRematchDefeat	Tus POKéMON son fortísimos.$
+Route120_Text_RobertPostRematch	Mis POKéMON se hacen más fuertes.\nYo también tengo que hacerme fuerte.$
+Route120_Text_LorenzoIntro	Voy a ver si tus POKéMON están en\nforma para ir por el monte.$
+Route120_Text_LorenzoDefeat	¡Con POKéMON tan fuertes, nadie\ntendrá que rescatarte!$
+Route120_Text_LorenzoPostBattle	Ir adonde te lleve el corazón con\ntus POKéMON…\lEsa es la alegría de entrenar.$
+Route120_Text_JennaIntro	¿Qué tal estás de forma física?\nSi no estás en forma, lo pasarás\lmal en situaciones críticas.$
+Route120_Text_JennaDefeat	Estoy en plena forma, pero…$
+Route120_Text_JennaPostBattle	Entrenar el cuerpo es parte de mi\nrutina. Siempre corro con mis POKéMON.$
+Route120_Text_JeffreyIntro	… … … … … …\n… … … … … …\l¿Combatimos?$
+Route120_Text_JeffreyDefeat	He perdido…$
+Route120_Text_JeffreyPostBattle	… … … … … …\n… … … … … …\lMe esforzaré más…$
+Route120_Text_JeffreyRegister	… … … … … …\n… … … … … …\l¿Tienes POKéNAV…?$
+Route120_Text_JeffreyRematchIntro	… … … … … …\n… … … … … …\l¿Combatimos otra vez?$
+Route120_Text_JeffreyRematchDefeat	… … … … … …\nHe vuelto a perder…$
+Route120_Text_JeffreyPostRematch	… … … … … …\n… … … … … …\lMe esforzaré más…\lPor mis queridos POKéMON BICHO…$
+Route120_Text_JenniferIntro	Los POKéMON tienen muchas habilidades\nespeciales. Si quieres ser de primera,\lapréndetelas.$
+Route120_Text_JenniferDefeat	Se nota que piensas.$
+Route120_Text_JenniferPostBattle	Las habilidades de los POKéMON cambian\nla forma de combatir.$
+Route120_Text_ChipIntro	¿Quién eres?\p¿Buscas quizá las ruinas antiguas\nque, según la leyenda, quizá\lpodrían existir?$
+Route120_Text_ChipDefeat	Qué revés tan vergonzoso…$
+Route120_Text_ChipPostBattle	Esa roca enorme… Me gustaría creer\nque contiene ruinas antiguas. Pero\lno veo ninguna entrada.$
+Route120_Text_ClarissaIntro	¿Que por qué llevo esta sombrilla?\pTe lo diré si me ganas.$
+Route120_Text_ClarissaDefeat	Una sombrilla no para los ataques\nde los POKéMON…$
+Route120_Text_ClarissaPostBattle	No creo que el sol fuerte sea bueno\npara mis POKéMON.\lPor eso los protejo con la sombrilla.$
+Route120_Text_AngelicaIntro	Yo, mis POKéMON y mi sombrilla…\pSi falta cualquiera, el cuadro de\nbelleza se echa a perder.$
+Route120_Text_AngelicaDefeat	Has arruinado mi belleza por\ncompleto…$
+Route120_Text_AngelicaPostBattle	A ti una sombrilla no te pegaría nada.\pPero si solo te estorbaría.$
+Route120_Text_KeigoIntro	Adoptaré los movimientos de los\nPOKéMON y crearé nuevas técnicas.$
+Route120_Text_KeigoDefeat	Crear técnicas ninja nuevas no es\nmás que un sueño lejano…$
+Route120_Text_KeigoPostBattle	Quizá debería ser aprendiz de un\nmaestro ninja.$
+Route120_Text_RileyIntro	Los ninjas nos escondemos con capas\nde camuflaje.\l¡Seguro que no sabías dónde estaba!$
+Route120_Text_RileyDefeat	¡He perdido!\n¡Debería camuflar mi vergüenza!$
+Route120_Text_RileyPostBattle	Nuestras capas de camuflaje están\nhechas a mano.$
+Route120_Text_CallieIntro	¡Si no prestas atención, te puedes\nhacer daño!$
+Route120_Text_CallieDefeat	¡Ay!\nLa que se ha hecho daño he sido yo.$
+Route120_Text_CalliePostBattle	Me pregunto… ¿Debería hacer\nevolucionar a mis POKéMON?\lAunque son monos tal como están.$
+Route120_Text_LeonelIntro	Los POKéMON de tu equipo…\n¿Son de tipos distintos?$
+Route120_Text_LeonelDefeat	¡He visto tu estrategia en acción!$
+Route120_Text_LeonelPostBattle	Me parece genial que seas tan fuerte\ncombatiendo con tus POKéMON favoritos.$
+Route121_Text_OkayMoveOutToMtPyre	¡Vale!\n¡Hay que ir al MONTE PÍRICO!$
+Route121_Text_AheadLoomsMtPyre	Ahí delante se alza el MONTE PÍRICO…\pEs un monumento natural a los\nespíritus de los POKéMON fallecidos…$
+Route121_Text_MtPyrePierSign	MUELLE DEL MONTE PÍRICO\p… El cartel está viejo y gastado.\nApenas se pueden leer las letras…$
+Route121_Text_SafariZoneSign	“¡Lleno de POKéMON raros!”\nZONA SAFARI$
+Route121_Text_VanessaIntro	¿Jugarás con mis POKéMON tan\nencantadores y bonitos?$
+Route121_Text_VanessaDefeat	¡No me refería a esto!$
+Route121_Text_VanessaPostBattle	Voy a un CONCURSO en CALAGUA.\pMis POKéMON arrasarán en la\nCATEGORÍA MASTER sin problema.$
+Route121_Text_WalterIntro	Con mis POKéMON he viajado a los\ncuatro rincones del mundo.\pPodría decirse que confío un poco\nen mi destreza.$
+Route121_Text_WalterDefeat	Ah, bien jugado.$
+Route121_Text_WalterPostBattle	Me gustaría volver a dar la vuelta\nal mundo con mis POKéMON.$
+Route121_Text_WalterRegister	Tu destreza con los POKéMON es\nnotable. Te registraré como recuerdo.$
+Route121_Text_WalterRematchIntro	Con mis POKéMON he viajado a los\ncuatro rincones del mundo.\pPodría decirse que confío un poco\nen mi destreza.$
+Route121_Text_WalterRematchDefeat	Ah, bien jugado.$
+Route121_Text_WalterPostRematch	Tus POKéMON y tú…\pJuntos, os considerarían fuertes\nincluso en el extranjero.$
+Route121_Text_TammyIntro	Hay poderes en el mundo que no\npodemos comprender…$
+Route121_Text_TammyDefeat	He perdido…$
+Route121_Text_TammyPostBattle	El MONTE PÍRICO…\nAllí actúa un poder\lmisterioso…$
+Route121_Text_KateIntro	KATE: ¡Juntas no tenemos miedo!\n¡Te demostraremos lo duras que somos!$
+Route121_Text_KateDefeat	KATE: La he fastidiado delante de mi\ncompañera de un curso menos…$
+Route121_Text_KatePostBattle	KATE: Cuando alguien confía en mí,\nme entran ganas de quedar bien\ldelante de ella…$
+Route121_Text_KateNotEnoughMons	KATE: Si solo llevas un POKéMON,\nno podemos combatir contigo.\pSería abusar.$
+Route121_Text_JoyIntro	JOY: ¡Juntas no tenemos miedo!\n¡Te demostraremos lo duras que somos!$
+Route121_Text_JoyDefeat	JOY: ¡Perdóname, KATE!$
+Route121_Text_JoyPostBattle	JOY: Jeje, tendré que volver a\nentrenar con KATE, mi compañera mayor.$
+Route121_Text_JoyNotEnoughMons	JOY: ¡Necesitas al menos dos POKéMON\nsi vas a desafiarnos!$
+Route121_Text_JessicaIntro	¡Alto! ¡Mira bien a mis queridos\nPOKéMON!$
+Route121_Text_JessicaDefeat	¡Oh, cómo te atreves!\n¡No te lo tomes tan en serio!$
+Route121_Text_JessicaPostBattle	A lo mejor voy a atrapar más POKéMON\nal SAFARI.$
+Route121_Text_JessicaRegister	¡Esta vez me he contenido!\n¡La próxima no será así!$
+Route121_Text_JessicaRematchIntro	¡Mis queridos POKéMON han crecido!\n¡Míralos bien!$
+Route121_Text_JessicaRematchDefeat	¡Oh, cómo te atreves!\n¡Sigues sin contenerte!$
+Route121_Text_JessicaPostRematch	A lo mejor voy a atrapar más POKéMON\nal SAFARI.$
+Route121_Text_CristinIntro	Tengo una rutina: ganar a cinco\nENTRENADORES al día.\l¿Sabes qué? ¡Eres el número cinco!$
+Route121_Text_CristinDefeat	¡No!\n¡Qué horror!$
+Route121_Text_CristinPostBattle	No esperaba perder tan fácilmente…\n¡La próxima vez ganaré!$
+Route121_Text_CristinRegister	¡Menuda humillación!\nNo te olvidaré…\l¡Dame tu POKéNAV!$
+Route121_Text_CristinRematchIntro	Tengo una rutina nueva: ganar a diez\nENTRENADORES al día.\l¿Sabes qué? ¡Eres el número diez!$
+Route121_Text_CristinRematchDefeat	¡Espera! ¡Eso es muy feo!\n¡Exijo la revancha!$
+Route121_Text_CristinPostRematch	Un rival al que no puedo ganar…\nSnif…\lNo me puedo creer que me pase esto…$
+Route121_Text_CaleIntro	¿No ves que voy cargado con todo\nesto?\p¿Y aun así insistes en combatir?$
+Route121_Text_CaleDefeat	¡Pues claro que he perdido!\n¡Llevo las dos manos ocupadas!$
+Route121_Text_CalePostBattle	He comprado demasiadas cosas en el\nCENTRO COMERCIAL de CALAGUA.\pEstá siguiendo el camino.\nOjalá tuviera una MOCHILA como la tuya.$
+Route121_Text_MylesIntro	¡Nada me gusta más que ver los\nPOKéMON de los demás!$
+Route121_Text_MylesDefeat	¡Superguay!$
+Route121_Text_MylesPostBattle	¡Tus POKéMON son geniales!\n¿Cómo los crías?$
+Route121_Text_PatIntro	¡Quiero que todo el mundo vea los\nPOKéMON que he criado!$
+Route121_Text_PatDefeat	¡Hala!\n¡Espectacular!$
+Route121_Text_PatPostBattle	Crío a todos mis POKéMON con el mismo\namor; no tengo favoritos.$
+Route121_Text_MarcelIntro	¡Mis POKéMON nunca han perdido!\nCuando ganen otra vez, los apuntaré\la CONCURSOS.$
+Route121_Text_MarcelDefeat	Oh, ¿y ahora qué ha pasado?$
+Route121_Text_MarcelPostBattle	Puede que tenga que entrenar más a\nmi pandilla antes de ir a un CONCURSO.$
+Route121_SafariZoneEntrance_Text_WelcomeToSafariZone	¡Te damos la bienvenida a la ZONA\nSAFARI!\pAquí podrás ver muchos tipos de\nPOKéMON que casi no se ven en HOENN.\pY los verás en estado salvaje, en\nsu hábitat natural.\pAdemás, ¡hemos abierto las puertas\na los ENTRENADORES POKéMON!\p¡Puedes atrapar POKéMON y quedártelos!\p¡Entra y disfruta de la ZONA SAFARI!$
+Route121_SafariZoneEntrance_Text_WelcomeFirstTime	¡Te damos la bienvenida a la ZONA\nSAFARI! ¿Es tu primera vez?$
+Route121_SafariZoneEntrance_Text_ComeInAndEnjoy	¡Entra y disfruta de la ZONA SAFARI!$
+Route121_SafariZoneEntrance_Text_FirstTimeInfo	Al entrar en la ZONA SAFARI, empiezas\ncon 30 SAFARI BALLS para atrapar\lPOKéMON.\pEl juego del SAFARI se acaba cuando\nte quedas sin SAFARI BALLS o cuando\lhas dado 500 pasos.\p¡Entra y disfruta de la ZONA SAFARI!$
+Route121_SafariZoneEntrance_Text_WouldYouLikeToPlay	¡Te damos la bienvenida a la ZONA\nSAFARI!\p¡Atrapa todo lo que puedas por 500 ¥!\n¿Quieres jugar al SAFARI?$
+Route121_SafariZoneEntrance_Text_PlayAnotherTime	Vale.\n¡Vuelve a jugar otro día!$
+Route121_SafariZoneEntrance_Text_NotEnoughMoney	No tienes bastante dinero.\nLo siento.$
+Route121_SafariZoneEntrance_Text_ThatWillBe500Please	Son 500 ¥, por favor.$
+Route121_SafariZoneEntrance_Text_HereAreYourSafariBalls	Aquí tienes tus SAFARI BALLS.$
+Route121_SafariZoneEntrance_Text_Received30SafariBalls	{PLAYER} ha recibido 30 SAFARI BALLS.$
+Route121_SafariZoneEntrance_Text_PleaseEnjoyYourself	Te avisaremos cuando se acabe\nel juego.\pHasta entonces, ¡disfruta!\n¡A por tu excursión salvaje!$
+Route121_SafariZoneEntrance_Text_PCIsFull	¡Perdona!\nLa CAJA de tu PC está llena.$
+Route121_SafariZoneEntrance_Text_YouNeedPokeblockCase	¡Perdona!\nParece que no llevas TUBO {POKEBLOCK}.\pEl SAFARI te irá mucho mejor si\nusas {POKEBLOCK}S.\pVuelve con un TUBO {POKEBLOCK}, por favor.\pTe darán un TUBO {POKEBLOCK} en la\nSALA DE CONCURSOS de CALAGUA.$
+Route121_SafariZoneEntrance_Text_TrainerTip	¡CONSEJO DE LA ZONA SAFARI!\pLánzales {POKEBLOCK}S a los POKéMON\nsalvajes para que no huyan tanto.$
+SafariZone_Text_WouldYouLikeToExit	¿Quieres salir de la ZONA SAFARI\nahora mismo?$
+SafariZone_Text_TimesUp	¡Din-don! ¡Se acabó el tiempo!\nTu juego del SAFARI ha terminado.$
+SafariZone_Text_OutOfBalls	Te has quedado sin SAFARI BALLS.\nTu juego del SAFARI ha terminado.$
+SafariZone_Text_PlacePokeblockOnFeeder	¿Quieres poner un {POKEBLOCK}\nen el COMEDERO?$
+SafariZone_Text_PokeblockStillHere	El {STR_VAR_1} que dejaste\nantes sigue aquí.$
+SafariZone_Text_PokeblockWasPlaced	Has puesto el {STR_VAR_1}\nen el COMEDERO de {POKEBLOCK}S.$
+SafariZone_South_Text_StillHaveTimeExit	Aún te queda tiempo. ¿Quieres salir\nde la ZONA SAFARI ya?$
+SafariZone_South_Text_EnjoyTheRestOfYourAdventure	¡Disfruta del resto de tu aventura\nsalvaje!$
+SafariZone_South_Text_ExitEarlyThankYouForPlaying	Vale.\pMe quedo con las SAFARI BALLS que\nte sobran.\pGracias por jugar.\nEsperamos volver a verte.$
+SafariZone_South_Text_GoodLuck	¡Buena suerte!\pSi necesitas algo, ¡no dudes en\ndecírmelo!$
+SafariZone_South_Text_Boy	¿Sabías que…?\pSi pones un {POKEBLOCK} en esa caja\ncuadrada, se acercan POKéMON.$
+SafariZone_South_Text_Man	Quiero seguir adentrándome, pero me\nhe olvidado la BICI.\pAlgo me dice que en las zonas de\nlas afueras viven POKéMON raros.$
+SafariZone_Southwest_Text_Woman	A veces, cuando le lanzo un {POKEBLOCK}\na un POKéMON, ni lo mira.\p¿Tendrán los POKéMON gustos con\nla comida?$
+SafariZone_Northwest_Text_Man	Uf… Uf…\nHe… llegado hasta aquí… pero…\pEstoy agotado… No me quedan fuerzas\npara atrapar POKéMON…$
+SafariZone_North_Text_Fisherman	Estoy buscando POKéMON de tipo AGUA\nque no se ven en HOENN.\p¿Sabes dónde está el lago?$
+SafariZone_North_Text_Man	¡Voy a atrapar un montón de POKéMON\nraros y cambiárselos a mis amigos!$
+SafariZone_South_Text_Youngster	Puse un {POKEBLOCK} en el COMEDERO.\nPero parece que ha desaparecido.\pSupongo que se lo habrán comido los\nPOKéMON sin que me diera cuenta.$
+SafariZone_Southwest_Text_RestHouseSign	“Descansa los pies”.\nCASA DE DESCANSO$
+SafariZone_RestHouse_Text_Youngster	No tengo {POKEBLOCK}S, pero he atrapado\nunos cuantos POKéMON.\pTendrás más posibilidades si te\nacercas a ellos antes de lanzar\luna SAFARI BALL.$
+SafariZone_RestHouse_Text_PsychicM	Si usas {POKEBLOCK}S, los POKéMON\nsalvajes no huirán tan rápido.\pNo sirve de mucho dárselos a POKéMON\nque no huyen con facilidad.$
+SafariZone_RestHouse_Text_FatMan	Si pones un {POKEBLOCK} en el COMEDERO,\nlos POKéMON se acercan.\pCreo que los POKéMON de la misma\nnaturaleza prefieren cierto {POKEBLOCK}.$
+SafariZone_South_Text_AreaOffLimits1	Esta zona aún está en obras.\n¡Lo siento, no se puede pasar!$
+SafariZone_South_Text_AreaOffLimits2	Esta zona aún está en obras.\n¡Lo siento, no se puede pasar!$
+SafariZone_Northeast_Text_Boy	Solo me quedan un par de SAFARI BALLS.\pNo sé qué atrapar.$
+SafariZone_Northeast_Text_Woman	He oído que aquí se pueden ver\nPIKACHU. ¿Dónde habrá alguno?$
+SafariZone_Northeast_Text_Girl	¡Jo!\n¡No consigo atrapar nada!\p¡Si no atrapo algo, habré tirado\nel dinero de la entrada!$

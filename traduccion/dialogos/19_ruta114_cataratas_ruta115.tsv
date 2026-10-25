@@ -1,0 +1,150 @@
+# RUTA 114 (casa de AREDIA y del MANÍACO DE LOS FÓSILES), CATARATAS METEORO y RUTA 115 (sin la cueva de MÁXIMO del postgame)
+Route114_Text_AllMyMonDoesIsRoarTakeThis	Mi POKéMON no hace más que RUGIR…\nNadie se atreve a acercarse a mí…\pSuspiro… Si no te importa,\nllévate esta MT…$
+Route114_Text_ExplainRoar	La MT05 contiene RUGIDO.\nCon RUGIDO, los POKéMON huyen.$
+Route114_Text_Poochyena	¡Guau! ¡Guau, guau!$
+Route114_Text_MeteorFallsSign	CATARATAS METEORO\nPOR AQUÍ A CIUDAD FÉRRICA$
+Route114_Text_FossilManiacsHouseSign	CASA DEL MANÍACO DE LOS FÓSILES\n“¡Se aceptan fósiles con gratitud!”$
+Route114_Text_LanettesHouse	CASA DE AREDIA$
+Route114_FossilManiacsHouse_Text_HaveThisToDigLikeMyBrother	Mi hermano mayor es el MANÍACO DE\nLOS FÓSILES… Es majo y le encantan…\pTambién le encanta cavar agujeros…\nEste lo ha cavado él solo…\pToma esto, así podrás EXCAVAR\nagujeros como mi hermano…$
+Route114_FossilManiacsHouse_Text_DigReturnsYouToEntrance	Si un POKéMON usa EXCAVAR dentro de\nuna cueva, vuelves a la entrada…$
+Route114_FossilManiacsHouse_Text_RocksFillDisplayCase	La vitrina está llena de rocas con\nformas curiosas…$
+Route114_FossilManiacsHouse_Text_CrammedWithBooks	LA COMPOSICIÓN DE LOS ESTRATOS…\nCÓMO LA LLUVIA DA FORMA AL TERRENO…\lPIEDRAS, TIERRA Y ROCA…\pEstá abarrotada de libros.$
+Route114_FossilManiacsTunnel_Text_LookInDesertForFossils	Soy el MANÍACO DE LOS FÓSILES…\nSoy majo y me encantan los FÓSILES…\p¿Quieres un FÓSIL?\pPero los FÓSILES de por aquí son\ntodos míos… Ninguno para ti…\pSi no puedes vivir sin un FÓSIL,\nbusca en un desierto con rocas y\larena que puedan esconder FÓSILES…$
+Route114_FossilManiacsTunnel_Text_DevonCorpRevivingFossils	Has encontrado un FÓSIL, ¿verdad?\nQué bonito… Qué maravilla…\p¿Qué vas a hacer con ese FÓSIL?\pPor lo que he oído, DEVON investiga\ncómo revivir POKéMON a partir de\lFÓSILES…\pYo quiero a mis FÓSILES, nunca les\nharía algo así…$
+Route114_FossilManiacsTunnel_Text_FossilsAreWonderful	Los FÓSILES son tan… Maravillosos…\nQué ilusión…$
+Route114_FossilManiacsTunnel_Text_NotSafeThatWay	Oh…\nPor ahí no es seguro…\pEstaba cavando, ¿sabes?…\nY se vino abajo toda la pared…\pCreo que ahora hay una caverna\nenorme debajo…\pPero la he dejado, porque no creo\nque haya FÓSILES…$
+Route114_LanettesHouse_Text_EverythingClutteredKeepThis	AREDIA: ¡Oh! ¡{PLAYER}{KUN}!\pPerdona que esté todo tan revuelto…\nCuando me meto en una investigación,\lacaba todo así…\pQué vergüenza… Guárdame el secreto\na cambio de esto, por favor.$
+Route114_LanettesHouse_Text_OrganizeYourBoxes	¿Te doy un consejo sobre mi Sistema\nde Almacenamiento POKéMON?\pOrganiza tus CAJAS para saber qué\nPOKéMON hay en cada una.$
+Route114_LanettesHouse_Text_ResearchNotesPage1	Son las notas de investigación de\nAREDIA. Hablan de las CAJAS.\pDiseñar CAJAS de 30 POKéMON cada una.\pCada ENTRENADOR debería poder guardar\n420 POKéMON en el PC.\p¿Seguir leyendo?$
+Route114_LanettesHouse_Text_ResearchNotesPage2	Añadir un sistema de marcas para\nordenar mejor a los POKéMON.\pEl nombre y el fondo de cada CAJA\nse podrán cambiar para que estén\la gusto los POKéMON guardados.\p¿Seguir leyendo?$
+Route114_LanettesHouse_Text_ResearchNotesPage3	Al guardar un POKéMON, debe ir a la\núltima CAJA que se haya mirado.\pSi esa CAJA está llena, el POKéMON\nse guarda en la siguiente.\pEs decir, al mirar una CAJA, queda\nseleccionada automáticamente como\lla CAJA donde se envían los POKéMON.$
+Route114_LanettesHouse_Text_ClosedTheNotebook	{PLAYER} ha cerrado el cuaderno.$
+Route114_LanettesHouse_Text_EmailFromBill	Hay un correo de alguien en el PC.\p“… … … … … … …\p”Tu Sistema de Almacenamiento es\nmás práctico que el mío.\p”Tiene muchas funciones fáciles de\nusar que lo hacen divertido y útil.\p”Me enorgullece haber participado\nen su desarrollo.\p”Espero que sigas investigando en\nSistemas de Almacenamiento.\p”De BILL\n… … … … … … … …”$
+Route114_Text_LennyIntro	¡Yodelaijiuuu!\p… …\p¡Tienes que gritar “yodelaijiuuu”,\nque aquí no hay eco!$
+Route114_Text_LennyDefeat	¡Yodelaijiuuu!$
+Route114_Text_LennyPostBattle	De pequeño creía que había alguien\nque me imitaba y me contestaba:\l“Yodelaijiuuu”.$
+Route114_Text_LucasIntro	¡Si no vas preparado, no deberías\nsubir a la montaña!$
+Route114_Text_LucasDefeat	La montaña no perdona…$
+Route114_Text_LucasPostBattle	En invierno, las montañas son mortales\npor las ventiscas y los aludes.$
+Route114_Text_ShaneIntro	¡Ir de acampada mola! ¡Puedes pescar,\ntostar nubes y contar cuentos!\p¡Pero lo mejor de todo son los\ncombates POKéMON!$
+Route114_Text_ShaneDefeat	¡Demasiado fuerte!$
+Route114_Text_ShanePostBattle	Me encanta poder ir de acampada\ncon mis POKéMON.$
+Route114_Text_NancyIntro	Tengo que hacer ejercicio después de\ncomer. ¡Combatamos!$
+Route114_Text_NancyDefeat	¡Oh, no!$
+Route114_Text_NancyPostBattle	Acabo de comer muy bien.\nMe está entrando sueño…$
+Route114_Text_SteveIntro	Ufufufufufu…\n¿Quieres combatir contra mis POKéMON?$
+Route114_Text_SteveDefeat	M-mis POKéMON…$
+Route114_Text_StevePostBattle	Un cuerpo enorme, lleno de bultos y\nduro, cuernos gigantes y colmillos…\pUfufufufu…\nOjalá tuviera un POKéMON así…$
+Route114_Text_SteveRegister	¡No olvides lo que me has hecho!\n¡Me aseguraré de que no lo olvides!$
+Route114_Text_SteveRematchIntro	Ufufufufufu…\nVenga, combate con mis POKéMON…$
+Route114_Text_SteveRematchDefeat	Qué suerte poder ver a tus POKéMON…$
+Route114_Text_StevePostRematch	Ufufufufufu…\pCuando veo combatir a los POKéMON,\nme entran escalofríos…$
+Route114_Text_BernieIntro	Si enciendes una hoguera, ten agua\na mano.$
+Route114_Text_BernieDefeat	¡Gracias por apagarme el fuego!$
+Route114_Text_BerniePostBattle	Hay que tener muchísimo cuidado con\nel fuego en el bosque.\pNunca subestimes el poder del\nfuego.$
+Route114_Text_BernieRegister	Has encendido mi espíritu.\n¡Registrémonos!$
+Route114_Text_BernieRematchIntro	¿Has aprendido a tener agua a mano\npara las hogueras?$
+Route114_Text_BernieRematchDefeat	Supongo que me han apagado antes\nde que pudiera prender.$
+Route114_Text_BerniePostRematch	Hay que tener muchísimo cuidado con\nel fuego en el bosque.\pNunca subestimes el poder del\nfuego.$
+Route114_Text_ClaudeIntro	Si estuviéramos pescando, no tendrías\nnada que hacer contra mí.\l¡Así que saca a tus POKéMON!$
+Route114_Text_ClaudeDefeat	Si estuviéramos pescando, habría\nganado yo…$
+Route114_Text_ClaudePostBattle	Creo que probaré suerte con algo\ngordo en las CATARATAS METEORO.\pAhí tiene que haber algo.\nLo sé.$
+Route114_Text_NolanIntro	Me gusta pescar. ¡Pero también\ncombatir!\pSi alguien me desafía, ahí estoy,\naunque esté pescando.$
+Route114_Text_NolanDefeat	Me gusta combatir, pero eso no quiere\ndecir que se me dé bien…$
+Route114_Text_NolanPostBattle	¡Esta vez lo conseguiré!\pSiempre pienso eso, por eso no puedo\ndejar ni la pesca ni los POKéMON.$
+Route114_Text_TyraIntro	TYRA: Bueno, vale.\nMe apetece.\lTe enseñaré un poco sobre POKéMON.$
+Route114_Text_TyraDefeat	TYRA: ¡Qué forma de combatir\nmás increíble!$
+Route114_Text_TyraPostBattle	TYRA: Le estaba enseñando cosas de\nPOKéMON a IVY, que va un curso por\ldetrás.$
+Route114_Text_TyraNotEnoughMons	TYRA: Jijiji…\nSi quieres combatir con nosotras,\l¡con un POKéMON no basta!$
+Route114_Text_IvyIntro	IVY: ¿Quién te ha enseñado lo que\nsabes de POKéMON?$
+Route114_Text_IvyDefeat	IVY: ¡Qué forma de combatir\nmás increíble!$
+Route114_Text_IvyPostBattle	IVY: ¡Empecé a entrenar POKéMON\nporque me enseñó TYRA, mi mentora!$
+Route114_Text_IvyNotEnoughMons	IVY: ¿Solo tienes un POKéMON?\nSe debe de sentir muy solo.$
+Route114_Text_KaiIntro	¡He pescado uno enorme!\n¡Pero enorme, te lo digo yo!$
+Route114_Text_KaiDefeat	¿Y eso?\n¿El mío era más pequeño?$
+Route114_Text_KaiPostBattle	¡Vale!\n¡Pues pescaré uno más grande!$
+Route114_Text_CharlotteIntro	¡Yo!\n¡No soy solo una cara bonita!$
+Route114_Text_CharlotteDefeat	¡Eso no ha sido nada mono!$
+Route114_Text_CharlottePostBattle	No quiero un POKéMON que solo\nsea mono.\p¡Me encantan los monos que tienen\nalguna rareza!$
+Route114_Text_AngelinaIntro	¿Has hecho evolucionar mucho a\ntus POKéMON?$
+Route114_Text_AngelinaDefeat	Ah, ya veo.\nMe viene bien saberlo.$
+Route114_Text_AngelinaPostBattle	¡Algunos POKéMON cambian tanto al\nevolucionar que asustan!$
+MeteorFalls_1F_1R_Text_WithThisMeteorite	¡Jejeje!\p¡Con este METEORITO, eso del MONTE\nCENIZO…!$
+MeteorFalls_1F_1R_Text_DontExpectMercyFromMagma	¿Eh?\pNo sé quién eres, pero si te metes\nen el camino del EQUIPO MAGMA,\l¡no esperes piedad!$
+MeteorFalls_1F_1R_Text_HoldItRightThereMagma	¡Alto ahí, EQUIPO MAGMA!\p¡Os equivocáis si creéis que podéis\nhacer lo que queráis con el mundo!$
+MeteorFalls_1F_1R_Text_BeSeeingYouTeamAqua	¡Jejeje!\n¡Hasta el EQUIPO AQUA se apunta!\pPero es un rollo tener que\nencargarse de todos vosotros…\pBah, ¡da igual!\p¡Ya tenemos el METEORITO, así que\nnos vamos al MONTE CENIZO!\p¡Jejeje! ¡Hasta luego, cabezas de\nchorlito del EQUIPO AQUA!$
+MeteorFalls_1F_1R_Text_ArchieSeenYouBefore	AQUILES: ¿No te he visto antes?\n¿En el MUSEO de PORTUAL?\pAh, así que te llamas {PLAYER}.\pEn aquel momento pensé que eras\nuno de los secuaces del EQUIPO MAGMA.\pHmpf…\nQué criatura más rara.\pEl EQUIPO MAGMA es un grupo de\nfanáticos muy peligroso.\pLo destruyen todo con la excusa de\nexpandir la tierra firme.\p¡Son los rivales de nosotros, el\nEQUIPO AQUA, que ama el mar!$
+MeteorFalls_1F_1R_Text_BossWeShouldChaseMagma	JEFE, deberíamos perseguir al\nEQUIPO MAGMA…$
+MeteorFalls_1F_1R_Text_ArchieYesNoTellingWhatMagmaWillDo	AQUILES: ¡Sí, sí, debemos hacerlo!\nHay que darse prisa.\p¡A saber qué hará el EQUIPO MAGMA\nen el MONTE CENIZO!$
+MeteorFalls_1F_1R_Text_ArchieFarewell	AQUILES: {PLAYER}, tú también deberías\nvigilar al EQUIPO MAGMA.\p¡Adiós!$
+MeteorFalls_1F_1R_Text_MeetProfCozmo	Yo… Soy COSMO…\nSoy PROFESOR…\pEl EQUIPO MAGMA me pidió que les\nguiara a las CATARATAS METEORO…\pPero me engañaron.\nHasta me quitaron mi METEORITO…\pY luego apareció otro grupo\nparecido, el EQUIPO AQUA.\pDespués de eso…\nNo entiendo nada.\pPero ese EQUIPO MAGMA…\p¿Qué van a hacer con el METEORITO\nen el MONTE CENIZO?$
+MeteorFalls_1F_1R_Text_WhatsTeamMagmaDoingAtMtChimney	PROF. COSMO: Pero ese EQUIPO MAGMA…\p¿Qué van a hacer con el METEORITO\nen el MONTE CENIZO?$
+MeteorFalls_1F_2R_Text_NicolasIntro	Aquí entrenamos los que usamos\nPOKéMON DRAGÓN.\pHasta el CAMPEÓN viene por aquí.\n¿Ves ahora lo especial que es?$
+MeteorFalls_1F_2R_Text_NicolasDefeat	¡Urgh!\n¡No esperaba que fueras tan fuerte!$
+MeteorFalls_1F_2R_Text_NicolasPostBattle	El camino que queda es largo y duro.\p¿Cuándo seremos los mejores mis\nPOKéMON y yo?$
+MeteorFalls_1F_2R_Text_NicolasRegister	Quiero saber más de tu poder.\nDeja que te registre en mi POKéNAV.$
+MeteorFalls_1F_2R_Text_NicolasRematchIntro	Desde que nos vimos, hemos entrenado\nduro para ser los número uno.\p¡Ayúdanos a ver cuánto más fuertes\nsomos!$
+MeteorFalls_1F_2R_Text_NicolasRematchDefeat	¡Urgh!\n¡No esperaba que fueras tan fuerte!$
+MeteorFalls_1F_2R_Text_NicolasPostRematch	Se nota que sigues entrenando a\ntus POKéMON.\p¡Mientras tú sigas siendo fuerte,\nyo también podré serlo!$
+MeteorFalls_1F_2R_Text_JohnIntro	JOHN: Siempre hemos combatido en\npareja.\lConfiamos en nosotros.$
+MeteorFalls_1F_2R_Text_JohnDefeat	JOHN: Vaya, vaya.\nHemos perdido, querida.$
+MeteorFalls_1F_2R_Text_JohnPostBattle	JOHN: Llevamos cincuenta años\ncasados.\pAhora que lo pienso, todavía no le\nhe ganado nunca a mi mujer.$
+MeteorFalls_1F_2R_Text_JohnNotEnoughMons	JOHN: ¡Vaya, vaya, qué joven!\p¿Combatirás con nosotros? Si es así,\ntendrás que volver con más POKéMON.$
+MeteorFalls_1F_2R_Text_JohnRegister	JOHN: Si se presenta la ocasión,\n¿volverás a combatir con nosotros?$
+MeteorFalls_1F_2R_Text_JayIntro	JAY: Llevamos cincuenta años\ncasados.\pEl lazo que nos une como pareja\nno se puede romper.$
+MeteorFalls_1F_2R_Text_JayDefeat	JAY: Ay, ay.\nHemos perdido, querido.$
+MeteorFalls_1F_2R_Text_JayPostBattle	JAY: Cincuenta años de casados…\pSi alguna vez discutíamos, siempre\nlo arreglábamos con un combate…$
+MeteorFalls_1F_2R_Text_JayNotEnoughMons	JAY: ¡Vaya, vaya, qué joven!\pSi quieres combatir con nosotros,\ntendrás que volver con más POKéMON.$
+MeteorFalls_1F_2R_Text_JohnRematchIntro	JOHN: Siempre hemos combatido en\npareja.\lConfiamos en nosotros.$
+MeteorFalls_1F_2R_Text_JohnRematchDefeat	JOHN: Vaya, vaya.\nHemos perdido, querida.$
+MeteorFalls_1F_2R_Text_JohnPostRematch	JOHN: Cincuenta años casados…\pPensándolo bien, mi mujer y yo\ncombatíamos todos los días…$
+MeteorFalls_1F_2R_Text_JohnRematchNotEnoughMons	JOHN: ¡Vaya, vaya, qué joven!\p¿Combatirás con nosotros? Si es así,\ntendrás que volver con más POKéMON.$
+MeteorFalls_1F_2R_Text_JayRematchIntro	JAY: Llevamos cincuenta años\ncasados.\pNos hemos apoyado todo este tiempo.\nAsí nos hemos hecho fuertes.$
+MeteorFalls_1F_2R_Text_JayRematchDefeat	JAY: Ay, ay.\nHemos perdido, querido.$
+MeteorFalls_1F_2R_Text_JayPostRematch	JAY: Cincuenta años de casados…\nHan pasado muchas cosas.\pEspero que sigamos teniendo\nrecuerdos felices juntos.$
+MeteorFalls_1F_2R_Text_JayRematchNotEnoughMons	JAY: ¡Vaya, vaya, qué joven!\pSi quieres combatir con nosotros,\ntendrás que volver con más POKéMON.$
+Route115_Text_NeverKnowWhenCavePokemonWillAppear	Explorar una cueva no es como ir\npor un camino.\pNunca sabes cuándo saldrá un POKéMON\nsalvaje. Es pura emoción.$
+Route115_Text_RouteSignRustboro	RUTA 115\n{DOWN_ARROW} CIUDAD FÉRRICA$
+Route115_Text_MeteorFallsSign	CATARATAS METEORO\nPOR AQUÍ A PUEBLO PARDAL$
+Route115_Text_TimothyIntro	Mmm…\nPareces bastante capaz…\l¡Déjame hacerte compañía!$
+Route115_Text_TimothyDefeat	¡Eres mucho más fuerte de lo que\nme imaginaba!$
+Route115_Text_TimothyPostBattle	Los genios no nacen.\n¡Todo depende del esfuerzo!\lEso es lo que creo…$
+Route115_Text_TimothyRegister	Mmm… Hacía mucho que no perdía\nde esta manera.\pSi me lo permites, quisiera otra\nocasión para combatir.$
+Route115_Text_TimothyRematchIntro	Mmm… Como siempre, tu agilidad habla\npor sí sola.\l¡Ven, hazme compañía!$
+Route115_Text_TimothyRematchDefeat	¡Tan fuerte como siempre!$
+Route115_Text_TimothyPostRematch	¡Solo hace falta esfuerzo!\p¡He perdido porque no me he\nesforzado bastante!$
+Route115_Text_KoichiIntro	¡Tú!\p¡Mi MACHOP!\p¡Exige un combate!$
+Route115_Text_KoichiDefeat	¡Ay, ay, ay!$
+Route115_Text_KoichiPostBattle	¡Mi equipo de MACHOP!\p¡Mientras busquen poder, me haré\nfuerte con ellos!$
+Route115_Text_NobIntro	¡Mi mejor técnica es romper ladrillos\ncon la frente!$
+Route115_Text_NobDefeat	¡Uuuaaah!\n¡Me he roto la cabeza!$
+Route115_Text_NobPostBattle	Estoy enseñando kárate a mis POKéMON.\pParece que van a ser mucho mejores\nque yo. ¡Qué ilusión!$
+Route115_Text_NobRegister	¡Me has impresionado! ¡Dame la\nrevancha cuando vuelva a entrenar!$
+Route115_Text_NobRematchIntro	Después de perder, entrenamos duro\npara mejorar.\l¡Venga, danos la revancha!$
+Route115_Text_NobRematchDefeat	¡Uuuaaah!\n¡Hemos vuelto a perder!$
+Route115_Text_NobPostRematch	¡Mis POKéMON se harán más fuertes!\n¡Entrenaré el doble!$
+Route115_Text_CyndyIntro	¡Esta playa es mi lugar secreto de\nentrenamiento! ¡No te metas!$
+Route115_Text_CyndyDefeat	¡No he entrenado bastante!$
+Route115_Text_CyndyPostBattle	La arena amortigua los golpes y evita\nlesiones.\lEs el sitio perfecto para entrenar.$
+Route115_Text_CyndyRegister	Vale, puedes venir cuando quieras.\nA cambio, quiero otro combate.$
+Route115_Text_CyndyRematchIntro	¡Venga, vamos a combatir!$
+Route115_Text_CyndyRematchDefeat	Yo sé combatir, pero mis POKéMON…$
+Route115_Text_CyndyPostRematch	Aunque pierda, me lo paso bien.\nSerá que me encantan los POKéMON.$
+Route115_Text_HectorIntro	¡Tengo un POKéMON raro!\n¿Quieres que te lo enseñe?$
+Route115_Text_HectorDefeat	Tú…\nQuieres mi POKéMON, ¿verdad?$
+Route115_Text_HectorPostBattle	Tengo este POKéMON raro.\nCon eso me basta.$
+Route115_Text_KyraIntro	¡Combatiré mientras corro!\n¡A ver si me sigues!$
+Route115_Text_KyraDefeat	Uf, uf…$
+Route115_Text_KyraPostBattle	¡Me he equivocado intentando combatir\nmientras corría!\pTendría que salir a correr para\ncalmarme…$
+Route115_Text_JaidenIntro	¡Toma!\n¡Ataque ninja ultra POKéMON!$
+Route115_Text_JaidenDefeat	¡Buaaah!\n¡Nuestra estrategia ha fallado!$
+Route115_Text_JaidenPostBattle	Pero mis POKéMON eran ultra,\n¿a que sí?$
+Route115_Text_HeleneIntro	¡Mis POKéMON tienen la fuerza de un\ncinturón negro!$
+Route115_Text_HeleneDefeat	¡Qué humillación!$
+Route115_Text_HelenePostBattle	No suelo encontrar a nadie mejor\nque yo…\p¡Ya lo pillo!\n¡Seguro que eres LÍDER de GIMNASIO!$
+Route115_Text_AlixIntro	¡Nuestras miradas se han cruzado!\n¡Ya no hay escapatoria!$
+Route115_Text_AlixDefeat	¡Ah!\n¡No está mal!$
+Route115_Text_AlixPostBattle	Bueno.\nCreo que me iré a casa con\lTELETRANSPORTE.$
+Route115_Text_MarleneIntro	Has interrumpido mi meditación…\nTe castigaré por ello.$
+Route115_Text_MarleneDefeat	¡Me has desconcentrado!$
+Route115_Text_MarlenePostBattle	Estaba meditando con mis POKéMON.\nPero este sitio no es muy tranquilo…$

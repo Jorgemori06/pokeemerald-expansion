@@ -1,0 +1,67 @@
+# Valoración de la POKéDEX del PROF. ABEDUL (la del PROF. OAK es de Kanto y no se traduce) y TUTORES de movimientos
+gBirchDexRatingText_AreYouCurious	PROF. ABEDUL: ¡Ah, {PLAYER}{KUN}!\p¿Quieres saber cómo va tu\nPOKéDEX?$
+gBirchDexRatingText_Cancel	¿Mm? Ah, aún no has atrapado bastantes\nPOKéMON como para que merezca la pena.$
+gBirchDexRatingText_SoYouveSeenAndCaught	Mmm, mmm…\pAsí que has visto {STR_VAR_1} POKéMON\ny has atrapado {STR_VAR_2}…$
+gBirchDexRatingText_LessThan10	Entra más en la hierba y busca\nPOKéMON con más atención.$
+gBirchDexRatingText_LessThan20	Parece que le vas cogiendo el truco.\nPero a partir de aquí es más difícil.$
+gBirchDexRatingText_LessThan30	Algunos POKéMON solo salen en\nciertas zonas.\lTienes que ser constante.$
+gBirchDexRatingText_LessThan40	Bueno, le faltan unos cuantos, pero\nesto ya va pareciendo una\lPOKéDEX.$
+gBirchDexRatingText_LessThan50	Esto va bastante bien.\nSigue esforzándote.$
+gBirchDexRatingText_LessThan60	¿Usas alguna CAÑA?\nEn el mar hay muchos POKéMON.$
+gBirchDexRatingText_LessThan70	Además de atrapar POKéMON, ¿por qué\nno los haces evolucionar?$
+gBirchDexRatingText_LessThan80	Va a ser una POKéDEX fantástica.\nEso es lo que me parece.$
+gBirchDexRatingText_LessThan90	Has reunido tantos…\n¡Tienes un talento admirable!$
+gBirchDexRatingText_LessThan100	¿Has ido a la ZONA SAFARI?\pHe oído que hay POKéMON que solo\nse pueden atrapar allí.$
+gBirchDexRatingText_LessThan110	¡Por fin has llegado a los\n100 tipos!\p¡Es una POKéDEX impresionante!$
+gBirchDexRatingText_LessThan120	Puede que haya POKéMON que se\nencuentren usando GOLPE ROCA.$
+gBirchDexRatingText_LessThan130	Deberías conseguir más POKéMON\nintercambiando con otros.$
+gBirchDexRatingText_LessThan140	He oído que hay POKéMON que\nevolucionan cuando quieren mucho\la su ENTRENADOR.$
+gBirchDexRatingText_LessThan150	No tenía ni idea de que hubiera tantas\nespecies de POKéMON en la región\lde HOENN.$
+gBirchDexRatingText_LessThan160	A veces, algunos POKéMON aparecen\nen grandes grupos, como en un brote.\p¡No dejes pasar esas ocasiones!$
+gBirchDexRatingText_LessThan170	Mirando tu POKéDEX uno se hace una\nidea muy buena de los POKéMON de\lla región de HOENN.$
+gBirchDexRatingText_LessThan180	¡Yo diría que ya podrías ser\nPROFESOR POKéMON, y de los buenos!$
+gBirchDexRatingText_LessThan190	Con una POKéDEX tan completa,\n¡eres toda una profesional!$
+gBirchDexRatingText_LessThan200	Te falta muy poco para completar\nesta POKéDEX.\l¡Lo noto en los huesos!$
+gBirchDexRatingText_DexCompleted	¡Enhorabuena!\n¡Tu POKéDEX está completa!$
+gBirchDexRatingText_OnANationwideBasis	Mmm, mmm…\nA nivel nacional…\pHas visto {STR_VAR_1} POKéMON\ny has atrapado {STR_VAR_2}…$
+MoveTutor_Text_ThisMoveCanOnlyBeLearnedOnce	Este movimiento solo se puede\naprender una vez. ¿Te parece bien?$
+MoveTutor_Text_SwaggerTeach	¡Je! ¡Mi POKéMON es lo más!\n¡Mola más que cualquier POKéMON!\pIba fanfarroneando así, muy chulo,\ncuando el PRESIDENTE me echó\lla bronca.\pSe me quitó la chulería de golpe.\pSi quieres, le enseño FANFARRONEAR\na uno de tus POKéMON.$
+MoveTutor_Text_SwaggerDeclined	¿Qué? ¿No? ¿No te animas un poco?$
+MoveTutor_Text_SwaggerWhichMon	¡Vale! ¿Qué POKéMON quiere aprender\na FANFARRONEAR?$
+MoveTutor_Text_SwaggerTaught	A partir de ahora alabaré a mi\nPOKéMON sin fanfarronear.$
+MoveTutor_Text_RolloutTeach	¿Sabías que desde aquí puedes ir\nmuy lejos en esa dirección sin\lcambiar de rumbo?\pHasta podría ir rodando.\p¿Crees que tus POKéMON también\nquerrán rodar?\pSi quieres, le enseño RODAR\na uno.$
+MoveTutor_Text_RolloutDeclined	No te cortes.\n¡Vamos a rodar!$
+MoveTutor_Text_RolloutWhichMon	¡Jeje, claro que sí! Estaría genial\nque el POKéMON se pareciera a mí.$
+MoveTutor_Text_RolloutTaught	Rodar por la hierba me hace feliz.\n¡Venga, a rodar!$
+MoveTutor_Text_FuryCutterTeach	Hay un movimiento que se hace más\nfuerte si lo usas seguido.\pEs de tipo BICHO y mola\nmuchísimo.\pSe llama CORTE FURIA.\n¿Quieres que se lo enseñe a un POKéMON?$
+MoveTutor_Text_FuryCutterDeclined	No estamos en la misma onda.$
+MoveTutor_Text_FuryCutterWhichMon	¡Bien!\nEnséñame a qué POKéMON se lo enseño.$
+MoveTutor_Text_FuryCutterTaught	¡Me emociona ver si el movimiento\nsigue acertando una vez tras otra!$
+MoveTutor_MimicTeach	¡Ah, joven!\pYo también soy joven, pero imito el\nestilo y la forma de hablar de los\lancianos de este pueblo.\p¿Qué me dices, joven?\n¿Aceptarías si me ofreciera a\lenseñarte el movimiento MIMÉTICO?$
+MoveTutor_MimicDeclined	¡Jo! ¡Quería enseñarle MIMÉTICO\na tu POKéMON!$
+MoveTutor_Text_MimicWhichMon	¡Jojo! ¡Así lo haré!\nEnséñame el POKéMON al que\lquieres que se lo enseñe.$
+MoveTutor_Text_MimicTaught	MIMÉTICO es un movimiento muy\nprofundo.\p¿Podrás usarlo tan bien\ncomo yo…?$
+MoveTutor_Text_MetronomeTeach	¡Quiero un montón de cosas!\nPero me he gastado la paga…\p¿No estaría bien un hechizo que\nhiciera aparecer dinero moviendo\lun dedo?\pSi quieres, le enseño a tu POKéMON\nel movimiento METRÓNOMO.\pNo aparecerá dinero, pero tu POKéMON\nmoverá un dedo. ¿Sí?$
+MoveTutor_Text_MetronomeDeclined	Vale. Aquí estaré si cambias\nde idea.$
+MoveTutor_Text_MetronomeWhichMon	¡Vale! ¡Se lo enseño!\n¿A qué POKéMON?$
+MoveTutor_Text_MetronomeTaught	Cuando un POKéMON mueve el dedo como\nun METRÓNOMO, pasan cosas de todo\ltipo.\p¿No estaría bien poder usarlo\nnosotros también?$
+MoveTutor_Text_SleepTalkTeach	¡Hmpf! Mi mujer usa PODER OCULTO\npara no dormirse.\pDebería echarse una siesta como yo\ny usar SONÁMBULO.\pYo puedo enseñarle a tu POKéMON\nSONÁMBULO. ¿Te interesa?$
+MoveTutor_Text_SleepTalkDeclined	Vale, vale. Tú también quieres seguir\ndespierto con PODER OCULTO…$
+MoveTutor_Text_SleepTalkWhichMon	¡Ah, una criatura que sabe apreciar!\n¿A qué POKéMON se lo enseño?$
+MoveTutor_Text_SleepTalkTaught	Nunca he acertado el truco de la\nmoneda de mi mujer.\pMe haría feliz acertarlo, aunque\nfuera en SONÁMBULO…$
+MoveTutor_Text_SubstituteTeach	Cuando veo el mundo desde aquí\narriba, en el tejado…\pPienso en lo bonito que sería que\nhubiera más de una como yo, para\lvivir todo tipo de vidas.\pClaro que no es posible.\nJijiji…\p¡Ya sé! ¿Te gustaría que un POKéMON\naprendiera SUSTITUTO?$
+MoveTutor_Text_SubstituteDeclined	¿Oh, no?\pCon él, un POKéMON puede hacer una\ncopia de sí mismo, ¿sabes?$
+MoveTutor_Text_SubstituteWhichMon	Jijiji…\n¿A qué POKéMON quieres que le\lenseñe SUSTITUTO?$
+MoveTutor_Text_SubstituteTaught	¡Las personas deberíamos disfrutar\nnuestra vida al máximo!\p¡Espero que tú también lo hagas!$
+MoveTutor_Text_DynamicPunchTeach	¡No puedo más!\p¡No hay nada que hacer!\p¡Soy ENTRENADOR de tipo LUCHA, así\nque no puedo ganar en el GIMNASIO\lde ALGARIA por mucho que lo intente!\p¡Argh! ¡Puñetazo! ¡Puñetazo!\n¡Puñetazo! ¡Puñetazo!\p¡Eh, no me mires así!\n¡Solo le pego al suelo!\p¿O quieres que le enseñe a tu\nPOKéMON PUÑO DINÁMICO?$
+MoveTutor_Text_DynamicPunchDeclined	¡Rayos! ¿Tú también te ríes de mí?\n¡Puñetazo! ¡Puñetazo! ¡Puñetazo!$
+MoveTutor_Text_DynamicPunchWhichMon	¿Qué? ¿Sí? ¡Qué buena persona eres!\n¿A qué POKéMON se lo enseño?$
+MoveTutor_Text_DynamicPunchTaught	¡Quiero que ganes en el GIMNASIO de\nALGARIA con ese PUÑO DINÁMICO!$
+MoveTutor_Text_DoubleEdgeTeach	Suspiro…\pEl LÍDER del GIMNASIO de ARRECÍPOLIS\nes adorable y admirable.\pPero eso también quiere decir que\ntengo muchas rivales.\pTiene un encanto de DOBLE FILO.\nNi siquiera me mira.\p¡Deja que le enseñe a tu POKéMON\nel movimiento DOBLE FILO, por favor!$
+MoveTutor_Text_DoubleEdgeDeclined	Oh…\nHasta tú me rechazas…$
+MoveTutor_Text_DoubleEdgeWhichMon	Vale, ¿a qué POKéMON le enseño\nDOBLE FILO?$
+MoveTutor_Text_DoubleEdgeTaught	¡No volveré a vivir por amor!\n¡Me haré fuerte!$
+MoveTutor_Text_ExplosionTeach	No pienso quedarme estancado en este\npueblucho para siempre.\pYa verás: me iré a la ciudad y seré\nun éxito enorme.\p¡En serio, voy a causar una EXPLOSIÓN\nde popularidad!\pSi me has oído, ¡le enseño encantado\nEXPLOSIÓN a tu POKéMON!$
+MoveTutor_Text_ExplosionDeclined	¡Aaah! ¿Me rechazas porque vivo\nen el campo?$
+MoveTutor_Text_ExplosionWhichMon	¡Vale! ¡Pues EXPLOSIÓN!\n¿Qué POKéMON quiere explotar?$
+MoveTutor_Text_ExplosionTaught	Llevo mucho tiempo enseñando\nEXPLOSIÓN a los POKéMON, pero aún\lno he provocado mi propia EXPLOSIÓN…\pQuizá sea porque, en el fondo,\nprefiero quedarme aquí…$

@@ -1,0 +1,106 @@
+# Textos comunes que salen siempre: objetos recibidos, movimientos de campo, PC, guardar, SURF, REPELENTE, tiendas, muebles, DAÑO SECRETO, ayudantes del PROF. ABEDUL, recordador de movimientos
+gText_ObtainedTheItem	¡Has obtenido {STR_VAR_2}!$
+gText_TheBagIsFull	La MOCHILA está llena…$
+gText_PutItemInPocket	{PLAYER} ha guardado {STR_VAR_2}\nen el BOLSILLO {STR_VAR_3}.$
+gText_PlayerFoundOneItem	¡{PLAYER} ha encontrado {STR_VAR_2}!$
+gText_TooBadBagIsFull	¡Qué pena!\nLa MOCHILA está llena…$
+gText_PlayerPutItemInBag	{PLAYER} ha guardado {STR_VAR_2}\nen la MOCHILA.$
+gText_ObtainedTheDecor	¡Has obtenido {STR_VAR_2}!$
+gText_NoRoomLeftForAnother	¡Qué pena! No queda sitio para\notro {STR_VAR_2}…$
+gText_TheDecorWasTransferredToThePC	{STR_VAR_2} se ha enviado\nal PC.$
+gText_ObtainedTheItems	¡Has obtenido {STR_VAR_1} {STR_VAR_2}!$
+gText_PlayerFoundItems	¡{PLAYER} ha encontrado\n{STR_VAR_1} {STR_VAR_2}!$
+gText_PutCoinsAwayInCoinCase	{PLAYER} ha guardado las FICHAS en\nel MONEDERO.$
+gText_FoundXCoins	¡{PLAYER} ha encontrado\n{STR_VAR_1} {STR_VAR_2}!$
+gText_FoundXItems	¡{PLAYER} ha encontrado\n{STR_VAR_1} {STR_VAR_2}!$
+gText_CoinCaseIsFull	¡Qué pena!\nEl MONEDERO está lleno…$
+gText_NothingToPutThemIn	¡Qué pena!\nNo tienes dónde guardarlas…$
+Text_WantToCut	¡Parece que este árbol se puede\nCORTAR!\p¿Quieres usar CORTE?$
+Text_MonUsedFieldMove	¡{STR_VAR_1} ha usado {STR_VAR_2}!$
+Text_CantCut	¡Parece que este árbol se puede\nCORTAR!$
+Text_WantToSmash	Parece que esta roca se puede romper.\n¿Quieres usar GOLPE ROCA?$
+Text_CantSmash	Es una roca dura, pero puede que\nun POKéMON consiga romperla.$
+Text_WantToStrength	Es una roca enorme, pero puede que\nun POKéMON consiga apartarla.\p¿Quieres usar FUERZA?$
+Text_MonUsedStrength	¡{STR_VAR_1} ha usado FUERZA!\p¡Gracias a la FUERZA de {STR_VAR_1},\nahora se pueden mover las rocas!$
+Text_CantStrength	Es una roca enorme, pero puede que\nun POKéMON consiga apartarla.$
+Text_StrengthActivated	Gracias a FUERZA, ahora se pueden\nmover las rocas.$
+Text_CantWaterfall	Una pared de agua cae con un\nestruendo tremendo.$
+Text_WantToWaterfall	Es una cascada enorme.\n¿Quieres usar CASCADA?$
+Text_MonUsedWaterfall	{STR_VAR_1} ha usado CASCADA.$
+Text_CantDive	Aquí el mar es profundo. Puede que\nun POKéMON consiga sumergirse.$
+Text_WantToDive	Aquí el mar es profundo.\n¿Quieres usar BUCEO?$
+Text_MonUsedDive	{STR_VAR_1} ha usado BUCEO.$
+Text_CantSurface	Entra luz desde arriba. Puede que un\nPOKéMON consiga salir a la superficie.$
+Text_WantToSurface	Entra luz desde arriba.\n¿Quieres usar BUCEO?$
+Text_FailSweetScent	Parece que aquí no hay nada…$
+Text_WantToRockClimb	El acantilado es muy empinado.\n¿Quieres usar TREPARROCAS?$
+Text_MonUsedRockClimb	¡{STR_VAR_1} ha usado TREPARROCAS!$
+Text_CantRockClimb	El acantilado es muy empinado.\nPuede que un POKéMON consiga trepar.$
+Text_BootUpPC	{PLAYER} ha encendido el PC.$
+gText_WhichPCShouldBeAccessed	¿A qué PC quieres acceder?$
+gText_AccessedSomeonesPC	Has accedido al PC de ALGUIEN.$
+gText_StorageSystemOpened	Sistema de Almacenamiento POKéMON\nabierto.$
+gText_AccessedPlayersPC	Has accedido al PC de {PLAYER}.$
+gText_AccessedLanettesPC	Has accedido al PC de AREDIA.$
+gText_AccessedBillsPC	Has accedido al PC de BILL.$
+gText_PkmnTransferredSomeonesPC	{STR_VAR_2} se ha enviado al\nPC de ALGUIEN.\pSe ha guardado en la\nCAJA “{STR_VAR_1}”.$
+gText_PkmnTransferredSomeonesPCBoxFull	La CAJA “{STR_VAR_3}” del PC\nde ALGUIEN estaba llena.\p{STR_VAR_2} se ha enviado a la\nCAJA “{STR_VAR_1}”.$
+gText_PkmnSentToPCAfterCatch	{STR_VAR_2} se ha enviado al\nPC de {B_PC_CREATOR_NAME}.\pSe ha guardado en la\nCAJA “{STR_VAR_1}”.$
+gText_PlayerObtainedTheMon	¡{PLAYER} ha obtenido\n{STR_VAR_1}!$
+gText_NoMoreRoomForPokemon	¡No queda sitio para más POKéMON!\p¡Las CAJAS POKéMON están llenas y\nno caben más!$
+gText_NicknameThisPokemon	¿Quieres ponerle un mote\na {STR_VAR_1}?$
+gText_ConfirmSave	¿Quieres guardar la partida?$
+gText_AlreadySavedFile	Ya hay una partida guardada.\n¿Quieres sobrescribirla?$
+gText_SavingDontTurnOff	GUARDANDO…\nNO APAGUES LA CONSOLA.$
+gText_PlayerSavedGame	{PLAYER} ha guardado la partida.$
+gText_DifferentSaveFile	¡ATENCIÓN!\pYa hay guardada una partida\ndistinta.\pSi guardas ahora, la aventura de la\notra partida, con sus objetos y\lPOKéMON, se perderá por completo.\p¿Seguro que quieres guardar y\nsobrescribir la otra partida?$
+gText_SaveError	Error al guardar.\pCambia la memoria de\nrespaldo, por favor.$
+gText_SavingDontTurnOffPower	GUARDANDO…\nNO APAGUES LA CONSOLA.$
+gText_WantToUseSurf	El agua es de un azul profundo…\n¿Quieres usar SURF?$
+gText_PlayerUsedSurf	¡{STR_VAR_1} ha usado SURF!$
+Text_CurrentTooFast	¡La corriente es demasiado rápida!\nAquí no se puede usar SURF…$
+Text_SprayWoreOff	El efecto de {STR_VAR_1} se ha\nacabado…$
+Text_SprayWoreOffAskUseAnother	¡El efecto de {STR_VAR_1} se ha\nacabado! ¿Usar otro?$
+Text_SprayWoreOffAskUseX	El efecto de {STR_VAR_1} se ha\nacabado… ¿Usar {STR_VAR_2}?$
+Text_SprayWoreOffUseX	{PLAYER} ha usado\n{STR_VAR_2}.$
+gText_YouWantTheUsual	¡Qué alegría verte, {PLAYER}!\nLo de siempre, ¿verdad?$
+Text_WouldYouLikeToMixRecords	¿Quieres mezclar récords con otros\nENTRENADORES?$
+Text_WeHopeToSeeYouAgain	¡Esperamos volver a verte!$
+gText_AbnormalWeatherEnded_Rain	Parece que el diluvio ha parado…$
+gText_AbnormalWeatherEnded_Sun	Parece que el sol abrasador se ha\ncalmado…$
+gText_HowMayIServeYou	¡Hola!\p¿En qué puedo ayudarte?$
+gText_PleaseComeAgain	¡Vuelve cuando quieras!$
+gText_PlayerWhatCanIDoForYou	¡Hola, {PLAYER}{KUN}!\p¿Qué puedo hacer por ti?$
+Text_PictureBookShelf	Hay una colección de libros ilustrados\nde POKéMON.$
+Text_BookShelf	Está lleno de libros de todo tipo.$
+Text_PokemonCenterBookShelf	¡Revistas de POKéMON!\nAMIGOS POKéMON…\pMANUAL POKéMON…\nPOKéMON ADORABLES…$
+Text_Vase	Este jarrón parece caro…\nHas mirado dentro…\pPero estaba vacío.$
+Text_EmptyTrashCan	Está vacía.$
+Text_ShopShelf	Las estanterías están llenas de\nartículos de POKéMON de todo tipo.$
+Text_Blueprint	¿Un plano de algo?\n¡Es demasiado complicado!$
+Route111_Text_MakingRoomUseTMToMakeYourOwn	¿Qué pasa?\n¿Que qué hago?\pEstoy pensando en hacerme un cuarto\naquí con un movimiento POKéMON.\p¡Ya sé! Te doy esta MT.\n¿La usarás para hacerte tu cuarto?$
+Route111_Text_ExplainSecretPower	Busca un árbol grande que parezca que\npuede soltar lianas.\pUsa DAÑO SECRETO delante del árbol.\nCaerán unas lianas y podrás subir.\pEncontrarás mucho sitio para poner\ntus cosas favoritas.\pSerá tu cuarto secreto…\n¡Una BASE SECRETA!\pDeberías hacerte una.\pOtra cosa: la BASE SECRETA no tiene\npor qué estar en un árbol.\pPrueba a usar DAÑO SECRETO en paredes\nde roca con pequeños huecos.\pYo también buscaré otros sitios.\n¡Vale, adiós!$
+Route111_Text_DontWantThis	¿Oh, no la quieres?\nSi cambias de idea, dímelo, ¿vale?$
+Route111_Text_DontHaveAnyRoom	Oh, no tienes sitio para esto.\pTe la guardo, así que vuelve a por\nella otro día, ¿vale?$
+Aide_Text_HaventCaughtEnoughMonsForItem	A ver…\n¡Vaya! Solo has atrapado\l{STR_VAR_3} tipos de POKéMON.\pNecesitas {STR_VAR_1} tipos\nsi quieres {STR_VAR_2}.$
+Aide_Text_GetEnoughMonsComeBackForItem	… Oh. Ya veo.\pCuando tengas {STR_VAR_1} tipos de\nPOKéMON, vuelve a por {STR_VAR_2}.$
+Aide_Text_DontHaveAnyRoomForItem	¡Oh! Veo que no tienes sitio\npara {STR_VAR_2}.$
+Dualocke_Text_SegundoDependiente	¡Hola! Vendo objetos raros traídos\nde todo HOENN.\p¿Qué quieres?$
+MoveRelearner_Text_WouldLearnNewMoves	Hola, soy el RECORDADOR de\nmovimientos. ¿Quieres aprender alguno?$
+MoveRelearner_Text_LevelUpMoves	Por nivel$
+MoveRelearner_Text_EggMoves	Huevo$
+MoveRelearner_Text_TMMoves	MT$
+MoveRelearner_Text_TutormoveMoves	Tutor$
+MoveRelearner_Text_SeeYa	¡Hasta luego!$
+MoveRelearner_Text_AnythingElse	¿Puedo hacer algo más por ti?$
+MoveRelearner_Text_ChoosePkmn	Elige un POKéMON, por favor.$
+MoveRelearner_Text_HaveNoPkmn	No tienes POKéMON.$
+MoveRelearner_Text_CantTeachMoveToEgg	Lo siento…\nUn HUEVO no aprende movimientos.$
+MoveRelearner_Text_CantTeachMoveToPkmn	Lo siento…\pParece que no hay ningún movimiento\nque pueda enseñarle a ese POKéMON.$
+MoveRelearner_Text_LevelUpMoveLWR	movimiento por nivel$
+MoveRelearner_Text_EggMoveLWR	movimiento huevo$
+MoveRelearner_Text_TMMoveLWR	movimiento de MT$
+MoveRelearner_Text_TutorMoveLWR	movimiento de tutor$
+MoveRelearner_Text_MoveLWR	movimiento$
+MoveRelearner_Text_WhichXmoveShouldTeach	¿Qué {STR_VAR_3} le enseño?$
+MoveRelearner_Text_ThankYouComeAgain	Gracias por usar nuestros servicios.\n¡Vuelve cuando quieras!$

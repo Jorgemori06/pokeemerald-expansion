@@ -83,33 +83,32 @@ VerdanturfTown_WandasHouse_EventScript_WallysAuntEverGrande::
 	end
 
 VerdanturfTown_WandasHouse_Text_StrongerSpeech:
-	.string "WALLY: I lost to you, {PLAYER}, but I'm\n"
-	.string "not feeling down anymore.\p"
-	.string "Because I have a new purpose in life.\n"
-	.string "Together with my RALTS, I'm going\l"
-	.string "to challenge POKéMON GYMS and become\l"
-	.string "a great TRAINER.\p"
-	.string "Please watch me, {PLAYER}.\n"
-	.string "I'm going to be stronger than you.\p"
-	.string "When I do, I'm going to challenge you\n"
-	.string "to another battle.$"
+	.string "BLASCO: He perdido contra ti,\n"
+	.string "{PLAYER}, pero ya no estoy triste.\p"
+	.string "Porque tengo un nuevo objetivo.\n"
+	.string "Con mi RALTS, voy a desafiar a los\l"
+	.string "GIMNASIOS POKéMON y ser un gran\l"
+	.string "ENTRENADOR.\p"
+	.string "Obsérvame, {PLAYER}.\n"
+	.string "Voy a ser más fuerte que tú.\p"
+	.string "Y cuando lo sea, te desafiaré\n"
+	.string "a otro combate.$"
 
 VerdanturfTown_WandasHouse_Text_StrongerSpeechShort:
-	.string "WALLY: Please watch me, {PLAYER}.\n"
-	.string "I'm going to get stronger than you.\p"
-	.string "When I do, I'm going to challenge you\n"
-	.string "to another battle.$"
+	.string "BLASCO: Obsérvame, {PLAYER}.\n"
+	.string "Voy a ser más fuerte que tú.\p"
+	.string "Y cuando lo sea, te desafiaré\n"
+	.string "a otro combate.$"
 
 VerdanturfTown_WandasHouse_Text_WallysNextDoor:
-	.string "UNCLE: Oh! {PLAYER}{KUN}!\n"
-	.string "WALLY's next door.\p"
-	.string "But, boy, there's something I have to\n"
-	.string "tell you.\p"
-	.string "This natural environment is doing\n"
-	.string "wonders for WALLY's health.\p"
-	.string "Maybe it's not just the environment.\n"
-	.string "It could be POKéMON that are giving\l"
-	.string "the boy hope.$"
+	.string "TÍO: ¡Oh! ¡{PLAYER}{KUN}!\n"
+	.string "BLASCO está en la habitación de al lado.\p"
+	.string "Pero tengo que contarte una cosa.\p"
+	.string "Este entorno natural le está\n"
+	.string "sentando de maravilla a BLASCO.\p"
+	.string "Aunque quizá no sea solo eso.\n"
+	.string "Puede que sean los POKéMON los que\l"
+	.string "le dan esperanza al chico.$"
 
 VerdanturfTown_WandasHouse_Text_WallySlippedOff:
 	.string "WALLY's gone away…\n"
@@ -123,38 +122,38 @@ VerdanturfTown_WandasHouse_Text_WallyGoneThatFar:
 	.string "my little brother's son.$"
 
 VerdanturfTown_WandasHouse_Text_MeetWanda:
-	.string "WANDA: You are?\n"
-	.string "Oh, right, I get it!\p"
-	.string "You're the {PLAYER} who WALLY was\n"
-	.string "telling me about.\p"
-	.string "I'm WALLY's cousin.\n"
-	.string "Glad to meet you!\p"
-	.string "I think WALLY's become a lot more lively\n"
-	.string "and healthy since he came here.$"
+	.string "WANDA: ¿Quién eres?\n"
+	.string "¡Ah, claro, ya caigo!\p"
+	.string "Eres {PLAYER}, de quien me ha\n"
+	.string "hablado BLASCO.\p"
+	.string "Soy la prima de BLASCO.\n"
+	.string "¡Encantada!\p"
+	.string "Creo que BLASCO está mucho más vivo\n"
+	.string "y sano desde que vino aquí.$"
 
 VerdanturfTown_WandasHouse_Text_DontWorryAboutWally:
-	.string "WANDA: Don't worry about WALLY.\n"
-	.string "He'll be just fine.\p"
-	.string "I know my little cousin, and he has\n"
-	.string "POKéMON with him, too.$"
+	.string "WANDA: No te preocupes por BLASCO.\n"
+	.string "Estará bien.\p"
+	.string "Conozco a mi primo, y además\n"
+	.string "lleva POKéMON con él.$"
 
 VerdanturfTown_WandasHouse_Text_CanSeeGirlfriendEveryDay:
-	.string "Thanks to you, I can see my girlfriend\n"
-	.string "every day.\l"
-	.string "Happy? You bet I am!$"
+	.string "Gracias a ti, puedo ver a mi novia\n"
+	.string "todos los días.\l"
+	.string "¿Que si estoy feliz? ¡Ya te digo!$"
 
 VerdanturfTown_WandasHouse_Text_DaughtersBoyfriendDriven:
-	.string "My daughter's boyfriend is a very\n"
-	.string "driven and passionate sort of person.\p"
-	.string "He's been digging a tunnel nonstop\n"
-	.string "just so he can see my daughter.\p"
-	.string "My daughter's a little concerned,\n"
-	.string "so she goes out to the tunnel a lot.$"
+	.string "El novio de mi hija es muy decidido\n"
+	.string "y apasionado.\p"
+	.string "Ha estado cavando un túnel sin parar\n"
+	.string "solo para poder ver a mi hija.\p"
+	.string "Mi hija está un poco preocupada, así\n"
+	.string "que va mucho al túnel.$"
 
 VerdanturfTown_WandasHouse_Text_DaughtersBoyfriendWasDigging:
-	.string "It's amazing. My daughter's boyfriend\n"
-	.string "was digging the tunnel by hand!\p"
-	.string "It's so incredible!$"
+	.string "Es increíble. ¡El novio de mi hija\n"
+	.string "estaba cavando el túnel a mano!\p"
+	.string "¡Qué barbaridad!$"
 
 VerdanturfTown_WandasHouse_Text_IfAnythingHappenedToWally:
 	.string "If anything were to happen to WALLY,\n"

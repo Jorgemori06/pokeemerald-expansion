@@ -1,0 +1,75 @@
+# CIUDAD ARBORADA y GIMNASIO de ALANA (sin la revancha), casas, tienda de adornos, tienda y CENTRO POKéMON
+FortreeCity_Text_SawGiganticPokemonInSky	Nadie me cree, pero he visto un\nPOKéMON gigantesco en el cielo.\pParecía retorcerse mientras volaba\nhacia la RUTA 131.\pPor cierto… Snif…\nEsto… Tú, eh… hueles a chamusquina.\p¿Has estado en un volcán o algo así?$
+FortreeCity_Text_SomethingBlockingGym	Quiero ir al GIMNASIO POKéMON, pero\nhay algo que corta el paso.\pCon lo que me ha costado entrenar\nen la RUTA 120…$
+FortreeCity_Text_ThisTimeIllBeatWinona	Llevo a mi POKéMON favorito.\nEsta vez le ganaré a ALANA.$
+FortreeCity_Text_TreesGrowByDrinkingRainwater	La tierra absorbe la lluvia, y los\nárboles crecen bebiendo esa agua…\pNuestra CIUDAD ARBORADA existe porque\nhay agua y tierra.$
+FortreeCity_Text_EveryoneHealthyAndLively	La CIUDAD está hecha de casas\nconstruidas en los árboles.\pQuizá por eso aquí todo el mundo\nestá sano y lleno de vida.\pHasta yo me siento como si tuviera\ntreinta años menos.$
+FortreeCity_Text_BugPokemonComeThroughWindow	Vivir en lo alto de los árboles\nestá bien.\pPero a veces entran POKéMON BICHO\npor las ventanas.\l¡Te pegan cada susto!$
+FortreeCity_Text_PokemonThatEvolveWhenTraded	¡Hay POKéMON que evolucionan cuando\nlos intercambias! Eso he oído.$
+FortreeCity_Text_SomethingUnseeable	Hay algo invisible que corta el paso.$
+FortreeCity_Text_UnseeableUseDevonScope	Hay algo invisible que corta el paso.\p¿Quieres usar el DETECTOR DEVON?$
+FortreeCity_Text_UsedDevonScopePokemonFled	{PLAYER} ha usado el DETECTOR DEVON.\p¡Un POKéMON invisible se ha vuelto\ntotalmente visible!\p¡El POKéMON se ha asustado y ha huido!$
+FortreeCity_Text_CitySign	CIUDAD ARBORADA\n“La ciudad en las copas de los árboles\lque juega con la naturaleza”.$
+FortreeCity_Text_GymSign	GIMNASIO POKéMON DE ARBORADA\nLÍDER: ALANA\p“La experta en aves que alza el vuelo\nhacia el mundo”.$
+FortreeCity_DecorationShop_Text_MerchandiseSentToPC	Lo que compras aquí te lo envían\nal PC.\p¡Qué maravilla! Ojalá a mí también\nme llevaran así a casa.$
+FortreeCity_DecorationShop_Text_BuyingDeskForDolls	Voy a comprar una mesa bonita para\nponer encima mis MUÑECOS.\pSi no, cuando decore mi BASE\nSECRETA, se ensuciarán o se\lclavarán astillas.$
+FortreeCity_Gym_Text_GymGuideAdvice	¡Eh! ¿Qué tal, futura estrella de\nla LIGA, {PLAYER}?\pALANA, la LÍDER de ARBORADA, es una\nmaestra de los POKéMON de tipo VOLADOR.\pTe espera al fondo del GIMNASIO,\ndetrás de las puertas giratorias.\p¡Espera a nuevos aspirantes que\nquieran alzar el vuelo!\p¡Venga, a por ella!$
+FortreeCity_Gym_Text_GymGuidePostVictory	¡Lo has conseguido!\n¡Has despegado!$
+FortreeCity_Gym_Text_JaredIntro	¡Contempla el elegante estilo de\ncombate de los POKéMON PÁJARO!$
+FortreeCity_Gym_Text_JaredDefeat	Eres…\nEres fuerte…$
+FortreeCity_Gym_Text_JaredPostBattle	Hay que ser listo para adaptarse a\nlos giros inesperados.\p¿Tienes la cabeza para llegar hasta\nnuestra LÍDER?$
+FortreeCity_Gym_Text_EdwardoIntro	Los amantes de los POKéMON PÁJARO\nsueñan con entrar en este GIMNASIO.\p¡Como miembro del GIMNASIO de\nARBORADA, no puedo perder!$
+FortreeCity_Gym_Text_EdwardoDefeat	Era una carga demasiado pesada\npara mí…$
+FortreeCity_Gym_Text_EdwardoPostBattle	El mundo es enorme y hay muchísimos\nENTRENADORES duros.\pVoy a seguir entrenando para ser\naún más fuerte.$
+FortreeCity_Gym_Text_FlintIntro	¡No hace falta que ALANA, nuestra\nLÍDER, se ocupe de ti!\p¡Conmigo tienes de sobra!$
+FortreeCity_Gym_Text_FlintDefeat	ALANA, yo…\n¡He perdido!$
+FortreeCity_Gym_Text_FlintPostBattle	ALANA es guapa y fuerte.\n¡Es la LÍDER definitiva!\p¡Qué vergüenza…!$
+FortreeCity_Gym_Text_AshleyIntro	¡ALANA me ha enseñado en persona!\n¡No me ganarás fácilmente!$
+FortreeCity_Gym_Text_AshleyDefeat	Me han ganado…$
+FortreeCity_Gym_Text_AshleyPostBattle	Gracias a ALANA, la gente de\nARBORADA vive sin miedo.$
+FortreeCity_Gym_Text_HumbertoIntro	Cuando ALANA combate, su cara brilla\ncon una determinación preciosa…\p¡No pienso dejar que veas esa\nimagen tan bonita!$
+FortreeCity_Gym_Text_HumbertoDefeat	¡Ugh!\nNo he podido pararte.$
+FortreeCity_Gym_Text_HumbertoPostBattle	¡Ten cuidado!\n¡No te despistes mirando a ALANA\lo te estrellarás!$
+FortreeCity_Gym_Text_DariusIntro	Que sepas que hay POKéMON de tipo\nVOLADOR de todas clases.\pLo sabes, ¿verdad?$
+FortreeCity_Gym_Text_DariusDefeat	¡Parece que sabes de lo que hablas!$
+FortreeCity_Gym_Text_DariusPostBattle	Vale, me has ganado.\n¡Pero ten cuidado! Los POKéMON de\lnuestra LÍDER ALANA van en serio.$
+FortreeCity_Gym_Text_WinonaIntro	Soy ALANA. Soy la LÍDER del\nGIMNASIO POKéMON de ARBORADA.\pMe he unido a los POKéMON PÁJARO\ny he surcado los cielos…\pPor duro que sea el combate, hemos\ntriunfado con elegancia…\p¡Contempla la elegante coreografía\nde mis POKéMON PÁJARO y yo!$
+FortreeCity_Gym_Text_WinonaDefeat	Nunca había visto a nadie dirigir\nPOKéMON con más elegancia que yo…\pEn reconocimiento a tu destreza,\nte entrego esta MEDALLA.$
+FortreeCity_Gym_Text_ReceivedFeatherBadge	{PLAYER} ha recibido la MEDALLA\nPLUMA de ALANA.$
+FortreeCity_Gym_Text_ExplainFeatherBadgeTakeThis	Con la MEDALLA PLUMA, todos los\nPOKéMON hasta el nivel 70, incluso los\lde intercambios, te obedecerán.\pTambién podrás usar el movimiento\nde MO VUELO fuera del combate.\pY esto…\nEsto es un regalo mío.$
+FortreeCity_Gym_Text_ExplainAerialAce	La MT40 contiene GOLPE AÉREO.\pSu velocidad…\nNingún POKéMON podrá esquivarlo.\p… … … … … …$
+FortreeCity_Gym_Text_RegisteredWinona	Has registrado a la LÍDER de GIMNASIO\nALANA en el POKéNAV.$
+FortreeCity_Gym_Text_WinonaPostBattle	Aunque me hayas ganado, seguiré\nentregada a los POKéMON PÁJARO.$
+FortreeCity_Gym_Text_GymStatue	GIMNASIO POKéMON DE ARBORADA$
+FortreeCity_Gym_Text_GymStatueCertified	GIMNASIO POKéMON DE ARBORADA\pRECONOCIDOS POR ALANA:\n{PLAYER}$
+FortreeCity_House1_Text_YouWillTradeWontYou	¡Uaaaaarg! ¡Lo necesito!\n¡Tengo que conseguir un {STR_VAR_1}!\l¡Haré lo que sea!\p… Eh… ¿Lo has oído?\n¿Mi grito desde el fondo del corazón?\pDespués de oírlo, me cambiarás tu\n{STR_VAR_1} por mi {STR_VAR_2},\l¿verdad?$
+FortreeCity_House1_Text_MonYouTakeCare	¡Oh, sí, genial!\p¡{STR_VAR_1}, bienvenido!\n¡{STR_VAR_2}, cuídate!$
+FortreeCity_House1_Text_ThisIsntAMon	Eh, no, creo que no.\nEso no es un {STR_VAR_1}.$
+FortreeCity_House1_Text_YouWontTradeMe	¿No? ¿No me lo cambias?\n¿Ni después de abrirte mi corazón?$
+FortreeCity_House1_Text_GoingToMakeVolbeatStrong	¡Desde ahora voy a hacer que\nVOLBEAT sea superfuerte!\p¡Espero que tú hagas lo mismo\ncon PLUSLE!$
+FortreeCity_House1_Text_TradingMemoriesWithOthers	Intercambiar POKéMON con otros…\pEs como intercambiar tus propios\nrecuerdos con otras personas.$
+FortreeCity_House1_Text_Zigzagoon	ZIGZAGOON: ¿Gumomoh?$
+FortreeCity_House2_Text_HiddenPowersArousedByNature	Las personas… Los POKéMON…\pSu poder oculto despierta al vivir\nen plena naturaleza…$
+FortreeCity_House2_Text_CoinInWhichHand	Deja que esta vieja vea si tu poder\noculto ha despertado…\pTengo una moneda en la mano.\pDime, ¿la tengo en la mano derecha?\n¿O en la izquierda?$
+FortreeCity_House2_Text_CorrectTryAgainWhichHand	¡Oh! ¡Sí, correcto!\pProbemos otra vez.\p¿En qué mano tengo la moneda?\n¿En la derecha o en la izquierda?$
+FortreeCity_House2_Text_CorrectTryAgainWhichHand2	¡Oh! ¡Sí, correcto!\pProbemos otra vez.\p¿En qué mano tengo la moneda?\n¿En la derecha o en la izquierda?$
+FortreeCity_House2_Text_YourHiddenPowerHasAwoken	¡Oh! ¡Espléndido!\n¡Tu poder oculto ha despertado!\pToma esto y despierta el poder\noculto de tus POKéMON.$
+FortreeCity_House2_Text_ExplainHiddenPower	PODER OCULTO es un movimiento que\ncambia según el POKéMON.$
+FortreeCity_House2_Text_YouGuessedWrong	No, qué pena.\nNo has acertado.$
+FortreeCity_House3_Text_MetStevenHadAmazingPokemon	Hablando de POKéDEX, me he acordado\nde algo.\pConocí a un ENTRENADOR, MÁXIMO,\ncuando buscaba piedras raras.\pMadre mía, llevaba unos POKéMON\nincreíbles.\p¡No solo eran raros, estaban\nentrenados hasta límites terroríficos!\pPuede que sea más fuerte que la LÍDER\ndel GIMNASIO de esta ciudad…$
+FortreeCity_House3_Text_OhYouHavePokedex	¿Qué es eso que llevas?\p… … … … … …\p¿Oh, se llama POKéDEX?\n¡Es una pasada!$
+FortreeCity_House4_Text_BringsWorldCloserTogether	Estando con POKéMON, la gente hace\ncada vez más amigos.\pY eso une más al mundo.\n¡Me parece maravilloso!$
+FortreeCity_House4_Text_GoBirdPokemon	¡Venga!\n¡Vuela, POKéMON PÁJARO!$
+FortreeCity_House4_Text_AskedWingullToRunErrand	Jeje, le he pedido a mi WINGULL que\nme haga un recado.$
+FortreeCity_House4_Text_WelcomeWingullTakeMentalHerb	¡Bien!\n¡Bienvenido, WINGULL!\p¿Eh? ¿Qué es esto?\n¿Qué lleva?\p¿Una HIERBA MENTAL?\nLa habrá cogido por ahí.\pPero yo no entreno POKéMON, así\nque te la puedes quedar.$
+FortreeCity_House4_Text_FriendsFarAwayThanksToWingull	Gracias a mi WINGULL, tengo amigos\nque viven muy lejos.$
+FortreeCity_House4_Text_Wingull	WINGULL: ¡Pijioh!$
+FortreeCity_House5_Text_TreeHousesAreGreat	¡Las casas en los árboles de\nARBORADA son geniales!\pCreo que es el mejor sitio para vivir\njunto a los POKéMON.$
+FortreeCity_House5_Text_AdaptedToNature	Los POKéMON y las personas se han\nadaptado a la naturaleza para vivir.\pNo hace falta cambiar la naturaleza\na nuestro gusto.$
+FortreeCity_House5_Text_Zigzagoon	ZIGZAGOON: ¡Bufuu!$
+FortreeCity_Mart_Text_SuperRepelBetter	El SUPERREPELENTE dura mucho y\ncumple de sobra.\pEs mucho mejor que un REPELENTE\nnormal.$
+FortreeCity_Mart_Text_StockUpOnItems	Siempre compro más objetos de los\nque creo que voy a necesitar.\pNunca se sabe lo que puede pasar.\n¡Más vale prevenir que curar!$
+FortreeCity_Mart_Text_RareCandyMakesMonGrow	Un CARAMELO RARO hace que un POKéMON\nsuba un nivel al instante.$
+FortreeCity_PokemonCenter_1F_Text_GoToSafariZone	Oye, ¿estás completando la\nPOKéDEX?\pMmm… Ve a la ZONA SAFARI.\nEso te recomiendo.$
+FortreeCity_PokemonCenter_1F_Text_RecordCornerIsNeat	¿Has probado el RINCÓN RÉCORDS?\pEstá muy bien. Mezcla y combina los\nrécords de los ENTRENADORES.\pNo sé muy bien cómo funciona, pero\nmola. ¡Hasta emociona!$
+FortreeCity_PokemonCenter_1F_Text_DoYouKnowAboutPokenav	¡Hala, tienes un POKéNAV!\n¡Y es igual que el mío!\p¿Conoces la AGENDA del POKéNAV?\pCon ella puedes hablar con los\nENTRENADORES registrados.\pTambién te dice qué ENTRENADORES\nquieren la revancha.\p¡Es una pasada! ¡Los de DEVON saben\nlo que hacen!$

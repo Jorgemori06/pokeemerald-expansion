@@ -562,153 +562,152 @@ Route111_EventScript_TrainerHillSign::
 	end
 
 Route111_Text_BattleOurFamily:
-	.string "Hello! I take it you're a traveler.\p"
-	.string "How's this? What do you say to taking\n"
-	.string "on our family of four in a series of\l"
-	.string "POKéMON battles?$"
+	.string "¡Hola! Supongo que vas de viaje.\p"
+	.string "¿Qué te parece? ¿Te atreves con\n"
+	.string "nuestra familia de cuatro en una\l"
+	.string "serie de combates POKéMON?$"
 
 Route111_Text_IsThatSo:
-	.string "Is that so?\n"
-	.string "Drop in, if you change your mind!$"
+	.string "¿Ah, sí?\n"
+	.string "¡Pásate si cambias de idea!$"
 
 Route111_Text_VictorIntro:
-	.string "That's the spirit! I like you!$"
+	.string "¡Así me gusta! ¡Me caes bien!$"
 
 Route111_Text_VictorDefeat:
-	.string "Aiyah!\n"
-	.string "You're a lot tougher than I expected!$"
+	.string "¡Ayayay!\n"
+	.string "¡Eres mucho más duro de lo que pensaba!$"
 
 Route111_Text_VictorPostBattle:
-	.string "Hey, all!\n"
-	.string "I've found a pretty strong TRAINER!$"
+	.string "¡Eh, todos!\n"
+	.string "¡He encontrado a alguien muy fuerte!$"
 
 Route111_Text_VictoriaIntro:
-	.string "Oh, my goodness! Aren't you young?\p"
-	.string "You must be quite the TRAINER to beat\n"
-	.string "my husband, though.\p"
-	.string "It's my turn to battle now!$"
+	.string "¡Madre mía! ¡Qué joven eres!\p"
+	.string "Pero para ganar a mi marido, tienes\n"
+	.string "que entrenar muy bien.\p"
+	.string "¡Ahora me toca a mí!$"
 
 Route111_Text_VictoriaDefeat:
-	.string "Oh, gosh!\n"
-	.string "I can't get over how strong you are!$"
+	.string "¡Ay, Dios!\n"
+	.string "¡No me puedo creer lo fuerte que eres!$"
 
 Route111_Text_VictoriaPostBattle:
-	.string "There's a strong TRAINER here!\n"
-	.string "This one's really strong!$"
+	.string "¡Aquí hay alguien muy fuerte!\n"
+	.string "¡Pero que muy fuerte!$"
 
 Route111_Text_ViviIntro:
-	.string "You're stronger than Mommy? Wow!\p"
-	.string "But I'm strong, too!\n"
-	.string "Really! Honestly!$"
+	.string "¿Eres más fuerte que mamá? ¡Hala!\p"
+	.string "¡Pero yo también soy fuerte!\n"
+	.string "¡De verdad! ¡En serio!$"
 
 Route111_Text_ViviDefeat:
-	.string "Huh? Did I just lose?$"
+	.string "¿Eh? ¿He perdido?$"
 
 Route111_Text_ViviPostBattle:
-	.string "This stinks…\p"
-	.string "…Snivel… Grandma!$"
+	.string "Qué rabia…\p"
+	.string "… Snif… ¡Abuela!$"
 
 Route111_Text_VickyIntro:
-	.string "How dare you make my granddaughter\n"
-	.string "cry!\p"
-	.string "For that, I'm going to smack you!\n"
-	.string "Prepare to lose!$"
+	.string "¡Cómo te atreves a hacer llorar a\n"
+	.string "mi nieta!\p"
+	.string "¡Por eso te voy a dar una lección!\n"
+	.string "¡Prepárate para perder!$"
 
 Route111_Text_VickyDefeat:
-	.string "Kwah! You are strong…\n"
-	.string "My granddaughter was right…$"
+	.string "¡Cuac! Sí que eres fuerte…\n"
+	.string "Mi nieta tenía razón…$"
 
 Route111_Text_VickyPostBattle:
-	.string "If you're not in any hurry,\n"
-	.string "visit with us awhile.$"
+	.string "Si no tienes prisa, quédate\n"
+	.string "un rato con nosotros.$"
 
 Route111_Text_ToughToKeepWinningUpTheRanks:
-	.string "If you don't raise your POKéMON some\n"
-	.string "more, it could be tough to keep winning\l"
-	.string "up through the ranks.\p"
-	.string "I've heard the POKéMON LEAGUE's\n"
-	.string "ELITE FOUR are far stronger than\l"
-	.string "any GYM LEADER.$"
+	.string "Si no crías más a tus POKéMON, te\n"
+	.string "va a costar seguir ganando cuando\l"
+	.string "subas de nivel.\p"
+	.string "He oído que el ALTO MANDO de la LIGA\n"
+	.string "POKéMON es mucho más fuerte que\l"
+	.string "cualquier LÍDER de GIMNASIO.$"
 
 Route111_Text_WinstrateFamilyDestroyedMe:
-	.string "I challenged the WINSTRATE family,\n"
-	.string "but four matches in a row is tough\l"
-	.string "going… They destroyed me.$"
+	.string "Desafié a la familia VENCEDOR, pero\n"
+	.string "cuatro combates seguidos es mucho…\l"
+	.string "Me hicieron polvo.$"
 
 Route111_Text_RouteSignMauville:
-	.string "ROUTE 111\n"
-	.string "{DOWN_ARROW} MAUVILLE CITY$"
+	.string "RUTA 111\n"
+	.string "{DOWN_ARROW} CIUDAD MALVALONA$"
 
 Route111_Text_WinstrateHouseSign:
-	.string "“Our family's hearts beat as one!”\n"
-	.string "THE WINSTRATE'S HOUSE$"
+	.string "“¡Nuestros corazones laten a una!”\n"
+	.string "CASA DE LOS VENCEDOR$"
 
 Route111_Text_RouteSign112:
-	.string "ROUTE 111\n"
-	.string "{LEFT_ARROW} ROUTE 112$"
+	.string "RUTA 111\n"
+	.string "{LEFT_ARROW} RUTA 112$"
 
 Route111_Text_RouteSign113:
-	.string "ROUTE 111\n"
-	.string "{LEFT_ARROW} ROUTE 113$"
+	.string "RUTA 111\n"
+	.string "{LEFT_ARROW} RUTA 113$"
 
 Route111_Text_OldLadysRestStopSign:
-	.string "OLD LADY'S REST STOP\n"
-	.string "“Come in and rest your tired bones.”$"
+	.string "CASA DE REPOSO DE LA ABUELA\n"
+	.string "“Entra y descansa los huesos”.$"
 
 Route111_Text_TrainerTipsSpAtkSpDef:
-	.string "TRAINER TIPS\p"
-	.string "One of the indicators of a POKéMON's\n"
-	.string "powerfulness is SP. ATK. It stands for\l"
-	.string "“SPECIAL ATTACK.”\p"
-	.string "Likewise, SP. DEF stands for “SPECIAL\n"
-	.string "DEFENSE.”$"
+	.string "CONSEJOS PARA ENTRENADORES\p"
+	.string "Una de las medidas del poder de un\n"
+	.string "POKéMON es el AT. ESP., que quiere\l"
+	.string "decir “ATAQUE ESPECIAL”.\p"
+	.string "Del mismo modo, DEF. ESP. quiere\n"
+	.string "decir “DEFENSA ESPECIAL”.$"
 
 Route111_Text_ShouldBeMirageTowerAroundHere:
-	.string "There should be a tower made of sand\n"
-	.string "around here somewhere.\p"
-	.string "But for some reason, it can be seen\n"
-	.string "sometimes, and sometimes not.\p"
-	.string "That's why I call it the MIRAGE TOWER.$"
+	.string "Por aquí debería haber una torre\n"
+	.string "hecha de arena.\p"
+	.string "Pero, por algún motivo, a veces se\n"
+	.string "ve y a veces no.\p"
+	.string "Por eso la llamo TORRE ESPEJISMO.$"
 
 Route111_Text_MirageTowerClearlyVisible:
-	.string "I see it!\n"
-	.string "The tower of sand!\p"
-	.string "The sand tower they called a mirage\n"
-	.string "is clearly visible!\p"
-	.string "But it looks so fragile…\n"
-	.string "It could crumble away anytime…\p"
-	.string "I want to go inside it, but I can't\n"
-	.string "get my courage up for it…$"
+	.string "¡La veo!\n"
+	.string "¡La torre de arena!\p"
+	.string "¡La torre de arena a la que llamaban\n"
+	.string "espejismo se ve perfectamente!\p"
+	.string "Pero parece tan frágil…\n"
+	.string "Se podría derrumbar en nada…\p"
+	.string "Quiero entrar, pero no me atrevo…$"
 
 Route111_Text_ThatWasShockingSandRainedDown:
-	.string "Whoa…\n"
-	.string "That was shocking.\p"
-	.string "Sand rained down in chunks all of\n"
-	.string "a sudden.\p"
-	.string "What was it like inside?\n"
-	.string "Were there sandy ghosts and such?$"
+	.string "Uf…\n"
+	.string "Qué susto.\p"
+	.string "De repente cayeron trozos enormes\n"
+	.string "de arena.\p"
+	.string "¿Qué había dentro?\n"
+	.string "¿Fantasmas de arena o algo así?$"
 
 Route111_Text_MirageTowerHasntBeenSeenSince:
-	.string "Since I spoke to you, the tower of sand\n"
-	.string "hasn't been seen.\p"
-	.string "Perhaps it really was\n"
-	.string "the MIRAGE TOWER…$"
+	.string "Desde que hablé contigo, no se ha\n"
+	.string "vuelto a ver la torre de arena.\p"
+	.string "Quizá sí que era la\n"
+	.string "TORRE ESPEJISMO…$"
 
 Route111_Text_ClawFossilDisappeared:
-	.string "The CLAW FOSSIL disappeared into\n"
-	.string "the sand…$"
+	.string "El FÓSIL GARRA se ha hundido en\n"
+	.string "la arena…$"
 
 Route111_Text_RootFossilDisappeared:
-	.string "The ROOT FOSSIL disappeared into\n"
-	.string "the sand…$"
+	.string "El FÓSIL RAÍZ se ha hundido en\n"
+	.string "la arena…$"
 
 Route111_Text_MauvilleUncleToldMeToTakeRockSmash:
-	.string "Oh, no!\p"
-	.string "My uncle in MAUVILLE told me to take\n"
-	.string "ROCK SMASH with me if I was going to\l"
-	.string "ROUTE 111!\p"
-	.string "My uncle? He lives across from\n"
-	.string "the bike shop in MAUVILLE.$"
+	.string "¡Oh, no!\p"
+	.string "¡Mi tío de MALVALONA me dijo que me\n"
+	.string "llevara GOLPE ROCA si iba a la\l"
+	.string "RUTA 111!\p"
+	.string "¿Mi tío? Vive enfrente de la tienda\n"
+	.string "de bicis de MALVALONA.$"
 
 Route111_Text_TrainerHillSign:
 	.string "{RIGHT_ARROW} TRAINER HILL ENTRANCE\p"
