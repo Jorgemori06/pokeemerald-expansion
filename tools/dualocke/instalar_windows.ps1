@@ -10,12 +10,40 @@
 #   el juego cuando Jorge o Miguel suban cambios).
 # - La ROM se copia al escritorio como Dualocke.gba. Si mGBA guarda la partida al lado
 #   (Dualocke.sav), al sustituir la ROM por una nueva la partida se conserva.
+# - El juego sale randomizado. La semilla se guarda la primera vez y se reutiliza, así que
+#   actualizar no cambia tu partida. Opciones:
+#     -NuevaPartida  otra semilla al azar (para empezar un locke nuevo).
+#     -SinRandom     el juego sin randomizar, para probar el equilibrio. Se copia aparte,
+#                    como Dualocke-sin-random.gba, para no pisar tu ROM de juego.
 
 param(
-    [string]$Rama = "master"
+    [string]$Rama = "master",
+    [switch]$NuevaPartida,
+    [switch]$SinRandom
 )
 
 $ErrorActionPreference = "Stop"
+
+if ($NuevaPartida -and $SinRandom) {
+    Write-Host "Usa -NuevaPartida o -SinRandom, pero no los dos a la vez." -ForegroundColor Red
+    exit 1
+}
+if ($NuevaPartida) {
+    Write-Host "Vas a generar una semilla nueva: la ROM sera otra partida distinta y la que" -ForegroundColor Yellow
+    Write-Host "tengas guardada (Dualocke.sav) dejara de cuadrar con ella." -ForegroundColor Yellow
+    $respuesta = Read-Host "Escribe SI para seguir"
+    if ($respuesta -ne "SI") {
+        Write-Host "Cancelado." -ForegroundColor Yellow
+        exit 0
+    }
+}
+if ($NuevaPartida) {
+    $make = "make nueva-partida"
+} elseif ($SinRandom) {
+    $make = "make -j`$(nproc) SIN_RANDOM=1"
+} else {
+    $make = "make -j`$(nproc)"
+}
 $Distro = "Ubuntu"
 $Repo = "https://github.com/Jorgemori06/pokeemerald-expansion"
 
@@ -65,7 +93,7 @@ cd pokeemerald-expansion
 git fetch origin
 git checkout $Rama
 git pull --ff-only origin $Rama
-make -j`$(nproc)
+$make
 "@
 Write-Host "Actualizando el repo y compilando (la primera vez tarda varios minutos)..." -ForegroundColor Cyan
 & wsl.exe -d $Distro -- bash -lc ($bash -replace "`r", "")
@@ -76,7 +104,11 @@ if ($LASTEXITCODE -ne 0) {
 
 # 3. Copiar la ROM al escritorio
 $escritorio = [Environment]::GetFolderPath("Desktop")
-$destino = Join-Path $escritorio "Dualocke.gba"
+if ($SinRandom) {
+    $destino = Join-Path $escritorio "Dualocke-sin-random.gba"
+} else {
+    $destino = Join-Path $escritorio "Dualocke.gba"
+}
 $origen = (& wsl.exe -d $Distro -- bash -lc "wslpath -w ~/romhack/pokeemerald-expansion/pokeemerald.gba").Trim()
 Copy-Item -LiteralPath $origen -Destination $destino -Force
 Write-Host ""
