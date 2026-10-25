@@ -2696,18 +2696,23 @@
 	msgbox \tradeCompleteMsg, MSGBOX_DEFAULT
 	.endm
 
+	@ Dualocke: Dualocke_TutorAleatorio cambia el movimiento por el del randomizer (si lo hay) y
+	@ guarda su nombre en STR_VAR_1 para los textos del tutor
 	.macro move_tutor moveId:req, wantTeachingMsg:req, monSelectMsg:req, declinedJmp:req, taughtJmp:req, flagId=0
 	.if \flagId
 		goto_if_set \flagId, \taughtJmp
 	.endif
+	setvar VAR_0x8005, \moveId
+	callnative Dualocke_TutorAleatorio
 	msgbox \wantTeachingMsg, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, \declinedJmp
 	.if \flagId
 		call MoveTutor_EventScript_CanOnlyBeLearnedOnce
 		goto_if_eq VAR_RESULT, NO, \declinedJmp
 	.endif
-	msgbox \monSelectMsg, MSGBOX_DEFAULT
 	setvar VAR_0x8005, \moveId
+	callnative Dualocke_TutorAleatorio
+	msgbox \monSelectMsg, MSGBOX_DEFAULT
 	call MoveTutor_EventScript_OpenBox
 	goto_if_eq VAR_RESULT, FALSE, \declinedJmp
 	.if \flagId

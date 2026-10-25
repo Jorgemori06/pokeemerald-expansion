@@ -1,6 +1,7 @@
 #include "global.h"
 #include "dualocke_es.h"
 #include "dualocke.h"
+#include "dualocke_aleatorio.h"
 #include "malloc.h"
 #include "apprentice.h"
 #include "battle.h"
@@ -3224,6 +3225,10 @@ enum Type GetSpeciesType(enum Species species, u8 slot)
 
 enum Ability GetSpeciesAbility(enum Species species, u8 slot)
 {
+    // Dualocke: con el randomizer, una habilidad al azar por especie (la misma en todos los huecos)
+    enum Ability ability = Dualocke_HabilidadAleatoria(SanitizeSpeciesId(species));
+    if (ability != ABILITY_NONE)
+        return ability;
     return gSpeciesInfo[SanitizeSpeciesId(species)].abilities[slot];
 }
 
@@ -5045,8 +5050,13 @@ bool8 TryIncrementMonLevel(struct Pokemon *mon)
 bool32 CanLearnTeachableMove(enum Species species, enum Move move)
 {
     const u16 *teachableLearnset = GetSpeciesTeachableLearnset(species);
+    s32 dualocke;
     if (species == SPECIES_EGG)
         return FALSE;
+    // Dualocke: las MT nuevas del randomizer las aprende cada especie con cierta probabilidad
+    dualocke = Dualocke_PuedeAprenderMT(species, move);
+    if (dualocke >= 0)
+        return dualocke;
     for (u32 i = 0; teachableLearnset[i] != MOVE_UNAVAILABLE; i++)
     {
         if (teachableLearnset[i] == move)
@@ -5418,6 +5428,15 @@ void SetWildMonHeldItem(void)
     {
         if (GetMonData(&gParties[B_TRAINER_OPPONENT_A][i], MON_DATA_HELD_ITEM) != ITEM_NONE)
             continue; // prevent overwriting previously set item
+
+        // Dualocke: con el randomizer, cualquier salvaje puede llevar un objeto al azar
+        if (Dualocke_ObjetosSalvajesAleatorios())
+        {
+            enum Item item = Dualocke_ObjetoSalvaje(itemHeldBoost);
+            if (item != ITEM_NONE)
+                SetMonData(&gParties[B_TRAINER_OPPONENT_A][i], MON_DATA_HELD_ITEM, &item);
+            continue;
+        }
 
         rnd = Random() % 100;
         species = GetMonData(&gParties[B_TRAINER_OPPONENT_A][i], MON_DATA_SPECIES, 0);

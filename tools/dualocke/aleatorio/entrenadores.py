@@ -17,12 +17,16 @@ Reglas (randomizer_config.json, "entrenadores" y "jefes"; decididas por Miguel):
   del tipo de su inicial (y el inicial pasa al hueco anterior).
 
 Al cambiar la especie se quitan los movimientos, la habilidad y el sexo que tenía escritos (no
-valdrían para la nueva): sale con los movimientos de su nivel y una habilidad normal. Se
-mantienen el nivel, el objeto, los IVs/EVs y la naturaleza.
+valdrían para la nueva). Los movimientos nuevos los elige movimientos.py (3 de los que aprende
+por nivel y el cuarto al azar) y la habilidad es la de su especie. Se mantienen el nivel, los
+IVs/EVs y la naturaleza; el objeto también, salvo en los jefes, que llevan uno "coherente" (que
+le sirva a ese Pokémon) en todo el equipo, menos la megapiedra del as.
 """
 
 import random
 import re
+
+from . import movimientos as mov
 
 FIJOS = {"TRAINER_STEVEN_ROUTE_120", "TRAINER_NONE"}
 JEFES_LIGA = {"TRAINER_SIDNEY", "TRAINER_PHOEBE", "TRAINER_GLACIA", "TRAINER_DRAKE", "TRAINER_WALLACE"}
@@ -86,21 +90,81 @@ def _es_megapiedra(objeto):
     return bool(objeto) and objeto.upper().replace(" ", "_").endswith(("ITE", "ITE_X", "ITE_Y"))
 
 
-def _reescribir(lineas, nueva, objeto):
+def _reescribir(lineas, nueva, objeto, movimientos=None):
     primera = nueva + (f" @ {objeto}" if objeto else "")
     resto = [l for l in lineas[1:] if not l.strip().startswith(CAMPOS_QUE_SE_QUITAN)]
-    return "\n".join([primera] + resto)
+    return "\n".join([primera] + resto + [f"- {m}" for m in (movimientos or [])])
+
+
+# Objetos "coherentes" de los jefes (Miguel, PR #27): un objeto que le sirva a ese Pokémon
+POTENCIADOR_DE_TIPO = {
+    "TYPE_FIRE": "ITEM_CHARCOAL", "TYPE_WATER": "ITEM_MYSTIC_WATER", "TYPE_GRASS": "ITEM_MIRACLE_SEED",
+    "TYPE_ELECTRIC": "ITEM_MAGNET", "TYPE_ICE": "ITEM_NEVER_MELT_ICE", "TYPE_FIGHTING": "ITEM_BLACK_BELT",
+    "TYPE_POISON": "ITEM_POISON_BARB", "TYPE_GROUND": "ITEM_SOFT_SAND", "TYPE_FLYING": "ITEM_SHARP_BEAK",
+    "TYPE_PSYCHIC": "ITEM_TWISTED_SPOON", "TYPE_BUG": "ITEM_SILVER_POWDER", "TYPE_ROCK": "ITEM_HARD_STONE",
+    "TYPE_GHOST": "ITEM_SPELL_TAG", "TYPE_DRAGON": "ITEM_DRAGON_FANG", "TYPE_DARK": "ITEM_BLACK_GLASSES",
+    "TYPE_STEEL": "ITEM_METAL_COAT", "TYPE_NORMAL": "ITEM_SILK_SCARF", "TYPE_FAIRY": "ITEM_FAIRY_FEATHER",
+}
+
+
+def objeto_coherente(especie, movimientos, datos_mov, rng, usados=()):
+    """Un objeto que le sirva a `especie` con esos movimientos: Mineral Evolutivo si puede
+    evolucionar; si no, según sus estadísticas (atacante físico o especial, rápido, resistente)."""
+    st = especie.stats
+    if especie.destinos:
+        return "ITEM_EVIOLITE"
+    danos = [datos_mov[m] for m in movimientos if m in datos_mov and datos_mov[m].de_dano]
+    todo_dano = len(danos) == len(movimientos) and danos
+    fisico = st.get("Attack", 0) >= st.get("SpAttack", 0) + 10
+    especial = st.get("SpAttack", 0) >= st.get("Attack", 0) + 10
+    opciones = ["ITEM_LIFE_ORB", "ITEM_EXPERT_BELT"]
+    if fisico:
+        opciones += ["ITEM_MUSCLE_BAND"] + (["ITEM_CHOICE_BAND"] if todo_dano else [])
+    if especial:
+        opciones += ["ITEM_WISE_GLASSES"] + (["ITEM_CHOICE_SPECS"] if todo_dano else [])
+    if st.get("Speed", 0) >= 95:
+        opciones += ["ITEM_FOCUS_SASH"] + (["ITEM_CHOICE_SCARF"] if todo_dano else [])
+    if danos:
+        opciones.append(POTENCIADOR_DE_TIPO.get(max(danos, key=lambda d: d.potencia).tipo, "ITEM_LIFE_ORB"))
+    if st.get("HP", 0) + st.get("Defense", 0) + st.get("SpDefense", 0) >= 260:
+        restos = "ITEM_BLACK_SLUDGE" if "TYPE_POISON" in especie.tipos else "ITEM_LEFTOVERS"
+        opciones += [restos, restos, "ITEM_SITRUS_BERRY"]
+        if st.get("Defense", 0) >= 100:
+            opciones.append("ITEM_ROCKY_HELMET")
+        if st.get("SpDefense", 0) >= 100 and todo_dano:
+            opciones.append("ITEM_ASSAULT_VEST")
+    libres = [o for o in opciones if o not in usados]
+    return rng.choice(libres or opciones)
 
 
 class Generador:
-    def __init__(self, pokedex, semilla, config, iniciales=None):
+    def __init__(self, pokedex, semilla, config, iniciales=None, movimientos=None):
         self.pokedex = pokedex
+        # Movimientos ({MOVE_X: Movimiento}); sin ellos, sale con los de su nivel (como antes)
+        self.movs = movimientos
+        self.todos = mov.validos(movimientos) if movimientos else []
         self.iniciales = iniciales or INICIALES_ORIGINALES
         self.semilla = semilla
         self.config = config
         self.raices = pokedex.raices_validas()
         self.raices_liga = pokedex.raices_validas(con_legendarios=True)
         self.lineas_familia = {}   # (familia, especie original) -> raíz nueva
+
+    def _equipar(self, trainer, i, especie, nivel, objeto, jefe, usados):
+        """Movimientos (todos los entrenadores) y objeto (los jefes, menos las megapiedras)."""
+        if not self.movs:
+            return None, objeto
+        rng = random.Random(f"{self.semilla}|movimientos|{trainer}|{i}")
+        cfg = self.config.get("entrenadores", {}).get("movimientos", {})
+        tope = cfg.get("potencia_maxima_del_cuarto", {"base": 40, "por_nivel": 1.5})
+        tope = (tope["base"], tope["por_nivel"]) if tope else None
+        movimientos = mov.elegir(especie, nivel, self.pokedex, self.movs, self.todos, rng,
+                                 cfg.get("garantizados", 3), tope)
+        if jefe and not _es_megapiedra(objeto):
+            objeto = objeto_coherente(self.pokedex.especies[especie], movimientos, self.movs, rng, usados)
+        if objeto:
+            usados.add(objeto)
+        return movimientos, objeto
 
     def _tipos(self, especie):
         return set(self.pokedex.especies[especie].tipos)
@@ -187,12 +251,15 @@ class Generador:
             usadas.add(raiz)
             nuevas[i] = (self.pokedex.evolucionar(raiz, nivel, random.Random(f"{self.semilla}|RIVAL|{raiz}")), None)
         cambios = []
+        usados = set()
         for i, lineas, original, objeto, nivel in datos:
             if i not in nuevas:
                 cambios.append(original)
                 continue
             especie, objeto_nuevo = nuevas[i]
-            trozos[i] = _reescribir(lineas, especie, objeto_nuevo or ("" if objeto_nuevo is None and _es_megapiedra(objeto) else objeto))
+            objeto = objeto_nuevo or ("" if objeto_nuevo is None and _es_megapiedra(objeto) else objeto)
+            movimientos, objeto = self._equipar(trainer, i, especie, nivel, objeto, True, usados)
+            trozos[i] = _reescribir(lineas, especie, objeto, movimientos)
             cambios.append(especie)
         return "\n\n".join(trozos), cambios
 
@@ -219,6 +286,7 @@ class Generador:
             tipos_as = as_por_tipo.get(trainer) or as_por_tipo.get(familia + "_1")
             mega_as = trainer in con_mega or (familia + "_1") in con_mega
             raices = self.raices_liga if familia in JEFES_LIGA else self.raices
+            jefe = bool(tipos_as) or familia in JEFES_LIGA
             rng = random.Random(f"{self.semilla}|entrenadores|{trainer}")
 
             trozos = _pokemons(bloque)
@@ -226,6 +294,7 @@ class Generador:
             # entrenador); el resto, un Pokémon por trozo
             indices = [i for i in range(1, len(trozos)) if trozos[i].strip()]
             usadas = set()
+            usados = set()
             cambios = []
             for n, i in enumerate(indices):
                 lineas, primera = _linea_especie(trozos[i])
@@ -249,7 +318,8 @@ class Generador:
                     raiz = self._raiz_para(familia, original, raices, usadas, rng)
                     nueva = self.pokedex.evolucionar(raiz, nivel, random.Random(f"{self.semilla}|{familia}|{raiz}"))
                 usadas.add(raiz)
-                trozos[i] = _reescribir(lineas, nueva, objeto)
+                movimientos, objeto = self._equipar(trainer, i, nueva, nivel, objeto, jefe, usados)
+                trozos[i] = _reescribir(lineas, nueva, objeto, movimientos)
                 cambios.append(nueva)
             solucionario[trainer] = cambios
             salida.append(cabecera + "\n\n".join(trozos))

@@ -1,5 +1,6 @@
 #include "global.h"
 #include "item_ball.h"
+#include "dualocke_aleatorio.h"
 #include "event_data.h"
 #include "constants/event_objects.h"
 #include "constants/items.h"
@@ -20,6 +21,9 @@ static u32 GetItemBallAmountFromTemplate(u32 itemBallId)
 static u32 GetItemBallIdFromTemplate(u32 itemBallId)
 {
     enum Item itemId = gMapHeader.events->objectEvents[itemBallId].trainerRange_berryTreeId;
+
+    // Dualocke: objetos del suelo aleatorios (por el flag de la Poké Ball)
+    itemId = Dualocke_ObjetoSuelo(gMapHeader.events->objectEvents[itemBallId].flagId, itemId);
 
     return (itemId >= ITEMS_COUNT) ? (ITEM_NONE + 1) : itemId;
 }

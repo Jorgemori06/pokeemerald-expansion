@@ -30,6 +30,9 @@ class Especie:
         self.tabla_formas = None        # nombre de la tabla de formas, si tiene
         self.megas = []                 # [(SPECIES_X_MEGA, ITEM_XITE)] si megaevoluciona con objeto
         self.nombre_es = ""
+        self.stats = {}                 # {"HP": 45, "Attack": 49, ...} (baseHP, baseAttack...)
+        self.habilidades = []           # [ABILITY_X, ...] sin ABILITY_NONE
+        self.por_nivel = []             # [(nivel, MOVE_X)] de su levelUpLearnset (0 = al evolucionar)
 
     @property
     def es_legendaria(self):
@@ -49,13 +52,13 @@ def _cuerpo_entre_llaves(texto, inicio):
     raise ValueError("llaves sin cerrar")
 
 
-def _preprocesar(cpp, cppflags):
-    """Pasa src/pokemon.c por el preprocesador. Si falta alguna cabecera que se genera más tarde
+def _preprocesar(cpp, cppflags, fuente="src/pokemon.c"):
+    """Pasa un .c (src/pokemon.c, por defecto) por el preprocesador. Si falta alguna cabecera que se genera más tarde
     en la compilación (los movimientos que se enseñan, por ejemplo), se pone una vacía en una
     carpeta temporal: no hace falta para leer las especies."""
     with tempfile.TemporaryDirectory() as vacias:
         for _ in range(20):
-            orden = [cpp] + cppflags + ["-iquote", vacias, "-P", "src/pokemon.c"]
+            orden = [cpp] + cppflags + ["-iquote", vacias, "-P", fuente]
             r = subprocess.run(orden, capture_output=True, text=True)
             if r.returncode == 0:
                 return r.stdout
@@ -65,7 +68,7 @@ def _preprocesar(cpp, cppflags):
             ruta = os.path.join(vacias, falta.group(1))
             os.makedirs(os.path.dirname(ruta), exist_ok=True)
             open(ruta, "w").close()
-        raise RuntimeError("Dualocke: no se pudo preprocesar src/pokemon.c:\n" + r.stderr[-2000:])
+        raise RuntimeError(f"Dualocke: no se pudo preprocesar {fuente}:\n" + r.stderr[-2000:])
 
 
 def _evolucion_valida_en_hoenn(condiciones):
@@ -146,6 +149,13 @@ def leer_especies(cpp="arm-none-eabi-cpp", cppflags=None):
         cuerpo = _cuerpo_entre_llaves(texto, m.end() - 1)
         tablas[m.group(1)] = [alias.get(s, s) for s in re.findall(r"SPECIES_\w+", cuerpo)]
 
+    # Movimientos por nivel: static const struct LevelUpMove sXLevelUpLearnset[] = {{.move = MOVE_X, .level = 5}, ...}
+    aprendizajes = {}
+    for m in re.finditer(r"static const struct LevelUpMove (s\w+)\[\]\s*=\s*\{", texto):
+        cuerpo = _cuerpo_entre_llaves(texto, m.end() - 1)
+        aprendizajes[m.group(1)] = [(int(nv), mv) for mv, nv in
+                                    re.findall(r"\.move\s*=\s*(MOVE_\w+)\s*,\s*\.level\s*=\s*(\d+)", cuerpo)]
+
     inicio = texto.index("const struct SpeciesInfo gSpeciesInfo[] =")
     bloque = _cuerpo_entre_llaves(texto, texto.index("{", inicio))
     especies = {}
@@ -168,6 +178,12 @@ def leer_especies(cpp="arm-none-eabi-cpp", cppflags=None):
             e.megas = megas_por_tabla.get(cambios.group(1), [])
         formas = re.search(r"\.formSpeciesIdTable\s*=\s*(s\w+)", cuerpo)
         e.tabla_formas = formas.group(1) if formas else None
+        e.stats = {k: int(v) for k, v in re.findall(r"\.base(HP|Attack|Defense|Speed|SpAttack|SpDefense)\s*=\s*(\d+)", cuerpo)}
+        habilidades = re.search(r"\.abilities\s*=\s*\{([^}]*)\}", cuerpo)
+        if habilidades:
+            e.habilidades = [h for h in re.findall(r"ABILITY_\w+", habilidades.group(1)) if h != "ABILITY_NONE"]
+        aprende = re.search(r"\.levelUpLearnset\s*=\s*(s\w+)", cuerpo)
+        e.por_nivel = aprendizajes.get(aprende.group(1), []) if aprende else []
         nombre = re.search(r'\.speciesName\s*=\s*_\("([^"]*)"\)', cuerpo)
         e.nombre_es = nombre.group(1) if nombre else ""
         especies[e.nombre] = e

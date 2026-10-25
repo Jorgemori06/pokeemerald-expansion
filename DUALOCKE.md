@@ -312,14 +312,16 @@ Para ver todo sin herramientas externas (pedido por Miguel el 24/10/2026):
 - Código: `include/config/summary_screen.h` (opciones `P_SUMMARY_SCREEN_IV_EV_*`) y `src/pokemon_summary_screen.c` (busca "Dualocke").
 - Pendiente: hacerla más bonita con gráficos nuevos (fondos, iconos). Hace falta dibujarlos y probarlos en el emulador.
 
-## 7. Randomizer (en marcha: falta movimientos, habilidades y objetos)
+## 7. Randomizer (hecho, falta probarlo jugando)
 
 ### Diseño
 
 - **Script propio** (Python) que baraja los datos del juego **antes de compilar**, usando una **semilla**.
 - **Cada jugador tiene una partida completamente distinta**: `make` se inventa una semilla al azar la primera vez y la guarda (decidido por Jorge el 25/10/2026: la semilla no se elige, es aleatoria). Cómo se usa: sección 3, "Partida randomizada".
 - **Cómo está hecho (Jorge):** `tools/dualocke/randomizer.py`, con los módulos en `tools/dualocke/aleatorio/`. Lo lanza el `Makefile` (bloque "Dualocke: randomizer con semilla"). Lee los originales (`wild_encounters.json`, y más adelante `trainers.party`…) y escribe las versiones barajadas en `build/dualocke/`, que son las que se compilan. **Los archivos de Miguel no se tocan.** Los datos de las especies (evoluciones, formas, legendarios) salen de pasar `src/pokemon.c` por el preprocesador de C, así que son exactamente los de la ROM. Comprueba el resultado antes de compilar (solo cambian las especies, no hay legendarios en los salvajes…) y para si algo falla.
-- **Hecho:** salvajes, entrenadores, iniciales, rival, estáticos y regalos. **Pendiente:** movimientos, habilidades y objetos.
+- **Hecho:** salvajes, entrenadores (con movimientos y objetos de los jefes), iniciales, rival, estáticos, regalos, objetos del suelo, Recogida, objetos de los salvajes, intercambios, habilidades, MT y tutores.
+- **Lo que no se puede barajar sin tocar mapas y scripts se cambia al vuelo:** el `Makefile` genera `src/data/dualocke_aleatorio.h` con las tablas de la semilla (vacías sin semilla) y `src/dualocke_aleatorio.c` las consulta: estáticos, regalos, objetos del suelo (por su flag), Recogida, objetos de los salvajes, intercambios, habilidades y MT. Enganches: `item_ball.c`, `field_control_avatar.c` (ocultos), `battle_script_commands.c` (Recogida), `pokemon.c` (`SetWildMonHeldItem`, `GetSpeciesAbility`, `CanLearnTeachableMove`), `trade.c`, `include/item.h` (qué enseña cada MT), `party_menu.c` y la macro `move_tutor` (`asm/macros/event.inc`).
+- `build/dualocke/solucionario.json` tiene todo lo que ha salido (no abrir si no quieres destriparte la partida).
 - Para no destriparse nada: o cada uno compila la suya, o uno compila las dos sin mirar los archivos generados.
 - Alternativa descartada por ahora: randomizer dentro del juego, al empezar partida (como Heart & Soul). Es más trabajo.
 
@@ -338,19 +340,19 @@ Están en **`tools/dualocke/randomizer_config.json`**, que es el archivo que deb
 
 **Pokémon**
 - Iniciales aleatorios (forma base de 3 fases y en triángulo de tipos, ver arriba). **Hecho** (`tools/dualocke/aleatorio/iniciales.py`): además, las dos evoluciones tienen que ser por nivel o con objeto, para poder hacerlas en el juego. Salen en `src/data/dualocke_iniciales.h` (generado; lo usa `src/starter_choose.c`).
-- Habilidades aleatorias, permitiendo Superguarda.
+- Habilidades aleatorias, permitiendo Superguarda. **Hecho** (`tools/dualocke/aleatorio/habilidades.py`; decidido por Miguel en el #27): **una por especie**, la misma en todos sus huecos (todos los Zigzagoon con la misma, también los del jugador). Ninguna prohibida, tampoco en los jefes. Solo se quitan las que dependen de una especie y el juego no deja cambiar (Cambio Táctico, Multitipo, Disfraz…: `cantBeOverwritten`).
 - Pokémon estáticos completamente aleatorios. **Hecho** (`tools/dualocke/aleatorio/estaticos.py`; decidido por Jorge el 25/10/2026):
   - **Estáticos** (`setwildbattle`: Kecleon, Voltorb, Electrode, Regis, Groudon, Kyogre, Rayquaza, Sudowoodo; y los errantes Latios/Latias): **todo al azar**, legendarios incluidos, a su nivel. Cada especie original cambia por la misma en todos sus sitios (todos los Kecleon del Detector son la misma especie nueva).
   - **Regalos** (Beldum, fósiles, Castform, iniciales de Johto) **y huevos** (Wynaut, Pichu): al azar, sin legendarios, a su nivel; los huevos, siempre la forma base.
   - El **sprite del mapa** y los **textos** siguen siendo los del original ("Has recibido un BELDUM"): se descubre al combatir o al recibirlo (decidido por Jorge: da igual). El mensaje de "enviado al PC" sí nombra al nuevo.
   - No se tocan los scripts: `src/dualocke_aleatorio.c` cambia la especie al vuelo en `setwildbattle`, `givemon`, `giveegg` y los errantes, con la tabla generada `src/data/dualocke_aleatorio.h` (vacía sin semilla).
 - Estadísticas base de Gen 9 (ya vienen así en el motor) sin aleatorizar sus valores.
-- Totales de estadísticas base barajados siguiendo las líneas evolutivas.
+- ~~Totales de estadísticas base barajados siguiendo las líneas evolutivas.~~ **No se hace** (Miguel, #27).
 - Pokémon de los entrenadores aleatorios, sin duplicados dentro de un mismo equipo.
 - El inicial del rival se mantiene durante toda la aventura. **Hecho:** lleva el que gana al del jugador, evolucionado según el nivel; el resto de su equipo es al azar y el mismo en todos sus combates. Desde Calagua su as lleva mega: su inicial si tiene, y si no, una especie con mega del tipo de su inicial (y el inicial pasa al hueco anterior).
 - Los equipos de los entrenadores evolucionan según el nivel y pueden usar formas alternativas.
 - +1 Pokémon a los entrenadores importantes y +2 a los jefes.
-- Los Pokémon de entrenadores importantes y jefes pueden llevar objetos aleatorios, priorizando objetos coherentes.
+- Los Pokémon de entrenadores importantes y jefes pueden llevar objetos aleatorios, priorizando objetos coherentes. **Hecho** (Miguel, #27: "un objeto que le sirva", a todo el equipo): Mineral Evolutivo si puede evolucionar; si no, según sus estadísticas y movimientos (Vidasfera, Cinta Experto, Banda/Gafas/Pañuelo Elección si todos sus movimientos son de daño, potenciador del tipo de su mejor ataque, Restos/Lodo Negro, Baya Zidra, Casco Dentado, Chaleco Asalto, Banda Aguante si es rápido…), sin repetir dentro del equipo si se puede. La megapiedra del as se queda. Son jefes los de `as_por_tipo` (y sus revanchas), el Alto Mando, Plubio y el rival.
 - **Nuevo:** el as de cada jefe es de su tipo y, desde el aro, una especie con mega de ese tipo con su megapiedra (ver arriba).
 
 **Salvajes** (hecho, `tools/dualocke/aleatorio/salvajes.py`)
@@ -369,7 +371,9 @@ Están en **`tools/dualocke/randomizer_config.json`**, que es el archivo que deb
   - Especies al azar, sin repetir dentro de un equipo, evolucionadas según el nivel de cada Pokémon y con formas regionales. Sin legendarios, salvo en el Alto Mando y Plubio (`permitidos_en: jefes_liga`).
   - Jefes (`as_por_tipo`): el as, el último, es de su tipo o temática. Los de `con_mega_desde_el_aro` llevan como as una especie con mega de ese tipo y su megapiedra. Las revanchas de un jefe mantienen el tipo, la mega y la misma línea del as.
   - Las revanchas de cualquier entrenador (`_2`, `_3`…) usan las mismas líneas que el primer combate, evolucionadas a su nivel.
-  - Al cambiar la especie se quitan los movimientos y la habilidad que tenía escritos: sale con los movimientos de su nivel (hasta la fase de movimientos). Se mantienen nivel, objeto, IVs/EVs y naturaleza.
+  - Al cambiar la especie se quitan los movimientos y la habilidad que tenía escritos (la habilidad es la de su especie). Se mantienen nivel, IVs/EVs y naturaleza, y el objeto salvo en los jefes (ver arriba).
+  - **Movimientos** (`movimientos.py`; Miguel, #27): **3 de los que aprende por nivel** (hasta su nivel) **y el cuarto al azar** entre todos los normales (sin Z, Dinamax ni los que Metrónomo no puede usar). Ligera preferencia por los potentes (uno de 100 de potencia sale 1,5 veces más que uno de estado), **igual para todos**. Diversidad de tipos: un segundo ataque del mismo tipo es mucho menos probable. Al menos uno de daño.
+  - **Tope del cuarto (Jorge):** como es al azar entre todos, tiene un tope de potencia según el nivel: 40 + 1,5 por nivel (nivel 7: 50; nivel 40: 100; desde 74, sin tope). Si no, un entrenador de nivel 5 podría llevar Hidrobomba. Miguel lo puede cambiar en `potencia_maxima_del_cuarto`.
   - **No se toca** Máximo en la Ruta 120 (equipo fijo).
 - Niveles según la curva de la sección 5 (sustituye al "+15%").
 - Movimientos aleatorios con 3 movimientos garantizados y una ligera preferencia por movimientos dañinos potentes.
@@ -378,14 +382,21 @@ Están en **`tools/dualocke/randomizer_config.json`**, que es el archivo que deb
 
 **Movimientos**
 - Movimientos de Gen 9 (ya vienen así).
-- MTs aleatorias con compatibilidad completamente aleatoria, conservando los movimientos de campo y comprobando los aprendibles por nivel.
-- Tutores aleatorios con compatibilidad aleatoria, conservando los movimientos de campo.
+- MTs aleatorias con compatibilidad completamente aleatoria, conservando los movimientos de campo y comprobando los aprendibles por nivel. **Hecho** (`mts.py`; Miguel, #27): cada MT enseña un movimiento al azar (sin repetir) y **cada especie la aprende con un 50 %**, sin excepción para las de su tipo; es siempre la misma respuesta para la misma especie y semilla. Las de movimientos de campo (Excavar, Daño Secreto) y las MO se quedan como están, con su compatibilidad original, para no bloquear el avance. No se toca `tms_hms.h`: lo cambia `include/item.h` al vuelo.
+- Tutores aleatorios con compatibilidad aleatoria, conservando los movimientos de campo. **Hecho** (`mts.py`): los 10 tutores de Hoenn enseñan un movimiento al azar (sin repetir los de las MT) y se aprende con la misma probabilidad que las MT nuevas. La macro `move_tutor` llama a `Dualocke_TutorAleatorio`, que cambia el movimiento y pone su nombre en `{STR_VAR_1}`. **Textos:** los de los tutores (`data/text/move_tutors.inc` y `traduccion/dialogos/27_pokedex_tutores.tsv`) ahora dicen el movimiento con `{STR_VAR_1}`. Los que lo describían (CORTE FURIA "de tipo BICHO", SUSTITUTO "hace una copia"…) se han dejado más generales. La historia de cada tutor se queda.
 
 **Objetos**
-- Objetos del suelo aleatorios (incluyendo megapiedras).
+- Objetos del suelo aleatorios. **Hecho** (`objetos.py`; Miguel, #27):
+  - Las Poké Balls del suelo y los objetos ocultos de Hoenn (unos 410).
+  - **Las megapiedras se quedan donde están** y ningún otro objeto del suelo puede ser una megapiedra.
+  - Los **competitivos** (`FLAG_ITEM_COMP_*`), totalmente aleatorios como el resto.
+  - **Las MT se barajan entre ellas** (donde había una MT sale otra).
+  - El resto, **cualquier objeto** menos los excluidos de Miguel (`objetos.excluir`), los objetos clave, las MO, las cartas, las megapiedras, los cristales Z y las teralitas. Las bayas sí.
+  - Los objetos clave y las MO del suelo no se tocan.
 - Objetos del segundo dependiente aleatorios, con objetos evolutivos garantizados (ver sección 6).
-- Objetos de Recogida aleatorios.
-- Intercambios internos totalmente aleatorios (Pokémon dado y pedido, objetos, IVs, motes, entrenador original).
+- Objetos de Recogida aleatorios. **Hecho:** solo objetos de consumo (curas, bayas, caramelos), con las mismas probabilidades por nivel que el original.
+- **Objetos de los salvajes (hecho):** cualquier salvaje puede llevar un objeto al azar (del grupo del suelo) con un **5 %** (el doble con Ojo Compuesto). Valor provisional de Jorge: `salvajes.probabilidad_objeto`.
+- Intercambios internos totalmente aleatorios (Pokémon dado y pedido, objetos, IVs, motes, entrenador original). **Hecho** (`intercambios.py`): el que te dan es una forma base al azar sin legendarios (sale al nivel del que entregas, como en el original; cuenta como regalo para la caja de prohibidos); **el que te piden sale de entre los salvajes de esa partida**, para que se pueda conseguir (Jorge). Objeto e IVs al azar; el mote pasa a ser el nombre de la especie y el entrenador original se queda.
 - Precios equilibrados y Caramelos Raros a 1 ₽.
 
 **Ajustes adicionales**
@@ -495,7 +506,7 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
 1. ~~Lo fácil: mote obligatorio, quitar curativos y Objetos X de las tiendas, Caramelos Raros a 1 ₽, bloquear Objetos X en combate, correr sin Deportivas, Pokédex Nacional desde el inicio, MTs reutilizables, MOs olvidables.~~ **Hecho.**
 2. ~~Combate con Máximo y el aro~~ (hecho). ~~Segundo dependiente y contenido de las tiendas~~ (hecho).
 3. Reglas del locke: ~~vidas + caja de muertos~~, ~~límite de una compra por objeto~~ y ~~aviso al morir~~ (hechos); ~~primera captura por zona y caja de prohibidos~~ (hechas).
-4. Randomizer con semilla (~~reescalado de niveles~~, ~~equipos de jefes~~ y ~~parámetros~~ hechos).
+4. Randomizer con semilla (~~reescalado de niveles~~, ~~equipos de jefes~~ y ~~parámetros~~ hechos; ~~salvajes, entrenadores, iniciales, estáticos, regalos, objetos, intercambios, movimientos, habilidades y MT~~ hechos por Jorge; ~~tutores~~ hechos; falta probarlo jugando).
 5. Revanchas y postgame (niveles).
 6. Traducción.
 7. **Siguiente tarea (pedida por Miguel, 24/10/2026): mejorar la pantalla de datos del Pokémon.** Que se vea todo sin herramientas externas:
@@ -523,6 +534,7 @@ Quién hace cada cosa y cómo se sube: sección 13.
 | Configuración del mundo (seguidores, etc.) | `include/config/overworld.h` |
 | Encuentros salvajes | `src/data/wild_encounters.json` |
 | Randomizer (semilla, salvajes, entrenadores, datos de las especies) | `tools/dualocke/randomizer.py`, `tools/dualocke/aleatorio/`; integración en el `Makefile` (bloque "Dualocke: randomizer con semilla") |
+| Randomizer en el juego (tablas generadas: estáticos, regalos, objetos, intercambios, habilidades, MT, tutores) | `src/dualocke_aleatorio.c`, `include/dualocke_aleatorio.h`, `src/data/dualocke_aleatorio.h` (generado); qué enseña cada MT en `include/item.h` |
 | Reescalado de niveles por tramos (tabla de mapas y reglas) | `tools/dualocke/reescalar_niveles.py` |
 | Equipos de los jefes (+1/+2, megas) | `tools/dualocke/equipos_jefes.py` |
 | Megapiedras y objetos competitivos por el mapa | `tools/dualocke/colocar_objetos.py` |

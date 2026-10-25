@@ -5,6 +5,7 @@
 #include "daycare.h"
 #include "debug.h"
 #include "dexnav.h"
+#include "dualocke_aleatorio.h"
 #include "faraway_island.h"
 #include "follower_npc.h"
 #include "event_data.h"
@@ -456,7 +457,7 @@ static const u8 *GetInteractedBackgroundEventScript(struct MapPosition *position
         if (bgEvent->bgUnion.hiddenItem.underfoot == TRUE)
             return NULL;
         gSpecialVar_0x8004 = bgEvent->bgUnion.hiddenItem.hiddenItemId + FLAG_HIDDEN_ITEMS_START;
-        gSpecialVar_0x8005 = bgEvent->bgUnion.hiddenItem.item;
+        gSpecialVar_0x8005 = Dualocke_ObjetoSuelo(gSpecialVar_0x8004, bgEvent->bgUnion.hiddenItem.item); // Dualocke: randomizer
         gSpecialVar_0x8009 = bgEvent->bgUnion.hiddenItem.quantity;
         if (FlagGet(gSpecialVar_0x8004) == TRUE)
             return NULL;

@@ -10,6 +10,7 @@
 #include "battle_switch_in.h"
 #include "battle_environment.h"
 #include "battle_gimmick.h"
+#include "dualocke_aleatorio.h"
 #include "battle_z_move.h"
 #include "battle_stat_change.h"
 #include "battle_move_resolution.h"
@@ -7577,7 +7578,8 @@ static void Cmd_pickup(void)
                         percentTotal += sPickupTable[j].percentage[lvlDivBy10];
                         if (rand < percentTotal)
                         {
-                            SetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_HELD_ITEM, &sPickupTable[j].itemId);
+                            enum Item pickupItem = Dualocke_ObjetoRecogida(sPickupTable[j].itemId); // Dualocke: randomizer
+                            SetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_HELD_ITEM, &pickupItem);
                             break;
                         }
                     }

@@ -277,8 +277,9 @@ endif
 DUALOCKE_MAKE_ARGS := DUALOCKE_SEED_SET=1 DUALOCKE_SEED='$(DUALOCKE_SEED)'
 
 DUALOCKE_RANDOMIZER_DEPS := tools/dualocke/randomizer.py $(wildcard tools/dualocke/aleatorio/*.py) tools/dualocke/randomizer_config.json \
-                            $(wildcard $(DATA_SRC_SUBDIR)/pokemon/species_info/*.h) $(INCLUDE_DIRS)/config/species_enabled.h
-# El randomizer pasa src/pokemon.c por el preprocesador, así que necesita antes estas cabeceras generadas
+                            $(wildcard $(DATA_SRC_SUBDIR)/pokemon/species_info/*.h) $(INCLUDE_DIRS)/config/species_enabled.h \
+                            $(DATA_SRC_SUBDIR)/items.h $(wildcard data/maps/*/map.json) src/roamer.c
+# El randomizer pasa src/pokemon.c y src/item.c por el preprocesador, así que necesita antes estas cabeceras generadas
 DUALOCKE_RANDOMIZER_DEPS += $(INCLUDE_DIRS)/constants/map_groups.h $(INCLUDE_DIRS)/constants/layouts.h $(INCLUDE_DIRS)/constants/map_event_ids.h \
                             $(DATA_SRC_SUBDIR)/map_group_count.h $(INCLUDE_DIRS)/constants/wild_encounter.h $(INCLUDE_DIRS)/constants/region_map_sections.h \
                             $(INCLUDE_DIRS)/constants/heal_locations.h $(INCLUDE_DIRS)/constants/script_commands.h
@@ -306,11 +307,11 @@ else
 WILD_ENCOUNTERS_JSON := $(DATA_SRC_SUBDIR)/wild_encounters.json
 # Sin semilla, la regla normal (trainer_rules.mk); la marca hace que se regenere al quitar la semilla
 $(DATA_SRC_SUBDIR)/trainers.h: $(DUALOCKE_SEED_STAMP)
-# Y los iniciales de siempre, y los estáticos y regalos sin cambios
+# Y los iniciales de siempre, y las tablas del randomizer vacías (estáticos, regalos, objetos, intercambios)
 $(DATA_SRC_SUBDIR)/dualocke_iniciales.h: $(DUALOCKE_SEED_STAMP) tools/dualocke/aleatorio/iniciales.py
 	python3 -c "import sys; sys.path.insert(0, 'tools/dualocke'); from aleatorio import iniciales as i; open('$@', 'w').write(i.cabecera(['SPECIES_TREECKO', 'SPECIES_TORCHIC', 'SPECIES_MUDKIP'], 'Sin randomizar'))"
-$(DATA_SRC_SUBDIR)/dualocke_aleatorio.h: $(DUALOCKE_SEED_STAMP) tools/dualocke/aleatorio/estaticos.py
-	python3 -c "import sys; sys.path.insert(0, 'tools/dualocke'); from aleatorio import estaticos as e; open('$@', 'w').write(e.cabecera({}, {}, 'Sin randomizar'))"
+$(DATA_SRC_SUBDIR)/dualocke_aleatorio.h: $(DUALOCKE_SEED_STAMP) tools/dualocke/aleatorio/cabecera.py
+	python3 -c "import sys; sys.path.insert(0, 'tools/dualocke'); from aleatorio import cabecera as c; open('$@', 'w').write(c.generar('Sin randomizar'))"
 endif
 AUTO_GEN_TARGETS += $(DATA_SRC_SUBDIR)/dualocke_iniciales.h $(DATA_SRC_SUBDIR)/dualocke_aleatorio.h
 

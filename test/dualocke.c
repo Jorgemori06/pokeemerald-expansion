@@ -1,12 +1,15 @@
 #include "global.h"
 #include "battle.h"
 #include "dualocke.h"
+#include "dualocke_aleatorio.h"
 #include "event_data.h"
+#include "item.h"
 #include "global.fieldmap.h"
 #include "pokemon.h"
 #include "pokemon_storage_system.h"
 #include "test/test.h"
 #include "constants/region_map_sections.h"
+#include "constants/trade.h"
 
 // Dualocke: tests del sistema de vidas y la caja de muertos.
 
@@ -483,4 +486,29 @@ TEST("Dualocke: antes de recibir las Poké Balls no se prohíbe nada")
     FlagClear(FLAG_ADVENTURE_STARTED);
     GiveMon(0, SPECIES_BELDUM);
     EXPECT_EQ(Gift(SPECIES_BELDUM, FALSE), MON_GIVEN_TO_PARTY);
+}
+
+// make check nunca randomiza: las tablas del randomizer están vacías y todo sale como el original
+TEST("Dualocke: sin semilla, el randomizer no cambia nada")
+{
+    enum Species especie = SPECIES_NONE, pide = SPECIES_NONE;
+    enum Item objeto = ITEM_NONE;
+    u8 ivs[NUM_STATS] = {0};
+
+    EXPECT_EQ(Dualocke_EstaticoAleatorio(SPECIES_KECLEON), SPECIES_KECLEON);
+    EXPECT_EQ(Dualocke_RegaloAleatorio(SPECIES_BELDUM), SPECIES_BELDUM);
+    EXPECT_EQ(Dualocke_ObjetoSuelo(FLAG_ITEM_ROUTE_102_POTION, ITEM_POTION), ITEM_POTION);
+    EXPECT_EQ(Dualocke_ObjetoSuelo(FLAG_HIDDEN_ITEM_ROUTE_104_SUPER_POTION, ITEM_SUPER_POTION), ITEM_SUPER_POTION);
+    EXPECT_EQ(Dualocke_ObjetoRecogida(ITEM_POTION), ITEM_POTION);
+    EXPECT(!Dualocke_ObjetosSalvajesAleatorios());
+    EXPECT_EQ(Dualocke_ObjetoSalvaje(TRUE), ITEM_NONE);
+    EXPECT(!Dualocke_IntercambioAleatorio(INGAME_TRADE_SEEDOT, &especie, &pide, &objeto, ivs));
+    EXPECT_EQ(Dualocke_HabilidadAleatoria(SPECIES_ZIGZAGOON), ABILITY_NONE);
+    EXPECT_EQ(GetSpeciesAbility(SPECIES_ZIGZAGOON, 0), ABILITY_PICKUP);
+    EXPECT_EQ(GetItemTMHMMoveId(ITEM_TM_EARTHQUAKE), MOVE_EARTHQUAKE);
+    EXPECT_EQ(GetTMHMItemIdFromMoveId(MOVE_EARTHQUAKE), ITEM_TM_EARTHQUAKE);
+    EXPECT_EQ(Dualocke_PuedeAprenderMT(SPECIES_ZIGZAGOON, MOVE_EARTHQUAKE), -1);
+    gSpecialVar_0x8005 = MOVE_SWAGGER;
+    Dualocke_TutorAleatorio();
+    EXPECT_EQ(gSpecialVar_0x8005, MOVE_SWAGGER);
 }
