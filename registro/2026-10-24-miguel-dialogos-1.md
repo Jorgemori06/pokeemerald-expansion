@@ -15,6 +15,7 @@ Rama: `miguel/dialogos-1`
 - Séptimo tramo (unos 170 textos): CASINO de MALVALONA, NUEVA MALVALONA, RUTA 117 con sus entrenadores y la GUARDERÍA, y RUTA 111 sur con la familia VENCEDOR.
 - Tramos 15 y 16 (unos 175 textos): la CASA TRAMPA (pruebas 1 a 7) y PUEBLO VERDEGAL.
 - Tramo 17 (unos 185 textos): RUTA 111 con el desierto y sus entrenadores, RUTA 112, el TELEFÉRICO, MONTE CENIZO (MAGNO, AQUILES y el METEORITO) y CAMINO ESCABROSO.
+- Tramos 18 y 19 (unos 250 textos): RUTA 113 con el TALLER DE CRISTAL, PUEBLO PARDAL, RUTA 114, CATARATAS METEORO (sin la cueva de MÁXIMO del postgame) y RUTA 115.
 - Lo que queda se reparte entre Miguel y Jorge en `traduccion/dialogos/PLAN.md` (unos 1300 textos cada uno).
 - Repasadas las frases con género del jugador para que valgan para chico y chica.
 - Explicación y lista de nombres en `traduccion/dialogos/LEEME.md`.

@@ -14,7 +14,7 @@ Son unas 187.000 palabras (los `.string` de `data/maps/*/scripts.inc`, `data/tex
 
 ## Nombres de Hoenn (oficiales)
 
-VILLA RAÍZ, PUEBLO ESCASO, CIUDAD PETALIA, CIUDAD FÉRRICA, PUEBLO AZULIZA, PUEBLO VERDEGAL, CIUDAD PORTUAL, CIUDAD CALAGUA, CIUDAD ALGARIA, MALVALONA; NORMAN, PETRA (Roxanne), SR. PEÑA (Mr. Stone), MÁXIMO (Steven), SCOTT, MARCIAL (Brawly), CAPITÁN BABOR (Capt. Stern), DOCK, GABI y TY, EQUIPO AQUA, AQUILES (Archie), EQUIPO MAGMA, familia VENCEDOR (Winstrate, sin confirmar), ERICO (Wattson), MAESTRO TRAMPA, MAGNO (Maxie), METEORITO, GALLETA LAVA, SENDERO ÍGNEO (Fiery Path, sin confirmar), CAMINO ESCABROSO (Jagged Pass, sin confirmar), ROBOMUÑECO (Mechadoll, sin confirmar), WANDA (sin confirmar), RYDEL (sin confirmar), CAMINO DE BICIS (sin confirmar); PROF. ABEDUL, AURA (May), BRUNO (Brendan), BLASCO (Wally), SR. ARENQUE (Mr. Briney), AREDIA (Lanette). Las DEPORTIVAS (Running Shoes).
+VILLA RAÍZ, PUEBLO ESCASO, CIUDAD PETALIA, CIUDAD FÉRRICA, PUEBLO AZULIZA, PUEBLO VERDEGAL, CIUDAD PORTUAL, CIUDAD CALAGUA, CIUDAD ALGARIA, MALVALONA; NORMAN, PETRA (Roxanne), SR. PEÑA (Mr. Stone), MÁXIMO (Steven), SCOTT, MARCIAL (Brawly), CAPITÁN BABOR (Capt. Stern), DOCK, GABI y TY, EQUIPO AQUA, AQUILES (Archie), EQUIPO MAGMA, familia VENCEDOR (Winstrate, sin confirmar), ERICO (Wattson), MAESTRO TRAMPA, MAGNO (Maxie), CANDELA (Flannery), PROF. COSMO (Cozmo, sin confirmar), SACO HOLLÍN, TUTOR DE MOVIMIENTOS, METEORITO, GALLETA LAVA, SENDERO ÍGNEO (Fiery Path, sin confirmar), CAMINO ESCABROSO (Jagged Pass, sin confirmar), ROBOMUÑECO (Mechadoll, sin confirmar), WANDA (sin confirmar), RYDEL (sin confirmar), CAMINO DE BICIS (sin confirmar); PROF. ABEDUL, AURA (May), BRUNO (Brendan), BLASCO (Wally), SR. ARENQUE (Mr. Briney), AREDIA (Lanette). Las DEPORTIVAS (Running Shoes).
 
 ## Hecho
 
@@ -37,6 +37,8 @@ VILLA RAÍZ, PUEBLO ESCASO, CIUDAD PETALIA, CIUDAD FÉRRICA, PUEBLO AZULIZA, PUE
 | CASA TRAMPA (pruebas 1-7; la 8 es del postgame) | `15_casa_trampa.tsv` |
 | PUEBLO VERDEGAL (sin el interior de la CARPA DE COMBATE ni lo de después de la LIGA) | `16_verdegal.tsv` |
 | RUTA 111 (desierto), RUTA 112, TELEFÉRICO, MONTE CENIZO (MAGNO y AQUILES) y CAMINO ESCABROSO | `17_ruta111_112_monte_cenizo.tsv` |
+| RUTA 113 con el TALLER DE CRISTAL y PUEBLO PARDAL | `18_ruta113_pardal.tsv` |
+| RUTA 114 (AREDIA y MANÍACO DE LOS FÓSILES), CATARATAS METEORO y RUTA 115 | `19_ruta114_cataratas_ruta115.tsv` |
 
 Siguiente: lo que queda está repartido entre Miguel y Jorge en `PLAN.md`.
 

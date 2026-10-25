@@ -1,0 +1,100 @@
+# RUTA 113 con el TALLER DE CRISTAL y PUEBLO PARDAL (sin el interior de la CARPA DE COMBATE)
+Route113_Text_AshCanBeFashionedIntoGlass	¡Juajuajua! ¡La tecnología de hoy\nes una maravilla!\pMira esta ceniza volcánica.\nCon ella se puede hacer cristal.$
+Route113_Text_FunWalkingThroughAsh	Es divertido andar por la ceniza del\nvolcán que cubre el suelo y la hierba.\p¡Se ve por dónde has pasado!\n¡Mola mucho!$
+Route113_Text_RouteSign111	RUTA 113\n{RIGHT_ARROW} RUTA 111$
+Route113_Text_RouteSignFallarbor	RUTA 113\n{LEFT_ARROW} PUEBLO PARDAL$
+Route113_Text_TrainerTipsRegisterKeyItems	CONSEJOS PARA ENTRENADORES\pPuedes asignar uno de los OBJETOS\nCLAVE de la MOCHILA al botón SELECT.\pAsí, con solo pulsar SELECT, usarás\nese objeto cómodamente.$
+Route113_Text_GlassWorkshopSign	TALLER DE CRISTAL\n“Cristal hecho con ceniza volcánica”.$
+Route113_GlassWorkshop_Text_GoCollectAshWithThis	Esta zona está cubierta de ceniza\nvolcánica, uf, uf.\pYo tengo un don especial, uf, uf.\pHago cristal con la ceniza volcánica\ny fabrico objetos, uf, uf.\pRecoge ceniza con esto, uf, uf.$
+Route113_GlassWorkshop_Text_ExplainSootSack	Coge ese SACO HOLLÍN y anda por los\nmontones de ceniza, uf, uf.\pY se irá llenando de ceniza\nvolcánica, uf, uf.\pCuando creas que tienes bastante,\nven a verme, uf, uf.$
+Route113_GlassWorkshop_Text_LetsSeeCollectedAshes	¿Has recogido ceniza, uf, uf?\nA ver, uf, uf.$
+Route113_GlassWorkshop_Text_NotEnoughAshNeedX	Mmm…\nNo hay bastante ceniza, uf, uf.\lCon esto no puedo hacer cristal, uf.\pA ver… Tienes que dar {STR_VAR_1}\npasos más para que te haga una\lFLAUTA AZUL, uf, uf.$
+Route113_GlassWorkshop_Text_WhichGlassItemWoudYouLike	¡Oh!\n¡Tienes mucha ceniza, uf, uf!\p¡Te haré un objeto de cristal, uf, uf!\n¿Cuál quieres, uf, uf?$
+Route113_GlassWorkshop_Text_IsThatTheItemForYou	¿{STR_VAR_1}, uf, uf?\n¿Es ese el que quieres, uf, uf?$
+Route113_GlassWorkshop_Text_WhichWouldYouLike	¿Cuál quieres, uf, uf?$
+Route113_GlassWorkshop_Text_IllMakeItemForYou	¡Pues {STR_VAR_1}, uf, uf!\p¡Vale! Te lo hago, uf, uf.\nEspera un poquito, uf, uf.$
+Route113_GlassWorkshop_Text_NotEnoughAshToMakeItem	¿{STR_VAR_1}, uf, uf?\pPero no hay bastante ceniza para\nhacerlo, uf, uf.\pA ver… Tienes que dar {STR_VAR_2}\npasos más por la ceniza para que\lte haga ese objeto, uf, uf.\p¿Qué otro objeto quieres que te\nhaga, uf, uf?$
+Route113_GlassWorkshop_Text_AllThatAshButDontWantAnything	¿Has recogido toda esa ceniza y no\nquieres nada, uf, uf?$
+Route113_GlassWorkshop_Text_IveFinishedGlassItem	Ya he terminado tu {STR_VAR_1}.\nToma, uf, uf.$
+Route113_GlassWorkshop_Text_NoRoomInBag	¿Oh?\nNo tienes sitio en la MOCHILA, uf, uf.\pTe lo guardo yo, así que vuelve\nmás tarde, uf, uf.$
+Route113_GlassWorkshop_Text_NoRoomInPC	¿Oh?\n¿No tienes sitio en el PC, uf, uf?\pTe lo guardo yo, así que vuelve\nmás tarde, uf, uf.$
+Route113_GlassWorkshop_Text_HaventGotYourSootSack	¿Eh? No llevas el SACO HOLLÍN\nencima, uf, uf.\pTienes que llevarlo para recoger\nceniza volcánica, uf, uf.$
+Route113_GlassWorkshop_Text_FunToBlowGlassFlute	Es divertido tocar una flauta de\ncristal mientras habla mi jefe.\p¡Fiu-fiu! ¡Uf-uf!$
+Route113_Text_JaylenIntro	¿A que no adivinas por qué hace\ntan fresquito aquí?$
+Route113_Text_JaylenDefeat	¡Puaj!\n¡Qué peste!$
+Route113_Text_JaylenPostBattle	La ceniza volcánica tapa el sol, así\nque no hace mucho calor.\p¡Me viene genial, odio el calor!$
+Route113_Text_DillonIntro	La erupción del volcán demuestra que\nla tierra está viva.$
+Route113_Text_DillonDefeat	¡Qué fuerza tienes!$
+Route113_Text_DillonPostBattle	¡Ay! ¡Uy! ¡No veo nada!\n¡Tengo ceniza hasta en las pestañas!\pY no es broma: ¡me pican las\npestañas de tanta ceniza!\pVale, ha sido malo, perdona…$
+Route113_Text_MadelineIntro	Uso esta sombrilla para proteger a\nmi querido NUMEL de esta ceniza\lvolcánica tan sucia y asquerosa.$
+Route113_Text_MadelineDefeat	Uf, uf…\nEstoy agotada…$
+Route113_Text_MadelinePostBattle	Lo haces muy bien.\n¡Debo decir que me has impresionado!$
+Route113_Text_MadelineRegister	Ven, ponte debajo de mi sombrilla.\nDeja que te registre en mi POKéNAV.$
+Route113_Text_MadelineRematchIntro	Oh, hola, ¿cuánto tiempo, verdad?\n¿Me concedes un combate?$
+Route113_Text_MadelineRematchDefeat	¡Oh, qué maravilla!$
+Route113_Text_MadelinePostRematch	Sigues haciéndolo muy bien.\n¡Debo decir que me has impresionado!$
+Route113_Text_LaoIntro	¡De entre las cenizas salto! ¡Hiyah!\n¡Os desafío!$
+Route113_Text_LaoDefeat	¡Con honor admito la derrota!$
+Route113_Text_LaoPostBattle	Debo perfeccionar el arte del\nocultamiento. Me despido.$
+Route113_Text_LaoRegister	¡Yiiyaah! ¡Contempla la antigua técnica\nninja del registro en el POKéNAV!$
+Route113_Text_LaoRematchIntro	¡De entre las cenizas salto! ¡Hiyah!\n¡Os desafío!$
+Route113_Text_LaoRematchDefeat	¡Con honor admito la derrota!$
+Route113_Text_LaoPostRematch	Mi ocultamiento perfecto se fue al\ntraste por mi torpeza en combate…\pMe despido.$
+Route113_Text_LungIntro	¡Gracias por encontrarme!\n¡Pero aun así hay que combatir!$
+Route113_Text_LungDefeat	Usaré mi ninjutsu contra ti…\n¡“REMOLINO MANTO DE CENIZA”!\p… ¿Qué?\n¿Ya se ha acabado?$
+Route113_Text_LungPostBattle	¿Sabes qué es lo malo de esconderse?\nQue es muy solitario si no viene nadie.$
+Route113_Text_ToriIntro	TORI: Las dos recogemos ceniza.\nY también combatimos con POKéMON.$
+Route113_Text_ToriDefeat	TORI: Hemos perdido… Qué aburrido,\nvoy a por más ceniza.$
+Route113_Text_ToriPostBattle	TORI: ¿Cuánta ceniza tenemos?\nOjalá haya para una FLAUTA BLANCA.$
+Route113_Text_ToriNotEnoughMons	TORI: Queremos combatir 2 contra 2.\n¡Si no, perderíamos!$
+Route113_Text_TiaIntro	TÍA: Las dos recogemos ceniza.\nY también combatimos con POKéMON.$
+Route113_Text_TiaDefeat	TÍA: No hemos podido ganar… Qué\naburrido, voy a por más ceniza.$
+Route113_Text_TiaPostBattle	TÍA: ¡Tenemos mucha ceniza!\n¡Creo que hay para una FLAUTA BLANCA!$
+Route113_Text_TiaNotEnoughMons	TÍA: Queremos combatir 2 contra 2.\n¡Si no, no ganaremos!$
+Route113_Text_CobyIntro	¡Bah, con estas alas te mando\na volar!$
+Route113_Text_CobyDefeat	¿Eh… qué?$
+Route113_Text_CobyPostBattle	No sé qué decir cuando me ganan\ntan fácilmente…$
+Route113_Text_SophieIntro	Este calorcito me da sueño.\nCombate conmigo para que no me duerma.$
+Route113_Text_SophieDefeat	Esto es un sueño.\nSeguro que sí…$
+Route113_Text_SophiePostBattle	Perder me saca de quicio…\n¡Me voy a dormir aquí mismo!\l¡Zzz!$
+Route113_Text_LawrenceIntro	¿Estabas recogiendo ceniza\nvolcánica?$
+Route113_Text_LawrenceDefeat	Jejeje.\nNos han ganado limpiamente.$
+Route113_Text_LawrencePostBattle	Yo también debería esconderme bajo\nla ceniza.$
+Route113_Text_WyattIntro	¿Q-quieres combatir conmigo?\n¿Aunque acabe de atrapar mi POKéMON?$
+Route113_Text_WyattDefeat	¿T-tan feliz te pone ganar?\n¿Aunque sea a mí?$
+Route113_Text_WyattPostBattle	¿Ah, y ahora quieres decirle algo\nal que ha perdido?\p¿Te crees lo más, o qué?\n¡Hmpf!$
+FallarborTown_Text_ShadyCharactersCozmosHome	¡Aquí pasa algo, y no me gusta\nnada!\pHe visto a gente sospechosa entrar y\nsalir de la casa del PROF. COSMO…$
+FallarborTown_Text_RegionKnownForMeteors	Esta zona es famosa por los\nmeteoritos desde tiempos antiguos.\pDicen que las CATARATAS METEORO las\nexcavó un meteorito hace mucho.$
+FallarborTown_Text_MyPreciousAzurill	¡Mira! ¡Fíjate!\n¡Es mi querido AZURILL!\p¡Es suavecito, liso y blandito!$
+FallarborTown_Text_Azurill	AZURILL: Ruriluuu.$
+FallarborTown_Text_HaveYouChallengedFlannery	¿Has desafiado ya a CANDELA, la LÍDER\ndel GIMNASIO de LAVACALDA?\pEl abuelo de la chica era famoso.\nFue del ALTO MANDO de la LIGA\lPOKéMON durante un tiempo.\pNo me extrañaría que CANDELA llegara\na ser una gran ENTRENADORA.$
+FallarborTown_Text_BattleTentSign	CARPA DE COMBATE DE PARDAL\n“¡Que se reúnan los mejores equipos!”$
+FallarborTown_Text_TownSign	PUEBLO PARDAL\n“Un pueblo de pequeños huertos”.$
+FallarborTown_Text_MoveTutorSign	CASA DEL TUTOR DE MOVIMIENTOS\n“Se enseñan movimientos a POKéMON”.$
+FallarborTown_ContestHall_Text_DoAllRightInPreliminary	En la ronda preliminar no lo hacemos\nmal, pero nunca ganamos la exhibición…\pA lo mejor tengo que fijarme en lo\nque hacen los demás concursantes…$
+FallarborTown_ContestHall_Text_MonAllTheseRibbons	¡Mira!\n¡Mi POKéMON ha ganado estas CINTAS!\p¿Tus POKéMON tienen CINTAS?\nLas puedes ver en el POKéNAV.$
+FallarborTown_ContestHall_Text_CantWinEverywhere	No puedo con los LÍDERES de GIMNASIO…\pNo gano ningún CONCURSO…\pHe ido de aquí para allá, y todo\npara nada…$
+FallarborTown_ContestHall_Text_SuperRankStage	CONCURSOS POKéMON\n¡ESCENARIO DE CATEGORÍA SUPER!$
+FallarborTown_CozmosHouse_Text_MeteoriteWillNeverBeMineNow	PROF. COSMO: Oh…\nNunca debí dejarme engañar para\ldecirle al EQUIPO MAGMA dónde\lencontrar METEORITOS…\pEse METEORITO de las CATARATAS\nMETEORO… Ya nunca será mío…$
+FallarborTown_CozmosHouse_Text_IsThatMeteoriteMayIHaveIt	¡Oh!\n¿Eh?\pEse objeto…\p¿Será posible?\p¿Es el METEORITO que el EQUIPO MAGMA\nse llevó de las CATARATAS METEORO?\p¿Me lo darías, por favor?\pNo te lo pido gratis.\n¿Qué tal a cambio de esta MT?$
+FallarborTown_CozmosHouse_Text_PleaseUseThisTM	PROF. COSMO: Esta MT es una muestra\nde mi agradecimiento.\l¡Úsala, por favor!$
+FallarborTown_CozmosHouse_Text_ReallyGoingToHelpMyResearch	PROF. COSMO: Oh, no me lo puedo creer.\n¡Esto es fantástico!\p¡Me va a ayudar muchísimo a\ninvestigar!$
+FallarborTown_CozmosHouse_Text_CrushedWithDisappointment	PROF. COSMO: Oh, pero…\nMe has dejado hundido…$
+FallarborTown_CozmosHouse_Text_MayIHaveMeteorite	PROF. COSMO: ¿Me darías ese\nMETEORITO, por favor?\pNo te lo pido gratis.\n¿Qué tal a cambio de esta MT?$
+FallarborTown_CozmosHouse_Text_CozmoWentToMeteorFalls	El PROF. COSMO se fue a las CATARATAS\nMETEORO, en la RUTA 114, con unos\ltipos del EQUIPO MAGMA.$
+FallarborTown_CozmosHouse_Text_FeelSorryForCozmo	Pobre PROF. COSMO…\nEstá muy deprimido… Me da pena.$
+FallarborTown_CozmosHouse_Text_CozmoIsSoHappy	Mira al PROF. COSMO…\n¡Qué contento está! Qué mono.$
+FallarborTown_Mart_Text_DecidingSkittyEvolve	No sé si hacer evolucionar a mi\nSKITTY o no.\pSolo tengo que usar esta PIEDRA\nLUNAR, pero me cuesta decidirme…\pSi evoluciona, será mucho más\nfuerte.\pPero también cambiará mucho.$
+FallarborTown_Mart_Text_Skitty	SKITTY: ¿Miau?$
+FallarborTown_Mart_Text_SellNuggetIFound	Esta PEPITA que he encontrado…\nSupongo que tendré que venderla,\lporque no sirve para nada más.$
+FallarborTown_MoveRelearnersHouse_Text_ImTheMoveTutor	Soy el TUTOR DE MOVIMIENTOS.\pConozco todos los movimientos que\naprenden los POKéMON, todos, y puedo\lenseñárselos.\pSi quieres, le enseño un movimiento\na uno de tus POKéMON.\pLo haré a cambio de una ESCAMA\nCORAZÓN. Ahora las colecciono.$
+FallarborTown_MoveRelearnersHouse_Text_ThatsAHeartScaleWantMeToTeachMove	¡Oh! ¡Eso es! ¡Una ESCAMA CORAZÓN\nde verdad!\pDéjame adivinar: ¿quieres que\nenseñe un movimiento?$
+FallarborTown_MoveRelearnersHouse_Text_TutorWhichMon	¿A qué POKéMON le enseño?$
+FallarborTown_MoveRelearnersHouse_Text_TeachWhichMove	¿Qué movimiento le enseño?$
+FallarborTown_MoveRelearnersHouse_Text_DontHaveMoveToTeachPokemon	Lo siento…\pParece que no hay ningún movimiento\nque pueda enseñarle a ese POKéMON.$
+FallarborTown_MoveRelearnersHouse_Text_HandedOverHeartScale	{PLAYER} ha entregado una ESCAMA\nCORAZÓN a cambio.$
+FallarborTown_MoveRelearnersHouse_Text_ComeBackWithHeartScale	Si tus POKéMON necesitan aprender un\nmovimiento, vuelve con una ESCAMA\lCORAZÓN.$
+FallarborTown_MoveRelearnersHouse_Text_CantTeachEgg	¿Eh? No hay ni un solo movimiento\nque pueda enseñarle a un HUEVO.$
+FallarborTown_PokemonCenter_1F_Text_LanetteGreeting	Oh, hola.\n¿Quién eres?\pVale, te llamas {PLAYER}{KUN}.\nSe nota que entrenas POKéMON.\pEso quiere decir que usas el Sistema\nde Almacenamiento que diseñé yo.\pHe llegado a esa conclusión con una\nsimple deducción.\pMe has hablado porque querías usar\nalgo de este PC.\pAy, perdona. Soy AREDIA.\pDe verdad, me alegra conocerte. ¡Qué\nbien que uses el Sistema!\pSi puedes, ven a verme a casa.\nVivo en la RUTA 114.$
+FallarborTown_PokemonCenter_1F_Text_FossilManiacEdgeOfTown	¿Cómo serían los POKéMON hace\nmuchísimo tiempo?\pA lo mejor lo sabe el MANÍACO DE\nLOS FÓSILES de las afueras.$
+FallarborTown_PokemonCenter_1F_Text_PlantHardyTrees	En los campos de PARDAL plantamos\nárboles resistentes que crecen bien\lincluso en la ceniza volcánica.$
