@@ -1,8 +1,8 @@
 gText_PkmnTransferredSomeonesPC::
-	.string "{STR_VAR_2} was transferred to\n"
-	.string "SOMEONE'S PC.\p"
-	.string "It was placed in \n"
-	.string "BOX “{STR_VAR_1}.”$"
+	.string "{STR_VAR_2} se ha enviado al\n"
+	.string "PC de ALGUIEN.\p"
+	.string "Se ha guardado en la\n"
+	.string "CAJA “{STR_VAR_1}”.$"
 
 gText_PkmnTransferredLanettesPC::
 	.string "{STR_VAR_2} was transferred to\n"
@@ -15,10 +15,10 @@ gText_PkmnTransferredLanettesPC::
 	.string "BOX “{STR_VAR_1}.”$"
 
 gText_PkmnTransferredSomeonesPCBoxFull::
-	.string "BOX “{STR_VAR_3}” on\n"
-	.string "SOMEONE'S PC was full.\p"
-	.string "{STR_VAR_2} was transferred to\n"
-	.string "BOX “{STR_VAR_1}.”$"
+	.string "La CAJA “{STR_VAR_3}” del PC\n"
+	.string "de ALGUIEN estaba llena.\p"
+	.string "{STR_VAR_2} se ha enviado a la\n"
+	.string "CAJA “{STR_VAR_1}”.$"
 
 gText_PkmnTransferredLanettesPCBoxFull::
 	.string "BOX “{STR_VAR_3}” on\n"
@@ -31,20 +31,20 @@ gText_PkmnTransferredLanettesPCBoxFull::
 	.string "BOX “{STR_VAR_1}.”$"
 
 gText_PkmnSentToPCAfterCatch::
-	.string "{STR_VAR_2} was sent to\n"
-	.string "{B_PC_CREATOR_NAME} PC.\p"
-	.string "It was placed in \n"
-	.string "BOX “{STR_VAR_1}”.$"
+	.string "{STR_VAR_2} se ha enviado al\n"
+	.string "PC de {B_PC_CREATOR_NAME}.\p"
+	.string "Se ha guardado en la\n"
+	.string "CAJA “{STR_VAR_1}”.$"
 
 gText_PlayerObtainedTheMon::
-	.string "{PLAYER} obtained\n"
-	.string "the {STR_VAR_1}!$"
+	.string "¡{PLAYER} ha obtenido\n"
+	.string "{STR_VAR_1}!$"
 
 gText_NoMoreRoomForPokemon::
-	.string "There's no more room for POKéMON!\p"
-	.string "The POKéMON BOXES are full and\n"
-	.string "can't accept any more!$"
+	.string "¡No queda sitio para más POKéMON!\p"
+	.string "¡Las CAJAS POKéMON están llenas y\n"
+	.string "no caben más!$"
 
 gText_NicknameThisPokemon::
-	.string "Give a nickname to\n"
-	.string "this {STR_VAR_1}!$"
+	.string "¿Quieres ponerle un mote\n"
+	.string "a {STR_VAR_1}?$"

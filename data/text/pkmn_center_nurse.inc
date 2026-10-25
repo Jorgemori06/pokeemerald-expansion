@@ -37,8 +37,8 @@ gText_NoticesGoldCard::
 	.string "the honor of resting your POKéMON!$"
 
 gText_YouWantTheUsual::
-	.string "I'm delighted to see you, {PLAYER}!\n"
-	.string "You want the usual, am I right?$"
+	.string "¡Qué alegría verte, {PLAYER}!\n"
+	.string "Lo de siempre, ¿verdad?$"
 
 gText_IllTakeYourPkmn2::
 	.string "Muy bien, me quedo tus POKéMON\n"

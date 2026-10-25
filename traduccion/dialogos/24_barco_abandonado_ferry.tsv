@@ -1,0 +1,104 @@
+# BARCO ABANDONADO y ferry M.S. MAREA (sin la invitación de SCOTT al FRENTE BATALLA del postgame)
+AbandonedShip_CaptainsOffice_Text_NoSuccessFindingScanner	Estoy investigando este barco por\nencargo del CAPITÁN BABOR.\pTambién me pidió que buscara un\nESCÁNER, pero no he tenido suerte…$
+AbandonedShip_CaptainsOffice_Text_OhCanYouDeliverScanner	¡Oh! ¡Eso es un ESCÁNER!\pOye, ¿podrías llevárselo al\nCAPITÁN BABOR?\pQuiero investigar este barco un\npoco más.$
+AbandonedShip_CaptainsOffice_Text_ThisIsSSCactus	Este barco se llama S.S. CACTUS.\nParece que es de otra época.$
+AbandonedShip_Corridors_1F_Text_CharlieIntro	¿Qué tiene de gracioso traerme el\nflotador al barco?$
+AbandonedShip_Corridors_1F_Text_CharlieDefeat	¡Uau, me has arrollado!$
+AbandonedShip_Corridors_1F_Text_CharliePostBattle	¡No es fácil lanzar POKé BALLS\nagarrado a un flotador!$
+AbandonedShip_Corridors_1F_Text_IsntItFunHere	¿A que esto es divertido?\n¡Solo de estar aquí me emociono!$
+AbandonedShip_Corridors_B1F_Text_DuncanIntro	Cuando salimos al mar, los MARINEROS\nsiempre llevamos a nuestros POKéMON.\l¿Qué tal un combate rápido?$
+AbandonedShip_Corridors_B1F_Text_DuncanDefeat	¡Huy, me he hundido!$
+AbandonedShip_Corridors_B1F_Text_DuncanPostBattle	El fondo del barco se ha hundido en\nlas profundidades.\pSi un POKéMON supiera bucear,\na lo mejor avanzaríamos algo…$
+AbandonedShip_Corridors_B1F_Text_YayItsAShip	¡Bien!\n¡Es un barco!$
+AbandonedShip_Corridors_B1F_Text_DoorIsLocked	La puerta está cerrada con llave.\pEn la puerta pone “ALMACÉN”.$
+AbandonedShip_Corridors_B1F_Text_InsertedStorageKey	{PLAYER} ha metido y girado la\nLLAVE ALMACÉN.\pLa LLAVE se ha quedado atascada,\npero la puerta se ha abierto.$
+AbandonedShip_Text_TheDoorIsOpen	La puerta está abierta.$
+AbandonedShip_HiddenFloorCorridors_Text_Rm1DoorIsLocked	La puerta está cerrada con llave.\pEn la puerta pone “HAB. 1”.$
+AbandonedShip_HiddenFloorCorridors_Text_Rm2DoorIsLocked	La puerta está cerrada con llave.\pEn la puerta pone “HAB. 2”.$
+AbandonedShip_HiddenFloorCorridors_Text_Rm4DoorIsLocked	La puerta está cerrada con llave.\pEn la puerta pone “HAB. 4”.$
+AbandonedShip_HiddenFloorCorridors_Text_Rm6DoorIsLocked	La puerta está cerrada con llave.\pEn la puerta pone “HAB. 6”.$
+AbandonedShip_HiddenFloorCorridors_Text_InsertedKey	{PLAYER} ha metido y girado la\nLLAVE.\pLa LLAVE se ha quedado atascada,\npero la puerta se ha abierto.$
+AbandonedShip_HiddenFloorRooms_Text_BrightShinyTrash	¡Brilla muchísimo!\nPero solo es basura…$
+AbandonedShip_Rooms2_1F_Text_DanIntro	DAN: ¡Buscando tesoros, hemos\nencontrado a un ENTRENADOR!$
+AbandonedShip_Rooms2_1F_Text_DanDefeat	DAN: No hemos podido ganar ni\nyendo juntos…$
+AbandonedShip_Rooms2_1F_Text_DanPostBattle	DAN: No encontramos ningún tesoro…\n¿Se los habrá llevado alguien?$
+AbandonedShip_Rooms2_1F_Text_DanNotEnoughMons	DAN: Ni siquiera tienes dos POKéMON.\nAsí no esperarás ganarnos.$
+AbandonedShip_Rooms2_1F_Text_KiraIntro	KIRA: ¿Oh?\nEstábamos buscando tesoros.\l¡Pero hemos encontrado a alguien!$
+AbandonedShip_Rooms2_1F_Text_KiraDefeat	KIRA: ¡Uh, qué fuerte!$
+AbandonedShip_Rooms2_1F_Text_KiraPostBattle	KIRA: ¿Dónde estarán los tesoros?\p¡Ya he decidido qué me compraré\ncuando los encontremos!$
+AbandonedShip_Rooms2_1F_Text_KiraNotEnoughMons	KIRA: ¿Oh, no tienes dos POKéMON?\n¡Tendremos que combatir otro día!$
+AbandonedShip_Rooms2_1F_Text_KiraRegister	KIRA: ¡Oh, qué rabia me das!\n¡Por eso te voy a registrar!$
+AbandonedShip_Rooms2_1F_Text_DanRematchIntro	DAN: Llevamos todo este tiempo\nbuscando tesoros.\pNuestros POKéMON también se han hecho\nmás fuertes. Te lo enseñamos, ¿vale?$
+AbandonedShip_Rooms2_1F_Text_DanRematchDefeat	DAN: ¡Tan fuerte como siempre!$
+AbandonedShip_Rooms2_1F_Text_DanPostRematch	DAN: No encontramos tesoros, perdemos\ncon los POKéMON…\pQuiero irme a casa… Pero si lo digo,\nella se enfada conmigo…$
+AbandonedShip_Rooms2_1F_Text_DanRematchNotEnoughMons	DAN: Ni siquiera tienes dos POKéMON.\nAsí no esperarás ganarnos.$
+AbandonedShip_Rooms2_1F_Text_KiraRematchIntro	KIRA: ¿Oh? ¡Otra vez nos vemos!\pComo nosotros, sigues sin dejar de\nbuscar tesoros, ¿verdad?\p¿Y si quien pierda deja de buscar?$
+AbandonedShip_Rooms2_1F_Text_KiraRematchDefeat	KIRA: Oh, hemos vuelto a perder…$
+AbandonedShip_Rooms2_1F_Text_KiraPostRematch	KIRA: ¡No nos vamos hasta que\nentrenemos más a nuestros POKéMON\ly encontremos los tesoros!$
+AbandonedShip_Rooms2_1F_Text_KiraRematchNotEnoughMons	KIRA: ¿Oh, no tienes dos POKéMON?\n¡Tendremos que combatir otro día!$
+AbandonedShip_Rooms2_1F_Text_JaniIntro	No se me da bien nadar,\n¡pero combatir sí!$
+AbandonedShip_Rooms2_1F_Text_JaniDefeat	Huy.\nNo ha salido muy bien.$
+AbandonedShip_Rooms2_1F_Text_JaniPostBattle	Ir descalza por este barco da un\npoco de asco.$
+AbandonedShip_Rooms2_1F_Text_GarrisonIntro	Fuerza y compasión…\n¡Esos son los tesoros de quien entrena!$
+AbandonedShip_Rooms2_1F_Text_GarrisonDefeat	Ah, hay algo en ti que brilla.$
+AbandonedShip_Rooms2_1F_Text_GarrisonPostBattle	En algún camarote del barco he visto\nalgo que brillaba.$
+AbandonedShip_Rooms2_B1F_Text_PerfectPlaceToGoExploring	¡Es el sitio perfecto para explorar!\n¡Qué emoción!\p¡Seguro que a bordo hay tesoros\nincreíbles!$
+AbandonedShip_Rooms_1F_Text_TakingALookAround	Los barcos así son raros, así que\nestoy echando un vistazo.\pMmm…\nParece que hay más camarotes…$
+AbandonedShip_Rooms_1F_Text_ThaliaIntro	¿Qué te ha traído hasta aquí?\n¡Debes de tener mucha curiosidad!$
+AbandonedShip_Rooms_1F_Text_ThaliaDefeat	No solo curiosidad, también fuerza…$
+AbandonedShip_Rooms_1F_Text_ThaliaPostBattle	El hombre del camarote de al lado…\pDice que solo está de turismo, pero\nno me lo creo.$
+AbandonedShip_Rooms_1F_Text_ThaliaRegister	¡Qué fuerte eres!\n¡Deja que te registre de recuerdo!$
+AbandonedShip_Rooms_1F_Text_ThaliaRematchIntro	¿Qué te ha hecho volver?\n¡Sí que tienes curiosidad!$
+AbandonedShip_Rooms_1F_Text_ThaliaRematchDefeat	¿No eres demasiado fuerte?$
+AbandonedShip_Rooms_1F_Text_ThaliaPostRematch	¡Seguro que ese hombre trama algo!\n¡Es que es muy sospechoso!$
+AbandonedShip_Rooms_1F_Text_DemetriusIntro	¡Buaaah!\n¡Me han encontrado! … ¿Eh?$
+AbandonedShip_Rooms_1F_Text_DemetriusDefeat	Oh, no eres mi madre.$
+AbandonedShip_Rooms_1F_Text_DemetriusPostBattle	Mi madre me ha regañado y me he\nescapado. ¡No digas dónde estoy!$
+AbandonedShip_Rooms_B1F_Text_GettingQueasy	Uuurrrp…\pSolo de estar en este barco me\nestoy mareando…\p¡Y eso que ni se mueve!$
+SSTidal_Text_FastCurrentsHopeYouEnjoyVoyage	Este ferry está hecho para surcar\ncorrientes rápidas.\pEsperamos que disfrutes del viaje.\nPuedes explorar el barco.$
+SSTidal_Text_HopeYouEnjoyVoyage	Esperamos que disfrutes del viaje\nen nuestro ferry.$
+SSTidal_Text_MadeLandInSlateport	Hemos llegado a CIUDAD PORTUAL.\nGracias por viajar con nosotros.$
+SSTidal_Text_MadeLandInLilycove	Hemos llegado a CIUDAD CALAGUA.\nGracias por viajar con nosotros.$
+SSTidalCorridor_Text_CanRestInCabin2	Todavía falta un rato para llegar,\ndiría yo.\pSi quieres, descansa en tu camarote.\nEs el n.º 2.\pLa cama es blandita y suave.\n¡Te aseguro que es comodísima!$
+SSTidalCorridor_Text_WeveArrived	¡Hemos llegado!$
+SSTidalCorridor_Text_VisitOtherCabins	Pásate por los otros camarotes.\nLos ENTRENADORES aburridos del viaje\lestarán deseando combatir.$
+SSTidalCorridor_Text_EnjoyYourCruise	¡Disfruta del crucero!$
+SSTidalCorridor_Text_HorizonSpreadsBeyondPorthole	Por el ojo de buey se ve el\nhorizonte.$
+SSTidalCorridor_Text_BrineyWelcomeAboard	SR. ARENQUE: ¡Sube a bordo,\n{PLAYER}{KUN}!\p¡Me han nombrado capitán honorario\ndel M.S. MAREA!\p¡Ya puedes llamarme CAPITÁN ARENQUE!\pYa me había jubilado una vez, pero\ncuando vi este barco tan majestuoso…\p¡Te diré que despertó mi alma dormida\nde marinero!$
+SSTidalCorridor_Text_Peeko	PEEKO: Pijio pijiojio…$
+SSTidalCorridor_Text_Cabin1	Camarote 1$
+SSTidalCorridor_Text_Cabin2	Camarote 2$
+SSTidalCorridor_Text_Cabin3	Camarote 3$
+SSTidalCorridor_Text_Cabin4	Camarote 4$
+SSTidalLowerDeck_Text_PhillipIntro	¡Arrrg! ¡Estoy harto y hecho polvo de\nlimpiar este sitio tan enorme!\p¡Hagamos un combate rápido!$
+SSTidalLowerDeck_Text_PhillipDefeat	¡Hermanito, he perdido!$
+SSTidalLowerDeck_Text_PhillipPostBattle	¡Somos los HERMANOS LIMPIEZA!\p¡El mayor echa el detergente y\nel pequeño frota!$
+SSTidalLowerDeck_Text_LeonardIntro	Esto es el fondo del casco del barco.\nHay sitio de sobra.\lValdrá para un combate POKéMON.$
+SSTidalLowerDeck_Text_LeonardDefeat	¡Hermano, he perdido!$
+SSTidalLowerDeck_Text_LeonardPostBattle	¡Somos los HERMANOS LIMPIEZA!\p¡El mayor echa el detergente y\nel pequeño frota!$
+SSTidalRooms_Text_TakeRestOnBed	Hay una cama…\nVamos a descansar.$
+SSTidalRooms_Text_ColtonIntro	Voy mucho en barco a CIUDAD CALAGUA.\pEs que me encanta ir a los\nCONCURSOS.$
+SSTidalRooms_Text_ColtonDefeat	¡Qué combate más agradable!$
+SSTidalRooms_Text_ColtonPostBattle	Me emociona imaginar qué POKéMON\nveré en el próximo CONCURSO.\l¡La espera me encanta!$
+SSTidalRooms_Text_MicahIntro	¿Tus amigos son fuertes?$
+SSTidalRooms_Text_MicahDefeat	Tus amigos sí que son fuertes.$
+SSTidalRooms_Text_MicahPostBattle	Los amigos no tienen por qué ser\npersonas. ¡Para mí, los POKéMON son\lmis amigos más queridos!$
+SSTidalRooms_Text_ThomasIntro	Criatura…\n¿Has llamado a la puerta?$
+SSTidalRooms_Text_ThomasDefeat	Una derrota se acepta sin prisas\nni nervios.$
+SSTidalRooms_Text_ThomasPostBattle	No perder nunca la compostura es el\ncódigo de conducta del CABALLERO.$
+SSTidalRooms_Text_JedIntro	JED: Me da un poco de vergüenza,\npero… ¡Verás nuestro poder amoroso!$
+SSTidalRooms_Text_JedDefeat	JED: Suspiro…$
+SSTidalRooms_Text_JedPostBattle	JED: ¡Es la primera vez que nuestro\npoder amoroso no basta!\l¡Qué bien entrenas!$
+SSTidalRooms_Text_JedNotEnoughMons	JED: ¿Solo tienes un POKéMON?\n¿No es demasiado triste?$
+SSTidalRooms_Text_LeaIntro	LEA: Me siento un poco tonta, pero…\n¡Verás nuestro poder amoroso!$
+SSTidalRooms_Text_LeaDefeat	LEA: ¡Jo!$
+SSTidalRooms_Text_LeaPostBattle	LEA: ¡No me lo puedo creer!\nNuestro poder amoroso ha fallado…\l¡Qué bien entrenas!$
+SSTidalRooms_Text_LeaNotEnoughMons	LEA: Quería combatir…\nPero si ni siquiera tienes dos POKéMON…$
+SSTidalRooms_Text_GarretIntro	Ah, llegas justo a tiempo.\pEs que me aburro.\nPuedes entretenerme.$
+SSTidalRooms_Text_GarretDefeat	… Con eso basta.$
+SSTidalRooms_Text_GarretPostBattle	Quizá le pida a Padre que me compre\nun yate.\l¡Un yate para mí y mis POKéMON!$
+SSTidalRooms_Text_NaomiIntro	Oh, qué cosa más adorable.\n¿Te apetece un té?\l¿O prefieres combatir?$
+SSTidalRooms_Text_NaomiDefeat	Ya veo.\nTe va la acción.$
+SSTidalRooms_Text_NaomiPostBattle	Un crucero por el mundo en un barco\nde lujo tiene su encanto, sin duda…\pPero reconozco que recorrer HOENN en\nferry también tiene su gracia.$
+SSTidalRooms_Text_NotSuspiciousTakeThis	Eh… ¡Hola! ¡No… no hago nada raro!\nEh… ¡Toma esto! ¡Gratis!\pNo… ¡De verdad que no se lo he\nROBADO a nadie! ¡Yo nunca haría eso!\l¡Está limpio! ¡Puedes usarlo!$
+SSTidalRooms_Text_ExplainSnatch	ROBO se queda con los efectos\nbeneficiosos de ciertos movimientos\lantes de que los use otro.$

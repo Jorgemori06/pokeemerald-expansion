@@ -1,0 +1,187 @@
+# RUTA 111 (desierto y entrenadores), RUTA 112, TELEFÉRICO, MONTE CENIZO y CAMINO ESCABROSO (sin el cartel del MONTE ENTRENADOR del postgame)
+Route112_Text_LeaderGoingToAwakenThing	Oye, tío, ¿de verdad nuestro jefe\nva a despertar a esa cosa?$
+Route112_Text_YeahWeNeedMeteorite	Eso parece, sí. Pero he oído que\nhace falta un METEORITO.$
+Route112_Text_OhThatsWhyCrewWentToFallarbor	Ah, ahora lo pillo. Por eso el resto\ndel grupo se fue a PARDAL.$
+Route112_Text_CantLetAnyonePassUntilTheyreBack	Exacto. Y hasta que vuelvan, no\npodemos dejar pasar a nadie.$
+Route112_Text_NotEasyToGetBackToLavaridge	Quiero ir a MALVALONA, pero si bajo\npor estos saltos, me costará mucho\lvolver a LAVACALDA.$
+Route112_Text_MtChimneyCableCarSign	TELEFÉRICO DEL MONTE CENIZO\n“¡A unos pasos hacia {UP_ARROW}!”$
+Route112_Text_MtChimneySign	MONTE CENIZO\p“Para ir a PUEBLO LAVACALDA o a la\ncima, tomad el TELEFÉRICO”.$
+Route112_Text_RouteSignLavaridge	RUTA 112\n{LEFT_ARROW} PUEBLO LAVACALDA$
+Route112_CableCarStation_Text_CableCarReadyGetOn	El TELEFÉRICO está listo para subir.\n¿Quieres montar?$
+Route112_CableCarStation_Text_StepThisWay	Pasa por aquí, por favor.$
+Route112_CableCarStation_Text_RideAnotherTime	Te esperamos en otra ocasión.$
+Route112_Text_BriceIntro	¡Jajajaja!\n¿Qué tal un combate?\l¡Tú y yo!\l¡Jajajaja!$
+Route112_Text_BriceDefeat	¡He perdido!\n¡Jajajaja!$
+Route112_Text_BricePostBattle	¡Jajajajaja! ¡Se me ha metido algo en\nla nariz! ¡Jajajaja-achís!$
+Route112_Text_TrentIntro	Tengo las piernas como rocas de\nsubir y bajar montañas.\p¡No van a flaquear tan fácilmente,\namigo!$
+Route112_Text_TrentDefeat	¡Ay! ¡Me ha dado un calambre!$
+Route112_Text_TrentPostBattle	Prueba a hacer senderismo en serio\npor estas montañas con una mochila\lque pese decenas de kilos.\pEso sí que te pone en forma.$
+Route112_Text_TrentRegister	Ay, tengo calambres en las piernas.\n¿Me sacas unas vendas de la\lmochila?\p¡No, eso es mi POKéNAV!\nBueno, vale, te registro.$
+Route112_Text_TrentRematchIntro	Me mantengo en forma haciendo\nsenderismo. ¡Fuerza me sobra!$
+Route112_Text_TrentRematchDefeat	¿Me han ganado en fuerza?$
+Route112_Text_TrentRematchPostBattle	He oído que en la cima del MONTE\nCENIZO hay ENTRENADORES muy duros.\p¡Pienso subir y desafiarlos!$
+Route112_Text_LarryIntro	Soy fuerte.\nNo lloraré si pierdo.$
+Route112_Text_LarryDefeat	¡Buaaaah!$
+Route112_Text_LarryPostBattle	¡No lloro porque eche de menos a\nmi mamá! Snif…$
+Route112_Text_CarolIntro	Cuando vas de excursión, ¡hay que\ncantar sí o sí!\l¡Venga, canta conmigo!$
+Route112_Text_CarolDefeat	¡Oh, qué fuerza tienes!$
+Route112_Text_CarolPostBattle	Da igual si se te da bien o mal cantar\no combatir con POKéMON.\p¡Quien más se divierte, gana!$
+Route112_Text_BryantIntro	¡He atrapado POKéMON ardientes en\nel SENDERO ÍGNEO! ¡Mira!$
+Route112_Text_BryantDefeat	¡Menudo viaje lleno de baches!$
+Route112_Text_BryantPostBattle	Me gusta cómo combates.\nTiene un estilo especial.$
+Route112_Text_ShaylaIntro	¡Oh, pero qué ENTRENADOR más\nadorable! ¡Quiero un combate\lromántico! ¡No se me da mal!$
+Route112_Text_ShaylaDefeat	¡Oh, qué fuerte eres!\n¡Me has dejado de piedra!$
+Route112_Text_ShaylaPostBattle	¿Tienes prisa ahora?\nHabía pensado que quizá podríamos\lrepetir ahora mismo…\lPero si tienes prisa, no pasa nada.$
+Route111_Text_DrewIntro	¡Eh, oye! Esas GAFAS AISLANTES te\nquedan bien. Pero a mí me quedan mejor.\p¡Decidamos a quién le quedan mejor\ncon un combate!$
+Route111_Text_DrewDefeat	Con las GAFAS AISLANTES no veía lo\nque pasaba a los lados.$
+Route111_Text_DrewPostBattle	Con las GAFAS AISLANTES se puede\ncruzar la tormenta de arena.\l¡Qué contento estoy!$
+Route111_Text_HeidiIntro	Estoy de excursión en el desierto.\p¡Siempre hay algún ENTRENADOR, así\nque aquí también puedo combatir!$
+Route111_Text_HeidiDefeat	¡Ohhh! ¡Qué crueldad!$
+Route111_Text_HeidiPostBattle	Cuando combatas en una tormenta de\narena, vigila los PS de tu POKéMON.\p¡Si no lo vigilas, se puede\ndebilitar!$
+Route111_Text_BeauIntro	Con estas GAFAS AISLANTES me siento\ncomo un superhéroe.\l¡Ahora mismo nadie puede ganarme!$
+Route111_Text_BeauDefeat	Solo con ánimo no se gana…$
+Route111_Text_BeauPostBattle	Algún día seré un héroe de verdad.\nVoy a esforzarme más para hacernos\lmás fuertes a mis POKéMON y a mí.$
+Route111_Text_BeckyIntro	He oído que en el desierto hay\nfósiles. ¿Dónde estarán?$
+Route111_Text_BeckyDefeat	Me he quedado corta…$
+Route111_Text_BeckyPostBattle	Si hay fósiles en el desierto, antes\ntuvo que ser un mar.$
+Route111_Text_DustyIntro	¡Llevo treinta años buscando\nruinas antiguas!\l¿Me desafías?$
+Route111_Text_DustyDefeat	He buscado ruinas, pero no he\nbuscado POKéMON fuertes.$
+Route111_Text_DustyPostBattle	¡Llevo treinta años buscando\nruinas antiguas!\pNo, espera, ¿eran cuarenta años?\n¿Cuántos eran?$
+Route111_Text_DustyRegister	No he buscado POKéMON fuertes.\pPero, por algún motivo, los\nPOKéNAV me encantan.$
+Route111_Text_DustyRematchIntro	¡Llevo treinta años buscando\nruinas antiguas!\pNo, espera, ¿eran cuarenta?\nEn fin, ¿me desafías?$
+Route111_Text_DustyRematchDefeat	No he encontrado ruinas ni POKéMON\nfuertes…$
+Route111_Text_DustyPostRematch	¡Llevo treinta años buscando\nruinas antiguas!\pNo, espera, ¿eran cuarenta años\nlos que llevo buscando?\pMmm… Igual hasta son cincuenta…\n¿Cuánto tiempo llevo con esto?$
+Route111_Text_TravisIntro	¡Estoy lleno de energía!\n¡Y mi POKéMON también!$
+Route111_Text_TravisDefeat	Mi POKéMON se ha quedado sin energía…$
+Route111_Text_TravisPostBattle	Cuando veo a un ENTRENADOR con mucha\nenergía, no puedo dejar de mirar.$
+Route111_Text_IreneIntro	No sé adónde vas, pero ¿te apetece\nun combate?$
+Route111_Text_IreneDefeat	¡Oh, qué rabia lo bien que lo haces!$
+Route111_Text_IrenePostBattle	Creo que debería ir al MONTE\nCENIZO, pero las vistas de por aquí\ltambién son muy bonitas.$
+Route111_Text_DaisukeIntro	¡Para entrenarme, desafío a todo\nel que me encuentro!$
+Route111_Text_DaisukeDefeat	¡Me rindo! ¡Me rindo!$
+Route111_Text_DaisukePostBattle	Solo puedo seguir entrenando hasta\nque pueda ganar a ENTRENADORES tan\lfuertes como tú.$
+Route111_Text_WiltonIntro	Enséñame cuánto has endurecido\na tus POKéMON.$
+Route111_Text_WiltonDefeat	Ya veo, los has endurecido\nbastante.$
+Route111_Text_WiltonPostBattle	Los POKéMON y los ENTRENADORES\naprenden mucho combatiendo.\pLo importante es no rendirse nunca,\naunque pierdas.$
+Route111_Text_WiltonRegister	Se puede aprender mucho de tu forma\nde entrenar.\pMe gustaría la revancha, si te\nparece bien.$
+Route111_Text_WiltonRematchIntro	Entrenamos aquí para subir de nivel.\n¡Quédate a entrenar con nosotros!$
+Route111_Text_WiltonRematchDefeat	¡Uh, no está nada mal!$
+Route111_Text_WiltonPostRematch	Con lo fuerte que eres, deberías\napuntar a la LIGA POKéMON.$
+Route111_Text_BrookeIntro	Oh, tus POKéMON parecen actores\nserios.\lTengo que contratarlos.$
+Route111_Text_BrookeDefeat	¡No solo parecían fuertes,\nes que lo son!$
+Route111_Text_BrookePostBattle	Creía que criaba a mis POKéMON con\nesmero, pero, ay, aún queda mucho\lpor hacer.$
+Route111_Text_BrookeRegister	¡Ojalá pudiera hacerme amiga de más\ngente fuerte como tú!$
+Route111_Text_BrookeRematchIntro	Los POKéMON pueden ser más fuertes\no más débiles según los movimientos\lque les enseñes.\p¿Qué movimientos saben tus\nPOKéMON?$
+Route111_Text_BrookeRematchDefeat	¡Les has enseñado buenos movimientos!$
+Route111_Text_BrookePostRematch	Quizá debí impedir que mis POKéMON\nevolucionaran hasta que aprendieran\lmejores movimientos…$
+Route111_Text_CeliaIntro	¡No debería haber venido de\nexcursión a un sitio así!$
+Route111_Text_CeliaDefeat	¡Ooh!\n¡De verdad que no debería haber venido!$
+Route111_Text_CeliaPostBattle	Con esta tormenta de arena no puedo\nponer la mesa para comer, ni siquiera\lcon las GAFAS AISLANTES…$
+Route111_Text_BryanIntro	¿Cuánta fuerza tienes?\n¡Desvelaremos ese secreto!$
+Route111_Text_BryanDefeat	¡Oh! ¡Tu fuerza!\n¡Está envuelta en misterio!$
+Route111_Text_BryanPostBattle	¡Este desierto esconde misterios en\nsus arenas movedizas!$
+Route111_Text_BrandenIntro	Si pierdes, te doy un poco de mi\nbocadillo.$
+Route111_Text_BrandenDefeat	¡Tsk! Creía que un bocadillo bastaba\npara sobornarte…$
+Route111_Text_BrandenPostBattle	A mi SANDSHREW le encanta comerse\nmis bocadillos.$
+Route111_Text_TyronIntro	¡Este es mi tipo de POKéMON favorito!$
+Route111_Text_TyronDefeat	¡Espera!\n¿Has visto bien a mi POKéMON?$
+Route111_Text_TyronPostBattle	Cuando combato, me encanta lucir\na mis POKéMON.\p¡Seguro que a todo el mundo le pasa\nlo mismo al combatir!$
+Route111_Text_CelinaIntro	Enséñame a poner un poco de emoción\nen mi vida.$
+Route111_Text_CelinaDefeat	Oh… Madre mía…\nDemasiada emoción.$
+Route111_Text_CelinaPostBattle	Aún tengo el pulso a mil.\nEntrenas de maravilla.$
+Route111_Text_HaydenIntro	¡Cuando tienes tanta hambre como yo,\nno hay piedad que valga!$
+Route111_Text_HaydenDefeat	Ugh…$
+Route111_Text_HaydenPostBattle	¡Me ruge el estómago!\nA lo mejor puedo asar unas BAYAS…$
+Route111_Text_BiancaIntro	¿Vienes de MALVALONA?\n¡Entonces irás con mucha energía!$
+Route111_Text_BiancaDefeat	¡Uh, la, la!\n¡Eso ha sido mucho!$
+Route111_Text_BiancaPostBattle	Este camino…\nTe queda un buen trecho por delante.$
+MtChimney_CableCarStation_Text_CableCarReadyGetOn	El TELEFÉRICO está listo para bajar.\n¿Quieres montar?$
+MtChimney_CableCarStation_Text_StepThisWay	Pasa por aquí, por favor.$
+MtChimney_CableCarStation_Text_RideAnotherTime	Te esperamos en otra ocasión.$
+MtChimney_Text_MeteoriteWillActivateVolcano	El poder del METEORITO…\pSi lo amplificamos con esta máquina,\nla actividad volcánica del MONTE\lCENIZO aumentará al instante…\pSu energía crecerá en lo más hondo\ndel cráter y…\lFufufu…$
+MtChimney_Text_MaxieIntro	MAGNO: ¿Mm?\n¿Quién eres?\p… … … … … …\n… … … … … …\pHe oído a AQUILES quejarse de una\ncriatura que se mete en los asuntos\ldel EQUIPO AQUA.\pDebía de referirse a ti.\p¡Hmpf! ¿Así que piensas meterte con\nnosotros, el EQUIPO MAGMA?\pEscúchame bien.\nHace mucho, los seres vivos usaban\lla tierra para vivir y crecer.\p¡Por eso la tierra es lo más\nimportante! ¡Es la cuna de todo!\pPor eso el EQUIPO MAGMA se dedica\na expandir la tierra firme.\p¡Por el progreso de la humanidad\ny de los POKéMON!\pY para eso necesitamos el poder de\nlo que duerme en esta montaña…\p¡Oh! No hacía falta que supieras\ntanto.\p¡Pero da igual!\nTe enseñaré lo que pasa por meterse\len nuestro gran plan.$
+MtChimney_Text_MaxieDefeat	¡¿Qué?!\p¡¿A mí, a MAGNO, me han pillado\ndesprevenido?!$
+MtChimney_Text_MaxieYouHaventSeenLastOfMagma	MAGNO: Pero basta.\nEsta vez me retiro.\pPero no creas que es lo último que\nverás del EQUIPO MAGMA.\pFufufu…\pAun sin el METEORITO, si conseguimos\nesa ESFERA… Fufufu…$
+MtChimney_Text_TabithaIntro	¡Jejeje!\p¡Así que has llegado hasta aquí!\p¡Pero llegas tarde!\n¡Ya le he entregado al JEFE el\lMETEORITO de las CATARATAS METEORO!$
+MtChimney_Text_TabithaDefeat	Jejeje…\pAunque haya perdido, si nuestro líder\ndespierta a esa cosa…$
+MtChimney_Text_TabithaPostBattle	¡JEFE, deprisa!\n¡Dale la energía del METEORITO!\pJejeje…$
+MtChimney_Text_Grunt2Intro	Los del EQUIPO MAGMA trabajamos duro\npor el bien de todos.\pO sea, si el poder de esa cosa crea\nmás tierra, habrá más sitio para vivir.\p¡Todos serían felices!$
+MtChimney_Text_Grunt2Defeat	¿Eh?\n¿Cómo que he perdido?$
+MtChimney_Text_Grunt2PostBattle	Nuestro JEFE dice: “Hará feliz a todo\nel mundo”.\pPero ¿por qué todos se empeñan en\nponernos trabas?$
+MtChimney_Text_Grunt1Intro	¡Si hubiera más tierra, podría tener\nuna casa enorme para mí solo!\p¡La construiré sobre lava solidificada!$
+MtChimney_Text_Grunt1Defeat	Mi sueño de una casa enorme…$
+MtChimney_Text_Grunt1PostBattle	¡Alguien de tu edad debería estar\nchapoteando en las olas!$
+MtChimney_Text_TeamAquaAlwaysMessingWithPlans	Ese EQUIPO AQUA tan pesado…\n¡Siempre nos fastidian los planes!$
+MtChimney_Text_MeteoritesPackAmazingPower	¡Los METEORITOS tienen un poder\nincreíble!$
+MtChimney_Text_YouBetterNotMessWithUs	¡Más te vale no meterte con nosotros!\p¡Queremos despertar a esa cosa por\nel bien de todos!$
+MtChimney_Text_AquasNameSimilar	¡Somos el EQUIPO MAGMA!\p¡Ellos son el EQUIPO AQUA!\p¡Me revienta que usen un nombre\ntan parecido al nuestro!$
+MtChimney_Text_DouseThemInFire	¡Sí!\n¡Achicharradlos!$
+MtChimney_Text_KeepMakingMoreLand	¡Vamos a seguir creando tierra!$
+MtChimney_Text_Bufoh	¡Bufoh!$
+MtChimney_Text_ArchieGoStopTeamMagma	AQUILES: ¡Grr, {PLAYER}!\n¡Debí suponer que aparecerías!\p¡Mira con tus ojos lo que traman esos\nfanáticos del EQUIPO MAGMA!\p¡Quieren meter en el volcán el poder\ndel METEORITO que han robado!\p¡Si lo hacen, el volcán entrará\nen erupción!$
+MtChimney_Text_ArchieIHaveMyHandsFull	AQUILES: Grrr…\pQuiero detener a MAGNO,\n¡pero no puedo!\p¡No mientras tenga que combatir con\ntres rivales a la vez!$
+MtChimney_Text_ArchieThankYou	AQUILES: ¡{PLAYER}!\n¡Gracias!\p¡Con tu ayuda, hemos frustrado el\nplan destructivo del EQUIPO MAGMA!\pPero… Tú…\n¿De qué lado estás?\pBah, da igual.\pSeguiremos alerta y no dejaremos de\nperseguir al EQUIPO MAGMA.\p¡{PLAYER}, volveremos a vernos!$
+MtChimney_Text_MagmaOutnumbersUs	Mecachis… ¡El EQUIPO MAGMA nos supera\nen número! ¡No podemos con ellos!$
+MtChimney_Text_LessHabitatForWaterPokemon	¡Si amplían la tierra, habrá menos\nhábitats para los POKéMON de AGUA!$
+MtChimney_Text_MagmasNameSimilar	¡Somos el EQUIPO AQUA!\p¡Ellos son el EQUIPO MAGMA!\p¡Me saca de quicio que usen un\nnombre tan confuso!$
+MtChimney_Text_Bushaa	¡Bushaa!$
+MtChimney_Text_LavaCookiesJust200	Las GALLETAS LAVA son típicas del\nMONTE CENIZO.\pPrueba una. Solo cuesta 200 ¥.$
+MtChimney_Text_ThankYouDear	¡Gracias, cielo!$
+MtChimney_Text_YouveNotGotTheMoney	Ay, cielo. No puedes comprar nada\nsi no tienes dinero.$
+MtChimney_Text_OhFineThen	Bueno, como quieras.$
+MtChimney_Text_MeteoriteFittedOnMachine	Hay un METEORITO colocado en una\nmáquina misteriosa…\pParece que la máquina está cargando\nenergía en el METEORITO.$
+MtChimney_Text_RemoveTheMeteorite	Hay un METEORITO colocado en una\nmáquina misteriosa…\p¿Quieres quitar el METEORITO?$
+MtChimney_Text_PlayerRemovedMeteorite	{PLAYER} ha quitado el METEORITO de\nla máquina misteriosa.$
+MtChimney_Text_PlayerLeftMeteorite	{PLAYER} ha dejado el METEORITO\ndonde estaba.$
+MtChimney_Text_MachineMakesNoResponse	Esta máquina misteriosa…\nNo responde a nada.$
+MtChimney_Text_RouteSign	{DOWN_ARROW} CAMINO ESCABROSO\nHACIA PUEBLO LAVACALDA$
+MtChimney_Text_ShelbyIntro	He estado en las aguas termales\ny he descansado los huesos.\l¡Ahora mismo me siento fuerte!$
+MtChimney_Text_ShelbyDefeat	¡Madre mía!\n¡Pero qué maravilla!$
+MtChimney_Text_ShelbyPostBattle	Vaya, vaya, he perdido. Ya no puedo\nllamarme EXPERTA, ¿verdad?$
+MtChimney_Text_ShelbyRegister	Gracias, criatura. Ha sido divertido,\ncomo combatir con mis nietos.\pVuelve a verme para la revancha,\npor favor.$
+MtChimney_Text_ShelbyRematchIntro	Si unes tu corazón con el de tus\nPOKéMON, podrás conseguir\lgrandes cosas.$
+MtChimney_Text_ShelbyRematchDefeat	¡Madre mía!\n¡Pero qué maravilla!$
+MtChimney_Text_ShelbyPostRematch	Quizá tu corazón se haya unido\ncon el de tus POKéMON.$
+MtChimney_Text_MelissaIntro	Llevo el fuego dentro, cariño.\n¡No lo aguanto! ¡Tengo que combatir!$
+MtChimney_Text_MelissaDefeat	¡Uh, qué combate más abrasador!$
+MtChimney_Text_MelissaPostBattle	¡El calor del MONTE CENIZO me\nenciende, cariño!$
+MtChimney_Text_SheilaIntro	Por fin he llegado al MONTE CENIZO.\n¡Quiero que mis POKéMON combatan!$
+MtChimney_Text_SheilaDefeat	Tu forma de combatir…\n¡Es como una erupción del MONTE CENIZO!$
+MtChimney_Text_SheilaPostBattle	Como te decía, por fin he llegado\nal MONTE CENIZO. Sería una pena\lsolo hacer turismo…\pQuiero combatir un poco y comprar\nGALLETAS de recuerdo.$
+MtChimney_Text_ShirleyIntro	¡Desde que me bañé en las aguas\ntermales me siento genial!\l¡Seguro que gano!$
+MtChimney_Text_ShirleyDefeat	¡Ay!\nMe está entrando frío al salir del agua.$
+MtChimney_Text_ShirleyPostBattle	Tendré que darme otro baño en las\naguas termales. ¿Te vienes?\p¡Es broma!$
+MtChimney_Text_SawyerIntro	¡Qué montaña tan estupenda! ¡Llena de\ngente ardiente para hacer compañía!$
+MtChimney_Text_SawyerDefeat	¡Oh, tú también echas chispas!$
+MtChimney_Text_SawyerPostBattle	¡Creo que necesito un baño en las\naguas termales de LAVACALDA!$
+MtChimney_Text_SawyerRegister	Me gustan las bolitas de fuego como tú.\nDeja que te registre en mi POKéNAV.$
+MtChimney_Text_SawyerRematchIntro	Estoy feliz rodeado de gente ardiente\npor aquí. ¡No pienso perder!$
+MtChimney_Text_SawyerRematchDefeat	¡Vaya, sigues echando chispas\ncomo antes!$
+MtChimney_Text_SawyerPostRematch	La verdad es que aquí hace calor.\nVoy demasiado abrigado.$
+JaggedPass_Text_EricIntro	El CAMINO ESCABROSO del MONTE\nCENIZO…\pEsto es lo que siempre he querido\nen una montaña.\pEste terreno tan accidentado…\n¡Me llega al alma!$
+JaggedPass_Text_EricDefeat	¡Perder me ha dejado un mal sabor!$
+JaggedPass_Text_EricPostBattle	Sí, he perdido con los POKéMON…\p¡Pero en amor por las montañas,\nte gano yo!$
+JaggedPass_Text_DianaIntro	Esto no es un paseo cualquiera.\nNo es sitio para ir de excursión.$
+JaggedPass_Text_DianaDefeat	¡Ohhh, no!\n¡El suelo es demasiado irregular…!$
+JaggedPass_Text_DianaPostBattle	¿Sabías que…?\pHay quien sube por este camino tan\nescabroso en bici, con mucha maña.$
+JaggedPass_Text_DianaRegister	¿Volverás alguna vez por aquí?\nSi vuelves, quiero la revancha.$
+JaggedPass_Text_DianaRematchIntro	Las excursiones son divertidas vayas\nadonde vayas. ¡Como los POKéMON!$
+JaggedPass_Text_DianaRematchDefeat	¡He perdido solo porque el suelo\nes muy irregular!$
+JaggedPass_Text_DianaPostRematch	Me olvidaré de que he perdido y\ndisfrutaré de esta excursión.$
+JaggedPass_Text_EthanIntro	Cuesta andar por el CAMINO ESCABROSO.\nEs un buen sitio para entrenar.$
+JaggedPass_Text_EthanDefeat	Se acabó mientras aún buscábamos\ndónde pisar…$
+JaggedPass_Text_EthanPostBattle	Si tuviera una BICI ACROBÁTICA,\npodría saltar los bordillos.$
+JaggedPass_Text_EthanRegister	¡Cuando me acostumbre a este terreno,\nseguro que gano!\p¿Me registras en tu POKéNAV?$
+JaggedPass_Text_EthanRematchIntro	Ya me he acostumbrado al terreno.\nAhora canto mientras subo.$
+JaggedPass_Text_EthanRematchDefeat	Sigue sin ser fácil combatir en este\nsuelo tan irregular…$
+JaggedPass_Text_EthanPostRematch	Debería pedirle una BICI ACROBÁTICA a\nRYDEL, en CIUDAD MALVALONA…$
+JaggedPass_Text_GruntIntro	¡Uah!\n¿Qué haces tú aquí?\p¿Que qué hago yo en un sitio así?\p¿Y a ti qué te importa?$
+JaggedPass_Text_GruntDefeat	Urrrgh…\pTendría que haberme metido en la\nGUARIDA enseguida…$
+JaggedPass_Text_GoWhereverYouWant	¡Vale, vale!\n¡Lo admito, eres fuerte!\pNo te preocupes por mí.\n¡Ve adonde quieras!$
+JaggedPass_Text_BoulderShakingInResponseToEmblem	¡Oh! ¡Esta roca tiembla al acercarle\nel EMBLEMA MAGMA!$
+JaggedPass_Text_JulioIntro	¡Aaah! ¡Da muchísimo miedo bajar la\nmontaña de un tirón!$
+JaggedPass_Text_JulioDefeat	Me siento como si me desmontara…$
+JaggedPass_Text_JulioPostBattle	La bici ha botado tanto que me duele\nel trasero…$
+JaggedPass_Text_AutumnIntro	Subo esta cuesta todos los días.\n¡Confío en mi fuerza!$
+JaggedPass_Text_AutumnDefeat	Mmm…\n¿Qué ha fallado?$
+JaggedPass_Text_AutumnPostBattle	¿Qué será esa roca tan rara que\nsobresale un poco más arriba?$

@@ -1,0 +1,250 @@
+# PUEBLO AZULIZA (con su GIMNASIO de MARCIAL), CUEVA GRANITO (MÁXIMO) y las rutas del mar 105-109 con la CASA DE LA PLAYA. Sin la revancha del postgame.
+DewfordTown_Text_TinyIslandCommunity	AZULIZA es una isla pequeñita.\nSi algo se pone de moda aquí,\ltodo el mundo se entera enseguida.$
+DewfordTown_Text_TownSign	PUEBLO AZULIZA\n“Una islita en el mar azul”.$
+DewfordTown_Text_GymSign	GIMNASIO POKéMON DE PUEBLO AZULIZA\nLÍDER: MARCIAL\l“¡Una gran ola de lucha!”$
+DewfordTown_Text_HallSign	SALÓN AZULIZA\n“¡Información para todo el mundo!”$
+Route104_Text_LandedInDewfordDeliverLetter	SR. ARENQUE: ¡Ah del barco!\nHemos llegado a AZULIZA.\pSupongo que vas a entregar esa\nCARTA a… ¿cómo se llamaba? ¡MÁXIMO!$
+DewfordTown_Text_SetSailBackToPetalburg	SR. ARENQUE: ¿Has entregado tu\nCARTA?\p¿O querías volver a PETALIA?$
+DewfordTown_Text_PetalburgWereSettingSail2	SR. ARENQUE: ¡Pues a PETALIA!\p¡Leven anclas!\n¡PEEKO, zarpamos, cariño!$
+DewfordTown_Text_GoDeliverIllBeWaiting	SR. ARENQUE: Pues ve a entregar\nla CARTA. Te espero aquí.$
+DewfordTown_Text_BrineyLandedInDewford	SR. ARENQUE: ¡Ah del barco!\n¡Hemos llegado a AZULIZA!\p¡Avísame cuando quieras volver\na zarpar!$
+DewfordTown_Text_WhereAreWeBound	SR. ARENQUE: ¡Ah del barco!\n¡Por ti salgo al mar cuando sea!\pBueno, ¿adónde vamos?$
+DewfordTown_Text_PetalburgWereSettingSail	SR. ARENQUE: ¿A PETALIA?\p¡Leven anclas!\n¡PEEKO, zarpamos, cariño!$
+DewfordTown_Text_SlateportWereSettingSail	SR. ARENQUE: ¿A PORTUAL?\p¡Leven anclas!\n¡PEEKO, zarpamos, cariño!$
+DewfordTown_Text_JustTellMeWhenYouNeedToSetSail	SR. ARENQUE: ¡Avísame cuando\nquieras volver a zarpar!$
+DewfordTown_Text_GettingItchToFish	Este es un sitio de pesca famoso.\n¿Te están entrando ganas de pescar?$
+DewfordTown_Text_GiveYouOneOfMyRods	¡Así me gusta!\n¡Eso es lo que quería oír!\pTe daré una de mis CAÑAS.$
+DewfordTown_Text_ThrowInFishingAdvice	¡Y, de regalo, te daré un consejo\nde pesca!\pPrimero, ponte de cara al agua\ny usa la CAÑA.\pConcéntrate…\nSi pica algo, tira de la CAÑA.\pA veces se pesca algo enseguida,\npero con las piezas grandes hay\lque tirar de la CAÑA en el momento\ljusto para sacarlas.$
+DewfordTown_Text_ThatsTooBadThen	Ah, ¿sí?\nPues qué pena.$
+DewfordTown_Text_HowsYourFishing	¡Eh!\n¿Qué tal la pesca?$
+DewfordTown_Text_GreatHaulInSomeBigOnes	¿Ah, sí? ¡Genial!\n¡A sacar piezas grandes!$
+DewfordTown_Text_FishingAdvice	¡Eh, no te desanimes!\nTe daré un consejo de pesca.\pPrimero, ponte de cara al agua\ny usa la CAÑA.\pConcéntrate…\nSi pica algo, tira de la CAÑA.\pA veces se pesca algo enseguida,\npero con las piezas grandes hay\lque tirar de la CAÑA en el momento\ljusto para sacarlas.$
+DewfordTown_Text_XIsTheBiggestHappeningThingRight	Me gusta lo moderno y lo que está\nde moda. Siempre estoy al día.\pOye, ¿has oído hablar de lo nuevo,\n“{STR_VAR_1}”?\p¡Eso es!\n¡Claro que lo conoces!\pO sea, madre mía,\n“{STR_VAR_1}”…\l¡Es lo más de lo más!\pVengas de donde vengas,\n“{STR_VAR_1}”\les lo que más se lleva, ¿verdad?$
+DewfordTown_Text_TellMeWhatsNewAndIn	¿Eh?\n¿Que no es lo que más se lleva?\pPues tienes que contarme qué es\nlo nuevo y lo que está de moda.$
+DewfordTown_Text_OfCourseIKnowAboutThat	¿Eh?\n¿“{STR_VAR_2}”?\p… …\p…Eh… ¡Sí! ¡Claro!\n¡Ya lo sabía! ¡Lo sabía desde siempre!\p¡Claro que lo conozco!\n“{STR_VAR_2}”, ¿verdad?\p¡Sí, eso es, ahí está!\n¿A que “{STR_VAR_2}”\les lo más guay?\pEs lo más moderno de lo moderno.\n¿Crees que no lo iba a saber?\p“{STR_VAR_1}”…\nEso ya está pasadísimo.\pAhora “{STR_VAR_2}” es\nlo que se lleva de verdad.$
+DewfordTown_Text_XHuhIThinkYIsCool	Mmm…\n“{STR_VAR_2}”, ¿eh?\pPero yo creo que\n“{STR_VAR_1}”\les lo que de verdad mola.$
+DewfordTown_Text_HearOfAnyTrendsComeShareWithMe	Bueno, si te enteras de alguna moda\nnueva, ven a contármela, ¿vale?$
+DewfordTown_Text_YeahDefinitionOfInRightNow	¡Sí, desde luego!\p“{STR_VAR_1}” es lo que\nestá de moda ahora mismo.$
+DewfordTown_Gym_Text_GymGuideAdvice	¡Eh! ¿Qué tal, {PLAYER}, futuro\nCAMPEÓN?\pMARCIAL, el LÍDER de AZULIZA, usa\nPOKéMON de tipo LUCHA.\pIr contra él con POKéMON de tipo\nNORMAL es buscarse problemas.\pLos POKéMON LUCHA dan una buena\npaliza a los NORMAL,\l¡así que ten cuidado!\pY lo peor es que el GIMNASIO está\ntan oscuro como el fondo del mar.\pPero se iluminará al vencer a los\nENTRENADORES que te encuentres.\p¡Venga, a por todas!$
+DewfordTown_Gym_Text_GymGuidePostVictory	¡Hala! ¡Aquí hay demasiada luz!\p¡Y tu futuro también es brillante!$
+DewfordTown_Gym_Text_TakaoIntro	¡La fuerza manda!\n¡Venga!$
+DewfordTown_Gym_Text_TakaoDefeat	No hay bastante fuerza…$
+DewfordTown_Gym_Text_TakaoPostBattle	¡Tu habilidad ha superado a mi fuerza!\n¡Tu técnica es digna de elogio!$
+DewfordTown_Gym_Text_JocelynIntro	¡No hace falta que MARCIAL se meta!\p¡Te voy a aplastar!$
+DewfordTown_Gym_Text_JocelynDefeat	Pero… ¿Cómo?\n¿Cómo he podido perder tan fácil?$
+DewfordTown_Gym_Text_JocelynPostBattle	No voy a desperdiciar esta derrota.\n¡Me servirá para entrenar más!\pAlgún día seré LÍDER de GIMNASIO…\p¡No, seré CAMPEONA de la LIGA\nPOKéMON!$
+DewfordTown_Gym_Text_LauraIntro	¡Ni se te ocurra ignorarme!\n¡No es culpa mía si lloras!$
+DewfordTown_Gym_Text_LauraDefeat	¡Buaaaaaaah!\n¡He perdido!$
+DewfordTown_Gym_Text_LauraPostBattle	Lucho a oscuras para fortalecer\nmi corazón.\pPero, como está tan oscuro, nunca\npuedo verle la cara a MARCIAL…$
+DewfordTown_Gym_Text_LilithIntro	Jujuju…\n¿Vas dando tumbos a oscuras?$
+DewfordTown_Gym_Text_LilithDefeat	Ay, tú…\n¡No quiero saber nada de ti!$
+DewfordTown_Gym_Text_LilithPostBattle	¡Te mereces perderte y acabar otra\nvez en la entrada!$
+DewfordTown_Gym_Text_BrendenIntro	¡Te enseñaré el valor de un hombre\nde mar!$
+DewfordTown_Gym_Text_BrendenDefeat	¿Cómo ha pasado esto?\n¡No es propio de mí perder así!$
+DewfordTown_Gym_Text_BrendenPostBattle	¡Pues sí! Mereces ver a nuestro\nLÍDER.$
+DewfordTown_Gym_Text_CristianIntro	¡Si quieres pasar, tendrá que ser\npor encima de mí!$
+DewfordTown_Gym_Text_CristianDefeat	¡Grrrrr!\n¡Me han superado de largo!$
+DewfordTown_Gym_Text_CristianPostBattle	¡Has ganado!\n¡Ve a por esa MEDALLA!$
+DewfordTown_Gym_Text_BrawlyIntro	¡Soy MARCIAL!\n¡El LÍDER del GIMNASIO de AZULIZA!\pMe he curtido en el oleaje de por\naquí y me he hecho fuerte en la\lcueva más oscura.\p¿Así que querías desafiarme?\n¡A ver qué sabes hacer!$
+DewfordTown_Gym_Text_BrawlyDefeat	¡Hala! ¡Has hecho una ola mucho más\ngrande de lo que esperaba!\p¡Me has arrollado!\pVale, me has ganado.\n¡Toma esta MEDALLA!$
+DewfordTown_Gym_Text_ReceivedKnuckleBadge	¡{PLAYER} ha recibido la MEDALLA\nPUÑO de MARCIAL!$
+DewfordTown_Gym_Text_KnuckleBadgeInfoTakeThis	Con la MEDALLA PUÑO te obedecerán\nlos POKéMON hasta el nivel 30,\launque los consigas en un cambio.\pAdemás, podrás usar el movimiento\nde MO DESTELLO fuera de los combates.\pSi quieres, usa también esta\nMÁQUINA TÉCNICA.$
+DewfordTown_Gym_Text_ExplainBulkUp	Esa MT08 contiene CORPULENCIA.\pEs un movimiento que sube el ATAQUE\ny la DEFENSA.\p… … … … … …$
+DewfordTown_Gym_Text_BrawlyPostBattle	¡Veo que tu talento será una ola\ngigante que algún día dejará\lboquiabiertos a los ENTRENADORES!$
+DewfordTown_Gym_Text_GymStatue	GIMNASIO POKéMON DE PUEBLO AZULIZA$
+DewfordTown_Gym_Text_GymStatueCertified	GIMNASIO POKéMON DE PUEBLO AZULIZA\pRECONOCIDOS POR MARCIAL:\n{PLAYER}$
+DewfordTown_House1_Text_LotToBeSaidForLivingOnIsland	Vivir en una islita así, en armonía\ncon los POKéMON y la familia,\ltiene muchas ventajas.$
+DewfordTown_House1_Text_LifeGoesSlowlyOnIsland	Dejé el gran puerto de CIUDAD PORTUAL\ncuando me casé con mi marido.\pEn esta islita la vida va despacio.\nPero estar rodeada de un mar tan\lbonito también es felicidad.$
+DewfordTown_House1_Text_Zigzagoon	ZIGZAGOON: ¡Guguuh!$
+DewfordTown_House2_Text_WantYouToHaveSilkScarf	¡Recréate la vista con esto!\p¡Es un PAÑUELO SEDA! ¡Lo último en\nmoda, ya lo creo!\p¡Oh, te brillan los ojos!\n¡Sabes apreciar mi estilo!\p¡Qué encanto!\nToma. ¡Quiero que lo tengas tú!$
+DewfordTown_House2_Text_NoRoom	Ah, ¿no te cabe?\pPues escúchame bien: ¡este PAÑUELO es\nimprescindible! ¡Yo vendería todos mis\lobjetos para tenerlo!$
+DewfordTown_House2_Text_ExplainSilkScarf	El PAÑUELO SEDA sube la potencia de\nlos movimientos de tipo NORMAL.\p¡Es un PAÑUELO maravilloso que queda\nbien con casi cualquier POKéMON!$
+DewfordTown_House2_Text_BrawlySoCool	¿Has cruzado el mar para venir\na AZULIZA?\p¿Has venido porque te han hablado\nde MARCIAL?\pEs tan guay…\nTodo el mundo lo adora.$
+DewfordTown_PokemonCenter_1F_Text_StoneCavern	Hay una cueva de piedra en las afueras\ndel pueblo.\pDicen que allí se encuentran piedras\nraras.$
+DewfordTown_PokemonCenter_1F_Text_FaintedMonCanUseHM	Aunque un POKéMON esté debilitado,\npuede usar un movimiento aprendido\lcon una MÁQUINA OCULTA (MO).$
+GraniteCave_1F_Text_GetsDarkAheadHereYouGo	Oye.\nMás adelante está muy oscuro.\lSerá difícil explorar.\pEse chico que ha pasado antes…\nMÁXIMO, creo que se llamaba.\pSabía usar DESTELLO, así que no le\npasará nada, pero…\pBueno, nuestro lema como MONTAÑEROS\nes ayudar a quien nos encontremos.\pToma, te lo doy.$
+GraniteCave_1F_Text_ExplainFlash	Enséñale el movimiento oculto\nDESTELLO a un POKéMON y úsalo.\pIlumina hasta la oscuridad más\nnegra de las cuevas.\pPero, para usarlo, necesitas la\nMEDALLA del GIMNASIO de AZULIZA.$
+GraniteCave_StevensRoom_Text_ImStevenLetterForMe	Me llamo MÁXIMO.\pMe interesan las piedras raras,\nasí que viajo de aquí para allá.\p¿Oh?\n¿Una CARTA para mí?$
+GraniteCave_StevensRoom_Text_ThankYouTakeThis	MÁXIMO: Vale, gracias.\pTe has tomado muchas molestias para\ntraérmela. Tengo que agradecértelo.\pA ver…\nTe daré esta MT.\pContiene mi movimiento favorito,\nALA DE ACERO.$
+GraniteCave_StevensRoom_Text_CouldBecomeChampionLetsRegister	MÁXIMO: Tus POKéMON parecen\nmuy capaces.\pSi sigues entrenando, algún día\npodrías ganar la LIGA\lPOKéMON. Eso es lo que pienso.\pYa sé: como ya nos conocemos,\nregistrémonos en los POKéNAV.\p… … … … … …$
+GraniteCave_StevensRoom_Text_RegisteredSteven	Has registrado a MÁXIMO\nen el POKéNAV.$
+GraniteCave_StevensRoom_Text_IveGotToHurryAlong	Bueno, tengo que darme prisa.$
+GraniteCave_StevensRoom_Text_OhBagIsFull	Vaya, tienes la MOCHILA llena…\nQué pena.$
+Route104_Text_DadPokenavCall	… … … … … …\n… … … … … ¡Bip!\pPAPÁ: ¿Hola, {PLAYER}?\p… … … … … …\n¿Dónde estás ahora?\lSe oye mucho viento.\pEl SR. PEÑA de DEVON me ha hablado\nde tu POKéNAV, así que he pensado\lllamarte.\pParece que te va bien,\nasí que yo tan contento.\pCuídate.\p… … … … … …\n… … … … … ¡Clic!$
+Route104_Text_RegisteredDadInPokenav	Has registrado a PAPÁ (NORMAN)\nen el POKéNAV.$
+Route106_Text_TrainerTips	CONSEJOS PARA ENTRENADORES\pPara atrapar POKéMON con la CAÑA:\npulsa el Botón A cuando piquen.$
+DewfordTown_Text_BrineyLandedInSlateportDeliverGoods	SR. ARENQUE: ¡Ah del barco!\n¡Hemos llegado a PORTUAL!\p¿Vas a ver al CAPITÁN BABOR para\nentregarle las PIEZAS DEVON?$
+Route109_Text_BrineySailToDewfordQuestion	SR. ARENQUE: Creía que tenías que\nentregar las PIEZAS DEVON.\p¿Quieres volver a AZULIZA?$
+Route109_Text_BrineyDewfordItIs	SR. ARENQUE: ¡Pues a AZULIZA!\p¡Leven anclas!\n¡PEEKO, zarpamos, cariño!$
+Route109_Text_BrineyDeliverDevonGoods	SR. ARENQUE: Pues ve a entregar\nlas PIEZAS DEVON. Te espero aquí.$
+DewfordTown_Text_BrineyLandedInSlateport	SR. ARENQUE: ¡Ah del barco! ¡Hemos\nllegado a PORTUAL!\p¡Avísame cuando quieras volver\na zarpar!$
+Route109_Text_BrineyWhereAreWeBound	SR. ARENQUE: ¡Ah del barco!\n¡Por ti salgo al mar cuando sea!\pBueno, ¿adónde vamos?$
+Route109_Text_BrineyTellMeWhenYouNeedToSail	SR. ARENQUE: ¡Avísame cuando\nquieras volver a zarpar!$
+Route109_Text_ChillAtMyPapasSpot	¡Eh, ENTRENADORES!\nSi tenéis calor o ganas de jaleo,\l¡venid al chiringuito de mi papá\ly os quedaréis fresquitos!$
+Route109_Text_LittleKidsDartAround	Los niños pequeños corren de un lado\na otro muy rápido…\pNo puedes quitarles el ojo de encima\nni un segundo. Es agotador.\pLos míos están con mis POKéMON, así\nque no les pasará nada, pero…$
+Route109_Text_SandCastleTakingLongTime	Nuestro castillo de arena está\ntardando mucho.$
+Route109_Text_YouCanHaveThis	¡Toma, para ti!$
+Route109_Text_WereGoingToMakeBigCastle	¡Vamos a coger toda la arena de la\nplaya y hacer un castillo enorme!\pY luego seremos el rey y la reina.\p¡Tú puedes ser nuestro criado!$
+Route109_Text_ZigzagoonPicksUpLitter	El agua de por aquí está limpia.\pPero a veces hago que mi ZIGZAGOON\nrecoja la basura de la orilla.\pEl agua sucia se vuelve lluvia y va\na los ríos, de donde bebemos…\pSi ensuciamos el mar, al final todo\nse vuelve contra nosotros.$
+Route109_Text_ZigzagoonCry	ZIGZAGOON: ¿Guguu?$
+Route109_Text_SeashoreHouseSign	CASA DE LA PLAYA\p“¡Combates ardientes en la arena\nardiente! ¡Para gente con fuego!”$
+Route109_Text_TrainerTipsSign	CONSEJOS PARA ENTRENADORES\pDos POKéMON del mismo nivel no\nsiempre tienen las mismas caract.\pSe dice que los POKéMON criados por\nENTRENADORES son más fuertes que\llos salvajes.$
+Route109_SeashoreHouse_Text_SeashoreHouseIntro	Soy el dueño de la CASA DE LA PLAYA.\n¡Pero puedes llamarme SR. MAR!\pLo que más me gusta es ver combates\nPOKéMON con mucha chispa.\p¡Demuéstrame que tu corazón arde!\pSi vences a todos los ENTRENADORES\nde aquí, te daré un premio.$
+Route109_SeashoreHouse_Text_ShowMeSomeHotMatches	¡Enséñame combates con chispa!\p¡Llevo esta CASA DE LA PLAYA solo\npor eso!$
+Route109_SeashoreHouse_Text_TakeTheseSodaPopBottles	¡Estás que ardes!\n¡Esos combates han sido de fuego!\l¡Estoy más que satisfecho!\pPara darte las gracias por tu racha,\nquiero que te quedes esto.\p¡Media docena de botellas de\nREFRESCO!$
+Route109_SeashoreHouse_Text_BagFull	Pero, oye, tienes la MOCHILA llena.\nTe las guardo yo.$
+Route109_SeashoreHouse_Text_WantToBuySodaPop	¿Quieres comprar REFRESCOS?\n¡A los POKéMON les encantan!\p¡Solo ¥300 la botella!\n¡Compra alguno!$
+Route109_SeashoreHouse_Text_HereYouGo	¡Aquí tienes!$
+Route109_SeashoreHouse_Text_NotEnoughMoney	No tienes dinero.$
+Route109_SeashoreHouse_Text_ThatsTooBad	¿No?\nQué pena.$
+Route109_SeashoreHouse_Text_DwayneIntro	¡Si buscas combate en la CASA DE LA\nPLAYA, no encontrarás a nadie con\lmás fuego que yo, colega!$
+Route109_SeashoreHouse_Text_DwayneDefeated	¡Qué combate más ardiente!\n¡Acepto la derrota, colega!$
+Route109_SeashoreHouse_Text_DwaynePostBattle	¡Cuando estoy en PORTUAL, disfruto\nde combates ardientes y REFRESCOS\lbien fríos!$
+Route109_SeashoreHouse_Text_JohannaIntro	Los combates aburridos no valen\nla pena.\p¡Los combates ardientes son los\nque curten a ENTRENADORES y POKéMON!$
+Route109_SeashoreHouse_Text_JohannaDefeated	¡Qué calor!$
+Route109_SeashoreHouse_Text_JohannaPostBattle	Uf, qué sed.\nCreo que me tomaré un REFRESCO.$
+Route109_SeashoreHouse_Text_SimonIntro	Te voy a enseñar lo geniales que son\nmis POKéMON, ¡pero no llores!$
+Route109_SeashoreHouse_Text_SimonDefeated	…He perdido, pero no voy a llorar…$
+Route109_SeashoreHouse_Text_SimonPostBattle	Si uno de mis POKéMON supiera el\nmovimiento para llevarme por el agua,\lpodría dejar este flotador.$
+Route105_Text_FosterIntro	Por aquí tiene que haber una roca\nmística.\l¿Sabes algo de ella?$
+Route105_Text_FosterDefeated	Pensaba tanto en esa roca que mis\nPOKéMON se han quedado débiles…$
+Route105_Text_FosterPostBattle	Puedo pasarme horas y horas mirando\nuna roca bonita sin aburrirme.$
+Route105_Text_LuisIntro	¡Uf! Al verte creí que se ahogaba\nalguien.\pParece que estás bien, así que\n¿qué tal un combate?$
+Route105_Text_LuisDefeated	Glub… Glub…$
+Route105_Text_LuisPostBattle	Si te ahogas, la señal es mover un\nbrazo hacia la playa.$
+Route105_Text_DominikIntro	Nadar por el mar azul…\n¡Es lo mejor!$
+Route105_Text_DominikDefeated	He perdido…\nAhora estoy de bajón…$
+Route105_Text_DominikPostBattle	¿Por qué el mar es azul?\pLo aprendí en el MUSEO de PORTUAL,\npero se me ha olvidado.$
+Route105_Text_BeverlyIntro	En el agua me siento más ligera.\n¡Es como si hubiera adelgazado!$
+Route105_Text_BeverlyDefeated	Estoy flotando…$
+Route105_Text_PostBattle	En el agua tu peso se queda en\nuna décima parte.\pAsí que yo pesaría…\n¡Uy! ¡No pienso decirte mi peso!$
+Route105_Text_ImaniIntro	El cielo azul…\nEl mar inmenso…\l¡Qué tranquilidad…!$
+Route105_Text_ImaniDefeated	¡He perdido mientras descansaba!$
+Route105_Text_ImaniPostBattle	Quiero que me digan que soy\nrelajante. Jijiji.$
+Route105_Text_AndresIntro	Estoy convencido de que el mar\nnos guarda secretos.$
+Route105_Text_AndresDefeated	Ya…\nNo se me da bien combatir…$
+Route105_Text_AndresPostBattle	Seguro que hay muchos secretos por\ndescubrir en los mares del mundo.\p¡Pienso encontrarlos todos!$
+Route105_Text_AndresRegister	¿Eh? Soy muy débil, ¿y aun así\nquieres registrarme en tu POKéNAV?$
+Route105_Text_AndresRematchIntro	Ya te dije que soy débil…\n¿Seguro que quieres hacerlo?$
+Route105_Text_AndresRematchDefeated	Ya…\nNo creía que pudiera ganar.$
+Route105_Text_AndresRematchPostBattle	Puede que sea débil combatiendo, pero\nmis ganas de explorar no tienen rival.\p¡Recorreré los mares de todo\nel mundo!$
+Route105_Text_JosueIntro	Estoy agotado de nadar.\nNo estoy acostumbrado.\p¡Necesito un combate para variar!$
+Route105_Text_JosueDefeated	He perdido por luchar en el mar.$
+Route105_Text_JosuePostBattle	Sí, a mí me va mucho más el cielo\nque el mar.$
+Route106_Text_ElliotIntro	¿Qué prefieres, pescar en el mar\no en un río?$
+Route106_Text_ElliotDefeated	¡Como en la pesca de altura,\nhe perdido a lo grande!$
+Route106_Text_ElliotPostBattle	Pescar es lo mejor, sea en el mar\no en un río.\l¿A que tengo razón?$
+Route106_Text_ElliotRegister	Pescar está genial, pero combatir\ntambién. Si no te importa, ¿nos vemos\lotra vez?$
+Route106_Text_ElliotRematchIntro	He pescado un montón de POKéMON.\n¡Te enseñaré un combate impresionante!$
+Route106_Text_ElliotRematchDefeated	¡He vuelto a perder a lo grande!$
+Route106_Text_ElliotRematchPostBattle	¡Ganes o pierdas, los POKéMON\nson lo mejor! ¿A que sí?$
+Route106_Text_NedIntro	¿Qué hace la gente cuando tiene que\nir al baño?\p¿Y si pica uno grande mientras estoy\nen el baño? No puedo ir…$
+Route106_Text_NedDefeated	He perdido por aguantarme las\nganas de ir al baño…$
+Route106_Text_NedPostBattle	¡Oh, no! ¡Me da que va a picar\nuno grande!$
+Route106_Text_DouglasIntro	¡Jajajá! Corro fatal, pero en el agua\nno me alcanzas!$
+Route106_Text_DouglasDefeated	¡Me rindo!$
+Route106_Text_DouglasPostBattle	En una carrera de natación no\nperdería…$
+Route106_Text_KylaIntro	El mar es mi jardín. ¡No me lo voy a\ntomar con calma porque seas joven!$
+Route106_Text_KylaDefeated	¿Te has dejado ganar o algo?$
+Route106_Text_KylaPostBattle	Dejarse llevar por las olas…\n¡Me encanta! ¿Por qué no lo pruebas?$
+Route107_Text_DarrinIntro	Aaah…\pMe habré quedado dormido mientras\nme llevaban las olas.$
+Route107_Text_DarrinDefeated	Jaja, he perdido…\nCreo que me echaré una siestecita…$
+Route107_Text_DarrinPostBattle	Flotar y dejarse mecer por las olas\nes como dormir en una cama\lmullidita y cómoda.$
+Route107_Text_TonyIntro	El mar es como mi jardín.\n¡A luchar!$
+Route107_Text_TonyDefeated	He perdido en mi propio terreno…\n¡No me lo creo!$
+Route107_Text_TonyPostBattle	Nado por los mares con el corazón\nlleno de sueños…\p¡Es una canción!\nBueno, voy a nadar un poco más.$
+Route107_Text_TonyRegister	¡Me has dejado de piedra!\nBueno, para que no me olvides…$
+Route107_Text_TonyRematchIntro	¡Nadando por el inmenso mar,\nmi POKéMON se ha hecho más fuerte!$
+Route107_Text_TonyRematchDefeated	¡No me lo creo!\p¡Mi POKéMON se ha hecho más fuerte,\npero yo sigo igual de débil!$
+Route107_Text_TonyRematchPostBattle	Lo que aprendes en combate te hace\nmejor ENTRENADOR.\lMe lo enseñaron las olas.$
+Route107_Text_DeniseIntro	¿Conoces un pueblecito llamado\nAZULIZA?$
+Route107_Text_DeniseDefeated	¡Qué rabia!$
+Route107_Text_DenisePostBattle	En el SALÓN AZULIZA se ha puesto de\nmoda una frase muy rara.$
+Route107_Text_BethIntro	¿Querías luchar contra mí?\n¡Claro, vamos allá!$
+Route107_Text_BethDefeated	No he estado a tu altura.$
+Route107_Text_BethPostBattle	Creo que vas a seguir mejorando.\n¡Yo también lo intentaré!$
+Route107_Text_LisaIntro	LISA: ¡Te desafiamos como hermana\ny hermano!$
+Route107_Text_LisaDefeated	LISA: Increíble.\nEstás a otro nivel.$
+Route107_Text_LisaPostBattle	LISA: ¿Tienes amigos que vayan\ncontigo a la playa?$
+Route107_Text_LisaNotEnoughPokemon	LISA: Si quieres luchar contra\nnosotros, trae más POKéMON.$
+Route107_Text_RayIntro	RAY: Mi hermana y yo siempre\nluchamos con POKéMON.\pYo siempre pierdo, ¡pero juntos te\nganamos dos contra dos!$
+Route107_Text_RayDefeated	RAY: ¡Hala, estás a un nivel más\nalto que nosotros!$
+Route107_Text_RayPostBattle	RAY: Mi hermana me dio mi POKéMON.\nLo he criado y ahora es mi\lcompañero más importante.$
+Route107_Text_RayNotEnoughPokemon	RAY: ¡Si quieres luchar contra\nnosotros, ve a por más POKéMON!$
+Route107_Text_CamronIntro	Estoy en mitad de un triatlón,\n¡pero no estoy nada cansado!$
+Route107_Text_CamronDefeated	Esto me ha agotado…$
+Route107_Text_CamronPostBattle	Después de esto aún me queda nadar\ny correr.\p¿Aguantaré?$
+Route108_Text_JeromeIntro	¡Mi sueño es nadar por los siete\nmares del mundo!$
+Route108_Text_JeromeDefeated	Así no podré nadar por los siete\nmares…$
+Route108_Text_JeromePostBattle	¡Jugar con POKéMON marinos es uno de\nlos placeres de nadar!$
+Route108_Text_MatthewIntro	¡Ah del barco! ¿Tú también vas al\nBARCO ABANDONADO?$
+Route108_Text_MatthewDefeated	¡Me hundo!\nGlub… Glub…$
+Route108_Text_MatthewPostBattle	Hay gente que incluso se mete dentro\nde ese BARCO ABANDONADO.$
+Route108_Text_TaraIntro	El mentiroso de mi novio me dijo que\nel biquini me queda genial…$
+Route108_Text_TaraDefeated	¡Jo!$
+Route108_Text_TaraPostBattle	Aunque sea mentira, me encanta que\nme digan que estoy guapa…\l¡Qué complicadas somos!$
+Route108_Text_MissyIntro	¡Me encanta el mar!\n¡Al nadar se me olvidan las penas!$
+Route108_Text_MissyDefeated	¡Cuando pierdo un combate, me pongo\nde los nervios!$
+Route108_Text_MissyPostBattle	¡Quita el estrés nadando!\n¡Es muy sano!$
+Route108_Text_CoryIntro	Me encantan los POKéMON de tipo AGUA.\n¡Y los demás también!$
+Route108_Text_CoryDefeated	¡Buaaa! ¡He perdido!\n¡Buaaa! ¡Buaaa!$
+Route108_Text_CoryPostBattle	¡Gritar me sienta bien!\n¡Me anima!$
+Route108_Text_CoryRegister	¡También me encantan los ENTRENADORES\nduros! ¡Regístrame en tu POKéNAV!$
+Route108_Text_CoryRematchIntro	¡Gane o pierda, me encanta combatir\nen el mar!$
+Route108_Text_CoryRematchDefeated	¡Buaaa! ¡He vuelto a perder!\n¡Buaaa! ¡Buaaa!$
+Route108_Text_CoryRematchPostBattle	¡Si tienes un reto delante, prueba\na gritarle al mar!$
+Route108_Text_CarolinaIntro	Estoy muy orgullosa de mis POKéMON.\n¡Te enseñaremos un combate rapidísimo!$
+Route108_Text_CarolinaDefeated	No ha sido nada mono.$
+Route108_Text_CarolinaPostBattle	Ya que estoy en el mar, no me\nimportaría ponerme un bañador rosa\lcon volantes…$
+Route109_Text_DavidIntro	¡Hiyah! ¡Mira mis abdominales!\n¡Esto es estar “cortado”!$
+Route109_Text_DavidDefeated	¡Ayah!\n¡Me he desinflado!$
+Route109_Text_DavidPostBattle	¡Hiyah!\p¡Mis abdominales no tienen nada que\nver con los combates POKéMON!$
+Route109_Text_AliceIntro	¿Te has protegido bien del sol?$
+Route109_Text_AliceDefeated	¡Ay, ay, ay!$
+Route109_Text_AlicePostBattle	¡Las mejillas son lo que más\nse quema!$
+Route109_Text_HueyIntro	He echado el ancla en puertos de todo\nel mundo, pero PORTUAL es el mejor.$
+Route109_Text_HueyDefeated	¡Eres lo mejor!$
+Route109_Text_HueyPostBattle	En el mejor puerto estaba la mejor\npersona entrenando…$
+Route109_Text_EdmondIntro	Uuuuurp…\n¿Un combate? ¿Conmigo?$
+Route109_Text_EdmondDefeated	Urp… Ooooooohhhhhh…\nUuuurrp…$
+Route109_Text_EdmondPostBattle	¡Normalmente soy más fuerte!\n¡Es que me mareo un montón!\pSoy MARINERO, pero…$
+Route109_Text_RickyIntro	Tengo sed… Me tomaría un REFRESCO\nen la CASA DE LA PLAYA…$
+Route109_Text_RickyDefeated	Ugh…$
+Route109_Text_RickyPostBattle	Tengo un hambre… Mi flotador parece\nun donut gigante…$
+Route109_Text_RickyRegister	¿Lucharás otra vez conmigo cuando\nno tenga tanta sed?$
+Route109_Text_RickyRematchIntro	Tengo hambre, ¡pero me quedan\nfuerzas para un combate!$
+Route109_Text_RickyRematchDefeated	He perdido…\nEs porque tengo hambre…$
+Route109_Text_RickyRematchPostBattle	Cuando comes en la playa, todo sabe\nun poco mejor.$
+Route109_Text_LolaIntro	¿A que una sombrilla parece una\nflor gigante?$
+Route109_Text_LolaDefeated	¡Mamá!$
+Route109_Text_LolaPostBattle	¡Si miras la playa desde el cielo,\nparece un gran jardín de flores!$
+Route109_Text_LolaRegister	¿Yo?\n¡Vengo aquí todos los días!$
+Route109_Text_LolaRematchIntro	¡No voy a volver a perder!\n¡Por eso llevo mi flotador!$
+Route109_Text_LolaRematchDefeated	¡Mamá!$
+Route109_Text_LolaRematchPostBattle	¡Con el flotador, mi POKéMON y yo\nsomos mucho más monos!$
+Route109_Text_AustinaIntro	No sé nadar sin flotador, ¡pero no\nperderé con los POKéMON!$
+Route109_Text_AustinaDefeated	¿He perdido por llevar flotador?$
+Route109_Text_AustinaPostBattle	Mi flotador es un complemento de moda.\nNo pueden verme sin él.$
+Route109_Text_GwenIntro	Hola, entrenas muy bien.\n¿Luchas conmigo?$
+Route109_Text_GwenDefeated	Oh, qué fuerte eres.$
+Route109_Text_GwenPostBattle	¿Cómo te has hecho tan fuerte?$
+Route109_Text_CarterIntro	¡Jajajá! ¡Este tío va a pescar\nuno grande!$
+Route109_Text_CarterDefeated	Este tío ha perdido uno…$
+Route109_Text_CarterPostBattle	Este tío cree que eres de los grandes.\n¡No, que vas a ser de los grandes!$
+Route109_Text_PaulIntro	PAUL: Vaya, nos has cortado el rollo.\pOjalá no molestaras nuestro\nprecioso momento juntos.$
+Route109_Text_PaulDefeated	PAUL: Bueno, me rindo.$
+Route109_Text_PaulPostBattle	PAUL: Bueno, no le digas a nadie que\nestamos aquí.\l¡Este es nuestro mundo de dos!$
+Route109_Text_PaulNotEnoughPokemon	PAUL: Estamos locamente enamorados.\nPor eso hacemos que nuestros POKéMON\lluchen juntos.$
+Route109_Text_MelIntro	MEL: Estamos supermegaenamorados.\n¡Nuestro amor está calentando HOENN!$
+Route109_Text_MelDefeated	MEL: ¡Hemos perdido por mi culpa!\n¡PAUL me va a odiar!$
+Route109_Text_MelPostBattle	MEL: Eh, PAUL, ¿estás enfadado?\nPor favor, no te enfades.$
+Route109_Text_MelNotEnoughPokemon	MEL: Estamos súper enamorados de\nverdad. Por eso hacemos que nuestros\lPOKéMON luchen juntos.$
+Route109_Text_ChandlerIntro	¡Tachán! ¿Ves?\n¡Mi flotador es redondo!$
+Route109_Text_ChandlerDefeated	¡Oh, oh!\n¡Qué pena!$
+Route109_Text_ChandlerPostBattle	Con lo que me ha costado enseñarte\nmi flotador redondo…$
+Route109_Text_HaileyIntro	No sé nadar, así que hago como\nque nado.$
+Route109_Text_HaileyDefeated	¡Lo sabía!\nNo creía que pudiéramos ganar.$
+Route109_Text_HaileyPostBattle	Cuando aprenda a nadar, creo que mis\nPOKéMON se harán más fuertes.$
+Route109_Text_ElijahIntro	¡Para un tío tan macho como yo, este\nPOKéMON es perfecto!$
+Route109_Text_ElijahDefeated	Hasta perdiendo soy guay, ¿eh?$
+Route109_Text_ElijahPostBattle	¡Para un tío tan macho como yo, un\npuerto es el sitio perfecto!\pCreo que me iré a PORTUAL.$

@@ -19,28 +19,28 @@ MauvilleCity_House1_EventScript_ReceivedRockSmash::
 	end
 
 MauvilleCity_House1_Text_ImRockSmashDudeTakeThis:
-	.string "Woohoo!\p"
-	.string "I hear people call me the ROCK SMASH\n"
-	.string "GUY, but I find that sort of degrading.\p"
-	.string "I think I deserve a bit more respect,\n"
-	.string "like maybe the ROCK SMASH DUDE.\p"
-	.string "Woohoo!\p"
-	.string "Anyways, your POKéMON look pretty\n"
-	.string "strong.\p"
-	.string "I like that!\n"
-	.string "Here, take this HIDDEN MACHINE!$"
+	.string "¡Yuju!\p"
+	.string "La gente me llama el TÍO DE GOLPE\n"
+	.string "ROCA, pero eso me parece poco.\p"
+	.string "Creo que merezco más respeto, algo\n"
+	.string "como el MAESTRO DE GOLPE ROCA.\p"
+	.string "¡Yuju!\p"
+	.string "En fin, tus POKéMON parecen\n"
+	.string "bastante fuertes.\p"
+	.string "¡Eso me gusta!\n"
+	.string "¡Toma, esta MÁQUINA OCULTA!$"
 
 MauvilleCity_House1_Text_ExplainRockSmash:
-	.string "That HM contains ROCK SMASH.\p"
-	.string "If you come across large boulders\n"
-	.string "that block your path…\p"
-	.string "Well, use that HM move and smash\n"
-	.string "them right out of your way!\p"
-	.string "Yes, sir! Smash rocks aside, I say!\n"
-	.string "Woohoo!$"
+	.string "Esa MO contiene GOLPE ROCA.\p"
+	.string "Si te encuentras rocas grandes que\n"
+	.string "te cortan el paso…\p"
+	.string "¡Usa ese movimiento de MO y quítalas\n"
+	.string "de en medio a golpes!\p"
+	.string "¡Eso es! ¡Rompe las rocas, digo yo!\n"
+	.string "¡Yuju!$"
 
 MauvilleCity_House1_Text_MonCanFlyOutOfSmashedRock:
-	.string "Oh, yes, if you smash a rock, a POKéMON\n"
-	.string "could come flying out of hiding.\p"
-	.string "Woohoo!$"
+	.string "Ah, sí: si rompes una roca, puede\n"
+	.string "salir un POKéMON de su escondite.\p"
+	.string "¡Yuju!$"
 

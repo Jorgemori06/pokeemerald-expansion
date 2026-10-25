@@ -1,0 +1,137 @@
+# CASA TRAMPA de la RUTA 110 (pruebas 1 a 7; la 8 es del postgame)
+Route110_TrickHouseEntrance_Text_YoureBeingWatched	Alguien te está observando…$
+Route110_TrickHouseEntrance_Text_ConcealedBeneathDesk	¿Eh? Grrr…\p¿Cómo sabías que me había escondido\ndebajo de esta mesa? ¡Menuda vista!$
+Route110_TrickHouseEntrance_Text_ConcealedBehindTree	¿Eh? Grrr…\p¿Cómo sabías que me había escondido\ndetrás de este árbol? ¡Menuda vista!$
+Route110_TrickHouseEntrance_Text_ConcealedInDresser	¿Eh? Grrr…\p¿Cómo sabías que me había escondido\nen esta cómoda? ¡Menuda vista!$
+Route110_TrickHouseEntrance_Text_ConealedBeyondWindow	¿Eh? Grrr…\p¿Cómo sabías que me había escondido\ntras esta ventana? ¡Menuda vista!$
+Route110_TrickHouseEntrance_Text_ConcealedInPlanter	¿Eh? Grrr…\p¿Cómo sabías que me había escondido\nen esta maceta? ¡Menuda vista!$
+Route110_TrickHouseEntrance_Text_ConcealedInCupboard	¿Eh? Grrr…\p¿Cómo sabías que me había escondido\nen este armario? ¡Menuda vista!$
+Route110_TrickHouseEntrance_Text_ConcealedBehindWindow	¿Eh? Grrr…\p¿Cómo sabías que me había escondido\ndetrás de esta ventana? ¡Menuda vista!$
+Route110_TrickHouseEntrance_Text_ConcealedBeneathCushion	¿Eh? Grrr…\p¿Cómo sabías que me había escondido\ndebajo de este cojín? ¡Menuda vista!$
+Route110_TrickHouseEntrance_Text_TheyCallMeTrickMaster	¡Contempla!\p¡Pues soy el hombre más misterioso\nque existe en todo HOENN!\lMe llaman…\p¡El MAESTRO TRAMPA!\n¡Juajuajua! ¡Encantado!$
+Route110_TrickHouseEntrance_Text_ComeToChallengeTrickHouse	Has venido a desafiar mi CASA\nTRAMPA, ¿a que sí?\pPor eso estás aquí, ¿verdad?\n¡Pues sí!\p¡Desafío aceptado!\p¡Entra por el pergamino de ahí\ny que empiece el desafío!\p¡Te esperaré al fondo!$
+Route110_TrickHouseEntrance_Text_ItsAScroll	Es un pergamino.$
+Route110_TrickHouseEntrance_Text_GoInHoleBehindScroll	¡Detrás del pergamino hay un\nagujero enorme!\p¿Quieres entrar?$
+Route110_TrickHouseEntrance_Text_LeavingOnJourneyNote	Hay una nota pegada al pergamino…\p“Me voy de viaje. No me busquéis.\nEl MAESTRO TRAMPA”.$
+Route110_TrickHouseEntrance_Text_NextTimeUseThisTrick	La próxima vez usaré este truco,\ny esa artimaña, y aquellas trampas…\pMufufufu… Modestia aparte, ¡es\ndificilísimo hasta para mí!$
+Route110_TrickHouseEntrance_Text_InMidstOfDevisingNewChallenges	¿Eh? ¡¿Qué?!\n¡Ah, eres tú!\p¡Estoy ideando nuevos desafíos\nllenos de trampas!\p¿No es mucho pedir un poco más de\ntiempo para pensar, verdad?\l¿No me lo negarás?\l¡Vuelve dentro de un rato!$
+Route110_TrickHouseEntrance_Text_YoureHereToAcceptReward	¡Ah, eres tú! Vienes a por el premio\nde la otra vez, ¿verdad?\l¡Claro que sí!\p¡Toma!\n¡Te lo doy ahora mismo!$
+Route110_TrickHouseEntrance_Text_DidYouNotComeToClaimReward	¿Eh?\n¿No venías a por tu premio?$
+Route110_TrickHouseEntrance_Text_MechadollWhichTent	¡ROBOMUÑECO 5 SOY YO!\nSI EL PREMIO NO TE LLEVAS,\lAL MAESTRO TRAMPA NO PUEDES SEGUIR.\pTIENDA ROJA O TIENDA AZUL,\n¿CUÁL PREFIERES?$
+Route110_TrickHouseEntrance_Text_ThenFarewell	ENTONCES, ADIÓS.$
+Route110_TrickHouseEntrance_Text_PCFullAgain	ESTADO DE TU PC: LLENO OTRA VEZ.\nQUÉ MALDAD.$
+Route110_TrickHousePuzzle_Text_FoundAScroll	{PLAYER} ha encontrado un pergamino.$
+Route110_TrickHousePuzzle_Text_MemorizedSecretCode	{PLAYER} ha memorizado el código\nsecreto escrito en el pergamino.$
+Route110_TrickHousePuzzle_Text_SecretCodeWrittenOnIt	Tiene escrito un código secreto.$
+Route110_TrickHouseEntrance_Text_DoorLockedWriteSecretCodeHere	La puerta está cerrada.\p… Si te fijas, pone algo:\n“Escribe aquí el código secreto”.$
+Route110_TrickHouseEnd_Text_YouveMadeItToMe	¡Aaah!\n¿Has llegado hasta mí?\lMmm… ¡Menuda vista!$
+Route110_TrickHouseEnd_Text_AllNightToPlantTrees	Me pasé toda la noche plantando\nesos árboles…\p¡Casi me igualas en grandeza! ¡Te\nfaltan uno, dos, tres, cuatro, cinco,\lseis puestos!$
+Route110_TrickHouseEnd_Text_AllNightToMakeMaze	Me pasé toda la noche haciendo\nel laberinto…\p¡Casi me igualas en grandeza! ¡Te\nfaltan uno, dos, tres, cuatro, cinco\lpuestos!$
+Route110_TrickHouseEnd_Text_AllNightToPreparePanels	Me pasé toda la noche preparando\nlos paneles de las paredes…\p¡Casi me igualas en grandeza! ¡Te\nfaltan uno, dos, tres, cuatro puestos!$
+Route110_TrickHouseEnd_Text_AllNightToShoveBoulders	Me pasé toda la noche metiendo\nesas rocas…\p¡Casi me igualas en grandeza! ¡Te\nfaltan uno, dos, tres puestos!$
+Route110_TrickHouseEnd_Text_AllNightToMakeMechadolls	Me pasé una noche haciendo los\nROBOMUÑECOS y otra pensando el test…\p¡Casi me igualas en grandeza! ¡Te\nfaltan uno, dos puestos!$
+Route110_TrickHouseEnd_Text_AllNightToInstallDoors	Me pasé toda la noche instalando\nlas puertas…\p¡Casi me igualas en grandeza!$
+Route110_TrickHouseEnd_Text_AllNightSettingUpArrows	Me pasé toda la noche poniendo\nflechas…\p¡Me igualas en grandeza!$
+Route110_TrickHouseEnd_Text_AllNightPolishingFloors	Me pasé toda la noche puliendo\nlos suelos…\p¡Me superas en grandeza!\nPuede…$
+Route110_TrickHouseEnd_Text_FountainOfIdeasRunDry	¿Q-qué hago?\nSe me ha secado la fuente de ideas\lpara trampas…\pQuizá sea hora de recorrer el país\nen busca de trucos nuevos…$
+Route110_TrickHouseEnd_Text_DefeatedMePreferWhichTent	Me duele admitirlo, pero ¡me\nhas vencido!\pAun así, si vienes a verme una y otra\nvez, será por mi carisma.\l¡Seguro que sí!\p¡Pero eso no tiene nada que ver con\nque haya perdido!\pPara celebrar la amistad entre\nalguien tan tenaz como tú y un genio\lcomo yo, ¡exijo que aceptes este\lrecuerdo!\pBueno, en realidad son dos: una\nTIENDA ROJA y una TIENDA AZUL.\l¿Cuál prefieres?$
+Route110_TrickHouseEnd_Text_NoRoomInPC	¿Qué? ¿No tienes sitio en el PC?\n¿Y yo qué hago con eso?\pMe gustaría decirlo, pero soy\ndemasiado bueno, ¡así que vuelve luego!$
+Route110_TrickHouseEnd_Text_LeavingOnJourney	… … … … … …\pMe voy de viaje a descubrir cosas.\nEn busca de trucos nuevos.\pEspero que algún día vuelvas a\nvisitarme y me entretengas.\p¡Y ahora, adiós!$
+Route110_TrickHouseEnd_Text_YouHaveEarnedThisReward	¡Muy bien!\n¡Te has ganado este premio!$
+Route110_TrickHouseEnd_Text_NoRoomForThis	¿Qué? ¿No tienes sitio para esto?\n¿Pero qué cosas llevas encima?\pBueno, como has llegado hasta mí,\nte guardaré el premio para luego.$
+Route110_TrickHouseEnd_Text_MakeNewTricksToStumpYou	¡Quita esa sonrisita de la cara!\n¡Es muy pronto para cantar victoria!\pPrepararé trucos nuevos para\npillarte, ya verás.\pSolo podrás reírte de mí cuando\nlos superes todos.\p¡Vuelve para la próxima entrega!$
+Route110_TrickHouseEnd_Text_YoureIgnoringMe	¡Vaya, vaya! ¿Ahora me ignoras?\n¡Eso me rompe el corazón!$
+Route110_TrickHousePuzzle1_Text_WroteSecretCodeLockOpened	{PLAYER} ha escrito el código\nsecreto en la puerta.\p“El MAESTRO TRAMPA es fabuloso”.\n… … … … … … … …\p¡La cerradura se ha abierto!$
+Route110_TrickHousePuzzle1_Text_SallyIntro	¡Me abriré paso a tajos con el CORTE\nque acabamos de aprender!$
+Route110_TrickHousePuzzle1_Text_SallyDefeat	¿Por qué te lo tomas tan en serio?$
+Route110_TrickHousePuzzle1_Text_SallyPostBattle	¡Nunca me canso de dar tajos!$
+Route110_TrickHousePuzzle1_Text_EddieIntro	He entrado en esta casa tan rara\npor casualidad…$
+Route110_TrickHousePuzzle1_Text_EddieDefeat	Y ahora he perdido…$
+Route110_TrickHousePuzzle1_Text_EddiePostBattle	Me he perdido, he perdido un combate\ny ahora estoy más perdido… No salgo…$
+Route110_TrickHousePuzzle1_Text_RobinIntro	¿Quién será el MAESTRO TRAMPA?$
+Route110_TrickHousePuzzle1_Text_RobinDefeat	¡He perdido por estar pensando\nen las musarañas!$
+Route110_TrickHousePuzzle1_Text_RobinPostBattle	¡Qué fuerte eres!\n¿Quién eres tú?$
+Route110_TrickHousePuzzle2_Text_WroteSecretCodeLockOpened	{PLAYER} ha escrito el código\nsecreto en la puerta.\p“El MAESTRO TRAMPA es listísimo”.\n… … … … … … … …\p¡La cerradura se ha abierto!$
+Route110_TrickHousePuzzle2_Text_TedIntro	¿Qué interruptor tapa qué agujero?$
+Route110_TrickHousePuzzle2_Text_TedDefeat	¡Después del combate estoy todavía\nmás confundido!$
+Route110_TrickHousePuzzle2_Text_TedPostBattle	¿Me pulsas tú todos los botones?$
+Route110_TrickHousePuzzle2_Text_PaulIntro	¡Oh! ¡Vas por tu segundo desafío\nde la CASA TRAMPA!$
+Route110_TrickHousePuzzle2_Text_PaulDefeat	¿También se te da bien combatir?$
+Route110_TrickHousePuzzle2_Text_PaulPostBattle	El MAESTRO TRAMPA montó todas las\ntrampas de la casa él solito.$
+Route110_TrickHousePuzzle2_Text_GeorgiaIntro	Algún día quiero tener mi GIMNASIO.\nPor eso estudio cómo poner trampas.$
+Route110_TrickHousePuzzle2_Text_GeorgiaDefeat	¡No he estudiado bastante cómo\ncombatir!$
+Route110_TrickHousePuzzle2_Text_GeorgiaPostBattle	Eres fuerte, ¿eh?\n¡Quizá hasta para ser LÍDER!$
+Route110_TrickHousePuzzle3_Text_WroteSecretCodeLockOpened	{PLAYER} ha escrito el código\nsecreto en la puerta.\p“El MAESTRO TRAMPA es envidiable”.\n… … … … … … … …\p¡La cerradura se ha abierto!$
+Route110_TrickHousePuzzle3_Text_JustinIntro	¡Siempre acabo en el mismo sitio!$
+Route110_TrickHousePuzzle3_Text_JustinDefeat	Ya lo estoy pasando mal, ¿y encima me\nganas? ¡No es justo!$
+Route110_TrickHousePuzzle3_Text_JustinPostBattle	¡Esto está lleno de puertas!\n¡Es pequeño y oscuro! ¡Socorro!$
+Route110_TrickHousePuzzle3_Text_MarthaIntro	No sé qué pasa aquí.\nMe estoy poniendo triste…$
+Route110_TrickHousePuzzle3_Text_MarthaDefeat	¡Qué… qué cruel!$
+Route110_TrickHousePuzzle3_Text_MarthaPostBattle	¡Ya sé que soy débil!\n¡Y no tengo sentido de la orientación!$
+Route110_TrickHousePuzzle3_Text_AlanIntro	No lo entiendo. ¿Quién querría una\ncasa tan rara?$
+Route110_TrickHousePuzzle3_Text_AlanDefeat	No lo entiendo.\n¿Cómo he perdido?$
+Route110_TrickHousePuzzle3_Text_AlanPostBattle	No lo entiendo.\n¿Cuántas trampas tiene esta casa?\pA lo mejor tú lo averiguas.$
+Route110_TrickHousePuzzle4_Text_WroteSecretCodeLockOpened	{PLAYER} ha escrito el código\nsecreto en la puerta.\p“El MAESTRO TRAMPA mola”.\n… … … … … … … …\p¡La cerradura se ha abierto!$
+Route110_TrickHousePuzzle4_Text_CoraIntro	Pensar esto es un rollo.\n¡Yo solo quería combatir!$
+Route110_TrickHousePuzzle4_Text_CoraDefeat	¡Aunque haya perdido, combatir es\nlo que más me gusta!$
+Route110_TrickHousePuzzle4_Text_CoraPostBattle	¿A que sí? Irías a cualquier parte\nsi hubiera ENTRENADORES.$
+Route110_TrickHousePuzzle4_Text_YujiIntro	¡Je! ¡Rocas como estas las aparto\ncon un dedo!$
+Route110_TrickHousePuzzle4_Text_YujiDefeat	Puedo empujar rocas, pero no\nresolver el puzle…$
+Route110_TrickHousePuzzle4_Text_YujiPostBattle	No basta con tener músculo…\n¡Hay que usar la cabeza!$
+Route110_TrickHousePuzzle4_Text_PaulaIntro	La CASA TRAMPA cada vez tiene más\ntrampas, ¿no?$
+Route110_TrickHousePuzzle4_Text_PaulaDefeat	¡Aaah!$
+Route110_TrickHousePuzzle4_Text_PaulaPostBattle	¿Alguien habrá llegado al final?$
+Route110_TrickHousePuzzle5_Text_WroteSecretCodeLockOpened	{PLAYER} ha escrito el código\nsecreto en la puerta.\p“El MAESTRO TRAMPA es un genio”.\n… … … … … … … …\p¡La cerradura se ha abierto!$
+Route110_TrickHousePuzzle5_Text_Mechadoll1Intro	CLIC-CLAC…\n¡ROBOMUÑECO 1 SOY YO!\pSI RESPONDES BIEN A LOS TESTS,\nIRÁS AL ROBOMUÑECO 5.\lY CONSEGUIRÁS EL CÓDIGO SECRETO.$
+Route110_TrickHousePuzzle5_Text_Mechadoll1Quiz1	TEST DEL ROBOMUÑECO 1.\pUno de estos POKéMON no vive en la\nRUTA 110. ¿Cuál es?$
+Route110_TrickHousePuzzle5_Text_Mechadoll1Quiz2	TEST DEL ROBOMUÑECO 1.\pUno de estos POKéMON no es de tipo\nAGUA. ¿Cuál es?$
+Route110_TrickHousePuzzle5_Text_Mechadoll1Quiz3	TEST DEL ROBOMUÑECO 1.\pUno de estos POKéMON no usa\nCHUPAVIDAS. ¿Cuál es?$
+Route110_TrickHousePuzzle5_Text_CorrectGoThrough	ENHORABUENA. RESPUESTA CORRECTA.\nPUEDES PASAR. POR FAVOR.$
+Route110_TrickHousePuzzle5_Text_DisappointmentError	BZZZT. DECEPCIÓN.\nERROR.$
+Route110_TrickHousePuzzle5_Text_Wahahahaha	¡JUAJUAJUAJUA! ¡JUAJUAJUAJUA!\n¡CLIC-CLAC!$
+Route110_TrickHousePuzzle5_Text_WaitForNextChallenge	TU PRÓXIMO DESAFÍO ESPERAMOS.$
+Route110_TrickHousePuzzle5_Text_Mechadoll2Intro	CLIC-CLAC…\n¡ROBOMUÑECO 2 SOY YO!\pEL TEST DEL ROBOMUÑECO 1 ES\nDEMASIADO FÁCIL.$
+Route110_TrickHousePuzzle5_Text_Mechadoll2Quiz1	TEST DEL ROBOMUÑECO 2.\p¿Qué POKéMON le prestó tu padre\na BLASCO?$
+Route110_TrickHousePuzzle5_Text_Mechadoll2Quiz2	TEST DEL ROBOMUÑECO 2.\p¿Qué POKéMON perseguía al\nPROF. ABEDUL?$
+Route110_TrickHousePuzzle5_Text_Mechadoll2Quiz3	TEST DEL ROBOMUÑECO 2.\p¿Qué POKéMON usó el EQUIPO AQUA\nen el BOSQUE PETALIA?$
+Route110_TrickHousePuzzle5_Text_Mechadoll3Intro	CLIC-CLAC…\n¡ROBOMUÑECO 3 SOY YO!\pSOLO ME INTERESA EL DINERO.$
+Route110_TrickHousePuzzle5_Text_Mechadoll3Quiz1	TEST DEL ROBOMUÑECO 3.\p¿Qué cuesta más? ¿Tres CARTAS\nPUERTO o un ANTIQUEMAR?$
+Route110_TrickHousePuzzle5_Text_Mechadoll3Quiz2	TEST DEL ROBOMUÑECO 3.\pVendes una SUPER BALL y compras una\nPOCIÓN. ¿Cuánto dinero te queda?$
+Route110_TrickHousePuzzle5_Text_Mechadoll3Quiz3	TEST DEL ROBOMUÑECO 3.\p¿Un REPELENTE y un REFRESCO cuestan\nmás que una SUPERPOCIÓN?$
+Route110_TrickHousePuzzle5_Text_Mechadoll4Intro	CLIC-CLAC…\n¡ROBOMUÑECO 4 ESE SOY YO!\pMI TEST ES UNA OBRA DE ARTE.$
+Route110_TrickHousePuzzle5_Text_Mechadoll4Quiz1	TEST DEL ROBOMUÑECO 4.\pEn la CASA DE LA PLAYA, ¿había más\nhombres o más mujeres?$
+Route110_TrickHousePuzzle5_Text_Mechadoll4Quiz2	TEST DEL ROBOMUÑECO 4.\pEn PUEBLO LAVACALDA, ¿había más\nancianos o más ancianas?$
+Route110_TrickHousePuzzle5_Text_Mechadoll4Quiz3	TEST DEL ROBOMUÑECO 4.\pEn la ESCUELA DE ENTRENADORES,\n¿cuántas alumnas había?$
+Route110_TrickHousePuzzle5_Text_Mechadoll5Intro	CLIC-CLAC…\n¡ROBOMUÑECO 5 SOY YO!\pEL MEJOR Y MÁS ORGULLOSO LOGRO\nDEL MAESTRO SOY YO.$
+Route110_TrickHousePuzzle5_Text_Mechadoll5Quiz1	TEST DEL ROBOMUÑECO 5.\pEn el CLUB DE FANS de PORTUAL,\n¿cuántos POKéMON había?$
+Route110_TrickHousePuzzle5_Text_Mechadoll5Quiz2	TEST DEL ROBOMUÑECO 5.\pEn CIUDAD ARBORADA, ¿cuántas\ncasas en los árboles había?$
+Route110_TrickHousePuzzle5_Text_Mechadoll5Quiz3	TEST DEL ROBOMUÑECO 5.\pEn el CAMINO DE BICIS, ¿cuántos\nTRIATLETAS había?$
+Route110_TrickHousePuzzle6_Text_WroteSecretCodeLockOpened	{PLAYER} ha escrito el código\nsecreto en la puerta.\p“El MAESTRO TRAMPA es mi vida”.\n… … … … … … … …\p¡La cerradura se ha abierto!$
+Route110_TrickHousePuzzle6_Text_SophiaIntro	Cuando me dijeron que había una casa\nrara, tuve que venir a verla.$
+Route110_TrickHousePuzzle6_Text_SophiaDefeat	¡He descubierto a alguien muy duro!$
+Route110_TrickHousePuzzle6_Text_SophiaPostBattle	Me lo estoy pasando genial\nexplorando este sitio.\p¡Es un desafío que merece la pena\nrepetir!$
+Route110_TrickHousePuzzle6_Text_BennyIntro	A lo mejor mi POKéMON PÁJARO puede\nvolar por encima de la pared…$
+Route110_TrickHousePuzzle6_Text_BennyDefeat	¡Uaaah! ¡La he fastidiado!$
+Route110_TrickHousePuzzle6_Text_BennyPostBattle	Jejeje… Supongo que he perdido por\nintentar hacer trampa.$
+Route110_TrickHousePuzzle6_Text_SebastianIntro	Me estoy mareando con estas\npuertas giratorias…$
+Route110_TrickHousePuzzle6_Text_SebastianDefeat	Todo me da vueltas y más vueltas.\nNo puedo más…$
+Route110_TrickHousePuzzle6_Text_SebastianPostBattle	Parece que a ti no te afecta nada.\n¿O es que pones cara de póquer?$
+Route110_TrickHousePuzzle7_Text_WroteSecretCodeLockOpened	{PLAYER} ha escrito el código\nsecreto en la puerta.\p“El MAESTRO TRAMPA es achuchable”.\n… … … … … … … …\p¡La cerradura se ha abierto!$
+Route110_TrickHousePuzzle7_Text_JoshuaIntro	El MAESTRO TRAMPA siempre desaparece\ncomo el humo. ¿Cómo lo hará?$
+Route110_TrickHousePuzzle7_Text_JoshuaDefeat	¡Aaaah! ¡Eres demasiado fuerte!\n¿Cómo lo haces?$
+Route110_TrickHousePuzzle7_Text_JoshuaPostBattle	Ojalá yo también pudiera aparecer\ny desaparecer como el humo.$
+Route110_TrickHousePuzzle7_Text_PatriciaIntro	Dar vueltas al mismo sitio…\nTrae mala suerte…$
+Route110_TrickHousePuzzle7_Text_PatriciaDefeat	¡Derrota!\nMala señal…$
+Route110_TrickHousePuzzle7_Text_PatriciaPostBattle	Ya he pasado más de diez veces por\naquí… Qué mala suerte…$
+Route110_TrickHousePuzzle7_Text_AlexisIntro	Quien gane pasará primero.\nEso me da a mí.$
+Route110_TrickHousePuzzle7_Text_AlexisDefeat	¡Oh!\nBueno, ¡pues pasa!$
+Route110_TrickHousePuzzle7_Text_AlexisPostBattle	Vas a resolver todos los puzles de\nla CASA TRAMPA. Eso me da a mí.$
+Route110_TrickHousePuzzle7_Text_MarielaIntro	¡Nufufufu, por fin!\n¡Vamos allá!$
+Route110_TrickHousePuzzle7_Text_MarielaDefeat	¡Ganas como si nada!$
+Route110_TrickHousePuzzle7_Text_MarielaPostBattle	¡Hmpf! ¡No estoy enfadada!\n¡Qué va!$
+Route110_TrickHousePuzzle7_Text_AlvaroIntro	¡Te he visto venir con mucha atención!$
+Route110_TrickHousePuzzle7_Text_AlvaroDefeat	Esto sí que no lo he visto venir…$
+Route110_TrickHousePuzzle7_Text_AlvaroPostBattle	En fin, menudo sitio raro para\nconocernos.\pDe bicho raro a bicho raro,\n¡demos lo mejor!$
+Route110_TrickHousePuzzle7_Text_EverettIntro	Aquí dentro se está muy apretado…$
+Route110_TrickHousePuzzle7_Text_EverettDefeat	Oh, sí, fuerza tienes.$
+Route110_TrickHousePuzzle7_Text_EverettPostBattle	Esperaba cambiarte el sitio si te\nganaba, pero…$

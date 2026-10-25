@@ -1,0 +1,66 @@
+# PUEBLO LAVACALDA y GIMNASIO de CANDELA (sin la revancha), HERBOLARIO, casas, tienda y CENTRO POKéMON
+LavaridgeTown_Text_MayNiceBadgesTakeThis	AURA: ¡{PLAYER}{KUN}! ¡Cuánto tiempo!\p¿Oh? Mientras yo iba a las aguas\ntermales, tú has ganado la MEDALLA\ldel GIMNASIO de LAVACALDA.\pDebes de haber reunido buenos\nPOKéMON…\lNo, seguro que los has criado tú.\pCreo que no pasa nada si te doy\nesto.$
+LavaridgeTown_Text_MayExplainGoGogglesChallengeDad	AURA: Con esas GAFAS AISLANTES podrás\ncruzar sin problemas el desierto\lde la RUTA 111.\pPero, hala, {PLAYER}{KUN}…\nDesafiando GIMNASIOS…\p¡Seguro que te esfuerzas tanto porque\nno quieres perder contra mí!\p{PLAYER}{KUN}, creo que voy a\ndesafiar a tu padre en PETALIA.\p¡Hasta otra!$
+LavaridgeTown_Text_BrendanNiceBadgesTakeThis	BRUNO: {PLAYER}, eh, cuánto tiempo.\n¿Qué tal te va?\pMmm…\nLlevas unas cuantas MEDALLAS.\pVale, entonces.\nYa puestos, quédate esto.$
+LavaridgeTown_Text_BrendanExplainGoGogglesChallengeDad	BRUNO: Llévalas encima si piensas\nentrar en el desierto de la\lRUTA 111.\pDebe de haber POKéMON que solo\nviven en el desierto.\lPodrías buscarlos.\pEn cuanto a mí…\nEstoy pensando en desafiar a NORMAN,\lel LÍDER del GIMNASIO de PETALIA.\pA diferencia de ti, {PLAYER}, tu padre\nsí que parece duro de verdad.\p¡Nos vemos!$
+LavaridgeTown_Text_HaveEggWillYouTakeIt	Tengo aquí un HUEVO.\pQuería que eclosionara cubriéndolo\ncon arena caliente de las termas.\lPero parece que no basta…\pHe oído que lo mejor es tenerlo\njunto a POKéMON y llevarlo de un\llado a otro.\pEntrenas POKéMON, ¿verdad?\nY tus POKéMON rebosan vitalidad.\p¿Qué me dices?\n¿Te llevas este HUEVO?$
+LavaridgeTown_Text_HopeYoullWalkPlentyWithEgg	¡Bien! ¡Espero que camines mucho\ncon este HUEVO!$
+LavaridgeTown_Text_ReceivedTheEgg	{PLAYER} ha recibido el HUEVO.$
+LavaridgeTown_Text_NoRoomForThisEgg	¿Oh? Llevas demasiados POKéMON.\nNo hay sitio para este HUEVO…$
+LavaridgeTown_Text_AsYouWishThen	Como quieras…\pSi cambias de idea sobre este HUEVO,\naquí estaré.$
+LavaridgeTown_Text_EverySoOftenEggFoundAtDayCare	De vez en cuando aparece un HUEVO\nen la GUARDERÍA POKéMON.\pO eso es lo que dicen, al menos.$
+LavaridgeTown_Text_HotSpringsNeverRunDry	Sacamos toda el agua caliente que\nqueremos y las termas nunca se secan.\p¿No es mágico?\pEstas termas salen cerca de volcanes\nactivos. El magma calienta las vetas\lde agua bajo tierra y brotan\laguas termales.$
+LavaridgeTown_Text_PokemonNippedBackside	Estar enterrado en esta arena\ncaliente es…\pSuspiro…\pTan calentito y celestial…\p¿Eh? ¡Aaah! ¡Ay!\p¡Un POKéMON me ha mordido el trasero!$
+LavaridgeTown_Text_OhYouLikeHotSprings	¿Oh, te gustan las aguas termales?\pQué raro, con lo joven que eres.$
+LavaridgeTown_Text_BatheInHotSpringsEveryDay	Me baño en las termas todos los días.\pQuiero ser una LÍDER de GIMNASIO guapa\ny fuerte como CANDELA.$
+LavaridgeTown_Text_IfPokemonInHotSprings	Si metieran POKéMON en las termas,\nsería rarísimo.\p¡Podría ser un baño eléctrico, o\nde burbujas, o hasta de lava!$
+LavaridgeTown_Text_HotSpringsClaims	Dicen que estas termas van bien para\nlos nervios, los dolores musculares,\llos problemas amorosos y para\latraer el dinero…$
+LavaridgeTown_Text_TownSign	PUEBLO LAVACALDA\p“TERMAS DEL CENTRO POKéMON\n¡Un lugar ideal para relajarse!”$
+LavaridgeTown_Text_GymSign	GIMNASIO POKéMON DE LAVACALDA\nLÍDER: CANDELA\l“¡Con una pasión que arde!”$
+LavaridgeTown_Text_HerbShopSign	HERBOLARIO POKéMON\n“¡Cuanto más amargo, mejor cura!”$
+LavaridgeTown_Gym_1F_Text_GymGuideAdvice	¡Eh! ¿Qué tal, futura estrella de\nla LIGA, {PLAYER}?\pCANDELA, la LÍDER de LAVACALDA,\nusa POKéMON de tipo FUEGO.\pSu pasión por los POKéMON arde con\nmás fuerza que un volcán.\p¡No te acerques mucho o te quemarás!\n¡Échale agua y a por ella!$
+LavaridgeTown_Gym_1F_Text_GymGuidePostVictory	¡Uf! ¡Ha sido un combate abrasador!$
+LavaridgeTown_Gym_1F_Text_ColeIntro	¡Ayayayayay!\n¡Qué calor!$
+LavaridgeTown_Gym_1F_Text_ColeDefeat	El sudor no me deja ver…$
+LavaridgeTown_Gym_1F_Text_ColePostBattle	Enterrarse en arena caliente mejora\nla circulación.\pVa muy bien para el dolor de\narticulaciones.$
+LavaridgeTown_Gym_1F_Text_AxleIntro	Estoy intentando relajarme.\n¡No vengas a estresarme!$
+LavaridgeTown_Gym_1F_Text_AxleDefeat	¡Espero que CANDELA te achicharre!$
+LavaridgeTown_Gym_1F_Text_AxlePostBattle	Aaah… Uf…\pSi pasas mucho tiempo enterrado en\narena caliente, acabas agotado…$
+LavaridgeTown_Gym_B1F_Text_KeeganIntro	Ya debes de estar cansado.\nTe gustaría descansar en la arena\lcaliente, ¿a que sí?\pPero que sepas que no perder la\nvoluntad es una capacidad importante\lpara cualquier ENTRENADOR.$
+LavaridgeTown_Gym_B1F_Text_KeeganDefeat	Quien juega con fuego, se quema…$
+LavaridgeTown_Gym_B1F_Text_KeeganPostBattle	Tu habilidad es real…\nPero nuestra LÍDER, CANDELA, es fuerte.\pSi no tienes cuidado, saldrás\nmuy quemado.$
+LavaridgeTown_Gym_1F_Text_GeraldIntro	¿Aguantarán tus POKéMON un calor\nde 200 grados?$
+LavaridgeTown_Gym_1F_Text_GeraldDefeat	No ardía lo suficiente…$
+LavaridgeTown_Gym_1F_Text_GeraldPostBattle	El magma está a unos 200 grados\no más.\pTus POKéMON me han ganado, así que\nsobrevivirían en el magma sin problema.$
+LavaridgeTown_Gym_1F_Text_DanielleIntro	Esto…\nVale, combatiré contigo.$
+LavaridgeTown_Gym_1F_Text_DanielleDefeat	Oh, pero qué fuerza tienes.$
+LavaridgeTown_Gym_1F_Text_DaniellePostBattle	Voy a ser una ENTRENADORA guapa y\nfuerte como CANDELA.$
+LavaridgeTown_Gym_B1F_Text_JaceIntro	¡Venga, espabila!\n¡Vamos antes de que se me enfríe\lel ánimo!$
+LavaridgeTown_Gym_B1F_Text_JaceDefeat	Hace tanto calor y, aun así, tengo\nel corazón helado…$
+LavaridgeTown_Gym_B1F_Text_JacePostBattle	Con lo que te arde el espíritu de\ncombate, puede que tengas una\loportunidad contra nuestra LÍDER.$
+LavaridgeTown_Gym_B1F_Text_JeffIntro	¿Ves cómo arden las llamas?\n¡Arden esperando mi victoria!$
+LavaridgeTown_Gym_B1F_Text_JeffDefeat	Algo ha salido mal.$
+LavaridgeTown_Gym_B1F_Text_JeffPostBattle	Bueno, ¿y qué? ¿Y qué, eh?\n¡Puedo andar descalzo sobre brasas!\p… ¡Ni se te ocurra intentarlo!$
+LavaridgeTown_Gym_B1F_Text_EliIntro	Me encantan las montañas, pero sobre\ntodo los volcanes.$
+LavaridgeTown_Gym_B1F_Text_EliDefeat	Bueno, me parece que he perdido sin\ncontrolar nada en ningún momento.$
+LavaridgeTown_Gym_B1F_Text_EliPostBattle	Estoy aquí porque me hice fan del\npoder de CANDELA.\pJejejeje.$
+LavaridgeTown_Gym_1F_Text_FlanneryIntro	Bienven… No, espera.\p¡ENTRENADOR insignificante, qué bien\nque hayas llegado hasta aquí!\pMe han confiado el… No, espera.\p¡Soy CANDELA, y soy la LÍDER de este\nGIMNASIO!\pEh…\n¡No me subestimes, aunque lleve poco\ltiempo de LÍDER!\pCon las técnicas que heredé de mi\nabuelo, te, eh… ¡demostraré los\lmovimientos ardientes de esta tierra!$
+LavaridgeTown_Gym_1F_Text_FlanneryDefeat	Oh…\nCreo que me he esforzado demasiado…\pYo… Hace poco que soy LÍDER\nde GIMNASIO.\pHe intentado ser alguien que\nno soy.\pTengo que hacer las cosas a mi manera.\nSi no, mis POKéMON se confundirán.\pGracias por enseñármelo.\nPor eso, te mereces esto.$
+LavaridgeTown_Gym_1F_Text_ReceivedHeatBadge	{PLAYER} ha recibido la MEDALLA\nCALOR de CANDELA.$
+LavaridgeTown_Gym_1F_Text_ExplainHeatBadgeTakeThis	Con la MEDALLA CALOR, todos los\nPOKéMON hasta el nivel 50, incluso los\lque te den en intercambios, te\lobedecerán por completo.\pY además permite usar el movimiento\nde MO FUERZA fuera del combate.\pEsto es una muestra de mi gratitud.\n¡No te cortes y cógelo!$
+LavaridgeTown_Gym_1F_Text_ExplainOverheat	Esa MT50 contiene SOFOCO.\pEse movimiento hace muchísimo daño\nal rival.\pPero también baja mucho el AT. ESP.\ndel POKéMON que lo usa. Quizá no\lsirva para combates largos.$
+LavaridgeTown_Gym_1F_Text_RegisteredFlannery	Has registrado a la LÍDER de GIMNASIO\nCANDELA en el POKéNAV.$
+LavaridgeTown_Gym_1F_Text_FlanneryPostBattle	Tu fuerza me recuerda a alguien…\p¡Oh! ¡Ya sé! Combates como NORMAN,\nel LÍDER del GIMNASIO de PETALIA.$
+LavaridgeTown_Gym_1F_Text_GymStatue	GIMNASIO POKéMON DE LAVACALDA$
+LavaridgeTown_Gym_1F_Text_GymStatueCertified	GIMNASIO POKéMON DE LAVACALDA\pRECONOCIDOS POR CANDELA:\n{PLAYER}$
+LavaridgeTown_HerbShop_Text_WelcomeToHerbShop	¡Te damos la bienvenida al HERBOLARIO,\nmedicinas eficaces y baratas!$
+LavaridgeTown_HerbShop_Text_YouveComeToLookAtHerbalMedicine	¿Has venido a LAVACALDA a ver\nremedios de hierbas?\pEso dice mucho de ti.\p¡Me caes bien! ¡Toma esto!$
+LavaridgeTown_HerbShop_Text_ExplainCharcoal	Ese CARBÓN que te he dado se usa\npara hacer remedios de hierbas.\pY si se lo das a un POKéMON, hace\nmaravillas.\pAumenta la potencia de los\nmovimientos de tipo FUEGO.$
+LavaridgeTown_HerbShop_Text_HerbalMedicineWorksButMonWillDislike	Los remedios de hierbas funcionan de\nmaravilla. Pero tus POKéMON no te\llo perdonarán. ¡Saben fatal!$
+LavaridgeTown_House_Text_WifeWarmingEggInHotSprings	Mi mujer está calentando un HUEVO en\nlas termas. Eso me ha dicho.\pDejó dos POKéMON en la GUARDERÍA.\n¡Y encontraron ese HUEVO!$
+LavaridgeTown_House_Text_Zigzagoon	ZIGZAGOON: ¡Pshuu!$
+LavaridgeTown_Mart_Text_XSpeedFirstStrike	Usa VELOCIDAD X para subir la\nVELOCIDAD de un POKéMON en combate.\pAsí atacará primero, ¡y eso es una\ngran ventaja!$
+LavaridgeTown_Mart_Text_LocalSpecialtyOnMtChimney	En la cima del MONTE CENIZO hay una\nespecialidad que solo se vende allí.\pDásela a un POKéMON y se pondrá\ncontentísimo.$
+LavaridgeTown_PokemonCenter_1F_Text_TrainersPokemonSpendTimeTogether	Creo que los POKéMON se unen más a\nquien los entrena si están juntos.\pCuanto más, mejor.\nEso es lo que pienso.$
+LavaridgeTown_PokemonCenter_1F_Text_HotSpringCanInvigorate	Es casi mágico lo bien que sienta\nsentarse en una poza termal.\pOjalá mis POKéMON pudieran darse\nun baño también.$
+LavaridgeTown_PokemonCenter_1F_Text_TrainersShouldRestToo	¡Jojojo! Oye, desde aquí se llega\na las aguas termales.\pSi los POKéMON descansan, sus\nENTRENADORES también deberían.$

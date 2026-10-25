@@ -1,0 +1,152 @@
+# RUTA 118, RUTA 119 con sus entrenadores e INSTITUTO METEOROLÓGICO
+Route118_Text_StevenQuestions	MÁXIMO: ¡Hola, {PLAYER}{KUN}!\p¡Soy yo, MÁXIMO!\nNos vimos en la cueva de AZULIZA.\p¿Has conocido muchos tipos de POKéMON\ndesde la última vez?\pEn este mundo tan grande hay\nmuchísimos tipos de POKéMON.\pSi solo quieres criar a tus\nfavoritos, está bien.\pO quizá te divierta más criar\nPOKéMON de todo tipo.\pComo ENTRENADOR de POKéMON,\n¿tú qué opinas?\pClaro que no es asunto mío.\pEstaría bien que volviéramos a\nvernos en algún sitio.$
+Route118_Text_YouAgreeGoodRodIsGood	¡Mmm!\n¡Una CAÑA BUENA es buenísima!\p¿No te parece?$
+Route118_Text_IdenticalMindsTakeThis	¡Mmm!\n¡Pensamos exactamente igual!\p¡Mmm!\n¡Toma esta CAÑA BUENA!$
+Route118_Text_TryYourLuckFishing	Donde haya agua, prueba suerte\npescando.$
+Route118_Text_DontYouLikeToFish	¿No te gusta pescar?$
+Route118_Text_TryCatchingMonWithGoodRod	Intenta pescar POKéMON de todo tipo\ncon tu CAÑA BUENA.$
+Route118_Text_CanCrossRiversWithSurf	Aunque no haya barco, puedes cruzar\nríos y el mar si tienes un POKéMON\lque sepa SURF.\p¡Los POKéMON te ayudan en tantas\ncosas!$
+Route118_Text_RouteSignMauville	RUTA 118\n{LEFT_ARROW} CIUDAD MALVALONA$
+Route118_Text_RouteSign119	RUTA 118\n{UP_ARROW} RUTA 119$
+Route118_Text_RoseIntro	El aroma de las flores tiene un poder\nmágico. Nos limpia el cuerpo y el alma.$
+Route118_Text_RoseDefeat	Ay, madre mía.\nParece que he perdido.$
+Route118_Text_RosePostBattle	Flores, POKéMON…\nMe encanta todo lo que huele bien.\pLas cosas apestosas…\nPaso.$
+Route118_Text_RoseRegister	Snif… Ese olor… ¡Es un POKéNAV!\n¡Tenemos que registrarnos!$
+Route118_Text_RoseRematchIntro	¿Te ha traído aquí el dulce aroma?$
+Route118_Text_RoseRematchDefeat	El poder del aroma…\nNo parece que haya servido de mucho.$
+Route118_Text_RosePostRematch	Si usas bien un dulce aroma, los\nPOKéMON acuden a él.$
+Route118_Text_PerryIntro	Los POKéMON PÁJARO que usan VUELO con\nelegancia… ¡Son los mejores!$
+Route118_Text_PerryDefeat	Urgh…\nMe he estrellado…$
+Route118_Text_PerryPostBattle	Tienes unos POKéMON geniales.\nTendré que entrenar mejor a los míos.$
+Route118_Text_ChesterIntro	¡A volar!\n¡Mis POKéMON PÁJARO!$
+Route118_Text_ChesterDefeat	Volar, sí que han volado…$
+Route118_Text_ChesterPostBattle	Si se hicieran más fuertes, podrían\nvolar con más libertad…$
+Route118_Text_BarnyIntro	Soy PESCADOR, pero también entreno.\nCrío a los POKéMON que pesco.$
+Route118_Text_BarnyDefeat	Creía que iba bien con el\nentrenamiento…$
+Route118_Text_BarnyPostBattle	No he podido ganar entrenando POKéMON\nmientras pescaba…\p¿Hacía las cosas a medias?$
+Route118_Text_WadeIntro	Para un PESCADOR, lo importante es\nel equipo.\pPero para un ENTRENADOR, ¡lo esencial\nson los POKéMON y el corazón!$
+Route118_Text_WadeDefeat	¿Me han ganado en corazón?$
+Route118_Text_WadePostBattle	Ahora que lo pienso, pescar es un\ncombate entre PESCADOR y POKéMON.$
+Route118_Text_DaltonIntro	¡Que mi melodía te sacuda el alma!$
+Route118_Text_DaltonDefeat	La-lalala…$
+Route118_Text_DaltonPostBattle	Una guitarra eléctrica no siempre\ntiene que hacer ruido…\pSe puede rasgar para sacarle esta\nmelodía que emociona…$
+Route118_Text_DaltonRegister	Cuando componga melodías mejores,\ntienes que venir a escucharlas, ¿vale?$
+Route118_Text_DaltonRematchIntro	Una melodía de mis POKéMON y mía…\nDeja que te llegue al alma.$
+Route118_Text_DaltonRematchDefeat	La-lalala…$
+Route118_Text_DaltonPostRematch	Cuando toco, mis emociones te llegan\na través de mi guitarra eléctrica…$
+Route118_Text_DeandreIntro	¡Vamos, vamos, vamos!\n¡POKéMON 1, 2 y 3!$
+Route118_Text_DeandreDefeat	¡Responded, POKéMON! ¿Estáis bien?\n¡¿POKéMON 1, 2 y 3?!$
+Route118_Text_DeandrePostBattle	¿A que mola que tenga un equipo\nde combate POKéMON?\p¡Puedes copiarme, no me importa!$
+Route119_Text_MayIntro	AURA: ¡{PLAYER}{KUN}!\n¿Dónde estabas? ¡Te estaba buscando!\p¿Cuánto más fuerte te has hecho?\n¡Voy a comprobarlo!\p¿Tienes listos a tus POKéMON?\n¡Claro que sí! ¡Vamos!$
+Route119_Text_MayDefeat	¡Ay!\n¡{PLAYER}{KUN}, qué fuerte eres!\pMe preocupaba que lo estuvieras\npasando mal entrenando.$
+Route119_Text_MayPresentForYou	AURA: ¡Pero no tenía nada de qué\npreocuparme! ¡Sigue así!\p¡Y toma! Tengo un regalo para ti.$
+Route119_Text_MayExplainFly	AURA: Con VUELO, tu POKéMON te lleva\nal instante a cualquier pueblo en el\lque ya hayas estado.\pPero para usar VUELO, necesitas la\nMEDALLA del GIMNASIO de ARBORADA.\lEs importante, no lo olvides.\pDeberías volar a casa y visitar\nVILLA RAÍZ, para variar.\pSeguro que tu madre está preocupada\npor ti, {PLAYER}{KUN}.\p¡Bueno, ya nos veremos por ahí!$
+Route119_Text_BrendanIntro	BRUNO: ¡{PLAYER}! ¿Así que aquí es\ndonde buscabas POKéMON?\pA ver cuánto has mejorado.\n¡Te pondré a prueba!\p¡Ya!\n¡Es un combate, así que a combatir!$
+Route119_Text_BrendanDefeat	Mmm…\nTe has vuelto bastante buena.$
+Route119_Text_BrendanIllGiveYouThis	BRUNO: Diría que ya puedes buscar\nPOKéMON en cualquier parte.\pToma, te doy esto.\nPruébalo.$
+Route119_Text_BrendanExplainFly	BRUNO: Con VUELO, tu POKéMON te lleva\nal instante a cualquier pueblo en el\lque ya hayas estado.\pPero para eso necesitas la MEDALLA\ndel GIMNASIO de ARBORADA.\pBueno, tengo que irme.$
+Route119_Text_ScottWayToGoBeSeeingYou	SCOTT: ¡Jajajá!\n¡Bien hecho, {PLAYER}{KUN}!\pAcabo de cruzarme con un ENTRENADOR\nque iba en BICI.\pLe acabas de ganar, ¿verdad?\nSe notaba muchísimo.\pEl chico iba muy disgustado, con la\ncara roja de rabia.\pParece que me cruzo mucho contigo.\n¿Vas ahora al GIMNASIO de ARBORADA?\pSeguro que te irá bien.\n¡Bueno, ya nos veremos!$
+Route119_Text_ScottYouWonAtFortreeGym	… … … … … …\n… … … … … ¡Bip!\pSCOTT: ¡Hola, {PLAYER}{KUN}, soy yo!\pTal como pensaba, has ganado en el\nGIMNASIO de ARBORADA.\pTu fuerza…\nQuizá sí que seas el ENTRENADOR\lque estaba buscando.\pRecuerda que tienes un fan en mí.\nTe animaré desde la barrera.\l¡Sigue así!\p… … … … … …\n… … … … … ¡Clic!$
+Route119_Text_StayAwayFromWeatherInstitute	Estamos aquí de vigilancia.\p¡Eh, tú! Aléjate del INSTITUTO\nMETEOROLÓGICO. No es seguro.$
+Route119_Text_DontGoNearWeatherInstitute	Vigilar es más aburrido de lo que\nparece.\p¡Eh, tú! No te acerques al\nINSTITUTO METEOROLÓGICO, por favor.$
+Route119_Text_ThoughtFlyByCatchingBirdMons	Creía que para volar había que atrapar\nuna bandada de POKéMON PÁJARO y\lagarrarse a ellos como fuera.\p¡Pero resulta que hay un movimiento\nde MO llamado VUELO!\pOjalá lo hubiera sabido antes…$
+Route119_Text_TallGrassSnaresBikeTires	Tsk…\nNo hay manera…\pLa hierba alta se enreda en las\nruedas. Aquí no se puede ir en BICI.$
+Route119_Text_CanYourMonMakeSecretBase	¿Puede tu POKéMON usar DAÑO SECRETO\nen un montón de hierba y hacer una\lBASE SECRETA?$
+Route119_Text_RouteSignFortree	RUTA 119\n{RIGHT_ARROW} CIUDAD ARBORADA$
+Route119_Text_WeatherInstitute	INSTITUTO METEOROLÓGICO$
+Route119_Text_TrainerTipsDecoration	CONSEJOS PARA ENTRENADORES\pEn una BASE SECRETA se pueden poner\nhasta dieciséis adornos y muebles.\pElige tus favoritos y crea una\nBASE SECRETA totalmente a tu gusto.$
+Route119_House_Text_RumorAboutCaveOfOrigin	He oído hablar de una cueva llamada\nCUEVA ANCESTRAL.\pDicen que allí reviven los espíritus\nde los POKéMON. ¿Será verdad?$
+Route119_House_Text_Wingull	WINGULL: ¡Pijioh!$
+Route119_WeatherInstitute_1F_Text_Grunt1Intro	Al JEFE le interesa lo que investigan\naquí, así que nos ha mandado.\p¡Deja de meter las narices!$
+Route119_WeatherInstitute_1F_Text_Grunt1Defeat	Maldita sea…\nMe ha machacado un renacuajo…$
+Route119_WeatherInstitute_1F_Text_Grunt1PostBattle	Nuestro JEFE lo sabe todo.\pPero yo solo soy un SOLDADO.\n¿Qué voy a saber de lo que piensa?$
+Route119_WeatherInstitute_1F_Text_Grunt4Intro	¿Eh?\n¿Qué hace aquí una criatura?$
+Route119_WeatherInstitute_1F_Text_Grunt4Defeat	¿Eh?\n¡¿He perdido?!$
+Route119_WeatherInstitute_1F_Text_Grunt4PostBattle	Ay, no…\nMe va a caer una buena por perder\lcontra una criatura…\pMejor me echo una siesta en la cama…$
+Route119_WeatherInstitute_1F_Text_EveryoneWentUpstairs	¡Mientras dormía, todos se han\nido arriba!$
+Route119_WeatherInstitute_1F_Text_WowYoureStrong	¡Hala, qué fuerte eres!\p¡Ojalá pudiera entrenar POKéMON\ncomo tú!$
+Route119_WeatherInstitute_1F_Text_ProfStudyingRain	Al PROFESOR le encanta la lluvia.\nEs un hecho.\pPero si no para de llover, la gente lo\npasará mal. Es otro hecho.\pPor eso, el PROFESOR estudia si la\nlluvia se puede aprovechar.$
+Route119_WeatherInstitute_1F_Text_NoticingAbnormalWeather	En la segunda planta del INSTITUTO\nestudiamos el tiempo en la región\lde HOENN.\pÚltimamente hemos visto sequías y\nlluvias torrenciales en sitios\lconcretos y durante poco tiempo…$
+Route119_WeatherInstitute_1F_Text_WhatWereAquasUpTo	¡Hola!\n¡Gracias a ti nos hemos salvado!\pLo que no entiendo es qué demonios\nquerían los del AQUA.$
+Route119_WeatherInstitute_1F_Text_TakeRestInBed	Hay una cama…\nVamos a descansar.$
+Route119_WeatherInstitute_2F_Text_Grunt2Intro	El INSTITUTO ha creado un tipo de\nPOKéMON que tiene que ver con el\ltiempo. ¡Venimos a llevárnoslos!$
+Route119_WeatherInstitute_2F_Text_Grunt2Defeat	¿Una criatura nos fastidia el plan?$
+Route119_WeatherInstitute_2F_Text_Grunt2PostBattle	Si el POKéMON que han creado puede\ncontrolar el tiempo a su antojo,\l¡el EQUIPO AQUA lo necesita!$
+Route119_WeatherInstitute_2F_Text_Grunt3Intro	¡Somos el EQUIPO AQUA!\n¡Aparecemos donde haya algo raro!$
+Route119_WeatherInstitute_2F_Text_Grunt3Defeat	¡Me has pillado!$
+Route119_WeatherInstitute_2F_Text_Grunt3PostBattle	¡No tienes ni idea de lo que busca\nel EQUIPO AQUA!\l¡No te metas en nuestro camino!$
+Route119_WeatherInstitute_2F_Text_Grunt5Intro	¿No me digas que tú también buscas\nese POKéMON del tiempo?\p¡Ni hablar!\n¡Hemos llegado nosotros primero!$
+Route119_WeatherInstitute_2F_Text_Grunt5Defeat	¡Oh, pero mira mis POKéMON!$
+Route119_WeatherInstitute_2F_Text_Grunt5PostBattle	Hmpf, ¿y qué?\nLo que queremos…\pLo que queremos de verdad no está\naquí… Jijijiji…$
+Route119_WeatherInstitute_2F_Text_ShellyIntro	¡Jajajajaja!\p¿Te vas a meter en los asuntos del\nEQUIPO AQUA?\p¡O no tienes miedo de nada, o no\nsabes nada, o las dos cosas!\p¡Qué ternura, me das asco!\n¡Te voy a poner en tu sitio!$
+Route119_WeatherInstitute_2F_Text_ShellyDefeat	¡Jajajajaja!\n¡Qué fuerza tan repugnante!$
+Route119_WeatherInstitute_2F_Text_ShellyPostBattle	¡Ya era bastante con el EQUIPO MAGMA\nmetiendo la pata, y ahora tú!\p¿Por qué te empeñas en husmear en\nnuestros asuntos?$
+Route119_WeatherInstitute_2F_Text_TeamMagmaJustPassedBy	¡Tenemos un problema!\pUn grupo del EQUIPO MAGMA acaba de\npasar junto al INSTITUTO.\p¡Parece que van al MONTE PÍRICO!$
+Route119_WeatherInstitute_2F_Text_WeHaveToHurryToMtPyre	¡¿Qué?!\p¡No podemos perder más tiempo aquí!\n¡Vamos también al MONTE PÍRICO!\p¡Jajajajaja!\n¡EQUIPO MAGMA, ya veréis!$
+Route119_WeatherInstitute_2F_Text_ThanksPleaseTakePokemon	¡Gracias!\n¡Gracias a ti estamos a salvo!\pQuizá sea una forma rara de darte las\ngracias, pero llévate este POKéMON.$
+Route119_WeatherInstitute_2F_Text_NoRoomForPokemon	¿Mm? Parece que no tienes sitio para\neste POKéMON.$
+Route119_WeatherInstitute_2F_Text_PlayerReceivedCastform	¡{PLAYER} ha recibido a CASTFORM!$
+Route119_WeatherInstitute_2F_Text_PokemonChangesWithWeather	Ese POKéMON cambia de forma según\nel tiempo que haga.\pEn el INSTITUTO hay muchos, así que\nquédatelo sin problema.$
+Route119_WeatherInstitute_2F_Text_ChangingWeatherRidiculous	Llevo muchos años investigando la\nlluvia, pero es absurdo pensar que el\lser humano pueda cambiar el tiempo.$
+Route119_WeatherInstitute_2F_Text_GroudonWeather	Sigo el tiempo en toda la región\nde HOENN.\pAhora mismo se ha registrado una\nsequía en {STR_VAR_1}.\p¿Querrá decir que cerca de\n{STR_VAR_1}…?$
+Route119_WeatherInstitute_2F_Text_KyogreWeather	Sigo el tiempo en toda la región\nde HOENN.\pAhora mismo se han registrado lluvias\ntorrenciales en {STR_VAR_1}.\p¿Querrá decir que cerca de\n{STR_VAR_1}…?$
+Route119_WeatherInstitute_2F_Text_NoAbnormalWeather	Ya no se registra ningún fenómeno\nmeteorológico anormal.\pLa lluvia de vez en cuando es una\nbendición, la verdad.$
+Route119_Text_BrentIntro	¡Somos el CLUB MIMÉTICO!\n¡Imitamos todo lo que haces!$
+Route119_Text_BrentDefeat	¡Huy!\n¡He perdido!$
+Route119_Text_BrentPostBattle	¿Qué tiene de bueno imitar?\pFufufu…\nNunca lo entenderás…$
+Route119_Text_DonaldIntro	¡Por fin nos vemos!\n¡Mis POKéMON BICHO te harán compañía!$
+Route119_Text_DonaldDefeat	Ojalá no nos hubiéramos visto…$
+Route119_Text_DonaldPostBattle	Quiero imitarte un poco más.\n¿Te mueves ya, por favor?$
+Route119_Text_TaylorIntro	Si das un paso adelante, nosotros\ntambién.\pSi giras a la derecha, giramos…$
+Route119_Text_TaylorDefeat	Pero si tú ganas, yo pierdo…$
+Route119_Text_TaylorPostBattle	No puedo imitarte ganando el combate.\nEs imposible…\l¡Qué rabia me da!$
+Route119_Text_DougIntro	¡Sí, por fin me has pillado!\n¿O intentabas esquivarme?$
+Route119_Text_DougDefeat	¡Yuju, qué gran combate!$
+Route119_Text_DougPostBattle	¡Somos el CLUB MIMÉTICO!\nEspero que te haya gustado la función.$
+Route119_Text_GregIntro	No sabes quién soy, ¿verdad?\pPero yo tampoco te conozco.\n¡Así que a combatir!$
+Route119_Text_GregDefeat	¡Qué fuerte eres!$
+Route119_Text_GregPostBattle	Hasta que te vayas a otro sitio,\nseguiremos imitando cada movimiento.$
+Route119_Text_KentIntro	El CLUB MIMÉTICO lo fundó gente a la\nque le gusta imitar.\p¡El combate empieza en cuanto nos\nvemos!$
+Route119_Text_KentDefeat	¡Me rindo!$
+Route119_Text_KentPostBattle	¿Te unes a nuestro CLUB MIMÉTICO?$
+Route119_Text_JacksonIntro	¿Quién tiene los conocimientos y la\ntécnica para sobrevivir?\p¡Los GUARDAS POKéMON, quién si no!$
+Route119_Text_JacksonDefeat	No sabía lo bastante de POKéMON…$
+Route119_Text_JacksonPostBattle	¡Alejarse de la civilización y\ndespertar el espíritu salvaje!\pEsa es nuestra visión.$
+Route119_Text_JacksonRegister	Espero que me des la revancha sin\nburlarte de lo poco que sé.$
+Route119_Text_JacksonRematchIntro	Voy a recuperar mi espíritu salvaje\nestando con los POKéMON.$
+Route119_Text_JacksonRematchDefeat	¡Sigues siendo fuerte!$
+Route119_Text_JacksonPostRematch	Cree en tus POKéMON.\nCree en ti.\pEl camino se te mostrará solo.$
+Route119_Text_CatherineIntro	¿Oh? Mírate.\pPara estar de aventura, llevas muy\npoco equipaje.$
+Route119_Text_CatherineDefeat	¡Si no vas preparado, pasan\naccidentes!$
+Route119_Text_CatherinePostBattle	Llevas poco equipaje, pero tienes\ntodo lo que necesitas.\pY tienes la cabeza y el cuerpo\nen forma.$
+Route119_Text_CatherineRegister	¿Tienes POKéNAV?\nEs imprescindible para entrenar.\p¡Ah, sí que tienes!\n¡Pues registrémonos!$
+Route119_Text_CatherineRematchIntro	¿Qué tal tu viaje con los POKéMON?$
+Route119_Text_CatherineRematchDefeat	Todavía me falta algo…$
+Route119_Text_CatherinePostRematch	Igual que tú confías en tus POKéMON,\ntus POKéMON confían en ti.$
+Route119_Text_HughIntro	¡El vasto cielo encierra promesas\nsin fin!\p¡No hay nada como la emoción\nde volar!$
+Route119_Text_HughDefeat	¡Derribado!$
+Route119_Text_HughPostBattle	¡Mis POKéMON PÁJARO hicieron realidad\nmi sueño de volar!$
+Route119_Text_PhilIntro	¡Te enseñaré todo lo que podemos\nhacer mis POKéMON PÁJARO y yo!$
+Route119_Text_PhilDefeat	No dábamos para más…$
+Route119_Text_PhilPostBattle	Desde pequeño siempre he admirado a\nlos POKéMON PÁJARO…$
+Route119_Text_YasuIntro	Acechar en las sombras y vivir en la\noscuridad… Ese es mi destino.\p¡Salgo para desafiarte!$
+Route119_Text_YasuDefeat	¡Admito la derrota!$
+Route119_Text_YasuPostBattle	Quien pierde en combate vuelve en\nsilencio a las sombras.\lEso también es el destino…$
+Route119_Text_TakashiIntro	¡Si bajas la guardia, lo vas a pasar\nmal!$
+Route119_Text_TakashiDefeat	¡Qué sorpresa, lo haces muy bien!$
+Route119_Text_TakashiPostBattle	Mi ataque sorpresa ha fracasado…$
+Route119_Text_HideoIntro	¡Para esconder un árbol, usa un\nbosque!$
+Route119_Text_HideoDefeat	Me inclino ante tu superioridad.$
+Route119_Text_HideoPostBattle	¡Para esconder un árbol, usa un bosque!\n¡Para esconder un POKéMON, usa un\lPOKéMON!\pNo tiene ningún significado oculto.$
+Route119_Text_ChrisIntro	Me has hablado…\n¡Así que quieres desafiarme!\p¡Vale! ¡Probaré los POKéMON que he\natrapado haciendo SURF!$
+Route119_Text_ChrisDefeat	No tengo ni idea de qué hace falta\npara ganar.$
+Route119_Text_ChrisPostBattle	Hacer SURF a lomos de mi POKéMON…\pY luego pescar desde su espalda…\p¡Es un momento de lujo indescriptible!$
+Route119_Text_FabianIntro	¡Dame un acorde de poder!\n¡La victoria es mía!\l¡Es nuestra hora de brillar, uoh, yeah!$
+Route119_Text_FabianDefeat	¡Me has enseñado quién manda!\n¡Toca aceptar la derrota, oh, no!$
+Route119_Text_FabianPostBattle	¡Dame otro acorde de poder!\n¡Déjame en paz!\l¡Tu victoria la pagarás!$
+Route119_Text_DaytonIntro	¡Jojojo!\n¡Me gustan los ENTRENADORES jóvenes!\l¡Hagamos un buen combate!$
+Route119_Text_DaytonDefeat	¡Eres increíble!\n¡Jojojo!$
+Route119_Text_DaytonPostBattle	¡Jojojo!\n¡Intentaré copiar la energía de los\lENTRENADORES jóvenes como tú!$
+Route119_Text_RachelIntro	Esté donde esté, siempre llevo la\nsombrilla en la mano.$
+Route119_Text_RachelDefeat	Oh, pero…\nEso no es justo.$
+Route119_Text_RachelPostBattle	¿Que si pesa la sombrilla?\nTu MOCHILA lleva más trastos de los\lque yo llevo nunca.$

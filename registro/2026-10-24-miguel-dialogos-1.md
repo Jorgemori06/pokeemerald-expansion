@@ -9,6 +9,19 @@ Rama: `miguel/dialogos-1`
 - Primer tramo (149 textos): presentación del PROF. ABEDUL, VILLA RAÍZ, las dos casas, el LABORATORIO, RUTA 101, PUEBLO ESCASO (con su tienda, casas y CENTRO POKéMON), la enfermera de todos los CENTROS POKéMON y RUTA 103.
 - Segundo tramo (235 textos): RUTA 102 con sus entrenadores, CIUDAD PETALIA (calles, casas, tienda, CENTRO POKéMON, casa de BLASCO), el GIMNASIO PETALIA (sin la revancha del postgame), RUTA 104 con la casa del SR. ARENQUE y sus entrenadores, y BOSQUE PETALIA.
 - Tercer tramo (unos 250 textos): CIUDAD FÉRRICA (calles, GIMNASIO de PETRA, DEVON, ESCUELA DE ENTRENADORES, casas, tienda, CENTRO POKéMON), RUTA 116 con sus entrenadores y TÚNEL FERVERGAL.
+- Cuarto tramo (unos 330 textos): PUEBLO AZULIZA con el GIMNASIO de MARCIAL (sin la revancha), CUEVA GRANITO con MÁXIMO, RUTAS 105 a 109 con sus entrenadores y la CASA DE LA PLAYA.
+- Quinto tramo (unos 200 textos): CIUDAD PORTUAL entera: calles, mercado, la cola del EQUIPO AQUA, la entrevista de GABI y TY, el PUERTO con AQUILES y el submarino, el ASTILLERO de BABOR, el MUSEO OCEÁNICO, el CLUB DE FANS, el EVALUADOR DE NOMBRES, casas, tienda y CENTRO POKéMON.
+- Sexto tramo (unos 200 textos): RUTA 110 con sus entrenadores y el CAMINO DE BICIS, y CIUDAD MALVALONA (BLASCO, BICIS RYDEL, GIMNASIO de ERICO sin revancha, casas, tienda, CENTRO POKéMON).
+- Séptimo tramo (unos 170 textos): CASINO de MALVALONA, NUEVA MALVALONA, RUTA 117 con sus entrenadores y la GUARDERÍA, y RUTA 111 sur con la familia VENCEDOR.
+- Tramos 15 y 16 (unos 175 textos): la CASA TRAMPA (pruebas 1 a 7) y PUEBLO VERDEGAL.
+- Tramo 17 (unos 185 textos): RUTA 111 con el desierto y sus entrenadores, RUTA 112, el TELEFÉRICO, MONTE CENIZO (MAGNO, AQUILES y el METEORITO) y CAMINO ESCABROSO.
+- Tramos 18 y 19 (unos 250 textos): RUTA 113 con el TALLER DE CRISTAL, PUEBLO PARDAL, RUTA 114, CATARATAS METEORO (sin la cueva de MÁXIMO del postgame) y RUTA 115.
+- Tramos 20 y 21 (unos 215 textos): PUEBLO LAVACALDA con el GIMNASIO de CANDELA (sin la revancha), RUTAS 118 y 119 con sus entrenadores y el INSTITUTO METEOROLÓGICO.
+- Tramos 22 y 23 (unos 225 textos): CIUDAD ARBORADA con el GIMNASIO de ALANA (sin la revancha), RUTA 120 con el combate de MÁXIMO y el MEGA-ARO, RUTA 121 y la ZONA SAFARI de Hoenn (sin la zona ampliada del postgame; los mapas del SAFARI de Kanto no se tocan).
+- Tramos 24 y 25 (unos 210 textos): BARCO ABANDONADO, ferry M.S. MAREA y los textos comunes básicos (objetos recibidos, movimientos de campo, PC, guardar, SURF, REPELENTE, recordador de movimientos). Con esto, la parte de Miguel del reparto (tramos 15-25) está hecha.
+- Los textos comunes resultaron ser ~1500 en vez de ~80; el resto se reparte en `PLAN.md`.
+- Tramos 26-28 (unos 220 textos): BAYAS (árboles, regalos, FLORERÍA, MAESTRO DE BAYAS, LICUADORA), valoración de la POKéDEX del PROF. ABEDUL, TUTORES de movimientos y BASES SECRETAS. El texto de la planta en flor (`BerryTree_Text_BerryGrowthStage4`) va dentro de un `.if` y la herramienta no lo ve: se tradujo a mano en `data/scripts/berry_tree.inc`.
+- Lo que queda se reparte entre Miguel y Jorge en `traduccion/dialogos/PLAN.md` (unos 1300 textos cada uno).
 - Repasadas las frases con género del jugador para que valgan para chico y chica.
 - Explicación y lista de nombres en `traduccion/dialogos/LEEME.md`.
 
@@ -20,4 +33,4 @@ Rama: `miguel/dialogos-1`
 ## Pendiente
 
 - Probarlo jugando.
-- Los siguientes tramos (PUEBLO AZULIZA…).
+- Los tramos 15-29 (Miguel) y 30-49 (Jorge) según `PLAN.md`.
