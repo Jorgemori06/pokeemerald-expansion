@@ -1,0 +1,196 @@
+# RUTAS 124 a 129 (el mar entre CALAGUA, ALGARIA, ARRECÍPOLIS y COLOSALIA), casa del BUSCATESOROS y escena de MAGNO, AQUILES y MÁXIMO en la RUTA 128
+Route124_Text_HuntersHouse	CASA DEL BUSCATESOROS$
+Route124_DivingTreasureHuntersHouse_Text_Greeting	¡Soy el BUSCATESOROS SUBMARINO!\p¡El tío genial que bucea hasta el\nfondo del mar para recoger los\ltesoros que hay allí!$
+Route124_DivingTreasureHuntersHouse_Text_HaveYouSeenAnyShards	Dime, ¿has visto PARTES de\nherramientas de tiempos antiguos?$
+Route124_DivingTreasureHuntersHouse_Text_YouHaventGotAnyShards	No tienes ningún tesoro para mí…\p¡Si ves alguna PARTE, como la PARTE\nROJA, tienes que cambiármela!$
+Route124_DivingTreasureHuntersHouse_Text_ThatsAShardIllTradeYou	¡Oh, eh! Eso…\n¡Eso es una PARTE! ¡Las estoy buscando!\p¡Tío, tienes que cambiármela!\n¡Te daré algo bueno!$
+Route124_DivingTreasureHuntersHouse_Text_WhatDoYouWantToTrade	¿Qué quieres cambiar?$
+Route124_DivingTreasureHuntersHouse_Text_YoullTradeShardForStone	¿Entonces me cambias tu {STR_VAR_1}\npor mi {STR_VAR_2}?$
+Route124_DivingTreasureHuntersHouse_Text_ItsADeal	¡Trato hecho!\n¡Úsala bien!$
+Route124_DivingTreasureHuntersHouse_Text_TradeSomethingElse	¿Quieres cambiar algo más?$
+Route124_DivingTreasureHuntersHouse_Text_BagFull	Huy, tienes la MOCHILA llena.\n¡Deshazte de algo, amigo!$
+Route124_DivingTreasureHuntersHouse_Text_ComeBackIfYouChangeMind	¿No? Qué bajón.\nBueno, si cambias de idea, vuelve.$
+Route124_DivingTreasureHuntersHouse_Text_ShardTradeBoard	{CLEAR_TO 10}Se busca{CLEAR_TO 124}A cambio\n{CLEAR_TO 15}PARTE ROJA{CLEAR_TO 89}{LEFT_ARROW}{RIGHT_ARROW}{CLEAR_TO 123}PIEDRA FUEGO{CLEAR_TO 200}\p{CLEAR_TO 10}Se busca{CLEAR_TO 124}A cambio\n{CLEAR_TO 6}PARTE AMARILLA{CLEAR_TO 89}{LEFT_ARROW}{RIGHT_ARROW}{CLEAR_TO 115}PIEDRA TRUENO{CLEAR_TO 200}\p{CLEAR_TO 10}Se busca{CLEAR_TO 124}A cambio\n{CLEAR_TO 12}PARTE AZUL{CLEAR_TO 89}{LEFT_ARROW}{RIGHT_ARROW}{CLEAR_TO 121}PIEDRA AGUA{CLEAR_TO 200}\p{CLEAR_TO 10}Se busca{CLEAR_TO 124}A cambio\n{CLEAR_TO 8}PARTE VERDE{CLEAR_TO 89}{LEFT_ARROW}{RIGHT_ARROW}{CLEAR_TO 123}PIEDRA HOJA$
+Route128_Text_ArchieWhatHappened	AQUILES: ¿Qué ha pasado…?\n¿Qué es este desastre…?\p¿He… cometido un error terrible?$
+Route128_Text_ArchieIOnlyWanted	Yo…\nYo solo quería…$
+Route128_Text_MaxieDoYouUnderstandNow	MAGNO: ¿Lo entiendes ahora,\nAQUILES?\p¿Ves por fin lo desastroso que ha\nresultado ser tu sueño?\p¡Tenemos que darnos prisa! ¡Hay que\nhacer algo antes de que todo se\lnos vaya de las manos!$
+Route128_Text_MaxieResposibilityFallsToArchieAndMe	MAGNO: {PLAYER}, no digas nada.\pSé que no tengo derecho a criticar\na AQUILES…\pPero tal como están las cosas, dudo\nque las personas podamos hacer\lnada al respecto.\pPero tampoco podemos quedarnos\nmirando sin hacer nada.\pLa responsabilidad de acabar con\nesto es de AQUILES y mía…$
+Route128_Text_MaxieThisDefiesBelief	MAGNO: Esto es increíble…\pEsos POKéMON superancestrales…\pSu poder es increíble.\nHan roto el equilibrio de la naturaleza…$
+Route128_Text_StevenWhatIsHappening	MÁXIMO: ¡{PLAYER}{KUN}!\n¿Qué está pasando?$
+Route128_Text_StevenWholeWorldWillDrown	Esto es terrible…\pCuando acabó la ola de calor\nabrasador, empezó este diluvio.\pSi no para, todo HOENN…\nNo, el mundo entero se inundará.\pEsta nube de lluvia enorme se\nextiende desde ARRECÍPOLIS…\p¿Qué demonios estará pasando allí?\pNo sirve de nada discutir aquí…\nARRECÍPOLIS quizá tenga respuestas…$
+Route128_Text_StevenImGoingToSootopolis	{PLAYER}{KUN}…\nNo sé qué piensas hacer, pero no\lhagas ninguna locura.\pBueno.\nYo me voy a ARRECÍPOLIS.$
+Route124_Text_SpencerIntro	Eh, ¿te has perdido en el mar?\pSi le ganas a mis POKéMON, te puedo\nhacer de guía.$
+Route124_Text_SpencerDefeat	¡Me he desorientado en el combate!$
+Route124_Text_SpencerPostBattle	Mucha gente se desorienta en el mar.\pSi te pasa, mira el MAPA del\nPOKéNAV.$
+Route124_Text_RolandIntro	¡Mm! Vas a lomos de un POKéMON en\nvez de nadar tú…\p¡Qué envidia!$
+Route124_Text_RolandDefeat	¡Oh!\nNo puedo…$
+Route124_Text_RolandPostBattle	Me estoy quedando helado…\nLlevo demasiado rato en el agua…\pOjalá pudiera ir a lomos de un POKéMON\ncomo tú…$
+Route124_Text_JennyIntro	Si flotas así en el mar, los POKéMON\nse acercan a jugar.$
+Route124_Text_JennyDefeat	Oh, vaya.\nHe perdido.$
+Route124_Text_JennyPostBattle	Nadando me he dado cuenta de que\nunos POKéMON atacan y otros solo miran.\pSupongo que los POKéMON tienen su\npropia personalidad.$
+Route124_Text_JennyRegister	Es solo un capricho, pero quizá deje\nque me registres en tu POKéNAV.$
+Route124_Text_JennyRematchIntro	¡Si flotas así en el mar, te desafían\nlos ENTRENADORES!$
+Route124_Text_JennyRematchDefeat	Qué raro…\nHe vuelto a perder…$
+Route124_Text_JennyPostRematch	No tiene nada que ver, pero quizá\nvaya a la CASA TRAMPA.$
+Route124_Text_GraceIntro	Me estoy aburriendo de nadar…\n¿Qué tal un combate?$
+Route124_Text_GraceDefeat	¡No tenía ni idea de que fueras\ntan fuerte!$
+Route124_Text_GracePostBattle	Todo el esfuerzo que has puesto te\nha hecho así de fuerte.$
+Route124_Text_ChadIntro	Fufufufu… Buceo hasta lo más hondo\npara pasar desapercibido.\l¡Lo mío es ir al fondo!$
+Route124_Text_ChadDefeat	Glu, glu, glu…\nMe hundo…$
+Route124_Text_ChadPostBattle	Me han dicho de buena tinta que por\naquí hay un sitio para BUCEAR.\pMe entran ganas de bajar otra vez…$
+Route124_Text_LilaIntro	LILA: Suspiro…\pAquí estoy, en el mar, ¿y con quién?\n¡Con mi hermano pequeño!\p¡Combatamos para no pensar en ello!$
+Route124_Text_LilaDefeat	LILA: ¡ROY! ¡Hemos perdido por tu culpa!\n¡Luego vas a ver!$
+Route124_Text_LilaPostBattle	LILA: Suspiro…\pSi al menos a mi lado no estuviera mi\nhermano pequeño, sino un novio majo…$
+Route124_Text_LilaNotEnoughMons	LILA: ¿Quieres combatir con nosotros?\nNo sin dos POKéMON.$
+Route124_Text_RoyIntro	ROY: ¡Mi hermana mayor es muy buena\ncon los POKéMON!\p¡No llores cuando pierdas!$
+Route124_Text_RoyDefeat	ROY: Ay, ay…\nMi hermana me va a echar la bronca…$
+Route124_Text_RoyPostBattle	ROY: Mi hermana da muchísimo miedo\ncuando se enfada.\pPor eso no tiene novio.$
+Route124_Text_LilaRoyRegister	ROY: ¿Combatirás otra vez con\nnosotros? ¡Pero sin pasarte la próxima!$
+Route124_Text_RoyNotEnoughMons	ROY: ¿Querías combatir con nosotros?\nPues trae dos POKéMON.$
+Route124_Text_LilaRematchIntro	LILA: Suspiro…\pAquí estoy, en el mar, ¿y con quién?\n¡Con mi hermano pequeño!\pAh, hola, cuánto tiempo. ¡Combatamos\npara no pensar en ello!$
+Route124_Text_LilaRematchDefeat	LILA: ¡ROY!\n¡Otra vez hemos perdido por tu culpa!\p¡Luego toca entrenar!$
+Route124_Text_LilaPostRematch	LILA: Suspiro…\pSi tuviera un novio majo, ganaríamos\na cualquiera con buenas combinaciones…$
+Route124_Text_LilaRematchNotEnoughMons	LILA: ¿Quieres combatir con nosotros?\nNo sin dos POKéMON.$
+Route124_Text_RoyRematchIntro	ROY: Si perdemos, me la cargo.\n¡Voy a darlo todo!$
+Route124_Text_RoyRematchDefeat	ROY: Ay, ay…\nMi hermana me va a echar otra bronca.$
+Route124_Text_RoyPostRematch	ROY: Mi hermana da muchísimo miedo\ncuando se enfada.\pLuego me va a hacer entrenar a tope\ncon los POKéMON…$
+Route124_Text_RoyRematchNotEnoughMons	ROY: ¿Querías combatir con nosotros?\nPues trae dos POKéMON.$
+Route124_Text_DeclanIntro	Aquí estoy, nadando solo en este\nmar tan grande y bonito.\pNo hay otra forma de decirlo.\n¡Qué triste!$
+Route124_Text_DeclanDefeat	Me siento azul.\nAzul como el cielo…$
+Route124_Text_DeclanPostBattle	Debería hablar con las NADADORAS e\ninvitarlas a nadar un buen rato.$
+Route124_Text_IsabellaIntro	No pienso perder contra alguien que\nva haciendo SURF.$
+Route124_Text_IsabellaDefeat	¡Solo es sudor en los ojos!\n¡No estoy llorando!$
+Route124_Text_IsabellaPostBattle	Por aquí se encuentran trozos de\ncosas de colores muy bonitos.$
+Route125_Text_NolenIntro	¡Te he oído llegar, así que te he\nesperado!$
+Route125_Text_NolenDefeat	¡Me rindo!$
+Route125_Text_NolenPostBattle	El sonido va más rápido en el agua\nque en el aire.$
+Route125_Text_StanIntro	¡Eh, hola!\n¡Mira qué POKéMON más chulo tengo!$
+Route125_Text_StanDefeat	He naufragado…$
+Route125_Text_StanPostBattle	El encanto de HORSEA me dejó loco,\nasí que me puse a nadar yo también.$
+Route125_Text_TanyaIntro	Estoy cansada de nadar.\n¿Te apetece un combate?$
+Route125_Text_TanyaDefeat	¡Eres demasiado!$
+Route125_Text_TanyaPostBattle	Uf…\n¿Por dónde se va a CIUDAD ALGARIA?$
+Route125_Text_SharonIntro	¿Te atreves con los POKéMON de tipo\nAGUA que he criado?$
+Route125_Text_SharonDefeat	He perdido…$
+Route125_Text_SharonPostBattle	Tu poder… Eres de verdad.\n¡Estoy alucinada!$
+Route125_Text_ErnestIntro	¡Ah del barco! ¡Soy un MARINERO fuerte\ny duro! ¡He surcado todos los mares!$
+Route125_Text_ErnestDefeat	¡Grrrooooar!\n¡No he podido ganar!$
+Route125_Text_ErnestPostBattle	En la CUEVA CARDUMEN la marea sube\ny baja.\pPor cierto, entre la marea alta y la\nbaja hay unas seis horas. ¿Lo sabías?$
+Route125_Text_ErnestRegister	Regístrame en tu POKéNAV y te diré\nalgo bueno.$
+Route125_Text_ErnestRematchIntro	¡Ya es hora de que me cobre la\nrevancha! ¡Venga, a combatir!$
+Route125_Text_ErnestRematchDefeat	¡No he podido ganar!\n¡Es que no hay manera!$
+Route125_Text_ErnestRematchPostBattle	La CUEVA CARDUMEN…\pHay sitios a los que puedes o no\nllegar según suba o baje la marea.\pPor cierto, entre la marea alta y la\nbaja hay unas seis horas. ¡No lo olvides!$
+Route125_Text_KimIntro	KIM: Me han dicho que en la CUEVA\nCARDUMEN vive un viejo muy gracioso.\l¿Tú también vas a verlo?$
+Route125_Text_KimDefeat	KIM: Creía que ganaríamos.$
+Route125_Text_KimPostBattle	KIM: En la CUEVA CARDUMEN vive un\nviejo muy gracioso, ¿verdad?\p¡Vamos a verlo, IRIS!$
+Route125_Text_KimNotEnoughMons	KIM: ¡No, no, no! ¡Necesitas dos\nPOKéMON, si no, no vale!$
+Route125_Text_IrisIntro	IRIS: KIM, ¿me dices qué buscamos\naquí?$
+Route125_Text_IrisDefeat	IRIS: Oh, casi lo conseguimos.$
+Route125_Text_IrisPostBattle	IRIS: KIM, ¿de verdad vamos a entrar\nen la CUEVA CARDUMEN?\l¡Nos vamos a empapar!$
+Route125_Text_IrisNotEnoughMons	IRIS: Oh, nosotras nunca haríamos un\ncombate de 2 contra 1.$
+Route125_Text_PresleyIntro	¿Por qué un OJEADOR AVES como yo\nvendría al mar?$
+Route125_Text_PresleyDefeat	Vale.\nTe diré por qué estoy aquí.$
+Route125_Text_PresleyPostBattle	Metí un mensaje en una botella y la\neché al mar.\p¡Seguro que la encuentra una\nNADADORA!$
+Route125_Text_AuronIntro	¡Eh! ¿Has sido tú quien tira basura\nal mar?$
+Route125_Text_AuronDefeat	Oh, no eras tú quien tiraba basura\nal mar.$
+Route125_Text_AuronPostBattle	Antes he visto una botella muy fea\nflotando entre las olas.\p¡Me da rabia que alguien ensucie\nel mar!$
+Route126_Text_BarryIntro	¡Nadar ejercita todo el cuerpo!\n¡Te pondrás en forma!$
+Route126_Text_BarryDefeat	¡Lo admito!\n¡Has ganado!$
+Route126_Text_BarryPostBattle	Gracias a nadar todos los días…\n¡Mira! ¡Mira qué cuerpazo!$
+Route126_Text_DeanIntro	Esa enorme montaña de roca blanca\nes CIUDAD ARRECÍPOLIS.$
+Route126_Text_DeanDefeat	¿Me han ganado?$
+Route126_Text_DeanPostBattle	No encuentro la entrada a\nARRECÍPOLIS. ¿Dónde estará?$
+Route126_Text_NikkiIntro	¡Ufufufufu!\n¡Soy una sirena!$
+Route126_Text_NikkiDefeat	¡Mi fantasía ha estallado como una\nburbuja! Blub, blub, blub…$
+Route126_Text_NikkiPostBattle	Me has dado una paliza… Quiero\ndesaparecer en una ola de tristeza…$
+Route126_Text_BrendaIntro	¡Hola, peque!\n¿Combates conmigo?$
+Route126_Text_BrendaDefeat	¡Oh, noooooo!$
+Route126_Text_BrendaPostBattle	¡Me encanta jugar así con los\nPOKéMON en el mar!$
+Route126_Text_PabloIntro	¡Mira qué cuerpo esculpido!\n¡Más cachas que un CINTURÓN NEGRO!$
+Route126_Text_PabloDefeat	¡Huy! ¡Qué fuerte!\n¡Nada mal! ¡Nada mal!$
+Route126_Text_PabloPostBattle	¡Perder contra ti me ha espabilado!\n¡Entrenaré más duro con mis POKéMON!$
+Route126_Text_PabloRegister	¡Sí, no está nada mal!\n¡Quiero conocerte más!$
+Route126_Text_PabloRematchIntro	¡Mira qué cuerpazo!\n¡Tengo más curvas que un NADADOR!$
+Route126_Text_PabloRematchDefeat	¡Huy! ¡Pero qué fuerte!\n¡Nada mal! ¡Nada mal!$
+Route126_Text_PabloPostRematch	¡Voy a entrenar aún más duro!\n¡Me motivas un montón!\l¡Tienes que volver!$
+Route126_Text_LeonardoIntro	El año pasado no sabía ni nadar, pero\nahora soy un NADADOR bastante bueno.\pCreo que ahora soy capaz de todo.$
+Route126_Text_LeonardoDefeat	Vaya, por querer más no he\nconseguido nada.$
+Route126_Text_LeonardoPostBattle	Si practicas algo, mejoras.\p¡Eres joven, no tengas miedo de\nprobar todo tipo de cosas!$
+Route126_Text_IsobelIntro	Si te entra agua de mar por la nariz,\n¿no es horrible?$
+Route126_Text_IsobelDefeat	¡Ag! Pero ¿qué…?\n¡Glub!$
+Route126_Text_IsobelPostBattle	¡Uh, he tragado agua!\n¡Qué amarga! ¡Qué salada!$
+Route126_Text_SiennaIntro	¡Estoy poniendo todo mi corazón\nen esto!$
+Route126_Text_SiennaDefeat	¡Tú le has puesto más corazón!$
+Route126_Text_SiennaPostBattle	Tengo que refrescarme…\nCreo que voy a bucear un rato.$
+Route127_Text_CamdenIntro	Te lo veo en la cara.\nQuieres desafiarme.$
+Route127_Text_CamdenDefeat	Awawawawawa…$
+Route127_Text_CamdenPostBattle	Un buen combate me deja fresco\ny sereno.$
+Route127_Text_DonnyIntro	¿Tienes algún rival contra el que\nodies perder?$
+Route127_Text_DonnyDefeat	¡Arrrgh!\n¡Odio perder!$
+Route127_Text_DonnyPostBattle	Si tienes un rival, ¿no sientes que\ntienes que seguir mejorando?$
+Route127_Text_JonahIntro	Pescando he alcanzado un estado de\nserenidad absoluta…\pPermíteme demostrártelo…$
+Route127_Text_JonahDefeat	Aunque haya perdido, mi corazón\nsigue en calma…$
+Route127_Text_JonahPostBattle	No importa no pescar nada.\nEl sedal sigue en el agua…$
+Route127_Text_HenryIntro	¡Huy! ¿No me digas que he enganchado\na un POKéMON haciendo SURF?$
+Route127_Text_HenryDefeat	¡No puedo seguirte el ritmo!$
+Route127_Text_HenryPostBattle	¡Menudo lío si enganchara a tu\nPOKéMON tan duro!$
+Route127_Text_RogerIntro	¡Bueno, eh! ¡Un combate entre fan\nde los POKéMON y fan de la pesca!$
+Route127_Text_RogerDefeat	¡No! ¡Se me ha enredado el sedal!\n¡Se acabó la fiesta!$
+Route127_Text_RogerPostBattle	¡Mi sedal está bailando!\n¡El tango del enredo! ¡Jajaja, grr!$
+Route127_Text_AidanIntro	Los POKéMON PÁJARO tienen una vista\nexcelente. Ven presas desde muy alto.$
+Route127_Text_AidanDefeat	Uf… Me rindo.$
+Route127_Text_AidanPostBattle	Por esta zona del mar hay muchos\nsitios para bucear.\pDesde el cielo se ven muy bien porque\nson de un color más oscuro.$
+Route127_Text_KojiIntro	Corre descalzo.\n¡Así se te endurecen las plantas!$
+Route127_Text_KojiDefeat	¡Ay!\n¡Se me ha metido una piedra en la uña!$
+Route127_Text_KojiPostBattle	Ir descalzo es una gozada.\nPero tus DEPORTIVAS también molan.$
+Route127_Text_KojiRegister	¡Esto es lo que hago con quien me\ngana! Espero que repitamos.$
+Route127_Text_KojiRematchIntro	Sigo corriendo descalzo todos los\ndías. ¡Tengo las plantas durísimas!$
+Route127_Text_KojiRematchDefeat	¡Ay!\n¡Se me han clavado piedras en el pie!$
+Route127_Text_KojiPostRematch	¿Quieres ir descalzo un rato?\n¿Así pruebo tus DEPORTIVAS?$
+Route127_Text_AthenaIntro	Hagamos un combate tranquilo y\nmetódico.$
+Route127_Text_AthenaDefeat	No me has dejado tiempo para pensar\nninguna estrategia.$
+Route127_Text_AthenaPostBattle	Rodeada del mar y el cielo azules,\nparece que el tiempo va más despacio.$
+Route128_Text_IsaiahIntro	CIUDAD COLOSALIA aún queda muy lejos…$
+Route128_Text_IsaiahDefeat	Mi primera victoria también parece\nquedar muy lejos…$
+Route128_Text_IsaiahPostBattle	Me he pasado la vida perdiendo,\n¡pero nunca me rendiré!$
+Route128_Text_IsaiahRegister	Sé que ahora no soy bueno, pero creo\nque acabaré ganando.\pRegístrame en tu POKéNAV, por favor.$
+Route128_Text_IsaiahRematchIntro	Sigo con ganas. Seguiré nadando hasta\nCIUDAD COLOSALIA.$
+Route128_Text_IsaiahRematchDefeat	Aún no he probado mi primera\nvictoria…$
+Route128_Text_IsaiahPostRematch	Llegaré a CIUDAD COLOSALIA, donde\nalgún día ganaré…$
+Route128_Text_KatelynIntro	En un triatlón hay que nadar, ir en\nbici y correr una maratón.\pEs una carrera agotadora de tres\npruebas.$
+Route128_Text_KatelynDefeat	Un combate POKéMON también agota…$
+Route128_Text_KatelynPostBattle	Ahora me toca la BICI, pero…\nEstoy a punto de tirar la toalla…$
+Route128_Text_KatelynRegister	Bueno, habrá que sacarle partido.\nQuiero la revancha algún día.$
+Route128_Text_KatelynRematchIntro	Un triatlón es largo. Pero supongo\nque el camino para ser CAMPEÓN\lPOKéMON también es largo y duro.$
+Route128_Text_KatelynRematchDefeat	Un combate POKéMON es duro de\nverdad, y no perdona…$
+Route128_Text_KatelynPostRematch	Deberías pensar en serio en los\ndesafíos de la CALLE VICTORIA.$
+Route128_Text_AlexaIntro	Nos hemos esforzado mucho para\ndesafiar a la LIGA POKéMON…\p¡No podemos perder ahora!$
+Route128_Text_AlexaDefeat	¡Oh!\n¡¿Cómo ha podido pasar?!$
+Route128_Text_AlexaPostBattle	Después de todo lo que he hecho para\nllegar aquí, no me rindo por un\ltropiezo.$
+Route128_Text_RubenIntro	¡No hay ENTRENADOR más fuerte que yo!$
+Route128_Text_RubenDefeat	¡No puede ser!$
+Route128_Text_RubenPostBattle	¡Seguramente no hay nadie más fuerte\nque tú!$
+Route128_Text_WayneIntro	Quiero ir a COLOSALIA, así que atrapé\nun POKéMON que sabe CASCADA para\lsubir las cataratas.$
+Route128_Text_WayneDefeat	¡Me he venido abajo como una cascada!$
+Route128_Text_WaynePostBattle	¡Jo, qué rabia!\p¡Mi POKéMON sabe CASCADA, pero no\ntengo la MEDALLA de ARRECÍPOLIS!$
+Route128_Text_HarrisonIntro	Se te ve muy fuerte.\n¿Podré ganar?$
+Route128_Text_HarrisonDefeat	¡Ay!\nSupongo que era imposible ganar.$
+Route128_Text_HarrisonPostBattle	Por COLOSALIA hay ENTRENADORES duros\na montones.\p¿Crees que me viene grande?$
+Route128_Text_CarleeIntro	Por esta zona el sol parece más\nfuerte.$
+Route128_Text_CarleeDefeat	No veía bien por el reflejo del sol.$
+Route128_Text_CarleePostBattle	Debería volver pronto.\nTengo que ponerme más crema.$
+Route129_Text_ChaseIntro	Es mi primer triatlón.\n¡Estoy de los nervios!$
+Route129_Text_ChaseDefeat	¡Uooooar!\n¡No he podido ganar!$
+Route129_Text_ChasePostBattle	Si estoy tenso, no puedo darlo\ntodo.$
+Route129_Text_AllisonIntro	Estoy en pleno triatlón, pero, vale,\n¿por qué no combatimos?$
+Route129_Text_AllisonDefeat	¡Estaba segura de que ganaba!$
+Route129_Text_AllisonPostBattle	¿Sabes qué es lo mejor de los\ntriatlones?\p¡Poner a prueba los límites de tu\nfuerza y resistencia contra la\lMadre Naturaleza!$
+Route129_Text_ReedIntro	¡Eh, eh, eh!\n¡Vamos al lío!$
+Route129_Text_ReedDefeat	He perdido, me han ganado.\n¡Se acabó, fuera!$
+Route129_Text_ReedPostBattle	No hay nada para el que pierde.\nMe vuelvo a casa.$
+Route129_Text_TishaIntro	¿Qué prisa hay?\nVamos con calma.$
+Route129_Text_TishaDefeat	Ay, madre.\nQuería relajarme un poco más…$
+Route129_Text_TishaPostBattle	¿No odias equivocarte por las prisas?\pPor eso intento hacer las cosas\ncon calma.$
+Route129_Text_ClarenceIntro	Hacer SURF no es tan fácil como\nparece, ¿verdad?$
+Route129_Text_ClarenceDefeat	Ganar tampoco es fácil.$
+Route129_Text_ClarencePostBattle	¿Apuntas a la LIGA POKéMON?\n¡Sigue así!$
