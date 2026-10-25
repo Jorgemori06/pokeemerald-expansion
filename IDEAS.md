@@ -69,3 +69,27 @@ Una sección por idea, con:
     3. Si apetece, sprites de mapa propios, dibujados a mano o partiendo de bases de la comunidad.
   - **Qué tendría que pasar Jorge:** fotos o descripción de cada uno (pelo, ropa, colores) e imágenes de referencia de la IA. Claude se encarga de convertirlas, meterlas en el juego y cambiar los textos.
 - **Estado:** Pendiente.
+
+### 4. Amigos nuestros como los NPC que dan Pokémon y regalos
+
+- **Qué:** que los personajes que te dan Pokémon u objetos sean amigos de Jorge y Miguel: con su nombre y, si se puede, algo de su aspecto.
+- **Propuesta de:** Jorge, 25/10/2026.
+- **Notas (viabilidad, sin planificar):**
+  - **Quiénes son:**
+    - **Pokémon de regalo:** cinco sitios.
+      - El huevo de la señora de PUEBLO LAVACALDA.
+      - El inicial de Johto del laboratorio del PROF. ABEDUL.
+      - El BELDUM de casa de MÁXIMO en ALGARIA.
+      - El CASTFORM del INSTITUTO METEOROLÓGICO.
+      - Los fósiles que revive DEVON en FÉRRICA.
+      - Con el randomizer, todos dan un Pokémon al azar.
+    - **Objetos de regalo:** unos 78 mapas con alguien que te da algo (MT, el Repartir Experiencia, la Moneda Amuleto…). Se puede elegir solo a unos cuantos.
+  - **Nombre: fácil.** Los NPC normales no tienen nombre en el juego: solo hablan. Se les pone delante del texto ("PABLO: ¡Toma, para ti!") o se cambia la frase para que se presenten.
+    - Los textos son traducciones de Miguel (`traduccion/dialogos/`), así que se cambian en su `.tsv` y se vuelven a aplicar.
+  - **Aspecto, de más fácil a más difícil:**
+    1. **Cambiar el sprite por otro que ya exista en el juego.** Es una línea en el `map.json` del mapa (`graphics_id`), y hay más de 200 personajes donde elegir: chico con gorra, chica deportista, abuelo, pescador…
+    2. **Recolorearlo** con los colores de cada amigo (pelo, ropa). Los NPC comparten paletas, así que hay que darle una paleta propia, pero es asumible, como en la idea 3.
+    3. **Un sprite nuevo dibujado:** solo tiene 4 imágenes (andar en cuatro direcciones), mucho menos que el jugador, pero sigue siendo dibujo a mano.
+  - **Qué tendrían que pasar Jorge y Miguel:** la lista de qué amigo va en qué NPC, con su nombre y, si queréis el recoloreado, una foto o los colores de cada uno.
+  - **Ojo con la regla de los regalos:** con la caja de prohibidos, un regalo repetido o legendario sigue yendo a la caja, sea quien sea el que lo da.
+- **Estado:** Pendiente.
