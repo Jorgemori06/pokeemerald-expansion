@@ -278,7 +278,7 @@ DUALOCKE_MAKE_ARGS := DUALOCKE_SEED_SET=1 DUALOCKE_SEED='$(DUALOCKE_SEED)'
 
 DUALOCKE_RANDOMIZER_DEPS := tools/dualocke/randomizer.py $(wildcard tools/dualocke/aleatorio/*.py) tools/dualocke/randomizer_config.json \
                             $(wildcard $(DATA_SRC_SUBDIR)/pokemon/species_info/*.h) $(INCLUDE_DIRS)/config/species_enabled.h \
-                            $(DATA_SRC_SUBDIR)/items.h $(wildcard data/maps/*/map.json)
+                            $(DATA_SRC_SUBDIR)/items.h $(wildcard data/maps/*/map.json) src/roamer.c
 # El randomizer pasa src/pokemon.c y src/item.c por el preprocesador, así que necesita antes estas cabeceras generadas
 DUALOCKE_RANDOMIZER_DEPS += $(INCLUDE_DIRS)/constants/map_groups.h $(INCLUDE_DIRS)/constants/layouts.h $(INCLUDE_DIRS)/constants/map_event_ids.h \
                             $(DATA_SRC_SUBDIR)/map_group_count.h $(INCLUDE_DIRS)/constants/wild_encounter.h $(INCLUDE_DIRS)/constants/region_map_sections.h \

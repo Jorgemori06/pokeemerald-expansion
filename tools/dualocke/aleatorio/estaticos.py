@@ -18,7 +18,17 @@ import glob
 import random
 import re
 
-ERRANTES = {"SPECIES_LATIAS": 40, "SPECIES_LATIOS": 40}  # src/roamer.c (InitRoamer)
+ERRANTES = ("SPECIES_LATIAS", "SPECIES_LATIOS")  # src/roamer.c (InitRoamer)
+
+
+def _nivel_errantes():
+    """Nivel de los errantes en src/roamer.c: DUALOCKE_NIVEL_ERRANTE (Miguel, #31) o el número
+    que se pase a TryAddRoamer."""
+    with open("src/roamer.c", encoding="utf-8") as f:
+        texto = f.read()
+    m = re.search(r"#define\s+DUALOCKE_NIVEL_ERRANTE\s+(\d+)", texto) \
+        or re.search(r"TryAddRoamer\(SPECIES_LATI[AO]S,\s*(\d+)\)", texto)
+    return int(m.group(1)) if m else 40
 
 
 def _scripts_de_hoenn():
@@ -28,7 +38,7 @@ def _scripts_de_hoenn():
 
 def buscar(alias):
     """Devuelve ({especie estática: nivel máximo}, {especie regalo: nivel}, {especie huevo})."""
-    estaticos, regalos, huevos = dict(ERRANTES), {}, set()
+    estaticos, regalos, huevos = dict.fromkeys(ERRANTES, _nivel_errantes()), {}, set()
     for archivo in _scripts_de_hoenn():
         with open(archivo, encoding="utf-8") as f:
             texto = f.read()
