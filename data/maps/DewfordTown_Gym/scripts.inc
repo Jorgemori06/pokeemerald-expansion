@@ -414,8 +414,8 @@ DewfordTown_Gym_Text_ExplainBulkUp:
 	.string "… … … … … …$"
 
 DewfordTown_Gym_Text_RegisteredBrawly:
-	.string "Registered GYM LEADER BRAWLY\n"
-	.string "in the POKéNAV.$"
+	.string "Has registrado al LÍDER de GIMNASIO\n"
+	.string "MARCIAL en el POKéNAV.$"
 
 DewfordTown_Gym_Text_BrawlyPostBattle:
 	.string "¡Veo que tu talento será una ola\n"
