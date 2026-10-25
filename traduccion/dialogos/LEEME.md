@@ -14,7 +14,7 @@ Son unas 187.000 palabras (los `.string` de `data/maps/*/scripts.inc`, `data/tex
 
 ## Nombres de Hoenn (oficiales)
 
-VILLA RAÍZ, PUEBLO ESCASO, CIUDAD PETALIA, CIUDAD FÉRRICA, PUEBLO AZULIZA, PUEBLO VERDEGAL, CIUDAD PORTUAL, CIUDAD CALAGUA, CIUDAD ALGARIA, MALVALONA; NORMAN, PETRA (Roxanne), SR. PEÑA (Mr. Stone), MÁXIMO (Steven), SCOTT, MARCIAL (Brawly), CAPITÁN BABOR (Capt. Stern), DOCK, GABI y TY, EQUIPO AQUA, AQUILES (Archie), EQUIPO MAGMA, familia VENCEDOR (Winstrate, sin confirmar), ERICO (Wattson), MAESTRO TRAMPA, MAGNO (Maxie), CANDELA (Flannery), SILVINA (Shelly), ALANA (Winona), MEDALLA PLUMA, MEGA-ARO, COMEDERO (Pokéblock Feeder), S.S. CACTUS, HERMANOS LIMPIEZA, RECORDADOR (Move Relearner), MEDALLA CALOR, HERBOLARIO, CLUB MIMÉTICO, GUARDAS POKéMON (Rangers, sin confirmar), PROF. COSMO (Cozmo, sin confirmar), SACO HOLLÍN, TUTOR DE MOVIMIENTOS, METEORITO, GALLETA LAVA, SENDERO ÍGNEO (Fiery Path, sin confirmar), CAMINO ESCABROSO (Jagged Pass, sin confirmar), ROBOMUÑECO (Mechadoll, sin confirmar), WANDA (sin confirmar), RYDEL (sin confirmar), CAMINO DE BICIS (sin confirmar); PROF. ABEDUL, AURA (May), BRUNO (Brendan), BLASCO (Wally), SR. ARENQUE (Mr. Briney), AREDIA (Lanette). Las DEPORTIVAS (Running Shoes).
+VILLA RAÍZ, PUEBLO ESCASO, CIUDAD PETALIA, CIUDAD FÉRRICA, PUEBLO AZULIZA, PUEBLO VERDEGAL, CIUDAD PORTUAL, CIUDAD CALAGUA, CIUDAD ALGARIA, MALVALONA; NORMAN, PETRA (Roxanne), SR. PEÑA (Mr. Stone), MÁXIMO (Steven), SCOTT, MARCIAL (Brawly), CAPITÁN BABOR (Capt. Stern), DOCK, GABI y TY, EQUIPO AQUA, AQUILES (Archie), EQUIPO MAGMA, familia VENCEDOR (Winstrate, sin confirmar), ERICO (Wattson), MAESTRO TRAMPA, MAGNO (Maxie), CANDELA (Flannery), SILVINA (Shelly), ALANA (Winona), MEDALLA PLUMA, MEGA-ARO, COMEDERO (Pokéblock Feeder), S.S. CACTUS, HERMANOS LIMPIEZA, RECORDADOR (Move Relearner), LICUADORA DE BAYAS, MAESTRO LICUADOR, MAESTRO DE BAYAS, TUBO {POKEBLOCK}, MEDALLA CALOR, HERBOLARIO, CLUB MIMÉTICO, GUARDAS POKéMON (Rangers, sin confirmar), PROF. COSMO (Cozmo, sin confirmar), SACO HOLLÍN, TUTOR DE MOVIMIENTOS, METEORITO, GALLETA LAVA, SENDERO ÍGNEO (Fiery Path, sin confirmar), CAMINO ESCABROSO (Jagged Pass, sin confirmar), ROBOMUÑECO (Mechadoll, sin confirmar), WANDA (sin confirmar), RYDEL (sin confirmar), CAMINO DE BICIS (sin confirmar); PROF. ABEDUL, AURA (May), BRUNO (Brendan), BLASCO (Wally), SR. ARENQUE (Mr. Briney), AREDIA (Lanette). Las DEPORTIVAS (Running Shoes).
 
 ## Hecho
 
@@ -45,6 +45,9 @@ VILLA RAÍZ, PUEBLO ESCASO, CIUDAD PETALIA, CIUDAD FÉRRICA, PUEBLO AZULIZA, PUE
 | RUTA 120 (MÁXIMO y el MEGA-ARO), RUTA 121 y ZONA SAFARI de Hoenn (sin la zona ampliada del postgame) | `23_rutas120_121_safari.tsv` |
 | BARCO ABANDONADO y ferry M.S. MAREA (sin la invitación al FRENTE BATALLA) | `24_barco_abandonado_ferry.tsv` |
 | Textos comunes básicos: objetos, movimientos de campo, PC, guardar, SURF, REPELENTE, recordador | `25_textos_comunes_basicos.tsv` |
+| BAYAS: árboles, regalos de BAYAS, FLORERÍA PÉTALO BONITO, MAESTRO DE BAYAS y LICUADORA | `26_bayas.tsv` |
+| Valoración de la POKéDEX del PROF. ABEDUL y TUTORES de movimientos | `27_pokedex_tutores.tsv` |
+| BASES SECRETAS | `28_bases_secretas.tsv` |
 
 Siguiente: lo que queda está repartido entre Miguel y Jorge en `PLAN.md`.
 

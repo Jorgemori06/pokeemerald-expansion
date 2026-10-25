@@ -1,0 +1,131 @@
+# BAYAS: árboles de bayas, regalos de BAYAS por todo HOENN, FLORERÍA PÉTALO BONITO, MAESTRO DE BAYAS y LICUADORA DE BAYAS (data/scripts/berry_tree.inc, data/text/berries.inc, data/scripts/berry_blender.inc, data/text/blend_master.inc)
+BerryTree_Text_ItsSoftLoamySoil	Es tierra blanda y fértil.$
+BerryTree_Text_WantToPlant	Es tierra blanda y fértil.\n¿Quieres plantar una BAYA?$
+BerryTree_Text_PlantedOneBerry	{PLAYER} ha plantado una {STR_VAR_1}\nen la tierra blanda y fértil.$
+BerryTree_Text_BerryGrowthStageTrunk	¡El tronco de la {STR_VAR_1} crece!$
+BerryTree_Text_BerryGrowthStageBudding	¡La planta de {STR_VAR_1} tiene brotes!$
+BerryTree_Text_CareAdverbGreat	de maravilla$
+BerryTree_Text_CareAdverbPoor	con timidez$
+BerryTree_Text_CareAdverbGood	muy bonitas$
+BerryTree_Text_WantToPick	¡Has encontrado {STR_VAR_2} {STR_VAR_1}!\p¿Quieres coger la\n{STR_VAR_1}?$
+BerryTree_Text_PickedTheBerry	{PLAYER} ha cogido {STR_VAR_2} {STR_VAR_1}.$
+BerryTree_Text_PutAwayBerry	{PLAYER} ha guardado {STR_VAR_1}\nen el BOLSILLO BAYAS de la MOCHILA.\pLa tierra ha vuelto a quedar blanda\ny fértil.$
+BerryTree_Text_BerryPocketFull	El BOLSILLO BAYAS de la MOCHILA está\nlleno.\pNo se ha podido coger {STR_VAR_1}.$
+BerryTree_Text_BerryLeftUnpicked	{PLAYER} ha dejado {STR_VAR_1}\nsin coger.$
+BerryTree_Text_WantToWater	¿Quieres regar la {STR_VAR_1} con la\nWAILMEGADERA?$
+BerryTree_Text_WateredTheBerry	{PLAYER} ha regado la {STR_VAR_1}.$
+BerryTree_Text_PlantIsDelighted	La planta parece encantada.$
+BerryTree_Text_ExclamationPoint	¡!$
+BerryTree_Text_WantToPick_Mutation	¡Has encontrado {STR_VAR_2} {STR_VAR_1}\ny 1 {STR_VAR_3}!\p¿Quieres cogerlas?$
+BerryTree_Text_BerryLeftUnpicked_Mutation	{PLAYER} ha dejado {STR_VAR_1}\ny {STR_VAR_3} sin coger.$
+BerryTree_Text_BerryPocketFull_Mutation	El BOLSILLO BAYAS de la MOCHILA está\nlleno.\pNo se han podido coger {STR_VAR_1}\ny {STR_VAR_3}.$
+BerryTree_Text_PickedTheBerry_Mutation	{PLAYER} ha cogido {STR_VAR_2} {STR_VAR_1}\ny {STR_VAR_3}.$
+BerryTree_Text_PutAwayBerry_Mutation	{PLAYER} ha guardado {STR_VAR_1}\ny {STR_VAR_3} en el BOLSILLO\lBAYAS de la MOCHILA.\pLa tierra ha vuelto a quedar blanda\ny fértil.$
+BerryTree_Text_WantToMulch	Es tierra blanda y fértil.\n¿Quieres echar abono?$
+BerryTree_Text_ScatteredMulch	{PLAYER} ha echado {STR_VAR_1}\nen la tierra blanda y fértil.$
+BerryTree_Text_WeedIsGrowing	Aquí crece una mala hierba.\n¿Quieres arrancarla?$
+BerryTree_Text_PulledOutTheWeed	¡{PLAYER} ha arrancado la mala hierba!$
+BerryTree_Text_APokemonAppeared	¡Ha aparecido un POKéMON!$
+PetalburgCity_Gym_Text_GiveEnigmaBerry	PAPÁ: ¡Hola, {PLAYER}!\pMe acaban de dar una BAYA muy rara.\nMe gustaría que te la quedaras.$
+Route104_Text_PlantBerriesInSoilTakeThis	Si ves BAYAS creciendo en tierra\nfértil, puedes cogerlas.\pPero planta otra BAYA en el mismo\nsitio. Es cuestión de educación.\pToma, te doy una.$
+Route104_Text_TrainersOftenMakeMonHoldBerries	Por tu pinta, entrenas POKéMON,\n¿verdad?\pLos ENTRENADORES suelen dar BAYAS a\nsus POKéMON para que las lleven.\pTú decides si cultivar las BAYAS\no usarlas.$
+Route111_Text_WateredPlantsEveryDayTakeBerry	Regué las plantas todos los días.\nDieron un montón de flores.\pY también muchas BAYAS.\p¡Toma!\n¡Para ti!$
+Route111_Text_GoingToTryToMakeDifferentColorBerries	Voy a esforzarme mucho para sacar\nBAYAS de colores distintos.\p¡Espero que tú también te esfuerces!$
+Route111_Text_WhatColorBerriesToLookForToday	¿De qué color serán las BAYAS que\nbusque hoy?$
+Route114_Text_LoveUsingBerryCrushShareBerry	Me encanta usar la TRITURADORA DE\nBAYAS, así que colecciono BAYAS.\pSi quieres, te doy una.$
+Route114_Text_TryBerryCrushWithFriends	Deberías probar la TRITURADORA DE\nBAYAS con tus amigos.$
+Route114_Text_FunToThinkAboutBerries	¿Qué BAYA plantar?\n¿Usar las BAYAS o guardarlas?\pEs divertido pensarlo.$
+Route120_Text_BerriesExpressionOfLoveIsntIt	Las BAYAS crecen absorbiendo la\nluz del sol.\pNosotros las ayudamos a crecer\nregándolas a menudo.\pEs una muestra de amor, ¿no?$
+Route120_Text_YesYouUnderstand	Sí, sí.\nEntiendes lo que quiero decir.\pDeberías quedarte esto.$
+Route120_Text_MakeYourOwnImpressions	Oh… Aunque supongo que es importante\nsacar tus propias conclusiones…\pPuedes quedarte esto.$
+Route120_Text_BerryIsRareRaiseItWithCare	Creo que esa BAYA es rara.\nEspero que la cuides con cariño.$
+Route120_Text_IllGetMoreBerriesFromBerryMaster	Conseguiré más BAYAS del\nMAESTRO DE BAYAS.$
+LilycoveCity_Text_BerrySuitsYou	Al fin y al cabo…\pIgual que a mí me sientan de maravilla\nlos trajes, al mar le sienta la brisa.\pY a ti una BAYA te sienta de\nmaravilla…\p¿Por qué será?$
+LilycoveCity_Text_BecauseYoureTrainer	Al fin y al cabo…\p¡Es porque entrenas POKéMON!$
+LilycoveCity_Text_PokeblocksSuitPokemon	Al fin y al cabo…\pIgual que a mí me sienta la sencillez\ndigna, los {POKEBLOCK}S le sientan a\llos POKéMON.$
+Route123_BerryMastersHouse_Text_YoureDeservingOfBerry	Puedes llamarme MAESTRO DE BAYAS.\pSueño con llenar el mundo de flores\nbonitas, así que cultivo BAYAS y se\llas doy a todo el mundo.\p¡Te mereces una!$
+Route123_BerryMastersHouse_Text_WhyBeStingyTakeAnother	¿Para qué ser tacaño?\n¡Toma otra!$
+Route123_BerryMastersHouse_Text_VisitPrettyPetalFlowerShop	No dejes de visitar la FLORERÍA\nPÉTALO BONITO, cerca de FÉRRICA.\p¡Que las flores llenen el mundo!$
+Route123_BerryMastersHouse_Text_DoneForToday	Por hoy ya está.\nVuelve otro día.\p¡Que las flores llenen el mundo!$
+Route123_BerryMastersHouse_Text_HeardAGoodSayingLately	Cómo cultiva BAYAS mi marido…\n¡Es el mejor del mundo!\pMe tiene muy orgullosa, de verdad.\pPor cierto, criatura, ¿has oído\nalgún buen dicho últimamente?$
+Route123_BerryMastersHouse_Text_InspirationalTakeThis	¡Ah! ¡Qué dicho tan extraordinario!\n¡Qué inspirador!\pQuiero que te quedes esto.$
+Route123_BerryMastersHouse_Text_GoodSayingTakeThis	¡Oh! Es un buen dicho.\nEres extraordinario.\pQuiero que te quedes esto.$
+Route123_BerryMastersHouse_Text_JoyNeverGoesOutOfMyLife	Nuestros cuatro nietos llegarán más\nlejos que mi marido.\p¡La alegría nunca falta en mi vida!$
+Route123_BerryMastersHouse_Text_Ah	Ah…$
+Route104_PrettyPetalFlowerShop_Text_ThisIsPrettyPetalFlowerShop	¡Hola!\pEsto es la FLORERÍA PÉTALO BONITO.\n¡Llenamos el mundo de flores!$
+Route104_PrettyPetalFlowerShop_Text_LearnAboutBerries	{PLAYER}{KUN}, ¿quieres saber cosas\nsobre las BAYAS?$
+Route104_PrettyPetalFlowerShop_Text_IntroLearnAboutBerries	¿Cómo te llamas?\p{PLAYER}{KUN}.\nQué nombre tan bonito.\p{PLAYER}{KUN}, ¿quieres saber cosas\nsobre las BAYAS?$
+Route104_PrettyPetalFlowerShop_Text_BerriesExplanation	Las BAYAS crecen en plantas que solo\nse dan en tierra blanda y fértil.\pSi coges BAYAS, no olvides plantar\nuna en la tierra fértil otra vez.\pUna BAYA plantada pronto brota, se\nhace planta, da flores preciosas\ly vuelve a dar BAYAS.\pQuiero ver el mundo entero lleno de\nflores bonitas.\lEse es mi sueño.\pAyúdame, {PLAYER}{KUN}. Planta BAYAS\nllena el mundo de flores.$
+Route104_PrettyPetalFlowerShop_Text_FlowersBringHappiness	Las flores hacen muy feliz a la\ngente, ¿verdad?$
+Route104_PrettyPetalFlowerShop_Text_YouCanHaveThis	¡Hola!\pCuanto más cuidas las flores, más\nbonitas florecen.\pTe gustará cuidar flores. Seguro.\nPuedes quedarte esto.$
+Route104_PrettyPetalFlowerShop_Text_WailmerPailExplanation	Mientras crecen las plantas de BAYAS,\nriégalas con la WAILMEGADERA.\pAh, otra cosa.\pSi tardas en coger las BAYAS, se\ncaen al suelo.\lPero vuelven a brotar.\p¿No es increíble?\nEs como si tuvieran ganas de vivir.$
+Route104_PrettyPetalFlowerShop_Text_ImGrowingFlowers	Quiero ser como mis hermanas mayores.\n¡Yo también cultivo flores!\p¡Toma!\n¡Es para ti!$
+Route104_PrettyPetalFlowerShop_Text_MachineMixesBerries	Puedes plantar una BAYA y hacerla\ncrecer, o dársela a un POKéMON.\pPero ahora hay una máquina que mezcla\nBAYAS y hace caramelos para POKéMON.\pYo también quiero caramelos.$
+SootopolisCity_Text_NameIsKiriHaveOneOfThese	Hola, ¿cómo te llamas?\p… … …  … … …  … … …\nVale. ¡Qué bonito!\pYo me llamo KIRI.\pMis papás me pusieron este nombre\npara que creciera sana y cariñosa.\lEso es lo que deseaban.\pToma, quédate una de estas.$
+SootopolisCity_Text_GiveYouThisBerryToo	¡KIRI también te da esta BAYA!\n¡Me encanta!$
+SootopolisCity_Text_WhatKindOfWishInYourName	¿Qué deseo habrá en tu nombre?$
+SootopolisCity_Text_LikeSeasonBornIn	Primavera, verano, otoño e invierno.\pSi naces en primavera, ¿te gusta\nla primavera, y si naces en verano,\lte gusta el verano?$
+SootopolisCity_Text_ThenILoveAutumn	Entonces KIRI nació en otoño, ¡así\nque me encanta el otoño!\p¿Qué estación te gusta a ti?$
+SootopolisCity_Text_OhDoesntMatter	Oh…\nNo importa…\p¡Hay tantas cosas que quiero saber!…$
+BerryBlender_Text_WantToMakePokeblocks	¿Oh? ¿Querías hacer {POKEBLOCK}S con\neste vejete?$
+BerryBlender_Text_Excellent	¡Excelente!$
+BerryBlender_Text_MadeOldTimerSad	Oh…\nHas puesto triste a este vejete…$
+BerryBlender_Text_KnowHowToMakePokeblocks	¿Sabes hacer {POKEBLOCK}S?$
+BerryBlender_Text_LetsBerryBlender	¡Pues empecemos!\p¡A licuar BAYAS!$
+BerryBlender_Text_ExplainBerryBlending	Vale, te lo explico un poco.\pAh, no te preocupes, es muy fácil.\pCuando la flecha de la LICUADORA\nllegue a tu marca, pulsa el Botón A.\pEso es todo.\nYa verás qué fácil es cuando pruebes.$
+BerryBlender_Text_DontHaveAnyBerries	¿Oh?\n¿No tienes BAYAS?\pSi no tienes BAYAS, no puedes\nhacer {POKEBLOCK}S.$
+BerryBlender_Text_CanHaveOneOfMyBerries	Bueno, así no puede ser, ¿verdad?\pSi no te importan las sobras, te\ndoy una de mis BAYAS.\pAsí podremos hacer {POKEBLOCK}S juntos\ncon la LICUADORA DE BAYAS.$
+BerryBlender_Text_DontHaveAnyBerriesToSpare	Si me sobraran BAYAS, te daría una\nencantado…\pPero hoy no me sobra ninguna.\nTendremos que dejarlo para otro día.$
+BerryBlender_Text_PokeblockCaseIsFull	Pero tu TUBO {POKEBLOCK} está lleno.\pUsa algunos {POKEBLOCK}S antes de\nvolver a verme.$
+BerryBlender_Text_DontHavePokeblockCase	Pero no tienes TUBO {POKEBLOCK}.\pConsigue un TUBO {POKEBLOCK} y luego\nven a verme.$
+BerryBlender_Text_LetsGetBlendingAlready	¡Venga, a licuar ya!$
+BerryBlender_Text_WhatKindOfPokeblockWillIGet	¿Qué {POKEBLOCK} me saldrá?\n¡Qué emoción!$
+BerryBlender_Text_WantToBlendPokeblocksWithUs	¡Hola! ¿Quieres hacer {POKEBLOCK}S\ncon nosotros?$
+BerryBlender_Text_Okay	¡Vale!$
+BerryBlender_Text_ThatsTooBad	Qué pena…\pPero aquí estaremos cuando te\nentren ganas de licuar.$
+BerryBlender_Text_KnowHowToMakePokeblocks2	Sabes hacer {POKEBLOCK}S,\n¿verdad?$
+BerryBlender_Text_LetsBerryBlender2	¡Pues empecemos!\p¡A licuar BAYAS!$
+BerryBlender_Text_ExplainBerryBlending2	¡Vale!\n¡Te lo explico!\pCuando la flecha de la LICUADORA\nllegue a tu marca, pulsa el\lBotón A.\pEso es todo.\nMuy fácil, ¿no?$
+BerryBlender_Text_DontHaveAnyBerries2	Oh, pero espera un momento…\nNo tienes BAYAS.\pSin BAYAS no puedes hacer\n{POKEBLOCK}S…\pAquí estaremos cuando tengas\nBAYAS para licuar.$
+BerryBlender_Text_PokeblockCaseIsFull2	Oh, pero espera un momento…\nTu TUBO {POKEBLOCK} está lleno.\pUsa algunos {POKEBLOCK}S y luego\nvuelve.$
+BerryBlender_Text_DontHavePokeblockCase2	Oh, pero espera un momento…\nNo tienes TUBO {POKEBLOCK}.\pConsigue un TUBO {POKEBLOCK} y luego\nvuelve.$
+BerryBlender_Text_MakePokeblocksWithOurGroup	¡Oh, hola! ¿Quieres hacer {POKEBLOCK}S\ncon nuestro grupito?$
+BerryBlender_Text_OhDear	¡Ay, cielo!$
+BerryBlender_Text_LeftUsInShock	Ay, madre mía…\p¡Nos has dejado de piedra!$
+BerryBlender_Text_KnowHowToMakePokeblocks3	Sabes hacer {POKEBLOCK}S,\n¿verdad?$
+BerryBlender_Text_LetsBerryBlender3	¡Vale, cielo!\n¡Empecemos!\p¡A licuar BAYAS!$
+BerryBlender_Text_ExplainBerryBlending3	¡Ay, cielo!\pEntonces te lo explico bien.\pCuando la flecha de la LICUADORA\nllegue a tu marca, pulsa el Botón A.\pEso es todo.\n¿A que es sencillo?$
+BerryBlender_Text_DontHaveAnyBerries3	No tienes BAYAS,\n¿verdad?\pSi no tienes BAYAS, no puedes\nhacer {POKEBLOCK}S.\pAquí siempre estamos haciendo\n{POKEBLOCK}S, así que hagamos alguno\lcuando tengas una o dos BAYAS.$
+BerryBlender_Text_PokeblockCaseIsFull3	Parece que tu TUBO {POKEBLOCK}\nestá lleno.\pUsa algunos {POKEBLOCK}S y luego\nvuelve.$
+BerryBlender_Text_DontHavePokeblockCase3	Parece que aún no tienes\nTUBO {POKEBLOCK}.\pConsigue un TUBO {POKEBLOCK} antes\nde volver.$
+BerryBlender_Text_SetNewBlenderRecord	¡Vale! ¡Hoy es el día en que batiré\nel récord de velocidad de la LICUADORA!$
+BerryBlender_Text_LookGoodAtBlendingJoinUs	¡Ay, cielo!\nPareces de los que licúan bien.\l¿Te unes a nosotros?$
+BerryBlender_Text_MakeDeliciousPokeblocks	Voy a hacer {POKEBLOCK}S deliciosos para\nque mis POKéMON sean más dulces.$
+BerryBlender_Text_SaveGameBeforeBerryBlenderLink	Vas a hacer {POKEBLOCK}S con tus amigos\nen la LICUADORA DE BAYAS.\p¿Guardamos la partida antes de\nconectar con tus amigos?$
+BerryBlender_Text_SearchingForFriends	Buscando a tus amigos…\n… … Botón B: Cancelar$
+BerryBlender_Text_Player1Arrived	Ha llegado {STR_VAR_1}.$
+BerryBlender_Text_Player1And2Arrived	Han llegado {STR_VAR_1} y {STR_VAR_2}.$
+BerryBlender_Text_AllPlayersArrived	Han llegado {STR_VAR_1}, {STR_VAR_2}\ny {STR_VAR_3}.$
+BerryBlender_Text_NoBerriesLink	No tienes BAYAS.\nNo se puede usar la LICUADORA.$
+BerryBlender_Text_PokeblockCaseIsFullLink	Tu TUBO {POKEBLOCK} está lleno.\nNo se puede usar la LICUADORA.$
+BerryBlender_Text_DontHavePokeblockCaseLink	No tienes TUBO {POKEBLOCK}.\nNo se puede usar la LICUADORA.$
+BerryBlender_Text_LoveMakingPokeblocks	Me encanta hacer {POKEBLOCK}S.\pSiempre llevo BAYAS encima.$
+BerryBlender_Text_MakePokeblocksUsingBerryBlender	Si quieres, podemos hacer\n{POKEBLOCK}S juntos con la\lLICUADORA DE BAYAS.$
+BerryBlender_Text_DontHaveAnyBerriesHaveOne	¿Oh?\n¿No tienes BAYAS?\pBueno, así no puede ser, ¿verdad?\pSi no te importan las sobras, te\ndoy una de mis BAYAS.$
+BerryBlender_Text_UseItToMakePokeblocksTogether	La usaremos para hacer {POKEBLOCK}S\njuntos con la LICUADORA DE BAYAS.$
+BerryBlender_Text_DontHaveAnyBerriesNoneToSpare	¿Oh?\n¿No tienes BAYAS?\pSi me sobrara alguna, te la daría\nencantado…\pPero hoy no me sobra ninguna.\nLo siento.$
+BerryBlender_Text_BlendWithTheBlendMaster	MAESTRO LICUADOR: ¡Así es!\n¡El MAESTRO LICUADOR soy yo!\p¡Licúa conmigo y verás la maestría\nque pongo al licuar!$
+BerryBlender_Text_SeeMyMasteryInAction	MAESTRO LICUADOR: ¡Mmm! ¿Así que\nquieres ver mi maestría en acción?$
+BerryBlender_Text_TooBusyNowIsee	¡Mmm!\p¡Así que ahora tienes prisa, ya veo!\p¡Pero no temas!\n¡Estaré aquí todo el día!\l¡Vuelve rápido de tu recado!$
+BerryBlender_Text_BlendMasterNoBerries	¡Mmm!\p¡No tienes ni una BAYA!\p¡Estaré aquí todo el día!\n¡Vuelve rápido con BAYAS!$
+BerryBlender_Text_BlendMasterKnowHowToMakePokeblocks	¡Por supuesto!\n¡Por supuesto!\pPor cierto…\n¿Sabes hacer {POKEBLOCK}S con\lBAYAS?$
+BerryBlender_Text_BlendMasterExplainBerryBlending	¡Mmm!\p¡Ah, pero si es muy sencillo!\pCuando la flecha de la LICUADORA\nllegue a tu marca, pulsa el Botón A.\pEso es todo.\pCuando veas con qué precisión pulso\nel Botón A, lo entenderás.$
+BerryBlender_Text_BlendMasterLetsBerryBlender	¡Bien!\p¡Pues empecemos!\p¡Todos con el MAESTRO LICUADOR,\na licuar BAYAS!$
+BerryBlender_Text_BlendMasterNoPokeblockCase	¡Mmm!\p¡Parece que no tienes el\nTUBO {POKEBLOCK}!\p¡Estaré aquí todo el día!\n¡Consigue el TUBO {POKEBLOCK} y vuelve!$
+BerryBlender_Text_BlendMasterPokeblockCaseFull	¡Mmm!\p¡Parece que tu TUBO {POKEBLOCK} está\nlleno!\p¡Estaré aquí todo el día!\n¡Usa algunos {POKEBLOCK}S y vuelve!$
+BerryBlender_Text_WhoaAwesome	¡Hala!\n¡Increíble!$
+BerryBlender_Text_WickedlyFast	¡Rapidísimo!$
+BerryBlender_Text_WhatAnExpert	¡Qué experto!$
+BerryBlender_Text_MadeAmazingPokeblocksWithMaster	¡Cuando licué con el MAESTRO,\nhicimos unos {POKEBLOCK}S increíbles!$
+BerryBlender_Text_QualitiesOfBlendMaster	Unos ojos que siguen la flecha con\nprecisión de máquina…\pUna mano que pulsa el Botón A\ncon precisión de reloj…\pEsas cualidades hacen grande al\nMAESTRO LICUADOR.$
+BerryBlender_Text_MasterWorksOnSkillsInMountains	Dicen que el MAESTRO LICUADOR entrena\nsu técnica en lo más hondo del monte.\pA veces viene a CALAGUA a licuar\nBAYAS todo el día.$
