@@ -48,6 +48,19 @@ VILLA RAÍZ, PUEBLO ESCASO, CIUDAD PETALIA, CIUDAD FÉRRICA, PUEBLO AZULIZA, PUE
 | BAYAS: árboles, regalos de BAYAS, FLORISTERÍA PÉTALO BONITO, MAESTRO DE BAYAS y LICUADORA | `26_bayas.tsv` |
 | Valoración de la POKéDEX del PROF. ABEDUL y TUTORES de movimientos | `27_pokedex_tutores.tsv` |
 | BASES SECRETAS | `28_bases_secretas.tsv` |
+| Sueltos de la historia: caja del camión, registro de PETRA y MARCIAL, entrenadores de la RUTA 103 | `29_sueltos_historia.tsv` |
+| CIUDAD CALAGUA: calles (combate con el rival), PUERTO, MOTEL, casas, CENTRO POKéMON, OLVIDAMOVIMIENTOS | `30_calagua.tsv` |
+| CIUDAD CALAGUA: MUSEO y CENTRO COMERCIAL | `31_calagua_museo_centro_comercial.tsv` |
+| RUTA 123 y MONTE PÍRICO (con la cima, AQUILES y los PRISMAS) | `32_ruta123_monte_pirico.tsv` |
+| GUARIDA AQUA | `33_guarida_aqua.tsv` |
+| CIUDAD ALGARIA y GIMNASIO de VITO y LETI (sin la revancha), casa de MÁXIMO | `34_algaria.tsv` |
+| CENTRO ESPACIAL (EQUIPO MAGMA y combate doble con MÁXIMO) | `35_centro_espacial.tsv` |
+| GUARIDA MAGMA (MAGNO y GROUDON) | `36_guarida_magma.tsv` |
+| RUTAS 124 a 129, casa del BUSCATESOROS y escena de la RUTA 128 | `37_rutas124_129.tsv` |
+| RUTAS 130 a 134, CUEVA CARDUMEN, zona submarina y CUEVA ABISAL (AQUILES y KYOGRE) | `38_rutas130_134_cueva_abisal.tsv` |
+| CIUDAD ARRECÍPOLIS (la crisis, PLUBIO) y GIMNASIO de GALANO (sin la revancha) | `39_arrecipolis.tsv` |
+| CUEVA ANCESTRAL, PILAR CELESTE y PUEBLO PACIFIDLOG | `40_cueva_ancestral_pilar_pacifidlog.tsv` |
+| CIUDAD COLOSALIA, CALLE VICTORIA y LIGA POKéMON (ALTO MANDO, PLUBIO, SALA DE LA FAMA) | `41_colosalia_calle_victoria_liga.tsv` |
 | Textos comunes (Jorge): LOTERÍA, cuestionario y hombre de los perfiles | `50_loteria_cuestionario_perfiles.tsv` |
 | Textos comunes (Jorge): NOTICIAS POKéMON de la tele | `51_noticias_pokemon.tsv` |
 | Textos comunes (Jorge): las DAMAS del CENTRO POKéMON de CALAGUA | `52_damas_calagua.tsv` |
@@ -55,7 +68,7 @@ VILLA RAÍZ, PUEBLO ESCASO, CIUDAD PETALIA, CIUDAD FÉRRICA, PUEBLO AZULIZA, PUE
 | Textos comunes (Jorge): CLUB CABLE e INALÁMBRICO, SALA UNIÓN y minijuegos de ALGARIA | `54_club_cable_inalambrico.tsv` |
 | Textos comunes (Jorge): llamadas de la AGENDA del POKéNAV | `55_agenda.tsv` |
 
-Siguiente: lo que queda está repartido entre Miguel y Jorge en `PLAN.md`.
+**La historia principal está traducida entera** (tramos 01-41) y también los textos comunes de Jorge (50-55). Falta probarlo jugando (`PRUEBAS.md`) y lo que no afecta a la historia (ver `PLAN.md`).
 
 La CARPA DE COMBATE y el FRENTE BATALLA se traducen igual cuando salen en una conversación normal, pero sus edificios se dejan para el final (son de después de la historia o secundarios).
 

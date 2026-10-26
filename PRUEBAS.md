@@ -1,0 +1,50 @@
+# Pruebas antes de jugar el locke
+
+Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y la historia en español. Ya compila y pasa los tests (`make check`, 5450 en verde), pero **nadie lo ha jugado todavía**. Esta lista es para la primera partida de prueba. Lo que falle se apunta como un issue o en un PR, con el mapa y lo que pasó.
+
+## Cómo preparar la ROM de prueba
+
+- **Para probar:** `make SIN_RANDOM=1` (o el instalador con `-SinRandom`). Así se reconocen los Pokémon y los entrenadores originales, y es más fácil ver si algo está mal.
+- **Para ver el randomizer:** `make` normal (o el instalador sin opciones) con una semilla cualquiera.
+- **Atajos de prueba:** en el mapa, **R + START** abre el menú de depuración: volar a cualquier mapa, darse Pokémon y objetos, cambiar flags. En combate, **SELECT** abre el de combate.
+- **Ojo para la partida de verdad:** esos dos menús están activos en el `make` normal (`DEBUG_OVERWORLD_MENU` y `DEBUG_BATTLE_MENU` valen `DISABLED_ON_RELEASE`). Con **`make release`** se quitan, pero la ROM sale como `pokeemerald-release.gba` y el instalador no lo hace todavía. **Pendiente:** comprobar que `make release` compila con todo lo nuestro y, si es así, que el instalador use esa versión para jugar.
+
+## Qué mirar
+
+### Textos en español
+
+- [ ] **Cajas de texto:** que ninguna línea se salga ni se corte. `dialogos.py comprobar` mide el ancho con la fuente del juego, pero no ve los nombres largos que se meten en `{STR_VAR_1}` (Pokémon, objetos, movimientos).
+- [ ] **Sitios con más riesgo:**
+  - el tablón del BUSCATESOROS (RUTA 124), con columnas en píxeles;
+  - VITO y LETI hablando a la vez (GIMNASIO de ALGARIA);
+  - los tutores, que ahora dicen el movimiento al azar;
+  - las llamadas de la AGENDA con nombres largos;
+  - las estatuas de los gimnasios ("RECONOCIDOS POR").
+- [ ] **Frases que salen en inglés** en la historia: apuntar el mapa. Lo que se dejó en inglés a propósito está en `traduccion/dialogos/PLAN.md` (postgame, la tele, el hombre de MALVALONA…).
+- [ ] **Nombres sin confirmar:** RYDEL, CAMINO DE BICIS, familia VENCEDOR, ROBOMUÑECO, WANDA, SENDERO ÍGNEO, CAMINO ESCABROSO, PROF. COSMO, GUARDAS POKéMON, OLVIDAMOVIMIENTOS, MOTEL CALAGUA; y los de Jorge en el #33 (BOLETO LOTO, SALA UNIÓN, MACHACABAYAS…). Si alguien sabe el oficial, se cambia en el `.tsv` y en `LEEME.md`.
+- [ ] **Género:** jugar al menos un rato con chica. Los textos se escribieron para que valgan para los dos, pero puede quedar alguno en masculino.
+- [ ] **Combate y menús:** mensajes de combate (artículos, "salvaje", "enemigo"), pantalla de datos, PC, MOCHILA, tiendas.
+
+### Reglas del locke
+
+- [ ] **Vidas:** el menú de pausa muestra "Vidas: N". Un Pokémon debilitado sale con el aviso de muerte, va a la caja 14 y resta una vida. Con 0 vidas, la siguiente muerte pone "LOCKE PERDIDO".
+- [ ] **Primera captura por zona:** solo se puede capturar el primer salvaje válido de cada zona. Los repetidos y legendarios no gastan la zona. Los shiny se capturan siempre.
+- [ ] **Caja de prohibidos (13):** regalos, huevos, fósiles, estáticos e intercambios repetidos o legendarios van ahí, bloqueados.
+- [ ] **Tiendas:** una compra por objeto (salvo Balls, Repelentes, Bayas y Caramelos), y el segundo dependiente en las ciudades.
+- [ ] **Caps de nivel:** al llegar al cap no se gana experiencia y los Caramelos Raros no funcionan por encima.
+
+### Randomizer (con semilla)
+
+- [ ] Salvajes, entrenadores, iniciales y rival cambian, sin legendarios donde no toca.
+- [ ] Los jefes llevan su as con megapiedra desde el Mega-Aro, y objetos que les sirven.
+- [ ] Habilidades, MT, tutores, intercambios y objetos del suelo cambian, y las MO no.
+- [ ] `make nueva-partida` da otra semilla y `make` repite la misma.
+
+### Equilibrio
+
+- [ ] Niveles de entrenadores y salvajes de cada tramo frente al cap (sección 5 de `DUALOCKE.md`).
+- [ ] Combate con MÁXIMO en la RUTA 120 (nivel 62) y entrega del Mega-Aro.
+
+## Cómo apuntar un fallo
+
+Mapa, qué se hizo, qué pasó y, si se puede, una captura. Si es un texto, la etiqueta del `.tsv` (la sacas con `python tools/dualocke/dialogos.py exportar data/maps/MAPA/scripts.inc`) y cómo debería quedar.
