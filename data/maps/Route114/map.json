@@ -389,6 +389,19 @@
       "trainer_sight_or_berry_tree_id": "ITEM_HEAVY_DUTY_BOOTS",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_COMP_HEAVY_DUTY_BOOTS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 14,
+      "y": 67,
+      "elevation": 7,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_HEART_SCALE",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_TICKET_RUTA_114"
     }
   ],
   "warp_events": [
@@ -526,6 +539,14 @@
       "elevation": 7,
       "item": "ITEM_SCRAFTINITE",
       "flag": "FLAG_ITEM_MEGA_SCRAFTINITE"
+    },
+    {
+      "type": "hidden_item",
+      "x": 13,
+      "y": 67,
+      "elevation": 7,
+      "item": "ITEM_HEART_SCALE",
+      "flag": "FLAG_ITEM_TICKET_RUTA_114_2"
     }
   ]
 }
