@@ -408,7 +408,7 @@ Están en **`tools/dualocke/randomizer_config.json`**, que es el archivo que deb
 - MTs reutilizables (`I_REUSABLE_TMS` en `include/config/item.h`).
 - MOs olvidables.
 
-## 8. Traducción al español (pendiente)
+## 8. Traducción al español (historia hecha, falta probarla jugando)
 
 Decisión: empezar en inglés y traducir en paralelo o después. La traducción y los cambios de jugabilidad tocan cosas distintas, así que se puede pasar el español por encima cuando esté listo.
 
@@ -438,8 +438,8 @@ En total, unas 210.000 palabras: más o menos dos novelas largas.
    - **Descripciones (hecho, 24/10/2026):** 874 movimientos, 786 objetos y 306 habilidades, en `traduccion/descripciones/*.csv` (`constante,espanol,origen`). `origen` = `oficial` si es el texto oficial de los juegos (PokéAPI) y cabe; `propia` si lo hemos traducido nosotros desde el inglés del juego, porque las oficiales modernas son demasiado largas para los recuadros de Esmeralda. Se escriben en una línea; `tools/dualocke/aplicar_descripciones.py` corta las líneas (movimientos: 2 de 29 letras; objetos: 3 de 20; habilidades: 1 de 30) y avisa si no caben. `--aplicar` escribe los archivos; se puede volver a ejecutar.
    - **Pokédex (hecho, 24/10/2026):** 1284 entradas y las categorías, en `traduccion/pokedex/` (`entradas.csv`, `categorias.csv`). Unas 870 son las oficiales (PokéAPI) y el resto (megas, formas regionales, especies nuevas sin texto que quepa) son traducción propia. Las 31 formas Gigamax se quedan en inglés porque el Dinamax no se usa. La ficha pone "POKéMON Semilla" en vez de "Seed POKéMON" (`src/international_string_util.c`). La categoría tiene como mucho 12 letras (`categoryName` es `u8[13]`). Las aplica `tools/dualocke/aplicar_pokedex.py`.
 2. **Mensajes de combate, menús y gráficos con texto:** reaprovechar la traducción de Heart & Soul ([SergioBonet/hns_es](https://github.com/SergioBonet/hns_es)), que tradujo este mismo motor (aunque una versión algo anterior). Incluye los arreglos de código para artículos y concordancias ("¡El Pikachu salvaje usó…!") y los gráficos con texto (iconos de tipo, barras de PS/Nv…).
-3. **Diálogos de Hoenn (en curso):** decidido el 24/10/2026 traducirlos nosotros por tramos, en el orden de la historia, y sin el postgame. Cómo se hace: `traduccion/dialogos/LEEME.md`.
-4. **Pruebas jugando:** recuadros donde no cabe el texto, frases sin traducir, erratas.
+3. **Diálogos de Hoenn (historia hecha, 26/10/2026):** traducidos por nosotros por tramos, en el orden de la historia y sin el postgame. **La historia principal está entera**, de VILLA RAÍZ a la LIGA (tramos 01-41, Miguel), y también los textos comunes de la AGENDA, concursos, lotería y club cable (tramos 50-55, Jorge): unos 4700 textos. Quedan en inglés cosas que no afectan a la historia (la tele, el hombre de MALVALONA, alguna casa suelta, el postgame). Cómo se hace y qué falta: `traduccion/dialogos/LEEME.md` y `PLAN.md`.
+4. **Pruebas jugando (siguiente paso):** recuadros donde no cabe el texto, frases sin traducir, erratas. Qué mirar: `PRUEBAS.md`.
 
 ### Dificultades técnicas
 
@@ -496,6 +496,8 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
 - Combate con Máximo en la Ruta 120 que da el Mega-Aro (Jorge, sección 6).
 - Primera captura por zona para los salvajes (Jorge, sección 4). Las zonas gastadas se guardan en `VAR_DUALOCKE_ZONES_0` a `_6` (7 variables libres, un bit por zona; no gasta flags). Tests en `test/dualocke.c`.
 - Caja de prohibidos (Jorge, sección 4): regalos, eventos, fósiles, estáticos, huevos e intercambios repetidos o legendarios van a la caja 13 ("VETADOS"), bloqueada hasta que dejan de ser repetidos.
+- Randomizer completo (Jorge, sección 7) y traducción al español de la historia (Miguel y Jorge, sección 8).
+- **Siguiente: jugar y probarlo todo junto.** Lista de qué mirar en `PRUEBAS.md`.
 
 ### Pendiente de decidir
 
@@ -508,7 +510,7 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
 3. Reglas del locke: ~~vidas + caja de muertos~~, ~~límite de una compra por objeto~~ y ~~aviso al morir~~ (hechos); ~~primera captura por zona y caja de prohibidos~~ (hechas).
 4. Randomizer con semilla (~~reescalado de niveles~~, ~~equipos de jefes~~ y ~~parámetros~~ hechos; ~~salvajes, entrenadores, iniciales, estáticos, regalos, objetos, intercambios, movimientos, habilidades y MT~~ hechos por Jorge; ~~tutores~~ hechos; falta probarlo jugando).
 5. Revanchas y postgame (niveles).
-6. Traducción.
+6. ~~Traducción~~ (historia hecha; falta probarla jugando, `PRUEBAS.md`).
 7. **Siguiente tarea (pedida por Miguel, 24/10/2026): mejorar la pantalla de datos del Pokémon.** Que se vea todo sin herramientas externas:
    - Características, **IVs** y **EVs** (número exacto, no la letra).
    - **Naturaleza** con lo que sube y lo que baja ("Firme: +Ataque, −At. Esp.").
