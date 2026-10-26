@@ -235,7 +235,7 @@ Regla general: **el as de cada jefe va exactamente al nivel del cap**, el resto 
   - Están ordenados por tramo: los más fuertes (Pañuelo Elegido, Chaleco Asalto, Gafas Elegidas, Vidasfera) salen a partir del tramo 6.
   - Los coloca el mismo script. Sus flags son `FLAG_ITEM_COMP_...`, del **0x493 al 0x4C9**.
   - La tabla está en el script y en `registro/2026-10-23-miguel-objetos-competitivos.md`.
-  - **Flags libres que quedan para Jorge:** 0x2B6-0x2BB, 0x4CA-0x4EF y el resto de `FLAG_UNUSED_...` (0x2B5 es `FLAG_DUALOCKE_TIENE_BALLS`).
+  - **Flags libres que quedan para Jorge:** 0x043-0x04F, 0x2B6-0x2BB, 0x4CA-0x4E4 y el resto de `FLAG_UNUSED_...` (0x2B5 es `FLAG_DUALOCKE_TIENE_BALLS`; 0x021-0x042 y 0x4E5-0x4EF son de los Ticket-Recuerdo).
 
 ### Tiendas
 
@@ -325,6 +325,24 @@ Lo pidió Jorge al probar: las megapiedras y las pociones se mezclaban con todo 
 - El tutorial de Blasco (la Poción va a Medicinas) guarda y devuelve también ese bolsillo. Las bebidas de la azotea del Centro Comercial dicen que van a MEDICINAS.
 - Depuración: "Fill Pocket Items" llena también Medicinas y da una de cada megapiedra; "Fill Pocket Key Items" da el Mega-Aro.
 - Tests en `test/dualocke.c` (busca "bolsillos").
+
+### Recuerdamovimientos y Ticket-Recuerdo (hecho, Miguel, 26/10/2026)
+
+Lo pidió Miguel: poder recuperar los movimientos que un Pokémon ha podido aprender durante la aventura, pagando con tickets que se encuentran por el mapa.
+
+- **En todos los Centros Pokémon de Hoenn** (los 16) hay una señora a la derecha del PC, en la casilla (13, 2), que hace que un Pokémon recuerde un movimiento.
+  - Enseña los movimientos **de nivel** que el Pokémon ya podría saber por su nivel (los mismos que el tutor de Pueblo Pardal). Se puede elegir un Pokémon del equipo o de las cajas.
+  - Cobra **un Ticket-Recuerdo por movimiento**, y solo si lo aprende: si cancelas, no se gasta.
+  - Script: `data/scripts/dualocke_recuerda_movimientos.inc` (`Dualocke_EventScript_RecuerdaMovimientos`). Los PNJ están en el `map.json` de cada `*_PokemonCenter_1F`.
+- **El Ticket-Recuerdo es la Escama Corazón** (`ITEM_HEART_SCALE`) con otro nombre, otra descripción y el icono del Ticket del Barco. Así el tutor de Pueblo Pardal, que ya cobraba con la escama, también lo pide (sus textos dicen TICKET-RECUERDO).
+- **Dónde están:** 45 por el mapa.
+  - **Uno en bola en cada ruta**, de la 101 a la 134.
+  - **Otro oculto** en las rutas largas: 104, 110, 111, 113, 114, 117, 118, 119, 120, 121 y 123.
+  - Además siguen las Escamas Corazón ocultas del juego original (rutas 104, 105, 106, 109, 115, 118, 128, Calagua y bajo el agua de la 124), que ahora son tickets. Con el randomizer esas sí cambian por otros objetos.
+  - Los coloca `tools/dualocke/colocar_objetos.py` (tablas `TICKETS` y `TICKETS_OCULTOS`). Flags `FLAG_ITEM_TICKET_RUTA_...`: **0x021-0x042** los de bola y **0x4E5-0x4EF** los ocultos, porque los ocultos necesitan un flag por encima de `FLAG_HIDDEN_ITEMS_START`.
+  - El script busca primero suelo firme. En 7 rutas de mar abierto (107, 108, 126, 128, 129, 130 y 131) no hay playa cerca y el ticket está en el agua: se coge haciendo Surf, como se habla con los nadadores.
+  - **El randomizer no los toca** (`FIJOS` en `tools/dualocke/aleatorio/objetos.py`), como las megapiedras.
+- **Se ha quitado el recordador gratis de la pantalla de datos** (`P_SUMMARY_SCREEN_MOVE_RELEARNER` a `FALSE` en `include/config/summary_screen.h`): si no, los tickets no servirían de nada.
 
 ## 7. Randomizer (hecho, falta probarlo jugando)
 
@@ -516,6 +534,7 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
 - Caja de prohibidos (Jorge, sección 4): regalos, eventos, fósiles, estáticos, huevos e intercambios repetidos o legendarios van a la caja 13 ("VETADOS"), bloqueada hasta que dejan de ser repetidos.
 - Randomizer completo (Jorge, sección 7) y traducción al español de la historia (Miguel y Jorge, sección 8).
 - Bolsillos Medicinas y Megapiedras en la mochila (Jorge, sección 6).
+- Recuerdamovimientos en los Centros Pokémon y Ticket-Recuerdo por las rutas (Miguel, sección 6).
 - **Siguiente: jugar y probarlo todo junto.** Lista de qué mirar en `PRUEBAS.md`.
 
 ### Pendiente de decidir
@@ -558,7 +577,8 @@ Quién hace cada cosa y cómo se sube: sección 13.
 | Randomizer en el juego (tablas generadas: estáticos, regalos, objetos, intercambios, habilidades, MT, tutores) | `src/dualocke_aleatorio.c`, `include/dualocke_aleatorio.h`, `src/data/dualocke_aleatorio.h` (generado); qué enseña cada MT en `include/item.h` |
 | Reescalado de niveles por tramos (tabla de mapas y reglas) | `tools/dualocke/reescalar_niveles.py` |
 | Equipos de los jefes (+1/+2, megas) | `tools/dualocke/equipos_jefes.py` |
-| Megapiedras y objetos competitivos por el mapa | `tools/dualocke/colocar_objetos.py` |
+| Megapiedras, objetos competitivos y Ticket-Recuerdo por el mapa | `tools/dualocke/colocar_objetos.py` |
+| Recuerdamovimientos de los Centros Pokémon | `data/scripts/dualocke_recuerda_movimientos.inc` |
 | Evolución por nivel de los entrenadores normales | `tools/dualocke/evolucionar_entrenadores.py` |
 | Entrenadores | `src/data/trainers.party` |
 | Tiendas | scripts de cada mapa en `data/maps/*/scripts.inc` (`pokemart`) |

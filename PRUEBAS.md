@@ -33,6 +33,13 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 - [ ] **Tiendas:** una compra por objeto (salvo Balls, Repelentes, Bayas y Caramelos), y el segundo dependiente en las ciudades.
 - [ ] **Caps de nivel:** al llegar al cap no se gana experiencia y los Caramelos Raros no funcionan por encima.
 
+### Recuerdamovimientos y Ticket-Recuerdo
+
+- [ ] En un Centro Pokémon, la señora a la derecha del PC: sin ticket te lo dice; con ticket enseña un movimiento de nivel y gasta el ticket solo si lo aprende.
+- [ ] Que no tape el PC ni el mapa de la región, y que esté en todos los Centros (también en LAVACALDA).
+- [ ] Que los tickets de las rutas se vean y se puedan coger. Mirar sobre todo los de las rutas de mar (en el agua, con Surf) y los ocultos de las rutas largas.
+- [ ] Que la pantalla de datos ya no deje recordar movimientos gratis.
+
 ### Randomizer (con semilla)
 
 - [ ] Salvajes, entrenadores, iniciales y rival cambian, sin legendarios donde no toca.
