@@ -1,0 +1,36 @@
+# Textos comunes (Jorge): LOTERÍA del CENTRO COMERCIAL de CALAGUA, el cuestionario del CENTRO POKéMON y el hombre de los perfiles
+LilycoveCity_DepartmentStore_1F_Text_LotteryCornerDrawTicket	Esta es la LOTERÍA POKéMON.\pCualquier cliente del CENTRO COMERCIAL\npuede sacar un BOLETO LOTO.\pSi el número del BOLETO coincide con\nel número ID de uno de tus POKéMON,\lte llevarás un premio fabuloso.\p¿Quieres sacar un BOLETO LOTO?$
+LilycoveCity_DepartmentStore_1F_Text_ComeBackTomorrow	Vuelve mañana, por favor.$
+LilycoveCity_DepartmentStore_1F_Text_PleaseVisitAgain	¡Vuelve cuando quieras!$
+LilycoveCity_DepartmentStore_1F_Text_PleasePickTicket	Escoge un BOLETO LOTO.\n…{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}…{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}…{PAUSE 15}{PAUSE 15}{PAUSE 15}{PAUSE 15}$
+LilycoveCity_DepartmentStore_1F_Text_TicketNumberIsXPleaseWait	El número del BOLETO es el {STR_VAR_1}.\pVoy a comprobar si coincide con el\nnúmero ID de alguno de tus\lPOKéMON. Espera un momento.$
+LilycoveCity_DepartmentStore_1F_Text_TicketMatchesPartyMon	¡Enhorabuena!\p¡El número ID de tu {STR_VAR_1}\ndel equipo coincide con el\lnúmero de tu BOLETO LOTO!$
+LilycoveCity_DepartmentStore_1F_Text_TicketMatchesPCMon	¡Enhorabuena!\p¡El número ID de tu {STR_VAR_1}\ndel PC coincide con el\lnúmero de tu BOLETO LOTO!$
+LilycoveCity_DepartmentStore_1F_Text_NoNumbersMatched	Lo siento.\nNo ha coincidido ningún número.$
+LilycoveCity_DepartmentStore_1F_Text_TwoDigitsMatched	Coinciden dos cifras, así que ganas\nel tercer premio.\l¡Te llevas {STR_VAR_1}!$
+LilycoveCity_DepartmentStore_1F_Text_ThreeDigitsMatched	Coinciden tres cifras, así que ganas\nel segundo premio.\l¡Te llevas {STR_VAR_1}!$
+LilycoveCity_DepartmentStore_1F_Text_FourDigitsMatched	Coinciden cuatro cifras, así que ganas\nel primer premio.\l¡Te llevas {STR_VAR_1}!$
+LilycoveCity_DepartmentStore_1F_Text_AllFiveDigitsMatched	¡Madre mía, coinciden las cinco\ncifras!\p¡Has ganado el premio gordo!\n¡Te llevas {STR_VAR_1}!$
+LilycoveCity_DepartmentStore_1F_Text_NoRoomForThis	¿Oh?\nParece que no te cabe en la MOCHILA.\pHaz sitio en la MOCHILA y\navísame.$
+LilycoveCity_DepartmentStore_1F_Text_PrizeWeveBeenHolding	¿{PLAYER}?\nSí, te estábamos esperando.\pAquí tienes el premio que te\nhabíamos guardado.$
+LilycoveCity_DepartmentStore_1F_Text_PleaseVisitAgain2	¡Vuelve cuando quieras!$
+Questionnaire_Text_FillOut	Hay un cuestionario.\n¿Quieres rellenarlo?$
+Questionnaire_Text_ThankYou	Gracias por dedicar un rato a\nrellenar nuestro cuestionario.\pTus respuestas nos serán de\ngran ayuda.$
+Questionnaire_Text_YouKnowThoseWordsGift	¡Ah, hola!\n¿Conoces esas palabras?\pEntonces seguro que sabes lo que\nes el REGALO MISTERIOSO.\p¡A partir de ahora podrás recibir\nREGALOS MISTERIOSOS!$
+Questionnaire_Text_YouCanAccessMysteryGift	Cuando guardes la partida, podrás\nentrar en REGALO MISTERIOSO.$
+Questionnaire_Text_YouKnowThoseWordsEvent	¡Ah, hola!\n¿Conoces esas palabras?\pEntonces seguro que sabes lo que\nes el EVENTO MISTERIOSO.$
+Questionnaire_Text_YouCanAccessMysteryEvent	Cuando guardes la partida, podrás\nentrar en EVENTO MISTERIOSO.$
+MysteryGift_Text_TheresATicketForYou	Gracias por usar el sistema de\nEVENTO MISTERIOSO.\pTú debes de ser {PLAYER}.\nTengo aquí un TICKET para ti.$
+MysteryGift_Text_TryUsingItAtLilycovePort	Parece que sirve en el\nPUERTO de CIUDAD CALAGUA.\p¿Por qué no lo pruebas y ves\nde qué se trata?$
+ProfileMan_Text_CollectTrainerProfiles	¡Hola, ENTRENADOR!\nQué sonrisa más maravillosa tienes.\pMi afición es coleccionar los perfiles\nde los ENTRENADORES POKéMON.$
+ProfileMan_Text_MayISeeYourProfile	¿Qué me dices?\n¿Me enseñas tu perfil?$
+ProfileMan_Text_EasyChatExplanation	Tu perfil se hace juntando cuatro\npalabras o frases.\pMira, te enseño un ejemplo de\nperfil hecho con cuatro piezas.\pPuedes cambiar esas cuatro piezas por\notras como quieras para hacer\ltu propio perfil.\pHay un montón de piezas que\npuedes usar.\pEstán ordenadas por grupos, como\nPOKéMON, estilo de vida o aficiones,\lpara que sea más fácil buscarlas.\pPrimero, elige un grupo para ver\nla lista de piezas.\pLuego, escoge la que quieras.\pHaz lo mismo con las demás y\ntendrás tu propio perfil.$
+ProfileMan_Text_LetsSeeItThen	¡Sí! ¡Gracias!\nA ver, enséñamelo.$
+ProfileMan_Text_ImagineYouWouldHaveWonderfulProfile	Vaya, ¿en serio?\pSeguro que alguien como tú tiene\nun perfil maravilloso…$
+ProfileMan_Text_NotIntoItRightNow	¿Oh? ¿Ahora no te apetece?\p¡Pues cuando quieras!$
+ProfileMan_Text_YouHaveWonderfulSmile	¡Hola, ENTRENADOR!\nQué sonrisa más maravillosa tienes.$
+ProfileMan_Text_MayISeeYourNewProfile	¿Me enseñas tu nuevo perfil?$
+ProfileMan_Text_EvenBetterThanLastProfile	¡Sí! ¡Gracias!\pOjalá sea aún mejor que el perfil\nque me enseñaste la otra vez.$
+ProfileMan_Text_LikeProfileWayItIs	Ah, te gusta tu perfil tal como está.\pNormal: es un perfil maravilloso\ntal y como está ahora.$
+ProfileMan_Text_FantasticProfile	¡F-fantástico!\p¡Tu perfil es maravilloso!\nDice mucho de ti.\p¡Cualquiera que lo oiga caerá\nrendido a tus pies!\p¡Gracias!$
+ProfileMan_Text_YouKnowSecretSaying	¿Oh?\n¡Conoces la frase secreta!\p¡Eso quiere decir que ya eres\nmiembro del CLUB EVENTO MISTERIOSO!$

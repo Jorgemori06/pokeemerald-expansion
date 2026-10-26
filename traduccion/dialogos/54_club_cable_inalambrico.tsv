@@ -1,0 +1,92 @@
+# Textos comunes (Jorge): CLUB CABLE y CLUB INALÁMBRICO POKéMON (planta 2.ª de los CENTROS POKéMON), SALA UNIÓN, RINCÓN DIRECTO, RINCÓN DE DATOS y minijuegos de ALGARIA
+CableClub_Text_WelcomeWhichCableClubService	Te damos la bienvenida al CLUB\nCABLE POKéMON.\p¿Qué servicio quieres usar?$
+CableClub_Text_WhichService	¿Qué servicio quieres usar?$
+CableClub_Text_TradeUsingLinkCable	Cambia POKéMON con otro jugador\ncon el Cable Game Link.$
+CableClub_Text_BattleUsingLinkCable	Combate contra otro ENTRENADOR\ncon el Cable Game Link.$
+CableClub_Text_RecordCornerUsingLinkCable	Usa el RINCÓN DE DATOS con otros\njugadores con el Cable Game Link.$
+CableClub_Text_CloseThisMenu	Cierra este menú.$
+CableClub_Text_NeedTwoMonsForDoubleBattle	Para un COMBATE DOBLE necesitas\nal menos dos POKéMON.$
+CableClub_Text_NeedTwoMonsToTrade	Para intercambiar necesitas llevar\nal menos dos POKéMON.$
+CableClub_Text_CantTradeEnigmaBerry	No se puede intercambiar un POKéMON\nque lleve la BAYA {STR_VAR_1}.$
+gText_PleaseWaitForLink	Espera, por favor.\n… … Botón B: cancelar$
+gText_ConfirmLinkWhenPlayersReady	Cuando estéis todos listos…\nBotón A: confirmar\lBotón B: cancelar$
+gText_ConfirmStartLinkWithXPlayers	Conectar con {STR_VAR_1} jugadores.\nBotón A: confirmar\lBotón B: cancelar$
+gText_AwaitingLinkup	Esperando la conexión…\n… … Botón B: cancelar$
+CableClub_Text_OkayToSaveProgress	Hay que guardar la partida antes de\nconectar. ¿Quieres guardar?$
+CableClub_Text_PleaseEnter	Adelante, pasa.$
+CableClub_Text_DirectYouToYourRoom	Te acompaño a tu sala.$
+Text_SomeoneIsNotReadyToLink	Alguien no está listo para conectar.\pVolved cuando todos estéis\npreparados.$
+Text_LinkErrorPleaseReset	Lo siento, ha habido un error de\nconexión… Reinicia y vuelve a probar.$
+Text_PlayersMadeDifferentSelections	Parece que los jugadores han\nelegido cosas distintas.$
+CableClub_Text_PleaseVisitAgain	¡Vuelve cuando quieras!$
+CableClub_Text_IncorrectNumberOfParticipants	El número de participantes no es\ncorrecto.$
+CableClub_Text_CantSingleBattleWithXPlayers	El modo COMBATE INDIVIDUAL no es\npara {STR_VAR_1} jugadores.$
+CableClub_Text_CantDoubleBattleWithXPlayers	El modo COMBATE DOBLE no es\npara {STR_VAR_1} jugadores.$
+CableClub_Text_NeedFourPlayers	Para este modo de combate hacen\nfalta cuatro jugadores.$
+CableClub_Text_PleaseConfirmNumberAndRestart	Comprobad el número de jugadores\ny volved a empezar.$
+Text_TerminateLinkConfirmation	Si sales de la sala, se cortará la\nconexión. ¿Te parece bien?$
+Text_TerminateLinkPleaseWait	Cortando la conexión…\nTe acompañaremos fuera de la\lsala. Espera, por favor.$
+CableClub_Text_TooBusyToNotice	Este ENTRENADOR está tan ocupado\nque no se da cuenta…$
+CableClub_Text_GotToLookAtTrainerCard	¡Bien! ¡Has visto la FICHA DE\nENTRENADOR de {STR_VAR_1}!$
+CableClub_Text_GotToLookAtColoredTrainerCard	¡Bien! ¡Has visto la FICHA DE\nENTRENADOR de {STR_VAR_1}!\p¡Es una ficha {STR_VAR_2}!$
+BattleColosseum_2P_Text_TakePlaceStartBattle	Ocupa tu sitio y empieza\nel combate.$
+TradeCenter_Text_TakeSeatStartTrade	Siéntate y empieza\nel intercambio.$
+RecordCorner_Text_ThanksForComing	Gracias por venir.$
+CableClub_Text_TrainerCardDataOverwritten	Se sobrescribirán los datos de la\nFICHA DE ENTRENADOR.$
+CableClub_Text_HopeToSeeYouAgain	¡Espero verte otra vez!$
+CableClub_Text_NotSetUpForFarAwayRegion	Lo siento muchísimo.\pTodavía no podemos hacer\nintercambios con ENTRENADORES\lde otras regiones lejanas…$
+CableClub_Text_OtherTrainerNotReady	El otro ENTRENADOR no está listo.$
+CableClub_Text_YouHaveAMonThatCantBeTaken	Llevas al menos un POKéMON\nque no se puede llevar.$
+RecordCorner_Text_TakeSeatAndWait	Siéntate y espera, por favor.$
+RecordCorner_Text_PlayerSentOverOneX	{STR_VAR_1} ha enviado\n{STR_VAR_2}.$
+CableClub_Text_CantMixWithJapaneseGame	Lo siento, ha habido un error.\pNo se pueden mezclar datos con  \nRubí o Zafiro japoneses.\pTampoco se pueden mezclar a la vez\ncon Esmeralda japonés y con Rubí o\lZafiro de otros países.$
+CableClub_Text_AdapterNotConnected	El Adaptador inalámbrico no está\nbien conectado.$
+CableClub_Text_ParticipantsStepUpToCounter	Los participantes deben acercarse\na la recepción.$
+CableClub_Text_Hello	¡Hola!$
+CableClub_Text_PleaseWait	Espera, por favor.$
+CableClub_Text_YouMayTradeHere	Aquí puedes intercambiar POKéMON\ncon otro ENTRENADOR.$
+CableClub_Text_YouMayBattleHere	Aquí puedes combatir con tus\namigos.$
+CableClub_Text_CanMakeBerryPowder	De dos a cinco ENTRENADORES pueden\nhacer POLVO BAYA juntos.$
+CableClub_Text_CanMixRecords	Se pueden mezclar los datos de\ndos a cuatro jugadores.$
+CableClub_Text_GuideToVariousServices	Guía de los servicios del\nCLUB INALÁMBRICO.$
+CableClub_Text_CancelSelectedItem	Cancela la opción elegida.$
+CableClub_Text_WhichBattleMode	¿Qué modo de combate quieres?$
+CableClub_Text_ReturnsToPreviousStep	Vuelve al paso anterior.$
+CableClub_Text_NeedBerryForBerryCrush	Para usar el MACHACABAYAS necesitas\nal menos una BAYA.$
+CableClub_Text_NeedTwoMonsForUnionRoom	Para entrar en la SALA UNIÓN\nnecesitas al menos dos POKéMON.$
+CableClub_Text_NoEnigmaBerryInUnionRoom	No puede entrar en la SALA UNIÓN un\nPOKéMON que lleve la BAYA {STR_VAR_1}.$
+CableClub_Text_UnionRoomAdapterNotConnected	Esta es la SALA UNIÓN del CLUB\nINALÁMBRICO POKéMON.\pPor desgracia, tu Adaptador\ninalámbrico no está bien conectado.\pVuelve cuando quieras.$
+CableClub_Text_OhExcuseMe	¡Oh…!\n¡Perdona!$
+CableClub_Text_PlayerIsWaiting	Parece que {STR_VAR_1} está jugando\nahora mismo.\l¡A por ello!$
+MossdeepCity_GameCorner_1F_Text_DescribeWhichGame	Si quieres, te explico las reglas\nde los juegos.\p¿Cuál te explico?$
+MossdeepCity_GameCorner_1F_Text_PokemonJumpInfo	“SALTO POKéMON”\pHaz que tu POKéMON salte la cuerda\nde LÁTIGO CEPA con el Botón A.\pSolo pueden participar POKéMON\npequeños, de unos 70 cm o menos.\pLos POKéMON que solo nadan, excavan\no vuelan no saben saltar bien.\pPor eso, esos POKéMON no pueden\nparticipar.\pSi todos saltáis a la vez,\npasan cosas buenas.$
+MossdeepCity_GameCorner_1F_Text_DodrioBerryPickingInfo	“RECOGEBAYAS DODRIO”\pDirige las tres cabezas de DODRIO\npara atrapar las BAYAS que caen.\pPulsa derecha, arriba o izquierda\nen el {PLUS} Panel de Control para\lmover las cabezas.\pPara jugar necesitas un DODRIO.$
+MossdeepCity_GameCorner_1F_Text_TalkToOldManToPlay	Si quieres jugar, díselo al señor\nque tengo al lado.$
+MossdeepCity_GameCorner_1F_Text_WelcomeCanYouWait	¡Hola, te damos la bienvenida!\n¿Vienes a jugar con la\lComunicación inalámbrica?\p¿Puedes esperar un poquito?$
+MossdeepCity_GameCorner_1F_Text_ComeAgain	¡Muy bien, vuelve cuando quieras!$
+MossdeepCity_GameCorner_1F_Text_AdapterNotConnected	El Adaptador inalámbrico no está\nconectado. ¡Vuelve cuando lo esté!$
+MossdeepCity_GameCorner_1F_Text_PlayWhichGame	Muy bien, ¿a qué juego quieres\njugar?$
+MossdeepCity_GameCorner_1F_Text_EnterWhichPokemon	¿Con qué POKéMON quieres\nparticipar?$
+MossdeepCity_GameCorner_1F_Text_AllGoodToGo	Vale, ya está todo listo.\n¡Que no te ganen los demás!$
+MossdeepCity_GameCorner_1F_Text_LeavingDoComeAgain	¿Ya te vas?\n¡Vuelve cuando quieras!$
+MossdeepCity_GameCorner_1F_Text_ExplainRequiredMon	Parece que no tienes ningún POKéMON\nque pueda participar…\p¿Quieres que te explique qué\nPOKéMON pueden participar?$
+MossdeepCity_GameCorner_1F_Text_ShortJumpingPokemonAllowed	En el “SALTO POKéMON” pueden\nparticipar POKéMON de unos 70 cm\lo menos.\pLos que no pueden son los\nPOKéMON que no saben saltar.\pYa sabes, los que solo nadan,\nexcavan o vuelan.\pY eso es todo lo que hay que saber.$
+MossdeepCity_GameCorner_1F_Text_OnlyDodrioAllowed	En RECOGEBAYAS DODRIO solo puede \nparticipar DODRIO.$
+MossdeepCity_GameCorner_1F_Text_RetryPlease	¿Puedes volver a empezar desde\nel principio, por favor?$
+CableClub_Text_WelcomeWhichDirectCornerRoom	Te damos la bienvenida al RINCÓN\nDIRECTO del CLUB INALÁMBRICO.\pAquí puedes jugar directamente\ncon tus amigos.\p¿En qué sala quieres\nentrar?$
+CableClub_Text_TradePokemon	¿Quieres intercambiar POKéMON?$
+CableClub_Text_PlayWhichBattleMode	¿A qué modo de combate quieres\njugar?$
+CableClub_Text_AccessRecordCorner	¿Quieres entrar en el\nRINCÓN DE DATOS?$
+CableClub_Text_UseBerryCrush	¿Quieres usar el sistema\nMACHACABAYAS?$
+CableClub_Text_ExplainBattleModes	Hay tres modos de combate.\pEl COMBATE INDIVIDUAL es para dos\nENTRENADORES con uno o más POKéMON.\pCada ENTRENADOR saca un POKéMON\nal combate cada vez.\pEl COMBATE DOBLE es para dos\nENTRENADORES con dos o más POKéMON.\pCada ENTRENADOR saca dos\nPOKéMON a la vez.\pEl COMBATE MÚLTIPLE es para cuatro\nENTRENADORES con uno o más POKéMON.\pCada ENTRENADOR saca un POKéMON\nal combate cada vez.$
+CableClub_Text_ChooseGroupLeaderOfTwo	Decidid quién de los dos será\nel LÍDER.\pEl otro jugador tendrá que elegir\n“UNIRSE AL GRUPO”.$
+CableClub_Text_ChooseGroupLeaderOfFour	Decidid quién de los cuatro será\nel LÍDER DEL GRUPO.\pLos demás jugadores tendrán que\nelegir “UNIRSE AL GRUPO”.$
+CableClub_Text_ChooseGroupLeader	Decidid quién de vosotros será\nel LÍDER DEL GRUPO.\pLos demás jugadores tendrán que\nelegir “UNIRSE AL GRUPO”.$
+CableClub_Text_WelcomeUnionRoomEnter	Te damos la bienvenida a la SALA\nUNIÓN del CLUB INALÁMBRICO.\pAquí puedes jugar directamente\ncon otros ENTRENADORES, aunque\lno los conozcas.\p¿Quieres entrar en la SALA?$
+CableClub_Text_UnionRoomInfo	Los ENTRENADORES de la SALA UNIÓN\nson los jugadores de tu alrededor\lque también han entrado.\pAquí puedes hacer muchas cosas,\ncomo saludaros.\pPuedes inscribir dos POKéMON de\nhasta Nv. 30 para un combate.\pPuedes charlar con dos a cinco\npersonas.\pO puedes inscribir un POKéMON para\nintercambiarlo.\p¿Quieres entrar en la SALA?$
+CableClub_Text_EnjoyUnionRoom	Espero que lo pases bien en\nla SALA UNIÓN.$
+CableClub_Text_FirstTimeRightThisWay	¡Hola!\nMe llamo TEALA.\pDebe de ser tu primera vez\npor aquí.\pTe enseñaré cómo funciona el\nsistema de Comunicación inalámbrica.\pPrimero tengo que enseñarte esta\nplanta del CENTRO POKéMON.\pPor aquí, por favor.$
+CableClub_Text_ExplainWirelessClubFirstTime	En la planta de arriba hay dos\nsalas.\pPrimero, la de la izquierda.\nEs la SALA UNIÓN.\pAllí puedes conectar con los\nENTRENADORES de tu alrededor que\ltambién hayan entrado.\pCon ellos puedes charlar, combatir\no intercambiar, por ejemplo.\pSegundo, la sala de la derecha es\nel RINCÓN DIRECTO.\pAllí puedes intercambiar o combatir\ncon tus amigos.\pSi no tienes el Adaptador\ninalámbrico conectado, puedes usar\lel Cable Game Link.\pEn ese caso, tienes que ir al\nRINCÓN DIRECTO.\pEspero que disfrutes del sistema de \nComunicación inalámbrica.$
+CableClub_Text_AskAboutLinking	¡Hola, {PLAYER}!\pSoy yo, TEALA, la encargada de la\n2.ª planta del CENTRO POKéMON.\p¿Querías preguntarme algo sobre\nlas conexiones?$
+CableClub_Text_ExplainWirelessClub	Te explico cómo funciona el CLUB\nINALÁMBRICO POKéMON.\pEn esta planta, la de arriba, hay\ndos salas.\pPrimero, la de la izquierda.\nEs la SALA UNIÓN.\pAllí puedes conectar con los\nENTRENADORES de tu alrededor que\ltambién hayan entrado.\pCon ellos puedes charlar, combatir\no intercambiar, por ejemplo.\pSegundo, la sala de la derecha es\nel RINCÓN DIRECTO.\pAllí puedes intercambiar o combatir\ncon tus amigos.\pA veces no encontrarás a tus amigos\nen la SALA UNIÓN ni en el\lRINCÓN DIRECTO.\pEn ese caso, acércate más a\ntus amigos.\pSi no tienes el Adaptador\ninalámbrico conectado, puedes usar\lel Cable Game Link.\pEn ese caso, tienes que ir al\nRINCÓN DIRECTO.\pEspero que disfrutes del sistema de \nComunicación inalámbrica.$
+CableClub_Text_HopeYouEnjoyWirelessSystem	Espero que disfrutes del sistema de\nComunicación inalámbrica.$

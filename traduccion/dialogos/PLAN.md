@@ -25,7 +25,7 @@ En orden de la historia:
 Los textos comunes resultaron ser muchos más (~1500 de Hoenn). Los que quedan se reparten así:
 
 - **Miguel:** `berry_tree`, `berries`, `berry_blender`, `blend_master`, `pokedex_rating`, `move_tutors`, `secret_base` y `shared_secret_base` (**hechos**, tramos 26-28); quedan `mauville_man` (el hombre de MALVALONA, ~165) y `tv` (los programas de la tele, ~400).
-- **Jorge:** `contest_hall`, `lilycove_lady`, `lottery_corner`, `profile_man`, `pokemon_news`, `questionnaire`, `cable_club` y `match_call` (las llamadas de la AGENDA, ~320). Unos 580, que se suman a sus zonas.
+- **Jorge:** `contest_hall`, `lilycove_lady`, `lottery_corner`, `profile_man`, `pokemon_news`, `questionnaire`, `cable_club` y `match_call` (las llamadas de la AGENDA, ~320). Unos 580 (**hechos**, 26/10/2026, archivos 50-55).
 - **No se traducen:** `apprentice`, `battle_tent`, `battle_frontier` (postgame), todo lo `_frlg` (Kanto), `debug`, los `gift_*` y `mystery_event_club` (eventos), `test_signpost`, `flavor_text` (muebles de los mapas de Kanto) y la parte de OAK de `pokedex_rating`.
 
 ## Jorge: tramos 30 a 49 (unos 1300 textos)

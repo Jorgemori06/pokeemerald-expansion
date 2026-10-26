@@ -1,0 +1,77 @@
+# Textos comunes (Jorge): SALA DE CONCURSOS (recepción, explicaciones, CONCURSOS por cable y el PRESENTADOR)
+LilycoveCity_ContestLobby_Text_ReceptionDontHavePokeblockCase	¡Hola!\pEsta es la recepción de los\nCONCURSOS POKéMON.\p¿Oh? Parece que aún no tienes\nun TUBO {POKEBLOCK}.\p¡Pues tenemos que darte esto!$
+LilycoveCity_ContestLobby_Text_NowThatWeveClearedThatUp	Bien, ahora que ya está solucionado…\p¡Hola!\pEsta es la recepción de los\nCONCURSOS POKéMON.$
+LilycoveCity_ContestLobby_Text_ContestReception	¡Hola!\pEsta es la recepción de los\nCONCURSOS POKéMON.$
+LilycoveCity_ContestLobby_Text_CounterOnlyFor4PlayerContests	¡Hola!\pEsta recepción es solo para\nCONCURSOS POKéMON de 4 jugadores.$
+LilycoveCity_ContestLobby_Text_EnterContest1	¿Quieres inscribir a tu POKéMON\nen nuestros CONCURSOS?$
+LilycoveCity_ContestLobby_Text_WhichTopic1	¿Sobre qué quieres información?$
+LilycoveCity_ContestLobby_Text_ExplainContests	En un CONCURSO POKéMON, cuatro\nENTRENADORES presentan un POKéMON\lcada uno para que los juzguen.\pUn CONCURSO tiene dos fases:\nla primera y la segunda.\pLa primera fase es una votación\ndel público.\pEn la segunda fase, los POKéMON\nse exhiben con sus movimientos.\pPiensa bien las exhibiciones para\nllamar la atención del JUEZ y\lemocionar al público.\l¡Intenta destacar!\pAl final se suman las puntuaciones\nde las dos fases.\pEl POKéMON con la puntuación más\nalta gana.$
+LilycoveCity_ContestLobby_Text_ExplainContestTypes	Hay cinco clases de CONCURSOS.\pCARISMA, BELLEZA, DULZURA, INGENIO\ny DUREZA son las cinco categorías.\pElige el CONCURSO que mejor le vaya\nal POKéMON que vayas a presentar.$
+LilycoveCity_ContestLobby_Text_ExplainContestRanks	Hay cuatro rangos de CONCURSOS\nPOKéMON.\pNORMAL, SUPER, HIPER y MASTER\nson los cuatro rangos.\pEn el rango NORMAL puede participar\ncualquier POKéMON.\pEl POKéMON que gana un CONCURSO de\nrango NORMAL puede pasar al rango\lSUPER de la misma categoría.\pIgual que el que gana en SUPER puede\npasar a HIPER, y el que gana en\lHIPER puede pasar a MASTER en la\lmisma categoría.\pEl POKéMON que gana en MASTER puede\nvolver a competir en MASTER tantas\lveces como quiera su ENTRENADOR.$
+LilycoveCity_ContestLobby_Text_EnterWhichRank	¿En qué rango quieres participar?$
+LilycoveCity_ContestLobby_Text_EnterWhichContest1	¿En qué CONCURSO quieres participar?$
+LilycoveCity_ContestLobby_Text_EnterWhichPokemon1	¿Qué POKéMON quieres presentar?$
+LilycoveCity_ContestLobby_Text_MonNotQualifiedForRank	Lo siento muchísimo, pero tu POKéMON\naún no puede competir en\leste rango…$
+LilycoveCity_ContestLobby_Text_EggCannotTakePart	Lo siento, pero un HUEVO no puede\nparticipar en un CONCURSO POKéMON.$
+LilycoveCity_ContestLobby_Text_MonInNoConditionForContest	Parece que tu POKéMON no está en\ncondiciones de participar…$
+LilycoveCity_ContestLobby_Text_AlreadyWonEnterAnyway	Ah, pero esa CINTA…\pTu POKéMON ya ha ganado este\nCONCURSO, ¿verdad?\p¿Quieres presentarlo a este\nCONCURSO de todas formas?$
+LilycoveCity_ContestLobby_Text_ConfirmContestMon	¿Es este tu POKéMON para el CONCURSO?$
+LilycoveCity_ContestLobby_Text_YourMonIsEntryNum4	Bien, tu POKéMON queda inscrito\nen este CONCURSO.\pTu POKéMON es el participante n.º 4.\nEl CONCURSO empezará enseguida.$
+LilycoveCity_ContestLobby_Text_ComeThroughHere	Pasa por aquí, por favor.\n¡Buena suerte!$
+LilycoveCity_ContestLobby_Text_PokemonWonWeHavePrize	¡Enhorabuena! ¡Tu POKéMON ha ganado\nel CONCURSO!\pTenemos aquí tu premio.\n¡Por aquí, por favor!$
+LilycoveCity_ContestLobby_Text_ComeBackForPrizeLater	Vuelve más tarde a por tu premio,\npor favor.$
+ContestHall_Text_GettingStartedParticipantsAsFollows	PRESENTADOR: ¡Hola! ¡Empezamos\nun CONCURSO de {STR_VAR_2}\lde rango {STR_VAR_3}!\pLos ENTRENADORES participantes y sus\nPOKéMON son los siguientes:$
+ContestHall_Text_GettingStartedParticipantsAsFollowsLink	PRESENTADOR: ¡Hola! ¡Empezamos\nun CONCURSO de {STR_VAR_2}\lpor cable de 4 jugadores!\pLos ENTRENADORES participantes y sus\nPOKéMON son los siguientes:$
+ContestHall_Text_EntryXTrainersMon	PRESENTADOR: ¡Participante {STR_VAR_2}!\n¡{STR_VAR_3} de {STR_VAR_1}!$
+ContestHall_Text_SeenContestantsAudienceWillVote	PRESENTADOR: Ya hemos visto a los\ncuatro POKéMON participantes.\p¡Es la hora de la primera fase!\pEl público votará a sus\nPOKéMON favoritos.\pSin más preámbulos, ¡que empiece\nla votación!$
+ContestHall_Text_VotingUnderWay	Votación en curso…$
+ContestHall_Text_VotingCompleteLetsAppeal	¡La votación ha terminado!\pMientras se cuentan los votos,\n¡pasemos a la segunda fase!\p¡La segunda fase es el esperado\nmomento de las exhibiciones!\p¡Que los participantes nos asombren\ncon movimientos deslumbrantes!\p¡Un poco de entusiasmo!\n¡A exhibirse!$
+ContestHall_Text_ThatsItForJudging	PRESENTADOR: ¡Y aquí acaba el juicio!$
+ContestHall_Text_ThankYouForAppeals	¡Gracias a todos por unas\nexhibiciones maravillosas!\p¡Con esto termina el juicio!\n¡Gracias por vuestro esfuerzo!$
+ContestHall_Text_JudgeLooksReady	Ahora solo queda el emocionante\nmomento de anunciar al ganador.\p¡Parece que el JUEZ está listo\npara darlo a conocer!$
+ContestHall_Text_WeWillNowDeclareWinner	JUEZ: ¡Anunciamos al ganador!$
+ContestHall_Text_CongratsTrainerXandMon	PRESENTADOR: ¡Participante {STR_VAR_2}!\p¡{STR_VAR_3} y {STR_VAR_1},\nenhorabuena!$
+ContestHall_Text_CongratsPleaseCompeteAgain	PRESENTADOR: ¡Enhorabuena!\n¡Vuelve a participar cuando quieras!$
+ContestHall_Text_AcceptYourPrize	PRESENTADOR: ¡Aquí tienes!\n¡Acepta tu premio!$
+ContestHall_Text_ConferRibbonAsPrize	¡Te otorgamos esta CINTA\ncomo premio!$
+ContestHall_Text_ReceivedRibbon	{PLAYER} ha recibido una CINTA.$
+ContestHall_Text_PutRibbonOnMon	{PLAYER} le ha puesto la CINTA a\n{STR_VAR_1}.$
+ContestHall_Text_PickUpPrizeAtCounterLater	Recoge tu premio más tarde en\nla recepción, por favor.\l¡Vuelve a participar cuando quieras!$
+ContestHall_Text_OnlyRegister4Players	Solo inscribo a cuatro jugadores\nen los CONCURSOS POKéMON.\pSi se conectan otros tres jugadores,\nlos cuatro podéis entrar en el mismo\lCONCURSO.\p¿Quieres participar?$
+LilycoveCity_ContestLobby_Text_ProgressWillBeSaved	Antes de entrar en un CONCURSO,\nse guardará la partida.$
+LilycoveCity_ContestLobby_Text_ParticipateAnotherTime	Esperamos que participes en\notra ocasión.$
+LilycoveCity_ContestLobby_Text_EnterContest2	¿Quieres participar en un CONCURSO?$
+LilycoveCity_ContestLobby_Text_Explain4PlayerContest	Cuando estéis los cuatro jugadores,\nconectaos con el Cable Game Link\ly venid a inscribiros conmigo.\pElegid todos el mismo CONCURSO.\pEl CONCURSO empieza en cuanto todos\nlos jugadores se hayan inscrito.\pA partir de ahí, se siguen las\nnormas de siempre.$
+LilycoveCity_ContestLobby_Text_EnterWhichContest2	¿En qué CONCURSO quieres participar?$
+LilycoveCity_ContestLobby_Text_EnterWhichPokemon2	¿Qué POKéMON quieres presentar?$
+LilycoveCity_ContestLobby_Text_Transmitting	Transmitiendo…$
+LilycoveCity_ContestLobby_Text_TransmissionError	Error de transmisión…$
+LilycoveCity_ContestLobby_Text_PlayersChoseDifferentContest	Puede que hayas elegido un CONCURSO\ndistinto al de otro jugador.$
+LilycoveCity_ContestLobby_Text_PlayersMadeDifferentChoice	Puede que hayas elegido algo\ndistinto que otro jugador.$
+LilycoveCity_ContestLobby_Text_PleaseWaitBButtonCancel	Espera, por favor.\n… … Botón B: cancelar$
+LilycoveCity_ContestLobby_Text_ParticipateAnotherTime2	Esperamos que participes en\notra ocasión.$
+LilycoveCity_ContestLobby_Text_TransmissionErrorTryAgain	Error de transmisión.\nVuelve a intentarlo.$
+LilycoveCity_ContestLobby_Text_YourMonIsEntryNumX	Tu POKéMON queda inscrito en\nel CONCURSO.\pEs el participante n.º {STR_VAR_2}.$
+LilycoveCity_ContestLobby_Text_ContestBeginShortly	El CONCURSO empezará enseguida.$
+LilycoveCity_ContestLobby_Text_LinkContestReception	¡Hola! Esta es la recepción de los\nCONCURSOS POKéMON por cable.\pPuedes participar en CONCURSOS junto\na uno o más amigos.$
+LilycoveCity_ContestLobby_Text_WhichTopic2	¿Sobre qué quieres información?$
+LilycoveCity_ContestLobby_Text_EnterContest3	¿Quieres participar en un CONCURSO?$
+LilycoveCity_ContestLobby_Text_EnterWhichContest3	¿En qué CONCURSO quieres participar?$
+LilycoveCity_ContestLobby_Text_MonInNoCondition2	Parece que tu POKéMON no está en\ncondiciones de participar…$
+LilycoveCity_ContestLobby_Text_EggCannotTakePart2	Lo siento, pero un HUEVO no puede\nparticipar en un CONCURSO POKéMON.$
+LilycoveCity_ContestLobby_Text_EnterWhichPokemon3	¿Qué POKéMON quieres presentar?$
+LilycoveCity_ContestLobby_Text_PleaseDecideLinkLeader	Decidid quién de vosotros será\nel LÍDER DEL GRUPO.\pLos demás jugadores tendrán que\nelegir “UNIRSE AL GRUPO”.$
+LilycoveCity_ContestLobby_Text_PlayerAt4PCounterUseGMode	Al menos un jugador se ha inscrito\nen la recepción de 4 jugadores.\pTiene que haber cuatro jugadores\nconectados con el Cable Game Link.\pCuando estéis los cuatro, elegid\nMODO G (MODO GLOBAL)\ly volved a inscribiros, por favor.$
+LilycoveCity_ContestLobby_Text_ExplainLinkContest	Es un CONCURSO para dos a cuatro\njugadores conectados con un Adaptador\linalámbrico o un Cable Game Link.\pPrimero, cada participante elige\nen qué modo quiere participar.\pHay dos modos.\pEl MODO E (MODO ESMERALDA) es para\ndos a cuatro jugadores, cada uno\lcon un cartucho de POKéMON Esmeralda.\pEl MODO G (MODO GLOBAL) es solo para\ncuatro jugadores, cada uno con\lPOKéMON Esmeralda, Rubí o Zafiro.\pLos jugadores deben hablarlo\ny elegir el mismo modo.\pCuando todos hayan elegido el mismo\nCONCURSO en el mismo modo,\lla inscripción estará completa.\pDespués, el CONCURSO empezará\ncomo siempre.$
+LilycoveCity_ContestLobby_Text_ExplainEMode	En el MODO E (MODO ESMERALDA),\nun CONCURSO por cable puede ser de\ldos a cuatro jugadores. Cada uno\ldebe tener POKéMON Esmeralda.\pLos jugadores deben conectarse con\nAdaptadores inalámbricos o\lCables Game Link.\pSi hay menos de cuatro jugadores,\nENTRENADORES de la sala completarán\llos cuatro puestos del CONCURSO.\pTen en cuenta que el MODO E no existe\nen POKéMON Rubí ni Zafiro.$
+LilycoveCity_ContestLobby_Text_ExplainGMode	El MODO G (MODO GLOBAL) es solo\npara cuatro jugadores conectados\lcon Cables Game Link.\pCada uno debe tener POKéMON\nEsmeralda, Rubí o Zafiro.\pEl CONCURSO empieza cuando todos\nelijan el MODO G (POKéMON Esmeralda)\lo se inscriban en la recepción de 4\ljugadores (POKéMON Rubí o Zafiro).$
+LilycoveCity_ContestLobby_Text_NoWirelessAdapterInGMode	Lo siento muchísimo.\pEl MODO G no funciona con\nAdaptadores inalámbricos.\pElige el MODO E o vuelve a intentarlo\ncon un Cable Game Link.$
+LilycoveCity_ContestLobby_Text_WhichContestMode	¿En qué MODO DE CONCURSO quieres\nparticipar?$
+ContestHall_Text_GettingStartedWireless	PRESENTADOR: ¡Hola! ¡Empezamos\nun CONCURSO de {STR_VAR_2}\lpor cable de 4 jugadores!$
+ContestHall_Text_ParticipantsAsFollows	Los ENTRENADORES participantes y sus\nPOKéMON son los siguientes:$
+ContestHall_Text_WeveSeenContestants	PRESENTADOR: Ya hemos visto a los\ncuatro POKéMON participantes.\p¡Es la hora de la primera fase!$
+ContestHall_Text_AudienceWillVote	El público votará a sus\nPOKéMON favoritos.$
+ContestHall_Text_LetVotingBegin	Sin más preámbulos,\n¡que empiece la votación!$
+ContestHall_Text_VotingComplete	¡La votación ha terminado!\pMientras se cuentan los votos,\n¡pasemos a la segunda fase!$
+ContestHall_Text_SecondStageOfJudging	¡La segunda fase es el esperado\nmomento de las exhibiciones!\p¡Que los participantes nos asombren\ncon movimientos deslumbrantes!$
+ContestHall_Text_LetsAppeal	¡Un poco de entusiasmo!\n¡A exhibirse!$

@@ -48,6 +48,12 @@ VILLA RAÍZ, PUEBLO ESCASO, CIUDAD PETALIA, CIUDAD FÉRRICA, PUEBLO AZULIZA, PUE
 | BAYAS: árboles, regalos de BAYAS, FLORISTERÍA PÉTALO BONITO, MAESTRO DE BAYAS y LICUADORA | `26_bayas.tsv` |
 | Valoración de la POKéDEX del PROF. ABEDUL y TUTORES de movimientos | `27_pokedex_tutores.tsv` |
 | BASES SECRETAS | `28_bases_secretas.tsv` |
+| Textos comunes (Jorge): LOTERÍA, cuestionario y hombre de los perfiles | `50_loteria_cuestionario_perfiles.tsv` |
+| Textos comunes (Jorge): NOTICIAS POKéMON de la tele | `51_noticias_pokemon.tsv` |
+| Textos comunes (Jorge): las DAMAS del CENTRO POKéMON de CALAGUA | `52_damas_calagua.tsv` |
+| Textos comunes (Jorge): SALA DE CONCURSOS | `53_sala_concursos.tsv` |
+| Textos comunes (Jorge): CLUB CABLE e INALÁMBRICO, SALA UNIÓN y minijuegos de ALGARIA | `54_club_cable_inalambrico.tsv` |
+| Textos comunes (Jorge): llamadas de la AGENDA del POKéNAV | `55_agenda.tsv` |
 
 Siguiente: lo que queda está repartido entre Miguel y Jorge en `PLAN.md`.
 
