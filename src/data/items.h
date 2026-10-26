@@ -477,7 +477,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("Restores the HP of\n"
             "a Pokémon by\n"
             "20 points."), COMPOUND_STRING("Restaura 20 PS a un\n" "Pokémon.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -501,7 +501,7 @@ const struct ItemInfo gItemsInfo[] =
         #else
             "50 points."),
         #endif
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -525,7 +525,7 @@ const struct ItemInfo gItemsInfo[] =
         #else
             "200 points."),
         #endif
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -543,7 +543,7 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffectParam = 255,
         .description = ES(COMPOUND_STRING("Fully restores the\n"
             "HP of a Pokémon."), COMPOUND_STRING("Restaura todos los\n" "PS de un Pokémon.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -562,7 +562,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("Fully restores the\n"
             "HP and status of a\n"
             "Pokémon."), COMPOUND_STRING("Restaura todos los\n" "PS y el estado de un\n" "Pokémon.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -580,7 +580,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("Revives a fainted\n"
             "Pokémon with half\n"
             "its HP."), COMPOUND_STRING("Revive a un Pokémon\n" "con la mitad de sus\n" "PS.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -598,7 +598,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("Revives a fainted\n"
             "Pokémon with all\n"
             "its HP."), COMPOUND_STRING("Revive a un Pokémon\n" "con todos sus PS.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -622,7 +622,7 @@ const struct ItemInfo gItemsInfo[] =
         #else
             "by 50 points."),
         #endif
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -646,7 +646,7 @@ const struct ItemInfo gItemsInfo[] =
         #else
             "by 60 points."),
         #endif
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -670,7 +670,7 @@ const struct ItemInfo gItemsInfo[] =
         #else
             "by 80 points."),
         #endif
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -689,7 +689,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("A nutritious milk\n"
             "that restores HP\n"
             "by 100 points."), COMPOUND_STRING("Leche nutritiva que\n" "restaura 100 PS.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -712,7 +712,7 @@ const struct ItemInfo gItemsInfo[] =
         #else
             "by 50 points."),
         #endif
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -735,7 +735,7 @@ const struct ItemInfo gItemsInfo[] =
         #else
             "by 200 points."),
         #endif
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -753,7 +753,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("A bitter powder\n"
             "that heals all\n"
             "status problems."), COMPOUND_STRING("Un polvo amargo que\n" "cura todos los\n" "estados.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_STATUS_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -771,7 +771,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("A very bitter herb\n"
             "that revives a\n"
             "fainted Pokémon."), COMPOUND_STRING("Una hierba muy\n" "amarga que revive a\n" "un Pokémon.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -788,7 +788,7 @@ const struct ItemInfo gItemsInfo[] =
         .price = (I_PRICE >= GEN_7) ? 200 : 100,
         .description = ES(COMPOUND_STRING("Heals a poisoned\n"
             "Pokémon."), COMPOUND_STRING("Cura el\n" "envenenamiento.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_STATUS_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -805,7 +805,7 @@ const struct ItemInfo gItemsInfo[] =
         .price = (I_PRICE == GEN_7) ? 300 : 200,
         .description = ES(COMPOUND_STRING("Heals a paralyzed\n"
             "Pokémon."), COMPOUND_STRING("Medicina en espray\n" "que cura a un\n" "Pokémon paralizado.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_STATUS_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -828,7 +828,7 @@ const struct ItemInfo gItemsInfo[] =
     #endif
         .description = ES(COMPOUND_STRING("Heals Pokémon\n"
             "of a burn."), COMPOUND_STRING("Cura las quemaduras.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_STATUS_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -857,7 +857,7 @@ const struct ItemInfo gItemsInfo[] =
             "Defrosts a frozen\n"
             "Pokémon."),
         #endif
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_STATUS_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -880,7 +880,7 @@ const struct ItemInfo gItemsInfo[] =
     #endif
         .description = ES(COMPOUND_STRING("Awakens a sleeping\n"
             "Pokémon."), COMPOUND_STRING("Despierta a un\n" "Pokémon dormido.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_STATUS_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -898,7 +898,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("Heals all the\n"
             "status problems of\n"
             "one Pokémon."), COMPOUND_STRING("Cura todos los\n" "problemas de estado.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_STATUS_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -917,7 +917,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("Restores the PP\n"
             "of a selected move\n"
             "by 10."), COMPOUND_STRING("Restaura 10 PP del\n" "movimiento elegido\n" "de un Pokémon.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_PP_RECOVERY,
         .type = ITEM_USE_PARTY_MENU_MOVES,
         .fieldUseFunc = ItemUseOutOfBattle_PPRecovery,
@@ -936,7 +936,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("Fully restores the\n"
             "PP of a selected\n"
             "move."), COMPOUND_STRING("Restaura todos los\n" "PP de un movimiento.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_PP_RECOVERY,
         .type = ITEM_USE_PARTY_MENU_MOVES,
         .fieldUseFunc = ItemUseOutOfBattle_PPRecovery,
@@ -954,7 +954,7 @@ const struct ItemInfo gItemsInfo[] =
         .holdEffectParam = 10,
         .description = ES(COMPOUND_STRING("Restores the PP\n"
             "of all moves by 10."), COMPOUND_STRING("Restaura 10 PP a\n" "todos los\n" "movimientos.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_PP_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_PPRecovery,
@@ -973,7 +973,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("Fully restores the\n"
             "PP of a Pokémon's\n"
             "moves."), COMPOUND_STRING("Restaura todos los\n" "PP de todos los\n" "movimientos.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_PP_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_PPRecovery,
@@ -993,7 +993,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("A 100% pure juice\n"
             "that restores HP\n"
             "by 20 points."), COMPOUND_STRING("Zumo de bayas 100%\n" "natural que restaura\n" "20 PS de un Pokémon.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -1012,7 +1012,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("Fully revives and\n"
             "restores all\n"
             "fainted Pokémon."), COMPOUND_STRING("Revive y cura del\n" "todo a los Pokémon\n" "debilitados.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_SacredAsh,
@@ -1030,7 +1030,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("A sweet chocolate\n"
             "that restores HP\n"
             "by 20 points."), COMPOUND_STRING("Chocolatina de sabor\n" "dulce. Restaura 20\n" "PS de un Pokémon.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -1049,7 +1049,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("Revives a fainted\n"
             "Pokémon with all\n"
             "its HP."), COMPOUND_STRING("Revive a un Pokémon\n" "con todos sus PS.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -1070,7 +1070,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("A local specialty\n"
             "that heals all\n"
             "status problems."), COMPOUND_STRING("Especialidad local\n" "que cura todos los\n" "estados.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_STATUS_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -1088,7 +1088,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("A local specialty\n"
             "that heals all\n"
             "status problems."), COMPOUND_STRING("Especialidad local\n" "que cura todos los\n" "estados.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_STATUS_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -1106,7 +1106,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("A local specialty\n"
             "that heals all\n"
             "status problems."), COMPOUND_STRING("Especialidad local\n" "que cura todos los\n" "estados.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_STATUS_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -1125,7 +1125,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("A local specialty\n"
             "that heals all\n"
             "status problems."), COMPOUND_STRING("Especialidad local\n" "que cura todos los\n" "estados.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_STATUS_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -1143,7 +1143,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("A local specialty\n"
             "that heals all\n"
             "status problems."), COMPOUND_STRING("Especialidad local\n" "que cura todos los\n" "estados.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_STATUS_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -1161,7 +1161,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("A local specialty\n"
             "that heals all\n"
             "status problems."), COMPOUND_STRING("Especialidad local\n" "que cura todos los\n" "estados.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_STATUS_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -1179,7 +1179,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("A local specialty\n"
             "that heals all\n"
             "status problems."), COMPOUND_STRING("Especialidad local\n" "que cura todos los\n" "estados.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_STATUS_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -1197,7 +1197,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("A local specialty\n"
             "that heals all\n"
             "status problems."), COMPOUND_STRING("Especialidad local\n" "que cura todos los\n" "estados.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_STATUS_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -1216,7 +1216,7 @@ const struct ItemInfo gItemsInfo[] =
         .price = (I_PRICE >= GEN_7) ? 10000 : 9800,
         .description = ES(COMPOUND_STRING("Raises the base HP\n"
             "of one Pokémon."), COMPOUND_STRING("Nutritiva bebida que\n" "potencia los PS de\n" "base de un Pokémon.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_STAT_BOOST_DRINK,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -1233,7 +1233,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("Raises the base\n"
             "Attack stat of one\n"
             "Pokémon."), COMPOUND_STRING("Sube la base de\n" "Ataque de un\n" "Pokémon.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_STAT_BOOST_DRINK,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -1250,7 +1250,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("Raises the base\n"
             "Defense stat of\n"
             "one Pokémon."), COMPOUND_STRING("Sube la base de\n" "Defensa de un\n" "Pokémon.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_STAT_BOOST_DRINK,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -1267,7 +1267,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("Raises the base\n"
             "Sp. Atk stat of one\n"
             "Pokémon."), COMPOUND_STRING("Sube la base de At.\n" "Esp. de un Pokémon.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_STAT_BOOST_DRINK,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -1284,7 +1284,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("Raises the base\n"
             "Sp. Def stat of one\n"
             "Pokémon."), COMPOUND_STRING("Sube la base de Def.\n" "Esp. de un Pokémon.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_STAT_BOOST_DRINK,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -1302,7 +1302,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("Raises the base\n"
             "Speed stat of one\n"
             "Pokémon."), COMPOUND_STRING("Sube la base de\n" "Velocidad de un\n" "Pokémon.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_STAT_BOOST_DRINK,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -1325,7 +1325,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("Raises the maximum\n"
             "PP of a selected\n"
             "move."), COMPOUND_STRING("Sube los PP máximos\n" "de un movimiento.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_STAT_BOOST_DRINK,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_PPUp,
@@ -1343,7 +1343,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("Raises the PP of a\n"
             "move to its maximum\n"
             "points."), COMPOUND_STRING("Sube al máximo los\n" "PP de un movimiento.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_STAT_BOOST_DRINK,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_PPUp,
@@ -1361,7 +1361,7 @@ const struct ItemInfo gItemsInfo[] =
         .price = (I_PRICE >= GEN_7) ? 300 : 3000,
         .description = ES(COMPOUND_STRING("Raises the base HP\n"
             "of one Pokémon."), COMPOUND_STRING("Sube un poco la base\n" "de PS de un Pokémon.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_STAT_BOOST_FEATHER,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -1378,7 +1378,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("Raises the base\n"
             "Attack stat of one\n"
             "Pokémon."), COMPOUND_STRING("Sube un poco la base\n" "de Ataque.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_STAT_BOOST_FEATHER,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -1395,7 +1395,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("Raises the base\n"
             "Defense stat of\n"
             "one Pokémon."), COMPOUND_STRING("Sube un poco la base\n" "de Defensa.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_STAT_BOOST_FEATHER,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -1412,7 +1412,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("Raises the base\n"
             "Sp. Atk stat of one\n"
             "Pokémon."), COMPOUND_STRING("Sube un poco la base\n" "de At. Esp.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_STAT_BOOST_FEATHER,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -1429,7 +1429,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("Raises the base\n"
             "Sp. Def stat of one\n"
             "Pokémon."), COMPOUND_STRING("Sube un poco la base\n" "de Def. Esp.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_STAT_BOOST_FEATHER,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -1446,7 +1446,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("Raises the base\n"
             "Speed stat of one\n"
             "Pokémon."), COMPOUND_STRING("Sube un poco la base\n" "de Velocidad.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_STAT_BOOST_FEATHER,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -1866,7 +1866,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("Raises the level\n"
             "of a Pokémon by\n"
             "one."), COMPOUND_STRING("Caramelo energético\n" "que sube a un\n" "Pokémon de nivel.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_LEVEL_UP_ITEM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_RareCandy,
@@ -1885,7 +1885,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("Grants a very small\n"
             "amount of Exp. to\n"
             "a single Pokémon."), COMPOUND_STRING("Da muy poca\n" "experiencia a un\n" "Pokémon.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_LEVEL_UP_ITEM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_RareCandy,
@@ -1904,7 +1904,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("Grants a small\n"
             "amount of Exp. to\n"
             "a single Pokémon."), COMPOUND_STRING("Da poca experiencia\n" "a un Pokémon.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_LEVEL_UP_ITEM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_RareCandy,
@@ -1923,7 +1923,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("Grants a moderate\n"
             "amount of Exp. to\n"
             "a single Pokémon."), COMPOUND_STRING("Da algo de\n" "experiencia a un\n" "Pokémon.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_LEVEL_UP_ITEM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_RareCandy,
@@ -1942,7 +1942,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("Grants a large\n"
             "amount of Exp. to\n"
             "a single Pokémon."), COMPOUND_STRING("Da mucha experiencia\n" "a un Pokémon.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_LEVEL_UP_ITEM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_RareCandy,
@@ -1961,7 +1961,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("Grants a very large\n"
             "amount of Exp. to\n"
             "a single Pokémon."), COMPOUND_STRING("Da muchísima\n" "experiencia a un\n" "Pokémon.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_LEVEL_UP_ITEM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_RareCandy,
@@ -1979,7 +1979,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("Raises the Dynamax\n"
             "Level of a single\n"
             "Pokémon by one."), COMPOUND_STRING("Sube 1 el nivel\n" "Dinamax de un\n" "Pokémon.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_LEVEL_UP_ITEM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_DynamaxCandy,
@@ -5383,7 +5383,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Venusaur to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Venusaur.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -5400,7 +5400,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Charizard to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Charizard.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -5417,7 +5417,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Charizard to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Charizard.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -5434,7 +5434,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Blastoise to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Blastoise.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -5451,7 +5451,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Beedrill to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Beedrill.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -5468,7 +5468,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Pidgeot to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Pidgeot.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -5485,7 +5485,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Alakazam to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Alakazam.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -5502,7 +5502,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Slowbro to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Slowbro.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -5519,7 +5519,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Gengar to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Gengar.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -5536,7 +5536,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Kangaskhan to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Kangaskhan.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -5553,7 +5553,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Pinsir to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Pinsir.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -5570,7 +5570,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Gyarados to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Gyarados.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -5587,7 +5587,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Aerodactyl to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Aerodactyl.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -5604,7 +5604,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Mewtwo to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Mewtwo.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -5621,7 +5621,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Mewtwo to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Mewtwo.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -5638,7 +5638,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Ampharos to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Ampharos.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -5655,7 +5655,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Steelix to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Steelix.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -5672,7 +5672,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Scizor to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Scizor.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -5689,7 +5689,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Heracross to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Heracross.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -5706,7 +5706,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Houndoom to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Houndoom.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -5723,7 +5723,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Tyranitar to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Tyranitar.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -5740,7 +5740,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Sceptile to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Sceptile.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -5757,7 +5757,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Blaziken to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Blaziken.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -5774,7 +5774,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Swampert to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Swampert.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -5791,7 +5791,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Gardevoir to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Gardevoir.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -5808,7 +5808,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Sableye to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Sableye.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -5825,7 +5825,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Mawile to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Mawile.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -5842,7 +5842,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Aggron to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Aggron.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -5859,7 +5859,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Medicham to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Medicham.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -5876,7 +5876,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Manectric to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Manectric.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -5893,7 +5893,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Sharpedo to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Sharpedo.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -5910,7 +5910,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Camerupt to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Camerupt.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -5927,7 +5927,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Altaria to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Altaria.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -5944,7 +5944,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Banette to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Banette.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -5961,7 +5961,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Absol to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Absol.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -5978,7 +5978,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Glalie to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Glalie.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -5995,7 +5995,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Salamence to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Salamence.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6012,7 +6012,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Metagross to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Metagross.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6029,7 +6029,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Latias to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Latias.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6046,7 +6046,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Latios to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Latios.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6063,7 +6063,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Lopunny to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Lopunny.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6080,7 +6080,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Garchomp to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Garchomp.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6097,7 +6097,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Lucario to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Lucario.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6114,7 +6114,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Abomasnow to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Inflige daño a los\n" "oponentes con una\n" "potente luz.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6131,7 +6131,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Gallade to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Gallade.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6148,7 +6148,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Audino to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Audino.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6165,7 +6165,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Diancie to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Diancie.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6182,7 +6182,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Clefable to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Clefable.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6199,7 +6199,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Victreebel to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Victreebel.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6216,7 +6216,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Starmie to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Starmie.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6233,7 +6233,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Dragonite to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Dragonite.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6250,7 +6250,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Meganium to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Meganium.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6267,7 +6267,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Feraligatr to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Feraligatr.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6284,7 +6284,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Skarmory to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Skarmory.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6301,7 +6301,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Froslass to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Froslass.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6318,7 +6318,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Emboar to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Emboar.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6335,7 +6335,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Excadrill to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Excadrill.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6352,7 +6352,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Scolipede to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Scolipede.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6369,7 +6369,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Scrafty to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Scrafty.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6386,7 +6386,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Eelektross to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Eelektross.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6403,7 +6403,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Chandelure to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Chandelure.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6420,7 +6420,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Chesnaught to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Chesnaught.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6437,7 +6437,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Delphox to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Delphox.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6454,7 +6454,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Greninja to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Greninja.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6471,7 +6471,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Pyroar to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Pyroar.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6488,7 +6488,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Floette to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Floette.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6505,7 +6505,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Malamar to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Malamar.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6522,7 +6522,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Barbaracle to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Barbaracle.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6539,7 +6539,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Dragalge to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Dragalge.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6556,7 +6556,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Hawlucha to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Hawlucha.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6573,7 +6573,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Zygarde to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Zygarde.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6590,7 +6590,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Drampa to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Drampa.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6607,7 +6607,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Falinks to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Falinks.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6624,7 +6624,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Heatran to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Heatran.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6641,7 +6641,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Darkrai to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Darkrai.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6658,7 +6658,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Zeraora to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Zeraora.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6675,7 +6675,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Raichu to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Raichu.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6692,7 +6692,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Raichu to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Raichu.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6709,7 +6709,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Chimecho to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Chimecho.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6726,7 +6726,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Absol to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Absol.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6743,7 +6743,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Staraptor to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Staraptor.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6760,7 +6760,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Garchomp to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Garchomp.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6777,7 +6777,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Lucario to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Lucario.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6794,7 +6794,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Golurk to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Golurk.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6811,7 +6811,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Meowstic to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Meowstic.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6828,7 +6828,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Crabominable to\n"
             "Mega in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Crabominable.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6845,7 +6845,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Golisopod to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Golisopod.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6862,7 +6862,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Magearna to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Magearna.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6879,7 +6879,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Scovillain to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Scovillain.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6896,7 +6896,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Baxcalibur to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Baxcalibur.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6913,7 +6913,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Tatsugiri to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Tatsugiri.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -6930,7 +6930,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("This stone enables\n"
             "Glimmora to Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Glimmora.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -14912,7 +14912,7 @@ const struct ItemInfo gItemsInfo[] =
         .price = 500,
         .description = ES(COMPOUND_STRING("Raises the base HP\n"
             "of one Pokémon."), COMPOUND_STRING("Sube la base de PS\n" "de un Pokémon.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_STAT_BOOST_MOCHI,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -14930,7 +14930,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("Raises the base\n"
             "Attack stat of one\n"
             "Pokémon."), COMPOUND_STRING("Sube la base de\n" "Ataque de un\n" "Pokémon.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_STAT_BOOST_MOCHI,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -14948,7 +14948,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("Raises the base\n"
             "Defense stat of\n"
             "one Pokémon."), COMPOUND_STRING("Sube la base de\n" "Defensa de un\n" "Pokémon.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_STAT_BOOST_MOCHI,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -14966,7 +14966,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("Raises the base\n"
             "Sp. Atk stat of one\n"
             "Pokémon."), COMPOUND_STRING("Sube la base de At.\n" "Esp. de un Pokémon.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_STAT_BOOST_MOCHI,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -14984,7 +14984,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("Raises the base\n"
             "Sp. Def stat of one\n"
             "Pokémon."), COMPOUND_STRING("Sube la base de Def.\n" "Esp. de un Pokémon.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_STAT_BOOST_MOCHI,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -15002,7 +15002,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("Raises the base\n"
             "Speed stat of one\n"
             "Pokémon."), COMPOUND_STRING("Sube la base de\n" "Velocidad de un\n" "Pokémon.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_STAT_BOOST_MOCHI,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -15020,7 +15020,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("A cake that causes\n"
             "a Pokémon to lose\n"
             "all its base stats."), COMPOUND_STRING("Un pastel que deja a\n" "cero los puntos de\n" "base.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_STAT_BOOST_MOCHI,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_ResetEVs,
@@ -15083,7 +15083,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("A local specialty\n"
             "that heals all\n"
             "status problems."), COMPOUND_STRING("Especialidad local\n" "que cura todos los\n" "estados.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_STATUS_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -15102,7 +15102,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = ES(COMPOUND_STRING("A bitter powder\n"
             "that restores HP\n"
             "by 20 points."), COMPOUND_STRING("Un polvo amargo que\n" "restaura 20 PS.")),
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -15126,7 +15126,7 @@ const struct ItemInfo gItemsInfo[] =
         #else
             "by 50 points."),
         #endif
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -15150,7 +15150,7 @@ const struct ItemInfo gItemsInfo[] =
         #else
             "by 200 points."),
         #endif
-        .pocket = POCKET_ITEMS,
+        .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,

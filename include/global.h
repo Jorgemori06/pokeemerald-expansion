@@ -254,6 +254,12 @@ struct NPCFollower
 #include "constants/items.h"
 #define ITEM_FLAGS_COUNT ((ITEMS_COUNT / 8) + ((ITEMS_COUNT % 8) ? 1 : 0))
 
+struct ItemSlot
+{
+    enum Item itemId;
+    u16 quantity;
+};
+
 struct SaveBlock3
 {
 #if OW_USE_FAKE_RTC
@@ -272,6 +278,9 @@ struct SaveBlock3
 #if APRICORN_TREE_COUNT > 0
     u8 apricornTrees[NUM_APRICORN_TREE_BYTES];
 #endif
+    // Dualocke: bolsillos nuevos de la mochila. Van aquí porque SaveBlock1 va justo de espacio.
+    struct ItemSlot bagMedicine[BAG_MEDICINE_COUNT];
+    struct ItemSlot bagMegaStones[BAG_MEGASTONES_COUNT];
 }; /* max size 1624 bytes */
 
 extern struct SaveBlock3 *gSaveBlock3Ptr;
@@ -671,12 +680,6 @@ struct WarpData
     s8 warpId;
     //u8 padding;
     s16 x, y;
-};
-
-struct ItemSlot
-{
-    enum Item itemId;
-    u16 quantity;
 };
 
 struct Pokeblock
