@@ -613,6 +613,8 @@ Para editar mapas y NPCs de forma visual existe **Porymap**; para scripts y diá
 
 1. ~~**Añadir a Miguel como colaborador**~~ (hecho): Settings → Collaborators → `Mike360mine`. Así los dos trabajáis con ramas en este mismo repo y no hacen falta forks. Mientras no esté hecho, Miguel trabaja desde su fork `Mike360mine/pokeemerald-expansion` con PRs.
 2. ~~**Activar Actions**~~ (hecho): pestaña Actions → *I understand my workflows, go ahead and enable them*. Sin esto, el CI no se ejecuta (GitHub lo desactiva en los forks).
+   - GitHub puede volver a desactivarlo solo en los forks si se gasta mucho CI en la red de la expansion (pasó en octubre de 2026; Soporte confirmó que es automático). Sale un aviso en la pestaña Actions y se reactiva con el mismo botón (reactivado el 26/10/2026).
+   - El workflow **Docs** (publica la documentación de la expansion en GitHub Pages) está desactivado desde la pestaña Actions: no nos sirve.
 3. **Opcional, recomendado:** Settings → Branches → regla para `master` que exija PR y que el check **CI** esté en verde antes de fusionar. Así nadie sube a `master` algo que no compila.
 
 ### Flujo para cada tarea
