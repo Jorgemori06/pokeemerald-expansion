@@ -7,6 +7,7 @@
 #include "global.fieldmap.h"
 #include "pokemon.h"
 #include "pokemon_storage_system.h"
+#include "strings.h"
 #include "test/test.h"
 #include "constants/region_map_sections.h"
 #include "constants/trade.h"
@@ -511,4 +512,68 @@ TEST("Dualocke: sin semilla, el randomizer no cambia nada")
     gSpecialVar_0x8005 = MOVE_SWAGGER;
     Dualocke_TutorAleatorio();
     EXPECT_EQ(gSpecialVar_0x8005, MOVE_SWAGGER);
+}
+
+// Dualocke: bolsillos MEDICINAS y MEGAPIEDRAS de la mochila.
+
+TEST("Dualocke: las medicinas y las megapiedras van a sus bolsillos")
+{
+    EXPECT_EQ(GetItemPocket(ITEM_POTION), POCKET_MEDICINE);
+    EXPECT_EQ(GetItemPocket(ITEM_MAX_REVIVE), POCKET_MEDICINE);
+    EXPECT_EQ(GetItemPocket(ITEM_FULL_HEAL), POCKET_MEDICINE);
+    EXPECT_EQ(GetItemPocket(ITEM_MAX_ELIXIR), POCKET_MEDICINE);
+    EXPECT_EQ(GetItemPocket(ITEM_RARE_CANDY), POCKET_MEDICINE);
+    EXPECT_EQ(GetItemPocket(ITEM_PROTEIN), POCKET_MEDICINE);
+    EXPECT_EQ(GetItemPocket(ITEM_LEMONADE), POCKET_MEDICINE);
+    EXPECT_EQ(GetItemPocket(ITEM_VENUSAURITE), POCKET_MEGA_STONES);
+    EXPECT_EQ(GetItemPocket(ITEM_METAGROSSITE), POCKET_MEGA_STONES);
+    EXPECT_EQ(GetItemPocket(ITEM_NUGGET), POCKET_ITEMS);
+    EXPECT_EQ(GetItemPocket(ITEM_X_ATTACK), POCKET_ITEMS);
+    EXPECT_EQ(GetItemPocket(ITEM_HONEY), POCKET_ITEMS);
+    EXPECT_EQ(GetItemPocket(ITEM_MEGA_RING), POCKET_KEY_ITEMS);
+}
+
+TEST("Dualocke: los bolsillos nuevos guardan, quitan y se vacían bien")
+{
+    ClearBag();
+    EXPECT(AddBagItem(ITEM_POTION, 3));
+    EXPECT(AddBagItem(ITEM_VENUSAURITE, 1));
+    EXPECT_EQ(GetBagItemId(POCKET_MEDICINE, 0), ITEM_POTION);
+    EXPECT_EQ(GetBagItemIdAndQuantity(POCKET_MEDICINE, 0).quantity, 3);
+    EXPECT_EQ(GetBagItemId(POCKET_MEGA_STONES, 0), ITEM_VENUSAURITE);
+    EXPECT_EQ(GetBagItemId(POCKET_ITEMS, 0), ITEM_NONE);
+    EXPECT(CheckBagHasItem(ITEM_POTION, 3));
+    EXPECT(CheckBagHasItem(ITEM_VENUSAURITE, 1));
+
+    EXPECT(RemoveBagItem(ITEM_POTION, 3));
+    EXPECT(!CheckBagHasItem(ITEM_POTION, 1));
+
+    ClearBag();
+    EXPECT(!CheckBagHasItem(ITEM_VENUSAURITE, 1));
+}
+
+TEST("Dualocke: caben todas las megapiedras a la vez")
+{
+    enum Item item;
+    u32 count = 0;
+
+    ClearBag();
+    for (item = ITEM_NONE + 1; item < ITEMS_COUNT; item++)
+    {
+        if (GetItemPocket(item) != POCKET_MEGA_STONES)
+            continue;
+        EXPECT(AddBagItem(item, 1));
+        count++;
+    }
+    EXPECT_GT(count, 80);
+    EXPECT(IsBagPocketNonEmpty(POCKET_MEGA_STONES));
+    ClearBag();
+}
+
+TEST("Dualocke: todos los bolsillos tienen nombre")
+{
+    u32 i;
+
+    for (i = 0; i < POCKETS_COUNT; i++)
+        EXPECT(gPocketNamesStringsTable[i] != NULL);
 }
