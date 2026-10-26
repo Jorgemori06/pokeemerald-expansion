@@ -5,6 +5,7 @@
 #include "dualocke.h"
 #include "event_data.h"
 #include "global.fieldmap.h"
+#include "item.h"
 #include "pokemon.h"
 #include "pokemon_storage_system.h"
 #include "string_util.h"
@@ -150,8 +151,24 @@ void Dualocke_OnBattleEnd(bool32 playerDefeated)
 // - Solo cuenta en los encuentros aleatorios (hierba, cuevas, surf, pesca, Golpe
 //   Roca, Dulce Aroma, Safari, errantes). Los combates de evento y los estáticos
 //   no gastan la zona.
-// - Hasta que te dan las primeras Poké Balls (FLAG_ADVENTURE_STARTED) no cuenta nada.
+// - Hasta que tienes las primeras Poké Balls no cuenta nada (Dualocke_ReglasEmpezadas).
 // ---------------------------------------------------------------------------
+
+// Las reglas empiezan cuando te dan las Poké Balls (FLAG_ADVENTURE_STARTED) o cuando tienes
+// alguna antes, por ejemplo comprada en la tienda de PUEBLO ESCASO (decidido por Jorge: "si no
+// tienes porque se te ha olvidado comprar, sí cuenta"). Se guarda en un flag para que no se
+// desactive al gastar la última.
+bool32 Dualocke_ReglasEmpezadas(void)
+{
+    if (FlagGet(FLAG_ADVENTURE_STARTED) || FlagGet(FLAG_DUALOCKE_TIENE_BALLS))
+        return TRUE;
+    if (IsBagPocketNonEmpty(POCKET_POKE_BALLS))
+    {
+        FlagSet(FLAG_DUALOCKE_TIENE_BALLS);
+        return TRUE;
+    }
+    return FALSE;
+}
 
 static EWRAM_DATA bool8 sRandomEncounterPending = FALSE;
 static EWRAM_DATA u8 sCurrentEncounter = DUALOCKE_ENCOUNTER_NO_RULE;
@@ -383,7 +400,7 @@ enum DualockeEncounter Dualocke_GetWildEncounterStatus(struct Pokemon *wildMon, 
 {
     enum Species species = GetMonData(wildMon, MON_DATA_SPECIES);
 
-    if (!FlagGet(FLAG_ADVENTURE_STARTED) || GetZoneIndex(mapsec) < 0 || species == SPECIES_NONE)
+    if (!Dualocke_ReglasEmpezadas() || GetZoneIndex(mapsec) < 0 || species == SPECIES_NONE)
         return DUALOCKE_ENCOUNTER_NO_RULE;
     if (IsMonShiny(wildMon))
         return DUALOCKE_ENCOUNTER_SHINY;
@@ -440,7 +457,7 @@ bool32 Dualocke_CanCatchCurrentEncounter(void)
 // - Los repetidos se pueden sacar en cuanto dejan de serlo (muere el de su línea que ya
 //   tenías); los legendarios se quedan bloqueados para siempre.
 // - Los variocolor nunca van ahí: se pueden usar siempre.
-// - No se aplica hasta que te dan las Poké Balls (FLAG_ADVENTURE_STARTED): así el inicial
+// - No se aplica hasta que tienes Poké Balls (Dualocke_ReglasEmpezadas): así el inicial
 //   y los tests de la expansion no se ven afectados.
 // ---------------------------------------------------------------------------
 
@@ -465,7 +482,7 @@ static bool32 IsBoxMonBanned(struct BoxPokemon *boxMon)
 
 bool32 Dualocke_ShouldBanMon(struct Pokemon *mon)
 {
-    if (!FlagGet(FLAG_ADVENTURE_STARTED))
+    if (!Dualocke_ReglasEmpezadas())
         return FALSE;
     return IsBoxMonBanned(&mon->box);
 }

@@ -16,6 +16,7 @@ void Dualocke_InitNewGame(void);
 void Dualocke_OnBattleEnd(bool32 playerDefeated);
 u32 Dualocke_GetLives(void);
 bool32 Dualocke_IsLockeLost(void);
+bool32 Dualocke_ReglasEmpezadas(void);
 bool32 Dualocke_IsDeadBox(u32 boxId);
 bool32 Dualocke_IsBannedBox(u32 boxId);
 bool32 Dualocke_IsLockedBox(u32 boxId);

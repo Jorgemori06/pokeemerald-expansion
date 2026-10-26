@@ -48,3 +48,35 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 ## Cómo apuntar un fallo
 
 Mapa, qué se hizo, qué pasó y, si se puede, una captura. Si es un texto, la etiqueta del `.tsv` (la sacas con `python tools/dualocke/dialogos.py exportar data/maps/MAPA/scripts.inc`) y cómo debería quedar.
+
+## Partidas de prueba
+
+### 1. Jorge, 26/10/2026 (randomizada, hasta la RUTA 103 y perder el locke a propósito)
+
+**Bien:** opciones, menú con las vidas, diálogos de la intro y de VILLA RAÍZ, inicial al azar con habilidad y movimientos en español, combate, aviso de muerte con las vidas que quedan y LOCKE PERDIDO.
+
+**Fallos encontrados (arreglados en `jorge/arreglos-prueba`):**
+
+| Qué pasó | Arreglo |
+|---|---|
+| Con Poké Balls compradas en PUEBLO ESCASO antes de que te las den, se podían capturar dos salvajes en la misma ruta | Las reglas empiezan también con la primera Poké Ball en la mochila (`FLAG_DUALOCKE_TIENE_BALLS`). Test nuevo. |
+| Datos del Pokémon: "lo conociste en ROUTE 101" | Nombres de los lugares de Hoenn en español |
+| En combate, "TYPE/" junto a los PP | "TIPO/" |
+| Al perder: "Prueba scurried back home…" | Traducidos los cuatro textos de volver a casa o al CENTRO POKéMON |
+| "LOCKE PERDIDO" se cortaba en la ventana del menú | Ventana más ancha |
+
+**No era fallo:** no poder huir de un Dreepy después de tirarle una Ball. Usó Acoso, que atrapa (en los juegos oficiales pasa igual).
+
+**Pendiente (son imágenes):** PROFILE, ABILITY y TRAINER MEMO en los datos; MOVE INFO en combate; los iconos de tipo (ICE, GROUND…); PRESS START y "New Game" en el título; PARTY POKéMON, CLOSE BOX y PKMN DATA en el PC.
+
+### 2. Jorge, 26/10/2026 (tarde, con el menú de depuración)
+
+**Bien:**
+- Con Poké Balls compradas, el segundo salvaje de la ruta ya no se puede capturar (arreglo de la partida 1). El mensaje cabe.
+- Mewtwo (legendario) va directo a VETADOS.
+- Un Bulbasaur repetido va a VETADOS; al morir el primero (aviso con 19 vidas, caja MUERTOS) se puede sacar el segundo.
+- Los Caramelos Raros paran en el cap (16 con 0 medallas).
+
+**Fallo:** al volar, "¿A dónde quieres VOLAR?" se cortaba (la ventana es estrecha). Ahora "¿Adónde VOLAR?".
+
+**No era fallo:** no poder volar a ningún sitio. Solo se vuela a las ciudades ya visitadas.

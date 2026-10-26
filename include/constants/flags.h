@@ -745,7 +745,7 @@
 #define FLAG_ITEM_MEGA_FALINKSITE          0x2B2 // Dualocke: megapiedra en el mapa
 #define FLAG_ITEM_MEGA_MEDICHAMITE         0x2B3 // Dualocke: megapiedra en el mapa
 #define FLAG_ITEM_MEGA_SALAMENCITE         0x2B4 // Dualocke: megapiedra en el mapa
-#define FLAG_UNUSED_0x2B5  0x2B5 // Unused Flag
+#define FLAG_DUALOCKE_TIENE_BALLS  0x2B5 // Dualocke: el jugador ya ha tenido Poké Balls (empiezan las reglas)
 #define FLAG_UNUSED_0x2B6  0x2B6 // Unused Flag
 #define FLAG_UNUSED_0x2B7  0x2B7 // Unused Flag
 #define FLAG_UNUSED_0x2B8  0x2B8 // Unused Flag

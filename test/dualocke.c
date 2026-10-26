@@ -145,6 +145,8 @@ static void SetupCapture(void)
     for (pos = VAR_DUALOCKE_ZONES_0; pos <= VAR_DUALOCKE_ZONES_6; pos++)
         VarSet(pos, 0);
     FlagSet(FLAG_ADVENTURE_STARTED);
+    FlagClear(FLAG_DUALOCKE_TIENE_BALLS);
+    ClearBag();
     gBattleTypeFlags = 0;
 }
 
@@ -315,6 +317,19 @@ TEST("Dualocke: antes de recibir las Poké Balls no cuenta nada")
     SetupCapture();
     FlagClear(FLAG_ADVENTURE_STARTED);
     EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_ZIGZAGOON, FALSE), MAPSEC_ROUTE_101), DUALOCKE_ENCOUNTER_NO_RULE);
+}
+
+// Encontrado jugando (26/10/2026): las Poké Balls se pueden comprar en PUEBLO ESCASO antes de que
+// te las den, y entonces la regla tiene que contar (decidido por Jorge).
+TEST("Dualocke: con Poké Balls compradas antes de que te las den, la regla ya cuenta")
+{
+    SetupCapture();
+    FlagClear(FLAG_ADVENTURE_STARTED);
+    AddBagItem(ITEM_POKE_BALL, 1);
+    EXPECT_EQ(Dualocke_GetWildEncounterStatus(Wild(SPECIES_ZIGZAGOON, FALSE), MAPSEC_ROUTE_101), DUALOCKE_ENCOUNTER_FIRST);
+    // Aunque se gaste la última, la regla sigue
+    RemoveBagItem(ITEM_POKE_BALL, 1);
+    EXPECT(Dualocke_ReglasEmpezadas());
 }
 
 TEST("Dualocke: el combate aleatorio gasta la zona al empezar y bloquea los siguientes")
