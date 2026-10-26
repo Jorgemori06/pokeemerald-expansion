@@ -312,6 +312,19 @@ Para ver todo sin herramientas externas (pedido por Miguel el 24/10/2026):
 - Código: `include/config/summary_screen.h` (opciones `P_SUMMARY_SCREEN_IV_EV_*`) y `src/pokemon_summary_screen.c` (busca "Dualocke").
 - Pendiente: hacerla más bonita con gráficos nuevos (fondos, iconos). Hace falta dibujarlos y probarlos en el emulador.
 
+### Mochila: bolsillos Medicinas y Megapiedras (hecho, Jorge, 26/10/2026)
+
+Lo pidió Jorge al probar: las megapiedras y las pociones se mezclaban con todo en Objetos.
+
+- **7 bolsillos**, en este orden: OBJETOS, **MEDICINAS**, POKé BALLS, MT Y MO, BAYAS, **MEGAPIEDRAS**, OBJ. CLAVE. Los nombres de los bolsillos y los de "guardado en el BOLSILLO …" están traducidos.
+- **Medicinas** (hasta 60 objetos distintos): pociones y bebidas, revivir, curar estados, Éter/Elixir, vitaminas, Más PP, plumas, mochis y caramelos (Caramelo Raro, Caramelos Exp.). Los Objetos X, la Miel y los repelentes se quedan en Objetos.
+- **Megapiedras** (hasta 100; caben las 92 que hay). El Mega-Aro sigue en Objetos clave.
+- **Sin dibujos nuevos:** la mochila reutiliza el dibujo de Objetos para Medicinas y el de Objetos clave para Megapiedras. Los cuadraditos de arriba ahora son 7 (columnas 4-10 del fondo) y MEGAPIEDRAS se escribe con la fuente estrecha porque no cabe en la normal.
+- **Dónde se guardan:** en `SaveBlock3` (`bagMedicine` y `bagMegaStones`), que estaba casi vacío; a `SaveBlock1` le quedaban 376 bytes y no se ha tocado. Las partidas guardadas de antes no sirven (dan igual, eran de prueba).
+- El tutorial de Blasco (la Poción va a Medicinas) guarda y devuelve también ese bolsillo. Las bebidas de la azotea del Centro Comercial dicen que van a MEDICINAS.
+- Depuración: "Fill Pocket Items" llena también Medicinas y da una de cada megapiedra; "Fill Pocket Key Items" da el Mega-Aro.
+- Tests en `test/dualocke.c` (busca "bolsillos").
+
 ## 7. Randomizer (hecho, falta probarlo jugando)
 
 ### Diseño
@@ -497,6 +510,7 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
 - Primera captura por zona para los salvajes (Jorge, sección 4). Las zonas gastadas se guardan en `VAR_DUALOCKE_ZONES_0` a `_6` (7 variables libres, un bit por zona; no gasta flags). Tests en `test/dualocke.c`.
 - Caja de prohibidos (Jorge, sección 4): regalos, eventos, fósiles, estáticos, huevos e intercambios repetidos o legendarios van a la caja 13 ("VETADOS"), bloqueada hasta que dejan de ser repetidos.
 - Randomizer completo (Jorge, sección 7) y traducción al español de la historia (Miguel y Jorge, sección 8).
+- Bolsillos Medicinas y Megapiedras en la mochila (Jorge, sección 6).
 - **Siguiente: jugar y probarlo todo junto.** Lista de qué mirar en `PRUEBAS.md`.
 
 ### Pendiente de decidir
@@ -561,6 +575,7 @@ Quién hace cada cosa y cómo se sube: sección 13.
 | Qué combates son encuentros aleatorios | `src/battle_setup.c` (busca `Dualocke_SetRandomEncounter`) |
 | Bloqueo de las Balls y la Safari Ball | `src/item_use.c` (`GetBallThrowableState`) y `src/battle_main.c` (`B_ACTION_SAFARI_BALL`) |
 | Aviso al empezar el combate | `src/battle_main.c` (`FIRST_TURN_EVENTS_DUALOCKE_ZONE`) y `data/battle_scripts_1.s` (`BattleScript_DualockeZoneMsg`) |
+| Bolsillos de la mochila (Medicinas, Megapiedras) | `include/constants/item.h` (`enum Pocket`), `include/global.h` (`SaveBlock3`), `src/item.c` (`SetBagItemsPointers`), `src/item_menu.c` (busca "Dualocke"), `.pocket` en `src/data/items.h` |
 | Documentación oficial de la expansion | `docs/` y https://rh-hideout.github.io/pokeemerald-expansion/ |
 
 Para editar mapas y NPCs de forma visual existe **Porymap**; para scripts y diálogos, **poryscript**.
