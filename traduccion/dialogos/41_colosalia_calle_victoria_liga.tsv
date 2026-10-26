@@ -1,0 +1,91 @@
+# CIUDAD COLOSALIA, CALLE VICTORIA (Hoenn) y LIGA POKéMON: ALTO MANDO, CAMPEÓN PLUBIO y SALA DE LA FAMA (la CALLE VICTORIA de Kanto, los mapas _Frlg, no se traduce)
+EverGrandeCity_Text_EnteringVictoryRoad	ENTRADA A LA CALLE VICTORIA$
+EverGrandeCity_Text_EnteringPokemonLeague	ENTRADA A LA LIGA POKéMON\nPUERTA CENTRAL$
+EverGrandeCity_Text_CitySign	CIUDAD COLOSALIA\p“El paraíso de las flores, el mar\ny los POKéMON”.$
+EverGrandeCity_PokemonCenter_1F_Text_LeagueAfterVictoryRoad	La LIGA POKéMON está muy cerca, al\nfinal de la CALLE VICTORIA.\pSi has llegado hasta aquí, ¿qué vas a\nhacer sino seguir adelante?$
+EverGrandeCity_PokemonCenter_1F_Text_BelieveInYourPokemon	La larga y dura CALLE VICTORIA…\pEs como volver a recorrer el camino\nde toda una vida…\p¡Confía en tus POKéMON y da lo\nmejor de ti!$
+EverGrandeCity_PokemonCenter_1F_Text_ScottHappyForYou	SCOTT: {PLAYER}{KUN}, ¡te has abierto\npaso hasta la LIGA POKéMON!\p¡Me alegro mucho por ti!\n¡Ha merecido la pena animarte!\p{PLAYER}{KUN}, si llegas a ser\nCAMPEÓN de la LIGA POKéMON…\pMe pondré en contacto contigo.\p¡Vale, {PLAYER}{KUN}!\n¡A por la gloria!$
+EverGrandeCity_PokemonLeague_1F_Text_MustHaveAllGymBadges	A partir de aquí, solo pueden pasar los\nENTRENADORES que tengan todas las\lMEDALLAS de GIMNASIO.\pVamos a comprobar que tienes todas\nlas MEDALLAS de GIMNASIO.$
+EverGrandeCity_PokemonLeague_1F_Text_HaventObtainedAllBadges	No tienes todas las MEDALLAS.\pSi vas a la LIGA POKéMON, tienes que\nvolver con ellas.$
+EverGrandeCity_PokemonLeague_1F_Text_GoForth	¡Adelante! ¡Confía en ti y en tus\nPOKéMON, y sigue!$
+VictoryRoad_1F_Text_WallyNotGoingToLoseAnymore	BLASCO: ¡Hola! ¡{PLAYER}!\p¡Seguro que te sorprende verme aquí!\p¡He llegado hasta aquí, y todo\ngracias a ti!\p{PLAYER}, ¡perder contra ti aquella vez\nme hizo más fuerte!\p¡Pero ya no voy a perder más!\p¡Voy a ganar! ¡Por los POKéMON que me\ndieron valor y fuerza!\p¡Vale… allá voy!$
+VictoryRoad_1F_Text_WallyEntranceDefeat	¡Hala!\n{PLAYER}, ¡al final sí que eres fuerte!$
+VictoryRoad_1F_Text_WallyPostEntranceBattle	BLASCO: Hoy no he podido ganarte,\n{PLAYER}, ¡pero algún día te\lalcanzaré!$
+VictoryRoad_1F_Text_WallyIntro	BLASCO: ¡Hola! ¡{PLAYER}!\p¡Me he hecho más fuerte desde la última\nvez! ¡Quería enseñártelo, {PLAYER}!\p¡Vale… allá voy!$
+VictoryRoad_1F_Text_WallyDefeat	¡Hala!\n{PLAYER}, ¡al final sí que eres fuerte!$
+VictoryRoad_1F_Text_WallyPostBattle	BLASCO: Esta vez tampoco he podido\nganarte… Pero algún día, {PLAYER},\lte alcanzaré…\p¡Y desafiaré a la LIGA POKéMON!$
+VictoryRoad_1F_Text_EdgarIntro	Ya he llegado aquí un par de veces,\npero el último tramo es tan largo…$
+VictoryRoad_1F_Text_EdgarDefeat	Mi sueño vuelve a acabar aquí…$
+VictoryRoad_1F_Text_EdgarPostBattle	Has llegado hasta aquí. ¡No pierdas\nel impulso y conviértete en CAMPEÓN!\l¡Si alguien puede, eres tú!$
+VictoryRoad_1F_Text_AlbertIntro	No he venido hasta aquí para perder\nahora. ¡Esa posibilidad no existe!$
+VictoryRoad_1F_Text_AlbertDefeat	Imposible…\n¿He perdido?$
+VictoryRoad_1F_Text_AlbertPostBattle	He perdido aquí…\pEso quiere decir que no tengo lo que\nhace falta para ser CAMPEÓN…$
+VictoryRoad_1F_Text_HopeIntro	Este camino, duro y que parece no\nacabar, hace honor al nombre de\lVICTORIA.$
+VictoryRoad_1F_Text_HopeDefeat	Tu forma de combatir es fantástica…$
+VictoryRoad_1F_Text_HopePostBattle	Parece que tienes madera de\nCAMPEÓN.$
+VictoryRoad_1F_Text_QuincyIntro	¿Qué es la CALLE VICTORIA?\n¡Te lo diré si ganas!$
+VictoryRoad_1F_Text_QuincyDefeat	¡Vale!\n¡Bien hecho!$
+VictoryRoad_1F_Text_QuincyPostBattle	Cruzarla sin problemas: esa es la\nprueba final para quien quiere ser\lCAMPEÓN POKéMON.\pPor eso se llama CALLE VICTORIA.$
+VictoryRoad_1F_Text_KatelynnIntro	No tengo nada que decirle a quien ha\nllegado hasta aquí. ¡Vamos!$
+VictoryRoad_1F_Text_KatelynnDefeat	Qué vergüenza…$
+VictoryRoad_1F_Text_KatelynnPostBattle	Hmpf, sigue adelante.\nA mí qué más me da.$
+VictoryRoad_B1F_Text_SamuelIntro	Pensar que me acerco a la LIGA\nPOKéMON…\pMe está entrando pánico escénico…$
+VictoryRoad_B1F_Text_SamuelDefeat	No he podido hacer nada…$
+VictoryRoad_B1F_Text_SamuelPostBattle	La LIGA POKéMON vuelve a quedar\nlejos… Qué decepción…$
+VictoryRoad_B1F_Text_ShannonIntro	Para abrirte paso en la LIGA POKéMON,\nnecesitas la confianza de tus\lPOKéMON.$
+VictoryRoad_B1F_Text_ShannonDefeat	Vuestra relación se basa en una\nconfianza sólida.$
+VictoryRoad_B1F_Text_ShannonPostBattle	Estando siempre juntos, crece la\nconfianza entre POKéMON y quien\nlos entrena.$
+VictoryRoad_B1F_Text_MichelleIntro	Esto no es la meta. Solo es un punto\ndel camino hacia la LIGA POKéMON.$
+VictoryRoad_B1F_Text_MichelleDefeat	¡Así se hace!$
+VictoryRoad_B1F_Text_MichellePostBattle	¡Te irá bien, seguro!\n¡Tus POKéMON están deseando seguir!$
+VictoryRoad_B1F_Text_MitchellIntro	¡Mis POKéMON son de una grandeza\ncósmica!$
+VictoryRoad_B1F_Text_MitchellDefeat	Nunca había conocido a nadie como tú.$
+VictoryRoad_B1F_Text_MitchellPostBattle	Incluso fuera del combate, noto un\npoder increíble que sale de ti y de\ltus POKéMON.$
+VictoryRoad_B1F_Text_HalleIntro	¡Vale, no hace falta ponerse tenso!\n¡Relájate, con calma!$
+VictoryRoad_B1F_Text_HalleDefeat	¡Uau!\n¡Maravilloso!$
+VictoryRoad_B1F_Text_HallePostBattle	Sí, esto es la CALLE VICTORIA.\pPero no es tan distinto del camino\nque has recorrido hasta ahora.\p¡Intenta disfrutar el resto del\ncamino!$
+VictoryRoad_B2F_Text_VitoIntro	¡He entrenado con toda mi familia,\ncon todos y cada uno!\l¡No pienso perder contra nadie!$
+VictoryRoad_B2F_Text_VitoDefeat	¡¿Mejor que mi familia?!\n¡¿Es posible?!$
+VictoryRoad_B2F_Text_VitoPostBattle	Era el mejor de mi familia. Nunca\nhabía perdido…\pHe perdido la confianza…\nA lo mejor me vuelvo a casa…$
+VictoryRoad_B2F_Text_OwenIntro	Había oído que por aquí andaba un\nrenacuajo muy duro. ¿Eres tú?$
+VictoryRoad_B2F_Text_OwenDefeat	¡El renacuajo es duro de verdad!$
+VictoryRoad_B2F_Text_OwenPostBattle	Según los rumores, ese renacuajo tan\nduro es de CIUDAD PETALIA.$
+VictoryRoad_B2F_Text_CarolineIntro	Ya te debe de pesar el cansancio.$
+VictoryRoad_B2F_Text_CarolineDefeat	¡No hay ni rastro de cansancio!$
+VictoryRoad_B2F_Text_CarolinePostBattle	La CALLE VICTORIA y la LIGA son\nretos largos y agotadores.\l¡Cuidado con el cansancio!$
+VictoryRoad_B2F_Text_JulieIntro	No te confíes solo porque tengas\nmuchas MEDALLAS de GIMNASIO.\p¡Siempre habrá alguien mejor que tú!$
+VictoryRoad_B2F_Text_JulieDefeat	¡Eres mejor que yo!$
+VictoryRoad_B2F_Text_JuliePostBattle	Mira tus MEDALLAS y recuerda a\nquienes te has enfrentado.$
+VictoryRoad_B2F_Text_FelixIntro	He llegado hasta aquí, pero los nervios\nme están dando dolor de estómago…$
+VictoryRoad_B2F_Text_FelixDefeat	Uf…\nQué dolor…$
+VictoryRoad_B2F_Text_FelixPostBattle	No puedo evitar ponerme tenso al saber\nque estoy cerca de la LIGA POKéMON.\pBastante hago con fingir que estoy\ntranquilo.$
+VictoryRoad_B2F_Text_DianneIntro	En esta cueva se reúne la élite de\nla élite.\p¿Qué te parece?$
+VictoryRoad_B2F_Text_DianneDefeat	¡No te inmutas en absoluto!$
+VictoryRoad_B2F_Text_DiannePostBattle	¡Tienes agallas! ¡Me gusta!\n¡Sigue así!$
+EverGrandeCity_SidneysRoom_Text_IntroSpeech	¡Te doy la bienvenida, aspirante!\nSoy SIXTO, del ALTO MANDO.\pMe gusta esa mirada que me echas.\nSupongo que me darás un buen combate.\l¡Eso está bien! ¡Pero que muy bien!\p¡Vale! ¡Tú y yo, disfrutemos de un\ncombate que solo puede vivirse aquí,\len la LIGA POKéMON!$
+EverGrandeCity_SidneysRoom_Text_Defeat	Bueno, ¿qué te parece? ¡He perdido!\nBah, ha sido divertido, así que da igual.$
+EverGrandeCity_SidneysRoom_Text_PostBattleSpeech	Bueno, escucha lo que tiene que decir\neste perdedor.\pTienes lo que hace falta para llegar\nlejos. ¡Ahora pasa a la siguiente sala\ly disfruta del próximo combate!$
+EverGrandeCity_PhoebesRoom_Text_IntroSpeech	¡Jajaja!\pSoy FÁTIMA, del ALTO MANDO.\nEntrené en el MONTE PÍRICO.\pMientras entrenaba, aprendí a\ncomunicarme con los POKéMON de tipo\lFANTASMA.\pSí, el lazo que tengo con los POKéMON\nes muy fuerte.\pAsí que, venga, ¡a ver si consigues\nhacerles algo de daño a mis POKéMON!$
+EverGrandeCity_PhoebesRoom_Text_Defeat	Oh, vaya.\nHe perdido.$
+EverGrandeCity_PhoebesRoom_Text_PostBattleSpeech	Entre tú y tus POKéMON también hay\nun lazo claro.\pNo lo vi, así que es normal que\nhaya perdido.\pSí, me gustaría ver hasta dónde te\nlleva ese lazo.\pVenga, pasa a la siguiente sala.$
+EverGrandeCity_GlaciasRoom_Text_IntroSpeech	Te doy la bienvenida. Me llamo NÍVEA,\ndel ALTO MANDO.\pHe venido a HOENN desde muy lejos para\nperfeccionar mi técnica de hielo.\pPero solo he visto desafíos de\nENTRENADORES débiles y sus POKéMON.\p¿Y tú qué?\p¡Me encantaría poder darlo todo\ncontra ti!$
+EverGrandeCity_GlaciasRoom_Text_Defeat	Tú y tus POKéMON…\n¡Cómo arde vuestro espíritu!\pEse calor lo arrasa todo.\pNo me extraña que mi técnica de hielo\nno pudiera con vosotros.$
+EverGrandeCity_GlaciasRoom_Text_PostBattleSpeech	Pasa a la siguiente sala.\pY allí, comprueba la cara más temible\nde la LIGA POKéMON.$
+EverGrandeCity_DrakesRoom_Text_IntroSpeech	¡Soy el último del ALTO MANDO de la\nLIGA POKéMON, DRACÓN, el maestro\lde los DRAGONES!\pEn su estado natural, los POKéMON son\nseres salvajes. Son libres.\pA veces nos estorban.\nA veces nos ayudan.\pPara combatir con POKéMON como\ncompañeros, ¿sabes qué hace falta?\p¿Sabes lo que se necesita?\p¡Si no lo sabes, nunca podrás\nvencerme!$
+EverGrandeCity_DrakesRoom_Text_Defeat	Soberbio, hay que decirlo.$
+EverGrandeCity_DrakesRoom_Text_PostBattleSpeech	Te mereces todo el reconocimiento por\nhaber llegado hasta aquí con tus\lPOKéMON.\pParece que sabes lo que hace falta.\pSí, lo que necesita un ENTRENADOR es\nun corazón virtuoso.\pLos POKéMON tocan el buen corazón de\nsus ENTRENADORES y aprenden el bien\ly el mal.\pTocan el buen corazón de sus\nENTRENADORES y se hacen fuertes.\p¡Ve! ¡Sigue adelante!\n¡El CAMPEÓN te espera!$
+EverGrandeCity_ChampionsRoom_Text_IntroSpeech	PLUBIO: Te doy la bienvenida,\n{PLAYER}{KUN}.\pLo de CIUDAD ARRECÍPOLIS…\nFue un trabajo magnífico, acabar con\lesa crisis tú solo.\p¡Huy!\pNo sería justo decir que acabaste con\nla crisis tú solo.\pSuperaste esa situación tan difícil\nformando un equipo con tus POKéMON.\pLos ENTRENADORES criamos a los POKéMON\ndándoles objetos y enseñándoles\ltécnicas nuevas para combatir.\pPero nosotros también aprendemos\nmuchas cosas de los POKéMON.\pY aquí es donde tus logros se ponen a\nprueba frente a los de otros como tú.\p¡Vamos!\p¿Quién baila con más elegancia junto a\nsus POKéMON en HOENN?\p¡Demuéstramelo aquí y ahora!$
+EverGrandeCity_ChampionsRoom_Text_Defeat	Yo, el CAMPEÓN, caigo derrotado…\pHa sido un trabajo maravilloso.\nQué elegancia, hasta fastidia.\l¡Y aun así ha sido glorioso!\p¡Te felicito, {PLAYER}{KUN}!\p¡Entrenas POKéMON con auténtica\nnobleza!$
+EverGrandeCity_ChampionsRoom_Text_PostBattleSpeech	PLUBIO: Los POKéMON que sacaste\nal combate…\pA veces bailaban como una brisa de\nprimavera, y a veces golpeaban\lcomo un rayo.\pGuiaste a tus POKéMON con una\nelegancia ligera, pero segura.\p¡Hasta a mí me ha deslumbrado tu\nactuación magistral!\pAhora estás en la cima gloriosa de la\nLIGA POKéMON.\pY ahora proclamo que, de la región\nde HOENN, tú eres…$
+EverGrandeCity_ChampionsRoom_Text_MayAdvice	AURA: ¡{PLAYER}{KUN}!\pAquí tienes un consejo antes de que\ndesafíes al CAMPEÓN…$
+EverGrandeCity_ChampionsRoom_Text_MayItsAlreadyOver	AURA: ¿Eh?\n¿Qué, qué, qué?\p{PLAYER}{KUN}…\n¿No me digas que…\l¿Ya se ha acabado?$
+EverGrandeCity_ChampionsRoom_Text_BrendanAdvice	BRUNO: ¡{PLAYER}!\p¿Quieres un consejo antes de desafiar\nal CAMPEÓN?…$
+EverGrandeCity_ChampionsRoom_Text_BrendanYouveWon	BRUNO: {PLAYER}…\p¿Me estás diciendo que…\n¿Que has ganado al CAMPEÓN?$
+EverGrandeCity_ChampionsRoom_Text_BirchArriveRatePokedex	PROF. ABEDUL: ¿Lo ves?\n¿Qué te dije, {RIVAL}?\p¿No te dije que no tenías que\npreocuparte por {PLAYER}{KUN}?\p… … … … … … … …\n{PLAYER}{KUN}, por fin lo has logrado.\pCuando me enteré de que habías ganado\na tu padre en el GIMNASIO de PETALIA,\lpensé que quizá tenías opciones…\p¡Pero llegar a ser CAMPEÓN!\p¡Ah, sí!\p¿Cómo va tu POKéDEX?\nA ver, déjame verla.$
+EverGrandeCity_ChampionsRoom_Text_BirchCongratulations	PROF. ABEDUL: En fin,\n¡enhorabuena!\p¡Ahora entra con orgullo en la última\nsala!$
+EverGrandeCity_ChampionsRoom_Text_WallaceComeWithMe	PLUBIO: {PLAYER}{KUN}…\pNo, déjame decirlo como es debido.\p¡CAMPEÓN de HOENN!\pVen conmigo.$
+EverGrandeCity_ChampionsRoom_Text_WallaceWaitOutside	PLUBIO: Lo siento, pero…\pA partir de aquí solo pueden entrar\nlos ENTRENADORES que han llegado a\lCAMPEÓN.\pTendrás que esperar fuera con el\nPROF. ABEDUL.$
+EverGrandeCity_ChampionsRoom_Text_MayCongratulations	AURA: Jo…\p… … … … … … … …\n… … … … … … … …\p¡Es broma! ¡No pasa nada!\n¡Son las normas!\p¡{PLAYER}{KUN}!\n¡De verdad, enhorabuena!$
+EverGrandeCity_ChampionsRoom_Text_BrendanCongratulations	BRUNO: ¡¿Quéééé?! … … … … …\n… … … … … … … …\pSi son las normas, no hay nada que\nhacer.\p¡{PLAYER}, bien hecho!\n¡Enhorabuena!$
+EverGrandeCity_HallOfFame_Text_HereWeHonorLeagueChampions	PLUBIO: Esta sala…\pAquí guardamos el registro de los\nPOKéMON que salieron victoriosos de\lcombates muy duros.\pAquí es donde se honra a los\nCAMPEONES de la LIGA.$
+EverGrandeCity_HallOfFame_Text_LetsRecordYouAndYourPartnersNames	PLUBIO: Venga, registremos tu nombre\ncomo ENTRENADOR que ha vencido en la\lLIGA POKéMON, y los nombres de los\lcompañeros que combatieron contigo.$

@@ -17,6 +17,7 @@ Seguir con la traducción por lo que importa para avanzar en la historia. La par
 - Tramo 38: RUTAS 130 a 134, CUEVA CARDUMEN (CINTA AGUANTE), el SUBMARINO EXPLORADOR 1 bajo el agua y la CUEVA ABISAL (SILVINA, AQUILES, KYOGRE y MAGNO).
 - Tramo 39: CIUDAD ARRECÍPOLIS (la crisis de GROUDON y KYOGRE, MAGNO, AQUILES, MÁXIMO y PLUBIO) y el GIMNASIO de GALANO, sin la revancha. Sin la casa de combates por cable ni la de LOTAD y SEEDOT (no afectan a la historia).
 - Tramo 40: CUEVA ANCESTRAL, PILAR CELESTE y PUEBLO PACIFIDLOG.
+- Tramo 41: CIUDAD COLOSALIA, CALLE VICTORIA (la de Hoenn; los mapas `_Frlg` son de Kanto) y la LIGA POKéMON: ALTO MANDO, PLUBIO de CAMPEÓN y la SALA DE LA FAMA. Con esto, la historia principal está traducida entera.
 - Corregidos en el tramo 17 dos nombres de objetos que no eran los de nuestra tabla: ESFERA → PRISMA y EMBLEMA MAGMA → SIGNO MAGMA.
 - Sin lo del FRENTE BATALLA (postgame).
 - `LEEME.md` (tabla y nombres) y `PLAN.md` (aviso del cambio de reparto).
@@ -29,4 +30,5 @@ Seguir con la traducción por lo que importa para avanzar en la historia. La par
 ## Pendiente
 
 - SALA DE CONCURSOS y CLUB DE FANS DE ENTRENADORES de CALAGUA (no afectan a la historia).
-- Siguiente: CIUDAD COLOSALIA, CALLE VICTORIA y LIGA POKéMON.
+- Queda lo que no afecta a la historia: SALA DE CONCURSOS y CLUB DE FANS de CALAGUA, casas sueltas, la tele, el hombre de MALVALONA, la AGENDA y los textos comunes de Jorge (ver `PLAN.md`).
+- Probarlo jugando entero.
