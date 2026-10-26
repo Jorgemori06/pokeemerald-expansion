@@ -115,6 +115,8 @@ enum Language
 #define BAG_POKEBALLS_COUNT 16
 #define BAG_TMHM_COUNT 64
 #define BAG_BERRIES_COUNT 46
+#define BAG_MEDICINE_COUNT 60     // Dualocke: bolsillo MEDICINAS
+#define BAG_MEGASTONES_COUNT 100  // Dualocke: bolsillo MEGAPIEDRAS (caben todas)
 
 // Number of facilities for Ranking Hall.
 // 7 facilities for single mode + tower double mode + tower multi mode.

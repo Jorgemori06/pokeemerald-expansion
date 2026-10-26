@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke_es.h"
 #include "main.h"
 #include "event_data.h"
 #include "field_effect.h"
