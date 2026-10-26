@@ -516,6 +516,7 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
 - Caja de prohibidos (Jorge, sección 4): regalos, eventos, fósiles, estáticos, huevos e intercambios repetidos o legendarios van a la caja 13 ("VETADOS"), bloqueada hasta que dejan de ser repetidos.
 - Randomizer completo (Jorge, sección 7) y traducción al español de la historia (Miguel y Jorge, sección 8).
 - Bolsillos Medicinas y Megapiedras en la mochila (Jorge, sección 6).
+- **Guía para jugar** en `GUIA.html` (se abre con el navegador): cómo avanzar, caps y niveles de los jefes, objetos nuevos, pistas de megapiedras y Ticket-Recuerdo, y novedades. Las pistas salen de los mapas con `python3 tools/dualocke/guia.py`; el resto se edita a mano.
 - **Siguiente: jugar y probarlo todo junto.** Lista de qué mirar en `PRUEBAS.md`.
 
 ### Pendiente de decidir
@@ -559,6 +560,7 @@ Quién hace cada cosa y cómo se sube: sección 13.
 | Reescalado de niveles por tramos (tabla de mapas y reglas) | `tools/dualocke/reescalar_niveles.py` |
 | Equipos de los jefes (+1/+2, megas) | `tools/dualocke/equipos_jefes.py` |
 | Megapiedras y objetos competitivos por el mapa | `tools/dualocke/colocar_objetos.py` |
+| Guía para jugar (walkthrough, caps, pistas de objetos, novedades) | `GUIA.html` (pistas: `tools/dualocke/guia.py`) |
 | Evolución por nivel de los entrenadores normales | `tools/dualocke/evolucionar_entrenadores.py` |
 | Entrenadores | `src/data/trainers.party` |
 | Tiendas | scripts de cada mapa en `data/maps/*/scripts.inc` (`pokemart`) |
