@@ -1232,7 +1232,7 @@ RustboroCity_Text_DevonCorpSign:
 	.string "lo fabricamos todo”.$"
 
 RustboroCity_Text_GymSign:
-	.string "GIMNASIO POKéMON DE CIUDAD FÉRRICA\n"
+	.string "GIMNASIO POKéMON DE FÉRRICA\n"
 	.string "LÍDER: PETRA\p"
 	.string "“¡La alumna modelo que ama las rocas!”$"
 

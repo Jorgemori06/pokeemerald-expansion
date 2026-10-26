@@ -1,0 +1,105 @@
+# CIUDAD CALAGUA: calles (combate con el rival), PUERTO, MOTEL, casas, CENTRO POKéMON y OLVIDAMOVIMIENTOS (sin lo del FRENTE BATALLA)
+LilycoveCity_Text_MayShoppingLetsBattle	AURA: ¿Oh, eh? ¡{PLAYER}{KUN}!\n¿Tú también de compras?\pYo me he comprado un montón de\nMUÑECOS y PÓSTERES.\pClaro que también he atrapado muchos\nPOKéMON y los estoy criando\lcomo es debido.\pLa verdad, me preocupa más si tú\nlos crías bien, {PLAYER}{KUN}.\pCombatiré contigo para que me\nenseñes tus POKéMON, {PLAYER}{KUN}.$
+LilycoveCity_Text_MayNotRaisingPokemon	AURA: ¿Oh, por qué? {PLAYER}{KUN},\n¿no has criado a tus POKéMON?\pEso no dice mucho de ti como\nENTRENADOR…$
+LilycoveCity_Text_MayBattleMe	AURA: ¡Venga, combate conmigo para\nque vea tus POKéMON!$
+LilycoveCity_Text_MayWontBeBeaten	AURA: ¡{PLAYER}{KUN}, mis POKéMON no\nperderán contra los tuyos!$
+LilycoveCity_Text_MayDefeat	… … … … … … … …\pMe acuerdo del combate que tuvimos\nen la RUTA 103, {PLAYER}{KUN}.\pAquel combate te ayudó a ser tan\nfuerte, ¿verdad, {PLAYER}{KUN}?$
+LilycoveCity_Text_MayGoingBackToLittleroot	AURA: Estoy pensando en volver pronto\na VILLA RAÍZ.\pHe atrapado un buen grupo de POKéMON\ny mi POKéDEX va avanzando, así\lque voy a enseñársela a mi padre.$
+LilycoveCity_Text_MayYouGoingToCollectBadges	{PLAYER}{KUN}, ¿qué vas a hacer?\p¿Conseguir todas las MEDALLAS y\ndesafiar a la LIGA POKéMON?\pBueno, mientras tú consigues\nMEDALLAS, yo trabajaré en mi\lPOKéDEX. ¡La completaré antes que tú!\p¡Hasta luego!$
+LilycoveCity_Text_MayYouGoingToPokemonLeague	{PLAYER}{KUN}, ¿qué vas a hacer?\p¿Vas a desafiar a la LIGA POKéMON?\p¿O vas a completar tu POKéDEX?\pPuede que haya perdido contra ti,\n¡pero acabaré mi POKéDEX antes!\p¡Hasta luego!$
+LilycoveCity_Text_BrendanShoppingLetsBattle	BRUNO: Oh, eh, es {PLAYER}.\pEstoy haciendo un recado para mi padre.\nNo, no estoy comprando MUÑECOS.\pBueno, cuánto tiempo.\p¿Combatimos para ver quién ha criado\nmejor a sus POKéMON?$
+LilycoveCity_Text_BrendanNoConfidence	BRUNO: Oh, ¿qué pasa?\n¿No te ves capaz?$
+LilycoveCity_Text_BrendanBattleMe	BRUNO: ¿Combatimos para ver quién ha\ncriado mejor a sus POKéMON?$
+LilycoveCity_Text_BrendanWontBeBeaten	BRUNO: Ya sabes que contra ti no\npienso perder, {PLAYER}.$
+LilycoveCity_Text_BrendanDefeat	Hmpf…\nLos has criado mucho.\pEso escuece un poco, que yo empecé\na entrenar antes que tú…$
+LilycoveCity_Text_BrendanGoingBackToLittleroot	BRUNO: Yo…\nPienso volver a VILLA RAÍZ.\pYa sabes que ayudo a mi padre con\nsu POKéDEX. Va bastante bien,\lasí que debería enseñársela.$
+LilycoveCity_Text_BrendanYouGoingToCollectBadges	{PLAYER}, ¿qué vas a hacer?\p¿Conseguir todas las MEDALLAS y\ndesafiar a la LIGA POKéMON?\pA lo mejor yo también lo hago…\p¡Bueno, ánimo!$
+LilycoveCity_Text_BrendanYouGoingToPokemonLeague	{PLAYER}, ¿qué vas a hacer?\pCon lo fuerte que eres, ¿vas a\ndesafiar a la LIGA POKéMON?\pJe, si yo entrenara un poco más a\nmis POKéMON, sería más fuerte que\ltú, {PLAYER}.\p¡Bueno, ánimo!$
+LilycoveCity_Text_MovedLootIntoHideoutToday	Fufufu…\pHoy hemos metido más botín en la\nGUARIDA secreta…\p¡¿Q-quién eres?!\n¡Solo hablaba solo!$
+LilycoveCity_Text_ChanceToDoBigThings	Solo soy un SOLDADO, así que no sé\nqué piensa el JEFE…\p¡Pero en el EQUIPO AQUA sé que tendré\nla ocasión de hacer cosas grandes!\p¡¿Q-quién eres?!\n¡Solo hablaba solo!$
+LilycoveCity_Text_DontGoNearCaveInCove	¡Eh, tú!\p¡No te acerques a la cueva de la cala!\p¿Por qué? ¡No te hace falta saberlo!\n¡Soy mayor, así que hazme caso!$
+LilycoveCity_Text_IfWorldBecomesOurs	Si el mundo entero es nuestro, del\nEQUIPO AQUA, también será un sitio\lmás feliz para los POKéMON.$
+LilycoveCity_Text_WailmerLeapOutOfWater	¡Venga! ¡WAILMER!\n¡Salta fuera del agua!$
+LilycoveCity_Text_GetLostMessingUpTraining	¿Eh? ¿Qué quieres?\pNos estás fastidiando el entreno,\nasí que ¿te largas, o qué?$
+LilycoveCity_Text_ContestHallInTown	En este pueblo hay una SALA DE\nCONCURSOS POKéMON.\pEso quiere decir que vienen POKéMON\nbien criados de todo el país.\p¡Se me hincha el corazón de emoción!$
+LilycoveCity_Text_StrangeCaveInCove	¿Has visto esa cueva tan rara de la\ncala de las afueras?$
+LilycoveCity_Text_GoingToMoveDeleterForHMs	Voy a enseñarle movimientos nuevos a\nmi POKéMON para un CONCURSO.\pAsí que voy a ver al\nOLVIDAMOVIMIENTOS para que olvide\llos movimientos de MO.$
+LilycoveCity_Text_ImFromKanto	Vengo de KANTO.\pLa región de HOENN es preciosa, con\ntanta agua y tanta naturaleza.\p¿Eh? Espera un momento…\p¿Habrá POKéMON raros que solo vivan\npor aquí?$
+LilycoveCity_Text_TeamAquaBeenTrainingWailmer	El EQUIPO AQUA está entrenando a sus\nWAILMER en la cala.\p¡Los MARINEROS no podemos sacar los\nbarcos con ellos en medio!$
+LilycoveCity_Text_SomeonePuntedTeamAquaOut	¡Ah del barco! ¿Sabes qué?\p¡Alguien ha echado al EQUIPO AQUA\npor nosotros!\pLos WAILMER se han ido de la cala, así\nque ya podemos sacar los barcos.$
+LilycoveCity_Text_SomeoneStoleMyPokemon	Estaba echando una siesta en la posada\nde la playa, con el ruido de las olas…\p¡Y alguien me ha robado el POKéMON!\p¿Quién habrá sido?\n¿Ha sido el EQUIPO AQUA?$
+LilycoveCity_Text_MissingPokemonCameBack	Mi POKéMON desaparecido…\n¡Ha vuelto sin que me diera cuenta!$
+LilycoveCity_Text_ImArtDealer	Soy MARCHANTE DE ARTE.\pCompro y vendo obras de arte,\nsobre todo cuadros.\pHe oído que el MUSEO de aquí expone\nobras magníficas…$
+LilycoveCity_Text_SeaRemainsForeverYoung	Aunque nos hagamos viejos y arrugados,\nel mar sigue siempre joven, con el\lbrillo intenso de la vida…\pJojojo, jojojojo…$
+LilycoveCity_Text_SixtyYearsAgoHusbandProposed	Hace sesenta años mi marido se me\ndeclaró aquí.\lEl mar sigue tan bonito como siempre.\pJijiji, jijijiji…$
+LilycoveCity_Text_TeamAquaRenovatedCavern	Mm, ¿conoces la caverna tan rara\nque hay en esta cala?\pEra una formación natural, pero\nllegaron los del EQUIPO AQUA\ly la reformaron.\p¡Dicen que son el “EQUIPO AQUA,\namante de la naturaleza”!\p¡Pero lo que hacen y lo que dicen no\ntienen nada que ver!$
+LilycoveCity_Text_TeamAquaLotGoneForGood	Esa cueva de la cala…\pNo me di cuenta enseguida, pero\nahora está totalmente vacía.\pEsos del EQUIPO AQUA se habrán ido\npara siempre.$
+LilycoveCity_Text_CitySign	CIUDAD CALAGUA\p“Donde acaba la tierra y empieza\nel mar”.$
+LilycoveCity_Text_ContestHallSign	SALA DE CONCURSOS POKéMON\n“¡Donde se reúnen los ENTRENADORES!”$
+LilycoveCity_Text_MotelSign	MOTEL CALAGUA\p“Que nos recuerden como el motel\nde CALAGUA”.$
+LilycoveCity_Text_MuseumSign	MUSEO DE CALAGUA\p“¡Exposición de obras maestras\nPOKéMON!”$
+LilycoveCity_Text_MuseumSignPlayersExhibit	MUSEO DE CALAGUA\p“¡Exposición de la colección\nPOKéMON de {PLAYER}!”$
+LilycoveCity_Text_HarborSignUnderConstruction	PUERTO DE CIUDAD CALAGUA\p“El ferry M.S. MAREA se está\nconstruyendo en CIUDAD PORTUAL.\p”Empezará a funcionar en breve”.$
+LilycoveCity_Text_HarborSign	PUERTO DE CIUDAD CALAGUA\p“Disfruta de un crucero en el ferry\nM.S. MAREA”.$
+LilycoveCity_Text_TrainerFanClubSign	CLUB DE FANS DE ENTRENADORES\pEl cartel está lleno de nombres de\nENTRENADORES garabateados…$
+LilycoveCity_Text_DepartmentStoreSign	CENTRO COMERCIAL DE CALAGUA\p“¡Rebosante de artículos geniales\ny de emoción!\p”¡El sitio ideal para encontrar eso\nque necesitas!”$
+LilycoveCity_Text_MoveDeletersHouseSign	CASA DEL OLVIDAMOVIMIENTOS\p“Se borran movimientos POKéMON\nque no se quieren”.$
+LilycoveCity_Text_DoYouKnowAboutBerryBlender	¿Conoces la máquina llamada\nLICUADORA DE BAYAS?$
+LilycoveCity_Text_FasterSpinBetterPokeblocks	Hay que coordinarse para que gire\nmás rápido.\pHe oído que cuanto más rápido gira,\nmejores {POKEBLOCK}S salen.$
+LilycoveCity_Text_ExplainBerryBlender	Sirve para hacer unos caramelos que\nse llaman {POKEBLOCK}S.\pSi le das un buen {POKEBLOCK} a un\nPOKéMON, su estado mejora mucho.$
+LilycoveCity_Text_HeardTowerCalledSkyPillar	He oído que hay una torre por alguna\nde las rutas del mar.\pDicen que se llama PILAR CELESTE.$
+LilycoveCity_Text_SawTallTowerOnRoute131	Vi una torre muy alta por la\nRUTA 131.\p¿Será esa…?$
+LilycoveCity_Text_JustArrivedAndSawRarePokemon	Acabamos de llegar de luna de miel.\pY hemos visto un POKéMON de tipo\nDRAGÓN volando muy alto en el cielo.\p¿En HOENN viven POKéMON tan\nchulos como ese?$
+LilycoveCity_Text_HoneymoonVowToSeeRarePokemon	En la luna de miel nos prometimos ver\ntodos los POKéMON raros posibles.\pY nada más llegar vimos uno raro.\n¡Qué alegría!\p¡Vamos, que estamos felicísimos!$
+LilycoveCity_Harbor_Text_FerryUnavailable	¿Perdona?\n¿Buscas un barco?\pLo siento, ahora mismo no hay\nservicio de ferry…$
+LilycoveCity_Harbor_Text_MayISeeYourTicket	Hola, ¿vienes por el ferry?\n¿Me enseñas tu TICKET?$
+LilycoveCity_Harbor_Text_NoTicket	{PLAYER} no tiene el TICKET…\pLo siento muchísimo.\pHace falta un TICKET para subir\nal ferry.$
+LilycoveCity_Harbor_Text_FlashTicketWhereTo	{PLAYER} ha enseñado el TICKET.\p¡Perfecto! ¡Es todo lo que necesitas!\p¿Y adónde quieres ir?$
+LilycoveCity_Harbor_Text_SailAnotherTime	¡Viaja con nosotros en otra ocasión!$
+LilycoveCity_Harbor_Text_SlateportItIs	¡Pues a CIUDAD PORTUAL!$
+LilycoveCity_Harbor_Text_PleaseBoard	Sube al ferry y espera a que zarpe,\npor favor.$
+LilycoveCity_Harbor_Text_WhereWouldYouLikeToGo	Entonces, ¿adónde quieres ir?$
+LilycoveCity_Harbor_Text_SailorFerryUnavailable	Hasta que terminen el ferry, los\nmarineros no tenemos nada que hacer…\pOjalá se den prisa los del ASTILLERO\nde PORTUAL.$
+LilycoveCity_Harbor_Text_SailorFerryAvailable	Por fin funciona el ferry\nM.S. MAREA.\pLos del ASTILLERO de PORTUAL habrán\ntrabajado el doble.\p¡Bueno, ahora me toca a mí!$
+LilycoveCity_CoveLilyMotel_1F_Text_GuestsDoubledByMascot	Mm, ¿así que doblaron los clientes\nusando POKéMON como atracción?\pMm, a lo mejor debería poner un\nPOKéMON mono de mascota del motel.\p¿Vendrán así más clientes?$
+LilycoveCity_CoveLilyMotel_1F_Text_NoGuestsWithTeamAqua	¡Ay, perdona, perdona!\n¡Estaba muy metido viendo la tele!\pDesde que llegó el EQUIPO AQUA a la\nciudad, los turistas no vienen.$
+LilycoveCity_CoveLilyMotel_1F_Text_CantSeeTheTV	¡Eh, quita de en medio!\n¡Que no veo la tele!$
+LilycoveCity_CoveLilyMotel_1F_Text_MonFoundLostItem	¡Increíble! ¿Me dices que un POKéMON\nencontró un objeto perdido?\pEso sí que es algo. Si tuviéramos un\nPOKéMON tan listo…\pPodríamos encontrar todo lo que\nperdieran los clientes…$
+LilycoveCity_CoveLilyMotel_1F_Text_HeardAquaHideoutBusted	¡Ay, perdona, perdona!\n¡Estaba muy metido viendo la tele!\pHe oído que alguien ha desmantelado\nla GUARIDA del EQUIPO AQUA.\pGracias a eso, acaba de reservar un\ngrupo grande.\pEra una empresa que se llama… Eh…\nGAME no sé qué…$
+LilycoveCity_CoveLilyMotel_1F_Text_HouseSittingMonCaughtBurglar	¡Increíble! ¿Un POKéMON que cuidaba la\ncasa atrapó a un ladrón?\pEso sí que es algo. Si tuviéramos un\nPOKéMON fuerte de guardia…\pPodríamos dar más seguridad a los\nclientes.$
+LilycoveCity_CoveLilyMotel_1F_Text_BetterGetWorkingOnGuestsDinner	¡Ay, perdona, perdona!\n¡Estaba muy metido viendo la tele!\pAh, sí. Hace un rato llegó un grupo\ngrande de clientes.\pSe registraron como GAME FREAK, así\nque supongo que hacen juegos.\p¡Ay, tengo que ponerme con su cena!$
+LilycoveCity_CoveLilyMotel_2F_Text_ShowMeCompletedDex	Soy el DISEÑADOR DEL JUEGO.\p¿Ah, sí?\n¿Estás completando una POKéDEX?\pCuesta mucho completarla, pero\nno te rindas.\pSi la completas, ven a enseñármela,\npor favor.$
+LilycoveCity_CoveLilyMotel_2F_Text_FilledPokedexGiveYouThis	¡Hala! ¡Qué pasada!\n¡Sí, es una pasada total!\p¡Esta POKéDEX está completa!\n¡Sí que te gustan los POKéMON!\p¡Estoy impresionado!\pDeja que te dé algo como\nreconocimiento.$
+LilycoveCity_CoveLilyMotel_2F_Text_ImTheProgrammer	¿Yo? ¿Me hablas a mí?\nSoy el PROGRAMADOR.\p¿Cómo serán las TRAGAPERRAS de\npor aquí?$
+LilycoveCity_CoveLilyMotel_2F_Text_ImTheGraphicArtist	¡Soy la GRAFISTA! ¿A que los POKéMON\nde HOENN son interesantes?$
+LilycoveCity_CoveLilyMotel_2F_Text_GirlsAreCute	Las chicas del FLOTADOR son monas,\n¿eh? Combatir contra una de ellas…\p¡Uau, es lo más!\p¡Y las GEMELAS! ¿A que son monas?\nUn combate 2 contra 2 con GEMELAS…\p¡Uau, es divertidísimo!$
+LilycoveCity_CoveLilyMotel_2F_Text_SeaBreezeTicklesHeart	La brisa del mar me hace cosquillas\nen el corazón. ¡Qué gusto!$
+LilycoveCity_CoveLilyMotel_2F_Text_NeverLeaveWithoutGameBoy	Nunca sabes cuándo ni dónde te\nvan a desafiar.\pPor eso nunca salgo de casa sin\nmi GAME BOY ADVANCE.$
+LilycoveCity_CoveLilyMotel_2F_Text_SnoozingPreferBattles	SCOTT: … … … … …\n… … … … … Zzz…\p… … … … … ¿Eh?\n¡Ay, perdona! ¡Me había dormido!\pHe venido a ver eso de los\nCONCURSOS POKéMON.\pReconozco que parece bastante\nentretenido, pero…\pSoy de la vieja escuela: prefiero los\ncombates y los ENTRENADORES duros.\pPero eso es cosa mía.\p¡{PLAYER}{KUN}, que lo disfrutes\ntodo: GIMNASIOS, CONCURSOS, CARPA\lDE COMBATE…!$
+LilycoveCity_CoveLilyMotel_2F_Text_ContestsDoTakeStrategy	SCOTT: Creo que para ganar un\nCONCURSO sí que hace falta estrategia.\pPensar estrategias de CONCURSO es\nuna forma de mejorar como ENTRENADOR.$
+LilycoveCity_House1_Text_PokemonPartnersNotTools	Los POKéMON son compañeros de las\npersonas. No son herramientas.\pPor desgracia, hay gente que no\nlo entiende…$
+LilycoveCity_House1_Text_Kecleon	KECLEON: ¿Ruroro?$
+LilycoveCity_House2_Text_NotAwakeYetHaveThis	¿Eh? ¿Qué? ¿Qué pasa?\pAún no me he despertado…\nToma, para ti…$
+LilycoveCity_House2_Text_SleepIsEssential	Aaah…\pDormir es fundamental para la salud…\nDuerme y recupérate…$
+LilycoveCity_House3_Text_LearnFromMasterOfPokeblocks	¡Ay, madre! ¿Viajas sin compañía?\n¡Con lo joven que eres! ¡Bien hecho!\p¡Seguro que mis hijos podrían\naprender algo de ti!\p¿Yo? Soy maestra de los {POKEBLOCK}S.\pSi me pongo un poquito en serio,\npreparo unos {POKEBLOCK}S geniales.\p¿Quieres que te enseñe una maestra\nde los {POKEBLOCK}S?$
+LilycoveCity_House3_Text_OhAreYouSure	¿Oh? ¿Seguro?\p¡No siempre hay que intentar hacerlo\ntodo sin ayuda, cielo!$
+LilycoveCity_House3_Text_ExplainPokeblocks	¡Oh, bien! ¡Qué cabeza tienes!\nEs un poco largo, así que atención.\p¿Lista la cabeza?\pSi miras los {POKEBLOCK}S, verás que\ntienen una nota de textura.\p¡Cuanto más baja la textura, mejor!\n¡Que no se te olvide!\pUn buen {POKEBLOCK} tiene la textura\nbaja y el nivel alto.\pAdemás, un POKéMON puede comer más\n{POKEBLOCK}S buenos que normales.\pY esto es importante.\pPara hacer {POKEBLOCK}S suaves, usa\nBAYAS de tipos distintos.\p¡No seas tacaño! El tipo de BAYAS\ninfluye en la suavidad.\pY otra cosa.\pCuanta más gente licúe BAYAS, más\nsuaves salen los {POKEBLOCK}S.\pPor eso deberías hablar con más gente\ny hacer {POKEBLOCK}S en compañía.\pEso es lo que necesitas saber para\nhacer buenos {POKEBLOCK}S.\pSi todo el mundo tuviera POKéMON\nqueridos, {POKEBLOCK}S suaves y una\lfamilia que lo quiere, el mundo\lsería más feliz.\p¡No te rindas, cielo!$
+LilycoveCity_House3_Text_HappyToHaveQuadruplets	Cuando mi mujer tuvo cuatrillizos,\nme llevé un susto de muerte.\pPero ahora, al verlos jugar juntos,\nsoy feliz.$
+LilycoveCity_House3_Text_GoingToWinMultiBattles	Estamos jugando a COMBATES MÚLTIPLES,\npero sé que voy a ganar yo.$
+LilycoveCity_House3_Text_LikeMixingAtRecordCorner	Nos gusta mezclar cosas en el\nRINCÓN RÉCORDS.\p¿Pero qué se mezcla?$
+LilycoveCity_House3_Text_MakePokeblocksWithBerryBlender	¡Vamos a hacer {POKEBLOCK}S geniales\ncon una LICUADORA DE BAYAS!$
+LilycoveCity_House3_Text_GoingToEnterContest	Quiero presumir de lo fuerte que es\nmi POKéMON, así que nos vamos a\lpresentar juntos a un CONCURSO.$
+LilycoveCity_House4_Text_MysteriesAtBottomOfSea	Los mayores misterios del planeta\nestán en el fondo del mar.\pEso dijo alguien, pero no sé…$
+LilycoveCity_House4_Text_UnderwaterTrenchMossdeepSootopolis	Entre ALGARIA y ARRECÍPOLIS hay una\nfosa submarina muy profunda.\pEso me han dicho, al menos.$
+LilycoveCity_PokemonCenter_1F_Text_HowManyKindsOfPokemon	¿Cuántos tipos de POKéMON habrá en\nel mundo?\pSería genial cruzar el mar y cambiar\nPOKéMON con gente de muy lejos.$
+LilycoveCity_PokemonCenter_1F_Text_HeardAboutRottenScoundrels	He oído hablar de unos sinvergüenzas\nque roban POKéMON y METEORITOS.$
+LilycoveCity_PokemonCenter_1F_Text_HaventSeenRottenScoundrels	Esos sinvergüenzas que roban POKéMON\ny METEORITOS…\pÚltimamente no los he visto.$
+LilycoveCity_MoveDeletersHouse_Text_ICanMakeMonForgetMove	Eh…\n¡Ah, sí! Soy el OLVIDAMOVIMIENTOS.\pPuedo hacer que los POKéMON olviden\nsus movimientos.\p¿Quieres que lo haga?$
+LilycoveCity_MoveDeletersHouse_Text_WhichMonShouldForget	¿Qué POKéMON debe olvidar un\nmovimiento?$
+LilycoveCity_MoveDeletersHouse_Text_WhichMoveShouldBeForgotten	¿Qué movimiento debe olvidar?$
+LilycoveCity_MoveDeletersHouse_Text_MonOnlyKnowsOneMove	{STR_VAR_1} solo sabe un movimiento,\nasí que no puede olvidarlo…$
+LilycoveCity_MoveDeletersHouse_Text_MonsMoveShouldBeForgotten	¡Mm! ¿{STR_VAR_2} de {STR_VAR_1}?\n¿Debe olvidar ese movimiento?$
+LilycoveCity_MoveDeletersHouse_Text_MonHasForgottenMove	¡Ha salido perfecto!\p{STR_VAR_1} ha olvidado\n{STR_VAR_2} por completo.$
+LilycoveCity_MoveDeletersHouse_Text_ComeAgain	Vuelve si hay movimientos que\nolvidar.$
+LilycoveCity_MoveDeletersHouse_Text_EggCantForgetMoves	¿Qué?\nUn HUEVO no sabe ningún movimiento.$
+LilycoveCity_MoveDeletersHouse_Text_CantForgetSurf	¡Mm!\pParece que tu {STR_VAR_1} no quiere\nolvidar SURF.$

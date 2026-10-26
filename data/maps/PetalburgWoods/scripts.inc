@@ -441,7 +441,7 @@ PetalburgWoods_Text_HiddenItemsExplanation:
 
 PetalburgWoods_Text_TryUsingThisItem:
 	.string "¡Anda, qué guay!\n"
-	.string "¡Es la MEDALLA del GIMNASIO FÉRRICA!\p"
+	.string "¡Es la MEDALLA del GIMNASIO de FÉRRICA!\p"
 	.string "Seguro que entrenas POKéMON.\n"
 	.string "Deberías probar este objeto.$"
 

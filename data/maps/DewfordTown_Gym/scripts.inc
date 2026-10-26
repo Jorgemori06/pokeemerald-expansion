@@ -423,10 +423,10 @@ DewfordTown_Gym_Text_BrawlyPostBattle:
 	.string "boquiabiertos a los ENTRENADORES!$"
 
 DewfordTown_Gym_Text_GymStatue:
-	.string "GIMNASIO POKéMON DE PUEBLO AZULIZA$"
+	.string "GIMNASIO POKéMON DE AZULIZA$"
 
 DewfordTown_Gym_Text_GymStatueCertified:
-	.string "GIMNASIO POKéMON DE PUEBLO AZULIZA\p"
+	.string "GIMNASIO POKéMON DE AZULIZA\p"
 	.string "RECONOCIDOS POR MARCIAL:\n"
 	.string "{PLAYER}$"
 

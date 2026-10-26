@@ -1,4 +1,4 @@
-# BAYAS: árboles de bayas, regalos de BAYAS por todo HOENN, FLORERÍA PÉTALO BONITO, MAESTRO DE BAYAS y LICUADORA DE BAYAS (data/scripts/berry_tree.inc, data/text/berries.inc, data/scripts/berry_blender.inc, data/text/blend_master.inc)
+# BAYAS: árboles de bayas, regalos de BAYAS por todo HOENN, FLORISTERÍA PÉTALO BONITO, MAESTRO DE BAYAS y LICUADORA DE BAYAS (data/scripts/berry_tree.inc, data/text/berries.inc, data/scripts/berry_blender.inc, data/text/blend_master.inc)
 BerryTree_Text_ItsSoftLoamySoil	Es tierra blanda y fértil.$
 BerryTree_Text_WantToPlant	Es tierra blanda y fértil.\n¿Quieres plantar una BAYA?$
 BerryTree_Text_PlantedOneBerry	{PLAYER} ha plantado una {STR_VAR_1}\nen la tierra blanda y fértil.$
@@ -45,14 +45,14 @@ LilycoveCity_Text_BecauseYoureTrainer	Al fin y al cabo…\p¡Es porque entrenas 
 LilycoveCity_Text_PokeblocksSuitPokemon	Al fin y al cabo…\pIgual que a mí me sienta la sencillez\ndigna, los {POKEBLOCK}S le sientan a\llos POKéMON.$
 Route123_BerryMastersHouse_Text_YoureDeservingOfBerry	Puedes llamarme MAESTRO DE BAYAS.\pSueño con llenar el mundo de flores\nbonitas, así que cultivo BAYAS y se\llas doy a todo el mundo.\p¡Te mereces una!$
 Route123_BerryMastersHouse_Text_WhyBeStingyTakeAnother	¿Para qué ser tacaño?\n¡Toma otra!$
-Route123_BerryMastersHouse_Text_VisitPrettyPetalFlowerShop	No dejes de visitar la FLORERÍA\nPÉTALO BONITO, cerca de FÉRRICA.\p¡Que las flores llenen el mundo!$
+Route123_BerryMastersHouse_Text_VisitPrettyPetalFlowerShop	No dejes de visitar la FLORISTERÍA\nPÉTALO BONITO, cerca de FÉRRICA.\p¡Que las flores llenen el mundo!$
 Route123_BerryMastersHouse_Text_DoneForToday	Por hoy ya está.\nVuelve otro día.\p¡Que las flores llenen el mundo!$
 Route123_BerryMastersHouse_Text_HeardAGoodSayingLately	Cómo cultiva BAYAS mi marido…\n¡Es el mejor del mundo!\pMe tiene muy orgullosa, de verdad.\pPor cierto, criatura, ¿has oído\nalgún buen dicho últimamente?$
 Route123_BerryMastersHouse_Text_InspirationalTakeThis	¡Ah! ¡Qué dicho tan extraordinario!\n¡Qué inspirador!\pQuiero que te quedes esto.$
 Route123_BerryMastersHouse_Text_GoodSayingTakeThis	¡Oh! Es un buen dicho.\nEres extraordinario.\pQuiero que te quedes esto.$
 Route123_BerryMastersHouse_Text_JoyNeverGoesOutOfMyLife	Nuestros cuatro nietos llegarán más\nlejos que mi marido.\p¡La alegría nunca falta en mi vida!$
 Route123_BerryMastersHouse_Text_Ah	Ah…$
-Route104_PrettyPetalFlowerShop_Text_ThisIsPrettyPetalFlowerShop	¡Hola!\pEsto es la FLORERÍA PÉTALO BONITO.\n¡Llenamos el mundo de flores!$
+Route104_PrettyPetalFlowerShop_Text_ThisIsPrettyPetalFlowerShop	¡Hola!\pEsto es la FLORISTERÍA PÉTALO BONITO.\n¡Llenamos el mundo de flores!$
 Route104_PrettyPetalFlowerShop_Text_LearnAboutBerries	{PLAYER}{KUN}, ¿quieres saber cosas\nsobre las BAYAS?$
 Route104_PrettyPetalFlowerShop_Text_IntroLearnAboutBerries	¿Cómo te llamas?\p{PLAYER}{KUN}.\nQué nombre tan bonito.\p{PLAYER}{KUN}, ¿quieres saber cosas\nsobre las BAYAS?$
 Route104_PrettyPetalFlowerShop_Text_BerriesExplanation	Las BAYAS crecen en plantas que solo\nse dan en tierra blanda y fértil.\pSi coges BAYAS, no olvides plantar\nuna en la tierra fértil otra vez.\pUna BAYA plantada pronto brota, se\nhace planta, da flores preciosas\ly vuelve a dar BAYAS.\pQuiero ver el mundo entero lleno de\nflores bonitas.\lEse es mi sueño.\pAyúdame, {PLAYER}{KUN}. Planta BAYAS\nllena el mundo de flores.$

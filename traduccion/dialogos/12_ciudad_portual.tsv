@@ -78,9 +78,9 @@ SlateportCity_Text_RegisteredScott	Has registrado a ese tal SCOTT\nen el POKéNA
 SlateportCity_Text_KeepEyeOnTrainersBeSeeingYou	SCOTT: Me gustaría acompañarte, pero\ntambién quiero estar atento al\ltalento de otras personas.\pAsí que seguiré recorriendo otros\npueblos un poco más.\p¡Nos vemos, {PLAYER}{KUN}!$
 SlateportCity_Text_TakingBattleTentChallenge	SCOTT: ¡Anda!\n¡Si es {PLAYER}{KUN}!\pDéjame adivinar: ¿vas a\nprobar la CARPA DE COMBATE?\p¡Sí! ¡Buena idea!\n¡Una idea estupenda!\p¡Al fin y al cabo, la CARPA DE COMBATE\nes perfecta para alguien fuerte!\p¡Esfuérzate al máximo!$
 SlateportCity_Harbor_Text_FerryServiceUnavailable	¿Perdona?\n¿Buscas un barco?\pLo siento, ahora mismo no hay\nservicio de ferry…$
-SlateportCity_Harbor_Text_MayISeeYourTicket	Hola, ¿vienes por el ferry?\n¿Me enseñas tu BILLETE?$
-SlateportCity_Harbor_Text_YouMustHaveTicket	{PLAYER} no tiene el BILLETE…\pLo siento muchísimo.\pHace falta un BILLETE para subir\nal ferry.$
-SlateportCity_Harbor_Text_FlashedTicketWhereTo	{PLAYER} ha enseñado el BILLETE.\p¡Perfecto! ¡Es todo lo que necesitas!\p¿Y adónde quieres ir?$
+SlateportCity_Harbor_Text_MayISeeYourTicket	Hola, ¿vienes por el ferry?\n¿Me enseñas tu TICKET?$
+SlateportCity_Harbor_Text_YouMustHaveTicket	{PLAYER} no tiene el TICKET…\pLo siento muchísimo.\pHace falta un TICKET para subir\nal ferry.$
+SlateportCity_Harbor_Text_FlashedTicketWhereTo	{PLAYER} ha enseñado el TICKET.\p¡Perfecto! ¡Es todo lo que necesitas!\p¿Y adónde quieres ir?$
 SlateportCity_Harbor_Text_SailAnotherTime	¡Viaja con nosotros en otra ocasión!$
 SlateportCity_Harbor_Text_LilycoveItIs	¡Pues a CIUDAD CALAGUA!$
 SlateportCity_Harbor_Text_BattleFrontierItIs	¡Pues al FRENTE BATALLA!$

@@ -177,7 +177,7 @@ RustboroCity_Gym_Text_MarcPostBattle:
 
 RustboroCity_Gym_Text_RoxanneIntro:
 	.string "Hola, soy PETRA, la LÍDER del\n"
-	.string "GIMNASIO POKÉMON de FÉRRICA.\p"
+	.string "GIMNASIO POKéMON de FÉRRICA.\p"
 	.string "Me hice LÍDER para poner en práctica\n"
 	.string "en combate lo que aprendí en la\l"
 	.string "ESCUELA de ENTRENADORES POKéMON.\p"
@@ -224,11 +224,11 @@ RustboroCity_Gym_Text_RoxannePostBattle:
 	.string "aprenderás muchas cosas.$"
 
 RustboroCity_Gym_Text_GymStatue:
-	.string "GIMNASIO POKéMON DE CIUDAD FÉRRICA$"
+	.string "GIMNASIO POKéMON DE FÉRRICA$"
 
 RustboroCity_Gym_Text_GymStatueCertified:
-	.string "GIMNASIO POKéMON DE CIUDAD FÉRRICA\p"
-	.string "ENTRENADORES RECONOCIDOS POR PETRA:\n"
+	.string "GIMNASIO POKéMON DE FÉRRICA\p"
+	.string "RECONOCIDOS POR PETRA:\n"
 	.string "{PLAYER}$"
 
 RustboroCity_Gym_Text_RoxanneRegisterCall:

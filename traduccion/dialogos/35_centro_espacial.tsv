@@ -1,0 +1,61 @@
+# CENTRO ESPACIAL de ALGARIA: el EQUIPO MAGMA y el combate doble con MÁXIMO
+MossdeepCity_Text_SpaceCenterReceivedLetter	El CENTRO ESPACIAL de la isla lanza\ncohetes enormes.\pÚltimamente hay mucho revuelo por\nuna carta que han recibido.$
+MossdeepCity_Text_SpaceCenterLaunchingRockets	El CENTRO ESPACIAL de la isla lanza\ncohetes enormes.$
+MossdeepCity_Text_SpecialSpaceCenterRock	Esta roca es muy especial para la\ngente del CENTRO ESPACIAL.\pLa pusieron aquí para pedir que sus\ncohetes vuelen sin problemas.\pCuando pides un deseo, ¿qué usas?\n¿Se lo pides a una estrella?\pYo uso un amuleto de los deseos.\nEso es lo que hago.$
+MossdeepCity_Text_SpaceCenterSign	CENTRO ESPACIAL DE ALGARIA\n“El lugar más cercano al espacio”.$
+MossdeepCity_SpaceCenter_1F_Text_RocketLaunchImminent	¡El lanzamiento del cohete es\ninminente!$
+MossdeepCity_SpaceCenter_1F_Text_SuccessfulLaunchNumber	¡El cohete ha despegado sin problemas!\n¡Lanzamiento con éxito n.º {STR_VAR_1}!$
+MossdeepCity_SpaceCenter_1F_Text_HaywireButRocketLaunchImminent	Ya sé que ahora mismo las cosas están\nun poco revueltas, pero…\p¡El lanzamiento del cohete es\ninminente!$
+MossdeepCity_SpaceCenter_1F_Text_HaywireButSuccessfulLaunchNumber	Ya sé que ahora mismo las cosas están\nun poco revueltas, pero…\p¡El cohete ha despegado sin problemas!\n¡Lanzamiento con éxito n.º {STR_VAR_1}!$
+MossdeepCity_SpaceCenter_1F_Text_RocketLaunchDemandsPerfection	Lanzar un cohete exige perfección.\nNo se permite ni un 1 % de error.\pAunque el 99 % esté bien, todo falla\nsi el 1 % restante sale mal.\pAun así, nunca dejamos de intentarlo.\n¿Por qué? Es un sueño que no acaba.$
+MossdeepCity_SpaceCenter_1F_Text_MagmaHaveSightsOnSpaceCenter	Esos matones del MAGMA tienen en el\npunto de mira nuestro CENTRO ESPACIAL.\p¡Pero no vamos a dejar que una\ntontería así frene el lanzamiento!$
+MossdeepCity_SpaceCenter_1F_Text_FoundThisYouCanHaveIt	Paseaba por la playa y me encontré\nesto.\pNo lo necesito, así que te lo puedes\nquedar.$
+MossdeepCity_SpaceCenter_1F_Text_HoennFamousForMeteorShowers	La región de HOENN es famosa desde\nsiempre por sus lluvias de estrellas.$
+MossdeepCity_SpaceCenter_1F_Text_MagmaCantStealFuelTakeThis	No podemos dejar que el EQUIPO MAGMA\nrobe el combustible del cohete.\pAh, por cierto, puedes quedarte esta\npiedra que encontré en la playa.$
+MossdeepCity_SpaceCenter_1F_Text_CantStrollOnBeachWithMagma	Con el EQUIPO MAGMA por aquí, supongo\nque pasear por la playa no es seguro.$
+MossdeepCity_SpaceCenter_1F_Text_DidPokemonComeFromSpace	Hay quien dice que los POKéMON\nvinieron del espacio. ¿Será verdad?$
+MossdeepCity_SpaceCenter_1F_Text_AquaShouldBeatMagma	¡El EQUIPO AQUA debería encargarse\ndel EQUIPO MAGMA!\pPero si lo hiciera, el EQUIPO AQUA se\nvolvería más descarado, ¿no?$
+MossdeepCity_SpaceCenter_1F_Text_RocketsBoggleMyMind	Un trozo enorme de metal atraviesa\nel cielo y vuela al espacio…\p¡Me deja alucinado!$
+MossdeepCity_SpaceCenter_1F_Text_MagmaWantsToSpoilMyDream	Un trozo enorme de metal atraviesa\nel cielo y vuela al espacio…\p¡Pero el EQUIPO MAGMA quiere\nfastidiarme ese sueño!\p¡Ni hablar!$
+MossdeepCity_SpaceCenter_1F_Text_StevenMagmaCantBeAllowedToTakeFuel	MÁXIMO: {PLAYER}{KUN}, ¿has leído ya\nese aviso?\pEl EQUIPO MAGMA viene a por el\ncombustible de cohetes de esta isla.\pNo sé para qué lo querrán, pero no\npodemos dejar que se lo lleven.\pVoy a vigilar un rato más.\pMientras tanto, ¿por qué no das una\nvuelta por el pueblo?$
+MossdeepCity_SpaceCenter_1F_Text_Grunt3Intro	¡Como prometimos, venimos a por el\ncombustible del cohete!$
+MossdeepCity_SpaceCenter_1F_Text_Grunt3Defeat	Sin combustible…$
+MossdeepCity_SpaceCenter_1F_Text_Grunt3PostBattle	¡No te creas que vas lanzado solo\npor ganarme!$
+MossdeepCity_SpaceCenter_1F_Text_Grunt1Intro	¡Ya avisamos!\n¡Nosotros no vamos a escondidas!$
+MossdeepCity_SpaceCenter_1F_Text_Grunt1Defeat	Grrr…\nTendríamos que haber ido a traición…$
+MossdeepCity_SpaceCenter_1F_Text_Grunt1PostBattle	¡Vale, ya lo pillo! La próxima vez\nvendremos sin avisar.$
+MossdeepCity_SpaceCenter_1F_Text_Grunt4Intro	El combustible que guarda el CENTRO\nESPACIAL: eso es lo que buscamos.\p¡Nos lo vamos a llevar todo!$
+MossdeepCity_SpaceCenter_1F_Text_Grunt4Defeat	Por favor, ¿no nos das algo de\ncombustible? ¡Aunque sea un vasito!$
+MossdeepCity_SpaceCenter_1F_Text_Grunt4PostBattle	¿Que qué vamos a hacer con el\ncombustible?\p¿Yo qué sé?\n¡Pregúntale a nuestro líder, arriba!$
+MossdeepCity_SpaceCenter_1F_Text_Grunt2Intro	¡Nuestro líder ha dicho que no pase\nnadie, pero nadie!$
+MossdeepCity_SpaceCenter_1F_Text_Grunt2Defeat	¡Ag! ¡Ag! ¡Aaag!$
+MossdeepCity_SpaceCenter_1F_Text_Grunt2PostBattle	Por favor, dile a nuestro líder que\nnunca abandoné mi puesto.\lQue aguanté hasta el final…$
+MossdeepCity_SpaceCenter_1F_Text_MagmaIntentToStealNotice	Esto es…\n¿Un aviso de robo?\p“Al personal del CENTRO ESPACIAL:\n¿Qué tal? Nosotros, muy bien.\p”Dentro de poco iremos a llevarnos\nvuestro combustible de cohetes.\p”Por favor, no intentéis pararnos.\nNos lo llevaremos pase lo que pase.\p”¡Que haya más tierra!\n                                          EQUIPO MAGMA”$
+MossdeepCity_SpaceCenter_2F_Text_MossdeepIdealForRockets	En ALGARIA casi siempre hace sol, y el\nviento es estable.\pEs el sitio ideal para lanzar\ncohetes.$
+MossdeepCity_SpaceCenter_2F_Text_WhyWouldMagmaStealRocketFuel	¿Para qué querrá el EQUIPO MAGMA\nrobar nuestro combustible?$
+MossdeepCity_SpaceCenter_2F_Text_WouldveLikedToBeAstronaut	Si fuera un poco más joven, me habría\ngustado ser astronauta…\p¡No… no es tarde!\n¡Puedo intentarlo y lo intentaré!$
+MossdeepCity_SpaceCenter_2F_Text_MagmaCantGetAwayWithThis	¡Si el EQUIPO MAGMA se lleva el\ncombustible, no podré ir al espacio!\p¡No pueden salirse con la suya con\nsemejante atrocidad!$
+MossdeepCity_SpaceCenter_2F_Text_WishOrdinaryPeopleCouldGoIntoSpace	Ojalá algún día la gente normal\npudiera ir al espacio…$
+MossdeepCity_SpaceCenter_2F_Text_DoesMagmaWantToGoToSpace	El EQUIPO MAGMA…\n¿También querrá ir al espacio?$
+MossdeepCity_SpaceCenter_2F_Text_YoureOutnumberedTakeUsOn	¿Qué te pasa?\p¿Somos tres contra uno y aun así\nquieres enfrentarte a nosotros?$
+MossdeepCity_SpaceCenter_2F_Text_GoodAnswer	¡Buena respuesta!\n¡Eso es lo que haría alguien listo!$
+MossdeepCity_SpaceCenter_2F_Text_Grunt5Intro	¿No le tienes miedo a nada, eh?\n¡Vale, empiezo yo!$
+MossdeepCity_SpaceCenter_2F_Text_Grunt5Defeat	¡He perdido!\n¡Pero!$
+MossdeepCity_SpaceCenter_2F_Text_Grunt6Intro	¡Aún es pronto para respirar!\n¡Ahora voy yo!$
+MossdeepCity_SpaceCenter_2F_Text_Grunt6Defeat	¡Yo también he perdido!\n¡Pero!$
+MossdeepCity_SpaceCenter_2F_Text_Grunt7Intro	Seguro que quieres un descanso.\n¡Pero no te lo voy a permitir!$
+MossdeepCity_SpaceCenter_2F_Text_Grunt7Defeat	Tendríamos que haber descansado…\nEso es lo que había que hacer…$
+MossdeepCity_SpaceCenter_2F_Text_Grunt6PostBattle	Tres aquí y mira en qué lío tan\npatético nos hemos metido.$
+MossdeepCity_SpaceCenter_2F_Text_Grunt7PostBattle	Perder así los tres…\n¡Hacemos el triple de ridículo!$
+MossdeepCity_SpaceCenter_2F_Text_Grunt5PostBattle	¿Le estamos siendo útiles a nuestro\nlíder en algo?$
+MossdeepCity_SpaceCenter_2F_Text_WellTakeCareOfYou	¡Jejeje!\p¡Venimos hasta aquí a por combustible\ny otra vez nos estorban!\p¡Si tú también te vas a meter, te\nliquidamos a la vez!$
+MossdeepCity_SpaceCenter_2F_Text_MaxieDontInterfere	MAGNO: ¡Apártate!\n¡Ni se te ocurra meterte!$
+MossdeepCity_SpaceCenter_2F_Text_StevenWhyStealRocketFuel	MÁXIMO: EQUIPO MAGMA…\p¿Para qué queréis robar combustible\nde cohetes?$
+MossdeepCity_SpaceCenter_2F_Text_MaxieUseFuelToEruptVolcano	MAGNO: Fufufu… Ya que tienes tanta\ncuriosidad, te lo explicaré.\p¡Vamos a echar toda la carga en el\nMONTE CENIZO!\pSin GROUDON, ese montón de escoria\nde montaña ya no nos sirve.\p¡Así que usaremos el combustible para\nque el volcán entre en erupción!\p¡Será brutal!$
+MossdeepCity_SpaceCenter_2F_Text_StevenAreYouReadyToBattle	MÁXIMO: ¡{PLAYER}{KUN}!\n¿Me vas a ayudar?\p¡Combatamos juntos!\n¿Todo listo?$
+MossdeepCity_SpaceCenter_2F_Text_StevenHurryGetReadyQuickly	MÁXIMO: ¡Entonces, date prisa!\n¡Prepárate rápido!$
+MossdeepCity_SpaceCenter_2F_Text_JustWantToExpandLand	Lo único que quiero…\nSolo quiero expandir la tierra…$
+MossdeepCity_SpaceCenter_Text_TabithaDefeat	Estoy con nuestro líder…$
+MossdeepCity_SpaceCenter_2F_Text_MaxieWeFailedIsAquaAlsoMisguided	MAGNO: No hemos conseguido que el\nvolcán entre en erupción…\pNo pudimos controlar a GROUDON\ndespués de despertarlo…\p¿Es un error nuestro objetivo de\nexpandir la tierra?\p… … … … … …\n… … … … … …\pSi…\nSi nosotros, el EQUIPO MAGMA, nos\lequivocamos…\l… … … … … …\p¿El objetivo del EQUIPO AQUA de\nexpandir el mar también será\lun error?$
+MossdeepCity_SpaceCenter_2F_Text_MaxieWeWillGiveUp	MAGNO: Muy bien…\nRenunciamos al combustible…\pParece que hay asuntos más\nimportantes que debo estudiar…$
+MossdeepCity_SpaceCenter_2F_Text_StevenThankYouComeSeeMeAtHome	MÁXIMO: Uf, qué tensión.\n{PLAYER}{KUN}, gracias.\pTengo algo para ti para agradecerte\ntu ayuda.\pVen a verme a casa después.\pAh, sí: no vivo en CIUDAD FÉRRICA.\nVivo aquí mismo, en esta isla.$

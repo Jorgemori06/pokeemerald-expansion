@@ -4,7 +4,7 @@ PlayersHouse_1F_Text_MoversPokemonGoSetClock	Los POKéMON de la mudanza lo han\n
 PlayersHouse_1F_Text_ArentYouInterestedInRoom	MAMÁ: ¿Qué pasa, {PLAYER}?\p¿No quieres ver tu propia\nhabitación?$
 PlayersHouse_1F_Text_GoSetTheClock	MAMÁ: {PLAYER}.\pVe a poner en hora el reloj de tu\nhabitación, cielo.$
 PlayersHouse_1F_Text_OhComeQuickly	MAMÁ: ¡Oh! ¡{PLAYER}, {PLAYER}!\n¡Rápido! ¡Ven corriendo!$
-PlayersHouse_1F_Text_MaybeDadWillBeOn	MAMÁ: ¡Mira! ¡Es el GIMNASIO PETALIA!\n¡A lo mejor sale PAPÁ!$
+PlayersHouse_1F_Text_MaybeDadWillBeOn	MAMÁ: ¡Mira! ¡Es el GIMNASIO de PETALIA!\n¡A lo mejor sale PAPÁ!$
 PlayersHouse_1F_Text_ItsOverWeMissedHim	MAMÁ: Oh… Ya ha terminado.\pCreo que ha salido PAPÁ, pero nos\nlo hemos perdido. ¡Qué pena!$
 PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor	Ah, sí.\nUn amigo de PAPÁ vive en el pueblo.\pSe llama PROF. ABEDUL.\pVive justo al lado, así que deberías\nir a presentarte.$
 PlayersHouse_1F_Text_SeeYouHoney	MAMÁ: ¡Hasta luego, cielo!$
@@ -17,12 +17,12 @@ PlayersHouse_1F_Text_IsThatAPokenav	MAMÁ: ¿Qué es eso, cielo? ¿Un POKéNAV?\
 PlayersHouse_1F_Text_RegisteredMom	Has registrado a MAMÁ\nen el POKéNAV.$
 PlayersHouse_1F_Text_Vigoroth1	¡Fugiiiiih!$
 PlayersHouse_1F_Text_Vigoroth2	Huggoh, uggo uggo…$
-PlayersHouse_1F_Text_ReportFromPetalburgGym	REPORTERA: …Les hemos ofrecido este\nreportaje desde el GIMNASIO PETALIA.$
+PlayersHouse_1F_Text_ReportFromPetalburgGym	REPORTERA: …Les hemos ofrecido este\nreportaje desde el GIMNASIO de\lPETALIA.$
 PlayersHouse_1F_Text_TheresAMovieOnTV	Están echando una película.\pDos hombres bailan sobre el teclado\nde un piano gigante.\p¡Hay que ponerse en marcha!$
 PlayersHouse_1F_Text_RunningShoesManual	Es el folleto de instrucciones de\nlas DEPORTIVAS.\p“Pulsa el Botón B para correr con\nlas DEPORTIVAS puestas.\p”¡Átate las DEPORTIVAS y sal\ncorriendo!”$
 PlayersHouse_1F_Text_TicketFromBrineyCameForYou	PAPÁ: ¿Mm?\p¡Anda, si es {PLAYER}!\pHacía tiempo que no te veía, pero\nte veo… más fuerte, no sé.\pEsa es la impresión que me das.\n¡Pero tu viejo aún no se rinde!\pAh, sí, tengo algo para ti.\nTe lo ha enviado un tal\lSR. ARENQUE.$
-PlayersHouse_1F_Text_PortsInSlateportLilycove	PAPÁ: Mm, ¿un BILLETE de ferry?\pSi no recuerdo mal, hay puertos en\nCIUDAD PORTUAL y CIUDAD CALAGUA.$
-PlayersHouse_1F_Text_BetterGetBackToGym	Tengo que volver al GIMNASIO PETALIA.\pMAMÁ, gracias por cuidar de la casa\nmientras estoy fuera.$
+PlayersHouse_1F_Text_PortsInSlateportLilycove	PAPÁ: Mm, ¿un TICKET de ferry?\pSi no recuerdo mal, hay puertos en\nCIUDAD PORTUAL y CIUDAD CALAGUA.$
+PlayersHouse_1F_Text_BetterGetBackToGym	Tengo que volver al GIMNASIO.\pMAMÁ, gracias por cuidar de la casa\nmientras estoy fuera.$
 PlayersHouse_1F_Text_DadShouldStayLonger	MAMÁ: Tu padre…\pViene a casa después de mucho\ntiempo y solo habla de POKéMON.\pDebería relajarse y quedarse más.$
 PlayersHouse_1F_Text_IsThatABreakingStory	MAMÁ: ¿Es una noticia de última hora?$
 PlayersHouse_1F_Text_LatiEmergencyNewsFlash	¡Interrumpimos la emisión para dar\nuna noticia urgente!\pEn varios lugares de HOENN se ha visto\nun POKéMON de color BZZT…\lsurcando el cielo.\pDe momento no se sabe de qué\nPOKéMON se trata.\pAhora seguimos con la película.$

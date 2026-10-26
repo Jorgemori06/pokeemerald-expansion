@@ -28,7 +28,7 @@ DewfordTown_House2_EventScript_Boy::
 
 DewfordTown_House2_Text_WantYouToHaveSilkScarf:
 	.string "¡Recréate la vista con esto!\p"
-	.string "¡Es un PAÑUELO SEDA! ¡Lo último en\n"
+	.string "¡Es un PAÑUELO DE SEDA! ¡Lo último en\n"
 	.string "moda, ya lo creo!\p"
 	.string "¡Oh, te brillan los ojos!\n"
 	.string "¡Sabes apreciar mi estilo!\p"
@@ -42,7 +42,7 @@ DewfordTown_House2_Text_NoRoom:
 	.string "objetos para tenerlo!$"
 
 DewfordTown_House2_Text_ExplainSilkScarf:
-	.string "El PAÑUELO SEDA sube la potencia de\n"
+	.string "El PAÑUELO DE SEDA sube la potencia de\n"
 	.string "los movimientos de tipo NORMAL.\p"
 	.string "¡Es un PAÑUELO maravilloso que queda\n"
 	.string "bien con casi cualquier POKéMON!$"

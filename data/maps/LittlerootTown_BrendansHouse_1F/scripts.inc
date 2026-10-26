@@ -312,7 +312,7 @@ PlayersHouse_1F_Text_OhComeQuickly:
 	.string "¡Rápido! ¡Ven corriendo!$"
 
 PlayersHouse_1F_Text_MaybeDadWillBeOn:
-	.string "MAMÁ: ¡Mira! ¡Es el GIMNASIO PETALIA!\n"
+	.string "MAMÁ: ¡Mira! ¡Es el GIMNASIO de PETALIA!\n"
 	.string "¡A lo mejor sale PAPÁ!$"
 
 PlayersHouse_1F_Text_ItsOverWeMissedHim:
@@ -370,7 +370,8 @@ PlayersHouse_1F_Text_Vigoroth2:
 
 PlayersHouse_1F_Text_ReportFromPetalburgGym:
 	.string "REPORTERA: …Les hemos ofrecido este\n"
-	.string "reportaje desde el GIMNASIO PETALIA.$"
+	.string "reportaje desde el GIMNASIO de\l"
+	.string "PETALIA.$"
 
 PlayersHouse_1F_Text_TheresAMovieOnTV:
 	.string "Están echando una película.\p"
@@ -398,12 +399,12 @@ PlayersHouse_1F_Text_TicketFromBrineyCameForYou:
 	.string "SR. ARENQUE.$"
 
 PlayersHouse_1F_Text_PortsInSlateportLilycove:
-	.string "PAPÁ: Mm, ¿un BILLETE de ferry?\p"
+	.string "PAPÁ: Mm, ¿un TICKET de ferry?\p"
 	.string "Si no recuerdo mal, hay puertos en\n"
 	.string "CIUDAD PORTUAL y CIUDAD CALAGUA.$"
 
 PlayersHouse_1F_Text_BetterGetBackToGym:
-	.string "Tengo que volver al GIMNASIO PETALIA.\p"
+	.string "Tengo que volver al GIMNASIO.\p"
 	.string "MAMÁ, gracias por cuidar de la casa\n"
 	.string "mientras estoy fuera.$"
 

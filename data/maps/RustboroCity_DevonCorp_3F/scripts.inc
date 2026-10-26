@@ -250,11 +250,11 @@ RustboroCity_DevonCorp_3F_Text_ThankYouForDeliveringLetter:
 
 RustboroCity_DevonCorp_3F_Text_ExplainExpShare:
 	.string "SR. PEÑA: El POKéMON que lleve el\n"
-	.string "REPARTIR EXP. recibirá parte de\l"
+	.string "REPARTIR EXP recibirá parte de\l"
 	.string "la EXPERIENCIA del combate.\p"
 	.string "La recibirá aunque no haya\n"
 	.string "luchado.\p"
-	.string "Diría que el REPARTIR EXP. es muy útil\n"
+	.string "Diría que el REPARTIR EXP es muy útil\n"
 	.string "para entrenar POKéMON débiles.$"
 
 RustboroCity_DevonCorp_3F_Text_NotFamiliarWithTrends:

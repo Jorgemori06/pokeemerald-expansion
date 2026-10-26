@@ -1,0 +1,47 @@
+# CUEVA ANCESTRAL (PLUBIO), PILAR CELESTE (RAYQUAZA) y PUEBLO PACIFIDLOG
+CaveOfOrigin_B1F_Text_WallaceStory	¿Ah, así que eres {PLAYER}{KUN}?\nHe oído hablar de tus hazañas.\pMe llamo PLUBIO.\pAntes era el LÍDER del GIMNASIO de\nARRECÍPOLIS, pero surgió algo.\pAsí que le he confiado el GIMNASIO\na mi maestro, GALANO.\p… … … … … …\n… … … … … …\pGROUDON y KYOGRE, los dos POKéMON que\nestán sembrando el caos, se\lconsideran POKéMON superancestrales.\pPero no hay solo dos POKéMON\nsuperancestrales.\pHay uno más en alguna parte.\pEn algún lugar hay un POKéMON\nsuperancestral llamado RAYQUAZA.\pDicen que fue RAYQUAZA quien calmó a\nlos dos rivales en un pasado remoto.\pPero ni siquiera yo tengo idea de\ndónde está RAYQUAZA…$
+CaveOfOrigin_B1F_Text_WhereIsRayquaza	PLUBIO: {PLAYER}{KUN}, ¿sabes\ndónde está RAYQUAZA ahora?\pSi lo sabes, dímelo, por favor.$
+CaveOfOrigin_B1F_Text_ButWereInCaveOfOrigin	PLUBIO: ¿La CUEVA ANCESTRAL?\p¡Pero si es aquí mismo!\n¡Necesito algo mejor que eso!\pPor favor, piensa dónde podría estar\nRAYQUAZA ahora mismo.$
+CaveOfOrigin_B1F_Text_OldLadyDidntMentionThat	PLUBIO: ¿El MONTE PÍRICO?\pPero cuando vi antes a la anciana de\nallí, no me dijo nada de eso.\pDudo mucho que la anciana intentara\nocultarme algo…\p{PLAYER}{KUN}, ¿puedes pensarlo\ncon más calma?$
+CaveOfOrigin_B1F_Text_CantYouRememberSomehow	PLUBIO: ¿Eh? ¿No te acuerdas?\nMmm… Eso es un problema…\p¿No puedes hacer memoria?$
+CaveOfOrigin_B1F_Text_WellHeadToSkyPillar	PLUBIO: ¿El PILAR CELESTE?\p¡Eso es!\n¡Tiene que ser el PILAR CELESTE!\p{PLAYER}{KUN}, ¡no hay tiempo!\n¡Vamos ya mismo al PILAR CELESTE!$
+SkyPillar_Outside_Text_DoorIsClosed	La puerta está cerrada.$
+SkyPillar_Outside_Text_OpenedDoorToSkyPillar	PLUBIO: ¡Ay, perdona, de verdad!\pCon las prisas, ¡no me había dado\ncuenta de que te dejaba atrás!\pHe abierto la puerta cerrada del\nPILAR CELESTE.\p{PLAYER}{KUN}, ¡en marcha!$
+SkyPillar_Outside_Text_EarthquakeNotMomentToWaste	PLUBIO: ¡Es un terremoto!\p¡No hay tiempo que perder!\n¡Tenemos que darnos prisa!$
+SkyPillar_Outside_Text_SituationGettingWorse	PLUBIO: Mmm…\nLa situación empeora…$
+SkyPillar_Outside_Text_GotToGoBackForSootopolis	PLUBIO: Esto no pinta bien…\pLa alteración del tiempo llega hasta\naquí…\p{PLAYER}{KUN}.\pRAYQUAZA debería estar más arriba.\pMe preocupa ARRECÍPOLIS.\nTengo que volver.\pAhora todo está en tus manos.\n¡No nos falles!$
+SkyPillar_Top_Text_RayquazaFlewOff	RAYQUAZA ha despertado y se ha ido\nvolando…$
+PacifidlogTown_Text_FastRunningCurrent	En el mar entre PACIFIDLOG y PORTUAL\nla corriente es muy rápida.\pSi decides hacer SURF, puede que te\narrastre a otra parte.$
+PacifidlogTown_Text_NeatHousesOnWater	¿A que mola?\n¡Estas casas están sobre el agua!\p¡Yo nací aquí!$
+PacifidlogTown_Text_SkyPillarTooScary	¿El PILAR CELESTE?\p… Ah, te referirás a esa torre tan\nalta que hay un poco más allá.\pYo no subiría.\nDa demasiado miedo estar tan alto.\pLa vida a ras del mar en PACIFIDLOG\nya me va bien.$
+PacifidlogTown_Text_TownSign	PUEBLO PACIFIDLOG\p“Donde el sol de la mañana sonríe\nsobre las aguas”.$
+PacifidlogTown_House1_Text_RegiStory	En la región de HOENN hay tres POKéMON\nque representan el poder de la roca,\lel hielo y el acero.\pDicen que cada uno se esconde en lo\nmás hondo de una cueva.\pEsa es la historia que me contaban\ncuando era pequeño.$
+PacifidlogTown_House1_Text_SixDotsOpenThreeDoors	“Seis puntos abren tres puertas”.\pEso decía el abuelo, pero no sé qué\nquería decir.$
+PacifidlogTown_House2_Text_ChairmansYoungerBrotherOnVacation	¡Ejem!\pSoy el hermano pequeño del PRESIDENTE,\nla persona más importante del CLUB DE\lFANS DE LOS POKéMON.\pEstoy aquí de vacaciones con mis\nPOKéMON, sí, sí.$
+PacifidlogTown_House2_Text_AhYourPokemon	¡Ah!\nTu POKéMON…$
+PacifidlogTown_House2_Text_AdoringPokemonTakeThis	Se nota que te quiere muchísimo.\pUn POKéMON tan cariñoso y adorable se\nmerece una MT como esta, ¿no?$
+PacifidlogTown_House2_Text_PutInSomeMoreEffort	Mmm…\nNo está mal, pero tampoco bien.\pTú, que lo entrenas, tienes que\nesforzarte un poco más.$
+PacifidlogTown_House2_Text_ViciousPokemonTakeThis	Tiene una mirada feroz.\pUn POKéMON que da tanto miedo se\nmerece una MT como esta.$
+PacifidlogTown_House2_Text_ExplainReturnFrustration	Si un POKéMON te quiere mucho, la\npotencia de RETRIBUCIÓN aumenta.\pSi no te quiere, aumenta la de\nFRUSTRACIÓN.$
+PacifidlogTown_House2_Text_GetGoodTMInXDays	Ah, sí. Dentro de unos {STR_VAR_1} días\ntendré alguna MT buena.\pVen a verme entonces.\nTe daré una MT que le vaya a tu\lPOKéMON.$
+PacifidlogTown_House2_Text_Rurii	AZURILL: Rurii.$
+PacifidlogTown_House2_Text_VeryFriendlyWithTrainer	Parece que se lleva muy bien con su\nENTRENADOR.$
+PacifidlogTown_House2_Text_Rururi	AZURILL: ¡Rururi!$
+PacifidlogTown_House2_Text_DoesntLikeTrainerVeryMuch	No parece que le caiga muy bien su\nENTRENADOR.$
+PacifidlogTown_House3_Text_WillingToTradeIt	¡Mira este {STR_VAR_2}!\p¡Es el {STR_VAR_2} que atrapé ayer para\ncelebrar mi cumpleaños!\p¡Oh, ya veo que lo quieres!\n¡Al fin y al cabo, no tiene precio!\pTe diré qué. A lo mejor te lo cambio\npor un {STR_VAR_1}.$
+PacifidlogTown_House3_Text_ItsSubtlyDifferentThankYou	¿Oh, así que esto es un {STR_VAR_1}?\pSe parece un poco a un {STR_VAR_2},\npero tiene algo distinto.\p¡Gracias!$
+PacifidlogTown_House3_Text_WontAcceptAnyLessThanRealMon	¡No, no, no! ¡Solo acepto un\n{STR_VAR_1} de verdad!$
+PacifidlogTown_House3_Text_NotDesperateOrAnything	¿Oh, así que al final no?\pVale. Tampoco es que me muera\npor cambiarlo.$
+PacifidlogTown_House3_Text_ReallyWantedToGetBagon	Sé que podría buscar uno por mi\ncuenta, pero…\pDe verdad quería un BAGON que hubiera\natrapado otro ENTRENADOR…$
+PacifidlogTown_House3_Text_IsThatAPokedex	¿Eso es una POKéDEX?\p¿Has conocido muchos POKéMON\ndistintos?\pOjalá yo fuera como tú.$
+PacifidlogTown_House4_Text_PeopleSawHighFlyingPokemon	Dicen que han visto un POKéMON\nvolando muy alto sobre HOENN.\p¿Vuela todo el rato?\n¿No necesita descansar en algún sitio?$
+PacifidlogTown_House4_Text_SkyPokemon	¡Un POKéMON del cielo!\n¡Un POKéMON del cielo!$
+PacifidlogTown_House4_Text_WhereDidYouComeFrom	¿De dónde eres?$
+PacifidlogTown_House4_Text_YesTown	¿Sí?\n¿PUEBLO SÍ?\pNunca he oído hablar de ese sitio.$
+PacifidlogTown_House4_Text_YouHaveToComeFromSomewhere	¿No? Eso no tiene sentido.\nDe algún sitio serás.\p¡Oh! ¡Espera! ¿No me dirás que naciste\nen el fondo del mar?$
+PacifidlogTown_House5_Text_CantSeeMirageIslandToday	Hoy no se ve la ISLA ESPEJISMO…$
+PacifidlogTown_House5_Text_CanSeeMirageIslandToday	¡Oh! ¡Madre mía!\n¡Hoy se ve la ISLA ESPEJISMO!$
+PacifidlogTown_House5_Text_MirageIslandAppearDependingOnWeather	La ISLA ESPEJISMO…\pSeguro que se ve o no según el tiempo\nque haga para que haya espejismos.\p¿O de verdad aparece y desaparece?$
+PacifidlogTown_PokemonCenter_1F_Text_WhatColorTrainerCard	¿De qué color es tu FICHA DE\nENTRENADOR? ¡La mía es de cobre!$
+PacifidlogTown_PokemonCenter_1F_Text_OnColonyOfCorsola	PUEBLO PACIFIDLOG flota sobre una\ncolonia de CORSOLA.\pSi te lo dijera, ¿me creerías?$
+PacifidlogTown_PokemonCenter_1F_Text_AncestorsLivedOnBoats	Dicen que los antepasados de la gente\nde PACIFIDLOG nacían en barcos y\lvivían y morían a bordo.\pTengo entendido que vivían así porque\nbuscaban algo.$
