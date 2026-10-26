@@ -1,4 +1,4 @@
-# GIMNASIO PETALIA: primera visita con BLASCO, entrenadores y combate con PAPÁ (NORMAN). Sin la revancha del postgame.
+# GIMNASIO de PETALIA: primera visita con BLASCO, entrenadores y combate con PAPÁ (NORMAN). Sin la revancha del postgame.
 PetalburgCity_Gym_Text_DadYoureHereWithYourPokemon	PAPÁ: ¿Mm?\p¡Anda, si es {PLAYER}!\n¿Ya has terminado con la mudanza?\pMe sorprende que hayas llegado\nhasta aquí tú solo.\pAh, ya veo.\nVienes con tu POKéMON.\pMm… Entonces vas a ser ENTRENADOR\ncomo yo, {PLAYER}.\p¡Qué buena noticia!\n¡Tengo muchas ganas de verlo!$
 PetalburgCity_Gym_Text_WallyIdLikeAPokemon	Eh… Yo…\nQuería un POKéMON, por favor…$
 PetalburgCity_Gym_Text_DadOhYoureWallyRight	PAPÁ: ¿Mm? Tú eres… Eh… Ah, claro.\nEres BLASCO, ¿verdad?$
@@ -25,7 +25,7 @@ PetalburgCity_Gym_Text_PleaseComeWithMe	¡Ah, estás aquí, {PLAYER}{KUN}!\pVen 
 PetalburgCity_Gym_Text_LetMeBorrowPlayer	NORMAN, no te importa, ¿verdad?\p¿Me prestas a {PLAYER}{KUN}\nun par de minutos?$
 PetalburgCity_Gym_Text_DadGoingToKeepTraining	PAPÁ: {PLAYER}, deberías ir a ver\na tu madre de vez en cuando.\pYo me quedo aquí a entrenar\nel doble.\p¡Como ENTRENADOR, no puedo quedarme\nsin la revancha, {PLAYER}!$
 PetalburgCity_Gym_Text_DadNoAmountOfTrainingIsEnough	PAPÁ: {PLAYER}, ¿qué tal te va?\pEl mundo de los POKéMON es profundo.\pDe verdad creo que nunca se\nentrena lo suficiente.$
-PetalburgCity_Gym_Text_GymGuideAdvice	¡Eh! ¿Qué tal, {PLAYER}, futuro\nCAMPEÓN?\pLas puertas de este GIMNASIO se abren\nal vencer a los ENTRENADORES.\p¡Ojo! Las puertas de esta sala ya\nestán abiertas, ¡así que no me ataques!\pLos ENTRENADORES del GIMNASIO PETALIA\nusan todo tipo de objetos.\pLa puerta de la izquierda lleva a\nla SALA VELOCIDAD.\pLa de la derecha lleva a\nla SALA PRECISIÓN.\pEl nombre de la sala está en la\npuerta, así que elige bien.\pCuando elijas la puerta…\n¡Pues a por todas!$
+PetalburgCity_Gym_Text_GymGuideAdvice	¡Eh! ¿Qué tal, {PLAYER}, futura\nestrella de la LIGA?\pLas puertas de este GIMNASIO se abren\nal vencer a los ENTRENADORES.\p¡Ojo! Las puertas de esta sala ya\nestán abiertas, ¡así que no me ataques!\pLos ENTRENADORES de este GIMNASIO\nusan todo tipo de objetos.\pLa puerta de la izquierda lleva a\nla SALA VELOCIDAD.\pLa de la derecha lleva a\nla SALA PRECISIÓN.\pEl nombre de la sala está en la\npuerta, así que elige bien.\pCuando elijas la puerta…\n¡Pues a por todas!$
 PetalburgCity_Gym_Text_GymGuidePostVictory	¡{PLAYER}! ¡Hala! ¡Has superado incluso\na tu propio padre!\p¡Pero bueno!\n¡Qué giro tan impresionante!$
 PetalburgCity_Gym_Text_RandallIntro	Poder atacar antes que el\nrival…\pSolo con eso tengo una gran\nventaja, ¿no crees?$
 PetalburgCity_Gym_Text_RandallDefeat	¡Ha sido un combate magnífico!$
@@ -65,5 +65,5 @@ PetalburgCity_Gym_Text_EnterRecoveryRoom	El cartel dice “SALA RECUPERACIÓN”
 PetalburgCity_Gym_Text_EnterStrengthRoom	El cartel dice “SALA FUERZA”.\p¿Quieres entrar?$
 PetalburgCity_Gym_Text_EnterOHKORoom	El cartel dice “SALA KO”.\p¿Quieres entrar?$
 PetalburgCity_Gym_Text_EnterGymLeadersRoom	“SALA DEL LÍDER DE GIMNASIO\p”¡Mira tú mismo qué POKéMON te\nesperan!”, dice el cartel.\p¿Quieres entrar?$
-PetalburgCity_Gym_Text_GymStatue	GIMNASIO POKéMON DE CIUDAD PETALIA$
-PetalburgCity_Gym_Text_GymStatueCertified	GIMNASIO POKéMON DE CIUDAD PETALIA\pENTRENADORES RECONOCIDOS POR NORMAN:\n{PLAYER}$
+PetalburgCity_Gym_Text_GymStatue	GIMNASIO POKéMON DE PETALIA$
+PetalburgCity_Gym_Text_GymStatueCertified	GIMNASIO POKéMON DE PETALIA\pRECONOCIDOS POR NORMAN:\n{PLAYER}$

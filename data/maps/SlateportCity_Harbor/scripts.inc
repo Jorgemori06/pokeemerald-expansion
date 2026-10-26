@@ -388,16 +388,16 @@ SlateportCity_Harbor_Text_FerryServiceUnavailable:
 
 SlateportCity_Harbor_Text_MayISeeYourTicket:
 	.string "Hola, ¿vienes por el ferry?\n"
-	.string "¿Me enseñas tu BILLETE?$"
+	.string "¿Me enseñas tu TICKET?$"
 
 SlateportCity_Harbor_Text_YouMustHaveTicket:
-	.string "{PLAYER} no tiene el BILLETE…\p"
+	.string "{PLAYER} no tiene el TICKET…\p"
 	.string "Lo siento muchísimo.\p"
-	.string "Hace falta un BILLETE para subir\n"
+	.string "Hace falta un TICKET para subir\n"
 	.string "al ferry.$"
 
 SlateportCity_Harbor_Text_FlashedTicketWhereTo:
-	.string "{PLAYER} ha enseñado el BILLETE.\p"
+	.string "{PLAYER} ha enseñado el TICKET.\p"
 	.string "¡Perfecto! ¡Es todo lo que necesitas!\p"
 	.string "¿Y adónde quieres ir?$"
 

@@ -37,7 +37,7 @@ RustboroCity_Text_BrendanDefeat	Mmm…\nNo lo haces nada mal.$
 RustboroCity_Text_BrendanMrBrineyHint	BRUNO: Por cierto, ¿conoces al\nSR. ARENQUE? ¿Con el que me he cruzado?\pComo te acabas de mudar, {PLAYER},\nseguro que no lo sabes, pero el\lSR. ARENQUE fue un gran marinero.$
 RustboroCity_Text_TunnelNearingCompletion	“¡Túnel para ahorrar tiempo, a punto\nde terminarse!”\p…Eso dice el cartel, pero tiene\nuna gran “X” pintada encima\lcon pintura roja…$
 RustboroCity_Text_DevonCorpSign	CORPORACIÓN DEVON\p“Para todo lo que necesites,\nlo fabricamos todo”.$
-RustboroCity_Text_GymSign	GIMNASIO POKéMON DE CIUDAD FÉRRICA\nLÍDER: PETRA\p“¡La alumna modelo que ama las rocas!”$
+RustboroCity_Text_GymSign	GIMNASIO POKéMON DE FÉRRICA\nLÍDER: PETRA\p“¡La alumna modelo que ama las rocas!”$
 RustboroCity_Text_DevonCorpBranchOfficeSign	OFICINA DE LA CORPORACIÓN DEVON\p“Solo para empleados de DEVON y\npersonal autorizado”.$
 RustboroCity_Text_CitySign	CIUDAD FÉRRICA\p“La ciudad que busca unir naturaleza\ny ciencia”.$
 RustboroCity_Text_TrainersSchoolSign	ESCUELA DE ENTRENADORES POKéMON\p“¡Te enseñamos todo sobre\nlos POKéMON!”$
@@ -58,11 +58,11 @@ RustboroCity_Gym_Text_TommyPostBattle	PETRA es mucho más fuerte\nque yo.\p¡Ve 
 RustboroCity_Gym_Text_MarcIntro	Estaremos en mitad de la ciudad,\npero ¿y qué?\p¡Mis POKéMON ROCA necesitan sitio\npara arrasar!$
 RustboroCity_Gym_Text_MarcDefeat	¡Madre mía!\n¡Qué rival tan peleón!$
 RustboroCity_Gym_Text_MarcPostBattle	Hay que reconocérselo a nuestra LÍDER.\pTuvo cabeza para elegir el tipo ROCA\ntan joven.$
-RustboroCity_Gym_Text_RoxanneIntro	Hola, soy PETRA, la LÍDER del\nGIMNASIO POKÉMON de FÉRRICA.\pMe hice LÍDER para poner en práctica\nen combate lo que aprendí en la\lESCUELA de ENTRENADORES POKéMON.\p¿Serías tan amable de enseñarme cómo\ncombates y con qué POKéMON?$
+RustboroCity_Gym_Text_RoxanneIntro	Hola, soy PETRA, la LÍDER del\nGIMNASIO POKéMON de FÉRRICA.\pMe hice LÍDER para poner en práctica\nen combate lo que aprendí en la\lESCUELA de ENTRENADORES POKéMON.\p¿Serías tan amable de enseñarme cómo\ncombates y con qué POKéMON?$
 RustboroCity_Gym_Text_RoxanneDefeat	Así que…\nHe perdido…\pParece que todavía me queda mucho\npor aprender…\pLo entiendo.\pLas normas de la LIGA POKéMON dicen\nque hay que dar esto a quien venza\la un LÍDER de GIMNASIO.\pAcepta la MEDALLA PIEDRA oficial de\nla LIGA POKéMON.$
 RustboroCity_Gym_Text_ReceivedStoneBadge	¡{PLAYER} ha recibido la MEDALLA\nPIEDRA de PETRA!$
 RustboroCity_Gym_Text_StoneBadgeInfoTakeThis	La MEDALLA PIEDRA sube el ATAQUE\nde tus POKéMON.\pTambién les permite usar el movimiento\nde MO CORTE fuera de los combates.\pToma también esto, por favor.$
 RustboroCity_Gym_Text_ExplainRockTomb	Esa MÁQUINA TÉCNICA, la MT39,\ncontiene TUMBA ROCAS.\pNo solo hace daño tirando rocas,\nsino que también baja la VELOCIDAD.\pUna MT enseña al instante el\nmovimiento a un POKéMON.\pRecuerda que una MT solo se usa\nuna vez, así que piénsalo bien.$
 RustboroCity_Gym_Text_RoxannePostBattle	Como eres tan fuerte, deberías\ndesafiar a otros LÍDERES.\pLuchando contra muchos ENTRENADORES\naprenderás muchas cosas.$
-RustboroCity_Gym_Text_GymStatue	GIMNASIO POKéMON DE CIUDAD FÉRRICA$
-RustboroCity_Gym_Text_GymStatueCertified	GIMNASIO POKéMON DE CIUDAD FÉRRICA\pENTRENADORES RECONOCIDOS POR PETRA:\n{PLAYER}$
+RustboroCity_Gym_Text_GymStatue	GIMNASIO POKéMON DE FÉRRICA$
+RustboroCity_Gym_Text_GymStatueCertified	GIMNASIO POKéMON DE FÉRRICA\pRECONOCIDOS POR PETRA:\n{PLAYER}$

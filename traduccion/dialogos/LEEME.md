@@ -45,7 +45,7 @@ VILLA RAÍZ, PUEBLO ESCASO, CIUDAD PETALIA, CIUDAD FÉRRICA, PUEBLO AZULIZA, PUE
 | RUTA 120 (MÁXIMO y el MEGA-ARO), RUTA 121 y ZONA SAFARI de Hoenn (sin la zona ampliada del postgame) | `23_rutas120_121_safari.tsv` |
 | BARCO ABANDONADO y ferry M.S. MAREA (sin la invitación al FRENTE BATALLA) | `24_barco_abandonado_ferry.tsv` |
 | Textos comunes básicos: objetos, movimientos de campo, PC, guardar, SURF, REPELENTE, recordador | `25_textos_comunes_basicos.tsv` |
-| BAYAS: árboles, regalos de BAYAS, FLORERÍA PÉTALO BONITO, MAESTRO DE BAYAS y LICUADORA | `26_bayas.tsv` |
+| BAYAS: árboles, regalos de BAYAS, FLORISTERÍA PÉTALO BONITO, MAESTRO DE BAYAS y LICUADORA | `26_bayas.tsv` |
 | Valoración de la POKéDEX del PROF. ABEDUL y TUTORES de movimientos | `27_pokedex_tutores.tsv` |
 | BASES SECRETAS | `28_bases_secretas.tsv` |
 

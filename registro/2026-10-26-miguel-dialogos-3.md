@@ -22,6 +22,18 @@ Seguir con la traducción por lo que importa para avanzar en la historia. La par
 - Sin lo del FRENTE BATALLA (postgame).
 - `LEEME.md` (tabla y nombres) y `PLAN.md` (aviso del cambio de reparto).
 
+## Repaso de coherencia (pedido por Miguel)
+
+Se sacaron todos los nombres en mayúsculas de los 41 tramos y se compararon entre sí y con la tabla de objetos. Corregido:
+
+- FLORERÍA → FLORISTERÍA PÉTALO BONITO (como en el tramo 07).
+- PAÑUELO SEDA → PAÑUELO DE SEDA y REPARTIR EXP. → REPARTIR EXP (nombres de la tabla de objetos).
+- BILLETE → TICKET en el ferry y en la casa del jugador (el objeto se llama TICKET DEL BARCO).
+- Nombres de gimnasio con el mismo formato en todos: GIMNASIO POKéMON DE FÉRRICA/PETALIA/AZULIZA (sin CIUDAD ni PUEBLO), GIMNASIO de PETALIA, GIMNASIO de FÉRRICA, y RECONOCIDOS POR en todas las estatuas.
+- GIMNASIO POKÉMON → GIMNASIO POKéMON.
+- "futuro CAMPEÓN" del guía de PETALIA → "futura estrella de la LIGA", como en los demás gimnasios (sin género).
+- No queda ningún nombre ni frase en inglés en los tramos.
+
 ## Cómo se comprobó
 
 - `dialogos.py comprobar`: 0 errores.

@@ -733,7 +733,7 @@ PetalburgCity_Text_FullPartyExplanation:
 	.string "sistema de almacenamiento del PC.$"
 
 PetalburgCity_Text_GymSign:
-	.string "GIMNASIO POKéMON DE CIUDAD PETALIA\n"
+	.string "GIMNASIO POKéMON DE PETALIA\n"
 	.string "LÍDER: NORMAN\l"
 	.string "“¡Un hombre que busca la fuerza!”$"
 

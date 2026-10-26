@@ -637,7 +637,7 @@ DewfordTown_Text_TownSign:
 	.string "“Una islita en el mar azul”.$"
 
 DewfordTown_Text_GymSign:
-	.string "GIMNASIO POKéMON DE PUEBLO AZULIZA\n"
+	.string "GIMNASIO POKéMON DE AZULIZA\n"
 	.string "LÍDER: MARCIAL\l"
 	.string "“¡Una gran ola de lucha!”$"
 

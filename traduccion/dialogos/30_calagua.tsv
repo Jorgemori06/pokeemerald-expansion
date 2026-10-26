@@ -52,9 +52,9 @@ LilycoveCity_Text_SawTallTowerOnRoute131	Vi una torre muy alta por la\nRUTA 131.
 LilycoveCity_Text_JustArrivedAndSawRarePokemon	Acabamos de llegar de luna de miel.\pY hemos visto un POKéMON de tipo\nDRAGÓN volando muy alto en el cielo.\p¿En HOENN viven POKéMON tan\nchulos como ese?$
 LilycoveCity_Text_HoneymoonVowToSeeRarePokemon	En la luna de miel nos prometimos ver\ntodos los POKéMON raros posibles.\pY nada más llegar vimos uno raro.\n¡Qué alegría!\p¡Vamos, que estamos felicísimos!$
 LilycoveCity_Harbor_Text_FerryUnavailable	¿Perdona?\n¿Buscas un barco?\pLo siento, ahora mismo no hay\nservicio de ferry…$
-LilycoveCity_Harbor_Text_MayISeeYourTicket	Hola, ¿vienes por el ferry?\n¿Me enseñas tu BILLETE?$
-LilycoveCity_Harbor_Text_NoTicket	{PLAYER} no tiene el BILLETE…\pLo siento muchísimo.\pHace falta un BILLETE para subir\nal ferry.$
-LilycoveCity_Harbor_Text_FlashTicketWhereTo	{PLAYER} ha enseñado el BILLETE.\p¡Perfecto! ¡Es todo lo que necesitas!\p¿Y adónde quieres ir?$
+LilycoveCity_Harbor_Text_MayISeeYourTicket	Hola, ¿vienes por el ferry?\n¿Me enseñas tu TICKET?$
+LilycoveCity_Harbor_Text_NoTicket	{PLAYER} no tiene el TICKET…\pLo siento muchísimo.\pHace falta un TICKET para subir\nal ferry.$
+LilycoveCity_Harbor_Text_FlashTicketWhereTo	{PLAYER} ha enseñado el TICKET.\p¡Perfecto! ¡Es todo lo que necesitas!\p¿Y adónde quieres ir?$
 LilycoveCity_Harbor_Text_SailAnotherTime	¡Viaja con nosotros en otra ocasión!$
 LilycoveCity_Harbor_Text_SlateportItIs	¡Pues a CIUDAD PORTUAL!$
 LilycoveCity_Harbor_Text_PleaseBoard	Sube al ferry y espera a que zarpe,\npor favor.$
