@@ -120,6 +120,7 @@ Estas son las reglas que usaban en Platino. La idea es mantenerlas lo más parec
     - Los **shiny** se pueden capturar y usar siempre, aunque sean repetidos o legendarios, y **no gastan** la captura de la zona (confirmado por Jorge).
     - **Líneas con ramas** (decidido por Jorge el 24/10/2026): cada evolución final distinta es una **rama** (Gardevoir y Gallade, cada eeveelución, Beautifly y Dustox…). Se puede tener un Pokémon de cada rama: si tienes Gardevoir, un Ralts, Kirlia o Gallade sí cuentan, pero el nuevo **no puede evolucionar a la rama que ya tienes**. Un Pokémon que **todavía no ha elegido rama** (Ralts, Kirlia, Eevee…) ocupa **toda la línea** hasta que evolucione a una rama concreta. Las **formas regionales** cuentan como su especie (si tienes Pikachu, un Raichu de Alola es repetido). Si el que tenías muere, su rama se libera, también para evolucionar.
     - **Antes de que te den las primeras Poké Balls** (en el laboratorio de Abedul, al recibir la Pokédex) no cuenta ningún encuentro. Después sí, aunque no tengas Balls porque se te olvidó comprarlas (decidido por Jorge el 24/10/2026).
+    - **Arreglo (26/10/2026, encontrado jugando):** como las Poké Balls se pueden comprar en PUEBLO ESCASO desde el principio, las reglas (captura por zona y caja de prohibidos) también empiezan en cuanto llevas una Poké Ball en la mochila. Se guarda en `FLAG_DUALOCKE_TIENE_BALLS` (0x2B5) para que no se desactive al gastar la última. Código: `Dualocke_ReglasEmpezadas` (`src/dualocke.c`).
   - **Cómo funciona en el juego (hecho, Jorge, 24-25/10/2026):**
     - Solo cuentan los **encuentros aleatorios**: hierba, cuevas, surf, pesca, Golpe Roca, Dulce Aroma, Safari y los errantes. Los combates de evento y los estáticos (Kecleon, Electrode, legendarios…) no gastan la zona y se pueden capturar.
     - Al **empezar** el combate con el primer salvaje válido, la zona queda gastada, pase lo que pase (lo capturas, huyes, lo debilitas o pierdes).
@@ -234,7 +235,7 @@ Regla general: **el as de cada jefe va exactamente al nivel del cap**, el resto 
   - Están ordenados por tramo: los más fuertes (Pañuelo Elegido, Chaleco Asalto, Gafas Elegidas, Vidasfera) salen a partir del tramo 6.
   - Los coloca el mismo script. Sus flags son `FLAG_ITEM_COMP_...`, del **0x493 al 0x4C9**.
   - La tabla está en el script y en `registro/2026-10-23-miguel-objetos-competitivos.md`.
-  - **Flags libres que quedan para Jorge:** 0x2B5-0x2BB, 0x4CA-0x4EF y el resto de `FLAG_UNUSED_...`.
+  - **Flags libres que quedan para Jorge:** 0x2B6-0x2BB, 0x4CA-0x4EF y el resto de `FLAG_UNUSED_...` (0x2B5 es `FLAG_DUALOCKE_TIENE_BALLS`).
 
 ### Tiendas
 
@@ -466,7 +467,11 @@ Hecho: **toda la tabla de mensajes de combate** (693 de 699; los 6 restantes son
 
 **Menús (`src/strings.c`), en curso:** 524 de los 974 textos que se usan, con el mismo `ES()`. Están los de jugar normal: menú de pausa, mochila, tienda, equipo, datos del Pokémon, PC, guardado, ficha de entrenador, decoración, guardería, recordador de movimientos, Safari, huevos y Salón de la Fama. Falta lo que casi no se ve en un Dualocke: Frente Batalla, juegos por cable (Baya-Licuadora, Dodrio, Saltos), Regalo Misterioso, chat y frases de Easy Chat. 
 
-**Menús de otros archivos (hecho):** 233 textos más en `option_menu.c` (opciones), `start_menu.c` (vidas del locke), `party_menu.c`, `item_menu.c`, `item_use.c`, `player_pc.c`, `main_menu.c` (pantalla de inicio), `naming_screen.c`, `pokemon_summary_screen.c`, `map_name_popup.c`, `pokemon_storage_system.c` (cajas del PC) y `pokedex.c`. Se sustituye cada `_("…")` o `COMPOUND_STRING("…")` por `ES(…)` con las dos versiones. No se tocan los nombres de entrenadores de ejemplo de `main_menu.c` ni el abecedario de `naming_screen.c`. Quedan en inglés archivos menos vistos (Pokédex HGSS y DexNav, desactivados; concursos; Baya-Licuadora; depuración).
+**Menús de otros archivos (hecho):** 233 textos más en `option_menu.c` (opciones), `start_menu.c` (vidas del locke), `party_menu.c`, `item_menu.c`, `item_use.c`, `player_pc.c`, `main_menu.c` (pantalla de inicio), `naming_screen.c`, `pokemon_summary_screen.c`, `map_name_popup.c`, `pokemon_storage_system.c` (cajas del PC) y `pokedex.c`. Se sustituye cada `_("…")` o `COMPOUND_STRING("…")` por `ES(…)` con las dos versiones. No se tocan los nombres de entrenadores de ejemplo de `main_menu.c` ni el abecedario de `naming_screen.c`.
+
+**Nombres de los lugares (hecho, Jorge, 26/10/2026):** los de Hoenn en `src/data/region_map/region_map_sections.json` (RUTA 101, VILLA RAÍZ, CIUDAD PORTUAL…). Salen en los datos del Pokémon ("lo conociste en…"), en el cartel al entrar en un mapa y en el mapa de la región. Máximo 16 letras (`MAP_NAME_LENGTH`), así que algunos van recortados: ARRECÍPOLIS y PACIFIDLOG sin "CIUDAD"/"PUEBLO", CATARATA METEORO, CAMIÓN. Los de Kanto se quedan en inglés.
+
+**Pendiente (imágenes, no texto):** las cabeceras PROFILE, ABILITY y TRAINER MEMO de la pantalla de datos (`graphics/summary_screen/tiles.png`), el botón MOVE INFO del combate (`graphics/battle_interface/move_info_window_*.png`), los iconos de los tipos (ICE, GROUND…) y PRESS START en la pantalla de título. Quedan en inglés archivos menos vistos (Pokédex HGSS y DexNav, desactivados; concursos; Baya-Licuadora; depuración).
 
 Reglas para los menús: mantener los códigos y el mismo número de saltos `\n`, `\l` y `\p`, y que cada línea no sea mucho más larga que la inglesa (los recuadros tienen ancho fijo). Los nombres van en mayúsculas como en el original (MOCHILA, GUARDAR, CARTA…).
 
