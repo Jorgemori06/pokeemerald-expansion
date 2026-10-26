@@ -67,4 +67,16 @@ Mapa, qué se hizo, qué pasó y, si se puede, una captura. Si es un texto, la e
 
 **No era fallo:** no poder huir de un Dreepy después de tirarle una Ball. Usó Acoso, que atrapa (en los juegos oficiales pasa igual).
 
-**Pendiente (son imágenes):** PROFILE, ABILITY y TRAINER MEMO en los datos; MOVE INFO en combate; los iconos de tipo (ICE, GROUND…); PRESS START y "New Game" en el título.
+**Pendiente (son imágenes):** PROFILE, ABILITY y TRAINER MEMO en los datos; MOVE INFO en combate; los iconos de tipo (ICE, GROUND…); PRESS START y "New Game" en el título; PARTY POKéMON, CLOSE BOX y PKMN DATA en el PC.
+
+### 2. Jorge, 26/10/2026 (tarde, con el menú de depuración)
+
+**Bien:**
+- Con Poké Balls compradas, el segundo salvaje de la ruta ya no se puede capturar (arreglo de la partida 1). El mensaje cabe.
+- Mewtwo (legendario) va directo a VETADOS.
+- Un Bulbasaur repetido va a VETADOS; al morir el primero (aviso con 19 vidas, caja MUERTOS) se puede sacar el segundo.
+- Los Caramelos Raros paran en el cap (16 con 0 medallas).
+
+**Fallo:** al volar, "¿A dónde quieres VOLAR?" se cortaba (la ventana es estrecha). Ahora "¿Adónde VOLAR?".
+
+**No era fallo:** no poder volar a ningún sitio. Solo se vuela a las ciudades ya visitadas.
