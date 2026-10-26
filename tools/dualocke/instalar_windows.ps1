@@ -10,11 +10,13 @@
 #   el juego cuando Jorge o Miguel suban cambios).
 # - La ROM se copia al escritorio como Dualocke.gba. Si mGBA guarda la partida al lado
 #   (Dualocke.sav), al sustituir la ROM por una nueva la partida se conserva.
-# - El juego sale randomizado. La semilla se guarda la primera vez y se reutiliza, así que
-#   actualizar no cambia tu partida. Opciones:
+# - El juego sale randomizado y en version de juego (make release), sin los menus de
+#   depuracion (R + START en el mapa, SELECT en combate). La semilla se guarda la primera
+#   vez y se reutiliza, asi que actualizar no cambia tu partida. Opciones:
 #     -NuevaPartida  otra semilla al azar (para empezar un locke nuevo).
-#     -SinRandom     el juego sin randomizar, para probar el equilibrio. Se copia aparte,
-#                    como Dualocke-sin-random.gba, para no pisar tu ROM de juego.
+#     -SinRandom     el juego sin randomizar y con los menus de depuracion, para probar.
+#                    Se copia aparte, como Dualocke-sin-random.gba, para no pisar tu ROM
+#                    de juego.
 
 param(
     [string]$Rama = "master",
@@ -37,12 +39,18 @@ if ($NuevaPartida) {
         exit 0
     }
 }
+# La partida de verdad se compila con make release (sin menus de depuracion) y sale como
+# pokeemerald-release.gba; la de prueba, con make normal, como pokeemerald.gba
 if ($NuevaPartida) {
-    $make = "make nueva-partida"
+    # Lo mismo que make nueva-partida, pero en version release
+    $make = "rm -f dualocke_semilla.txt && make -j`$(nproc) release"
+    $rom = "pokeemerald-release.gba"
 } elseif ($SinRandom) {
     $make = "make -j`$(nproc) SIN_RANDOM=1"
+    $rom = "pokeemerald.gba"
 } else {
-    $make = "make -j`$(nproc)"
+    $make = "make -j`$(nproc) release"
+    $rom = "pokeemerald-release.gba"
 }
 $Distro = "Ubuntu"
 $Repo = "https://github.com/Jorgemori06/pokeemerald-expansion"
@@ -109,7 +117,7 @@ if ($SinRandom) {
 } else {
     $destino = Join-Path $escritorio "Dualocke.gba"
 }
-$origen = (& wsl.exe -d $Distro -- bash -lc "wslpath -w ~/romhack/pokeemerald-expansion/pokeemerald.gba").Trim()
+$origen = (& wsl.exe -d $Distro -- bash -lc "wslpath -w ~/romhack/pokeemerald-expansion/$rom").Trim()
 Copy-Item -LiteralPath $origen -Destination $destino -Force
 Write-Host ""
 Write-Host "Hecho: $destino" -ForegroundColor Green
