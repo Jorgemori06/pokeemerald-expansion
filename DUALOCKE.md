@@ -494,6 +494,14 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
 
 ## 9. Estado y siguientes pasos
 
+### Locke en curso (empezado el 26/10/2026)
+
+- ROMs hechas por Claude con `make release` (sin menús de depuración) desde `master` en el commit `46ba7600` (con #36 y #37, sin las ideas).
+- **Semillas:** Miguel `7044754226` (`Esmeralda Dualocke - Mikemine.gba`), Jorge `6629063067` (`Esmeralda Dualocke - Jorgemori.gba`).
+- **Para regenerar la misma ROM:** `git checkout 46ba7600` y `make release SEED=<semilla>`. Con un commit más nuevo, la misma semilla puede barajar distinto si ha cambiado el randomizer o los datos, y la partida guardada puede dejar de servir si cambia lo que se guarda (como pasó con los bolsillos). Si hay que arreglar algo a mitad del locke, se hace la ROM nueva con la misma semilla y se comprueba antes que la partida carga.
+- **No actualizar con el instalador a mitad del locke:** usa su propia semilla (`dualocke_semilla.txt`) y compila `master`. Si hace falta, se pone la semilla de cada uno en ese archivo antes.
+- Las ideas de `IDEAS.md` se dejan para después de pasárnoslo.
+
 ### Hecho
 
 - Fork montado y compilando (en Windows/WSL y en el entorno de Claude).
