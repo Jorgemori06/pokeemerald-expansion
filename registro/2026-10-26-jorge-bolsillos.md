@@ -20,14 +20,14 @@ Al probar la ROM, Jorge vio que las megapiedras y las pociones se guardaban en O
 - **Nombres traducidos:** los de los bolsillos (`src/strings.c`) y los del mensaje "guardado en el BOLSILLO …" (`src/data/script_menu.h`, nuevos `STDSTRING_MEDICINE` y `STDSTRING_MEGA_STONES`). Antes salía "BOLSILLO ITEMS".
 - **Scripts:** `data/scripts/obtain_item.inc` con los dos bolsillos nuevos (sin esto, el script se cortaba al recoger una medicina). Las bebidas de la máquina de la azotea de Calagua dicen MEDICINAS.
 - **Depuración (`src/debug.c`):** "Fill Pocket Items" también llena Medicinas y da una de cada megapiedra.
-- **Tests (`test/dualocke.c`):** a qué bolsillo va cada tipo de objeto, guardar/quitar/vaciar, que caben todas las megapiedras y que todos los bolsillos tienen nombre.
+- **Tests (`test/dualocke.c` y el tamaño de `SaveBlock3` en `test/save.c`):** a qué bolsillo va cada tipo de objeto, guardar/quitar/vaciar, que caben todas las megapiedras y que todos los bolsillos tienen nombre.
 - `DUALOCKE.md`: sección 6 (apartado nuevo), sección 9 y mapa del código.
 
 ## Cómo se comprobó
 
 - `make` compila sin errores ni avisos (`SaveBlock3` cabe).
 - `make check TESTS="Dualocke"`: los 4 tests nuevos en verde.
-- `make check` completo: ver el PR.
+- `make check` completo: 5454 en verde. El único fallo era `SaveBlock3 is backwards compatible`, que comprueba el tamaño de `SaveBlock3`: crece a propósito (de 4 a 644 bytes), así que se ha actualizado el número en `test/save.c`.
 - No hay emulador aquí: lo visual (cuadraditos, nombre MEGAPIEDRAS, cambio de dibujo) hay que mirarlo jugando.
 
 ## Pendiente
