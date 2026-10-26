@@ -49,7 +49,7 @@ powershell -ExecutionPolicy Bypass -File tools\dualocke\instalar_windows.ps1
 - **Qué hace luego:** instala el compilador (te pide la contraseña de Ubuntu), clona el repo en `~/romhack`, compila y copia la ROM al **escritorio como `Dualocke.gba`**.
 - **Para actualizar el juego** cuando se suban cambios, se vuelve a lanzar el mismo script. Si mGBA guarda la partida al lado (`Dualocke.sav`), se conserva.
 - Con `-Rama nombre-de-rama` compila otra rama, por ejemplo para probar un PR antes de fusionarlo.
-- El juego sale **randomizado** con tu semilla (la misma cada vez que actualizas). Con **`-NuevaPartida`** genera otra semilla para empezar un locke nuevo (pide confirmación, porque la partida guardada deja de cuadrar). Con **`-SinRandom`** compila el juego sin randomizar, para probar el equilibrio, y lo copia aparte como `Dualocke-sin-random.gba`.
+- El juego sale **randomizado** con tu semilla (la misma cada vez que actualizas) y compilado con **`make release`**, así que no tiene los menús de depuración (R + START en el mapa, SELECT en combate). Con **`-NuevaPartida`** genera otra semilla para empezar un locke nuevo (pide confirmación, porque la partida guardada deja de cuadrar). Con **`-SinRandom`** compila el juego sin randomizar y con los menús de depuración, para probar, y lo copia aparte como `Dualocke-sin-random.gba`.
 - Si no tienes el repo en Windows, descarga solo el script desde GitHub (`tools/dualocke/instalar_windows.ps1`).
 
 ### Entorno (Windows), paso a paso

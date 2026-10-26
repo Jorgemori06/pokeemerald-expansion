@@ -7,7 +7,7 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 - **Para probar:** `make SIN_RANDOM=1` (o el instalador con `-SinRandom`). Así se reconocen los Pokémon y los entrenadores originales, y es más fácil ver si algo está mal.
 - **Para ver el randomizer:** `make` normal (o el instalador sin opciones) con una semilla cualquiera.
 - **Atajos de prueba:** en el mapa, **R + START** abre el menú de depuración: volar a cualquier mapa, darse Pokémon y objetos, cambiar flags. En combate, **SELECT** abre el de combate.
-- **Ojo para la partida de verdad:** esos dos menús están activos en el `make` normal (`DEBUG_OVERWORLD_MENU` y `DEBUG_BATTLE_MENU` valen `DISABLED_ON_RELEASE`). Con **`make release`** se quitan, pero la ROM sale como `pokeemerald-release.gba` y el instalador no lo hace todavía. **Pendiente:** comprobar que `make release` compila con todo lo nuestro y, si es así, que el instalador use esa versión para jugar.
+- **Partida de verdad:** esos dos menús están activos en el `make` normal (`DEBUG_OVERWORLD_MENU` y `DEBUG_BATTLE_MENU` valen `DISABLED_ON_RELEASE`). Con **`make release`** se quitan y la ROM sale como `pokeemerald-release.gba`. El instalador ya usa `make release` para la partida de verdad (sin opciones y con `-NuevaPartida`) y la copia como `Dualocke.gba`. Con `-SinRandom` sigue siendo el `make` normal, con los menús.
 
 ## Qué mirar
 
