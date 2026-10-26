@@ -235,7 +235,7 @@ MatchCall_Text_Juan_Preparing	GALANO: Mmm…\n{PLAYER}{KUN}… ¿Verdad?\pNuestr
 MatchCall_Text_Juan_PreparingPostGame	GALANO: Jujú… {PLAYER}{KUN}…\nPor fin has alcanzado tu meta.\pMi ojo para el talento no\nse equivocaba…\pDeseo volver a verte, pues has\nalcanzado la cima del poder y\ldel prestigio.$
 MatchCall_Text_Juan_RematchReady	GALANO: Jojó… {PLAYER}{KUN}…\pNuestro GIMNASIO de ARRECÍPOLIS\npor fin ha vuelto a abrir.\pSi deseas verme, puedes\nvenir cuando quieras.$
 MatchCall_Text_Juan_PostRematch	GALANO: {PLAYER}{KUN}…\pComo la mejor música, nuestros\ncombates hacen vibrar en mi corazón\lacordes de inspiración…\pCuando cierro los ojos, te veo\nvolando con la melodía…$
-MatchCall_Text_Sidney	SIDNEY: ¡Ey, {PLAYER}!\pSi quieres volver a combatir\nconmigo, vuelve a la LIGA POKéMON\lcuando te dé la gana.\p¡Aquí estaré siempre!\n¡Te espero!$
+MatchCall_Text_Sidney	SIXTO: ¡Ey, {PLAYER}!\pSi quieres volver a combatir\nconmigo, vuelve a la LIGA POKéMON\lcuando te dé la gana.\p¡Aquí estaré siempre!\n¡Te espero!$
 MatchCall_Text_Phoebe	FÁTIMA: ¡Hola, {PLAYER}!\p¿Por qué no vuelves por aquí\nalgún día?\pMe gustaría ver cuánto más fuerte\nes tu vínculo con tus\lPOKéMON.$
 MatchCall_Text_Glacia	NÍVEA: Hola, {PLAYER}.\pConfío en que no te hayas dormido\nen los laureles.\pSi sientes la necesidad de enfriar\nun poco tus emociones, ven a la\lLIGA POKéMON…$
 MatchCall_Text_Drake	DRACÓN: Esa voz… {PLAYER}, ¿verdad?\nSe te oye bien…\pTengo entendido que ahora hay un\nlugar llamado FRENTE BATALLA que\lpone a prueba a los\lENTRENADORES.\pPero si quieres combates de verdad,\nno hay nada como la\lLIGA POKéMON.\p¿No crees, {PLAYER}?$
@@ -284,7 +284,7 @@ MatchCall_Text_Scott2	SCOTT: Ahora estoy en la RUTA 119.\n¡Está llena de ENTRE
 MatchCall_Text_Scott3	SCOTT: ¡Hola, hola, {PLAYER}{KUN}!\p¿Has tenido ocasión de subir\nal MONTE PÍRICO?\pEs un memorial a los POKéMON\nque nos han dejado.\pTodo ENTRENADOR debería subir hasta\narriba al menos una vez.$
 MatchCall_Text_Scott4	SCOTT: ¡Hola, {PLAYER}{KUN}!\pHe oído que hay unas bandas\nraras dando la lata.\pEl EQUIPO MAGMA y el EQUIPO AQUA,\ncreo que eran.\pSupongo que habrá ENTRENADORES\nhábiles entre ellos.\p…Pero si son unos matones…$
 MatchCall_Text_Scott5	SCOTT: Ah, hola, {PLAYER}{KUN}.\p¿Habrá ENTRENADORES fuertes en\nel fondo del mar?\pNo puedo ir a comprobarlo.\nPara empezar, no sé nadar.\lY no crío POKéMON…$
-MatchCall_Text_Scott6	SCOTT: ¡Hola, hola, {PLAYER}{KUN}!\p¿Sabes que puedes retar a la\nLIGA POKéMON cuando tengas\ltodas las MEDALLAS?\pCon tu talento, llegar a CAMPEÓN\nno es ningún sueño imposible.\pPero ¿sabías una cosa?\nHay un sitio aún mejor.\pPero, de momento, es todo lo\nque te voy a contar.\pEs algo que te espera más\nadelante.\p¡Cuando hayas superado la LIGA\nPOKéMON y entres en el SALÓN\lDE LA FAMA!$
+MatchCall_Text_Scott6	SCOTT: ¡Hola, hola, {PLAYER}{KUN}!\p¿Sabes que puedes retar a la\nLIGA POKéMON cuando tengas\ltodas las MEDALLAS?\pCon tu talento, llegar a CAMPEÓN\nno es ningún sueño imposible.\pPero ¿sabías una cosa?\nHay un sitio aún mejor.\pPero, de momento, es todo lo\nque te voy a contar.\pEs algo que te espera más\nadelante.\p¡Cuando hayas superado la LIGA\nPOKéMON y entres en la SALA\lDE LA FAMA!$
 MatchCall_Text_Scott7	… … … … … …\n… … … … … …\pParece que SCOTT está fuera de\nla cobertura del POKéNAV…$
 MatchCall_Text_Norman1	PAPÁ: En FÉRRICA hay un hombre\nal que llaman, curiosamente,\lel LEÑADOR.\pSi pasas por allí, deberías\nhacerle una visita.$
 MatchCall_Text_Norman2	PAPÁ: Mmm… Poco a poco, pero con\nmucha firmeza, te estás haciendo\lmás fuerte, {PLAYER}.\pCuanto más fuerte te haces, más\nlejos y más alto vuelas de mamá\ly de mí…\pEs una sensación difícil de explicar.$
@@ -301,7 +301,7 @@ MatchCall_Text_Steven3	MÁXIMO: ¡Hola, {PLAYER}{KUN}!\pCuando vas de aventura c
 MatchCall_Text_Steven4	MÁXIMO: ¿Diga?\n¿{PLAYER}{KUN}?\pTengo un pequeño problema en\nel CENTRO ESPACIAL.\pLo siento, ahora no puedo hablar.\n¡Adiós!$
 MatchCall_Text_Steven5	MÁXIMO: ¡Oh!\n¡{PLAYER}{KUN}!\pNo hace falta hablar.\nYa no es momento de palabras.\pTienes que creer en ti\ny hacer lo correcto.$
 MatchCall_Text_Steven6	… … … … … …\pParece que MÁXIMO no recibe\nla llamada…$
-MatchCall_Text_Steven7	MÁXIMO: {PLAYER}{KUN}… Enhorabuena\npor entrar en el SALÓN DE LA FAMA.\p… … … … … …\n… … … … … …\p¡Espero que volvamos a vernos\nen algún sitio!$
+MatchCall_Text_Steven7	MÁXIMO: {PLAYER}{KUN}… Enhorabuena\npor entrar en la SALA DE LA FAMA.\p… … … … … …\n… … … … … …\p¡Espero que volvamos a vernos\nen algún sitio!$
 MatchCall_Text_BirchRegisterCall	PROF. ABEDUL: ¡Oh, {PLAYER}{KUN}!\n¡Ya me han hablado de ti!\pParece que te han puesto la\nAGENDA en el POKéNAV.\p¡Pues yo también me registro!\pAsí podré revisar tu POKéDEX\naunque estés lejos.\p… … … … … …$
 MatchCall_Text_RegisteredBirch	PROF. ABEDUL registrado\nen el POKéNAV.$
 MatchCall_Text_UnusedProfBirch	PROF. ABEDUL: Con la POKéDEX y el\nPOKéNAV, estudiar a los POKéMON\les más divertido, ¿eh?$
@@ -311,7 +311,7 @@ MatchCall_Text_MrStone3	SR. PEÑA: ¡Oh! ¡{PLAYER}{KUN}!\p¡Ah, así que has co
 MatchCall_Text_MrStone4	SR. PEÑA: ¡Oh! ¡{PLAYER}{KUN}!\p¿Sabías que DEVON estaba\nexcavando el TÚNEL FERVERGAL?\pPero paramos las obras para\nproteger a los POKéMON de la zona.\pEs de cajón, de verdad.\pEs más importante que los POKéMON\nvivan en paz que nuestra\lpropia comodidad.$
 MatchCall_Text_MrStone5	SR. PEÑA: ¡Hola, hola, {PLAYER}{KUN}!\p¡Me han dicho en PETALIA que eres\nde la familia de NORMAN!\p¡No me extraña que tengas\ntanto talento!$
 MatchCall_Text_MrStone6	SR. PEÑA: ¿Qué dices?\p¿Que has combatido contra tu propio\npadre y le has ganado?\p¡Es asombroso!\p¡No sabía que me había hecho amigo\nde alguien tan especial! ¡Jajajá!$
-MatchCall_Text_MrStone7	¡Hola!\nAquí la SOCIEDAD DEVON, dígam…\l¡Ah, hola, {PLAYER}!\pNuestro PRESIDENTE estaba aquí hace\nun rato, pero ha salido.\pEl PRESIDENTE va muy ocupado, pero\ntú pareces ir igual, {PLAYER}.$
+MatchCall_Text_MrStone7	¡Hola!\nAquí la CORPORACIÓN DEVON, dígam…\l¡Ah, hola, {PLAYER}!\pNuestro PRESIDENTE estaba aquí hace\nun rato, pero ha salido.\pEl PRESIDENTE va muy ocupado, pero\ntú pareces ir igual, {PLAYER}.$
 MatchCall_Text_MrStone8	…¿Eh? …¿Cómo?\pGROU… ¿Sí? …DON?\pSe corta…\n…no te oigo…\pBZZZZ…$
 MatchCall_Text_MrStone9	…¿Eh? …¿Cómo?\pCueva… ¿Sí? …Abis…?\pSe corta…\n…no te oigo…\pBZZZZ…$
 MatchCall_Text_MrStone10	SR. PEÑA: ¡{PLAYER}{KUN}! ¡Soy yo!\pPor lo visto te has metido en todo\ntipo de líos, pero yo, con lo\locupado que estoy, ¡ni idea de cuáles!\pPero te animo a seguir el camino\nen el que crees.\p¡Siempre estaré de tu parte!\n¡Cuídate!$

@@ -2260,7 +2260,7 @@ MatchCall_Text_Juan_PostRematch::
 	.string "volando con la melodía…$"
 
 MatchCall_Text_Sidney::
-	.string "SIDNEY: ¡Ey, {PLAYER}!\p"
+	.string "SIXTO: ¡Ey, {PLAYER}!\p"
 	.string "Si quieres volver a combatir\n"
 	.string "conmigo, vuelve a la LIGA POKéMON\l"
 	.string "cuando te dé la gana.\p"
@@ -2703,7 +2703,7 @@ MatchCall_Text_Scott6::
 	.string "Es algo que te espera más\n"
 	.string "adelante.\p"
 	.string "¡Cuando hayas superado la LIGA\n"
-	.string "POKéMON y entres en el SALÓN\l"
+	.string "POKéMON y entres en la SALA\l"
 	.string "DE LA FAMA!$"
 
 MatchCall_Text_Scott7::
@@ -2827,7 +2827,7 @@ MatchCall_Text_Steven6::
 
 MatchCall_Text_Steven7::
 	.string "MÁXIMO: {PLAYER}{KUN}… Enhorabuena\n"
-	.string "por entrar en el SALÓN DE LA FAMA.\p"
+	.string "por entrar en la SALA DE LA FAMA.\p"
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
 	.string "¡Espero que volvamos a vernos\n"
@@ -2915,7 +2915,7 @@ MatchCall_Text_MrStone6::
 
 MatchCall_Text_MrStone7::
 	.string "¡Hola!\n"
-	.string "Aquí la SOCIEDAD DEVON, dígam…\l"
+	.string "Aquí la CORPORACIÓN DEVON, dígam…\l"
 	.string "¡Ah, hola, {PLAYER}!\p"
 	.string "Nuestro PRESIDENTE estaba aquí hace\n"
 	.string "un rato, pero ha salido.\p"

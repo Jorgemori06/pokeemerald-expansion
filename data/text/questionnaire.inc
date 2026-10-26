@@ -34,7 +34,7 @@ MysteryGift_Text_TheresATicketForYou::
 	.string "Gracias por usar el sistema de\n"
 	.string "EVENTO MISTERIOSO.\p"
 	.string "Tú debes de ser {PLAYER}.\n"
-	.string "Tengo aquí un billete para ti.$"
+	.string "Tengo aquí un TICKET para ti.$"
 
 MysteryGift_Text_TryUsingItAtLilycovePort::
 	.string "Parece que sirve en el\n"

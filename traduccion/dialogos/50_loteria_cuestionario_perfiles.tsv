@@ -20,7 +20,7 @@ Questionnaire_Text_YouKnowThoseWordsGift	¡Ah, hola!\n¿Conoces esas palabras?\p
 Questionnaire_Text_YouCanAccessMysteryGift	Cuando guardes la partida, podrás\nentrar en REGALO MISTERIOSO.$
 Questionnaire_Text_YouKnowThoseWordsEvent	¡Ah, hola!\n¿Conoces esas palabras?\pEntonces seguro que sabes lo que\nes el EVENTO MISTERIOSO.$
 Questionnaire_Text_YouCanAccessMysteryEvent	Cuando guardes la partida, podrás\nentrar en EVENTO MISTERIOSO.$
-MysteryGift_Text_TheresATicketForYou	Gracias por usar el sistema de\nEVENTO MISTERIOSO.\pTú debes de ser {PLAYER}.\nTengo aquí un billete para ti.$
+MysteryGift_Text_TheresATicketForYou	Gracias por usar el sistema de\nEVENTO MISTERIOSO.\pTú debes de ser {PLAYER}.\nTengo aquí un TICKET para ti.$
 MysteryGift_Text_TryUsingItAtLilycovePort	Parece que sirve en el\nPUERTO de CIUDAD CALAGUA.\p¿Por qué no lo pruebas y ves\nde qué se trata?$
 ProfileMan_Text_CollectTrainerProfiles	¡Hola, ENTRENADOR!\nQué sonrisa más maravillosa tienes.\pMi afición es coleccionar los perfiles\nde los ENTRENADORES POKéMON.$
 ProfileMan_Text_MayISeeYourProfile	¿Qué me dices?\n¿Me enseñas tu perfil?$
