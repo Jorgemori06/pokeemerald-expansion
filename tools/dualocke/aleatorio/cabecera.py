@@ -2,7 +2,7 @@
 Dualocke: escribe src/data/dualocke_aleatorio.h, las tablas que usa src/dualocke_aleatorio.c para
 cambiar al vuelo lo que no se puede randomizar sin tocar los mapas y los scripts: estáticos,
 regalos, objetos del suelo, Recogida, objetos de los salvajes, intercambios con NPCs,
-habilidades, MT y tutores.
+habilidades, MT, tutores y movimientos por nivel.
 
 Sin semilla (make SIN_RANDOM=1 o make check) todas las tablas están vacías y el juego sale como
 el original.
@@ -14,9 +14,28 @@ def _pares(nombre, mapa, tipo="u16"):
     return [f"static const {tipo} {nombre}[][2] =", "{"] + filas + ["};"]
 
 
+def _aprendizajes(aprendizajes):
+    """Una tabla por cada tabla distinta y, por especie, cuál usa (NULL = la original)."""
+    lineas = ["// Movimientos por nivel al azar (aprendizajes.py): especie -> tabla nueva"]
+    nombres = {}
+    for especie in sorted(aprendizajes):
+        tabla = tuple(aprendizajes[especie])
+        if tabla in nombres:
+            continue
+        nombres[tabla] = f"sDualockeAprende{len(nombres)}"
+        lineas.append(f"static const struct LevelUpMove {nombres[tabla]}[] =")
+        lineas.append("{")
+        lineas += [f"    {{.move = {m}, .level = {n}}}," for n, m in tabla]
+        lineas += ["    {.move = LEVEL_UP_MOVE_END, .level = 0},", "};"]
+    lineas += ["static const struct LevelUpMove *const sDualockeAprendizajes[NUM_SPECIES] =", "{"]
+    lineas += [f"    [{e}] = {nombres[tuple(t)]}," for e, t in sorted(aprendizajes.items())] or ["    NULL,"]
+    lineas += ["};"]
+    return lineas
+
+
 def generar(comentario, estaticos=None, regalos=None, suelo=None, recogida=None,
             salvajes=None, probabilidad_salvajes=0, intercambios=None, habilidades=None,
-            mts=None, compatibilidad_mt=0, semilla_numerica=0, tutores=None):
+            mts=None, compatibilidad_mt=0, semilla_numerica=0, tutores=None, aprendizajes=None):
     lineas = ["// Generado por el Makefile (Dualocke, tools/dualocke/randomizer.py): no editar.",
               f"// {comentario}", ""]
     lineas += ["// Estáticos (setwildbattle y errantes): especie original -> especie nueva"]
@@ -50,4 +69,5 @@ def generar(comentario, estaticos=None, regalos=None, suelo=None, recogida=None,
     lineas += _pares("sDualockeMT", mts or {})
     lineas += ["// Tutores: movimiento original -> movimiento nuevo (se aprende como las MT nuevas)"]
     lineas += _pares("sDualockeTutores", tutores or {})
+    lineas += _aprendizajes(aprendizajes or {})
     return "\n".join(lineas) + "\n"
