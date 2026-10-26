@@ -284,55 +284,54 @@ Route124_DivingTreasureHuntersHouse_EventScript_ShardTradeBoard::
 	end
 
 Route124_DivingTreasureHuntersHouse_Text_Greeting:
-	.string "I'm the DIVING TREASURE HUNTER!\p"
-	.string "I'm the awesome dude who makes\n"
-	.string "deep-sea dives to gather treasures\l"
-	.string "resting at the bottom.$"
+	.string "¡Soy el BUSCATESOROS SUBMARINO!\p"
+	.string "¡El tío genial que bucea hasta el\n"
+	.string "fondo del mar para recoger los\l"
+	.string "tesoros que hay allí!$"
 
 Route124_DivingTreasureHuntersHouse_Text_HaveYouSeenAnyShards:
-	.string "Tell me, have you seen any SHARDS of\n"
-	.string "tools made in ancient times?$"
+	.string "Dime, ¿has visto PARTES de\n"
+	.string "herramientas de tiempos antiguos?$"
 
 Route124_DivingTreasureHuntersHouse_Text_YouHaventGotAnyShards:
-	.string "You haven't got any treasures\n"
-	.string "for me…\p"
-	.string "If you see any SHARDS, like the RED\n"
-	.string "SHARD, you've got to trade it with me!$"
+	.string "No tienes ningún tesoro para mí…\p"
+	.string "¡Si ves alguna PARTE, como la PARTE\n"
+	.string "ROJA, tienes que cambiármela!$"
 
 Route124_DivingTreasureHuntersHouse_Text_ThatsAShardIllTradeYou:
-	.string "Oh, hey! That…\n"
-	.string "That's a SHARD! I'm looking for those!\p"
-	.string "Oh, man, you've got to trade that\n"
-	.string "with me! I'll give you something good!$"
+	.string "¡Oh, eh! Eso…\n"
+	.string "¡Eso es una PARTE! ¡Las estoy buscando!\p"
+	.string "¡Tío, tienes que cambiármela!\n"
+	.string "¡Te daré algo bueno!$"
 
 Route124_DivingTreasureHuntersHouse_Text_WhatDoYouWantToTrade:
-	.string "What do you want to trade?$"
+	.string "¿Qué quieres cambiar?$"
 
 Route124_DivingTreasureHuntersHouse_Text_YoullTradeShardForStone:
-	.string "You'll trade your {STR_VAR_1} for\n"
-	.string "my {STR_VAR_2}, then?$"
+	.string "¿Entonces me cambias tu {STR_VAR_1}\n"
+	.string "por mi {STR_VAR_2}?$"
 
 Route124_DivingTreasureHuntersHouse_Text_ItsADeal:
-	.string "It's a done deal!\n"
-	.string "Use that wisely!$"
+	.string "¡Trato hecho!\n"
+	.string "¡Úsala bien!$"
 
 Route124_DivingTreasureHuntersHouse_Text_TradeSomethingElse:
-	.string "Do you want to trade something else?$"
+	.string "¿Quieres cambiar algo más?$"
 
 Route124_DivingTreasureHuntersHouse_Text_BagFull:
-	.string "Whoops, your BAG's full.\n"
-	.string "Get rid of some items, friend!$"
+	.string "Huy, tienes la MOCHILA llena.\n"
+	.string "¡Deshazte de algo, amigo!$"
 
 Route124_DivingTreasureHuntersHouse_Text_ComeBackIfYouChangeMind:
-	.string "No? That's a downer.\n"
-	.string "Well, if you change your mind, come back.$"
+	.string "¿No? Qué bajón.\n"
+	.string "Bueno, si cambias de idea, vuelve.$"
 
 Route124_DivingTreasureHuntersHouse_Text_ShardTradeBoard:
-	.string "{CLEAR_TO 10}Wanted item{CLEAR_TO 124}Trade item\n"
-	.string "{CLEAR_TO 15}RED SHARD{CLEAR_TO 89}{LEFT_ARROW}{RIGHT_ARROW}{CLEAR_TO 123}FIRE STONE{CLEAR_TO 200}\p"
-	.string "{CLEAR_TO 10}Wanted item{CLEAR_TO 124}Trade item\n"
-	.string "{CLEAR_TO 6}YELLOW SHARD{CLEAR_TO 89}{LEFT_ARROW}{RIGHT_ARROW}{CLEAR_TO 115}THUNDERSTONE{CLEAR_TO 200}\p"
-	.string "{CLEAR_TO 10}Wanted item{CLEAR_TO 124}Trade item\n"
-	.string "{CLEAR_TO 12}BLUE SHARD{CLEAR_TO 89}{LEFT_ARROW}{RIGHT_ARROW}{CLEAR_TO 121}WATER STONE{CLEAR_TO 200}\p"
-	.string "{CLEAR_TO 10}Wanted item{CLEAR_TO 124}Trade item\n"
-	.string "{CLEAR_TO 8}GREEN SHARD{CLEAR_TO 89}{LEFT_ARROW}{RIGHT_ARROW}{CLEAR_TO 123}LEAF STONE$"
+	.string "{CLEAR_TO 10}Se busca{CLEAR_TO 124}A cambio\n"
+	.string "{CLEAR_TO 15}PARTE ROJA{CLEAR_TO 89}{LEFT_ARROW}{RIGHT_ARROW}{CLEAR_TO 123}PIEDRA FUEGO{CLEAR_TO 200}\p"
+	.string "{CLEAR_TO 10}Se busca{CLEAR_TO 124}A cambio\n"
+	.string "{CLEAR_TO 6}PARTE AMARILLA{CLEAR_TO 89}{LEFT_ARROW}{RIGHT_ARROW}{CLEAR_TO 115}PIEDRA TRUENO{CLEAR_TO 200}\p"
+	.string "{CLEAR_TO 10}Se busca{CLEAR_TO 124}A cambio\n"
+	.string "{CLEAR_TO 12}PARTE AZUL{CLEAR_TO 89}{LEFT_ARROW}{RIGHT_ARROW}{CLEAR_TO 121}PIEDRA AGUA{CLEAR_TO 200}\p"
+	.string "{CLEAR_TO 10}Se busca{CLEAR_TO 124}A cambio\n"
+	.string "{CLEAR_TO 8}PARTE VERDE{CLEAR_TO 89}{LEFT_ARROW}{RIGHT_ARROW}{CLEAR_TO 123}PIEDRA HOJA$"

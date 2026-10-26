@@ -1,0 +1,146 @@
+# RUTAS 130 a 134, CUEVA CARDUMEN, zona submarina y CUEVA ABISAL (AQUILES, KYOGRE y MAGNO)
+SeafloorCavern_Entrance_Text_HearMagmaNearMossdeep	¡Eh!\n¡Me acuerdo de tu cara!\pSi estás aquí, ¡es que vienes a\nfastidiarnos otra vez!\p¿De verdad crees que un renacuajo como\ntú puede con el EQUIPO AQUA?\p¡Te faltan como un billón de años!\p¡Tú estás para el EQUIPO MAGMA!\pHablando del EQUIPO MAGMA, he oído\nque los han visto cerca de ALGARIA.\p¡Esa panda de matones no pega nada\ncerca del mar!$
+SeafloorCavern_Entrance_Text_HearMagmaNearMossdeepShort	¿De verdad crees que un renacuajo como\ntú puede con el EQUIPO AQUA?\p¡Te faltan como un billón de años!\p¡Tú estás para el EQUIPO MAGMA!\pHablando del EQUIPO MAGMA, he oído\nque los han visto cerca de ALGARIA.\p¡Esa panda de matones no pega nada\ncerca del mar!$
+SeafloorCavern_Room1_Text_Grunt1Intro	¡Aquí no queremos críos!\n¡Vete ya a casa!$
+SeafloorCavern_Room1_Text_Grunt1Defeat	Quiero irme a casa…$
+SeafloorCavern_Room1_Text_Grunt1PostBattle	Quiero que me asciendan para poder\nmandar a los SOLDADOS…$
+SeafloorCavern_Room1_Text_Grunt2Intro	Ese submarino… Por dentro es diminuto.\n¡Me duele todo!$
+SeafloorCavern_Room1_Text_Grunt2Defeat	¡Perder me duele!$
+SeafloorCavern_Room1_Text_Grunt2PostBattle	El submarino que robamos, tío, es\nun suplicio para viajar.\l¡Se va apretadísimo!$
+SeafloorCavern_Room3_Text_ShellyIntro	¡Jajajajaja!\p¿Cómo has llegado hasta aquí sin\nsubmarino?\l¡Qué criatura más impresionante!\pPero… No me conviene que andes\nmetiendo las narices aquí.\pY quiero la revancha por lo del\nINSTITUTO METEOROLÓGICO…\p¡Te voy a dar a probar un poco de\ndolor! ¡Resígnate!$
+SeafloorCavern_Room3_Text_ShellyDefeat	¡Jajajajaja!\p¡Ay!$
+SeafloorCavern_Room3_Text_ShellyPostBattle	¡Jajajajaja!\nQué fuerte eres, de verdad.\pEs una pena enorme que no seas del\nEQUIPO AQUA.\pPodrías haber disfrutado con nosotros\ndel mundo fabuloso que nos ha\lprometido el JEFE…$
+SeafloorCavern_Room3_Text_Grunt5Intro	Para que nuestro sueño se cumpla,\nnecesitamos el poder de los POKéMON.\p¡Pero los entrometidos como tú usan\nese poder para fastidiarnos hasta\len un sitio como este!\p¡La vida no funciona como nos\nhace falta!$
+SeafloorCavern_Room3_Text_Grunt5Defeat	¡Uah!$
+SeafloorCavern_Room3_Text_Grunt5PostBattle	¿Sabes? Nosotros no nos atrevemos a\ncuestionar los motivos del líder.\pPero aquí estás tú, plantándole cara\na nuestro JEFE.\pA lo mejor…\nA lo mejor eres alguien especial…$
+SeafloorCavern_Room4_Text_Grunt3Intro	¿Quién eres?\n¿Por dónde has entrado?$
+SeafloorCavern_Room4_Text_Grunt3Defeat	He perdido…$
+SeafloorCavern_Room4_Text_Grunt3PostBattle	¡No encuentro la salida!\p¡No tengo miedo, que conste!$
+SeafloorCavern_Room4_Text_Grunt4Intro	¿Quién eres?\n¿Adónde te crees que vas?$
+SeafloorCavern_Room4_Text_Grunt4Defeat	¡No he podido ganar!$
+SeafloorCavern_Room4_Text_Grunt4PostBattle	¡Mi compañero se dejó el mapa en el\nsubmarino!\p¿Se puede ser más inútil?$
+SeafloorCavern_Room9_Text_ArchieHoldItRightThere	AQUILES: Alto ahí.$
+SeafloorCavern_Room9_Text_ArchieSoItWasYou	AQUILES: Fufufu…\nAsí que, al final, eras tú.$
+SeafloorCavern_Room9_Text_ArchieBeholdKyogre	AQUILES: ¡Contempla!\p¡Mira qué bello es el POKéMON ancestral\nKYOGRE mientras duerme!\pHe esperado tanto tiempo a que\nllegara este día…$
+SeafloorCavern_Room9_Text_ArchieYouMustDisappear	AQUILES: Me sorprende que hayas\nconseguido seguirme hasta aquí.\pPero se acabó.\p¡Para que se cumpla mi sueño, tienes\nque desaparecer!$
+SeafloorCavern_Room9_Text_ArchieDefeat	¡¿Qué?!\n¡¿He perdido contra una simple\lcriatura?!$
+SeafloorCavern_Room9_Text_ArchieWithThisRedOrb	AQUILES: Fufufu…\pTe felicito. Tengo que reconocer\nque tienes un talento enorme.\p¡Pero!\n¡Tengo esto en mi poder!\p¡Con este PRISMA ROJO puedo hacer\nque KYOGRE…!$
+SeafloorCavern_Room9_Text_RedOrbShinesByItself	¡De repente, el PRISMA ROJO ha\nempezado a brillar solo!$
+SeafloorCavern_Room9_Text_ArchieWhereDidKyogreGo	AQUILES: ¡¿Qué?!\pNo he hecho nada.\n¿Por qué el PRISMA ROJO…?\p¿Adónde ha ido KYOGRE?$
+SeafloorCavern_Room9_Text_ArchieAMessageFromOutside	AQUILES: ¿Mm? Es un mensaje de\nnuestros miembros de fuera…$
+SeafloorCavern_Room9_Text_ArchieWhatRainingTooHard	AQUILES: Sí, ¿qué pasa?\pMm…\n¿Que llueve muchísimo?\pBien… Eso es lo que tenía que pasar.\nPara eso despertamos a KYOGRE, para\lcumplir la visión del EQUIPO AQUA de\lexpandir el mar.\p¡¿Qué?!\p¿Que llueve mucho más de lo previsto?\n¿Que estáis en peligro?\pNo puede ser…\nEso es imposible…\p¡Mantened la posición y vigilad\nla situación!$
+SeafloorCavern_Room9_Text_ArchieWhyDidKyogreDisappear	AQUILES: Aquí pasa algo raro…\pEl PRISMA ROJO tiene que despertar\ny controlar a KYOGRE…\pPero… ¿Por qué?\n¿Por qué ha desaparecido KYOGRE?\p¡¿Por qué?!$
+SeafloorCavern_Room9_Text_MaxieWhatHaveYouWrought	MAGNO: ¿Qué has hecho?\pAQUILES… Al final has despertado a\nKYOGRE, ¿verdad?\p¿Qué le pasará al mundo si este\ndiluvio no para nunca?\pLa tierra firme se hundirá en un mar\ncada vez más profundo…$
+SeafloorCavern_Room9_Text_ArchieDontGetAllHighAndMighty	AQUILES: ¡¿Q-qué?!\n¡No me vengas con aires de grandeza!\p¿No fuisteis vosotros, el EQUIPO MAGMA,\nlos que enfurecisteis a GROUDON?\pMientras tenga este PRISMA ROJO,\ndebería poder controlar a KYOGRE…\pDebería poder controlarlo…$
+SeafloorCavern_Room9_Text_MaxieWeDontHaveTimeToArgue	MAGNO: ¡No tenemos tiempo para\ndiscutir aquí!\p¡Sal fuera y míralo con tus ojos!\p¡Mira si lo que has hecho es el mundo\nque queríamos!$
+SeafloorCavern_Room9_Text_MaxieComeOnPlayer	MAGNO: {PLAYER}, vamos, ¡tú también\ntienes que salir de aquí!$
+ShoalCave_LowTideLowerRoom_Text_CanOvercomeColdWithFocus	Este frío que cala hasta los huesos\nes un estorbo para entrenar.\p¡Pero con concentración se supera!\p¡Con esta CINTA AGUANTE, concéntrate\ny aguanta el frío!$
+ShoalCave_LowTideLowerRoom_Text_EverythingStartsWithFocus	¡Todo empieza por la concentración!$
+Underwater_SeafloorCavern_Text_SubExplorer1	En el casco pone “SUBMARINO\nEXPLORADOR 1”.\p¡Es el submarino que el EQUIPO AQUA\nrobó en PORTUAL!\pEl EQUIPO AQUA debe de haber\ndesembarcado aquí.$
+Route130_Text_RodneyIntro	¡Qué sorpresa! No esperaba ver a un\nENTRENADOR en mitad del mar.\p¡Creo que deberíamos combatir!$
+Route130_Text_RodneyDefeat	Qué fuerte es esta criatura…$
+Route130_Text_RodneyPostBattle	Tienes la mirada de quien ha superado\ndesafíos duros y ha ganado.\l¡Te queda muy bien!$
+Route130_Text_KatieIntro	En el mar azul,\nmi corazón roto y azul\lencuentra calma.$
+Route130_Text_KatieDefeat	Como el ancho mar,\nel mundo de los POKéMON\les muy profundo.$
+Route130_Text_KatiePostBattle	Los niños del mundo\nsueñan con llegar a ser\lCAMPEÓN POKéMON.$
+Route130_Text_SantiagoIntro	Flotar así en mar abierto…\nQué paz.$
+Route130_Text_SantiagoDefeat	¡Tendría que haber estado menos\nen paz!$
+Route130_Text_SantiagoPostBattle	Nadar y combatir así…\nSoy feliz…$
+Route131_Text_RichardIntro	El mar está lleno de POKéMON.\nNo es fácil nadar, te lo aseguro.$
+Route131_Text_RichardDefeat	Los POKéMON criados por ENTRENADORES\nson duros de verdad…$
+Route131_Text_RichardPostBattle	Uf… Uf…\nEstoy hecho polvo…\pLa ida es fácil. Lo difícil es\nla vuelta.\p¿Me quedarán fuerzas para volver?$
+Route131_Text_HermanIntro	El mar… El mar… El mar…\n¡Mar hasta donde alcanza la vista!\l¡Estoy harto del mar!$
+Route131_Text_HermanDefeat	¡Puaj!$
+Route131_Text_HermanPostBattle	Del mar estoy harto, pero nadar\ndebo.\p¡He nacido para nadar!\nEso es lo que soy.$
+Route131_Text_SusieIntro	¡Hola, cielo, espera!\n¡Tenemos que combatir, tú y yo!$
+Route131_Text_SusieDefeat	¡Eres fuerte, aunque no lo parezca!$
+Route131_Text_SusiePostBattle	¿Has visto a uno por ahí que se queja\nde que está harto del mar?\pSon todo palabras.\n¡Está loco por el mar!$
+Route131_Text_KaraIntro	¿Por qué les gustan tanto los\nbañadores a los hombres?\p¡Todos se me quedan mirando!$
+Route131_Text_KaraDefeat	¡Me he metido en aguas profundas!$
+Route131_Text_KaraPostBattle	A lo mejor no miran por el bañador.\n¡Será por mi belleza!$
+Route131_Text_ReliIntro	RELI: ¡Como hermanos que somos,\nlucharemos juntos contra ti!$
+Route131_Text_ReliDefeat	RELI: No hemos podido ganar ni\nluchando juntos…$
+Route131_Text_ReliPostBattle	RELI: La gente de PACIFIDLOG está\njunto al mar y los POKéMON desde\lque nace.$
+Route131_Text_ReliNotEnoughMons	RELI: ¿No tienes dos POKéMON?\nEntonces no podemos disfrutar\ldel combate.$
+Route131_Text_IanIntro	IAN: ¡Me esfuerzo junto a mi\nhermana!$
+Route131_Text_IanDefeat	IAN: Me he esforzado con mi hermana,\npero aun así no hemos ganado…$
+Route131_Text_IanPostBattle	IAN: ¿Sabes que PACIFIDLOG es un\npueblo flotante?\p¡Así que, donde haya mar, eso es\nparte de PACIFIDLOG!$
+Route131_Text_IanNotEnoughMons	IAN: ¡Si tienes dos POKéMON,\nte haremos frente!$
+Route131_Text_TaliaIntro	¡Si me ganas, te daré una\ninformación genial!$
+Route131_Text_TaliaDefeat	¿Oh?\n¿He perdido?$
+Route131_Text_TaliaPostBattle	Aquí cerca hay un sitio raro.\nHay una torre enorme.\l¿Por qué no vas a echar un vistazo?$
+Route131_Text_KevinIntro	La gente de PACIFIDLOG es muy\npacífica.\pNunca se enfada.\nYo tampoco.$
+Route131_Text_KevinDefeat	¡Huy!$
+Route131_Text_KevinPostBattle	¡Tsk! … Ay, espera.\nNo estoy enfadado. ¡De verdad!\p¡Pero qué fuerte eres!\n¡Jajaja!$
+Route132_Text_GilbertIntro	De pequeño me resfriaba muchísimo,\npero desde que nado estoy en plena\lforma.$
+Route132_Text_GilbertDefeat	Quiero más poder…$
+Route132_Text_GilbertPostBattle	Los ENTRENADORES recorren campos y\nmontañas, así que también deben\lestar en forma.$
+Route132_Text_DanaIntro	Intento no nadar donde las corrientes\nson muy fuertes.$
+Route132_Text_DanaDefeat	¡Oh, no, por favor!$
+Route132_Text_DanaPostBattle	Si me arrastra la corriente, perderé\ntoda la orientación…$
+Route132_Text_RonaldIntro	¡Ganes o pierdas, no lo sabrás hasta\nque lo intentes!$
+Route132_Text_RonaldDefeat	¡Buaaah!\n¡Me he hundido en la derrota!$
+Route132_Text_RonaldPostBattle	Nunca combato si sé que voy a ganar.\n¡Me gusta combatir en el filo entre\lvictoria y derrota!$
+Route132_Text_KiyoIntro	Pienso en POKéMON las 24 horas del día.\n¿Cómo vas a ganarme?$
+Route132_Text_KiyoDefeat	He perdido.\nAdmito la derrota.$
+Route132_Text_KiyoPostBattle	Urggh…\nTe apasionan los POKéMON, ¿eh?\pSeguro que también piensas en ellos\nlas 24 horas del día, ¿verdad?$
+Route132_Text_MakaylaIntro	Siempre voy con mi marido, pero puedo\nganar incluso sin él.$
+Route132_Text_MakaylaDefeat	Oh, supongo que no era bastante\nbuena.$
+Route132_Text_MakaylaPostBattle	Ese joven de ahí es clavado a mi\nmarido cuando era joven.\p¡Me hace sonrojarme!$
+Route132_Text_JonathanIntro	Alguien me estaba mirando fijamente.\n¿Eras tú?$
+Route132_Text_JonathanDefeat	¡Hala!\n¡Sí que eres fuerte, sí!$
+Route132_Text_JonathanPostBattle	No me quito la sensación de que\nalguien me está mirando.\p¡No me puedo concentrar!$
+Route132_Text_PaxtonIntro	¿Dónde se habrá metido mi mujer?\nSiempre voy con ella.\l¿Podré ganar yo solo?$
+Route132_Text_PaxtonDefeat	Ah, ya veo que al final no he podido\nganar yo solo.$
+Route132_Text_PaxtonPostBattle	Mi mujer me estará buscando.\nMejor voy a buscarla ya.$
+Route132_Text_DarcyIntro	Me gustaba entrenar aquí sola.\n¡Qué fastidio que venga tanta gente!$
+Route132_Text_DarcyDefeat	¡Vale! No me quejaré más de que\nhaya gente.$
+Route132_Text_DarcyPostBattle	Supongo que puedo formar equipo con\nese señor mayor y desafiar a la\lotra pareja.$
+Route133_Text_FranklinIntro	¿A ti también te ha traído la\ncorriente? Esto es cosa del destino.\l¡Combatamos!$
+Route133_Text_FranklinDefeat	¡Qué fuerte!\n¡Demasiado!$
+Route133_Text_FranklinPostBattle	Qué mala suerte que alguien tan fuerte\nacabe aquí a la deriva…\l¡Debo de estar gafado!$
+Route133_Text_DebraIntro	He llevado una vida de penas y\ndesgracias… Me abandonaron, y aquí\lme ha traído la corriente…$
+Route133_Text_DebraDefeat	Otra derrota…$
+Route133_Text_DebraPostBattle	Una vida a la deriva…\n¡No la quiero más!$
+Route133_Text_LindaIntro	¡Hola!\n¡Te estaba esperando!$
+Route133_Text_LindaDefeat	¡No! ¡Por favor!$
+Route133_Text_LindaPostBattle	Una criatura que entrena tan fuerte…\n¡Qué rabia me da!$
+Route133_Text_WarrenIntro	Quiero ganar como todos, pero no\ncriaré POKéMON como todos.$
+Route133_Text_WarrenDefeat	¡Rayos!\n¡Mi forma aún es muy floja!$
+Route133_Text_WarrenPostBattle	Es mucho más divertido hacer las cosas\na mi manera que como todo el mundo.\l¡Vamos, que es evidente!$
+Route133_Text_BeckIntro	He venido hasta aquí con mis\nPOKéMON PÁJARO.$
+Route133_Text_BeckDefeat	Tú…\n¡Qué estilazo tienes!$
+Route133_Text_BeckPostBattle	Me gustaría volver a ARBORADA, pero\nesto también me ha empezado a gustar.$
+Route133_Text_MollieIntro	He combatido miles de veces.\nYa he perdido la cuenta.$
+Route133_Text_MollieDefeat	He perdido miles de veces, pero\nuna derrota sigue doliendo.$
+Route133_Text_MolliePostBattle	Sigue así, joven. Así llegarás a ser\ncomo mi marido y yo.$
+Route133_Text_ConorIntro	Los jóvenes se dejan llevar por la\ncorriente. No tienen rumbo.$
+Route133_Text_ConorDefeat	Tú sí que tienes un rumbo claro.$
+Route133_Text_ConorPostBattle	No dejes que otros te desvíen.\nNo pierdas el rumbo al crecer.$
+Route134_Text_JackIntro	Hasta los POKéMON que saben nadar\nse los lleva la corriente rápida.$
+Route134_Text_JackDefeat	¡Aaaaaah!$
+Route134_Text_JackPostBattle	Creo que a los POKéMON les gustan las\ncorrientes rápidas de por aquí.$
+Route134_Text_LaurelIntro	Mis LUVDISC buscan un combate\ndivertido. ¿Te apuntas?$
+Route134_Text_LaurelDefeat	¡Huy!$
+Route134_Text_LaurelPostBattle	Hay un coleccionista que va detrás de\nlas ESCAMAS de LUVDISC.$
+Route134_Text_AlexIntro	¡Vale! ¡Se acabó el descanso, chicos!\n¡Hora de combatir!$
+Route134_Text_AlexDefeat	Agotados otra vez…$
+Route134_Text_AlexPostBattle	Mis POKéMON PÁJARO se cansan pronto\ndespués de un vuelo largo…$
+Route134_Text_HitoshiIntro	Entrenas POKéMON.\nSobran las palabras. Combatamos.$
+Route134_Text_HitoshiDefeat	… … … … … …\n… … … … … …$
+Route134_Text_HitoshiPostBattle	Fui yo quien te desafió, y aun así\nhe perdido. Qué vergüenza…$
+Route134_Text_AaronIntro	La marea salvaje de esta zona nos\nhace más fuertes que nunca.$
+Route134_Text_AaronDefeat	Admito la derrota de buen grado.$
+Route134_Text_AaronPostBattle	Volveremos a entrenar a las\nCATARATAS METEORO.\pSi quieres, ve tú también.\n¡Seguro que te hace más fuerte!$
+Route134_Text_KelvinIntro	¡N-nuestro barco!\n¡Se lo ha llevado la marea!$
+Route134_Text_KelvinDefeat	¡Aaaaah!\n¡Para, por favor! ¡Para!$
+Route134_Text_KelvinPostBattle	Si no podemos hacer SURF, ¿cómo\nvolvemos a casa?\pLa verdad es que sé que un POKéMON\ndebilitado puede hacer SURF, pero no\lme parece bien.$
+Route134_Text_MarleyIntro	¿Podrán tus POKéMON esquivar nuestros\nataques rápidos como el rayo?$
+Route134_Text_MarleyDefeat	¡No sabía que existiera esa técnica!\nNos has ganado de calle.$
+Route134_Text_MarleyPostBattle	No he perdido mi pasión por la\nvelocidad. Me esforzaré más.$
+Route134_Text_ReynaIntro	¡A mis POKéMON no se les tumba\nfácilmente!$
+Route134_Text_ReynaDefeat	¡No puede ser!\n¡Explícame cómo he perdido!$
+Route134_Text_ReynaPostBattle	¡Jaja!\n¡Has ganado, sí señor!\p¡Volveré a subir enfrentándome a los\nENTRENADORES que me encuentre!$
+Route134_Text_HudsonIntro	Oye, ¿has visto por aquí a otro\nMARINERO?$
+Route134_Text_HudsonDefeat	¡Eso sí que es algo!$
+Route134_Text_HudsonPostBattle	Nuestro barco se fue a la deriva.\pMi compañero es muy miedoso, así que\nestoy preocupado por él.$

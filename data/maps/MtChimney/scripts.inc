@@ -590,7 +590,7 @@ MtChimney_Text_MaxieYouHaventSeenLastOfMagma:
 	.string "verás del EQUIPO MAGMA.\p"
 	.string "Fufufu…\p"
 	.string "Aun sin el METEORITO, si conseguimos\n"
-	.string "esa ESFERA… Fufufu…$"
+	.string "ese PRISMA… Fufufu…$"
 
 MtChimney_Text_TabithaIntro:
 	.string "¡Jejeje!\p"

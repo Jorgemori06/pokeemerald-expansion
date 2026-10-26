@@ -1,7 +1,7 @@
 # PUEBLO AZULIZA (con su GIMNASIO de MARCIAL), CUEVA GRANITO (MÁXIMO) y las rutas del mar 105-109 con la CASA DE LA PLAYA. Sin la revancha del postgame.
 DewfordTown_Text_TinyIslandCommunity	AZULIZA es una isla pequeñita.\nSi algo se pone de moda aquí,\ltodo el mundo se entera enseguida.$
 DewfordTown_Text_TownSign	PUEBLO AZULIZA\n“Una islita en el mar azul”.$
-DewfordTown_Text_GymSign	GIMNASIO POKéMON DE PUEBLO AZULIZA\nLÍDER: MARCIAL\l“¡Una gran ola de lucha!”$
+DewfordTown_Text_GymSign	GIMNASIO POKéMON DE AZULIZA\nLÍDER: MARCIAL\l“¡Una gran ola de lucha!”$
 DewfordTown_Text_HallSign	SALÓN AZULIZA\n“¡Información para todo el mundo!”$
 Route104_Text_LandedInDewfordDeliverLetter	SR. ARENQUE: ¡Ah del barco!\nHemos llegado a AZULIZA.\pSupongo que vas a entregar esa\nCARTA a… ¿cómo se llamaba? ¡MÁXIMO!$
 DewfordTown_Text_SetSailBackToPetalburg	SR. ARENQUE: ¿Has entregado tu\nCARTA?\p¿O querías volver a PETALIA?$
@@ -51,14 +51,14 @@ DewfordTown_Gym_Text_ReceivedKnuckleBadge	¡{PLAYER} ha recibido la MEDALLA\nPU�
 DewfordTown_Gym_Text_KnuckleBadgeInfoTakeThis	Con la MEDALLA PUÑO te obedecerán\nlos POKéMON hasta el nivel 30,\launque los consigas en un cambio.\pAdemás, podrás usar el movimiento\nde MO DESTELLO fuera de los combates.\pSi quieres, usa también esta\nMÁQUINA TÉCNICA.$
 DewfordTown_Gym_Text_ExplainBulkUp	Esa MT08 contiene CORPULENCIA.\pEs un movimiento que sube el ATAQUE\ny la DEFENSA.\p… … … … … …$
 DewfordTown_Gym_Text_BrawlyPostBattle	¡Veo que tu talento será una ola\ngigante que algún día dejará\lboquiabiertos a los ENTRENADORES!$
-DewfordTown_Gym_Text_GymStatue	GIMNASIO POKéMON DE PUEBLO AZULIZA$
-DewfordTown_Gym_Text_GymStatueCertified	GIMNASIO POKéMON DE PUEBLO AZULIZA\pRECONOCIDOS POR MARCIAL:\n{PLAYER}$
+DewfordTown_Gym_Text_GymStatue	GIMNASIO POKéMON DE AZULIZA$
+DewfordTown_Gym_Text_GymStatueCertified	GIMNASIO POKéMON DE AZULIZA\pRECONOCIDOS POR MARCIAL:\n{PLAYER}$
 DewfordTown_House1_Text_LotToBeSaidForLivingOnIsland	Vivir en una islita así, en armonía\ncon los POKéMON y la familia,\ltiene muchas ventajas.$
 DewfordTown_House1_Text_LifeGoesSlowlyOnIsland	Dejé el gran puerto de CIUDAD PORTUAL\ncuando me casé con mi marido.\pEn esta islita la vida va despacio.\nPero estar rodeada de un mar tan\lbonito también es felicidad.$
 DewfordTown_House1_Text_Zigzagoon	ZIGZAGOON: ¡Guguuh!$
-DewfordTown_House2_Text_WantYouToHaveSilkScarf	¡Recréate la vista con esto!\p¡Es un PAÑUELO SEDA! ¡Lo último en\nmoda, ya lo creo!\p¡Oh, te brillan los ojos!\n¡Sabes apreciar mi estilo!\p¡Qué encanto!\nToma. ¡Quiero que lo tengas tú!$
+DewfordTown_House2_Text_WantYouToHaveSilkScarf	¡Recréate la vista con esto!\p¡Es un PAÑUELO DE SEDA! ¡Lo último en\nmoda, ya lo creo!\p¡Oh, te brillan los ojos!\n¡Sabes apreciar mi estilo!\p¡Qué encanto!\nToma. ¡Quiero que lo tengas tú!$
 DewfordTown_House2_Text_NoRoom	Ah, ¿no te cabe?\pPues escúchame bien: ¡este PAÑUELO es\nimprescindible! ¡Yo vendería todos mis\lobjetos para tenerlo!$
-DewfordTown_House2_Text_ExplainSilkScarf	El PAÑUELO SEDA sube la potencia de\nlos movimientos de tipo NORMAL.\p¡Es un PAÑUELO maravilloso que queda\nbien con casi cualquier POKéMON!$
+DewfordTown_House2_Text_ExplainSilkScarf	El PAÑUELO DE SEDA sube la potencia de\nlos movimientos de tipo NORMAL.\p¡Es un PAÑUELO maravilloso que queda\nbien con casi cualquier POKéMON!$
 DewfordTown_House2_Text_BrawlySoCool	¿Has cruzado el mar para venir\na AZULIZA?\p¿Has venido porque te han hablado\nde MARCIAL?\pEs tan guay…\nTodo el mundo lo adora.$
 DewfordTown_PokemonCenter_1F_Text_StoneCavern	Hay una cueva de piedra en las afueras\ndel pueblo.\pDicen que allí se encuentran piedras\nraras.$
 DewfordTown_PokemonCenter_1F_Text_FaintedMonCanUseHM	Aunque un POKéMON esté debilitado,\npuede usar un movimiento aprendido\lcon una MÁQUINA OCULTA (MO).$

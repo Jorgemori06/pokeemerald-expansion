@@ -103,7 +103,7 @@ Route123_BerryMastersHouse_Text_WhyBeStingyTakeAnother:
 	.string "¡Toma otra!$"
 
 Route123_BerryMastersHouse_Text_VisitPrettyPetalFlowerShop:
-	.string "No dejes de visitar la FLORERÍA\n"
+	.string "No dejes de visitar la FLORISTERÍA\n"
 	.string "PÉTALO BONITO, cerca de FÉRRICA.\p"
 	.string "¡Que las flores llenen el mundo!$"
 
@@ -139,7 +139,7 @@ Route123_BerryMastersHouse_Text_Ah:
 
 Route104_PrettyPetalFlowerShop_Text_ThisIsPrettyPetalFlowerShop:
 	.string "¡Hola!\p"
-	.string "Esto es la FLORERÍA PÉTALO BONITO.\n"
+	.string "Esto es la FLORISTERÍA PÉTALO BONITO.\n"
 	.string "¡Llenamos el mundo de flores!$"
 
 Route104_PrettyPetalFlowerShop_Text_LearnAboutBerries:

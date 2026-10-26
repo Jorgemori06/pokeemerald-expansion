@@ -1324,13 +1324,13 @@ PetalburgCity_Gym_Text_DadNoAmountOfTrainingIsEnough:
 	.string "entrena lo suficiente.$"
 
 PetalburgCity_Gym_Text_GymGuideAdvice:
-	.string "¡Eh! ¿Qué tal, {PLAYER}, futuro\n"
-	.string "CAMPEÓN?\p"
+	.string "¡Eh! ¿Qué tal, {PLAYER}, futura\n"
+	.string "estrella de la LIGA?\p"
 	.string "Las puertas de este GIMNASIO se abren\n"
 	.string "al vencer a los ENTRENADORES.\p"
 	.string "¡Ojo! Las puertas de esta sala ya\n"
 	.string "están abiertas, ¡así que no me ataques!\p"
-	.string "Los ENTRENADORES del GIMNASIO PETALIA\n"
+	.string "Los ENTRENADORES de este GIMNASIO\n"
 	.string "usan todo tipo de objetos.\p"
 	.string "La puerta de la izquierda lleva a\n"
 	.string "la SALA VELOCIDAD.\p"
@@ -1544,11 +1544,11 @@ PetalburgCity_Gym_Text_EnterGymLeadersRoom:
 	.string "¿Quieres entrar?$"
 
 PetalburgCity_Gym_Text_GymStatue:
-	.string "GIMNASIO POKéMON DE CIUDAD PETALIA$"
+	.string "GIMNASIO POKéMON DE PETALIA$"
 
 PetalburgCity_Gym_Text_GymStatueCertified:
-	.string "GIMNASIO POKéMON DE CIUDAD PETALIA\p"
-	.string "ENTRENADORES RECONOCIDOS POR NORMAN:\n"
+	.string "GIMNASIO POKéMON DE PETALIA\p"
+	.string "RECONOCIDOS POR NORMAN:\n"
 	.string "{PLAYER}$"
 
 PetalburgCity_Gym_Text_NormanPreRematch:

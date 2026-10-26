@@ -304,125 +304,124 @@ MossdeepCity_Movement_ScottExitEast:
 	step_end
 
 MossdeepCity_Text_WantKingsRockStevenGaveMe:
-	.string "I got this from STEVEN, but I don't\n"
-	.string "know what it's good for.\p"
-	.string "I think it's called KING'S ROCK.\n"
-	.string "Do you want it?$"
+	.string "Me lo dio MÁXIMO, pero no sé para\n"
+	.string "qué sirve.\p"
+	.string "Creo que se llama ROCA DEL REY.\n"
+	.string "¿La quieres?$"
 
 MossdeepCity_Text_YouCanKeepIt:
-	.string "Why would you want it?\n"
-	.string "You're weird.\p"
-	.string "You can keep it, but keep it a secret\n"
-	.string "from STEVEN.$"
+	.string "¿Para qué la quieres?\n"
+	.string "Qué gustos más raros.\p"
+	.string "Te la puedes quedar, pero no se lo\n"
+	.string "digas a MÁXIMO.$"
 
 MossdeepCity_Text_StevensHouseOverThere:
-	.string "STEVEN's house is right over there!$"
+	.string "¡La casa de MÁXIMO está ahí mismo!$"
 
 MossdeepCity_Text_WhatToDoWithWeirdRock:
-	.string "Yeah, you think so, too! What are you\n"
-	.string "supposed to do with some weird rock?$"
+	.string "¡Sí, tú también lo piensas! ¿Qué se\n"
+	.string "supone que haces con una roca rara?$"
 
 MossdeepCity_Text_WailmerWatching:
-	.string "Around MOSSDEEP, you can see wild\n"
-	.string "WAILMER.\p"
-	.string "It's called, uh…\n"
-	.string "What was it now…\p"
+	.string "Por ALGARIA se ven WAILMER salvajes.\p"
+	.string "Se llama, eh…\n"
+	.string "¿Cómo era…?\p"
 	.string "WAI, WAI, WAI…\p"
-	.string "WAILMER watching!$"
+	.string "¡Avistamiento de WAILMER!$"
 
 MossdeepCity_Text_SpaceCenterReceivedLetter:
-	.string "The island's SPACE CENTER has been\n"
-	.string "launching huge rockets.\p"
-	.string "There's been some kind of an uproar\n"
-	.string "over a letter they received recently.$"
+	.string "El CENTRO ESPACIAL de la isla lanza\n"
+	.string "cohetes enormes.\p"
+	.string "Últimamente hay mucho revuelo por\n"
+	.string "una carta que han recibido.$"
 
 MossdeepCity_Text_SpaceCenterLaunchingRockets:
-	.string "The island's SPACE CENTER has been\n"
-	.string "launching huge rockets.$"
+	.string "El CENTRO ESPACIAL de la isla lanza\n"
+	.string "cohetes enormes.$"
 
 MossdeepCity_Text_MossdeepTargetedByMagma:
-	.string "I heard from a SAILOR buddy that\n"
-	.string "TEAM AQUA set up shop in LILYCOVE.\p"
-	.string "I also heard that someone came along\n"
-	.string "and wiped the floor with them!\p"
-	.string "But MOSSDEEP here's been targeted\n"
-	.string "by that TEAM MAGMA.\p"
-	.string "If you want to know what they're up to,\n"
-	.string "go visit the SPACE CENTER.$"
+	.string "Un amigo MARINERO me ha dicho que el\n"
+	.string "EQUIPO AQUA se instaló en CALAGUA.\p"
+	.string "¡Y también que alguien llegó y los\n"
+	.string "dejó por los suelos!\p"
+	.string "Pero ALGARIA está en el punto de mira\n"
+	.string "del EQUIPO MAGMA.\p"
+	.string "Si quieres saber qué traman, ve al\n"
+	.string "CENTRO ESPACIAL.$"
 
 MossdeepCity_Text_FeelReliefOnLand:
-	.string "I'm a SAILOR, so the sea's obviously\n"
-	.string "more important to me.\p"
-	.string "But you know? When I get back on land\n"
-	.string "after a long voyage, I do feel relief!$"
+	.string "Soy MARINERO, así que el mar es lo más\n"
+	.string "importante para mí, claro.\p"
+	.string "¿Pero sabes qué? ¡Cuando vuelvo a\n"
+	.string "tierra tras un viaje largo, me alivia!$"
 
 MossdeepCity_Text_NiceIfWorldCoveredByFlowers:
-	.string "Wouldn't it be nice?\p"
-	.string "If the whole world was covered in\n"
-	.string "plants and flowers like this island?$"
+	.string "¿No sería bonito?\p"
+	.string "¿Que el mundo entero estuviera\n"
+	.string "cubierto de plantas y flores como\l"
+	.string "esta isla?$"
 
 MossdeepCity_Text_LifeNeedsSeaToLive:
-	.string "All life needs the sea to live, even\n"
-	.string "though it makes its home on the land.\p"
-	.string "Life, having run its course, becomes\n"
-	.string "soil and returns to the land.\p"
-	.string "And the sea is always connected to\n"
-	.string "the land.\p"
-	.string "Yes, like the very shoreline here.$"
+	.string "Toda la vida necesita el mar, aunque\n"
+	.string "viva en tierra.\p"
+	.string "La vida, cuando termina, se hace\n"
+	.string "tierra y vuelve a la tierra.\p"
+	.string "Y el mar siempre está unido a la\n"
+	.string "tierra.\p"
+	.string "Sí, como esta misma orilla.$"
 
 MossdeepCity_Text_SurfExhilarating:
-	.string "A voyage on a ship is fine.\p"
-	.string "But crossing the sea with POKéMON\n"
-	.string "using SURF…\p"
-	.string "Now that's an exhilarating trip!\n"
-	.string "Wouldn't you agree, youngster?$"
+	.string "Un viaje en barco está bien.\p"
+	.string "Pero cruzar el mar con POKéMON\n"
+	.string "usando SURF…\p"
+	.string "¡Eso sí que es un viaje emocionante!\n"
+	.string "¿No te parece, joven?$"
 
 MossdeepCity_Text_SpecialSpaceCenterRock:
-	.string "This rock has a special meaning to\n"
-	.string "the people at the SPACE CENTER.\p"
-	.string "They put it here as their wish for\n"
-	.string "their rockets to fly safely.\p"
-	.string "When you make a wish, what do you use?\n"
-	.string "Do you wish upon a star?\p"
-	.string "I use a wish tag to make it happen.\n"
-	.string "That's what I do.$"
+	.string "Esta roca es muy especial para la\n"
+	.string "gente del CENTRO ESPACIAL.\p"
+	.string "La pusieron aquí para pedir que sus\n"
+	.string "cohetes vuelen sin problemas.\p"
+	.string "Cuando pides un deseo, ¿qué usas?\n"
+	.string "¿Se lo pides a una estrella?\p"
+	.string "Yo uso un amuleto de los deseos.\n"
+	.string "Eso es lo que hago.$"
 
 MossdeepCity_Text_ItsAWhiteRock:
-	.string "It's a white rock.$"
+	.string "Es una roca blanca.$"
 
 MossdeepCity_Text_GymSign:
-	.string "MOSSDEEP CITY POKéMON GYM\n"
-	.string "LEADERS: LIZA & TATE\p"
-	.string "“The mystic combination!”$"
+	.string "GIMNASIO POKéMON DE ALGARIA\n"
+	.string "LÍDERES: VITO y LETI\l"
+	.string "“¡La combinación mística!”$"
 
 MossdeepCity_Text_CitySign:
-	.string "MOSSDEEP CITY\n"
-	.string "“Our slogan: Cherish POKéMON!”$"
+	.string "CIUDAD ALGARIA\n"
+	.string "“Nuestro lema: ¡Quiere a los POKéMON!”$"
 
 MossdeepCity_Text_SpaceCenterSign:
-	.string "MOSSDEEP SPACE CENTER\n"
-	.string "“The closest place to space.”$"
+	.string "CENTRO ESPACIAL DE ALGARIA\n"
+	.string "“El lugar más cercano al espacio”.$"
 
 MossdeepCity_Text_ScottSomethingWrongWithTown:
-	.string "SCOTT: {PLAYER}{KUN}, feeling good?\n"
-	.string "I'm doing great!\p"
-	.string "I'd heard MOSSDEEP's GYM LEADER is\n"
-	.string "pretty strong, so I decided to come\l"
-	.string "take a look-see for myself.\p"
-	.string "But there's something wrong about\n"
-	.string "this town.\p"
-	.string "People are going on about a warning\n"
-	.string "letter and the SPACE CENTER…\p"
-	.string "I don't think it concerns me in any\n"
-	.string "way, though.$"
+	.string "SCOTT: {PLAYER}{KUN}, ¿qué tal?\n"
+	.string "¡Yo genial!\p"
+	.string "Había oído que el LÍDER de ALGARIA\n"
+	.string "es bastante fuerte, así que he\l"
+	.string "venido a verlo con mis ojos.\p"
+	.string "Pero en este pueblo pasa algo raro.\p"
+	.string "La gente no para de hablar de una\n"
+	.string "carta de amenaza y del CENTRO…\p"
+	.string "Aunque no creo que tenga nada que\n"
+	.string "ver conmigo.$"
 
 MossdeepCity_Text_SootopolisNewGymLeader:
-	.string "Ahh… It feels great letting the waves\n"
-	.string "wash over my feet…\p"
-	.string "Speaking of the waves, you know that\n"
-	.string "island city SOOTOPOLIS?\p"
-	.string "I think the GYM there had a new\n"
-	.string "LEADER come in.\p"
-	.string "People tell me the new LEADER once\n"
-	.string "mentored WALLACE.$"
+	.string "Aaah… Qué gusto que las olas te\n"
+	.string "mojen los pies…\p"
+	.string "Hablando de olas, ¿conoces la ciudad\n"
+	.string "de la isla, ARRECÍPOLIS?\p"
+	.string "Creo que su GIMNASIO tiene un\n"
+	.string "LÍDER nuevo.\p"
+	.string "Dicen que el nuevo LÍDER fue el\n"
+	.string "maestro de PLUBIO.$"
 
