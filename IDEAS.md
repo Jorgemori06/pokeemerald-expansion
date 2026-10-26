@@ -93,3 +93,17 @@ Una sección por idea, con:
   - **Qué tendrían que pasar Jorge y Miguel:** la lista de qué amigo va en qué NPC, con su nombre y, si queréis el recoloreado, una foto o los colores de cada uno.
   - **Ojo con la regla de los regalos:** con la caja de prohibidos, un regalo repetido o legendario sigue yendo a la caja, sea quien sea el que lo da.
 - **Estado:** Pendiente.
+
+### 5. Dos versiones: una personalizada para nosotros y otra general
+
+- **Qué:** sacar dos ROMs del mismo código. La **personalizada**, con lo nuestro: jugar como Jorge o Miguel (idea 3), amigos como NPC (idea 4), Gonzalo Plaza de Campeón (idea 1)… Y la **general**, sin nada de eso, para pasársela a cualquiera.
+- **Propuesta de:** Miguel, 26/10/2026.
+- **Notas (viabilidad, sin planificar):**
+  - **Es fácil si se prepara desde el principio.** Se hace igual que el randomizer: una opción al compilar, por ejemplo `make PERSONALIZADA=1`, que define una constante (`DUALOCKE_PERSONALIZADA`).
+  - **Código:** lo personal va dentro de `#if DUALOCKE_PERSONALIZADA`.
+  - **Gráficos y textos personales:** van en archivos aparte que el Makefile solo usa en esa versión.
+  - **Mapas** (cambiar un NPC por otro sprite): mejor por código al cargar el mapa que tocando el `map.json`, para no tener dos copias de cada mapa.
+  - Todo lo demás (reglas del locke, randomizer, traducción) es igual en las dos.
+  - Las dos se compilan con la misma semilla o con otra, como se quiera.
+  - **Instalador:** se le añade una opción para elegir cuál compilar.
+- **Estado:** Pendiente.
