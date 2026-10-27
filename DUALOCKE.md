@@ -522,13 +522,15 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
 
 ## 9. Estado y siguientes pasos
 
-### Locke en curso (empezado el 26/10/2026)
+### Locke en curso (empezado de nuevo el 27/10/2026)
 
 - ROMs hechas por Claude con `make release` (sin menús de depuración).
   - **Versión 1** (26/10/2026): commit `46ba7600` (con #36 y #37).
   - **Versión 2** (27/10/2026): commit `a661c0eb`. Añade el recuerdamovimientos, los Ticket-Recuerdo (#40) y los movimientos por nivel al azar (#42). Las partidas de la versión 1 siguen valiendo: con la misma semilla, salvajes, iniciales, objetos, estáticos, MT y habilidades salen idénticos. Solo cambian los movimientos por nivel y los de los entrenadores.
-  - **Versión 3** (27/10/2026, la actual): commit `c9b5e9e38`. Arregla las habilidades de relleno (#47; con la misma semilla solo cambian las especies que salían "sin habilidad") y protege el mote y el orden del equipo al capturar (#49, bug del equipo clonado). Las partidas de la versión 2 siguen valiendo.
-- **Semillas:** Miguel `7044754226` (`Esmeralda Dualocke - Mikemine.gba`), Jorge `6629063067` (`Esmeralda Dualocke - Jorgemori.gba`).
+  - **Versión 3** (27/10/2026): commit `c9b5e9e38`. Arregla las habilidades de relleno (#47; con la misma semilla solo cambian las especies que salían "sin habilidad") y protege el mote y el orden del equipo al capturar (#49, bug del equipo clonado). Las partidas de la versión 2 siguen valiendo.
+  - **Versión 4** (27/10/2026, la actual): commit `085e51aa3` (el mismo juego que la 3) con **semillas nuevas**: Jorge y Miguel empiezan el locke de cero.
+- **Semillas actuales (versión 4):** Miguel `1820821844` (`Esmeralda Dualocke - Mikemine.gba`), Jorge `5966102869` (`Esmeralda Dualocke - Jorgemori.gba`).
+- Semillas de las versiones 1-3 (partidas abandonadas): Miguel `7044754226`, Jorge `6629063067`.
 - **Para regenerar la misma ROM:** `git checkout <commit de la versión>` y `make release SEED=<semilla>`. Con un commit más nuevo, la misma semilla puede barajar distinto si ha cambiado el randomizer o los datos, y la partida guardada puede dejar de servir si cambia lo que se guarda (como pasó con los bolsillos). Si hay que arreglar algo a mitad del locke, se hace la ROM nueva con la misma semilla y se comprueba antes que la partida carga.
 - **No actualizar con el instalador a mitad del locke:** usa su propia semilla (`dualocke_semilla.txt`) y compila `master`. Si hace falta, se pone la semilla de cada uno en ese archivo antes.
 - Las ideas de `IDEAS.md` se dejan para después de pasárnoslo.
