@@ -35,6 +35,7 @@ from aleatorio import habilidades as hab  # noqa: E402
 from aleatorio import iniciales as ini  # noqa: E402
 from aleatorio import intercambios  # noqa: E402
 from aleatorio import movimientos as mov  # noqa: E402
+from aleatorio import aprendizajes as apr  # noqa: E402
 from aleatorio import mts  # noqa: E402
 from aleatorio import objetos as obj  # noqa: E402
 from aleatorio import salvajes  # noqa: E402
@@ -98,6 +99,14 @@ def main():
     solucionario["mt"] = {o: movs[m].nombre for o, m in mapa_mts.items()}
     tutores = mts.randomizar_tutores(movs, args.semilla, config, mapa_mts)
     solucionario["tutores"] = {movs[o].nombre: movs[n].nombre for o, n in tutores.items()}
+    aprende = apr.randomizar(pokedex, movs, args.semilla, config)
+    errores = apr.comprobar(pokedex, movs, aprende, config)
+    if errores:
+        sys.exit("Dualocke: el randomizer de movimientos por nivel ha fallado:\n  " + "\n  ".join(errores[:20]))
+    solucionario["movimientos_por_nivel"] = {e: [f"{n}: {movs[m].nombre}" for n, m in t] for e, t in aprende.items()}
+    # Los entrenadores eligen sus 3 movimientos "de nivel" de las tablas nuevas
+    for especie, tabla in aprende.items():
+        pokedex.especies[especie].por_nivel = tabla
     # Para la compatibilidad de las MT (la calcula el juego a partir de este número)
     numero = int(hashlib.sha256(args.semilla.encode()).hexdigest()[:8], 16)
 
@@ -105,7 +114,7 @@ def main():
         f.write(cabecera.generar(f"Semilla {args.semilla}", mapa_estaticos, mapa_regalos,
                                  res_objetos["suelo"], res_objetos["recogida"], res_objetos["salvajes"],
                                  res_objetos["probabilidad_salvajes"], res_intercambios, habilidades,
-                                 mapa_mts, compatibilidad, numero, tutores))
+                                 mapa_mts, compatibilidad, numero, tutores, aprende))
 
     with open(TRAINERS, encoding="utf-8") as f:
         original = f.read()

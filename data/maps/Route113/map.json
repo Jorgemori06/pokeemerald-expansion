@@ -251,6 +251,19 @@
       "trainer_sight_or_berry_tree_id": "ITEM_SKARMORITE",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_MEGA_SKARMORITE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 61,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_HEART_SCALE",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_TICKET_RUTA_113"
     }
   ],
   "warp_events": [
@@ -482,6 +495,14 @@
       "elevation": 3,
       "item": "ITEM_WIDE_LENS",
       "flag": "FLAG_ITEM_COMP_WIDE_LENS"
+    },
+    {
+      "type": "hidden_item",
+      "x": 64,
+      "y": 7,
+      "elevation": 3,
+      "item": "ITEM_HEART_SCALE",
+      "flag": "FLAG_ITEM_TICKET_RUTA_113_2"
     }
   ]
 }

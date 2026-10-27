@@ -7,7 +7,7 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 - **Para probar:** `make SIN_RANDOM=1` (o el instalador con `-SinRandom`). Así se reconocen los Pokémon y los entrenadores originales, y es más fácil ver si algo está mal.
 - **Para ver el randomizer:** `make` normal (o el instalador sin opciones) con una semilla cualquiera.
 - **Atajos de prueba:** en el mapa, **R + START** abre el menú de depuración: volar a cualquier mapa, darse Pokémon y objetos, cambiar flags. En combate, **SELECT** abre el de combate.
-- **Ojo para la partida de verdad:** esos dos menús están activos en el `make` normal (`DEBUG_OVERWORLD_MENU` y `DEBUG_BATTLE_MENU` valen `DISABLED_ON_RELEASE`). Con **`make release`** se quitan, pero la ROM sale como `pokeemerald-release.gba` y el instalador no lo hace todavía. **Pendiente:** comprobar que `make release` compila con todo lo nuestro y, si es así, que el instalador use esa versión para jugar.
+- **Partida de verdad:** esos dos menús están activos en el `make` normal (`DEBUG_OVERWORLD_MENU` y `DEBUG_BATTLE_MENU` valen `DISABLED_ON_RELEASE`). Con **`make release`** se quitan y la ROM sale como `pokeemerald-release.gba`. El instalador ya usa `make release` para la partida de verdad (sin opciones y con `-NuevaPartida`) y la copia como `Dualocke.gba`. Con `-SinRandom` sigue siendo el `make` normal, con los menús.
 
 ## Qué mirar
 
@@ -33,11 +33,19 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 - [ ] **Tiendas:** una compra por objeto (salvo Balls, Repelentes, Bayas y Caramelos), y el segundo dependiente en las ciudades.
 - [ ] **Caps de nivel:** al llegar al cap no se gana experiencia y los Caramelos Raros no funcionan por encima.
 
+### Recuerdamovimientos y Ticket-Recuerdo
+
+- [ ] En un Centro Pokémon, la señora a la derecha del PC: sin ticket te lo dice; con ticket enseña un movimiento de nivel y gasta el ticket solo si lo aprende.
+- [ ] Que no tape el PC ni el mapa de la región, y que esté en todos los Centros (también en LAVACALDA).
+- [ ] Que los tickets de las rutas se vean y se puedan coger. Mirar sobre todo los de las rutas de mar (en el agua, con Surf) y los ocultos de las rutas largas.
+- [ ] Que la pantalla de datos ya no deje recordar movimientos gratis.
+
 ### Randomizer (con semilla)
 
 - [ ] Salvajes, entrenadores, iniciales y rival cambian, sin legendarios donde no toca.
 - [ ] Los jefes llevan su as con megapiedra desde el Mega-Aro, y objetos que les sirven.
 - [ ] Habilidades, MT, tutores, intercambios y objetos del suelo cambian, y las MO no.
+- [ ] Los movimientos que se aprenden al subir de nivel son al azar: los de tu inicial, los de los salvajes y los de los entrenadores. Que al principio siempre haya algún ataque y que no salgan ataques muy fuertes a nivel bajo.
 - [ ] `make nueva-partida` da otra semilla y `make` repite la misma.
 
 ### Equilibrio
