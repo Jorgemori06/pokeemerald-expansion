@@ -423,6 +423,19 @@
       "trainer_sight_or_berry_tree_id": "ITEM_CHOICE_SPECS",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_COMP_CHOICE_SPECS"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 39,
+      "y": 10,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_HEART_SCALE",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_TICKET_RUTA_121"
     }
   ],
   "warp_events": [
@@ -548,6 +561,14 @@
       "elevation": 3,
       "item": "ITEM_MAX_REVIVE",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_121_MAX_REVIVE"
+    },
+    {
+      "type": "hidden_item",
+      "x": 42,
+      "y": 9,
+      "elevation": 3,
+      "item": "ITEM_HEART_SCALE",
+      "flag": "FLAG_ITEM_TICKET_RUTA_121_2"
     }
   ]
 }

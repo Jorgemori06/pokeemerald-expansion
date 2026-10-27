@@ -118,7 +118,9 @@
     "compatibilidad_porcentaje": 50,
     "_mt": "Miguel (#27): cada MT enseña un movimiento al azar y cada especie la aprende con un 50 %, sin excepción para las de su tipo. Las de campo y las MO se quedan como están.",
     "conservar_movimientos_de_campo": true,
-    "tutores_aleatorios": true
+    "tutores_aleatorios": true,
+    "aprendizaje_aleatorio": true,
+    "_aprendizaje": "Miguel (26/10/2026): cada especie aprende movimientos al azar al subir de nivel (los mismos niveles que el original), con el tope de potencia de entrenadores.movimientos.potencia_maxima_del_cuarto y preferencia por los de su tipo. Lo usan salvajes, jugador, el que recuerda movimientos y entrenadores."
   },
 
   "objetos": {

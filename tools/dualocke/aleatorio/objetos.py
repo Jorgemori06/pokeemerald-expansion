@@ -6,6 +6,8 @@ en el PR #27, 25/10/2026).
   - Las megapiedras (flag FLAG_ITEM_MEGA_*) se quedan donde están, y ningún otro objeto del suelo
     puede ser una megapiedra.
   - Los objetos competitivos (FLAG_ITEM_COMP_*) son totalmente aleatorios, como el resto.
+  - Los Ticket-Recuerdo (FLAG_ITEM_TICKET_*) se quedan donde están, para que haya al menos uno
+    por ruta.
   - Las MT se barajan entre ellas: donde había una MT sale otra MT.
   - El resto, cualquier objeto menos los de "excluir", los objetos clave, las MO, las cartas, las
     megapiedras, los cristales Z y las teralitas. Las bayas sí pueden salir.
@@ -25,6 +27,9 @@ import random
 import re
 
 from . import especies as esp
+
+# Objetos del suelo que no se randomizan: megapiedras y Ticket-Recuerdo (colocar_objetos.py)
+FIJOS = ("FLAG_ITEM_MEGA_", "FLAG_ITEM_TICKET_")
 
 # Nombres de "excluir" (randomizer_config.json) que no son el nombre exacto de un objeto
 EXCLUIR_POR_NOMBRE = {
@@ -171,7 +176,7 @@ def randomizar(objetos, semilla, config):
         if flag in mapa_suelo or objeto not in objetos:
             continue
         o = objetos[objeto]
-        if flag.startswith("FLAG_ITEM_MEGA_") or o.es_clave or o.es_mo:
+        if flag.startswith(FIJOS) or o.es_clave or o.es_mo:
             continue  # fijos
         if o.es_mt:
             huecos_mt.append(flag)
@@ -202,8 +207,8 @@ def comprobar(objetos, config, resultado):
         viejo = originales.get(flag)
         if viejo is None:
             errores.append(f"{flag}: no es un objeto del suelo")
-        elif flag.startswith("FLAG_ITEM_MEGA_"):
-            errores.append(f"{flag}: las megapiedras no se tocan")
+        elif flag.startswith(FIJOS):
+            errores.append(f"{flag}: las megapiedras y los Ticket-Recuerdo no se tocan")
         elif objetos[viejo].es_mt != objetos[nuevo].es_mt:
             errores.append(f"{flag}: {viejo} -> {nuevo} (las MT solo se cambian por MT)")
         elif not objetos[nuevo].es_mt and nuevo in fuera:

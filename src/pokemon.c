@@ -3294,7 +3294,11 @@ u32 GetSpeciesBaseStatTotal(enum Species species)
 
 const struct LevelUpMove *GetSpeciesLevelUpLearnset(enum Species species)
 {
-    const struct LevelUpMove *learnset = gSpeciesInfo[SanitizeSpeciesId(species)].levelUpLearnset;
+    // Dualocke: con el randomizer, cada especie aprende movimientos al azar al subir de nivel
+    const struct LevelUpMove *learnset = Dualocke_AprendizajeAleatorio(SanitizeSpeciesId(species));
+    if (learnset != NULL)
+        return learnset;
+    learnset = gSpeciesInfo[SanitizeSpeciesId(species)].levelUpLearnset;
     if (learnset == NULL)
         return gSpeciesInfo[SPECIES_NONE].levelUpLearnset;
     return learnset;

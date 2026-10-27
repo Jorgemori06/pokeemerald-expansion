@@ -49,7 +49,7 @@ powershell -ExecutionPolicy Bypass -File tools\dualocke\instalar_windows.ps1
 - **Qué hace luego:** instala el compilador (te pide la contraseña de Ubuntu), clona el repo en `~/romhack`, compila y copia la ROM al **escritorio como `Dualocke.gba`**.
 - **Para actualizar el juego** cuando se suban cambios, se vuelve a lanzar el mismo script. Si mGBA guarda la partida al lado (`Dualocke.sav`), se conserva.
 - Con `-Rama nombre-de-rama` compila otra rama, por ejemplo para probar un PR antes de fusionarlo.
-- El juego sale **randomizado** con tu semilla (la misma cada vez que actualizas). Con **`-NuevaPartida`** genera otra semilla para empezar un locke nuevo (pide confirmación, porque la partida guardada deja de cuadrar). Con **`-SinRandom`** compila el juego sin randomizar, para probar el equilibrio, y lo copia aparte como `Dualocke-sin-random.gba`.
+- El juego sale **randomizado** con tu semilla (la misma cada vez que actualizas) y compilado con **`make release`**, así que no tiene los menús de depuración (R + START en el mapa, SELECT en combate). Con **`-NuevaPartida`** genera otra semilla para empezar un locke nuevo (pide confirmación, porque la partida guardada deja de cuadrar). Con **`-SinRandom`** compila el juego sin randomizar y con los menús de depuración, para probar, y lo copia aparte como `Dualocke-sin-random.gba`.
 - Si no tienes el repo en Windows, descarga solo el script desde GitHub (`tools/dualocke/instalar_windows.ps1`).
 
 ### Entorno (Windows), paso a paso
@@ -235,7 +235,7 @@ Regla general: **el as de cada jefe va exactamente al nivel del cap**, el resto 
   - Están ordenados por tramo: los más fuertes (Pañuelo Elegido, Chaleco Asalto, Gafas Elegidas, Vidasfera) salen a partir del tramo 6.
   - Los coloca el mismo script. Sus flags son `FLAG_ITEM_COMP_...`, del **0x493 al 0x4C9**.
   - La tabla está en el script y en `registro/2026-10-23-miguel-objetos-competitivos.md`.
-  - **Flags libres que quedan para Jorge:** 0x2B6-0x2BB, 0x4CA-0x4EF y el resto de `FLAG_UNUSED_...` (0x2B5 es `FLAG_DUALOCKE_TIENE_BALLS`).
+  - **Flags libres que quedan para Jorge:** 0x043-0x04F, 0x2B6-0x2BB, 0x4CA-0x4E4 y el resto de `FLAG_UNUSED_...` (0x2B5 es `FLAG_DUALOCKE_TIENE_BALLS`; 0x021-0x042 y 0x4E5-0x4EF son de los Ticket-Recuerdo).
 
 ### Tiendas
 
@@ -326,6 +326,24 @@ Lo pidió Jorge al probar: las megapiedras y las pociones se mezclaban con todo 
 - Depuración: "Fill Pocket Items" llena también Medicinas y da una de cada megapiedra; "Fill Pocket Key Items" da el Mega-Aro.
 - Tests en `test/dualocke.c` (busca "bolsillos").
 
+### Recuerdamovimientos y Ticket-Recuerdo (hecho, Miguel, 26/10/2026)
+
+Lo pidió Miguel: poder recuperar los movimientos que un Pokémon ha podido aprender durante la aventura, pagando con tickets que se encuentran por el mapa.
+
+- **En todos los Centros Pokémon de Hoenn** (los 16) hay una señora a la derecha del PC, en la casilla (13, 2), que hace que un Pokémon recuerde un movimiento.
+  - Enseña los movimientos **de nivel** que el Pokémon ya podría saber por su nivel (los mismos que el tutor de Pueblo Pardal). Se puede elegir un Pokémon del equipo o de las cajas.
+  - Cobra **un Ticket-Recuerdo por movimiento**, y solo si lo aprende: si cancelas, no se gasta.
+  - Script: `data/scripts/dualocke_recuerda_movimientos.inc` (`Dualocke_EventScript_RecuerdaMovimientos`). Los PNJ están en el `map.json` de cada `*_PokemonCenter_1F`.
+- **El Ticket-Recuerdo es la Escama Corazón** (`ITEM_HEART_SCALE`) con otro nombre, otra descripción y el icono del Ticket del Barco. Así el tutor de Pueblo Pardal, que ya cobraba con la escama, también lo pide (sus textos dicen TICKET-RECUERDO).
+- **Dónde están:** 45 por el mapa.
+  - **Uno en bola en cada ruta**, de la 101 a la 134.
+  - **Otro oculto** en las rutas largas: 104, 110, 111, 113, 114, 117, 118, 119, 120, 121 y 123.
+  - Además siguen las Escamas Corazón ocultas del juego original (rutas 104, 105, 106, 109, 115, 118, 128, Calagua y bajo el agua de la 124), que ahora son tickets. Con el randomizer esas sí cambian por otros objetos.
+  - Los coloca `tools/dualocke/colocar_objetos.py` (tablas `TICKETS` y `TICKETS_OCULTOS`). Flags `FLAG_ITEM_TICKET_RUTA_...`: **0x021-0x042** los de bola y **0x4E5-0x4EF** los ocultos, porque los ocultos necesitan un flag por encima de `FLAG_HIDDEN_ITEMS_START`.
+  - El script busca primero suelo firme. En 7 rutas de mar abierto (107, 108, 126, 128, 129, 130 y 131) no hay playa cerca y el ticket está en el agua: se coge haciendo Surf, como se habla con los nadadores.
+  - **El randomizer no los toca** (`FIJOS` en `tools/dualocke/aleatorio/objetos.py`), como las megapiedras.
+- **Se ha quitado el recordador gratis de la pantalla de datos** (`P_SUMMARY_SCREEN_MOVE_RELEARNER` a `FALSE` en `include/config/summary_screen.h`): si no, los tickets no servirían de nada.
+
 ## 7. Randomizer (hecho, falta probarlo jugando)
 
 ### Diseño
@@ -333,8 +351,8 @@ Lo pidió Jorge al probar: las megapiedras y las pociones se mezclaban con todo 
 - **Script propio** (Python) que baraja los datos del juego **antes de compilar**, usando una **semilla**.
 - **Cada jugador tiene una partida completamente distinta**: `make` se inventa una semilla al azar la primera vez y la guarda (decidido por Jorge el 25/10/2026: la semilla no se elige, es aleatoria). Cómo se usa: sección 3, "Partida randomizada".
 - **Cómo está hecho (Jorge):** `tools/dualocke/randomizer.py`, con los módulos en `tools/dualocke/aleatorio/`. Lo lanza el `Makefile` (bloque "Dualocke: randomizer con semilla"). Lee los originales (`wild_encounters.json`, y más adelante `trainers.party`…) y escribe las versiones barajadas en `build/dualocke/`, que son las que se compilan. **Los archivos de Miguel no se tocan.** Los datos de las especies (evoluciones, formas, legendarios) salen de pasar `src/pokemon.c` por el preprocesador de C, así que son exactamente los de la ROM. Comprueba el resultado antes de compilar (solo cambian las especies, no hay legendarios en los salvajes…) y para si algo falla.
-- **Hecho:** salvajes, entrenadores (con movimientos y objetos de los jefes), iniciales, rival, estáticos, regalos, objetos del suelo, Recogida, objetos de los salvajes, intercambios, habilidades, MT y tutores.
-- **Lo que no se puede barajar sin tocar mapas y scripts se cambia al vuelo:** el `Makefile` genera `src/data/dualocke_aleatorio.h` con las tablas de la semilla (vacías sin semilla) y `src/dualocke_aleatorio.c` las consulta: estáticos, regalos, objetos del suelo (por su flag), Recogida, objetos de los salvajes, intercambios, habilidades y MT. Enganches: `item_ball.c`, `field_control_avatar.c` (ocultos), `battle_script_commands.c` (Recogida), `pokemon.c` (`SetWildMonHeldItem`, `GetSpeciesAbility`, `CanLearnTeachableMove`), `trade.c`, `include/item.h` (qué enseña cada MT), `party_menu.c` y la macro `move_tutor` (`asm/macros/event.inc`).
+- **Hecho:** salvajes, entrenadores (con movimientos y objetos de los jefes), iniciales, rival, estáticos, regalos, objetos del suelo, Recogida, objetos de los salvajes, intercambios, habilidades, MT, tutores y movimientos por nivel.
+- **Lo que no se puede barajar sin tocar mapas y scripts se cambia al vuelo:** el `Makefile` genera `src/data/dualocke_aleatorio.h` con las tablas de la semilla (vacías sin semilla) y `src/dualocke_aleatorio.c` las consulta: estáticos, regalos, objetos del suelo (por su flag), Recogida, objetos de los salvajes, intercambios, habilidades y MT. Enganches: `item_ball.c`, `field_control_avatar.c` (ocultos), `battle_script_commands.c` (Recogida), `pokemon.c` (`SetWildMonHeldItem`, `GetSpeciesAbility`, `CanLearnTeachableMove`, `GetSpeciesLevelUpLearnset`), `trade.c`, `include/item.h` (qué enseña cada MT), `party_menu.c` y la macro `move_tutor` (`asm/macros/event.inc`).
 - `build/dualocke/solucionario.json` tiene todo lo que ha salido (no abrir si no quieres destriparte la partida).
 - Para no destriparse nada: o cada uno compila la suya, o uno compila las dos sin mirar los archivos generados.
 - Alternativa descartada por ahora: randomizer dentro del juego, al empezar partida (como Heart & Soul). Es más trabajo.
@@ -396,6 +414,13 @@ Están en **`tools/dualocke/randomizer_config.json`**, que es el archivo que deb
 
 **Movimientos**
 - Movimientos de Gen 9 (ya vienen así).
+- **Movimientos por nivel al azar** (`aprendizajes.py`; pedido por Miguel el 26/10/2026, al ver en la primera partida que todo aprendía lo de siempre). Cada especie aprende movimientos al azar al subir de nivel: los Pokémon del jugador, los salvajes, el que recuerda movimientos y los entrenadores (sus 3 movimientos "de nivel" salen de estas tablas).
+  - Mismos niveles que el original: se aprende lo mismo de veces y a los mismos niveles.
+  - Tope de potencia según el nivel, el mismo que el cuarto movimiento de los entrenadores (40 + 1,5 por nivel). Los de "al evolucionar" cuentan como nivel 30.
+  - Un 60 % son de daño y, entre ellos, los de su tipo son 3 veces más probables. Siempre hay uno de daño entre los que aprende hasta nivel 5.
+  - Sin repetidos en la misma tabla. Las formas que compartían tabla la siguen compartiendo.
+  - **Nunca sale Plegaria Vital** (revive a un debilitado en pleno combate y se saltaría las muertes del locke). Ojo: las MT y los tutores al azar todavía pueden enseñarla.
+  - Se activa con `"aprendizaje_aleatorio"` en `randomizer_config.json`. El juego usa la tabla nueva desde `GetSpeciesLevelUpLearnset` (`src/pokemon.c`); sin semilla, y en los tests, sale la original.
 - MTs aleatorias con compatibilidad completamente aleatoria, conservando los movimientos de campo y comprobando los aprendibles por nivel. **Hecho** (`mts.py`; Miguel, #27): cada MT enseña un movimiento al azar (sin repetir) y **cada especie la aprende con un 50 %**, sin excepción para las de su tipo; es siempre la misma respuesta para la misma especie y semilla. Las de movimientos de campo (Excavar, Daño Secreto) y las MO se quedan como están, con su compatibilidad original, para no bloquear el avance. No se toca `tms_hms.h`: lo cambia `include/item.h` al vuelo.
 - Tutores aleatorios con compatibilidad aleatoria, conservando los movimientos de campo. **Hecho** (`mts.py`): los 10 tutores de Hoenn enseñan un movimiento al azar (sin repetir los de las MT) y se aprende con la misma probabilidad que las MT nuevas. La macro `move_tutor` llama a `Dualocke_TutorAleatorio`, que cambia el movimiento y pone su nombre en `{STR_VAR_1}`. **Textos:** los de los tutores (`data/text/move_tutors.inc` y `traduccion/dialogos/27_pokedex_tutores.tsv`) ahora dicen el movimiento con `{STR_VAR_1}`. Los que lo describían (CORTE FURIA "de tipo BICHO", SUSTITUTO "hace una copia"…) se han dejado más generales. La historia de cada tutor se queda.
 
@@ -516,6 +541,7 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
 - Caja de prohibidos (Jorge, sección 4): regalos, eventos, fósiles, estáticos, huevos e intercambios repetidos o legendarios van a la caja 13 ("VETADOS"), bloqueada hasta que dejan de ser repetidos.
 - Randomizer completo (Jorge, sección 7) y traducción al español de la historia (Miguel y Jorge, sección 8).
 - Bolsillos Medicinas y Megapiedras en la mochila (Jorge, sección 6).
+- Recuerdamovimientos en los Centros Pokémon y Ticket-Recuerdo por las rutas (Miguel, sección 6).
 - **Guía para jugar** en `GUIA.html` (se abre con el navegador): cómo avanzar, caps y niveles de los jefes, objetos nuevos, pistas de megapiedras y Ticket-Recuerdo, y novedades. Las pistas salen de los mapas con `python3 tools/dualocke/guia.py`; el resto se edita a mano.
 - **Siguiente: jugar y probarlo todo junto.** Lista de qué mirar en `PRUEBAS.md`.
 
@@ -559,7 +585,8 @@ Quién hace cada cosa y cómo se sube: sección 13.
 | Randomizer en el juego (tablas generadas: estáticos, regalos, objetos, intercambios, habilidades, MT, tutores) | `src/dualocke_aleatorio.c`, `include/dualocke_aleatorio.h`, `src/data/dualocke_aleatorio.h` (generado); qué enseña cada MT en `include/item.h` |
 | Reescalado de niveles por tramos (tabla de mapas y reglas) | `tools/dualocke/reescalar_niveles.py` |
 | Equipos de los jefes (+1/+2, megas) | `tools/dualocke/equipos_jefes.py` |
-| Megapiedras y objetos competitivos por el mapa | `tools/dualocke/colocar_objetos.py` |
+| Megapiedras, objetos competitivos y Ticket-Recuerdo por el mapa | `tools/dualocke/colocar_objetos.py` |
+| Recuerdamovimientos de los Centros Pokémon | `data/scripts/dualocke_recuerda_movimientos.inc` |
 | Guía para jugar (walkthrough, caps, pistas de objetos, novedades) | `GUIA.html` (pistas: `tools/dualocke/guia.py`) |
 | Evolución por nivel de los entrenadores normales | `tools/dualocke/evolucionar_entrenadores.py` |
 | Entrenadores | `src/data/trainers.party` |

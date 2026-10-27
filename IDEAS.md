@@ -107,3 +107,44 @@ Una sección por idea, con:
   - Las dos se compilan con la misma semilla o con otra, como se quiera.
   - **Instalador:** se le añade una opción para elegir cuál compilar.
 - **Estado:** Pendiente.
+
+### 6. Que el primer Pokémon del equipo te siga por el mapa
+
+- **Qué:** como en HeartGold y SoulSilver, el primer Pokémon del equipo va andando detrás del jugador por el mapa, y se puede hablar con él.
+- **Propuesta de:** Miguel, 26/10/2026.
+- **Notas (viabilidad, sin planificar):**
+  - **La expansion ya lo trae hecho.**
+    - Se activa con `OW_FOLLOWERS_ENABLED` en `include/config/overworld.h`, que ahora vale `FALSE`.
+    - Los sprites de mapa de todos los Pokémon ya están: `OW_POKEMON_OBJECT_EVENTS` vale `TRUE`.
+    - En el mismo archivo hay opciones para afinarlo:
+      - que salga de su propia Ball;
+      - que se balancee al andar;
+      - un flag para esconderlo durante un rato (`B_FLAG_FOLLOWERS_DISABLED`).
+  - **Lo que habría que revisar:**
+    - **Escenas de la historia:** la expansion avisa de que algunos scripts pueden necesitar retoques para que el Pokémon no estorbe, por ejemplo cuando un NPC camina hacia ti. Habría que pasar la historia viendo que no se queda nada atascado.
+    - **Textos:** al hablar con él dice frases según su humor y el sitio. Son unos 138 textos en inglés, en `src/data/text/follower_messages.h`, y habría que traducirlos.
+    - **Con el locke:** si el primero del equipo se debilita y se va a la caja de muertos, el que te sigue pasa a ser el siguiente. Hay que comprobar que ese cambio no se lía.
+    - **Memoria de vídeo:** con muchos Pokémon en pantalla a la vez puede faltar memoria de vídeo. Con uno solo no debería haber problema.
+  - **Dificultad:** baja para activarlo y probarlo. La traducción y la revisión de las escenas llevan más tiempo.
+- **Estado:** Pendiente.
+
+### 7. NPC nuevos que sean colegas nuestros
+
+- **Qué:** añadir personajes **nuevos** por el mapa que sean colegas nuestros. Pueden estar en ciudades y rutas para charlar, como entrenadores para combatir o con algún guiño entre nosotros. Es distinto de la idea 4, que cambia a los NPC que ya existen y dan regalos.
+- **Propuesta de:** Miguel, 26/10/2026.
+- **Notas (viabilidad, sin planificar):**
+  - **NPC que solo habla: fácil.**
+    - Se añade un personaje al `map.json` del mapa, con su posición, su sprite (`graphics_id`) y su script.
+    - El script con su texto va en el `scripts.inc` del mapa.
+    - Cada mapa tiene un límite de personajes, pero en casi todos sobra sitio.
+  - **Como entrenador: medio.** Además del NPC, hace falta:
+    - el entrenador en `src/data/trainers.party`, con su nombre, clase, equipo y niveles;
+    - meterlo en la tabla de niveles de su tramo (`reescalar_niveles.py`);
+    - tener en cuenta que el randomizer también le cambiará el equipo, como a todos.
+  - **Aspecto:** igual que en la idea 4. Lo más fácil es elegir un sprite que ya exista; también se puede recolorear o dibujar uno nuevo.
+  - **Versiones:** encaja con la idea 5, como parte de la versión personalizada.
+  - **Qué tendrían que pasar Jorge y Miguel:**
+    - la lista de colegas;
+    - en qué sitio va cada uno;
+    - qué dice o qué equipo lleva.
+- **Estado:** Pendiente.
