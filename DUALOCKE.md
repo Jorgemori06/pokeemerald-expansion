@@ -1,6 +1,6 @@
 # Proyecto Dualocke: contexto completo
 
-> **⚠ Aviso para el Claude de Miguel (27/10/2026):** hay un bug abierto en el locke (el equipo se clonó al capturar un Wiglett). Miguel ya ha respondido a las preguntas (27/10/2026): están en `BUG-EQUIPO-CLONADO.md`, con lo que se deduce de ellas y cómo reproducirlo. Mientras no se arregle, mejor no capturar con el equipo lleno.
+> **⚠ Bug del equipo clonado (27/10/2026):** parcheado en el #49 (se protegen el mote y el orden del equipo), pero sin causa confirmada. Detalles y estado en `BUG-EQUIPO-CLONADO.md`.
 
 Este archivo resume **todo lo decidido y hecho** en el proyecto, para que cualquiera de los dos (o el Claude de cualquiera de los dos) pueda retomarlo sin haber visto las conversaciones anteriores.
 

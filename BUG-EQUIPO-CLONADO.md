@@ -114,3 +114,18 @@ Jugando su ROM del locke (semilla `7044754226`, versión 2, commit `a661c0eb`), 
 Con las respuestas, intentar reproducirlo en el emulador con un estado guardado. Si se confirma lo del equipo lleno, un arreglo sencillo y seguro es desactivar ese menú (`B_CATCH_SWAP_INTO_PARTY` a `GEN_6` en `include/config/battle.h`): con el equipo lleno, lo capturado iría directo al PC, como en el Esmeralda original.
 
 *Lo apunta el Claude de Jorge, a petición de Jorge (27/10/2026). Cuando el bug esté resuelto, quitar el aviso del principio de `DUALOCKE.md`.*
+
+## Estado (27/10/2026, tarde, Claude de Jorge)
+
+**Reproducción automática, sin éxito todavía.**
+- Se montó un mGBA que juega solo el combate: una versión de la ROM con un arnés que pulsa los botones y vigila cada fotograma `battlerPartyIndexes`…`caughtMonNick` de `gBattleStruct`. No se ha subido al repo.
+- Escenario: equipo de 6 con Charmander delante, Wiglett salvaje con solo Campo de Niebla y Canto Mortal, Ball con los dos activos, mote y NO.
+- Resultado: **no se clonó**. El mote se guardó bien, y el único cambio en esa zona fue el de la pantalla de mote al escribir el nombre.
+- Esa prueba se hizo con otra semilla, así que el Wiglett tenía una habilidad normal. Falta repetirla con la semilla de Miguel (`7044754226`), con `ABILITY_317`. Como el #47 ya quita esa habilidad, si era la causa, ya no pasa.
+
+**Parche de protección: PR #49 de Miguel, fusionado.**
+- El mote va en un búfer propio, fuera de `gBattleStruct`.
+- El orden del equipo se guarda antes de la pantalla de mote y se repone al volver.
+- `UpdatePartyToBattleOrder` y `UpdatePartyToFieldOrder` comprueban que el orden sea una permutación de 0-5; si no lo es, lo rehacen. Así no se clona el equipo aunque algo borre esa memoria.
+- El Claude de Jorge había preparado lo mismo (#50); se quedó el de Miguel porque añade la última comprobación.
+- La causa de fondo sigue sin encontrarse. Si vuelve a pasar algo raro al capturar (mote en blanco, equipo cambiado), avisad con capturas.
