@@ -17,6 +17,12 @@ Empezar ya el locke, sin implementar las ideas: una ROM randomizada para Miguel 
 - Las dos compilan sin errores y el randomizer se ejecuta con su semilla (sale en el log). Las ROMs son distintas entre sí.
 - En `make release`, `DEBUG_OVERWORLD_MENU` y `DEBUG_BATTLE_MENU` valen `FALSE`.
 
+## Versión 2 (27/10/2026)
+
+- Miguel jugó hasta el BOSQUE PETALIA y vio que los movimientos por nivel no eran al azar, y que no encontraba objetos ni el recuerdamovimientos. Lo arregló él en #42 y #40.
+- Claude probó #38, #39, #40, #41 y #42 juntos: `make check` (5455 en verde) y `make release` con la semilla de Miguel. Comparó su randomización antigua con la nueva: todo igual salvo los movimientos por nivel y los de los entrenadores. Después aprobó y fusionó #38, #39, #40 y #42.
+- ROMs nuevas para los dos desde `a661c0eb`, con las mismas semillas. Las partidas guardadas siguen valiendo.
+
 ## Pendiente
 
 - Jugar. Apuntar los fallos que salgan (`PRUEBAS.md`).
