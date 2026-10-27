@@ -7826,6 +7826,27 @@ u8 GetPartyIdFromBattlePartyId(u8 battlePartyId)
 static const u8 sMultiBattlePartyIdToMenuId_Left[PARTY_SIZE] = { 0, 2, 3, 1, 4, 5};
 static const u8 sMultiBattlePartyIdToMenuId_Right[PARTY_SIZE] = { 1, 4, 5, 0, 2, 3};
 
+// Dualocke: el orden del equipo en combate tiene que ser una permutación de 0-5. Si llega roto (por
+// ejemplo, a ceros), copiar con él pondría el mismo Pokémon en todos los huecos (BUG-EQUIPO-CLONADO.md):
+// en vez de eso se rehace a partir de los Pokémon que están en el campo.
+static void Dualocke_ArreglarOrdenEquipo(void)
+{
+    u32 i, vistos = 0;
+
+    if (IsMultiBattle())
+        return;
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        u32 partyId = GetPartyIdFromBattleSlot(i);
+        if (partyId >= PARTY_SIZE || (vistos & (1u << partyId)))
+        {
+            BufferBattlePartyCurrentOrder();
+            return;
+        }
+        vistos |= 1u << partyId;
+    }
+}
+
 static void UpdatePartyToBattleOrder(void)
 {
     struct Pokemon *partyBuffer = Alloc(sizeof(gParties[B_TRAINER_PLAYER]));
@@ -7835,6 +7856,7 @@ static void UpdatePartyToBattleOrder(void)
     if ((gBattleTypeFlags & BATTLE_TYPE_LINK) && ((gBattlerInMenuId & BIT_FLANK) != B_FLANK_LEFT))
         multiBattlePartyIdToMenuId = sMultiBattlePartyIdToMenuId_Right;
 
+    Dualocke_ArreglarOrdenEquipo();
 
     for (i = 0; i < PARTY_SIZE; i++)
     {
@@ -7871,6 +7893,7 @@ static void UpdatePartyToFieldOrder(void)
     {
         multiBattlePartyIdToMenuId = sMultiBattlePartyIdToMenuId_Right;
     }
+    Dualocke_ArreglarOrdenEquipo();
 
     for (i = 0; i < PARTY_SIZE; i++)
     {

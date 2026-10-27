@@ -8559,6 +8559,15 @@ void BattleDestroyYesNoCursorAt(u8 cursorPosition)
     CopyBgTilemapBufferToVram(0);
 }
 
+// Dualocke: con el equipo lleno, al volver de la pantalla de mote se borraba el trozo de gBattleStruct
+// donde van el mote y el orden del equipo (mote en blanco y equipo clonado, BUG-EQUIPO-CLONADO.md).
+// El mote se escribe aquí, fuera de gBattleStruct, y el orden del equipo se guarda antes de la
+// pantalla de mote y se repone al volver.
+static EWRAM_DATA u8 sDualockeMote[POKEMON_NAME_LENGTH + 1] = {0};
+static EWRAM_DATA u8 sDualockeOrdenEquipo[MAX_BATTLERS_COUNT][PARTY_SIZE / 2] = {0};
+static EWRAM_DATA u8 sDualockeHuecosEquipo[MAX_BATTLERS_COUNT] = {0};
+static EWRAM_DATA u8 sDualockeCambiosEquipo[MAX_BATTLERS_COUNT] = {0};
+
 static void Cmd_trygivecaughtmonnick(void)
 {
     CMD_ARGS();
@@ -8578,11 +8587,14 @@ static void Cmd_trygivecaughtmonnick(void)
         if (!gPaletteFade.active)
         {
             struct Pokemon *caughtMon = GetBattlerMon(gBattlerTarget);
-            GetMonData(caughtMon, MON_DATA_NICKNAME, gBattleStruct->caughtMonNick);
+            GetMonData(caughtMon, MON_DATA_NICKNAME, sDualockeMote);
+            memcpy(sDualockeOrdenEquipo, gBattleStruct->battlerPartyOrders, sizeof(sDualockeOrdenEquipo));
+            memcpy(sDualockeHuecosEquipo, gBattleStruct->battlerPartyIndexes, sizeof(sDualockeHuecosEquipo));
+            memcpy(sDualockeCambiosEquipo, gBattleStruct->monToSwitchIntoId, sizeof(sDualockeCambiosEquipo));
             CloseMainBattleScreen();
             MainCallback callback = CalculatePlayerPartyCount() == PARTY_SIZE ? ReshowBlankBattleScreenAfterMenu : BattleMainCB2;
 
-            DoNamingScreen(NAMING_SCREEN_CAUGHT_MON, gBattleStruct->caughtMonNick,
+            DoNamingScreen(NAMING_SCREEN_CAUGHT_MON, sDualockeMote,
                            GetMonData(caughtMon, MON_DATA_SPECIES),
                            GetMonGender(caughtMon),
                            GetMonData(caughtMon, MON_DATA_PERSONALITY),
@@ -8594,14 +8606,19 @@ static void Cmd_trygivecaughtmonnick(void)
     case 3:
         if (gMain.callback2 == BattleMainCB2 && !gPaletteFade.active)
         {
-            // Dualocke (Nick Clause): si se deja el nombre de la especie, se vuelve a pedir el mote
-            if (StringCompare(gBattleStruct->caughtMonNick, GetSpeciesName(GetMonData(GetBattlerMon(gBattlerTarget), MON_DATA_SPECIES))) == 0)
+            memcpy(gBattleStruct->battlerPartyOrders, sDualockeOrdenEquipo, sizeof(sDualockeOrdenEquipo));
+            memcpy(gBattleStruct->battlerPartyIndexes, sDualockeHuecosEquipo, sizeof(sDualockeHuecosEquipo));
+            memcpy(gBattleStruct->monToSwitchIntoId, sDualockeCambiosEquipo, sizeof(sDualockeCambiosEquipo));
+            StringCopy(gBattleStruct->caughtMonNick, sDualockeMote);
+            // Dualocke (Nick Clause): si se deja el nombre de la especie (o se deja vacío), se vuelve a pedir el mote
+            if (sDualockeMote[0] == EOS
+             || StringCompare(sDualockeMote, GetSpeciesName(GetMonData(GetBattlerMon(gBattlerTarget), MON_DATA_SPECIES))) == 0)
             {
                 BeginFastPaletteFade(3);
                 gBattleCommunication[MULTIUSE_STATE] = 2;
                 break;
             }
-            SetMonData(GetBattlerMon(gBattlerTarget), MON_DATA_NICKNAME, gBattleStruct->caughtMonNick);
+            SetMonData(GetBattlerMon(gBattlerTarget), MON_DATA_NICKNAME, sDualockeMote);
             gBattleCommunication[MULTIUSE_STATE]++;
         }
         break;
