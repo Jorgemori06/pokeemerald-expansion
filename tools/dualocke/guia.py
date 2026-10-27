@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Dualocke: actualiza las pistas de GUIA.html (megapiedras, objetos competitivos y Ticket-Recuerdo)
+Dualocke: actualiza las pistas de GUIA.html (megapiedras y Ticket-Recuerdo)
 a partir de los mapas, para que la guía no se quede atrás si se mueve algo.
 
 Uso (desde la raíz del repo):
@@ -147,9 +147,8 @@ def nombres_es():
 def main():
     mapas = Mapas()
     nombres = nombres_es()
-    datos = {"megapiedras": [], "competitivos": [], "tickets": []}
+    datos = {"megapiedras": [], "tickets": []}
     grupos = [("megapiedras", c.MEGAPIEDRAS, "FLAG_ITEM_MEGA_", None),
-              ("competitivos", c.COMPETITIVOS, "FLAG_ITEM_COMP_", None),
               ("tickets", getattr(c, "TICKETS", []) + getattr(c, "TICKETS_OCULTOS", []), "FLAG_ITEM_TICKET_", "Ticket-Recuerdo")]
     for clave, lista, prefijo, nombre_fijo in grupos:
         for objeto, carpeta, tipo, _ in lista:
