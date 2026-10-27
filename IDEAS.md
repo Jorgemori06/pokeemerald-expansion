@@ -148,3 +148,17 @@ Una sección por idea, con:
     - en qué sitio va cada uno;
     - qué dice o qué equipo lleva.
 - **Estado:** Pendiente.
+
+### 8. Nombres del jugador y motes más largos
+
+- **Qué:** que quepan nombres más largos. Ahora el nombre del jugador tiene un máximo de 7 letras y "JORGEMORI" (9) no cabe. Para la versión general; en la personalizada (idea 5) el nombre ya vendría puesto.
+- **Propuesta de:** Jorge, 27/10/2026, al empezar el locke (se ha tenido que poner "JORGE").
+- **Notas (viabilidad, sin planificar):**
+  - **Motes de los Pokémon: ya caben 12 letras** (`POKEMON_NAME_LENGTH` = 12 en la expansion; en el Esmeralda original eran 10). Subirlo más es difícil: el mote se guarda dentro de cada Pokémon y cambiaría el tamaño de todos los Pokémon guardados (equipo y cajas). No parece que haga falta.
+  - **Nombre del jugador: dificultad media.**
+    - Es `PLAYER_NAME_LENGTH` (7) en `include/constants/global.h`, y se usa en unos 170 sitios: partida guardada (`SaveBlock2`), ficha de entrenador, Salón de la Fama, programas de la tele, mezcla de récords, Frente Batalla…
+    - Subirlo a 10-12 cambia la partida guardada, así que las partidas de antes dejarían de servir. Se haría para el siguiente locke, no a mitad de uno.
+    - Hay que revisar que el nombre largo quepa en los textos (diálogos con `{PLAYER}`, ficha, menú de guardar) y en la pantalla de poner nombre.
+    - Las estructuras de los juegos por cable y la mezcla de récords guardan el nombre con tamaño fijo. Como no jugamos por cable, se pueden dejar o recortar al copiar.
+  - El nombre del rival (Aura/Bruno) y los de las cajas del PC no hace falta tocarlos.
+- **Estado:** Pendiente (para el siguiente locke).
