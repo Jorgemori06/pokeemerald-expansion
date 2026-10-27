@@ -1,5 +1,7 @@
 # Proyecto Dualocke: contexto completo
 
+> **⚠ Aviso para el Claude de Miguel (27/10/2026):** hay un bug abierto en el locke (el equipo se clonó al capturar un Wiglett). Miguel ya ha respondido a las preguntas (27/10/2026): están en `BUG-EQUIPO-CLONADO.md`, con lo que se deduce de ellas y cómo reproducirlo. Mientras no se arregle, mejor no capturar con el equipo lleno.
+
 Este archivo resume **todo lo decidido y hecho** en el proyecto, para que cualquiera de los dos (o el Claude de cualquiera de los dos) pueda retomarlo sin haber visto las conversaciones anteriores.
 
 > **Si eres Claude y te acaban de pedir que leas este archivo:** léelo entero antes de tocar nada. Al final hay una sección con instrucciones de trabajo para ti. Cuando cambies algo importante del proyecto, actualiza también este archivo en el mismo commit.
@@ -373,6 +375,7 @@ Están en **`tools/dualocke/randomizer_config.json`**, que es el archivo que deb
 **Pokémon**
 - Iniciales aleatorios (forma base de 3 fases y en triángulo de tipos, ver arriba). **Hecho** (`tools/dualocke/aleatorio/iniciales.py`): además, las dos evoluciones tienen que ser por nivel o con objeto, para poder hacerlas en el juego. Salen en `src/data/dualocke_iniciales.h` (generado; lo usa `src/starter_choose.c`).
 - Habilidades aleatorias, permitiendo Superguarda. **Hecho** (`tools/dualocke/aleatorio/habilidades.py`; decidido por Miguel en el #27): **una por especie**, la misma en todos sus huecos (todos los Zigzagoon con la misma, también los del jugador). Ninguna prohibida, tampoco en los jefes. Solo se quitan las que dependen de una especie y el juego no deja cambiar (Cambio Táctico, Multitipo, Disfraz…: `cantBeOverwritten`).
+  - **Sin habilidades de relleno** (arreglado el 27/10/2026, Jorge): `ABILITY_314`, `ABILITY_317` y Guardia Aura no hacen nada y ya no salen. Si el sorteo cae en una, solo esa especie se vuelve a sortear, así que las semillas en curso no cambian en nada más.
 - Pokémon estáticos completamente aleatorios. **Hecho** (`tools/dualocke/aleatorio/estaticos.py`; decidido por Jorge el 25/10/2026):
   - **Estáticos** (`setwildbattle`: Kecleon, Voltorb, Electrode, Regis, Groudon, Kyogre, Rayquaza, Sudowoodo; y los errantes Latios/Latias): **todo al azar**, legendarios incluidos, a su nivel. Cada especie original cambia por la misma en todos sus sitios (todos los Kecleon del Detector son la misma especie nueva).
   - **Regalos** (Beldum, fósiles, Castform, iniciales de Johto) **y huevos** (Wynaut, Pichu): al azar, sin legendarios, a su nivel; los huevos, siempre la forma base.

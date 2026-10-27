@@ -94,6 +94,9 @@ def main():
     solucionario["intercambios"] = res_intercambios
 
     habilidades = hab.randomizar(pokedex, hab.leer_habilidades(args.cpp, cppflags), args.semilla, config)
+    errores = hab.comprobar(habilidades)
+    if errores:
+        sys.exit("Dualocke: el randomizer de habilidades ha fallado:\n  " + "\n  ".join(errores[:20]))
     solucionario["habilidades"] = habilidades
     mapa_mts, compatibilidad = mts.randomizar(movs, args.semilla, config)
     solucionario["mt"] = {o: movs[m].nombre for o, m in mapa_mts.items()}
