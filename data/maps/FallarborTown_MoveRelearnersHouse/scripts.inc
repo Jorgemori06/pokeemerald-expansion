@@ -64,12 +64,11 @@ FallarborTown_MoveRelearnersHouse_Text_ImTheMoveTutor:
 	.string "enseñárselos.\p"
 	.string "Si quieres, le enseño un movimiento\n"
 	.string "a uno de tus POKéMON.\p"
-	.string "Lo haré a cambio de una ESCAMA\n"
-	.string "CORAZÓN. Ahora las colecciono.$"
+	.string "Lo haré a cambio de un\n"
+	.string "TICKET-RECUERDO.$"
 
 FallarborTown_MoveRelearnersHouse_Text_ThatsAHeartScaleWantMeToTeachMove:
-	.string "¡Oh! ¡Eso es! ¡Una ESCAMA CORAZÓN\n"
-	.string "de verdad!\p"
+	.string "¡Oh! ¡Eso es! ¡Un TICKET-RECUERDO!\p"
 	.string "Déjame adivinar: ¿quieres que\n"
 	.string "enseñe un movimiento?$"
 
@@ -85,13 +84,13 @@ FallarborTown_MoveRelearnersHouse_Text_DontHaveMoveToTeachPokemon:
 	.string "que pueda enseñarle a ese POKéMON.$"
 
 FallarborTown_MoveRelearnersHouse_Text_HandedOverHeartScale:
-	.string "{PLAYER} ha entregado una ESCAMA\n"
-	.string "CORAZÓN a cambio.$"
+	.string "{PLAYER} ha entregado un\n"
+	.string "TICKET-RECUERDO a cambio.$"
 
 FallarborTown_MoveRelearnersHouse_Text_ComeBackWithHeartScale:
 	.string "Si tus POKéMON necesitan aprender un\n"
-	.string "movimiento, vuelve con una ESCAMA\l"
-	.string "CORAZÓN.$"
+	.string "movimiento, vuelve con un\l"
+	.string "TICKET-RECUERDO.$"
 
 FallarborTown_MoveRelearnersHouse_Text_CantTeachEgg:
 	.string "¿Eh? No hay ni un solo movimiento\n"

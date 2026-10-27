@@ -403,6 +403,19 @@
       "trainer_sight_or_berry_tree_id": "ITEM_JOLLY_MINT",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_COMP_JOLLY_MINT"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 38,
+      "y": 15,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_HEART_SCALE",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_TICKET_RUTA_117"
     }
   ],
   "warp_events": [
@@ -479,6 +492,14 @@
       "elevation": 3,
       "item": "ITEM_EJECT_PACK",
       "flag": "FLAG_ITEM_COMP_EJECT_PACK"
+    },
+    {
+      "type": "hidden_item",
+      "x": 35,
+      "y": 16,
+      "elevation": 3,
+      "item": "ITEM_HEART_SCALE",
+      "flag": "FLAG_ITEM_TICKET_RUTA_117_2"
     }
   ]
 }

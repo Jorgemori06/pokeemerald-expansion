@@ -87,13 +87,13 @@ FallarborTown_CozmosHouse_Text_CozmoIsSoHappy	Mira al PROF. COSMO…\n¡Qué con
 FallarborTown_Mart_Text_DecidingSkittyEvolve	No sé si hacer evolucionar a mi\nSKITTY o no.\pSolo tengo que usar esta PIEDRA\nLUNAR, pero me cuesta decidirme…\pSi evoluciona, será mucho más\nfuerte.\pPero también cambiará mucho.$
 FallarborTown_Mart_Text_Skitty	SKITTY: ¿Miau?$
 FallarborTown_Mart_Text_SellNuggetIFound	Esta PEPITA que he encontrado…\nSupongo que tendré que venderla,\lporque no sirve para nada más.$
-FallarborTown_MoveRelearnersHouse_Text_ImTheMoveTutor	Soy el TUTOR DE MOVIMIENTOS.\pConozco todos los movimientos que\naprenden los POKéMON, todos, y puedo\lenseñárselos.\pSi quieres, le enseño un movimiento\na uno de tus POKéMON.\pLo haré a cambio de una ESCAMA\nCORAZÓN. Ahora las colecciono.$
-FallarborTown_MoveRelearnersHouse_Text_ThatsAHeartScaleWantMeToTeachMove	¡Oh! ¡Eso es! ¡Una ESCAMA CORAZÓN\nde verdad!\pDéjame adivinar: ¿quieres que\nenseñe un movimiento?$
+FallarborTown_MoveRelearnersHouse_Text_ImTheMoveTutor	Soy el TUTOR DE MOVIMIENTOS.\pConozco todos los movimientos que\naprenden los POKéMON, todos, y puedo\lenseñárselos.\pSi quieres, le enseño un movimiento\na uno de tus POKéMON.\pLo haré a cambio de un\nTICKET-RECUERDO.$
+FallarborTown_MoveRelearnersHouse_Text_ThatsAHeartScaleWantMeToTeachMove	¡Oh! ¡Eso es! ¡Un TICKET-RECUERDO!\pDéjame adivinar: ¿quieres que\nenseñe un movimiento?$
 FallarborTown_MoveRelearnersHouse_Text_TutorWhichMon	¿A qué POKéMON le enseño?$
 FallarborTown_MoveRelearnersHouse_Text_TeachWhichMove	¿Qué movimiento le enseño?$
 FallarborTown_MoveRelearnersHouse_Text_DontHaveMoveToTeachPokemon	Lo siento…\pParece que no hay ningún movimiento\nque pueda enseñarle a ese POKéMON.$
-FallarborTown_MoveRelearnersHouse_Text_HandedOverHeartScale	{PLAYER} ha entregado una ESCAMA\nCORAZÓN a cambio.$
-FallarborTown_MoveRelearnersHouse_Text_ComeBackWithHeartScale	Si tus POKéMON necesitan aprender un\nmovimiento, vuelve con una ESCAMA\lCORAZÓN.$
+FallarborTown_MoveRelearnersHouse_Text_HandedOverHeartScale	{PLAYER} ha entregado un\nTICKET-RECUERDO a cambio.$
+FallarborTown_MoveRelearnersHouse_Text_ComeBackWithHeartScale	Si tus POKéMON necesitan aprender un\nmovimiento, vuelve con un\lTICKET-RECUERDO.$
 FallarborTown_MoveRelearnersHouse_Text_CantTeachEgg	¿Eh? No hay ni un solo movimiento\nque pueda enseñarle a un HUEVO.$
 FallarborTown_PokemonCenter_1F_Text_LanetteGreeting	Oh, hola.\n¿Quién eres?\pVale, te llamas {PLAYER}{KUN}.\nSe nota que entrenas POKéMON.\pEso quiere decir que usas el Sistema\nde Almacenamiento que diseñé yo.\pHe llegado a esa conclusión con una\nsimple deducción.\pMe has hablado porque querías usar\nalgo de este PC.\pAy, perdona. Soy AREDIA.\pDe verdad, me alegra conocerte. ¡Qué\nbien que uses el Sistema!\pSi puedes, ven a verme a casa.\nVivo en la RUTA 114.$
 FallarborTown_PokemonCenter_1F_Text_FossilManiacEdgeOfTown	¿Cómo serían los POKéMON hace\nmuchísimo tiempo?\pA lo mejor lo sabe el MANÍACO DE\nLOS FÓSILES de las afueras.$

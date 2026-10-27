@@ -2820,18 +2820,19 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_HEART_SCALE] =
     {
-        .name = ES(ITEM_NAME("Heart Scale"), ITEM_NAME("Escama Corazón")),
+        // Dualocke: es el Ticket-Recuerdo, que se canjea en los Centros Pokémon para recordar movimientos
+        .name = ES(ITEM_NAME("Heart Scale"), ITEM_NAME("Ticket-Recuerdo")),
         .price = 100,
         .description = ES(COMPOUND_STRING("A lovely scale.\n"
             "It is coveted by\n"
-            "collectors."), COMPOUND_STRING("Una escama preciosa.\n" "Los coleccionistas\n" "la adoran.")),
+            "collectors."), COMPOUND_STRING("Sirve para que un\n" "Pokémon recuerde un\n" "movimiento olvidado.")),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_SELLABLE,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
-        .iconPic = gItemIcon_HeartScale,
-        .iconPalette = gItemIconPalette_HeartScale,
+        .iconPic = gItemIcon_SSTicket,
+        .iconPalette = gItemIconPalette_SSTicket,
     },
 
     [ITEM_HONEY] =

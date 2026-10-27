@@ -52,40 +52,40 @@
 #else
 
 #define FLAG_DUALOCKE_LOCKE_LOST    0x20 // Dualocke: se ha perdido el locke
-#define FLAG_UNUSED_0x021    0x21 // Unused Flag
-#define FLAG_UNUSED_0x022    0x22 // Unused Flag
-#define FLAG_UNUSED_0x023    0x23 // Unused Flag
-#define FLAG_UNUSED_0x024    0x24 // Unused Flag
-#define FLAG_UNUSED_0x025    0x25 // Unused Flag
-#define FLAG_UNUSED_0x026    0x26 // Unused Flag
-#define FLAG_UNUSED_0x027    0x27 // Unused Flag
-#define FLAG_UNUSED_0x028    0x28 // Unused Flag
-#define FLAG_UNUSED_0x029    0x29 // Unused Flag
-#define FLAG_UNUSED_0x02A    0x2A // Unused Flag
-#define FLAG_UNUSED_0x02B    0x2B // Unused Flag
-#define FLAG_UNUSED_0x02C    0x2C // Unused Flag
-#define FLAG_UNUSED_0x02D    0x2D // Unused Flag
-#define FLAG_UNUSED_0x02E    0x2E // Unused Flag
-#define FLAG_UNUSED_0x02F    0x2F // Unused Flag
-#define FLAG_UNUSED_0x030    0x30 // Unused Flag
-#define FLAG_UNUSED_0x031    0x31 // Unused Flag
-#define FLAG_UNUSED_0x032    0x32 // Unused Flag
-#define FLAG_UNUSED_0x033    0x33 // Unused Flag
-#define FLAG_UNUSED_0x034    0x34 // Unused Flag
-#define FLAG_UNUSED_0x035    0x35 // Unused Flag
-#define FLAG_UNUSED_0x036    0x36 // Unused Flag
-#define FLAG_UNUSED_0x037    0x37 // Unused Flag
-#define FLAG_UNUSED_0x038    0x38 // Unused Flag
-#define FLAG_UNUSED_0x039    0x39 // Unused Flag
-#define FLAG_UNUSED_0x03A    0x3A // Unused Flag
-#define FLAG_UNUSED_0x03B    0x3B // Unused Flag
-#define FLAG_UNUSED_0x03C    0x3C // Unused Flag
-#define FLAG_UNUSED_0x03D    0x3D // Unused Flag
-#define FLAG_UNUSED_0x03E    0x3E // Unused Flag
-#define FLAG_UNUSED_0x03F    0x3F // Unused Flag
-#define FLAG_UNUSED_0x040    0x40 // Unused Flag
-#define FLAG_UNUSED_0x041    0x41 // Unused Flag
-#define FLAG_UNUSED_0x042    0x42 // Unused Flag
+#define FLAG_ITEM_TICKET_RUTA_101          0x021 // Dualocke: Ticket-Recuerdo en el mapa
+#define FLAG_ITEM_TICKET_RUTA_102          0x022 // Dualocke: Ticket-Recuerdo en el mapa
+#define FLAG_ITEM_TICKET_RUTA_103          0x023 // Dualocke: Ticket-Recuerdo en el mapa
+#define FLAG_ITEM_TICKET_RUTA_104          0x024 // Dualocke: Ticket-Recuerdo en el mapa
+#define FLAG_ITEM_TICKET_RUTA_105          0x025 // Dualocke: Ticket-Recuerdo en el mapa
+#define FLAG_ITEM_TICKET_RUTA_106          0x026 // Dualocke: Ticket-Recuerdo en el mapa
+#define FLAG_ITEM_TICKET_RUTA_107          0x027 // Dualocke: Ticket-Recuerdo en el mapa
+#define FLAG_ITEM_TICKET_RUTA_108          0x028 // Dualocke: Ticket-Recuerdo en el mapa
+#define FLAG_ITEM_TICKET_RUTA_109          0x029 // Dualocke: Ticket-Recuerdo en el mapa
+#define FLAG_ITEM_TICKET_RUTA_110          0x02A // Dualocke: Ticket-Recuerdo en el mapa
+#define FLAG_ITEM_TICKET_RUTA_111          0x02B // Dualocke: Ticket-Recuerdo en el mapa
+#define FLAG_ITEM_TICKET_RUTA_112          0x02C // Dualocke: Ticket-Recuerdo en el mapa
+#define FLAG_ITEM_TICKET_RUTA_113          0x02D // Dualocke: Ticket-Recuerdo en el mapa
+#define FLAG_ITEM_TICKET_RUTA_114          0x02E // Dualocke: Ticket-Recuerdo en el mapa
+#define FLAG_ITEM_TICKET_RUTA_115          0x02F // Dualocke: Ticket-Recuerdo en el mapa
+#define FLAG_ITEM_TICKET_RUTA_116          0x030 // Dualocke: Ticket-Recuerdo en el mapa
+#define FLAG_ITEM_TICKET_RUTA_117          0x031 // Dualocke: Ticket-Recuerdo en el mapa
+#define FLAG_ITEM_TICKET_RUTA_118          0x032 // Dualocke: Ticket-Recuerdo en el mapa
+#define FLAG_ITEM_TICKET_RUTA_119          0x033 // Dualocke: Ticket-Recuerdo en el mapa
+#define FLAG_ITEM_TICKET_RUTA_120          0x034 // Dualocke: Ticket-Recuerdo en el mapa
+#define FLAG_ITEM_TICKET_RUTA_121          0x035 // Dualocke: Ticket-Recuerdo en el mapa
+#define FLAG_ITEM_TICKET_RUTA_122          0x036 // Dualocke: Ticket-Recuerdo en el mapa
+#define FLAG_ITEM_TICKET_RUTA_123          0x037 // Dualocke: Ticket-Recuerdo en el mapa
+#define FLAG_ITEM_TICKET_RUTA_124          0x038 // Dualocke: Ticket-Recuerdo en el mapa
+#define FLAG_ITEM_TICKET_RUTA_125          0x039 // Dualocke: Ticket-Recuerdo en el mapa
+#define FLAG_ITEM_TICKET_RUTA_126          0x03A // Dualocke: Ticket-Recuerdo en el mapa
+#define FLAG_ITEM_TICKET_RUTA_127          0x03B // Dualocke: Ticket-Recuerdo en el mapa
+#define FLAG_ITEM_TICKET_RUTA_128          0x03C // Dualocke: Ticket-Recuerdo en el mapa
+#define FLAG_ITEM_TICKET_RUTA_129          0x03D // Dualocke: Ticket-Recuerdo en el mapa
+#define FLAG_ITEM_TICKET_RUTA_130          0x03E // Dualocke: Ticket-Recuerdo en el mapa
+#define FLAG_ITEM_TICKET_RUTA_131          0x03F // Dualocke: Ticket-Recuerdo en el mapa
+#define FLAG_ITEM_TICKET_RUTA_132          0x040 // Dualocke: Ticket-Recuerdo en el mapa
+#define FLAG_ITEM_TICKET_RUTA_133          0x041 // Dualocke: Ticket-Recuerdo en el mapa
+#define FLAG_ITEM_TICKET_RUTA_134          0x042 // Dualocke: Ticket-Recuerdo en el mapa
 #define FLAG_UNUSED_0x043    0x43 // Unused Flag
 #define FLAG_UNUSED_0x044    0x44 // Unused Flag
 #define FLAG_UNUSED_0x045    0x45 // Unused Flag
@@ -1304,17 +1304,17 @@
 #define FLAG_UNUSED_0x4E2                                           0x4E2 // Unused Flag
 #define FLAG_UNUSED_0x4E3                                           0x4E3 // Unused Flag
 #define FLAG_UNUSED_0x4E4                                           0x4E4 // Unused Flag
-#define FLAG_UNUSED_0x4E5                                           0x4E5 // Unused Flag
-#define FLAG_UNUSED_0x4E6                                           0x4E6 // Unused Flag
-#define FLAG_UNUSED_0x4E7                                           0x4E7 // Unused Flag
-#define FLAG_UNUSED_0x4E8                                           0x4E8 // Unused Flag
-#define FLAG_UNUSED_0x4E9                                           0x4E9 // Unused Flag
-#define FLAG_UNUSED_0x4EA                                           0x4EA // Unused Flag
-#define FLAG_UNUSED_0x4EB                                           0x4EB // Unused Flag
-#define FLAG_UNUSED_0x4EC                                           0x4EC // Unused Flag
-#define FLAG_UNUSED_0x4ED                                           0x4ED // Unused Flag
-#define FLAG_UNUSED_0x4EE                                           0x4EE // Unused Flag
-#define FLAG_UNUSED_0x4EF                                           0x4EF // Unused Flag
+#define FLAG_ITEM_TICKET_RUTA_104_2        0x4E5 // Dualocke: Ticket-Recuerdo oculto en el mapa
+#define FLAG_ITEM_TICKET_RUTA_110_2        0x4E6 // Dualocke: Ticket-Recuerdo oculto en el mapa
+#define FLAG_ITEM_TICKET_RUTA_111_2        0x4E7 // Dualocke: Ticket-Recuerdo oculto en el mapa
+#define FLAG_ITEM_TICKET_RUTA_113_2        0x4E8 // Dualocke: Ticket-Recuerdo oculto en el mapa
+#define FLAG_ITEM_TICKET_RUTA_114_2        0x4E9 // Dualocke: Ticket-Recuerdo oculto en el mapa
+#define FLAG_ITEM_TICKET_RUTA_117_2        0x4EA // Dualocke: Ticket-Recuerdo oculto en el mapa
+#define FLAG_ITEM_TICKET_RUTA_118_2        0x4EB // Dualocke: Ticket-Recuerdo oculto en el mapa
+#define FLAG_ITEM_TICKET_RUTA_119_2        0x4EC // Dualocke: Ticket-Recuerdo oculto en el mapa
+#define FLAG_ITEM_TICKET_RUTA_120_2        0x4ED // Dualocke: Ticket-Recuerdo oculto en el mapa
+#define FLAG_ITEM_TICKET_RUTA_121_2        0x4EE // Dualocke: Ticket-Recuerdo oculto en el mapa
+#define FLAG_ITEM_TICKET_RUTA_123_2        0x4EF // Dualocke: Ticket-Recuerdo oculto en el mapa
 
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0
 #define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F1
