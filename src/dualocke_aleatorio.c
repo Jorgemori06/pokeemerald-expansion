@@ -2,12 +2,14 @@
 #include "dualocke_aleatorio.h"
 #include "event_data.h"
 #include "move.h"
+#include "pokemon.h"
 #include "random.h"
 #include "string_util.h"
 #include "constants/flags.h"
 #include "constants/abilities.h"
 #include "constants/items.h"
 #include "constants/moves.h"
+#include "constants/pokemon.h"
 #include "constants/species.h"
 #include "constants/trade.h"
 
@@ -38,6 +40,13 @@ static u32 Buscar(const u16 (*tabla)[2], u32 count, u32 original)
             return tabla[i][1];
     }
     return original;
+}
+
+const struct LevelUpMove *Dualocke_AprendizajeAleatorio(enum Species species)
+{
+    if (species >= NUM_SPECIES)
+        return NULL;
+    return sDualockeAprendizajes[species];
 }
 
 enum Species Dualocke_EstaticoAleatorio(enum Species species)

@@ -45,6 +45,7 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 - [ ] Salvajes, entrenadores, iniciales y rival cambian, sin legendarios donde no toca.
 - [ ] Los jefes llevan su as con megapiedra desde el Mega-Aro, y objetos que les sirven.
 - [ ] Habilidades, MT, tutores, intercambios y objetos del suelo cambian, y las MO no.
+- [ ] Los movimientos que se aprenden al subir de nivel son al azar: los de tu inicial, los de los salvajes y los de los entrenadores. Que al principio siempre haya algún ataque y que no salgan ataques muy fuertes a nivel bajo.
 - [ ] `make nueva-partida` da otra semilla y `make` repite la misma.
 
 ### Equilibrio

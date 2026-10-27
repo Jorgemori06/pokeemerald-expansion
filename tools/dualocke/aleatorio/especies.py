@@ -33,6 +33,7 @@ class Especie:
         self.stats = {}                 # {"HP": 45, "Attack": 49, ...} (baseHP, baseAttack...)
         self.habilidades = []           # [ABILITY_X, ...] sin ABILITY_NONE
         self.por_nivel = []             # [(nivel, MOVE_X)] de su levelUpLearnset (0 = al evolucionar)
+        self.tabla_aprendizaje = None   # nombre de su levelUpLearnset (sXLevelUpLearnset)
 
     @property
     def es_legendaria(self):
@@ -184,6 +185,7 @@ def leer_especies(cpp="arm-none-eabi-cpp", cppflags=None):
             e.habilidades = [h for h in re.findall(r"ABILITY_\w+", habilidades.group(1)) if h != "ABILITY_NONE"]
         aprende = re.search(r"\.levelUpLearnset\s*=\s*(s\w+)", cuerpo)
         e.por_nivel = aprendizajes.get(aprende.group(1), []) if aprende else []
+        e.tabla_aprendizaje = aprende.group(1) if aprende else None
         nombre = re.search(r'\.speciesName\s*=\s*_\("([^"]*)"\)', cuerpo)
         e.nombre_es = nombre.group(1) if nombre else ""
         especies[e.nombre] = e
