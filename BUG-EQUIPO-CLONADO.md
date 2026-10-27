@@ -47,7 +47,69 @@ Jugando su ROM del locke (semilla `7044754226`, versión 2, commit `a661c0eb`), 
 16. ¿Qué emulador y versión? ¿Usó aceleración, trucos o estados guardados en medio del combate?
 17. ¿Le ha pasado algo raro más en la partida (otros combates, el recuerdamovimientos, la mochila)?
 
+## Respuestas de Miguel (27/10/2026)
+
+**El combate**
+1. **Equipo lleno (6).**
+2. **El primero era el Charmander "Mikemine".**
+3. **Fuera tenía al Charmander todo el combate.** El Wiglett puso **Campo de Niebla** y usó **Canto Mortal**.
+4. **No cambió de Pokémon.**
+5. **No se le debilitó ninguno.** No cambió ni usó objetos, y no salió ningún aviso de muerte.
+6. **Una sola Ball**, que lo capturó a la primera.
+7. **El Charmander ganó experiencia al capturar, pero no subió de nivel.** No le salió aprender ningún movimiento.
+8. Por responder: si salió el aviso de primera captura. Seguramente sí, porque lo pudo capturar.
+9. **La pantalla de mote salió una vez.** Escribió un mote distinto de WIGLETT y aceptó. **El mote no se aplicó: el Wiglett se quedó sin nombre, en blanco.**
+10. **Le preguntó si lo quería en el equipo y contestó NO**, así que fue directo al PC.
+11. No llegó a ver el menú "Elige un POKéMON" de la captura. **Vio el equipo clonado al salir del combate**, en el menú de pausa.
+12. **El Wiglett está en el PC**, sin mote y con la habilidad "-------". **Sus otros 5 Pokémon se han perdido**: no están en ninguna caja.
+13. Por responder: de qué pantalla es la foto. Por lo anterior, será del PC o del menú de pausa.
+
+**Al lanzar la Ball**
+- **Seguían activos el Campo de Niebla y el contador del Canto Mortal.**
+
+**La partida**
+14. **No guardó encima.** Tiene la partida de antes del combate (no un estado guardado justo antes).
+15. **La versión 2 de Jorge.**
+16. **mGBA.** **Es posible que usara el turbo (aceleración) en mitad del combate**; suele usarlo. No cargó estados en mitad del combate.
+17. **Antes había capturado un Growlithe con el equipo lleno, contestó SÍ y lo cambió por uno del equipo, y fue todo bien.**
+
+## Lo que dicen las respuestas (Claude de Miguel)
+
+- **No es el menú de "¿lo metes en el equipo?"**: Miguel dijo NO, y con SÍ (el Growlithe) funcionó.
+- **Se rompe entre el mote y el PC, antes de ir al PC.**
+  - `Cmd_trygivecaughtmonnick` (`src/battle_script_commands.c`) copia el nombre a `gBattleStruct->caughtMonNick` en el estado 2, abre el mote y, al volver (estado 3), lo escribe en el Pokémon.
+  - Como el mote salió en blanco, **`caughtMonNick` ya estaba borrado al volver de la pantalla de mote**.
+  - Con el equipo lleno, la vuelta pasa por `ReshowBlankBattleScreenAfterMenu`, que es la vía rara.
+- **Los dos fallos son la misma escritura.** En `struct BattleStruct` (`include/battle.h`) estos campos van seguidos:
+  ```
+  battlerPartyIndexes[4], monToSwitchIntoId[4], battlerPartyOrders[4][3], runTries, caughtMonNick[13]
+  ```
+  - Si algo pone a cero ese trozo, el mote se queda en blanco.
+  - `battlerPartyOrders` queda en ceros, y al acabar el combate `UpdatePartyToBattleOrder` copia el primer Pokémon (Charmander) en los 6 huecos, que es lo que vio Miguel.
+  - Lo que sobrescribe no es necesariamente de esa zona: puede ser un campo de antes que se sale de su tamaño, o memoria liberada y reutilizada durante el mote o la vuelta al combate.
+- **Diferencias con la captura del Growlithe, que fue bien:**
+  - Campo de Niebla activo (con `B_TERRAIN_BG_CHANGE`, el fondo del combate se vuelve a dibujar con el del campo).
+  - Contador del Canto Mortal activo.
+  - Habilidad de relleno (`ABILITY_314`/`317`/Guardia Aura).
+  - Respuesta NO en vez de SÍ.
+  - Turbo. No debería cambiar la lógica, pero se apunta.
+- No se ha podido probar en el PC de Miguel: no hay compilador ni emulador para depurar.
+
 ## Siguiente paso
+
+**Cómo reproducirlo:**
+1. Partida con el equipo lleno, un salvaje que ponga Campo de Niebla y use Canto Mortal (o forzarlo con el menú de depuración), capturarlo con los dos activos, poner mote y contestar NO.
+2. Si se clona, repetir quitando cosas de una en una para ver cuál lo provoca: sin campo, sin Canto Mortal, con SÍ, con un Pokémon con habilidad normal.
+
+**La forma más rápida de encontrar al culpable: un punto de vigilancia en mGBA** (Herramientas → Depurador, con el `.elf` de la compilación).
+- Poner un *watchpoint* de escritura en `gBattleStruct->caughtMonNick`, o en `battlerPartyOrders`, justo antes de lanzar la Ball. El depurador se para en la instrucción que lo borra.
+- La dirección sale de `gBattleStruct` (un puntero, en el `.map`) más el desplazamiento del campo.
+
+**Mientras tanto:** con el equipo lleno, NO a meterlo en el equipo sigue sin ser seguro (justo así pasó). Hasta arreglarlo, **mejor no capturar con el equipo lleno**: deja antes un Pokémon en el PC. Y si vuelve a pasar, no guardar.
+
+### Siguiente paso (de Jorge, antes de las respuestas)
+
+
 
 Con las respuestas, intentar reproducirlo en el emulador con un estado guardado. Si se confirma lo del equipo lleno, un arreglo sencillo y seguro es desactivar ese menú (`B_CATCH_SWAP_INTO_PARTY` a `GEN_6` en `include/config/battle.h`): con el equipo lleno, lo capturado iría directo al PC, como en el Esmeralda original.
 
