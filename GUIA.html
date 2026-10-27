@@ -1,0 +1,735 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guía del Dualocke</title>
+<meta name="description" content="Guía del Dualocke Esmeralda: cómo avanzar, level caps, jefes, objetos nuevos, pistas de megapiedras y Ticket-Recuerdo, y todas las novedades.">
+<style>
+:root {
+  --bg: #f4f7f5;
+  --surface: #ffffff;
+  --surface-2: #eef3f0;
+  --text: #17201b;
+  --muted: #5b6a62;
+  --line: #d9e3dd;
+  --accent: #0f8a5f;
+  --accent-soft: #d6f0e4;
+  --accent-text: #0b6b49;
+  --mega: #8a3ffc;
+  --mega-soft: #ece2ff;
+  --ticket: #c26a00;
+  --ticket-soft: #fdebd3;
+  --boss: #c0392b;
+  --boss-soft: #fbe2df;
+  --soon: #2d6cdf;
+  --soon-soft: #dde8fb;
+  --shadow: 0 1px 2px rgba(16, 40, 28, .06), 0 4px 16px rgba(16, 40, 28, .06);
+  --radius: 14px;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e1512;
+    --surface: #151f1a;
+    --surface-2: #1b2721;
+    --text: #e6eee9;
+    --muted: #9aaba2;
+    --line: #26352d;
+    --accent: #3ccf95;
+    --accent-soft: #163a2b;
+    --accent-text: #6fe0b1;
+    --mega: #b58cff;
+    --mega-soft: #2b2140;
+    --ticket: #f0a54a;
+    --ticket-soft: #3a2a14;
+    --boss: #ff7a6b;
+    --boss-soft: #3a1d1a;
+    --soon: #7fa8ff;
+    --soon-soft: #1b2740;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 4px 16px rgba(0, 0, 0, .25);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e1512;
+  --surface: #151f1a;
+  --surface-2: #1b2721;
+  --text: #e6eee9;
+  --muted: #9aaba2;
+  --line: #26352d;
+  --accent: #3ccf95;
+  --accent-soft: #163a2b;
+  --accent-text: #6fe0b1;
+  --mega: #b58cff;
+  --mega-soft: #2b2140;
+  --ticket: #f0a54a;
+  --ticket-soft: #3a2a14;
+  --boss: #ff7a6b;
+  --boss-soft: #3a1d1a;
+  --soon: #7fa8ff;
+  --soon-soft: #1b2740;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 4px 16px rgba(0, 0, 0, .25);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 16px; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+a { color: var(--accent-text); }
+.layout { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 32px; max-width: 1240px; margin: 0 auto; padding: 24px; }
+nav.indice { position: sticky; top: 16px; align-self: start; max-height: calc(100vh - 32px); overflow: auto; }
+nav.indice .marca { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 18px; margin-bottom: 16px; }
+nav.indice .marca .gema { width: 28px; height: 28px; border-radius: 8px; background: linear-gradient(135deg, var(--accent), #1fd29a); transform: rotate(45deg) scale(.8); box-shadow: var(--shadow); }
+nav.indice ol { list-style: none; margin: 0; padding: 0; }
+nav.indice li a { display: flex; gap: 10px; padding: 7px 10px; border-radius: 9px; color: var(--text); text-decoration: none; font-size: 15px; }
+nav.indice li a:hover, nav.indice li a.activo { background: var(--accent-soft); color: var(--accent-text); }
+nav.indice li a span { color: var(--muted); width: 18px; text-align: right; font-variant-numeric: tabular-nums; }
+nav.indice .tema { margin-top: 16px; width: 100%; }
+main { min-width: 0; }
+header.portada {
+  background: linear-gradient(135deg, #0b6b49, #0f8a5f 45%, #19b37c);
+  color: #fff; border-radius: 20px; padding: 36px 32px; box-shadow: var(--shadow); position: relative; overflow: hidden;
+}
+header.portada::after {
+  content: ""; position: absolute; right: -60px; top: -60px; width: 260px; height: 260px; border-radius: 50%;
+  border: 28px solid rgba(255, 255, 255, .12);
+}
+header.portada h1 { margin: 0 0 8px; font-size: clamp(28px, 5vw, 42px); line-height: 1.1; }
+header.portada p { margin: 0; max-width: 640px; opacity: .92; }
+header.portada .chips { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 8px; }
+header.portada .chips span { background: rgba(255, 255, 255, .16); border-radius: 999px; padding: 4px 12px; font-size: 14px; }
+section { margin-top: 44px; }
+section > h2 { font-size: 26px; margin: 0 0 6px; display: flex; align-items: center; gap: 10px; }
+section > h2 .num { font-size: 14px; background: var(--accent-soft); color: var(--accent-text); border-radius: 8px; padding: 2px 8px; }
+section > .intro { color: var(--muted); margin: 0 0 18px; max-width: 760px; }
+h3 { font-size: 19px; margin: 0 0 8px; }
+.tarjetas { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; }
+.tarjeta { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 18px; box-shadow: var(--shadow); }
+.tarjeta h3 { font-size: 17px; display: flex; align-items: center; gap: 8px; }
+.tarjeta p { margin: 0; color: var(--muted); font-size: 15px; }
+.tarjeta ul { margin: 6px 0 0; padding-left: 18px; color: var(--muted); font-size: 15px; }
+.icono { width: 30px; height: 30px; border-radius: 9px; display: inline-grid; place-items: center; background: var(--accent-soft); color: var(--accent-text); font-size: 16px; flex: none; }
+.aviso { background: var(--soon-soft); border: 1px solid transparent; border-left: 4px solid var(--soon); border-radius: 10px; padding: 12px 14px; margin: 14px 0; font-size: 15px; }
+.aviso.peligro { background: var(--boss-soft); border-left-color: var(--boss); }
+.etiqueta { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .02em; border-radius: 999px; padding: 2px 9px; vertical-align: middle; white-space: nowrap; }
+.etiqueta.cap { background: var(--accent-soft); color: var(--accent-text); }
+.etiqueta.mega { background: var(--mega-soft); color: var(--mega); }
+.etiqueta.ticket { background: var(--ticket-soft); color: var(--ticket); }
+.etiqueta.jefe { background: var(--boss-soft); color: var(--boss); }
+.etiqueta.pronto { background: var(--soon-soft); color: var(--soon); }
+.etiqueta.neutra { background: var(--surface-2); color: var(--muted); }
+.tabla-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); }
+table { width: 100%; border-collapse: collapse; font-size: 15px; }
+th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { background: var(--surface-2); font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+tr:last-child td { border-bottom: 0; }
+td.nivel { font-weight: 800; font-variant-numeric: tabular-nums; white-space: nowrap; }
+/* Caps */
+.caps { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 10px; }
+.cap-paso { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px; text-align: center; box-shadow: var(--shadow); }
+.cap-paso .n { font-size: 28px; font-weight: 900; color: var(--accent-text); line-height: 1.1; font-variant-numeric: tabular-nums; }
+.cap-paso .q { font-size: 13px; color: var(--muted); }
+.cap-paso .h { font-size: 14px; font-weight: 700; margin-top: 4px; }
+/* Walkthrough */
+.tramo { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); margin-bottom: 14px; overflow: hidden; }
+.tramo > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 14px; padding: 16px 18px; }
+.tramo > summary::-webkit-details-marker { display: none; }
+.tramo > summary .medalla { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; font-weight: 900; background: var(--accent-soft); color: var(--accent-text); flex: none; }
+.tramo > summary .tit { flex: 1; min-width: 0; }
+.tramo > summary .tit strong { display: block; font-size: 17px; }
+.tramo > summary .tit small { color: var(--muted); }
+.tramo > summary::after { content: "▾"; color: var(--muted); transition: transform .2s; }
+.tramo[open] > summary::after { transform: rotate(180deg); }
+.tramo .cuerpo { padding: 0 18px 18px; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 18px; }
+.tramo ol.pasos { margin: 0; padding-left: 20px; }
+.tramo ol.pasos li { margin-bottom: 4px; }
+.jefes { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.jefes li { display: flex; justify-content: space-between; gap: 10px; align-items: center; background: var(--surface-2); border-radius: 10px; padding: 8px 12px; font-size: 15px; }
+.jefes li .lv { font-weight: 800; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.jefes li.lider { background: var(--boss-soft); }
+.jefes li .quien small { display: block; color: var(--muted); font-size: 13px; }
+/* Pistas */
+.controles { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 14px; }
+.controles label { font-size: 14px; color: var(--muted); display: flex; align-items: center; gap: 6px; }
+select, input[type="search"], button {
+  font: inherit; font-size: 15px; color: var(--text); background: var(--surface); border: 1px solid var(--line);
+  border-radius: 10px; padding: 8px 12px; min-height: 40px;
+}
+input[type="search"] { min-width: 200px; flex: 1; }
+button { cursor: pointer; }
+button:hover { border-color: var(--accent); }
+.contador { font-size: 14px; color: var(--muted); margin-left: auto; }
+.barra { height: 8px; border-radius: 999px; background: var(--surface-2); overflow: hidden; margin-bottom: 16px; }
+.barra > div { height: 100%; background: var(--accent); width: 0; transition: width .3s; }
+.barra.mega > div { background: var(--mega); }
+.barra.ticket > div { background: var(--ticket); }
+.pistas { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 12px; }
+.pista { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 8px; }
+.pista.hecha { opacity: .55; }
+.pista .arriba { display: flex; align-items: flex-start; gap: 10px; }
+.pista .arriba h4 { margin: 0; font-size: 16px; flex: 1; }
+.pista .arriba h4 small { display: block; font-weight: 400; color: var(--muted); font-size: 13px; }
+.pista .zona { font-size: 15px; }
+.pista details { font-size: 14px; color: var(--muted); border-top: 1px dashed var(--line); padding-top: 6px; }
+.pista details summary { cursor: pointer; color: var(--accent-text); font-weight: 600; }
+.pista details p { margin: 4px 0 0; }
+.pista input[type="checkbox"] { width: 20px; height: 20px; accent-color: var(--accent); margin: 2px 0 0; flex: none; }
+.vacio { color: var(--muted); padding: 18px; text-align: center; border: 1px dashed var(--line); border-radius: var(--radius); }
+/* Novedades */
+.novedades { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 14px; }
+.novedades .tarjeta ul { color: var(--text); }
+.novedades .tarjeta li { margin-bottom: 5px; }
+.novedades .tarjeta li small { color: var(--muted); }
+footer { margin: 56px 0 24px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); padding-top: 18px; }
+.menu-movil { display: none; }
+@media (max-width: 900px) {
+  .layout { grid-template-columns: minmax(0, 1fr); padding: 16px; gap: 0; }
+  nav.indice { position: static; max-height: none; margin-bottom: 16px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 12px; }
+  nav.indice ol { display: none; }
+  nav.indice.abierto ol { display: block; }
+  nav.indice .marca { margin-bottom: 0; }
+  .menu-movil { display: inline-block; margin-left: auto; }
+  nav.indice .tema { display: none; }
+  nav.indice.abierto .tema { display: block; }
+  .tramo .cuerpo { grid-template-columns: minmax(0, 1fr); }
+  header.portada { padding: 28px 20px; }
+  .contador { margin-left: 0; width: 100%; }
+}
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="indice" id="indice" aria-label="Índice">
+    <div class="marca"><div class="gema" aria-hidden="true"></div>Dualocke<button class="menu-movil" type="button" id="boton-menu" aria-expanded="false">Índice</button></div>
+    <ol>
+      <li><a href="#empezar"><span>1</span>Cómo empezar</a></li>
+      <li><a href="#reglas"><span>2</span>Reglas del locke</a></li>
+      <li><a href="#caps"><span>3</span>Level caps</a></li>
+      <li><a href="#ruta"><span>4</span>Cómo avanzar</a></li>
+      <li><a href="#objetos"><span>5</span>Objetos importantes</a></li>
+      <li><a href="#megapiedras"><span>6</span>Pistas: megapiedras</a></li>
+      <li><a href="#tickets"><span>7</span>Pistas: Ticket-Recuerdo</a></li>
+      <li><a href="#novedades"><span>8</span>Novedades</a></li>
+    </ol>
+    <button class="tema" type="button" id="boton-tema">Cambiar tema claro/oscuro</button>
+  </nav>
+
+  <main>
+    <header class="portada">
+      <h1>Guía del Dualocke Esmeralda</h1>
+      <p>Lo que hace falta para jugar el locke: cómo avanzar, los niveles de cada jefe, dónde buscar las megapiedras y los Ticket-Recuerdo, y todo lo que hemos cambiado respecto a Esmeralda.</p>
+      <div class="chips"><span>20 vidas</span><span>Primera captura por zona</span><span>Caps duros</span><span>Randomizer con semilla</span><span>Megas desde la Ruta 120</span><span>En español</span></div>
+    </header>
+
+    <!-- 1. Empezar -->
+    <section id="empezar">
+      <h2><span class="num">1</span>Cómo empezar</h2>
+      <p class="intro">Cada uno juega su propia partida, con su semilla. Los Pokémon, entrenadores y objetos cambian, pero las reglas y los niveles son los mismos para los dos.</p>
+      <div class="tarjetas">
+        <div class="tarjeta"><h3><span class="icono">⬇</span>Conseguir la ROM</h3><p>Con el instalador de Windows (<code>tools/dualocke/instalar_windows.ps1</code>), que lo prepara todo y deja <b>Dualocke.gba</b> en el escritorio. Los pasos están en <code>DUALOCKE.md</code>, sección 3. O pídesela al otro, nunca por GitHub.</p></div>
+        <div class="tarjeta"><h3><span class="icono">🎮</span>Emulador</h3><p><b>mGBA</b> (mgba.io). Guarda la partida al lado de la ROM (<code>Dualocke.sav</code>): al poner una ROM nueva con la misma semilla, la partida sigue.</p></div>
+        <div class="tarjeta"><h3><span class="icono">🎲</span>Tu semilla</h3><p>Se elige al azar la primera vez y se reutiliza. Actualizar el juego no cambia tu partida. Apunta la semilla para poder regenerar la ROM si hay que arreglar algo.</p></div>
+        <div class="tarjeta"><h3><span class="icono">📋</span>Si algo falla</h3><p>Apunta el mapa, qué hiciste y qué pasó (mejor con captura). La lista de cosas a mirar está en <code>PRUEBAS.md</code>.</p></div>
+      </div>
+    </section>
+
+    <!-- 2. Reglas -->
+    <section id="reglas">
+      <h2><span class="num">2</span>Reglas del locke</h2>
+      <p class="intro">Casi todas las hace cumplir el propio juego. Las que no, van por honor.</p>
+      <div class="tarjetas">
+        <div class="tarjeta"><h3><span class="icono">❤</span>20 vidas</h3><p>Un Pokémon que acaba un combate debilitado <b>muere</b>: va a la caja 14 ("DEAD") y resta una vida. Con 0 vidas, la siguiente muerte pierde el locke. El menú de pausa enseña las vidas.</p></div>
+        <div class="tarjeta"><h3><span class="icono">☠</span>Perder un combate</h3><p>Si te debilitan los 6, <b>pierdes el locke</b>. Los objetos de revivir no se pueden usar en combate.</p></div>
+        <div class="tarjeta"><h3><span class="icono">⚑</span>Primera captura por zona</h3><p>Solo el primer salvaje de cada zona (ruta, cueva, ciudad…). Si es de una línea que ya tienes viva o es legendario, no cuenta y sigues buscando. Los <b>shiny</b> siempre se pueden capturar. Empieza en cuanto llevas una Poké Ball.</p></div>
+        <div class="tarjeta"><h3><span class="icono">⛔</span>Caja de prohibidos</h3><p>Regalos, huevos, fósiles, estáticos e intercambios repetidos o legendarios van a la caja 13 ("VETADOS"). Los repetidos se desbloquean cuando muere el de su línea.</p></div>
+        <div class="tarjeta"><h3><span class="icono">✎</span>Mote obligatorio</h3><p>Al capturar, recibir o eclosionar se abre la pantalla de mote, y no deja seguir sin uno.</p></div>
+        <div class="tarjeta"><h3><span class="icono">🛒</span>Tiendas</h3><p>Sin curativos ni Objetos X. Una unidad de cada objeto por tienda, salvo Balls, Repelentes, Bayas, Caramelos Raros y Cuerda Huida. Los Objetos X no se pueden usar.</p></div>
+        <div class="tarjeta"><h3><span class="icono">⤒</span>Level cap duro</h3><p>Al llegar al cap no se gana experiencia, y los Caramelos Raros (a 1 ₽) no funcionan por encima.</p></div>
+        <div class="tarjeta"><h3><span class="icono">🏆</span>Ganar</h3><p>Gana quien venza a PLUBIO sin perder todas las vidas ni ningún combate. Si empatáis, deciden los combates entre vosotros: 3 tandas al mejor de 3 en Showdown, por honor.</p></div>
+      </div>
+    </section>
+
+    <!-- 3. Caps -->
+    <section id="caps">
+      <h2><span class="num">3</span>Level caps</h2>
+      <p class="intro">El cap sube al ganar cada medalla. El as de cada líder va justo al cap; el resto de entrenadores del tramo, un poco por debajo.</p>
+      <div class="caps">
+        <div class="cap-paso"><div class="n">16</div><div class="q">hasta la medalla 1</div><div class="h">PETRA</div></div>
+        <div class="cap-paso"><div class="n">23</div><div class="q">hasta la medalla 2</div><div class="h">MARCIAL</div></div>
+        <div class="cap-paso"><div class="n">32</div><div class="q">hasta la medalla 3</div><div class="h">ERICO</div></div>
+        <div class="cap-paso"><div class="n">43</div><div class="q">hasta la medalla 4</div><div class="h">CANDELA</div></div>
+        <div class="cap-paso"><div class="n">50</div><div class="q">hasta la medalla 5</div><div class="h">NORMAN</div></div>
+        <div class="cap-paso"><div class="n">62</div><div class="q">hasta la medalla 6</div><div class="h">ALANA</div></div>
+        <div class="cap-paso"><div class="n">73</div><div class="q">hasta la medalla 7</div><div class="h">VITO y LETI</div></div>
+        <div class="cap-paso"><div class="n">84</div><div class="q">hasta la medalla 8</div><div class="h">GALANO</div></div>
+        <div class="cap-paso"><div class="n">100</div><div class="q">Liga</div><div class="h">PLUBIO</div></div>
+      </div>
+    </section>
+
+    <!-- 4. Walkthrough -->
+    <section id="ruta">
+      <h2><span class="num">4</span>Cómo avanzar</h2>
+      <p class="intro">Muy breve, tramo a tramo. El nivel de cada jefe es el de <b>su as</b> (el Pokémon más fuerte). Los equipos cambian con la semilla; los niveles, no.</p>
+
+      <details class="tramo" open>
+        <summary><span class="medalla">1</span><span class="tit"><strong>De VILLA RAÍZ a CIUDAD FÉRRICA</strong><small>Rutas 101-104 y BOSQUE PETALIA</small></span><span class="etiqueta cap">cap 16</span></summary>
+        <div class="cuerpo">
+          <ol class="pasos">
+            <li>Salva al PROF. ABEDUL en la RUTA 101 y elige inicial (los tres forman un triángulo de tipos).</li>
+            <li>Combate con tu rival en la RUTA 103. Al volver al laboratorio te dan la POKéDEX y las Poké Balls: <b>empiezan las reglas</b>.</li>
+            <li>RUTA 102 y CIUDAD PETALIA (visita a NORMAN y BLASCO; ese combate no cuenta).</li>
+            <li>RUTA 104 y BOSQUE PETALIA, con el primer soldado del EQUIPO AQUA. Busca las megapiedras de la esquina noreste del bosque.</li>
+            <li>CIUDAD FÉRRICA: GIMNASIO de PETRA.</li>
+          </ol>
+          <ul class="jefes">
+            <li><span class="quien">Rival<small>RUTA 103</small></span><span class="lv">Nv. 7</span></li>
+            <li><span class="quien">Soldado AQUA<small>BOSQUE PETALIA</small></span><span class="lv">Nv. 8</span></li>
+            <li class="lider"><span class="quien">PETRA<small>GIMNASIO de FÉRRICA</small></span><span class="lv">Nv. 16</span></li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="tramo">
+        <summary><span class="medalla">2</span><span class="tit"><strong>De FÉRRICA a PUEBLO AZULIZA</strong><small>TÚNEL FERVERGAL, CUEVA GRANITO</small></span><span class="etiqueta cap">cap 23</span></summary>
+        <div class="cuerpo">
+          <ol class="pasos">
+            <li>Persigue al soldado AQUA hasta el TÚNEL FERVERGAL (RUTA 116) y recupera las piezas DEVON.</li>
+            <li>Tu rival te reta al salir de FÉRRICA.</li>
+            <li>El SR. ARENQUE te lleva en barca a PUEBLO AZULIZA. En la CUEVA GRANITO das la carta a MÁXIMO.</li>
+            <li>GIMNASIO de MARCIAL.</li>
+          </ol>
+          <ul class="jefes">
+            <li><span class="quien">Soldado AQUA<small>TÚNEL FERVERGAL</small></span><span class="lv">Nv. 14</span></li>
+            <li><span class="quien">Rival<small>CIUDAD FÉRRICA</small></span><span class="lv">Nv. 16</span></li>
+            <li class="lider"><span class="quien">MARCIAL<small>GIMNASIO de AZULIZA</small></span><span class="lv">Nv. 23</span></li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="tramo">
+        <summary><span class="medalla">3</span><span class="tit"><strong>De AZULIZA a CIUDAD MALVALONA</strong><small>CIUDAD PORTUAL, RUTA 110</small></span><span class="etiqueta cap">cap 32</span></summary>
+        <div class="cuerpo">
+          <ol class="pasos">
+            <li>Barca a la RUTA 109 y CIUDAD PORTUAL. En el MUSEO OCEÁNICO, combate con soldados AQUA.</li>
+            <li>RUTA 110: combate con tu rival.</li>
+            <li>MALVALONA: BLASCO te reta en la entrada del gimnasio.</li>
+            <li>GIMNASIO de ERICO.</li>
+          </ol>
+          <ul class="jefes">
+            <li><span class="quien">Soldados AQUA<small>MUSEO OCEÁNICO</small></span><span class="lv">Nv. 22</span></li>
+            <li><span class="quien">BLASCO<small>MALVALONA</small></span><span class="lv">Nv. 26</span></li>
+            <li><span class="quien">Rival<small>RUTA 110</small></span><span class="lv">Nv. 28</span></li>
+            <li class="lider"><span class="quien">ERICO<small>GIMNASIO de MALVALONA</small></span><span class="lv">Nv. 32</span></li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="tramo">
+        <summary><span class="medalla">4</span><span class="tit"><strong>De MALVALONA a PUEBLO LAVACALDA</strong><small>Rutas 111-117, CATARATA METEORO, MONTE CENIZO</small></span><span class="etiqueta cap">cap 43</span></summary>
+        <div class="cuerpo">
+          <ol class="pasos">
+            <li>RUTA 117 y PUEBLO VERDEGAL (y el TÚNEL FERVERGAL ya abierto).</li>
+            <li>RUTA 111, RUTA 112, SENDERO ÍGNEO, RUTA 113 (ceniza) y PUEBLO PARDAL.</li>
+            <li>RUTA 114 y CATARATA METEORO: MAGMA y AQUA se pelean por el meteorito.</li>
+            <li>Teleférico al MONTE CENIZO: combates con TATIANO y MAGNO.</li>
+            <li>Baja por el CAMINO ESCABROSO hasta LAVACALDA: GIMNASIO de CANDELA.</li>
+          </ol>
+          <ul class="jefes">
+            <li><span class="quien">TATIANO<small>MONTE CENIZO</small></span><span class="lv">Nv. 35</span></li>
+            <li><span class="quien">MAGNO<small>MONTE CENIZO</small></span><span class="lv">Nv. 42</span></li>
+            <li class="lider"><span class="quien">CANDELA<small>GIMNASIO de LAVACALDA</small></span><span class="lv">Nv. 43</span></li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="tramo">
+        <summary><span class="medalla">5</span><span class="tit"><strong>De vuelta a CIUDAD PETALIA</strong><small>Casi nada entre medias</small></span><span class="etiqueta cap">cap 50</span></summary>
+        <div class="cuerpo">
+          <ol class="pasos">
+            <li>Con las GAFAS AISLANTES ya puedes cruzar el desierto de la RUTA 111 (TORRE ESPEJISMO, megapiedras).</li>
+            <li>Vuelve a PETALIA: GIMNASIO de NORMAN. Al ganar tienes SURF.</li>
+          </ol>
+          <ul class="jefes">
+            <li class="lider"><span class="quien">NORMAN<small>GIMNASIO de PETALIA</small></span><span class="lv">Nv. 50</span></li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="tramo">
+        <summary><span class="medalla">6</span><span class="tit"><strong>De PETALIA a CIUDAD ARBORADA</strong><small>Rutas 118-120 · el MEGA-ARO</small></span><span class="etiqueta cap">cap 62</span></summary>
+        <div class="cuerpo">
+          <ol class="pasos">
+            <li>Con SURF: rutas 105-108, BARCO ABANDONADO y NUEVA MALVALONA (opcionales, con megapiedras).</li>
+            <li>RUTA 118 y RUTA 119. En el INSTITUTO METEOROLÓGICO, combate con SILVINA.</li>
+            <li>Tu rival te reta en el puente de la RUTA 119.</li>
+            <li><b>RUTA 120: MÁXIMO</b> te reta antes de darte el DETECTOR DEVON. Es obligatorio: 6 Pokémon a nivel 62 y un as con mega. Si ganas, te da el <b>MEGA-ARO</b>.</li>
+            <li>GIMNASIO de ALANA. Desde aquí, los jefes megaevolucionan.</li>
+          </ol>
+          <ul class="jefes">
+            <li><span class="quien">SILVINA<small>INSTITUTO METEOROLÓGICO</small></span><span class="lv">Nv. 54</span></li>
+            <li><span class="quien">Rival<small>RUTA 119</small></span><span class="lv">Nv. 62</span></li>
+            <li class="lider"><span class="quien">MÁXIMO<small>RUTA 120 · da el MEGA-ARO</small></span><span class="lv">Nv. 62</span></li>
+            <li class="lider"><span class="quien">ALANA<small>GIMNASIO de ARBORADA</small></span><span class="lv">Nv. 62</span></li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="tramo">
+        <summary><span class="medalla">7</span><span class="tit"><strong>De ARBORADA a CIUDAD ALGARIA</strong><small>CALAGUA, MONTE PÍRICO, las dos guaridas</small></span><span class="etiqueta cap">cap 73</span></summary>
+        <div class="cuerpo">
+          <ol class="pasos">
+            <li>RUTA 121, ZONA SAFARI y CIUDAD CALAGUA: combate con tu rival.</li>
+            <li>RUTA 122 y MONTE PÍRICO: AQUILES se lleva el PRISMA AZUL.</li>
+            <li>CAMINO ESCABROSO → GUARIDA MAGMA: TATIANO y MAGNO.</li>
+            <li>GUARIDA AQUA, en CALAGUA: MATÍAS.</li>
+            <li>RUTA 124 hasta CIUDAD ALGARIA: GIMNASIO de VITO y LETI (combate doble).</li>
+          </ol>
+          <ul class="jefes">
+            <li><span class="quien">TATIANO<small>GUARIDA MAGMA</small></span><span class="lv">Nv. 65</span></li>
+            <li><span class="quien">MATÍAS<small>GUARIDA AQUA</small></span><span class="lv">Nv. 67</span></li>
+            <li><span class="quien">Rival<small>CALAGUA</small></span><span class="lv">Nv. 70</span></li>
+            <li><span class="quien">MAGNO<small>GUARIDA MAGMA</small></span><span class="lv">Nv. 73</span></li>
+            <li class="lider"><span class="quien">VITO y LETI<small>GIMNASIO de ALGARIA</small></span><span class="lv">Nv. 73</span></li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="tramo">
+        <summary><span class="medalla">8</span><span class="tit"><strong>De ALGARIA a ARRECÍPOLIS</strong><small>CENTRO ESPACIAL, CUEVA ABISAL, PILAR CELESTE</small></span><span class="etiqueta cap">cap 84</span></summary>
+        <div class="cuerpo">
+          <ol class="pasos">
+            <li>CENTRO ESPACIAL: combate doble junto a MÁXIMO contra TATIANO y MAGNO.</li>
+            <li>Con BUCEO, a la RUTA 128 y la CUEVA ABISAL: SILVINA y AQUILES.</li>
+            <li>Crisis de ARRECÍPOLIS: sube al PILAR CELESTE.</li>
+            <li>GIMNASIO de GALANO. Te da CASCADA, que hace falta para la CALLE VICTORIA.</li>
+          </ol>
+          <ul class="jefes">
+            <li><span class="quien">SILVINA<small>CUEVA ABISAL</small></span><span class="lv">Nv. 76</span></li>
+            <li><span class="quien">TATIANO<small>CENTRO ESPACIAL (doble)</small></span><span class="lv">Nv. 81</span></li>
+            <li><span class="quien">MAGNO<small>CENTRO ESPACIAL (doble)</small></span><span class="lv">Nv. 84</span></li>
+            <li><span class="quien">AQUILES<small>CUEVA ABISAL</small></span><span class="lv">Nv. 84</span></li>
+            <li class="lider"><span class="quien">GALANO<small>GIMNASIO de ARRECÍPOLIS</small></span><span class="lv">Nv. 84</span></li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="tramo">
+        <summary><span class="medalla">★</span><span class="tit"><strong>La LIGA POKéMON</strong><small>CALLE VICTORIA, ALTO MANDO y PLUBIO</small></span><span class="etiqueta cap">cap 100</span></summary>
+        <div class="cuerpo">
+          <ol class="pasos">
+            <li>RUTA 128 → CIUDAD COLOSALIA.</li>
+            <li>CALLE VICTORIA: BLASCO te espera dentro.</li>
+            <li>ALTO MANDO uno detrás de otro, sin salir. Lleva Caramelos Raros: el salto desde 84 es grande, pero no hace falta entrenar.</li>
+            <li>PLUBIO, el Campeón, con el as a nivel 100.</li>
+          </ol>
+          <ul class="jefes">
+            <li><span class="quien">BLASCO<small>CALLE VICTORIA</small></span><span class="lv">Nv. 90</span></li>
+            <li class="lider"><span class="quien">SIXTO<small>ALTO MANDO</small></span><span class="lv">Nv. 92</span></li>
+            <li class="lider"><span class="quien">FÁTIMA<small>ALTO MANDO</small></span><span class="lv">Nv. 94</span></li>
+            <li class="lider"><span class="quien">NÍVEA<small>ALTO MANDO</small></span><span class="lv">Nv. 95</span></li>
+            <li class="lider"><span class="quien">DRACÓN<small>ALTO MANDO</small></span><span class="lv">Nv. 97</span></li>
+            <li class="lider"><span class="quien">PLUBIO<small>Campeón</small></span><span class="lv">Nv. 100</span></li>
+          </ul>
+        </div>
+      </details>
+      <div class="aviso">El postgame (revanchas, cuevas legendarias, FRENTE BATALLA) va a nivel 97-100 y no entra en esta guía.</div>
+    </section>
+
+    <!-- 5. Objetos -->
+    <section id="objetos">
+      <h2><span class="num">5</span>Objetos importantes</h2>
+      <p class="intro">Lo que hemos añadido o cambiado de sitio, y cómo se consigue.</p>
+      <div class="tarjetas">
+        <div class="tarjeta"><h3><span class="icono">💍</span>MEGA-ARO</h3><p>Lo da MÁXIMO en el puente de la <b>RUTA 120</b> si le ganas (nivel 62, obligatorio antes del gimnasio de ALANA). Sin él no se puede megaevolucionar.</p></div>
+        <div class="tarjeta"><h3><span class="icono">💎</span>Megapiedras <span class="etiqueta mega">81</span></h3><p>No se venden: están <b>por el mapa</b>, en bolas y ocultas, cada una en un sitio que pega con su Pokémon. <b>Son fijas</b>: el randomizer no las mueve. Las de antes del aro se pueden coger, pero no usar. Pistas en la <a href="#megapiedras">sección 6</a>.</p></div>
+        <div class="tarjeta"><h3><span class="icono">🎟</span>Ticket-Recuerdo <span class="etiqueta ticket">45</span></h3><p>Con uno, la señora a la derecha del PC de <b>cualquier Centro Pokémon</b> hace que un Pokémon recuerde un movimiento de nivel. Hay uno en bola en cada ruta y otro oculto en las rutas largas. Pistas en la <a href="#tickets">sección 7</a>.</p></div>
+        <div class="tarjeta"><h3><span class="icono">🎲</span>Objetos del suelo</h3><p><b>Todos al azar</b> en cada partida, menos las megapiedras, los Ticket-Recuerdo y los objetos clave, que siempre están en el mismo sitio. Las MT solo se cambian por otras MT. Los objetos competitivos (Vidasfera, Chaleco Asalto, mentas…) pueden salir en cualquier bola.</p></div>
+        <div class="tarjeta"><h3><span class="icono">🍬</span>Caramelos Raros</h3><p>A <b>1 ₽</b> en todas las tiendas que vendían curativos. Sin límite de compra, pero no suben por encima del cap.</p></div>
+        <div class="tarjeta"><h3><span class="icono">🧑‍💼</span>Segundo dependiente</h3><p>En las 11 tiendas de ciudad, detrás del mostrador. Vende 1 objeto evolutivo y 3 equipables raros (Restos, Garra Rápida, Campana Concha…), distintos en cada partida.</p></div>
+        <div class="tarjeta"><h3><span class="icono">🪨</span>Objetos evolutivos</h3><p>Cada ciudad vende los suyos (piedras desde la medalla 2, los de antiguos intercambios desde la 4). En los Grandes Almacenes de CALAGUA, todos.</p></div>
+        <div class="tarjeta"><h3><span class="icono">🎒</span>Mochila con 7 bolsillos</h3><p>OBJETOS, <b>MEDICINAS</b>, POKé BALLS, MT Y MO, BAYAS, <b>MEGAPIEDRAS</b> y OBJ. CLAVE.</p></div>
+      </div>
+      <h3 style="margin-top:24px">Tiendas: qué vende cada ciudad</h3>
+      <div class="tabla-scroll">
+        <table>
+          <thead><tr><th>Tienda</th><th>Balls propias</th><th>Objetos evolutivos</th></tr></thead>
+          <tbody>
+            <tr><td>Todas</td><td>Poké, Super (1 medalla), Ultra (5)</td><td>— · Repelentes, Cuerda Huida, Caramelo Raro</td></tr>
+            <tr><td>CIUDAD FÉRRICA</td><td>Turno, Acopio</td><td>Revestimiento Metálico, Mejora, Disco Extraño</td></tr>
+            <tr><td>CIUDAD PORTUAL</td><td>Buceo, Malla</td><td>Piedra Agua, Escama Bella, Diente Marino, Escama Marina</td></tr>
+            <tr><td>CIUDAD MALVALONA</td><td>Veloz</td><td>Piedra Trueno, Electrizador</td></tr>
+            <tr><td>PUEBLO VERDEGAL</td><td>Nido</td><td>Piedra Hoja, Saquito Fragante, Dulce de Nata</td></tr>
+            <tr><td>PUEBLO PARDAL</td><td>Ocaso</td><td>Piedra Lunar, Piedra Noche</td></tr>
+            <tr><td>PUEBLO LAVACALDA</td><td>Sana</td><td>Piedra Fuego, Magmatizador · Herboristería: Hierba Blanca, Mental y Única</td></tr>
+            <tr><td>CIUDAD ARBORADA</td><td>Nido</td><td>Piedra Solar, Garra Afilada, Colmillo Agudo</td></tr>
+            <tr><td>CALAGUA (Grandes Almacenes)</td><td>Lujo, Ocaso, Veloz</td><td>Todos</td></tr>
+            <tr><td>CIUDAD ALGARIA</td><td>Malla, Buceo</td><td>Piedra Alba, Piedra Día, Piedra Hielo, Protector</td></tr>
+            <tr><td>ARRECÍPOLIS</td><td>Buceo, Lujo</td><td>Roca del Rey, Escama Dragón, Tela Terrible</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 6. Megapiedras -->
+    <section id="megapiedras">
+      <h2><span class="num">6</span>Pistas: megapiedras</h2>
+      <p class="intro">Cada tarjeta dice la zona. Si no la encuentras, abre "Más pistas" (parte del mapa y lo que hay cerca) y, como último recurso, "Solución" (la casilla exacta). Las <b>ocultas</b> no se ven: pulsa A en la casilla o usa el BUSCAOBJETOS. Marca las que vayas cogiendo: se guarda en este navegador.</p>
+      <div class="controles" data-lista="megapiedras">
+        <label>Voy por <select class="filtro-tramo"></select></label>
+        <input type="search" class="filtro-texto" placeholder="Buscar megapiedra o zona…" aria-label="Buscar">
+        <label><input type="checkbox" class="filtro-hechas"> Ocultar las que tengo</label>
+        <span class="contador"></span>
+      </div>
+      <div class="barra mega"><div></div></div>
+      <div class="pistas" id="lista-megapiedras"></div>
+    </section>
+
+    <!-- 7. Tickets -->
+    <section id="tickets">
+      <h2><span class="num">7</span>Pistas: Ticket-Recuerdo</h2>
+      <p class="intro">Uno en bola en cada ruta (101-134) y otro oculto en las rutas largas. En siete rutas de mar abierto no hay tierra cerca y el ticket está en el agua: se coge haciendo SURF, como se habla con los nadadores.</p>
+      <div class="controles" data-lista="tickets">
+        <label>Voy por <select class="filtro-tramo"></select></label>
+        <input type="search" class="filtro-texto" placeholder="Buscar ruta…" aria-label="Buscar">
+        <label><input type="checkbox" class="filtro-hechas"> Ocultar los que tengo</label>
+        <span class="contador"></span>
+      </div>
+      <div class="barra ticket"><div></div></div>
+      <div class="pistas" id="lista-tickets"></div>
+    </section>
+
+    <!-- 8. Novedades -->
+    <section id="novedades">
+      <h2><span class="num">8</span>Novedades</h2>
+      <p class="intro">Todo lo que hemos cambiado respecto a Esmeralda.</p>
+      <div class="novedades">
+        <div class="tarjeta"><h3><span class="icono">⚖</span>Reglas dentro del juego</h3><ul>
+          <li>20 vidas, caja de muertos (14) y aviso "ha muerto" con las vidas que quedan.</li>
+          <li>Primera captura por zona, con repetidos por rama evolutiva, legendarios fuera y shiny libres. Aviso al empezar el combate; las Balls no se gastan si no se puede capturar.</li>
+          <li>Un Pokémon no evoluciona a una rama que ya tienes viva.</li>
+          <li>Caja de prohibidos (13) para regalos, huevos, fósiles, estáticos e intercambios repetidos o legendarios.</li>
+          <li>Mote obligatorio. Reglas activas desde que llevas una Poké Ball.</li>
+        </ul></div>
+        <div class="tarjeta"><h3><span class="icono">📈</span>Niveles</h3><ul>
+          <li>Caps duros por medalla, de 16 a 100. Caramelos Raros a 1 ₽ que no pasan el cap.</li>
+          <li>Todo reescalado por tramos: entrenadores, salvajes, estáticos y legendarios.</li>
+          <li>Líderes, ALTO MANDO y PLUBIO con 2 Pokémon más; rival, BLASCO, MAGNO, AQUILES y los admins con 1 más.</li>
+          <li>Los Pokémon de los entrenadores evolucionan según su nivel.</li>
+          <li>Revanchas de la AGENDA entre 47 y 97. Postgame a 97-100. Latios y Latias a 100.</li>
+        </ul></div>
+        <div class="tarjeta"><h3><span class="icono">💎</span>Megaevoluciones</h3><ul>
+          <li>Todas las megas, también las nuevas de Leyendas Z-A.</li>
+          <li>MEGA-ARO con el combate contra MÁXIMO en la RUTA 120.</li>
+          <li>Desde el aro, todos los jefes llevan un as con mega.</li>
+          <li>81 megapiedras repartidas por Hoenn, fijas en todas las partidas.</li>
+        </ul></div>
+        <div class="tarjeta"><h3><span class="icono">🎲</span>Randomizer con semilla</h3><ul>
+          <li>Salvajes 1 a 1 por zona, sin legendarios y con la evolución que toca por nivel.</li>
+          <li>Entrenadores y jefes al azar; el as de cada jefe es de su tipo. El rival lleva el inicial que gana al tuyo.</li>
+          <li>Iniciales en triángulo de tipos, estáticos, regalos e intercambios al azar.</li>
+          <li>Habilidades al azar por especie. MT con movimiento al azar (50 % de compatibilidad) y tutores al azar.</li>
+          <li>Objetos del suelo al azar (las MT entre ellas; megapiedras y tickets fijos), Recogida y objetos de los salvajes (5 %).</li>
+          <li>Cada especie aprende <b>movimientos al azar al subir de nivel</b> (los tuyos, los salvajes y los de los entrenadores), con tope de potencia según el nivel, más ataques de su tipo y siempre algún ataque al principio.</li>
+          <li>Entrenadores: 3 movimientos de esa tabla nueva y el cuarto al azar, con tope de potencia por nivel.</li>
+        </ul></div>
+        <div class="tarjeta"><h3><span class="icono">🛒</span>Tiendas</h3><ul>
+          <li>Sin curativos ni Objetos X. Una unidad de cada objeto por tienda.</li>
+          <li>Cada ciudad vende sus Balls y sus objetos evolutivos, con medallas.</li>
+          <li>Segundo dependiente con objetos evolutivos y equipables raros.</li>
+        </ul></div>
+        <div class="tarjeta"><h3><span class="icono">🎟</span>Movimientos</h3><ul>
+          <li>Movimientos y datos de la 9.ª generación, con el tipo Hada.</li>
+          <li>MT reutilizables y MO olvidables.</li>
+          <li>Recuerdamovimientos en todos los Centros Pokémon, a cambio de un Ticket-Recuerdo; 45 tickets por las rutas. El tutor de PUEBLO PARDAL también acepta el ticket.</li>
+          <li>Ya no se pueden recordar movimientos gratis desde la pantalla de datos.</li>
+        </ul></div>
+        <div class="tarjeta"><h3><span class="icono">🔁</span>Evoluciones</h3><ul>
+          <li>Las de intercambio ahora son por nivel: Alakazam 36; Machamp, Golem, Gengar, Gigalith y Conkeldurr 38; Trevenant, Gourgeist, Escavalier y Accelgor 32.</li>
+          <li>Las de intercambio con objeto se hacen usando el objeto, como una piedra (Steelix, Scizor, Kingdra, Milotic, Porygon2…).</li>
+        </ul></div>
+        <div class="tarjeta"><h3><span class="icono">🖥</span>Pantallas y menús</h3><ul>
+          <li>Datos del Pokémon: naturaleza con lo que sube y baja; START para ver todas sus habilidades posibles; A para ver IVs y EVs exactos.</li>
+          <li>Mochila con bolsillos de MEDICINAS y MEGAPIEDRAS.</li>
+          <li>Vidas en el menú de pausa. Mapa de la región en español.</li>
+        </ul></div>
+        <div class="tarjeta"><h3><span class="icono">✨</span>Comodidad</h3><ul>
+          <li>Correr sin DEPORTIVAS desde el principio.</li>
+          <li>POKéDEX Nacional desde el principio.</li>
+          <li>Pokémon de las 9 generaciones.</li>
+          <li>La partida de verdad va sin los menús de depuración (trucos).</li>
+        </ul></div>
+        <div class="tarjeta"><h3><span class="icono">🇪🇸</span>Traducción</h3><ul>
+          <li>Toda la historia en español, de VILLA RAÍZ a la LIGA, con los nombres oficiales.</li>
+          <li>Objetos, movimientos, habilidades, Pokédex, menús y mensajes de combate.</li>
+          <li>Quedan en inglés cosas fuera de la historia: la tele, el postgame y alguna casa suelta.</li>
+        </ul></div>
+      </div>
+    </section>
+
+    <footer>
+      Guía del Dualocke · Jorge y Miguel. Hecho sobre pokeemerald-expansion (RHH) y pokeemerald (pret). Las pistas se regeneran desde los mapas con <code>python3 tools/dualocke/guia.py</code>; el resto se edita a mano. Más detalle técnico en <code>DUALOCKE.md</code>.
+    </footer>
+  </main>
+</div>
+
+<script id="datos-pistas" type="application/json">{"megapiedras":[{"zona":"BOSQUE PETALIA","parte":"","tipo":"bola","sector":"noreste","detalles":["junto a hierba alta","al lado de otra bola de objeto"],"x":44,"y":7,"tramo":1,"nombre":"Beedrillita"},{"zona":"BOSQUE PETALIA","parte":"","tipo":"bola","sector":"noreste","detalles":["junto a hierba alta","al lado de otra bola de objeto"],"x":45,"y":6,"tramo":1,"nombre":"Scolipedita"},{"zona":"BOSQUE PETALIA","parte":"","tipo":"oculto","sector":"noreste","detalles":["entre la hierba alta","al lado de otra bola de objeto"],"x":42,"y":7,"tramo":1,"nombre":"Venusaurita"},{"zona":"RUTA 104","parte":"","tipo":"bola","sector":"noreste","detalles":["cerca del agua","cerca de un entrenador","al lado de otra bola de objeto"],"x":32,"y":24,"tramo":1,"nombre":"Floettita"},{"zona":"CUEVA GRANITO","parte":"planta 1","tipo":"bola","sector":"centro","detalles":["cerca de una entrada o escalera","al lado de otra bola de objeto"],"x":18,"y":7,"tramo":2,"nombre":"Steelixita"},{"zona":"CUEVA GRANITO","parte":"sótano 1","tipo":"bola","sector":"sur","detalles":["al lado de otra bola de objeto"],"x":14,"y":21,"tramo":2,"nombre":"Sableynita"},{"zona":"CUEVA GRANITO","parte":"sótano 2","tipo":"bola","sector":"noroeste","detalles":["cerca de una entrada o escalera","al lado de otra bola de objeto"],"x":5,"y":4,"tramo":2,"nombre":"Aggronita"},{"zona":"CUEVA GRANITO","parte":"sótano 2","tipo":"oculto","sector":"noroeste","detalles":["cerca de una entrada o escalera","al lado de otra bola de objeto"],"x":7,"y":4,"tramo":2,"nombre":"Mawilita"},{"zona":"RUTA 116","parte":"","tipo":"oculto","sector":"oeste","detalles":["entre la hierba alta","cerca de un entrenador","al lado de otra bola de objeto"],"x":15,"y":7,"tramo":2,"nombre":"Alakazamita"},{"zona":"TÚNEL FERVERGAL","parte":"","tipo":"bola","sector":"noroeste","detalles":["al lado de otra bola de objeto"],"x":4,"y":1,"tramo":2,"nombre":"Excadrillita"},{"zona":"CAMINO ESCABROSO","parte":"","tipo":"bola","sector":"norte","detalles":["en lo alto de la montaña","cerca de una entrada o escalera","cerca de un entrenador"],"x":11,"y":8,"tramo":4,"nombre":"Cameruptita"},{"zona":"CATARATA METEORO","parte":"planta 1, sala 1","tipo":"bola","sector":"noroeste","detalles":["cerca de una entrada o escalera","al lado de otra bola de objeto"],"x":3,"y":4,"tramo":4,"nombre":"Clefablita"},{"zona":"CATARATA METEORO","parte":"planta 1, sala 1","tipo":"oculto","sector":"noroeste","detalles":["cerca del agua","cerca de una entrada o escalera","al lado de otra bola de objeto"],"x":4,"y":5,"tramo":4,"nombre":"Glimmoranita"},{"zona":"MONTE CENIZO","parte":"","tipo":"bola","sector":"noroeste","detalles":["en lo alto de la montaña","cerca de un entrenador","al lado de otra bola de objeto"],"x":11,"y":11,"tramo":4,"nombre":"Charizardita Y"},{"zona":"MONTE CENIZO","parte":"","tipo":"oculto","sector":"noroeste","detalles":["en lo alto de la montaña","cerca de un entrenador","al lado de otra bola de objeto"],"x":10,"y":12,"tramo":4,"nombre":"Pyroarita"},{"zona":"RUTA 110","parte":"final de la CASA TRAMPA","tipo":"bola","sector":"oeste","detalles":["cerca de una entrada o escalera"],"x":3,"y":5,"tramo":4,"nombre":"Meowsticita"},{"zona":"RUTA 113","parte":"","tipo":"bola","sector":"centro","detalles":["cerca de un entrenador","al lado de otra bola de objeto"],"x":63,"y":8,"tramo":4,"nombre":"Skarmorita"},{"zona":"RUTA 114","parte":"","tipo":"oculto","sector":"sur","detalles":["en lo alto de la montaña","cerca de un entrenador","al lado de otra bola de objeto"],"x":18,"y":65,"tramo":4,"nombre":"Scraftita"},{"zona":"RUTA 117","parte":"","tipo":"oculto","sector":"sureste","detalles":["cerca de un entrenador","al lado de otra bola de objeto"],"x":40,"y":17,"tramo":4,"nombre":"Audinita"},{"zona":"RUTA 117","parte":"","tipo":"oculto","sector":"sureste","detalles":["cerca de un entrenador","al lado de otra bola de objeto"],"x":41,"y":16,"tramo":4,"nombre":"Lopunnita"},{"zona":"RUTA 117","parte":"","tipo":"bola","sector":"sur","detalles":["cerca de un entrenador","al lado de otra bola de objeto"],"x":39,"y":16,"tramo":4,"nombre":"Meganiumita"},{"zona":"SENDERO ÍGNEO","parte":"","tipo":"bola","sector":"noroeste","detalles":["al lado de otra bola de objeto"],"x":9,"y":3,"tramo":4,"nombre":"Charizardita X"},{"zona":"SENDERO ÍGNEO","parte":"","tipo":"oculto","sector":"noroeste","detalles":["al lado de otra bola de objeto"],"x":10,"y":4,"tramo":4,"nombre":"Emboarita"},{"zona":"SENDERO ÍGNEO","parte":"","tipo":"bola","sector":"noroeste","detalles":["al lado de otra bola de objeto"],"x":7,"y":3,"tramo":4,"nombre":"Houndoomita"},{"zona":"RUTA 111","parte":"","tipo":"bola","sector":"sureste","detalles":["en la arena del desierto","al lado de otra bola de objeto"],"x":33,"y":103,"tramo":5,"nombre":"Garchompita"},{"zona":"RUTA 111","parte":"","tipo":"oculto","sector":"sureste","detalles":["en la arena del desierto","al lado de otra bola de objeto"],"x":32,"y":102,"tramo":5,"nombre":"Scovillainita"},{"zona":"RUTA 111","parte":"","tipo":"bola","sector":"sureste","detalles":["en la arena del desierto","al lado de otra bola de objeto"],"x":32,"y":103,"tramo":5,"nombre":"Tyranitarita"},{"zona":"TORRE ESPEJISMO","parte":"planta 4","tipo":"bola","sector":"oeste","detalles":["cerca de una entrada o escalera"],"x":2,"y":4,"tramo":5,"nombre":"Aerodactylita"},{"zona":"BARCO ABANDONADO","parte":"camarotes del sótano","tipo":"bola","sector":"suroeste","detalles":["al lado de otra bola de objeto"],"x":7,"y":7,"tramo":6,"nombre":"Golisopodita"},{"zona":"BARCO ABANDONADO","parte":"pasillos de la planta oculta","tipo":"oculto","sector":"norte","detalles":["cerca de una entrada o escalera"],"x":5,"y":2,"tramo":6,"nombre":"Greninjanita"},{"zona":"NUEVA MALVALONA","parte":"interior","tipo":"bola","sector":"este","detalles":["al lado de otra bola de objeto"],"x":31,"y":25,"tramo":6,"nombre":"Ampharosita"},{"zona":"NUEVA MALVALONA","parte":"interior","tipo":"bola","sector":"este","detalles":["al lado de otra bola de objeto"],"x":32,"y":24,"tramo":6,"nombre":"Eelektrossita"},{"zona":"NUEVA MALVALONA","parte":"interior","tipo":"bola","sector":"este","detalles":["al lado de otra bola de objeto"],"x":33,"y":25,"tramo":6,"nombre":"Manectricita"},{"zona":"NUEVA MALVALONA","parte":"interior","tipo":"bola","sector":"este","detalles":["al lado de otra bola de objeto"],"x":32,"y":26,"tramo":6,"nombre":"Raichunita X"},{"zona":"NUEVA MALVALONA","parte":"interior","tipo":"oculto","sector":"este","detalles":["al lado de otra bola de objeto"],"x":35,"y":25,"tramo":6,"nombre":"Raichunita Y"},{"zona":"RUTA 118","parte":"","tipo":"bola","sector":"este","detalles":["entre la hierba alta","cerca de un entrenador","al lado de otra bola de objeto"],"x":65,"y":10,"tramo":6,"nombre":"Hawluchanita"},{"zona":"RUTA 119","parte":"","tipo":"oculto","sector":"sur","detalles":["entre la hierba muy alta","cerca de un entrenador","al lado de otra bola de objeto"],"x":15,"y":123,"tramo":6,"nombre":"Chesnaughtita"},{"zona":"RUTA 119","parte":"","tipo":"bola","sector":"suroeste","detalles":["entre la hierba muy alta","cerca de un entrenador","al lado de otra bola de objeto"],"x":13,"y":123,"tramo":6,"nombre":"Heracrossita"},{"zona":"RUTA 119","parte":"","tipo":"bola","sector":"suroeste","detalles":["entre la hierba muy alta","cerca de un entrenador","al lado de otra bola de objeto"],"x":12,"y":122,"tramo":6,"nombre":"Sceptilita"},{"zona":"RUTA 119","parte":"","tipo":"bola","sector":"suroeste","detalles":["entre la hierba muy alta","cerca de un entrenador","al lado de otra bola de objeto"],"x":11,"y":123,"tramo":6,"nombre":"Scizorita"},{"zona":"RUTA 119","parte":"","tipo":"bola","sector":"suroeste","detalles":["entre la hierba muy alta","cerca de un entrenador","al lado de otra bola de objeto"],"x":12,"y":124,"tramo":6,"nombre":"Victreebelita"},{"zona":"RUTA 120","parte":"","tipo":"bola","sector":"noroeste","detalles":["cerca de un entrenador","al lado de otra bola de objeto"],"x":6,"y":22,"tramo":6,"nombre":"Absolita"},{"zona":"RUTA 120","parte":"","tipo":"oculto","sector":"noroeste","detalles":["cerca del agua","cerca de un entrenador","al lado de otra bola de objeto"],"x":7,"y":23,"tramo":6,"nombre":"Absolita Z"},{"zona":"RUTA 120","parte":"","tipo":"bola","sector":"noroeste","detalles":["cerca de un entrenador","al lado de otra bola de objeto"],"x":4,"y":22,"tramo":6,"nombre":"Lucarita"},{"zona":"CIUDAD ALGARIA","parte":"","tipo":"oculto","sector":"sureste","detalles":["cerca del agua","al lado de otra bola de objeto"],"x":59,"y":35,"tramo":7,"nombre":"Metagrossita"},{"zona":"CIUDAD CALAGUA","parte":"","tipo":"oculto","sector":"sureste","detalles":["cerca del agua","al lado de otra bola de objeto"],"x":63,"y":37,"tramo":7,"nombre":"Malamarita"},{"zona":"CUEVA CARDUMEN","parte":"sala de abajo (con la marea baja)","tipo":"bola","sector":"noroeste","detalles":["cerca de una entrada o escalera"],"x":8,"y":2,"tramo":7,"nombre":"Froslassita"},{"zona":"CUEVA CARDUMEN","parte":"sala de hielo (con la marea baja)","tipo":"bola","sector":"norte","detalles":["al lado de otra bola de objeto"],"x":11,"y":8,"tramo":7,"nombre":"Abomasnowita"},{"zona":"CUEVA CARDUMEN","parte":"sala de hielo (con la marea baja)","tipo":"bola","sector":"norte","detalles":["al lado de otra bola de objeto"],"x":13,"y":8,"tramo":7,"nombre":"Glalita"},{"zona":"CUEVA CARDUMEN","parte":"sala de las escaleras (con la marea baja)","tipo":"bola","sector":"sur","detalles":["al lado de otra bola de objeto"],"x":12,"y":12,"tramo":7,"nombre":"Baxcaliburita"},{"zona":"CUEVA CARDUMEN","parte":"sala del fondo (con la marea baja)","tipo":"bola","sector":"centro","detalles":["al lado de otra bola de objeto"],"x":27,"y":14,"tramo":7,"nombre":"Crabominablita"},{"zona":"GUARIDA AQUA","parte":"sótano 1","tipo":"bola","sector":"sur","detalles":["cerca de un entrenador","al lado de otra bola de objeto"],"x":29,"y":16,"tramo":7,"nombre":"Swampertita"},{"zona":"GUARIDA MAGMA","parte":"planta 3, sala 3","tipo":"bola","sector":"suroeste","detalles":["al lado de otra bola de objeto"],"x":9,"y":20,"tramo":7,"nombre":"Blazikenita"},{"zona":"MONTE PÍRICO","parte":"cima","tipo":"bola","sector":"centro","detalles":["cerca de un entrenador"],"x":22,"y":15,"tramo":7,"nombre":"Chimechita"},{"zona":"MONTE PÍRICO","parte":"planta 2","tipo":"bola","sector":"oeste","detalles":["cerca de un entrenador"],"x":4,"y":6,"tramo":7,"nombre":"Delphoxita"},{"zona":"MONTE PÍRICO","parte":"planta 3","tipo":"bola","sector":"noroeste","detalles":["cerca de una entrada o escalera","cerca de un entrenador"],"x":2,"y":4,"tramo":7,"nombre":"Banettita"},{"zona":"MONTE PÍRICO","parte":"planta 4","tipo":"bola","sector":"este","detalles":["cerca de una entrada o escalera","cerca de un entrenador"],"x":12,"y":7,"tramo":7,"nombre":"Chandelurita"},{"zona":"MONTE PÍRICO","parte":"planta 5","tipo":"bola","sector":"oeste","detalles":["cerca de una entrada o escalera","cerca de un entrenador"],"x":2,"y":7,"tramo":7,"nombre":"Golurkita"},{"zona":"MONTE PÍRICO","parte":"planta 6","tipo":"oculto","sector":"noreste","detalles":["cerca de un entrenador"],"x":9,"y":3,"tramo":7,"nombre":"Gengarita"},{"zona":"RUTA 123","parte":"","tipo":"bola","sector":"centro","detalles":["entre la hierba alta","cerca de un entrenador","al lado de otra bola de objeto"],"x":71,"y":12,"tramo":7,"nombre":"Pidgeotita"},{"zona":"RUTA 123","parte":"","tipo":"bola","sector":"centro","detalles":["entre la hierba alta","cerca de un entrenador","al lado de otra bola de objeto"],"x":69,"y":12,"tramo":7,"nombre":"Staraptorita"},{"zona":"RUTA 124","parte":"","tipo":"bola","sector":"norte","detalles":["en el agua (con SURF)","cerca de un entrenador"],"x":35,"y":25,"tramo":7,"nombre":"Dragalgita"},{"zona":"RUTA 125","parte":"","tipo":"bola","sector":"suroeste","detalles":["en el agua (con SURF)","cerca de un entrenador"],"x":8,"y":31,"tramo":7,"nombre":"Feraligatrita"},{"zona":"ZONA SAFARI","parte":"zona noroeste","tipo":"bola","sector":"noreste","detalles":["cerca del agua","al lado de otra bola de objeto"],"x":34,"y":7,"tramo":7,"nombre":"Pinsirita"},{"zona":"ZONA SAFARI","parte":"zona suroeste","tipo":"bola","sector":"suroeste","detalles":["cerca del agua","al lado de otra bola de objeto"],"x":1,"y":37,"tramo":7,"nombre":"Kangaskhanita"},{"zona":"FONDO MARINO","parte":"bajo el agua (con BUCEO)","tipo":"oculto","sector":"oeste","detalles":[],"x":14,"y":35,"tramo":8,"nombre":"Sharpedonita"},{"zona":"FONDO MARINO","parte":"bajo el agua (con BUCEO)","tipo":"oculto","sector":"norte","detalles":[],"x":31,"y":19,"tramo":8,"nombre":"Tatsugirita"},{"zona":"PILAR CELESTE","parte":"planta 1","tipo":"bola","sector":"sur","detalles":["cerca de una entrada o escalera"],"x":5,"y":13,"tramo":8,"nombre":"Drampanita"},{"zona":"PILAR CELESTE","parte":"planta 3","tipo":"bola","sector":"noroeste","detalles":["cerca de una entrada o escalera"],"x":3,"y":2,"tramo":8,"nombre":"Altarianita"},{"zona":"PILAR CELESTE","parte":"planta 5","tipo":"bola","sector":"noroeste","detalles":["cerca de una entrada o escalera"],"x":3,"y":2,"tramo":8,"nombre":"Dragonitita"},{"zona":"RUTA 126","parte":"","tipo":"bola","sector":"sur","detalles":["en el agua (con SURF)","cerca de un entrenador","al lado de otra bola de objeto"],"x":50,"y":65,"tramo":8,"nombre":"Slowbronita"},{"zona":"RUTA 127","parte":"","tipo":"bola","sector":"centro","detalles":["en el agua (con SURF)","cerca de un entrenador"],"x":46,"y":42,"tramo":8,"nombre":"Blastoisita"},{"zona":"RUTA 127","parte":"","tipo":"oculto","sector":"centro","detalles":["en el agua (con SURF)","cerca de un entrenador","al lado de otra bola de objeto"],"x":47,"y":43,"tramo":8,"nombre":"Gyaradosita"},{"zona":"RUTA 130","parte":"","tipo":"bola","sector":"este","detalles":["en el agua (con SURF)","cerca de un entrenador","al lado de otra bola de objeto"],"x":71,"y":21,"tramo":8,"nombre":"Starmita"},{"zona":"CALLE VICTORIA","parte":"planta 1","tipo":"bola","sector":"este","detalles":["cerca de un entrenador","al lado de otra bola de objeto"],"x":32,"y":22,"tramo":9,"nombre":"Galladita"},{"zona":"CALLE VICTORIA","parte":"planta 1","tipo":"bola","sector":"este","detalles":["cerca de un entrenador","al lado de otra bola de objeto"],"x":33,"y":23,"tramo":9,"nombre":"Gardevoirita"},{"zona":"CALLE VICTORIA","parte":"sótano 1","tipo":"oculto","sector":"este","detalles":["cerca de un entrenador","al lado de otra bola de objeto"],"x":38,"y":14,"tramo":9,"nombre":"Falinksita"},{"zona":"CALLE VICTORIA","parte":"sótano 1","tipo":"bola","sector":"este","detalles":["cerca de un entrenador","al lado de otra bola de objeto"],"x":38,"y":12,"tramo":9,"nombre":"Garchompita Z"},{"zona":"CALLE VICTORIA","parte":"sótano 2","tipo":"bola","sector":"norte","detalles":["cerca del agua","cerca de un entrenador","al lado de otra bola de objeto"],"x":16,"y":6,"tramo":9,"nombre":"Lucarita Z"},{"zona":"CALLE VICTORIA","parte":"sótano 2","tipo":"bola","sector":"noroeste","detalles":["cerca del agua","cerca de un entrenador","al lado de otra bola de objeto"],"x":15,"y":7,"tramo":9,"nombre":"Medichamita"},{"zona":"CATARATA METEORO","parte":"sótano 1, sala 2","tipo":"bola","sector":"norte","detalles":["cerca del agua","al lado de otra bola de objeto"],"x":6,"y":3,"tramo":9,"nombre":"Salamencita"}],"tickets":[{"zona":"RUTA 101","parte":"","tipo":"bola","sector":"este","detalles":["junto a hierba alta"],"x":17,"y":8,"tramo":1,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 102","parte":"","tipo":"bola","sector":"sureste","detalles":["junto a hierba alta","cerca de un entrenador"],"x":34,"y":14,"tramo":1,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 103","parte":"","tipo":"bola","sector":"este","detalles":["cerca de un entrenador"],"x":72,"y":11,"tramo":1,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 104","parte":"","tipo":"bola","sector":"noreste","detalles":["cerca del agua","cerca de un entrenador","al lado de otra bola de objeto"],"x":30,"y":24,"tramo":1,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 104","parte":"","tipo":"oculto","sector":"noreste","detalles":["cerca del agua","cerca de un entrenador","al lado de otra bola de objeto"],"x":33,"y":23,"tramo":1,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 106","parte":"","tipo":"bola","sector":"sur","detalles":["en la arena","cerca de un entrenador"],"x":52,"y":14,"tramo":2,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 116","parte":"","tipo":"bola","sector":"oeste","detalles":["entre la hierba alta","cerca de un entrenador","al lado de otra bola de objeto"],"x":11,"y":7,"tramo":2,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 109","parte":"","tipo":"bola","sector":"norte","detalles":["en la arena","cerca de un entrenador"],"x":16,"y":17,"tramo":3,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 110","parte":"","tipo":"bola","sector":"oeste","detalles":["entre la hierba alta","cerca del agua","cerca de un entrenador","al lado de otra bola de objeto"],"x":4,"y":39,"tramo":3,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 110","parte":"","tipo":"oculto","sector":"oeste","detalles":["cerca del agua","junto a hierba alta","cerca de un entrenador","al lado de otra bola de objeto"],"x":6,"y":39,"tramo":3,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 111","parte":"","tipo":"bola","sector":"este","detalles":["cerca de un entrenador","al lado de otra bola de objeto"],"x":27,"y":51,"tramo":4,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 112","parte":"","tipo":"bola","sector":"sureste","detalles":["junto a hierba alta","cerca de un entrenador"],"x":28,"y":49,"tramo":4,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 113","parte":"","tipo":"bola","sector":"centro","detalles":["en la hierba con ceniza","cerca de un entrenador","al lado de otra bola de objeto"],"x":61,"y":8,"tramo":4,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 113","parte":"","tipo":"oculto","sector":"centro","detalles":["en la hierba con ceniza","cerca de un entrenador","al lado de otra bola de objeto"],"x":64,"y":7,"tramo":4,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 114","parte":"","tipo":"bola","sector":"sur","detalles":["cerca de un entrenador","al lado de otra bola de objeto"],"x":14,"y":67,"tramo":4,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 114","parte":"","tipo":"oculto","sector":"suroeste","detalles":["cerca de un entrenador","al lado de otra bola de objeto"],"x":13,"y":67,"tramo":4,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 115","parte":"","tipo":"bola","sector":"noroeste","detalles":["cerca del agua","cerca de un entrenador","al lado de otra bola de objeto"],"x":7,"y":15,"tramo":4,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 117","parte":"","tipo":"bola","sector":"sur","detalles":["cerca de un entrenador","al lado de otra bola de objeto"],"x":38,"y":15,"tramo":4,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 117","parte":"","tipo":"oculto","sector":"sur","detalles":["junto a hierba alta","cerca de un entrenador","al lado de otra bola de objeto"],"x":35,"y":16,"tramo":4,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 111","parte":"","tipo":"oculto","sector":"este","detalles":["en la arena del desierto","cerca de un entrenador","al lado de otra bola de objeto"],"x":31,"y":51,"tramo":5,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 105","parte":"","tipo":"bola","sector":"suroeste","detalles":["en la arena","cerca del agua","al lado de otra bola de objeto"],"x":9,"y":73,"tramo":6,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 107","parte":"","tipo":"bola","sector":"este","detalles":["en el agua (con SURF)","cerca de un entrenador"],"x":42,"y":10,"tramo":6,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 108","parte":"","tipo":"bola","sector":"este","detalles":["en el agua (con SURF)","cerca de un entrenador"],"x":53,"y":13,"tramo":6,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 118","parte":"","tipo":"bola","sector":"este","detalles":["junto a hierba alta","cerca de un entrenador","al lado de otra bola de objeto"],"x":64,"y":11,"tramo":6,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 118","parte":"","tipo":"oculto","sector":"este","detalles":["entre la hierba alta","cerca de un entrenador","al lado de otra bola de objeto"],"x":67,"y":10,"tramo":6,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 119","parte":"","tipo":"bola","sector":"suroeste","detalles":["entre la hierba muy alta","cerca de un entrenador","al lado de otra bola de objeto"],"x":13,"y":122,"tramo":6,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 119","parte":"","tipo":"oculto","sector":"sur","detalles":["entre la hierba muy alta","cerca de un entrenador","al lado de otra bola de objeto"],"x":14,"y":122,"tramo":6,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 120","parte":"","tipo":"bola","sector":"noroeste","detalles":["cerca de un entrenador","al lado de otra bola de objeto"],"x":6,"y":23,"tramo":6,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 120","parte":"","tipo":"oculto","sector":"noroeste","detalles":["cerca del agua","cerca de un entrenador","al lado de otra bola de objeto"],"x":7,"y":21,"tramo":6,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 121","parte":"","tipo":"bola","sector":"centro","detalles":["junto a hierba alta","cerca de un entrenador","al lado de otra bola de objeto"],"x":39,"y":10,"tramo":7,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 121","parte":"","tipo":"oculto","sector":"centro","detalles":["junto a hierba alta","cerca de un entrenador","al lado de otra bola de objeto"],"x":42,"y":9,"tramo":7,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 122","parte":"","tipo":"bola","sector":"sur","detalles":["cerca del agua","cerca de una entrada o escalera"],"x":22,"y":30,"tramo":7,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 123","parte":"","tipo":"bola","sector":"centro","detalles":["entre la hierba alta","cerca de un entrenador","al lado de otra bola de objeto"],"x":71,"y":13,"tramo":7,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 123","parte":"","tipo":"oculto","sector":"centro","detalles":["entre la hierba alta","cerca de un entrenador","al lado de otra bola de objeto"],"x":72,"y":13,"tramo":7,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 124","parte":"","tipo":"bola","sector":"este","detalles":["en la arena","cerca del agua","cerca de una entrada o escalera"],"x":70,"y":49,"tramo":7,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 125","parte":"","tipo":"bola","sector":"centro","detalles":["en la arena","cerca del agua","cerca de un entrenador","al lado de otra bola de objeto"],"x":45,"y":18,"tramo":7,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 126","parte":"","tipo":"bola","sector":"sur","detalles":["en el agua (con SURF)","cerca de un entrenador","al lado de otra bola de objeto"],"x":51,"y":64,"tramo":8,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 127","parte":"","tipo":"bola","sector":"sureste","detalles":["en la arena","cerca del agua","cerca de un entrenador"],"x":64,"y":63,"tramo":8,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 128","parte":"","tipo":"bola","sector":"suroeste","detalles":["en el agua (con SURF)","cerca de un entrenador"],"x":34,"y":33,"tramo":8,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 129","parte":"","tipo":"bola","sector":"centro","detalles":["en el agua (con SURF)","cerca de un entrenador"],"x":29,"y":16,"tramo":8,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 130","parte":"","tipo":"bola","sector":"este","detalles":["en el agua (con SURF)","cerca de un entrenador","al lado de otra bola de objeto"],"x":69,"y":21,"tramo":8,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 131","parte":"","tipo":"bola","sector":"sureste","detalles":["en el agua (con SURF)","cerca de un entrenador"],"x":42,"y":32,"tramo":8,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 132","parte":"","tipo":"bola","sector":"sur","detalles":["en la arena","cerca del agua","cerca de un entrenador"],"x":46,"y":28,"tramo":8,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 133","parte":"","tipo":"bola","sector":"centro","detalles":["en la arena","cerca del agua","cerca de un entrenador"],"x":38,"y":15,"tramo":8,"nombre":"Ticket-Recuerdo"},{"zona":"RUTA 134","parte":"","tipo":"bola","sector":"centro","detalles":["en la arena","cerca del agua","cerca de un entrenador","al lado de otra bola de objeto"],"x":48,"y":16,"tramo":8,"nombre":"Ticket-Recuerdo"}]}</script>
+<script>
+(function () {
+  "use strict";
+  var TRAMOS = [
+    [1, "medalla 1 (PETRA)"], [2, "medalla 2 (MARCIAL)"], [3, "medalla 3 (ERICO)"], [4, "medalla 4 (CANDELA)"],
+    [5, "medalla 5 (NORMAN)"], [6, "medalla 6 (ALANA)"], [7, "medalla 7 (VITO y LETI)"], [8, "medalla 8 (GALANO)"], [9, "la LIGA"]
+  ];
+
+  function leer(clave, porDefecto) {
+    try { var v = localStorage.getItem(clave); return v === null ? porDefecto : JSON.parse(v); } catch (e) { return porDefecto; }
+  }
+  function guardar(clave, valor) {
+    try { localStorage.setItem(clave, JSON.stringify(valor)); } catch (e) { /* sin almacenamiento: no se recuerda */ }
+  }
+  function el(etiqueta, clase, texto) {
+    var n = document.createElement(etiqueta);
+    if (clase) n.className = clase;
+    if (texto !== undefined) n.textContent = texto;
+    return n;
+  }
+
+  // Tema
+  var raiz = document.documentElement;
+  var tema = leer("dualocke-tema", null);
+  if (tema) raiz.setAttribute("data-theme", tema);
+  document.getElementById("boton-tema").addEventListener("click", function () {
+    var oscuro = raiz.getAttribute("data-theme") === "dark" ||
+      (!raiz.getAttribute("data-theme") && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    var nuevo = oscuro ? "light" : "dark";
+    raiz.setAttribute("data-theme", nuevo);
+    guardar("dualocke-tema", nuevo);
+  });
+
+  // Índice en el móvil
+  var indice = document.getElementById("indice");
+  var botonMenu = document.getElementById("boton-menu");
+  botonMenu.addEventListener("click", function () {
+    var abierto = indice.classList.toggle("abierto");
+    botonMenu.setAttribute("aria-expanded", abierto ? "true" : "false");
+  });
+  indice.querySelectorAll("ol a").forEach(function (a) {
+    a.addEventListener("click", function () { indice.classList.remove("abierto"); botonMenu.setAttribute("aria-expanded", "false"); });
+  });
+
+  // Sección activa en el índice
+  if ("IntersectionObserver" in window) {
+    var enlaces = {};
+    indice.querySelectorAll("ol a").forEach(function (a) { enlaces[a.getAttribute("href").slice(1)] = a; });
+    var obs = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (e) {
+        if (e.isIntersecting && enlaces[e.target.id]) {
+          Object.keys(enlaces).forEach(function (k) { enlaces[k].classList.remove("activo"); });
+          enlaces[e.target.id].classList.add("activo");
+        }
+      });
+    }, { rootMargin: "-20% 0px -70% 0px" });
+    document.querySelectorAll("main section").forEach(function (s) { obs.observe(s); });
+  }
+
+  // Pistas
+  var datos = {};
+  try { datos = JSON.parse(document.getElementById("datos-pistas").textContent || "{}"); } catch (e) { datos = {}; }
+  var tramoGuardado = leer("dualocke-tramo", 9);
+
+  function idDe(lista, p) { return lista + ":" + p.zona + ":" + p.parte + ":" + p.x + ":" + p.y; }
+
+  function montar(lista, etiqueta) {
+    var items = datos[lista] || [];
+    var contenedor = document.getElementById("lista-" + lista);
+    var controles = document.querySelector('.controles[data-lista="' + lista + '"]');
+    var barra = controles.nextElementSibling.firstElementChild;
+    var selTramo = controles.querySelector(".filtro-tramo");
+    var texto = controles.querySelector(".filtro-texto");
+    var ocultar = controles.querySelector(".filtro-hechas");
+    var contador = controles.querySelector(".contador");
+    var hechas = leer("dualocke-hechas-" + lista, {});
+
+    TRAMOS.forEach(function (t) {
+      var o = el("option", null, t[1]);
+      o.value = t[0];
+      selTramo.appendChild(o);
+    });
+    selTramo.value = tramoGuardado;
+
+    function pintar() {
+      var hasta = Number(selTramo.value);
+      var q = texto.value.trim().toLowerCase();
+      contenedor.textContent = "";
+      var visibles = 0, total = 0, cogidas = 0;
+      items.forEach(function (p) {
+        if (p.tramo > hasta) return;
+        total++;
+        var id = idDe(lista, p);
+        var hecha = !!hechas[id];
+        if (hecha) cogidas++;
+        if (ocultar.checked && hecha) return;
+        var busca = (p.nombre + " " + p.zona + " " + p.parte).toLowerCase();
+        if (q && busca.indexOf(q) === -1) return;
+        visibles++;
+        var tarjeta = el("article", "pista" + (hecha ? " hecha" : ""));
+        var arriba = el("div", "arriba");
+        var marca = el("input");
+        marca.type = "checkbox";
+        marca.checked = hecha;
+        marca.setAttribute("aria-label", "La tengo: " + p.nombre + " en " + p.zona);
+        marca.addEventListener("change", function () {
+          if (marca.checked) hechas[id] = true; else delete hechas[id];
+          guardar("dualocke-hechas-" + lista, hechas);
+          pintar();
+        });
+        var titulo = el("h4", null, lista === "tickets" ? p.zona : p.nombre);
+        titulo.appendChild(el("small", null, "Tramo de la " + TRAMOS[p.tramo - 1][1]));
+        arriba.appendChild(marca);
+        arriba.appendChild(titulo);
+        arriba.appendChild(el("span", "etiqueta " + (p.tipo === "oculto" ? "neutra" : etiqueta), p.tipo === "oculto" ? (lista === "megapiedras" ? "oculta" : "oculto") : "en bola"));
+        tarjeta.appendChild(arriba);
+        var zona = el("div", "zona");
+        var b = el("b", null, p.zona);
+        zona.appendChild(document.createTextNode(lista === "tickets" ? "Está en " : lista === "megapiedras" ? "Búscala en " : "Búscalo en "));
+        zona.appendChild(b);
+        if (p.parte) zona.appendChild(document.createTextNode(" · " + p.parte));
+        tarjeta.appendChild(zona);
+        var mas = el("details");
+        mas.appendChild(el("summary", null, "Más pistas"));
+        var frase = "En la parte " + p.sector + " del mapa";
+        if (p.sector === "centro") frase = "Hacia el centro del mapa";
+        if (p.detalles && p.detalles.length) frase += ", " + p.detalles.join(", ");
+        mas.appendChild(el("p", null, frase + "."));
+        tarjeta.appendChild(mas);
+        var sol = el("details");
+        sol.appendChild(el("summary", null, "Solución"));
+        sol.appendChild(el("p", null, "Casilla (" + p.x + ", " + p.y + ") del mapa, contando desde la esquina de arriba a la izquierda. Es la que se ve en Porymap."));
+        tarjeta.appendChild(sol);
+        contenedor.appendChild(tarjeta);
+      });
+      if (!visibles) contenedor.appendChild(el("div", "vacio", items.length ? "No hay nada con estos filtros." : "Faltan los datos: lanza python3 tools/dualocke/guia.py."));
+      contador.textContent = cogidas + " de " + total + " hasta aquí";
+      barra.style.width = total ? (100 * cogidas / total) + "%" : "0";
+    }
+    selTramo.addEventListener("change", function () {
+      tramoGuardado = Number(selTramo.value);
+      guardar("dualocke-tramo", tramoGuardado);
+      document.querySelectorAll(".filtro-tramo").forEach(function (s) { s.value = tramoGuardado; s.dispatchEvent(new Event("sincronizar")); });
+    });
+    selTramo.addEventListener("sincronizar", pintar);
+    texto.addEventListener("input", pintar);
+    ocultar.addEventListener("change", pintar);
+    pintar();
+  }
+  montar("megapiedras", "mega");
+  montar("tickets", "ticket");
+})();
+</script>
+</body>
+</html>
