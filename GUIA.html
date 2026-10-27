@@ -448,7 +448,7 @@ footer { margin: 56px 0 24px; color: var(--muted); font-size: 14px; border-top: 
       <div class="tarjetas">
         <div class="tarjeta"><h3><span class="icono">💍</span>MEGA-ARO</h3><p>Lo da MÁXIMO en el puente de la <b>RUTA 120</b> si le ganas (nivel 62, obligatorio antes del gimnasio de ALANA). Sin él no se puede megaevolucionar.</p></div>
         <div class="tarjeta"><h3><span class="icono">💎</span>Megapiedras <span class="etiqueta mega">81</span></h3><p>No se venden: están <b>por el mapa</b>, en bolas y ocultas, cada una en un sitio que pega con su Pokémon. <b>Son fijas</b>: el randomizer no las mueve. Las de antes del aro se pueden coger, pero no usar. Pistas en la <a href="#megapiedras">sección 6</a>.</p></div>
-        <div class="tarjeta"><h3><span class="icono">🎟</span>Ticket-Recuerdo <span class="etiqueta ticket">45</span> <span class="etiqueta pronto">próximamente</span></h3><p>Con uno, la señora a la derecha del PC de <b>cualquier Centro Pokémon</b> hace que un Pokémon recuerde un movimiento de nivel. Hay uno en bola en cada ruta y otro oculto en las rutas largas. Pistas en la <a href="#tickets">sección 7</a>.</p></div>
+        <div class="tarjeta"><h3><span class="icono">🎟</span>Ticket-Recuerdo <span class="etiqueta ticket">45</span></h3><p>Con uno, la señora a la derecha del PC de <b>cualquier Centro Pokémon</b> hace que un Pokémon recuerde un movimiento de nivel. Hay uno en bola en cada ruta y otro oculto en las rutas largas. Pistas en la <a href="#tickets">sección 7</a>.</p></div>
         <div class="tarjeta"><h3><span class="icono">⚔</span>Objetos competitivos <span class="etiqueta neutra">55</span></h3><p>Vidasfera, Banda Aguante, Chaleco Asalto, mentas, semillas, Cápsula Habilidad… repartidos por el mapa. Con el randomizer, lo que hay en cada sitio cambia por otro objeto al azar. Lista en la <a href="#competitivos">sección 8</a>.</p></div>
         <div class="tarjeta"><h3><span class="icono">🍬</span>Caramelos Raros</h3><p>A <b>1 ₽</b> en todas las tiendas que vendían curativos. Sin límite de compra, pero no suben por encima del cap.</p></div>
         <div class="tarjeta"><h3><span class="icono">🧑‍💼</span>Segundo dependiente</h3><p>En las 11 tiendas de ciudad, detrás del mostrador. Vende 1 objeto evolutivo y 3 equipables raros (Restos, Garra Rápida, Campana Concha…), distintos en cada partida.</p></div>
@@ -494,7 +494,6 @@ footer { margin: 56px 0 24px; color: var(--muted); font-size: 14px; border-top: 
     <section id="tickets">
       <h2><span class="num">7</span>Pistas: Ticket-Recuerdo</h2>
       <p class="intro">Uno en bola en cada ruta (101-134) y otro oculto en las rutas largas. En siete rutas de mar abierto no hay tierra cerca y el ticket está en el agua: se coge haciendo SURF, como se habla con los nadadores.</p>
-      <div class="aviso">Los tickets y la señora de los Centros Pokémon llegan con la próxima actualización de la ROM (PR #40). Si tu ROM es anterior, todavía no están.</div>
       <div class="controles" data-lista="tickets">
         <label>Voy por <select class="filtro-tramo"></select></label>
         <input type="search" class="filtro-texto" placeholder="Buscar ruta…" aria-label="Buscar">
@@ -522,7 +521,7 @@ footer { margin: 56px 0 24px; color: var(--muted); font-size: 14px; border-top: 
     <!-- 9. Novedades -->
     <section id="novedades">
       <h2><span class="num">9</span>Novedades</h2>
-      <p class="intro">Todo lo que hemos cambiado respecto a Esmeralda. Lo marcado como <span class="etiqueta pronto">próximamente</span> está hecho pero falta que entre en la ROM.</p>
+      <p class="intro">Todo lo que hemos cambiado respecto a Esmeralda.</p>
       <div class="novedades">
         <div class="tarjeta"><h3><span class="icono">⚖</span>Reglas dentro del juego</h3><ul>
           <li>20 vidas, caja de muertos (14) y aviso "ha muerto" con las vidas que quedan.</li>
@@ -550,8 +549,8 @@ footer { margin: 56px 0 24px; color: var(--muted); font-size: 14px; border-top: 
           <li>Iniciales en triángulo de tipos, estáticos, regalos e intercambios al azar.</li>
           <li>Habilidades al azar por especie. MT con movimiento al azar (50 % de compatibilidad) y tutores al azar.</li>
           <li>Objetos del suelo al azar (las MT entre ellas; megapiedras y tickets fijos), Recogida y objetos de los salvajes (5 %).</li>
-          <li>Entrenadores: 3 movimientos de nivel y el cuarto al azar, con tope de potencia por nivel.</li>
-          <li><span class="etiqueta pronto">próximamente</span> Cada especie aprende <b>movimientos al azar al subir de nivel</b>, con tope de potencia y preferencia por su tipo (PR #42).</li>
+          <li>Cada especie aprende <b>movimientos al azar al subir de nivel</b> (los tuyos, los salvajes y los de los entrenadores), con tope de potencia según el nivel, más ataques de su tipo y siempre algún ataque al principio.</li>
+          <li>Entrenadores: 3 movimientos de esa tabla nueva y el cuarto al azar, con tope de potencia por nivel.</li>
         </ul></div>
         <div class="tarjeta"><h3><span class="icono">🛒</span>Tiendas</h3><ul>
           <li>Sin curativos ni Objetos X. Una unidad de cada objeto por tienda.</li>
@@ -561,8 +560,8 @@ footer { margin: 56px 0 24px; color: var(--muted); font-size: 14px; border-top: 
         <div class="tarjeta"><h3><span class="icono">🎟</span>Movimientos</h3><ul>
           <li>Movimientos y datos de la 9.ª generación, con el tipo Hada.</li>
           <li>MT reutilizables y MO olvidables.</li>
-          <li><span class="etiqueta pronto">próximamente</span> Recuerdamovimientos en todos los Centros Pokémon, a cambio de un Ticket-Recuerdo; 45 tickets por las rutas (PR #40). El tutor de PUEBLO PARDAL también acepta el ticket.</li>
-          <li><span class="etiqueta pronto">próximamente</span> Ya no se pueden recordar movimientos gratis desde la pantalla de datos.</li>
+          <li>Recuerdamovimientos en todos los Centros Pokémon, a cambio de un Ticket-Recuerdo; 45 tickets por las rutas. El tutor de PUEBLO PARDAL también acepta el ticket.</li>
+          <li>Ya no se pueden recordar movimientos gratis desde la pantalla de datos.</li>
         </ul></div>
         <div class="tarjeta"><h3><span class="icono">🔁</span>Evoluciones</h3><ul>
           <li>Las de intercambio ahora son por nivel: Alakazam 36; Machamp, Golem, Gengar, Gigalith y Conkeldurr 38; Trevenant, Gourgeist, Escavalier y Accelgor 32.</li>
@@ -577,7 +576,7 @@ footer { margin: 56px 0 24px; color: var(--muted); font-size: 14px; border-top: 
           <li>Correr sin DEPORTIVAS desde el principio.</li>
           <li>POKéDEX Nacional desde el principio.</li>
           <li>Pokémon de las 9 generaciones.</li>
-          <li><span class="etiqueta pronto">próximamente</span> La partida de verdad se compila sin los menús de depuración (PR #38).</li>
+          <li>La partida de verdad va sin los menús de depuración (trucos).</li>
         </ul></div>
         <div class="tarjeta"><h3><span class="icono">🇪🇸</span>Traducción</h3><ul>
           <li>Toda la historia en español, de VILLA RAÍZ a la LIGA, con los nombres oficiales.</li>
