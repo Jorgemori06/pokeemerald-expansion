@@ -592,3 +592,39 @@ TEST("Dualocke: todos los bolsillos tienen nombre")
     for (i = 0; i < POCKETS_COUNT; i++)
         EXPECT(gPocketNamesStringsTable[i] != NULL);
 }
+
+// Dualocke: al capturar con el equipo lleno, solo no se puede mandar a la caja al único que sabe una MO
+static void SetMove(u32 partyIndex, u32 slot, enum Move move)
+{
+    SetMonData(&gParties[B_TRAINER_PLAYER][partyIndex], MON_DATA_MOVE1 + slot, &move);
+}
+
+TEST("Dualocke: se puede mandar a la caja un Pokémon con MO si otro del equipo también la sabe")
+{
+    SetupParty(3);
+    SetMove(0, 0, MOVE_CUT);
+    SetMove(1, 2, MOVE_CUT);
+    EXPECT(!Dualocke_KnowsUniqueHM(0));
+    EXPECT(!Dualocke_KnowsUniqueHM(1));
+    EXPECT(!Dualocke_KnowsUniqueHM(2));
+}
+
+TEST("Dualocke: no se puede mandar a la caja al único del equipo que sabe una MO")
+{
+    SetupParty(3);
+    SetMove(0, 0, MOVE_CUT);
+    SetMove(0, 1, MOVE_SURF);
+    SetMove(1, 0, MOVE_CUT);
+    EXPECT(Dualocke_KnowsUniqueHM(0)); // Surf solo lo sabe él
+    EXPECT(!Dualocke_KnowsUniqueHM(1));
+}
+
+TEST("Dualocke: un huevo con la MO no cuenta como otro que la sabe")
+{
+    bool32 egg = TRUE;
+    SetupParty(2);
+    SetMove(0, 0, MOVE_SURF);
+    SetMove(1, 0, MOVE_SURF);
+    SetMonData(&gParties[B_TRAINER_PLAYER][1], MON_DATA_IS_EGG, &egg);
+    EXPECT(Dualocke_KnowsUniqueHM(0));
+}
