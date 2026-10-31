@@ -408,8 +408,38 @@ Están en **`tools/dualocke/randomizer_config.json`**, que es el archivo que deb
   - Las revanchas de cualquier entrenador (`_2`, `_3`…) usan las mismas líneas que el primer combate, evolucionadas a su nivel.
   - Al cambiar la especie se quitan los movimientos y la habilidad que tenía escritos (la habilidad es la de su especie). Se mantienen nivel, IVs/EVs y naturaleza, y el objeto salvo en los jefes (ver arriba).
   - **Movimientos** (`movimientos.py`; Miguel, #27): **3 de los que aprende por nivel** (hasta su nivel) **y el cuarto al azar** entre todos los normales (sin Z, Dinamax ni los que Metrónomo no puede usar). Ligera preferencia por los potentes (uno de 100 de potencia sale 1,5 veces más que uno de estado), **igual para todos**. Diversidad de tipos: un segundo ataque del mismo tipo es mucho menos probable. Al menos uno de daño.
-  - **Tope del cuarto (Jorge):** como es al azar entre todos, tiene un tope de potencia según el nivel: 40 + 1,5 por nivel (nivel 7: 50; nivel 40: 100; desde 74, sin tope). Si no, un entrenador de nivel 5 podría llevar Hidrobomba. Miguel lo puede cambiar en `potencia_maxima_del_cuarto`.
+  - **Sin tope de potencia** (Miguel y Jorge, 31/10/2026). Antes el cuarto llevaba uno según el nivel (40 + 1,5 por nivel, de Jorge). Se quitó porque, con el tope, los movimientos de los Pokémon del jugador eran casi todos de 40 de potencia. Para volver a ponerlo: `"potencia_maxima_del_cuarto": {"base": 40, "por_nivel": 1.5}`.
   - **No se toca** Máximo en la Ruta 120 (equipo fijo).
+
+#### Líderes con estrategia y con la fuerza de los salvajes (Miguel y Jorge, 31/10/2026)
+
+Al jugar, los líderes eran difíciles por desequilibrio, no por cómo jugaban: sacaban Pokémon y movimientos mucho más fuertes que los nuestros. Ahora la dificultad viene de que juegan bien. Está en `tools/dualocke/aleatorio/estrategia.py` y en `"lideres"` del config. **Cambia lo que se decidió en el #27** ("los jefes no llevan mejores movimientos que el resto"): los líderes ya no siguen esa regla.
+- **Quién:** los 8 líderes, el Alto Mando y Plubio (`con_estrategia`).
+- **IA:** `Smart Trainer / Hp Aware / Ace Pokemon` (`ia`). Es la lista de la expansion:
+  - piensa qué movimiento le conviene, cambia de Pokémon con cabeza y conoce tu equipo;
+  - tiene en cuenta los PS;
+  - deja el as para el final.
+  - VITO y LETI, en doble, usan `Double Ace Pokemon`.
+- **Movimientos con plan:**
+  - **El primero pone trampas**, y solo él: Trampa Rocas, Púas, Púas Tóxicas o Red Viscosa, según su tipo (Trampa Rocas si no tiene una de su tipo).
+  - **Los demás llevan movimientos de estrategia** de su tipo o de su papel. Por ejemplo:
+    - Veneno: Tóxico y Púas Tóxicas;
+    - Fuego y Fantasma: Fuego Fatuo;
+    - Eléctrico: Onda Trueno;
+    - Planta: Drenadoras;
+    - Lucha: Corpulencia;
+    - Dragón: Danza Dragón;
+    - Psíquico: Paz Mental y pantallas;
+    - los que pegan físico, Danza Espada; los especiales, Maquinación; los que aguantan, Tóxico y Recuperación.
+  - **Cuántos:** hasta el gimnasio 3, uno de estrategia por Pokémon; después, dos.
+  - **Los ataques salen de lo que aprende por nivel** (las tablas al azar), los mejores para él: de su tipo, potentes y de tipos distintos. Así no pegan con movimientos que el jugador no podría tener. Si no aprende suficientes ataques hasta su nivel, se completa al azar.
+- **Hasta el gimnasio 3, la fuerza de los salvajes** (`limite_salvajes`):
+  - **Quién:** PETRA, MARCIAL y ERICO, el rival en la Ruta 103, Férrica y la Ruta 110, y BLASCO en Malvalona.
+  - **Tope:** ninguno de sus Pokémon puede tener más estadísticas base (suma) que el percentil 90 de los salvajes de hierba de los tramos hasta ese gimnasio, con la semilla de la partida. Si hasta ahí no salen evoluciones, el líder tampoco las lleva.
+  - **El as** sigue siendo de su tipo: el de su tipo que cabe o, si ninguno cabe, el más flojo.
+  - **El inicial del rival** se queda como está (es la regla del rival).
+  - Los topes de cada tramo salen en el solucionario (`tope_lideres_por_tramo`).
+
 - Niveles según la curva de la sección 5 (sustituye al "+15%").
 - Movimientos aleatorios con 3 movimientos garantizados y una ligera preferencia por movimientos dañinos potentes.
 - Mejores movimientos y diversidad de tipos en jefes, importantes y normales.
@@ -419,7 +449,7 @@ Están en **`tools/dualocke/randomizer_config.json`**, que es el archivo que deb
 - Movimientos de Gen 9 (ya vienen así).
 - **Movimientos por nivel al azar** (`aprendizajes.py`; pedido por Miguel el 26/10/2026, al ver en la primera partida que todo aprendía lo de siempre). Cada especie aprende movimientos al azar al subir de nivel: los Pokémon del jugador, los salvajes, el que recuerda movimientos y los entrenadores (sus 3 movimientos "de nivel" salen de estas tablas).
   - Mismos niveles que el original: se aprende lo mismo de veces y a los mismos niveles.
-  - Tope de potencia según el nivel, el mismo que el cuarto movimiento de los entrenadores (40 + 1,5 por nivel). Los de "al evolucionar" cuentan como nivel 30.
+  - **Sin tope de potencia** desde el 31/10/2026 (Miguel y Jorge: "totalmente aleatorios"): si en la Ruta 101 sale un Charmander con Lanzallamas, sale, y un Garchomp puede salir con Arañazo. Lo controla el mismo `potencia_maxima_del_cuarto` (ahora `null`).
   - Un 60 % son de daño y, entre ellos, los de su tipo son 3 veces más probables. Siempre hay uno de daño entre los que aprende hasta nivel 5.
   - Sin repetidos en la misma tabla. Las formas que compartían tabla la siguen compartiendo.
   - **Nunca sale Plegaria Vital** (revive a un debilitado en pleno combate y se saltaría las muertes del locke). Ojo: las MT y los tutores al azar todavía pueden enseñarla.

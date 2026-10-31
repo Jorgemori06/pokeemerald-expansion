@@ -6,9 +6,9 @@ partida que todo aprendía los movimientos de siempre).
 - Cada tabla de movimientos por nivel conserva sus niveles (se aprende lo mismo de veces y a los
   mismos niveles), pero cada movimiento cambia por uno al azar entre los válidos
   (movimientos.validos: sin Movimientos Z, Dinamax ni los que Metrónomo no puede usar).
-- Tope de potencia según el nivel al que se aprende, como el cuarto movimiento de los
-  entrenadores (40 + 1,5 por nivel: a nivel 5, hasta 47; a nivel 40, hasta 100). Los que se
-  aprenden al evolucionar (nivel 0) cuentan como nivel 30.
+- Sin tope de potencia (Miguel y Jorge, 31/10/2026: totalmente aleatorios; un Charmander de la
+  ruta 101 puede tener Lanzallamas). Se puede volver a poner con "potencia_maxima_del_cuarto" en
+  el config: 40 + 1,5 por el nivel al que se aprende (los de evolucionar cuentan como nivel 30).
 - Cada movimiento es de daño con un 60 % de probabilidad (PROBABILIDAD_DANO) y de estado si no:
   al azar puro salían demasiados de estado (Treecko con Hora del Té, Canto y Encanto).
 - Entre los de daño, los de uno de sus tipos son más probables (PREFERENCIA_SU_TIPO).

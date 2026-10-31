@@ -37,6 +37,8 @@ from aleatorio import intercambios  # noqa: E402
 from aleatorio import movimientos as mov  # noqa: E402
 from aleatorio import aprendizajes as apr  # noqa: E402
 from aleatorio import mts  # noqa: E402
+from aleatorio import estrategia as est  # noqa: E402
+import reescalar_niveles  # noqa: E402
 from aleatorio import objetos as obj  # noqa: E402
 from aleatorio import salvajes  # noqa: E402
 
@@ -121,8 +123,12 @@ def main():
 
     with open(TRAINERS, encoding="utf-8") as f:
         original = f.read()
+    # Tope de fuerza de los líderes del principio: los salvajes que se han podido encontrar
+    topes = est.fuerza_salvajes(datos, pokedex, reescalar_niveles.tramo_de_mapa,
+                                config.get("lideres", {}).get("percentil_salvajes", 0.9))
+    solucionario["tope_lideres_por_tramo"] = topes
     randomizado, solucionario["entrenadores"] = entrenadores.Generador(pokedex, args.semilla, config, iniciales,
-                                                                            movs).randomizar(original)
+                                                                            movs, topes).randomizar(original)
     errores = entrenadores.comprobar(original, randomizado, pokedex)
     if errores:
         sys.exit("Dualocke: el randomizer de entrenadores ha fallado:\n  " + "\n  ".join(errores[:20]))
