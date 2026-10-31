@@ -12,6 +12,7 @@
 #include "bg.h"
 #include "contest.h"
 #include "data.h"
+#include "dualocke.h"
 #include "decompress.h"
 #include "easy_chat.h"
 #include "event_data.h"
@@ -509,7 +510,7 @@ static u8 IndividualToCombinedPartyId(u8 index, enum BattlerId battler);
 static const u8 sText_askText[] = ES(_("Would you like to change {STR_VAR_1}'s\nability to {STR_VAR_2}?"), _("¿Cambiar la habilidad de {STR_VAR_1}\npor {STR_VAR_2}?"));
 static const u8 sText_doneText[] = ES(_("{STR_VAR_1}'s ability became\n{STR_VAR_2}!{PAUSE_UNTIL_PRESS}"), _("¡{STR_VAR_1} tiene ahora la\nhabilidad {STR_VAR_2}!{PAUSE_UNTIL_PRESS}"));
 static const u8 sText_BasePointsResetToZero[] = ES(_("{STR_VAR_1}'s base points\nwere all reset to zero!{PAUSE_UNTIL_PRESS}"), _("¡Los puntos base de\n{STR_VAR_1} vuelven a cero!{PAUSE_UNTIL_PRESS}"));
-static const u8 sText_CannotSendMonToBoxHM[] = ES(_("Cannot send that mon to the box,\nbecause it knows a HM move.{PAUSE_UNTIL_PRESS}"), _("No puedes mandarlo a la caja\nporque conoce un mov. de MO.{PAUSE_UNTIL_PRESS}"));
+static const u8 sText_CannotSendMonToBoxHM[] = ES(_("Cannot send that mon to the box,\nbecause it knows a HM move.{PAUSE_UNTIL_PRESS}"), _("No puedes mandarlo a la caja: es\nel único que sabe un mov. de MO.{PAUSE_UNTIL_PRESS}"));
 static const u8 sText_CannotSendMonToBoxPartner[] = ES(_("Cannot send a mon that doesn't\nbelong to you to the box.{PAUSE_UNTIL_PRESS}"), _("No puedes mandar a la caja un\nPOKéMON que no es tuyo.{PAUSE_UNTIL_PRESS}"));
 
 // static const data
@@ -1659,12 +1660,8 @@ static bool8 DoesSelectedMonKnowHM(u8 *slotPtr)
     if (B_CATCH_SWAP_CHECK_HMS == FALSE)
         return FALSE;
 
-    for (u32 i = 0; i < MAX_MON_MOVES; i++)
-    {
-        if (IsMoveHM(GetMonData(&gParties[B_TRAINER_PLAYER][*slotPtr], MON_DATA_MOVE1 + i)))
-            return TRUE;
-    }
-    return FALSE;
+    // Dualocke: solo si es el único del equipo que sabe alguna de sus MO
+    return Dualocke_KnowsUniqueHM(*slotPtr);
 }
 
 static void HandleChooseMonCancel(u8 taskId, s8 *slotPtr)
