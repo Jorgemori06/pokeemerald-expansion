@@ -124,8 +124,10 @@ def main():
     with open(TRAINERS, encoding="utf-8") as f:
         original = f.read()
     # Tope de fuerza de los líderes del principio: los salvajes que se han podido encontrar
+    cfg_lideres = config.get("lideres", {})
+    techos = {int(t): v for t, v in cfg_lideres.get("techo_por_tramo", {}).items()}
     topes = est.fuerza_salvajes(datos, pokedex, reescalar_niveles.tramo_de_mapa,
-                                config.get("lideres", {}).get("percentil_salvajes", 0.9))
+                                cfg_lideres.get("percentil_salvajes", 0.9), techos)
     solucionario["tope_lideres_por_tramo"] = topes
     randomizado, solucionario["entrenadores"] = entrenadores.Generador(pokedex, args.semilla, config, iniciales,
                                                                             movs, topes).randomizar(original)

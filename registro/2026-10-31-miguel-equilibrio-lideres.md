@@ -38,3 +38,16 @@ Miguel y Jorge vieron jugando que el juego estaba desequilibrado: los líderes s
 
 - Jorge: `make check` y `make release SEED=...` con el randomizer de verdad, y mirar en el solucionario cómo salen PETRA, MARCIAL y ERICO frente a los salvajes.
 - Probarlo jugando. Ojo: con la misma semilla cambian los movimientos de todos y los equipos de los líderes del principio, así que conviene empezar partida nueva.
+
+## Arreglos tras la revisión de Jorge (01/11/2026)
+
+Jorge lo compiló y lo probó con la semilla `5966102869`: `make release` sin avisos y `make check` con 5455 en verde. Vio dos cosas, y están arregladas:
+
+1. **Ataques que no convienen.** Los líderes cogían ataques que los perjudican: el Minccino de PETRA llevaba Explosión Bruma, y el Ninjask de ERICO, Giga Impacto. Ahora `estrategia.NO_CONVIENEN` los quita de la lista:
+   - los que debilitan al que los usa o le quitan media vida: Autodestrucción, Explosión, Explosión Bruma, Sacrificio, Cabeza Sorpresa, Metalaser y Clorofiláser;
+   - los que obligan a recargar: Hiperrayo, Giga Impacto, Anillo Ígneo, Hidrocañón, Planta Feroz, Romperrocas, Distorsión, Láser Prisma, Asalto Estelar y Rayo Infinito.
+2. **Tope del tramo 1 demasiado alto.** Con esa semilla salía 570, por un Iron Treads en la Ruta 101 y un Dondozo en la 102. Ahora hay `techo_por_tramo` (360, 400 y 450 hasta PETRA, MARCIAL y ERICO): el tope nunca pasa de ahí aunque el percentil salga más alto.
+
+Se comprobó con la prueba de siempre:
+- con Explosión, Giga Impacto e Hiperrayo en la tabla, el líder no los coge;
+- con un Garchomp y un Tyranitar en la Ruta 101, el tope del tramo 1 se queda en 360.

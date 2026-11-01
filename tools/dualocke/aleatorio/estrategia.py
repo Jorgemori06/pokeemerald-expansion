@@ -14,10 +14,15 @@ que encuentras).
   - El resto son ataques **de los que aprende por nivel** (las tablas al azar de aprendizajes.py),
     los mejores para él (de su tipo y potentes). Así no pegan más fuerte que lo que podría tener
     el jugador. Si no aprende suficientes ataques hasta su nivel, se completa al azar.
+  - Nunca coge ataques que le perjudican (NO_CONVIENEN): los que lo debilitan o le quitan media
+    vida (Autodestrucción, Explosión, Explosión Bruma, Sacrificio...) ni los que obligan a recargar
+    (Hiperrayo, Giga Impacto...). Lo vio Jorge al probar el #54.
 - Fuerza de los salvajes (los marcados en "limite_salvajes", hasta el gimnasio 3): sus Pokémon no
   pueden tener más estadísticas base (suma) que el percentil "percentil_salvajes" de los salvajes
-  de hierba de los tramos hasta ese gimnasio, con la semilla de la partida. Si los salvajes aún
-  no han evolucionado, el líder tampoco.
+  de hierba de los tramos hasta ese gimnasio, con la semilla de la partida, y nunca más que el
+  "techo_por_tramo". El techo hace falta porque en los primeros tramos hay pocas rutas, y un solo
+  salvaje fuerte que no evoluciona (Dondozo, Iron Treads) subía el percentil a 570 (Jorge, #54).
+  Si los salvajes aún no han evolucionado, el líder tampoco.
 """
 
 import fnmatch
@@ -55,6 +60,14 @@ ESTRATEGIA_POR_TIPO = {
 FISICO = ["MOVE_SWORDS_DANCE", "MOVE_BULK_UP", "MOVE_DRAGON_DANCE"]
 ESPECIAL = ["MOVE_NASTY_PLOT", "MOVE_CALM_MIND"]
 AGUANTE = ["MOVE_TOXIC", "MOVE_RECOVER"]
+# Ataques que no le convienen a un líder: lo debilitan, le quitan media vida o obligan a recargar
+NO_CONVIENEN = {
+    "MOVE_SELF_DESTRUCT", "MOVE_EXPLOSION", "MOVE_MISTY_EXPLOSION", "MOVE_FINAL_GAMBIT",
+    "MOVE_MIND_BLOWN", "MOVE_STEEL_BEAM", "MOVE_CHLOROBLAST",
+    "MOVE_HYPER_BEAM", "MOVE_GIGA_IMPACT", "MOVE_BLAST_BURN", "MOVE_HYDRO_CANNON", "MOVE_FRENZY_PLANT",
+    "MOVE_ROCK_WRECKER", "MOVE_ROAR_OF_TIME", "MOVE_PRISMATIC_LASER", "MOVE_METEOR_ASSAULT",
+    "MOVE_ETERNABEAM",
+}
 # Cuánto más vale un ataque de su tipo al elegir los mejores de su tabla
 VALOR_SU_TIPO = 1.5
 
@@ -99,7 +112,8 @@ def elegir(especie, nivel, pokedex, movimientos, todos, rng, n_estrategia=2, pri
         return mov.potencia(d) * (VALOR_SU_TIPO if d.tipo in tipos else 1.0)
 
     aprendidos = sorted({m for nv, m in datos.por_nivel if nv <= nivel and m in movimientos
-                         and movimientos[m].de_dano and m not in estrategia}, key=lambda m: (-valor(m), m))
+                         and movimientos[m].de_dano and m not in estrategia and m not in NO_CONVIENEN},
+                        key=lambda m: (-valor(m), m))
     ataques = []
     tipos_usados = set()
     for m in aprendidos:
@@ -116,7 +130,8 @@ def elegir(especie, nivel, pokedex, movimientos, todos, rng, n_estrategia=2, pri
             ataques.append(m)
     # Si no aprende suficientes ataques hasta su nivel, se completa al azar (mejor de su tipo)
     while len(ataques) + len(estrategia) < 4:
-        danos = [t for t in todos if movimientos[t].de_dano and t not in ataques and t not in estrategia]
+        danos = [t for t in todos if movimientos[t].de_dano and t not in ataques and t not in estrategia
+                 and t not in NO_CONVIENEN]
         if not danos:
             break
         suyos = [t for t in danos if movimientos[t].tipo in tipos]
@@ -124,8 +139,10 @@ def elegir(especie, nivel, pokedex, movimientos, todos, rng, n_estrategia=2, pri
     return ataques[:2] + estrategia + ataques[2:]
 
 
-def fuerza_salvajes(datos, pokedex, tramo_de_mapa, percentil):
-    """{tramo: tope de estadísticas base} con los salvajes de hierba de los tramos hasta ese."""
+def fuerza_salvajes(datos, pokedex, tramo_de_mapa, percentil, techos=None):
+    """{tramo: tope de estadísticas base} con los salvajes de hierba de los tramos hasta ese, sin
+    pasar del techo de ese tramo ({tramo: techo})."""
+    techos = techos or {}
     por_tramo = {}
     for grupo in datos["wild_encounter_groups"]:
         if grupo.get("label") != "gWildMonHeaders":
@@ -144,6 +161,8 @@ def fuerza_salvajes(datos, pokedex, tramo_de_mapa, percentil):
         if acumulado:
             valores = sorted(acumulado)
             topes[tramo] = valores[min(len(valores) - 1, int(percentil * (len(valores) - 1) + 0.5))]
+            if tramo in techos:
+                topes[tramo] = min(topes[tramo], techos[tramo])
     return topes
 
 

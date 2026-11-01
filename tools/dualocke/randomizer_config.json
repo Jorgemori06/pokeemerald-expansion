@@ -74,7 +74,9 @@
       "TRAINER_WALLY_MAUVILLE": 3
     },
     "_limite_salvajes": "Entrenador -> tramo (gimnasio): sus Pokémon no pasan de las estadísticas base que tiene el percentil_salvajes de los salvajes de hierba hasta ese tramo, con la semilla de la partida. Hasta ese gimnasio llevan además un solo movimiento de estrategia por Pokémon.",
-    "percentil_salvajes": 0.9
+    "percentil_salvajes": 0.9,
+    "techo_por_tramo": {"1": 360, "2": 400, "3": 450},
+    "_techo_por_tramo": "Tope máximo de estadísticas base (suma) por tramo, aunque el percentil salga más alto. Con pocas rutas, un solo salvaje fuerte que no evoluciona (Dondozo 530, Iron Treads 570) dejaba a PETRA sin tope (Jorge, #54). 360: primeras fases; 400: alguna fase intermedia floja; 450: fases intermedias."
   },
 
   "jefes": {

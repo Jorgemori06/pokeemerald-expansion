@@ -433,9 +433,11 @@ Al jugar, los líderes eran difíciles por desequilibrio, no por cómo jugaban: 
     - los que pegan físico, Danza Espada; los especiales, Maquinación; los que aguantan, Tóxico y Recuperación.
   - **Cuántos:** hasta el gimnasio 3, uno de estrategia por Pokémon; después, dos.
   - **Los ataques salen de lo que aprende por nivel** (las tablas al azar), los mejores para él: de su tipo, potentes y de tipos distintos. Así no pegan con movimientos que el jugador no podría tener. Si no aprende suficientes ataques hasta su nivel, se completa al azar.
+  - **Nunca cogen ataques que les perjudican:** ni los que debilitan al que los usa o le quitan media vida (Autodestrucción, Explosión, Explosión Bruma, Sacrificio…) ni los que obligan a recargar (Hiperrayo, Giga Impacto…).
 - **Hasta el gimnasio 3, la fuerza de los salvajes** (`limite_salvajes`):
   - **Quién:** PETRA, MARCIAL y ERICO, el rival en la Ruta 103, Férrica y la Ruta 110, y BLASCO en Malvalona.
   - **Tope:** ninguno de sus Pokémon puede tener más estadísticas base (suma) que el percentil 90 de los salvajes de hierba de los tramos hasta ese gimnasio, con la semilla de la partida. Si hasta ahí no salen evoluciones, el líder tampoco las lleva.
+  - **Techo** (`techo_por_tramo`): 360 hasta PETRA, 400 hasta MARCIAL y 450 hasta ERICO, aunque el percentil salga más alto. Con pocas rutas, un solo salvaje fuerte que no evoluciona (Dondozo, Iron Treads) subía el tope a 570 (lo vio Jorge al probar el #54).
   - **El as** sigue siendo de su tipo: el de su tipo que cabe o, si ninguno cabe, el más flojo.
   - **El inicial del rival** se queda como está (es la regla del rival).
   - Los topes de cada tramo salen en el solucionario (`tope_lideres_por_tramo`).
