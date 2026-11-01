@@ -166,6 +166,17 @@ def describir_evolucion(metodo, param, condiciones, objetos, movimientos, tipos)
     elif metodo == "EVO_SPIN":
         partes.append("Girando con un dulce equipado")
         return " ".join(partes)
+    elif metodo == "EVO_LEVEL_BATTLE_ONLY":
+        # Tandemaus: el Caramelo Raro fuera de combate no sirve
+        partes.append(f"Nivel {param}, subiendo de nivel en un combate")
+    elif metodo == "EVO_BATTLE_END":
+        partes.append("Al acabar un combate")
+    elif metodo == "EVO_SPLIT_FROM_EVO":
+        # Shedinja: sale aparte cuando Nincada evoluciona
+        partes.append("Aparece al evolucionar, si hay hueco en el equipo")
+    elif metodo == "EVO_SCRIPT_TRIGGER":
+        # Runerigus y Urshifu: necesitan lugares de Galar que no hay en Hoenn
+        return "No puede evolucionar en este juego"
     else:
         return "Método especial"
     for cond, valor in re.findall(r"\{(IF_\w+),\s*([^}]*)\}", condiciones):
@@ -192,6 +203,11 @@ def describir_evolucion(metodo, param, condiciones, objetos, movimientos, tipos)
             partes.append("con mucha belleza")
         elif cond in ("IF_SPECIES_IN_PARTY", "IF_TYPE_IN_PARTY"):
             partes.append("con otro Pokémon concreto en el equipo")
+        elif cond == "IF_CRITICAL_HITS_GE":
+            partes.append(f"en el que haya dado {valor} golpes críticos")
+        elif cond == "IF_BAG_ITEM_COUNT":
+            item = valor.split(",")[0].strip()
+            partes.append(f"y con {nombre_objeto(item)} en la mochila")
         elif cond.startswith("IF_PID"):
             partes.append("(según el Pokémon)")
         elif cond in ("IF_REGION", "IF_NOT_REGION"):

@@ -11,6 +11,7 @@
 #include "string_util.h"
 #include "trainer_hill.h"
 #include "dualocke_es.h"
+#include "constants/moves.h"
 #include "constants/battle.h"
 #include "constants/region_map_sections.h"
 
@@ -538,4 +539,47 @@ bool32 Dualocke_TryBanPartyMon(u32 partyIndex)
         return FALSE;
     ZeroMonData(mon);
     return TRUE;
+}
+
+// ---------------------------------------------------------------------------
+// Dualocke: al capturar con el equipo lleno se puede mandar otro Pokémon a la caja. La
+// expansion lo prohíbe si sabe algún movimiento de MO, aunque otro del equipo también lo
+// sepa. Aquí solo se prohíbe si es el único del equipo que sabe alguna de sus MO.
+// ---------------------------------------------------------------------------
+
+static bool32 OtherPartyMonKnowsMove(u32 partyIndex, enum Move move)
+{
+    u32 i, j;
+
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        struct Pokemon *mon = &gParties[B_TRAINER_PLAYER][i];
+
+        if (i == partyIndex
+         || GetMonData(mon, MON_DATA_SPECIES) == SPECIES_NONE
+         || GetMonData(mon, MON_DATA_IS_EGG))
+            continue;
+        for (j = 0; j < MAX_MON_MOVES; j++)
+        {
+            if (GetMonData(mon, MON_DATA_MOVE1 + j) == move)
+                return TRUE;
+        }
+    }
+    return FALSE;
+}
+
+bool32 Dualocke_KnowsUniqueHM(u32 partyIndex)
+{
+    u32 i;
+
+    if (partyIndex >= PARTY_SIZE)
+        return FALSE;
+    for (i = 0; i < MAX_MON_MOVES; i++)
+    {
+        enum Move move = GetMonData(&gParties[B_TRAINER_PLAYER][partyIndex], MON_DATA_MOVE1 + i);
+
+        if (move != MOVE_NONE && IsMoveHM(move) && !OtherPartyMonKnowsMove(partyIndex, move))
+            return TRUE;
+    }
+    return FALSE;
 }
