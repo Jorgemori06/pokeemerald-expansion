@@ -78,6 +78,14 @@ TRAMOS = {
          "TERRA_CAVE_*", "MARINE_CAVE_*", "UNDERWATER_MARINE_CAVE"],
 }
 
+# Mapas cuyos entrenadores normales se alcanzan en un tramo posterior al de sus salvajes. Esos
+# entrenadores se reescalan con el rango del tramo indicado, y no cuentan para el nivel de los
+# salvajes ni de los estáticos de su mapa (que se quedan en el tramo del mapa).
+# - Ruta 103: la hierba está junto a PUEBLO ESCASO (tramo 1), pero sus 8 entrenadores están en la
+#   parte este, a la que solo se llega desde la Ruta 110 (tramo 3). Antes arrastraban a los
+#   salvajes de la 103 a nivel 9-11 al principio del juego (encontrado jugando, 01/11/2026).
+TRAMO_ENTRENADORES_DE_MAPA = {"MAP_ROUTE103": 3}
+
 LIDERES = {"TRAINER_ROXANNE_1", "TRAINER_BRAWLY_1", "TRAINER_WATTSON_1", "TRAINER_FLANNERY_1",
            "TRAINER_NORMAN_1", "TRAINER_WINONA_1", "TRAINER_TATE_AND_LIZA_1", "TRAINER_JUAN_1"}
 
@@ -142,6 +150,12 @@ def mapas_de_entrenadores():
     return resultado
 
 
+def de_otro_tramo(t, mapas):
+    """Entrenador normal de un mapa de TRAMO_ENTRENADORES_DE_MAPA (no cuenta para su mapa)."""
+    return mapas.get(t) in TRAMO_ENTRENADORES_DE_MAPA and t not in LIDERES and t not in JEFES_FIJOS \
+        and not es_jefe_medio(t)
+
+
 def interpolar(v, vmin, vmax, nmin, nmax):
     if vmax <= vmin:
         return nmax
@@ -162,6 +176,12 @@ def calcular_entrenadores(base, mapas):
                    and t not in LIDERES and t not in JEFES_FIJOS and not es_jefe_medio(t)]
         if maximos:
             bandas[s] = (percentil(maximos, 0.10), percentil(maximos, 0.95))
+
+    # Las bandas se calculan con el tramo del mapa (para no mover a nadie más); después, los de
+    # TRAMO_ENTRENADORES_DE_MAPA pasan a su tramo
+    for t in tramo_de:
+        if de_otro_tramo(t, mapas):
+            tramo_de[t] = TRAMO_ENTRENADORES_DE_MAPA[mapas[t]]
 
     nuevos = {}
     for t, s in tramo_de.items():
@@ -229,7 +249,7 @@ def calcular_salvajes(datos, nuevos, tramo_de, mapas, bandas):
     # Nivel de los entrenadores normales de cada mapa (media de su Pokémon más fuerte)
     nivel_mapa = {}
     for t, s in tramo_de.items():
-        if t in LIDERES or t in JEFES_FIJOS or es_jefe_medio(t):
+        if t in LIDERES or t in JEFES_FIJOS or es_jefe_medio(t) or de_otro_tramo(t, mapas):
             continue
         nivel_mapa.setdefault(mapas[t], []).append(max(nuevos[t]))
     nivel_mapa = {m: round(sum(v) / len(v)) for m, v in nivel_mapa.items()}
@@ -326,7 +346,8 @@ def aplicar_estaticos(nuevos, tramo_de, mapas):
     # Nivel de cada mapa: el Pokémon más fuerte de sus entrenadores normales, de media
     por_mapa = {}
     for t, s in tramo_de.items():
-        if t in nuevos and t not in LIDERES and t not in JEFES_FIJOS and not es_jefe_medio(t):
+        if t in nuevos and t not in LIDERES and t not in JEFES_FIJOS and not es_jefe_medio(t) \
+                and not de_otro_tramo(t, mapas):
             por_mapa.setdefault(mapas[t], []).append(max(nuevos[t]))
     for ruta, mapa, regla in ESTATICOS:
         if regla == "zona":

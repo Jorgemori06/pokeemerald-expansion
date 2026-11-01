@@ -651,11 +651,11 @@ Double Battle: No
 AI: Check Bad Move
 
 Shroomish
-Level: 12
+Level: 21
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Roselia
-Level: 12
+Level: 21
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ROSE_1 ===
@@ -5559,7 +5559,7 @@ Double Battle: No
 AI: Check Bad Move
 
 Skitty @ Oran Berry
-Level: 13
+Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_COLTON ===
@@ -5629,7 +5629,7 @@ Double Battle: No
 AI: Check Bad Move
 
 Delcatty @ Oran Berry
-Level: 48
+Level: 51
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MIGUEL_3 ===
@@ -5642,7 +5642,7 @@ Double Battle: No
 AI: Check Bad Move
 
 Delcatty @ Oran Berry
-Level: 60
+Level: 63
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MIGUEL_4 ===
@@ -5655,7 +5655,7 @@ Double Battle: No
 AI: Check Bad Move
 
 Delcatty @ Oran Berry
-Level: 71
+Level: 74
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MIGUEL_5 ===
@@ -5668,7 +5668,7 @@ Double Battle: No
 AI: Check Bad Move
 
 Delcatty @ Sitrus Berry
-Level: 82
+Level: 86
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_VICTORIA ===
@@ -6354,16 +6354,16 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Magikarp
-Level: 4
+Gyarados
+Level: 20
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Tentacool
-Level: 8
+Level: 20
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Magikarp
-Level: 13
+Gyarados
+Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_IVAN ===
@@ -8819,11 +8819,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Plusle
-Level: 13
+Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Minun
-Level: 13
+Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_AMY_AND_LIV_2 ===
@@ -8836,11 +8836,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Plusle
-Level: 47
+Level: 50
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
 Minun
-Level: 47
+Level: 50
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
 === TRAINER_GINA_AND_MIA_1 ===
@@ -8925,11 +8925,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Plusle
-Level: 60
+Level: 62
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
 Minun
-Level: 60
+Level: 62
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
 === TRAINER_AMY_AND_LIV_5 ===
@@ -8942,7 +8942,7 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Plusle
-Level: 71
+Level: 73
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 - Spark
 - Charge
@@ -8950,7 +8950,7 @@ IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 - Helping Hand
 
 Minun
-Level: 71
+Level: 73
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 - Spark
 - Charge
@@ -8967,7 +8967,7 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Plusle
-Level: 82
+Level: 86
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 - Thunder
 - Charge
@@ -8975,7 +8975,7 @@ IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 - Helping Hand
 
 Minun
-Level: 82
+Level: 86
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 - Thunder
 - Charge
@@ -13250,7 +13250,7 @@ Double Battle: No
 AI: Check Bad Move
 
 Voltorb
-Level: 13
+Level: 22
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_RHETT ===
@@ -13263,7 +13263,7 @@ Double Battle: No
 AI: Check Bad Move
 
 Makuhita
-Level: 13
+Level: 22
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_TYRON ===
@@ -13749,7 +13749,7 @@ Double Battle: No
 AI: Check Bad Move
 
 Tentacool
-Level: 13
+Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ISABELLE ===
@@ -13761,8 +13761,8 @@ Music: Swimmer
 Double Battle: No
 AI: Check Bad Move
 
-Marill
-Level: 13
+Azumarill
+Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ANDRES_1 ===
