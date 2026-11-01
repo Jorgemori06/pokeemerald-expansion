@@ -51,12 +51,32 @@
       "preferencia_daninos_potentes": "ligera",
       "_preferencia": "Igual para todos: los jefes no llevan mejores movimientos que el resto.",
       "diversidad_de_tipos": true,
-      "potencia_maxima_del_cuarto": {"base": 40, "por_nivel": 1.5},
-      "_potencia_maxima_del_cuarto": "Jorge: tope de potencia del movimiento al azar, 40 + 1,5 por nivel (nivel 7: 50; nivel 40: 100; desde 74, sin tope). Para que uno de nivel 5 no lleve Hidrobomba. null = sin tope."
+      "potencia_maxima_del_cuarto": null,
+      "_potencia_maxima_del_cuarto": "Sin tope (Miguel y Jorge, 31/10/2026: movimientos totalmente aleatorios; si en la ruta 101 sale un Charmander con Lanzallamas, sale). Vale también para los movimientos por nivel (aprendizajes.py). Para volver a ponerlo: {\"base\": 40, \"por_nivel\": 1.5}."
     },
     "objetos_jefes_e_importantes": "aleatorios_coherentes",
     "_objetos_jefes": "Miguel (#27): un objeto que le sirva a cada Pokémon, en todo el equipo; la megapiedra del as se queda.",
     "combates": "individuales"
+  },
+
+  "lideres": {
+    "_comentario": "Miguel y Jorge (31/10/2026): líderes difíciles con estrategia, pero sin Pokémon más fuertes que los que encuentras al principio. Ver tools/dualocke/aleatorio/estrategia.py.",
+    "con_estrategia": ["TRAINER_ROXANNE_1", "TRAINER_BRAWLY_1", "TRAINER_WATTSON_1", "TRAINER_FLANNERY_1",
+                       "TRAINER_NORMAN_1", "TRAINER_WINONA_1", "TRAINER_TATE_AND_LIZA_1", "TRAINER_JUAN_1",
+                       "TRAINER_SIDNEY", "TRAINER_PHOEBE", "TRAINER_GLACIA", "TRAINER_DRAKE", "TRAINER_WALLACE"],
+    "ia": "Smart Trainer / Hp Aware / Ace Pokemon",
+    "_ia": "IA de los de con_estrategia: la lista de la expansion (piensa sus movimientos, cambia de Pokémon con cabeza y conoce tu equipo), atenta a los PS y con el as al final. En combates dobles, Double Ace Pokemon.",
+    "limite_salvajes": {
+      "TRAINER_ROXANNE_1": 1, "TRAINER_BRAWLY_1": 2, "TRAINER_WATTSON_1": 3,
+      "TRAINER_MAY_ROUTE_103_*": 1, "TRAINER_BRENDAN_ROUTE_103_*": 1,
+      "TRAINER_MAY_RUSTBORO_*": 1, "TRAINER_BRENDAN_RUSTBORO_*": 1,
+      "TRAINER_MAY_ROUTE_110_*": 3, "TRAINER_BRENDAN_ROUTE_110_*": 3,
+      "TRAINER_WALLY_MAUVILLE": 3
+    },
+    "_limite_salvajes": "Entrenador -> tramo (gimnasio): sus Pokémon no pasan de las estadísticas base que tiene el percentil_salvajes de los salvajes de hierba hasta ese tramo, con la semilla de la partida. Hasta ese gimnasio llevan además un solo movimiento de estrategia por Pokémon.",
+    "percentil_salvajes": 0.9,
+    "techo_por_tramo": {"1": 360, "2": 400, "3": 450},
+    "_techo_por_tramo": "Tope máximo de estadísticas base (suma) por tramo, aunque el percentil salga más alto. Con pocas rutas, un solo salvaje fuerte que no evoluciona (Dondozo 530, Iron Treads 570) dejaba a PETRA sin tope (Jorge, #54). 360: primeras fases; 400: alguna fase intermedia floja; 450: fases intermedias."
   },
 
   "jefes": {

@@ -16,6 +16,11 @@ Reglas (randomizer_config.json, "entrenadores" y "jefes"; decididas por Miguel):
   en con_mega_desde_el_aro) el as lleva mega: su inicial si tiene, y si no, una especie con mega
   del tipo de su inicial (y el inicial pasa al hueco anterior).
 
+Líderes (Miguel y Jorge, 31/10/2026; ver estrategia.py y "lideres" en el config):
+- Los de "con_estrategia" (líderes, Alto Mando y Plubio) llevan movimientos con plan (trampas,
+  estados, chetarse) e IA lista ("ia"), y los de "limite_salvajes" (hasta el gimnasio 3, y el rival
+  y BLASCO hasta ahí) no sacan Pokémon más fuertes que los salvajes que se han podido encontrar.
+
 Al cambiar la especie se quitan los movimientos, la habilidad y el sexo que tenía escritos (no
 valdrían para la nueva). Los movimientos nuevos los elige movimientos.py (3 de los que aprende
 por nivel y el cuarto al azar) y la habilidad es la de su especie. Se mantienen el nivel, los
@@ -26,6 +31,7 @@ le sirva a ese Pokémon) en todo el equipo, menos la megapiedra del as.
 import random
 import re
 
+from . import estrategia as est
 from . import movimientos as mov
 
 FIJOS = {"TRAINER_STEVEN_ROUTE_120", "TRAINER_NONE"}
@@ -138,7 +144,7 @@ def objeto_coherente(especie, movimientos, datos_mov, rng, usados=()):
 
 
 class Generador:
-    def __init__(self, pokedex, semilla, config, iniciales=None, movimientos=None):
+    def __init__(self, pokedex, semilla, config, iniciales=None, movimientos=None, topes=None):
         self.pokedex = pokedex
         # Movimientos ({MOVE_X: Movimiento}); sin ellos, sale con los de su nivel (como antes)
         self.movs = movimientos
@@ -149,17 +155,39 @@ class Generador:
         self.raices = pokedex.raices_validas()
         self.raices_liga = pokedex.raices_validas(con_legendarios=True)
         self.lineas_familia = {}   # (familia, especie original) -> raíz nueva
+        # Líderes: estrategia, IA y tope de fuerza (estrategia.py)
+        cfg_lideres = config.get("lideres", {})
+        self.estrategas = set(cfg_lideres.get("con_estrategia", []))
+        self.ia_lideres = cfg_lideres.get("ia")
+        self.limites = cfg_lideres.get("limite_salvajes", {})
+        self.topes = topes or {}   # {tramo: tope de estadísticas base de los salvajes}
 
-    def _equipar(self, trainer, i, especie, nivel, objeto, jefe, usados):
-        """Movimientos (todos los entrenadores) y objeto (los jefes, menos las megapiedras)."""
+    def _tope(self, trainer):
+        """Tope de estadísticas base para este entrenador, o None si no tiene."""
+        tramo = est.tramo_limitado(trainer, self.limites)
+        return self.topes.get(tramo) if tramo else None
+
+    def _cabe(self, familia, raiz, nivel, tope):
+        if tope is None:
+            return True
+        especie = self.pokedex.evolucionar(raiz, nivel, random.Random(f"{self.semilla}|{familia}|{raiz}"))
+        return est.bst(self.pokedex.especies[especie]) <= tope
+
+    def _equipar(self, trainer, i, especie, nivel, objeto, jefe, usados, estrategia=None):
+        """Movimientos (todos los entrenadores) y objeto (los jefes, menos las megapiedras).
+        `estrategia`: (movimientos de estrategia, va primero) para los líderes."""
         if not self.movs:
             return None, objeto
         rng = random.Random(f"{self.semilla}|movimientos|{trainer}|{i}")
         cfg = self.config.get("entrenadores", {}).get("movimientos", {})
-        tope = cfg.get("potencia_maxima_del_cuarto", {"base": 40, "por_nivel": 1.5})
+        tope = cfg.get("potencia_maxima_del_cuarto")
         tope = (tope["base"], tope["por_nivel"]) if tope else None
-        movimientos = mov.elegir(especie, nivel, self.pokedex, self.movs, self.todos, rng,
-                                 cfg.get("garantizados", 3), tope)
+        if estrategia:
+            movimientos = est.elegir(especie, nivel, self.pokedex, self.movs, self.todos,
+                                     est.generar_rng(self.semilla, trainer, i), *estrategia)
+        else:
+            movimientos = mov.elegir(especie, nivel, self.pokedex, self.movs, self.todos, rng,
+                                     cfg.get("garantizados", 3), tope)
         if jefe and not _es_megapiedra(objeto):
             objeto = objeto_coherente(self.pokedex.especies[especie], movimientos, self.movs, rng, usados)
         if objeto:
@@ -169,17 +197,19 @@ class Generador:
     def _tipos(self, especie):
         return set(self.pokedex.especies[especie].tipos)
 
-    def _raiz_para(self, familia, original, raices, usadas, rng):
+    def _raiz_para(self, familia, original, raices, usadas, rng, nivel=None, tope=None):
         clave = (familia, original)
         raiz = self.lineas_familia.get(clave)
-        if raiz is None or raiz in usadas:
+        if raiz is None or raiz in usadas or not self._cabe(familia, raiz, nivel, tope):
             opciones = [r for r in raices if r not in usadas]
-            raiz = rng.choice(opciones)
+            debiles = [r for r in opciones if self._cabe(familia, r, nivel, tope)]
+            raiz = rng.choice(debiles or opciones)
             self.lineas_familia.setdefault(clave, raiz)
         return raiz
 
-    def _as_de_jefe(self, trainer, familia, original, nivel, tipos, con_mega, raices, usadas, rng):
-        """Raíz y especie del as: de uno de `tipos` y, si toca, con mega (y su megapiedra)."""
+    def _as_de_jefe(self, trainer, familia, original, nivel, tipos, con_mega, raices, usadas, rng, tope=None):
+        """Raíz y especie del as: de uno de `tipos` y, si toca, con mega (y su megapiedra). Con
+        `tope`, el más parecido a los salvajes si ninguno de su tipo cabe."""
         clave = (familia, "AS")
         candidatos = []
         for raiz in raices:
@@ -193,6 +223,12 @@ class Generador:
             candidatos.append((raiz, especie))
         if not candidatos:
             return None
+        if tope is not None:
+            debiles = [c for c in candidatos if est.bst(self.pokedex.especies[c[1]]) <= tope]
+            if not debiles:
+                minimo = min(est.bst(self.pokedex.especies[c[1]]) for c in candidatos)
+                debiles = [c for c in candidatos if est.bst(self.pokedex.especies[c[1]]) == minimo]
+            candidatos = debiles
         previa = self.lineas_familia.get(clave)
         elegido = next((c for c in candidatos if c[0] == previa), None) or rng.choice(candidatos)
         self.lineas_familia.setdefault(clave, elegido[0])
@@ -247,7 +283,7 @@ class Generador:
         for i, lineas, original, objeto, nivel in datos:
             if i in nuevas or original not in self.pokedex.especies:
                 continue
-            raiz = self._raiz_para("RIVAL", original, self.raices, usadas, rng)
+            raiz = self._raiz_para("RIVAL", original, self.raices, usadas, rng, nivel, self._tope(trainer))
             usadas.add(raiz)
             nuevas[i] = (self.pokedex.evolucionar(raiz, nivel, random.Random(f"{self.semilla}|RIVAL|{raiz}")), None)
         cambios = []
@@ -288,8 +324,17 @@ class Generador:
             raices = self.raices_liga if familia in JEFES_LIGA else self.raices
             jefe = bool(tipos_as) or familia in JEFES_LIGA
             rng = random.Random(f"{self.semilla}|entrenadores|{trainer}")
+            tope = self._tope(trainer)
+            estratega = trainer in self.estrategas
+            # Hasta el gimnasio 3 (los que tienen tope), un movimiento de estrategia; después, dos
+            n_estrategia = 1 if tope is not None else 2
 
             trozos = _pokemons(bloque)
+            if estratega and self.ia_lideres:
+                ia = self.ia_lideres
+                if re.search(r"^Double Battle:\s*Yes", trozos[0], re.M):
+                    ia = ia.replace("Ace Pokemon", "Double Ace Pokemon")
+                trozos[0] = re.sub(r"^AI:.*$", "AI: " + ia, trozos[0], flags=re.M)
             # trozos[0] es lo que hay entre la cabecera y el primer Pokémon (los datos del
             # entrenador); el resto, un Pokémon por trozo
             indices = [i for i in range(1, len(trozos)) if trozos[i].strip()]
@@ -309,16 +354,17 @@ class Generador:
                 elegido = None
                 if es_as:
                     elegido = self._as_de_jefe(trainer, familia, original, nivel, tipos_as,
-                                               mega_as, raices, usadas, rng)
+                                               mega_as, raices, usadas, rng, tope)
                 if elegido:
                     raiz, nueva = elegido
                     if mega_as:
                         objeto = self.pokedex.especies[nueva].megas[0][1]
                 else:
-                    raiz = self._raiz_para(familia, original, raices, usadas, rng)
+                    raiz = self._raiz_para(familia, original, raices, usadas, rng, nivel, tope)
                     nueva = self.pokedex.evolucionar(raiz, nivel, random.Random(f"{self.semilla}|{familia}|{raiz}"))
                 usadas.add(raiz)
-                movimientos, objeto = self._equipar(trainer, i, nueva, nivel, objeto, jefe, usados)
+                plan = (n_estrategia, n == 0) if estratega else None
+                movimientos, objeto = self._equipar(trainer, i, nueva, nivel, objeto, jefe, usados, plan)
                 trozos[i] = _reescribir(lineas, nueva, objeto, movimientos)
                 cambios.append(nueva)
             solucionario[trainer] = cambios

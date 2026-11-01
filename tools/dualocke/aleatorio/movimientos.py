@@ -7,7 +7,8 @@ Dualocke: movimientos de los entrenadores (randomizer_config.json, "entrenadores
   movimientos que el resto).
 - Diversidad de tipos: se evita repetir el tipo de un movimiento de daño.
 - Al menos uno de daño, si puede.
-- El cuarto, al azar pero con un tope de potencia según el nivel (40 + 1,5 por nivel: a nivel 7,
+- El cuarto, al azar. Sin tope de potencia desde el 31/10/2026 ("potencia_maxima_del_cuarto": null);
+  antes llevaba uno según el nivel (40 + 1,5 por nivel: a nivel 7,
   hasta 50; a nivel 40, hasta 100; desde nivel 74, sin tope). Si no, un entrenador de nivel 5
   podría llevar Hidrobomba. Se cambia con "potencia_maxima_del_cuarto" en el config.
 """
