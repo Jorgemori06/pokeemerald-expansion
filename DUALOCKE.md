@@ -588,6 +588,7 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
   - Con 0 vidas se sigue jugando; la siguiente muerte pierde el locke (`FLAG_DUALOCKE_LOCKE_LOST`). Perder un combate también lo pierde, sin mover a nadie (el equipo no puede quedarse vacío). El juego no se bloquea: se marca y se ve en el menú.
   - El menú de pausa muestra "Lives: N" o "LOCKE LOST".
   - La caja de muertos solo deja ver el resumen: no se puede sacar, mover, soltar ni meter nada, y los Pokémon nuevos nunca van ahí.
+  - **Objetos de los muertos (Jorge, 07/11/2026, encontrado jugando):** como en la caja no se puede tocar nada, los objetos que lleven vuelven solos a la mochila (al PC de objetos si ese bolsillo está lleno). Pasa al acabar cada combate y al encender el PC, así que también recupera los de los que murieron antes. Lo hace `Dualocke_RecoverDeadMonsItems` (`src/dualocke.c`).
   - Los objetos de revivir no se pueden usar en combate.
   - No cuentan: Frontera, Pirámide, Pike, Cima Entrenador, combates por cable, Safari, el primer combate y las bases secretas.
   - Tests en `test/dualocke.c` (`make check TESTS="Dualocke"`).
