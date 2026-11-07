@@ -1623,7 +1623,10 @@ static void Task_PCMainMenu(u8 taskId)
 
 void ShowPokemonStorageSystemPC(void)
 {
-    u8 taskId = CreateTask(Task_PCMainMenu, 80);
+    u8 taskId;
+
+    Dualocke_RecoverDeadMonsItems(); // Dualocke: los objetos de los muertos vuelven a la mochila
+    taskId = CreateTask(Task_PCMainMenu, 80);
     gTasks[taskId].tState = 0;
     gTasks[taskId].tSelectedOption = 0;
     LockPlayerFieldControls();

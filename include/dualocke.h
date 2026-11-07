@@ -25,6 +25,7 @@ bool32 Dualocke_ShouldBanMon(struct Pokemon *mon);
 u32 Dualocke_SendMonToBannedBox(struct Pokemon *mon);
 bool32 Dualocke_TryBanPartyMon(u32 partyIndex);
 bool32 Dualocke_KnowsUniqueHM(u32 partyIndex);
+void Dualocke_RecoverDeadMonsItems(void);
 
 // Primera captura por zona (Capture Clause).
 // Estado del encuentro salvaje del combate actual.

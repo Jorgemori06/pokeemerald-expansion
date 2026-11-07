@@ -628,3 +628,36 @@ TEST("Dualocke: un huevo con la MO no cuenta como otro que la sabe")
     SetMonData(&gParties[B_TRAINER_PLAYER][1], MON_DATA_IS_EGG, &egg);
     EXPECT(Dualocke_KnowsUniqueHM(0));
 }
+
+// Dualocke: los objetos de los muertos vuelven a la mochila
+TEST("Dualocke: el objeto de un Pokémon que muere vuelve a la mochila")
+{
+    enum Item item = ITEM_ORAN_BERRY;
+
+    SetupParty(2);
+    ClearBag();
+    SetMonData(&gParties[B_TRAINER_PLAYER][0], MON_DATA_HELD_ITEM, &item);
+    Faint(0);
+
+    Dualocke_OnBattleEnd(FALSE);
+
+    EXPECT_EQ(GetBoxMonDataAt(DUALOCKE_DEAD_BOX, 0, MON_DATA_HELD_ITEM), ITEM_NONE);
+    EXPECT(CheckBagHasItem(ITEM_ORAN_BERRY, 1));
+}
+
+TEST("Dualocke: los objetos de los que ya estaban muertos también vuelven")
+{
+    enum Item item = ITEM_LEFTOVERS;
+    struct Pokemon mon;
+
+    SetupParty(1);
+    ClearBag();
+    CreateMon(&mon, SPECIES_WOBBUFFET, 20, 0, OTID_STRUCT_PLAYER_ID);
+    SetMonData(&mon, MON_DATA_HELD_ITEM, &item);
+    SetBoxMonAt(DUALOCKE_DEAD_BOX, 3, &mon.box);
+
+    Dualocke_RecoverDeadMonsItems();
+
+    EXPECT_EQ(GetBoxMonDataAt(DUALOCKE_DEAD_BOX, 3, MON_DATA_HELD_ITEM), ITEM_NONE);
+    EXPECT(CheckBagHasItem(ITEM_LEFTOVERS, 1));
+}
