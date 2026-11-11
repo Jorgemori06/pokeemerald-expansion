@@ -546,7 +546,9 @@ Hecho: **toda la tabla de mensajes de combate** (693 de 699; los 6 restantes son
 
 **Nombres de los lugares (hecho, Jorge, 26/10/2026):** los de Hoenn en `src/data/region_map/region_map_sections.json` (RUTA 101, VILLA RAÍZ, CIUDAD PORTUAL…). Salen en los datos del Pokémon ("lo conociste en…"), en el cartel al entrar en un mapa y en el mapa de la región. Máximo 16 letras (`MAP_NAME_LENGTH`), así que algunos van recortados: ARRECÍPOLIS y PACIFIDLOG sin "CIUDAD"/"PUEBLO", CATARATA METEORO, CAMIÓN. Los de Kanto se quedan en inglés.
 
-**Pendiente (imágenes, no texto):** las cabeceras PROFILE, ABILITY y TRAINER MEMO de la pantalla de datos (`graphics/summary_screen/tiles.png`), el botón MOVE INFO del combate (`graphics/battle_interface/move_info_window_*.png`), los iconos de los tipos (ICE, GROUND…) y PRESS START en la pantalla de título. Quedan en inglés archivos menos vistos (Pokédex HGSS y DexNav, desactivados; concursos; Baya-Licuadora; depuración).
+**Título del mote (arreglo, Jorge, 07/11/2026, encontrado jugando):** salía "Torchic¿Mote de ?", porque la especie se escribía delante y el título detrás, con el hueco `{STR_VAR_1}` vacío. Ahora `Dualocke_BuildMonNamingTitle` (`src/naming_screen.c`) mete la especie en el hueco: "¿Mote de Torchic?".
+
+**Pendiente (imágenes, no texto):** los botones de la pantalla de nombres (lower/upper, BACK, B BUTTON, OK, START, SELECT, en `graphics/naming_screen/`), las cabeceras PROFILE, ABILITY y TRAINER MEMO de la pantalla de datos (`graphics/summary_screen/tiles.png`), el botón MOVE INFO del combate (`graphics/battle_interface/move_info_window_*.png`), los iconos de los tipos (ICE, GROUND…) y PRESS START en la pantalla de título. Quedan en inglés archivos menos vistos (Pokédex HGSS y DexNav, desactivados; concursos; Baya-Licuadora; depuración).
 
 Reglas para los menús: mantener los códigos y el mismo número de saltos `\n`, `\l` y `\p`, y que cada línea no sea mucho más larga que la inglesa (los recuadros tienen ancho fijo). Los nombres van en mayúsculas como en el original (MOCHILA, GUARDAR, CARTA…).
 

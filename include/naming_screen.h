@@ -18,4 +18,6 @@ extern void BattleMainCB2(void);
 
 void DoNamingScreen(u8 templateNum, u8 *destBuffer, u16 monSpeciesOrPlayerGender, u16 monGender, u32 monPersonality, MainCallback returnCallback);
 
+u8 *Dualocke_BuildMonNamingTitle(u8 *dst, const u8 *species, const u8 *title);
+
 #endif // GUARD_NAMING_SCREEN_H
