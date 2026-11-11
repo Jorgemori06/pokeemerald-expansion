@@ -255,16 +255,16 @@ DewfordTown_Hall_EventScript_ReceivedSludgeBomb::
 	end
 
 DewfordTown_Hall_Text_CantImagineLifeWithoutTrend:
-	.string "What's in vogue? Why, it has to be\n"
+	.string "¿Lo que está de moda? ¡Pues claro,\n"
 	.string "“{STR_VAR_1}”!\p"
-	.string "I can't imagine what life would be like\n"
-	.string "without “{STR_VAR_1}”!$"
+	.string "¡No me imagino la vida sin\n"
+	.string "“{STR_VAR_1}”!$"
 
 DewfordTown_Hall_Text_GettingBoredOfTrend:
-	.string "What's in vogue? Why, it has to be\n"
+	.string "¿Lo que está de moda? ¡Pues claro,\n"
 	.string "“{STR_VAR_1}”!\p"
-	.string "But I'm getting kind of bored with it.\p"
-	.string "I should look for the next big thing.$"
+	.string "Pero ya me está aburriendo un poco.\p"
+	.string "Tendré que buscar lo próximo.$"
 
 DewfordTown_Hall_Text_TeachingMonAboutTrend:
 	.string "I'm teaching my POKéMON about\n"
@@ -273,47 +273,45 @@ DewfordTown_Hall_Text_TeachingMonAboutTrend:
 	.string "It's a bit too much, I think.$"
 
 DewfordTown_Hall_Text_DeepLinkBetweenXAndY:
-	.string "I'm studying up on the hip and trendy\n"
-	.string "“{STR_VAR_1}” now.\p"
-	.string "Is it true that there's a deep link\n"
-	.string "between “{STR_VAR_1}”\l"
-	.string "and “{STR_VAR_2}”?$"
+	.string "Ahora estoy estudiando lo último:\n"
+	.string "“{STR_VAR_1}”.\p"
+	.string "¿Es verdad que hay una relación\n"
+	.string "profunda entre “{STR_VAR_1}”\l"
+	.string "y “{STR_VAR_2}”?$"
 
 DewfordTown_Hall_Text_MyHunchWasRight:
-	.string "Oh!\n"
-	.string "So, my hunch was right!\p"
-	.string "I'm one step closer to being hip and\n"
-	.string "happening, yowza!$"
+	.string "¡Oh!\n"
+	.string "¡Así que tenía razón!\p"
+	.string "¡Estoy un paso más cerca de ir\n"
+	.string "a la última! ¡Toma ya!$"
 
 DewfordTown_Hall_Text_NotEasyToKeepUp:
-	.string "What?!\n"
-	.string "Is that so?!\p"
-	.string "It's not easy for an older fellow like\n"
-	.string "me to keep up with trends!$"
+	.string "¡¿Qué?!\n"
+	.string "¡¿En serio?!\p"
+	.string "¡No es fácil para alguien de mi\n"
+	.string "edad estar al día de las modas!$"
 
 DewfordTown_Hall_Text_TVShowAboutTrend:
-	.string "This whole business about\n"
+	.string "Todo esto de\n"
 	.string "“{STR_VAR_1}”…\l"
-	.string "Isn't there a TV show on it?$"
+	.string "¿No hay un programa de tele?$"
 
 DewfordTown_Hall_Text_IsTrendMorePopularAcrossSea:
-	.string "Across the sea…\p"
-	.string "Is “{STR_VAR_1}”\n"
-	.string "even more popular?$"
+	.string "Al otro lado del mar…\p"
+	.string "¿“{STR_VAR_1}”\n"
+	.string "estará aún más de moda?$"
 
 DewfordTown_Hall_Text_CollectTrendMerchandise:
-	.string "I collect official\n"
-	.string "“{STR_VAR_1}”\l"
-	.string "licensed merchandise.\p"
-	.string "I have official\n"
-	.string "“{STR_VAR_1}” DOLLS…\p"
-	.string "Official “{STR_VAR_1}”\n"
-	.string "brand clothing…\p"
-	.string "And officially licensed\n"
-	.string "“{STR_VAR_1}”\l"
-	.string "picture books.\p"
-	.string "Heheh, I own!\n"
-	.string "I'm not sharing anything with you!$"
+	.string "Colecciono artículos oficiales\n"
+	.string "de “{STR_VAR_1}”.\p"
+	.string "Tengo MUÑECOS oficiales de\n"
+	.string "“{STR_VAR_1}”…\p"
+	.string "Ropa de la marca\n"
+	.string "“{STR_VAR_1}”…\p"
+	.string "Y libros ilustrados oficiales de\n"
+	.string "“{STR_VAR_1}”.\p"
+	.string "¡Jejeje, son míos!\n"
+	.string "¡No te pienso dejar nada!$"
 
 DewfordTown_Hall_Text_BooksAboutTrend:
 	.string "IDENTIFYING GOOD\n"
@@ -328,109 +326,109 @@ DewfordTown_Hall_Text_BooksAboutTrend:
 	.string "“{STR_VAR_1}.”$"
 
 DewfordTown_Hall_Text_TrendsScream:
-	.string "“{STR_VAR_1}'S\n"
-	.string "SCREAM” is the title.$"
+	.string "El título es “EL GRITO DE\n"
+	.string "{STR_VAR_1}”.$"
 
 DewfordTown_Hall_Text_TrendsSmile:
-	.string "“{STR_VAR_1}'S\n"
-	.string "SMILE” is the title.$"
+	.string "El título es “LA SONRISA DE\n"
+	.string "{STR_VAR_1}”.$"
 
 DewfordTown_Hall_Text_LastTrend:
-	.string "It's titled “THE LAST\n"
+	.string "El título es “EL ÚLTIMO\n"
 	.string "{STR_VAR_1}”.$"
 
 DewfordTown_Hall_Text_BirthOfTrend:
-	.string "It's titled “THE BIRTH OF\n"
+	.string "El título es “EL NACIMIENTO DE\n"
 	.string "{STR_VAR_1}”.$"
 
 DewfordTown_Hall_Text_SawTrendCoolestThing:
-	.string "I saw “{STR_VAR_1}”!\n"
-	.string "Cool, huh?\p"
-	.string "It's, like, the coolest thing going!\p"
-	.string "It was awesome!\n"
-	.string "It was the real thing, oh yeah!$"
+	.string "¡He visto “{STR_VAR_1}”!\n"
+	.string "¿Mola, eh?\p"
+	.string "¡Es lo más guay que hay ahora mismo!\p"
+	.string "¡Fue alucinante!\n"
+	.string "¡Era de verdad, sí, señor!$"
 
 DewfordTown_Hall_Text_AllegedTrendNotAuthentic:
-	.string "Oh, no, no, no.\p"
-	.string "That alleged\n"
+	.string "No, no, no.\p"
+	.string "Ese supuesto\n"
 	.string "“{STR_VAR_1}”\l"
-	.string "you claim to have seen--it's not.\p"
-	.string "The authentic article is much…\n"
-	.string "How should I say it?\l"
-	.string "Sharper, yet more mellow!\p"
-	.string "Ah, no matter. It's astonishing!$"
+	.string "que dices haber visto… no lo era.\p"
+	.string "El auténtico es mucho más…\n"
+	.string "¿Cómo decirlo?\l"
+	.string "¡Más afilado y a la vez más suave!\p"
+	.string "Bah, da igual. ¡Es asombroso!$"
 
 DewfordTown_Hall_Text_ComposedTrendThemeSong:
-	.string "Hey, listen, I composed a theme song\n"
-	.string "for “{STR_VAR_1}.”\p"
+	.string "Oye, escucha, he compuesto una\n"
+	.string "canción para “{STR_VAR_1}”.\p"
 	.string "“{STR_VAR_1}”\n"
-	.string "is really popular right now.\p"
-	.string "Okay, listen!\n"
+	.string "está muy de moda ahora mismo.\p"
+	.string "¡Venga, escucha!\n"
 	.string "… …\p"
-	.string "Oh!\n"
-	.string "{STR_VAR_1}!\p"
-	.string "Wonderful\n"
+	.string "¡Oh!\n"
+	.string "¡{STR_VAR_1}!\p"
+	.string "¡Maravilloso\n"
 	.string "{STR_VAR_1}!$"
 
 DewfordTown_Hall_Text_WorkOnYourSinging:
 	.string "… …\p"
-	.string "I dare say, chap, it would pay for you\n"
-	.string "to work on your singing before you\l"
-	.string "trifle yourself with\l"
-	.string "“{STR_VAR_1}.”$"
+	.string "Me atrevo a decir, amigo, que te\n"
+	.string "vendría bien practicar el canto antes\l"
+	.string "de meterte con\l"
+	.string "“{STR_VAR_1}”.$"
 
 DewfordTown_Hall_Text_OrganizeTrendParty:
-	.string "Anyway, as I was saying earlier, we\n"
-	.string "should get together and organize a\l"
-	.string "“{STR_VAR_1}” party\l"
-	.string "on the island.$"
+	.string "En fin, como decía antes, deberíamos\n"
+	.string "juntarnos y organizar una fiesta de\l"
+	.string "“{STR_VAR_1}”\l"
+	.string "en la isla.$"
 
 DewfordTown_Hall_Text_BrilliantIndeed:
-	.string "Oh, a smashing good idea!\p"
-	.string "It will settle once and for all\n"
-	.string "who is the best at\l"
-	.string "“{STR_VAR_1}.”\l"
-	.string "Brilliant, indeed!\p"
-	.string "Starting today, our lives will revolve\n"
-	.string "around “{STR_VAR_1}”!$"
+	.string "¡Oh, qué idea tan estupenda!\p"
+	.string "¡Así se sabrá de una vez por todas\n"
+	.string "quién es el mejor en\l"
+	.string "“{STR_VAR_1}”!\l"
+	.string "¡Brillante, sin duda!\p"
+	.string "¡Desde hoy, nuestras vidas girarán\n"
+	.string "en torno a “{STR_VAR_1}”!$"
 
 DewfordTown_Hall_Text_TrendHasBecomePartOfLife:
-	.string "I was thinking, though…\p"
-	.string "Wouldn't you agree that\n"
-	.string "“{STR_VAR_1}” has\l"
-	.string "grown from being something trendy to\l"
-	.string "being a part of our daily lives?$"
+	.string "Aunque, estaba pensando…\p"
+	.string "¿No te parece que\n"
+	.string "“{STR_VAR_1}” ha\l"
+	.string "pasado de ser una moda a ser\l"
+	.string "parte de nuestra vida diaria?$"
 
 DewfordTown_Hall_Text_TrendWeighsHeavilyOnMind:
-	.string "Beg pardon?\n"
-	.string "That much, what?\p"
-	.string "However, it's true that\n"
+	.string "¿Perdón?\n"
+	.string "¿Tanto así?\p"
+	.string "Aunque es verdad que\n"
 	.string "“{STR_VAR_1}”\l"
-	.string "weighs heavily on your mind, whether\l"
-	.string "you're awake or asleep.\p"
-	.string "Absolutely, you're the\n"
-	.string "“{STR_VAR_1}”\l"
-	.string "PROFESSOR, old sport!$"
+	.string "te ronda la cabeza, estés\l"
+	.string "despierto o dormido.\p"
+	.string "¡Desde luego, eres el PROFESOR de\n"
+	.string "“{STR_VAR_1}”,\l"
+	.string "colega!$"
 
 DewfordTown_Hall_Text_IfWeTeamUpWellBeInvincible:
-	.string "If you and me team up as a combo,\n"
-	.string "we'll be invincible when it comes to all\l"
-	.string "things “{STR_VAR_1}”!$"
+	.string "¡Si tú y yo hacemos equipo, seremos\n"
+	.string "invencibles en todo lo que tenga\l"
+	.string "que ver con “{STR_VAR_1}”!$"
 
 DewfordTown_Hall_Text_WellBeTrendDuo:
-	.string "Spot on, my friend!\p"
-	.string "We shall be the\n"
-	.string "“{STR_VAR_1}” DUO!\p"
-	.string "Isn't that a ripe image?\n"
-	.string "Hahahah!$"
+	.string "¡Exacto, amigo mío!\p"
+	.string "¡Seremos el DÚO\n"
+	.string "“{STR_VAR_1}”!\p"
+	.string "¿A que suena genial?\n"
+	.string "¡Jajajá!$"
 
 DewfordTown_Hall_Text_GiveYouSludgeBomb:
-	.string "For me, SLUDGE BOMB is at the peak\n"
-	.string "of popularity. It's the one.\p"
-	.string "Hunh? You're telling me that you don't\n"
-	.string "know about SLUDGE BOMB?\p"
-	.string "That's outright pitiful.\n"
-	.string "I'll give you one.$"
+	.string "Para mí, BOMBA LODO está en lo más\n"
+	.string "alto. Es lo mejor que hay.\p"
+	.string "¿Qué? ¿Me estás diciendo que no\n"
+	.string "conoces BOMBA LODO?\p"
+	.string "Eso es lamentable.\n"
+	.string "Te daré una.$"
 
 DewfordTown_Hall_Text_LoveSludgeBombButTrendInToo:
 	.string "I love SLUDGE BOMB.\p"

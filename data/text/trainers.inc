@@ -120,23 +120,24 @@ Route103_Text_LivNotEnoughPokemon:
 	.string "¡Si no, no es justo!$"
 
 Route103_Text_AmyRematchIntro:
-	.string "AMY: I'm AMY.\n"
-	.string "And this is my little sister LIV.\l"
-	.string "We battle together!$"
+	.string "AMY: Soy AMY.\n"
+	.string "Y esta es mi hermana pequeña LIV.\l"
+	.string "¡Combatimos juntas!$"
 
 Route103_Text_AmyRematchDefeated:
 	.string "AMY: Aww, boo!\n"
 	.string "We couldn't win again…$"
 
 Route103_Text_AmyRematchPostBattle:
-	.string "AMY: You have to think about all\n"
-	.string "kinds of things when you're battling\l"
-	.string "against two TRAINERS.$"
+	.string "AMY: Hay que pensar en muchas\n"
+	.string "cosas cuando combates contra\l"
+	.string "dos ENTRENADORAS.$"
 
 Route103_Text_AmyRematchNotEnoughPokemon:
-	.string "AMY: Uh-oh, you have only one\n"
-	.string "POKéMON with you.\l"
-	.string "You can't battle us like that.$"
+	.string "AMY: Huy, solo llevas un\n"
+	.string "POKéMON.\l"
+	.string "Así no puedes combatir con\l"
+	.string "nosotras.$"
 
 Route103_Text_LivRematchIntro:
 	.string "LIV: We battle together as one\n"
@@ -147,14 +148,14 @@ Route103_Text_LivRematchDefeated:
 	.string "Big sister…$"
 
 Route103_Text_LivRematchPostBattle:
-	.string "LIV: We work perfectly together,\n"
-	.string "me and my big sister…\p"
-	.string "But why did we lose again?$"
+	.string "LIV: Mi hermana y yo nos\n"
+	.string "compenetramos a la perfección…\p"
+	.string "¿Pero por qué hemos vuelto a perder?$"
 
 Route103_Text_LivRematchNotEnoughPokemon:
-	.string "LIV: If you want to battle us, you\n"
-	.string "have to have two POKéMON!\l"
-	.string "It's not fair if you don't!$"
+	.string "LIV: ¡Si quieres combatir contra\n"
+	.string "nosotras, necesitas dos POKéMON!\l"
+	.string "¡Si no, no es justo!$"
 
 Route103_Text_AndrewIntro:
 	.string "¡Ag! ¡Se me ha enredado el sedal!\n"
@@ -186,16 +187,16 @@ Route103_Text_MiguelRegister:
 	.string "POKéMON precioso!$"
 
 Route103_Text_MiguelRematchIntro:
-	.string "Hi, you! My delightfully adorable\n"
-	.string "POKéMON has become more darling!$"
+	.string "¡Hola! ¡Mi POKéMON, que ya era\n"
+	.string "adorable, ahora lo es todavía más!$"
 
 Route103_Text_MiguelRematchDefeated:
 	.string "Oh!\n"
 	.string "My darling POKéMON!$"
 
 Route103_Text_MiguelRematchPostBattle:
-	.string "The more I spend time with it,\n"
-	.string "the more adorable my POKéMON becomes.$"
+	.string "Cuanto más tiempo paso con él,\n"
+	.string "más adorable se vuelve mi POKéMON.$"
 
 Route103_Text_PeteIntro:
 	.string "Con esta distancia…\n"
@@ -4793,16 +4794,16 @@ Route134_Text_HudsonPostBattle:
 	.string "estoy preocupado por él.$"
 
 VSSeeker_Text_BatteryNotChargedNeedXSteps::
-	.string "The battery isn't charged enough.\p"
-	.string "No. of steps required to fully\n"
-	.string "charge the battery: {STR_VAR_1}{PAUSE_UNTIL_PRESS}$"
+	.string "La batería no tiene carga suficiente.\p"
+	.string "Pasos que faltan para cargarla\n"
+	.string "por completo: {STR_VAR_1}{PAUSE_UNTIL_PRESS}$"
 
 VSSeeker_Text_NoTrainersWithinRange::
-	.string "There are no Trainers within range\n"
-	.string "who can battle…\p"
-	.string "The VS Seeker was turned off.{PAUSE_UNTIL_PRESS}$"
+	.string "No hay ENTRENADORES cerca que\n"
+	.string "puedan combatir…\p"
+	.string "Se ha apagado el BUSCAPELEA.{PAUSE_UNTIL_PRESS}$"
 
 VSSeeker_Text_TrainersNotReady::
-	.string "The other Trainers don't appear\n"
-	.string "to be ready for battle.\p"
-	.string "Let's wait till later.{PAUSE_UNTIL_PRESS}$"
+	.string "Parece que los demás ENTRENADORES\n"
+	.string "aún no están listos para combatir.\p"
+	.string "Habrá que esperar un poco.{PAUSE_UNTIL_PRESS}$"

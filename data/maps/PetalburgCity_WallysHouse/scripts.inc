@@ -108,12 +108,12 @@ PetalburgCity_WallysHouse_Text_WallyIsComingHomeSoon:
 	.string "Tengo muchas ganas de verlo.$"
 
 PetalburgCity_WallysHouse_Text_YouMetWallyInEverGrandeCity:
-	.string "Oh? You met WALLY in\n"
-	.string "EVER GRANDE CITY?\p"
-	.string "Oh, {PLAYER}{KUN}, don't be silly.\p"
-	.string "He may have gotten healthy, but he\n"
-	.string "can't go somewhere far away like\l"
-	.string "that all by himself.$"
+	.string "¿Eh? ¿Viste a BLASCO en\n"
+	.string "CIUDAD COLOSALIA?\p"
+	.string "Ay, {PLAYER}{KUN}, no digas\n"
+	.string "tonterías.\p"
+	.string "Puede que esté más sano, pero no\n"
+	.string "puede irse tan lejos él solo.$"
 
 PetalburgCity_WallysHouse_Text_WallyWasReallyHappy:
 	.string "BLASCO estaba feliz cuando nos dijo\n"

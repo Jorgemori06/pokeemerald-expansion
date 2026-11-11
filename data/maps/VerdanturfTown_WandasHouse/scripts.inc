@@ -115,11 +115,11 @@ VerdanturfTown_WandasHouse_Text_WallySlippedOff:
 	.string "He slipped off on his own…$"
 
 VerdanturfTown_WandasHouse_Text_WallyGoneThatFar:
-	.string "UNCLE: Is that right?\n"
-	.string "WALLY's gone away that far all by\l"
-	.string "himself…\p"
-	.string "Well, I have to give him credit--he is\n"
-	.string "my little brother's son.$"
+	.string "TÍO: ¿En serio?\n"
+	.string "¿BLASCO ha llegado tan lejos él\l"
+	.string "solo…?\p"
+	.string "Bueno, hay que reconocérselo: es\n"
+	.string "el hijo de mi hermano pequeño.$"
 
 VerdanturfTown_WandasHouse_Text_MeetWanda:
 	.string "WANDA: ¿Quién eres?\n"
@@ -156,12 +156,12 @@ VerdanturfTown_WandasHouse_Text_DaughtersBoyfriendWasDigging:
 	.string "¡Qué barbaridad!$"
 
 VerdanturfTown_WandasHouse_Text_IfAnythingHappenedToWally:
-	.string "If anything were to happen to WALLY,\n"
-	.string "I would never be able to look his\l"
-	.string "parents in PETALBURG in the eye…$"
+	.string "Si a BLASCO le pasara algo, no\n"
+	.string "podría volver a mirar a la cara a\l"
+	.string "sus padres de PETALIA…$"
 
 VerdanturfTown_WandasHouse_Text_WallyWasInEverGrande:
-	.string "WALLY was in EVER GRANDE?\p"
-	.string "His parents in PETALBURG would be\n"
-	.string "astonished to hear that!$"
+	.string "¿BLASCO estuvo en COLOSALIA?\p"
+	.string "¡Sus padres de PETALIA se quedarían\n"
+	.string "de piedra si lo supieran!$"
 
