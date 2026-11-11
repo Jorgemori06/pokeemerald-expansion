@@ -624,11 +624,7 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
 
 ### Pendiente para el próximo locke
 
-- **Estadísticas mal leídas en el randomizer (apuntado por Jorge, 08/11/2026):**
-  - **Qué pasa:** `tools/dualocke/aleatorio/especies.py` coge el primer número de las estadísticas que dependen de la generación (`P_UPDATED_STATS`). Ya preprocesadas son, por ejemplo, `8 >= 1 ? 60 : 50`. Salen mal 189 estadísticas de unas 90 especies: a Machoke le da 8 de Def. Esp., a Charizard le falta el At. Esp…
-  - **A qué afecta:** solo a los entrenadores, por la suma de estadísticas (el tope de los líderes hasta ERICO y la estrategia) y por los objetos de algunos jefes. Los salvajes, las habilidades y los iniciales no cambian.
-  - **Cómo se arregla:** evaluar la expresión como hace `evaluar` en `tools/dualocke/guia_pokedex.py`.
-  - **Por qué se espera:** con la misma semilla cambian 52 entrenadores (todos los líderes y los rivales), así que se deja para cuando se empiece partida nueva. Con la semilla de Jorge ya está probado: solo cambian `trainers.party` y el solucionario.
+- **Estadísticas mal leídas en el randomizer: ARREGLADO (Jorge, 11/11/2026).** `aleatorio/especies.py` cogía el primer número de las estadísticas que dependen de la generación (ya preprocesadas son, por ejemplo, `8 >= 1 ? 60 : 50`). Salían mal 189 estadísticas de unas 90 especies: Machoke con 8 de Def. Esp., a Charizard le faltaba el At. Esp… Ahora se evalúa la expresión con `evaluar`, que se ha movido de `guia_pokedex.py` a `aleatorio/especies.py` para que la usen los dos. Solo afecta a los entrenadores (tope y estrategia de los líderes, objetos de los jefes) y **cambia a muchos con la misma semilla**, así que va con partida nueva.
 
 ### Pendiente de decidir
 
