@@ -49,6 +49,10 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 - [ ] `make nueva-partida` da otra semilla y `make` repite la misma.
 
 ### Equilibrio
+- [ ] Primeros gimnasios (desde el 11/11/2026):
+  - PETRA con 4 Pokémon (14-16), MARCIAL con 4 (21-23) y ERICO con 5 (30-32), una cura cada uno.
+  - Ninguno lleva Mineral Evolutivo, Vidasfera ni objetos Elección (salvo Pañuelo).
+  - ¿Siguen siendo un reto sin ser un muro?
 - [ ] Líderes (desde el 31/10/2026):
   - El primero pone trampas y los demás usan su estrategia: envenenar, quemar, chetarse.
   - Cambian de Pokémon con cabeza y dejan el as para el final.
