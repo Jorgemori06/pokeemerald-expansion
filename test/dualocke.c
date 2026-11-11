@@ -9,6 +9,8 @@
 #include "pokemon_storage_system.h"
 #include "strings.h"
 #include "test/test.h"
+#include "naming_screen.h"
+#include "string_util.h"
 #include "constants/region_map_sections.h"
 #include "constants/trade.h"
 
@@ -627,4 +629,18 @@ TEST("Dualocke: un huevo con la MO no cuenta como otro que la sabe")
     SetMove(1, 0, MOVE_SURF);
     SetMonData(&gParties[B_TRAINER_PLAYER][1], MON_DATA_IS_EGG, &egg);
     EXPECT(Dualocke_KnowsUniqueHM(0));
+}
+
+// Dualocke: en la pantalla del mote, la especie va en el hueco del título ("¿Mote de Torchic?")
+TEST("Dualocke: el título del mote pone la especie en su hueco")
+{
+    u8 buffer[64];
+
+    Dualocke_BuildMonNamingTitle(buffer, COMPOUND_STRING("Torchic"), COMPOUND_STRING("¿Mote de {STR_VAR_1}?"));
+    EXPECT(StringCompare(buffer, COMPOUND_STRING("¿Mote de Torchic?")) == 0);
+    Dualocke_BuildMonNamingTitle(buffer, COMPOUND_STRING("Torchic"), COMPOUND_STRING("{STR_VAR_1}'s nickname?"));
+    EXPECT(StringCompare(buffer, COMPOUND_STRING("Torchic's nickname?")) == 0);
+    // Sin hueco, la especie va delante, como antes
+    Dualocke_BuildMonNamingTitle(buffer, COMPOUND_STRING("Torchic"), COMPOUND_STRING("'s nickname?"));
+    EXPECT(StringCompare(buffer, COMPOUND_STRING("Torchic's nickname?")) == 0);
 }

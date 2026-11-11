@@ -1776,13 +1776,47 @@ static void DrawNormalTextEntryBox(void)
     PutWindowTilemap(sNamingScreen->windows[WIN_TEXT_ENTRY_BOX]);
 }
 
+// Dualocke: el título lleva {STR_VAR_1} donde va la especie ("¿Mote de {STR_VAR_1}?"). Antes la
+// especie se escribía delante y el título detrás con el hueco vacío, y en castellano salía
+// "Torchic¿Mote de ?" (encontrado jugando, 07/11/2026). Si el título no lleva hueco, la especie
+// va delante, como antes.
+u8 *Dualocke_BuildMonNamingTitle(u8 *dst, const u8 *species, const u8 *title)
+{
+    u8 name[POKEMON_NAME_BUFFER_SIZE + 6];
+    u8 *end = StringCopyN(name, species, POKEMON_NAME_LENGTH);
+    bool32 placed = FALSE;
+    u32 i;
+
+    *end = EOS;
+    WrapFontIdToFit(name, end, FONT_NORMAL, 128 - 64);
+    for (i = 0; title[i] != EOS; i++)
+    {
+        if (title[i] == PLACEHOLDER_BEGIN && title[i + 1] == PLACEHOLDER_ID_STRING_VAR_1)
+            placed = TRUE;
+    }
+    if (!placed)
+        dst = StringCopy(dst, name);
+    for (i = 0; title[i] != EOS; i++)
+    {
+        if (title[i] == PLACEHOLDER_BEGIN && title[i + 1] == PLACEHOLDER_ID_STRING_VAR_1)
+        {
+            dst = StringCopy(dst, name);
+            i++;
+        }
+        else
+        {
+            *dst++ = title[i];
+        }
+    }
+    *dst = EOS;
+    return dst;
+}
+
 static void DrawMonTextEntryBox(void)
 {
     u8 buffer[64];
 
-    u8 *end = StringCopy(buffer, GetSpeciesName(sNamingScreen->monSpecies));
-    WrapFontIdToFit(buffer, end, FONT_NORMAL, 128 - 64);
-    StringAppendN(end, sNamingScreen->template->title, 15);
+    Dualocke_BuildMonNamingTitle(buffer, GetSpeciesName(sNamingScreen->monSpecies), sNamingScreen->template->title);
     FillWindowPixelBuffer(sNamingScreen->windows[WIN_TEXT_ENTRY_BOX], PIXEL_FILL(1));
     AddTextPrinterParameterized(sNamingScreen->windows[WIN_TEXT_ENTRY_BOX], FONT_NORMAL, buffer, 8, 1, 0, 0);
     PutWindowTilemap(sNamingScreen->windows[WIN_TEXT_ENTRY_BOX]);
