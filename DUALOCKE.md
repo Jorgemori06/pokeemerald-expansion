@@ -604,6 +604,14 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
 - **Guía para jugar** en `GUIA.html` (se abre con el navegador): cómo avanzar, caps y niveles de los jefes, objetos nuevos, pistas de megapiedras y Ticket-Recuerdo, y novedades. Tiene también una **Pokédex** (estadísticas base, tipos, debilidades, evoluciones y megas, con sprites). Las pistas salen de los mapas con `python3 tools/dualocke/guia.py` y la Pokédex del código con `python3 tools/dualocke/guia_pokedex.py`; el resto se edita a mano. Las evoluciones raras salen explicadas: Tandemaus (nivel 25 subiendo en combate, no con Caramelo Raro fuera de combate), Shedinja, Sirfetch'd y las que no se pueden hacer en Hoenn (Runerigus, Urshifu).
 - **Siguiente: jugar y probarlo todo junto.** Lista de qué mirar en `PRUEBAS.md`.
 
+### Pendiente para el próximo locke
+
+- **Estadísticas mal leídas en el randomizer (apuntado por Jorge, 08/11/2026):**
+  - **Qué pasa:** `tools/dualocke/aleatorio/especies.py` coge el primer número de las estadísticas que dependen de la generación (`P_UPDATED_STATS`). Ya preprocesadas son, por ejemplo, `8 >= 1 ? 60 : 50`. Salen mal 189 estadísticas de unas 90 especies: a Machoke le da 8 de Def. Esp., a Charizard le falta el At. Esp…
+  - **A qué afecta:** solo a los entrenadores, por la suma de estadísticas (el tope de los líderes hasta ERICO y la estrategia) y por los objetos de algunos jefes. Los salvajes, las habilidades y los iniciales no cambian.
+  - **Cómo se arregla:** evaluar la expresión como hace `evaluar` en `tools/dualocke/guia_pokedex.py`.
+  - **Por qué se espera:** con la misma semilla cambian 52 entrenadores (todos los líderes y los rivales), así que se deja para cuando se empiece partida nueva. Con la semilla de Jorge ya está probado: solo cambian `trainers.party` y el solucionario.
+
 ### Pendiente de decidir
 
 - ¿Se consigue la **ROM de Esmeralda española** para los diálogos oficiales?
