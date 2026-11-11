@@ -598,9 +598,9 @@ const u8 gText_First[] = ES(_("first"), _("primero"));
 const u8 gText_Second[] = ES(_("second"), _("segundo"));
 const u8 gText_Third[] = ES(_("third"), _("tercero"));
 #if OW_POISON_DAMAGE < GEN_4
-const u8 gText_PkmnFainted_FldPsn[] = _("{STR_VAR_1} fainted…\p\n");
+const u8 gText_PkmnFainted_FldPsn[] = ES(_("{STR_VAR_1} fainted…\p\n"), _("{STR_VAR_1} se ha debilitado…\p\n"));
 #else
-const u8 gText_PkmnFainted_FldPsn[] = _("{STR_VAR_1} survived the poisoning.\nThe poison faded away!\p");
+const u8 gText_PkmnFainted_FldPsn[] = ES(_("{STR_VAR_1} survived the poisoning.\nThe poison faded away!\p"), _("{STR_VAR_1} ha aguantado el veneno.\n¡Ya no está envenenado!\p"));
 #endif
 const u8 gText_Marco[] = _("MARCO");
 const u8 gText_TrainerCardName[] = ES(_("NAME: "), _("NOMBRE: "));

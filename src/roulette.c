@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke_es.h"
 #include "malloc.h"
 #include "bg.h"
 #include "coins.h"
@@ -416,18 +417,18 @@ static void SetBallStuck(struct Sprite *);
 static void SpriteCB_Shroomish(struct Sprite *);
 static void SpriteCB_Taillow(struct Sprite *);
 
-static const u8 Roulette_Text_PlayMinimumWagerIsX[] = _("The minimum wager at this table\nis {STR_VAR_1}. Do you want to play?");
-static const u8 Roulette_Text_NotEnoughCoins[] = _("You don't have enough COINS.");
-static const u8 Roulette_Text_SpecialRateTable[] = _("Special rate table right now!");
-static const u8 Roulette_Text_ControlsInstruction[] = _("Place your wager with the + Control\nPad, then press the A Button.");
-static const u8 Roulette_Text_ItsAHit[] = _("It's a hit!");
-static const u8 Roulette_Text_Jackpot[] = _("Jackpot!");
-static const u8 Roulette_Text_NothingDoing[] = _("Nothing doing!");
-static const u8 Roulette_Text_YouveWonXCoins[] = _("You've won {STR_VAR_1} COINS!");
-static const u8 Roulette_Text_NoCoinsLeft[] = _("No COINS left…");
-static const u8 Roulette_Text_KeepPlaying[] = _("Keep playing?");
-static const u8 Roulette_Text_BoardWillBeCleared[] = _("The ROULETTE board will be cleared.");
-static const u8 Roulette_Text_CoinCaseIsFull[] = _("Your COIN CASE is full!\nCoins can be exchanged for prizes.");
+static const u8 Roulette_Text_PlayMinimumWagerIsX[] = ES(_("The minimum wager at this table\nis {STR_VAR_1}. Do you want to play?"), _("La apuesta mínima en esta mesa\nes de {STR_VAR_1}. ¿Quieres jugar?"));
+static const u8 Roulette_Text_NotEnoughCoins[] = ES(_("You don't have enough COINS."), _("No tienes suficientes FICHAS."));
+static const u8 Roulette_Text_SpecialRateTable[] = ES(_("Special rate table right now!"), _("¡Ahora hay premios especiales!"));
+static const u8 Roulette_Text_ControlsInstruction[] = ES(_("Place your wager with the + Control\nPad, then press the A Button."), _("Elige tu apuesta con la cruceta\ny pulsa el botón A."));
+static const u8 Roulette_Text_ItsAHit[] = ES(_("It's a hit!"), _("¡Acierto!"));
+static const u8 Roulette_Text_Jackpot[] = ES(_("Jackpot!"), _("¡Premio gordo!"));
+static const u8 Roulette_Text_NothingDoing[] = ES(_("Nothing doing!"), _("¡Nada!"));
+static const u8 Roulette_Text_YouveWonXCoins[] = ES(_("You've won {STR_VAR_1} COINS!"), _("¡Has ganado {STR_VAR_1} FICHAS!"));
+static const u8 Roulette_Text_NoCoinsLeft[] = ES(_("No COINS left…"), _("No te quedan FICHAS…"));
+static const u8 Roulette_Text_KeepPlaying[] = ES(_("Keep playing?"), _("¿Sigues jugando?"));
+static const u8 Roulette_Text_BoardWillBeCleared[] = ES(_("The ROULETTE board will be cleared."), _("Se va a vaciar el tablero."));
+static const u8 Roulette_Text_CoinCaseIsFull[] = ES(_("Your COIN CASE is full!\nCoins can be exchanged for prizes."), _("¡Tu MONEDERO está lleno!\nCambia las FICHAS por premios."));
 
 static const u16 sWheel_Pal[] = INCGFX_U16("graphics/roulette/wheel.png", ".gbapal"); // also palette for grid
 static const u32 sGrid_Tilemap[] = INCGFX_U32("graphics/roulette/grid.bin", ".smolTM");
