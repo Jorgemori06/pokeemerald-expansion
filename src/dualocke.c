@@ -6,6 +6,7 @@
 #include "event_data.h"
 #include "global.fieldmap.h"
 #include "item.h"
+#include "mail.h"
 #include "pokemon.h"
 #include "pokemon_storage_system.h"
 #include "string_util.h"
@@ -85,6 +86,33 @@ static void BuryMon(struct Pokemon *mon)
     ZeroMonData(mon);
 }
 
+// Dualocke: los objetos que llevan los muertos vuelven a la mochila (o al PC de objetos si
+// ese bolsillo está lleno), porque en la caja de muertos no se puede tocar nada (encontrado
+// jugando, 07/11/2026). Se llama al acabar cada combate y al encender el PC, así que también
+// recupera los de los que murieron antes de este cambio. Si no caben en ningún sitio, el
+// objeto se queda en el muerto hasta la próxima vez.
+void Dualocke_RecoverDeadMonsItems(void)
+{
+    u32 boxPos;
+
+    for (boxPos = 0; boxPos < IN_BOX_COUNT; boxPos++)
+    {
+        struct BoxPokemon *slot = GetBoxedMonPtr(DUALOCKE_DEAD_BOX, boxPos);
+        enum Item item;
+
+        if (GetBoxMonData(slot, MON_DATA_SPECIES) == SPECIES_NONE)
+            continue;
+        item = GetBoxMonData(slot, MON_DATA_HELD_ITEM);
+        if (item == ITEM_NONE || ItemIsMail(item))
+            continue;
+        if (AddBagItem(item, 1) || AddPCItem(item, 1))
+        {
+            item = ITEM_NONE;
+            SetBoxMonData(slot, MON_DATA_HELD_ITEM, &item);
+        }
+    }
+}
+
 // No es static: la usa también el aviso al morir (src/dualocke_aviso.c)
 bool32 IsDualockeBattle(void)
 {
@@ -139,6 +167,7 @@ void Dualocke_OnBattleEnd(bool32 playerDefeated)
         CompactPartySlots();
         CalculatePlayerPartyCount();
     }
+    Dualocke_RecoverDeadMonsItems();
 }
 
 // ---------------------------------------------------------------------------
