@@ -193,7 +193,7 @@ Regla general: **el as de cada jefe va exactamente al nivel del cap**, el resto 
 - **Reescalado hecho** (Miguel, 23/10/2026) con `tools/dualocke/reescalar_niveles.py`, que lee los niveles originales de la expansion y se puede volver a lanzar tras tocar la tabla. Cómo funciona:
   - Cada mapa de Hoenn está asignado a su **tramo** (entre una medalla y la siguiente, en orden de historia).
   - **Entrenadores normales:** suben del cap anterior − 3 al cap del tramo − 3, según lo fuertes que eran en el original dentro de su tramo.
-  - **Líderes de gimnasio:** el equipo entero al cap.
+  - **Líderes de gimnasio:** el equipo entero al cap. **Salvo PETRA, MARCIAL y ERICO** (Miguel, 11/11/2026; ver sección 6): el as al cap y el resto 1-2 niveles por debajo.
   - **Alto Mando:** Sidney 92, Fátima 94, Nívea 95 y Dracón 97, el equipo entero a ese nivel. **Plubio** 100 y **Blasco** en Calle Victoria 90.
   - **Jefes a mitad de tramo** (rival, Magno, Aquiles, Blasco en Malvalona): el equipo entero 3 niveles por encima de los entrenadores de ese punto, sin pasar del cap.
   - **Salvajes:** los entrenadores de su zona − 3, con un margen de ±2. Las tres cañas dan el mismo nivel.
@@ -225,6 +225,17 @@ Regla general: **el as de cada jefe va exactamente al nivel del cap**, el resto 
 - **Desde que el jugador tiene el aro, todos los jefes llevan un Pokémon con mega** (y la usan). Lista de "jefes" (decidida el 23/10/2026): líderes de gimnasio, Alto Mando, Plubio, rival (Bruno/Aura), Blasco y los líderes Magma/Aqua (Magno, Aquiles).
 - **Equipos de los jefes (hecho, Miguel, 23/10/2026)** con `tools/dualocke/equipos_jefes.py` (se lanza después de `reescalar_niveles.py`):
   - **+2 Pokémon** a líderes, Alto Mando y Plubio; **+1** al rival, Blasco, Magno, Aquiles y los admins (Tatiano, Silvina, Matías). Máximo 6.
+  - **Primeros gimnasios más suaves (Miguel, 11/11/2026).** Jorge y Miguel vieron jugando que PETRA y MARCIAL eran demasiado difíciles: 5 Pokémon al cap, todos con Mineral Evolutivo, IVs 24, IA lista y 2 curas. En el original eran 3 Pokémon a nivel 12-15. Ahora:
+
+    | Líder | Pokémon | Niveles (el último es el as) | Curas |
+    | --- | --- | --- | --- |
+    | PETRA | 4 (sin Onix) | 14, 15, 15, 16 | 1 Poción |
+    | MARCIAL | 4 (sin Mankey) | 21, 22, 22, 23 | 1 Superpoción |
+    | ERICO | 5 (sin Raichu) | 30, 31, 31, 31, 32 | 1 Superpoción |
+
+    - Las especies son las del hueco base: el randomizer las cambia igualmente, y el as sigue siendo de su tipo.
+    - En `equipos_jefes.py` son las tablas `EQUIPOS`, `NIVELES_EQUIPO` y `CURAS`.
+    - Los objetos de sus Pokémon, en la sección 7 ("objetos de los jefes").
   - Los huecos nuevos son Pokémon **del tipo del jefe**; los originales **evolucionan** según su nivel. El randomizer los cambiará igualmente.
   - **Megas canónicas** desde el aro (el as, último del equipo, lleva su megapiedra): Alana Altaria, Vito y Leti Metagross, Galano Starmie, Sidney Absol, Fátima Banette, Nívea Glalie, Dracón Salamence, Plubio Gyarados, Blasco Gardevoir, Magno Camerupt, Aquiles Sharpedo y el rival su inicial (desde Ciudad Calagua).
   - **Objetos:** solo se añade la megapiedra; los que ya llevaban (Baya Zidra…) se quedan, y el resto lo pondrá el randomizer.
@@ -390,6 +401,10 @@ Están en **`tools/dualocke/randomizer_config.json`**, que es el archivo que deb
 - Los equipos de los entrenadores evolucionan según el nivel y pueden usar formas alternativas.
 - +1 Pokémon a los entrenadores importantes y +2 a los jefes.
 - Los Pokémon de entrenadores importantes y jefes pueden llevar objetos aleatorios, priorizando objetos coherentes. **Hecho** (Miguel, #27: "un objeto que le sirva", a todo el equipo): Mineral Evolutivo si puede evolucionar; si no, según sus estadísticas y movimientos (Vidasfera, Cinta Experto, Banda/Gafas/Pañuelo Elección si todos sus movimientos son de daño, potenciador del tipo de su mejor ataque, Restos/Lodo Negro, Baya Zidra, Casco Dentado, Chaleco Asalto, Banda Aguante si es rápido…), sin repetir dentro del equipo si se puede. La megapiedra del as se queda. Son jefes los de `as_por_tipo` (y sus revanchas), el Alto Mando, Plubio y el rival.
+  - **Mineral Evolutivo: como mucho uno por equipo** (Miguel, 11/11/2026). Antes lo llevaba todo el equipo que pudiera evolucionar; los demás llevan ahora otro objeto según sus estadísticas.
+  - **Hasta el gimnasio 3, objetos de punto medio** (`objeto_suave`; Miguel, 11/11/2026). Afecta a los de `lideres.limite_salvajes`: PETRA, MARCIAL, ERICO, el rival hasta la Ruta 110 y BLASCO en Malvalona.
+    - **Sí:** Baya Zidra, bayas que suben una estadística (Lichi, Yapati, Aslac, Gonlan y Albina), Cinta Fuerte o Gafas Especiales según ataque, Pañuelo Elección si es rápido y todos sus movimientos son de daño, y el potenciador del tipo de su mejor ataque.
+    - **No:** Mineral Evolutivo, Vidasfera, Cinta Elección, Gafas Elección ni Cinta Experto.
 - **Nuevo:** el as de cada jefe es de su tipo y, desde el aro, una especie con mega de ese tipo con su megapiedra (ver arriba).
 
 **Salvajes** (hecho, `tools/dualocke/aleatorio/salvajes.py`)

@@ -15,6 +15,9 @@ Reglas (decididas por Miguel, ver DUALOCKE.md, sección 6):
 - Huecos nuevos: Pokémon del tipo del jefe. El randomizer los cambiará igualmente.
 - Desde el aro (Alana en adelante) el as (el último del equipo) lleva su megapiedra.
 - Sin más objetos: el resto los pondrá el randomizer.
+- Primeros gimnasios más suaves (Miguel, 11/11/2026, al ver jugando que eran demasiado
+  difíciles): PETRA y MARCIAL con 4 Pokémon y ERICO con 5, el as al cap y el resto 1-2 niveles
+  por debajo (NIVELES_EQUIPO), y una sola cura cada uno (CURAS).
 
 Formato de cada equipo, en orden (el último es el as):
     "Geodude"            Pokémon original que se conserva (con sus movimientos)
@@ -31,10 +34,11 @@ import reescalar_niveles as rn  # noqa: E402
 
 EQUIPOS = {
     # Líderes (+2)
-    "TRAINER_ROXANNE_1": ["Geodude", "+SPECIES_LARVITAR", "+SPECIES_ONIX", "+SPECIES_ARON", "Nosepass"],
-    "TRAINER_BRAWLY_1": ["Machop", "Meditite", "+SPECIES_MANKEY", "+SPECIES_TIMBURR", "Makuhita"],
+    # (PETRA, MARCIAL y ERICO: uno menos desde el 11/11/2026; ver NIVELES_EQUIPO)
+    "TRAINER_ROXANNE_1": ["Geodude", "+SPECIES_LARVITAR", "+SPECIES_ARON", "Nosepass"],
+    "TRAINER_BRAWLY_1": ["Machop", "Meditite", "+SPECIES_TIMBURR", "Makuhita"],
     "TRAINER_WATTSON_1": ["Voltorb>Electrode", "Magneton", "+SPECIES_LUXRAY", "+SPECIES_AMPHAROS",
-                          "+SPECIES_RAICHU", "Manectric"],
+                          "Manectric"],
     "TRAINER_FLANNERY_1": ["+SPECIES_NINETALES", "Slugma>Magcargo", "+SPECIES_HOUNDOOM", "+SPECIES_ARCANINE",
                            "Camerupt", "Torkoal"],
     "TRAINER_NORMAN_1": ["Spinda", "Vigoroth", "Linoone", "+SPECIES_URSARING", "+SPECIES_KANGASKHAN",
@@ -74,6 +78,21 @@ EQUIPOS = {
     "TRAINER_SHELLY_WEATHER_INSTITUTE": ["Carvanha>Sharpedo", "Mightyena", "+SPECIES_CRAWDAUNT"],
     "TRAINER_SHELLY_SEAFLOOR_CAVERN": ["Sharpedo", "Mightyena", "+SPECIES_CRAWDAUNT"],
     "TRAINER_MATT": ["Mightyena", "Golbat>Crobat", "+SPECIES_SHARPEDO"],
+}
+
+# Niveles de cada Pokémon, en el orden del equipo (el último es el as, al cap). Los que no salen
+# aquí llevan los de reescalar_niveles.py (los líderes, todo el equipo al cap).
+NIVELES_EQUIPO = {
+    "TRAINER_ROXANNE_1": [14, 15, 15, 16],
+    "TRAINER_BRAWLY_1": [21, 22, 22, 23],
+    "TRAINER_WATTSON_1": [30, 31, 31, 31, 32],
+}
+
+# Curas del entrenador en combate (la línea "Items:"): una sola hasta ERICO
+CURAS = {
+    "TRAINER_ROXANNE_1": "Potion",
+    "TRAINER_BRAWLY_1": "Super Potion",
+    "TRAINER_WATTSON_1": "Super Potion",
 }
 
 # Rival: evoluciona por nivel, +1 Pokémon de su grupo habitual y, desde el aro (Calagua),
@@ -190,6 +209,11 @@ def main():
             cabecera, mons = construir(nombre, cabecera, mons, EQUIPOS[nombre])
         else:
             cabecera, mons = construir_rival(nombre, cabecera, mons)
+        if nombre in NIVELES_EQUIPO:
+            assert len(NIVELES_EQUIPO[nombre]) == len(mons), nombre
+            mons = [con_nivel(m, n) for m, n in zip(mons, NIVELES_EQUIPO[nombre])]
+        if nombre in CURAS:
+            cabecera = re.sub(r"^Items:.*$", "Items: " + CURAS[nombre], cabecera, flags=re.M)
         partes[i + 1] = "\n" + "\n\n".join([cabecera] + mons) + "\n\n"
         hechos.append((nombre, [especie(m) + (" @ " + m.splitlines()[0].split("@")[1].strip() if "@" in m.splitlines()[0] else "") for m in mons]))
 

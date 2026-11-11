@@ -113,11 +113,41 @@ POTENCIADOR_DE_TIPO = {
 }
 
 
-def objeto_coherente(especie, movimientos, datos_mov, rng, usados=()):
-    """Un objeto que le sirva a `especie` con esos movimientos: Mineral Evolutivo si puede
-    evolucionar; si no, según sus estadísticas (atacante físico o especial, rápido, resistente)."""
+def objeto_suave(especie, movimientos, datos_mov, rng, usados=()):
+    """Objeto de los jefes hasta el gimnasio 3 (Miguel, 11/11/2026): un punto medio, sin Mineral
+    Evolutivo, Vidasfera, Cinta Elección ni Gafas Elección. Bayas que suben estadísticas (o Baya
+    Zidra), Cinta Fuerte o Gafas Especiales, Pañuelo Elección (solo si todos sus movimientos son de
+    daño) y el potenciador del tipo de su mejor ataque."""
     st = especie.stats
-    if especie.destinos:
+    danos = [datos_mov[m] for m in movimientos if m in datos_mov and datos_mov[m].de_dano]
+    todo_dano = len(danos) == len(movimientos) and danos
+    opciones = ["ITEM_SITRUS_BERRY"]
+    if st.get("Attack", 0) >= st.get("SpAttack", 0):
+        opciones += ["ITEM_MUSCLE_BAND", "ITEM_LIECHI_BERRY"]
+    else:
+        opciones += ["ITEM_WISE_GLASSES", "ITEM_PETAYA_BERRY"]
+    if st.get("Speed", 0) >= 80:
+        opciones += ["ITEM_SALAC_BERRY"] + (["ITEM_CHOICE_SCARF"] if todo_dano else [])
+    if st.get("Defense", 0) >= 80:
+        opciones.append("ITEM_GANLON_BERRY")
+    if st.get("SpDefense", 0) >= 80:
+        opciones.append("ITEM_APICOT_BERRY")
+    if danos:
+        opciones.append(POTENCIADOR_DE_TIPO.get(max(danos, key=lambda d: d.potencia).tipo, "ITEM_SITRUS_BERRY"))
+    libres = [o for o in opciones if o not in usados]
+    return rng.choice(libres or opciones)
+
+
+def objeto_coherente(especie, movimientos, datos_mov, rng, usados=(), suave=False):
+    """Un objeto que le sirva a `especie` con esos movimientos: Mineral Evolutivo si puede
+    evolucionar; si no, según sus estadísticas (atacante físico o especial, rápido, resistente).
+    Como mucho un Mineral Evolutivo por equipo. Con `suave` (los jefes hasta el gimnasio 3), uno de
+    objeto_suave: con el Mineral en todo el equipo, PETRA y MARCIAL eran demasiado difíciles
+    (Miguel, 11/11/2026)."""
+    if suave:
+        return objeto_suave(especie, movimientos, datos_mov, rng, usados)
+    st = especie.stats
+    if especie.destinos and "ITEM_EVIOLITE" not in usados:
         return "ITEM_EVIOLITE"
     danos = [datos_mov[m] for m in movimientos if m in datos_mov and datos_mov[m].de_dano]
     todo_dano = len(danos) == len(movimientos) and danos
@@ -189,7 +219,9 @@ class Generador:
             movimientos = mov.elegir(especie, nivel, self.pokedex, self.movs, self.todos, rng,
                                      cfg.get("garantizados", 3), tope)
         if jefe and not _es_megapiedra(objeto):
-            objeto = objeto_coherente(self.pokedex.especies[especie], movimientos, self.movs, rng, usados)
+            # Hasta el gimnasio 3 (los que tienen tope de fuerza), objetos suaves (objeto_suave)
+            objeto = objeto_coherente(self.pokedex.especies[especie], movimientos, self.movs, rng, usados,
+                                      self._tope(trainer) is not None)
         if objeto:
             usados.add(objeto)
         return movimientos, objeto
