@@ -48,36 +48,9 @@ SUFIJOS = [
 MOMENTOS = {"TIME_MORNING": "por la mañana", "TIME_DAY": "de día", "TIME_EVENING": "al atardecer", "TIME_NIGHT": "de noche"}
 
 
-def evaluar(expr):
-    """Valor de una expresión de C ya preprocesada: "8 >= 5 || 8 == 0 ? 50 : 40", "(8 >= 1 ? 109 : 85)"."""
-    expr = expr.strip()
-    while expr.startswith("(") and expr.endswith(")"):
-        profundidad = 0
-        for i, ch in enumerate(expr):
-            profundidad += ch == "("
-            profundidad -= ch == ")"
-            if profundidad == 0 and i < len(expr) - 1:
-                break
-        else:
-            expr = expr[1:-1].strip()
-            continue
-        break
-    profundidad = 0
-    for i, ch in enumerate(expr):
-        profundidad += ch == "("
-        profundidad -= ch == ")"
-        if ch == "?" and profundidad == 0:
-            resto, nivel = expr[i + 1:], 0
-            for j, c2 in enumerate(resto):
-                nivel += c2 == "?"
-                if c2 == ":":
-                    if nivel == 0:
-                        cond = evaluar(expr[:i])
-                        return evaluar(resto[:j]) if cond else evaluar(resto[j + 1:])
-                    nivel -= 1
-    python = expr.replace("||", " or ").replace("&&", " and ").replace("!=", " != ")
-    python = re.sub(r"!(?!=)", " not ", python)
-    return eval(python, {"__builtins__": {}})
+
+# Vive en aleatorio/especies.py: el randomizer también la usa para las estadísticas
+evaluar = esp.evaluar
 
 
 def leer_stats(cuerpo):

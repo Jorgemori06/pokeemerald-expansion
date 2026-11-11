@@ -115,6 +115,38 @@ def _leer_evoluciones(cuerpo):
     return evos, todas
 
 
+def evaluar(expr):
+    """Valor de una expresión de C ya preprocesada: "8 >= 5 || 8 == 0 ? 50 : 40", "(8 >= 1 ? 109 : 85)"."""
+    expr = expr.strip()
+    while expr.startswith("(") and expr.endswith(")"):
+        profundidad = 0
+        for i, ch in enumerate(expr):
+            profundidad += ch == "("
+            profundidad -= ch == ")"
+            if profundidad == 0 and i < len(expr) - 1:
+                break
+        else:
+            expr = expr[1:-1].strip()
+            continue
+        break
+    profundidad = 0
+    for i, ch in enumerate(expr):
+        profundidad += ch == "("
+        profundidad -= ch == ")"
+        if ch == "?" and profundidad == 0:
+            resto, nivel = expr[i + 1:], 0
+            for j, c2 in enumerate(resto):
+                nivel += c2 == "?"
+                if c2 == ":":
+                    if nivel == 0:
+                        cond = evaluar(expr[:i])
+                        return evaluar(resto[:j]) if cond else evaluar(resto[j + 1:])
+                    nivel -= 1
+    python = expr.replace("||", " or ").replace("&&", " and ").replace("!=", " != ")
+    python = re.sub(r"!(?!=)", " not ", python)
+    return eval(python, {"__builtins__": {}})
+
+
 def leer_especies(cpp="arm-none-eabi-cpp", cppflags=None):
     """Devuelve ({SPECIES_X: Especie}, {tabla: [SPECIES_X, ...]}, {alias: SPECIES_X})."""
     if cppflags is None:
@@ -179,7 +211,10 @@ def leer_especies(cpp="arm-none-eabi-cpp", cppflags=None):
             e.megas = megas_por_tabla.get(cambios.group(1), [])
         formas = re.search(r"\.formSpeciesIdTable\s*=\s*(s\w+)", cuerpo)
         e.tabla_formas = formas.group(1) if formas else None
-        e.stats = {k: int(v) for k, v in re.findall(r"\.base(HP|Attack|Defense|Speed|SpAttack|SpDefense)\s*=\s*(\d+)", cuerpo)}
+        # Las que dependen de la generación llegan como "8 >= 6 ? 90 : 85": antes se cogía el primer
+        # número (Machoke con 8 de Def. Esp., Charizard sin At. Esp.) y fallaban unas 90 especies
+        e.stats = {k: int(evaluar(v)) for k, v in
+                   re.findall(r"\.base(HP|Attack|Defense|Speed|SpAttack|SpDefense)\s*=\s*([^,]+),", cuerpo)}
         habilidades = re.search(r"\.abilities\s*=\s*\{([^}]*)\}", cuerpo)
         if habilidades:
             e.habilidades = [h for h in re.findall(r"ABILITY_\w+", habilidades.group(1)) if h != "ABILITY_NONE"]
