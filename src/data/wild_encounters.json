@@ -1681,53 +1681,53 @@
             "encounter_rate": 30,
             "mons": [
               {
-                "min_level": 42,
-                "max_level": 43,
+                "min_level": 17,
+                "max_level": 18,
                 "species": "SPECIES_MAGIKARP"
               },
               {
-                "min_level": 42,
-                "max_level": 43,
+                "min_level": 17,
+                "max_level": 18,
                 "species": "SPECIES_TENTACOOL"
               },
               {
-                "min_level": 43,
-                "max_level": 45,
+                "min_level": 18,
+                "max_level": 20,
                 "species": "SPECIES_MAGIKARP"
               },
               {
-                "min_level": 43,
-                "max_level": 45,
+                "min_level": 18,
+                "max_level": 20,
                 "species": "SPECIES_TENTACOOL"
               },
               {
-                "min_level": 43,
-                "max_level": 45,
+                "min_level": 18,
+                "max_level": 20,
                 "species": "SPECIES_CARVANHA"
               },
               {
-                "min_level": 45,
-                "max_level": 45,
+                "min_level": 20,
+                "max_level": 20,
                 "species": "SPECIES_SHARPEDO"
               },
               {
-                "min_level": 45,
-                "max_level": 45,
+                "min_level": 20,
+                "max_level": 20,
                 "species": "SPECIES_CARVANHA"
               },
               {
-                "min_level": 44,
-                "max_level": 44,
+                "min_level": 19,
+                "max_level": 19,
                 "species": "SPECIES_CARVANHA"
               },
               {
-                "min_level": 45,
-                "max_level": 46,
+                "min_level": 20,
+                "max_level": 21,
                 "species": "SPECIES_CARVANHA"
               },
               {
-                "min_level": 46,
-                "max_level": 46,
+                "min_level": 21,
+                "max_level": 21,
                 "species": "SPECIES_CARVANHA"
               }
             ]
@@ -2945,53 +2945,53 @@
             "encounter_rate": 30,
             "mons": [
               {
-                "min_level": 44,
-                "max_level": 45,
+                "min_level": 15,
+                "max_level": 16,
                 "species": "SPECIES_MAGIKARP"
               },
               {
-                "min_level": 44,
-                "max_level": 45,
+                "min_level": 15,
+                "max_level": 16,
                 "species": "SPECIES_TENTACOOL"
               },
               {
-                "min_level": 45,
-                "max_level": 47,
+                "min_level": 16,
+                "max_level": 18,
                 "species": "SPECIES_MAGIKARP"
               },
               {
-                "min_level": 45,
-                "max_level": 47,
+                "min_level": 16,
+                "max_level": 18,
                 "species": "SPECIES_TENTACOOL"
               },
               {
-                "min_level": 45,
-                "max_level": 47,
+                "min_level": 16,
+                "max_level": 18,
                 "species": "SPECIES_WAILMER"
               },
               {
-                "min_level": 46,
-                "max_level": 47,
+                "min_level": 17,
+                "max_level": 18,
                 "species": "SPECIES_WAILMER"
               },
               {
-                "min_level": 47,
-                "max_level": 47,
+                "min_level": 18,
+                "max_level": 18,
                 "species": "SPECIES_WAILMER"
               },
               {
-                "min_level": 46,
-                "max_level": 46,
+                "min_level": 17,
+                "max_level": 17,
                 "species": "SPECIES_WAILMER"
               },
               {
-                "min_level": 47,
-                "max_level": 48,
+                "min_level": 18,
+                "max_level": 19,
                 "species": "SPECIES_WAILMER"
               },
               {
-                "min_level": 48,
-                "max_level": 48,
+                "min_level": 19,
+                "max_level": 19,
                 "species": "SPECIES_WAILMER"
               }
             ]
@@ -9063,53 +9063,53 @@
             "encounter_rate": 10,
             "mons": [
               {
-                "min_level": 42,
-                "max_level": 43,
+                "min_level": 15,
+                "max_level": 16,
                 "species": "SPECIES_MAGIKARP"
               },
               {
-                "min_level": 42,
-                "max_level": 43,
+                "min_level": 15,
+                "max_level": 16,
                 "species": "SPECIES_GOLDEEN"
               },
               {
-                "min_level": 43,
-                "max_level": 45,
+                "min_level": 16,
+                "max_level": 18,
                 "species": "SPECIES_MAGIKARP"
               },
               {
-                "min_level": 43,
-                "max_level": 45,
+                "min_level": 16,
+                "max_level": 18,
                 "species": "SPECIES_GOLDEEN"
               },
               {
-                "min_level": 43,
-                "max_level": 45,
+                "min_level": 16,
+                "max_level": 18,
                 "species": "SPECIES_CORPHISH"
               },
               {
-                "min_level": 44,
-                "max_level": 45,
+                "min_level": 17,
+                "max_level": 18,
                 "species": "SPECIES_CORPHISH"
               },
               {
-                "min_level": 45,
-                "max_level": 45,
+                "min_level": 18,
+                "max_level": 18,
                 "species": "SPECIES_CORPHISH"
               },
               {
-                "min_level": 44,
-                "max_level": 44,
+                "min_level": 17,
+                "max_level": 17,
                 "species": "SPECIES_CORPHISH"
               },
               {
-                "min_level": 45,
-                "max_level": 46,
+                "min_level": 18,
+                "max_level": 19,
                 "species": "SPECIES_CORPHISH"
               },
               {
-                "min_level": 46,
-                "max_level": 46,
+                "min_level": 19,
+                "max_level": 19,
                 "species": "SPECIES_CORPHISH"
               }
             ]

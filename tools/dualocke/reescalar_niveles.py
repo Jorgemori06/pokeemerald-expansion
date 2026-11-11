@@ -86,6 +86,19 @@ TRAMOS = {
 #   salvajes de la 103 a nivel 9-11 al principio del juego (encontrado jugando, 01/11/2026).
 TRAMO_ENTRENADORES_DE_MAPA = {"MAP_ROUTE103": 3}
 
+# Pesca que se alcanza a pie antes que sus entrenadores (que se combaten con SURF): esos mapas
+# pescan al nivel de la pesca de otro mapa del tramo en el que llegas andando, con la CAÑA VIEJA
+# (AZULIZA, tramo 2) o en cuanto llegas (encontrado jugando, 11/11/2026: un Audino de nivel 44
+# pescando junto a AZULIZA, en la RUTA 107).
+# - CIUDAD PETALIA: el estanque de la ciudad (tramo 2, como AZULIZA).
+# - RUTA 107: la orilla este de la isla de AZULIZA es de la RUTA 107 (tramo 2, como AZULIZA).
+# - RUTA 118: la orilla oeste, al salir de MALVALONA (tramo 3, como la RUTA 110).
+PESCA_COMO = {
+    "MAP_PETALBURG_CITY": "MAP_DEWFORD_TOWN",
+    "MAP_ROUTE107": "MAP_DEWFORD_TOWN",
+    "MAP_ROUTE118": "MAP_ROUTE110",
+}
+
 LIDERES = {"TRAINER_ROXANNE_1", "TRAINER_BRAWLY_1", "TRAINER_WATTSON_1", "TRAINER_FLANNERY_1",
            "TRAINER_NORMAN_1", "TRAINER_WINONA_1", "TRAINER_TATE_AND_LIZA_1", "TRAINER_JUAN_1"}
 
@@ -254,7 +267,17 @@ def calcular_salvajes(datos, nuevos, tramo_de, mapas, bandas):
         nivel_mapa.setdefault(mapas[t], []).append(max(nuevos[t]))
     nivel_mapa = {m: round(sum(v) / len(v)) for m, v in nivel_mapa.items()}
 
+    def reescalar(mons, objetivo):
+        vmedia = sum(m["min_level"] + m["max_level"] for m in mons) / (2 * len(mons))
+        desvio = max(max(abs(m["min_level"] - vmedia), abs(m["max_level"] - vmedia)) for m in mons)
+        escala = min(1.0, 2 / desvio) if desvio else 0
+        for m in mons:
+            m["min_level"] = max(2, round(objetivo + (m["min_level"] - vmedia) * escala))
+            m["max_level"] = max(m["min_level"], round(objetivo + (m["max_level"] - vmedia) * escala))
+
     resumen = {}
+    objetivos = {}      # (mapa, tipo) -> nivel objetivo
+    pendientes = []     # pesca de PESCA_COMO: se calcula al final, con la del mapa de referencia
     for grupo in datos["wild_encounter_groups"]:
         if grupo.get("label") != "gWildMonHeaders":
             continue
@@ -266,6 +289,9 @@ def calcular_salvajes(datos, nuevos, tramo_de, mapas, bandas):
             for tipo in ("land_mons", "water_mons", "rock_smash_mons", "fishing_mons", "hidden_mons"):
                 if tipo not in zona:
                     continue
+                if tipo == "fishing_mons" and zona["map"] in PESCA_COMO:
+                    pendientes.append(zona)
+                    continue
                 mons = zona[tipo]["mons"]
                 vmedia = sum(m["min_level"] + m["max_level"] for m in mons) / (2 * len(mons))
                 if zona["map"] in nivel_mapa:
@@ -275,12 +301,13 @@ def calcular_salvajes(datos, nuevos, tramo_de, mapas, bandas):
                 else:
                     entrenadores = (nmin + nmax) // 2
                 objetivo = max(2, entrenadores - MARGEN_SALVAJES)
-                desvio = max(max(abs(m["min_level"] - vmedia), abs(m["max_level"] - vmedia)) for m in mons)
-                escala = min(1.0, 2 / desvio) if desvio else 0
-                for m in mons:
-                    m["min_level"] = max(2, round(objetivo + (m["min_level"] - vmedia) * escala))
-                    m["max_level"] = max(m["min_level"], round(objetivo + (m["max_level"] - vmedia) * escala))
+                reescalar(mons, objetivo)
+                objetivos[(zona["map"], tipo)] = objetivo
                 resumen.setdefault(s, []).append(objetivo)
+    for zona in pendientes:
+        objetivo = objetivos[(PESCA_COMO[zona["map"]], "fishing_mons")]
+        reescalar(zona["fishing_mons"]["mons"], objetivo)
+        resumen.setdefault(tramo_de_mapa(zona["map"]), []).append(objetivo)
     return resumen
 
 
