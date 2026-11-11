@@ -539,6 +539,8 @@ En total, unas 210.000 palabras: más o menos dos novelas largas.
 - No romper los códigos dentro del texto: `{PLAYER}`, `{STR_VAR_1}`, colores, pausas, etc.
 - Mensajes de combate montados por trozos que necesitan cambios de código para el género y los artículos.
 
+**Textos del código (Jorge, 11/11/2026, encontrados jugando):** la pesca ("¡Oh! ¡Ha picado algo!"), el aviso de la tienda de que ya has comprado uno, el veneno fuera de combate, la RULETA y las tragaperras (`src/fishing.c`, `shop.c`, `strings.c`, `roulette.c`, `slot_machine.c`, con `ES()`).
+
 Hubo una traducción antigua de la expansion al castellano (fork de Xhyzi, rama `pokeemerald-expansion-es`, compilando con `LANG=ES`), pero tiene más de tres años y no sirve tal cual.
 
 ### Paso 2: mensajes de combate (hecho)

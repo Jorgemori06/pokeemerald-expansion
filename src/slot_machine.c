@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke_es.h"
 #include "overworld.h"
 #include "field_effect.h"
 #include "random.h"
@@ -650,11 +651,11 @@ static void SpriteCB_ReelTimeDuck(struct Sprite *);
 static void SpriteCB_ReelTimeSmoke(struct Sprite *);
 static void SpriteCB_PikaPowerBolt(struct Sprite *);
 
-static const u8 sText_QuitTheGame[] = _("Quit the game?");
-static const u8 sText_YouveGot9999Coins[] = _("You've got 9,999 COINS.");
-static const u8 sText_YouveRunOutOfCoins[] = _("You've run out of COINS.\nGame over!");
-static const u8 sText_YouDontHaveThreeCoins[] = _("You don't have three COINS.");
-static const u8 sText_ReelTimeHelp[] = _("REEL TIME\nHere's your chance to take\naim and nail marks!\nReel Time continues for the\nawarded number of spins.\nIt all ends on a Big Bonus.");
+static const u8 sText_QuitTheGame[] = ES(_("Quit the game?"), _("¿Dejar de jugar?"));
+static const u8 sText_YouveGot9999Coins[] = ES(_("You've got 9,999 COINS."), _("Tienes 9.999 FICHAS."));
+static const u8 sText_YouveRunOutOfCoins[] = ES(_("You've run out of COINS.\nGame over!"), _("Te has quedado sin FICHAS.\n¡Fin de la partida!"));
+static const u8 sText_YouDontHaveThreeCoins[] = ES(_("You don't have three COINS."), _("No tienes tres FICHAS."));
+static const u8 sText_ReelTimeHelp[] = ES(_("REEL TIME\nHere's your chance to take\naim and nail marks!\nReel Time continues for the\nawarded number of spins.\nIt all ends on a Big Bonus."), _("TIEMPO EXTRA\n¡Tu oportunidad de apuntar\ny acertar los símbolos!\nDura las tiradas que te\nhayan tocado.\nY acaba con un Gran Premio."));
 
 // Ewram variables
 static EWRAM_DATA u16 *sMenuGfx = NULL;

@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke_es.h"
 #include "main.h"
 #include "event_object_movement.h"
 #include "fieldmap.h"
@@ -61,10 +62,10 @@ static u32 CalculateFishingTimeOfDayBoost(void);
     #define FISHING_SUPER_ROD_ODDS 50
 #endif
 
-static const u8 sText_OhABite[] = _("Oh! A bite!");
-static const u8 sText_PokemonOnHook[] = _("A POKéMON's on the hook!{PAUSE_UNTIL_PRESS}");
-static const u8 sText_NotEvenANibble[] = _("Not even a nibble…{PAUSE_UNTIL_PRESS}");
-static const u8 sText_ItGotAway[] = _("It got away…{PAUSE_UNTIL_PRESS}");
+static const u8 sText_OhABite[] = ES(_("Oh! A bite!"), _("¡Oh! ¡Ha picado algo!"));
+static const u8 sText_PokemonOnHook[] = ES(_("A POKéMON's on the hook!{PAUSE_UNTIL_PRESS}"), _("¡Has pescado un POKéMON!{PAUSE_UNTIL_PRESS}"));
+static const u8 sText_NotEvenANibble[] = ES(_("Not even a nibble…{PAUSE_UNTIL_PRESS}"), _("No pica nada…{PAUSE_UNTIL_PRESS}"));
+static const u8 sText_ItGotAway[] = ES(_("It got away…{PAUSE_UNTIL_PRESS}"), _("Se ha escapado…{PAUSE_UNTIL_PRESS}"));
 
 struct FriendshipHookChanceBoost
 {
