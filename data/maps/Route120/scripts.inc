@@ -451,11 +451,11 @@ Route120_Text_StevenGoodbye:
 	.string "Bueno, ya nos veremos por ahí.$"
 
 Kecleon_Text_SomethingUnseeable:
-	.string "Something unseeable is in the way.$"
+	.string "Algo invisible bloquea el paso.$"
 
 Kecleon_Text_WantToUseDevonScope:
-	.string "Something unseeable is in the way.\p"
-	.string "Want to use the DEVON SCOPE?$"
+	.string "Algo invisible bloquea el paso.\p"
+	.string "¿Quieres usar el DETECTOR DEVON?$"
 
 Kecleon_Text_UseDevonScopeMonAttacked:
 	.string "{PLAYER} used the DEVON SCOPE.\p"

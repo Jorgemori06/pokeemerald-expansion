@@ -40,8 +40,9 @@ sText_PokemonGotAway:
 	.string "The Pokémon got away!$"
 
 sText_LostSignal:
-	.string "There is no reaction.\n"
-	.string "The signal was lost!$"
+	.string "No hay reacción.\n"
+	.string "¡Se ha perdido la señal!$"
 
 sText_TooDark:
-	.string "It's too dark to search\nfor a Pokémon!$"
+	.string "¡Está demasiado oscuro para\n"
+	.string "buscar POKéMON!$"

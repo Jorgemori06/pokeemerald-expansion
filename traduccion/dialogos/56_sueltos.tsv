@@ -1,0 +1,126 @@
+# Sueltos que quedaban en inglés y se ven durante la historia (Jorge, 11/11/2026, encontrados jugando): SALÓN AZULIZA (la palabra de moda), CLUB DE FANS de CALAGUA, casa de LOTAD y SEEDOT de ARRECÍPOLIS, TORRE ESPEJISMO, KECLEON de la RUTA 120, cartel del MONTE ENTRENADOR, CUEVA CARDUMEN, POKéMON que te sigue, DEXNAV, revanchas de la RUTA 103 y BUSCAPELEA, casa de los combates de visita (ALGARIA y ARRECÍPOLIS) y familia de BLASCO.
+DewfordTown_Hall_Text_CantImagineLifeWithoutTrend	¿Lo que está de moda? ¡Pues claro,\n“{STR_VAR_1}”!\p¡No me imagino la vida sin\n“{STR_VAR_1}”!$
+DewfordTown_Hall_Text_GettingBoredOfTrend	¿Lo que está de moda? ¡Pues claro,\n“{STR_VAR_1}”!\pPero ya me está aburriendo un poco.\pTendré que buscar lo próximo.$
+DewfordTown_Hall_Text_DeepLinkBetweenXAndY	Ahora estoy estudiando lo último:\n“{STR_VAR_1}”.\p¿Es verdad que hay una relación\nprofunda entre “{STR_VAR_1}”\ly “{STR_VAR_2}”?$
+DewfordTown_Hall_Text_MyHunchWasRight	¡Oh!\n¡Así que tenía razón!\p¡Estoy un paso más cerca de ir\na la última! ¡Toma ya!$
+DewfordTown_Hall_Text_NotEasyToKeepUp	¡¿Qué?!\n¡¿En serio?!\p¡No es fácil para alguien de mi\nedad estar al día de las modas!$
+DewfordTown_Hall_Text_TVShowAboutTrend	Todo esto de\n“{STR_VAR_1}”…\l¿No hay un programa de tele?$
+DewfordTown_Hall_Text_IsTrendMorePopularAcrossSea	Al otro lado del mar…\p¿“{STR_VAR_1}”\nestará aún más de moda?$
+DewfordTown_Hall_Text_CollectTrendMerchandise	Colecciono artículos oficiales\nde “{STR_VAR_1}”.\pTengo MUÑECOS oficiales de\n“{STR_VAR_1}”…\pRopa de la marca\n“{STR_VAR_1}”…\pY libros ilustrados oficiales de\n“{STR_VAR_1}”.\p¡Jejeje, son míos!\n¡No te pienso dejar nada!$
+DewfordTown_Hall_Text_TrendsScream	El título es “EL GRITO DE\n{STR_VAR_1}”.$
+DewfordTown_Hall_Text_TrendsSmile	El título es “LA SONRISA DE\n{STR_VAR_1}”.$
+DewfordTown_Hall_Text_LastTrend	El título es “EL ÚLTIMO\n{STR_VAR_1}”.$
+DewfordTown_Hall_Text_BirthOfTrend	El título es “EL NACIMIENTO DE\n{STR_VAR_1}”.$
+DewfordTown_Hall_Text_SawTrendCoolestThing	¡He visto “{STR_VAR_1}”!\n¿Mola, eh?\p¡Es lo más guay que hay ahora mismo!\p¡Fue alucinante!\n¡Era de verdad, sí, señor!$
+DewfordTown_Hall_Text_AllegedTrendNotAuthentic	No, no, no.\pEse supuesto\n“{STR_VAR_1}”\lque dices haber visto… no lo era.\pEl auténtico es mucho más…\n¿Cómo decirlo?\l¡Más afilado y a la vez más suave!\pBah, da igual. ¡Es asombroso!$
+DewfordTown_Hall_Text_ComposedTrendThemeSong	Oye, escucha, he compuesto una\ncanción para “{STR_VAR_1}”.\p“{STR_VAR_1}”\nestá muy de moda ahora mismo.\p¡Venga, escucha!\n… …\p¡Oh!\n¡{STR_VAR_1}!\p¡Maravilloso\n{STR_VAR_1}!$
+DewfordTown_Hall_Text_WorkOnYourSinging	… …\pMe atrevo a decir, amigo, que te\nvendría bien practicar el canto antes\lde meterte con\l“{STR_VAR_1}”.$
+DewfordTown_Hall_Text_OrganizeTrendParty	En fin, como decía antes, deberíamos\njuntarnos y organizar una fiesta de\l“{STR_VAR_1}”\len la isla.$
+DewfordTown_Hall_Text_BrilliantIndeed	¡Oh, qué idea tan estupenda!\p¡Así se sabrá de una vez por todas\nquién es el mejor en\l“{STR_VAR_1}”!\l¡Brillante, sin duda!\p¡Desde hoy, nuestras vidas girarán\nen torno a “{STR_VAR_1}”!$
+DewfordTown_Hall_Text_TrendHasBecomePartOfLife	Aunque, estaba pensando…\p¿No te parece que\n“{STR_VAR_1}” ha\lpasado de ser una moda a ser\lparte de nuestra vida diaria?$
+DewfordTown_Hall_Text_TrendWeighsHeavilyOnMind	¿Perdón?\n¿Tanto así?\pAunque es verdad que\n“{STR_VAR_1}”\lte ronda la cabeza, estés\ldespierto o dormido.\p¡Desde luego, eres el PROFESOR de\n“{STR_VAR_1}”,\lcolega!$
+DewfordTown_Hall_Text_IfWeTeamUpWellBeInvincible	¡Si tú y yo hacemos equipo, seremos\ninvencibles en todo lo que tenga\lque ver con “{STR_VAR_1}”!$
+DewfordTown_Hall_Text_WellBeTrendDuo	¡Exacto, amigo mío!\p¡Seremos el DÚO\n“{STR_VAR_1}”!\p¿A que suena genial?\n¡Jajajá!$
+DewfordTown_Hall_Text_GiveYouSludgeBomb	Para mí, BOMBA LODO está en lo más\nalto. Es lo mejor que hay.\p¿Qué? ¿Me estás diciendo que no\nconoces BOMBA LODO?\pEso es lamentable.\nTe daré una.$
+LilycoveCity_PokemonTrainerFanClub_Text_OhWowItsPlayer	¡Hala!\n¡Es {PLAYER}!$
+LilycoveCity_PokemonTrainerFanClub_Text_HeardAboutYouImYourFan	¡Me he enterado de todo!\nEres muy fuerte, ¿verdad?\pAquí siempre discutimos sobre quién\nes el ENTRENADOR más fuerte.\pAsí que, cuando oí hablar de ti,\ndecidí ser fan tuyo.\p¡Espero que sigas combatiendo contra\nENTRENADORES duros!\pAsí podremos ver más de tus\ncombates tan emocionantes.\pY los demás verán lo bueno que\neres de verdad.\p¡Recuerda que te apoyo,\n{PLAYER}!$
+LilycoveCity_PokemonTrainerFanClub_Text_YoureOneWeWantToWin	¡Eh, {PLAYER}!\n¡Queremos que ganes tú!$
+LilycoveCity_PokemonTrainerFanClub_Text_OthersDontKnowYoureTheBest	¡Los demás no saben que eres\nlo mejor de lo mejor!\p¿A que sí, {PLAYER}?\n¡Demuéstrales lo que vales!$
+LilycoveCity_PokemonTrainerFanClub_Text_TrainersPowerIsOutOfTheOrdinary	No me gusta decirlo, pero el\nENTRENADOR del que todos hablan\les {STR_VAR_1}, ¡sin duda!\pEl poder de ese ENTRENADOR…\nNo es nada normal.$
+LilycoveCity_PokemonTrainerFanClub_Text_TrainerIsBestNoOneWantsToListen	Vaya… Llevo un tiempo diciendo\nque {STR_VAR_1} es el mejor…\p¡Pero nadie me hace caso!$
+LilycoveCity_PokemonTrainerFanClub_Text_HearingAboutToughNewTrainer	He oído cosas sobre un nuevo\nENTRENADOR muy fuerte.\pDicen que hasta les gana a los\nLÍDERES DE GIMNASIO.\p¿Sabes algo de ese nuevo\nENTRENADOR?$
+LilycoveCity_PokemonTrainerFanClub_Text_ImPullingForYou	¡Oh!\n¡{PLAYER}!\p¡A por todas!\n¡Estoy de tu parte!$
+LilycoveCity_PokemonTrainerFanClub_Text_BrawlyNoImYourFan	Ay…\nMARCIAL…\p¡Oh, no! ¡Espera!\n¡Eso no es así! ¡No, no, no!\p¡Soy fan tuyo de los pies a la\ncabeza!\p¡Así que haz que me sienta orgulloso!\n¡A por todas!$
+LilycoveCity_PokemonTrainerFanClub_Text_ICantHelpLikingBrawly	No lo puedo evitar, solo me gusta\nMARCIAL…$
+LilycoveCity_PokemonTrainerFanClub_Text_NobodyUnderstandsBrawly	Nadie entiende el encanto de\nMARCIAL…\p¡Me da igual!\p¡Aunque sea el único, voy a seguir\nanimando a MARCIAL!$
+LilycoveCity_PokemonTrainerFanClub_Text_MyFavoriteTrainerIsBrawly	Digan lo que digan, ¡mi ENTRENADOR\nfavorito es el LÍDER DE GIMNASIO\lde AZULIZA, MARCIAL!$
+LilycoveCity_PokemonTrainerFanClub_Text_YouveSurpassedYourFather	¡Has superado a tu padre en todos\nlos sentidos!\p¡Te lo digo yo, así que no hay\nninguna duda!$
+LilycoveCity_PokemonTrainerFanClub_Text_YourFatherNeverGaveUpSoKeepOnBattling	Aunque las cosas se pusieran feas,\ntu padre nunca se rendía.\pEso lo sé seguro.\p¡Tú tampoco te rindes aunque\npierdas! ¡Así que sigue combatiendo!$
+LilycoveCity_PokemonTrainerFanClub_Text_LongWayToGoComparedToNorman	NORMAN combatía con más fuerza,\ncarisma y espectáculo que tú.\pAunque la gente diga que\neres fuerte…\pTodavía te queda mucho para\nllegar al nivel de tu padre.$
+LilycoveCity_PokemonTrainerFanClub_Text_YouAndNormanAreDifferent	Empiezas a imponer el mismo\nrespeto que NORMAN.\pPero hay algo que os hace\ncompletamente distintos.\pNo te puedo decir qué es.\nTendrás que descubrirlo tú.$
+LilycoveCity_PokemonTrainerFanClub_Text_OhWoweeItsPlayer	¡Hala, hala! ¡Es {PLAYER}!\n¡Y en persona!\p¡Dame la mano, porfa, porfa!$
+LilycoveCity_PokemonTrainerFanClub_Text_AlwaysCheerForYou	¡Siempre te voy a animar, {PLAYER}!\n¡Siempre, siempre!\p¡No quiero verte perder nunca,\n{PLAYER}!\p¡Porque sé que eres muy, pero\nque muy fuerte, {PLAYER}!$
+LilycoveCity_PokemonTrainerFanClub_Text_EveryoneThinksTrainerIsCool	{STR_VAR_1} mola un montón…\p¿A que todo el mundo lo piensa?$
+LilycoveCity_PokemonTrainerFanClub_Text_TrainerIsReallyCoolItsJustMe	{STR_VAR_1} mola un montón,\n¿no crees?\pAunque sea el único, voy a seguir\nanimando a mi ENTRENADOR favorito.$
+LilycoveCity_PokemonTrainerFanClub_Text_WishThereWasTrainerLikeThat	Mi ENTRENADOR favorito es…\pGuay…\pFuerte…\pY muy majo…\pOjalá hubiera un ENTRENADOR así…$
+LilycoveCity_PokemonTrainerFanClub_Text_WantToBeStrongLikeYou	¡Hala! ¡Es {PLAYER}!\n¡Qué pasada!\p¡De mayor quiero ser tan fuerte\ncomo tú, {PLAYER}!$
+LilycoveCity_PokemonTrainerFanClub_Text_OnlyOneWhoCheersForYou	Aunque sea el único…\p¡Siempre serás la única persona a\nla que animo, {PLAYER}!\p¡Porque creo en ti, {PLAYER}!$
+LilycoveCity_PokemonTrainerFanClub_Text_TrainerIsWickedlyCool	{STR_VAR_1} mola muchísimo…\nQuiero darle la mano a mi ídolo.$
+LilycoveCity_PokemonTrainerFanClub_Text_NeverGoingToStopBeingTrainersFan	Aunque sea el único…\p¡Nunca dejaré de ser fan de\n{STR_VAR_1}!\p¡Porque dicen que {STR_VAR_1}\nnunca pierde!$
+LilycoveCity_PokemonTrainerFanClub_Text_YoureAmazingAfterAll	¡{PLAYER}!\n¡Al final eres increíble!\pDesde que te vi supe que eras\nbuenísimo.\pParece que no me equivocaba.$
+LilycoveCity_PokemonTrainerFanClub_Text_ImInYourCorner	Me dan igual los demás.\n¡Yo estoy de tu parte!\pNo te preocupes. Tú sal ahí y\ncombate como siempre.$
+LilycoveCity_PokemonTrainerFanClub_Text_ThinkTrainerIsNumberOne	Creo que eres un ENTRENADOR\nbastante bueno.\pPero también creo que {STR_VAR_1}\nes el número uno ahora mismo.\pEs solo mi opinión.\nNo te lo tomes muy a pecho.$
+LilycoveCity_PokemonTrainerFanClub_Text_YoureMaybeStrongerThanTrainer	Vaya, sí que eres fuerte.\nA lo mejor más que {STR_VAR_1}.\pPero {STR_VAR_1} me necesita.\p¿Si no animo yo a {STR_VAR_1},\nquién lo hará?$
+LilycoveCity_PokemonTrainerFanClub_Text_YouChangedMyMind	¡Me has hecho cambiar de opinión!\nEres muy fuerte, ¿verdad?\p¡Me gustaría que me contaras cómo\nhas llegado a ser tan fuerte!$
+LilycoveCity_PokemonTrainerFanClub_Text_YouBattleAttractivelyInToughSituation	Cuanto más difícil se pone la cosa,\nmejor combates.\p¡Me muero de ganas de ver tu\npróximo combate!$
+LilycoveCity_PokemonTrainerFanClub_Text_TrainerIsStandout	De todos los ENTRENADORES que\ndestacan ahora, {STR_VAR_1} es el mejor.\pEsa fuerza no es nada normal.\pTú no lo haces mal, pero no estás\na la altura de {STR_VAR_1}.$
+LilycoveCity_PokemonTrainerFanClub_Text_YouImpressive	Tú…\p¡Impresionante!$
+LilycoveCity_PokemonTrainerFanClub_Text_OnlyIRecognizeYourTrueWorth	Me basta con ser yo quien\nreconozca lo que vales.\pDudo que los demás entiendan el\npoder oculto que llevas dentro.$
+LilycoveCity_PokemonTrainerFanClub_Text_HaventRealizedPotential	Sí, veo fuerza en tus ojos.\p¡Pero!\pTodavía no has sacado todo tu\npotencial.$
+LilycoveCity_PokemonTrainerFanClub_Text_YourePowerfulButNotTrueStrength	Es verdad que tienes muchísimo\npoder.\p¡Pero!\nYo lo noto…\p¡Esa fuerza todavía no se puede\nllamar fuerza de verdad!\pLa fuerza de verdad es…\n… …\pBueno, la verdad es que yo\ntampoco lo sé.$
+SootopolisCity_LotadAndSeedotHouse_Text_GoshMightBeBiggerThanLotad	¡{STR_VAR_2}!\n¡Madre mía, qué grande es!\p¡Puede que sea más grande que el\nLOTAD que vio mi hermano pequeño!\pGracias por enseñármelo.\n¡Toma, por las molestias!$
+SootopolisCity_LotadAndSeedotHouse_Text_ReceivedPotion1	¡{PLAYER} ha recibido una POCIÓN!$
+SootopolisCity_LotadAndSeedotHouse_Text_BagCrammedFull1	¿Eh?\nTu MOCHILA está a rebosar.$
+SootopolisCity_LotadAndSeedotHouse_Text_SeenBiggerSeedot	{STR_VAR_2}, ¿eh?\pMmm… He visto SEEDOT más grandes\nque este.$
+SootopolisCity_LotadAndSeedotHouse_Text_ThatsNotSeedot	Vaya, esto sí que es algo…\n¡Pero no es un SEEDOT!$
+SootopolisCity_LotadAndSeedotHouse_Text_DontHaveBigSeedot	¿No tienes un SEEDOT grande?\nQué pena…\pSi consigues un SEEDOT grande,\nven a enseñármelo, por favor.$
+SootopolisCity_LotadAndSeedotHouse_Text_BiggestSeedotInHistory	¡El SEEDOT más grande de la historia!\n¡Un gigante de {STR_VAR_3} de {STR_VAR_2}!\p¡Un SEEDOT más grande que un LOTAD,\ncomo siempre quise!$
+SootopolisCity_LotadAndSeedotHouse_Text_WowMightBeBiggerThanSeedot	¡{STR_VAR_2}!\n¡Hala, qué grande!\p¡Puede que sea más grande que el\nSEEDOT enorme que vio mi hermano!\p¡Gracias por enseñármelo!\n¡Toma, por las molestias!$
+SootopolisCity_LotadAndSeedotHouse_Text_ReceivedPotion2	¡{PLAYER} ha recibido una POCIÓN!$
+SootopolisCity_LotadAndSeedotHouse_Text_BagCrammedFull2	¿Eh?\nTu MOCHILA está a rebosar.$
+SootopolisCity_LotadAndSeedotHouse_Text_SeenBiggerLotad	¿{STR_VAR_2}?\pMmm… He visto LOTAD más grandes\nque este.$
+SootopolisCity_LotadAndSeedotHouse_Text_ThatsNotLotad	¡Vaya, esto sí que es algo!\n¡Pero no es un LOTAD!$
+SootopolisCity_LotadAndSeedotHouse_Text_DontHaveBigLotad	¿No tienes un LOTAD grande?\nQué decepción…\pSi consigues un LOTAD grande,\n¡ven a enseñármelo, por favor!$
+SootopolisCity_LotadAndSeedotHouse_Text_BiggestLotadInHistory	¡El LOTAD más grande de la historia!\n¡Un coloso de {STR_VAR_3} de {STR_VAR_2}!\p¡Un LOTAD más grande que un SEEDOT,\ncomo siempre quise!$
+MirageTower_4F_Text_TakeRootFossil	Has encontrado el FÓSIL RAÍZ.\pSi te llevas el FÓSIL, el suelo de\nalrededor se vendrá abajo…\p¿Te llevas el FÓSIL RAÍZ igualmente?$
+MirageTower_4F_Text_LeftRootFossilAlone	{PLAYER} ha dejado el FÓSIL RAÍZ\ndonde estaba.$
+MirageTower_4F_Text_TakeClawFossil	Has encontrado el FÓSIL GARRA.\pSi te llevas el FÓSIL, el suelo de\nalrededor se vendrá abajo…\p¿Te llevas el FÓSIL GARRA igualmente?$
+MirageTower_4F_Text_LeaveClawFossilAlone	{PLAYER} ha dejado el FÓSIL GARRA\ndonde estaba.$
+Kecleon_Text_SomethingUnseeable	Algo invisible bloquea el paso.$
+Kecleon_Text_WantToUseDevonScope	Algo invisible bloquea el paso.\p¿Quieres usar el DETECTOR DEVON?$
+Route111_Text_TrainerHillSign	{RIGHT_ARROW} ENTRADA DEL MONTE ENTRENADOR\p“¡Subid a lo más alto,\nENTRENADORES con sangre caliente!”$
+ShoalCave_LowTideEntranceRoom_Text_AreYouPlanningOnGoingInThere	¿Piensas meterte hasta el fondo?\p¿Qué tal si me traes SAL CARDUMEN\ny CONCHAS CARDUMEN?\pSi me traes los ingredientes, te\nhago algo que está muy bien.$
+ShoalCave_LowTideEntranceRoom_Text_BringMe4ShoalSaltAndShells	Si me traes cuatro de SAL CARDUMEN\ny cuatro CONCHAS CARDUMEN,\lte hago un CASCABEL CONCHA…\pEsos ingredientes se pueden\nconseguir cada día.$
+ShoalCave_LowTideEntranceRoom_Text_WouldYouLikeShellBell	¡Anda! ¡SAL CARDUMEN y CONCHAS\nCARDUMEN! ¡Y tienes de sobra!\p¿Quieres que te haga un\nCASCABEL CONCHA con ellas?$
+ShoalCave_LowTideEntranceRoom_Text_MakeShellBellRightAway	¡Pues venga! Te hago un\nCASCABEL CONCHA ahora mismo.\p… … … … … … … …\n… … … … … … … …\p¡Ya está! ¡Listo!$
+ShoalCave_LowTideEntranceRoom_Text_WantedToMakeShellBell	Oh… Vaya…\nCon las ganas que tenía de hacer\lun CASCABEL CONCHA…$
+ShoalCave_LowTideEntranceRoom_Text_NoSpaceInYourBag	No tienes sitio en la MOCHILA para\nlo que te iba a hacer.\pHaz hueco y vuelve a por el\nCASCABEL CONCHA.$
+ShoalCave_Text_WasShoalSaltNowNothing	Aquí había SAL CARDUMEN.\nPero ahora no hay nada.$
+ShoalCave_Text_WasShoallShellNowNothing	Aquí había una CONCHA CARDUMEN.\nPero ahora no hay nada.$
+gText_FollowerLovesYou	¡{STR_VAR_1} te mira con\nadoración!$
+gText_WantsToFly	{STR_VAR_1} mira al cielo\ninquieto.\p¿Quieres usar VUELO?$
+sText_LostSignal	No hay reacción.\n¡Se ha perdido la señal!$
+sText_TooDark	¡Está demasiado oscuro para\nbuscar POKéMON!$
+Route103_Text_AmyRematchIntro	AMY: Soy AMY.\nY esta es mi hermana pequeña LIV.\l¡Combatimos juntas!$
+Route103_Text_AmyRematchPostBattle	AMY: Hay que pensar en muchas\ncosas cuando combates contra\ldos ENTRENADORAS.$
+Route103_Text_AmyRematchNotEnoughPokemon	AMY: Huy, solo llevas un\nPOKéMON.\lAsí no puedes combatir con\lnosotras.$
+Route103_Text_LivRematchPostBattle	LIV: Mi hermana y yo nos\ncompenetramos a la perfección…\p¿Pero por qué hemos vuelto a perder?$
+Route103_Text_LivRematchNotEnoughPokemon	LIV: ¡Si quieres combatir contra\nnosotras, necesitas dos POKéMON!\l¡Si no, no es justo!$
+Route103_Text_MiguelRematchIntro	¡Hola! ¡Mi POKéMON, que ya era\nadorable, ahora lo es todavía más!$
+Route103_Text_MiguelRematchPostBattle	Cuanto más tiempo paso con él,\nmás adorable se vuelve mi POKéMON.$
+VSSeeker_Text_BatteryNotChargedNeedXSteps	La batería no tiene carga suficiente.\pPasos que faltan para cargarla\npor completo: {STR_VAR_1}{PAUSE_UNTIL_PRESS}$
+VSSeeker_Text_NoTrainersWithinRange	No hay ENTRENADORES cerca que\npuedan combatir…\pSe ha apagado el BUSCAPELEA.{PAUSE_UNTIL_PRESS}$
+VSSeeker_Text_TrainersNotReady	Parece que los demás ENTRENADORES\naún no están listos para combatir.\pHabrá que esperar un poco.{PAUSE_UNTIL_PRESS}$
+RS_MysteryEventsHouse_Text_DoorIsLocked	Parece que la puerta está cerrada.$
+RS_MysteryEventsHouse_Text_ChallengeVisitingTrainer	Ha venido a mi casa un ENTRENADOR\nllamado {STR_VAR_1}.\p¿Quieres combatir contra\n{STR_VAR_1}?$
+RS_MysteryEventsHouse_Text_YouWontBattle	¿No vas a combatir? Qué pena\nno poder verte en acción…$
+RS_MysteryEventsHouse_Text_KeepItToA3On3	¡Bien, bien!\pPero mi casa no es muy resistente.\p¿Podría pediros que sea un\ncombate de tres contra tres?$
+RS_MysteryEventsHouse_Text_SaveYourProgress	Antes del combate, deberías\nguardar la partida.$
+RS_MysteryEventsHouse_Text_HopeToSeeAGoodMatch	¡Espero ver un buen combate!$
+RS_MysteryEventsHouse_Text_BattleTie	Vaya, ha quedado en tablas.\p¡Ha sido un combate genial en el\nque nadie ha cedido ni un paso!$
+RS_MysteryEventsHouse_Text_BattleWon	¡Ha sido magnífico!\p¡Ha sido como volver a verme\nen mi juventud!$
+RS_MysteryEventsHouse_Text_BattleLost	¡Ah, qué mala suerte!\pPero ha sido un buen combate.\nEspero que la próxima vez ganes.$
+SootopolisCity_MysteryEventsHouse_1F_Text_DoorAppearsToBeLocked	Parece que la puerta está cerrada.$
+SootopolisCity_MysteryEventsHouse_1F_Text_ChallengeVisitingTrainer	Ha venido a mi casa un ENTRENADOR\nllamado {STR_VAR_1}.\p¿Quieres combatir contra\n{STR_VAR_1}?$
+SootopolisCity_MysteryEventsHouse_1F_Text_YouWontBattle	¿No vas a combatir? Qué pena\nno poder verte en acción…$
+SootopolisCity_MysteryEventsHouse_1F_Text_KeepItTo3On3	¡Bien, bien!\pPero mi casa no es muy resistente.\p¿Podría pediros que sea un\ncombate de tres contra tres?$
+SootopolisCity_MysteryEventsHouse_1F_Text_SaveProgressBeforeBattle	Antes del combate, deberías\nguardar la partida.$
+SootopolisCity_MysteryEventsHouse_1F_Text_HopeToSeeGoodMatch	¡Espero ver un buen combate!$
+SootopolisCity_MysteryEventsHouse_B1F_Text_MatchEndedUpDraw	El combate ha acabado en empate.$
+SootopolisCity_MysteryEventsHouse_1F_Text_BrilliantStandoff	Vaya, ha quedado en tablas.\p¡Ha sido un combate genial en el\nque nadie ha cedido ni un paso!$
+SootopolisCity_MysteryEventsHouse_1F_Text_ThatWasSuperlative	¡Ha sido magnífico!\p¡Ha sido como volver a verme\nen mi juventud!$
+SootopolisCity_MysteryEventsHouse_1F_Text_TooBadForYou	¡Ah, qué mala suerte!\pPero ha sido un buen combate.\nEspero que la próxima vez ganes.$
+VerdanturfTown_WandasHouse_Text_WallyGoneThatFar	TÍO: ¿En serio?\n¿BLASCO ha llegado tan lejos él\lsolo…?\pBueno, hay que reconocérselo: es\nel hijo de mi hermano pequeño.$
+VerdanturfTown_WandasHouse_Text_IfAnythingHappenedToWally	Si a BLASCO le pasara algo, no\npodría volver a mirar a la cara a\lsus padres de PETALIA…$
+VerdanturfTown_WandasHouse_Text_WallyWasInEverGrande	¿BLASCO estuvo en COLOSALIA?\p¡Sus padres de PETALIA se quedarían\nde piedra si lo supieran!$
+PetalburgCity_WallysHouse_Text_YouMetWallyInEverGrandeCity	¿Eh? ¿Viste a BLASCO en\nCIUDAD COLOSALIA?\pAy, {PLAYER}{KUN}, no digas\ntonterías.\pPuede que esté más sano, pero no\npuede irse tan lejos él solo.$
