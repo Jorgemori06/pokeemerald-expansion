@@ -624,7 +624,7 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
 
 ### Pendiente para el próximo locke
 
-- **Estadísticas mal leídas en el randomizer: ARREGLADO (Jorge, 11/11/2026).** `aleatorio/especies.py` cogía el primer número de las estadísticas que dependen de la generación (ya preprocesadas son, por ejemplo, `8 >= 1 ? 60 : 50`). Salían mal 189 estadísticas de unas 90 especies: Machoke con 8 de Def. Esp., a Charizard le faltaba el At. Esp… Ahora se evalúa la expresión con `evaluar`, que se ha movido de `guia_pokedex.py` a `aleatorio/especies.py` para que la usen los dos. Solo afecta a los entrenadores (tope y estrategia de los líderes, objetos de los jefes) y **cambia a muchos con la misma semilla**, así que va con partida nueva.
+- **Estadísticas mal leídas en el randomizer: ARREGLADO (Jorge, 11/11/2026).** `aleatorio/especies.py` cogía el primer número de las estadísticas que dependen de la generación (ya preprocesadas son, por ejemplo, `8 >= 1 ? 60 : 50`). Salían mal 189 estadísticas de unas 90 especies: Machoke con 8 de Def. Esp., a Charizard le faltaba el At. Esp… Ahora se evalúa la expresión con `evaluar`, que se ha movido de `guia_pokedex.py` a `aleatorio/especies.py` para que la usen los dos. Solo afecta a los jefes (tope y estrategia de los líderes, objetos): con la semilla de Jorge cambian 52 (líderes, rivales y BLASCO, sobre todo especies y movimientos); los salvajes, las habilidades, los iniciales y el resto de entrenadores salen igual. Se metió con las partidas ya empezadas: los jefes que aún no has visto simplemente salen distintos.
 
 ### Pendiente de decidir
 

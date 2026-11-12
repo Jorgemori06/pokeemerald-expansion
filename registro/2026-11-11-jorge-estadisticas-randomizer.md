@@ -16,6 +16,8 @@ Estaba apuntado para el próximo locke (#59). Jorge perdió 4 POKéMON en el pri
 - La guía regenerada sale idéntica.
 - `DUALOCKE.md`: marcado como arreglado en "Pendiente para el próximo locke".
 
-## Ojo
+## Con las partidas ya empezadas (12/11/2026)
 
-Con la misma semilla cambian muchos entrenadores: el tope de los líderes, la estrategia y los objetos. Solo debe fusionarse cuando se empiece partida nueva.
+Jorge y Miguel deciden seguir con sus partidas. Con la semilla de Jorge solo cambian 52 jefes: líderes, rivales y BLASCO. Unos 46 cambian de especies o movimientos y 6 solo de objeto. Los salvajes, las habilidades, los iniciales y el resto de entrenadores salen idénticos.
+
+Los jefes que ya has combatido dan igual, y los que no has visto aún simplemente salen distintos. Así que se mete ya, sin esperar a una partida nueva.
