@@ -583,11 +583,17 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
   - **Versión 2** (27/10/2026): commit `a661c0eb`. Añade el recuerdamovimientos, los Ticket-Recuerdo (#40) y los movimientos por nivel al azar (#42). Las partidas de la versión 1 siguen valiendo: con la misma semilla, salvajes, iniciales, objetos, estáticos, MT y habilidades salen idénticos. Solo cambian los movimientos por nivel y los de los entrenadores.
   - **Versión 3** (27/10/2026): commit `c9b5e9e38`. Arregla las habilidades de relleno (#47; con la misma semilla solo cambian las especies que salían "sin habilidad") y protege el mote y el orden del equipo al capturar (#49, bug del equipo clonado). Las partidas de la versión 2 siguen valiendo.
   - **Versión 4** (27/10/2026): commit `085e51aa3` (el mismo juego que la 3) con **semillas nuevas**: Jorge y Miguel empiezan el locke de cero.
-  - **Versión 5** (01/11/2026, la actual): commit `27c61472d`, con **semillas nuevas** y partida nueva. Añade:
+  - **Versión 5** (01/11/2026): commit `27c61472d`, con **semillas nuevas** y partida nueva. Añade:
     - movimientos al azar sin tope y líderes con estrategia (#54, Miguel);
     - la hierba de la Ruta 103 a 2-3 (#55);
     - la captura con el equipo lleno, que solo bloquea al único que sabe una MO, y la guía con las evoluciones raras (#53).
-- **Semillas actuales (versión 5):** Miguel `2918696854` (`Esmeralda Dualocke - Mikemine.gba`), Jorge `2780853751` (`Esmeralda Dualocke - Jorgemori.gba`).
+  - **Versión 6** (12/11/2026, la actual): commit `24e7f72ff`, con **las mismas semillas** que la 5, así que las partidas siguen. Añade:
+    - el título del mote (#57) y los objetos de los muertos, que vuelven a la mochila (#58);
+    - los textos sueltos traducidos y los de la pesca, la tienda y el casino (#60, #62);
+    - la pesca a pie a 15-21 (#61);
+    - los tres primeros gimnasios más suaves (#63);
+    - las estadísticas bien leídas en el randomizer (#64). Con la misma semilla cambian unos 50 jefes que aún no se han visto; los salvajes y el resto de entrenadores salen igual.
+- **Semillas actuales (versiones 5 y 6):** Miguel `2918696854` (`Esmeralda Dualocke - Mikemine.gba`), Jorge `2780853751` (`Esmeralda Dualocke - Jorgemori.gba`).
 - Semillas de las versiones anteriores (partidas abandonadas):
   - versión 4: Miguel `1820821844`, Jorge `5966102869`;
   - versiones 1-3: Miguel `7044754226`, Jorge `6629063067`.
