@@ -5057,6 +5057,10 @@ bool32 CanLearnTeachableMove(enum Species species, enum Move move)
     s32 dualocke;
     if (species == SPECIES_EGG)
         return FALSE;
+    // Dualocke: todas las especies aprenden las MO (Miguel, 13/11/2026), para no quedarse atascado
+    // si en el locke no tienes un Pokémon compatible
+    if (IsMoveHM(move))
+        return TRUE;
     // Dualocke: las MT nuevas del randomizer las aprende cada especie con cierta probabilidad
     dualocke = Dualocke_PuedeAprenderMT(species, move);
     if (dualocke >= 0)

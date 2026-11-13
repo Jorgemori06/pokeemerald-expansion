@@ -677,3 +677,19 @@ TEST("Dualocke: el título del mote pone la especie en su hueco")
     Dualocke_BuildMonNamingTitle(buffer, COMPOUND_STRING("Torchic"), COMPOUND_STRING("'s nickname?"));
     EXPECT(StringCompare(buffer, COMPOUND_STRING("Torchic's nickname?")) == 0);
 }
+
+// Dualocke: todas las especies aprenden las MO y se pueden olvidar siempre
+TEST("Dualocke: cualquier especie aprende las MO, menos los huevos")
+{
+    EXPECT(CanLearnTeachableMove(SPECIES_MAGIKARP, MOVE_FLY));
+    EXPECT(CanLearnTeachableMove(SPECIES_MAGIKARP, MOVE_SURF));
+    EXPECT(CanLearnTeachableMove(SPECIES_CATERPIE, MOVE_STRENGTH));
+    EXPECT(CanLearnTeachableMove(SPECIES_DITTO, MOVE_WATERFALL));
+    EXPECT(!CanLearnTeachableMove(SPECIES_EGG, MOVE_CUT));
+}
+
+TEST("Dualocke: las MO se pueden olvidar")
+{
+    EXPECT(!CannotForgetMove(MOVE_SURF));
+    EXPECT(!CannotForgetMove(MOVE_DIVE));
+}
