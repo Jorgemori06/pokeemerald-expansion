@@ -20,4 +20,4 @@ Jorge seguía encontrando textos en inglés jugando. De los bloques que quedaban
 ## Cómo se comprobó
 
 - `dialogos.py comprobar`: 0 errores (anchos de 208 px y códigos).
-- `dialogos.py aplicar` y `make` compilan.
+- `dialogos.py aplicar` y `make` compilan sin errores.
