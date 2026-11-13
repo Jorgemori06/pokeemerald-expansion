@@ -849,9 +849,9 @@ ALIGNED(4) const u8 gText_FrontierFacilityRoomsCleared[] = _("Rooms cleared: {ST
 ALIGNED(4) const u8 gText_FrontierFacilityKOsStreak[] = _("KOs in a row: {STR_VAR_2}");
 ALIGNED(4) const u8 gText_FrontierFacilityFloorsCleared[] = _("Floors cleared: {STR_VAR_2}");
 ALIGNED(4) const u8 gText_123Dot[][3] = {_("1."), _("2."), _("3.")};
-const u8 gText_FrontierFacilityTotalCaughtSpeciesBanned[] = _(" and {STR_VAR_2} of the POKéMON species\nyou caught are inelegible");
-const u8 gText_FrontierFacilityIncluding[] = _(".\pThese include ");
-const u8 gText_FrontierFacilityAreInelegible[] = _(" are inelegible");
+const u8 gText_FrontierFacilityTotalCaughtSpeciesBanned[] = ES(_(" and {STR_VAR_2} of the POKéMON species\nyou caught are inelegible"), _(" no valen, ni {STR_VAR_2} de las especies\nde POKéMON que has capturado"));
+const u8 gText_FrontierFacilityIncluding[] = ES(_(".\pThese include "), _(".\pEntre ellas: "));
+const u8 gText_FrontierFacilityAreInelegible[] = ES(_(" are inelegible"), _(" no valen"));
 
 const u8 gText_YesNo[] = ES(_("YES\nNO"), _("SÍ\nNO"));
 const u8 gText_SelectorArrow3[] = _("▶");

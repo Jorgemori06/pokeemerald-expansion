@@ -1,0 +1,167 @@
+# El hombre del centro POKéMON de MALVALONA (Jorge, 13/11/2026): el COMERCIANTE, el CUENTACUENTOS, el CHARLATÁN, el BARDO y el MODERNO, que cambian con el tiempo. Las acciones de los cuentos ({STR_VAR_2}) van en participio porque se leen como "¿Has <acción> N veces?".
+MauvilleCity_PokemonCenter_1F_Text_WantToTradeDecor	Hola, soy el COMERCIANTE.\n¿Quieres cambiar adornos conmigo?$
+MauvilleCity_PokemonCenter_1F_Text_TraderFeelingTheBlues	Oh…\nMe has dejado muy triste…$
+MauvilleCity_PokemonCenter_1F_Text_WeveAlreadyTraded	Pero tú y yo ya hemos cambiado\nadornos.$
+MauvilleCity_PokemonCenter_1F_Text_PickADecorItem	Si ves algún adorno mío que\nquieras, dímelo.$
+MauvilleCity_PokemonCenter_1F_Text_YouDontWantAnything	¿No quieres nada?\nMe siento despreciado…$
+MauvilleCity_PokemonCenter_1F_Text_OnceBelongedToPlayerDoYouWantIt	Ese adorno era de\n{STR_VAR_1}.\p¿Lo quieres?$
+MauvilleCity_PokemonCenter_1F_Text_YouDontHaveAnyDecor	Eh… Un momento. ¡No tienes ni un\nsolo adorno!$
+MauvilleCity_PokemonCenter_1F_Text_PickTheDecorToTrade	Vale, elige el adorno que me vas\na dar a cambio.$
+MauvilleCity_PokemonCenter_1F_Text_YouDontWantToTrade	¿No quieres cambiar conmigo?\nMe siento despreciado…$
+MauvilleCity_PokemonCenter_1F_Text_YouveNoRoomForThis	Ya tienes todos los adornos de tipo\n{STR_VAR_2} que caben. No hay sitio.$
+MauvilleCity_PokemonCenter_1F_Text_SoWellTradeTheseDecor	Vale, ¿entonces cambiamos mi\n{STR_VAR_3} por tu {STR_VAR_2}?$
+MauvilleCity_PokemonCenter_1F_Text_ThatDecorIsInUse	Ese adorno lo estás usando.\nNo lo puedes cambiar.$
+MauvilleCity_PokemonCenter_1F_Text_SendDecorToYourPC	¡Pues trato hecho!\nTe mando mi adorno a tu PC.$
+MauvilleCity_PokemonCenter_1F_Text_CantTradeThatOne	¡Huy! ¡Lo siento! Ese adorno es muy\nraro.\l¡Ese no lo puedo cambiar!\p¿Te interesa otra cosa?$
+MauvilleCity_PokemonCenter_1F_Text_WillYouHearMyTale	Soy el CUENTACUENTOS.\nTe contaré historias de ENTRENADORES\llegendarios.\p¿Quieres oír mi historia?$
+MauvilleCity_PokemonCenter_1F_Text_StorytellerFeelingTheBlues	Oh…\nMe has dejado muy triste…$
+MauvilleCity_PokemonCenter_1F_Text_WhichTaleToTell	Conozco estas leyendas.\n¿Cuál quieres que te cuente?$
+MauvilleCity_PokemonCenter_1F_Text_IKnowNoTales	Pero no conozco a ningún ENTRENADOR\nlegendario, así que no sé historias.\p¿Dónde se encuentra un ENTRENADOR\ndigno de una leyenda?$
+MauvilleCity_PokemonCenter_1F_Text_YouDidStatXTimes	¡¿Qué?!\nTú… ¿Tú…?\p¡¿Has {STR_VAR_2}\n{STR_VAR_1} veces?!\p¡Es verdaderamente magnífico!\n¡Nace una nueva leyenda!$
+MauvilleCity_PokemonCenter_1F_Text_CouldThereBeOtherLegends	Me hace pensar… ¿Habrá otros\nENTRENADORES con leyendas aún más\limpresionantes por descubrir?$
+MauvilleCity_PokemonCenter_1F_Text_HaveYouAnyLegendaryTales	¿Eres ENTRENADOR?\pEntonces dime, ¿tienes alguna\nhistoria que sea mínimamente\llegendaria?$
+MauvilleCity_PokemonCenter_1F_Text_HearAnotherLegendaryTale	Por cierto… ¿Te gustaría oír otra\nhistoria legendaria?$
+MauvilleCity_PokemonCenter_1F_Text_NotWorthyOfLegend	Mmm…\nNo me convence…\pOjalá me trajeras algo digno de\nllamarse leyenda.$
+MauvilleCity_PokemonCenter_1F_Text_IWishMorePeopleWereInterested	Ojalá a más gente le interesaran mis\nhistorias épicas de ENTRENADORES\llegendarios.$
+MauvilleCity_PokemonCenter_1F_Text_SavedGameTitle	El ENTRENADOR guardador$
+MauvilleCity_PokemonCenter_1F_Text_SavedGameAction	guardado la partida$
+MauvilleCity_PokemonCenter_1F_Text_SavedGameStory	Esta es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\p¡Este ENTRENADOR guardó la partida\n{STR_VAR_1} veces!\p¡Nunca encontrarás un ENTRENADOR\nmás precavido que {STR_VAR_3}!$
+MauvilleCity_PokemonCenter_1F_Text_TrendsStartedTitle	El ENTRENADOR a la moda$
+MauvilleCity_PokemonCenter_1F_Text_TrendsStartedAction	creado modas$
+MauvilleCity_PokemonCenter_1F_Text_TrendsStartedStory	Esta es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\p¡Este ENTRENADOR creó modas nuevas\n{STR_VAR_1} veces!\p¡{STR_VAR_3} marca tendencia en toda\nla región de HOENN!$
+MauvilleCity_PokemonCenter_1F_Text_BerriesPlantedTitle	El ENTRENADOR sembrador$
+MauvilleCity_PokemonCenter_1F_Text_BerriesPlantedAction	plantado BAYAS$
+MauvilleCity_PokemonCenter_1F_Text_BerriesPlantedStory	Esta es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\p¡Este ENTRENADOR plantó BAYAS\n{STR_VAR_1} veces!\p¡{STR_VAR_3} es un amante legendario\nde las BAYAS!$
+MauvilleCity_PokemonCenter_1F_Text_BikeTradesTitle	El ENTRENADOR ciclista$
+MauvilleCity_PokemonCenter_1F_Text_BikeTradesAction	cambiado de BICI$
+MauvilleCity_PokemonCenter_1F_Text_BikeTradesStory	Esta es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\p¡Este ENTRENADOR cambió de BICI\n{STR_VAR_1} veces!\p¡A {STR_VAR_3} le deben de encantar\nlas BICIS con locura!$
+MauvilleCity_PokemonCenter_1F_Text_InterviewsTitle	El ENTRENADOR entrevistado$
+MauvilleCity_PokemonCenter_1F_Text_InterviewsAction	dado entrevistas$
+MauvilleCity_PokemonCenter_1F_Text_InterviewsStory	Esta es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\p¡Este ENTRENADOR dio entrevistas\n{STR_VAR_1} veces!\p¡{STR_VAR_3} debe de ser un ENTRENADOR\nque llama mucho la atención!$
+MauvilleCity_PokemonCenter_1F_Text_TrainerBattlesTitle	El ENTRENADOR peleón$
+MauvilleCity_PokemonCenter_1F_Text_TrainerBattlesAction	combatido$
+MauvilleCity_PokemonCenter_1F_Text_TrainerBattlesStory	Esta es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\p¡Este ENTRENADOR combatió\n{STR_VAR_1} veces!\p¡{STR_VAR_3} debe de ser un ENTRENADOR\nque nunca rechaza un combate!$
+MauvilleCity_PokemonCenter_1F_Text_PokemonCaughtTitle	El ENTRENADOR cazador$
+MauvilleCity_PokemonCenter_1F_Text_PokemonCaughtAction	capturado POKéMON$
+MauvilleCity_PokemonCenter_1F_Text_PokemonCaughtStory	Esta es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\p¡Este ENTRENADOR capturó\n{STR_VAR_1} POKéMON!\p¡{STR_VAR_3} es un cazador legendario\nde POKéMON salvajes!$
+MauvilleCity_PokemonCenter_1F_Text_FishingPokemonCaughtTitle	El ENTRENADOR pescador$
+MauvilleCity_PokemonCenter_1F_Text_FishingPokemonCaughtAction	pescado POKéMON$
+MauvilleCity_PokemonCenter_1F_Text_FishingPokemonCaughtStory	Esta es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\p¡Este ENTRENADOR pescó\n{STR_VAR_1} POKéMON!\p¡{STR_VAR_3} es un pescador\nlegendario!$
+MauvilleCity_PokemonCenter_1F_Text_EggsHatchedTitle	El ENTRENADOR incubador$
+MauvilleCity_PokemonCenter_1F_Text_EggsHatchedAction	hecho eclosionar HUEVOS$
+MauvilleCity_PokemonCenter_1F_Text_EggsHatchedStory	Esta es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\p¡De los HUEVOS de este ENTRENADOR\nnacieron {STR_VAR_1} POKéMON!\p¡{STR_VAR_3} es un incubador\nlegendario de HUEVOS!$
+MauvilleCity_PokemonCenter_1F_Text_PokemonEvolvedTitle	El ENTRENADOR evolucionador$
+MauvilleCity_PokemonCenter_1F_Text_PokemonEvolvedAction	hecho evolucionar POKéMON$
+MauvilleCity_PokemonCenter_1F_Text_PokemonEvolvedStory	Esta es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\p¡Este ENTRENADOR hizo evolucionar a\n{STR_VAR_1} POKéMON!\p¡{STR_VAR_3} es el evolucionador\nde POKéMON definitivo!$
+MauvilleCity_PokemonCenter_1F_Text_UsedPokemonCenterTitle	El ENTRENADOR del CENTRO$
+MauvilleCity_PokemonCenter_1F_Text_UsedPokemonCenterAction	ido al CENTRO POKéMON$
+MauvilleCity_PokemonCenter_1F_Text_UsedPokemonCenterStory	Esta es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\p¡Este ENTRENADOR curó a sus POKéMON\n{STR_VAR_1} veces en CENTROS POKéMON!\p¡Nadie quiere tanto a los CENTROS\nPOKéMON como {STR_VAR_3}!$
+MauvilleCity_PokemonCenter_1F_Text_RestedAtHomeTitle	El ENTRENADOR casero$
+MauvilleCity_PokemonCenter_1F_Text_RestedAtHomeAction	descansado en casa$
+MauvilleCity_PokemonCenter_1F_Text_RestedAtHomeStory	Esta es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\p¡Este ENTRENADOR curó a sus POKéMON\nen casa {STR_VAR_1} veces!\p¡No hay nadie más casero que\n{STR_VAR_3}!$
+MauvilleCity_PokemonCenter_1F_Text_SafariGamesTitle	El ENTRENADOR del SAFARI$
+MauvilleCity_PokemonCenter_1F_Text_SafariGamesAction	entrado en la ZONA SAFARI$
+MauvilleCity_PokemonCenter_1F_Text_SafariGamesStory	Esta es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\p¡Este ENTRENADOR entró en la ZONA\nSAFARI {STR_VAR_1} veces!\p¡A {STR_VAR_3} le sale el lado salvaje\nen la ZONA SAFARI!$
+MauvilleCity_PokemonCenter_1F_Text_UsedCutTitle	El ENTRENADOR podador$
+MauvilleCity_PokemonCenter_1F_Text_UsedCutAction	usado CORTE$
+MauvilleCity_PokemonCenter_1F_Text_UsedCutStory	Esta es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\p¡Este ENTRENADOR usó CORTE\n{STR_VAR_1} veces!\p¡A {STR_VAR_3} le debe de encantar\nCORTAR!$
+MauvilleCity_PokemonCenter_1F_Text_UsedRockSmashTitle	El ENTRENADOR rompepiedras$
+MauvilleCity_PokemonCenter_1F_Text_UsedRockSmashAction	roto rocas$
+MauvilleCity_PokemonCenter_1F_Text_UsedRockSmashStory	Esta es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\p¡Este ENTRENADOR usó GOLPE ROCA\n{STR_VAR_1} veces!\p¡{STR_VAR_3} no puede dejar una piedra\nsin romper!$
+MauvilleCity_PokemonCenter_1F_Text_MovedBasesTitle	El ENTRENADOR nómada$
+MauvilleCity_PokemonCenter_1F_Text_MovedBasesAction	mudado su BASE SECRETA$
+MauvilleCity_PokemonCenter_1F_Text_MovedBasesStory	Esta es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\p¡Este ENTRENADOR mudó su BASE\nSECRETA {STR_VAR_1} veces!\p¡A {STR_VAR_3} le encanta mudarse\na menudo!$
+MauvilleCity_PokemonCenter_1F_Text_UsedSplashTitle	El ENTRENADOR salpicón$
+MauvilleCity_PokemonCenter_1F_Text_UsedSplashAction	usado SALPICADURA$
+MauvilleCity_PokemonCenter_1F_Text_UsedSplashStory	Esta es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\p¡Este ENTRENADOR usó SALPICADURA\n{STR_VAR_1} veces!\p¡A {STR_VAR_3} le debe de encantar\nSALPICAR!$
+MauvilleCity_PokemonCenter_1F_Text_UsedStruggleTitle	El ENTRENADOR tenaz$
+MauvilleCity_PokemonCenter_1F_Text_UsedStruggleAction	tenido que usar FORCEJEO$
+MauvilleCity_PokemonCenter_1F_Text_UsedStruggleStory	Esta es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\p¡Este ENTRENADOR tuvo que usar\nFORCEJEO {STR_VAR_1} veces!\p¡{STR_VAR_3} es un ENTRENADOR tenaz\nque nunca se rinde!$
+MauvilleCity_PokemonCenter_1F_Text_SlotJackpotsTitle	El rey de las TRAGAPERRAS$
+MauvilleCity_PokemonCenter_1F_Text_SlotJackpotsAction	ganado el premio gordo$
+MauvilleCity_PokemonCenter_1F_Text_SlotJackpotsStory	Esta es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\pEste ENTRENADOR ganó el premio gordo\nde las TRAGAPERRAS {STR_VAR_1} veces.\p¡{STR_VAR_3} tuvo mucha suerte en las\nTRAGAPERRAS!$
+MauvilleCity_PokemonCenter_1F_Text_RouletteWinsTitle	El rey de la RULETA$
+MauvilleCity_PokemonCenter_1F_Text_RouletteWinsAction	ganado seguidas en la RULETA$
+MauvilleCity_PokemonCenter_1F_Text_RouletteWinsStory	Esta es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\pEste ENTRENADOR ganó en la RULETA\n{STR_VAR_1} veces seguidas.\p¡{STR_VAR_3} tuvo suerte con la bola\nde la RULETA!$
+MauvilleCity_PokemonCenter_1F_Text_BattleTowerChallengesTitle	El aspirante de la TORRE BATALLA$
+MauvilleCity_PokemonCenter_1F_Text_BattleTowerChallengesAction	ido a la TORRE BATALLA$
+MauvilleCity_PokemonCenter_1F_Text_BattleTowerChallengesStory	Esta es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\p¡Este ENTRENADOR aceptó el desafío de\nla TORRE BATALLA {STR_VAR_1} veces!\p¡{STR_VAR_3} aspira a la excelencia\nen la TORRE BATALLA!$
+MauvilleCity_PokemonCenter_1F_Text_MadePokeblocksTitle	El ENTRENADOR licuador$
+MauvilleCity_PokemonCenter_1F_Text_MadePokeblocksAction	hecho {POKEBLOCK}S$
+MauvilleCity_PokemonCenter_1F_Text_MadePokeblocksStory	Esta es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\p¡Este ENTRENADOR hizo {POKEBLOCK}S\n{STR_VAR_1} veces!\p¡Nadie usa la LICUADORA de BAYAS\nmejor que {STR_VAR_3}!$
+MauvilleCity_PokemonCenter_1F_Text_EnteredContestsTitle	El ENTRENADOR concursante$
+MauvilleCity_PokemonCenter_1F_Text_EnteredContestsAction	ido a CONCURSOS$
+MauvilleCity_PokemonCenter_1F_Text_EnteredContestsStory	Esta es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\p¡Este ENTRENADOR participó en\nCONCURSOS {STR_VAR_1} veces!\p¡A {STR_VAR_3} le debe de encantar\nlucir a sus POKéMON!$
+MauvilleCity_PokemonCenter_1F_Text_WonContestsTitle	El maestro de los CONCURSOS$
+MauvilleCity_PokemonCenter_1F_Text_WonContestsAction	ganado CONCURSOS$
+MauvilleCity_PokemonCenter_1F_Text_WonContestsStory	Esta es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\p¡Este ENTRENADOR ganó CONCURSOS\n{STR_VAR_1} veces!\p¡{STR_VAR_3} debe de ser un maestro\nincreíble de los CONCURSOS!$
+MauvilleCity_PokemonCenter_1F_Text_TimesShoppedTitle	El comprador feliz$
+MauvilleCity_PokemonCenter_1F_Text_TimesShoppedAction	ido de compras$
+MauvilleCity_PokemonCenter_1F_Text_TimesShoppedStory	Esta es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\p¡Este ENTRENADOR compró en tiendas\n{STR_VAR_1} veces!\p{STR_VAR_3} debe de ser de esas\npersonas que nacen para comprar.$
+MauvilleCity_PokemonCenter_1F_Text_UsedItemFinderTitle	El ENTRENADOR buscatesoros$
+MauvilleCity_PokemonCenter_1F_Text_UsedItemFinderAction	usado un BUSCAOBJETOS$
+MauvilleCity_PokemonCenter_1F_Text_UsedItemFinderStory	Esta es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\p¡Este ENTRENADOR usó un BUSCAOBJETOS\n{STR_VAR_1} veces!\p¡A {STR_VAR_3} le debe de encantar\nbuscar objetos ocultos!$
+MauvilleCity_PokemonCenter_1F_Text_TimesRainedTitle	El ENTRENADOR empapado$
+MauvilleCity_PokemonCenter_1F_Text_TimesRainedAction	acabado empapado$
+MauvilleCity_PokemonCenter_1F_Text_TimesRainedStory	Esta es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\p¡A este ENTRENADOR le cayó la lluvia\n{STR_VAR_1} veces!\p¡El carisma de {STR_VAR_3} hasta\natrae la lluvia!$
+MauvilleCity_PokemonCenter_1F_Text_CheckedPokedexTitle	El lector de la POKéDEX$
+MauvilleCity_PokemonCenter_1F_Text_CheckedPokedexAction	mirado la POKéDEX$
+MauvilleCity_PokemonCenter_1F_Text_CheckedPokedexStory	Esta es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\p¡Este ENTRENADOR miró la POKéDEX\n{STR_VAR_1} veces!\p¡A {STR_VAR_3} le debe de encantar\nestudiar POKéMON en la POKéDEX!$
+MauvilleCity_PokemonCenter_1F_Text_ReceivedRibbonsTitle	El coleccionista de CINTAS$
+MauvilleCity_PokemonCenter_1F_Text_ReceivedRibbonsAction	recibido CINTAS$
+MauvilleCity_PokemonCenter_1F_Text_ReceivedRibbonsStory	Esta es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\p¡Este ENTRENADOR recibió CINTAS\n{STR_VAR_1} veces!\p¡A {STR_VAR_3} le debe de encantar\ncoleccionar CINTAS!$
+MauvilleCity_PokemonCenter_1F_Text_LedgesJumpedTitle	El ENTRENADOR saltarín$
+MauvilleCity_PokemonCenter_1F_Text_LedgesJumpedAction	saltado bordillos$
+MauvilleCity_PokemonCenter_1F_Text_LedgesJumpedStory	Esta es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\p¡Este ENTRENADOR saltó bordillos\n{STR_VAR_1} veces!\p¡Si hay un bordillo, {STR_VAR_3}\nno puede evitar saltarlo!$
+MauvilleCity_PokemonCenter_1F_Text_TVWatchedTitle	El telespectador legendario$
+MauvilleCity_PokemonCenter_1F_Text_TVWatchedAction	visto la tele$
+MauvilleCity_PokemonCenter_1F_Text_TVWatchedStory	Esta es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\p¡Este ENTRENADOR vio la tele\n{STR_VAR_1} veces!\p¡A {STR_VAR_3} le debe de encantar\nver la tele!$
+MauvilleCity_PokemonCenter_1F_Text_CheckedClockTitle	El ENTRENADOR puntual$
+MauvilleCity_PokemonCenter_1F_Text_CheckedClockAction	mirado la hora$
+MauvilleCity_PokemonCenter_1F_Text_CheckedClockStory	Esta es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\p¡Este ENTRENADOR miró la hora\n{STR_VAR_1} veces!\p{STR_VAR_3} debe de ser un ENTRENADOR\npuntual que no pierde la hora.$
+MauvilleCity_PokemonCenter_1F_Text_WonLotteryTitle	El mago de la LOTERÍA POKéMON$
+MauvilleCity_PokemonCenter_1F_Text_WonLotteryAction	ganado la LOTERÍA POKéMON$
+MauvilleCity_PokemonCenter_1F_Text_WonLotteryStory	Esta es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\p¡Este ENTRENADOR ganó la LOTERÍA\nPOKéMON {STR_VAR_1} veces!\p¡{STR_VAR_3} debe de tener muchos\namigos con quien cambiar POKéMON!$
+MauvilleCity_PokemonCenter_1F_Text_UsedDaycareTitle	El ENTRENADOR de la GUARDERÍA$
+MauvilleCity_PokemonCenter_1F_Text_UsedDaycareAction	dejado POKéMON en la GUARDERÍA$
+MauvilleCity_PokemonCenter_1F_Text_UsedDaycareStory	Esta es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\p¡Este ENTRENADOR dejó POKéMON en la\nGUARDERÍA {STR_VAR_1} veces!\p¡{STR_VAR_3} debe de ser alguien muy\nambicioso criando POKéMON!$
+MauvilleCity_PokemonCenter_1F_Text_RodeCableCarTitle	El ENTRENADOR del TELEFÉRICO$
+MauvilleCity_PokemonCenter_1F_Text_RodeCableCarAction	subido al TELEFÉRICO$
+MauvilleCity_PokemonCenter_1F_Text_RodeCableCarStory	Esta es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\p¡Este ENTRENADOR subió al TELEFÉRICO\n{STR_VAR_1} veces!\p¡{STR_VAR_3} debe de ser un ENTRENADOR\nque no para de subir y bajar!$
+MauvilleCity_PokemonCenter_1F_Text_HotSpringsTitle	El ENTRENADOR de las termas$
+MauvilleCity_PokemonCenter_1F_Text_HotSpringsAction	ido a las aguas termales$
+MauvilleCity_PokemonCenter_1F_Text_HotSpringsStory	Esta es la historia de un ENTRENADOR\nllamado {STR_VAR_3}.\p¡Este ENTRENADOR se bañó en aguas\ntermales {STR_VAR_1} veces!\p¡{STR_VAR_3} debe de tener la piel\nsuave como la de un bebé!$
+MauvilleCity_PokemonCenter_1F_Text_HearMyStory	¡Soy el CHARLATÁN!\n¡Tengo una historia brillante para ti!\p¿Quieres oír mi historia?$
+MauvilleCity_PokemonCenter_1F_Text_GiddyFeelingTheBlues	Oh…\nMe has dejado muy triste…$
+MauvilleCity_PokemonCenter_1F_Text_AlsoIWasThinking	Y además, estaba pensando…$
+MauvilleCity_PokemonCenter_1F_Text_WeShouldChatAgain	Creo que eso es todo…\p¡Tenemos que volver a charlar!\n¡Adiós!$
+MauvilleCity_PokemonCenter_1F_Text_WouldYouLikeToHearMySong	Hola, soy el BARDO.\n¿Quieres oír mi canción?$
+MauvilleCity_PokemonCenter_1F_Text_BardFeelingTheBlues1	Oh…\nMe has dejado muy triste…$
+MauvilleCity_PokemonCenter_1F_Text_WishICouldPlaySongForOthers	Oh, qué canción tan emotiva…\nOjalá pudiera tocarla para otros…$
+MauvilleCity_PokemonCenter_1F_Text_WouldYouLikeToWriteSomeLyrics	¿Y bien?\n¿Te gusta mi canción?\pPero la letra no me acaba de\nconvencer.\p¿Te gustaría escribirme una\nletra nueva?$
+MauvilleCity_PokemonCenter_1F_Text_BardFeelingTheBlues2	Oh…\nMe has dejado muy triste…$
+MauvilleCity_PokemonCenter_1F_Text_LetMeSingItForYou	¡Muchísimas gracias!\nDeja que te la cante.$
+MauvilleCity_PokemonCenter_1F_Text_ThatHowYouWantedSongToGo	¿Así querías que sonara tu\ncanción?$
+MauvilleCity_PokemonCenter_1F_Text_IllSingThisSongForAWhile	¡Vale! Pues así se queda.\nCantaré esta canción una temporada.$
+MauvilleCity_PokemonCenter_1F_Text_TeachWhatsHipAndHappening	¡Eh, colega! Me llaman el MODERNO.\nTe enseñaré lo que está de moda.$
+MauvilleCity_PokemonCenter_1F_Text_IAlreadyTaughtYou	Pero, eh, ya te enseñé lo que está\nde moda.\pQuiero compartir la buena nueva\ncon otra gente.$
+MauvilleCity_PokemonCenter_1F_Text_IveGotNothingNewToTeach	Pero, eh, tú ya sabes un montón de\nlo que está de moda.\p¡No tengo nada nuevo que enseñarte!$
+MauvilleCity_PokemonCenter_1F_Text_HaveYouHeardOfWord	Eh, ¿has oído hablar de\n“{STR_VAR_1}”?\p¿Que qué significa? Pues…\nPregúntaselo a tus padres, ¿vale?$
+GiddyText_SoPretty	 tan bonito.$
+GiddyText_SoDarling	 tan encantador.$
+GiddyText_SoRelaxed	 tan relajante.$
+GiddyText_SoSunny	 tan soleado.$
+GiddyText_SoDesirable	 tan deseable.$
+GiddyText_SoExciting	 tan emocionante.$
+GiddyText_SoAmusing	 tan divertido.$
+GiddyText_SoMagical	 tan mágico.$
+GiddyText_Is	 es$
+GiddyText_DontYouAgree	\n¿No crees?$
+GiddyText_ISoWantToGoOnAVacation	Tengo muchas ganas de irme de\nvacaciones. ¿Conoces algún sitio?$
+GiddyText_IBoughtCrayonsWith120Colors	¡Me he comprado ceras de 120\ncolores! ¿A que mola?$
+GiddyText_WouldntItBeNiceIfWeCouldFloat	¿A que estaría bien poder flotar\nen una nube de burbujas?$
+GiddyText_WhenYouWriteOnASandyBeach	Cuando escribes en la arena de la\nplaya, se borra. Me pone triste.$
+GiddyText_WhatsTheBottomOfTheSeaLike	¿Cómo será el fondo del mar?\n¡Me encantaría ir aunque fuera una vez!$
+GiddyText_WhenYouSeeTheSettingSunDoesIt	Cuando ves la puesta de sol,\n¿no te entran ganas de volver a casa?$
+GiddyText_LyingBackInTheGreenGrass	Tumbarse en la hierba verde…\n¡Ay, qué gusto!$
+GiddyText_SecretBasesAreSoWonderful	¡Las BASES SECRETAS son geniales!\n¿No sientes la emoción?$
