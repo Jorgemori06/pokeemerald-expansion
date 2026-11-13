@@ -541,6 +541,8 @@ En total, unas 210.000 palabras: más o menos dos novelas largas.
 
 **Textos del código (Jorge, 11/11/2026, encontrados jugando):** la pesca ("¡Oh! ¡Ha picado algo!"), el aviso de la tienda de que ya has comprado uno, el veneno fuera de combate, la RULETA y las tragaperras (`src/fishing.c`, `shop.c`, `strings.c`, `roulette.c`, `slot_machine.c`, con `ES()`).
 
+**Menús de opciones (Jorge, 13/11/2026, encontrado jugando):** los menús de los scripts (`src/data/script_menu.h`) seguían en inglés, como el del barco del SR. BRINEY ("PETALBURG / SLATEPORT"). Se han traducido con `ES()` todos menos los nombres de POKéMON y los números: destinos, bicis, casino, tiendas, concursos, frente batalla, estados, encuestas… Los precios con `{CLEAR_TO}` se han acortado donde hacía falta (FL. AMARILLA, SEM. MILAGRO).
+
 Hubo una traducción antigua de la expansion al castellano (fork de Xhyzi, rama `pokeemerald-expansion-es`, compilando con `LANG=ES`), pero tiene más de tres años y no sirve tal cual.
 
 ### Paso 2: mensajes de combate (hecho)
