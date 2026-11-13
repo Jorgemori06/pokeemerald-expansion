@@ -541,6 +541,8 @@ En total, unas 210.000 palabras: más o menos dos novelas largas.
 
 **Textos del código (Jorge, 11/11/2026, encontrados jugando):** la pesca ("¡Oh! ¡Ha picado algo!"), el aviso de la tienda de que ya has comprado uno, el veneno fuera de combate, la RULETA y las tragaperras (`src/fishing.c`, `shop.c`, `strings.c`, `roulette.c`, `slot_machine.c`, con `ES()`).
 
+**Comunes (Jorge, 13/11/2026, encontrados jugando):** quedaban textos en `data/event_scripts.s`, que `dialogos.py` no miraba (ahora sí): centro POKéMON, MAMÁ, POKÉRUS, la MT DAÑO SECRETO del mercado de PORTUAL… También los carteles genéricos de las casas, el hombre del perfil de los centros POKéMON y la CUEVA CARDUMEN (`57_sueltos_comunes.tsv`). **Siguen en inglés, y se ven durante la historia:** la tele (`tv.inc`, ~350), el hombre de MALVALONA (`mauville_man`, ~80) y las TIENDAS BATALLA de PARDAL, VERDEGAL y PORTUAL (`battle_tent.inc`, ~56).
+
 Hubo una traducción antigua de la expansion al castellano (fork de Xhyzi, rama `pokeemerald-expansion-es`, compilando con `LANG=ES`), pero tiene más de tres años y no sirve tal cual.
 
 ### Paso 2: mensajes de combate (hecho)
