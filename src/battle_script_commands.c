@@ -10,6 +10,7 @@
 #include "battle_switch_in.h"
 #include "battle_environment.h"
 #include "battle_gimmick.h"
+#include "dualocke.h"
 #include "dualocke_aleatorio.h"
 #include "battle_z_move.h"
 #include "battle_stat_change.h"
@@ -8341,8 +8342,18 @@ static void Cmd_givecaughtmon(void)
             {
                 //Before sending to PC, we revert battle form
                 TryRevertPartyMonFormChange(gSelectedMonPartyId);
+                GetMonNickname(&gParties[B_TRAINER_PLAYER][gSelectedMonPartyId], gStringVar2);
+                // Dualocke: si el elegido ya está debilitado, ha muerto: va a la caja de muertos
+                if (Dualocke_TryBuryChosenPartyMon(gSelectedMonPartyId))
+                {
+                    StringCopy(gStringVar1, GetBoxNamePtr(DUALOCKE_DEAD_BOX));
+                    gBattleStruct->itemLost[B_TRAINER_PLAYER][gSelectedMonPartyId].originalItem = ITEM_NONE;
+                    gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_SWAPPED_INTO_PARTY;
+                    gSelectedMonPartyId = PARTY_SIZE;
+                    gBattleCommunication[MULTIUSE_STATE] = GIVECAUGHTMON_GIVE_AND_SHOW_MSG;
+                }
                 // Mon chosen, try to put it in the PC
-                if (CopyMonToPC(&gParties[B_TRAINER_PLAYER][gSelectedMonPartyId]) == MON_GIVEN_TO_PC)
+                else if (CopyMonToPC(&gParties[B_TRAINER_PLAYER][gSelectedMonPartyId]) == MON_GIVEN_TO_PC)
                 {
                     GetMonNickname(&gParties[B_TRAINER_PLAYER][gSelectedMonPartyId], gStringVar2);
                     StringCopy(gStringVar1, GetBoxNamePtr(GetPCBoxToSendMon()));
