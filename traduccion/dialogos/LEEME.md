@@ -68,6 +68,7 @@ VILLA RAÍZ, PUEBLO ESCASO, CIUDAD PETALIA, CIUDAD FÉRRICA, PUEBLO AZULIZA, PUE
 | Textos comunes (Jorge): CLUB CABLE e INALÁMBRICO, SALA UNIÓN y minijuegos de ALGARIA | `54_club_cable_inalambrico.tsv` |
 | Textos comunes (Jorge): llamadas de la AGENDA del POKéNAV | `55_agenda.tsv` |
 | Sueltos que se ven durante la historia (Jorge, encontrados jugando): SALÓN AZULIZA, CLUB DE FANS de CALAGUA, casa de LOTAD y SEEDOT, TORRE ESPEJISMO, KECLEON de la RUTA 120, CUEVA CARDUMEN, POKéMON que te sigue, DEXNAV, revanchas de la RUTA 103, BUSCAPELEA, casa de los combates de visita y familia de BLASCO | `56_sueltos.tsv` |
+| Comunes que quedaban (Jorge, encontrados jugando): `event_scripts.s` (centro POKéMON, MAMÁ, POKÉRUS, MT DAÑO SECRETO del mercado de PORTUAL…), carteles genéricos de las casas, el hombre del perfil y la CUEVA CARDUMEN | `57_sueltos_comunes.tsv` |
 
 **La historia principal está traducida entera** (tramos 01-41) y también los textos comunes de Jorge (50-55). Falta probarlo jugando (`PRUEBAS.md`) y lo que no afecta a la historia (ver `PLAN.md`).
 
