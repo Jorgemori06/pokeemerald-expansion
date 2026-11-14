@@ -474,7 +474,7 @@ Al jugar, los líderes eran difíciles por desequilibrio, no por cómo jugaban: 
   - **Sin tope de potencia** desde el 31/10/2026 (Miguel y Jorge: "totalmente aleatorios"): si en la Ruta 101 sale un Charmander con Lanzallamas, sale, y un Garchomp puede salir con Arañazo. Lo controla el mismo `potencia_maxima_del_cuarto` (ahora `null`).
   - Un 60 % son de daño y, entre ellos, los de su tipo son 3 veces más probables. Siempre hay uno de daño entre los que aprende hasta nivel 5.
   - Sin repetidos en la misma tabla. Las formas que compartían tabla la siguen compartiendo.
-  - **Nunca sale Plegaria Vital** (revive a un debilitado en pleno combate y se saltaría las muertes del locke). Ojo: las MT y los tutores al azar todavía pueden enseñarla.
+  - **Nunca sale Plegaria Vital** (revive a un debilitado en pleno combate y se saltaría las muertes del locke). Las MT y los tutores tampoco la enseñan (Miguel, 14/11/2026; `PROHIBIDOS` en `mts.py`). Para no cambiar las partidas en curso, se sortea igual que antes y solo se vuelve a sortear, aparte, la MT o el tutor que caiga en ella.
   - Se activa con `"aprendizaje_aleatorio"` en `randomizer_config.json`. El juego usa la tabla nueva desde `GetSpeciesLevelUpLearnset` (`src/pokemon.c`); sin semilla, y en los tests, sale la original.
 - MTs aleatorias con compatibilidad completamente aleatoria, conservando los movimientos de campo y comprobando los aprendibles por nivel. **Hecho** (`mts.py`; Miguel, #27): cada MT enseña un movimiento al azar (sin repetir) y **cada especie la aprende con un 50 %**, sin excepción para las de su tipo; es siempre la misma respuesta para la misma especie y semilla. Las de movimientos de campo (Excavar, Daño Secreto) y las MO se quedan como están, con su compatibilidad original, para no bloquear el avance. No se toca `tms_hms.h`: lo cambia `include/item.h` al vuelo.
 - Tutores aleatorios con compatibilidad aleatoria, conservando los movimientos de campo. **Hecho** (`mts.py`): los 10 tutores de Hoenn enseñan un movimiento al azar (sin repetir los de las MT) y se aprende con la misma probabilidad que las MT nuevas. La macro `move_tutor` llama a `Dualocke_TutorAleatorio`, que cambia el movimiento y pone su nombre en `{STR_VAR_1}`. **Textos:** los de los tutores (`data/text/move_tutors.inc` y `traduccion/dialogos/27_pokedex_tutores.tsv`) ahora dicen el movimiento con `{STR_VAR_1}`. Los que lo describían (CORTE FURIA "de tipo BICHO", SUSTITUTO "hace una copia"…) se han dejado más generales. La historia de cada tutor se queda.
@@ -543,7 +543,18 @@ En total, unas 210.000 palabras: más o menos dos novelas largas.
 
 **Textos del código (Jorge, 11/11/2026, encontrados jugando):** la pesca ("¡Oh! ¡Ha picado algo!"), el aviso de la tienda de que ya has comprado uno, el veneno fuera de combate, la RULETA y las tragaperras (`src/fishing.c`, `shop.c`, `strings.c`, `roulette.c`, `slot_machine.c`, con `ES()`).
 
-**Comunes (Jorge, 13/11/2026, encontrados jugando):** quedaban textos en `data/event_scripts.s`, que `dialogos.py` no miraba (ahora sí): centro POKéMON, MAMÁ, POKÉRUS, la MT DAÑO SECRETO del mercado de PORTUAL… También los carteles genéricos de las casas, el hombre del perfil de los centros POKéMON y la CUEVA CARDUMEN (`57_sueltos_comunes.tsv`). **Siguen en inglés, y se ven durante la historia:** la tele (`tv.inc`, ~350), el hombre de MALVALONA (`mauville_man`, ~80) y las TIENDAS BATALLA de PARDAL, VERDEGAL y PORTUAL (`battle_tent.inc`, ~56).
+**Comunes (Jorge, 13/11/2026, encontrados jugando):** quedaban textos en `data/event_scripts.s`, que `dialogos.py` no miraba (ahora sí): centro POKéMON, MAMÁ, POKÉRUS, la MT DAÑO SECRETO del mercado de PORTUAL… También los carteles genéricos de las casas, el hombre del perfil de los centros POKéMON y la CUEVA CARDUMEN (`57_sueltos_comunes.tsv`). La tele, el hombre de MALVALONA y las CARPAS DE COMBATE, que quedaban en inglés, se tradujeron después (#71).
+
+**Clases de entrenador (Miguel, 14/11/2026):** salían en inglés en todos los combates ("HIKER", "YOUNGSTER", "TEAM AQUA"…). Las 59 de Hoenn van en español con `ES()` en `gTrainerClasses` (`src/battle_main.c`): MONTAÑERO, JOVEN, CHICA, CAZABICHOS, EQUIPO AQUA, LÍDER, ALTO MANDO, CAMPEÓN… Caben 12 caracteres (`{PKMN}` cuenta como 2), así que algunas van abreviadas: ENTREN. {PKMN}, ENTREN. GUAY, COLECCIONIS. Las del Frente Batalla y las de Kanto se quedan en inglés. También la ventana de información del movimiento en combate ("POT:" y "PRE:").
+
+**Qué queda en inglés (repaso del 14/11/2026):** de los diálogos faltan unos 1700 textos, casi todos de después de la LIGA:
+- el Frente Batalla (unos 1400);
+- la Cima Entrenador;
+- los eventos de regalo;
+- las revanchas de los líderes;
+- los entrenadores de las bases secretas.
+
+En la historia solo quedan 38 sueltos: las revanchas de los gimnasios y la valoración de la POKéDEX. De `src/strings.c` están 561 de 1059, y de los mensajes de combate, 693 de 718.
 
 **Menús de opciones (Jorge, 13/11/2026, encontrado jugando):** los menús de los scripts (`src/data/script_menu.h`) seguían en inglés, como el del barco del SR. BRINEY ("PETALBURG / SLATEPORT"). Se han traducido con `ES()` todos menos los nombres de POKéMON y los números: destinos, bicis, casino, tiendas, concursos, frente batalla, estados, encuestas… Los precios con `{CLEAR_TO}` se han acortado donde hacía falta (FL. AMARILLA, SEM. MILAGRO).
 
