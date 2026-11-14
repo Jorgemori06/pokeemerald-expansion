@@ -85,7 +85,7 @@ def leer_traducciones():
 
 
 def archivos():
-    return sorted(glob.glob('data/maps/*/scripts.inc') + glob.glob('data/text/*.inc') + glob.glob('data/scripts/*.inc'))
+    return sorted(glob.glob('data/maps/*/scripts.inc') + glob.glob('data/text/*.inc') + glob.glob('data/scripts/*.inc') + ['data/event_scripts.s'])
 
 
 def main():

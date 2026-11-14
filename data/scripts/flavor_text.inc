@@ -130,19 +130,19 @@ Text_PokeMartShelf::
 	.string "Tons of POKéMON stuff!$"
 
 Text_DishesPlatesNeatlyLinedUp::
-	.string "Dishes and plates are neatly\n"
-	.string "lined up.$"
+	.string "Hay platos y fuentes bien\n"
+	.string "colocados.$"
 
 Text_Kitchen::
-	.string "It smells delicious!\n"
-	.string "Somebody's been cooking here.$"
+	.string "¡Qué bien huele!\n"
+	.string "Alguien ha estado cocinando.$"
 
 Text_Dresser::
-	.string "It's a nicely made dresser.\n"
-	.string "It will hold a lot of stuff.$"
+	.string "Es una cómoda muy bonita.\n"
+	.string "Cabe un montón de cosas.$"
 
 Text_Snacks::
-	.string "There's a pile of snacks here.$"
+	.string "Hay un montón de aperitivos.$"
 
 Text_PokemartSign::
 	.string "All your item needs fulfilled!\n"
@@ -163,73 +163,72 @@ Text_Indigo_HighestAuthority::
 	.string "POKéMON LEAGUE HQ$"
 
 Text_Food::
-	.string "It should be packed with all kinds\n"
-	.string "of delicious things to eat.$"
+	.string "Seguro que está llena de cosas\n"
+	.string "ricas para comer.$"
 
 Text_Blueprints::
-	.string "It's a blueprint of some sort.\n"
-	.string "It's filled with diagrams and text.$"
+	.string "Son unos planos de algo.\n"
+	.string "Están llenos de dibujos y texto.$"
 
 Text_Painting::
 	.string "It's a pretty picture of a POKéMON.\n"
 	.string "It looks like it's feeling good.$"
 
 Text_PowerPlantMachine::
-	.string "What could this machine be?\n"
-	.string "Better not mess around with it!$"
+	.string "¿Qué será esta máquina?\n"
+	.string "¡Mejor no tocarla!$"
 
 Text_Telephone::
-	.string "It's a telephone.\n"
-	.string "Better not use it.$"
+	.string "Es un teléfono.\n"
+	.string "Mejor no usarlo.$"
 
 Text_Computer::
-	.string "It's all complicated words and\n"
-	.string "numbers that make no sense…$"
+	.string "Todo son palabras complicadas y\n"
+	.string "números que no tienen sentido…$"
 
 Text_AdvertisingPoster::
-	.string "It's an advertising poster about\n"
-	.string "all kinds of products.$"
+	.string "Es un cartel de publicidad de\n"
+	.string "todo tipo de productos.$"
 
 Text_TastyFood::
-	.string "Oh, that smells tasty!\n"
-	.string "It might get the stomach growling!$"
+	.string "¡Qué bien huele!\n"
+	.string "¡Hace que te ruja la tripa!$"
 
 Text_TrashBin::
-	.string "Inside this…\n"
+	.string "Aquí dentro hay…\n"
 	.string "……\p"
-	.string "There's nothing here!$"
+	.string "¡Nada!$"
 
 Text_Cup::
 	.string "It's a cup with a POKéMON mark\n"
 	.string "on it.$"
 
 Text_PolishedWindow::
-	.string "The window is very well polished.$"
+	.string "La ventana está muy limpia.$"
 
 Text_BeautifulSkyWindow::
-	.string "Outside the window…\p"
-	.string "The sky looks fantastically\n"
-	.string "beautiful.$"
+	.string "Al otro lado de la ventana…\p"
+	.string "El cielo se ve precioso.$"
 
 Text_BlinkingLights::
-	.string "Lights in different colors are\n"
-	.string "flashing on and off.$"
+	.string "Hay luces de colores que se\n"
+	.string "encienden y se apagan.$"
 
 Text_NeatlyLinedUpTools::
-	.string "All sorts of tools are lined up\n"
-	.string "neatly.$"
+	.string "Hay todo tipo de herramientas\n"
+	.string "bien colocadas.$"
 
 Text_ImpressiveMachine::
-	.string "It's a machine of some sort.\n"
-	.string "It sure is impressive.$"
+	.string "Es una máquina de algún tipo.\n"
+	.string "Y es impresionante.$"
 
 Text_VideoGame::
-	.string "It's the latest video game!\n"
-	.string "It sure looks fun!$"
+	.string "¡Es el último videojuego!\n"
+	.string "¡Tiene pinta de ser divertido!$"
 
 Text_Burglary::
-	.string "There are obvious signs of burglary\n"
-	.string "here…$"
+	.string "Hay señales claras de que aquí\n"
+	.string "ha habido un robo…$"
 
 Text_PlayerFacingTVScreen::
 	.string "There's a POKéMON on TV!\n"
