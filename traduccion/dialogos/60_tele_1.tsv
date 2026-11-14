@@ -1,0 +1,101 @@
+# La tele, parte 1 (Jorge, 13/11/2026): entrevistas de los reporteros, ¡BRAVO, ENTRENADOR!, el CLUB DE FANS POKéMON, NOTICIAS RECIENTES, brotes de POKéMON, {POKEBLOCK}S, el CLUB DE FANS de ENTRENADORES y el CALIFICANOMBRES.
+LilycoveCity_ContestLobby_Text_InterviewRequest	¡Oh, hola! Has participado en un\nCONCURSO POKéMON, ¿verdad?\lSe nota por tus POKéMON.\pSoy reportera. Estoy preparando un\nreportaje sobre los CONCURSOS POKéMON.\p¿Te importaría contestarme a unas\npreguntas?$
+LilycoveCity_ContestLobby_Text_DescribeContest	¿Sí? ¡Muchas gracias!\pEn pocas palabras, ¿cómo describirías\nel CONCURSO en el que acabas de\lparticipar?$
+LilycoveCity_ContestLobby_Text_WhatImageWhenYouHearX	Ah, ya veo.\nEs un comentario muy instructivo.\pTe hace una idea de cómo fue\nel CONCURSO.\pTengo una última pregunta.\pCuando oyes la palabra\n“{STR_VAR_2}”, ¿qué te imaginas?$
+LilycoveCity_ContestLobby_Text_ThatsAllForInterview	¡Ya veo!\pAsí es como te imaginas la idea\nde “{STR_VAR_2}”.\p¡Gracias!\nMe has dado muy buenas ideas.\pCreo que ya puedo escribir un buen\nreportaje sobre los CONCURSOS POKéMON.\pA lo mejor, quién sabe, este reportaje\nhasta llega a la tele.\l¡Espero que estés atento!$
+LilycoveCity_ContestLobby_Text_PleaseDoShareStoryWithMe	Oh, qué pena…\pBueno, si te enteras de alguna buena\nhistoria, cuéntamela, por favor.$
+LilycoveCity_ContestLobby_Text_LookingForwardToNextContest	Estaré pendiente de tu próximo\nCONCURSO POKéMON.$
+gTVBravoTrainerText00	¡Sí, señor!\n¡Es la hora de ¡BRAVO, ENTRENADOR!!\pHoy os presentamos a un POKéMON\nde {STR_VAR_1}.\pEste POKéMON presume de rango\n{STR_VAR_3} en la categoría {STR_VAR_2}.$
+gTVBravoTrainerText01	¡Os presentamos a {STR_VAR_2},\nel {STR_VAR_1}!\pEl mote {STR_VAR_2}…\p¡Hasta el mote tiene un aire que\nproclama “{STR_VAR_3}”!$
+gTVBravoTrainerText02	En fin, cuando {STR_VAR_1} inscribió\na este POKéMON en un CONCURSO,\lconseguimos unas apasionadas\lpalabras sobre su fiel compañero.$
+gTVBravoTrainerText03	Al preguntarle por el CONCURSO,\n{STR_VAR_1} contestó con una enorme\lsonrisa: “¡{STR_VAR_2}!”\pBueno, claro, su POKéMON quedó\nen el puesto {STR_VAR_3} del CONCURSO.\p¡Yo diría que la frase le va como\nanillo al dedo a {STR_VAR_1}!$
+gTVBravoTrainerText04	Al preguntarle por el CONCURSO,\n{STR_VAR_1} contestó con un toque\lde amargura: “{STR_VAR_2}”.\pBueno, claro, su POKéMON quedó\nen el puesto {STR_VAR_3} del CONCURSO.\p¡Yo diría que la decepción de\n{STR_VAR_1} se nota a la legua!$
+gTVBravoTrainerText05	¿No os gustaría saber qué se imagina\n{STR_VAR_1} con {STR_VAR_2}?\p¡A nosotros también!\n¡Así que se lo preguntamos!\pLa respuesta lo resume todo:\n“¡{STR_VAR_3}!”\p¡Eso es lo que significa {STR_VAR_2}\npara {STR_VAR_1}!$
+gTVBravoTrainerText06	¡El último movimiento que usó\n{STR_VAR_2} el {STR_VAR_1}\les puro “{STR_VAR_3}”!$
+gTVBravoTrainerText07	¡Bravo, {STR_VAR_1}!\n¡Bravo, {STR_VAR_2}!\p¡Esperamos ver a {STR_VAR_1}\nllegar todavía más alto!\p¡Y se nos acaba el tiempo!\n¡Hasta la próxima!$
+gTVBravoTrainerText08	¡Os presentamos al {STR_VAR_1}\ndel ENTRENADOR!$
+BattleFrontier_BattleTowerLobby_Text_InterviewRequest	¡Hola! Eres el ENTRENADOR que acaba\nde combatir, ¿verdad?\pEstoy entrevistando a ENTRENADORES\nde todas partes.\p¿Me dices unas palabras sobre lo\nque te ha parecido el combate?$
+BattleFrontier_BattleTowerLobby_Text_HowDidBattleTowerTurnOut	¿Sí? ¿De verdad?\n¡Gracias!\lPues, eh…\p¿Cómo te ha ido hoy en la\nTORRE BATALLA?\p¿Te ha gustado cómo has combatido?\n¿O no te ha convencido?$
+BattleFrontier_BattleTowerLobby_Text_SorryWeDisturbedYou	Oh…\nPerdona por la molestia.\pConcédenos una entrevista la próxima\nvez que vengas a la TORRE BATALLA.$
+BattleFrontier_BattleTowerLobby_Text_ObviousYouHadGreatBattle	¡Pues claro!\pEsa cara de satisfacción\nno engaña…\pSe nota que has tenido un combate\nestupendo.$
+BattleFrontier_BattleTowerLobby_Text_DifficultToMakeBattleTurnOutAsPlanned	Oh, ya veo…\pLa verdad es que es difícil que un\ncombate salga justo como lo planeas.$
+BattleFrontier_BattleTowerLobby_Text_DescribeYourBattle	¡Ah, ah! ¿Te puedo hacer una\npregunta más?\pSi tuvieras que describir lo que te\nha parecido este combate con una\lfrase, ¿cuál sería?$
+BattleFrontier_BattleTowerLobby_Text_ThatsGreatLine	¡Oh, eso es buenísimo!\p¡Qué gran frase!\nOjalá la próxima vez te vaya igual.\p¡Espero volver a verte!$
+BattleFrontier_BattleTowerLobby_Text_SilentType	Oh, ya veo…\pAun así, ser de pocas palabras\ntambién mola, ¿no?\p¡Espero que otro día me cuentes\nlo que piensas!$
+BattleFrontier_BattleTowerLobby_Text_LookingForwardToNextBattle	¡Estaré pendiente de tu próximo\ncombate!$
+BravoTrainerBattleTower_Text_Intro	¡Sí, señor!\n¡Es la hora de ¡BRAVO, ENTRENADOR!!\pHoy os presentamos a {STR_VAR_1}, que\nse atrevió con la TORRE BATALLA.\pPara el desafío, {STR_VAR_1} usó\nun {STR_VAR_2} temible.$
+BravoTrainerBattleTower_Text_NewRecord	¡La pareja batió un récord de\n{STR_VAR_2} victorias seguidas en la\lcategoría {STR_VAR_1}! ¡Bravo!$
+BravoTrainerBattleTower_Text_Lost	La pareja acabó cayendo ante\n{STR_VAR_1} en el combate {STR_VAR_2}.\l¡Buen intento, ENTRENADOR!\pPero, oye, qué mala suerte toparse\ncon {STR_VAR_1} tan pronto.\pLe preguntamos al ENTRENADOR qué\nle pareció el combate con {STR_VAR_1}.$
+BravoTrainerBattleTower_Text_Won	¡La pareja lo ganó todo arrasando\nal {STR_VAR_2} de {STR_VAR_1}!\l¡Bravo, ENTRENADOR!\p¡Vencer incluso a {STR_VAR_1}…!\n¡Increíble! ¡Simplemente asombroso!\pLe preguntamos al ENTRENADOR qué\nsintió en su momento de gloria.$
+BravoTrainerBattleTower_Text_LostFinal	Tras una racha de victorias, la pareja\ncayó ante el {STR_VAR_2} de\l{STR_VAR_1}, su último obstáculo.\p¡Buen intento, ENTRENADOR!\pHay que reconocerlo: no se ven\nmuchas parejas tan famosas como\l{STR_VAR_1} y {STR_VAR_2}.\pLe preguntamos al ENTRENADOR qué\nle pareció luchar contra ellos.$
+BravoTrainerBattleTower_Text_Satisfied	Esto es lo que dijo el ENTRENADOR:\n“¡Estoy satisfecho!”\p¿A que es una respuesta refrescante?\n¡Bravo, ENTRENADOR!\p¿No es genial poder combatir y\nquedar plenamente satisfecho?\pSupe hasta qué punto lo estaba al\noír al ENTRENADOR decir esto:$
+BravoTrainerBattleTower_Text_Unsatisfied	Esto es lo que dijo el ENTRENADOR:\n“No estoy satisfecho…”\pSe le notaba un poco bajo de ánimo\nal decirlo.\pAunque no es fácil combatir y quedar\nsatisfecho del todo, ¿verdad?\pEn fin, supe lo insatisfecho que\nestaba al oírle decir esto:$
+BravoTrainerBattleTower_Text_None1	Nada$
+BravoTrainerBattleTower_Text_None2	Nada$
+BravoTrainerBattleTower_Text_None3	Nada$
+BravoTrainerBattleTower_Text_None4	Nada$
+BravoTrainerBattleTower_Text_ResponseSatisfied	“{STR_VAR_1}”.\n¿A que es genial?\pYo diría que expresa de verdad la\nalegría de {STR_VAR_2}.\pEse último combate contra\n{STR_VAR_3}… ¡Fue lo que se dice\l“{STR_VAR_1}”!$
+BravoTrainerBattleTower_Text_ResponseUnsatisfied	“{STR_VAR_1}”.\n¿A que le va que ni pintado?\pEse último combate contra\n{STR_VAR_3}… ¡No se puede describir\lde otra forma que “{STR_VAR_1}”!\p¡Yo diría que la decepción de\n{STR_VAR_2} se nota a la legua!$
+BravoTrainerBattleTower_Text_Outro	¡Bravo, {STR_VAR_1}!\n¡Bravo, {STR_VAR_2}!\p¡Esperamos ver a {STR_VAR_1}\nllegar todavía más alto!\p¡Y se nos acaba el tiempo!\n¡Hasta la próxima!$
+SlateportCity_PokemonFanClub_Text_InterviewRequestHasName	¡Hala!\pSe ve a la legua que adoras a\ntu {STR_VAR_1}.\pVale, se llama {STR_VAR_2}.\p¿Te puedo pedir un favor?\pSoy reportera de la tele y estoy\nhaciendo una encuesta sobre POKéMON.\p¿Me contestarías a unas preguntas\nsencillas?$
+SlateportCity_PokemonFanClub_Text_HereGoesQuickAnswers	¡Genial! ¡Gracias!\pVale, allá voy.\nSolo quiero respuestas rápidas, ¿vale?$
+SlateportCity_PokemonFanClub_Text_DescribeFeelingsFirstMetMon	Cuando conociste a {STR_VAR_1},\n¿qué sentiste?\p¿Cómo describirías lo que sentiste\nen ese momento?$
+SlateportCity_PokemonFanClub_Text_LikenMonToSomethingYouLike	Cuidas a tu {STR_VAR_1} con mucho\ncariño.\pSi tuvieras que compararlo con algo\nque te guste, ¿qué sería?$
+SlateportCity_PokemonFanClub_Text_WhatAttractedYouAboutMon	Esta pregunta también es sobre tu\nquerido {STR_VAR_1}.\p¿Qué fue lo que te atrajo de\n{STR_VAR_1}?$
+SlateportCity_PokemonFanClub_Text_WhatDoPokemonMeanToYou	Vale, tiene sentido.\pLa siguiente pregunta igual es un\npoco más difícil.\pAllá va…\p¿Qué significan los POKéMON para ti?$
+SlateportCity_PokemonFanClub_Text_ThatsAllForInterview	¡Ya veo!\pMmm…\p¡Vale!\nGracias por ayudarme.\pHa sido divertido e instructivo\nhablar contigo.\pPuede que la entrevista acabe en la\ntele. ¡Estate atento!\pVale, eso es todo.\n¡Adiós!$
+SlateportCity_PokemonFanClub_Text_HereIfYouGetUrgeToTellMe	Oh, vale…\pBueno, si te entran ganas de\nhablarme de POKéMON, ¡aquí estaré!$
+SlateportCity_PokemonFanClub_Text_EnjoyDoingInterviews	Me encanta este trabajo: aprendes\nmucho de POKéMON con las entrevistas.$
+SlateportCity_PokemonFanClub_Text_InterviewRequest	Hola, se te ve muy unido a tu\n{STR_VAR_1}.\p¿Sabes qué?\nSoy reportera de la tele.\pViajo por ahí entrevistando a gente\nsobre sus POKéMON.\p¿Me contarías algo sobre tu\n{STR_VAR_1}?$
+SlateportCity_PokemonFanClub_Text_TellMeAnythingAboutYourMon	¡Hala, gracias!\pVale, pues cuéntame lo que quieras\nsobre tu {STR_VAR_1}.$
+SlateportCity_PokemonFanClub_Text_ThatsAllForInterview2	Hala…\nQué historia tan interesante.\pEstáis muy unidos tú y {STR_VAR_1},\n¿verdad?\pTengo la sensación de que tu historia\nva a quedar genial en la tele.\pTe prometo que haré con esto\nun programa entretenido.\lEstate atento.\pVale, eso es todo.\n¡Adiós!$
+gTVFanClubOpinionsText00	¡SOMOS EL CLUB DE FANS POKéMON!\p¡Estamos en antena!\pEn este programa recogemos vuestras\nopiniones ¡y yo las grito por vosotros!\l¿A que es una idea fantástica?\pHoy os traemos el reportaje de\nnuestra reportera en el CLUB DE FANS\lPOKéMON.\pY bien, ¿quién es el fan de POKéMON\nprotagonista de hoy?\p… … … … … … … …\p¡{STR_VAR_1}!\pVamos a ver qué dice {STR_VAR_1} de\n{STR_VAR_3}, su {STR_VAR_2}.\p¡Y yo gritaré esas palabras de amor\na pleno pulmón en la tele!\p¡Ju-já!\p¡A gritar!$
+gTVFanClubOpinionsText01	Le preguntamos a {STR_VAR_1}: “Cuando\nviste a tu {STR_VAR_2} por primera vez,\l¿qué pensaste?”\p“¡{STR_VAR_3}!”\p¡Yeee! ¡Eso es un buen grito!\p¿No os trae recuerdos de aquellos\nlejanos días?$
+gTVFanClubOpinionsText02	Le preguntamos a {STR_VAR_1}: “Si\ntuvieras que comparar a tu\l{STR_VAR_2} con algo, sería…”\p… … … … … … … …\p“¡{STR_VAR_3}!”\p¡Uooh, eso sí que es original!\pSe nota la intensidad de lo que\nsiente este ENTRENADOR por\l{STR_VAR_2}.$
+gTVFanClubOpinionsText03	Y a ver…\n¿Qué fue lo que tanto atrajo a\l{STR_VAR_1} de ese {STR_VAR_2}?\p… … … … … … … …\p“¡{STR_VAR_3}!”\p¡Uau! ¡Qué declaración tan\nespectacular!\p¡El amor del ENTRENADOR por su\n{STR_VAR_2} se nota a la legua!$
+gTVFanClubOpinionsText04	¿Mm? Oh, aún hay más.\n¡Vamos a verlo!\pA ver…\pLe preguntamos a {STR_VAR_1}: “¿Qué\nsignifican los POKéMON para ti?”\p… … … … … …\p“¡{STR_VAR_3}!”\p¡Bravo!\p¡Es el mejor grito de todo el día!\p“¡{STR_VAR_3}!”\p¡Dan ganas de gritarlo una y otra\nvez!\pDespués de este gran grito, ¡toca\ndespedirse hasta la próxima!\pAsí que, ¡un último grito!\n¡Todos juntos!\p“¡{STR_VAR_3}!”$
+gTVFanClubText00	¡SOMOS EL CLUB DE FANS POKéMON!\p¡Estamos en antena!\pHoy empezamos con el RINCÓN DE LA\nENCUESTA POKéMON.\pDe todas las historias que viven los\nPOKéMON y sus ENTRENADORES, ¿qué\lnuevo drama nos sorprenderá hoy?\pA ver…\p¡Esta!\p¡Empezamos con esta carta!\pEs una carta de {STR_VAR_1} sobre su\nquerido {STR_VAR_2}.\p¡A ver con cuánta pasión expresa\nsu amor por {STR_VAR_2}!\lMmm…$
+gTVFanClubText01	¡Uooh!\n¡Qué carta tan increíble!$
+gTVFanClubText02	¡Me ha encantado, así que otra vez!$
+gTVFanClubText03	¡Una buena carta se puede leer\nuna y otra vez!$
+gTVFanClubText04	¡Lo de “{STR_VAR_3}” le da\nmuchísima emoción!\p¡Es una carta genial que sale\nde verdad del corazón!$
+gTVFanClubText05	¡Sobre todo lo de “{STR_VAR_3}”!\p¡Me encanta cómo usa\n“{STR_VAR_3}”!$
+gTVFanClubText06	Por cierto, y no es importante, pero\n“{STR_VAR_3}” es una gran frase.\pÚltimamente uso mucho\n“{STR_VAR_3}” cuando hablo.$
+gTVFanClubText07	Si tuviera que puntuar la carta,\nle daría {STR_VAR_3} puntos.\p¡La próxima vez espero una carta\naún mejor, {STR_VAR_1}!\p¡Huy! ¿Ya es la hora?\n¡Toca despedirse hasta la próxima!$
+SlateportCity_OceanicMuseum_1F_Text_InterviewRequest	¿Oh?\n¿Te gustan los POKéMON?\pEstoy haciendo un reportaje para la\ncadena de televisión.\pRecojo historias recientes de\nPOKéMON y ENTRENADORES.\pSi no te importa, ¿me contarías algo\nsobre ti?$
+SlateportCity_OceanicMuseum_1F_Text_InterviewRequestShort	Recojo historias recientes de\nPOKéMON y ENTRENADORES.\pSi no te importa, ¿me contarías algo\nsobre ti?$
+SlateportCity_OceanicMuseum_1F_Text_TellMeExperienceInvolvingPokemon	¿Sí? ¡Gracias!\pPues cuéntame algo interesante que te\nhaya pasado hace poco con POKéMON.$
+SlateportCity_OceanicMuseum_1F_Text_LetMeKnowIfYouHaveStory	Oh, ya veo…\pBueno, si tienes alguna historia\ninteresante, cuéntamela.$
+SlateportCity_OceanicMuseum_1F_Text_ThatsAllForInterview	¡Oh, qué historia tan bonita!\pMe aseguraré de que salga\nen la tele.\pSe emitirá algún día, creo,\nasí que estate atento.$
+SlateportCity_OceanicMuseum_1F_Text_BetterWriteUpStory	Mmm…\nTengo una buena historia para la tele.\p¡Será mejor que la escriba rápido!$
+gTVRecentHappeningsText00	Hola, es la hora de NOTICIAS\nRECIENTES.\pPara los ENTRENADORES POKéMON, cada\ndía es un cuento.\pQueremos presentaros algunas de\nesas historias de POKéMON.\pHoy os traemos la historia de\n{STR_VAR_1}.\p¿Qué le ha pasado hace poco a\n{STR_VAR_1}? Vamos a verlo.\pA ver…$
+gTVRecentHappeningsText01	¿A que ha sido instructivo?\pLa historia deja claro lo que\nha vivido {STR_VAR_1} hace poco.\l¡Es como si hubiéramos estado allí!$
+gTVRecentHappeningsText02	“{STR_VAR_3}”. Eso le da\nfuerza y profundidad a la historia.$
+gTVRecentHappeningsText03	“{STR_VAR_3}”.\nEso sitúa la historia en un lugar.\lNos deja imaginar dónde pasó.$
+gTVRecentHappeningsText04	La parte de “{STR_VAR_3}”\nes muy expresiva.$
+gTVRecentHappeningsText05	{STR_VAR_1} nos ha contado una historia\nmaravillosa con POKéMON.\pY ahora la historia de {STR_VAR_1}\nse os ha quedado grabada en el alma.\pEso es todo por hoy.\nNo os perdáis el próximo programa.$
+gTVMassOutbreakText00	¡Saludos!\nEs la hora de NOTICIAS POKéMON.\pNos acaba de llegar un suceso\nmuy poco común.\pHay noticias de un brote masivo de\n{STR_VAR_2} cerca de {STR_VAR_1}.\p{STR_VAR_2}, como ya sabréis, es un\nPOKéMON raro y difícil de encontrar.\pParece una ocasión única para ver\neste misterioso brote de\l{STR_VAR_2} en libertad.\pEstas han sido las NOTICIAS POKéMON.$
+gTV3CheersForPokeblocksText00	PRESENTADOR: ¡Bienvenidos a\n“3 HURRAS POR LOS {POKEBLOCK}S”!\pHoy analizamos el {POKEBLOCK} que han\nhecho {STR_VAR_1} y compañía.\pSin más dilación, se lo doy a mi\nPOKéMON gourmet, GULPIN.\p… … … … … …\n… … … … … …$
+gTV3CheersForPokeblocksText01	GULPIN: ¡Gubi! ¡Gubii!\pPRESENTADOR: ¡El veredicto: muy\n{STR_VAR_1}! GULPIN dice que sabe\l“¡{STR_VAR_2}!”\p¡Muchísimas gracias, {STR_VAR_3}!$
+gTV3CheersForPokeblocksText02	La mezcla de {STR_VAR_1} dejó\nbastante que desear.\pSi mezclara mejor, el {POKEBLOCK}\nestaría mucho más rico.$
+gTV3CheersForPokeblocksText03	GULPIN: ¡Gubi! ¡Gubii!\pPRESENTADOR: Mmm… Es demasiado\n{STR_VAR_1}. GULPIN dice que sabe\l“¡{STR_VAR_2}!”\pParece que los fallos de {STR_VAR_3}\nhan estropeado la mezcla…$
+gTV3CheersForPokeblocksText04	Es una pena que el esfuerzo de\n{STR_VAR_1} se echara a perder.\p¡Esperemos que {STR_VAR_2} lo haga\nmejor la próxima vez!$
+gTV3CheersForPokeblocksText05	¡No os perdáis el próximo programa!\nNuestro lema: “¡3 HURRAS POR LOS\l{POKEBLOCK}S!”$
+LilycoveCity_PokemonTrainerFanClub_Text_WhatsYourOpinionOfTrainer	¡Hola!\pSoy muy fan de {STR_VAR_1}.\n¿Qué opinas de {STR_VAR_1}?$
+LilycoveCity_PokemonTrainerFanClub_Text_ThatsWhatYouThink	Ya veo, ya veo. Eso es lo que\npiensas de ese ENTRENADOR.$
+LilycoveCity_PokemonTrainerFanClub_Text_HaveYouForgottenTrainer	¿Te has olvidado por completo\nde {STR_VAR_1}?$
+LilycoveCity_PokemonTrainerFanClub_Text_WhatsYourOpinionOfTrainer2	Soy muy fan de {STR_VAR_1}.\n¿Qué opinas de {STR_VAR_1}?$
+LilycoveCity_PokemonTrainerFanClub_Text_HowStrongRateTrainer	Del cero al cien, ¿cómo de fuerte\ndirías que es {STR_VAR_1}?$
+LilycoveCity_PokemonTrainerFanClub_Text_HaveYouForgottenTrainer2	¿Te has olvidado por completo\nde {STR_VAR_1}?$
+LilycoveCity_PokemonTrainerFanClub_Text_YouShouldMeetTrainer	¡Oh, ya veo!\nDeberías conocer a {STR_VAR_1}.\l¡Seguro que también te haces fan!$
+LilycoveCity_PokemonTrainerFanClub_Text_ThankYouIllShareThisInfo	Ya veo, ya veo.\p¡Gracias!\nEs muy útil saberlo.\pSe lo contaré a otros fans de\n{STR_VAR_1} y lo comentaremos.$
+LilycoveCity_PokemonTrainerFanClub_HopeYouCatchTVSpecial	Muy pronto van a echar en la tele un\nespecial sobre {STR_VAR_1}.\p¡Espero que lo veas!$
+gTVTrainerFanClubSpecialText00	¡ESPECIAL {STR_VAR_1} del CLUB DE\nFANS de ENTRENADORES!\pUn programa especial para los fans\nde {STR_VAR_1} de todo HOENN.\pHoy nos preguntamos: “¿Qué piensa\nla gente de {STR_VAR_1}?”\pSe lo preguntamos a {STR_VAR_2} en\nrepresentación de los ENTRENADORES.\pLe dijimos: “¿Cómo describirías a\n{STR_VAR_1} en una palabra?”\pRespuesta: “{STR_VAR_3}”.\p¡Bien dicho, {STR_VAR_2}!\n¡Qué opinión tan perspicaz!\p“{STR_VAR_3} {STR_VAR_1}”.\n¡Suena de maravilla!\p{STR_VAR_2} también puntuó la fuerza\nde {STR_VAR_1} del 0 al 100.$
+gTVTrainerFanClubSpecialText01	¡Le dio {STR_VAR_3} puntos!\n¡Una puntuación altísima!\pEstá claro que {STR_VAR_2} tiene a\n{STR_VAR_1} en muy alta estima.$
+gTVTrainerFanClubSpecialText02	¡Le dio {STR_VAR_3} puntos!\nUna puntuación bastante buena.\p{STR_VAR_2} debe de considerar a\n{STR_VAR_1} un rival.$
+gTVTrainerFanClubSpecialText03	¡Le dio {STR_VAR_3} puntos!\nUna puntuación más bien floja.\p{STR_VAR_2} debe de considerar a\n{STR_VAR_1} un simple ayudante.$
+gTVTrainerFanClubSpecialText04	¡Le dio {STR_VAR_3} punto(s)!\nUna puntuación pésima.\p{STR_VAR_2} debe de considerar a\n{STR_VAR_1} un subordinado.$
+gTVTrainerFanClubSpecialText05	¡Pues ya lo habéis oído!\pCreo que hoy hemos aprendido algo\nnuevo sobre {STR_VAR_1}.\pPara terminar, os dejo con las\npalabras de {STR_VAR_2}:\p¡{STR_VAR_3} {STR_VAR_1}!$
+gTVNameRaterText00	Y ahora es la hora del…\nPROGRAMA DEL CALIFICANOMBRES.\pLeo el destino de tus POKéMON a\npartir del mote que les has puesto.\pLo que doy son consejos, y son\nconsejos muy útiles.\pHoy voy a leer el mote {STR_VAR_3} del\nPOKéMON {STR_VAR_2} de\l{STR_VAR_1}.\pMmm…\pMmm…\nEste mote es…$
+gTVNameRaterText01	Un mote que insinúa talento en\nmuchos sentidos.\pAnimo a este ENTRENADOR a tener\nvalor y aceptar muchos retos.$
+gTVNameRaterText02	Un mote que complementa a la\nperfección a {STR_VAR_1}, el nombre\ldel ENTRENADOR.\pSugiere que formaréis un gran equipo\ncon una compenetración perfecta.$

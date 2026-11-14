@@ -1,0 +1,67 @@
+# CARPAS DE COMBATE de PARDAL, VERDEGAL y PORTUAL (Jorge, 13/11/2026): se ven durante la historia y seguían en inglés.
+FallarborTown_BattleTentLobby_Text_WelcomeToBattleTent	¡Te doy la bienvenida a la CARPA\nDE COMBATE de PARDAL!\p¡Soy tu guía para el Torneo KO!$
+FallarborTown_BattleTentLobby_Text_TakeChallenge	Bien, ¿quieres aceptar el desafío\ndel Torneo KO?$
+FallarborTown_BattleTentLobby_Text_AwaitAnotherChallenge	¡Esperamos tu desafío en otra\nocasión!$
+FallarborTown_BattleTentLobby_Text_ExplainFallarborTent	En la CARPA DE COMBATE de PARDAL\nse celebra el Torneo KO.\pTodos los participantes entran con un\nequipo de tres POKéMON.\pLos tres POKéMON deben ir en el orden\nen el que van a salir.\pEn el combate, los POKéMON salen de\nuno en uno en ese orden.\pUna vez que un POKéMON sale, tiene\nque seguir hasta que se decida.\pSi en tres turnos no se ha decidido,\nse pasa a la decisión de los jueces.\pSi quieres dejar el desafío a medias,\nguarda la partida.\pSi no guardas, no podrás seguir con\ntu desafío.\pSi consigues ganar a tres\nENTRENADORES seguidos,\lte daremos un buen premio.$
+FallarborTown_BattleTentLobby_Text_SaveBeforeChallenge	Antes de llevarte a la CARPA DE\nCOMBATE, debo guardar. ¿Te parece?$
+FallarborTown_BattleTentLobby_Text_WhichLevelMode	Hay dos niveles de desafío:\nNivel 50 y Nivel Libre.\l¿Cuál eliges?$
+FallarborTown_BattleTentLobby_Text_SelectThreeMons	Muy bien, ahora elige tus\ntres POKéMON, por favor.$
+FallarborTown_BattleTentLobby_Text_NotEnoughValidMonsLv50	¡Querido participante!\pNo tienes los tres POKéMON\nnecesarios para participar.\pAdemás, no pueden llevar objetos\nrepetidos.\pLos HUEVOS{STR_VAR_1}.\pCuando lo tengas todo preparado,\nvuelve, por favor.$
+FallarborTown_BattleTentLobby_Text_NotEnoughValidMonsLvOpen	¡Querido participante!\pNo tienes los tres POKéMON\nnecesarios para participar.\pPara participar, debes traer tres\nPOKéMON de especies distintas.\pAdemás, no pueden llevar objetos\nrepetidos.\pLos HUEVOS{STR_VAR_1}.\pCuando lo tengas todo preparado,\nvuelve, por favor.$
+FallarborTown_BattleTentLobby_Text_GuideYouToBattleTent	Ahora te llevaré a la CARPA DE\nCOMBATE.$
+FallarborTown_BattleTentLobby_Text_DidntSaveBeforeQuitting	¡Querido participante!\pNo guardaste la partida antes de\napagar, ¿verdad?\pEs una pena, pero eso te ha\ndescalificado del desafío.\pPor supuesto, puedes empezar un\ndesafío nuevo.$
+FallarborTown_BattleTentLobby_Text_BeatThreeTrainers	¡Espléndido! ¡Has vencido a tres\nENTRENADORES seguidos!$
+FallarborTown_BattleTentLobby_Text_WaitWhileSaveGame	Espera mientras guardo la partida.$
+FallarborTown_BattleTentLobby_Text_PresentYouWithPrize	Para celebrar tu racha de 3 victorias,\nte damos este premio.$
+FallarborTown_BattleTentLobby_Text_ReceivedPrize	¡{PLAYER} ha recibido como premio\n{STR_VAR_1}!$
+FallarborTown_BattleTentLobby_Text_BagFullReturnForPrize	¿Oh?\nParece que tu MOCHILA está llena.\pHaz sitio y vuelve a por tu\npremio, por favor.$
+FallarborTown_BattleTentLobby_Text_ThankYouWaitWhileSaving	¡Muchas gracias por participar!\pEspera mientras guardo la partida.$
+FallarborTown_BattleTentLobby_Text_AwaitAnotherChallenge2	¡Esperamos tu desafío en otra\nocasión!$
+FallarborTown_BattleTentLobby_Text_LookingForwardToArrival	Te estábamos esperando.\pAntes de llevarte a la CARPA DE\nCOMBATE, debo guardar. Espera.$
+VerdanturfTown_BattleTentLobby_Text_WelcomeToBattleTent	¡Te doy la bienvenida a la CARPA\nDE COMBATE de VERDEGAL!\pAquí se pone a prueba la confianza\ndel ENTRENADOR en sus POKéMON.$
+VerdanturfTown_BattleTentLobby_Text_TakeChallenge	¿Quieres aceptar el desafío de la\nCARPA DE COMBATE de VERDEGAL?$
+VerdanturfTown_BattleTentLobby_Text_ExplainVerdanturfTent	En la CARPA DE COMBATE de VERDEGAL\nhay una norma fundamental que\lhay que cumplir.\pLos ENTRENADORES solo pueden cambiar\na sus POKéMON.\pNo pueden darles ninguna otra\norden.\pLos POKéMON actúan según su\nnaturaleza y combaten por su cuenta.\pTienes que confiar en tus POKéMON\ny vigilarlos.\pSi logras vencer a tres\nENTRENADORES seguidos,\lte daremos un premio.\pSi quieres dejar el desafío a medias,\nguarda la partida.\pSi no guardas antes de dejarlo,\nquedarás descalificado.$
+VerdanturfTown_BattleTentLobby_Text_ReturnFortified	Vuelve cuando tu corazón y tus\nPOKéMON estén preparados.$
+VerdanturfTown_BattleTentLobby_Text_WhichLevelMode	Hay dos niveles de dificultad:\nNivel 50 y Nivel Libre.\l¿Cuál eliges para tu desafío?$
+VerdanturfTown_BattleTentLobby_Text_NotEnoughValidMonsLv50	Vaya…\pNo tienes los tres POKéMON\nnecesarios para el desafío.\pPara participar, debes traer tres\nPOKéMON de especies distintas.\pAdemás, no pueden llevar objetos\nrepetidos.\pLos HUEVOS{STR_VAR_1}.\pVuelve cuando lo tengas todo\npreparado.$
+VerdanturfTown_BattleTentLobby_Text_NotEnoughValidMonsLvOpen	Vaya…\pNo tienes los tres POKéMON\nnecesarios para el desafío.\pPara participar, debes traer tres\nPOKéMON de especies distintas.\pAdemás, no pueden llevar objetos\nrepetidos.\pLos HUEVOS{STR_VAR_1}.\pVuelve cuando lo tengas todo\npreparado.$
+VerdanturfTown_BattleTentLobby_Text_SelectThreeMons	Bien. Ahora debes elegir tus\ntres POKéMON.$
+VerdanturfTown_BattleTentLobby_Text_SaveBeforeChallenge	Debo guardar antes de llevarte a la\nCARPA DE COMBATE. ¿Te parece?$
+VerdanturfTown_BattleTentLobby_Text_NowFollowMe	Bien.\nAhora sígueme.$
+VerdanturfTown_BattleTentLobby_Text_ResultsWillBeRecorded	Ha sido un honor ver las hazañas\nde tus POKéMON.\pSe anotarán los resultados.\nEspera un momento, por favor.$
+VerdanturfTown_BattleTentLobby_Text_AchievedThreeWinStreak	Conseguir 3 victorias seguidas…\pEl vínculo entre tu corazón y tus\nPOKéMON parece firme y sincero.$
+VerdanturfTown_BattleTentLobby_Text_FeatWillBeRecorded	Se anotará tu hazaña.\nEspera un momento, por favor.$
+VerdanturfTown_BattleTentLobby_Text_PresentYouWithPrize	Por tu racha de 3 victorias,\nte damos este premio.$
+SlateportCity_BattleTentLobby_Text_WelcomeToBattleTent	¡Bienvenido a la CARPA DE COMBATE\nde PORTUAL!\pSoy tu guía para el Torneo de\nIntercambio.$
+SlateportCity_BattleTentLobby_Text_TakeChallenge	¿Quieres aceptar el desafío del\nTorneo de Intercambio?$
+SlateportCity_BattleTentLobby_Text_ExplainSlateportTent	En la CARPA DE COMBATE de PORTUAL\nse celebra el Torneo de Intercambio\lcon POKéMON de alquiler.\pPrimero, te prestaremos tres\nPOKéMON solo para el torneo.\pCon esos POKéMON de alquiler, harás\nun COMBATE INDIVIDUAL.\pSi ganas, puedes cambiar uno de tus\nPOKéMON de alquiler.\pRepite el ciclo de combatir y\ncambiar. Si ganas tres veces\lseguidas, te llevarás un buen premio.\pSi quieres dejar el desafío a medias,\nguarda la partida.\pSi no guardas antes de dejarlo,\nquedarás descalificado.$
+SlateportCity_BattleTentLobby_Text_LookForwardToNextVisit	Esperamos tu próxima visita.$
+SlateportCity_BattleTentLobby_Text_WhichLevelMode	¿Qué nivel quieres desafiar?\n¿Nivel 50 o Nivel 100?$
+SlateportCity_BattleTentLobby_Text_SaveBeforeChallenge	Antes de empezar el desafío, tengo\nque guardar. ¿Te parece?$
+SlateportCity_BattleTentLobby_Text_HoldMonsForSafekeeping	Muy bien, te guardaré tus POKéMON\nmientras compites.$
+SlateportCity_BattleTentLobby_Text_StepThisWay	Por aquí, por favor.$
+SlateportCity_BattleTentLobby_Text_ReturnRentalMonsSaveResults	¡Gracias por participar!\pTe devuelvo tus POKéMON a cambio\nde los de alquiler.\pTambién tengo que guardar tus\nresultados. Espera, por favor.$
+SlateportCity_BattleTentLobby_Text_ReturnMonsExchangeRentals	Te devuelvo tus POKéMON a cambio\nde los de alquiler.$
+SlateportCity_BattleTentLobby_Text_WonThreeMatchesReturnMons	¡Enhorabuena!\n¡Has ganado tres combates seguidos!\pTe devuelvo tus POKéMON a cambio\nde los de alquiler.\pTambién tengo que guardar tus\nresultados. Espera, por favor.$
+SlateportCity_BattleTentLobby_Text_AwardYouThisPrize	Por tu racha de 3 victorias,\nte damos este premio.$
+SlateportCity_BattleTentLobby_Text_NoRoomInBagMakeRoom	¿Oh?\nParece que no tienes sitio.\pHaz hueco en tu MOCHILA y\navísame.$
+SlateportCity_BattleTentLobby_Text_BeenWaitingForYou	¡Te estábamos esperando!\pAntes de seguir con tu desafío,\ndebo guardar la partida.$
+SlateportCity_BattleTentLobby_Text_DidntSaveBeforeQuitting	Siento decírtelo, pero la última vez\nno guardaste antes de dejar de jugar.\pPor eso, has quedado descalificado\ndel desafío.$
+SlateportCity_BattleTentLobby_Text_ReturnPersonalMons	Te devolvemos tus POKéMON.$
+SlateportCity_BattleTentLobby_Text_ReceivedPrize	¡{PLAYER} ha recibido como premio\n{STR_VAR_1}!$
+SlateportCity_BattleTentLobby_Text_RulesAreListed	Aquí están las normas del Torneo\nde Intercambio.$
+SlateportCity_BattleTentLobby_Text_ReadWhichHeading	¿Qué apartado quieres leer?$
+SlateportCity_BattleTentLobby_Text_ExplainBasicRules	En el Torneo de Intercambio solo\npuedes usar tres POKéMON.\pTanto si alquilas como si cambias,\ntu equipo no puede tener dos o más\lPOKéMON iguales.$
+SlateportCity_BattleTentLobby_Text_ExplainSwapPartnerRules	Solo puedes cambiar POKéMON con el\nENTRENADOR al que acabas de vencer.\pY solo por los POKéMON que usó ese\nENTRENADOR.$
+SlateportCity_BattleTentLobby_Text_ExplainSwapNumberRules	Tras cada combate que ganes, puedes\ncambiar uno de tus POKéMON por uno\ldel rival que has vencido.\pCon el tercer ENTRENADOR no se\npueden cambiar POKéMON.$
+SlateportCity_BattleTentLobby_Text_ExplainSwapNotes	Hay dos cosas importantes a tener\nen cuenta al cambiar POKéMON.\pPrimero: al cambiar, no puedes ver\nlas características del POKéMON\lque vas a recibir.\pSegundo: los POKéMON de tu equipo\nvan en el orden en que los alquilaste.\pEse orden no cambia aunque\nhagas cambios.$
+SlateportCity_BattleTentLobby_Text_ExplainMonRules	Todos los POKéMON de la CARPA DE\nCOMBATE de PORTUAL son de alquiler.\pTodos están a Nivel 30.$
+VerdanturfTown_BattleTentLobby_Text_RulesAreListed2	Aquí están las normas de la CARPA\nDE COMBATE de VERDEGAL.$
+VerdanturfTown_BattleTentLobby_Text_ReadWhichHeading	¿Qué apartado quieres leer?$
+VerdanturfTown_BattleTentLobby_Text_ExplainBasicRules	En la CARPA DE COMBATE de VERDEGAL,\nlos POKéMON tienen que pensar y\lcombatir por su cuenta.\pA diferencia de los salvajes, los\nPOKéMON que viven con personas\lactúan según su naturaleza.$
+VerdanturfTown_BattleTentLobby_Text_ExplainNatureRules	Según su naturaleza, un POKéMON\npuede preferir atacar pase lo que pase.\pOtro puede preferir protegerse de\ncualquier daño.\pY otro puede disfrutar molestando\no confundiendo a sus rivales.\pSegún su naturaleza, un POKéMON\ntendrá movimientos favoritos que\lsabe usar bien.\pY puede que no le gusten algunos\nmovimientos que le cuesta usar.$
+VerdanturfTown_BattleTentLobby_Text_ExplainMoveRules	Hay movimientos ofensivos que\nhacen daño directo al rival.\pHay movimientos defensivos que\nsirven para prepararse ante los\lataques o para recuperar PS.\pY hay otros movimientos algo raros\nque debilitan al rival con problemas\lde estado, como el veneno o la\lparálisis.\pLos POKéMON tendrán en cuenta\nestos tres tipos de movimientos.$
+VerdanturfTown_BattleTentLobby_Text_ExplainUnderpoweredRules	Si su ENTRENADOR no le da órdenes,\nun POKéMON puede no usar bien\lciertos movimientos.\pUn POKéMON no usa bien ningún\nmovimiento que no le guste.\pSi un POKéMON solo sabe movimientos\nque no van con su naturaleza, a\lmenudo no rendirá todo lo que puede.$
+VerdanturfTown_BattleTentLobby_Text_ExplainWhenInDangerRules	Según su naturaleza, un POKéMON\npuede usar movimientos que no van\lcon ella cuando está en apuros.\pSi un POKéMON empieza a actuar raro\nen un apuro, vigílalo bien.$
+BattleTentLobby_Text_ExplainLevelRules	En esta CARPA DE COMBATE, el nivel\nde tus rivales se ajusta al de\ltus POKéMON.\pPero ningún ENTRENADOR al que te\nenfrentes tendrá POKéMON por\ldebajo del Nivel 30.$
+VerdanturfTown_BattleTentLobby_Text_RulesAreListed	Aquí están las normas de la CARPA\nDE COMBATE de VERDEGAL.$
