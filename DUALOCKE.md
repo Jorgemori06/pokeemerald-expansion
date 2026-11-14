@@ -326,6 +326,7 @@ Para ver todo sin herramientas externas (pedido por Miguel el 24/10/2026):
   - Detrás de la naturaleza, lo que sube y lo que baja en letra pequeña: "Firme (+Atq -AtE)", o "(neutra)". Si se ha usado una menta, sale el efecto de la menta.
   - **START** pasa por todas las habilidades que puede tener la especie, con su descripción. A la derecha sale "Actual" (azul), "Posible" u "Oculta" (rojo) y cuántas hay ("2/3"). Al cambiar de Pokémon vuelve a la actual.
 - **Página de características:** **A** pasa de características a IVs y a EVs, con el número exacto. La etiqueta de arriba cambia a IVs/EVs. Lo que sube la naturaleza sale en rojo y lo que baja en azul (ya venía activado).
+  - **Amistad (Jorge, 13/11/2026):** arriba a la derecha, donde salían las cintas (que en el locke no sirven), se ve la amistad de 0 a 255 ("123/255"). La etiqueta pone "AMISTAD", dibujada con las letras de las otras etiquetas en `graphics/summary_screen/tiles.png` e `iv_ev_tiles.png`. Las evoluciones por amistad piden 160 o más.
 - **Movimientos:** ya enseñaban tipo, categoría (físico/especial/estado), PP, potencia, precisión y descripción.
 - Código: `include/config/summary_screen.h` (opciones `P_SUMMARY_SCREEN_IV_EV_*`) y `src/pokemon_summary_screen.c` (busca "Dualocke").
 - Pendiente: hacerla más bonita con gráficos nuevos (fondos, iconos). Hace falta dibujarlos y probarlos en el emulador.
