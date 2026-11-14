@@ -1374,7 +1374,7 @@ gText_MomOrDadMightLikeThisProgram::
 	.string "Better get going!$"
 
 gText_WhichFloorWouldYouLike::
-	.string "Bienvenido a los GRANDES ALMACENES\n"
+	.string "Estos son los GRANDES ALMACENES\n"
 	.string "de CALAGUA.\p"
 	.string "¿A qué planta quieres ir?$"
 
@@ -1431,7 +1431,7 @@ gText_MonsHealed::
 
 gText_HadQuiteAnExperienceTakeRest::
 	.string "MAMÁ: ¡{PLAYER}!\n"
-	.string "Bienvenido a casa.\p"
+	.string "¡Ya estás en casa!\p"
 	.string "Parece que has vivido toda una\n"
 	.string "aventura.\p"
 	.string "Deberías descansar un poco.$"
@@ -1445,8 +1445,8 @@ gText_MomExplainHPGetPotions::
 	.string "Si tus POKéMON pierden PS, puedes\n"
 	.string "curarlos en cualquier\l"
 	.string "CENTRO POKéMON.\p"
-	.string "Si vas a viajar lejos, un ENTRENADOR\n"
-	.string "listo lleva POCIONES de la\l"
+	.string "Si vas a viajar lejos, todo buen\n"
+	.string "ENTRENADOR lleva POCIONES de la\l"
 	.string "TIENDA POKéMON.\p"
 	.string "¡Haz que me sienta orgullosa, cielo!\p"
 	.string "¡Cuídate!$"

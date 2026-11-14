@@ -1,5 +1,5 @@
 # Textos comunes que quedaban en inglés (Jorge, 13/11/2026, encontrados jugando): event_scripts.s (centro POKéMON, MAMÁ, POKÉRUS, la TM SECRETO del mercado de PORTUAL…), carteles genéricos de las casas (flavor_text), el hombre del perfil de los centros POKéMON y la CUEVA CARDUMEN.
-gText_WhichFloorWouldYouLike	Bienvenido a los GRANDES ALMACENES\nde CALAGUA.\p¿A qué planta quieres ir?$
+gText_WhichFloorWouldYouLike	Estos son los GRANDES ALMACENES\nde CALAGUA.\p¿A qué planta quieres ir?$
 gText_SandstormIsVicious	La tormenta de arena es terrible.\nEs imposible seguir adelante.$
 gText_SelectWithoutRegisteredItem	Puedes registrar un objeto de la\nMOCHILA en SELECT para usarlo rápido.$
 gText_UnusedNicknameReceivedPokemon	¿Quieres ponerle un mote al\n{STR_VAR_2} que has recibido?$
@@ -7,8 +7,8 @@ gText_PlayerWhitedOut	¡A {PLAYER} no le quedan\nPOKéMON que puedan luchar!\p¡
 gText_FirstShouldRestoreMonsHealth	Primero deberías curar a tus\nPOKéMON del todo.$
 gText_MonsHealedShouldBuyPotions	Tus POKéMON están totalmente\nrecuperados.\pSi la energía de tus POKéMON, los PS,\nbaja, ven a vernos.\pSi vas a viajar lejos, deberías\ncomprar POCIONES en la TIENDA\lPOKéMON.\p¡Esperamos que te vaya muy bien!$
 gText_MonsHealed	Tus POKéMON están totalmente\nrecuperados.\p¡Esperamos que te vaya muy bien!$
-gText_HadQuiteAnExperienceTakeRest	MAMÁ: ¡{PLAYER}!\nBienvenido a casa.\pParece que has vivido toda una\naventura.\pDeberías descansar un poco.$
-gText_MomExplainHPGetPotions	MAMÁ: ¡Qué bien! Tus POKéMON y tú\ntenéis muy buen aspecto.\pAcabo de hablar con {STR_VAR_1}.\pDice que la energía de los POKéMON\nse mide en PS.\pSi tus POKéMON pierden PS, puedes\ncurarlos en cualquier\lCENTRO POKéMON.\pSi vas a viajar lejos, un ENTRENADOR\nlisto lleva POCIONES de la\lTIENDA POKéMON.\p¡Haz que me sienta orgullosa, cielo!\p¡Cuídate!$
+gText_HadQuiteAnExperienceTakeRest	MAMÁ: ¡{PLAYER}!\n¡Ya estás en casa!\pParece que has vivido toda una\naventura.\pDeberías descansar un poco.$
+gText_MomExplainHPGetPotions	MAMÁ: ¡Qué bien! Tus POKéMON y tú\ntenéis muy buen aspecto.\pAcabo de hablar con {STR_VAR_1}.\pDice que la energía de los POKéMON\nse mide en PS.\pSi tus POKéMON pierden PS, puedes\ncurarlos en cualquier\lCENTRO POKéMON.\pSi vas a viajar lejos, todo buen\nENTRENADOR lleva POCIONES de la\lTIENDA POKéMON.\p¡Haz que me sienta orgullosa, cielo!\p¡Cuídate!$
 gText_ComeBackWithSecretPower	¿Conoces la MT DAÑO SECRETO?\pA nuestro grupo le encanta la\nMT DAÑO SECRETO.\pUno de nuestros miembros te la\ndará. Vuelve y enséñamela cuando\lla tengas.\pTe aceptaremos como miembro y te\nvenderemos cosas buenas en secreto.$
 gText_PokerusExplanation	Puede que tus POKéMON estén\ninfectados con POKÉRUS.\pSe sabe poco del POKÉRUS, salvo que\nson formas de vida microscópicas\lque se pegan a los POKéMON.\pDicen que, mientras están\ninfectados, los POKéMON crecen\lmuchísimo mejor.$
 gText_BigHoleInTheWall	Hay un agujero enorme en la pared.$
