@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke.h"
 #include "dualocke_aleatorio.h"
 #include "battle.h"
 #include "battle_gfx_sfx_util.h"
@@ -125,6 +126,7 @@ void CreateScriptedWildMon(enum Species species, u8 level, enum Item item)
 {
     u8 heldItem[2];
 
+    Dualocke_CapWildMon(&species, &level); // Dualocke: ningún salvaje por encima del level cap
     ZeroEnemyPartyMons();
     u32 personality = GetMonPersonality(species,
         GetSynchronizedGender(STATIC_WILDMON_ORIGIN, species),
@@ -144,6 +146,8 @@ void CreateScriptedDoubleWildMon(enum Species species1, u8 level1, enum Item ite
     u8 heldItem1[2];
     u8 heldItem2[2];
 
+    Dualocke_CapWildMon(&species1, &level1); // Dualocke: ningún salvaje por encima del level cap
+    Dualocke_CapWildMon(&species2, &level2);
     ZeroEnemyPartyMons();
     u32 personality = GetMonPersonality(species1,
         GetSynchronizedGender(STATIC_WILDMON_ORIGIN, species1),

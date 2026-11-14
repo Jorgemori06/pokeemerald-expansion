@@ -26,12 +26,12 @@ ShoalCave_LowTideEntranceRoom_Text_MakeShellBellRightAway:
 	.string "¡Ya está! ¡Listo!$"
 
 ShoalCave_LowTideEntranceRoom_Text_ExplainShellBell:
-	.string "Have a POKéMON hold on to that.\n"
-	.string "It'll love it, that's for certain.\p"
-	.string "Why, the SHELL BELL's chime…\n"
-	.string "It's simply sublime!\p"
-	.string "You can get its ingredients every day,\n"
-	.string "so I can make you more.$"
+	.string "Dáselo a un POKéMON para que lo\n"
+	.string "lleve. Le va a encantar, seguro.\p"
+	.string "¡Ay, el sonido del CASCABEL CONCHA…!\n"
+	.string "¡Es simplemente sublime!\p"
+	.string "Los ingredientes se consiguen cada\n"
+	.string "día, así que te puedo hacer más.$"
 
 ShoalCave_LowTideEntranceRoom_Text_WantedToMakeShellBell:
 	.string "Oh… Vaya…\n"
