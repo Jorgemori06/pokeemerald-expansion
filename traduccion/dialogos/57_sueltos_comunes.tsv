@@ -1,0 +1,50 @@
+# Textos comunes que quedaban en inglés (Jorge, 13/11/2026, encontrados jugando): event_scripts.s (centro POKéMON, MAMÁ, POKÉRUS, la TM SECRETO del mercado de PORTUAL…), carteles genéricos de las casas (flavor_text), el hombre del perfil de los centros POKéMON y la CUEVA CARDUMEN.
+gText_WhichFloorWouldYouLike	Bienvenido a los GRANDES ALMACENES\nde CALAGUA.\p¿A qué planta quieres ir?$
+gText_SandstormIsVicious	La tormenta de arena es terrible.\nEs imposible seguir adelante.$
+gText_SelectWithoutRegisteredItem	Puedes registrar un objeto de la\nMOCHILA en SELECT para usarlo rápido.$
+gText_UnusedNicknameReceivedPokemon	¿Quieres ponerle un mote al\n{STR_VAR_2} que has recibido?$
+gText_PlayerWhitedOut	¡A {PLAYER} no le quedan\nPOKéMON que puedan luchar!\p¡{PLAYER} ha perdido el conocimiento!$
+gText_FirstShouldRestoreMonsHealth	Primero deberías curar a tus\nPOKéMON del todo.$
+gText_MonsHealedShouldBuyPotions	Tus POKéMON están totalmente\nrecuperados.\pSi la energía de tus POKéMON, los PS,\nbaja, ven a vernos.\pSi vas a viajar lejos, deberías\ncomprar POCIONES en la TIENDA\lPOKéMON.\p¡Esperamos que te vaya muy bien!$
+gText_MonsHealed	Tus POKéMON están totalmente\nrecuperados.\p¡Esperamos que te vaya muy bien!$
+gText_HadQuiteAnExperienceTakeRest	MAMÁ: ¡{PLAYER}!\nBienvenido a casa.\pParece que has vivido toda una\naventura.\pDeberías descansar un poco.$
+gText_MomExplainHPGetPotions	MAMÁ: ¡Qué bien! Tus POKéMON y tú\ntenéis muy buen aspecto.\pAcabo de hablar con {STR_VAR_1}.\pDice que la energía de los POKéMON\nse mide en PS.\pSi tus POKéMON pierden PS, puedes\ncurarlos en cualquier\lCENTRO POKéMON.\pSi vas a viajar lejos, un ENTRENADOR\nlisto lleva POCIONES de la\lTIENDA POKéMON.\p¡Haz que me sienta orgullosa, cielo!\p¡Cuídate!$
+gText_ComeBackWithSecretPower	¿Conoces la MT DAÑO SECRETO?\pA nuestro grupo le encanta la\nMT DAÑO SECRETO.\pUno de nuestros miembros te la\ndará. Vuelve y enséñamela cuando\lla tengas.\pTe aceptaremos como miembro y te\nvenderemos cosas buenas en secreto.$
+gText_PokerusExplanation	Puede que tus POKéMON estén\ninfectados con POKÉRUS.\pSe sabe poco del POKÉRUS, salvo que\nson formas de vida microscópicas\lque se pegan a los POKéMON.\pDicen que, mientras están\ninfectados, los POKéMON crecen\lmuchísimo mejor.$
+gText_BigHoleInTheWall	Hay un agujero enorme en la pared.$
+gText_SorryWirelessClubAdjustments	Lo siento muchísimo.\nEl CLUB INALÁMBRICO POKéMON está\len ajustes ahora mismo.$
+gText_SorryTradeCenterInspections	Lo siento muchísimo. El CENTRO DE\nINTERCAMBIO está en revisión.$
+gText_SorryRecordCornerPreparation	Lo siento muchísimo. El RINCÓN\nDE RÉCORDS aún no está listo.$
+gText_ThankYouForAccessingMysteryGift	Gracias por usar el sistema de\nREGALO MISTERIOSO.$
+gText_Sudowoodo_Attacked	¡Al árbol raro no le gusta la\nREGADERA WAILMER!\p¡El árbol raro ha atacado!$
+Text_DishesPlatesNeatlyLinedUp	Hay platos y fuentes bien\ncolocados.$
+Text_Kitchen	¡Qué bien huele!\nAlguien ha estado cocinando.$
+Text_Dresser	Es una cómoda muy bonita.\nCabe un montón de cosas.$
+Text_Snacks	Hay un montón de aperitivos.$
+Text_Food	Seguro que está llena de cosas\nricas para comer.$
+Text_Blueprints	Son unos planos de algo.\nEstán llenos de dibujos y texto.$
+Text_PowerPlantMachine	¿Qué será esta máquina?\n¡Mejor no tocarla!$
+Text_Telephone	Es un teléfono.\nMejor no usarlo.$
+Text_Computer	Todo son palabras complicadas y\nnúmeros que no tienen sentido…$
+Text_AdvertisingPoster	Es un cartel de publicidad de\ntodo tipo de productos.$
+Text_TastyFood	¡Qué bien huele!\n¡Hace que te ruja la tripa!$
+Text_TrashBin	Aquí dentro hay…\n……\p¡Nada!$
+Text_PolishedWindow	La ventana está muy limpia.$
+Text_BeautifulSkyWindow	Al otro lado de la ventana…\pEl cielo se ve precioso.$
+Text_BlinkingLights	Hay luces de colores que se\nencienden y se apagan.$
+Text_NeatlyLinedUpTools	Hay todo tipo de herramientas\nbien colocadas.$
+Text_ImpressiveMachine	Es una máquina de algún tipo.\nY es impresionante.$
+Text_VideoGame	¡Es el último videojuego!\n¡Tiene pinta de ser divertido!$
+Text_Burglary	Hay señales claras de que aquí\nha habido un robo…$
+Text_IdLoveToHearYourProfile	¡Hola, encantado de conocerte!\p…Qué borde eres.\n¿No me saludas?\pVenga, háblame de ti.\p¡Me encantaría oír tu perfil!$
+Text_TellMeWhatsYourProfile	Cuéntame algo bueno de ti.\n¿Cuál es tu perfil?$
+Text_ExplainProfile	Un perfil se escribe con cuatro\npalabras o frases.\pHay muchísimas palabras para elegir\npara tu perfil.\pLas palabras y frases están en\nvarios grupos para que sea fácil.\pPrimero eliges un grupo y luego\nuna palabra o frase.\p…Es más fácil de lo que parece.\n¿Por qué no lo pruebas?$
+Text_WhatsYourProfile	¿Cuál es tu perfil?$
+Text_DontBeLikeThat	Ay… No seas así.\nPuedes contarme tu perfil.$
+Text_DecidedNotTo	¿Al final no quieres?\nQué voluble eres, ¿eh?$
+Text_ChangeYourProfile	¿Quieres cambiar tu perfil?$
+Text_WhatAreYouLikeNow	¿Cómo eres ahora?\nMe encantaría saberlo.$
+Text_LikeProfileWayItIs	Vale, te gusta tu perfil tal\ncomo está.\pA mí también.$
+Text_ProfileSaysSomethingAboutYou	Mmm…\pTu perfil dice mucho de cómo eres.\pAhora que te conozco mejor,\n¡somos más amigos que nunca!$
+Text_HeardThatBefore	Anda, eso ya lo he oído antes…\pCreo que mi primo, que vive lejos,\nsiempre lo decía.$
+ShoalCave_LowTideEntranceRoom_Text_ExplainShellBell	Dáselo a un POKéMON para que lo\nlleve. Le va a encantar, seguro.\p¡Ay, el sonido del CASCABEL CONCHA…!\n¡Es simplemente sublime!\pLos ingredientes se consiguen cada\ndía, así que te puedo hacer más.$

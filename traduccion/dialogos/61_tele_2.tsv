@@ -1,0 +1,101 @@
+# La tele, parte 2 (Jorge, 13/11/2026): el CALIFICANOMBRES, el PESCADOR, POKéMON HOY, el COMPRADOR LISTO, el MUNDO DE LOS MAESTROS, el RIVAL DE HOY, las modas de AZULIZA, los TESOROS DE HOENN, el CASINO, las NOTICIAS DE ÚLTIMA HORA y las visitas a BASES SECRETAS.
+gTVNameRaterText03	¡Un mote digno de un POKéMON\núnico en su especie!\pSi se cría bien, ¡su singularidad\nflorecerá sin límites!$
+gTVNameRaterText04	Un mote que alimentará el lado\ncariñoso y compasivo del POKéMON.\pSi se cría bien, ¡este POKéMON\nmostrará un cariño de verdad!$
+gTVNameRaterText05	Un mote estupendo que augura\ngrandeza.\pMe intriga saber qué le deparará\nel futuro a este POKéMON.$
+gTVNameRaterText06	¡Un buen mote que hará que el\nPOKéMON esté sano y fuerte!\pEse POKéMON seguirá en forma y\nrobusto durante mucho, mucho tiempo.$
+gTVNameRaterText07	¡Un buen mote que hará que el\nPOKéMON sea muy activo!\pCreo que este POKéMON rendirá\nmuy bien en combate.$
+gTVNameRaterText08	¡Un mote atractivo que hará que el\nPOKéMON tenga mucho encanto!\pNo dudo que este POKéMON cautivará\na todos en los CONCURSOS POKéMON.$
+gTVNameRaterText09	El mote {STR_VAR_1} tiene su raíz\nen la letra “{STR_VAR_3}”.\pEsa letra se apoya en la inicial\n“{STR_VAR_2}”, que le da al mote\luna presencia sólida.$
+gTVNameRaterText10	El mote {STR_VAR_1} tiene una forma\nmuy agradable.\pLa presencia de las letras “{STR_VAR_2}”\ny “{STR_VAR_3}”… ¡es notablemente buena!$
+gTVNameRaterText11	El mote {STR_VAR_1}… tiene un aire\nsublime y fluido.\pEl paso de la inicial “{STR_VAR_2}”\na “{STR_VAR_3}” es especialmente bonito.$
+gTVNameRaterText12	Veamos otros ejemplos de buenos\nmotes, ¿os parece?$
+gTVNameRaterText13	Mirad este ejemplo. Tomad una parte\ndel nombre de {STR_VAR_1}, el\lENTRENADOR, y sale el buen mote\l{STR_VAR_2}{STR_VAR_3}.$
+gTVNameRaterText14	El mote {STR_VAR_2}{STR_VAR_3} también\nquedaría muy bien.$
+gTVNameRaterText15	El nombre de la especie, {STR_VAR_2},\npodría servir de base para el\lmote {STR_VAR_1}{STR_VAR_3}.$
+gTVNameRaterText16	{STR_VAR_1}{STR_VAR_3} también sería\nun mote eficaz.$
+gTVNameRaterText17	Lo que siempre hay que evitar es usar\nel nombre de otra especie de POKéMON.\pPor ejemplo, no uséis el nombre de\n{STR_VAR_2} para hacer el mote\l{STR_VAR_1}{STR_VAR_3}. Es inaceptable.$
+gTVNameRaterText18	Debo decir que {STR_VAR_1} es un\nmote bastante bueno.\pEspero que el ENTRENADOR siga\ntratando a {STR_VAR_1} con cariño.\pEso es todo por hoy.\nHasta la próxima.$
+gTVPokemonAnglerText00	PESCADOR DE {STR_VAR_2}\pPRESENTADOR: ¡Hola! Hoy nos dan\ntrucos para pescar {STR_VAR_2}.\pMAESTRO, ¿qué consejo nos da para\npescar {STR_VAR_2}?\pMAESTRO: ¿Mm? ¿Pescar {STR_VAR_2}?\nPues mira, paciencia y a esperar.\lEsa es la clave.\p¿Ves a {STR_VAR_1} ahí?\nEs un buen ejemplo.\pYa se le han escapado {STR_VAR_3}\nPOKéMON.\pPero ahí sigue {STR_VAR_1}. Sin rendirse.\nEsa es la ley para pescar {STR_VAR_2}.\pPRESENTADOR: Ya veo…\p¡Oh! ¡Por fin {STR_VAR_1} ha pescado\nun escurridizo {STR_VAR_2}!\p¡Parece que está a punto de llorar\nde alegría!\p¡Viendo esa cara, a mí también me\nentran ganas de pescar!\pEspectadores, ¿por qué no os animáis\na pescar {STR_VAR_2}?\p¡Hasta el próximo programa! ¡Adiós\ny buena pesca a todos!$
+gTVPokemonAnglerText01	PESCADOR DE {STR_VAR_2}\pPRESENTADOR: ¡Hola! Hoy nos dan\ntrucos para pescar {STR_VAR_2}.\pMAESTRO, ¿qué consejo nos da para\npescar {STR_VAR_2}?\pMAESTRO: ¿Mm? ¿Pescar {STR_VAR_2}?\nPues mira, ¡usa la CAÑA con\lenergía!\p¿Ves a {STR_VAR_1} ahí?\n¿Ves cómo maneja la CAÑA?\pYa ha pescado {STR_VAR_3}\nseguidos.\pPRESENTADOR: ¡Es increíble!\nParece una tormenta…\pViendo una técnica así, a mí también\nme entran ganas de pescar.\pEspectadores, ¿por qué no os animáis\na pescar {STR_VAR_2}?\p¡Hasta el próximo programa! ¡Adiós\ny buena pesca a todos!$
+gTVPokemonTodayFailedText00	¡Hola!\p¡Es la hora de POKéMON HOY!\pHERMANA: ¡Hola! ¿Estáis todos\nfrescos y animados?\pHoy vamos a ver el POKéMON\n{STR_VAR_2} de {STR_VAR_1}.\pHERMANO: ¡Sí! ¡Eso es lo que vamos\na hacer!$
+gTVPokemonTodayFailedText01	¡Oh!\nHablando de {STR_VAR_1}…\p¡HERMANA, vi a ese ENTRENADOR con\nmis propios ojos!\pHERMANA: Oh, ¿y qué viste?\pHERMANO: Pues tuve que ir de viaje\na {STR_VAR_2}.\pY allí me encontré con {STR_VAR_1},\nque intentaba capturar al POKéMON\l{STR_VAR_3}, pero…$
+gTVPokemonTodayFailedText02	¡El POKéMON se escapó!\p¡Gastó esta cantidad de\nPOKé BALLS: {STR_VAR_2}!\p¡Tendrías que haber visto la cara de\nfrustración de {STR_VAR_1} cuando\lse le escapó!$
+gTVPokemonTodayFailedText03	¡Pero {STR_VAR_1} metió la pata y\ndebilitó al POKéMON!\p¡Gastó esta cantidad de\nPOKé BALLS: {STR_VAR_2}!\p¡Tendrías que haber visto la cara de\npasmo de {STR_VAR_1} cuando el\lPOKéMON se debilitó!$
+gTVPokemonTodayFailedText04	HERMANA: ¡Eh, oye!\n¡Eso no está bien!\p¡No hay que reírse de las\ndesgracias ajenas!\pOh, pobre {STR_VAR_1}.\n¡Qué pena!\pHERMANO: ¡Es verdad!\nPerdón por reírme.$
+gTVPokemonTodayFailedText05	HERMANA: Pfff…\pHERMANO: ¡Eh!\n¡Tú también te has reído!\pHERMANA: ¡¿Eh?!\p¡No me he reído!\n¡De verdad que no!\pOh, pobre {STR_VAR_1}.\n¡Qué pena!\pHERMANO: …$
+gTVPokemonTodayFailedText06	HERMANA: ¡Basta de tonterías!\nVamos a ver el POKéMON de hoy…\p¿Eh?\n¿Ya no nos queda tiempo?\p¡Ooh!\n¡Hoy no hemos podido ver ningún\lPOKéMON!\pHERMANO: ¡Hasta la próxima!\pHERMANA: ¡Eh, no acabes el programa\nsin mí!$
+gTVPokemonTodaySuccessfulText00	¡Hola!\p¡Es la hora de POKéMON HOY!\pHERMANA: ¡Hola! ¿Estáis todos\nfrescos y animados?\pHoy vamos a ver el POKéMON\n{STR_VAR_2} de {STR_VAR_1}.\pHERMANO: ¡Sí! ¡Eso es lo que vamos\na hacer!$
+gTVPokemonTodaySuccessfulText01	HERMANA: ¡{STR_VAR_1} le puso el mote\n{STR_VAR_3} a su {STR_VAR_2}!\p¡Parece que a {STR_VAR_3} lo cuidan\ncon mucho cariño!$
+gTVPokemonTodaySuccessfulText02	HERMANO: Tuvo que lanzar esta\ncantidad de POKé BALLS: {STR_VAR_3}.\p¡Al final lo capturó con una\n{STR_VAR_2}!$
+gTVPokemonTodaySuccessfulText03	HERMANA: Si fue tan fácil de capturar,\n¡seguro que el destino unió a\l{STR_VAR_1} y a su {STR_VAR_2}!$
+gTVPokemonTodaySuccessfulText04	HERMANA: ¡Hala! ¡Qué guay!\pPero ya sabes lo que dicen: ¡un\nPOKéMON que cuesta mucho capturar\lse gana el cariño de su ENTRENADOR!$
+gTVPokemonTodaySuccessfulText05	HERMANA: El {STR_VAR_2} de {STR_VAR_1}\nes un POKéMON memorable: ¡hizo falta\luna valiosísima MASTER BALL!\pHERMANO: ¡Hala! ¡Eso es la caña!\pHERMANA: ¡Seguro que {STR_VAR_1} tenía\nmuchas ganas de ese {STR_VAR_2}!$
+gTVPokemonTodaySuccessfulText06	HERMANO: Y encima ponerle el mote\n{STR_VAR_3} a ese {STR_VAR_2}…\pTe haces una buena idea del\nbuen ojo de {STR_VAR_1}.\pHERMANA: ¡Estoy de acuerdo!$
+gTVPokemonTodaySuccessfulText07	¡Yo le pondría ese mote a algo\ncomo este {STR_VAR_3}!\pHERMANO: ¡Hala! ¡Eso podría ser el\nprincipio de algo nuevo!$
+gTVPokemonTodaySuccessfulText08	¿{STR_VAR_2}, el {STR_VAR_1}?\n¿A que suena perfecto?\p¡Las letras y todo le quedan que\nni pintado a un {STR_VAR_1}!\pHERMANO: ¡Sí, es verdad!$
+gTVPokemonTodaySuccessfulText09	¡Que yo sepa, ningún ENTRENADOR le\nhabía puesto el mote {STR_VAR_2} a\lsu {STR_VAR_1}!\pHERMANO: ¡Eso demuestra el buen gusto\nde este ENTRENADOR para los motes!$
+gTVPokemonTodaySuccessfulText10	La próxima vez que capture un\nPOKéMON, le pondré {STR_VAR_2}.\pHERMANO: ¿Eh? ¡Yo también!\n¡Yo también le pondré {STR_VAR_2}!$
+gTVPokemonTodaySuccessfulText11	HERMANA: ¡Oh, no!\n¡Mira qué hora es!\pBueno, chicos, esto es todo por hoy.\n¡Hasta la próxima!\pHERMANO: ¡Recordad que la próxima vez\npodría salir vuestro POKéMON!$
+SmartShopper_Text_Intro	¡Hola!\p¡Es la hora del COMPRADOR LISTO\nDEL DÍA!\pENTREVISTADORA: ¿Qué tal estáis?\pHoy visitamos una tienda de\n{STR_VAR_2}.\pVamos a ver qué es lo que más\nse ha vendido últimamente.$
+SmartShopper_Text_ClerkNormal	Entrevistemos al dependiente para\nque nos lo cuente todo.\pHola, ¿qué tal va el negocio?\pDEPENDIENTE: Oh, nos va de maravilla.\pÚltimamente se está vendiendo muy\nbien el objeto {STR_VAR_2}.\pSin ir más lejos, el otro día\n{STR_VAR_1} compró {STR_VAR_3}.$
+SmartShopper_Text_RandomComment1	ENTREVISTADORA: ¿Compró {STR_VAR_3}\nde {STR_VAR_2}? ¡Menudo botín!\pSi me permiten decirlo, {STR_VAR_1}\nse estaría preparando para un largo\lviaje a tierras lejanas.\p¡Para viajar, {STR_VAR_2} es\nimprescindible!$
+SmartShopper_Text_RandomComment2	ENTREVISTADORA: Hablando de\n{STR_VAR_2}, yo compré {STR_VAR_3}\lhace poco.\p¡Es que {STR_VAR_2} es un objeto\ngenial!$
+SmartShopper_Text_RandomComment3	ENTREVISTADORA: ¿¡{STR_VAR_2}!?\n¿¡Y {STR_VAR_3}!?\pNo pensaba que hubiera alguien que\ncomprara tantos.\pMadre mía, yo solo me puedo permitir\nuno o dos cada vez…$
+SmartShopper_Text_RandomComment4	ENTREVISTADORA: Una vez compré\nun montón de {STR_VAR_2}.\pPero resultaron ser demasiados.\nAcabé arrepintiéndome…\pDesde entonces, solo compro lo\nque necesito de verdad…\p¡Huy!\p¡No tiene sentido hablar de mí!$
+SmartShopper_Text_SecondItem	DEPENDIENTE: {STR_VAR_1} también\ncompró {STR_VAR_2} al por mayor:\l{STR_VAR_3}.\pENTREVISTADORA: Oh, qué listo.\n{STR_VAR_2} también es muy bueno.$
+SmartShopper_Text_ThirdItem	DEPENDIENTE: Y además compró\n{STR_VAR_3} de {STR_VAR_2}.$
+SmartShopper_Text_DuringSale	DEPENDIENTE: Y encima en plenas\nrebajas. Eso es comprar con cabeza.$
+SmartShopper_Text_OutroNormal	ENTREVISTADORA: Mmm… ¡{STR_VAR_1} sabe\nbuscar gangas!\pEn total, las compras de {STR_VAR_1}\nsumaron…\p¿¡{STR_VAR_2}¥!?\n¡Menuda cantidad!\p¡Huy! ¡Se acabó el tiempo!\n¡Hasta el próximo programa!$
+SmartShopper_Text_IsVIP	DEPENDIENTE: {STR_VAR_1} es un cliente\nVIP, no hay duda.$
+SmartShopper_Text_ClerkMax	Entrevistemos al dependiente para\nque nos lo cuente todo.\pHola, ¿qué tal va el negocio?\pDEPENDIENTE: Oh, de maravilla.\nCasi no damos abasto.\pHace poco, {STR_VAR_1} compró\n{STR_VAR_2} al por mayor.\pCasi nos deja sin existencias\nde {STR_VAR_2}.\pNunca pensé que un cliente necesitara\ntantos. ¡No se había visto nunca!\pENTREVISTADORA: ¿Unos 100 o 200?\pDEPENDIENTE: ¡Oh, no, muchos más!\pENTREVISTADORA: ¡Madre mía!\n¡{STR_VAR_1} es un comprador especial!\pDEPENDIENTE: {STR_VAR_1} es un cliente\nVIP, no hay duda.$
+SmartShopper_Text_OutroMax	ENTREVISTADORA: Mmm…\nEs increíble.\pPero ¿para qué necesitará\ntantos?\p… …\pEl misterio continúa, pero no nos\nqueda más tiempo por hoy.\l¡Hasta el próximo programa!\pAun así, {STR_VAR_1} es todo un enigma…$
+gTVWorldOfMastersText00	EL MUNDO DE LOS MAESTROS\pHola, espectadores.\pQuizá conozcáis a un ENTRENADOR\nllamado {STR_VAR_1}.\p{STR_VAR_1} es famoso por ser un\nmaestro capturando POKéMON.\pSu búsqueda de POKéMON se basa en\nrastrear a pie con mucho cuidado.\pUn día memorable, este ENTRENADOR\ndio unos {STR_VAR_2} pasos.\p¡Ese día capturó nada menos que\n{STR_VAR_3} POKéMON!$
+gTVWorldOfMastersText01	Semejante hazaña fue posible gracias\na la confianza entre el ENTRENADOR\ly {STR_VAR_1}.$
+gTVWorldOfMastersText02	El último POKéMON del día fue un\n{STR_VAR_3}, cerca de {STR_VAR_2}.\pAl parecer, ese POKéMON tiene un\nestatus especial de plusmarquista.\pAnimamos a los ENTRENADORES expertos\na intentar batir este récord.\pEso es todo por hoy.\nNo os perdáis el próximo programa.$
+gTVTodaysRivalTrainerText00	¡EL RIVAL DE HOY!\p¡Hola, compañeros ENTRENADORES!\n¿Qué tal estamos hoy?\pHoy, como cada día,\n¡analizamos a uno de nuestros rivales!$
+gTVTodaysRivalTrainerText07	El rival de hoy es {STR_VAR_1}, que\nahora anda por {STR_VAR_3}.\pHasta ahora, {STR_VAR_1} ha registrado\n{STR_VAR_2} POKéMON en la POKéDEX.$
+gTVTodaysRivalTrainerText08	El rival de hoy es {STR_VAR_1}, que\nahora está en una BASE SECRETA.\pHasta ahora, {STR_VAR_1} ha registrado\n{STR_VAR_2} POKéMON en la POKéDEX.$
+gTVTodaysRivalTrainerText09	El rival de hoy es {STR_VAR_1}.\pHasta ahora, {STR_VAR_1} ha registrado\n{STR_VAR_2} POKéMON en la POKéDEX.$
+gTVTodaysRivalTrainerText10	El rival de hoy es {STR_VAR_1}, que\nahora va en un ferry.\pHasta ahora, {STR_VAR_1} ha registrado\n{STR_VAR_2} POKéMON en la POKéDEX.$
+gTVTodaysRivalTrainerText01	¿Y cuántas MEDALLAS tiene nuestro\nrival? ¡Pues {STR_VAR_1}!$
+gTVTodaysRivalTrainerText02	¡Pero nuestro rival aún no tiene\nni una sola MEDALLA!$
+gTVTodaysRivalTrainerText03	Nuestro rival aún no tiene ni un\nsolo Símbolo del FRENTE BATALLA.$
+gTVTodaysRivalTrainerText04	Veamos cuántos Símbolos del FRENTE\nBATALLA tiene nuestro rival.\pSímbolos de oro: ¡{STR_VAR_1}!\nSímbolos de plata: ¡{STR_VAR_2}!$
+gTVTodaysRivalTrainerText05	Nuestro rival ha conseguido {STR_VAR_1}\nPunto(s) Batalla en el FRENTE BATALLA.$
+gTVTodaysRivalTrainerText06	Y bien, ¿cómo estáis en comparación\ncon {STR_VAR_1}?\p¡La aventura continúa!\p¡Compañeros ENTRENADORES!\p¡Sigamos avanzando y dejemos atrás\na nuestros rivales!$
+TrendWatcher_Text_Intro	¡CADENA DE MODAS DE AZULIZA!\pPRESENTADOR: ¿Qué pasa?\nOs traemos lo último de lo que\lse lleva en AZULIZA.\pNuestro invitado de hoy es este\nabuelete, que dice ser la autoridad\len todo lo que pasa en AZULIZA.\pAnciano: Encantado de estar aquí.\pPRESENTADOR: Vamos al grano, colega.\p¿Qué es lo que mola ahora entre\nla buena gente de AZULIZA?\pAnciano: {STR_VAR_1} {STR_VAR_2}.\pPRESENTADOR: ¿{STR_VAR_1}\n{STR_VAR_2}, dice?\pAnciano: No.\p{STR_VAR_1} {STR_VAR_2} nunca\nllegó a ponerse de moda.\p¿Quiere que se lo cuente?\pPRESENTADOR: Eh, no. Lo que queremos\nsaber es qué se lleva ahora…$
+TrendWatcher_Text_MaleTaughtMePhrase	Anciano: {STR_VAR_1} {STR_VAR_2}\nes lo que {STR_VAR_3}, de VILLA RAÍZ,\lme enseñó que estaba de moda…$
+TrendWatcher_Text_FemaleTaughtMePhrase	Anciano: {STR_VAR_1} {STR_VAR_2}\nes lo que {STR_VAR_3}, de VILLA RAÍZ,\lme enseñó que estaba de moda…$
+TrendWatcher_Text_PhraseWasHopeless	Pero no hubo manera.\p¡Fiesta de {STR_VAR_1} {STR_VAR_2}!\p¡Concurso de {STR_VAR_1} {STR_VAR_2}!\pIntenté enseñárselo a todos lo\nmejor que pude, pero…\pQuizá lo de {STR_VAR_1} no\nera lo adecuado…\pPRESENTADOR: Eh, perdone, compadre,\nnecesito saber qué se lleva ahora…$
+TrendWatcher_Text_MaleTellMeBigger	Anciano: ¡{STR_VAR_3}!\n¡Por favor, enséñame algo más gordo\lque ese {STR_VAR_1} {STR_VAR_2}!$
+TrendWatcher_Text_FemaleTellMeBigger	Anciano: ¡{STR_VAR_3}!\n¡Por favor, enséñame algo más gordo\lque ese {STR_VAR_1} {STR_VAR_2}!$
+TrendWatcher_Text_Outro	PRESENTADOR: …Eh… Pues ya lo habéis\noído, gente moderna.\p{STR_VAR_1} {STR_VAR_2}… eh…\n¡No se puso de moda en AZULIZA!\pSe me acaba el tiempo. ¡Nos vemos!\pAnciano: ¡{STR_VAR_1} {STR_VAR_2}!$
+gTVHoennTreasureInvestigatorsText00	¡BUSCADORES DE TESOROS DE HOENN!\p¡Hola, chicos!\n¿Habéis encontrado objetos secretos?\pComo siempre, analizamos lo que nos\ncontáis de secretos de todas partes.\pEmpezamos con una carta.\nDice: “¡Encontrado {STR_VAR_1}!”$
+gTVHoennTreasureInvestigatorsText01	¡Hala, hay que ver esta carta!\nOs la leo.\p…Queridos BUSCADORES:\nEspero que estéis bien.\pHace poco vi a {STR_VAR_2} cerca\nde {STR_VAR_3}.\pEncontró el objeto {STR_VAR_1}.\nMe dio mucha envidia.\p…¡Bien hecho, {STR_VAR_2}!\p¡Espectadores, animaos a sacar\nvuestros BUSCAOBJETOS y a buscar!\p¡Espero vuestras noticias!$
+gTVHoennTreasureInvestigatorsText02	¡Hala, hay que ver esta carta!\nOs la leo.\p…Queridos BUSCADORES:\nEspero que estéis bien.\pHace poco vi a {STR_VAR_2} en un ferry.\pEncontró el objeto {STR_VAR_1}.\nMe dio mucha envidia.\p…¡Bien hecho, {STR_VAR_2}!\p¡Espectadores, animaos a sacar\nvuestros BUSCAOBJETOS y a buscar!\p¡Espero vuestras noticias!$
+gTVFindThatGamerText00	¡BUSCA AL JUGÓN!\p¡Eh, jugones!\n¿Qué tal va esa {STR_VAR_2}?\pComo siempre, ¡ponemos el foco en un\nENTRENADOR singular que ha pasado\lpor el CASINO!\pHoy, nuestro jugón número uno es…\n¡{STR_VAR_1}!$
+gTVFindThatGamerText01	{STR_VAR_1} jugó a la {STR_VAR_2}\ny ganó nada menos que {STR_VAR_3} FICHAS.\p“Cuando viene {STR_VAR_1}, hay que\nasegurarse de tener FICHAS.”\pEso murmuran los empleados del CASINO\ncuando nuestro jugón está en marcha.\pEspectadores, vigilad vuestras FICHAS\ncomo {STR_VAR_1} si vais al CASINO\ly jugáis a la {STR_VAR_2}.\pEn directo desde el CASINO,\n¡donde se respira la emoción!\p¡Eso es todo por hoy!$
+gTVFindThatGamerText02	{STR_VAR_1} jugó a la {STR_VAR_2}\ny perdió {STR_VAR_3} FICHAS.\p“Cuando viene {STR_VAR_1}, parece que\nvendemos más FICHAS.”\pEso dicen los empleados del CASINO\ncuando nuestro jugón está en marcha.$
+gTVFindThatGamerText03	Espectadores, vigilad vuestras FICHAS\ncomo {STR_VAR_1} si vais al CASINO\ly jugáis a la {STR_VAR_2}.\pEn directo desde el CASINO,\n¡donde se respira la emoción!\p¡Eso es todo por hoy!$
+gTVBreakingNewsText01	¡{STR_VAR_1} captura un\n{STR_VAR_2} poco común!\p¡Conectamos en directo desde las\ncercanías de {STR_VAR_3}!\p¡Hace un rato, {STR_VAR_1} capturó\naquí un {STR_VAR_2} poco común!$
+gTVBreakingNewsText02	Cuando {STR_VAR_1} se encontró con el\n{STR_VAR_2}, sacó a su POKéMON\l{STR_VAR_3}.$
+gTVBreakingNewsText03	En el combate, el ENTRENADOR lanzó\n{STR_VAR_1} POKé BALL(S).\pAl final, el POKéMON cayó con la\núltima que usó, una {STR_VAR_2}.$
+gTVBreakingNewsText04	En ese instante, en {STR_VAR_2}\nresonaron los gritos de alegría\lde {STR_VAR_1}.\pDebo decir que le tengo un poco de\nenvidia. Yo también quiero gritar.\p…¡Aquí termina la conexión en\ndirecto desde este feliz lugar!$
+gTVBreakingNewsText05	¡{STR_VAR_1} no logra capturar un\n{STR_VAR_2} poco común!\p¡Conectamos en directo desde las\ncercanías de {STR_VAR_3}!\p¡Fue aquí donde {STR_VAR_1} no logró\ncapturar un {STR_VAR_2} poco común!$
+gTVBreakingNewsText06	Cuando {STR_VAR_1} se encontró con el\n{STR_VAR_2}, sacó a su POKéMON\l{STR_VAR_3}.$
+gTVBreakingNewsText07	Hizo que {STR_VAR_2} usara el\nmovimiento {STR_VAR_1}.\pSin querer, el ENTRENADOR debilitó\nal POKéMON poco común…$
+gTVBreakingNewsText12	Pero {STR_VAR_1} se puso nervioso\nal ver al {STR_VAR_2}.\pEn plena confusión, ordenó a\n{STR_VAR_3} que atacara.\pSin querer, el ENTRENADOR debilitó\nal POKéMON poco común.$
+gTVBreakingNewsText08	En ese instante, en {STR_VAR_2}\nresonaron los gritos de frustración\lde {STR_VAR_1}…$
+gTVBreakingNewsText09	Pero parece que a {STR_VAR_1} se le\nacabaron las POKé BALLS.\pTuvo que dejar el combate contra\nel {STR_VAR_2}.\pEn ese instante, en {STR_VAR_3}\nresonaron los gritos de frustración\lde {STR_VAR_1}…$
+gTVBreakingNewsText10	Pero el {STR_VAR_2} huyó sin\navisar.\pEn ese instante, en {STR_VAR_3}\nresonaron los gritos de frustración\lde {STR_VAR_1}…$
+gTVBreakingNewsText11	Debo decir que siento lo de\n{STR_VAR_1}. Hasta me dan ganas\lde gritar.\p…¡Aquí termina la conexión en\ndirecto desde este triste lugar!$
+gTVSecretBaseVisitText00	¡Hola a todos!\nVuelve la VISITA A LA\lBASE SECRETA.\pHoy visitamos la BASE SECRETA\nde {STR_VAR_1}.\p¿Cómo habrá decorado {STR_VAR_1}\nsu BASE SECRETA?\p¡Vamos a verlo!\n… … … … … …$
+gTVSecretBaseVisitText01	¡Oh!\n¡Qué maravilla!\pEste {STR_VAR_2}…\n¡No es lo que uno esperaría\lencontrar aquí!$
+gTVSecretBaseVisitText02	¡Oh!\n¡Qué notable!\p¡No hay ni un solo mueble\nni adorno!\p¡Los simples mortales no pueden\nimitar algo tan atrevido!\p¡Es sencillo, pero rebosa, sí,\nrebosa de rebeldía!\pMe quito el sombrero, {STR_VAR_1}.\n¡Tenías que ser tú!$
+gTVSecretBaseVisitText03	¡Oh! ¡Ya veo!\n¡Lo veo con total claridad!\pQue este {STR_VAR_2} esté aquí…\n¡Transmite un mensaje eficaz!$
+gTVSecretBaseVisitText04	¡Oh! ¡Ya veo!\n¡Lo veo con total claridad!\p¡Este espacio está vacío de\nadornos a propósito!\p¡Transmite un mensaje eficaz!$
+gTVSecretBaseVisitText05	¡Uaaau!\p¡Juntar {STR_VAR_2}\ncon {STR_VAR_3}!\p¡Es la combinación soñada como\nninguna otra!$
+gTVSecretBaseVisitText06	¡Uaaau!\p¡Poner este {STR_VAR_2}\njusto aquí…!\p¡Tiene una presencia que llena\ntoda la BASE SECRETA!$
+gTVSecretBaseVisitText07	¡Uaaau!\p¡Aquí no hay nada!\pEste espacio vacío influye en\ntoda la BASE SECRETA.$
+gTVSecretBaseVisitText08	¡Oh!\n¡Aquí viene {STR_VAR_1}!\l¡Retemos al ENTRENADOR!\p… … … … … …\n… … … … … …$
+gTVSecretBaseVisitText09	Ay…\nHay que reconocérselo a {STR_VAR_1}.\pSus POKéMON eran dignos de un\nCAMPEÓN de verdad.\pDemostraron con creces lo fuerte\nque es {STR_VAR_1}.\pQue {STR_VAR_2} supiera el\nmovimiento {STR_VAR_3}…\pDemuestra qué clase de ENTRENADOR\nes {STR_VAR_1}.\p¡Desde luego, ha sido toda una lección!$

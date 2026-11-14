@@ -7,6 +7,8 @@
 #include "global.fieldmap.h"
 #include "item.h"
 #include "mail.h"
+#include "caps.h"
+#include "random.h"
 #include "pokemon.h"
 #include "pokemon_storage_system.h"
 #include "string_util.h"
@@ -129,6 +131,65 @@ bool32 IsDualockeBattle(void)
     if (InBattlePike() || InTrainerHillChallenge())
         return FALSE;
     return TRUE;
+}
+
+// Dualocke: al capturar con el equipo lleno se puede mandar a la caja a uno del equipo. Si
+// ese ya está debilitado, ha muerto en este combate: va a la caja de muertos y resta una vida,
+// en vez de colarse vivo en una caja normal (encontrado jugando, 13/11/2026). Devuelve TRUE si
+// lo ha enterrado; entonces el hueco del equipo queda vacío, como al mandarlo al PC.
+bool32 Dualocke_TryBuryChosenPartyMon(u32 partyIndex)
+{
+    struct Pokemon *mon = &gParties[B_TRAINER_PLAYER][partyIndex];
+
+    if (!IsDualockeBattle()
+     || GetMonData(mon, MON_DATA_SPECIES) == SPECIES_NONE
+     || GetMonData(mon, MON_DATA_IS_EGG)
+     || GetMonData(mon, MON_DATA_HP) != 0)
+        return FALSE;
+
+    BuryMon(mon);
+    LoseLife();
+    return TRUE;
+}
+
+// Dualocke: arreglo de una vez para las partidas en las que ya pasó lo de arriba. Los
+// Pokémon de las cajas normales con 0 PS solo pueden ser muertos que se colaron (las cajas
+// no curan y fuera de combate no se debilitan), así que se entierran y restan su vida. Se
+// hace una sola vez, al encender el PC, para no tocar en el futuro a los que se debiliten en
+// combates que no cuentan (la Torre Entrenador no cura). Devuelve cuántos ha enterrado.
+u32 Dualocke_BuryFaintedBoxMonsOnce(void)
+{
+    u32 boxId, boxPos, buried = 0;
+
+    if (FlagGet(FLAG_DUALOCKE_CAJAS_REVISADAS))
+        return 0;
+    FlagSet(FLAG_DUALOCKE_CAJAS_REVISADAS);
+
+    for (boxId = 0; boxId < TOTAL_BOXES_COUNT; boxId++)
+    {
+        if (Dualocke_IsLockedBox(boxId))
+            continue;
+        for (boxPos = 0; boxPos < IN_BOX_COUNT; boxPos++)
+        {
+            struct BoxPokemon *boxMon = GetBoxedMonPtr(boxId, boxPos);
+            struct Pokemon mon;
+
+            // Los PS perdidos se leen sin descifrar: así casi todas las cajas se saltan rápido
+            if (GetBoxMonData(boxMon, MON_DATA_HP_LOST) == 0
+             || GetBoxMonData(boxMon, MON_DATA_SPECIES) == SPECIES_NONE
+             || GetBoxMonData(boxMon, MON_DATA_IS_EGG))
+                continue;
+            BoxMonToMon(boxMon, &mon);
+            if (GetMonData(&mon, MON_DATA_HP) != 0)
+                continue;
+
+            BuryMon(&mon);
+            ZeroBoxMonData(boxMon);
+            LoseLife();
+            buried++;
+        }
+    }
+    return buried;
 }
 
 // Se llama al terminar un combate, con el equipo del jugador ya restaurado.
@@ -611,4 +672,76 @@ bool32 Dualocke_KnowsUniqueHM(u32 partyIndex)
             return TRUE;
     }
     return FALSE;
+}
+
+// ---------------------------------------------------------------------------
+// Dualocke: ningún POKéMON salvaje pasa del level cap (Jorge, 12/11/2026). Las tablas ya se
+// reescalan por tramos, pero hay zonas a las que se llega antes de lo que dicen sus entrenadores
+// (como la pesca junto a AZULIZA, que daba un Audino de nivel 44). Esto es la red de seguridad:
+// si un salvaje sale por encima del cap, se queda entre el cap y 2 niveles menos, y vuelve a la
+// etapa que le toca para ese nivel con las mismas reglas que el randomizer
+// (tools/dualocke/aleatorio/especies.py: por nivel si evoluciona por nivel; si no, 30 la primera
+// evolución y 40 la segunda).
+// ---------------------------------------------------------------------------
+
+#define DUALOCKE_NIVEL_SIN_NIVEL_PRIMERA 30
+#define DUALOCKE_NIVEL_SIN_NIVEL_SEGUNDA 40
+
+// Nivel al que `preEvo` evoluciona a `species`, o 0 si no es por nivel ni por objeto
+static u32 EvolutionLevelFor(enum Species preEvo, enum Species species)
+{
+    const struct Evolution *evos = GetSpeciesEvolutions(preEvo);
+    u32 i;
+
+    if (evos == NULL)
+        return 0;
+    for (i = 0; evos[i].method != EVOLUTIONS_END; i++)
+    {
+        if (evos[i].targetSpecies != species)
+            continue;
+        if (evos[i].method == EVO_LEVEL && evos[i].param > 0)
+            return evos[i].param;
+        if (evos[i].method == EVO_LEVEL || evos[i].method == EVO_ITEM)
+        {
+            if (GetSpeciesPreEvolution(preEvo) != SPECIES_NONE)
+                return DUALOCKE_NIVEL_SIN_NIVEL_SEGUNDA;
+            return DUALOCKE_NIVEL_SIN_NIVEL_PRIMERA;
+        }
+        return 0;
+    }
+    return 0;
+}
+
+enum Species Dualocke_SpeciesForWildLevel(enum Species species, u32 level)
+{
+    u32 guard;
+
+    for (guard = 0; guard < 3; guard++)
+    {
+        enum Species preEvo = GetSpeciesPreEvolution(species);
+        u32 evoLevel;
+
+        if (preEvo == SPECIES_NONE)
+            break;
+        evoLevel = EvolutionLevelFor(preEvo, species);
+        if (evoLevel == 0 || level >= evoLevel)
+            break;
+        species = preEvo;
+    }
+    return species;
+}
+
+void Dualocke_CapWildMon(enum Species *species, u8 *level)
+{
+    Dualocke_CapWildMonTo(species, level, GetCurrentLevelCap());
+}
+
+void Dualocke_CapWildMonTo(enum Species *species, u8 *level, u32 cap)
+{
+    if (*level <= cap)
+        return;
+    *level = cap - (Random() % 3);
+    if (*level < 1)
+        *level = 1;
+    *species = Dualocke_SpeciesForWildLevel(*species, *level);
 }
