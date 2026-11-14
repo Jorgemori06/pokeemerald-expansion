@@ -677,3 +677,39 @@ TEST("Dualocke: el título del mote pone la especie en su hueco")
     Dualocke_BuildMonNamingTitle(buffer, COMPOUND_STRING("Torchic"), COMPOUND_STRING("'s nickname?"));
     EXPECT(StringCompare(buffer, COMPOUND_STRING("Torchic's nickname?")) == 0);
 }
+
+// Dualocke: ningún salvaje por encima del level cap; si se baja de nivel, vuelve a su etapa
+TEST("Dualocke: un salvaje bajado de nivel vuelve a la etapa que le toca")
+{
+    EXPECT_EQ(Dualocke_SpeciesForWildLevel(SPECIES_PIDGEOT, 50), SPECIES_PIDGEOT);
+    EXPECT_EQ(Dualocke_SpeciesForWildLevel(SPECIES_PIDGEOT, 23), SPECIES_PIDGEOTTO);
+    EXPECT_EQ(Dualocke_SpeciesForWildLevel(SPECIES_PIDGEOT, 10), SPECIES_PIDGEY);
+    EXPECT_EQ(Dualocke_SpeciesForWildLevel(SPECIES_VENUSAUR, 20), SPECIES_IVYSAUR);
+    // Sin preevolución, se queda igual
+    EXPECT_EQ(Dualocke_SpeciesForWildLevel(SPECIES_TAUROS, 5), SPECIES_TAUROS);
+}
+
+TEST("Dualocke: un salvaje por encima del cap se queda en el cap o hasta 2 niveles menos")
+{
+    u32 i;
+
+    for (i = 0; i < 20; i++)
+    {
+        enum Species species = SPECIES_PIDGEOT;
+        u8 level = 44;
+
+        Dualocke_CapWildMonTo(&species, &level, 23);
+        EXPECT(level <= 23 && level >= 21);
+        EXPECT_EQ(species, SPECIES_PIDGEOTTO);
+    }
+}
+
+TEST("Dualocke: un salvaje por debajo del cap no cambia")
+{
+    enum Species species = SPECIES_PIDGEOT;
+    u8 level = 40;
+
+    Dualocke_CapWildMonTo(&species, &level, 43);
+    EXPECT_EQ(level, 40);
+    EXPECT_EQ(species, SPECIES_PIDGEOT);
+}
