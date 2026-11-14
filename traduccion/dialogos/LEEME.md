@@ -69,6 +69,12 @@ VILLA RAÍZ, PUEBLO ESCASO, CIUDAD PETALIA, CIUDAD FÉRRICA, PUEBLO AZULIZA, PUE
 | Textos comunes (Jorge): llamadas de la AGENDA del POKéNAV | `55_agenda.tsv` |
 | Sueltos que se ven durante la historia (Jorge, encontrados jugando): SALÓN AZULIZA, CLUB DE FANS de CALAGUA, casa de LOTAD y SEEDOT, TORRE ESPEJISMO, KECLEON de la RUTA 120, CUEVA CARDUMEN, POKéMON que te sigue, DEXNAV, revanchas de la RUTA 103, BUSCAPELEA, casa de los combates de visita y familia de BLASCO | `56_sueltos.tsv` |
 | Comunes que quedaban (Jorge, encontrados jugando): `event_scripts.s` (centro POKéMON, MAMÁ, POKÉRUS, MT DAÑO SECRETO del mercado de PORTUAL…), carteles genéricos de las casas, el hombre del perfil y la CUEVA CARDUMEN | `57_sueltos_comunes.tsv` |
+| CARPAS DE COMBATE de PARDAL, VERDEGAL y PORTUAL: recepcionistas y reglas (Jorge) | `58_carpas_de_combate.tsv` |
+| El hombre del CENTRO POKéMON de MALVALONA: COMERCIANTE, CUENTACUENTOS, CHARLATÁN, BARDO y MODERNO (Jorge) | `59_hombre_malvalona.tsv` |
+| La tele, parte 1 (Jorge): entrevistas, ¡BRAVO, ENTRENADOR!, CLUB DE FANS, NOTICIAS RECIENTES, {POKEBLOCK}S, CALIFICANOMBRES | `60_tele_1.tsv` |
+| La tele, parte 2 (Jorge): PESCADOR, POKéMON HOY, COMPRADOR LISTO, RIVAL DE HOY, modas de AZULIZA, tesoros, CASINO, ÚLTIMA HORA, BASES SECRETAS | `61_tele_2.tsv` |
+| Gente de los vestíbulos de las CARPAS DE COMBATE y de la sala de CONCURSOS de PORTUAL (Jorge) | `62_carpas_mapas.tsv` |
+| La tele, parte 3 (Jorge): LOTERÍA, SEMINARIO, CINTAS, FRENTE BATALLA, Nº 1 DE HOENN, SAFARI, CONCURSOS en directo, GABI y TY | `63_tele_3.tsv` |
 
 **La historia principal está traducida entera** (tramos 01-41) y también los textos comunes de Jorge (50-55). Falta probarlo jugando (`PRUEBAS.md`) y lo que no afecta a la historia (ver `PLAN.md`).
 

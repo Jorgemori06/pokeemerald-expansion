@@ -1,0 +1,200 @@
+# La tele, parte 3 (Jorge, 13/11/2026): visitas a BASES SECRETAS, LOTERÍA, SEMINARIO DE COMBATE, CLUB DE FANS de ENTRENADORES, CINTAS, noticias del FRENTE BATALLA, el Nº 1 DE HOENN, SECRETOS DE LAS BASES, CLUB DE FANS DEL SAFARI, CONCURSOS en directo, combates, GABI y TY.
+gTVSecretBaseVisitText10	¡Aaay!\nHay que reconocérselo a {STR_VAR_1}.\p¡Sus POKéMON eran durísimos!\pDemostraron con creces lo tenaz\nque es {STR_VAR_1}.\pQue {STR_VAR_2} supiera el\nmovimiento {STR_VAR_3}…\pDemuestra qué clase de ENTRENADOR\nes {STR_VAR_1}.\p¡Desde luego, ha sido toda una lección!$
+gTVSecretBaseVisitText11	¡Uaaau!\nHay que reconocérselo a {STR_VAR_1}.\pSus POKéMON están criados con\nmucho equilibrio.\pDemostraron con creces lo reflexivo\nque es {STR_VAR_1}.\pQue {STR_VAR_2} supiera el\nmovimiento {STR_VAR_3}…\pDemuestra qué clase de ENTRENADOR\nes {STR_VAR_1}.\p¡Desde luego, ha sido toda una lección!$
+gTVSecretBaseVisitText12	¡Vaya, vaya!\nHay que reconocérselo a {STR_VAR_1}.\pSus POKéMON prometen mucho\npara el futuro.\pRepresentan las esperanzas y los\nsueños de {STR_VAR_1}.\pQue {STR_VAR_2} supiera el\nmovimiento {STR_VAR_3}…\pDemuestra qué clase de ENTRENADOR\nes {STR_VAR_1}.\p¡Desde luego, ha sido toda una lección!$
+gTVSecretBaseVisitText13	¡Debo decir que es una BASE SECRETA\nespléndida!\pEspectadores, si tenéis ocasión,\nvisitad la BASE SECRETA de {STR_VAR_1}.\p¡Hasta la próxima, me despido!$
+gTVPokemonLotteryWinnerFlashReportText00	¡Emocionante!\n¡Dramático!\p¡Es el AVANCE DE GANADORES DE LA\nLOTERÍA POKéMON!\p¡Hola! Conectamos en directo desde\nel RINCÓN DE LA LOTERÍA POKéMON,\len la planta baja de los GRANDES\lALMACENES de CALAGUA.\p¡Como siempre, hoy ha aparecido\notro ENTRENADOR con suerte!\pSu nombre es…\n¡{STR_VAR_1}!\p¡{STR_VAR_1} ha ganado el {STR_VAR_2}\npremio y se ha llevado {STR_VAR_3}!\p¡{STR_VAR_1}!\n¡Enhorabuena!\pEspectadores, ¡no os quedéis mirando,\nparticipad vosotros también!\p¡En los GRANDES ALMACENES de CALAGUA\nesperamos vuestra próxima visita!\pOs hemos hablado en directo desde los\nGRANDES ALMACENES de CALAGUA, con la\lmayor variedad de todo HOENN.$
+gTVThePokemonBattleSeminarText00	¡EL SEMINARIO DE COMBATE POKéMON!\pAnalizamos combates para aprender\nde los demás.\pHoy estudiamos el combate de\n{STR_VAR_1}.\pSu {STR_VAR_2} combatía contra\nun {STR_VAR_3}…$
+gTVThePokemonBattleSeminarText01	Y usó el movimiento {STR_VAR_3}\ncontra el {STR_VAR_2}…\pMmm… ¡{STR_VAR_1}!\n¡Eso es lo que no hay que hacer!$
+gTVThePokemonBattleSeminarText02	Además del movimiento fallido,\nsu {STR_VAR_1} también sabía$
+gTVThePokemonBattleSeminarText03	{STR_VAR_1}, {STR_VAR_2}\ny {STR_VAR_3}.$
+gTVThePokemonBattleSeminarText04	{STR_VAR_1} y\n{STR_VAR_2}.$
+gTVThePokemonBattleSeminarText05	{STR_VAR_2}.$
+gTVThePokemonBattleSeminarText06	Y bien, en esta situación, ¿qué\ndebería haber usado?\p… … … … … …\n¡{STR_VAR_1}!\p{STR_VAR_1} habría sido mucho\nmejor que {STR_VAR_2}.\pEspectadores, ¡aprended de este caso\ny combatid con cabeza!\p¡Hasta la próxima!$
+gTVTrainerFanClubText00	¡Todos juntos!\n¡CLUB DE FANS de ENTRENADORES!\pPRESENTADOR: ¿Qué tal estáis?\nHoy reunimos a los fans de\l¡{STR_VAR_1}, que arrasa!\pFANS: ¡Uooooooaaaah!\pFANS: ¡{STR_VAR_1}!\pPRESENTADOR: ¡Todos!\n¿Qué os parece {STR_VAR_1}?\pFANS: ¡Nos encanta {STR_VAR_1}!\pPRESENTADOR: ¿Qué es lo que más os\ngusta de {STR_VAR_1}?$
+gTVTrainerFanClubText01	FANS: ¡Lo bien que lanza las\nPOKé BALLS!$
+gTVTrainerFanClubText02	FANS: ¡Lo mono que corre!$
+gTVTrainerFanClubText03	FANS: ¡Que se crece cuando las cosas\nse ponen difíciles!$
+gTVTrainerFanClubText04	FANS: ¡Lo que sabe de POKéMON!$
+gTVTrainerFanClubText05	FANS: ¡Lo bueno que es con todos\nlos POKéMON!$
+gTVTrainerFanClubText06	FANS: ¡Lo increíble que va en BICI!$
+gTVTrainerFanClubText07	FANS: ¡Su estilo comprando objetos!$
+gTVTrainerFanClubText08	FANS: ¡Los motes tan monos que les\npone a sus POKéMON!$
+gTVTrainerFanClubText09	FANS: ¡Lo bien que decora su\nBASE SECRETA!$
+gTVTrainerFanClubText10	FANS: ¡Lo atrevido que es usando\nMT!$
+gTVTrainerFanClubText11	PRESENTADOR: ¡Ya lo habéis visto,\n{STR_VAR_1} está que arde! ¡Uf!\p¡Los FANS de {STR_VAR_1} tienen\nun lema especial!\pPRESENTADOR: Cuando yo diga\n{STR_VAR_1}, vosotros decís…\pFANS: ¡{STR_VAR_2}!\pFANS: ¡{STR_VAR_3}!\pFANS: ¡{STR_VAR_2}!\pFANS: ¡{STR_VAR_3}!\pPRESENTADOR: Eso es, cuando alguien\ndiga “{STR_VAR_1}”…\pSe contesta: “¡{STR_VAR_2}\n{STR_VAR_3}!”\p¡Qué bien suena!\n¡Ya entiendo por qué la gente se\lhace FAN de {STR_VAR_1}!\p¡Vale, tú, delante de la tele, únete!\n¡Todos juntos!\pPRESENTADOR: Cuando yo diga\n{STR_VAR_1}, vosotros decís…\pFANS: ¡{STR_VAR_2}!\pFANS: ¡{STR_VAR_3}!\pFANS: ¡{STR_VAR_2}!\pFANS: ¡{STR_VAR_3}!\pPRESENTADOR: ¡Gracias por venir,\nFANS de {STR_VAR_1}!\l¡Hasta la próxima!\pPRESENTADOR: Cuando yo diga\n{STR_VAR_1}, vosotros decís…\pFANS: ¡{STR_VAR_2}!\pFANS: ¡{STR_VAR_3}!$
+TVSpotTheCuties_Text_Intro	¡BUSCA LAS MONADAS!\n¡POKéMON CON CINTAS!\p¡Hola, queridos espectadores!\p¡Seguro que estáis de acuerdo: un\nPOKéMON con CINTAS es divino!\pHoy quiero enseñaros un POKéMON\nprecioso que vi paseando por\lla ciudad.\pEl POKéMON de hoy es el {STR_VAR_2}\nde {STR_VAR_1}.$
+TVSpotTheCuties_Text_RibbonsLow	{STR_VAR_2} lleva {STR_VAR_3}\nCINTA(S).\pEso dice mucho de lo que\n{STR_VAR_1} adora a su POKéMON.$
+TVSpotTheCuties_Text_RibbonsMid	¡{STR_VAR_2} lleva nada menos que\n{STR_VAR_3} CINTAS!\p¡Eso demuestra lo entregado que está\n{STR_VAR_1} a su POKéMON!$
+TVSpotTheCuties_Text_RibbonsHigh	¡{STR_VAR_2} lleva la increíble\ncifra de {STR_VAR_3} CINTAS!\p¡Eso demuestra que {STR_VAR_1} es un\ncoleccionista entregado!$
+TVSpotTheCuties_Text_RibbonIntro	Veamos más de cerca las muchas\nCINTAS que lleva {STR_VAR_2}.$
+TVSpotTheCuties_Text_RibbonChampion	La CINTA CAMPEÓN le queda\nespecialmente bien.\p{STR_VAR_2} la recibió al entrar en\nel SALÓN DE LA FAMA.\pDe verdad que resalta la valentía\nde {STR_VAR_2}.\p¡{STR_VAR_2} y la CINTA CAMPEÓN!\n¡La combinación es superefectiva!$
+TVSpotTheCuties_Text_RibbonCool	La CINTA CARISMA le queda\nespecialmente bien.\p{STR_VAR_2} la recibió por ganar\nun CONCURSO de CARISMA.\pDe verdad que resalta el carisma\nde {STR_VAR_2}.\p¡{STR_VAR_2} y la CINTA CARISMA!\n¡La combinación es superefectiva!$
+TVSpotTheCuties_Text_RibbonBeauty	La CINTA BELLEZA le queda\nespecialmente bien.\p{STR_VAR_2} la recibió por ganar\nun CONCURSO de BELLEZA.\pDe verdad que resalta la belleza\nde {STR_VAR_2}.\p¡{STR_VAR_2} y la CINTA BELLEZA!\n¡La combinación es superefectiva!$
+TVSpotTheCuties_Text_RibbonCute	La CINTA DULZURA le queda\nespecialmente bien.\p{STR_VAR_2} la recibió por ganar\nun CONCURSO de DULZURA.\pDe verdad que resalta la dulzura\nde {STR_VAR_2}.\p¡{STR_VAR_2} y la CINTA DULZURA!\n¡La combinación es superefectiva!$
+TVSpotTheCuties_Text_RibbonSmart	La CINTA INGENIO le queda\nespecialmente bien.\p{STR_VAR_2} la recibió por ganar\nun CONCURSO de INGENIO.\pDe verdad que resalta el ingenio\nde {STR_VAR_2}.\p¡{STR_VAR_2} y la CINTA INGENIO!\n¡La combinación es superefectiva!$
+TVSpotTheCuties_Text_RibbonTough	La CINTA DUREZA le queda\nespecialmente bien.\p{STR_VAR_2} la recibió por ganar\nun CONCURSO de DUREZA.\pDe verdad que resalta la dureza\nde {STR_VAR_2}.\p¡{STR_VAR_2} y la CINTA DUREZA!\n¡La combinación es superefectiva!$
+TVSpotTheCuties_Text_RibbonWinning	La CINTA GANADOR le queda\nespecialmente bien.\p{STR_VAR_2} la recibió por sus\nhazañas en la TORRE BATALLA.\pDe verdad que resalta el poderío\nde {STR_VAR_2}.\p¡{STR_VAR_2} y la CINTA GANADOR!\n¡La combinación es superefectiva!$
+TVSpotTheCuties_Text_RibbonVictory	La CINTA VICTORIA le queda\nespecialmente bien.\p{STR_VAR_2} la recibió por sus\nhazañas en la TORRE BATALLA.\pDe verdad que resalta el increíble\npoderío de {STR_VAR_2}.\p¡{STR_VAR_2} y la CINTA VICTORIA!\n¡La combinación es superefectiva!$
+TVSpotTheCuties_Text_RibbonArtist	La CINTA ARTISTA le queda\nespecialmente bien.\p{STR_VAR_2} la recibió por posar\npara un artista.\pDe verdad que resalta su encanto\nde estrella del pop.\p¡{STR_VAR_2} y la CINTA ARTISTA!\n¡La combinación es superefectiva!$
+TVSpotTheCuties_Text_RibbonEffort	La CINTA ESFUERZO le queda\nespecialmente bien.\p{STR_VAR_2} la recibió por esforzarse\nmuchísimo.\pDe verdad que resalta la\ndeterminación de {STR_VAR_2}.\p¡{STR_VAR_2} y la CINTA ESFUERZO!\n¡La combinación es superefectiva!$
+TVSpotTheCuties_Text_Outro	…Ay…\pCINTAS y POKéMON…\n¡Combinan de maravilla!\pAntes de desmayarme,\n¡me despido de todos!$
+gTVPokemonNewsBattleFrontierText00	¡Saludos!\nEs la hora de NOTICIAS POKéMON.\pTenemos buenas noticias desde\nel FRENTE BATALLA.$
+gTVPokemonNewsBattleFrontierText01	{STR_VAR_1} ha batido el récord con\n{STR_VAR_2} victorias seguidas en la\lSALA INDIVIDUAL de la TORRE BATALLA.\p¡Va por {STR_VAR_1}!$
+gTVPokemonNewsBattleFrontierText02	{STR_VAR_1} ha batido el récord con\n{STR_VAR_2} victorias seguidas en la\lSALA DOBLE de la TORRE BATALLA.\p¡Va por {STR_VAR_1}!$
+gTVPokemonNewsBattleFrontierText03	{STR_VAR_1} ha batido el récord con\n{STR_VAR_2} victorias seguidas en la\lSALA MÚLTIPLE de la TORRE BATALLA.\p¡Va por {STR_VAR_1}!$
+gTVPokemonNewsBattleFrontierText04	{STR_VAR_1} ha batido el récord con\n{STR_VAR_2} victorias seguidas en la\lSALA MÚLTIPLE POR CABLE de la\lTORRE BATALLA. ¡Va por {STR_VAR_1}!$
+gTVPokemonNewsBattleFrontierText05	{STR_VAR_1} ha batido el récord con\n{STR_VAR_2} torneos ganados seguidos\len los torneos individuales de la\lCÚPULA BATALLA. ¡Va por {STR_VAR_1}!$
+gTVPokemonNewsBattleFrontierText06	{STR_VAR_1} ha batido el récord con\n{STR_VAR_2} torneos ganados seguidos\len los torneos dobles de la\lCÚPULA BATALLA. ¡Va por {STR_VAR_1}!$
+gTVPokemonNewsBattleFrontierText07	{STR_VAR_1} ha batido el récord con\n{STR_VAR_2} victorias seguidas en el\lIntercambio individual de la\lFÁBRICA BATALLA. ¡Va por {STR_VAR_1}!$
+gTVPokemonNewsBattleFrontierText08	{STR_VAR_1} ha batido el récord con\n{STR_VAR_2} victorias seguidas en el\lIntercambio doble de la\lFÁBRICA BATALLA. ¡Va por {STR_VAR_1}!$
+gTVPokemonNewsBattleFrontierText09	{STR_VAR_1} ha batido el récord con\n{STR_VAR_2} salas superadas en la\lElección de combate del\lTUBO BATALLA. ¡Va por {STR_VAR_1}!$
+gTVPokemonNewsBattleFrontierText10	{STR_VAR_1} ha batido el récord con\n{STR_VAR_2} victorias seguidas en los\lTorneos KO de la ARENA BATALLA.\p¡Va por {STR_VAR_1}!$
+gTVPokemonNewsBattleFrontierText11	{STR_VAR_1} ha batido el récord con\n{STR_VAR_2} victorias seguidas en la\lSALA INDIVIDUAL del PALACIO BATALLA.\p¡Va por {STR_VAR_1}!$
+gTVPokemonNewsBattleFrontierText12	{STR_VAR_1} ha batido el récord con\n{STR_VAR_2} victorias seguidas en la\lSALA DOBLE del PALACIO BATALLA.\p¡Va por {STR_VAR_1}!$
+gTVPokemonNewsBattleFrontierText13	{STR_VAR_1} ha batido el récord con\n{STR_VAR_2} plantas superadas en la\lBúsqueda de combate de la\lPIRÁMIDE BATALLA. ¡Va por {STR_VAR_1}!$
+gTVPokemonNewsBattleFrontierText14	¡Y por sus tres POKéMON: {STR_VAR_1},\n{STR_VAR_2} y {STR_VAR_3}!\p¡Enhorabuena por esta actuación\nde récord!$
+gTVPokemonNewsBattleFrontierText15	¡Y por sus dos POKéMON: {STR_VAR_1}\ny {STR_VAR_2}!\p¡Enhorabuena por esta actuación\nde récord!$
+gTVPokemonNewsBattleFrontierText16	¡Y por sus cuatro POKéMON: {STR_VAR_1}!\p¡{STR_VAR_2}!\p¡{STR_VAR_3}!$
+gTVPokemonNewsBattleFrontierText17	¡Y {STR_VAR_1}!\p¡Enhorabuena por esta actuación\nde récord!$
+gTVPokemonNewsBattleFrontierText18	¡Esperamos más hazañas de récord de\n{STR_VAR_1} y sus fieles POKéMON!\pEstas han sido las NOTICIAS POKéMON.$
+gTVWhatsNo1InHoennTodayText00	¿QUÉ ES EL Nº 1 DE HOENN HOY?\n¡Sí, vuelve la hora!\p¡Hola, espectadores! ¿Estáis dando\nlo mejor de vosotros?\p¡Veamos quién ha sido el mejor\nENTRENADOR de hoy!\p¡El ENTRENADOR nº 1 de hoy es nada\nmenos que {STR_VAR_1}!$
+gTVWhatsNo1InHoennTodayText01	En un solo día, {STR_VAR_1} jugó a las\nTRAGAPERRAS del CASINO {STR_VAR_2} veces.\pMientras jugaba, se le oyó murmurar:\n“Conmigo los rodillos ni se mueven…”\l¿A que es curioso?$
+gTVWhatsNo1InHoennTodayText02	En un solo día, {STR_VAR_1} jugó a\nla RULETA del CASINO {STR_VAR_2} veces.\pMientras jugaba, {STR_VAR_1} gritó:\n“¡Que decidan las bolas!”\pTenía la mirada fija y la cara\nmuy concentrada.$
+gTVWhatsNo1InHoennTodayText03	¡En un solo día, {STR_VAR_1} combatió\ncon POKéMON salvajes {STR_VAR_2} veces!\pAl parecer, sus POKéMON se han hecho\nmuchísimo más fuertes.\p¡Parecen deseando combatir en\ncualquier sitio y como sea!$
+gTVWhatsNo1InHoennTodayText04	¡En un solo día, {STR_VAR_1} usó la\nLICUADORA de BAYAS {STR_VAR_2} veces!\pAl final, hasta {STR_VAR_1} parecía\nmareado.\p¡Iba dando tumbos como un SPINDA!$
+gTVWhatsNo1InHoennTodayText05	¡En un solo día, {STR_VAR_1} plantó\n{STR_VAR_2} BAYAS!\pAl final acabó con la ropa llena\nde tierra.\pDonde plantó han brotado\nflores sin parar.\pDicen que esas flores calman\nlos ánimos de la gente.$
+gTVWhatsNo1InHoennTodayText06	¡En un solo día, {STR_VAR_1} recogió\n{STR_VAR_2} BAYAS!\p¡Llenó tanto la MOCHILA de BAYAS\nque luego casi no podía andar!$
+gTVWhatsNo1InHoennTodayText07	¡En un solo día, {STR_VAR_1} consiguió\n{STR_VAR_2} Puntos Batalla!\pLuego le vieron dudando entre\ncambiarlos por un objeto chulo o\lpor un adorno bonito.\pDicen que sonreía mientras se lo\npensaba.$
+gTVWhatsNo1InHoennTodayText08	¡Vaya, menuda hazaña!\p¡{STR_VAR_1}!\n¡Eres el ENTRENADOR nº 1 de hoy!\p¡Espectadores, animaos como\n{STR_VAR_1}! ¡Podéis ser el nº 1!$
+TVSecretBaseSecrets_Text_Intro	¡SECRETOS DE LAS BASES SECRETAS!\p¿Qué hacen los ENTRENADORES en el\nsecreto de sus BASES SECRETAS?\pHoy investigamos la BASE SECRETA\nde {STR_VAR_1}.\p¿Oh? Parece que {STR_VAR_2} ha venido\nde visita.\p¡Echemos un vistazo!\p¿Qué hará {STR_VAR_2}?$
+TVSecretBaseSecrets_Text_WhatWillPlayerDoNext1	¿Qué hará ahora {STR_VAR_2}?$
+TVSecretBaseSecrets_Text_WhatWillPlayerDoNext2	Y ahora, ¿qué hará {STR_VAR_2}?$
+TVSecretBaseSecrets_Text_TookXStepsBeforeLeaving	Al final, {STR_VAR_2} dio {STR_VAR_3} pasos\nen la BASE SECRETA de {STR_VAR_1}\lantes de irse.$
+TVSecretBaseSecrets_Text_BaseFailedToInterestPlayer	Mmm…\pParece que la BASE SECRETA de\n{STR_VAR_1} no le interesó a {STR_VAR_2}…$
+TVSecretBaseSecrets_Text_PlayerEnjoyedBase	Parece que a {STR_VAR_2} le ha\nencantado la BASE de {STR_VAR_1}.$
+TVSecretBaseSecrets_Text_PlayerHugeFanOfBase	Parece que {STR_VAR_2} se ha hecho\nfan total de la BASE SECRETA de\l{STR_VAR_1}.$
+TVSecretBaseSecrets_Text_Outro	Espectadores, quizá queráis visitar\nla BASE SECRETA de {STR_VAR_1}.\p¡En el próximo programa visitaremos\notra! ¡Gracias por vernos!$
+TVSecretBaseSecrets_Text_StoppedMoving1	¡La visita se ha parado!\p¡No se mueve nada!\p¿Tan poco impresionante es la\nBASE SECRETA de {STR_VAR_1}?$
+TVSecretBaseSecrets_Text_StoppedMoving2	¡La visita se ha parado!\p¡No se mueve nada!\p¿Será cansancio?\n¿Se habrá agotado?$
+TVSecretBaseSecrets_Text_UsedChair	¡La visita se ha sentado en una silla!\n¡Está sentada!\p¡Mirad qué cara de gusto!\p¡Esa silla debe de ser comodísima\npara que reaccione así!$
+TVSecretBaseSecrets_Text_UsedBalloon	¡La visita se ha lanzado contra\nun globo!\p¡Ha explotado!\n¡Madre mía, ha reventado!\p¡Parece que el ruido la ha\nasustado!$
+TVSecretBaseSecrets_Text_UsedTent	¡La visita ha entrado en una TIENDA!\p¡Está corriendo por dentro!\p¡Vaya, está retozando!\p¡Parece sorprendida por lo grande\nque es la TIENDA!$
+TVSecretBaseSecrets_Text_UsedPlant	¡La visita está examinando\nuna planta!\p¡Tiene un gusto sorprendentemente\nmaduro!$
+TVSecretBaseSecrets_Text_UsedGoldShield	¡La visita está examinando\nun ESCUDO DORADO!\p¡Le brillan los ojos de asombro!$
+TVSecretBaseSecrets_Text_UsedSilverShield	¡La visita está examinando\nun ESCUDO PLATEADO!\p¡Tiene los ojos como platos!$
+TVSecretBaseSecrets_Text_UsedGlassOrnament	¡La visita está examinando\nun ADORNO DE CRISTAL!\p¡Oh, no!\p¡Lo está tocando!\p¡Se está llenando de huellas…!$
+TVSecretBaseSecrets_Text_UsedTV	¡La visita está viendo la tele!\p¡Parece que es muy fan de la tele!$
+TVSecretBaseSecrets_Text_UsedMudBall	¡La visita ha pisado una BOLA DE BARRO!\p¡Parece encantada!$
+TVSecretBaseSecrets_Text_UsedBag	…¿Oh?\p¡La visita está rebuscando en\nsu propia MOCHILA!\p¡Ha sacado un\n{STR_VAR_2}!\p¡Mirad cómo sonríe enseñando\nel {STR_VAR_2}!\p¡Parece un anuncio de la tele!$
+TVSecretBaseSecrets_Text_UsedCushion	La visita coge un cojín y…$
+TVSecretBaseSecrets_Text_HitCushion	…¡empieza a darle golpes!\p¿Estará muy estresada?$
+TVSecretBaseSecrets_Text_HuggedCushion	…¡lo abraza con fuerza!\p¿Estará contenta por algo?$
+TVSecretBaseSecrets_Text_BattledWon	¡La visita está charlando con\n{STR_VAR_1}!\p¡Parece que van a combatir!\pY…\p¡Gana la visita!\n¡Ha ganado fuera de casa!\p¡La visita está haciendo\nun baile de victoria!$
+TVSecretBaseSecrets_Text_BattledLost	¡La visita está charlando con\n{STR_VAR_1}!\p¡Parece que van a combatir!\pY…\p¡Gana {STR_VAR_1}!\n¡La visita ha perdido!\p¡Se la ve abatida!$
+TVSecretBaseSecrets_Text_DeclinedBattle	¡La visita está charlando con\n{STR_VAR_1}!\p¡Parece que van a combatir!\pY…\p¡No, la visita se ha negado!\p¡Al final no habrá combate!\p¿No le habrá caído bien\n{STR_VAR_1}?$
+TVSecretBaseSecrets_Text_UsedPoster	¡La visita mira fijamente\nun póster!\p¿Le gustará el póster?\p…Pero… Esa mirada tiene algo\ninquietante.$
+TVSecretBaseSecrets_Text_UsedNoteMat	¡La visita ha pisado una ALFOMBRA\nMUSICAL!\p…Mmm…\n¡Ha compuesto una melodía graciosa!$
+TVSecretBaseSecrets_Text_BattledDraw	¡La visita está charlando con\n{STR_VAR_1}!\p¡Parece que van a combatir!\pY…\p¡Empate!\n¡No se ha decidido nada!\p¡Los dos ENTRENADORES parecen\nmuy decepcionados!$
+TVSecretBaseSecrets_Text_UsedSpinMat	¡La visita ha pisado una ALFOMBRA\nGIRATORIA!\p¡Parece que se ha mareado!\p¡Va dando tumbos!\n¡Cuidado!$
+TVSecretBaseSecrets_Text_UsedSandOrnament	¡La visita va a coger un\nADORNO DE ARENA!\p¡Oh!\p¡Se ha desmoronado!\n¡Se ha hecho pedazos!\p¡La visita parece avergonzada\ny culpable!$
+TVSecretBaseSecrets_Text_UsedDesk	¡La visita pasa el dedo por encima\nde una mesa!\p¡Parece que no le gusta el polvo!\p¡Es sorprendentemente maniática\ncon la limpieza!$
+TVSecretBaseSecrets_Text_UsedBrick	¡La visita mira un LADRILLO!\p¿Estará pensando en lo que hay\nencima del LADRILLO?$
+TVSecretBaseSecrets_Text_UsedSolidBoard	¡La visita cruza la TABLA SÓLIDA!\p¡No para de mirar hacia abajo!\p¡Parece sorprendentemente tímida\ny prudente!$
+TVSecretBaseSecrets_Text_UsedFence	¡La visita mira fijamente\nuna VALLA!\p¿Se le habrá ocurrido una idea\npara una trampa?$
+TVSecretBaseSecrets_Text_UsedGlitterMat	¡La visita ha pisado una ALFOMBRA\nBRILLANTE!\p¡Está haciendo un montón de poses!\p¡Parece que sueña con ser una\nestrella!$
+TVSecretBaseSecrets_Text_UsedTire	¡La visita mira fijamente\nun NEUMÁTICO!\p¿Estará pensando en qué coche\nllevaría uno así?$
+TVSecretBaseSecrets_Text_UsedStand	¡La visita se ha subido a una TARIMA!\p¡Contempla la BASE de {STR_VAR_1}\ndesde lo alto!\pY…\p¡Suelta un rugido!\n¡La visita está rugiendo!$
+TVSecretBaseSecrets_Text_BrokeDoor	¡La visita se ha lanzado de cabeza\ncontra una PUERTA FRÁGIL!\p¡Se está partiendo de risa!$
+TVSecretBaseSecrets_Text_UsedDoll	¡La visita está hablando con un\nMUÑECO!\p…Da un poco de mal rollo…$
+TVSecretBaseSecrets_Text_UsedSlide	¡La visita sube la escalera de\nun TOBOGÁN!\pY…\p¡Se ha tirado!\p¡Parece que se lo está pasando\nen grande!$
+TVSecretBaseSecrets_Text_UsedSlideButDidntGoDown	¡La visita sube la escalera de\nun TOBOGÁN!\pY…\p¡Ha vuelto a bajar por la\nescalera!\p¿Se habrá rajado de repente?$
+TVSecretBaseSecrets_Text_UsedJumpMat	¡La visita ha pisado una ALFOMBRA\nSALTARINA!\p¡Ha saltado una vez!\p¡Dos veces!\p¡Y ha aterrizado de maravilla!\p¡La visita aplaude!\n¡Qué actuación en solitario!$
+gTVSafariFanClubText00	¡CLUB DE FANS DEL SAFARI!\pREPORTERO: ¡Muy buenas, colegas!\n¿Lanzando SAFARI BALLS o qué?\p¡Pues aquí estoy, en la ZONA SAFARI,\nllena de POKéMON increíbles!\p¡Vamos a charlar con este buen\nhombre, el GUÍA del SAFARI!\pA ver, colega, ¿qué tal se les da\na los ENTRENADORES que vienen?$
+gTVSafariFanClubText01	GUÍA: Todo el mundo se lo toma\nmuy en serio.\pA {STR_VAR_1} le va especialmente bien.\pSin ir más lejos, la otra vez\ncapturó {STR_VAR_2} POKéMON.$
+gTVSafariFanClubText02	Usa muy bien los {POKEBLOCK}S.\nCreo que usó {STR_VAR_2} aquella vez.$
+gTVSafariFanClubText03	¡No usó ni un solo {POKEBLOCK}!\n¡Ni uno!\pEso es ser un experto.$
+gTVSafariFanClubText04	REPORTERO: ¿Ah, sí?\p¡Parece que nuestro colega {STR_VAR_1}\nes todo un maestro del SAFARI!\pGUÍA: Espero que vuelva y nos\nenseñe esa técnica tan buena.$
+gTVSafariFanClubText05	GUÍA: Parece que a nadie le va\nmuy bien.\pA {STR_VAR_1} le fue especialmente mal.\pLa otra vez solo consiguió capturar\n{STR_VAR_2} POKéMON.$
+gTVSafariFanClubText06	GUÍA: Parece que a nadie le va\nmuy bien.\pA {STR_VAR_1} le fue especialmente mal.\pLa otra vez no capturó ni un solo\nPOKéMON. ¡Ni uno!$
+gTVSafariFanClubText07	Usa {POKEBLOCK}S, eso sí.\nCreo que usó {STR_VAR_2} aquella vez.\pPero, chico, ojalá se le diera\nun poco mejor.$
+gTVSafariFanClubText08	Creo que tendría más suerte si\nusara {POKEBLOCK}S, que aquella vez\lno usó ni uno.$
+gTVSafariFanClubText09	REPORTERO: ¿Ah, sí?\pParece que a nuestro colega\n{STR_VAR_1} le falta rodaje en el SAFARI.\pGUÍA: Espero que venga muchas veces\nhasta que le coja el truco.$
+gTVSafariFanClubText10	REPORTERO: ¡Así es!\n¡Hay que plantar cara a los retos!\p¡Espectadores, venid al SAFARI\ny probadlo vosotros mismos!\p¡Hasta la próxima, chao!$
+ContestLiveUpdates_Text_Intro	“¡CONCURSOS POKéMON EN DIRECTO!”\pPRESENTADOR: ¡Gracias por vernos!\pConectamos en directo desde el recién\nterminado {STR_VAR_1}.\pLa sala sigue llena de un público\nque no se quiere ir.\pEspectador: ¡{STR_VAR_2}!\pEspectador: ¡{STR_VAR_3}!\pPRESENTADOR: Como acabáis de oír, el\nCONCURSO lo ganó {STR_VAR_2},\lde {STR_VAR_3}.\pEspectador: ¡{STR_VAR_2}!\n¡Eres el mejor!\pEspectador: ¡{STR_VAR_3}!\n¡Bien hecho!\pPRESENTADOR: Veamos qué opinan los\nfans de este CONCURSO.$
+ContestLiveUpdates_Text_WonBothRounds	Espectador: ¡{STR_VAR_2} fue el mejor\nen la primera y en la segunda ronda!\p¡Ese {STR_VAR_2} va a seguir ganando!$
+ContestLiveUpdates_Text_BetterRound2	Espectador: ¡A {STR_VAR_2} no le fue\nbien en la primera ronda, pero arrasó\len la segunda!\pFue una remontada milagrosa de\nese {STR_VAR_2}. ¡Yupi!$
+ContestLiveUpdates_Text_EqualRounds	Espectador: {STR_VAR_2} estuvo igual\nde bien en la primera ronda y en\lla segunda.\p¡{STR_VAR_3} y {STR_VAR_2} no son\nuna pareja cualquiera!$
+ContestLiveUpdates_Text_BetterRound1	Espectador: En {STR_VAR_1}, ese\n{STR_VAR_2} fue excepcional.\pPero espero que la próxima vez\nhaga mejores exhibiciones.$
+ContestLiveUpdates_Text_GotNervous	Espectador: Cuando {STR_VAR_2} se puso\nnervioso, no pude evitar gritarle\lpara animarlo.\pA ese {STR_VAR_2} le quiero decir:\n“¡Enhorabuena!”$
+ContestLiveUpdates_Text_StartledFoes	Espectador: ¡La exhibición de ese\n{STR_VAR_2} hasta me asustó a mí!\p¡{STR_VAR_2}, estuviste genial!$
+ContestLiveUpdates_Text_UsedCombo	Espectador: ¡El combo de ese\n{STR_VAR_2} fue impresionante!\p¡Me ha dejado temblando!$
+ContestLiveUpdates_Text_ExcitingAppeal	Espectador: ¡La exhibición del\n{STR_VAR_2} ganador me aceleró\lel corazón!$
+ContestLiveUpdates_Text_WasCool	¡{STR_VAR_2}!\n¡Tuviste mucho carisma!$
+ContestLiveUpdates_Text_WasBeautiful	¡{STR_VAR_2}!\n¡Estuviste precioso!$
+ContestLiveUpdates_Text_WasCute	¡{STR_VAR_2}!\n¡Estuviste monísimo!$
+ContestLiveUpdates_Text_WasSmart	¡{STR_VAR_2}!\n¡Estuviste ingenioso!$
+ContestLiveUpdates_Text_WasTough	¡{STR_VAR_2}!\n¡Estuviste durísimo!$
+ContestLiveUpdates_Text_VeryExcitingAppeal	Espectador: ¡La exhibición del\n{STR_VAR_2} ganador aún me tiene\lel corazón a mil!$
+ContestLiveUpdates_Text_VeryCool	¡{STR_VAR_2}!\n¡Eres el colmo del carisma!$
+ContestLiveUpdates_Text_VeryBeautiful	¡{STR_VAR_2}!\n¡Eres el más bello!$
+ContestLiveUpdates_Text_VeryCute	¡{STR_VAR_2}!\n¡Eres lo más mono que hay!$
+ContestLiveUpdates_Text_VerySmart	¡{STR_VAR_2}!\n¡Eres el más listo de los listos!$
+ContestLiveUpdates_Text_VeryTough	¡{STR_VAR_2}!\n¡Eres el más duro de los duros!$
+ContestLiveUpdates_Text_TookBreak	Espectador: Incluso cuando\n{STR_VAR_2} descansó de exhibirse,\lno podía quitarle los ojos de encima.\p¡Ese {STR_VAR_2} me tiene cautivado!$
+ContestLiveUpdates_Text_GotStartled	Espectador: Cuando a {STR_VAR_2} lo\nasustó la exhibición de otro POKéMON,\lcasi me echo a llorar.\p¡{STR_VAR_2}, aguantaste!\n¡Bien hecho!$
+ContestLiveUpdates_Text_MoveWonderful	Espectador: Oh…\n¡Ese {STR_VAR_3} de {STR_VAR_2}!\l¡El {STR_VAR_3} de {STR_VAR_2}!\l¡El {STR_VAR_3} de {STR_VAR_2}!\l¿Cómo puede ser tan maravilloso?$
+ContestLiveUpdates_Text_TalkAboutAnotherMon	PRESENTADOR: Ya lo veis. ¡Esto está\nlleno de fans de {STR_VAR_1}!\pTambién quería mencionar que otro\nPOKéMON, el {STR_VAR_3} de {STR_VAR_2},\lme llamó la atención.\pEl {STR_VAR_3} de {STR_VAR_2}…$
+ContestLiveUpdates_Text_FailedToAppeal	De los nervios, no logró hacer ni\nuna exhibición en la segunda ronda.\pLa próxima vez me gustaría ver a este\n{STR_VAR_1} hacer al menos una.$
+ContestLiveUpdates_Text_LastInBothRounds	Quedó el último en la primera ronda\ny en la segunda.\pEspero que {STR_VAR_1} vuelva a\nentrenar a este {STR_VAR_2} y borre\lla vergüenza de este último puesto.$
+ContestLiveUpdates_Text_NotExcitingEnough	No supo aprovechar la emoción del\npúblico con una exhibición adecuada.\pEsperamos que {STR_VAR_1} aprenda a\nleer al público y a ponerlo al rojo\lvivo la próxima vez.$
+ContestLiveUpdates_Text_LostAfterWinningRound1	Aunque quedó primero en la primera\nronda, sus exhibiciones de la segunda\lno funcionaron.\pSufrió una humillante derrota\nremontada.\pSeguro que {STR_VAR_1} ya está\nestudiando cómo exhibirse mejor.$
+ContestLiveUpdates_Text_NeverExciting	El público no se emocionó nunca con\nsus exhibiciones en la segunda ronda.\pEsperamos que deje de preocuparse por\nlos demás POKéMON y aprenda a\lexhibirse más para el público.$
+ContestLiveUpdates_Text_LostBySmallMargin	Perdió por muy poco ante el\n{STR_VAR_2} de {STR_VAR_1}.\pDebe de ser durísimo quedarse tan\ncerca de ganar y no conseguirlo.\pNo me extrañaría que {STR_VAR_3}\nestuviera llorando por esto.$
+ContestLiveUpdates_Text_RepeatedAppeals	Decepcionó al JUEZ repitiendo las\nmismas exhibiciones.\pEs un error imperdonable en cualquier\nCONCURSO, y el POKéMON lo pagó.\p{STR_VAR_1} debería sentirse culpable\npor esta triste actuación.$
+ContestLiveUpdates_Text_ValiantEffortButLost	{STR_VAR_1} se esforzó con valentía,\npero…\pNo sirvió de nada: quedó el último.\p{STR_VAR_1} debería aprender de esta\nderrota y sacarle partido.$
+ContestLiveUpdates_Text_Outro	Quiero terminar el programa con\nnuestra despedida a los ganadores.\pEsta vez, ¡{STR_VAR_1} y\n{STR_VAR_2}!\pPRESENTADOR: ¿Todos listos?\n¡Todos juntos!\pPúblico: ¡{STR_VAR_1}! ¡{STR_VAR_2}!\n¡Enhorabuena!\l¡Habéis ganado el CONCURSO!$
+gTVPokemonBattleUpdateText00	“¡ACTUALIDAD DE COMBATES POKéMON!”\p¡Os traemos los resultados de los\ncombates POKéMON según llegan!$
+gTVPokemonBattleUpdateText01	{STR_VAR_1} y {STR_VAR_2} se\nenfrentaron en un COMBATE\l{STR_VAR_3}.\pEl combate terminó con la victoria\nde {STR_VAR_1}.$
+gTVPokemonBattleUpdateText02	¡En el combate, el {STR_VAR_2} de\n{STR_VAR_1} fue temible usando\l{STR_VAR_3}!$
+gTVPokemonBattleUpdateText03	El {STR_VAR_2} de {STR_VAR_1} tuvo\nuna actuación floja que le costó caro.$
+gTVPokemonBattleUpdateText04	¡Enhorabuena por la victoria,\n{STR_VAR_1}!\p¡Y a {STR_VAR_2}, que perdió, le\ndeseamos más suerte la próxima vez!\pAsí termina este episodio de\n“¡ACTUALIDAD DE COMBATES POKéMON!”$
+gTVPokemonBattleUpdateText05	Los equipos de {STR_VAR_1} y\n{STR_VAR_2} se enfrentaron en un\lCOMBATE MÚLTIPLE.\pEl combate terminó con la victoria\ndel equipo de {STR_VAR_1}.$
+gTVPokemonBattleUpdateText06	En el combate, el {STR_VAR_2} del\nequipo de {STR_VAR_1} fue temible\lusando {STR_VAR_3}.$
+gTVPokemonBattleUpdateText07	La actuación floja del {STR_VAR_3}\ndel equipo de {STR_VAR_2} le pasó\lfactura.\p¡Enhorabuena por la victoria de\ntu equipo, {STR_VAR_1}!\p¡Y al equipo de {STR_VAR_2}, que perdió,\nle deseamos más suerte la próxima vez!\pAsí termina este episodio de\n“¡ACTUALIDAD DE COMBATES POKéMON!”$
+GabbyAndTy_Text_GabbyPreFirstBattle	GABI: ¡Oh! ¡Hemos encontrado a un\nENTRENADOR con pinta de duro aquí!\p¡Vale, cámara!\n¡A por la entrevista!$
+GabbyAndTy_Text_GabbyIntro	GABI: ¡Oh! ¡Eres {PLAYER}! ¡Hola!\n¿Te acuerdas de nosotros?\p¿Nos enseñas cuánto has mejorado?\n¡Vale, que empiece la entrevista!$
+GabbyAndTy_Text_GabbyDefeatFirstTime	GABI: ¡Mis ojos no me engañaban!\n¡He descubierto a un ENTRENADOR\lasombroso!$
+GabbyAndTy_Text_WhoAreYouInterview	GABI: ¡Increíble! ¡Increíble!\n¡¿Quién eres?!\p¡Sabía que habíamos dado con algo\nbueno al verte!\pOh, deja que te explique. Viajamos\npor todas partes entrevistando a\ltoda clase de ENTRENADORES.\pAsí que, ¿nos concedes un ratito\npara una entrevista?$
+GabbyAndTy_Text_QuoteFromLastInterview	GABI: “¡{STR_VAR_1}!”\p¿Te acuerdas? Es la frase que nos\ndiste para cerrar el combate.\p¡Yo nunca jamás olvido esas cosas!$
+GabbyAndTy_Text_YouStompedUsInterviewAgain	La última vez que combatimos nos\naplastaste antes de que pudiéramos\lreaccionar…\pEn fin, ¿qué te parece?\n¿Te hacemos otra entrevista?$
+GabbyAndTy_Text_YouThrewABallAtUsInterviewAgain	La última vez que combatimos, ¿no nos\nlanzaste una POKé BALL?\p¡Nos quedamos de piedra! ¡Así que se\nlo contamos a todo el mundo!\pEn fin, ¿qué te parece?\n¿Te hacemos otra entrevista?$
+GabbyAndTy_Text_CleverItemSkillsInterviewAgain	La última vez que combatimos, nos\nganaste usando muy bien los objetos.\pEn fin, ¿qué te parece?\n¿Te hacemos otra entrevista?$
+GabbyAndTy_Text_WeLookedRespectableInterviewAgain	La última vez que combatimos, al\nmenos quedamos dignamente.\pEn fin, ¿qué te parece?\n¿Te hacemos otra entrevista?$
+GabbyAndTy_Text_InterviewAgain	En fin, ¿qué te parece?\n¿Te hacemos otra entrevista?$
+GabbyAndTy_Text_DescribeYourFeelings	¿Sí?\n¡Gracias!\pVale, necesito que describas lo que\nsientes sobre el combate, pero que\lsea corto y claro. ¡Adelante!$
+GabbyAndTy_Text_PerfectWellBeSeeingYou	GABI: ¡Mmm, sí!\n¡Es el cierre perfecto!\pTengo la sensación de que va a\nquedar un programa genial.\pPuede que lo echen en la tele,\n¡así que estate atento!\p¡Vale!\n¡Nos vemos!$
+GabbyAndTy_Text_DontGiveUpKeepingEyeOut	GABI: Oh…\pVale, ¡pero no te rindas!\n¡Te seguiremos la pista!$
+GabbyAndTy_Text_KeepingAnEyeOutForYou	GABI: ¡Te seguiremos la pista!$
+GabbyAndTy_Text_GabbyNotEnoughMons	GABI: ¿No hay por aquí ningún\nENTRENADOR fuerte con muchos\lPOKéMON?$
+GabbyAndTy_Text_GiveUsAnInterviewThisTime	GABI: ¡Hala, eres la caña!\p¡Te has hecho mucho más fuerte, pero\nmucho, desde la última vez!\pAcertamos al ver en ti a un\nENTRENADOR prometedor.\pEn fin, ¿qué te parece?\n¿Nos concedes una entrevista\lesta vez?$
+GabbyAndTy_Text_GabbyDefeat	GABI: ¡Qué combate tan intenso!\n¿Lo has grabado todo?$
+GabbyAndTy_Text_TyPreFirstBattle	TY: ¡Eh, mira! ¡Un ENTRENADOR con\npinta de duro aquí, nada menos!\l¡La cámara está grabando!$
+GabbyAndTy_Text_TyIntro	TY: ¡Eh, mira!\n¡Me acuerdo de ti!\p¡Voy a grabar este combate entero\ncon esta cámara!$
+GabbyAndTy_Text_TyPostBattle	TY: ¡Eres un natural!\n¡Menudas imágenes he sacado!$
+GabbyAndTy_Text_TyNotEnoughMons	TY: ¿Solo tienes un POKéMON\ny ya está?\pSi tuvieras más POKéMON, quedarían\nmejores imágenes, pero…$
+GabbyAndTy_Text_TyDefeatFirstTime	TY: Sí, hemos dado con un ENTRENADOR\nprometedor. ¡Menuda exclusiva!$
+GabbyAndTy_Text_TyDefeat	TY: Sí, lo tengo todo.\nEl combate entero está grabado.$
+gTVInSearchOfTrainersText00	EN BUSCA DE ENTRENADORES…\pGABI: ¡Hola! Hoy estoy visitando\nuna zona cerca de {STR_VAR_1}.\pBuscamos nuevos talentos que estén\nempezando a despuntar.\pHoy hemos puesto el objetivo en\n{PLAYER}.\pHay algo en este ENTRENADOR que\nnos llamó la atención.$
+gTVInSearchOfTrainersText01	Ya habíamos combatido con {PLAYER},\npero podemos asegurar que ha\lmejorado muchísimo.\p¡Sabía que era alguien especial en\ncuanto lo vimos!$
+gTVInSearchOfTrainersText02	La mejor forma de saber lo fuerte\nque es un ENTRENADOR…\pBueno, la más rápida es combatir.\n¡Así que empezamos a investigar!\p… …\pY así acabamos combatiendo\ncon {PLAYER}.\p¡Con una actuación aplastante, nos\nbarrió, nos enrolló y nos tiró!\p{PLAYER} es despiadadamente fuerte…\pEstas son nuestras impresiones\ntras combatir con él.$
+gTVInSearchOfTrainersText03	¡La combinación de {STR_VAR_1} y\n{STR_VAR_3} fue divina!\pVerlos, a {STR_VAR_1} y a\n{STR_VAR_3}, apoyándose el uno al\lotro en pleno combate…\p¡Fue maravilloso!\p{STR_VAR_2} fue el último movimiento\nque usó en nuestro combate.\p¡{STR_VAR_2} es la señal de amistad\nde {STR_VAR_1} y {STR_VAR_3}!$
+gTVInSearchOfTrainersText04	…Perdí la confianza en mí mismo\ntras nuestro encuentro.\pNos ganó antes de que pudiéramos\nlanzar un solo ataque.\lOhhh… Snif…\pAun así, los combates de {PLAYER}\nmerecen la pena.\pRecomiendo a los ENTRENADORES con\nconfianza que reten a {PLAYER}.$
+gTVInSearchOfTrainersText05	Solo hay una cosa que decir.\n¡No se te ocurra lanzar una POKé BALL\len un combate contra ENTRENADORES!\p{PLAYER} es fuerte, sí, pero no tiene\nni idea de las reglas básicas.\pTengo una petición para nuestros\nespectadores.\pSi veis a {PLAYER}, ¡avisadle!$
+gTVInSearchOfTrainersText06	{PLAYER} sabe leer muy bien lo que\nva a hacer el rival.\p¡Usó los objetos en el momento justo!$
+gTVInSearchOfTrainersText07	Sinceramente, pensaba que yo\ntambién era bastante bueno.\pAunque perdimos, fue un combate\nmuy reñido.\pPero si te cuesta ganarme a mí,\n¡aún te queda, {PLAYER}!$
+gTVInSearchOfTrainersText08	Tras el combate, le pedimos a\n{PLAYER} que lo resumiera.\pContestó: “{STR_VAR_1}”.\pLos POKéMON {STR_VAR_2} y\n{STR_VAR_3} de {PLAYER}…\lY “{STR_VAR_1}”…\p¡Mmm! ¡Qué profundo! ¡Esa frase\ntiene mucho significado!\pNo es de extrañar: un buen ENTRENADOR\ndice cosas buenas.\p¡Eso es todo por hoy!\n¡Hasta el próximo programa!$
+ContestLadyShow_Text_Intro	“¡CONCURSOS POKéMON EN DIRECTO!”\pPRESENTADOR: ¡Perdonad que\ninterrumpamos la programación, y\lgracias por vernos!\pConectamos en directo desde un\n{STR_VAR_1} que acaba de terminar.\pEspectadores: ¡¿!!!!\pPRESENTADOR: ¡Oh! ¡Parece que los\nparticipantes vienen hacia aquí!\p¡Intentaré hacerles una entrevista\nimprovisada!\pEspectadores: ¡¿!!!!\n¡¿!!!!$
+ContestLadyShow_Text_Won	PRESENTADOR: ¡Disculpe!\n¡Gracias por salir en directo!\p¿Me permite felicitarla por la\nvictoria?\p¿Cuál ha sido la clave de la\nvictoria de hoy?\pBELLA: ¡Mi {STR_VAR_2} y yo lo hemos\ndado todo hoy!\pPero seguro que no lo habríamos\nconseguido sin toda la ayuda que\lrecibimos antes del CONCURSO.\pPRESENTADOR: ¿Hay alguien especial\ncon quien quiera compartir su\lalegría? ¡En directo!\pBELLA: ¡Eh, hola!\p¡{STR_VAR_3}! ¿Me estás viendo?\n¡Lo hemos conseguido!\l¡Gracias!$
+ContestLadyShow_Text_Lost	PRESENTADOR: ¡Disculpe!\n¡Gracias por salir en directo!\pDebe de estar decepcionada.\n¿Quiere decir algo?\pBELLA: Es desgarrador…\nMi {STR_VAR_2} y yo lo dimos todo…\pPero siento que he fallado a todos\nlos que nos han apoyado.\pPRESENTADOR: Siento decirlo, pero al\nPOKéMON le falta un poco de color.\pBELLA: {STR_VAR_3}, lo siento mucho…\nLa próxima vez lo haré mejor…\l…Snif… ¡Buaaaah!\pEspectadores: ¿Lo has visto?\n¡Pobre chica!\pPRESENTADOR: Eh… Huy…\pEh… ¡Se nos acaba el tiempo!\n¡Gracias por vernos!$
+ContestLadyShow_Text_LostBadly	PRESENTADOR: ¡Disculpe!\n¡Gracias por salir en directo!\p¿Qué tal le ha ido en el CONCURSO?\pBELLA: Nada ha salido bien…\nNo sé por qué, mi {STR_VAR_2} no\lconsiguió gustar a nadie.\pPRESENTADOR: Siento decirlo, pero al\nPOKéMON le falta un poco de color.\pBELLA: … … … … … …\n…Snif… ¡Buaaaah!\pEspectadores: ¿Lo has visto?\n¡Pobre chica!\pPRESENTADOR: Eh… Huy…\pEh… ¡Se nos acaba el tiempo!\n¡Gracias por vernos!$
