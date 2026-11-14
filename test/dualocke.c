@@ -664,6 +664,61 @@ TEST("Dualocke: los objetos de los que ya estaban muertos también vuelven")
     EXPECT(CheckBagHasItem(ITEM_LEFTOVERS, 1));
 }
 
+// Dualocke: al capturar con el equipo lleno, si mandas a la caja a uno que ya ha caído en ese
+// combate, va a la caja de muertos y no a una caja normal (encontrado jugando, 13/11/2026)
+TEST("Dualocke: el debilitado que cambias por la captura va a la caja de muertos")
+{
+    enum Species dead;
+
+    SetupParty(PARTY_SIZE);
+    dead = GetMonData(&gParties[B_TRAINER_PLAYER][2], MON_DATA_SPECIES);
+    Faint(2);
+
+    EXPECT(Dualocke_TryBuryChosenPartyMon(2));
+
+    EXPECT_EQ(Dualocke_GetLives(), DUALOCKE_START_LIVES - 1);
+    EXPECT_EQ(GetBoxMonDataAt(DUALOCKE_DEAD_BOX, 0, MON_DATA_SPECIES), dead);
+    EXPECT_EQ(GetMonData(&gParties[B_TRAINER_PLAYER][2], MON_DATA_SPECIES), SPECIES_NONE);
+}
+
+TEST("Dualocke: el que cambias por la captura con PS sigue yendo a una caja normal")
+{
+    SetupParty(PARTY_SIZE);
+
+    EXPECT(!Dualocke_TryBuryChosenPartyMon(2));
+
+    EXPECT_EQ(Dualocke_GetLives(), DUALOCKE_START_LIVES);
+    EXPECT_EQ(GetBoxMonDataAt(DUALOCKE_DEAD_BOX, 0, MON_DATA_SPECIES), SPECIES_NONE);
+    EXPECT_EQ(GetMonData(&gParties[B_TRAINER_PLAYER][2], MON_DATA_SPECIES), SPECIES_WOBBUFFET + 2);
+}
+
+TEST("Dualocke: los muertos que se colaron vivos en las cajas se entierran una vez")
+{
+    struct Pokemon mon;
+    u32 hp = 0;
+
+    SetupParty(1);
+    ZeroBoxMonAt(0, 4);
+    ZeroBoxMonAt(0, 5);
+    FlagClear(FLAG_DUALOCKE_CAJAS_REVISADAS);
+    CreateMon(&mon, SPECIES_ZIGZAGOON, 20, 0, OTID_STRUCT_PLAYER_ID);
+    CalculateMonStats(&mon);
+    SetBoxMonAt(0, 5, &mon.box); // uno vivo: se queda
+    SetMonData(&mon, MON_DATA_HP, &hp);
+    SetBoxMonAt(0, 4, &mon.box); // el muerto que se coló
+
+    EXPECT_EQ(Dualocke_BuryFaintedBoxMonsOnce(), 1);
+    EXPECT_EQ(GetBoxMonDataAt(0, 4, MON_DATA_SPECIES), SPECIES_NONE);
+    EXPECT_EQ(GetBoxMonDataAt(0, 5, MON_DATA_SPECIES), SPECIES_ZIGZAGOON);
+    EXPECT_EQ(GetBoxMonDataAt(DUALOCKE_DEAD_BOX, 0, MON_DATA_SPECIES), SPECIES_ZIGZAGOON);
+    EXPECT_EQ(Dualocke_GetLives(), DUALOCKE_START_LIVES - 1);
+
+    // La segunda vez ya no hace nada, aunque haya otro debilitado (la Torre Entrenador no cura)
+    SetBoxMonAt(0, 4, &mon.box);
+    EXPECT_EQ(Dualocke_BuryFaintedBoxMonsOnce(), 0);
+    EXPECT_EQ(GetBoxMonDataAt(0, 4, MON_DATA_SPECIES), SPECIES_ZIGZAGOON);
+}
+
 // Dualocke: en la pantalla del mote, la especie va en el hueco del título ("¿Mote de Torchic?")
 TEST("Dualocke: el título del mote pone la especie en su hueco")
 {

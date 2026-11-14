@@ -1625,6 +1625,7 @@ void ShowPokemonStorageSystemPC(void)
 {
     u8 taskId;
 
+    Dualocke_BuryFaintedBoxMonsOnce(); // Dualocke: entierra a los muertos que se colaron vivos en las cajas
     Dualocke_RecoverDeadMonsItems(); // Dualocke: los objetos de los muertos vuelven a la mochila
     taskId = CreateTask(Task_PCMainMenu, 80);
     gTasks[taskId].tState = 0;
