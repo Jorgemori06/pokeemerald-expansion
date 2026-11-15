@@ -476,7 +476,7 @@ Al jugar, los líderes eran difíciles por desequilibrio, no por cómo jugaban: 
   - Sin repetidos en la misma tabla. Las formas que compartían tabla la siguen compartiendo.
   - **Nunca sale Plegaria Vital** (revive a un debilitado en pleno combate y se saltaría las muertes del locke). Ojo: las MT y los tutores al azar todavía pueden enseñarla.
   - Se activa con `"aprendizaje_aleatorio"` en `randomizer_config.json`. El juego usa la tabla nueva desde `GetSpeciesLevelUpLearnset` (`src/pokemon.c`); sin semilla, y en los tests, sale la original.
-- MTs aleatorias con compatibilidad completamente aleatoria, conservando los movimientos de campo y comprobando los aprendibles por nivel. **Hecho** (`mts.py`; Miguel, #27): cada MT enseña un movimiento al azar (sin repetir) y **cada especie la aprende con un 50 %**, sin excepción para las de su tipo; es siempre la misma respuesta para la misma especie y semilla. Las de movimientos de campo (Excavar, Daño Secreto) y las MO se quedan como están, con su compatibilidad original, para no bloquear el avance. No se toca `tms_hms.h`: lo cambia `include/item.h` al vuelo.
+- MTs aleatorias con compatibilidad completamente aleatoria, conservando los movimientos de campo y comprobando los aprendibles por nivel. **Hecho** (`mts.py`; Miguel, #27): cada MT enseña un movimiento al azar (sin repetir) y **cada especie la aprende con un 50 %**, sin excepción para las de su tipo; es siempre la misma respuesta para la misma especie y semilla. Las de movimientos de campo (Excavar, Daño Secreto) y las MO se quedan como están, para no bloquear el avance. **Las MO las aprenden todas las especies** (Miguel, 13/11/2026): `CanLearnTeachableMove` (`src/pokemon.c`) dice que sí a cualquier MO, salvo a los huevos, para no quedarse atascado si en el locke no tienes un Pokémon compatible. No se toca `tms_hms.h`: lo cambia `include/item.h` al vuelo.
 - Tutores aleatorios con compatibilidad aleatoria, conservando los movimientos de campo. **Hecho** (`mts.py`): los 10 tutores de Hoenn enseñan un movimiento al azar (sin repetir los de las MT) y se aprende con la misma probabilidad que las MT nuevas. La macro `move_tutor` llama a `Dualocke_TutorAleatorio`, que cambia el movimiento y pone su nombre en `{STR_VAR_1}`. **Textos:** los de los tutores (`data/text/move_tutors.inc` y `traduccion/dialogos/27_pokedex_tutores.tsv`) ahora dicen el movimiento con `{STR_VAR_1}`. Los que lo describían (CORTE FURIA "de tipo BICHO", SUSTITUTO "hace una copia"…) se han dejado más generales. La historia de cada tutor se queda.
 
 **Objetos**
@@ -500,7 +500,7 @@ Al jugar, los líderes eran difíciles por desequilibrio, no por cómo jugaban: 
 - Correr sin Deportivas.
 - Barras de PS y experiencia rápidas (ya activado por defecto: `B_FAST_HP_DRAIN`, `B_FAST_EXP_GROW`).
 - MTs reutilizables (`I_REUSABLE_TMS` en `include/config/item.h`).
-- MOs olvidables.
+- MOs olvidables siempre (en combate, al evolucionar, en la pantalla de datos y con el OLVIDAMOVIMIENTOS de Calagua; `P_CAN_FORGET_HIDDEN_MOVE`) y aprendibles por todas las especies (13/11/2026).
 
 ## 8. Traducción al español (historia hecha, falta probarla jugando)
 
@@ -694,6 +694,7 @@ Quién hace cada cosa y cómo se sube: sección 13.
 | Objetos que no se pueden usar en combate | `src/item_use.c` (`CannotUseItemsInBattle`) |
 | MTs reutilizables | `include/config/item.h` (`I_REUSABLE_TMS`) |
 | MOs olvidables | `include/config/pokemon.h` (`P_CAN_FORGET_HIDDEN_MOVE`) |
+| MOs para todas las especies | `src/pokemon.c` (`CanLearnTeachableMove`) |
 | Filtrar tiendas por medallas/flags (útil para las megapiedras) | `src/shop_criteria.c` |
 | Vidas y caja de muertos | `src/dualocke.c`, `include/dualocke.h`; se llama desde `src/battle_setup.c` (final de combate) |
 | Bloqueo de las cajas de muertos y prohibidos | `src/pokemon_storage_system.c` (busca `Dualocke_IsLockedBox` y `Dualocke_IsBoxMonLocked`) y `src/pokemon.c` (`CopyMonToPC`) |
