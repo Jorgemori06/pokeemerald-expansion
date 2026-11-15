@@ -1,22 +1,25 @@
 """
-Dualocke: líderes con estrategia y con la fuerza de los salvajes al principio
+Dualocke: jefes con estrategia y con la fuerza de los salvajes al principio
 (randomizer_config.json, "lideres"; pedido por Miguel y Jorge el 31/10/2026: "que los líderes
 sean difíciles, que tengan una estrategia", pero sin sacar Pokémon mucho más fuertes que los
 que encuentras).
 
-- Movimientos con plan (líderes, Alto Mando y Plubio):
-  - El primero del equipo pone trampas (y solo él): Trampa Rocas, Púas, Púas Tóxicas o Red Viscosa, según su
-    tipo (Trampa Rocas si no tiene una de su tipo).
-  - Los demás llevan movimientos de estrategia de su tipo o de su papel: envenenar o quemar,
-    paralizar, chetarse (Danza Espada, Maquinación, Paz Mental, Danza Dragón...), clima,
-    pantallas, recuperarse.
-  - Hasta el gimnasio 3, un movimiento de estrategia por Pokémon; después, dos.
-  - El resto son ataques **de los que aprende por nivel** (las tablas al azar de aprendizajes.py),
-    los mejores para él (de su tipo y potentes). Así no pegan más fuerte que lo que podría tener
-    el jugador. Si no aprende suficientes ataques hasta su nivel, se completa al azar.
+- Estilos (Miguel, 15/11/2026: "que cada jefe se sienta diferente sin perder la sensación del
+  randomlocke; no todos tienen que llevar trampas"). Cada jefe juega con uno de ESTILOS:
+  trampas, espacio raro, chetarse, clima, estados, pantallas, aguante o velocidad.
+  - Se reparten al azar con la semilla, sin repetir dentro de cada grupo: los 8 líderes llevan
+    los 8 estilos, y el Alto Mando con Plubio y los jefes de mitad de tramo (rival, BLASCO,
+    MAGNO, AQUILES y los admins), estilos distintos entre sí.
+  - Un personaje lleva el mismo estilo en todos sus combates (MAGNO en el Monte Cenizo, en su
+    guarida y en el Centro Espacial).
+- Movimientos de cada Pokémon: 2 de estrategia de su estilo y 2 "al azar": el mejor ataque de
+  los que aprende por nivel (las tablas al azar de aprendizajes.py) y uno al azar entre todos.
+  - Hasta el gimnasio 3 (los que tienen tope de fuerza), 1 de estrategia, los 2 mejores ataques
+    de su nivel y 1 al azar.
   - Nunca coge ataques que le perjudican (NO_CONVIENEN): los que lo debilitan o le quitan media
-    vida (Autodestrucción, Explosión, Explosión Bruma, Sacrificio...) ni los que obligan a recargar
-    (Hiperrayo, Giga Impacto...). Lo vio Jorge al probar el #54.
+    vida (Autodestrucción, Explosión, Explosión Bruma, Sacrificio...) ni los que obligan a
+    recargar (Hiperrayo, Giga Impacto...). Lo vio Jorge al probar el #54.
+  - Siempre lleva al menos un ataque.
 - Fuerza de los salvajes (los marcados en "limite_salvajes", hasta el gimnasio 3): sus Pokémon no
   pueden tener más estadísticas base (suma) que el percentil "percentil_salvajes" de los salvajes
   de hierba de los tramos hasta ese gimnasio, con la semilla de la partida, y nunca más que el
@@ -27,40 +30,46 @@ que encuentras).
 
 import fnmatch
 import random
+import re
 
 from . import movimientos as mov
+
+ESTILOS = ["trampas", "espacio_raro", "chetarse", "clima", "estados", "pantallas", "aguante", "velocidad"]
+NOMBRE_ESTILO = {
+    "trampas": "Trampas y arrastre", "espacio_raro": "Espacio Raro", "chetarse": "Chetarse",
+    "clima": "Clima", "estados": "Estados", "pantallas": "Pantallas", "aguante": "Aguante",
+    "velocidad": "Velocidad",
+}
+# Grupos de jefes: dentro de cada uno no se repite estilo
+GRUPOS = [
+    ["ROXANNE", "BRAWLY", "WATTSON", "FLANNERY", "NORMAN", "WINONA", "TATE_AND_LIZA", "JUAN"],
+    ["SIDNEY", "PHOEBE", "GLACIA", "DRAKE", "WALLACE"],
+    ["RIVAL", "MAXIE", "TABITHA", "SHELLY", "MATT", "ARCHIE", "WALLY"],
+]
 
 TRAMPAS = ["MOVE_STEALTH_ROCK", "MOVE_SPIKES", "MOVE_TOXIC_SPIKES", "MOVE_STICKY_WEB"]
 TRAMPA_POR_TIPO = {
     "TYPE_ROCK": "MOVE_STEALTH_ROCK", "TYPE_GROUND": "MOVE_SPIKES", "TYPE_STEEL": "MOVE_STEALTH_ROCK",
     "TYPE_POISON": "MOVE_TOXIC_SPIKES", "TYPE_BUG": "MOVE_STICKY_WEB",
 }
-ESTRATEGIA_POR_TIPO = {
-    "TYPE_POISON": ["MOVE_TOXIC", "MOVE_TOXIC_SPIKES"],
-    "TYPE_ROCK": ["MOVE_STEALTH_ROCK", "MOVE_SANDSTORM"],
-    "TYPE_GROUND": ["MOVE_STEALTH_ROCK", "MOVE_SPIKES"],
-    "TYPE_STEEL": ["MOVE_IRON_DEFENSE", "MOVE_STEALTH_ROCK"],
-    "TYPE_FIRE": ["MOVE_WILL_O_WISP", "MOVE_SUNNY_DAY"],
-    "TYPE_WATER": ["MOVE_RAIN_DANCE", "MOVE_AQUA_RING"],
-    "TYPE_ELECTRIC": ["MOVE_THUNDER_WAVE"],
-    "TYPE_GRASS": ["MOVE_LEECH_SEED", "MOVE_STUN_SPORE"],
-    "TYPE_ICE": ["MOVE_SNOWSCAPE", "MOVE_HAZE"],
-    "TYPE_FIGHTING": ["MOVE_BULK_UP"],
-    "TYPE_PSYCHIC": ["MOVE_CALM_MIND", "MOVE_REFLECT", "MOVE_LIGHT_SCREEN"],
-    "TYPE_GHOST": ["MOVE_WILL_O_WISP", "MOVE_CONFUSE_RAY"],
-    "TYPE_DARK": ["MOVE_NASTY_PLOT", "MOVE_TAUNT"],
-    "TYPE_DRAGON": ["MOVE_DRAGON_DANCE"],
-    "TYPE_FLYING": ["MOVE_ROOST", "MOVE_TAILWIND"],
-    "TYPE_BUG": ["MOVE_QUIVER_DANCE", "MOVE_STICKY_WEB"],
-    "TYPE_NORMAL": ["MOVE_SWORDS_DANCE", "MOVE_GLARE"],
-    "TYPE_FAIRY": ["MOVE_CALM_MIND", "MOVE_MOONLIGHT"],
+ARRASTRE = ["MOVE_ROAR", "MOVE_WHIRLWIND"]
+CLIMAS = ["MOVE_RAIN_DANCE", "MOVE_SUNNY_DAY", "MOVE_SANDSTORM", "MOVE_SNOWSCAPE"]
+CLIMA_POR_TIPO = {
+    "TYPE_WATER": "MOVE_RAIN_DANCE", "TYPE_ELECTRIC": "MOVE_RAIN_DANCE",
+    "TYPE_FIRE": "MOVE_SUNNY_DAY", "TYPE_GRASS": "MOVE_SUNNY_DAY",
+    "TYPE_ROCK": "MOVE_SANDSTORM", "TYPE_GROUND": "MOVE_SANDSTORM", "TYPE_STEEL": "MOVE_SANDSTORM",
+    "TYPE_ICE": "MOVE_SNOWSCAPE",
 }
-# Según sus estadísticas: el que pega físico se cheta el ataque, el especial el ataque especial
-# y el que aguanta envenena y se cura
+ESTADOS = ["MOVE_TOXIC", "MOVE_WILL_O_WISP", "MOVE_THUNDER_WAVE", "MOVE_CONFUSE_RAY", "MOVE_LEECH_SEED",
+           "MOVE_YAWN", "MOVE_GLARE"]
+DESGASTE = ["MOVE_TOXIC", "MOVE_LEECH_SEED", "MOVE_WILL_O_WISP"]
+CURAS = ["MOVE_RECOVER", "MOVE_ROOST", "MOVE_PROTECT"]
+FRENOS = ["MOVE_THUNDER_WAVE", "MOVE_ICY_WIND", "MOVE_ELECTROWEB", "MOVE_SCARY_FACE"]
+# Para chetarse: el que pega físico se sube el ataque y el especial, el ataque especial
 FISICO = ["MOVE_SWORDS_DANCE", "MOVE_BULK_UP", "MOVE_DRAGON_DANCE"]
-ESPECIAL = ["MOVE_NASTY_PLOT", "MOVE_CALM_MIND"]
-AGUANTE = ["MOVE_TOXIC", "MOVE_RECOVER"]
-# Ataques que no le convienen a un líder: lo debilitan, le quitan media vida o obligan a recargar
+ESPECIAL = ["MOVE_NASTY_PLOT", "MOVE_CALM_MIND", "MOVE_QUIVER_DANCE"]
+VELOCIDAD_LENTO = 60  # con esta velocidad base o menos, le conviene el Espacio Raro
+# Ataques que no le convienen a un jefe: lo debilitan, le quitan media vida o obligan a recargar
 NO_CONVIENEN = {
     "MOVE_SELF_DESTRUCT", "MOVE_EXPLOSION", "MOVE_MISTY_EXPLOSION", "MOVE_FINAL_GAMBIT",
     "MOVE_MIND_BLOWN", "MOVE_STEEL_BEAM", "MOVE_CHLOROBLAST",
@@ -76,67 +85,125 @@ def bst(especie):
     return sum(especie.stats.values())
 
 
-def _papel(especie):
-    st = especie.stats
-    if st.get("HP", 0) + st.get("Defense", 0) + st.get("SpDefense", 0) >= 270:
-        return AGUANTE
-    return ESPECIAL if st.get("SpAttack", 0) > st.get("Attack", 0) else FISICO
+def personaje(trainer):
+    """El personaje de un entrenador: el mismo en todos sus combates y revanchas."""
+    if re.match(r"TRAINER_(MAY|BRENDAN)_", trainer):
+        return "RIVAL"
+    nombre = re.sub(r"_\d+$", "", trainer[len("TRAINER_"):])
+    for clave in ("MAXIE", "TABITHA", "SHELLY", "WALLY"):
+        if nombre.startswith(clave + "_"):
+            return clave
+    return nombre
 
 
-def elegir(especie, nivel, pokedex, movimientos, todos, rng, n_estrategia=2, primero=False):
-    """Los 4 movimientos de un Pokémon de un líder: estrategia (trampas si va primero) y ataques
-    de los que aprende por nivel."""
+def estilo_de(semilla, trainer):
+    """El estilo del jefe: repartido al azar con la semilla, sin repetir dentro de su grupo."""
+    quien = personaje(trainer)
+    for n, grupo in enumerate(GRUPOS):
+        if quien in grupo:
+            estilos = ESTILOS[:]
+            random.Random(f"{semilla}|estilos|{n}").shuffle(estilos)
+            return estilos[grupo.index(quien) % len(estilos)]
+    return random.Random(f"{semilla}|estilo|{quien}").choice(ESTILOS)
+
+
+def plan_de(semilla, trainer, tipos_jefe=(), n_estrategia=2):
+    """Lo que comparte todo el equipo de un jefe: su estilo, cuántos movimientos de estrategia
+    lleva cada Pokémon y, si juega con el clima, cuál (el de su tipo, o uno al azar)."""
+    clima = next((CLIMA_POR_TIPO[t] for t in tipos_jefe if t in CLIMA_POR_TIPO), None)
+    if clima is None:
+        clima = random.Random(f"{semilla}|clima|{personaje(trainer)}").choice(CLIMAS)
+    return {"estilo": estilo_de(semilla, trainer), "n": n_estrategia, "clima": clima}
+
+
+def _refuerzos(datos, rng):
+    st = datos.stats
+    lista = (FISICO if st.get("Attack", 0) >= st.get("SpAttack", 0) else ESPECIAL)[:]
+    rng.shuffle(lista)
+    return lista
+
+
+def _de_estrategia(datos, plan, primero, rng):
+    """Los movimientos de estrategia que le tocan a este Pokémon, por orden de preferencia."""
+    estilo = plan["estilo"]
+    tipos = list(datos.tipos)
+    lento = datos.stats.get("Speed", 0) <= VELOCIDAD_LENTO
+    refuerzos = _refuerzos(datos, rng)
+    if estilo == "trampas":
+        if primero:
+            trampa = next((TRAMPA_POR_TIPO[t] for t in tipos if t in TRAMPA_POR_TIPO), rng.choice(TRAMPAS))
+            return [trampa, rng.choice(ARRASTRE)]
+        return [rng.choice(ARRASTRE), rng.choice(["MOVE_PROTECT", "MOVE_TOXIC", "MOVE_TAUNT"])]
+    if estilo == "espacio_raro":
+        if lento and datos.stats.get("Attack", 0) >= datos.stats.get("SpAttack", 0):
+            refuerzos = ["MOVE_CURSE"] + refuerzos
+        if primero or lento:
+            return ["MOVE_TRICK_ROOM", refuerzos[0]]
+        return [refuerzos[0], "MOVE_TRICK_ROOM"]
+    if estilo == "chetarse":
+        return [refuerzos[0], rng.choice(["MOVE_SUBSTITUTE", "MOVE_PROTECT", "MOVE_AGILITY"])]
+    if estilo == "clima":
+        if primero:
+            return [plan["clima"], "MOVE_AURORA_VEIL" if plan["clima"] == "MOVE_SNOWSCAPE" else "MOVE_PROTECT"]
+        return ["MOVE_WEATHER_BALL", plan["clima"]]
+    if estilo == "estados":
+        return rng.sample(ESTADOS, 2)
+    if estilo == "pantallas":
+        if primero:
+            return ["MOVE_REFLECT", "MOVE_LIGHT_SCREEN"]
+        return [refuerzos[0], rng.choice(["MOVE_REFLECT", "MOVE_LIGHT_SCREEN"])]
+    if estilo == "aguante":
+        return [rng.choice(DESGASTE), rng.choice(CURAS)]
+    if estilo == "velocidad":
+        if primero:
+            return ["MOVE_TAILWIND", rng.choice(FRENOS)]
+        return [rng.choice(FRENOS), rng.choice(["MOVE_AGILITY", "MOVE_TAILWIND"])]
+    raise ValueError(f"Dualocke: estilo desconocido '{estilo}'")
+
+
+def elegir(especie, nivel, pokedex, movimientos, todos, rng, plan, primero=False):
+    """Los 4 movimientos de un Pokémon de un jefe: los de estrategia de su estilo, el mejor
+    ataque (o los dos mejores) de los que aprende por nivel y uno al azar."""
     datos = pokedex.especies[especie]
     tipos = list(datos.tipos)
     estrategia = []
-    if primero:
-        trampa = next((TRAMPA_POR_TIPO[t] for t in tipos if t in TRAMPA_POR_TIPO), "MOVE_STEALTH_ROCK")
-        estrategia.append(trampa)
-    opciones = []
-    for t in tipos:
-        opciones += [m for m in ESTRATEGIA_POR_TIPO.get(t, []) if m not in opciones]
-    rng.shuffle(opciones)
-    papel = [m for m in _papel(datos) if m not in opciones]
-    rng.shuffle(papel)
-    for m in opciones + papel:
-        if len(estrategia) >= n_estrategia:
-            break
-        # Las trampas solo las pone el primero (con una por equipo basta)
-        if m in movimientos and m not in estrategia and m not in TRAMPAS:
+    for m in _de_estrategia(datos, plan, primero, rng):
+        if len(estrategia) < plan["n"] and m in movimientos and m not in estrategia:
             estrategia.append(m)
-    estrategia = [m for m in estrategia if m in movimientos][:max(n_estrategia, 1)]
 
-    # Ataques: los mejores de los que aprende hasta su nivel, sin repetir tipo si se puede
     def valor(m):
         d = movimientos[m]
         return mov.potencia(d) * (VALOR_SU_TIPO if d.tipo in tipos else 1.0)
 
+    # Los mejores ataques de los que aprende hasta su nivel, de tipos distintos si se puede
     aprendidos = sorted({m for nv, m in datos.por_nivel if nv <= nivel and m in movimientos
                          and movimientos[m].de_dano and m not in estrategia and m not in NO_CONVIENEN},
                         key=lambda m: (-valor(m), m))
+    de_nivel = 4 - len(estrategia) - 1  # el último hueco es para el movimiento al azar
     ataques = []
-    tipos_usados = set()
     for m in aprendidos:
-        if len(ataques) + len(estrategia) >= 4:
+        if len(ataques) >= de_nivel:
             break
-        if movimientos[m].tipo in tipos_usados:
-            continue
-        ataques.append(m)
-        tipos_usados.add(movimientos[m].tipo)
+        if not any(movimientos[a].tipo == movimientos[m].tipo for a in ataques):
+            ataques.append(m)
     for m in aprendidos:  # si faltan, aunque repita tipo
-        if len(ataques) + len(estrategia) >= 4:
+        if len(ataques) >= de_nivel:
             break
         if m not in ataques:
             ataques.append(m)
-    # Si no aprende suficientes ataques hasta su nivel, se completa al azar (mejor de su tipo)
-    while len(ataques) + len(estrategia) < 4:
-        danos = [t for t in todos if movimientos[t].de_dano and t not in ataques and t not in estrategia
-                 and t not in NO_CONVIENEN]
-        if not danos:
+
+    # El resto, al azar entre todos (como el cuarto de cualquier entrenador). Si todavía no lleva
+    # ningún ataque, el primero al azar es de daño
+    libres = [t for t in todos if t not in NO_CONVIENEN and t not in TRAMPAS]
+    elegidos = ataques + estrategia
+    while len(elegidos) < 4:
+        sin_ataque = not any(movimientos[e].de_dano for e in elegidos)
+        opciones = [t for t in libres if movimientos[t].de_dano] if sin_ataque else libres
+        m = mov._sacar(opciones, elegidos, movimientos, rng)
+        if m is None:
             break
-        suyos = [t for t in danos if movimientos[t].tipo in tipos]
-        ataques.append(rng.choice(suyos if suyos and rng.random() < 0.6 else danos))
-    return ataques[:2] + estrategia + ataques[2:]
+        elegidos.append(m)
+    return elegidos
 
 
 def fuerza_salvajes(datos, pokedex, tramo_de_mapa, percentil, techos=None):
@@ -164,6 +231,11 @@ def fuerza_salvajes(datos, pokedex, tramo_de_mapa, percentil, techos=None):
             if tramo in techos:
                 topes[tramo] = min(topes[tramo], techos[tramo])
     return topes
+
+
+def coincide(trainer, patrones):
+    """Si el entrenador está en la lista (admite comodines: TRAINER_MAXIE_*)."""
+    return any(fnmatch.fnmatchcase(trainer, p) for p in patrones)
 
 
 def tramo_limitado(trainer, limites):
