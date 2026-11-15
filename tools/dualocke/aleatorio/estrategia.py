@@ -144,7 +144,11 @@ def _de_estrategia(datos, plan, primero, rng):
         return [refuerzos[0], rng.choice(["MOVE_SUBSTITUTE", "MOVE_PROTECT", "MOVE_AGILITY"])]
     if estilo == "clima":
         if primero:
-            return [plan["clima"], "MOVE_AURORA_VEIL" if plan["clima"] == "MOVE_SNOWSCAPE" else "MOVE_PROTECT"]
+            # La IA solo pone el clima si le sirve al que está en el campo (BenefitsFromSun y
+            # compañía, en src/battle_ai_field_statuses.c): con Meteorobola o Velo Aurora le sirve
+            # siempre. Con Protección, el primero atacaba y el clima lo ponía el segundo
+            # (test/dualocke_ia_estilos.c).
+            return [plan["clima"], "MOVE_AURORA_VEIL" if plan["clima"] == "MOVE_SNOWSCAPE" else "MOVE_WEATHER_BALL"]
         return ["MOVE_WEATHER_BALL", plan["clima"]]
     if estilo == "estados":
         return rng.sample(ESTADOS, 2)
