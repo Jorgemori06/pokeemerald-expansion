@@ -212,7 +212,7 @@ Regla general: **el as de cada jefe va exactamente al nivel del cap**, el resto 
   - **Regalos** (Castform, fósiles, Beldum, iniciales de Johto, huevo de Wynaut): se quedan con su nivel original, para entrenarlos (con Caramelos Raros a 1 ₽).
   - Lo hace `reescalar_niveles.py` (tabla `ESTATICOS`).
   - **Captura de estáticos (decidido, falta implementarlo encima del PR #17):** de los estáticos normales solo se puede capturar el primero de cada tipo (un Kecleon, un Voltorb, un Electrode), sin gastar la zona.
-- **Evoluciones de los entrenadores normales (hecho):** `tools/dualocke/evolucionar_entrenadores.py` evoluciona sus Pokémon según el nivel. Las evoluciones por nivel van a su nivel normal; las que no son por nivel (piedra, amistad…) van a 30 la primera y a 40 la segunda. Los tres scripts se lanzan en orden: `reescalar_niveles.py`, `equipos_jefes.py` y `evolucionar_entrenadores.py`.
+- **Evoluciones de los entrenadores normales (hecho):** `tools/dualocke/evolucionar_entrenadores.py` evoluciona sus Pokémon según el nivel. Las evoluciones por nivel van a su nivel normal; las que no son por nivel (piedra, amistad…) van a 30 la primera y a 40 la segunda. Los tres scripts se lanzan en orden: `reescalar_niveles.py`, `equipos_jefes.py` y `evolucionar_entrenadores.py`. Después va `ia_entrenadores.py` (la IA de los entrenadores normales, sección 7).
 - El randomizer **no debe tocar los niveles ni el tamaño de los equipos**: solo especies, movimientos, habilidades y objetos. Al cambiar especies, debe mantener la regla de evolucionar según el nivel.
 
 ## 6. Megas, tiendas y evoluciones
@@ -431,29 +431,46 @@ Están en **`tools/dualocke/randomizer_config.json`**, que es el archivo que deb
   - **Sin tope de potencia** (Miguel y Jorge, 31/10/2026). Antes el cuarto llevaba uno según el nivel (40 + 1,5 por nivel, de Jorge). Se quitó porque, con el tope, los movimientos de los Pokémon del jugador eran casi todos de 40 de potencia. Para volver a ponerlo: `"potencia_maxima_del_cuarto": {"base": 40, "por_nivel": 1.5}`.
   - **No se toca** Máximo en la Ruta 120 (equipo fijo).
 
-#### Líderes con estrategia y con la fuerza de los salvajes (Miguel y Jorge, 31/10/2026)
+#### Jefes con estrategia y con la fuerza de los salvajes (Miguel y Jorge, 31/10/2026 y 15/11/2026)
 
 Al jugar, los líderes eran difíciles por desequilibrio, no por cómo jugaban: sacaban Pokémon y movimientos mucho más fuertes que los nuestros. Ahora la dificultad viene de que juegan bien. Está en `tools/dualocke/aleatorio/estrategia.py` y en `"lideres"` del config. **Cambia lo que se decidió en el #27** ("los jefes no llevan mejores movimientos que el resto"): los líderes ya no siguen esa regla.
-- **Quién:** los 8 líderes, el Alto Mando y Plubio (`con_estrategia`).
-- **IA:** `Smart Trainer / Hp Aware / Ace Pokemon` (`ia`). Es la lista de la expansion:
-  - piensa qué movimiento le conviene, cambia de Pokémon con cabeza y conoce tu equipo;
-  - tiene en cuenta los PS;
-  - deja el as para el final.
+- **Quién** (`con_estrategia`, admite comodines):
+  - los 8 líderes, el Alto Mando y Plubio;
+  - desde el gimnasio 3 (Miguel, 15/11/2026), los jefes de mitad de tramo: MAGNO, AQUILES, los admins (TATIANO, SILVINA, MATÍAS), el rival desde la Ruta 119 y BLASCO en la Calle Victoria;
+  - MÁXIMO en la Ruta 120, que tiene el equipo fijo: solo se le pone la IA.
+  - Antes de ERICO, el rival (rutas 103 y 110, y Férrica) y BLASCO en Malvalona se quedan con la IA básica y sus movimientos de siempre.
+- **IA** (`ia`): `Basic Trainer / Smart Switching / Smart Mon Choices / PP Stall Prevention / Randomize Switchin / Know Opponent Party / Hp Aware / Ace Pokemon`.
+  - Piensa qué movimiento le conviene, cambia de Pokémon con cabeza, tiene en cuenta los PS y deja el as para el final.
+  - **Sin trampa (Miguel, 15/11/2026).** Antes era `Smart Trainer`, que incluye `Omniscient`: conocía tus movimientos, tu objeto y tu habilidad aunque no los hubieras enseñado. Ahora sabe qué especies llevas (`Know Opponent Party`), y lo demás solo cuando lo ve en el combate.
   - VITO y LETI, en doble, usan `Double Ace Pokemon`.
-- **Movimientos con plan:**
-  - **El primero pone trampas**, y solo él: Trampa Rocas, Púas, Púas Tóxicas o Red Viscosa, según su tipo (Trampa Rocas si no tiene una de su tipo).
-  - **Los demás llevan movimientos de estrategia** de su tipo o de su papel. Por ejemplo:
-    - Veneno: Tóxico y Púas Tóxicas;
-    - Fuego y Fantasma: Fuego Fatuo;
-    - Eléctrico: Onda Trueno;
-    - Planta: Drenadoras;
-    - Lucha: Corpulencia;
-    - Dragón: Danza Dragón;
-    - Psíquico: Paz Mental y pantallas;
-    - los que pegan físico, Danza Espada; los especiales, Maquinación; los que aguantan, Tóxico y Recuperación.
-  - **Cuántos:** hasta el gimnasio 3, uno de estrategia por Pokémon; después, dos.
-  - **Los ataques salen de lo que aprende por nivel** (las tablas al azar), los mejores para él: de su tipo, potentes y de tipos distintos. Así no pegan con movimientos que el jugador no podría tener. Si no aprende suficientes ataques hasta su nivel, se completa al azar.
+- **Estilos (Miguel, 15/11/2026):** "que cada jefe se sienta diferente sin perder la sensación del randomlocke; no todos tienen que llevar trampas". Sustituye a lo de antes, en lo que el primero de todos los líderes ponía trampas.
+
+  | Estilo | El primero del equipo | Los demás |
+  | --- | --- | --- |
+  | Trampas y arrastre | Trampa Rocas, Púas, Púas Tóxicas o Red Viscosa, y Rugido o Remolino | Rugido o Remolino, y Protección, Tóxico o Mofa |
+  | Espacio Raro | Espacio Raro y una mejora | Los lentos, Espacio Raro; los demás, una mejora y Espacio Raro. Los lentos físicos, Maldición |
+  | Chetarse | Una mejora de su ataque y Sustituto, Protección o Agilidad | Lo mismo |
+  | Clima | Su clima, y Protección (Velo Aurora con nieve) | Meteorobola y su clima |
+  | Estados | Dos de Tóxico, Fuego Fatuo, Onda Trueno, Rayo Confuso, Drenadoras, Bostezo y Deslumbrar | Lo mismo |
+  | Pantallas | Reflejo y Pantalla de Luz | Una mejora y una pantalla |
+  | Aguante | Tóxico, Drenadoras o Fuego Fatuo, y Recuperación, Respiro o Protección | Lo mismo |
+  | Velocidad | Viento Afín y un freno (Onda Trueno, Viento Hielo, Electrotela o Cara Susto) | Un freno, y Agilidad o Viento Afín |
+
+  - **Reparto:** al azar con la semilla, sin repetir dentro de cada grupo. Los 8 líderes llevan los 8 estilos; el Alto Mando y Plubio, cinco distintos; y los jefes de mitad de tramo, siete distintos.
+  - **Por personaje:** MAGNO juega igual en el Monte Cenizo, en su guarida y en el Centro Espacial, y el rival, en todos sus combates.
+  - **Clima:** el del tipo del jefe (Agua y Eléctrico, lluvia; Fuego y Planta, sol; Roca, Tierra y Acero, arena; Hielo, nieve) o uno al azar si no tiene.
+  - **Mejoras:** los que pegan físico, Danza Espada, Corpulencia o Danza Dragón; los especiales, Maquinación, Paz Mental o Danza Aleteo.
+  - Los estilos de cada partida salen en el solucionario (`estilos_de_los_jefes`).
+- **Movimientos de cada Pokémon:** 2 de estrategia de su estilo y 2 "al azar".
+  - **Los 2 al azar:** el mejor ataque de los que aprende por nivel (las tablas al azar) y uno al azar entre todos, como el cuarto de cualquier entrenador.
+  - **Hasta el gimnasio 3:** 1 de estrategia, los 2 mejores ataques de su nivel y 1 al azar.
+  - **Siempre llevan al menos un ataque.**
   - **Nunca cogen ataques que les perjudican:** ni los que debilitan al que los usa o le quitan media vida (Autodestrucción, Explosión, Explosión Bruma, Sacrificio…) ni los que obligan a recargar (Hiperrayo, Giga Impacto…).
+- **Entrenadores normales (Miguel, 15/11/2026; `tools/dualocke/ia_entrenadores.py`):**
+  - En el original casi todos llevan `Check Bad Move`: solo evitan los movimientos que fallan y eligen al azar entre los demás.
+  - **Hasta el gimnasio 4 (CANDELA) se quedan así. Desde entonces llevan `Basic Trainer`**: eligen un buen movimiento y rematan si pueden, como el rival. Las revanchas, también.
+  - Son 462 entrenadores. El script solo toca a los que en el original llevaban `Check Bad Move` y se puede volver a lanzar; el umbral es `TRAMO_BASICA`.
+  - No pasa por el randomizer: está escrito en `trainers.party`, así que también vale sin semilla.
 - **Hasta el gimnasio 3, la fuerza de los salvajes** (`limite_salvajes`):
   - **Quién:** PETRA, MARCIAL y ERICO, el rival en la Ruta 103, Férrica y la Ruta 110, y BLASCO en Malvalona.
   - **Tope:** ninguno de sus Pokémon puede tener más estadísticas base (suma) que el percentil 90 de los salvajes de hierba de los tramos hasta ese gimnasio, con la semilla de la partida. Si hasta ahí no salen evoluciones, el líder tampoco las lleva.
