@@ -104,6 +104,9 @@ def main():
     solucionario["mt"] = {o: movs[m].nombre for o, m in mapa_mts.items()}
     tutores = mts.randomizar_tutores(movs, args.semilla, config, mapa_mts)
     solucionario["tutores"] = {movs[o].nombre: movs[n].nombre for o, n in tutores.items()}
+    errores = mts.comprobar(mapa_mts, tutores)
+    if errores:
+        sys.exit("Dualocke: el randomizer de MT y tutores ha fallado:\n  " + "\n  ".join(errores[:20]))
     aprende = apr.randomizar(pokedex, movs, args.semilla, config)
     errores = apr.comprobar(pokedex, movs, aprende, config)
     if errores:
