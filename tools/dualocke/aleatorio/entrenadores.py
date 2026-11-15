@@ -16,10 +16,14 @@ Reglas (randomizer_config.json, "entrenadores" y "jefes"; decididas por Miguel):
   en con_mega_desde_el_aro) el as lleva mega: su inicial si tiene, y si no, una especie con mega
   del tipo de su inicial (y el inicial pasa al hueco anterior).
 
-Líderes (Miguel y Jorge, 31/10/2026; ver estrategia.py y "lideres" en el config):
-- Los de "con_estrategia" (líderes, Alto Mando y Plubio) llevan movimientos con plan (trampas,
-  estados, chetarse) e IA lista ("ia"), y los de "limite_salvajes" (hasta el gimnasio 3, y el rival
-  y BLASCO hasta ahí) no sacan Pokémon más fuertes que los salvajes que se han podido encontrar.
+Jefes con estrategia (Miguel y Jorge, 31/10/2026 y 15/11/2026; ver estrategia.py y "lideres" en el
+config):
+- Los de "con_estrategia" (líderes, Alto Mando, Plubio y, desde el gimnasio 3, el rival, BLASCO,
+  MAGNO, AQUILES y los admins) llevan la IA lista ("ia") y los movimientos de su estilo (trampas,
+  espacio raro, chetarse, clima...): cada jefe juega de una manera.
+- MÁXIMO en la Ruta 120 tiene el equipo fijo: solo se le pone la IA.
+- Los de "limite_salvajes" (hasta el gimnasio 3, y el rival y BLASCO hasta ahí) no sacan Pokémon
+  más fuertes que los salvajes que se han podido encontrar.
 
 Al cambiar la especie se quitan los movimientos, la habilidad y el sexo que tenía escritos (no
 valdrían para la nueva). Los movimientos nuevos los elige movimientos.py (3 de los que aprende
@@ -187,10 +191,31 @@ class Generador:
         self.lineas_familia = {}   # (familia, especie original) -> raíz nueva
         # Líderes: estrategia, IA y tope de fuerza (estrategia.py)
         cfg_lideres = config.get("lideres", {})
-        self.estrategas = set(cfg_lideres.get("con_estrategia", []))
+        self.estrategas = cfg_lideres.get("con_estrategia", [])   # admite comodines
         self.ia_lideres = cfg_lideres.get("ia")
+        self.estilos = {}   # personaje -> estilo, para el solucionario
         self.limites = cfg_lideres.get("limite_salvajes", {})
         self.topes = topes or {}   # {tramo: tope de estadísticas base de los salvajes}
+
+    def _es_estratega(self, trainer):
+        return est.coincide(trainer, self.estrategas)
+
+    def _con_ia(self, cabecera):
+        """Los datos del entrenador con la IA de los jefes con estrategia."""
+        if not self.ia_lideres:
+            return cabecera
+        ia = self.ia_lideres
+        if re.search(r"^Double Battle:\s*Yes", cabecera, re.M):
+            ia = ia.replace("Ace Pokemon", "Double Ace Pokemon")
+        return re.sub(r"^AI:.*$", "AI: " + ia, cabecera, flags=re.M)
+
+    def _plan(self, trainer, tipos_jefe):
+        """El plan del equipo de un jefe con estrategia (estrategia.plan_de)."""
+        # Hasta el gimnasio 3 (los que tienen tope), un movimiento de estrategia; después, dos
+        n_estrategia = 1 if self._tope(trainer) is not None else 2
+        plan = est.plan_de(self.semilla, trainer, tipos_jefe or (), n_estrategia)
+        self.estilos[est.personaje(trainer)] = est.NOMBRE_ESTILO[plan["estilo"]]
+        return plan
 
     def _tope(self, trainer):
         """Tope de estadísticas base para este entrenador, o None si no tiene."""
@@ -205,7 +230,7 @@ class Generador:
 
     def _equipar(self, trainer, i, especie, nivel, objeto, jefe, usados, estrategia=None):
         """Movimientos (todos los entrenadores) y objeto (los jefes, menos las megapiedras).
-        `estrategia`: (movimientos de estrategia, va primero) para los líderes."""
+        `estrategia`: (plan del equipo, va primero) para los jefes con estrategia."""
         if not self.movs:
             return None, objeto
         rng = random.Random(f"{self.semilla}|movimientos|{trainer}|{i}")
@@ -277,6 +302,10 @@ class Generador:
         rng = random.Random(f"{self.semilla}|rival|{lugar}|{jugador}")
 
         trozos = _pokemons(bloque)
+        plan = None
+        if self._es_estratega(trainer):
+            trozos[0] = self._con_ia(trozos[0])
+            plan = self._plan(trainer, tipos_inicial)
         indices = [i for i in range(1, len(trozos)) if trozos[i].strip()]
         datos = []
         for i in indices:
@@ -326,7 +355,8 @@ class Generador:
                 continue
             especie, objeto_nuevo = nuevas[i]
             objeto = objeto_nuevo or ("" if objeto_nuevo is None and _es_megapiedra(objeto) else objeto)
-            movimientos, objeto = self._equipar(trainer, i, especie, nivel, objeto, True, usados)
+            movimientos, objeto = self._equipar(trainer, i, especie, nivel, objeto, True, usados,
+                                                (plan, i == datos[0][0]) if plan else None)
             trozos[i] = _reescribir(lineas, especie, objeto, movimientos)
             cambios.append(especie)
         return "\n\n".join(trozos), cambios
@@ -343,6 +373,11 @@ class Generador:
             trainer = cabecera[4:-4]
             familia = _familia(trainer)
             if trainer in FIJOS or "PLACEHOLDER" in trainer:
+                # Equipo fijo: no se toca. Si es un jefe con estrategia, solo se le pone la IA
+                if self._es_estratega(trainer):
+                    trozos = _pokemons(bloque)
+                    trozos[0] = self._con_ia(trozos[0])
+                    bloque = "\n\n".join(trozos)
                 salida.append(cabecera + bloque)
                 continue
             rival = RIVAL.match(trainer)
@@ -357,16 +392,13 @@ class Generador:
             jefe = bool(tipos_as) or familia in JEFES_LIGA
             rng = random.Random(f"{self.semilla}|entrenadores|{trainer}")
             tope = self._tope(trainer)
-            estratega = trainer in self.estrategas
-            # Hasta el gimnasio 3 (los que tienen tope), un movimiento de estrategia; después, dos
-            n_estrategia = 1 if tope is not None else 2
+            estratega = self._es_estratega(trainer)
+            plan = None
 
             trozos = _pokemons(bloque)
-            if estratega and self.ia_lideres:
-                ia = self.ia_lideres
-                if re.search(r"^Double Battle:\s*Yes", trozos[0], re.M):
-                    ia = ia.replace("Ace Pokemon", "Double Ace Pokemon")
-                trozos[0] = re.sub(r"^AI:.*$", "AI: " + ia, trozos[0], flags=re.M)
+            if estratega:
+                trozos[0] = self._con_ia(trozos[0])
+                plan = self._plan(trainer, tipos_as)
             # trozos[0] es lo que hay entre la cabecera y el primer Pokémon (los datos del
             # entrenador); el resto, un Pokémon por trozo
             indices = [i for i in range(1, len(trozos)) if trozos[i].strip()]
@@ -395,8 +427,8 @@ class Generador:
                     raiz = self._raiz_para(familia, original, raices, usadas, rng, nivel, tope)
                     nueva = self.pokedex.evolucionar(raiz, nivel, random.Random(f"{self.semilla}|{familia}|{raiz}"))
                 usadas.add(raiz)
-                plan = (n_estrategia, n == 0) if estratega else None
-                movimientos, objeto = self._equipar(trainer, i, nueva, nivel, objeto, jefe, usados, plan)
+                movimientos, objeto = self._equipar(trainer, i, nueva, nivel, objeto, jefe, usados,
+                                                    (plan, n == 0) if plan else None)
                 trozos[i] = _reescribir(lineas, nueva, objeto, movimientos)
                 cambios.append(nueva)
             solucionario[trainer] = cambios
