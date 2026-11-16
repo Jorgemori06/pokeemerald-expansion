@@ -55,7 +55,9 @@ TRAMOS = {
         "RUSTBORO_CITY", "RUSTBORO_CITY_GYM"],
     2: ["ROUTE116", "RUSTURF_TUNNEL", "DEWFORD_TOWN", "GRANITE_CAVE_*", "ROUTE106",
         "DEWFORD_TOWN_GYM",
-        "MARISMA_AZULIZA"],  # al oeste de AZULIZA (crear_marisma_azuliza.py; Miguel, 17/11/2026)
+        "MARISMA_AZULIZA",  # al oeste de AZULIZA (crear_marisma_azuliza.py; Miguel, 17/11/2026)
+        # al norte del BOSQUE PETALIA, con CORTE (crear_bosque_frondoso.py; Miguel, 17/11/2026)
+        "BOSQUE_FRONDOSO", "MANSION_OLVIDADA", "MANSION_OLVIDADA_DESVAN"],
     3: ["ROUTE109", "ROUTE109_SEASHORE_HOUSE", "SLATEPORT_CITY",
         "SLATEPORT_CITY_OCEANIC_MUSEUM_*", "ROUTE110", "MAUVILLE_CITY", "ROUTE117",
         "MAUVILLE_CITY_GYM", "ROUTE110_TRICK_HOUSE_PUZZLE1"],
@@ -197,7 +199,9 @@ def interpolar(v, vmin, vmax, nmin, nmax):
 #   los salvajes de las semillas en curso.
 ENTRENADORES_ISLAS = {"TRAINER_TERRY", "TRAINER_CINDY_2", "TRAINER_MIKE_1", "TRAINER_AMY_AND_LIV_3",
                       "TRAINER_GINA_AND_MIA_2", "TRAINER_LUCAS_2", "TRAINER_GRUNT_UNUSED",
-                      "TRAINER_DUDLEY", "TRAINER_KAYLEE"}
+                      "TRAINER_DUDLEY", "TRAINER_KAYLEE",
+                      # BOSQUE FRONDOSO y MANSIÓN OLVIDADA: el equipo lo escribe zonas_nuevas.py
+                      "TRAINER_BRENDAN_PLACEHOLDER", "TRAINER_MAY_PLACEHOLDER", "TRAINER_LEAF"}
 
 
 def calcular_entrenadores(base, mapas):
@@ -402,6 +406,7 @@ ESTATICOS = [
     ("data/maps/RuinasArenosas_Camara/scripts.inc", "MAP_RUINAS_ARENOSAS_CAMARA", "tope"),
     ("data/maps/GrutaIgnea_Camara/scripts.inc", "MAP_GRUTA_IGNEA_CAMARA", "tope"),
     ("data/maps/IslaNevada_Cueva/scripts.inc", "MAP_ISLA_NEVADA_CUEVA", "tope"),
+    ("data/maps/MansionOlvidada_Desvan/scripts.inc", "MAP_MANSION_OLVIDADA_DESVAN", "tope"),
 ]
 
 

@@ -1350,7 +1350,7 @@
 #define FLAG_SYS_POKEMON_GET                         (SYSTEM_FLAGS + 0x0) // FLAG_0x860
 #define FLAG_SYS_POKEDEX_GET                         (SYSTEM_FLAGS + 0x1)
 #define FLAG_SYS_POKENAV_GET                         (SYSTEM_FLAGS + 0x2)
-#define FLAG_UNUSED_0x863                            (SYSTEM_FLAGS + 0x3) // Unused Flag
+#define FLAG_DUALOCKE_GUARDIAN_MANSION               (SYSTEM_FLAGS + 0x3) // Dualocke: guardián de la MANSIÓN OLVIDADA vencido o capturado
 #define FLAG_SYS_GAME_CLEAR                          (SYSTEM_FLAGS + 0x4)
 #define FLAG_SYS_CHAT_USED                           (SYSTEM_FLAGS + 0x5)
 #define FLAG_UNLOCKED_TRENDY_SAYINGS                 (SYSTEM_FLAGS + 0x6)
@@ -1534,15 +1534,15 @@
 #define FLAG_UNUSED_0x8FD                           (SYSTEM_FLAGS + 0x9D) // Unused Flag
 #define FLAG_UNUSED_0x8FE                           (SYSTEM_FLAGS + 0x9E) // Unused Flag
 #define FLAG_UNUSED_0x8FF                           (SYSTEM_FLAGS + 0x9F) // Unused Flag
-#define FLAG_UNUSED_0x900                           (SYSTEM_FLAGS + 0xA0) // Unused Flag
-#define FLAG_UNUSED_0x901                           (SYSTEM_FLAGS + 0xA1) // Unused Flag
-#define FLAG_UNUSED_0x902                           (SYSTEM_FLAGS + 0xA2) // Unused Flag
-#define FLAG_UNUSED_0x903                           (SYSTEM_FLAGS + 0xA3) // Unused Flag
-#define FLAG_UNUSED_0x904                           (SYSTEM_FLAGS + 0xA4) // Unused Flag
+#define FLAG_ITEM_BOSQUE_SILVER_POWDER     0x900 // Dualocke: objeto del BOSQUE FRONDOSO y la MANSIÓN OLVIDADA
+#define FLAG_ITEM_BOSQUE_BIG_ROOT          0x901 // Dualocke: objeto del BOSQUE FRONDOSO y la MANSIÓN OLVIDADA
+#define FLAG_ITEM_BOSQUE_REAPER_CLOTH      0x902 // Dualocke: objeto del BOSQUE FRONDOSO y la MANSIÓN OLVIDADA
+#define FLAG_ITEM_BOSQUE_CLEANSE_TAG       0x903 // Dualocke: objeto del BOSQUE FRONDOSO y la MANSIÓN OLVIDADA
+#define FLAG_ITEM_BOSQUE_DUSK_STONE        0x904 // Dualocke: objeto del BOSQUE FRONDOSO y la MANSIÓN OLVIDADA
 #define FLAG_UNUSED_0x905                           (SYSTEM_FLAGS + 0xA5) // Unused Flag
 #define FLAG_UNUSED_0x906                           (SYSTEM_FLAGS + 0xA6) // Unused Flag
 #define FLAG_UNUSED_0x907                           (SYSTEM_FLAGS + 0xA7) // Unused Flag
-#define FLAG_UNUSED_0x908                           (SYSTEM_FLAGS + 0xA8) // Unused Flag
+#define FLAG_ITEM_TICKET_BOSQUE_FRONDOSO   0x908 // Dualocke: Ticket-Recuerdo en el BOSQUE FRONDOSO
 #define FLAG_UNUSED_0x909                           (SYSTEM_FLAGS + 0xA9) // Unused Flag
 #define FLAG_UNUSED_0x90A                           (SYSTEM_FLAGS + 0xAA) // Unused Flag
 #define FLAG_UNUSED_0x90B                           (SYSTEM_FLAGS + 0xAB) // Unused Flag

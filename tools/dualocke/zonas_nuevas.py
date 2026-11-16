@@ -38,6 +38,8 @@ CUEVA_GRUTA = ["SLUGMA", "NUMEL", "SALANDIT", "SIZZLIPEDE", "ROLYCOLY", "LITWICK
                "HEATMOR", "MAGBY", "CHARCADET", "TURTONATOR", "TORKOAL", "LARVESTA"]
 RUINAS = ["BALTOY", "YAMASK", "GOLETT", "BRONZOR", "SIGILYPH", "RUNERIGUS",
           "ELGYEM", "CLAYDOL", "BRONZONG", "COFAGRIGUS", "SPIRITOMB", "ARCHEN"]
+MANSION = ["GASTLY", "SHUPPET", "DUSKULL", "MISDREAVUS", "LITWICK", "PHANTUMP",
+           "PUMPKABOO", "SINISTEA", "GREAVARD", "DRIFLOON", "ROTOM", "DREEPY"]
 SALVAJES = {
     "MAP_SOUTHERN_ISLAND_EXTERIOR": {
         "fishing_mons": PESCA_TROPICAL,
@@ -92,6 +94,18 @@ SALVAJES = {
         "fishing_mons": ["MAGIKARP", "BARBOACH", "BARBOACH", "POLIWAG", "GOLDEEN",
                          "WISHIWASHI", "BARBOACH", "TYMPOLE", "CHEWTLE", "BASCULIN"],
     },
+    # BOSQUE FRONDOSO (crear_bosque_frondoso.py): bichos y plantas de todas las generaciones. Se pesca en
+    # la charca; el agua de surf, para cuando se vuelva con SURF
+    "MAP_BOSQUE_FRONDOSO": {
+        "land_mons": ["SEWADDLE", "NINCADA", "SEEDOT", "SKWOVET", "PIKIPEK", "PINECO",
+                      "FOMANTIS", "CUTIEFLY", "MORELULL", "PETILIL", "SCYTHER", "HERACROSS"],
+        "water_mons": ["LOTAD", "SURSKIT", "PSYDUCK", "LOTAD", "WOOPER"],
+        "fishing_mons": ["MAGIKARP", "GOLDEEN", "POLIWAG", "GOLDEEN", "PSYDUCK", "POLIWAG",
+                         "GOLDEEN", "LOTAD", "MARILL", "DRATINI"],
+    },
+    # MANSIÓN OLVIDADA: fantasmas en el suelo de madera (los del barco tienen salvajes)
+    "MAP_MANSION_OLVIDADA": {"land_mons": MANSION},
+    "MAP_MANSION_OLVIDADA_DESVAN": {"land_mons": MANSION},
     "MAP_ISLA_NEVADA_CUEVA": {
         "land_mons": ["SNORUNT", "SWINUB", "SNOVER", "CUBCHOO", "VANILLITE", "SNOM",
                       "BERGMITE", "SNEASEL", "CETODDLE", "CRYOGONAL", "EISCUE", "FRIGIBAX"],
@@ -146,6 +160,31 @@ NUEVOS = {
         "cabecera": [("Name", "MARGARITA"), ("Class", "Aroma Lady"), ("Pic", "Aroma Lady"), ("Gender", "Female"),
                      ("Music", "Female"), ("Double Battle", "No"), ("AI", "Check Bad Move")],
         "equipo": ["Shroomish", "Paras"],
+    },
+    "TRAINER_SEBAS": {
+        "mapa": "MAP_BOSQUE_FRONDOSO",
+        "cabecera": [("Name", "SEBAS"), ("Class", "Bug Catcher"), ("Pic", "Bug Catcher"), ("Gender", "Male"),
+                     ("Music", "Male"), ("Double Battle", "No"), ("AI", "Check Bad Move")],
+        "equipo": ["Dustox", "Ninjask"],
+    },
+    # Estos tres existían sin usar (placeholders de Esmeralda): se reescribe su bloque entero
+    "TRAINER_BRENDAN_PLACEHOLDER": {
+        "mapa": "MAP_BOSQUE_FRONDOSO",
+        "cabecera": [("Name", "OLIVIA"), ("Class", "Picnicker"), ("Pic", "Picnicker"), ("Gender", "Female"),
+                     ("Music", "Girl"), ("Double Battle", "No"), ("AI", "Check Bad Move")],
+        "equipo": ["Nuzleaf", "Skiploom"],
+    },
+    "TRAINER_MAY_PLACEHOLDER": {
+        "mapa": "MAP_MANSION_OLVIDADA",
+        "cabecera": [("Name", "ELVIRA"), ("Class", "Hex Maniac"), ("Pic", "Hex Maniac"), ("Gender", "Female"),
+                     ("Music", "Suspicious"), ("Double Battle", "No"), ("AI", "Check Bad Move")],
+        "equipo": ["Shuppet", "Duskull", "Misdreavus"],
+    },
+    "TRAINER_LEAF": {
+        "mapa": "MAP_MANSION_OLVIDADA",
+        "cabecera": [("Name", "ALFONSO"), ("Class", "Gentleman"), ("Pic", "Gentleman"), ("Gender", "Male"),
+                     ("Music", "Rich"), ("Double Battle", "No"), ("AI", "Check Bad Move")],
+        "equipo": ["Drifloon", "Litwick"],
     },
     "TRAINER_ROQUE": {
         "mapa": "MAP_GRUTA_IGNEA",

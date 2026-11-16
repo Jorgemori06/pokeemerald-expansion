@@ -856,9 +856,9 @@
 #define TRAINER_ALVARO                      849
 #define TRAINER_EVERETT                     850
 #define TRAINER_RED                         851
-#define TRAINER_LEAF                        852
-#define TRAINER_BRENDAN_PLACEHOLDER         853
-#define TRAINER_MAY_PLACEHOLDER             854
+#define TRAINER_LEAF                        852 // Dualocke: ALFONSO, caballero de la MANSIÓN OLVIDADA (zonas_nuevas.py)
+#define TRAINER_BRENDAN_PLACEHOLDER         853 // Dualocke: OLIVIA, campista del BOSQUE FRONDOSO (zonas_nuevas.py)
+#define TRAINER_MAY_PLACEHOLDER             854 // Dualocke: ELVIRA, bruja de la MANSIÓN OLVIDADA (zonas_nuevas.py)
 #define TRAINER_STEVEN_ROUTE_120            855 // Dualocke: Máximo en la Ruta 120, da el Aro Mega
 #define TRAINER_IGOR                        856 // Dualocke: fogonero de la GRUTA ÍGNEA (zonas_nuevas.py)
 #define TRAINER_ROQUE                       857 // Dualocke: montañero de la GRUTA ÍGNEA (zonas_nuevas.py)
@@ -867,12 +867,13 @@
 #define TRAINER_SOLEDAD                     860 // Dualocke: experta del DESIERTO PROFUNDO (zonas_nuevas.py)
 #define TRAINER_TOMAS                       861 // Dualocke: pescador de la MARISMA AZULIZA (zonas_nuevas.py)
 #define TRAINER_MARGARITA                   862 // Dualocke: dama aroma de la MARISMA AZULIZA (zonas_nuevas.py)
+#define TRAINER_SEBAS                       863 // Dualocke: cazabichos del BOSQUE FRONDOSO (zonas_nuevas.py)
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 8 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT_EMERALD     863
+#define TRAINERS_COUNT_EMERALD     864
 #define MAX_TRAINERS_COUNT_EMERALD 864
 
 #if IS_FRLG

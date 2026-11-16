@@ -160,6 +160,19 @@ OBJETOS_DESIERTO = [
 OBJETOS_MARISMA = [("MIRACLE_SEED", "MarismaAzuliza", "bola", None)]
 TICKETS_MARISMA = [("MARISMA_AZULIZA", "MarismaAzuliza", "bola", None)]
 
+# BOSQUE FRONDOSO y MANSIÓN OLVIDADA (crear_bosque_frondoso.py): de bicho y planta en el bosque, de
+# fantasma en la mansión, y un Ticket-Recuerdo en el bosque. Con semilla, al azar.
+# Se movieron después a mano en los map.json: el script los ponía junto a SEBAS y ELVIRA (en su línea de
+# visión) y, en el DESVÁN, en la casilla a la que se baja al entrar por la puerta.
+OBJETOS_BOSQUE = [
+    ("SILVER_POWDER", "BosqueFrondoso", "bola", None),
+    ("BIG_ROOT", "BosqueFrondoso", "oculta", None),
+    ("REAPER_CLOTH", "MansionOlvidada", "bola", None),
+    ("CLEANSE_TAG", "MansionOlvidada", "bola", None),
+    ("DUSK_STONE", "MansionOlvidada_Desvan", "bola", None),
+]
+TICKETS_BOSQUE = [("BOSQUE_FRONDOSO", "BosqueFrondoso", "bola", None)]
+
 # Objetos competitivos de generaciones nuevas (misma estructura). Los más fuertes (Pañuelo
 # Elegido, Chaleco Asalto, Gafas Elegidas, Vidasfera) van a partir del tramo 6.
 COMPETITIVOS = [
@@ -281,6 +294,8 @@ GRUPOS = [
     (TICKETS, "FLAG_ITEM_TICKET_", 0x021, 0x04F, "Ticket-Recuerdo en el mapa", "HEART_SCALE"),
     (TICKETS_OCULTOS, "FLAG_ITEM_TICKET_", 0x4E5, 0x4EF, "Ticket-Recuerdo oculto en el mapa", "HEART_SCALE"),
     (OBJETOS_ISLAS, "FLAG_ITEM_ISLA_", 0x8E5, 0x8EF, "objeto de las islas del ferry", None),
+    (OBJETOS_BOSQUE, "FLAG_ITEM_BOSQUE_", 0x900, 0x907, "objeto del BOSQUE FRONDOSO y la MANSIÓN OLVIDADA", None),
+    (TICKETS_BOSQUE, "FLAG_ITEM_TICKET_", 0x908, 0x908, "Ticket-Recuerdo en el BOSQUE FRONDOSO", "HEART_SCALE"),
     (OBJETOS_MARISMA, "FLAG_ITEM_MARISMA_", 0x88F, 0x88F, "objeto de la MARISMA AZULIZA", None),
     (TICKETS_MARISMA, "FLAG_ITEM_TICKET_", 0x8E3, 0x8E3, "Ticket-Recuerdo en la MARISMA AZULIZA", "HEART_SCALE"),
     (OBJETOS_DESIERTO, "FLAG_ITEM_DESIERTO_", 0x8F0, 0x8F5, "objeto del DESIERTO PROFUNDO y las RUINAS ARENOSAS", None),
@@ -288,7 +303,8 @@ GRUPOS = [
     (OBJETOS_NEVADA, "FLAG_ITEM_NEVADA_", 0x8FA, 0x8FF, "objeto de la ISLA NEVADA", None),
 ]
 COMPORTAMIENTOS_OK = {"MB_NORMAL", "MB_TALL_GRASS", "MB_LONG_GRASS", "MB_SHORT_GRASS", "MB_DEEP_SAND",
-                      "MB_SAND", "MB_CAVE", "MB_ASHGRASS", "MB_FOOTPRINTS"}
+                      "MB_SAND", "MB_CAVE", "MB_ASHGRASS", "MB_FOOTPRINTS",
+                      "MB_INDOOR_ENCOUNTER"}  # el suelo de madera del barco (MANSIÓN OLVIDADA)
 
 
 def comportamientos():
