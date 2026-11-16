@@ -389,6 +389,29 @@ Qué mira:
 
 Las rarezas del juego original (puertas del ferry fuera del mapa…) están en `ORIGINALES`.
 
+### MARISMA AZULIZA (hecho, Miguel, 17/11/2026; falta probarlo)
+
+- **Dónde:** al oeste de PUEBLO AZULIZA, pegada al pueblo (conexión por el borde, sin pantalla de carga). Se llega andando por la arena del oeste del pueblo: **tramo 2** (cap 23).
+- **El mapa** (36 × 20), con los gráficos de AZULIZA (General + Dewford):
+  - borde de árboles como el del pueblo;
+  - hierba con manchas de hierba alta y flores;
+  - dos charcas (copiadas de la RUTA 123 y la RUTA 102);
+  - siempre **llueve**;
+  - cartel a la entrada.
+- **Todo lo hace `tools/dualocke/crear_marisma_azuliza.py`.** El mapa va al final del grupo de AZULIZA y de `layouts.json`.
+- **Zona de captura propia:** `MAPSEC_MARISMA_AZULIZA`, al final de la lista. `HOENN_EXTRA_MAPSEC_LAST` pasa a ser esa: 109 bits.
+  - Se ha añadido una variable de zonas, `VAR_DUALOCKE_ZONES_7` (era `VAR_UNUSED_0x40FE`, sin usar): ahora caben 128 zonas.
+  - En las partidas guardadas vale 0, así que no se pierde nada.
+- **Entrenadores (2, nuevos), a nivel 19-20:**
+  - TOMÁS, pescador (`TRAINER_TOMAS`, 861): Barboach y Lotad.
+  - MARGARITA, dama aroma (`TRAINER_MARGARITA`, 862): Shroomish y Paras.
+  - `TRAINERS_COUNT_EMERALD` pasa a 863: queda 1 hueco.
+- **Salvajes:**
+  - Hierba: Wooper, Lotad, Surskit, Yanma, Tympole, Shroomish, Croagunk, Paras, Shellos, Stunfisk, Dewpider y, raro, Goomy.
+  - Pesca en las charcas con la CAÑA VIEJA (la dan en AZULIZA): Barboach, Poliwag, Goldeen, Wishiwashi, Tympole, Chewtle, Basculin…
+  - Surf, para cuando se vuelva: Surskit, Lotad, Wooper, Poliwag y Chewtle.
+- **Objetos:** Semilla Milagro (`FLAG_ITEM_MARISMA_MIRACLE_SEED`, 0x88F) y un Ticket-Recuerdo (`FLAG_ITEM_TICKET_MARISMA_AZULIZA`, 0x8E3), los dos en la hierba alta.
+
 ### DESIERTO PROFUNDO y RUINAS ARENOSAS (hecho, Miguel, 16/11/2026; falta probarlo)
 
 `ZONAS.md`, propuesta 5, y las ruinas que pidió Miguel ("el desierto profundo y unas ruinas").
@@ -772,7 +795,7 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
   - Tests en `test/dualocke.c` (`make check TESTS="Dualocke"`).
   - **Aviso al morir (hecho, Miguel, 24/10/2026):** cuando se debilita un Pokémon tuyo en un combate en el que cuentan las vidas, en vez de "X fainted!" sale "X has died! Lives left: N." (las vidas que quedarán al acabar el combate). Si ya no quedan vidas, o se han debilitado todos, sale "X has died! The locke is lost!". Los Pokémon del compañero (combates dobles con compañero) no cuentan. En los tests de la expansion se deja el texto original. Código: `src/dualocke_aviso.c`, enganchado en `BufferStringBattle` (`src/battle_message.c`).
 - Combate con Máximo en la Ruta 120 que da el Mega-Aro (Jorge, sección 6).
-- Primera captura por zona para los salvajes (Jorge, sección 4). Las zonas gastadas se guardan en `VAR_DUALOCKE_ZONES_0` a `_6` (7 variables libres, un bit por zona; no gasta flags). Tests en `test/dualocke.c`.
+- Primera captura por zona para los salvajes (Jorge, sección 4). Las zonas gastadas se guardan en `VAR_DUALOCKE_ZONES_0` a `_7` (8 variables libres, un bit por zona; no gasta flags; la `_7` se añadió el 17/11/2026 con la MARISMA AZULIZA). Tests en `test/dualocke.c`.
 - Caja de prohibidos (Jorge, sección 4): regalos, eventos, fósiles, estáticos, huevos e intercambios repetidos o legendarios van a la caja 13 ("VETADOS"), bloqueada hasta que dejan de ser repetidos.
 - Randomizer completo (Jorge, sección 7) y traducción al español de la historia (Miguel y Jorge, sección 8).
 - Bolsillos Medicinas y Megapiedras en la mochila (Jorge, sección 6).

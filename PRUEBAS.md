@@ -33,6 +33,15 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 - [ ] **Tiendas:** una compra por objeto (salvo Balls, Repelentes, Bayas y Caramelos), y el segundo dependiente en las ciudades.
 - [ ] **Caps de nivel:** al llegar al cap no se gana experiencia y los Caramelos Raros no funcionan por encima.
 
+### MARISMA AZULIZA (desde el 17/11/2026)
+
+- [ ] **Entrada:** desde la arena del oeste de PUEBLO AZULIZA se pasa a la marisma andando, sin pantalla de carga, y se vuelve igual.
+- [ ] **La unión con el pueblo:** que los árboles y la arena sigan bien por el borde (filas 3 a 16).
+- [ ] **Lluvia** y cartel "MARISMA AZULIZA". Es una zona de captura nueva: comprobar que la primera captura cuenta aquí y no en AZULIZA.
+- [ ] **Partida guardada de antes:** las zonas ya gastadas siguen gastadas (la variable nueva empieza a 0).
+- [ ] **TOMÁS y MARGARITA** te ven y luchan; los dos objetos de la hierba alta se pueden coger.
+- [ ] **Pesca** en las dos charcas con la CAÑA VIEJA.
+
 ### DESIERTO PROFUNDO y RUINAS ARENOSAS (desde el 16/11/2026)
 
 - [ ] **Entrada:** el montículo nuevo del desierto de la RUTA 111 (al este, abajo) lleva al DESIERTO PROFUNDO, y su salida devuelve al mismo sitio.
