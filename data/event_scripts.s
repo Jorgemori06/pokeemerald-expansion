@@ -499,6 +499,9 @@ gStdScripts_End::
 	.include "data/maps/BattleFrontier_BattleTowerBattleRoom/scripts.inc"
 	.include "data/maps/SouthernIsland_Exterior/scripts.inc"
 	.include "data/maps/SouthernIsland_Interior/scripts.inc"
+	.include "data/maps/GrutaIgnea/scripts.inc" @ Dualocke: zonas nuevas (crear_gruta_ignea.py, crear_isla_nevada.py)
+	.include "data/maps/IslaNevada/scripts.inc"
+	.include "data/maps/IslaNevada_Cueva/scripts.inc"
 	.include "data/maps/SafariZone_RestHouse/scripts.inc"
 	.include "data/maps/SafariZone_Northeast/scripts.inc"
 	.include "data/maps/SafariZone_Southeast/scripts.inc"

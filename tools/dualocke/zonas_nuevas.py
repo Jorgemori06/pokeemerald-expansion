@@ -169,7 +169,12 @@ def entrenadores():
             texto = texto[:actual[1]] + nuevo + texto[actual[2]:]
         else:
             _, _, fin = next(b for b in bloques(texto) if b[0] == DESPUES_DE)
-            texto = texto[:fin] + nuevo + texto[fin:]
+            antes = texto[:fin]
+            # El último de Esmeralda va al final del archivo, sin línea en blanco detrás, y
+            # trainerproc la necesita antes de cada "=== TRAINER_X ===" (Jorge, 16/11/2026)
+            if not antes.endswith(salto + salto):
+                antes = antes.rstrip("\r\n") + salto + salto
+            texto = antes + nuevo + texto[fin:]
     with open(TRAINERS, "w", encoding="utf-8", newline="") as f:
         f.write(texto)
 
