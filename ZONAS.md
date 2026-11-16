@@ -57,8 +57,20 @@ Los números son los del mapa (`mundo_propuestas.png`, en el PR). Los tramos son
 | 3 | **Isla Volcánica** | Al sur de la RUTA 134 | 8 | Lava y sol | Medio-alto |
 | 4 | **Isla Arenosa** | Al este de la RUTA 127 | 8 | Playa y dunas con tormenta de arena | Medio |
 | 6 | **Marisma** | Al oeste de AZULIZA | 2 | La del estudio del #75 | Medio |
+| 9 | **BOSQUE PETALIA frondoso y mansión abandonada** | Un camino nuevo desde el BOSQUE PETALIA | 1-2 (bosque) y más tarde (mansión) | Bosque más cerrado y oscuro, con hierba alta y entrenadores, y al fondo una mansión abandonada con fantasmas | Medio-alto |
+| 10 | **Playa volcánica del MONTE PÍRICO** | Pegada a la RUTA 122, al oeste o al este | 7 | Arena oscura, aguas termales y rocas volcánicas, con sol | Medio |
+| 11 | **Cumbre de la CASCADA METEORO** | Al norte de la RUTA 115 (borde libre) o por una salida nueva de la CASCADA METEORO | 4-6 | Montaña escarpada con pisos a distintas alturas y la cima nevada | Medio-alto |
 
 - **Islas "como las del Ultravuelo":** aquí no se vuela, así que se llega surfeando. Cada isla nueva es un mapa propio pegado al borde de una ruta de mar: se surfea hacia fuera de la ruta y se entra en la isla sin pantalla de carga, como entre dos rutas. Así cada isla tiene su zona de captura y sus salvajes.
+- **Propuestas de Miguel del 16/11/2026 (9, 10 y 11):**
+  - **BOSQUE PETALIA (9):** el bosque es un mapa de 48 × 44 sin conexiones, con salidas solo a la RUTA 104. La zona nueva sería otro mapa al que se entra por un camino entre los árboles, con el clima a la sombra (`WEATHER_SHADE`) y más hierba alta. La mansión:
+    - **Fuera:** casas y vallas de los tilesets `Rustboro` y `Petalburg`.
+    - **Dentro:** los interiores de casa (`GenericBuilding`) o del BARCO ABANDONADO, que ya tiene aire de sitio abandonado. Con los tilesets de Rojo Fuego estaría la Mansión Pokémon, que es justo eso.
+    - Como está al principio del juego, la mansión podría abrirse más tarde (con Corte o con una llave), para meter fantasmas de nivel más alto y premios mejores.
+  - **MONTE PÍRICO (10):** la RUTA 122 es un mapa de agua de 40 × 40 con la isla del monte, sin entrenadores, y tiene libres los dos lados. La playa sería un mapa pegado a uno de ellos, con el tileset de LAVACALDA (arena, roca volcánica, aguas termales) y sol en combate.
+  - **CASCADA METEORO (11):** es todo cueva. La montaña sería un mapa exterior nuevo:
+    - Acantilados en escalones, como la RUTA 115, con caminos que suben con la Bici Acrobática o la Bici Carrera, y rocas de Golpe Roca y de Fuerza.
+    - Abajo, clima normal; arriba, un mapa de cima con nieve cayendo (nieve en combate).
 - **Dentro de cada zona:** salvajes propios (hierba, agua, pesca), 2-4 entrenadores con recompensa, objetos (megapiedras, competitivos, Ticket-Recuerdo) y algún NPC con un regalo o un combate especial.
 
 ## 4. Límites técnicos
@@ -86,4 +98,6 @@ Los números son los del mapa (`mundo_propuestas.png`, en el PR). Los tramos son
 6. **Marisma de AZULIZA** (6).
 7. **Opcional:** traer los tilesets de Rojo Fuego para más hielo y ruinas.
 
-Cada zona usa una de las 8 zonas de captura libres. Con estas 7 nuevas (todas menos el ferry, cuyas islas ya tienen zona) quedaría una; si hacen falta más, se usa la variable 0x40FE.
+- **Después:** BOSQUE PETALIA frondoso (9), playa volcánica del MONTE PÍRICO (10) y cumbre de la CASCADA METEORO (11).
+
+**Zonas de captura:** cada zona nueva usa una. Con las 10 nuevas (todas menos el ferry, cuyas islas ya tienen zona) se pasa de las 8 libres, así que hará falta la variable 0x40FE (16 más). Es un cambio pequeño en `src/dualocke.c` que no rompe nada: los bits de esa variable empiezan a 0 en las partidas de ahora.
