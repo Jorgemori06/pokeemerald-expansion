@@ -118,7 +118,7 @@ def etiqueta(mapa):
             with open(f"data/maps/{carpeta}/map.json", encoding="utf-8") as f:
                 if json.load(f)["id"] == mapa:
                     return "g" + carpeta
-        except (FileNotFoundError, KeyError):
+        except (FileNotFoundError, NotADirectoryError, KeyError):  # data/maps/.gitignore en Linux
             continue
     raise SystemExit(f"Dualocke: no encuentro el mapa {mapa}")
 
