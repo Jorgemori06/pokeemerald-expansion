@@ -152,6 +152,9 @@ struct EvoScreenData
     u8 arrowSpriteId;
 };
 
+// Dualocke: hueco para la lista de MT y tutores de la Pokédex HGSS (Dualocke_MovimientosEnsenables)
+#define DUALOCKE_MAX_ENSENABLES 400
+
 struct FromScreenData
 {
     u16 formIds[30];
@@ -216,6 +219,8 @@ struct PokedexView
     u8 numEggMoves;
     u8 numLevelUpMoves;
     u8 numPreEvolutions;
+    // Dualocke: las MT y los tutores que puede aprender con la semilla (Dualocke_MovimientosEnsenables)
+    u16 dualockeEnsenables[DUALOCKE_MAX_ENSENABLES];
 };
 
 extern const u8 sCaughtBall_Gfx[];

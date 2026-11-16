@@ -1,7 +1,7 @@
 #ifndef GUARD_CONFIG_POKEDEX_PLUS_HGSS_H
 #define GUARD_CONFIG_POKEDEX_PLUS_HGSS_H
 
-#define POKEDEX_PLUS_HGSS                   FALSE // If TRUE, enables the custom HGSS style Pokedex.
+#define POKEDEX_PLUS_HGSS                   TRUE  // If TRUE, enables the custom HGSS style Pokedex. // Dualocke: Pokédex estilo HeartGold/SoulSilver, traducida (Miguel, 16/11/2026)
 #define HGSS_DECAPPED                       FALSE // If TRUE, uses decapped gfx and strings.
 #define HGSS_DARK_MODE                      FALSE // If TRUE, enables dark mode.
 #define HGSS_HIDE_UNSEEN_EVOLUTION_NAMES    FALSE // If TRUE, hides evolution mon names.

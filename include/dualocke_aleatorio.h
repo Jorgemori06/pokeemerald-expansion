@@ -23,6 +23,11 @@ enum Ability Dualocke_HabilidadAleatoria(enum Species species);
 // MT (mts.py). Dualocke_MovimientoMT y Dualocke_ObjetoMT están declaradas en include/item.h.
 s32 Dualocke_PuedeAprenderMT(enum Species species, enum Move move);
 
+// Pokédex HGSS: los movimientos de MT, MO y tutor que puede aprender la especie con la semilla,
+// sin repetir (primero las MT y MO, luego los tutores nuevos y luego el resto de su lista original).
+// Devuelve cuántos ha escrito en moves, como mucho max (DUALOCKE_MAX_ENSENABLES, en pokedex_common.h).
+u32 Dualocke_MovimientosEnsenables(enum Species species, u16 *moves, u32 max);
+
 // Movimientos por nivel (aprendizajes.py): NULL si la especie se queda con su tabla
 const struct LevelUpMove *Dualocke_AprendizajeAleatorio(enum Species species);
 
