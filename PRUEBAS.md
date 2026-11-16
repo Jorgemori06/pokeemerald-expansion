@@ -33,6 +33,16 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 - [ ] **Tiendas:** una compra por objeto (salvo Balls, Repelentes, Bayas y Caramelos), y el segundo dependiente en las ciudades.
 - [ ] **Caps de nivel:** al llegar al cap no se gana experiencia y los Caramelos Raros no funcionan por encima.
 
+### ISLA NEVADA (desde el 16/11/2026)
+
+- [ ] **Conexión:** surfeando hacia el norte desde la RUTA 124 se pasa a la ISLA NEVADA sin cortes, y la nieve empieza al cruzar.
+- [ ] **El mapa:** que no se vean trozos raros de roca en el borde de la RUTA 124 ni en el islote.
+- [ ] **Cartel de zona:** "ISLA NEVADA", también en la cueva, y que cuente como zona de captura propia.
+- [ ] **Nieve en combate**, también en la cueva (dentro no nieva, así que ahí no).
+- [ ] **CUEVA HELADA:** se entra por el islote y la escalera devuelve fuera. Se puede recorrer resbalando por el hielo y llegar a los objetos y a NIEVES.
+- [ ] **Entrenadores:** DUDLEY y KAYLEE en el agua (te ven al surfear), NIEVES en la cueva.
+- [ ] **Salvajes** de hielo y la Bola de Nieve oculta en el banco de arena.
+
 ### GRUTA ÍGNEA (desde el 16/11/2026)
 
 - [ ] **Entrada:** en la sala del suroeste del SENDERO ÍGNEO (con FUERZA) hay una boca de cueva. Bajando por ella se llega a la GRUTA ÍGNEA, y la puerta del noreste devuelve al mismo sitio.

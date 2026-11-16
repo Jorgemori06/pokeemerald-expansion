@@ -372,6 +372,25 @@ ISLA SUR, ISLA LEJANA, ISLA ORIGEN y ROCA OMBLIGO ya existían, pero solo con un
 - **Textos:** los del ferry y los marineros eran de postgame y estaban en inglés; ahora están en `traduccion/dialogos/41_islas_ferry.tsv`.
 - **Flags nuevos:** `FLAG_DUALOCKE_ISLA_SUR`, `_LEJANA`, `_ORIGEN`, `FLAG_DUALOCKE_OMBLIGO_CIMA` y `_FONDO` (0x881-0x885).
 
+### ISLA NEVADA (hecho, Miguel, 16/11/2026; falta probarlo)
+
+`ZONAS.md`, propuesta 1. Una isla al norte de la RUTA 124 con nieve y una cueva de hielo.
+
+- **Cómo se llega:** surfeando hacia el norte desde la RUTA 124, sin pantalla de carga (conexión `up`). **Tramo 7** (cap 73).
+- **La isla** (80 × 40): mar con el islote grande de la RUTA 125 (el de la entrada de la CUEVA CARDUMEN) y sus bancos de arena, pegados arriba.
+  - Usa los mismos gráficos que la RUTA 124, para que la conexión se vea bien.
+  - Clima `WEATHER_SNOW`: **nieve en combate**. Esmeralda no tiene suelo nevado para fuera, así que la nieve es la que cae.
+- **La CUEVA HELADA** (20 × 30): la entrada del islote lleva a ella. Es la sala de hielo de la CUEVA CARDUMEN (suelo resbaladizo, rocas para frenar), con otros entrenadores y objetos. Se podría rediseñar con Porymap.
+- **Zona de captura propia:** `MAPSEC_ISLA_NEVADA` (la isla y la cueva cuentan como una), al final de la lista. `HOENN_EXTRA_MAPSEC_LAST` pasa a ser esa: 106 de 112 bits.
+- **Todo lo hace `tools/dualocke/crear_isla_nevada.py`.** La isla va al final del grupo de las rutas y la cueva al de las mazmorras: ningún mapa cambia de número.
+- **Entrenadores (3):**
+  - DUDLEY y KAYLEE, nadadores que existían sin usar, en el agua alrededor del islote. Los reescala `reescalar_niveles.py` (65-67).
+  - NIEVES, entrenadora guay nueva en la cueva (`TRAINER_NIEVES`, 858; `TRAINERS_COUNT_EMERALD` 859). Lleva Froslass, Abomasnow y Walrein a nivel 69-70 (`zonas_nuevas.py`).
+- **Salvajes:**
+  - Agua y pesca: Spheal, Seel, Delibird, Arctovish, Cloyster, Lapras…
+  - Cueva: Snorunt, Swinub, Snover, Cubchoo, Vanillite, Snom, Bergmite, Sneasel, Cetoddle, Cryogonal, Eiscue y, raro, Frigibax.
+- **Objetos:** Hielo Perpetuo y Piedra Hielo en la cueva, y una Bola de Nieve oculta en el banco de arena (`OBJETOS_NEVADA`, flags 0x8FA-0x8FC). Después de colocarlos se movieron a mano a sitios que no tapan el pasillo.
+
 ### GRUTA ÍGNEA (hecho, Miguel, 16/11/2026; falta probarlo)
 
 La primera zona nueva de verdad (`ZONAS.md`, propuesta 7, "SENDERO ÍGNEO profundo"). El nombre es el que usó Miguel: "mejorar la gruta ígnea".
