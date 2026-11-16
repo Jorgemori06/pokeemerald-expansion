@@ -428,6 +428,9 @@ ISLA SUR, ISLA LEJANA, ISLA ORIGEN y ROCA OMBLIGO ya existían, pero solo con un
 - **Objetos:** 11 objetos normales (con semilla, al azar como los demás), colocados con `colocar_objetos.py` (`OBJETOS_ISLAS`, flags `FLAG_ITEM_ISLA_...` del 0x8E5 al 0x8EF).
 - **Textos:** los del ferry y los marineros eran de postgame y estaban en inglés; ahora están en `traduccion/dialogos/41_islas_ferry.tsv`.
 - **Flags nuevos:** `FLAG_DUALOCKE_ISLA_SUR`, `_LEJANA`, `_ORIGEN`, `FLAG_DUALOCKE_OMBLIGO_CIMA` y `_FONDO` (0x881-0x885).
+- **Zonas nuevas y semillas en curso (Jorge, 16/11/2026; vale también para la GRUTA ÍGNEA y la ISLA NEVADA):** el randomizer recorre los mapas por orden alfabético, así que un objeto nuevo en la ISLA LEJANA cambiaba todos los objetos de los mapas que van detrás, la Recogida y lo que piden los intercambios. Ahora los objetos (por su flag) y los salvajes (por su mapa) de las zonas nuevas se sortean aparte, con su propio generador (`tools/dualocke/aleatorio/zonas.py`). **Al añadir una zona nueva, se ponen allí su prefijo de mapa y el de los flags de sus objetos.**
+  - Comprobado con las dos semillas en curso: objetos del suelo, Recogida, intercambios, salvajes, iniciales, MT y tutores, idénticos a la versión 7.
+  - Lo que sí cambia, y es a propósito: los jefes con mega (#79) y el tope de fuerza de los líderes de los tramos que tienen zona nueva, porque cuenta lo que se puede capturar (con la semilla de Jorge, tramo 6 de 505 a 510 y tramo 7 de 540 a 535; con la de Miguel, nada).
 
 ### ISLA NEVADA (hecho, Miguel, 16/11/2026; falta probarlo)
 
