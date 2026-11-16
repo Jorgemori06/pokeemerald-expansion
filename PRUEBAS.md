@@ -33,6 +33,15 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 - [ ] **Tiendas:** una compra por objeto (salvo Balls, Repelentes, Bayas y Caramelos), y el segundo dependiente en las ciudades.
 - [ ] **Caps de nivel:** al llegar al cap no se gana experiencia y los Caramelos Raros no funcionan por encima.
 
+### GRUTA ÍGNEA (desde el 16/11/2026)
+
+- [ ] **Entrada:** en la sala del suroeste del SENDERO ÍGNEO (con FUERZA) hay una boca de cueva. Bajando por ella se llega a la GRUTA ÍGNEA, y la puerta del noreste devuelve al mismo sitio.
+- [ ] **El mapa:** que no quede ningún trozo de máquina de la GUARIDA MAGMA, que no se pueda pisar la lava y que se pueda dar toda la vuelta.
+- [ ] **Clima:** el sol fuerte se ve bien dentro de la cueva (si queda raro, se quita) y hay sol en los combates.
+- [ ] **Cartel de zona:** "GRUTA ÍGNEA". Cuenta como zona de captura propia: se puede capturar aunque ya hayas capturado en el SENDERO ÍGNEO.
+- [ ] **Entrenadores:** ROQUE, ÍGOR y la soldado Magma, a nivel 46-47, y te ven al pasar.
+- [ ] **Salvajes y objetos:** POKéMON de fuego y roca a nivel del tramo 5, y los 4 objetos.
+
 ### Islas del ferry (desde el 16/11/2026)
 
 - [ ] **Billetes:** con la 6.ª medalla, el encargado del puerto de CALAGUA da el Ticket Eón; con la 7.ª, el Mapa Viejo; con la 8.ª, el Ori-Ticket y el Misti-Ticket. Cada isla sale en la lista de destinos.

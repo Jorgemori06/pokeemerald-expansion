@@ -372,6 +372,25 @@ ISLA SUR, ISLA LEJANA, ISLA ORIGEN y ROCA OMBLIGO ya existían, pero solo con un
 - **Textos:** los del ferry y los marineros eran de postgame y estaban en inglés; ahora están en `traduccion/dialogos/41_islas_ferry.tsv`.
 - **Flags nuevos:** `FLAG_DUALOCKE_ISLA_SUR`, `_LEJANA`, `_ORIGEN`, `FLAG_DUALOCKE_OMBLIGO_CIMA` y `_FONDO` (0x881-0x885).
 
+### GRUTA ÍGNEA (hecho, Miguel, 16/11/2026; falta probarlo)
+
+La primera zona nueva de verdad (`ZONAS.md`, propuesta 7, "SENDERO ÍGNEO profundo"). El nombre es el que usó Miguel: "mejorar la gruta ígnea".
+
+- **Dónde:** una boca de cueva en la sala del suroeste del SENDERO ÍGNEO, la de detrás de las rocas. Hace falta FUERZA, que se usa con la 4.ª medalla, así que es del **tramo 5** (cap 50), que antes no tenía casi nada.
+- **El mapa** (59 × 28): es la planta 4 de la GUARIDA MAGMA sin las máquinas del Equipo Magma, que comparte gráficos con el SENDERO ÍGNEO. Es un recorrido largo alrededor de un lago de lava, que no se puede cruzar.
+  - Lo hace `tools/dualocke/crear_gruta_ignea.py`: cada casilla de máquina pasa a ser el suelo de cueva de al lado y se tapa la salida hacia la guarida.
+  - Clima `WEATHER_DROUGHT`: **sol en combate**. Música de la CUEVA ANCESTRAL.
+- **Zona de captura propia:** `MAPSEC_GRUTA_IGNEA`, al final de `region_map_sections.json`.
+  - `HOENN_EXTRA_MAPSEC_LAST` (`src/dualocke.c`) pasa a ser esa: se usan 105 de los 112 bits y los de antes no se mueven.
+  - Las zonas nuevas siguientes van detrás y se cambia esa línea.
+  - Cartel de zona: piedra, y negro en el estilo Blanco/Negro (`src/map_name_popup.c`).
+- **El mapa nuevo va al final** de `layouts.json` y del grupo `gMapGroup_Dungeons`: no cambia el número de ningún mapa de las partidas guardadas.
+- **Entrenadores (3):**
+  - ÍGOR (fogonero) y ROQUE (montañero): `TRAINER_IGOR` y `TRAINER_ROQUE`, dos de los 8 huecos que quedaban (`TRAINERS_COUNT_EMERALD` pasa a 858). Sus equipos los escribe `zonas_nuevas.py` (`NUEVOS`), al nivel de los más fuertes del tramo (46-47).
+  - Una soldado del Equipo Magma: `TRAINER_GRUNT_UNUSED`, que existía sin usar (con los gráficos del Equipo Aqua: `zonas_nuevas.py` se los cambia). La reescala `reescalar_niveles.py`.
+- **Salvajes:** de fuego y de roca de todas las generaciones (Slugma, Salandit, Sizzlipede, Rolycoly, Litwick, Heatmor, Charcadet, Turtonator, Larvesta…), en `zonas_nuevas.py`.
+- **Objetos:** Piedra Fuego, Magmatizador, Carbón y Galleta Lava (`OBJETOS_GRUTA` en `colocar_objetos.py`, flags del 0x8F6 al 0x8F9).
+
 ### Recuerdamovimientos y Ticket-Recuerdo (hecho, Miguel, 26/10/2026)
 
 Lo pidió Miguel: poder recuperar los movimientos que un Pokémon ha podido aprender durante la aventura, pagando con tickets que se encuentran por el mapa.
