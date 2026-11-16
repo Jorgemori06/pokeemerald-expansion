@@ -29,4 +29,8 @@ const struct LevelUpMove *Dualocke_AprendizajeAleatorio(enum Species species);
 // Tutores (mts.py): callnative en la macro move_tutor (asm/macros/event.inc)
 void Dualocke_TutorAleatorio(void);
 
+// Islas del ferry (data/scripts/dualocke_islas.inc): sprite y megapiedra del Pokémon fuerte de cada isla
+void Dualocke_GraficoPokemonIsla(void);
+void Dualocke_MegapiedraPokemonIsla(void);
+
 #endif // GUARD_DUALOCKE_ALEATORIO_H

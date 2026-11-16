@@ -4,8 +4,12 @@ NavelRock_Bottom_MapScripts::
 	.byte 0
 
 NavelRock_Bottom_OnTransition:
-	call_if_set FLAG_CAUGHT_LUGIA, NavelRock_Bottom_EventScript_HideLugia
-	call_if_unset FLAG_CAUGHT_LUGIA, NavelRock_Bottom_EventScript_TryShowLugia
+	@ Dualocke: sin Lugia
+	call NavelRock_Bottom_EventScript_HideLugia
+	@ Dualocke: el Pokémon fuerte de la isla, con el sprite de la especie que sale con la semilla
+	setvar VAR_0x8004, SPECIES_GYARADOS
+	special Dualocke_GraficoPokemonIsla
+	copyvar VAR_OBJ_GFX_ID_0, VAR_RESULT
 	end
 
 NavelRock_Bottom_EventScript_HideLugia::
@@ -72,4 +76,23 @@ NavelRock_Bottom_EventScript_DefeatedLugia::
 NavelRock_Bottom_EventScript_RanFromLugia::
 	setvar VAR_0x8004, SPECIES_LUGIA
 	goto Common_EventScript_LegendaryFlewAway
+	end
+
+@ Dualocke: el Pokémon fuerte de la isla (data/scripts/dualocke_islas.inc)
+NavelRock_Bottom_EventScript_Pokemon::
+	lock
+	setvar VAR_TEMP_8, SPECIES_GYARADOS
+	setvar VAR_TEMP_9, ITEM_ASSAULT_VEST
+	call Dualocke_EventScript_AvisoIsla
+	setwildbattle SPECIES_GYARADOS, 97
+	dowildbattle
+	call Dualocke_EventScript_ResultadoIsla
+	goto_if_eq VAR_RESULT, FALSE, NavelRock_Bottom_EventScript_PokemonSigue
+	setflag FLAG_DUALOCKE_OMBLIGO_FONDO
+	call Dualocke_EventScript_PremioIsla
+	release
+	end
+
+NavelRock_Bottom_EventScript_PokemonSigue::
+	release
 	end
