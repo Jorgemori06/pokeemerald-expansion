@@ -62,6 +62,16 @@ SALVAJES = {
         "land_mons": ["SLUGMA", "NUMEL", "SALANDIT", "SIZZLIPEDE", "ROLYCOLY", "LITWICK",
                       "HEATMOR", "MAGBY", "CHARCADET", "TURTONATOR", "TORKOAL", "LARVESTA"],
     },
+    # ISLA NEVADA y CUEVA HELADA (crear_isla_nevada.py): Pokémon de hielo
+    "MAP_ISLA_NEVADA": {
+        "water_mons": ["SPHEAL", "SEEL", "SPHEAL", "DELIBIRD", "LAPRAS"],
+        "fishing_mons": ["MAGIKARP", "SEEL", "SEEL", "SPHEAL", "ARCTOVISH",
+                         "SEALEO", "DEWGONG", "CLOYSTER", "ARCTOVISH", "LAPRAS"],
+    },
+    "MAP_ISLA_NEVADA_CUEVA": {
+        "land_mons": ["SNORUNT", "SWINUB", "SNOVER", "CUBCHOO", "VANILLITE", "SNOM",
+                      "BERGMITE", "SNEASEL", "CETODDLE", "CRYOGONAL", "EISCUE", "FRIGIBAX"],
+    },
 }
 
 # Entrenadores de las zonas nuevas.
@@ -82,6 +92,12 @@ NUEVOS = {
         "cabecera": [("Name", "ÍGOR"), ("Class", "Kindler"), ("Pic", "Kindler"), ("Gender", "Male"),
                      ("Music", "Hiker"), ("Double Battle", "No"), ("AI", "Basic Trainer")],
         "equipo": ["Camerupt", "Magcargo", "Magmortar"],
+    },
+    "TRAINER_NIEVES": {
+        "mapa": "MAP_ISLA_NEVADA_CUEVA",
+        "cabecera": [("Name", "NIEVES"), ("Class", "Cooltrainer"), ("Pic", "Cooltrainer F"), ("Gender", "Female"),
+                     ("Music", "Cool"), ("Double Battle", "No"), ("AI", "Basic Trainer")],
+        "equipo": ["Froslass", "Abomasnow", "Walrein"],
     },
     "TRAINER_ROQUE": {
         "mapa": "MAP_GRUTA_IGNEA",

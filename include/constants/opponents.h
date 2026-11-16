@@ -862,12 +862,13 @@
 #define TRAINER_STEVEN_ROUTE_120            855 // Dualocke: Máximo en la Ruta 120, da el Aro Mega
 #define TRAINER_IGOR                        856 // Dualocke: fogonero de la GRUTA ÍGNEA (zonas_nuevas.py)
 #define TRAINER_ROQUE                       857 // Dualocke: montañero de la GRUTA ÍGNEA (zonas_nuevas.py)
+#define TRAINER_NIEVES                      858 // Dualocke: entrenadora guay de la CUEVA HELADA (zonas_nuevas.py)
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 8 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT_EMERALD     858
+#define TRAINERS_COUNT_EMERALD     859
 #define MAX_TRAINERS_COUNT_EMERALD 864
 
 #if IS_FRLG

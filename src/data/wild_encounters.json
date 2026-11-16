@@ -37296,6 +37296,164 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_ISLA_NEVADA",
+          "base_label": "gIslaNevada",
+          "water_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 65,
+                "max_level": 67,
+                "species": "SPECIES_SPHEAL"
+              },
+              {
+                "min_level": 65,
+                "max_level": 67,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 66,
+                "max_level": 68,
+                "species": "SPECIES_SPHEAL"
+              },
+              {
+                "min_level": 67,
+                "max_level": 69,
+                "species": "SPECIES_DELIBIRD"
+              },
+              {
+                "min_level": 67,
+                "max_level": 69,
+                "species": "SPECIES_LAPRAS"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 30,
+            "mons": [
+              {
+                "min_level": 65,
+                "max_level": 67,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 65,
+                "max_level": 67,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 65,
+                "max_level": 67,
+                "species": "SPECIES_SEEL"
+              },
+              {
+                "min_level": 65,
+                "max_level": 67,
+                "species": "SPECIES_SPHEAL"
+              },
+              {
+                "min_level": 65,
+                "max_level": 67,
+                "species": "SPECIES_ARCTOVISH"
+              },
+              {
+                "min_level": 66,
+                "max_level": 68,
+                "species": "SPECIES_SEALEO"
+              },
+              {
+                "min_level": 66,
+                "max_level": 68,
+                "species": "SPECIES_DEWGONG"
+              },
+              {
+                "min_level": 66,
+                "max_level": 68,
+                "species": "SPECIES_CLOYSTER"
+              },
+              {
+                "min_level": 67,
+                "max_level": 69,
+                "species": "SPECIES_ARCTOVISH"
+              },
+              {
+                "min_level": 67,
+                "max_level": 69,
+                "species": "SPECIES_LAPRAS"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ISLA_NEVADA_CUEVA",
+          "base_label": "gIslaNevada_Cueva",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 65,
+                "max_level": 67,
+                "species": "SPECIES_SNORUNT"
+              },
+              {
+                "min_level": 65,
+                "max_level": 67,
+                "species": "SPECIES_SWINUB"
+              },
+              {
+                "min_level": 65,
+                "max_level": 67,
+                "species": "SPECIES_SNOVER"
+              },
+              {
+                "min_level": 65,
+                "max_level": 67,
+                "species": "SPECIES_CUBCHOO"
+              },
+              {
+                "min_level": 65,
+                "max_level": 67,
+                "species": "SPECIES_VANILLITE"
+              },
+              {
+                "min_level": 65,
+                "max_level": 67,
+                "species": "SPECIES_SNOM"
+              },
+              {
+                "min_level": 66,
+                "max_level": 68,
+                "species": "SPECIES_BERGMITE"
+              },
+              {
+                "min_level": 66,
+                "max_level": 68,
+                "species": "SPECIES_SNEASEL"
+              },
+              {
+                "min_level": 66,
+                "max_level": 68,
+                "species": "SPECIES_CETODDLE"
+              },
+              {
+                "min_level": 66,
+                "max_level": 68,
+                "species": "SPECIES_CRYOGONAL"
+              },
+              {
+                "min_level": 67,
+                "max_level": 69,
+                "species": "SPECIES_EISCUE"
+              },
+              {
+                "min_level": 67,
+                "max_level": 69,
+                "species": "SPECIES_FRIGIBAX"
+              }
+            ]
+          }
         }
       ]
     },

@@ -137,6 +137,15 @@ OBJETOS_GRUTA = [
     ("LAVA_COOKIE", "GrutaIgnea", "oculta", "04$"),
 ]
 
+# Objetos de la ISLA NEVADA y la CUEVA HELADA (crear_isla_nevada.py), de hielo. Con semilla, al azar.
+# Después de colocarlos se movieron a mano en el map.json: los de la cueva, a los sitios de objetos de la
+# sala de hielo de la CUEVA CARDUMEN (no tapan el pasillo); la Bola de Nieve, al banco de arena.
+OBJETOS_NEVADA = [
+    ("NEVER_MELT_ICE", "IslaNevada_Cueva", "bola", None),
+    ("ICE_STONE", "IslaNevada_Cueva", "bola", None),
+    ("SNOWBALL", "IslaNevada", "oculta", None),
+]
+
 # Objetos competitivos de generaciones nuevas (misma estructura). Los más fuertes (Pañuelo
 # Elegido, Chaleco Asalto, Gafas Elegidas, Vidasfera) van a partir del tramo 6.
 COMPETITIVOS = [
@@ -258,7 +267,8 @@ GRUPOS = [
     (TICKETS, "FLAG_ITEM_TICKET_", 0x021, 0x04F, "Ticket-Recuerdo en el mapa", "HEART_SCALE"),
     (TICKETS_OCULTOS, "FLAG_ITEM_TICKET_", 0x4E5, 0x4EF, "Ticket-Recuerdo oculto en el mapa", "HEART_SCALE"),
     (OBJETOS_ISLAS, "FLAG_ITEM_ISLA_", 0x8E5, 0x8F5, "objeto de las islas del ferry", None),
-    (OBJETOS_GRUTA, "FLAG_ITEM_GRUTA_", 0x8F6, 0x8FF, "objeto de la GRUTA ÍGNEA", None),
+    (OBJETOS_GRUTA, "FLAG_ITEM_GRUTA_", 0x8F6, 0x8F9, "objeto de la GRUTA ÍGNEA", None),
+    (OBJETOS_NEVADA, "FLAG_ITEM_NEVADA_", 0x8FA, 0x8FF, "objeto de la ISLA NEVADA", None),
 ]
 COMPORTAMIENTOS_OK = {"MB_NORMAL", "MB_TALL_GRASS", "MB_LONG_GRASS", "MB_SHORT_GRASS", "MB_DEEP_SAND",
                       "MB_SAND", "MB_CAVE", "MB_ASHGRASS", "MB_FOOTPRINTS"}

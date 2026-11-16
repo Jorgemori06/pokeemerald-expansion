@@ -69,7 +69,9 @@ TRAMOS = {
         "MAGMA_HIDEOUT_*", "AQUA_HIDEOUT_*", "ROUTE124", "ROUTE125", "SHOAL_CAVE_*",
         "ROUTE126", "ROUTE127", "MOSSDEEP_CITY", "MOSSDEEP_CITY_GYM", "ROUTE110_TRICK_HOUSE_PUZZLE5",
         # Islas del ferry: una por medalla (Miguel, 16/11/2026; data/scripts/dualocke_islas.inc)
-        "SOUTHERN_ISLAND_EXTERIOR", "SOUTHERN_ISLAND_INTERIOR"],
+        "SOUTHERN_ISLAND_EXTERIOR", "SOUTHERN_ISLAND_INTERIOR",
+        # ISLA NEVADA, al norte de la RUTA 124 (crear_isla_nevada.py)
+        "ISLA_NEVADA", "ISLA_NEVADA_CUEVA"],
     8: ["MOSSDEEP_CITY_SPACE_CENTER_*", "UNDERWATER_*", "ROUTE128", "SEAFLOOR_CAVERN_*",
         "SOOTOPOLIS_CITY", "CAVE_OF_ORIGIN_*", "SKY_PILLAR_*", "ROUTE129", "ROUTE130",
         "ROUTE131", "PACIFIDLOG_TOWN", "ROUTE132", "ROUTE133", "ROUTE134",
@@ -190,7 +192,8 @@ def interpolar(v, vmin, vmax, nmin, nmax):
 # - No cuentan para la banda de su tramo: así no se mueve el nivel de ningún otro entrenador ni de
 #   los salvajes de las semillas en curso.
 ENTRENADORES_ISLAS = {"TRAINER_TERRY", "TRAINER_CINDY_2", "TRAINER_MIKE_1", "TRAINER_AMY_AND_LIV_3",
-                      "TRAINER_GINA_AND_MIA_2", "TRAINER_LUCAS_2", "TRAINER_GRUNT_UNUSED"}
+                      "TRAINER_GINA_AND_MIA_2", "TRAINER_LUCAS_2", "TRAINER_GRUNT_UNUSED",
+                      "TRAINER_DUDLEY", "TRAINER_KAYLEE"}
 
 
 def calcular_entrenadores(base, mapas):

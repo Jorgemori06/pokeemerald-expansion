@@ -1528,9 +1528,9 @@
 #define FLAG_ITEM_GRUTA_MAGMARIZER         0x8F7 // Dualocke: objeto de la GRUTA ÍGNEA
 #define FLAG_ITEM_GRUTA_CHARCOAL           0x8F8 // Dualocke: objeto de la GRUTA ÍGNEA
 #define FLAG_ITEM_GRUTA_LAVA_COOKIE        0x8F9 // Dualocke: objeto de la GRUTA ÍGNEA
-#define FLAG_UNUSED_0x8FA                           (SYSTEM_FLAGS + 0x9A) // Unused Flag
-#define FLAG_UNUSED_0x8FB                           (SYSTEM_FLAGS + 0x9B) // Unused Flag
-#define FLAG_UNUSED_0x8FC                           (SYSTEM_FLAGS + 0x9C) // Unused Flag
+#define FLAG_ITEM_NEVADA_NEVER_MELT_ICE    0x8FA // Dualocke: objeto de la ISLA NEVADA
+#define FLAG_ITEM_NEVADA_ICE_STONE         0x8FB // Dualocke: objeto de la ISLA NEVADA
+#define FLAG_ITEM_NEVADA_SNOWBALL          0x8FC // Dualocke: objeto de la ISLA NEVADA
 #define FLAG_UNUSED_0x8FD                           (SYSTEM_FLAGS + 0x9D) // Unused Flag
 #define FLAG_UNUSED_0x8FE                           (SYSTEM_FLAGS + 0x9E) // Unused Flag
 #define FLAG_UNUSED_0x8FF                           (SYSTEM_FLAGS + 0x9F) // Unused Flag
