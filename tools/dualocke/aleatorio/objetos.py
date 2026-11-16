@@ -27,6 +27,7 @@ import random
 import re
 
 from . import especies as esp
+from . import zonas
 
 # Objetos del suelo que no se randomizan: megapiedras y Ticket-Recuerdo (colocar_objetos.py)
 FIJOS = ("FLAG_ITEM_MEGA_", "FLAG_ITEM_TICKET_")
@@ -172,12 +173,16 @@ def randomizar(objetos, semilla, config):
 
     mapa_suelo = {}
     huecos_mt, mts = [], []
+    de_zonas_nuevas = []
     for flag, objeto, _ in buscar_suelo():
         if flag in mapa_suelo or objeto not in objetos:
             continue
         o = objetos[objeto]
         if flag.startswith(FIJOS) or o.es_clave or o.es_mo:
             continue  # fijos
+        if flag.startswith(zonas.FLAGS_OBJETOS):
+            de_zonas_nuevas.append((flag, o))
+            continue  # van aparte, al final (aleatorio/zonas.py)
         if o.es_mt:
             huecos_mt.append(flag)
             mts.append(objeto)
@@ -185,6 +190,13 @@ def randomizar(objetos, semilla, config):
         mapa_suelo[flag] = rng.choice(suelo)
     rng.shuffle(mts)
     mapa_suelo.update(zip(huecos_mt, mts))
+
+    # Zonas nuevas: con su propio generador, para no mover lo de las partidas ya empezadas.
+    # Una MT de una zona nueva se queda como está: barajarla con las demás las movería.
+    rng_nuevas = random.Random(f"{semilla}|objetos|zonas nuevas")
+    for flag, o in de_zonas_nuevas:
+        if not o.es_mt and flag not in mapa_suelo:
+            mapa_suelo[flag] = rng_nuevas.choice(suelo)
 
     consumo = grupo_consumo(objetos, config)
     originales = leer_recogida()

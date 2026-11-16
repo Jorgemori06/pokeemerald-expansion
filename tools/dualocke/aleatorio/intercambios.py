@@ -16,6 +16,8 @@ import glob
 import random
 import re
 
+from . import zonas
+
 
 def buscar():
     """Intercambios que se usan en los scripts de Hoenn (INGAME_TRADE_X), en orden."""
@@ -39,6 +41,8 @@ def especies_salvajes(datos):
         for mapa in grupo.get("encounters", []):
             if "_Frlg" in mapa.get("base_label", "") or "_FRLG" in mapa.get("map", ""):
                 continue
+            if zonas.es_nueva(mapa.get("base_label", "")):
+                continue  # las zonas nuevas no cuentan, para no cambiar las partidas empezadas (aleatorio/zonas.py)
             for clave, valor in mapa.items():
                 if isinstance(valor, dict) and "mons" in valor:
                     especies |= {m["species"] for m in valor["mons"]}
