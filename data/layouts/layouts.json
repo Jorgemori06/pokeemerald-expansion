@@ -9333,6 +9333,26 @@
       "secondary_tileset": "gTileset_Lavaridge",
       "border_filepath": "data/layouts/GrutaIgnea/border.bin",
       "blockdata_filepath": "data/layouts/GrutaIgnea/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLA_NEVADA",
+      "name": "IslaNevada_Layout",
+      "width": 80,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mossdeep",
+      "border_filepath": "data/layouts/IslaNevada/border.bin",
+      "blockdata_filepath": "data/layouts/IslaNevada/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLA_NEVADA_CUEVA",
+      "name": "IslaNevada_Cueva_Layout",
+      "width": 20,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/IslaNevada_Cueva/border.bin",
+      "blockdata_filepath": "data/layouts/IslaNevada_Cueva/map.bin"
     }
   ]
 }

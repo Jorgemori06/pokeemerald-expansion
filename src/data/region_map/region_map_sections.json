@@ -1638,6 +1638,14 @@
       "y": 3,
       "width": 1,
       "height": 1
+    },
+    {
+      "id": "MAPSEC_ISLA_NEVADA",
+      "name": "ISLA NEVADA",
+      "x": 21,
+      "y": 2,
+      "width": 1,
+      "height": 1
     }
   ]
 }

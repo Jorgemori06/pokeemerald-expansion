@@ -38,6 +38,11 @@
       "map": "MAP_UNDERWATER_ROUTE124",
       "offset": 0,
       "direction": "dive"
+    },
+    {
+      "map": "MAP_ISLA_NEVADA",
+      "offset": 0,
+      "direction": "up"
     }
   ],
   "object_events": [
