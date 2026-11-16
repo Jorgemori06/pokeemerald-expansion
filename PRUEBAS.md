@@ -33,6 +33,18 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 - [ ] **Tiendas:** una compra por objeto (salvo Balls, Repelentes, Bayas y Caramelos), y el segundo dependiente en las ciudades.
 - [ ] **Caps de nivel:** al llegar al cap no se gana experiencia y los Caramelos Raros no funcionan por encima.
 
+### BOSQUE FRONDOSO y MANSIÓN OLVIDADA (desde el 17/11/2026)
+
+- [ ] **Entrada:** en el claro del noreste del BOSQUE PETALIA hay dos árboles de CORTE; detrás, el pasillo lleva al BOSQUE FRONDOSO sin pantalla de carga, y se vuelve igual.
+- [ ] **La unión:** que los árboles del borde de abajo del BOSQUE FRONDOSO sigan bien con los del BOSQUE PETALIA, y que no se vea nada raro al ir por el pasillo.
+- [ ] **El bosque:** que ningún árbol salga cortado. Carteles "BOSQUE FRONDOSO" y "MANSIÓN OLVIDADA": cada uno es una zona de captura.
+- [ ] **Pesca** en la charca.
+- [ ] **La mansión:** la puerta del edificio entra y sale. Dentro hay salvajes en el suelo de madera.
+  - La puerta de arriba a la izquierda dice que está atascada.
+  - La de la derecha sube al DESVÁN.
+- [ ] **Guardián del DESVÁN**, delante de la puerta rota: da premio al vencerlo o capturarlo y no vuelve a salir.
+- [ ] **Entrenadores:** SEBAS y OLIVIA en el bosque, ELVIRA y ALFONSO en la mansión. Que salgan con su nombre, su foto y su equipo, no con los de BRENDAN, MAY o HOJA.
+
 ### MARISMA AZULIZA (desde el 17/11/2026)
 
 - [ ] **Entrada:** desde la arena del oeste de PUEBLO AZULIZA se pasa a la marisma andando, sin pantalla de carga, y se vuelve igual.

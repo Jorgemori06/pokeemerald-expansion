@@ -389,6 +389,29 @@ Qué mira:
 
 Las rarezas del juego original (puertas del ferry fuera del mapa…) están en `ORIGINALES`.
 
+### BOSQUE FRONDOSO y MANSIÓN OLVIDADA (hecho, Miguel, 17/11/2026; falta probarlo)
+
+- **Dónde:** en el claro del noreste del BOSQUE PETALIA se abre un pasillo entre los árboles, tapado por dos árboles de CORTE (`FLAG_TEMP_13` y `_14`). Lleva al BOSQUE FRONDOSO por el borde, sin pantalla de carga. Hace falta CORTE: **tramo 2** (cap 23).
+- **BOSQUE FRONDOSO** (36 × 40), con los gráficos del BOSQUE PETALIA:
+  - caminos entre árboles, mucha hierba alta, flores y una charca para pescar;
+  - arriba, en un patio con verja y farolas, la mansión (el edificio largo de CIUDAD FÉRRICA) y su cartel.
+  - El mapa se dibuja en `tools/dualocke/crear_bosque_frondoso.py` sobre una rejilla de letras (`REJILLA`, una letra = dos casillas). `arboles()` pone las piezas de cada árbol (copa, cuerpo, tronco, base y bordes) como en el bosque, y avisa si una fila de árboles queda de un largo imposible.
+- **MANSIÓN OLVIDADA:** las cuatro salas del BARCO ABANDONADO, que con la madera y las camas parecen una casa vieja.
+  - Sin los salvavidas y con un paso nuevo a la sala de arriba a la izquierda.
+  - La puerta de esa sala está atascada (cartel). La de la derecha sube al **DESVÁN**: dos salas de la planta oculta del barco.
+  - El suelo de madera de ese barco tiene salvajes (`MB_INDOOR_ENCOUNTER`), aunque en el juego original no los usa: aquí salen fantasmas.
+- **Guardián del DESVÁN:** delante de una puerta rota. Sin semilla es Gengar a nivel 20 (cap − 3, regla `"tope"`); premio, Hechizo y su megapiedra. `FLAG_DUALOCKE_GUARDIAN_MANSION` (0x863).
+- **Zonas de captura propias (2):** `MAPSEC_BOSQUE_FRONDOSO` y `MAPSEC_MANSION_OLVIDADA` (las dos plantas). `HOENN_EXTRA_MAPSEC_LAST` pasa a ser la de la mansión: 111 de 128.
+- **Entrenadores (4), a nivel 19-20:**
+  - Bosque: SEBAS, cazabichos (`TRAINER_SEBAS`, 863: Dustox y Ninjask) y OLIVIA, campista (Nuzleaf y Skiploom).
+  - Mansión: ELVIRA, bruja (Shuppet, Duskull y Misdreavus) y ALFONSO, caballero (Drifloon y Litwick).
+  - **Ya no quedan huecos de entrenador** (864 de 864). OLIVIA, ELVIRA y ALFONSO son `TRAINER_BRENDAN_PLACEHOLDER`, `TRAINER_MAY_PLACEHOLDER` y `TRAINER_LEAF`, que existían sin usar en Esmeralda. `zonas_nuevas.py` reescribe su bloque entero y `reescalar_niveles.py` los trata como los de las islas (`ENTRENADORES_ISLAS`). Queda `TRAINER_RED` (851) sin usar; para más habrá que reutilizar otros.
+- **Salvajes:**
+  - Bosque: Sewaddle, Nincada, Seedot, Skwovet, Pikipek, Pineco, Fomantis, Cutiefly, Morelull, Petilil y, raros, Scyther y Heracross.
+  - Charca: Magikarp, Goldeen, Poliwag, Psyduck, Lotad, Marill y, muy raro con la SUPERCAÑA, Dratini.
+  - Mansión: Gastly, Shuppet, Duskull, Misdreavus, Litwick, Phantump, Pumpkaboo, Sinistea, Greavard, Drifloon y, raros, Rotom y Dreepy.
+- **Objetos** (`OBJETOS_BOSQUE`, flags 0x900-0x904, y un Ticket-Recuerdo, 0x908): Polvo Plata y Raíz Grande (oculta) en el bosque, Tela Terrible y Amuleto en la mansión, Piedra Noche en el desván.
+
 ### MARISMA AZULIZA (hecho, Miguel, 17/11/2026; falta probarlo)
 
 - **Dónde:** al oeste de PUEBLO AZULIZA, pegada al pueblo (conexión por el borde, sin pantalla de carga). Se llega andando por la arena del oeste del pueblo: **tramo 2** (cap 23).
