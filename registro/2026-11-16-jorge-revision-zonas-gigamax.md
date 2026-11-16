@@ -19,6 +19,11 @@ En `PRUEBAS.md`, `src/dualocke_aleatorio.c` y `tools/dualocke/colocar_objetos.py
 - **#82 y #83, scripts de los mapas:** faltaba incluirlos en `data/event_scripts.s` y no enlazaba. Miguel lo arregló a la vez (14:21) y se queda su versión.
 - **`zonas_nuevas.py` en Linux:** se paraba con `data/maps/.gitignore` (no es una carpeta). En Windows da otro error y por eso a Miguel no le pasaba.
 
+### Lo que fallaba en los tests
+
+- **"SaveBlock3 is backwards compatible":** el tamaño esperado era 644 bytes y ahora son 764, porque el bolsillo de megapiedras crece (#79). Es seguro, ver "Partidas guardadas" abajo. Actualizado en `test/save.c`.
+- **"Item descriptions fit on Bag and Shop Screen":** la descripción en inglés de la Corviknightita ("This stone enables Corviknight to Mega…") pasaba en 1 píxel. Solo se ve en los tests (en el juego sale la española), pero se ha acortado.
+
 ### Semillas en curso
 
 Con el #81, los objetos nuevos de las islas, la GRUTA y la ISLA NEVADA cambiaban casi todo lo que se sortea después:
