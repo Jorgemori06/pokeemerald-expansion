@@ -30,6 +30,7 @@ import re
 # Especie Gigamax (sin SPECIES_ ni _GMAX): megapiedra (constante, inglés, español),
 # estadísticas (PS, Ata, Def, AtE, DfE, Vel), tipos, habilidad, peso (en hg) y colores del icono
 # (bola, espiral 1, espiral 2). Las estadísticas suman 100 más que la forma normal, como las megas.
+# Diseño aprobado por Miguel el 16/11/2026.
 DISENO = [
     ("BUTTERFREE", "BUTTERFRITE", "Butterfrite", "Butterfrita",
      (60, 45, 70, 130, 100, 90), ("BUG", "PSYCHIC"), "TINTED_LENS", 380,

@@ -7,7 +7,7 @@ Miguel (estudio del #75, idea 9): "las formas Dynamax, como es una putada implem
 ## Qué se ha hecho
 
 - **26 megas nuevas** con los gráficos de su forma Gigamax (27 formas: Toxtricity tiene dos y una piedra). Venusaur, Charizard, Blastoise y Gengar ya tenían mega; Urshifu y Melmetal son singulares y se quedan como estaban.
-- **Diseño** (propuesta de Claude, para que Miguel la cambie): estadísticas que suman 100 más que la forma normal, tipo y habilidad que pegan con su movimiento Gigamax. La tabla está en `DUALOCKE.md`, sección 6.
+- **Diseño** (propuesta de Claude; Miguel la aprobó tal cual el mismo día): estadísticas que suman 100 más que la forma normal, tipo y habilidad que pegan con su movimiento Gigamax. La tabla está en `DUALOCKE.md`, sección 6.
 - **`tools/dualocke/megas_gigamax.py`** lo hace todo y se puede volver a lanzar (comprobado: la segunda vez no cambia nada):
   - formas: estadísticas, tipos, habilidad, peso (las Gigamax pesaban 0, y eso cambia Patada Baja y Cuerpo Pesado) e `isMegaEvolution` en vez de `isGigantamax`;
   - tabla de cambios de forma: megaevolución con su piedra en vez del Dinamax;

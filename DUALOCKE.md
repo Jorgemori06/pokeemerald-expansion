@@ -250,7 +250,7 @@ Regla general: **el as de cada jefe va exactamente al nivel del cap**, el resto 
   - **Para el randomizer:** estas ubicaciones son **fijas**. Al barajar los objetos del suelo hay que saltarse los que tienen flag `FLAG_ITEM_MEGA_...` o `FLAG_ITEM_COMP_...`.
 - **Formas Gigamax como megas (Miguel, 16/11/2026; idea 9 de `IDEAS.md`).** El Dinamax no se usa, así que las formas Gigamax son megaevoluciones, cada una con su megapiedra.
   - **26 megas nuevas** (27 formas: Toxtricity tiene dos y una sola piedra). Venusaur, Charizard, Blastoise y Gengar ya tenían mega, y Urshifu y Melmetal son singulares: se quedan como estaban.
-  - Usan los gráficos de la forma Gigamax. Las estadísticas suman **100 más** que la forma normal, como las megas oficiales. El diseño es una propuesta para que Miguel la cambie:
+  - Usan los gráficos de la forma Gigamax. Las estadísticas suman **100 más** que la forma normal, como las megas oficiales. El diseño lo propuso Claude y **Miguel lo aprobó tal cual (16/11/2026)**:
 
   | Pokémon | Megapiedra | Tipo | Habilidad | PS/Ata/Def/AtE/DfE/Vel (total) | Dónde |
   | --- | --- | --- | --- | --- | --- |
