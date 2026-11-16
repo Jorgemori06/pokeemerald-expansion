@@ -9413,6 +9413,16 @@
       "secondary_tileset": "gTileset_MirageTower",
       "border_filepath": "data/layouts/RuinasArenosas_3F/border.bin",
       "blockdata_filepath": "data/layouts/RuinasArenosas_3F/map.bin"
+    },
+    {
+      "id": "LAYOUT_MARISMA_AZULIZA",
+      "name": "MarismaAzuliza_Layout",
+      "width": 36,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Dewford",
+      "border_filepath": "data/layouts/MarismaAzuliza/border.bin",
+      "blockdata_filepath": "data/layouts/MarismaAzuliza/map.bin"
     }
   ]
 }

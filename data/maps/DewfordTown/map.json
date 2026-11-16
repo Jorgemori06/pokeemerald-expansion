@@ -23,6 +23,11 @@
       "map": "MAP_ROUTE107",
       "offset": 0,
       "direction": "right"
+    },
+    {
+      "map": "MAP_MARISMA_AZULIZA",
+      "offset": 0,
+      "direction": "left"
     }
   ],
   "object_events": [
