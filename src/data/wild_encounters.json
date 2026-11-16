@@ -37227,6 +37227,75 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_GRUTA_IGNEA",
+          "base_label": "gGrutaIgnea",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 42,
+                "max_level": 44,
+                "species": "SPECIES_SLUGMA"
+              },
+              {
+                "min_level": 42,
+                "max_level": 44,
+                "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 42,
+                "max_level": 44,
+                "species": "SPECIES_SALANDIT"
+              },
+              {
+                "min_level": 42,
+                "max_level": 44,
+                "species": "SPECIES_SIZZLIPEDE"
+              },
+              {
+                "min_level": 42,
+                "max_level": 44,
+                "species": "SPECIES_ROLYCOLY"
+              },
+              {
+                "min_level": 42,
+                "max_level": 44,
+                "species": "SPECIES_LITWICK"
+              },
+              {
+                "min_level": 43,
+                "max_level": 45,
+                "species": "SPECIES_HEATMOR"
+              },
+              {
+                "min_level": 43,
+                "max_level": 45,
+                "species": "SPECIES_MAGBY"
+              },
+              {
+                "min_level": 43,
+                "max_level": 45,
+                "species": "SPECIES_CHARCADET"
+              },
+              {
+                "min_level": 43,
+                "max_level": 45,
+                "species": "SPECIES_TURTONATOR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_TORKOAL"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_LARVESTA"
+              }
+            ]
+          }
         }
       ]
     },

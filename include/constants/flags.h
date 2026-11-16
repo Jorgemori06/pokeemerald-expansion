@@ -1524,10 +1524,10 @@
 #define FLAG_UNUSED_0x8F3                           (SYSTEM_FLAGS + 0x93) // Unused Flag
 #define FLAG_UNUSED_0x8F4                           (SYSTEM_FLAGS + 0x94) // Unused Flag
 #define FLAG_UNUSED_0x8F5                           (SYSTEM_FLAGS + 0x95) // Unused Flag
-#define FLAG_UNUSED_0x8F6                           (SYSTEM_FLAGS + 0x96) // Unused Flag
-#define FLAG_UNUSED_0x8F7                           (SYSTEM_FLAGS + 0x97) // Unused Flag
-#define FLAG_UNUSED_0x8F8                           (SYSTEM_FLAGS + 0x98) // Unused Flag
-#define FLAG_UNUSED_0x8F9                           (SYSTEM_FLAGS + 0x99) // Unused Flag
+#define FLAG_ITEM_GRUTA_FIRE_STONE         0x8F6 // Dualocke: objeto de la GRUTA ÍGNEA
+#define FLAG_ITEM_GRUTA_MAGMARIZER         0x8F7 // Dualocke: objeto de la GRUTA ÍGNEA
+#define FLAG_ITEM_GRUTA_CHARCOAL           0x8F8 // Dualocke: objeto de la GRUTA ÍGNEA
+#define FLAG_ITEM_GRUTA_LAVA_COOKIE        0x8F9 // Dualocke: objeto de la GRUTA ÍGNEA
 #define FLAG_UNUSED_0x8FA                           (SYSTEM_FLAGS + 0x9A) // Unused Flag
 #define FLAG_UNUSED_0x8FB                           (SYSTEM_FLAGS + 0x9B) // Unused Flag
 #define FLAG_UNUSED_0x8FC                           (SYSTEM_FLAGS + 0x9C) // Unused Flag

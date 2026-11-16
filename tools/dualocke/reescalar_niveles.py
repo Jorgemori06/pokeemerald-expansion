@@ -60,7 +60,8 @@ TRAMOS = {
         "MAUVILLE_CITY_GYM", "ROUTE110_TRICK_HOUSE_PUZZLE1"],
     4: ["ROUTE111", "ROUTE112", "FIERY_PATH", "ROUTE113", "ROUTE114", "METEOR_FALLS_1F_1R",
         "ROUTE115", "MT_CHIMNEY", "JAGGED_PASS", "LAVARIDGE_TOWN_GYM_*", "ROUTE110_TRICK_HOUSE_PUZZLE2"],
-    5: ["PETALBURG_CITY_GYM", "ROUTE110_TRICK_HOUSE_PUZZLE3"],
+    5: ["PETALBURG_CITY_GYM", "ROUTE110_TRICK_HOUSE_PUZZLE3",
+        "GRUTA_IGNEA"],  # se llega con FUERZA, desde el SENDERO ÍGNEO (Miguel, 16/11/2026)
     6: ["PETALBURG_CITY", "ROUTE105", "ROUTE107", "ROUTE108", "ABANDONED_SHIP_*",
         "NEW_MAUVILLE_*", "MIRAGE_TOWER_*", "ROUTE118", "ROUTE123", "ROUTE119",
         "ROUTE119_WEATHER_INSTITUTE_*", "ROUTE120", "FORTREE_CITY_GYM", "ROUTE110_TRICK_HOUSE_PUZZLE4"],
@@ -183,12 +184,13 @@ def interpolar(v, vmin, vmax, nmin, nmax):
     return round(nmin + (v - vmin) * (nmax - nmin) / (vmax - vmin))
 
 
-# Entrenadores que no salían en ningún mapa y ahora están en las islas del ferry (Miguel, 16/11/2026).
+# Entrenadores que no salían en ningún mapa y ahora están en las zonas nuevas (Miguel, 16/11/2026):
+# las islas del ferry y la GRUTA ÍGNEA.
 # - Aunque alguno acabe en _2 o _3 no son revanchas: se reescalan como los normales de su mapa.
 # - No cuentan para la banda de su tramo: así no se mueve el nivel de ningún otro entrenador ni de
 #   los salvajes de las semillas en curso.
 ENTRENADORES_ISLAS = {"TRAINER_TERRY", "TRAINER_CINDY_2", "TRAINER_MIKE_1", "TRAINER_AMY_AND_LIV_3",
-                      "TRAINER_GINA_AND_MIA_2", "TRAINER_LUCAS_2"}
+                      "TRAINER_GINA_AND_MIA_2", "TRAINER_LUCAS_2", "TRAINER_GRUNT_UNUSED"}
 
 
 def calcular_entrenadores(base, mapas):

@@ -18,6 +18,7 @@ src/data/wild_encounters.json desde la base y se las llevaría por delante:
 """
 
 import json
+import re
 import sys
 
 sys.path.insert(0, "tools/dualocke")
@@ -56,7 +57,41 @@ SALVAJES = {
     "MAP_NAVEL_ROCK_FORK": {"land_mons": CUEVA_OMBLIGO},
     "MAP_NAVEL_ROCK_TOP": {"land_mons": CUEVA_OMBLIGO},
     "MAP_NAVEL_ROCK_BOTTOM": {"land_mons": CUEVA_OMBLIGO},
+    # GRUTA ÍGNEA (crear_gruta_ignea.py): Pokémon de fuego y roca de todas las generaciones
+    "MAP_GRUTA_IGNEA": {
+        "land_mons": ["SLUGMA", "NUMEL", "SALANDIT", "SIZZLIPEDE", "ROLYCOLY", "LITWICK",
+                      "HEATMOR", "MAGBY", "CHARCADET", "TURTONATOR", "TORKOAL", "LARVESTA"],
+    },
 }
+
+# Entrenadores de las zonas nuevas.
+# - CABECERAS: entrenadores que ya existían (pero no salían en ningún mapa) a los que se les cambia
+#   algo de la cabecera. Su equipo y su nivel los pone reescalar_niveles.py (ENTRENADORES_ISLAS).
+# - NUEVOS: entrenadores nuevos (include/constants/opponents.h). reescalar_niveles.py no los
+#   conoce (no están en la base), así que el equipo entero lo escribe este script, al nivel más
+#   alto de los entrenadores normales de su tramo (el último, el as) y 1 menos el resto.
+#   Las especies son las de una partida sin semilla, ya evolucionadas para su nivel
+#   (evolucionar_entrenadores.py solo mira los de la base); el randomizer las cambia con semilla.
+CABECERAS = {
+    # El soldado sin usar tenía los gráficos y la música del Equipo Aqua
+    "TRAINER_GRUNT_UNUSED": {"Pic": "Magma Grunt F", "Music": "Magma"},
+}
+NUEVOS = {
+    "TRAINER_IGOR": {
+        "mapa": "MAP_GRUTA_IGNEA",
+        "cabecera": [("Name", "ÍGOR"), ("Class", "Kindler"), ("Pic", "Kindler"), ("Gender", "Male"),
+                     ("Music", "Hiker"), ("Double Battle", "No"), ("AI", "Basic Trainer")],
+        "equipo": ["Camerupt", "Magcargo", "Magmortar"],
+    },
+    "TRAINER_ROQUE": {
+        "mapa": "MAP_GRUTA_IGNEA",
+        "cabecera": [("Name", "ROQUE"), ("Class", "Hiker"), ("Pic", "Hiker"), ("Gender", "Male"),
+                     ("Music", "Hiker"), ("Double Battle", "No"), ("AI", "Basic Trainer")],
+        "equipo": ["Golem", "Torkoal"],
+    },
+}
+TRAINERS = "src/data/trainers.party"
+DESPUES_DE = "TRAINER_STEVEN_ROUTE_120"   # los nuevos van detrás del último de Esmeralda
 TASAS = {"land_mons": 10, "water_mons": 4, "fishing_mons": 30, "rock_smash_mons": 20}
 
 
@@ -88,7 +123,43 @@ def tabla(mapa, tipos):
     return entrada
 
 
+def bloques(texto):
+    """[(TRAINER_X, inicio, fin)] de cada entrenador en trainers.party."""
+    marcas = [(m.group(1), m.start()) for m in re.finditer(r"^=== (TRAINER_\w+) ===[ \t]*$", texto, re.M)]
+    return [(t, ini, marcas[i + 1][1] if i + 1 < len(marcas) else len(texto)) for i, (t, ini) in enumerate(marcas)]
+
+
+def entrenadores():
+    with open(TRAINERS, encoding="utf-8", newline="") as f:
+        texto = f.read()
+    salto = "\r\n" if "\r\n" in texto else "\n"
+    for t, campos in CABECERAS.items():
+        _, ini, fin = next(b for b in bloques(texto) if b[0] == t)
+        bloque = texto[ini:fin]
+        for campo, valor in campos.items():
+            bloque, n = re.subn(rf"^{campo}: .*$", f"{campo}: {valor}", bloque, count=1, flags=re.M)
+            assert n == 1, (t, campo)
+        texto = texto[:ini] + bloque + texto[fin:]
+    for t, datos in NUEVOS.items():
+        tramo = rn.tramo_de_mapa(datos["mapa"])
+        tope = rn.rango_tramo(tramo)[1]
+        lineas = [f"=== {t} ==="] + [f"{c}: {v}" for c, v in datos["cabecera"]] + [""]
+        for i, especie in enumerate(datos["equipo"]):
+            nivel = tope if i == len(datos["equipo"]) - 1 else tope - 1
+            lineas += [especie, f"Level: {nivel}", "IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe", ""]
+        nuevo = salto.join(lineas) + salto
+        actual = next((b for b in bloques(texto) if b[0] == t), None)
+        if actual:
+            texto = texto[:actual[1]] + nuevo + texto[actual[2]:]
+        else:
+            _, _, fin = next(b for b in bloques(texto) if b[0] == DESPUES_DE)
+            texto = texto[:fin] + nuevo + texto[fin:]
+    with open(TRAINERS, "w", encoding="utf-8", newline="") as f:
+        f.write(texto)
+
+
 def main():
+    entrenadores()
     with open(WILD, encoding="utf-8") as f:
         datos = json.load(f)
     grupo = next(g for g in datos["wild_encounter_groups"] if g.get("label") == "gWildMonHeaders")
@@ -104,7 +175,7 @@ def main():
             grupo["encounters"][actual] = nueva
     with open(WILD, "w", encoding="utf-8", newline="") as f:
         f.write(json.dumps(datos, indent=2, ensure_ascii=False) + "\n")
-    print(f"Dualocke: salvajes de {len(SALVAJES)} mapas de zonas nuevas")
+    print(f"Dualocke: salvajes de {len(SALVAJES)} mapas de zonas nuevas y {len(NUEVOS)} entrenadores nuevos")
 
 
 if __name__ == "__main__":

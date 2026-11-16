@@ -126,6 +126,17 @@ OBJETOS_ISLAS = [
     ("BALM_MUSHROOM", "NavelRock_B1F", "oculta", None),
 ]
 
+# Objetos de la GRUTA ÍGNEA (crear_gruta_ignea.py; Miguel, 16/11/2026), de fuego. Con semilla, al
+# azar como los demás objetos del suelo.
+# La pista es la vista del entrenador que se usa de referencia ("02" ÍGOR, "03" ROQUE, "04" el
+# soldado), para que no salgan todos juntos.
+OBJETOS_GRUTA = [
+    ("FIRE_STONE", "GrutaIgnea", "bola", "03$"),
+    ("MAGMARIZER", "GrutaIgnea", "bola", "04$"),
+    ("CHARCOAL", "GrutaIgnea", "oculta", "02$"),
+    ("LAVA_COOKIE", "GrutaIgnea", "oculta", "04$"),
+]
+
 # Objetos competitivos de generaciones nuevas (misma estructura). Los más fuertes (Pañuelo
 # Elegido, Chaleco Asalto, Gafas Elegidas, Vidasfera) van a partir del tramo 6.
 COMPETITIVOS = [
@@ -247,6 +258,7 @@ GRUPOS = [
     (TICKETS, "FLAG_ITEM_TICKET_", 0x021, 0x04F, "Ticket-Recuerdo en el mapa", "HEART_SCALE"),
     (TICKETS_OCULTOS, "FLAG_ITEM_TICKET_", 0x4E5, 0x4EF, "Ticket-Recuerdo oculto en el mapa", "HEART_SCALE"),
     (OBJETOS_ISLAS, "FLAG_ITEM_ISLA_", 0x8E5, 0x8F5, "objeto de las islas del ferry", None),
+    (OBJETOS_GRUTA, "FLAG_ITEM_GRUTA_", 0x8F6, 0x8FF, "objeto de la GRUTA ÍGNEA", None),
 ]
 COMPORTAMIENTOS_OK = {"MB_NORMAL", "MB_TALL_GRASS", "MB_LONG_GRASS", "MB_SHORT_GRASS", "MB_DEEP_SAND",
                       "MB_SAND", "MB_CAVE", "MB_ASHGRASS", "MB_FOOTPRINTS"}
@@ -326,9 +338,8 @@ def _buscar_desde_anclas(anclas, info, ancho, alto, ok, distancia, ocupadas, sol
             vecinas = [info(ax + dx, ay + dy)[1] for dx, dy in ((0, 1), (0, -1), (1, 0), (-1, 0))
                        if 0 <= ax + dx < ancho and 0 <= ay + dy < alto and info(ax + dx, ay + dy)[0] == 0
                        and info(ax + dx, ay + dy)[1] not in (0, 15)]
-            if not vecinas:
-                continue
-            elev = vecinas[0]
+            # Si todo el mapa es de transición (la GRUTA ÍGNEA, como la GUARIDA MAGMA), se queda en 0
+            elev = vecinas[0] if vecinas else elev
         vistos = {(ax, ay)}
         cola = deque([(ax, ay, 0)])
         while cola:
