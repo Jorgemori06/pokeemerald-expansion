@@ -16,7 +16,7 @@ En `PRUEBAS.md`, `src/dualocke_aleatorio.c` y `tools/dualocke/colocar_objetos.py
 
 - **#78:** en la Pokédex HGSS, un texto con un salto de línea de verdad dentro de las comillas (`sText_EVO_CRITICAL_HITS`). Rompía todo el archivo.
 - **#82 y #83, `trainers.party`:** TRAINER_STEVEN_ROUTE_120 es el último del archivo y no tiene línea en blanco detrás. `zonas_nuevas.py` pegaba ahí los entrenadores nuevos y `trainerproc` fallaba. Arreglado el archivo y el script, que ahora la pone.
-- **#82 y #83, scripts de los mapas:** faltaba incluir en `data/event_scripts.s` los scripts de la GRUTA ÍGNEA, la ISLA NEVADA y la CUEVA HELADA (`.include "data/maps/.../scripts.inc"`). Sin eso no enlaza. Van con los de la ISLA SUR, fuera del bloque `.if IS_FRLG` del final.
+- **#82 y #83, scripts de los mapas:** faltaba incluirlos en `data/event_scripts.s` y no enlazaba. Miguel lo arregló a la vez (14:21) y se queda su versión.
 - **`zonas_nuevas.py` en Linux:** se paraba con `data/maps/.gitignore` (no es una carpeta). En Windows da otro error y por eso a Miguel no le pasaba.
 
 ### Semillas en curso
