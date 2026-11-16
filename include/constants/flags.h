@@ -1404,7 +1404,7 @@
 #define FLAG_SYS_CRUISE_MODE                        (SYSTEM_FLAGS + 0x2D)
 
 #define FLAG_DUALOCKE_GUARDIAN_NEVADA                (SYSTEM_FLAGS + 0x2E) // Dualocke: guardián de la CUEVA HELADA vencido o capturado
-#define FLAG_UNUSED_0x88F                           (SYSTEM_FLAGS + 0x2F) // Unused Flag
+#define FLAG_ITEM_MARISMA_MIRACLE_SEED     0x88F // Dualocke: objeto de la MARISMA AZULIZA
 
 #define FLAG_SYS_TV_HOME                            (SYSTEM_FLAGS + 0x30)
 #define FLAG_SYS_TV_WATCH                           (SYSTEM_FLAGS + 0x31)
@@ -1503,7 +1503,7 @@
 #define FLAG_ARRIVED_AT_NAVEL_ROCK                  (SYSTEM_FLAGS + 0x81)
 #define FLAG_LANDMARK_TRAINER_HILL                  (SYSTEM_FLAGS + 0x82)
 
-#define FLAG_UNUSED_0x8E3                           (SYSTEM_FLAGS + 0x83) // Unused Flag
+#define FLAG_ITEM_TICKET_MARISMA_AZULIZA   0x8E3 // Dualocke: Ticket-Recuerdo en la MARISMA AZULIZA
 
 #define FLAG_RECEIVED_POKEDEX_FROM_BIRCH            (SYSTEM_FLAGS + 0x84)
 

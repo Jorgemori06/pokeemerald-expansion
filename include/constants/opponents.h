@@ -865,12 +865,14 @@
 #define TRAINER_NIEVES                      858 // Dualocke: entrenadora guay de la CUEVA HELADA (zonas_nuevas.py)
 #define TRAINER_RAMIRO                      859 // Dualocke: ruinamaníaco de las RUINAS ARENOSAS (zonas_nuevas.py)
 #define TRAINER_SOLEDAD                     860 // Dualocke: experta del DESIERTO PROFUNDO (zonas_nuevas.py)
+#define TRAINER_TOMAS                       861 // Dualocke: pescador de la MARISMA AZULIZA (zonas_nuevas.py)
+#define TRAINER_MARGARITA                   862 // Dualocke: dama aroma de la MARISMA AZULIZA (zonas_nuevas.py)
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 8 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT_EMERALD     861
+#define TRAINERS_COUNT_EMERALD     863
 #define MAX_TRAINERS_COUNT_EMERALD 864
 
 #if IS_FRLG

@@ -155,6 +155,11 @@ OBJETOS_DESIERTO = [
     ("ODD_KEYSTONE", "RuinasArenosas", "oculta", None),
 ]
 
+# MARISMA AZULIZA (crear_marisma_azuliza.py): un objeto y un Ticket-Recuerdo, como en cada ruta.
+# Se movieron después a mano a la hierba alta (4,15 y 24,4): el script los ponía junto a TOMÁS.
+OBJETOS_MARISMA = [("MIRACLE_SEED", "MarismaAzuliza", "bola", None)]
+TICKETS_MARISMA = [("MARISMA_AZULIZA", "MarismaAzuliza", "bola", None)]
+
 # Objetos competitivos de generaciones nuevas (misma estructura). Los más fuertes (Pañuelo
 # Elegido, Chaleco Asalto, Gafas Elegidas, Vidasfera) van a partir del tramo 6.
 COMPETITIVOS = [
@@ -276,6 +281,8 @@ GRUPOS = [
     (TICKETS, "FLAG_ITEM_TICKET_", 0x021, 0x04F, "Ticket-Recuerdo en el mapa", "HEART_SCALE"),
     (TICKETS_OCULTOS, "FLAG_ITEM_TICKET_", 0x4E5, 0x4EF, "Ticket-Recuerdo oculto en el mapa", "HEART_SCALE"),
     (OBJETOS_ISLAS, "FLAG_ITEM_ISLA_", 0x8E5, 0x8EF, "objeto de las islas del ferry", None),
+    (OBJETOS_MARISMA, "FLAG_ITEM_MARISMA_", 0x88F, 0x88F, "objeto de la MARISMA AZULIZA", None),
+    (TICKETS_MARISMA, "FLAG_ITEM_TICKET_", 0x8E3, 0x8E3, "Ticket-Recuerdo en la MARISMA AZULIZA", "HEART_SCALE"),
     (OBJETOS_DESIERTO, "FLAG_ITEM_DESIERTO_", 0x8F0, 0x8F5, "objeto del DESIERTO PROFUNDO y las RUINAS ARENOSAS", None),
     (OBJETOS_GRUTA, "FLAG_ITEM_GRUTA_", 0x8F6, 0x8F9, "objeto de la GRUTA ÍGNEA", None),
     (OBJETOS_NEVADA, "FLAG_ITEM_NEVADA_", 0x8FA, 0x8FF, "objeto de la ISLA NEVADA", None),

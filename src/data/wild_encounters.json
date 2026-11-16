@@ -37801,6 +37801,160 @@
           }
         },
         {
+          "map": "MAP_MARISMA_AZULIZA",
+          "base_label": "gMarismaAzuliza",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 15,
+                "max_level": 17,
+                "species": "SPECIES_WOOPER"
+              },
+              {
+                "min_level": 15,
+                "max_level": 17,
+                "species": "SPECIES_LOTAD"
+              },
+              {
+                "min_level": 15,
+                "max_level": 17,
+                "species": "SPECIES_SURSKIT"
+              },
+              {
+                "min_level": 15,
+                "max_level": 17,
+                "species": "SPECIES_YANMA"
+              },
+              {
+                "min_level": 15,
+                "max_level": 17,
+                "species": "SPECIES_TYMPOLE"
+              },
+              {
+                "min_level": 15,
+                "max_level": 17,
+                "species": "SPECIES_SHROOMISH"
+              },
+              {
+                "min_level": 16,
+                "max_level": 18,
+                "species": "SPECIES_CROAGUNK"
+              },
+              {
+                "min_level": 16,
+                "max_level": 18,
+                "species": "SPECIES_PARAS"
+              },
+              {
+                "min_level": 16,
+                "max_level": 18,
+                "species": "SPECIES_SHELLOS"
+              },
+              {
+                "min_level": 16,
+                "max_level": 18,
+                "species": "SPECIES_STUNFISK"
+              },
+              {
+                "min_level": 17,
+                "max_level": 19,
+                "species": "SPECIES_DEWPIDER"
+              },
+              {
+                "min_level": 17,
+                "max_level": 19,
+                "species": "SPECIES_GOOMY"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 15,
+                "max_level": 17,
+                "species": "SPECIES_SURSKIT"
+              },
+              {
+                "min_level": 15,
+                "max_level": 17,
+                "species": "SPECIES_LOTAD"
+              },
+              {
+                "min_level": 16,
+                "max_level": 18,
+                "species": "SPECIES_WOOPER"
+              },
+              {
+                "min_level": 17,
+                "max_level": 19,
+                "species": "SPECIES_POLIWAG"
+              },
+              {
+                "min_level": 17,
+                "max_level": 19,
+                "species": "SPECIES_CHEWTLE"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 30,
+            "mons": [
+              {
+                "min_level": 15,
+                "max_level": 17,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 15,
+                "max_level": 17,
+                "species": "SPECIES_BARBOACH"
+              },
+              {
+                "min_level": 15,
+                "max_level": 17,
+                "species": "SPECIES_BARBOACH"
+              },
+              {
+                "min_level": 15,
+                "max_level": 17,
+                "species": "SPECIES_POLIWAG"
+              },
+              {
+                "min_level": 15,
+                "max_level": 17,
+                "species": "SPECIES_GOLDEEN"
+              },
+              {
+                "min_level": 16,
+                "max_level": 18,
+                "species": "SPECIES_WISHIWASHI"
+              },
+              {
+                "min_level": 16,
+                "max_level": 18,
+                "species": "SPECIES_BARBOACH"
+              },
+              {
+                "min_level": 16,
+                "max_level": 18,
+                "species": "SPECIES_TYMPOLE"
+              },
+              {
+                "min_level": 17,
+                "max_level": 19,
+                "species": "SPECIES_CHEWTLE"
+              },
+              {
+                "min_level": 17,
+                "max_level": 19,
+                "species": "SPECIES_BASCULIN"
+              }
+            ]
+          }
+        },
+        {
           "map": "MAP_ISLA_NEVADA_CUEVA",
           "base_label": "gIslaNevada_Cueva",
           "land_mons": {

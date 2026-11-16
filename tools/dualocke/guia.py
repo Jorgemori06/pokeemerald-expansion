@@ -25,7 +25,7 @@ GUIA = "GUIA.html"
 # Tramo de la historia (el de la medalla que se busca) en el que se puede llegar a cada mapa
 TRAMOS = [
     (1, r"^Route10[1-4]$|^PetalburgWoods"),
-    (2, r"^Route116$|^RusturfTunnel|^DewfordTown|^GraniteCave|^Route106$"),
+    (2, r"^Route116$|^RusturfTunnel|^DewfordTown|^GraniteCave|^Route106$|^MarismaAzuliza"),
     (3, r"^Route109$|^SlateportCity|^Route110$|^MauvilleCity"),
     (4, r"^Route11[1-57]$|^Route110_TrickHouse|^VerdanturfTown|^FieryPath|^MeteorFalls_1F|^MtChimney|^JaggedPass"),
     (5, r"^MirageTower|^GrutaIgnea|^DesiertoProfundo|^RuinasArenosas"),

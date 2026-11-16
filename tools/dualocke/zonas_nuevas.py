@@ -83,6 +83,15 @@ SALVAJES = {
     "MAP_RUINAS_ARENOSAS": {"land_mons": RUINAS},
     "MAP_RUINAS_ARENOSAS_2F": {"land_mons": RUINAS},
     "MAP_RUINAS_ARENOSAS_3F": {"land_mons": RUINAS},
+    # MARISMA AZULIZA (crear_marisma_azuliza.py): Pokémon de pantano. Se pesca en las charcas con la
+    # CAÑA VIEJA de AZULIZA; el agua de surf, para cuando se vuelva con SURF
+    "MAP_MARISMA_AZULIZA": {
+        "land_mons": ["WOOPER", "LOTAD", "SURSKIT", "YANMA", "TYMPOLE", "SHROOMISH",
+                      "CROAGUNK", "PARAS", "SHELLOS", "STUNFISK", "DEWPIDER", "GOOMY"],
+        "water_mons": ["SURSKIT", "LOTAD", "WOOPER", "POLIWAG", "CHEWTLE"],
+        "fishing_mons": ["MAGIKARP", "BARBOACH", "BARBOACH", "POLIWAG", "GOLDEEN",
+                         "WISHIWASHI", "BARBOACH", "TYMPOLE", "CHEWTLE", "BASCULIN"],
+    },
     "MAP_ISLA_NEVADA_CUEVA": {
         "land_mons": ["SNORUNT", "SWINUB", "SNOVER", "CUBCHOO", "VANILLITE", "SNOM",
                       "BERGMITE", "SNEASEL", "CETODDLE", "CRYOGONAL", "EISCUE", "FRIGIBAX"],
@@ -125,6 +134,18 @@ NUEVOS = {
         "cabecera": [("Name", "SOLEDAD"), ("Class", "Expert"), ("Pic", "Expert F"), ("Gender", "Female"),
                      ("Music", "Intense"), ("Double Battle", "No"), ("AI", "Basic Trainer")],
         "equipo": ["Flygon", "Hippowdon", "Cacturne"],
+    },
+    "TRAINER_TOMAS": {
+        "mapa": "MAP_MARISMA_AZULIZA",
+        "cabecera": [("Name", "TOMÁS"), ("Class", "Fisherman"), ("Pic", "Fisherman"), ("Gender", "Male"),
+                     ("Music", "Hiker"), ("Double Battle", "No"), ("AI", "Check Bad Move")],
+        "equipo": ["Barboach", "Lotad"],
+    },
+    "TRAINER_MARGARITA": {
+        "mapa": "MAP_MARISMA_AZULIZA",
+        "cabecera": [("Name", "MARGARITA"), ("Class", "Aroma Lady"), ("Pic", "Aroma Lady"), ("Gender", "Female"),
+                     ("Music", "Female"), ("Double Battle", "No"), ("AI", "Check Bad Move")],
+        "equipo": ["Shroomish", "Paras"],
     },
     "TRAINER_ROQUE": {
         "mapa": "MAP_GRUTA_IGNEA",
