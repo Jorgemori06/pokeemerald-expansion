@@ -44,6 +44,10 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 
 - [ ] Salvajes, entrenadores, iniciales y rival cambian, sin legendarios donde no toca.
 - [ ] Los jefes llevan su as con megapiedra desde el Mega-Aro, y objetos que les sirven.
+- [ ] **Megas de las formas Gigamax (desde el 16/11/2026):**
+  - Coger alguna de las 26 megapiedras nuevas (la Orbeetlita en la RUTA 102, la Drednawita en la RUTA 106…): que salga con su icono y su nombre, y vaya al bolsillo MEGAPIEDRAS.
+  - Megaevolucionar a uno (con el Mega-Aro): animación de mega, sprite de la forma Gigamax, tipo y estadísticas nuevas en el combate, y que vuelva a la forma normal al acabar o al debilitarse.
+  - Que ningún salvaje salga en forma Gigamax y que el Dinamax siga sin poder usarse.
 - [ ] Habilidades, MT, tutores, intercambios y objetos del suelo cambian, y las MO no.
 - [ ] Los movimientos que se aprenden al subir de nivel son al azar: los de tu inicial, los de los salvajes y los de los entrenadores. Que al principio siempre haya algún ataque y que no salgan ataques muy fuertes a nivel bajo.
 - [ ] `make nueva-partida` da otra semilla y `make` repite la misma.
