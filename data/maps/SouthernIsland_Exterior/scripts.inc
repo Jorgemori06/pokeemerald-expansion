@@ -52,3 +52,36 @@ SouthernIsland_Exterior_EventScript_Sign::
 	msgbox SouthernIsland_Exterior_Text_Sign, MSGBOX_SIGN
 	end
 
+@ Dualocke: entrenadores de la isla
+SouthernIsland_Exterior_EventScript_Terry::
+	trainerbattle_single TRAINER_TERRY, SouthernIsland_Exterior_Text_TerryIntro, SouthernIsland_Exterior_Text_TerryDefeat
+	msgbox SouthernIsland_Exterior_Text_TerryPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+SouthernIsland_Exterior_EventScript_Cindy::
+	trainerbattle_single TRAINER_CINDY_2, SouthernIsland_Exterior_Text_CindyIntro, SouthernIsland_Exterior_Text_CindyDefeat
+	msgbox SouthernIsland_Exterior_Text_CindyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+SouthernIsland_Exterior_Text_TerryIntro:
+	.string "Esta isla está llena de sueños.\n"
+	.string "¿Has venido a buscar el tuyo?$"
+
+SouthernIsland_Exterior_Text_TerryDefeat:
+	.string "Mi sueño se ha deshecho…$"
+
+SouthernIsland_Exterior_Text_TerryPostBattle:
+	.string "Dentro del bosque hay algo que\n"
+	.string "vigila la isla. Se nota desde aquí.$"
+
+SouthernIsland_Exterior_Text_CindyIntro:
+	.string "He venido en el ferry a descansar,\n"
+	.string "pero un combate también me relaja.$"
+
+SouthernIsland_Exterior_Text_CindyDefeat:
+	.string "¡Vaya! Tus POKéMON vienen\n"
+	.string "con ganas.$"
+
+SouthernIsland_Exterior_Text_CindyPostBattle:
+	.string "El ferry vuelve a CALAGUA cuando\n"
+	.string "quieras. Habla con el marinero.$"

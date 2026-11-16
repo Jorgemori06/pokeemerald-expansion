@@ -110,6 +110,22 @@ MEGAPIEDRAS = [
     ("SALAMENCITE", "MeteorFalls_B1F_2R", "bola", None),
 ]
 
+# Objetos de las islas del ferry (Miguel, 16/11/2026; data/scripts/dualocke_islas.inc). Son objetos
+# normales del suelo: con semilla, el randomizer los cambia como los demás.
+OBJETOS_ISLAS = [
+    ("PP_UP", "SouthernIsland_Exterior", "oculta", None),
+    ("STAR_PIECE", "SouthernIsland_Exterior", "oculta", None),
+    ("MAX_ELIXIR", "SouthernIsland_Interior", "oculta", None),
+    ("BIG_NUGGET", "FarawayIsland_Entrance", "bola", None),
+    ("PP_MAX", "FarawayIsland_Entrance", "oculta", None),
+    ("ELIXIR", "FarawayIsland_Interior", "bola", None),
+    ("COMET_SHARD", "BirthIsland_Exterior", "bola", None),
+    ("PEARL_STRING", "NavelRock_Exterior", "oculta", None),
+    ("PROTEIN", "NavelRock_Fork", "bola", None),
+    ("CARBOS", "NavelRock_Fork", "oculta", None),
+    ("BALM_MUSHROOM", "NavelRock_B1F", "oculta", None),
+]
+
 # Objetos competitivos de generaciones nuevas (misma estructura). Los más fuertes (Pañuelo
 # Elegido, Chaleco Asalto, Gafas Elegidas, Vidasfera) van a partir del tramo 6.
 COMPETITIVOS = [
@@ -230,6 +246,7 @@ GRUPOS = [
     (COMPETITIVOS, "FLAG_ITEM_COMP_", 0x493, 0x4E4, "objeto competitivo en el mapa", None),
     (TICKETS, "FLAG_ITEM_TICKET_", 0x021, 0x04F, "Ticket-Recuerdo en el mapa", "HEART_SCALE"),
     (TICKETS_OCULTOS, "FLAG_ITEM_TICKET_", 0x4E5, 0x4EF, "Ticket-Recuerdo oculto en el mapa", "HEART_SCALE"),
+    (OBJETOS_ISLAS, "FLAG_ITEM_ISLA_", 0x8E5, 0x8F5, "objeto de las islas del ferry", None),
 ]
 COMPORTAMIENTOS_OK = {"MB_NORMAL", "MB_TALL_GRASS", "MB_LONG_GRASS", "MB_SHORT_GRASS", "MB_DEEP_SAND",
                       "MB_SAND", "MB_CAVE", "MB_ASHGRASS", "MB_FOOTPRINTS"}
@@ -357,7 +374,9 @@ def asegurar_flags(lista, prefijo, primero, ultimo, comentario, fijo=None):
         nombre = f"{prefijo}{objeto}"
         if nombre in texto:
             continue
-        antigua = re.search(rf"^#define FLAG_UNUSED_0x{valor:03X}\s+0x{valor:X}\b.*$", texto, re.M)
+        # Los de antes del sistema van como "0x123"; los del sistema, como "(SYSTEM_FLAGS + 0x85)"
+        antigua = re.search(rf"^#define FLAG_UNUSED_0x{valor:03X}\s+(0x{valor:X}\b|\(SYSTEM_FLAGS \+ 0x[0-9A-F]+\)).*$",
+                            texto, re.M)
         assert antigua, f"el flag 0x{valor:03X} ya no está libre"
         texto = texto.replace(antigua.group(0),
                               f"#define {nombre:<34} 0x{valor:03X} // Dualocke: {comentario}")
