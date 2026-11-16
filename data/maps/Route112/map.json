@@ -240,6 +240,19 @@
       "trainer_sight_or_berry_tree_id": "ITEM_HEART_SCALE",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_TICKET_RUTA_112"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 29,
+      "y": 50,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_MACHAMPITE",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_MEGA_MACHAMPITE"
     }
   ],
   "warp_events": [
@@ -319,6 +332,14 @@
       "elevation": 3,
       "item": "ITEM_PROTECTIVE_PADS",
       "flag": "FLAG_ITEM_COMP_PROTECTIVE_PADS"
+    },
+    {
+      "type": "hidden_item",
+      "x": 26,
+      "y": 49,
+      "elevation": 3,
+      "item": "ITEM_CENTISKORCHITE",
+      "flag": "FLAG_ITEM_MEGA_CENTISKORCHITE"
     }
   ]
 }

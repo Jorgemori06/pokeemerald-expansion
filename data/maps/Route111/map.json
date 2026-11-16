@@ -1217,6 +1217,14 @@
       "elevation": 3,
       "item": "ITEM_HEART_SCALE",
       "flag": "FLAG_ITEM_TICKET_RUTA_111_2"
+    },
+    {
+      "type": "hidden_item",
+      "x": 32,
+      "y": 101,
+      "elevation": 3,
+      "item": "ITEM_SANDACONDITE",
+      "flag": "FLAG_ITEM_MEGA_SANDACONDITE"
     }
   ]
 }

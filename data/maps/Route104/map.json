@@ -660,6 +660,14 @@
       "elevation": 3,
       "item": "ITEM_HEART_SCALE",
       "flag": "FLAG_ITEM_TICKET_RUTA_104_2"
+    },
+    {
+      "type": "hidden_item",
+      "x": 32,
+      "y": 22,
+      "elevation": 3,
+      "item": "ITEM_BUTTERFRITE",
+      "flag": "FLAG_ITEM_MEGA_BUTTERFRITE"
     }
   ]
 }
