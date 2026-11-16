@@ -1010,6 +1010,33 @@ const u16 gItemIconPalette_Tatsugirinite[] = INCGFX_U16("graphics/items/icon_pal
 
 const u32 gItemIcon_Glimmoranite[] = INCGFX_U32("graphics/items/icons/glimmoranite.png", ".4bpp.smol");
 const u16 gItemIconPalette_Glimmoranite[] = INCGFX_U16("graphics/items/icon_palettes/glimmoranite.pal", ".gbapal");
+// Dualocke: megapiedras de las formas Gigamax (tools/dualocke/megas_gigamax.py)
+const u16 gItemIconPalette_Butterfrite[] = INCGFX_U16("graphics/items/icon_palettes/butterfrite.pal", ".gbapal");
+const u16 gItemIconPalette_Pikachunite[] = INCGFX_U16("graphics/items/icon_palettes/pikachunite.pal", ".gbapal");
+const u16 gItemIconPalette_Meowthite[] = INCGFX_U16("graphics/items/icon_palettes/meowthite.pal", ".gbapal");
+const u16 gItemIconPalette_Machampite[] = INCGFX_U16("graphics/items/icon_palettes/machampite.pal", ".gbapal");
+const u16 gItemIconPalette_Kinglerite[] = INCGFX_U16("graphics/items/icon_palettes/kinglerite.pal", ".gbapal");
+const u16 gItemIconPalette_Laprasite[] = INCGFX_U16("graphics/items/icon_palettes/laprasite.pal", ".gbapal");
+const u16 gItemIconPalette_Eevinite[] = INCGFX_U16("graphics/items/icon_palettes/eevinite.pal", ".gbapal");
+const u16 gItemIconPalette_Snorlaxite[] = INCGFX_U16("graphics/items/icon_palettes/snorlaxite.pal", ".gbapal");
+const u16 gItemIconPalette_Garbodorite[] = INCGFX_U16("graphics/items/icon_palettes/garbodorite.pal", ".gbapal");
+const u16 gItemIconPalette_Rillaboomite[] = INCGFX_U16("graphics/items/icon_palettes/rillaboomite.pal", ".gbapal");
+const u16 gItemIconPalette_Cinderacite[] = INCGFX_U16("graphics/items/icon_palettes/cinderacite.pal", ".gbapal");
+const u16 gItemIconPalette_Inteleonite[] = INCGFX_U16("graphics/items/icon_palettes/inteleonite.pal", ".gbapal");
+const u16 gItemIconPalette_Corviknightite[] = INCGFX_U16("graphics/items/icon_palettes/corviknightite.pal", ".gbapal");
+const u16 gItemIconPalette_Orbeetlite[] = INCGFX_U16("graphics/items/icon_palettes/orbeetlite.pal", ".gbapal");
+const u16 gItemIconPalette_Drednawite[] = INCGFX_U16("graphics/items/icon_palettes/drednawite.pal", ".gbapal");
+const u16 gItemIconPalette_Coalossalite[] = INCGFX_U16("graphics/items/icon_palettes/coalossalite.pal", ".gbapal");
+const u16 gItemIconPalette_Flapplite[] = INCGFX_U16("graphics/items/icon_palettes/flapplite.pal", ".gbapal");
+const u16 gItemIconPalette_Appletunite[] = INCGFX_U16("graphics/items/icon_palettes/appletunite.pal", ".gbapal");
+const u16 gItemIconPalette_Sandacondite[] = INCGFX_U16("graphics/items/icon_palettes/sandacondite.pal", ".gbapal");
+const u16 gItemIconPalette_Toxtricitite[] = INCGFX_U16("graphics/items/icon_palettes/toxtricitite.pal", ".gbapal");
+const u16 gItemIconPalette_Centiskorchite[] = INCGFX_U16("graphics/items/icon_palettes/centiskorchite.pal", ".gbapal");
+const u16 gItemIconPalette_Hatterenite[] = INCGFX_U16("graphics/items/icon_palettes/hatterenite.pal", ".gbapal");
+const u16 gItemIconPalette_Grimmsnarlite[] = INCGFX_U16("graphics/items/icon_palettes/grimmsnarlite.pal", ".gbapal");
+const u16 gItemIconPalette_Alcremite[] = INCGFX_U16("graphics/items/icon_palettes/alcremite.pal", ".gbapal");
+const u16 gItemIconPalette_Copperajahite[] = INCGFX_U16("graphics/items/icon_palettes/copperajahite.pal", ".gbapal");
+const u16 gItemIconPalette_Duraludonite[] = INCGFX_U16("graphics/items/icon_palettes/duraludonite.pal", ".gbapal");
 
 // Gems
 

@@ -210,6 +210,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
 #if P_GIGANTAMAX_FORMS
     [SPECIES_RILLABOOM_GMAX] =
     {
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .baseHP        = 100,
         .baseAttack    = 125,
         .baseDefense   = 90,
@@ -217,6 +218,15 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .baseSpAttack  = 60,
         .baseSpDefense = 70,
         .types = MON_TYPES(TYPE_GRASS),
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .baseHP        = 100,
+        .baseAttack    = 155,
+        .baseDefense   = 110,
+        .baseSpeed     = 115,
+        .baseSpAttack  = 60,
+        .baseSpDefense = 90,
+        .types = MON_TYPES(TYPE_GRASS, TYPE_FIGHTING),
+#endif // Dualocke: megaevolución
         .catchRate = 45,
         .expYield = 265,
         .evYield_Attack = 3,
@@ -225,14 +235,22 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_GRASS),
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_GRASSY_SURGE },
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .abilities = { ABILITY_GRASSY_SURGE, ABILITY_GRASSY_SURGE, ABILITY_GRASSY_SURGE },
+#endif // Dualocke: megaevolución
         .bodyColor = BODY_COLOR_GREEN,
         .speciesName = _("Rillaboom"),
         .cryId = CRY_RILLABOOM,
         .natDexNum = NATIONAL_DEX_RILLABOOM,
         .categoryName = ES(_("Drummer"), _("Percusión")),
         .height = 280,
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .weight = 0,
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .weight = 1000,
+#endif // Dualocke: megaevolución
         .description = COMPOUND_STRING(
             "Rillaboom has become one with its\n"
             "forest of drums and continues to lay\n"
@@ -257,7 +275,11 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(0, 8, SHADOW_SIZE_XL_BATTLE_ONLY)
         FOOTPRINT(Rillaboom)
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .isGigantamax = TRUE,
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .isMegaEvolution = TRUE,
+#endif // Dualocke: megaevolución
         .levelUpLearnset = sRillaboomLevelUpLearnset,
         .teachableLearnset = sRillaboomTeachableLearnset,
         .formSpeciesIdTable = sRillaboomFormSpeciesIdTable,
@@ -471,6 +493,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
 #if P_GIGANTAMAX_FORMS
     [SPECIES_CINDERACE_GMAX] =
     {
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .baseHP        = 80,
         .baseAttack    = 116,
         .baseDefense   = 75,
@@ -478,6 +501,15 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .baseSpAttack  = 65,
         .baseSpDefense = 75,
         .types = MON_TYPES(TYPE_FIRE),
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .baseHP        = 80,
+        .baseAttack    = 146,
+        .baseDefense   = 90,
+        .baseSpeed     = 154,
+        .baseSpAttack  = 70,
+        .baseSpDefense = 90,
+        .types = MON_TYPES(TYPE_FIRE),
+#endif // Dualocke: megaevolución
         .catchRate = 45,
         .expYield = 265,
         .evYield_Speed = 3,
@@ -486,14 +518,22 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_HUMAN_LIKE),
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .abilities = { ABILITY_BLAZE, ABILITY_NONE, ABILITY_LIBERO },
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .abilities = { ABILITY_LIBERO, ABILITY_LIBERO, ABILITY_LIBERO },
+#endif // Dualocke: megaevolución
         .bodyColor = BODY_COLOR_WHITE,
         .speciesName = _("Cinderace"),
         .cryId = CRY_CINDERACE,
         .natDexNum = NATIONAL_DEX_CINDERACE,
         .categoryName = ES(_("Striker"), _("Delantero")),
         .height = 270,
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .weight = 0,
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .weight = 330,
+#endif // Dualocke: megaevolución
         .description = COMPOUND_STRING(
             "Infused with Cinderace's fighting\n"
             "spirit, the gigantic Pyro Ball never\n"
@@ -519,7 +559,11 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-3, 13, SHADOW_SIZE_XL_BATTLE_ONLY)
         FOOTPRINT(Cinderace)
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .isGigantamax = TRUE,
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .isMegaEvolution = TRUE,
+#endif // Dualocke: megaevolución
         .levelUpLearnset = sCinderaceLevelUpLearnset,
         .teachableLearnset = sCinderaceTeachableLearnset,
         .formSpeciesIdTable = sCinderaceFormSpeciesIdTable,
@@ -733,6 +777,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
 #if P_GIGANTAMAX_FORMS
     [SPECIES_INTELEON_GMAX] =
     {
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .baseHP        = 70,
         .baseAttack    = 85,
         .baseDefense   = 65,
@@ -740,6 +785,15 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .baseSpAttack  = 125,
         .baseSpDefense = 65,
         .types = MON_TYPES(TYPE_WATER),
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .baseHP        = 70,
+        .baseAttack    = 85,
+        .baseDefense   = 75,
+        .baseSpeed     = 150,
+        .baseSpAttack  = 165,
+        .baseSpDefense = 85,
+        .types = MON_TYPES(TYPE_WATER),
+#endif // Dualocke: megaevolución
         .catchRate = 45,
         .expYield = 265,
         .evYield_Speed = 3,
@@ -748,14 +802,22 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_1, EGG_GROUP_FIELD),
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .abilities = { ABILITY_TORRENT, ABILITY_NONE, ABILITY_SNIPER },
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .abilities = { ABILITY_SNIPER, ABILITY_SNIPER, ABILITY_SNIPER },
+#endif // Dualocke: megaevolución
         .bodyColor = BODY_COLOR_BLUE,
         .speciesName = _("Inteleon"),
         .cryId = CRY_INTELEON,
         .natDexNum = NATIONAL_DEX_INTELEON,
         .categoryName = ES(_("Secret Agent"), _("Agente")),
         .height = 400,
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .weight = 0,
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .weight = 452,
+#endif // Dualocke: megaevolución
         .description = COMPOUND_STRING(
             "Gigantamax Inteleon's Water Gun\n"
             "move fires at Mach 7. As the Pokémon\n"
@@ -781,7 +843,11 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-5, 12, SHADOW_SIZE_L)
         FOOTPRINT(Inteleon)
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .isGigantamax = TRUE,
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .isMegaEvolution = TRUE,
+#endif // Dualocke: megaevolución
         .levelUpLearnset = sInteleonLevelUpLearnset,
         .teachableLearnset = sInteleonTeachableLearnset,
         .formSpeciesIdTable = sInteleonFormSpeciesIdTable,
@@ -1141,6 +1207,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
 #if P_GIGANTAMAX_FORMS
     [SPECIES_CORVIKNIGHT_GMAX] =
     {
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .baseHP        = 98,
         .baseAttack    = 87,
         .baseDefense   = 105,
@@ -1148,6 +1215,15 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .baseSpAttack  = 53,
         .baseSpDefense = 85,
         .types = MON_TYPES(TYPE_FLYING, TYPE_STEEL),
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .baseHP        = 98,
+        .baseAttack    = 127,
+        .baseDefense   = 125,
+        .baseSpeed     = 87,
+        .baseSpAttack  = 53,
+        .baseSpDefense = 105,
+        .types = MON_TYPES(TYPE_FLYING, TYPE_STEEL),
+#endif // Dualocke: megaevolución
         .catchRate = 45,
         .expYield = 248,
         .evYield_Defense = 3,
@@ -1156,14 +1232,22 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FLYING),
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .abilities = { ABILITY_PRESSURE, ABILITY_UNNERVE, ABILITY_MIRROR_ARMOR },
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .abilities = { ABILITY_MIRROR_ARMOR, ABILITY_MIRROR_ARMOR, ABILITY_MIRROR_ARMOR },
+#endif // Dualocke: megaevolución
         .bodyColor = BODY_COLOR_PURPLE,
         .speciesName = _("Corviknight"),
         .cryId = CRY_CORVIKNIGHT,
         .natDexNum = NATIONAL_DEX_CORVIKNIGHT,
         .categoryName = ES(_("Raven"), _("Cuervo")),
         .height = 140,
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .weight = 0,
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .weight = 750,
+#endif // Dualocke: megaevolución
         .description = COMPOUND_STRING(
             "Imbued with Gigantamax energy, its\n"
             "wings can whip up winds more\n"
@@ -1189,7 +1273,11 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(2, 8, SHADOW_SIZE_L)
         FOOTPRINT(Corviknight)
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .isGigantamax = TRUE,
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .isMegaEvolution = TRUE,
+#endif // Dualocke: megaevolución
         .levelUpLearnset = sCorviknightLevelUpLearnset,
         .teachableLearnset = sCorviknightTeachableLearnset,
         .formSpeciesIdTable = sCorviknightFormSpeciesIdTable,
@@ -1408,6 +1496,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
 #if P_GIGANTAMAX_FORMS
     [SPECIES_ORBEETLE_GMAX] =
     {
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .baseHP        = 60,
         .baseAttack    = 45,
         .baseDefense   = 110,
@@ -1415,6 +1504,15 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .baseSpAttack  = 80,
         .baseSpDefense = 120,
         .types = MON_TYPES(TYPE_BUG, TYPE_PSYCHIC),
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .baseHP        = 70,
+        .baseAttack    = 45,
+        .baseDefense   = 120,
+        .baseSpeed     = 100,
+        .baseSpAttack  = 130,
+        .baseSpDefense = 140,
+        .types = MON_TYPES(TYPE_BUG, TYPE_PSYCHIC),
+#endif // Dualocke: megaevolución
         .catchRate = 45,
         .expYield = 253,
         .evYield_SpDefense = 3,
@@ -1424,14 +1522,22 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .abilities = { ABILITY_SWARM, ABILITY_FRISK, ABILITY_TELEPATHY },
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .abilities = { ABILITY_PSYCHIC_SURGE, ABILITY_PSYCHIC_SURGE, ABILITY_PSYCHIC_SURGE },
+#endif // Dualocke: megaevolución
         .bodyColor = BODY_COLOR_RED,
         .speciesName = _("Orbeetle"),
         .cryId = CRY_ORBEETLE,
         .natDexNum = NATIONAL_DEX_ORBEETLE,
         .categoryName = ES(_("Seven Spot"), _("Siete Puntos")),
         .height = 140,
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .weight = 0,
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .weight = 408,
+#endif // Dualocke: megaevolución
         .description = COMPOUND_STRING(
             "Its brain has grown to a gargantuan\n"
             "size, as has the rest of its body.\n"
@@ -1457,7 +1563,11 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(0, 12, SHADOW_SIZE_XL_BATTLE_ONLY)
         FOOTPRINT(Orbeetle)
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .isGigantamax = TRUE,
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .isMegaEvolution = TRUE,
+#endif // Dualocke: megaevolución
         .levelUpLearnset = sOrbeetleLevelUpLearnset,
         .teachableLearnset = sOrbeetleTeachableLearnset,
         .formSpeciesIdTable = sOrbeetleFormSpeciesIdTable,
@@ -1988,6 +2098,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
 #if P_GIGANTAMAX_FORMS
     [SPECIES_DREDNAW_GMAX] =
     {
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .baseHP        = 90,
         .baseAttack    = 115,
         .baseDefense   = 90,
@@ -1995,6 +2106,15 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .baseSpAttack  = 48,
         .baseSpDefense = 68,
         .types = MON_TYPES(TYPE_WATER, TYPE_ROCK),
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .baseHP        = 90,
+        .baseAttack    = 145,
+        .baseDefense   = 115,
+        .baseSpeed     = 99,
+        .baseSpAttack  = 48,
+        .baseSpDefense = 88,
+        .types = MON_TYPES(TYPE_WATER, TYPE_ROCK),
+#endif // Dualocke: megaevolución
         .catchRate = 75,
         .expYield = 170,
         .evYield_Attack = 2,
@@ -2003,14 +2123,22 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_WATER_1),
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .abilities = { ABILITY_STRONG_JAW, ABILITY_SHELL_ARMOR, ABILITY_SWIFT_SWIM },
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .abilities = { ABILITY_STRONG_JAW, ABILITY_STRONG_JAW, ABILITY_STRONG_JAW },
+#endif // Dualocke: megaevolución
         .bodyColor = BODY_COLOR_GREEN,
         .speciesName = _("Drednaw"),
         .cryId = CRY_DREDNAW,
         .natDexNum = NATIONAL_DEX_DREDNAW,
         .categoryName = ES(_("Bite"), _("Mordisco")),
         .height = 240,
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .weight = 0,
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .weight = 1300,
+#endif // Dualocke: megaevolución
         .description = COMPOUND_STRING(
             "In the Galar region, there's a tale\n"
             "about this Pokémon chewing up a\n"
@@ -2036,7 +2164,11 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(2, 12, SHADOW_SIZE_XL_BATTLE_ONLY)
         FOOTPRINT(Drednaw)
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .isGigantamax = TRUE,
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .isMegaEvolution = TRUE,
+#endif // Dualocke: megaevolución
         .levelUpLearnset = sDrednawLevelUpLearnset,
         .teachableLearnset = sDrednawTeachableLearnset,
         .formSpeciesIdTable = sDrednawFormSpeciesIdTable,
@@ -2378,6 +2510,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
 #if P_GIGANTAMAX_FORMS
     [SPECIES_COALOSSAL_GMAX] =
     {
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .baseHP        = 110,
         .baseAttack    = 80,
         .baseDefense   = 120,
@@ -2385,6 +2518,15 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .baseSpAttack  = 80,
         .baseSpDefense = 90,
         .types = MON_TYPES(TYPE_ROCK, TYPE_FIRE),
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .baseHP        = 110,
+        .baseAttack    = 80,
+        .baseDefense   = 150,
+        .baseSpeed     = 30,
+        .baseSpAttack  = 120,
+        .baseSpDefense = 120,
+        .types = MON_TYPES(TYPE_ROCK, TYPE_FIRE),
+#endif // Dualocke: megaevolución
         .catchRate = 45,
         .expYield = 255,
         .evYield_Defense = 3,
@@ -2393,14 +2535,22 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .abilities = { ABILITY_STEAM_ENGINE, ABILITY_FLAME_BODY, ABILITY_FLASH_FIRE },
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .abilities = { ABILITY_DROUGHT, ABILITY_DROUGHT, ABILITY_DROUGHT },
+#endif // Dualocke: megaevolución
         .bodyColor = BODY_COLOR_BLACK,
         .speciesName = _("Coalossal"),
         .cryId = CRY_COALOSSAL,
         .natDexNum = NATIONAL_DEX_COALOSSAL,
         .categoryName = ES(_("Coal"), _("Carbón")),
         .height = 420,
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .weight = 0,
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .weight = 3300,
+#endif // Dualocke: megaevolución
         .description = COMPOUND_STRING(
             "Its body is a colossal stove. With\n"
             "Gigantamax energy stoking the fire,\n"
@@ -2426,7 +2576,11 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(1, 12, SHADOW_SIZE_XL_BATTLE_ONLY)
         FOOTPRINT(Coalossal)
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .isGigantamax = TRUE,
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .isMegaEvolution = TRUE,
+#endif // Dualocke: megaevolución
         .levelUpLearnset = sCoalossalLevelUpLearnset,
         .teachableLearnset = sCoalossalTeachableLearnset,
         .formSpeciesIdTable = sCoalossalFormSpeciesIdTable,
@@ -2582,6 +2736,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
 #if P_GIGANTAMAX_FORMS
     [SPECIES_FLAPPLE_GMAX] =
     {
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .baseHP        = 70,
         .baseAttack    = 110,
         .baseDefense   = 80,
@@ -2589,6 +2744,15 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .baseSpAttack  = 95,
         .baseSpDefense = 60,
         .types = MON_TYPES(TYPE_GRASS, TYPE_DRAGON),
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .baseHP        = 70,
+        .baseAttack    = 140,
+        .baseDefense   = 90,
+        .baseSpeed     = 120,
+        .baseSpAttack  = 95,
+        .baseSpDefense = 70,
+        .types = MON_TYPES(TYPE_GRASS, TYPE_DRAGON),
+#endif // Dualocke: megaevolución
         .catchRate = 45,
         .expYield = 170,
         .evYield_Attack = 2,
@@ -2597,14 +2761,22 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_ERRATIC,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_GRASS, EGG_GROUP_DRAGON),
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .abilities = { ABILITY_RIPEN, ABILITY_GLUTTONY, ABILITY_HUSTLE },
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .abilities = { ABILITY_TOUGH_CLAWS, ABILITY_TOUGH_CLAWS, ABILITY_TOUGH_CLAWS },
+#endif // Dualocke: megaevolución
         .bodyColor = BODY_COLOR_GREEN,
         .speciesName = _("Flapple"),
         .cryId = CRY_FLAPPLE,
         .natDexNum = NATIONAL_DEX_FLAPPLE,
         .categoryName = ES(_("Apple Wing"), _("Manzanala")),
         .height = 240,
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .weight = 0,
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .weight = 20,
+#endif // Dualocke: megaevolución
         .description = COMPOUND_STRING(
             "Under the influence of Gigantamax\n"
             "energy, it produces much more sweet\n"
@@ -2630,7 +2802,11 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(0, 10, SHADOW_SIZE_XL_BATTLE_ONLY)
         FOOTPRINT(Flapple)
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .isGigantamax = TRUE,
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .isMegaEvolution = TRUE,
+#endif // Dualocke: megaevolución
         .levelUpLearnset = sFlappleLevelUpLearnset,
         .teachableLearnset = sFlappleTeachableLearnset,
         .formSpeciesIdTable = sFlappleFormSpeciesIdTable,
@@ -2708,6 +2884,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
 #if P_GIGANTAMAX_FORMS
     [SPECIES_APPLETUN_GMAX] =
     {
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .baseHP        = 110,
         .baseAttack    = 85,
         .baseDefense   = 80,
@@ -2715,6 +2892,15 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .baseSpAttack  = 100,
         .baseSpDefense = 80,
         .types = MON_TYPES(TYPE_GRASS, TYPE_DRAGON),
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .baseHP        = 120,
+        .baseAttack    = 85,
+        .baseDefense   = 110,
+        .baseSpeed     = 30,
+        .baseSpAttack  = 130,
+        .baseSpDefense = 110,
+        .types = MON_TYPES(TYPE_GRASS, TYPE_DRAGON),
+#endif // Dualocke: megaevolución
         .catchRate = 45,
         .expYield = 170,
         .evYield_HP = 2,
@@ -2723,14 +2909,22 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_ERRATIC,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_GRASS, EGG_GROUP_DRAGON),
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .abilities = { ABILITY_RIPEN, ABILITY_GLUTTONY, ABILITY_THICK_FAT },
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .abilities = { ABILITY_THICK_FAT, ABILITY_THICK_FAT, ABILITY_THICK_FAT },
+#endif // Dualocke: megaevolución
         .bodyColor = BODY_COLOR_GREEN,
         .speciesName = _("Appletun"),
         .cryId = CRY_APPLETUN,
         .natDexNum = NATIONAL_DEX_APPLETUN,
         .categoryName = ES(_("Apple Nectar"), _("Manzanéctar")),
         .height = 240,
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .weight = 0,
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .weight = 200,
+#endif // Dualocke: megaevolución
         .description = COMPOUND_STRING(
             "Due to Gigantamax energy, this\n"
             "Pokémon's nectar has thickened. The\n"
@@ -2756,7 +2950,11 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(0, 10, SHADOW_SIZE_XL_BATTLE_ONLY)
         FOOTPRINT(Appletun)
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .isGigantamax = TRUE,
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .isMegaEvolution = TRUE,
+#endif // Dualocke: megaevolución
         .levelUpLearnset = sAppletunLevelUpLearnset,
         .teachableLearnset = sAppletunTeachableLearnset,
         .formSpeciesIdTable = sAppletunFormSpeciesIdTable,
@@ -3028,6 +3226,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
 #if P_GIGANTAMAX_FORMS
     [SPECIES_SANDACONDA_GMAX] =
     {
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .baseHP        = 72,
         .baseAttack    = 107,
         .baseDefense   = 125,
@@ -3035,6 +3234,15 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .baseSpAttack  = 65,
         .baseSpDefense = 70,
         .types = MON_TYPES(TYPE_GROUND),
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .baseHP        = 72,
+        .baseAttack    = 137,
+        .baseDefense   = 155,
+        .baseSpeed     = 91,
+        .baseSpAttack  = 65,
+        .baseSpDefense = 90,
+        .types = MON_TYPES(TYPE_GROUND),
+#endif // Dualocke: megaevolución
         .catchRate = 120,
         .expYield = 179,
         .evYield_Defense = 2,
@@ -3043,14 +3251,22 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_DRAGON),
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .abilities = { ABILITY_SAND_SPIT, ABILITY_SHED_SKIN, ABILITY_SAND_VEIL },
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .abilities = { ABILITY_SAND_STREAM, ABILITY_SAND_STREAM, ABILITY_SAND_STREAM },
+#endif // Dualocke: megaevolución
         .bodyColor = BODY_COLOR_GREEN,
         .speciesName = _("Sandaconda"),
         .cryId = CRY_SANDACONDA,
         .natDexNum = NATIONAL_DEX_SANDACONDA,
         .categoryName = ES(_("Sand Snake"), _("Serp. Arena")),
         .height = 220,
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .weight = 0,
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .weight = 900,
+#endif // Dualocke: megaevolución
         .description = COMPOUND_STRING(
             "Its sand pouch has grown to tremendous\n"
             "proportions. More than 1,000,000 tons of\n"
@@ -3076,7 +3292,11 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(0, 14, SHADOW_SIZE_M)
         FOOTPRINT(Sandaconda)
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .isGigantamax = TRUE,
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .isMegaEvolution = TRUE,
+#endif // Dualocke: megaevolución
         .levelUpLearnset = sSandacondaLevelUpLearnset,
         .teachableLearnset = sSandacondaTeachableLearnset,
         .formSpeciesIdTable = sSandacondaFormSpeciesIdTable,
@@ -3524,6 +3744,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
 #if P_GIGANTAMAX_FORMS
     [SPECIES_TOXTRICITY_AMPED_GMAX] =
     {
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .baseHP        = 75,
         .baseAttack    = 98,
         .baseDefense   = 70,
@@ -3531,6 +3752,15 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .baseSpAttack  = 114,
         .baseSpDefense = 70,
         .types = MON_TYPES(TYPE_ELECTRIC, TYPE_POISON),
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .baseHP        = 75,
+        .baseAttack    = 98,
+        .baseDefense   = 80,
+        .baseSpeed     = 105,
+        .baseSpAttack  = 154,
+        .baseSpDefense = 90,
+        .types = MON_TYPES(TYPE_ELECTRIC, TYPE_POISON),
+#endif // Dualocke: megaevolución
         .catchRate = 45,
         .expYield = 176,
         .evYield_SpAttack = 2,
@@ -3539,14 +3769,22 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_HUMAN_LIKE),
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .abilities = { ABILITY_PUNK_ROCK, ABILITY_PLUS, ABILITY_TECHNICIAN },
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .abilities = { ABILITY_PUNK_ROCK, ABILITY_PUNK_ROCK, ABILITY_PUNK_ROCK },
+#endif // Dualocke: megaevolución
         .bodyColor = BODY_COLOR_PURPLE,
         .speciesName = _("Toxtricity"),
         .cryId = CRY_TOXTRICITY_AMPED,
         .natDexNum = NATIONAL_DEX_TOXTRICITY,
         .categoryName = ES(_("Punk"), _("Punki")),
         .height = 240,
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .weight = 0,
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .weight = 500,
+#endif // Dualocke: megaevolución
         .description = gToxtricityGigantamaxPokedexText,
         .pokemonScale = 259,
         .pokemonOffset = 1,
@@ -3568,7 +3806,11 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(1, 10, SHADOW_SIZE_XL_BATTLE_ONLY)
         FOOTPRINT(Toxtricity)
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .isGigantamax = TRUE,
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .isMegaEvolution = TRUE,
+#endif // Dualocke: megaevolución
         .levelUpLearnset = sToxtricityAmpedLevelUpLearnset,
         .teachableLearnset = sToxtricityAmpedTeachableLearnset,
         .formSpeciesIdTable = sToxtricityFormSpeciesIdTable,
@@ -3642,6 +3884,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
 #if P_GIGANTAMAX_FORMS
     [SPECIES_TOXTRICITY_LOW_KEY_GMAX] =
     {
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .baseHP        = 75,
         .baseAttack    = 98,
         .baseDefense   = 70,
@@ -3649,6 +3892,15 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .baseSpAttack  = 114,
         .baseSpDefense = 70,
         .types = MON_TYPES(TYPE_ELECTRIC, TYPE_POISON),
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .baseHP        = 75,
+        .baseAttack    = 98,
+        .baseDefense   = 80,
+        .baseSpeed     = 105,
+        .baseSpAttack  = 154,
+        .baseSpDefense = 90,
+        .types = MON_TYPES(TYPE_ELECTRIC, TYPE_POISON),
+#endif // Dualocke: megaevolución
         .catchRate = 45,
         .expYield = 176,
         .evYield_SpAttack = 2,
@@ -3657,14 +3909,22 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_HUMAN_LIKE),
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .abilities = { ABILITY_PUNK_ROCK, ABILITY_MINUS, ABILITY_TECHNICIAN },
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .abilities = { ABILITY_PUNK_ROCK, ABILITY_PUNK_ROCK, ABILITY_PUNK_ROCK },
+#endif // Dualocke: megaevolución
         .bodyColor = BODY_COLOR_PURPLE,
         .speciesName = _("Toxtricity"),
         .cryId = CRY_TOXTRICITY_LOW_KEY,
         .natDexNum = NATIONAL_DEX_TOXTRICITY,
         .categoryName = ES(_("Punk"), _("Punki")),
         .height = 240,
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .weight = 0,
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .weight = 500,
+#endif // Dualocke: megaevolución
         .description = gToxtricityGigantamaxPokedexText,
         .pokemonScale = 259,
         .pokemonOffset = 1,
@@ -3686,7 +3946,11 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(1, 10, SHADOW_SIZE_XL_BATTLE_ONLY)
         FOOTPRINT(Toxtricity)
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .isGigantamax = TRUE,
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .isMegaEvolution = TRUE,
+#endif // Dualocke: megaevolución
         .levelUpLearnset = sToxtricityLowKeyLevelUpLearnset,
         .teachableLearnset = sToxtricityLowKeyTeachableLearnset,
         .formSpeciesIdTable = sToxtricityFormSpeciesIdTable,
@@ -3832,6 +4096,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
 #if P_GIGANTAMAX_FORMS
     [SPECIES_CENTISKORCH_GMAX] =
     {
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .baseHP        = 100,
         .baseAttack    = 115,
         .baseDefense   = 65,
@@ -3839,6 +4104,15 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .baseSpAttack  = 90,
         .baseSpDefense = 90,
         .types = MON_TYPES(TYPE_FIRE, TYPE_BUG),
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .baseHP        = 100,
+        .baseAttack    = 145,
+        .baseDefense   = 85,
+        .baseSpeed     = 95,
+        .baseSpAttack  = 90,
+        .baseSpDefense = 110,
+        .types = MON_TYPES(TYPE_FIRE, TYPE_BUG),
+#endif // Dualocke: megaevolución
         .catchRate = 75,
         .expYield = 184,
         .evYield_Attack = 2,
@@ -3847,14 +4121,22 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_BUG),
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .abilities = { ABILITY_FLASH_FIRE, ABILITY_WHITE_SMOKE, ABILITY_FLAME_BODY },
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .abilities = { ABILITY_STRONG_JAW, ABILITY_STRONG_JAW, ABILITY_STRONG_JAW },
+#endif // Dualocke: megaevolución
         .bodyColor = BODY_COLOR_RED,
         .speciesName = _("Centiskorch"),
         .cryId = CRY_CENTISKORCH,
         .natDexNum = NATIONAL_DEX_CENTISKORCH,
         .categoryName = ES(_("Radiator"), _("Radiador")),
         .height = 750,
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .weight = 0,
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .weight = 1400,
+#endif // Dualocke: megaevolución
         .description = COMPOUND_STRING(
             "The heat that comes off a\n"
             "Gigantamax Centiskorch may\n"
@@ -3880,7 +4162,11 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(6, 9, SHADOW_SIZE_L)
         FOOTPRINT(Centiskorch)
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .isGigantamax = TRUE,
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .isMegaEvolution = TRUE,
+#endif // Dualocke: megaevolución
         .levelUpLearnset = sCentiskorchLevelUpLearnset,
         .teachableLearnset = sCentiskorchTeachableLearnset,
         .formSpeciesIdTable = sCentiskorchFormSpeciesIdTable,
@@ -4467,6 +4753,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
 #if P_GIGANTAMAX_FORMS
     [SPECIES_HATTERENE_GMAX] =
     {
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .baseHP        = 57,
         .baseAttack    = 90,
         .baseDefense   = 95,
@@ -4474,6 +4761,15 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .baseSpAttack  = 136,
         .baseSpDefense = 103,
         .types = MON_TYPES(TYPE_PSYCHIC, TYPE_FAIRY),
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .baseHP        = 67,
+        .baseAttack    = 90,
+        .baseDefense   = 115,
+        .baseSpeed     = 29,
+        .baseSpAttack  = 176,
+        .baseSpDefense = 133,
+        .types = MON_TYPES(TYPE_PSYCHIC, TYPE_FAIRY),
+#endif // Dualocke: megaevolución
         .catchRate = 45,
         .expYield = 255,
         .evYield_SpAttack = 3,
@@ -4482,14 +4778,22 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FAIRY),
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .abilities = { ABILITY_HEALER, ABILITY_ANTICIPATION, ABILITY_MAGIC_BOUNCE },
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .abilities = { ABILITY_MAGIC_BOUNCE, ABILITY_MAGIC_BOUNCE, ABILITY_MAGIC_BOUNCE },
+#endif // Dualocke: megaevolución
         .bodyColor = BODY_COLOR_PINK,
         .speciesName = _("Hatterene"),
         .cryId = CRY_HATTERENE,
         .natDexNum = NATIONAL_DEX_HATTERENE,
         .categoryName = ES(_("Silent"), _("Silencio")),
         .height = 260,
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .weight = 0,
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .weight = 60,
+#endif // Dualocke: megaevolución
         .description = COMPOUND_STRING(
             "This Pokémon can read the\n"
             "emotions of creatures over 30 miles away.\n"
@@ -4515,7 +4819,11 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-3, 13, SHADOW_SIZE_S)
         FOOTPRINT(Hatterene)
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .isGigantamax = TRUE,
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .isMegaEvolution = TRUE,
+#endif // Dualocke: megaevolución
         .levelUpLearnset = sHattereneLevelUpLearnset,
         .teachableLearnset = sHattereneTeachableLearnset,
         .formSpeciesIdTable = sHattereneFormSpeciesIdTable,
@@ -4718,6 +5026,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
 #if P_GIGANTAMAX_FORMS
     [SPECIES_GRIMMSNARL_GMAX] =
     {
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .baseHP        = 95,
         .baseAttack    = 120,
         .baseDefense   = 65,
@@ -4725,6 +5034,15 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .baseSpAttack  = 95,
         .baseSpDefense = 75,
         .types = MON_TYPES(TYPE_DARK, TYPE_FAIRY),
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .baseHP        = 95,
+        .baseAttack    = 150,
+        .baseDefense   = 85,
+        .baseSpeed     = 80,
+        .baseSpAttack  = 95,
+        .baseSpDefense = 105,
+        .types = MON_TYPES(TYPE_DARK, TYPE_FAIRY),
+#endif // Dualocke: megaevolución
         .catchRate = 45,
         .expYield = 255,
         .evYield_Attack = 3,
@@ -4733,14 +5051,22 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FAIRY, EGG_GROUP_HUMAN_LIKE),
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .abilities = { ABILITY_PRANKSTER, ABILITY_FRISK, ABILITY_PICKPOCKET },
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .abilities = { ABILITY_PRANKSTER, ABILITY_PRANKSTER, ABILITY_PRANKSTER },
+#endif // Dualocke: megaevolución
         .bodyColor = BODY_COLOR_PURPLE,
         .speciesName = _("Grimmsnarl"),
         .cryId = CRY_GRIMMSNARL,
         .natDexNum = NATIONAL_DEX_GRIMMSNARL,
         .categoryName = ES(_("Bulk Up"), _("Voluminoso")),
         .height = 320,
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .weight = 0,
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .weight = 700,
+#endif // Dualocke: megaevolución
         .description = COMPOUND_STRING(
             "Gigantamax energy has caused more\n"
             "hair to sprout all over its body.\n"
@@ -4766,7 +5092,11 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(0, 14, SHADOW_SIZE_XL_BATTLE_ONLY)
         FOOTPRINT(Grimmsnarl)
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .isGigantamax = TRUE,
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .isMegaEvolution = TRUE,
+#endif // Dualocke: megaevolución
         .levelUpLearnset = sGrimmsnarlLevelUpLearnset,
         .teachableLearnset = sGrimmsnarlTeachableLearnset,
         .formSpeciesIdTable = sGrimmsnarlFormSpeciesIdTable,
@@ -5160,13 +5490,37 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
 #if P_GIGANTAMAX_FORMS
     [SPECIES_ALCREMIE_GMAX] =
     {
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         ALCREMIE_MISC_INFO(BODY_COLOR_YELLOW),
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .baseHP        = 75,
+        .baseAttack    = 60,
+        .baseDefense   = 95,
+        .baseSpeed     = 84,
+        .baseSpAttack  = 140,
+        .baseSpDefense = 141,
+        .types = MON_TYPES(TYPE_FAIRY),
+        .catchRate = 100,
+        .expYield = 173,
+        .evYield_SpDefense = 2,
+        .genderRatio = MON_FEMALE,
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FAIRY, EGG_GROUP_AMORPHOUS),
+        .abilities = { ABILITY_MISTY_SURGE, ABILITY_MISTY_SURGE, ABILITY_MISTY_SURGE },
+        .bodyColor = BODY_COLOR_YELLOW,
+#endif // Dualocke: megaevolución
         .speciesName = _("Alcremie"),
         .cryId = CRY_ALCREMIE,
         .natDexNum = NATIONAL_DEX_ALCREMIE,
         .categoryName = ES(_("Cream"), _("Nata")),
         .height = 3,
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .weight = 5,
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .weight = 10,
+#endif // Dualocke: megaevolución
         .description = ES(COMPOUND_STRING("It launches swarms of missiles,\n"
             "each made of cream and loaded with\n"
             "100,000 kilocalories. Get hit by one of\n"
@@ -5191,7 +5545,11 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(-1, 12, SHADOW_SIZE_XL_BATTLE_ONLY)
         FOOTPRINT(Alcremie)
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .isGigantamax = TRUE,
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .isMegaEvolution = TRUE,
+#endif // Dualocke: megaevolución
         .levelUpLearnset = sAlcremieLevelUpLearnset,
         .teachableLearnset = sAlcremieTeachableLearnset,
         .formSpeciesIdTable = sAlcremieFormSpeciesIdTable,
@@ -6125,6 +6483,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
 #if P_GIGANTAMAX_FORMS
     [SPECIES_COPPERAJAH_GMAX] =
     {
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .baseHP        = 122,
         .baseAttack    = 130,
         .baseDefense   = 69,
@@ -6132,6 +6491,15 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .baseSpAttack  = 80,
         .baseSpDefense = 69,
         .types = MON_TYPES(TYPE_STEEL),
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .baseHP        = 122,
+        .baseAttack    = 160,
+        .baseDefense   = 99,
+        .baseSpeed     = 40,
+        .baseSpAttack  = 80,
+        .baseSpDefense = 99,
+        .types = MON_TYPES(TYPE_STEEL),
+#endif // Dualocke: megaevolución
         .catchRate = 90,
         .expYield = 175,
         .evYield_Attack = 2,
@@ -6141,14 +6509,22 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD, EGG_GROUP_MINERAL),
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .abilities = { ABILITY_SHEER_FORCE, ABILITY_NONE, ABILITY_HEAVY_METAL },
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .abilities = { ABILITY_SHEER_FORCE, ABILITY_SHEER_FORCE, ABILITY_SHEER_FORCE },
+#endif // Dualocke: megaevolución
         .bodyColor = BODY_COLOR_GREEN,
         .speciesName = _("Copperajah"),
         .cryId = CRY_COPPERAJAH,
         .natDexNum = NATIONAL_DEX_COPPERAJAH,
         .categoryName = ES(_("Copperderm"), _("Broncefante")),
         .height = 230,
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .weight = 0,
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .weight = 7000,
+#endif // Dualocke: megaevolución
         .description = COMPOUND_STRING(
             "After this Pokémon has Gigantamaxed,\n"
             "its massive nose can utterly demolish\n"
@@ -6174,7 +6550,11 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(0, 11, SHADOW_SIZE_L)
         FOOTPRINT(Copperajah)
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .isGigantamax = TRUE,
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .isMegaEvolution = TRUE,
+#endif // Dualocke: megaevolución
         .levelUpLearnset = sCopperajahLevelUpLearnset,
         .teachableLearnset = sCopperajahTeachableLearnset,
         .formSpeciesIdTable = sCopperajahFormSpeciesIdTable,
@@ -6513,6 +6893,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
 #if P_GIGANTAMAX_FORMS
     [SPECIES_DURALUDON_GMAX] =
     {
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .baseHP        = 70,
         .baseAttack    = 95,
         .baseDefense   = 115,
@@ -6520,6 +6901,15 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .baseSpAttack  = 120,
         .baseSpDefense = 50,
         .types = MON_TYPES(TYPE_STEEL, TYPE_DRAGON),
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .baseHP        = 70,
+        .baseAttack    = 95,
+        .baseDefense   = 135,
+        .baseSpeed     = 115,
+        .baseSpAttack  = 150,
+        .baseSpDefense = 70,
+        .types = MON_TYPES(TYPE_STEEL, TYPE_DRAGON),
+#endif // Dualocke: megaevolución
         .catchRate = 45,
         .expYield = 187,
         .evYield_SpAttack = 2,
@@ -6528,14 +6918,22 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL, EGG_GROUP_DRAGON),
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .abilities = { ABILITY_LIGHT_METAL, ABILITY_HEAVY_METAL, ABILITY_STALWART },
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .abilities = { ABILITY_FILTER, ABILITY_FILTER, ABILITY_FILTER },
+#endif // Dualocke: megaevolución
         .bodyColor = BODY_COLOR_WHITE,
         .speciesName = _("Duraludon"),
         .cryId = CRY_DURALUDON,
         .natDexNum = NATIONAL_DEX_DURALUDON,
         .categoryName = ES(_("Alloy"), _("Aleación")),
         .height = 430,
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .weight = 0,
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .weight = 500,
+#endif // Dualocke: megaevolución
         .description = COMPOUND_STRING(
             "The hardness of its cells is\n"
             "exceptional, even among Steel types. It\n"
@@ -6561,7 +6959,11 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(3, 12, SHADOW_SIZE_L)
         FOOTPRINT(Duraludon)
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .isGigantamax = TRUE,
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .isMegaEvolution = TRUE,
+#endif // Dualocke: megaevolución
         .levelUpLearnset = sDuraludonLevelUpLearnset,
         .teachableLearnset = sDuraludonTeachableLearnset,
         .eggMoveLearnset = sDuraludonEggMoveLearnset,
