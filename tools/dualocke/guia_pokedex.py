@@ -39,6 +39,8 @@ STATS = ["HP", "Attack", "Defense", "SpAttack", "SpDefense", "Speed"]
 # Formas que no se ven en una partida normal
 FUERA = {"isGigantamax", "isTotem", "isTeraForm"}
 SUFIJOS = [
+    # Formas Gigamax: en el juego son megas (megas_gigamax.py)
+    (r"_AMPED_GMAX$", "Mega-{} Aguda"), (r"_LOW_KEY_GMAX$", "Mega-{} Grave"), (r"_GMAX$", "Mega-{}"),
     (r"_MEGA_X$", "Mega-{} X"), (r"_MEGA_Y$", "Mega-{} Y"), (r"_MEGA_Z$", "Mega-{} Z"), (r"_MEGA$", "Mega-{}"),
     (r"_PRIMAL$", "{} Primigenio"),
     (r"_ALOLA\w*$", "{} de Alola"), (r"_GALAR\w*$", "{} de Galar"), (r"_HISUI\w*$", "{} de Hisui"),

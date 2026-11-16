@@ -193,7 +193,7 @@ Una sección por idea, con:
     6. **Randomizer y guía:** el randomizer saca las megas de la tabla de cambios de forma, así que los jefes podrían llevar las nuevas sin tocar nada. La Pokédex de la guía también las saca del código.
   - **Dificultad:** media. Lo que más lleva es decidir las 26 megas.
   - **Partidas en curso:** con megas nuevas, el as con mega de algunos jefes puede cambiar (hay más donde elegir). Mejor para un locke nuevo, o comprobar con las semillas qué cambia.
-- **Estado:** Pendiente.
+- **Estado:** Hecho (Miguel, 16/11/2026), falta compilarlo y probarlo. La tabla de las 26 está en `DUALOCKE.md`, sección 6.
 
 ### 10. Interfaces y opciones del motor que tenemos apagadas
 

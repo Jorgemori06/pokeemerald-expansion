@@ -710,6 +710,14 @@
       "elevation": 3,
       "item": "ITEM_RED_CARD",
       "flag": "FLAG_ITEM_COMP_RED_CARD"
+    },
+    {
+      "type": "hidden_item",
+      "x": 18,
+      "y": 20,
+      "elevation": 3,
+      "item": "ITEM_MEOWTHITE",
+      "flag": "FLAG_ITEM_MEGA_MEOWTHITE"
     }
   ]
 }

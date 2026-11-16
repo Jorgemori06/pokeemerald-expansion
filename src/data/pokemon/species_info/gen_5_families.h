@@ -6589,6 +6589,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
 #if P_GIGANTAMAX_FORMS
     [SPECIES_GARBODOR_GMAX] =
     {
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .baseHP        = 80,
         .baseAttack    = 95,
         .baseDefense   = 82,
@@ -6596,6 +6597,15 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .baseSpAttack  = 60,
         .baseSpDefense = 82,
         .types = MON_TYPES(TYPE_POISON),
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .baseHP        = 100,
+        .baseAttack    = 125,
+        .baseDefense   = 112,
+        .baseSpeed     = 75,
+        .baseSpAttack  = 60,
+        .baseSpDefense = 102,
+        .types = MON_TYPES(TYPE_POISON),
+#endif // Dualocke: megaevolución
         .catchRate = 60,
         .expYield = 166,
         .evYield_Attack = 2,
@@ -6606,7 +6616,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MINERAL),
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .abilities = { ABILITY_STENCH, ABILITY_WEAK_ARMOR, ABILITY_AFTERMATH },
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .abilities = { ABILITY_TOXIC_DEBRIS, ABILITY_TOXIC_DEBRIS, ABILITY_TOXIC_DEBRIS },
+#endif // Dualocke: megaevolución
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = TRUE,
         .speciesName = _("Garbodor"),
@@ -6614,7 +6628,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .natDexNum = NATIONAL_DEX_GARBODOR,
         .categoryName = ES(_("Trash Heap"), _("Vertedero")),
         .height = 210,
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .weight = 0,
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .weight = 1300,
+#endif // Dualocke: megaevolución
         .description = COMPOUND_STRING(
             "It sprays toxic gas from its mouth\n"
             "and fingers. If the gas engulfs you,\n"
@@ -6640,7 +6658,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         NO_SHADOW
         FOOTPRINT(Garbodor)
+#if TESTING // Dualocke: en los tests, la forma Gigamax de siempre
         .isGigantamax = TRUE,
+#else // Dualocke: megaevolución (tools/dualocke/megas_gigamax.py)
+        .isMegaEvolution = TRUE,
+#endif // Dualocke: megaevolución
         .levelUpLearnset = sGarbodorLevelUpLearnset,
         .teachableLearnset = sGarbodorTeachableLearnset,
         .formSpeciesIdTable = sGarbodorFormSpeciesIdTable,

@@ -1034,6 +1034,33 @@ extern const u32 gItemIcon_Tatsugirinite[];
 extern const u16 gItemIconPalette_Tatsugirinite[];
 extern const u32 gItemIcon_Glimmoranite[];
 extern const u16 gItemIconPalette_Glimmoranite[];
+// Dualocke: megapiedras de las formas Gigamax (tools/dualocke/megas_gigamax.py)
+extern const u16 gItemIconPalette_Butterfrite[];
+extern const u16 gItemIconPalette_Pikachunite[];
+extern const u16 gItemIconPalette_Meowthite[];
+extern const u16 gItemIconPalette_Machampite[];
+extern const u16 gItemIconPalette_Kinglerite[];
+extern const u16 gItemIconPalette_Laprasite[];
+extern const u16 gItemIconPalette_Eevinite[];
+extern const u16 gItemIconPalette_Snorlaxite[];
+extern const u16 gItemIconPalette_Garbodorite[];
+extern const u16 gItemIconPalette_Rillaboomite[];
+extern const u16 gItemIconPalette_Cinderacite[];
+extern const u16 gItemIconPalette_Inteleonite[];
+extern const u16 gItemIconPalette_Corviknightite[];
+extern const u16 gItemIconPalette_Orbeetlite[];
+extern const u16 gItemIconPalette_Drednawite[];
+extern const u16 gItemIconPalette_Coalossalite[];
+extern const u16 gItemIconPalette_Flapplite[];
+extern const u16 gItemIconPalette_Appletunite[];
+extern const u16 gItemIconPalette_Sandacondite[];
+extern const u16 gItemIconPalette_Toxtricitite[];
+extern const u16 gItemIconPalette_Centiskorchite[];
+extern const u16 gItemIconPalette_Hatterenite[];
+extern const u16 gItemIconPalette_Grimmsnarlite[];
+extern const u16 gItemIconPalette_Alcremite[];
+extern const u16 gItemIconPalette_Copperajahite[];
+extern const u16 gItemIconPalette_Duraludonite[];
 
 // Gems
 extern const u32 gItemIcon_TypeGem[];

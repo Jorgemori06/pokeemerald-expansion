@@ -243,16 +243,57 @@ Regla general: **el as de cada jefe va exactamente al nivel del cap**, el resto 
   - **Objetos:** solo se añade la megapiedra; los que ya llevaban (Baya Zidra…) se quedan, y el resto lo pondrá el randomizer.
   - Los rivales y la IA megaevolucionan sin aro, con solo llevar la piedra.
 - Las **megapiedras** (decidido por Miguel el 23/10/2026) **se encuentran explorando el mapa**: no se venden.
-  - Hay **81**, todas las de Pokémon no legendarios, cada una en un sitio que encaja con ella. Por ejemplo: Cameruptita en Jagged Pass, Garchompita en el desierto, Sharpedonita bajo el agua en la Ruta 124, Glalitita en Shoal Cave…
+  - Hay **107**: las 81 de Pokémon no legendarios de la expansion y 26 de las formas Gigamax (abajo), cada una en un sitio que encaja con ella. Por ejemplo: Cameruptita en Jagged Pass, Garchompita en el desierto, Sharpedonita bajo el agua en la Ruta 124, Glalitita en Shoal Cave…
   - Unas van en **bola de objeto** y otras **ocultas** (para el Buscaobjetos).
   - Las coloca `tools/dualocke/colocar_objetos.py`, que tiene la tabla completa. Cada una tiene su flag `FLAG_ITEM_MEGA_...`, del **0x264 al 0x2B4** de `include/constants/flags.h`. El script busca solo una casilla transitable cerca de algo que ya se pueda alcanzar.
   - Las de antes del aro se pueden recoger, pero no usar hasta tenerlo.
   - **Para el randomizer:** estas ubicaciones son **fijas**. Al barajar los objetos del suelo hay que saltarse los que tienen flag `FLAG_ITEM_MEGA_...` o `FLAG_ITEM_COMP_...`.
+- **Formas Gigamax como megas (Miguel, 16/11/2026; idea 9 de `IDEAS.md`).** El Dinamax no se usa, así que las formas Gigamax son megaevoluciones, cada una con su megapiedra.
+  - **26 megas nuevas** (27 formas: Toxtricity tiene dos y una sola piedra). Venusaur, Charizard, Blastoise y Gengar ya tenían mega, y Urshifu y Melmetal son singulares: se quedan como estaban.
+  - Usan los gráficos de la forma Gigamax. Las estadísticas suman **100 más** que la forma normal, como las megas oficiales. El diseño lo propuso Claude y **Miguel lo aprobó tal cual (16/11/2026)**:
+
+  | Pokémon | Megapiedra | Tipo | Habilidad | PS/Ata/Def/AtE/DfE/Vel (total) | Dónde |
+  | --- | --- | --- | --- | --- | --- |
+  | Butterfree | Butterfrita | Bicho / Psíquico | Cromolente | 60/45/70/130/100/90 (495) | RUTA 104 (oculta) |
+  | Pikachu | Pikachunita | Eléctrico | Transistor | 35/75/50/90/60/110 (420) | RUTA 110 (bola) |
+  | Meowth | Meowthita | Normal / Acero | Experto | 55/75/55/40/50/115 (390) | PORTUAL (oculta) |
+  | Machamp | Machampita | Lucha | Indefenso | 90/160/100/65/100/90 (605) | RUTA 112 (bola) |
+  | Kingler | Kinglerita | Agua / Acero | Garra Dura | 55/160/135/60/70/95 (575) | RUTA 109 (bola) |
+  | Lapras | Laprasita | Agua / Hielo | Nevada | 130/95/110/115/125/60 (635) | RUTA 128 (bola) |
+  | Eevee | Eevinita | Normal | Adaptable | 65/80/70/70/75/65 (425) | RUTA 116 (bola) |
+  | Snorlax | Snorlaxita | Normal / Planta | Sebo | 160/140/95/65/140/40 (640) | RUTA 121 (bola) |
+  | Garbodor | Garbodorita | Veneno | Capa Tóxica | 100/125/112/60/102/75 (574) | BARCO ABANDONADO (bola) |
+  | Rillaboom | Rillaboomita | Planta / Lucha | Herbogénesis | 100/155/110/60/90/115 (630) | ZONA SAFARI (bola) |
+  | Cinderace | Cinderacita | Fuego | Líbero | 80/146/90/70/90/154 (630) | RUTA 113 (oculta) |
+  | Inteleon | Inteleonita | Agua | Francotirador | 70/85/75/165/85/150 (630) | RUTA 122 (bola) |
+  | Corviknight | Corviknightita | Volador / Acero | Coraza Reflejo | 98/127/125/53/105/87 (595) | ARBORADA (oculta) |
+  | Orbeetle | Orbeetlita | Bicho / Psíquico | Psicogénesis | 70/45/120/130/140/100 (605) | RUTA 102 (bola) |
+  | Drednaw | Drednawita | Agua / Roca | Mandíbula Fuerte | 90/145/115/48/88/99 (585) | RUTA 106 (bola) |
+  | Coalossal | Coalossalita | Roca / Fuego | Sequía | 110/80/150/120/120/30 (610) | PASO DESNIVEL (oculta) |
+  | Flapple | Flapplita | Planta / Dragón | Garra Dura | 70/140/90/95/70/120 (585) | RUTA 123 (oculta) |
+  | Appletun | Appletunita | Planta / Dragón | Sebo | 120/85/110/130/110/30 (585) | RUTA 114 (bola) |
+  | Sandaconda | Sandacondita | Tierra | Chorro Arena | 72/137/155/65/90/91 (610) | RUTA 111 (desierto) (oculta) |
+  | Toxtricity (las dos formas) | Toxtricitita | Eléctrico / Veneno | Punk Rock | 75/98/80/154/90/105 (602) | NUEVA MALVALONA (bola) |
+  | Centiskorch | Centiskorchita | Fuego / Bicho | Mandíbula Fuerte | 100/145/85/90/110/95 (625) | RUTA 112 (oculta) |
+  | Hatterene | Hatterenita | Psíquico / Hada | Espejo Mágico | 67/90/115/176/133/29 (610) | MONTE PÍRICO (bola) |
+  | Grimmsnarl | Grimmsnarlita | Siniestro / Hada | Bromista | 95/150/85/95/105/80 (610) | RUTA 121 (oculta) |
+  | Alcremie | Alcremita | Hada | Nebulogénesis | 75/60/95/140/141/84 (595) | CALAGUA (bola) |
+  | Copperajah | Copperajahita | Acero | Potencia Bruta | 122/160/99/80/99/40 (600) | RUTA 115 (bola) |
+  | Duraludon | Duraludonita | Acero / Dragón | Filtro | 70/95/135/150/70/115 (635) | CALLE VICTORIA (oculta) |
+
+  - **Con semilla, la habilidad sale al azar**, como la de todas las especies (también las megas de siempre). La de la tabla vale sin semilla.
+  - **Megapiedras:** "Kinglerita", "Hace megaevolucionar a Kingler.". El icono es el dibujo de la Gengarita con otra paleta: la bola del color principal del Pokémon y la espiral de los otros dos (`graphics/items/icon_palettes/`).
+  - **Dónde:** las coloca `colocar_objetos.py` (tabla `MEGAPIEDRAS_GIGAMAX`), con los flags `FLAG_ITEM_MEGA_...` del **0x4CA al 0x4E3**.
+  - **Bolsillo de megapiedras:** de 100 a 130 (`BAG_MEGASTONES_COUNT`). Es lo último de `SaveBlock3` y las casillas nuevas se leen vacías de las partidas de antes.
+  - **Código:** todo lo hace `tools/dualocke/megas_gigamax.py` (tabla `DISENO`). Para cambiar una mega, se cambia ahí y se vuelve a lanzar.
+    - En `gSpeciesInfo` y en la tabla de cambios de forma, lo nuevo va dentro de `#if TESTING ... #else ... #endif`: en los tests de la expansion se queda la forma Gigamax de siempre, porque los tests del Dinamax la usan.
+    - Las megapiedras son objetos nuevos al final de la lista (874-899): no se mueve el número de ningún objeto de las partidas guardadas.
+  - **Randomizer:** los jefes que llevan as con mega desde el Mega-Aro pueden sacar una de estas, porque el randomizer lee las megas de la tabla de cambios de forma. En las semillas en curso solo cambia el as de esos jefes (de ALANA en adelante); lo demás sale igual.
 - **Objetos competitivos de generaciones nuevas** (decidido por Miguel el 23/10/2026): existían en el motor, pero no se podían conseguir. Ahora hay **55 repartidos por el mapa**, como las megapiedras: Mineral Evolutivo, Banda Focus, Casco Dentado, Botas Gruesas, Pañuelo Elegido, Chaleco Asalto, Gafas Elegidas, Vidasfera, rocas de clima, semillas de terreno, Cápsula y Parche Habilidad, 8 Mentas…
   - Están ordenados por tramo: los más fuertes (Pañuelo Elegido, Chaleco Asalto, Gafas Elegidas, Vidasfera) salen a partir del tramo 6.
   - Los coloca el mismo script. Sus flags son `FLAG_ITEM_COMP_...`, del **0x493 al 0x4C9**.
   - La tabla está en el script y en `registro/2026-10-23-miguel-objetos-competitivos.md`.
-  - **Flags libres que quedan para Jorge:** 0x043-0x04F, 0x2B6-0x2BB, 0x4CA-0x4E4 y el resto de `FLAG_UNUSED_...` (0x2B5 es `FLAG_DUALOCKE_TIENE_BALLS`; 0x021-0x042 y 0x4E5-0x4EF son de los Ticket-Recuerdo).
+  - **Flags libres que quedan para Jorge:** 0x043-0x04F, 0x2B6-0x2BB, 0x4E4 y el resto de `FLAG_UNUSED_...` (0x2B5 es `FLAG_DUALOCKE_TIENE_BALLS`; 0x021-0x042 y 0x4E5-0x4EF son de los Ticket-Recuerdo).
 
 ### Tiendas
 
