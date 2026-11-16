@@ -104,6 +104,9 @@ def main():
     solucionario["mt"] = {o: movs[m].nombre for o, m in mapa_mts.items()}
     tutores = mts.randomizar_tutores(movs, args.semilla, config, mapa_mts)
     solucionario["tutores"] = {movs[o].nombre: movs[n].nombre for o, n in tutores.items()}
+    errores = mts.comprobar(mapa_mts, tutores)
+    if errores:
+        sys.exit("Dualocke: el randomizer de MT y tutores ha fallado:\n  " + "\n  ".join(errores[:20]))
     aprende = apr.randomizar(pokedex, movs, args.semilla, config)
     errores = apr.comprobar(pokedex, movs, aprende, config)
     if errores:
@@ -129,8 +132,9 @@ def main():
     topes = est.fuerza_salvajes(datos, pokedex, reescalar_niveles.tramo_de_mapa,
                                 cfg_lideres.get("percentil_salvajes", 0.9), techos)
     solucionario["tope_lideres_por_tramo"] = topes
-    randomizado, solucionario["entrenadores"] = entrenadores.Generador(pokedex, args.semilla, config, iniciales,
-                                                                            movs, topes).randomizar(original)
+    generador = entrenadores.Generador(pokedex, args.semilla, config, iniciales, movs, topes)
+    randomizado, solucionario["entrenadores"] = generador.randomizar(original)
+    solucionario["estilos_de_los_jefes"] = generador.estilos
     errores = entrenadores.comprobar(original, randomizado, pokedex)
     if errores:
         sys.exit("Dualocke: el randomizer de entrenadores ha fallado:\n  " + "\n  ".join(errores[:20]))

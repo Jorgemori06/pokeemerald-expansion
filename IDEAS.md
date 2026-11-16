@@ -47,6 +47,15 @@ Una sección por idea, con:
   - **Gráficos nuevos** (un estilo de ruinas que no exista en el juego): **lo más difícil**. Habría que dibujar tiles y paletas a mano.
   - **Reparto del trabajo:** el diseño visual se hace mejor a mano en Porymap. Claude puede encargarse de lo demás: crear el mapa en los datos, conexiones y warps, scripts, encuentros, objetos y entrenadores. También puede generar un mapa sencillo por código, pero sin ver el resultado, así que el diseño fino es mejor en Porymap.
   - **Cosas que habría que tocar después:** los tramos de `reescalar_niveles.py` (para los niveles de la zona nueva), la tabla de `colocar_objetos.py` y la lista de zonas para las reglas de captura y el randomizer.
+  - **Zona junto a PUEBLO AZULIZA (Miguel, 15/11/2026):** una marisma con plantas y agua al oeste del pueblo, debajo de la RUTA 106, donde ahora no hay nada, con objetos, megapiedras y entrenadores que den cosas.
+    - **Hay sitio:** un hueco de unas 36 × 20 casillas entre el acantilado de la CUEVA GRANITO y el pueblo, que no pertenece a ningún mapa.
+    - **Entrada sin tocar AZULIZA:** el borde oeste del pueblo ya es arena transitable en las filas 6 a 14. Basta una conexión a la izquierda.
+    - **Mismos gráficos:** la RUTA 106 y AZULIZA usan `gTileset_General` y `gTileset_Dewford`, que ya tienen hierba, hierba alta, charcas, flores, árboles, arena y acantilados. No hace falta dibujar nada.
+    - **Ya se pueden ver los mapas sin Porymap:** `tools/dualocke/ver_mapa.py` dibuja cualquier mapa en un PNG con sus tilesets. Así se puede diseñar el mapa por código y comprobarlo a ojo, y mirar las colisiones como se hizo con los objetos.
+    - **Qué lleva:** mapa y layout nuevos, las conexiones, salvajes (hierba, agua y pesca), entrenadores nuevos en `trainers.party`, objetos, su tramo en `reescalar_niveles.py` (el 2) y su nombre en el mapa de la región.
+    - **Ojo con la zona de captura:** si es una zona nueva del mapa de la región, da una captura más y cambia cómo se guardan las zonas gastadas. Si cuenta como RUTA 106, no cambia nada.
+    - **Dificultad:** media-alta, pero ya no depende de dibujar a mano.
+  - **Edificios nuevos con NPC:** más fácil que una ruta. Se copia una casa que ya exista en el mismo pueblo a un hueco libre, se le pone una puerta y el interior reutiliza el de otra casa. Dentro, personajes con combates o regalos.
 - **Estado:** Pendiente.
 
 ### 3. Jugar como Jorge o como Miguel
@@ -162,3 +171,44 @@ Una sección por idea, con:
     - Las estructuras de los juegos por cable y la mezcla de récords guardan el nombre con tamaño fijo. Como no jugamos por cable, se pueden dejar o recortar al copiar.
   - El nombre del rival (Aura/Bruno) y los de las cajas del PC no hace falta tocarlos.
 - **Estado:** Pendiente (para el siguiente locke).
+
+### 9. Las formas Gigamax como megaevoluciones
+
+- **Qué:** como el Dinamax no se usa, que las formas Gigamax sean megas con su megapiedra. Kingler no tiene mega: se le da una "Kinglerita" y megaevoluciona a su forma Gigamax. Lo hace el Pokémon Añil.
+- **Propuesta de:** Miguel, 15/11/2026.
+- **Notas (viabilidad, mirado en el código el 15/11/2026):**
+  - **Se puede, y el motor lo pone fácil.**
+    - Cada forma Gigamax ya es una especie (`SPECIES_KINGLER_GMAX`…), con sus sprites de frente, de espaldas e icono.
+    - Una mega es una línea en la tabla de cambios de forma de la especie (`src/data/pokemon/form_change_tables.h`): `{FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM, SPECIES_KINGLER_GMAX, ITEM_KINGLERITE}`.
+  - **Cuáles:** hay 32 formas Gigamax.
+    - **Ya tienen mega (4):** Venusaur, Charizard, Blastoise y Gengar.
+    - **Legendarios o singulares (2):** Urshifu y Melmetal.
+    - **Megas nuevas (26):** Butterfree, Pikachu, Meowth, Machamp, Kingler, Lapras, Eevee, Snorlax, Garbodor, Rillaboom, Cinderace, Inteleon, Corviknight, Orbeetle, Drednaw, Coalossal, Flapple, Appletun, Sandaconda, Toxtricity, Centiskorch, Hatterene, Grimmsnarl, Alcremie, Copperajah y Duraludon.
+  - **Qué hay que hacer:**
+    1. **Estadísticas, tipo y habilidad de cada mega.** Las formas Gigamax tienen las mismas que la forma normal. Hay que decidirlas (lo normal en una mega: +100 de estadísticas base y una habilidad que pegue con su movimiento Gigamax). Es la parte de diseño, y es de Miguel.
+    2. **26 megapiedras nuevas:** constante, nombre, descripción e icono (se puede reutilizar el de otra megapiedra cambiando los colores).
+    3. **Marcar las formas como megas** (`isMegaEvolution`) y quitarles `isGigantamax`, y la línea de la tabla de cambios de forma.
+    4. **Colocarlas en el mapa** con `colocar_objetos.py`. Quedan flags libres para 26: 0x043-0x04F, 0x2B7-0x2BB y 0x4CA-0x4E4.
+    5. **Bolsillo de megapiedras:** caben 100 y habría 107 que se pueden conseguir. Hay que subirlo a 130. `bagMegaStones` es lo último de `SaveBlock3` y sobra sitio (usa 644 de 1624 bytes), así que en principio las partidas guardadas siguen valiendo; hay que comprobarlo.
+    6. **Randomizer y guía:** el randomizer saca las megas de la tabla de cambios de forma, así que los jefes podrían llevar las nuevas sin tocar nada. La Pokédex de la guía también las saca del código.
+  - **Dificultad:** media. Lo que más lleva es decidir las 26 megas.
+  - **Partidas en curso:** con megas nuevas, el as con mega de algunos jefes puede cambiar (hay más donde elegir). Mejor para un locke nuevo, o comprobar con las semillas qué cambia.
+- **Estado:** Pendiente.
+
+### 10. Interfaces y opciones del motor que tenemos apagadas
+
+- **Qué:** la expansion trae cosas hechas que no usamos. Activarlas es barato y cambia bastante cómo se ve el juego.
+- **Propuesta de:** Miguel, 15/11/2026 ("interfaces más chulas, actualizadas").
+- **Notas (repaso de `include/config/` del 15/11/2026):**
+  - **Pokédex estilo HeartGold/SoulSilver** (`POKEDEX_PLUS_HGSS`): dentro del juego, para cada Pokémon, estadísticas base, movimientos por nivel y por MT, evoluciones y formas.
+    - Con el randomizer enseñaría los movimientos al azar de cada especie. Es muy útil, o un destripe, según se mire.
+    - Tiene 97 textos en inglés que habría que traducir.
+  - **Tipos del rival en combate** (`B_SHOW_TYPES`): iconos de tipo junto a la barra de vida al elegir el movimiento. Con Pokémon de 9 generaciones ayuda mucho. La eficacia del movimiento ya sale (`B_SHOW_EFFECTIVENESS`), pero solo con especies que ya has visto.
+  - **Descripción del objeto al recogerlo** (`OW_SHOW_ITEM_DESCRIPTIONS`): sale la imagen y qué hace. Con los objetos del suelo al azar, viene muy bien. El modo "siempre" no toca la partida guardada; el de "solo la primera vez" sí.
+  - **Carteles de zona estilo Blanco/Negro** (`OW_POPUP_GENERATION`): el nombre de la ruta en una banda arriba, en negro o en blanco, con la hora si se quiere.
+  - **Combates más rápidos** (`B_WAIT_TIME_MULTIPLIER`, `B_FAST_INTRO_NO_SLIDE`): menos pausa en los textos y sin la entrada deslizante.
+  - **Huir de los entrenadores** (`B_RUN_TRAINER_BATTLE`): está **activado**, y huir cuenta como perder el combate, o sea, perder el locke. Mejor quitarlo para que no pase por error.
+  - **Ya están:** ventana de información del movimiento (botón L), última Ball con R, icono de categoría, día y noche, IVs y EVs en la pantalla de datos.
+  - **Más grande:** el Pokémon que te sigue (idea 6) y el DexNav. Y lo que no trae el motor (pantalla de datos estilo Blanco/Negro, menú de pausa a pantalla completa) son ramas de otra gente que habría que integrar: más difícil y con más riesgo.
+- **Estado:** Pendiente.
+

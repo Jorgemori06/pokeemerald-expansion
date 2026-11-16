@@ -65,9 +65,12 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
   - PETRA con 4 Pokémon (14-16), MARCIAL con 4 (21-23) y ERICO con 5 (30-32), una cura cada uno.
   - Ninguno lleva Mineral Evolutivo, Vidasfera ni objetos Elección (salvo Pañuelo).
   - ¿Siguen siendo un reto sin ser un muro?
-- [ ] Líderes (desde el 31/10/2026):
-  - El primero pone trampas y los demás usan su estrategia: envenenar, quemar, chetarse.
+- [ ] Jefes con estilo (desde el 15/11/2026):
+  - Cada jefe juega con su estilo (trampas, Espacio Raro, chetarse, clima, estados, pantallas, aguante o velocidad) y se nota la diferencia entre uno y otro.
+  - Usan bien sus movimientos de estrategia: ponen el Espacio Raro cuando son lentos, el clima al salir, las pantallas al principio…
   - Cambian de Pokémon con cabeza y dejan el as para el final.
+  - No adivinan lo que no han visto (tu objeto, un movimiento que no has usado).
+- [ ] Entrenadores normales: después de CANDELA eligen buenos movimientos y rematan. ¿Se nota demasiado?
   - Hasta ERICO, sus Pokémon no son más fuertes que los salvajes que has visto.
 - [ ] Movimientos sin tope: salvajes y tuyos con ataques fuertes a nivel bajo. Que el juego siga siendo jugable.
 
