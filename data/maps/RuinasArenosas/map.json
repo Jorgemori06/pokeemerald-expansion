@@ -27,8 +27,8 @@
       "x": 15,
       "y": 2,
       "elevation": 3,
-      "dest_map": "MAP_RUINAS_ARENOSAS_CAMARA",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_RUINAS_ARENOSAS_2F",
+      "dest_warp_id": "1"
     }
   ],
   "object_events": [

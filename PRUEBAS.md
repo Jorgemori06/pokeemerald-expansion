@@ -38,7 +38,9 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 - [ ] **Entrada:** el montículo nuevo del desierto de la RUTA 111 (al este, abajo) lleva al DESIERTO PROFUNDO, y su salida devuelve al mismo sitio.
 - [ ] **El mapa:** que no quede nada de la TORRE ESPEJISMO, y que los bordes (sobre todo el oeste, que es arena cortada) no queden raros.
 - [ ] **Tormenta de arena** fuera y en combate, y carteles "DESIERTO PROFUNDO" y "RUINAS ARENOSAS". Cada uno es una zona de captura.
-- [ ] **Ruinas:** el montículo del norte lleva a la entrada; la escalera, a la CÁMARA. El guardián tiene el sprite del Pokémon que sale y da premio al vencerlo o capturarlo.
+- [ ] **Ruinas:** el montículo del norte lleva a la entrada; las escaleras suben por las plantas 2 y 3 hasta la CÁMARA.
+  - En las plantas 2 y 3, el suelo agrietado se rompe y caes a la de abajo.
+  - En la 3, GOLPE ROCA rompe las dos rocas. El guardián tiene el sprite del Pokémon que sale y da premio al vencerlo o capturarlo.
 - [ ] **Entrenadores:** SOLEDAD en el desierto y RAMIRO en las ruinas, a nivel 46-47.
 - [ ] **Salvajes y objetos** de las dos zonas.
 
@@ -48,12 +50,14 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 - [ ] **El mapa:** que no se vean trozos raros de roca en el borde de la RUTA 124 ni en el islote.
 - [ ] **Cartel de zona:** "ISLA NEVADA", también en la cueva, y que cuente como zona de captura propia.
 - [ ] **Nieve en combate**, también en la cueva (dentro no nieva, así que ahí no).
+- [ ] **Guardián de la CUEVA HELADA**, abajo del todo: se llega resbalando y da premio.
 - [ ] **CUEVA HELADA:** se entra por el islote y la escalera devuelve fuera. Se puede recorrer resbalando por el hielo y llegar a los objetos y a NIEVES.
 - [ ] **Entrenadores:** DUDLEY y KAYLEE en el agua (te ven al surfear), NIEVES en la cueva.
 - [ ] **Salvajes** de hielo y la Bola de Nieve oculta en el banco de arena.
 
 ### GRUTA ÍGNEA (desde el 16/11/2026)
 
+- [ ] **CÁMARA DEL MAGMA:** la salida del sur de la gruta baja a ella. Se sube por las escaleras hasta el guardián, que da premio al vencerlo o capturarlo.
 - [ ] **Entrada:** en la sala del suroeste del SENDERO ÍGNEO (con FUERZA) hay una boca de cueva. Bajando por ella se llega a la GRUTA ÍGNEA, y la puerta del noreste devuelve al mismo sitio.
 - [ ] **El mapa:** que no quede ningún trozo de máquina de la GUARIDA MAGMA, que no se pueda pisar la lava y que se pueda dar toda la vuelta.
 - [ ] **Clima:** el sol fuerte se ve bien dentro de la cueva (si queda raro, se quita) y hay sol en los combates.

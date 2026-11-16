@@ -11,9 +11,10 @@ Uso (desde la raíz del repo; se puede volver a lanzar):
   ESPEJISMO ni los huecos de base secreta. Tormenta de arena (tormenta en combate). La puerta del
   montículo de abajo (el de las RUINAS DESIERTO en la RUTA 111) es la salida; en el norte hay otro
   montículo que lleva a las ruinas.
-- **RUINAS ARENOSAS:** la planta 1 de la TORRE ESPEJISMO (entrada) y la sala de arriba, la del fósil
-  (CÁMARA), donde está el guardián: un Pokémon fuerte que se puede capturar (como en las islas del
-  ferry, data/scripts/dualocke_islas.inc).
+- **RUINAS ARENOSAS:** las cuatro plantas de la TORRE ESPEJISMO: la entrada, dos plantas con suelo
+  agrietado (si se rompe, caes a la de abajo; en la tercera hay rocas de GOLPE ROCA) y la CÁMARA,
+  la sala del fósil, donde está el guardián: un Pokémon fuerte que se puede capturar (como en las
+  islas del ferry, data/scripts/dualocke_islas.inc).
 - **Zonas de captura propias:** MAPSEC_DESIERTO_PROFUNDO y MAPSEC_RUINAS_ARENOSAS, al final de la lista.
 - Los mapas van al final de su grupo y de layouts.json.
 Los entrenadores, los salvajes y los objetos los ponen zonas_nuevas.py y colocar_objetos.py.
@@ -28,7 +29,22 @@ sys.path.insert(0, "tools/dualocke")
 import colocar_objetos as co  # noqa: E402
 
 DESIERTO, RUINAS, CAMARA = "DesiertoProfundo", "RuinasArenosas", "RuinasArenosas_Camara"
-MAPAS = {DESIERTO: "MAP_DESIERTO_PROFUNDO", RUINAS: "MAP_RUINAS_ARENOSAS", CAMARA: "MAP_RUINAS_ARENOSAS_CAMARA"}
+PLANTA2, PLANTA3 = "RuinasArenosas_2F", "RuinasArenosas_3F"
+MAPAS = {DESIERTO: "MAP_DESIERTO_PROFUNDO", RUINAS: "MAP_RUINAS_ARENOSAS", CAMARA: "MAP_RUINAS_ARENOSAS_CAMARA",
+         PLANTA2: "MAP_RUINAS_ARENOSAS_2F", PLANTA3: "MAP_RUINAS_ARENOSAS_3F"}
+# Plantas con suelo agrietado: como en la TORRE ESPEJISMO, al romperse caes a la planta de abajo
+AGUJEROS = """{carpeta}_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, CaveHole_CheckFallDownHole
+	map_script MAP_SCRIPT_ON_TRANSITION, CaveHole_FixCrackedGround
+	map_script MAP_SCRIPT_ON_RESUME, {carpeta}_SetHoleWarp
+	.byte 0
+
+@ Dualocke: RUINAS ARENOSAS (tools/dualocke/crear_desierto_profundo.py). Si el suelo se rompe, caes abajo
+{carpeta}_SetHoleWarp:
+	setstepcallback STEP_CB_CRACKED_FLOOR
+	setholewarp {abajo}
+	end
+"""
 CAJA = (16, 30, 40, 98)                  # trozo de la RUTA 111 (x0, y0, x1, y1)
 TORRE = range(0x3D8, 0x3F3)              # metatiles de la TORRE ESPEJISMO
 ARENA = 0x251                            # arena lisa del desierto
@@ -131,7 +147,7 @@ def puerta_en(x, y):
     return x + PUERTA_MONTICULO[0], y + PUERTA_MONTICULO[1]
 
 
-def crear_mapas(layout_desierto, layout_ruinas, layout_camara):
+def crear_mapas(layout_desierto, layout_ruinas, layout_camara, layout_2f, layout_3f):
     salida = (MONTICULO[0] + PUERTA_MONTICULO[0] - CAJA[0], MONTICULO[1] + PUERTA_MONTICULO[1] - CAJA[1])
     a_ruinas = puerta_en(*SITIO_RUINAS)
     comun = {"region": "REGION_HOENN", "requires_flash": False, "allow_cycling": True, "allow_escaping": True,
@@ -150,16 +166,39 @@ def crear_mapas(layout_desierto, layout_ruinas, layout_camara):
         "map_type": "MAP_TYPE_UNDERGROUND", **comun,
         "warp_events": [
             {"x": 10, "y": 14, "elevation": 3, "dest_map": MAPAS[DESIERTO], "dest_warp_id": "1"},
-            {"x": 15, "y": 2, "elevation": 3, "dest_map": MAPAS[CAMARA], "dest_warp_id": "0"}]})
+            {"x": 15, "y": 2, "elevation": 3, "dest_map": MAPAS[PLANTA2], "dest_warp_id": "1"}]})
+    # Las dos plantas de en medio: mismas escaleras que en la TORRE ESPEJISMO
+    for carpeta, layout, abajo, warps in (
+            (PLANTA2, layout_2f, MAPAS[RUINAS],
+             [{"x": 18, "y": 12, "elevation": 3, "dest_map": MAPAS[PLANTA3], "dest_warp_id": "0"},
+              {"x": 15, "y": 2, "elevation": 3, "dest_map": MAPAS[RUINAS], "dest_warp_id": "1"}]),
+            (PLANTA3, layout_3f, MAPAS[PLANTA2],
+             [{"x": 18, "y": 12, "elevation": 3, "dest_map": MAPAS[PLANTA2], "dest_warp_id": "0"},
+              {"x": 2, "y": 4, "elevation": 3, "dest_map": MAPAS[CAMARA], "dest_warp_id": "0"}])):
+        if not os.path.exists(f"data/maps/{carpeta}/scripts.inc"):
+            os.makedirs(f"data/maps/{carpeta}", exist_ok=True)
+            escribir(f"data/maps/{carpeta}/scripts.inc", AGUJEROS.format(carpeta=carpeta, abajo=abajo))
+        mapa_json(carpeta, {
+            "id": MAPAS[carpeta], "name": carpeta, "layout": layout, "music": "MUS_MT_CHIMNEY",
+            "region_map_section": "MAPSEC_RUINAS_ARENOSAS", "weather": "WEATHER_NONE",
+            "map_type": "MAP_TYPE_UNDERGROUND", **comun, "warp_events": warps})
+    # Las rocas de GOLPE ROCA de la planta 3, como en la torre
+    ruta = f"data/maps/{PLANTA3}/map.json"
+    if "OBJ_EVENT_GFX_BREAKABLE_ROCK" not in leer(ruta):
+        texto = leer(ruta)
+        for o in json.loads(leer("data/maps/MirageTower_3F/map.json"))["object_events"]:
+            texto = co.insertar_en_lista(texto, "object_events", o)
+        json.loads(texto)
+        escribir(ruta, texto)
     mapa_json(CAMARA, {
         "id": MAPAS[CAMARA], "name": CAMARA, "layout": layout_camara, "music": "MUS_MT_CHIMNEY",
         "region_map_section": "MAPSEC_RUINAS_ARENOSAS", "weather": "WEATHER_NONE",
         "map_type": "MAP_TYPE_UNDERGROUND", **comun,
-        "warp_events": [{"x": 1, "y": 4, "elevation": 3, "dest_map": MAPAS[RUINAS], "dest_warp_id": "1"}]})
+        "warp_events": [{"x": 1, "y": 4, "elevation": 3, "dest_map": MAPAS[PLANTA3], "dest_warp_id": "1"}]})
 
     grupos = leer("data/maps/map_groups.json")
     salto = "\r\n" if "\r\n" in grupos else "\n"
-    for carpeta in (DESIERTO, RUINAS, CAMARA):
+    for carpeta in (DESIERTO, RUINAS, CAMARA, PLANTA2, PLANTA3):
         if f'"{carpeta}"' in grupos:
             continue
         d = json.loads(grupos)
@@ -205,7 +244,8 @@ def zonas_region():
 
 def main():
     layout_desierto, _ = crear_desierto()
-    crear_mapas(layout_desierto, copiar_layout(RUINAS, "MirageTower_1F"), copiar_layout(CAMARA, "MirageTower_4F"))
+    crear_mapas(layout_desierto, copiar_layout(RUINAS, "MirageTower_1F"), copiar_layout(CAMARA, "MirageTower_4F"),
+                copiar_layout(PLANTA2, "MirageTower_2F"), copiar_layout(PLANTA3, "MirageTower_3F"))
     entrada_ruta111()
     zonas_region()
     print("Dualocke: DESIERTO PROFUNDO y RUINAS ARENOSAS creados")

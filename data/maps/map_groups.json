@@ -476,7 +476,10 @@
     "IslaNevada_Cueva",
     "DesiertoProfundo",
     "RuinasArenosas",
-    "RuinasArenosas_Camara"
+    "RuinasArenosas_Camara",
+    "GrutaIgnea_Camara",
+    "RuinasArenosas_2F",
+    "RuinasArenosas_3F"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",

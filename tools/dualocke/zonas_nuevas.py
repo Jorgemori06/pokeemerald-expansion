@@ -34,9 +34,18 @@ PESCA_LEJOS = ["MAGIKARP", "REMORAID", "REMORAID", "CHINCHOU", "SKRELP",
                "LANTURN", "OCTILLERY", "CLAUNCHER", "DRAGALGE", "LAPRAS"]
 CUEVA_OMBLIGO = ["GOLBAT", "SABLEYE", "NOIBAT", "GOLBAT", "MAWILE", "CARBINK",
                  "NOIBAT", "LAIRON", "DRUDDIGON", "HONEDGE", "CROBAT", "DEINO"]
+CUEVA_GRUTA = ["SLUGMA", "NUMEL", "SALANDIT", "SIZZLIPEDE", "ROLYCOLY", "LITWICK",
+               "HEATMOR", "MAGBY", "CHARCADET", "TURTONATOR", "TORKOAL", "LARVESTA"]
+RUINAS = ["BALTOY", "YAMASK", "GOLETT", "BRONZOR", "SIGILYPH", "RUNERIGUS",
+          "ELGYEM", "CLAYDOL", "BRONZONG", "COFAGRIGUS", "SPIRITOMB", "ARCHEN"]
 SALVAJES = {
     "MAP_SOUTHERN_ISLAND_EXTERIOR": {
         "fishing_mons": PESCA_TROPICAL,
+    },
+    # ISLA SUR: hierba alta en el claro del bosque (puesta a mano en su map.bin el 17/11/2026)
+    "MAP_SOUTHERN_ISLAND_INTERIOR": {
+        "land_mons": ["BOUNSWEET", "PIKIPEK", "EXEGGCUTE", "FOMANTIS", "TROPIUS", "COMFEY",
+                      "ORANGURU", "PASSIMIAN", "DARTRIX", "TSAREENA", "LURANTIS", "JANGMO_O"],
     },
     "MAP_FARAWAY_ISLAND_ENTRANCE": {
         "fishing_mons": PESCA_LEJOS,
@@ -58,10 +67,8 @@ SALVAJES = {
     "MAP_NAVEL_ROCK_TOP": {"land_mons": CUEVA_OMBLIGO},
     "MAP_NAVEL_ROCK_BOTTOM": {"land_mons": CUEVA_OMBLIGO},
     # GRUTA ÍGNEA (crear_gruta_ignea.py): Pokémon de fuego y roca de todas las generaciones
-    "MAP_GRUTA_IGNEA": {
-        "land_mons": ["SLUGMA", "NUMEL", "SALANDIT", "SIZZLIPEDE", "ROLYCOLY", "LITWICK",
-                      "HEATMOR", "MAGBY", "CHARCADET", "TURTONATOR", "TORKOAL", "LARVESTA"],
-    },
+    "MAP_GRUTA_IGNEA": {"land_mons": CUEVA_GRUTA},
+    "MAP_GRUTA_IGNEA_CAMARA": {"land_mons": CUEVA_GRUTA},
     # ISLA NEVADA y CUEVA HELADA (crear_isla_nevada.py): Pokémon de hielo
     "MAP_ISLA_NEVADA": {
         "water_mons": ["SPHEAL", "SEEL", "SPHEAL", "DELIBIRD", "LAPRAS"],
@@ -73,10 +80,9 @@ SALVAJES = {
         "land_mons": ["TRAPINCH", "SANDSHREW", "CACNEA", "HIPPOPOTAS", "SANDILE", "SILICOBRA",
                       "HELIOPTILE", "SKORUPI", "MARACTUS", "BALTOY", "LARVITAR", "GIBLE"],
     },
-    "MAP_RUINAS_ARENOSAS": {
-        "land_mons": ["BALTOY", "YAMASK", "GOLETT", "BRONZOR", "SIGILYPH", "RUNERIGUS",
-                      "ELGYEM", "CLAYDOL", "BRONZONG", "COFAGRIGUS", "SPIRITOMB", "ARCHEN"],
-    },
+    "MAP_RUINAS_ARENOSAS": {"land_mons": RUINAS},
+    "MAP_RUINAS_ARENOSAS_2F": {"land_mons": RUINAS},
+    "MAP_RUINAS_ARENOSAS_3F": {"land_mons": RUINAS},
     "MAP_ISLA_NEVADA_CUEVA": {
         "land_mons": ["SNORUNT", "SWINUB", "SNOVER", "CUBCHOO", "VANILLITE", "SNOM",
                       "BERGMITE", "SNEASEL", "CETODDLE", "CRYOGONAL", "EISCUE", "FRIGIBAX"],

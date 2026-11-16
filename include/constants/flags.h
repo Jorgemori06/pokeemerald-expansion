@@ -1393,7 +1393,7 @@
 #define FLAG_DUALOCKE_OMBLIGO_CIMA                   (SYSTEM_FLAGS + 0x24) // Dualocke: Pokémon fuerte de la cima de ROCA OMBLIGO vencido o capturado
 #define FLAG_DUALOCKE_OMBLIGO_FONDO                  (SYSTEM_FLAGS + 0x25) // Dualocke: Pokémon fuerte del fondo de ROCA OMBLIGO vencido o capturado
 #define FLAG_DUALOCKE_GUARDIAN_RUINAS                (SYSTEM_FLAGS + 0x26) // Dualocke: guardián de las RUINAS ARENOSAS vencido o capturado
-#define FLAG_UNUSED_0x887                           (SYSTEM_FLAGS + 0x27) // Unused Flag
+#define FLAG_DUALOCKE_GUARDIAN_GRUTA                 (SYSTEM_FLAGS + 0x27) // Dualocke: guardián de la CÁMARA DEL MAGMA vencido o capturado
 
 #define FLAG_SYS_USE_FLASH                          (SYSTEM_FLAGS + 0x28)
 #define FLAG_SYS_USE_STRENGTH                       (SYSTEM_FLAGS + 0x29)
@@ -1403,7 +1403,7 @@
 #define FLAG_SYS_SAFARI_MODE                        (SYSTEM_FLAGS + 0x2C)
 #define FLAG_SYS_CRUISE_MODE                        (SYSTEM_FLAGS + 0x2D)
 
-#define FLAG_UNUSED_0x88E                           (SYSTEM_FLAGS + 0x2E) // Unused Flag
+#define FLAG_DUALOCKE_GUARDIAN_NEVADA                (SYSTEM_FLAGS + 0x2E) // Dualocke: guardián de la CUEVA HELADA vencido o capturado
 #define FLAG_UNUSED_0x88F                           (SYSTEM_FLAGS + 0x2F) // Unused Flag
 
 #define FLAG_SYS_TV_HOME                            (SYSTEM_FLAGS + 0x30)

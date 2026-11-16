@@ -367,10 +367,27 @@ ISLA SUR, ISLA LEJANA, ISLA ORIGEN y ROCA OMBLIGO ya existían, pero solo con un
 - **Entrenadores (6):** TERRY y CINDY en la ISLA SUR, MIKE y las gemelas AMY Y LIV en la ISLA LEJANA, las gemelas GINA Y MIA en la ISLA ORIGEN y LUCAS en el cruce de ROCA OMBLIGO.
   - Son entrenadores que existían pero no salían en ningún mapa, así que no se gastan flags ni se rompe la partida guardada.
   - `reescalar_niveles.py` les pone el nivel de su tramo (`ENTRENADORES_ISLAS`), pero no cuentan para la banda del tramo: así no cambia el nivel de nadie más.
-- **Salvajes** (`tools/dualocke/zonas_nuevas.py`): pesca en las cuatro islas, hierba en el interior de la ISLA LEJANA y cueva en ROCA OMBLIGO. Las tablas van al final de `wild_encounters.json`, para no cambiar los salvajes de las semillas en curso. Cada isla es su propia zona de captura (ya lo era en el mapa de la región).
+- **Salvajes** (`tools/dualocke/zonas_nuevas.py`): pesca en las cuatro islas, hierba en el interior de la ISLA SUR y de la ISLA LEJANA, y cueva en ROCA OMBLIGO.
+  - La ISLA SUR no tenía hierba: el 17/11/2026 se puso hierba alta en el claro del bosque, alrededor de la charca, en su `map.bin`. Las tablas van al final de `wild_encounters.json`, para no cambiar los salvajes de las semillas en curso. Cada isla es su propia zona de captura (ya lo era en el mapa de la región).
 - **Objetos:** 11 objetos normales (con semilla, al azar como los demás), colocados con `colocar_objetos.py` (`OBJETOS_ISLAS`, flags `FLAG_ITEM_ISLA_...` del 0x8E5 al 0x8EF).
 - **Textos:** los del ferry y los marineros eran de postgame y estaban en inglés; ahora están en `traduccion/dialogos/41_islas_ferry.tsv`.
 - **Flags nuevos:** `FLAG_DUALOCKE_ISLA_SUR`, `_LEJANA`, `_ORIGEN`, `FLAG_DUALOCKE_OMBLIGO_CIMA` y `_FONDO` (0x881-0x885).
+
+### Comprobar las zonas sin compilar
+
+`python3 tools/dualocke/comprobar_zonas.py` revisa todos los mapas de Hoenn y devuelve los fallos (0 el 17/11/2026, en 944 mapas). Hay que lanzarlo **antes de subir cualquier mapa nuevo**: los primeros mapas nuevos se subieron sin apuntar sus `scripts.inc` en `data/event_scripts.s` y no habrían compilado.
+
+Qué mira:
+
+- scripts apuntados en `event_scripts.s` y layouts (existen y miden lo que dicen);
+- etiquetas de los scripts y constantes (flags, objetos, especies, entrenadores, mapas, música…);
+- puertas (destino y número de puerta) y conexiones (que el otro mapa conecte de vuelta);
+- objetos repetidos en la misma casilla;
+- entrenadores: equipo en `trainers.party`, `TRAINERS_COUNT_EMERALD` y los nuevos de `zonas_nuevas.py` (clase, foto y música que existan, nombre de 10 letras como mucho);
+- salvajes: huecos y especies;
+- zonas de captura: caben en las variables y las nuevas tienen sus carteles.
+
+Las rarezas del juego original (puertas del ferry fuera del mapa…) están en `ORIGINALES`.
 
 ### DESIERTO PROFUNDO y RUINAS ARENOSAS (hecho, Miguel, 16/11/2026; falta probarlo)
 
@@ -382,7 +399,10 @@ ISLA SUR, ISLA LEJANA, ISLA ORIGEN y ROCA OMBLIGO ya existían, pero solo con un
 - **DESIERTO PROFUNDO** (24 × 68): el desierto de la RUTA 111 sin la TORRE ESPEJISMO ni los huecos de base secreta, con **tormenta de arena** (también en combate).
   - Abajo está la salida.
   - En el norte, otro montículo lleva a las ruinas.
-- **RUINAS ARENOSAS:** dos salas con los gráficos de la TORRE ESPEJISMO: la entrada, un pasillo alrededor de un bloque central, y la **CÁMARA** de arriba.
+- **RUINAS ARENOSAS:** las cuatro plantas de la TORRE ESPEJISMO (17/11/2026; antes eran dos).
+  - **Entrada:** un pasillo alrededor de un bloque central.
+  - **Plantas 2 y 3:** suelo agrietado, igual que en la torre: si se rompe, caes a la planta de abajo (`setholewarp`). En la 3, dos rocas de GOLPE ROCA.
+  - **CÁMARA:** arriba del todo.
   - **Guardián:** en la CÁMARA hay un Pokémon fuerte que se puede capturar, como en las islas del ferry (`dualocke_islas.inc`). Sin semilla es Garchomp a nivel 47 (cap − 3, regla `"tope"`); con semilla, otro fuerte (`islas()` en `estaticos.py`).
   - **Premio:** Cascabel Concha y su megapiedra si tiene. Flag `FLAG_DUALOCKE_GUARDIAN_RUINAS` (0x886).
 - **Zonas de captura propias (2):** `MAPSEC_DESIERTO_PROFUNDO` y `MAPSEC_RUINAS_ARENOSAS`, al final de la lista. `HOENN_EXTRA_MAPSEC_LAST` pasa a ser la de las ruinas: 108 de 112 bits.
@@ -404,6 +424,9 @@ ISLA SUR, ISLA LEJANA, ISLA ORIGEN y ROCA OMBLIGO ya existían, pero solo con un
 - **La isla** (80 × 40): mar con el islote grande de la RUTA 125 (el de la entrada de la CUEVA CARDUMEN) y sus bancos de arena, pegados arriba.
   - Usa los mismos gráficos que la RUTA 124, para que la conexión se vea bien.
   - Clima `WEATHER_SNOW`: **nieve en combate**. Esmeralda no tiene suelo nevado para fuera, así que la nieve es la que cae.
+- **Guardián de la CUEVA HELADA (17/11/2026):** al fondo de la cueva, donde estaba la Piedra Hielo (que pasa junto al Hielo Perpetuo).
+  - Sin semilla es Baxcalibur a nivel 70; premio, Garra Afilada y su megapiedra.
+  - `FLAG_DUALOCKE_GUARDIAN_NEVADA` (0x88E).
 - **La CUEVA HELADA** (20 × 30): la entrada del islote lleva a ella. Es la sala de hielo de la CUEVA CARDUMEN (suelo resbaladizo, rocas para frenar), con otros entrenadores y objetos. Se podría rediseñar con Porymap.
 - **Zona de captura propia:** `MAPSEC_ISLA_NEVADA` (la isla y la cueva cuentan como una), al final de la lista. `HOENN_EXTRA_MAPSEC_LAST` pasa a ser esa: 106 de 112 bits.
 - **Todo lo hace `tools/dualocke/crear_isla_nevada.py`.** La isla va al final del grupo de las rutas y la cueva al de las mazmorras: ningún mapa cambia de número.
@@ -419,6 +442,10 @@ ISLA SUR, ISLA LEJANA, ISLA ORIGEN y ROCA OMBLIGO ya existían, pero solo con un
 
 La primera zona nueva de verdad (`ZONAS.md`, propuesta 7, "SENDERO ÍGNEO profundo"). El nombre es el que usó Miguel: "mejorar la gruta ígnea".
 
+- **CÁMARA DEL MAGMA (17/11/2026):** la salida del sur de la gruta baja a una sala en terrazas con dos pozas de lava (la sala 3 de la planta 3 de la GUARIDA MAGMA, sin su máquina y con la puerta de arriba tapiada).
+  - **Guardián arriba del todo:** sin semilla, Houndoom a nivel 47; premio, Periscopio y su megapiedra.
+  - Usa el mismo sistema que las islas del ferry (`FLAG_DUALOCKE_GUARDIAN_GRUTA`, 0x887).
+  - Cuenta como la misma zona de captura que la gruta.
 - **Dónde:** una boca de cueva en la sala del suroeste del SENDERO ÍGNEO, la de detrás de las rocas. Hace falta FUERZA, que se usa con la 4.ª medalla, así que es del **tramo 5** (cap 50), que antes no tenía casi nada.
 - **El mapa** (59 × 28): es la planta 4 de la GUARIDA MAGMA sin las máquinas del Equipo Magma, que comparte gráficos con el SENDERO ÍGNEO. Es un recorrido largo alrededor de un lago de lava, que no se puede cruzar.
   - Lo hace `tools/dualocke/crear_gruta_ignea.py`: cada casilla de máquina pasa a ser el suelo de cueva de al lado y se tapa la salida hacia la guarida.

@@ -88,6 +88,13 @@
       "elevation": 0,
       "dest_map": "MAP_FIERY_PATH",
       "dest_warp_id": "2"
+    },
+    {
+      "x": 20,
+      "y": 21,
+      "elevation": 0,
+      "dest_map": "MAP_GRUTA_IGNEA_CAMARA",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

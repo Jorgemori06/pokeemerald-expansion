@@ -61,9 +61,10 @@ TRAMOS = {
     4: ["ROUTE111", "ROUTE112", "FIERY_PATH", "ROUTE113", "ROUTE114", "METEOR_FALLS_1F_1R",
         "ROUTE115", "MT_CHIMNEY", "JAGGED_PASS", "LAVARIDGE_TOWN_GYM_*", "ROUTE110_TRICK_HOUSE_PUZZLE2"],
     5: ["PETALBURG_CITY_GYM", "ROUTE110_TRICK_HOUSE_PUZZLE3",
-        "GRUTA_IGNEA",  # se llega con FUERZA, desde el SENDERO ÍGNEO (Miguel, 16/11/2026)
+        "GRUTA_IGNEA", "GRUTA_IGNEA_CAMARA",  # se llega con FUERZA, desde el SENDERO ÍGNEO (Miguel, 16/11/2026)
         # DESIERTO PROFUNDO y RUINAS ARENOSAS, desde el desierto de la RUTA 111 (crear_desierto_profundo.py)
-        "DESIERTO_PROFUNDO", "RUINAS_ARENOSAS", "RUINAS_ARENOSAS_CAMARA"],
+        "DESIERTO_PROFUNDO", "RUINAS_ARENOSAS", "RUINAS_ARENOSAS_2F", "RUINAS_ARENOSAS_3F",
+        "RUINAS_ARENOSAS_CAMARA"],
     6: ["PETALBURG_CITY", "ROUTE105", "ROUTE107", "ROUTE108", "ABANDONED_SHIP_*",
         "NEW_MAUVILLE_*", "MIRAGE_TOWER_*", "ROUTE118", "ROUTE123", "ROUTE119",
         "ROUTE119_WEATHER_INSTITUTE_*", "ROUTE120", "FORTREE_CITY_GYM", "ROUTE110_TRICK_HOUSE_PUZZLE4"],
@@ -398,6 +399,8 @@ ESTATICOS = [
     ("data/maps/NavelRock_Bottom/scripts.inc", "MAP_NAVEL_ROCK_BOTTOM", "tope"),
     # El guardián de las RUINAS ARENOSAS, igual (crear_desierto_profundo.py)
     ("data/maps/RuinasArenosas_Camara/scripts.inc", "MAP_RUINAS_ARENOSAS_CAMARA", "tope"),
+    ("data/maps/GrutaIgnea_Camara/scripts.inc", "MAP_GRUTA_IGNEA_CAMARA", "tope"),
+    ("data/maps/IslaNevada_Cueva/scripts.inc", "MAP_ISLA_NEVADA_CUEVA", "tope"),
 ]
 
 

@@ -9383,6 +9383,36 @@
       "secondary_tileset": "gTileset_MirageTower",
       "border_filepath": "data/layouts/RuinasArenosas_Camara/border.bin",
       "blockdata_filepath": "data/layouts/RuinasArenosas_Camara/map.bin"
+    },
+    {
+      "id": "LAYOUT_GRUTA_IGNEA_CAMARA",
+      "name": "GrutaIgnea_Camara_Layout",
+      "width": 33,
+      "height": 24,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lavaridge",
+      "border_filepath": "data/layouts/GrutaIgnea_Camara/border.bin",
+      "blockdata_filepath": "data/layouts/GrutaIgnea_Camara/map.bin"
+    },
+    {
+      "id": "LAYOUT_RUINAS_ARENOSAS_2F",
+      "name": "RuinasArenosas_2F_Layout",
+      "width": 21,
+      "height": 17,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_MirageTower",
+      "border_filepath": "data/layouts/RuinasArenosas_2F/border.bin",
+      "blockdata_filepath": "data/layouts/RuinasArenosas_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_RUINAS_ARENOSAS_3F",
+      "name": "RuinasArenosas_3F_Layout",
+      "width": 21,
+      "height": 17,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_MirageTower",
+      "border_filepath": "data/layouts/RuinasArenosas_3F/border.bin",
+      "blockdata_filepath": "data/layouts/RuinasArenosas_3F/map.bin"
     }
   ]
 }

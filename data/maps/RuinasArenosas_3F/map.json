@@ -1,0 +1,63 @@
+{
+  "id": "MAP_RUINAS_ARENOSAS_3F",
+  "name": "RuinasArenosas_3F",
+  "layout": "LAYOUT_RUINAS_ARENOSAS_3F",
+  "music": "MUS_MT_CHIMNEY",
+  "region_map_section": "MAPSEC_RUINAS_ARENOSAS",
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "region": "REGION_HOENN",
+  "requires_flash": false,
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "coord_events": [],
+  "warp_events": [
+    {
+      "x": 18,
+      "y": 12,
+      "elevation": 3,
+      "dest_map": "MAP_RUINAS_ARENOSAS_2F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 2,
+      "y": 4,
+      "elevation": 3,
+      "dest_map": "MAP_RUINAS_ARENOSAS_CAMARA",
+      "dest_warp_id": "0"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
+      "x": 3,
+      "y": 7,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_RockSmash",
+      "flag": "FLAG_TEMP_11"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
+      "x": 4,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_RockSmash",
+      "flag": "FLAG_TEMP_12"
+    }
+  ],
+  "bg_events": []
+}

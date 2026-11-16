@@ -29,7 +29,8 @@ ERRANTES = ("SPECIES_LATIAS", "SPECIES_LATIOS")  # src/roamer.c (InitRoamer)
 # Mapas con el Pokémon fuerte de las islas del ferry: van aparte (islas())
 MAPAS_ISLAS = ("SouthernIsland_Interior", "FarawayIsland_Interior", "BirthIsland_Exterior",
                "NavelRock_Top", "NavelRock_Bottom",
-               "RuinasArenosas_Camara")  # el guardián de las RUINAS ARENOSAS, igual
+               # Los guardianes de las zonas nuevas, igual
+               "RuinasArenosas_Camara", "GrutaIgnea_Camara", "IslaNevada_Cueva")
 
 
 def _nivel_errantes():
