@@ -9323,6 +9323,16 @@
       "border_filepath": "data/layouts/OneIsland_KindleRoad_EmberSpa_Frlg/border.bin",
       "blockdata_filepath": "data/layouts/OneIsland_KindleRoad_EmberSpa_Frlg/map.bin",
       "layout_version": "frlg"
+    },
+    {
+      "id": "LAYOUT_GRUTA_IGNEA",
+      "name": "GrutaIgnea_Layout",
+      "width": 59,
+      "height": 28,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lavaridge",
+      "border_filepath": "data/layouts/GrutaIgnea/border.bin",
+      "blockdata_filepath": "data/layouts/GrutaIgnea/map.bin"
     }
   ]
 }
