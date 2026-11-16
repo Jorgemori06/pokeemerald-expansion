@@ -1,41 +1,40 @@
 EventTicket_Text_ShowOldSeaMap:
-	.string "The ferry to SLATEPORT is…\p"
-	.string "I beg your pardon?\n"
-	.string "Can we sail to this place on the map?\p"
-	.string "I know someone who will help you better.\n"
-	.string "Please wait.$"
+	.string "El ferry a PORTUAL sale…\p"
+	.string "¿Perdona?\n"
+	.string "¿Quieres ir al sitio de este mapa?\p"
+	.string "Conozco a alguien que te puede\n"
+	.string "ayudar mejor. Espera un momento.$"
 
 EventTicket_Text_ThatPass:
-	.string "The ferry to SLATEPORT is…\p"
-	.string "Oh?\n"
-	.string "That PASS…$"
+	.string "El ferry a PORTUAL sale…\p"
+	.string "¿Eh?\n"
+	.string "Ese billete…$"
 
 EventTicket_Text_ShowEonTicket:
-	.string "Aye, mate, are you the one who brought\n"
-	.string "that mighty odd PASS?\p"
-	.string "I'll tell you, you're trying to reach a\n"
-	.string "tiny spit of an island far in the south.\p"
-	.string "There's no telling what we'll encounter\n"
-	.string "once we reach there, aye.\l"
-	.string "That shivers my timbers!\p"
-	.string "All aboard!$"
+	.string "¡Ah del barco! ¿Traes tú ese\n"
+	.string "billete tan raro?\p"
+	.string "Ese sitio es una isla diminuta,\n"
+	.string "muy lejos, hacia el sur.\p"
+	.string "Nadie sabe qué nos espera allí.\l"
+	.string "¡Se me ponen los pelos de punta!\p"
+	.string "¡Todos a bordo!$"
 
 EventTicket_Text_SouthernIslandSailBack:
-	.string "Aye, mate, there's nothing here to\n"
-	.string "see or do on this forgettable island.\p"
-	.string "What say we sail back to LILYCOVE?$"
+	.string "¡Ah del barco! ¿Has visto ya todo\n"
+	.string "lo que hay en esta isla?\p"
+	.string "¿Volvemos a CALAGUA?$"
 
 EventTicket_Text_SailHome:
-	.string "Aye, right, then!\n"
-	.string "Sail home we will!$"
+	.string "¡A la orden!\n"
+	.string "¡Rumbo a casa!$"
 
 EventTicket_Text_AsYouLike:
-	.string "Aye, right, as you like, then.$"
+	.string "Como quieras, entonces.$"
 
 SouthernIsland_Interior_Text_Sign:
-	.string "“All dreams are but another reality.\n"
-	.string "Never forget…”$"
+	.string "“Todos los sueños son otra realidad.\n"
+	.string "No lo olvides…”$"
 
 SouthernIsland_Exterior_Text_Sign:
-	.string "“Those whose memories fade seek to\n"
-	.string "carve them in their hearts…”$"
+	.string "“Quien siente que olvida sus\n"
+	.string "recuerdos los graba en el corazón…”$"

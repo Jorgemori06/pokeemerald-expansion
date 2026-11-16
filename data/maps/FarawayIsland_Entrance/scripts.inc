@@ -43,3 +43,39 @@ FarawayIsland_Entrance_EventScript_Sign::
 	msgbox FarawayIsland_Entrance_Text_Sign, MSGBOX_SIGN
 	end
 
+@ Dualocke: entrenadores de la isla
+FarawayIsland_Entrance_EventScript_Mike::
+	trainerbattle_single TRAINER_MIKE_1, FarawayIsland_Entrance_Text_MikeIntro, FarawayIsland_Entrance_Text_MikeDefeat
+	msgbox FarawayIsland_Entrance_Text_MikePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+FarawayIsland_Entrance_EventScript_AmyLiv::
+	trainerbattle_double TRAINER_AMY_AND_LIV_3, FarawayIsland_Entrance_Text_AmyLivIntro, FarawayIsland_Entrance_Text_AmyLivDefeat, FarawayIsland_Entrance_Text_AmyLivNotEnoughMons
+	msgbox FarawayIsland_Entrance_Text_AmyLivPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+FarawayIsland_Entrance_Text_MikeIntro:
+	.string "¡Estas rocas no las ha pisado\n"
+	.string "casi nadie! ¡Ni a ti te dejo!$"
+
+FarawayIsland_Entrance_Text_MikeDefeat:
+	.string "¡Me has dejado sin aliento!$"
+
+FarawayIsland_Entrance_Text_MikePostBattle:
+	.string "Arriba hay una pradera de hierba\n"
+	.string "alta. Ve con cuidado.$"
+
+FarawayIsland_Entrance_Text_AmyLivIntro:
+	.string "¡Nos hemos colado en el barco!\n"
+	.string "¡Ahora, combate doble!$"
+
+FarawayIsland_Entrance_Text_AmyLivDefeat:
+	.string "¡Jo! ¡Qué fuerte!$"
+
+FarawayIsland_Entrance_Text_AmyLivNotEnoughMons:
+	.string "¿Solo llevas un POKéMON?\n"
+	.string "¡Así no vale!$"
+
+FarawayIsland_Entrance_Text_AmyLivPostBattle:
+	.string "¡No se lo digas al capitán, que\n"
+	.string "no hemos pagado el billete!$"

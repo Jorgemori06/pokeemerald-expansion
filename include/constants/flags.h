@@ -1387,11 +1387,11 @@
 #define FLAG_IS_CHAMPION                            (SYSTEM_FLAGS + 0x1F) // Seems to be related to linking.
 #define FLAG_NURSE_UNION_ROOM_REMINDER              (SYSTEM_FLAGS + 0x20)
 
-#define FLAG_UNUSED_0x881                           (SYSTEM_FLAGS + 0x21) // Unused Flag
-#define FLAG_UNUSED_0x882                           (SYSTEM_FLAGS + 0x22) // Unused Flag
-#define FLAG_UNUSED_0x883                           (SYSTEM_FLAGS + 0x23) // Unused Flag
-#define FLAG_UNUSED_0x884                           (SYSTEM_FLAGS + 0x24) // Unused Flag
-#define FLAG_UNUSED_0x885                           (SYSTEM_FLAGS + 0x25) // Unused Flag
+#define FLAG_DUALOCKE_ISLA_SUR                       (SYSTEM_FLAGS + 0x21) // Dualocke: Pokémon fuerte de la ISLA SUR vencido o capturado
+#define FLAG_DUALOCKE_ISLA_LEJANA                    (SYSTEM_FLAGS + 0x22) // Dualocke: Pokémon fuerte de la ISLA LEJANA vencido o capturado
+#define FLAG_DUALOCKE_ISLA_ORIGEN                    (SYSTEM_FLAGS + 0x23) // Dualocke: Pokémon fuerte de la ISLA ORIGEN vencido o capturado
+#define FLAG_DUALOCKE_OMBLIGO_CIMA                   (SYSTEM_FLAGS + 0x24) // Dualocke: Pokémon fuerte de la cima de ROCA OMBLIGO vencido o capturado
+#define FLAG_DUALOCKE_OMBLIGO_FONDO                  (SYSTEM_FLAGS + 0x25) // Dualocke: Pokémon fuerte del fondo de ROCA OMBLIGO vencido o capturado
 #define FLAG_UNUSED_0x886                           (SYSTEM_FLAGS + 0x26) // Unused Flag
 #define FLAG_UNUSED_0x887                           (SYSTEM_FLAGS + 0x27) // Unused Flag
 
@@ -1507,30 +1507,30 @@
 
 #define FLAG_RECEIVED_POKEDEX_FROM_BIRCH            (SYSTEM_FLAGS + 0x84)
 
-#define FLAG_UNUSED_0x8E5                           (SYSTEM_FLAGS + 0x85) // Unused Flag
-#define FLAG_UNUSED_0x8E6                           (SYSTEM_FLAGS + 0x86) // Unused Flag
-#define FLAG_UNUSED_0x8E7                           (SYSTEM_FLAGS + 0x87) // Unused Flag
-#define FLAG_UNUSED_0x8E8                           (SYSTEM_FLAGS + 0x88) // Unused Flag
-#define FLAG_UNUSED_0x8E9                           (SYSTEM_FLAGS + 0x89) // Unused Flag
-#define FLAG_UNUSED_0x8EA                           (SYSTEM_FLAGS + 0x8A) // Unused Flag
-#define FLAG_UNUSED_0x8EB                           (SYSTEM_FLAGS + 0x8B) // Unused Flag
-#define FLAG_UNUSED_0x8EC                           (SYSTEM_FLAGS + 0x8C) // Unused Flag
-#define FLAG_UNUSED_0x8ED                           (SYSTEM_FLAGS + 0x8D) // Unused Flag
-#define FLAG_UNUSED_0x8EE                           (SYSTEM_FLAGS + 0x8E) // Unused Flag
-#define FLAG_UNUSED_0x8EF                           (SYSTEM_FLAGS + 0x8F) // Unused Flag
+#define FLAG_ITEM_ISLA_PP_UP               0x8E5 // Dualocke: objeto de las islas del ferry
+#define FLAG_ITEM_ISLA_STAR_PIECE          0x8E6 // Dualocke: objeto de las islas del ferry
+#define FLAG_ITEM_ISLA_MAX_ELIXIR          0x8E7 // Dualocke: objeto de las islas del ferry
+#define FLAG_ITEM_ISLA_BIG_NUGGET          0x8E8 // Dualocke: objeto de las islas del ferry
+#define FLAG_ITEM_ISLA_PP_MAX              0x8E9 // Dualocke: objeto de las islas del ferry
+#define FLAG_ITEM_ISLA_ELIXIR              0x8EA // Dualocke: objeto de las islas del ferry
+#define FLAG_ITEM_ISLA_COMET_SHARD         0x8EB // Dualocke: objeto de las islas del ferry
+#define FLAG_ITEM_ISLA_PEARL_STRING        0x8EC // Dualocke: objeto de las islas del ferry
+#define FLAG_ITEM_ISLA_PROTEIN             0x8ED // Dualocke: objeto de las islas del ferry
+#define FLAG_ITEM_ISLA_CARBOS              0x8EE // Dualocke: objeto de las islas del ferry
+#define FLAG_ITEM_ISLA_BALM_MUSHROOM       0x8EF // Dualocke: objeto de las islas del ferry
 #define FLAG_UNUSED_0x8F0                           (SYSTEM_FLAGS + 0x90) // Unused Flag
 #define FLAG_UNUSED_0x8F1                           (SYSTEM_FLAGS + 0x91) // Unused Flag
 #define FLAG_UNUSED_0x8F2                           (SYSTEM_FLAGS + 0x92) // Unused Flag
 #define FLAG_UNUSED_0x8F3                           (SYSTEM_FLAGS + 0x93) // Unused Flag
 #define FLAG_UNUSED_0x8F4                           (SYSTEM_FLAGS + 0x94) // Unused Flag
 #define FLAG_UNUSED_0x8F5                           (SYSTEM_FLAGS + 0x95) // Unused Flag
-#define FLAG_UNUSED_0x8F6                           (SYSTEM_FLAGS + 0x96) // Unused Flag
-#define FLAG_UNUSED_0x8F7                           (SYSTEM_FLAGS + 0x97) // Unused Flag
-#define FLAG_UNUSED_0x8F8                           (SYSTEM_FLAGS + 0x98) // Unused Flag
-#define FLAG_UNUSED_0x8F9                           (SYSTEM_FLAGS + 0x99) // Unused Flag
-#define FLAG_UNUSED_0x8FA                           (SYSTEM_FLAGS + 0x9A) // Unused Flag
-#define FLAG_UNUSED_0x8FB                           (SYSTEM_FLAGS + 0x9B) // Unused Flag
-#define FLAG_UNUSED_0x8FC                           (SYSTEM_FLAGS + 0x9C) // Unused Flag
+#define FLAG_ITEM_GRUTA_FIRE_STONE         0x8F6 // Dualocke: objeto de la GRUTA ÍGNEA
+#define FLAG_ITEM_GRUTA_MAGMARIZER         0x8F7 // Dualocke: objeto de la GRUTA ÍGNEA
+#define FLAG_ITEM_GRUTA_CHARCOAL           0x8F8 // Dualocke: objeto de la GRUTA ÍGNEA
+#define FLAG_ITEM_GRUTA_LAVA_COOKIE        0x8F9 // Dualocke: objeto de la GRUTA ÍGNEA
+#define FLAG_ITEM_NEVADA_NEVER_MELT_ICE    0x8FA // Dualocke: objeto de la ISLA NEVADA
+#define FLAG_ITEM_NEVADA_ICE_STONE         0x8FB // Dualocke: objeto de la ISLA NEVADA
+#define FLAG_ITEM_NEVADA_SNOWBALL          0x8FC // Dualocke: objeto de la ISLA NEVADA
 #define FLAG_UNUSED_0x8FD                           (SYSTEM_FLAGS + 0x9D) // Unused Flag
 #define FLAG_UNUSED_0x8FE                           (SYSTEM_FLAGS + 0x9E) // Unused Flag
 #define FLAG_UNUSED_0x8FF                           (SYSTEM_FLAGS + 0x9F) // Unused Flag

@@ -13,8 +13,12 @@ BirthIsland_Exterior_OnTransition:
 	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL
 	setvar VAR_DEOXYS_ROCK_STEP_COUNT, 0
 	setvar VAR_DEOXYS_ROCK_LEVEL, 0
-	call_if_set FLAG_BATTLED_DEOXYS, BirthIsland_Exterior_EventScript_HideDeoxysAndPuzzle
-	call_if_unset FLAG_BATTLED_DEOXYS, BirthIsland_Exterior_EventScript_TryShowDeoxysPuzzle
+	@ Dualocke: sin Deoxys ni el puzle del triángulo
+	call BirthIsland_Exterior_EventScript_HideDeoxysAndPuzzle
+	@ Dualocke: el Pokémon fuerte de la isla, con el sprite de la especie que sale con la semilla
+	setvar VAR_0x8004, SPECIES_METAGROSS
+	special Dualocke_GraficoPokemonIsla
+	copyvar VAR_OBJ_GFX_ID_1, VAR_RESULT
 	end
 
 BirthIsland_Exterior_EventScript_HideDeoxysAndPuzzle::
@@ -112,3 +116,42 @@ BirthIsland_Exterior_Movement_DeoxysApproach:
 	walk_slow_down
 	walk_slow_down
 	step_end
+
+@ Dualocke: el Pokémon fuerte de la isla (data/scripts/dualocke_islas.inc)
+BirthIsland_Exterior_EventScript_Pokemon::
+	lock
+	setvar VAR_TEMP_8, SPECIES_METAGROSS
+	setvar VAR_TEMP_9, ITEM_ABILITY_PATCH
+	call Dualocke_EventScript_AvisoIsla
+	setwildbattle SPECIES_METAGROSS, 97
+	dowildbattle
+	call Dualocke_EventScript_ResultadoIsla
+	goto_if_eq VAR_RESULT, FALSE, BirthIsland_Exterior_EventScript_PokemonSigue
+	setflag FLAG_DUALOCKE_ISLA_ORIGEN
+	call Dualocke_EventScript_PremioIsla
+	release
+	end
+
+BirthIsland_Exterior_EventScript_PokemonSigue::
+	release
+	end
+
+BirthIsland_Exterior_EventScript_GinaMia::
+	trainerbattle_double TRAINER_GINA_AND_MIA_2, BirthIsland_Exterior_Text_GinaMiaIntro, BirthIsland_Exterior_Text_GinaMiaDefeat, BirthIsland_Exterior_Text_GinaMiaNotEnoughMons
+	msgbox BirthIsland_Exterior_Text_GinaMiaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+BirthIsland_Exterior_Text_GinaMiaIntro:
+	.string "¡Esta isla tiene forma de\n"
+	.string "triángulo! ¡Y nosotras, de pareja!$"
+
+BirthIsland_Exterior_Text_GinaMiaDefeat:
+	.string "¡No nos ha salido la figura!$"
+
+BirthIsland_Exterior_Text_GinaMiaNotEnoughMons:
+	.string "¡Hacen falta dos POKéMON para\n"
+	.string "jugar con nosotras!$"
+
+BirthIsland_Exterior_Text_GinaMiaPostBattle:
+	.string "Dicen que aquí cayó algo del cielo\n"
+	.string "hace mucho tiempo.$"

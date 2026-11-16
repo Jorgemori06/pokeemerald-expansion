@@ -45,6 +45,36 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 - [ ] **Objetos:** al recoger uno sale arriba su imagen y su descripción, y se quita al cerrar el mensaje.
 - [ ] **Carteles de zona:** banda negra arriba con el nombre y la hora. Mirar los nombres largos (CIUDAD ARRECÍPOLIS, CALLE VICTORIA…).
 
+### ISLA NEVADA (desde el 16/11/2026)
+
+- [ ] **Conexión:** surfeando hacia el norte desde la RUTA 124 se pasa a la ISLA NEVADA sin cortes, y la nieve empieza al cruzar.
+- [ ] **El mapa:** que no se vean trozos raros de roca en el borde de la RUTA 124 ni en el islote.
+- [ ] **Cartel de zona:** "ISLA NEVADA", también en la cueva, y que cuente como zona de captura propia.
+- [ ] **Nieve en combate**, también en la cueva (dentro no nieva, así que ahí no).
+- [ ] **CUEVA HELADA:** se entra por el islote y la escalera devuelve fuera. Se puede recorrer resbalando por el hielo y llegar a los objetos y a NIEVES.
+- [ ] **Entrenadores:** DUDLEY y KAYLEE en el agua (te ven al surfear), NIEVES en la cueva.
+- [ ] **Salvajes** de hielo y la Bola de Nieve oculta en el banco de arena.
+
+### GRUTA ÍGNEA (desde el 16/11/2026)
+
+- [ ] **Entrada:** en la sala del suroeste del SENDERO ÍGNEO (con FUERZA) hay una boca de cueva. Bajando por ella se llega a la GRUTA ÍGNEA, y la puerta del noreste devuelve al mismo sitio.
+- [ ] **El mapa:** que no quede ningún trozo de máquina de la GUARIDA MAGMA, que no se pueda pisar la lava y que se pueda dar toda la vuelta.
+- [ ] **Clima:** el sol fuerte se ve bien dentro de la cueva (si queda raro, se quita) y hay sol en los combates.
+- [ ] **Cartel de zona:** "GRUTA ÍGNEA". Cuenta como zona de captura propia: se puede capturar aunque ya hayas capturado en el SENDERO ÍGNEO.
+- [ ] **Entrenadores:** ROQUE, ÍGOR y la soldado Magma, a nivel 46-47, y te ven al pasar.
+- [ ] **Salvajes y objetos:** POKéMON de fuego y roca a nivel del tramo 5, y los 4 objetos.
+
+### Islas del ferry (desde el 16/11/2026)
+
+- [ ] **Billetes:** con la 6.ª medalla, el encargado del puerto de CALAGUA da el Ticket Eón; con la 7.ª, el Mapa Viejo; con la 8.ª, el Ori-Ticket y el Misti-Ticket. Cada isla sale en la lista de destinos.
+- [ ] **Viaje:** se llega a cada isla y el marinero te devuelve a CALAGUA. Los textos, en español.
+- [ ] **Pokémon fuerte:** el sprite del mapa es el de la especie que sale en el combate (con semilla, otra).
+  - Al vencerlo o capturarlo desaparece y da el premio y su megapiedra. Si huyes, sigue ahí.
+  - Que no salga ningún legendario (ni Mew escondido en la hierba de la ISLA LEJANA, ni el triángulo de la ISLA ORIGEN).
+  - Capturado, va al equipo (o a VETADOS si ya tienes uno de su línea) y no gasta la zona.
+- [ ] **Entrenadores:** TERRY y CINDY (ISLA SUR), MIKE y AMY Y LIV (ISLA LEJANA), GINA Y MIA (ISLA ORIGEN) y LUCAS (ROCA OMBLIGO). Que te vean y no tapen el camino.
+- [ ] **Salvajes:** pesca en las cuatro, hierba en la ISLA LEJANA y cueva en ROCA OMBLIGO, a nivel de su tramo.
+
 ### Recuerdamovimientos y Ticket-Recuerdo
 
 - [ ] En un Centro Pokémon, la señora a la derecha del PC: sin ticket te lo dice; con ticket enseña un movimiento de nivel y gasta el ticket solo si lo aprende.

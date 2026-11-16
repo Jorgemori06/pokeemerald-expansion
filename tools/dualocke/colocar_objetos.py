@@ -141,6 +141,42 @@ MEGAPIEDRAS_GIGAMAX = [
     ("DURALUDONITE", "VictoryRoad_1F", "oculta", None),
 ]
 
+# Objetos de las islas del ferry (Miguel, 16/11/2026; data/scripts/dualocke_islas.inc). Son objetos
+# normales del suelo: con semilla, el randomizer los cambia como los demás.
+OBJETOS_ISLAS = [
+    ("PP_UP", "SouthernIsland_Exterior", "oculta", None),
+    ("STAR_PIECE", "SouthernIsland_Exterior", "oculta", None),
+    ("MAX_ELIXIR", "SouthernIsland_Interior", "oculta", None),
+    ("BIG_NUGGET", "FarawayIsland_Entrance", "bola", None),
+    ("PP_MAX", "FarawayIsland_Entrance", "oculta", None),
+    ("ELIXIR", "FarawayIsland_Interior", "bola", None),
+    ("COMET_SHARD", "BirthIsland_Exterior", "bola", None),
+    ("PEARL_STRING", "NavelRock_Exterior", "oculta", None),
+    ("PROTEIN", "NavelRock_Fork", "bola", None),
+    ("CARBOS", "NavelRock_Fork", "oculta", None),
+    ("BALM_MUSHROOM", "NavelRock_B1F", "oculta", None),
+]
+
+# Objetos de la GRUTA ÍGNEA (crear_gruta_ignea.py; Miguel, 16/11/2026), de fuego. Con semilla, al
+# azar como los demás objetos del suelo.
+# La pista es la vista del entrenador que se usa de referencia ("02" ÍGOR, "03" ROQUE, "04" el
+# soldado), para que no salgan todos juntos.
+OBJETOS_GRUTA = [
+    ("FIRE_STONE", "GrutaIgnea", "bola", "03$"),
+    ("MAGMARIZER", "GrutaIgnea", "bola", "04$"),
+    ("CHARCOAL", "GrutaIgnea", "oculta", "02$"),
+    ("LAVA_COOKIE", "GrutaIgnea", "oculta", "04$"),
+]
+
+# Objetos de la ISLA NEVADA y la CUEVA HELADA (crear_isla_nevada.py), de hielo. Con semilla, al azar.
+# Después de colocarlos se movieron a mano en el map.json: los de la cueva, a los sitios de objetos de la
+# sala de hielo de la CUEVA CARDUMEN (no tapan el pasillo); la Bola de Nieve, al banco de arena.
+OBJETOS_NEVADA = [
+    ("NEVER_MELT_ICE", "IslaNevada_Cueva", "bola", None),
+    ("ICE_STONE", "IslaNevada_Cueva", "bola", None),
+    ("SNOWBALL", "IslaNevada", "oculta", None),
+]
+
 # Objetos competitivos de generaciones nuevas (misma estructura). Los más fuertes (Pañuelo
 # Elegido, Chaleco Asalto, Gafas Elegidas, Vidasfera) van a partir del tramo 6.
 COMPETITIVOS = [
@@ -262,6 +298,9 @@ GRUPOS = [
     (MEGAPIEDRAS_GIGAMAX, "FLAG_ITEM_MEGA_", 0x4CA, 0x4E4, "megapiedra de forma Gigamax en el mapa", None),
     (TICKETS, "FLAG_ITEM_TICKET_", 0x021, 0x04F, "Ticket-Recuerdo en el mapa", "HEART_SCALE"),
     (TICKETS_OCULTOS, "FLAG_ITEM_TICKET_", 0x4E5, 0x4EF, "Ticket-Recuerdo oculto en el mapa", "HEART_SCALE"),
+    (OBJETOS_ISLAS, "FLAG_ITEM_ISLA_", 0x8E5, 0x8F5, "objeto de las islas del ferry", None),
+    (OBJETOS_GRUTA, "FLAG_ITEM_GRUTA_", 0x8F6, 0x8F9, "objeto de la GRUTA ÍGNEA", None),
+    (OBJETOS_NEVADA, "FLAG_ITEM_NEVADA_", 0x8FA, 0x8FF, "objeto de la ISLA NEVADA", None),
 ]
 COMPORTAMIENTOS_OK = {"MB_NORMAL", "MB_TALL_GRASS", "MB_LONG_GRASS", "MB_SHORT_GRASS", "MB_DEEP_SAND",
                       "MB_SAND", "MB_CAVE", "MB_ASHGRASS", "MB_FOOTPRINTS"}
@@ -341,9 +380,8 @@ def _buscar_desde_anclas(anclas, info, ancho, alto, ok, distancia, ocupadas, sol
             vecinas = [info(ax + dx, ay + dy)[1] for dx, dy in ((0, 1), (0, -1), (1, 0), (-1, 0))
                        if 0 <= ax + dx < ancho and 0 <= ay + dy < alto and info(ax + dx, ay + dy)[0] == 0
                        and info(ax + dx, ay + dy)[1] not in (0, 15)]
-            if not vecinas:
-                continue
-            elev = vecinas[0]
+            # Si todo el mapa es de transición (la GRUTA ÍGNEA, como la GUARIDA MAGMA), se queda en 0
+            elev = vecinas[0] if vecinas else elev
         vistos = {(ax, ay)}
         cola = deque([(ax, ay, 0)])
         while cola:
@@ -389,7 +427,9 @@ def asegurar_flags(lista, prefijo, primero, ultimo, comentario, fijo=None):
         nombre = f"{prefijo}{objeto}"
         if nombre in texto:
             continue
-        antigua = re.search(rf"^#define FLAG_UNUSED_0x{valor:03X}\s+0x{valor:X}\b.*$", texto, re.M)
+        # Los de antes del sistema van como "0x123"; los del sistema, como "(SYSTEM_FLAGS + 0x85)"
+        antigua = re.search(rf"^#define FLAG_UNUSED_0x{valor:03X}\s+(0x{valor:X}\b|\(SYSTEM_FLAGS \+ 0x[0-9A-F]+\)).*$",
+                            texto, re.M)
         assert antigua, f"el flag 0x{valor:03X} ya no está libre"
         texto = texto.replace(antigua.group(0),
                               f"#define {nombre:<34} 0x{valor:03X} // Dualocke: {comentario}")

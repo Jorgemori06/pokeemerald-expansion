@@ -13,6 +13,8 @@
 #include "constants/pokemon.h"
 #include "constants/species.h"
 #include "constants/trade.h"
+#include "constants/event_objects.h"
+#include "constants/form_change_types.h"
 
 // Dualocke: lo que el randomizer cambia al vuelo, sin tocar los mapas ni los scripts:
 // estáticos, regalos, objetos del suelo, Recogida, objetos de los salvajes, intercambios,
@@ -208,6 +210,37 @@ u32 Dualocke_MovimientosEnsenables(enum Species species, u16 *moves, u32 max)
         n = AnadirEnsenable(species, original[i], moves, n);
     }
     return n;
+}
+
+// Islas del ferry (data/scripts/dualocke_islas.inc): en VAR_0x8004, la especie del setwildbattle de la
+// isla (la original). Devuelve en VAR_RESULT el gráfico del mapa de la especie que sale con la
+// semilla, para que el sprite coincida con el combate, y deja su nombre en STR_VAR_1.
+void Dualocke_GraficoPokemonIsla(void)
+{
+    enum Species species = Dualocke_EstaticoAleatorio(gSpecialVar_0x8004);
+
+    StringCopy(gStringVar1, GetSpeciesName(species));
+    gSpecialVar_Result = species + OBJ_EVENT_MON;
+}
+
+// La megapiedra de ese Pokémon, para el premio de la isla (ITEM_NONE si no tiene mega)
+void Dualocke_MegapiedraPokemonIsla(void)
+{
+    enum Species species = Dualocke_EstaticoAleatorio(gSpecialVar_0x8004);
+    const struct FormChange *cambios = GetSpeciesFormChanges(species);
+    u32 i;
+
+    gSpecialVar_Result = ITEM_NONE;
+    if (cambios == NULL)
+        return;
+    for (i = 0; cambios[i].method != FORM_CHANGE_TERMINATOR; i++)
+    {
+        if (cambios[i].method == FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM)
+        {
+            gSpecialVar_Result = cambios[i].param1;
+            return;
+        }
+    }
 }
 
 // Tutores (callnative en la macro move_tutor): cambia el movimiento de VAR_0x8005 por el de la

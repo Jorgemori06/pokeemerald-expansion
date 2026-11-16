@@ -276,9 +276,11 @@ static const u16 sZoneVars[] =
 };
 
 // Zonas de Hoenn: las secciones anteriores a Kanto y las propias de Esmeralda
-// (de la Guarida Aqua a la Cima Entrenador), que van después de las de Kanto.
+// (de la Guarida Aqua a la Cima Entrenador), que van después de las de Kanto, y las zonas nuevas
+// del Dualocke (ZONAS.md), que se añaden al final de region_map_sections.json para no mover los
+// bits de las demás en las partidas guardadas.
 #define HOENN_EXTRA_MAPSEC_FIRST MAPSEC_AQUA_HIDEOUT
-#define HOENN_EXTRA_MAPSEC_LAST  MAPSEC_TRAINER_HILL
+#define HOENN_EXTRA_MAPSEC_LAST  MAPSEC_ISLA_NEVADA
 #define NUM_DUALOCKE_ZONES (KANTO_MAPSEC_START + HOENN_EXTRA_MAPSEC_LAST - HOENN_EXTRA_MAPSEC_FIRST + 1)
 
 STATIC_ASSERT(NUM_DUALOCKE_ZONES <= ARRAY_COUNT(sZoneVars) * 16, DualockeZoneVarsTooSmall);
