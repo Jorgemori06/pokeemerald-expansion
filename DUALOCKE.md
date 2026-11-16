@@ -212,7 +212,7 @@ Regla general: **el as de cada jefe va exactamente al nivel del cap**, el resto 
   - **Regalos** (Castform, fósiles, Beldum, iniciales de Johto, huevo de Wynaut): se quedan con su nivel original, para entrenarlos (con Caramelos Raros a 1 ₽).
   - Lo hace `reescalar_niveles.py` (tabla `ESTATICOS`).
   - **Captura de estáticos (decidido, falta implementarlo encima del PR #17):** de los estáticos normales solo se puede capturar el primero de cada tipo (un Kecleon, un Voltorb, un Electrode), sin gastar la zona.
-- **Evoluciones de los entrenadores normales (hecho):** `tools/dualocke/evolucionar_entrenadores.py` evoluciona sus Pokémon según el nivel. Las evoluciones por nivel van a su nivel normal; las que no son por nivel (piedra, amistad…) van a 30 la primera y a 40 la segunda. Los tres scripts se lanzan en orden: `reescalar_niveles.py`, `equipos_jefes.py` y `evolucionar_entrenadores.py`. Después va `ia_entrenadores.py` (la IA de los entrenadores normales, sección 7).
+- **Evoluciones de los entrenadores normales (hecho):** `tools/dualocke/evolucionar_entrenadores.py` evoluciona sus Pokémon según el nivel. Las evoluciones por nivel van a su nivel normal; las que no son por nivel (piedra, amistad…) van a 30 la primera y a 40 la segunda. Los scripts se lanzan en orden: `reescalar_niveles.py`, `zonas_nuevas.py` (los salvajes de las zonas nuevas, que `reescalar_niveles.py` borraría), `equipos_jefes.py` y `evolucionar_entrenadores.py`. Después va `ia_entrenadores.py` (la IA de los entrenadores normales, sección 7).
 - El randomizer **no debe tocar los niveles ni el tamaño de los equipos**: solo especies, movimientos, habilidades y objetos. Al cambiar especies, debe mantener la regla de evolucionar según el nivel.
 
 ## 6. Megas, tiendas y evoluciones
@@ -343,6 +343,34 @@ Lo pidió Jorge al probar: las megapiedras y las pociones se mezclaban con todo 
 - El tutorial de Blasco (la Poción va a Medicinas) guarda y devuelve también ese bolsillo. Las bebidas de la azotea del Centro Comercial dicen que van a MEDICINAS.
 - Depuración: "Fill Pocket Items" llena también Medicinas y da una de cada megapiedra; "Fill Pocket Key Items" da el Mega-Aro.
 - Tests en `test/dualocke.c` (busca "bolsillos").
+
+### Islas del ferry (hecho, Miguel, 16/11/2026; falta probarlo)
+
+ISLA SUR, ISLA LEJANA, ISLA ORIGEN y ROCA OMBLIGO ya existían, pero solo con un billete de evento y después de la Liga. Ahora son las primeras zonas "nuevas" (`ZONAS.md`, propuesta 8).
+
+- **Se abren una por medalla.** El encargado del puerto de CALAGUA da el billete de cada una y el ferry ya no espera a la Liga (`Dualocke_EventScript_BilletesIslas`, `data/scripts/dualocke_islas.inc`):
+
+  | Isla | Medalla | Tramo | Pokémon fuerte (sin semilla) | Nivel | Premio |
+  | --- | --- | --- | --- | --- | --- |
+  | ISLA SUR | 6.ª | 7 | Salamence | 70 | Cinta Elección |
+  | ISLA LEJANA | 7.ª | 8 | Tyranitar | 81 | Restos |
+  | ISLA ORIGEN | 8.ª | 9 | Metagross | 97 | Parche Habilidad |
+  | ROCA OMBLIGO, cima | 8.ª | 9 | Charizard | 97 | Vidasfera |
+  | ROCA OMBLIGO, fondo | 8.ª | 9 | Gyarados | 97 | Chaleco Asalto |
+
+- **Sin legendarios (Miguel):** "sustituirlos por Pokémon fuertes (pseudos, Pokémon con mega o Gigamax) capturables y que den recompensa".
+  - Latios/Latias, Mew, Deoxys, Ho-Oh y Lugia se quedan en el mapa, pero siempre ocultos (el código del juego los usa, como el Mew que se esconde en la hierba). Tampoco está el puzle del triángulo de la ISLA ORIGEN.
+  - En su sitio hay un Pokémon que se puede capturar. Es un estático: no gasta la captura de la zona. Si es de una línea que ya tienes, va a VETADOS, como siempre.
+  - **Con semilla sale otro fuerte:** de una línea que acaba en 600 o más de estadísticas base, o con mega (también las de las formas Gigamax). `islas()` en `tools/dualocke/aleatorio/estaticos.py` los sortea aparte, con su propio RNG, así que los demás estáticos y regalos de las semillas en curso no cambian. El sprite del mapa es el de la especie que sale (`Dualocke_GraficoPokemonIsla`).
+  - **Nivel:** el del entrenador normal más fuerte de su tramo (cap − 3), con la regla `"tope"` de `reescalar_niveles.py`.
+  - **Premio** al vencerlo o capturarlo: el objeto de la tabla y, si tiene mega, su megapiedra (`Dualocke_MegapiedraPokemonIsla`). Si huyes, se queda.
+- **Entrenadores (6):** TERRY y CINDY en la ISLA SUR, MIKE y las gemelas AMY Y LIV en la ISLA LEJANA, las gemelas GINA Y MIA en la ISLA ORIGEN y LUCAS en el cruce de ROCA OMBLIGO.
+  - Son entrenadores que existían pero no salían en ningún mapa, así que no se gastan flags ni se rompe la partida guardada.
+  - `reescalar_niveles.py` les pone el nivel de su tramo (`ENTRENADORES_ISLAS`), pero no cuentan para la banda del tramo: así no cambia el nivel de nadie más.
+- **Salvajes** (`tools/dualocke/zonas_nuevas.py`): pesca en las cuatro islas, hierba en el interior de la ISLA LEJANA y cueva en ROCA OMBLIGO. Las tablas van al final de `wild_encounters.json`, para no cambiar los salvajes de las semillas en curso. Cada isla es su propia zona de captura (ya lo era en el mapa de la región).
+- **Objetos:** 11 objetos normales (con semilla, al azar como los demás), colocados con `colocar_objetos.py` (`OBJETOS_ISLAS`, flags `FLAG_ITEM_ISLA_...` del 0x8E5 al 0x8EF).
+- **Textos:** los del ferry y los marineros eran de postgame y estaban en inglés; ahora están en `traduccion/dialogos/41_islas_ferry.tsv`.
+- **Flags nuevos:** `FLAG_DUALOCKE_ISLA_SUR`, `_LEJANA`, `_ORIGEN`, `FLAG_DUALOCKE_OMBLIGO_CIMA` y `_FONDO` (0x881-0x885).
 
 ### Recuerdamovimientos y Ticket-Recuerdo (hecho, Miguel, 26/10/2026)
 

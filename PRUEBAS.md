@@ -33,6 +33,17 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 - [ ] **Tiendas:** una compra por objeto (salvo Balls, Repelentes, Bayas y Caramelos), y el segundo dependiente en las ciudades.
 - [ ] **Caps de nivel:** al llegar al cap no se gana experiencia y los Caramelos Raros no funcionan por encima.
 
+### Islas del ferry (desde el 16/11/2026)
+
+- [ ] **Billetes:** con la 6.ª medalla, el encargado del puerto de CALAGUA da el Ticket Eón; con la 7.ª, el Mapa Viejo; con la 8.ª, el Ori-Ticket y el Misti-Ticket. Cada isla sale en la lista de destinos.
+- [ ] **Viaje:** se llega a cada isla y el marinero te devuelve a CALAGUA. Los textos, en español.
+- [ ] **Pokémon fuerte:** el sprite del mapa es el de la especie que sale en el combate (con semilla, otra).
+  - Al vencerlo o capturarlo desaparece y da el premio y su megapiedra. Si huyes, sigue ahí.
+  - Que no salga ningún legendario (ni Mew escondido en la hierba de la ISLA LEJANA, ni el triángulo de la ISLA ORIGEN).
+  - Capturado, va al equipo (o a VETADOS si ya tienes uno de su línea) y no gasta la zona.
+- [ ] **Entrenadores:** TERRY y CINDY (ISLA SUR), MIKE y AMY Y LIV (ISLA LEJANA), GINA Y MIA (ISLA ORIGEN) y LUCAS (ROCA OMBLIGO). Que te vean y no tapen el camino.
+- [ ] **Salvajes:** pesca en las cuatro, hierba en la ISLA LEJANA y cueva en ROCA OMBLIGO, a nivel de su tramo.
+
 ### Recuerdamovimientos y Ticket-Recuerdo
 
 - [ ] En un Centro Pokémon, la señora a la derecha del PC: sin ticket te lo dice; con ticket enseña un movimiento de nivel y gasta el ticket solo si lo aprende.
