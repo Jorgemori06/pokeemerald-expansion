@@ -6946,8 +6946,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("Butterfrite"), ITEM_NAME("Butterfrita")),
         .price = 0,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
-        .description = ES(COMPOUND_STRING("This stone enables\n"
-            "Butterfree to Mega\n"
+        .description = ES(COMPOUND_STRING("This stone lets\n"
+            "Butterfree Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Butterfree.")),
         .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
@@ -6963,8 +6963,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("Pikachunite"), ITEM_NAME("Pikachunita")),
         .price = 0,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
-        .description = ES(COMPOUND_STRING("This stone enables\n"
-            "Pikachu to Mega\n"
+        .description = ES(COMPOUND_STRING("This stone lets\n"
+            "Pikachu Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Pikachu.")),
         .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
@@ -6980,8 +6980,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("Meowthite"), ITEM_NAME("Meowthita")),
         .price = 0,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
-        .description = ES(COMPOUND_STRING("This stone enables\n"
-            "Meowth to Mega\n"
+        .description = ES(COMPOUND_STRING("This stone lets\n"
+            "Meowth Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Meowth.")),
         .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
@@ -6997,8 +6997,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("Machampite"), ITEM_NAME("Machampita")),
         .price = 0,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
-        .description = ES(COMPOUND_STRING("This stone enables\n"
-            "Machamp to Mega\n"
+        .description = ES(COMPOUND_STRING("This stone lets\n"
+            "Machamp Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Machamp.")),
         .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
@@ -7014,8 +7014,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("Kinglerite"), ITEM_NAME("Kinglerita")),
         .price = 0,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
-        .description = ES(COMPOUND_STRING("This stone enables\n"
-            "Kingler to Mega\n"
+        .description = ES(COMPOUND_STRING("This stone lets\n"
+            "Kingler Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Kingler.")),
         .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
@@ -7031,8 +7031,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("Laprasite"), ITEM_NAME("Laprasita")),
         .price = 0,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
-        .description = ES(COMPOUND_STRING("This stone enables\n"
-            "Lapras to Mega\n"
+        .description = ES(COMPOUND_STRING("This stone lets\n"
+            "Lapras Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Lapras.")),
         .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
@@ -7048,8 +7048,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("Eevinite"), ITEM_NAME("Eevinita")),
         .price = 0,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
-        .description = ES(COMPOUND_STRING("This stone enables\n"
-            "Eevee to Mega\n"
+        .description = ES(COMPOUND_STRING("This stone lets\n"
+            "Eevee Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Eevee.")),
         .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
@@ -7065,8 +7065,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("Snorlaxite"), ITEM_NAME("Snorlaxita")),
         .price = 0,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
-        .description = ES(COMPOUND_STRING("This stone enables\n"
-            "Snorlax to Mega\n"
+        .description = ES(COMPOUND_STRING("This stone lets\n"
+            "Snorlax Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Snorlax.")),
         .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
@@ -7082,8 +7082,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("Garbodorite"), ITEM_NAME("Garbodorita")),
         .price = 0,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
-        .description = ES(COMPOUND_STRING("This stone enables\n"
-            "Garbodor to Mega\n"
+        .description = ES(COMPOUND_STRING("This stone lets\n"
+            "Garbodor Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Garbodor.")),
         .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
@@ -7099,8 +7099,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("Rillaboomite"), ITEM_NAME("Rillaboomita")),
         .price = 0,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
-        .description = ES(COMPOUND_STRING("This stone enables\n"
-            "Rillaboom to Mega\n"
+        .description = ES(COMPOUND_STRING("This stone lets\n"
+            "Rillaboom Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Rillaboom.")),
         .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
@@ -7116,8 +7116,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("Cinderacite"), ITEM_NAME("Cinderacita")),
         .price = 0,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
-        .description = ES(COMPOUND_STRING("This stone enables\n"
-            "Cinderace to Mega\n"
+        .description = ES(COMPOUND_STRING("This stone lets\n"
+            "Cinderace Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Cinderace.")),
         .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
@@ -7133,8 +7133,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("Inteleonite"), ITEM_NAME("Inteleonita")),
         .price = 0,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
-        .description = ES(COMPOUND_STRING("This stone enables\n"
-            "Inteleon to Mega\n"
+        .description = ES(COMPOUND_STRING("This stone lets\n"
+            "Inteleon Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Inteleon.")),
         .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
@@ -7167,8 +7167,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("Orbeetlite"), ITEM_NAME("Orbeetlita")),
         .price = 0,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
-        .description = ES(COMPOUND_STRING("This stone enables\n"
-            "Orbeetle to Mega\n"
+        .description = ES(COMPOUND_STRING("This stone lets\n"
+            "Orbeetle Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Orbeetle.")),
         .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
@@ -7184,8 +7184,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("Drednawite"), ITEM_NAME("Drednawita")),
         .price = 0,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
-        .description = ES(COMPOUND_STRING("This stone enables\n"
-            "Drednaw to Mega\n"
+        .description = ES(COMPOUND_STRING("This stone lets\n"
+            "Drednaw Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Drednaw.")),
         .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
@@ -7201,8 +7201,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("Coalossalite"), ITEM_NAME("Coalossalita")),
         .price = 0,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
-        .description = ES(COMPOUND_STRING("This stone enables\n"
-            "Coalossal to Mega\n"
+        .description = ES(COMPOUND_STRING("This stone lets\n"
+            "Coalossal Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Coalossal.")),
         .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
@@ -7218,8 +7218,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("Flapplite"), ITEM_NAME("Flapplita")),
         .price = 0,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
-        .description = ES(COMPOUND_STRING("This stone enables\n"
-            "Flapple to Mega\n"
+        .description = ES(COMPOUND_STRING("This stone lets\n"
+            "Flapple Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Flapple.")),
         .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
@@ -7235,8 +7235,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("Appletunite"), ITEM_NAME("Appletunita")),
         .price = 0,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
-        .description = ES(COMPOUND_STRING("This stone enables\n"
-            "Appletun to Mega\n"
+        .description = ES(COMPOUND_STRING("This stone lets\n"
+            "Appletun Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Appletun.")),
         .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
@@ -7252,8 +7252,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("Sandacondite"), ITEM_NAME("Sandacondita")),
         .price = 0,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
-        .description = ES(COMPOUND_STRING("This stone enables\n"
-            "Sandaconda to Mega\n"
+        .description = ES(COMPOUND_STRING("This stone lets\n"
+            "Sandaconda Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Sandaconda.")),
         .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
@@ -7269,8 +7269,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("Toxtricitite"), ITEM_NAME("Toxtricitita")),
         .price = 0,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
-        .description = ES(COMPOUND_STRING("This stone enables\n"
-            "Toxtricity to Mega\n"
+        .description = ES(COMPOUND_STRING("This stone lets\n"
+            "Toxtricity Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Toxtricity.")),
         .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
@@ -7286,8 +7286,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("Centiskorchite"), ITEM_NAME("Centiskorchita")),
         .price = 0,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
-        .description = ES(COMPOUND_STRING("This stone enables\n"
-            "Centiskorch to Mega\n"
+        .description = ES(COMPOUND_STRING("This stone lets\n"
+            "Centiskorch Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Centiskorch.")),
         .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
@@ -7303,8 +7303,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("Hatterenite"), ITEM_NAME("Hatterenita")),
         .price = 0,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
-        .description = ES(COMPOUND_STRING("This stone enables\n"
-            "Hatterene to Mega\n"
+        .description = ES(COMPOUND_STRING("This stone lets\n"
+            "Hatterene Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Hatterene.")),
         .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
@@ -7320,8 +7320,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("Grimmsnarlite"), ITEM_NAME("Grimmsnarlita")),
         .price = 0,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
-        .description = ES(COMPOUND_STRING("This stone enables\n"
-            "Grimmsnarl to Mega\n"
+        .description = ES(COMPOUND_STRING("This stone lets\n"
+            "Grimmsnarl Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Grimmsnarl.")),
         .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
@@ -7337,8 +7337,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("Alcremite"), ITEM_NAME("Alcremita")),
         .price = 0,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
-        .description = ES(COMPOUND_STRING("This stone enables\n"
-            "Alcremie to Mega\n"
+        .description = ES(COMPOUND_STRING("This stone lets\n"
+            "Alcremie Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Alcremie.")),
         .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
@@ -7354,8 +7354,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("Copperajahite"), ITEM_NAME("Copperajahita")),
         .price = 0,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
-        .description = ES(COMPOUND_STRING("This stone enables\n"
-            "Copperajah to Mega\n"
+        .description = ES(COMPOUND_STRING("This stone lets\n"
+            "Copperajah Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Copperajah.")),
         .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
@@ -7371,8 +7371,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("Duraludonite"), ITEM_NAME("Duraludonita")),
         .price = 0,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
-        .description = ES(COMPOUND_STRING("This stone enables\n"
-            "Duraludon to Mega\n"
+        .description = ES(COMPOUND_STRING("This stone lets\n"
+            "Duraludon Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Duraludon.")),
         .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,

@@ -22,7 +22,7 @@ En `PRUEBAS.md`, `src/dualocke_aleatorio.c` y `tools/dualocke/colocar_objetos.py
 ### Lo que fallaba en los tests
 
 - **"SaveBlock3 is backwards compatible":** el tamaño esperado era 644 bytes y ahora son 764, porque el bolsillo de megapiedras crece (#79). Es seguro, ver "Partidas guardadas" abajo. Actualizado en `test/save.c`.
-- **"Item descriptions fit on Bag and Shop Screen":** la descripción en inglés de la Corviknightita ("This stone enables Corviknight to Mega…") pasaba en 1 píxel. Solo se ve en los tests (en el juego sale la española), pero se ha acortado.
+- **"Item descriptions fit on Bag and Shop Screen":** las descripciones en inglés de la Corviknightita y la Centiskorchita ("This stone enables X to Mega…") no cabían por 1 píxel. Solo se ven en los tests (en el juego sale la española), pero se han cambiado las 26 a "This stone lets X Mega…", también en `megas_gigamax.py`.
 
 ### Semillas en curso
 
@@ -57,7 +57,7 @@ Con las semillas `2780853751` y `2918696854`, contra la versión 7:
 ## Cómo se comprobó
 
 - `make` compila (con los arreglos).
-- `make check` completo.
+- `make check` completo: solo fallaban esos dos, que ya pasan. El resto, 5466 en verde (con los 48 del dualocke).
 - El randomizer con las dos semillas antes y después, comparando el solucionario y los archivos que genera.
 
 ## Pendiente

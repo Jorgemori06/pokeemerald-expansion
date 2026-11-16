@@ -290,8 +290,8 @@ def objetos():
             f'        .name = ES(ITEM_NAME("{en}"), ITEM_NAME("{es}")),',
             "        .price = 0,",
             "        .holdEffect = HOLD_EFFECT_MEGA_STONE,",
-            f'        .description = ES(COMPOUND_STRING("This stone enables\\n"',
-            f'            "{poke} to Mega\\n"',
+            f'        .description = ES(COMPOUND_STRING("This stone lets\\n"',  # "enables… to" no cabe con Corviknight o Centiskorch
+            f'            "{poke} Mega\\n"',
             f'            "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\\n" "a {poke}.")),',
             "        .pocket = POCKET_MEGA_STONES,",
             "        .sortType = ITEM_TYPE_MEGA_STONE,",
