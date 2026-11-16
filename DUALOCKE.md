@@ -331,6 +331,22 @@ Para ver todo sin herramientas externas (pedido por Miguel el 24/10/2026):
 - Código: `include/config/summary_screen.h` (opciones `P_SUMMARY_SCREEN_IV_EV_*`) y `src/pokemon_summary_screen.c` (busca "Dualocke").
 - Pendiente: hacerla más bonita con gráficos nuevos (fondos, iconos). Hace falta dibujarlos y probarlos en el emulador.
 
+### Interfaz: opciones del motor encendidas (Miguel, 16/11/2026)
+
+Miguel: "interfaces más chulas, actualizadas". Son cosas que la expansion ya trae y estaban apagadas. Todas en `include/config/`; ninguna cambia la partida guardada.
+
+- **Pokédex estilo HeartGold/SoulSilver** (`POKEDEX_PLUS_HGSS`, `pokedex_plus_hgss.h`):
+  - Para cada Pokémon: estadísticas base, captura, experiencia, amistad, grupos huevo, habilidades, movimientos y evoluciones (con su método).
+  - **Enseña lo de la semilla:** los movimientos por nivel al azar (ya salían de `GetSpeciesLevelUpLearnset`) y la habilidad al azar (`GetAbilityBySpecies`). Las MT y los tutores se sacan con `Dualocke_MovimientosEnsenables` (`src/dualocke_aleatorio.c`): lo que enseña cada MT con la semilla y si esa especie lo puede aprender, como al usar la MT. La lista original no valía, porque las MT enseñan otros movimientos.
+  - **Traducida:** los 97 textos de `src/pokedex_plus_hgss.c` con `ES()`, medidos con la fuente pequeña para que quepan en sus huecos. Las etiquetas que son dibujos (pestañas) siguen en inglés, como en la Pokédex de antes.
+  - Delante de un tipo o de una naturaleza se pone "tipo" o "naturaleza", porque en español va delante ("tipo Siniestro en el equipo").
+- **Tipos del rival en combate** (`B_SHOW_TYPES` = siempre): iconos de tipo junto a la barra de vida al elegir movimiento.
+- **Descripción al recoger un objeto** (`OW_SHOW_ITEM_DESCRIPTIONS` = siempre): la imagen y lo que hace, arriba. El modo "solo la primera vez" no: añade datos a la partida guardada y rompería las que están en curso.
+- **Carteles de zona estilo Blanco/Negro** (`OW_POPUP_GENERATION` = `GEN_5`), negros, con la hora en 24 h. Ocupan todo el ancho, así que caben todos los nombres en español.
+- **Combates más rápidos:** pausas de texto a la mitad (`B_WAIT_TIME_MULTIPLIER` 16 → 8) y sin la entrada deslizante (`B_FAST_INTRO_NO_SLIDE`).
+- **No se puede huir de un entrenador** (`B_RUN_TRAINER_BATTLE` = `FALSE`). Estaba activado, y huir cuenta como perder el combate (`B_OUTCOME_FORFEITED`), o sea, perder el locke. Así no pasa por error.
+- **Siguen apagados:** el Pokémon que te sigue (idea 6) y el DexNav, que piden más trabajo.
+
 ### Mochila: bolsillos Medicinas y Megapiedras (hecho, Jorge, 26/10/2026)
 
 Lo pidió Jorge al probar: las megapiedras y las pociones se mezclaban con todo en Objetos.
