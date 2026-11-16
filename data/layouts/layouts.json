@@ -9423,6 +9423,36 @@
       "secondary_tileset": "gTileset_Dewford",
       "border_filepath": "data/layouts/MarismaAzuliza/border.bin",
       "blockdata_filepath": "data/layouts/MarismaAzuliza/map.bin"
+    },
+    {
+      "id": "LAYOUT_BOSQUE_FRONDOSO",
+      "name": "BosqueFrondoso_Layout",
+      "width": 36,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/BosqueFrondoso/border.bin",
+      "blockdata_filepath": "data/layouts/BosqueFrondoso/map.bin"
+    },
+    {
+      "id": "LAYOUT_MANSION_OLVIDADA",
+      "name": "MansionOlvidada_Layout",
+      "width": 18,
+      "height": 17,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_InsideShip",
+      "border_filepath": "data/layouts/MansionOlvidada/border.bin",
+      "blockdata_filepath": "data/layouts/MansionOlvidada/map.bin"
+    },
+    {
+      "id": "LAYOUT_MANSION_OLVIDADA_DESVAN",
+      "name": "MansionOlvidada_Desvan_Layout",
+      "width": 30,
+      "height": 8,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_InsideShip",
+      "border_filepath": "data/layouts/MansionOlvidada_Desvan/border.bin",
+      "blockdata_filepath": "data/layouts/MansionOlvidada_Desvan/map.bin"
     }
   ]
 }

@@ -1670,6 +1670,22 @@
       "y": 14,
       "width": 1,
       "height": 1
+    },
+    {
+      "id": "MAPSEC_BOSQUE_FRONDOSO",
+      "name": "BOSQUE FRONDOSO",
+      "x": 0,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_MANSION_OLVIDADA",
+      "name": "MANSIÓN OLVIDADA",
+      "x": 0,
+      "y": 8,
+      "width": 1,
+      "height": 1
     }
   ]
 }

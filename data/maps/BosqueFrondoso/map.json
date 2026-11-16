@@ -1,0 +1,105 @@
+{
+  "id": "MAP_BOSQUE_FRONDOSO",
+  "name": "BosqueFrondoso",
+  "layout": "LAYOUT_BOSQUE_FRONDOSO",
+  "music": "MUS_PETALBURG_WOODS",
+  "region_map_section": "MAPSEC_BOSQUE_FRONDOSO",
+  "weather": "WEATHER_SHADE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "region": "REGION_HOENN",
+  "requires_flash": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "coord_events": [],
+  "connections": [
+    {
+      "map": "MAP_PETALBURG_WOODS",
+      "offset": -18,
+      "direction": "down"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 17,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_MANSION_OLVIDADA",
+      "dest_warp_id": "0"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
+      "x": 11,
+      "y": 21,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "BosqueFrondoso_EventScript_Sebas",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
+      "x": 15,
+      "y": 30,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "BosqueFrondoso_EventScript_Olivia",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 5,
+      "y": 4,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_SILVER_POWDER",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_BOSQUE_SILVER_POWDER"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 30,
+      "y": 28,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_HEART_SCALE",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_TICKET_BOSQUE_FRONDOSO"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 20,
+      "y": 12,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "BosqueFrondoso_EventScript_CartelMansion"
+    },
+    {
+      "type": "hidden_item",
+      "x": 4,
+      "y": 33,
+      "elevation": 3,
+      "item": "ITEM_BIG_ROOT",
+      "flag": "FLAG_ITEM_BOSQUE_BIG_ROOT"
+    }
+  ]
+}
