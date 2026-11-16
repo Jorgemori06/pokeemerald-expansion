@@ -28,7 +28,7 @@ TRAMOS = [
     (2, r"^Route116$|^RusturfTunnel|^DewfordTown|^GraniteCave|^Route106$"),
     (3, r"^Route109$|^SlateportCity|^Route110$|^MauvilleCity"),
     (4, r"^Route11[1-57]$|^Route110_TrickHouse|^VerdanturfTown|^FieryPath|^MeteorFalls_1F|^MtChimney|^JaggedPass"),
-    (5, r"^MirageTower|^GrutaIgnea"),
+    (5, r"^MirageTower|^GrutaIgnea|^DesiertoProfundo|^RuinasArenosas"),
     (6, r"^Route10[578]$|^AbandonedShip|^NewMauville|^Route11[89]|^Route120$|^MeteorFalls_B1F_1R"),
     (7, r"^Route12[1-5]$|^SafariZone|^LilycoveCity|^MtPyre|^MagmaHideout|^AquaHideout|^MossdeepCity$|^ShoalCave|^SouthernIsland|^IslaNevada"),
     (8, r"^MossdeepCity_SpaceCenter|^Route12[6-9]$|^Route13[0-4]$|^Underwater_|^SootopolisCity|^SkyPillar|^FarawayIsland"),

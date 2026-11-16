@@ -1392,7 +1392,7 @@
 #define FLAG_DUALOCKE_ISLA_ORIGEN                    (SYSTEM_FLAGS + 0x23) // Dualocke: Pokémon fuerte de la ISLA ORIGEN vencido o capturado
 #define FLAG_DUALOCKE_OMBLIGO_CIMA                   (SYSTEM_FLAGS + 0x24) // Dualocke: Pokémon fuerte de la cima de ROCA OMBLIGO vencido o capturado
 #define FLAG_DUALOCKE_OMBLIGO_FONDO                  (SYSTEM_FLAGS + 0x25) // Dualocke: Pokémon fuerte del fondo de ROCA OMBLIGO vencido o capturado
-#define FLAG_UNUSED_0x886                           (SYSTEM_FLAGS + 0x26) // Unused Flag
+#define FLAG_DUALOCKE_GUARDIAN_RUINAS                (SYSTEM_FLAGS + 0x26) // Dualocke: guardián de las RUINAS ARENOSAS vencido o capturado
 #define FLAG_UNUSED_0x887                           (SYSTEM_FLAGS + 0x27) // Unused Flag
 
 #define FLAG_SYS_USE_FLASH                          (SYSTEM_FLAGS + 0x28)
@@ -1518,10 +1518,10 @@
 #define FLAG_ITEM_ISLA_PROTEIN             0x8ED // Dualocke: objeto de las islas del ferry
 #define FLAG_ITEM_ISLA_CARBOS              0x8EE // Dualocke: objeto de las islas del ferry
 #define FLAG_ITEM_ISLA_BALM_MUSHROOM       0x8EF // Dualocke: objeto de las islas del ferry
-#define FLAG_UNUSED_0x8F0                           (SYSTEM_FLAGS + 0x90) // Unused Flag
-#define FLAG_UNUSED_0x8F1                           (SYSTEM_FLAGS + 0x91) // Unused Flag
-#define FLAG_UNUSED_0x8F2                           (SYSTEM_FLAGS + 0x92) // Unused Flag
-#define FLAG_UNUSED_0x8F3                           (SYSTEM_FLAGS + 0x93) // Unused Flag
+#define FLAG_ITEM_DESIERTO_SOFT_SAND       0x8F0 // Dualocke: objeto del DESIERTO PROFUNDO y las RUINAS ARENOSAS
+#define FLAG_ITEM_DESIERTO_STAR_PIECE      0x8F1 // Dualocke: objeto del DESIERTO PROFUNDO y las RUINAS ARENOSAS
+#define FLAG_ITEM_DESIERTO_RARE_BONE       0x8F2 // Dualocke: objeto del DESIERTO PROFUNDO y las RUINAS ARENOSAS
+#define FLAG_ITEM_DESIERTO_ODD_KEYSTONE    0x8F3 // Dualocke: objeto del DESIERTO PROFUNDO y las RUINAS ARENOSAS
 #define FLAG_UNUSED_0x8F4                           (SYSTEM_FLAGS + 0x94) // Unused Flag
 #define FLAG_UNUSED_0x8F5                           (SYSTEM_FLAGS + 0x95) // Unused Flag
 #define FLAG_ITEM_GRUTA_FIRE_STONE         0x8F6 // Dualocke: objeto de la GRUTA ÍGNEA

@@ -473,7 +473,10 @@
     "AlteringCave",
     "MeteorFalls_StevensCave",
     "GrutaIgnea",
-    "IslaNevada_Cueva"
+    "IslaNevada_Cueva",
+    "DesiertoProfundo",
+    "RuinasArenosas",
+    "RuinasArenosas_Camara"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",

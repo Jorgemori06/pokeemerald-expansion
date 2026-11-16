@@ -1646,6 +1646,22 @@
       "y": 2,
       "width": 1,
       "height": 1
+    },
+    {
+      "id": "MAPSEC_DESIERTO_PROFUNDO",
+      "name": "DESIERTO PROFUNDO",
+      "x": 9,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_RUINAS_ARENOSAS",
+      "name": "RUINAS ARENOSAS",
+      "x": 9,
+      "y": 2,
+      "width": 1,
+      "height": 1
     }
   ]
 }

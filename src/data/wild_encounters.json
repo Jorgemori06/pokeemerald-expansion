@@ -37387,6 +37387,144 @@
           }
         },
         {
+          "map": "MAP_DESIERTO_PROFUNDO",
+          "base_label": "gDesiertoProfundo",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 42,
+                "max_level": 44,
+                "species": "SPECIES_TRAPINCH"
+              },
+              {
+                "min_level": 42,
+                "max_level": 44,
+                "species": "SPECIES_SANDSHREW"
+              },
+              {
+                "min_level": 42,
+                "max_level": 44,
+                "species": "SPECIES_CACNEA"
+              },
+              {
+                "min_level": 42,
+                "max_level": 44,
+                "species": "SPECIES_HIPPOPOTAS"
+              },
+              {
+                "min_level": 42,
+                "max_level": 44,
+                "species": "SPECIES_SANDILE"
+              },
+              {
+                "min_level": 42,
+                "max_level": 44,
+                "species": "SPECIES_SILICOBRA"
+              },
+              {
+                "min_level": 43,
+                "max_level": 45,
+                "species": "SPECIES_HELIOPTILE"
+              },
+              {
+                "min_level": 43,
+                "max_level": 45,
+                "species": "SPECIES_SKORUPI"
+              },
+              {
+                "min_level": 43,
+                "max_level": 45,
+                "species": "SPECIES_MARACTUS"
+              },
+              {
+                "min_level": 43,
+                "max_level": 45,
+                "species": "SPECIES_BALTOY"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_LARVITAR"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_GIBLE"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_RUINAS_ARENOSAS",
+          "base_label": "gRuinasArenosas",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 42,
+                "max_level": 44,
+                "species": "SPECIES_BALTOY"
+              },
+              {
+                "min_level": 42,
+                "max_level": 44,
+                "species": "SPECIES_YAMASK"
+              },
+              {
+                "min_level": 42,
+                "max_level": 44,
+                "species": "SPECIES_GOLETT"
+              },
+              {
+                "min_level": 42,
+                "max_level": 44,
+                "species": "SPECIES_BRONZOR"
+              },
+              {
+                "min_level": 42,
+                "max_level": 44,
+                "species": "SPECIES_SIGILYPH"
+              },
+              {
+                "min_level": 42,
+                "max_level": 44,
+                "species": "SPECIES_RUNERIGUS"
+              },
+              {
+                "min_level": 43,
+                "max_level": 45,
+                "species": "SPECIES_ELGYEM"
+              },
+              {
+                "min_level": 43,
+                "max_level": 45,
+                "species": "SPECIES_CLAYDOL"
+              },
+              {
+                "min_level": 43,
+                "max_level": 45,
+                "species": "SPECIES_BRONZONG"
+              },
+              {
+                "min_level": 43,
+                "max_level": 45,
+                "species": "SPECIES_COFAGRIGUS"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_SPIRITOMB"
+              },
+              {
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_ARCHEN"
+              }
+            ]
+          }
+        },
+        {
           "map": "MAP_ISLA_NEVADA_CUEVA",
           "base_label": "gIslaNevada_Cueva",
           "land_mons": {

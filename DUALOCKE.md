@@ -372,6 +372,30 @@ ISLA SUR, ISLA LEJANA, ISLA ORIGEN y ROCA OMBLIGO ya existían, pero solo con un
 - **Textos:** los del ferry y los marineros eran de postgame y estaban en inglés; ahora están en `traduccion/dialogos/41_islas_ferry.tsv`.
 - **Flags nuevos:** `FLAG_DUALOCKE_ISLA_SUR`, `_LEJANA`, `_ORIGEN`, `FLAG_DUALOCKE_OMBLIGO_CIMA` y `_FONDO` (0x881-0x885).
 
+### DESIERTO PROFUNDO y RUINAS ARENOSAS (hecho, Miguel, 16/11/2026; falta probarlo)
+
+`ZONAS.md`, propuesta 5, y las ruinas que pidió Miguel ("el desierto profundo y unas ruinas").
+
+- **Entrada:** un montículo con puerta en la parte este del desierto de la RUTA 111, como el de las RUINAS DESIERTO.
+  - Se llega con las GAFAS AISLANTES: **tramo 5** (cap 50).
+  - Es una puerta y no una conexión por el borde, porque todo el borde este del desierto es roca.
+- **DESIERTO PROFUNDO** (24 × 68): el desierto de la RUTA 111 sin la TORRE ESPEJISMO ni los huecos de base secreta, con **tormenta de arena** (también en combate).
+  - Abajo está la salida.
+  - En el norte, otro montículo lleva a las ruinas.
+- **RUINAS ARENOSAS:** dos salas con los gráficos de la TORRE ESPEJISMO: la entrada, un pasillo alrededor de un bloque central, y la **CÁMARA** de arriba.
+  - **Guardián:** en la CÁMARA hay un Pokémon fuerte que se puede capturar, como en las islas del ferry (`dualocke_islas.inc`). Sin semilla es Garchomp a nivel 47 (cap − 3, regla `"tope"`); con semilla, otro fuerte (`islas()` en `estaticos.py`).
+  - **Premio:** Cascabel Concha y su megapiedra si tiene. Flag `FLAG_DUALOCKE_GUARDIAN_RUINAS` (0x886).
+- **Zonas de captura propias (2):** `MAPSEC_DESIERTO_PROFUNDO` y `MAPSEC_RUINAS_ARENOSAS`, al final de la lista. `HOENN_EXTRA_MAPSEC_LAST` pasa a ser la de las ruinas: 108 de 112 bits.
+- **Todo lo hace `tools/dualocke/crear_desierto_profundo.py`.** Los tres mapas van al final de `gMapGroup_Dungeons`.
+- **Entrenadores (2, nuevos):**
+  - SOLEDAD, experta del desierto (`TRAINER_SOLEDAD`, 860): Flygon, Hippowdon y Cacturne.
+  - RAMIRO, ruinamaníaco de las ruinas (`TRAINER_RAMIRO`, 859): Claydol y Golurk.
+  - Los dos a nivel 46-47. `TRAINERS_COUNT_EMERALD` pasa a 861: quedan 3 huecos.
+- **Salvajes:**
+  - Desierto: Trapinch, Sandshrew, Cacnea, Hippopotas, Sandile, Silicobra, Helioptile, Skorupi, Maractus, Baltoy y, raros, Larvitar y Gible.
+  - Ruinas: Baltoy, Yamask, Golett, Bronzor, Sigilyph, Runerigus, Elgyem, Claydol, Spiritomb, Archen…
+- **Objetos:** Arena Fina y Trozo Estrella en el desierto, Hueso Raro y Piedra Espíritu en las ruinas (`OBJETOS_DESIERTO`, flags 0x8F0-0x8F3).
+
 ### ISLA NEVADA (hecho, Miguel, 16/11/2026; falta probarlo)
 
 `ZONAS.md`, propuesta 1. Una isla al norte de la RUTA 124 con nieve y una cueva de hielo.

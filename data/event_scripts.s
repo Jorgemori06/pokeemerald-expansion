@@ -479,6 +479,9 @@ gStdScripts_End::
 	.include "data/maps/GrutaIgnea/scripts.inc" @ Dualocke: zona nueva
 	.include "data/maps/IslaNevada/scripts.inc" @ Dualocke: zona nueva
 	.include "data/maps/IslaNevada_Cueva/scripts.inc" @ Dualocke: zona nueva
+	.include "data/maps/DesiertoProfundo/scripts.inc" @ Dualocke: zona nueva
+	.include "data/maps/RuinasArenosas/scripts.inc" @ Dualocke: zona nueva
+	.include "data/maps/RuinasArenosas_Camara/scripts.inc" @ Dualocke: zona nueva
 	.include "data/scripts/shared_secret_base.inc"
 	.include "data/maps/BattleColosseum_2P/scripts.inc"
 	.include "data/maps/TradeCenter/scripts.inc"

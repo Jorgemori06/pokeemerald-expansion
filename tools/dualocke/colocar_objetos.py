@@ -146,6 +146,15 @@ OBJETOS_NEVADA = [
     ("SNOWBALL", "IslaNevada", "oculta", None),
 ]
 
+# Objetos del DESIERTO PROFUNDO y las RUINAS ARENOSAS (crear_desierto_profundo.py). Con semilla, al azar.
+# La Arena Fina y el Hueso Raro se movieron después a mano: el script los ponía delante de los entrenadores.
+OBJETOS_DESIERTO = [
+    ("SOFT_SAND", "DesiertoProfundo", "bola", None),
+    ("STAR_PIECE", "DesiertoProfundo", "oculta", None),
+    ("RARE_BONE", "RuinasArenosas", "bola", None),
+    ("ODD_KEYSTONE", "RuinasArenosas", "oculta", None),
+]
+
 # Objetos competitivos de generaciones nuevas (misma estructura). Los más fuertes (Pañuelo
 # Elegido, Chaleco Asalto, Gafas Elegidas, Vidasfera) van a partir del tramo 6.
 COMPETITIVOS = [
@@ -266,7 +275,8 @@ GRUPOS = [
     (COMPETITIVOS, "FLAG_ITEM_COMP_", 0x493, 0x4E4, "objeto competitivo en el mapa", None),
     (TICKETS, "FLAG_ITEM_TICKET_", 0x021, 0x04F, "Ticket-Recuerdo en el mapa", "HEART_SCALE"),
     (TICKETS_OCULTOS, "FLAG_ITEM_TICKET_", 0x4E5, 0x4EF, "Ticket-Recuerdo oculto en el mapa", "HEART_SCALE"),
-    (OBJETOS_ISLAS, "FLAG_ITEM_ISLA_", 0x8E5, 0x8F5, "objeto de las islas del ferry", None),
+    (OBJETOS_ISLAS, "FLAG_ITEM_ISLA_", 0x8E5, 0x8EF, "objeto de las islas del ferry", None),
+    (OBJETOS_DESIERTO, "FLAG_ITEM_DESIERTO_", 0x8F0, 0x8F5, "objeto del DESIERTO PROFUNDO y las RUINAS ARENOSAS", None),
     (OBJETOS_GRUTA, "FLAG_ITEM_GRUTA_", 0x8F6, 0x8F9, "objeto de la GRUTA ÍGNEA", None),
     (OBJETOS_NEVADA, "FLAG_ITEM_NEVADA_", 0x8FA, 0x8FF, "objeto de la ISLA NEVADA", None),
 ]

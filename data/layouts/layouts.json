@@ -9353,6 +9353,36 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/IslaNevada_Cueva/border.bin",
       "blockdata_filepath": "data/layouts/IslaNevada_Cueva/map.bin"
+    },
+    {
+      "id": "LAYOUT_DESIERTO_PROFUNDO",
+      "name": "DesiertoProfundo_Layout",
+      "width": 24,
+      "height": 68,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mauville",
+      "border_filepath": "data/layouts/DesiertoProfundo/border.bin",
+      "blockdata_filepath": "data/layouts/DesiertoProfundo/map.bin"
+    },
+    {
+      "id": "LAYOUT_RUINAS_ARENOSAS",
+      "name": "RuinasArenosas_Layout",
+      "width": 21,
+      "height": 17,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_MirageTower",
+      "border_filepath": "data/layouts/RuinasArenosas/border.bin",
+      "blockdata_filepath": "data/layouts/RuinasArenosas/map.bin"
+    },
+    {
+      "id": "LAYOUT_RUINAS_ARENOSAS_CAMARA",
+      "name": "RuinasArenosas_Camara_Layout",
+      "width": 13,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_MirageTower",
+      "border_filepath": "data/layouts/RuinasArenosas_Camara/border.bin",
+      "blockdata_filepath": "data/layouts/RuinasArenosas_Camara/map.bin"
     }
   ]
 }

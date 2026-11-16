@@ -68,6 +68,15 @@ SALVAJES = {
         "fishing_mons": ["MAGIKARP", "SEEL", "SEEL", "SPHEAL", "ARCTOVISH",
                          "SEALEO", "DEWGONG", "CLOYSTER", "ARCTOVISH", "LAPRAS"],
     },
+    # DESIERTO PROFUNDO y RUINAS ARENOSAS (crear_desierto_profundo.py)
+    "MAP_DESIERTO_PROFUNDO": {
+        "land_mons": ["TRAPINCH", "SANDSHREW", "CACNEA", "HIPPOPOTAS", "SANDILE", "SILICOBRA",
+                      "HELIOPTILE", "SKORUPI", "MARACTUS", "BALTOY", "LARVITAR", "GIBLE"],
+    },
+    "MAP_RUINAS_ARENOSAS": {
+        "land_mons": ["BALTOY", "YAMASK", "GOLETT", "BRONZOR", "SIGILYPH", "RUNERIGUS",
+                      "ELGYEM", "CLAYDOL", "BRONZONG", "COFAGRIGUS", "SPIRITOMB", "ARCHEN"],
+    },
     "MAP_ISLA_NEVADA_CUEVA": {
         "land_mons": ["SNORUNT", "SWINUB", "SNOVER", "CUBCHOO", "VANILLITE", "SNOM",
                       "BERGMITE", "SNEASEL", "CETODDLE", "CRYOGONAL", "EISCUE", "FRIGIBAX"],
@@ -98,6 +107,18 @@ NUEVOS = {
         "cabecera": [("Name", "NIEVES"), ("Class", "Cooltrainer"), ("Pic", "Cooltrainer F"), ("Gender", "Female"),
                      ("Music", "Cool"), ("Double Battle", "No"), ("AI", "Basic Trainer")],
         "equipo": ["Froslass", "Abomasnow", "Walrein"],
+    },
+    "TRAINER_RAMIRO": {
+        "mapa": "MAP_RUINAS_ARENOSAS",
+        "cabecera": [("Name", "RAMIRO"), ("Class", "Ruin Maniac"), ("Pic", "Ruin Maniac"), ("Gender", "Male"),
+                     ("Music", "Hiker"), ("Double Battle", "No"), ("AI", "Basic Trainer")],
+        "equipo": ["Claydol", "Golurk"],
+    },
+    "TRAINER_SOLEDAD": {
+        "mapa": "MAP_DESIERTO_PROFUNDO",
+        "cabecera": [("Name", "SOLEDAD"), ("Class", "Expert"), ("Pic", "Expert F"), ("Gender", "Female"),
+                     ("Music", "Intense"), ("Double Battle", "No"), ("AI", "Basic Trainer")],
+        "equipo": ["Flygon", "Hippowdon", "Cacturne"],
     },
     "TRAINER_ROQUE": {
         "mapa": "MAP_GRUTA_IGNEA",
