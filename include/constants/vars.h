@@ -273,7 +273,7 @@
 #define VAR_DUALOCKE_ZONES_4                             0x40FB // Dualocke: zonas con la captura gastada (bits)
 #define VAR_DUALOCKE_ZONES_5                             0x40FC // Dualocke: zonas con la captura gastada (bits)
 #define VAR_DUALOCKE_ZONES_6                             0x40FD // Dualocke: zonas con la captura gastada (bits)
-#define VAR_UNUSED_0x40FE                                0x40FE // Unused Var
+#define VAR_DUALOCKE_ZONES_7                             0x40FE // Dualocke: zonas con la captura gastada (bits; las zonas nuevas)
 #define VAR_UNUSED_0x40FF                                0x40FF // Unused Var
 
 #define VARS_END                                         0x40FF

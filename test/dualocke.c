@@ -145,7 +145,7 @@ static void SetupCapture(void)
         for (pos = 0; pos < IN_BOX_COUNT; pos++)
             ZeroBoxMonAt(box, pos);
     }
-    for (pos = VAR_DUALOCKE_ZONES_0; pos <= VAR_DUALOCKE_ZONES_6; pos++)
+    for (pos = VAR_DUALOCKE_ZONES_0; pos <= VAR_DUALOCKE_ZONES_7; pos++)
         VarSet(pos, 0);
     FlagSet(FLAG_ADVENTURE_STARTED);
     FlagClear(FLAG_DUALOCKE_TIENE_BALLS);

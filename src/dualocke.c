@@ -273,6 +273,7 @@ static const u16 sZoneVars[] =
     VAR_DUALOCKE_ZONES_4,
     VAR_DUALOCKE_ZONES_5,
     VAR_DUALOCKE_ZONES_6,
+    VAR_DUALOCKE_ZONES_7,
 };
 
 // Zonas de Hoenn: las secciones anteriores a Kanto y las propias de Esmeralda
@@ -280,7 +281,7 @@ static const u16 sZoneVars[] =
 // del Dualocke (ZONAS.md), que se añaden al final de region_map_sections.json para no mover los
 // bits de las demás en las partidas guardadas.
 #define HOENN_EXTRA_MAPSEC_FIRST MAPSEC_AQUA_HIDEOUT
-#define HOENN_EXTRA_MAPSEC_LAST  MAPSEC_RUINAS_ARENOSAS
+#define HOENN_EXTRA_MAPSEC_LAST  MAPSEC_MARISMA_AZULIZA
 #define NUM_DUALOCKE_ZONES (KANTO_MAPSEC_START + HOENN_EXTRA_MAPSEC_LAST - HOENN_EXTRA_MAPSEC_FIRST + 1)
 
 STATIC_ASSERT(NUM_DUALOCKE_ZONES <= ARRAY_COUNT(sZoneVars) * 16, DualockeZoneVarsTooSmall);
