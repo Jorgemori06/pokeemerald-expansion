@@ -213,3 +213,14 @@ Una sección por idea, con:
   - **Más grande:** el Pokémon que te sigue (idea 6) y el DexNav. Y lo que no trae el motor (pantalla de datos estilo Blanco/Negro, menú de pausa a pantalla completa) son ramas de otra gente que habría que integrar: más difícil y con más riesgo.
 - **Estado:** Hecho en el #78 (Miguel, 16/11/2026), menos el Pokémon que te sigue y el DexNav. Falta compilarlo y probarlo.
 
+
+### 11. Escribir con el teclado del ordenador
+
+- **Qué:** en la pantalla de poner nombre (al jugador, motes, cajas), escribir directamente con el teclado del ordenador en vez de ir letra a letra con la cruceta. Es mucho más rápido y cómodo.
+- **Propuesta de:** Jorge, 18/11/2026. No hace falta hacerla ya si es muy difícil.
+- **Notas (viabilidad, sin planificar):**
+  - **Desde la ROM no se puede:** la GBA no tiene teclado. El emulador solo le pasa los botones (A, B, cruceta…), así que el juego no sabe qué tecla se ha pulsado.
+  - **Hay que hacerlo en el emulador**, con un script de mGBA (Lua; mGBA lo admite desde la 0.10). Tendría que leer las teclas del ordenador mientras está abierta la pantalla de nombre y escribir las letras en la memoria del juego, o "pulsar" los botones para ir a cada letra.
+  - Antes hay que comprobar si mGBA 0.10.5, la que usamos, deja leer el teclado desde el script. Si no, habría que esperar a la 0.11.
+  - Lo más sencillo para empezar sería un campo de texto en la consola de scripts de mGBA: escribes el nombre ahí, le das a Intro y el script lo mete en la pantalla de nombre.
+- **Estado:** Pendiente.
