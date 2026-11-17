@@ -77,7 +77,9 @@ TRAMOS = {
         # Islas del ferry: una por medalla (Miguel, 16/11/2026; data/scripts/dualocke_islas.inc)
         "SOUTHERN_ISLAND_EXTERIOR", "SOUTHERN_ISLAND_INTERIOR",
         # ISLA NEVADA, al norte de la RUTA 124 (crear_isla_nevada.py)
-        "ISLA_NEVADA", "ISLA_NEVADA_CUEVA"],
+        "ISLA_NEVADA", "ISLA_NEVADA_CUEVA",
+        # PLAYA VOLCÁNICA, al oeste de la RUTA 122 (crear_playa_volcanica.py; Miguel, 17/11/2026)
+        "PLAYA_VOLCANICA"],
     8: ["MOSSDEEP_CITY_SPACE_CENTER_*", "UNDERWATER_*", "ROUTE128", "SEAFLOOR_CAVERN_*",
         "SOOTOPOLIS_CITY", "CAVE_OF_ORIGIN_*", "SKY_PILLAR_*", "ROUTE129", "ROUTE130",
         "ROUTE131", "PACIFIDLOG_TOWN", "ROUTE132", "ROUTE133", "ROUTE134",
@@ -413,6 +415,7 @@ ESTATICOS = [
     ("data/maps/IslaDeRuinas_Torre/scripts.inc", "MAP_ISLA_DE_RUINAS_TORRE", "tope"),
     ("data/maps/IslaVolcanica_Crater/scripts.inc", "MAP_ISLA_VOLCANICA_CRATER", "tope"),
     ("data/maps/IslaArenosa/scripts.inc", "MAP_ISLA_ARENOSA", "tope"),
+    ("data/maps/PlayaVolcanica/scripts.inc", "MAP_PLAYA_VOLCANICA", "tope"),
 ]
 
 

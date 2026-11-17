@@ -1557,12 +1557,12 @@
 #define FLAG_ITEM_TICKET_ISLA_DE_RUINAS    0x914 // Dualocke: Ticket-Recuerdo en las islas del sur
 #define FLAG_ITEM_TICKET_ISLA_VOLCANICA    0x915 // Dualocke: Ticket-Recuerdo en las islas del sur
 #define FLAG_ITEM_TICKET_ISLA_ARENOSA      0x916 // Dualocke: Ticket-Recuerdo en las islas del sur
-#define FLAG_UNUSED_0x917                           (SYSTEM_FLAGS + 0xB7) // Unused Flag
-#define FLAG_UNUSED_0x918                           (SYSTEM_FLAGS + 0xB8) // Unused Flag
-#define FLAG_UNUSED_0x919                           (SYSTEM_FLAGS + 0xB9) // Unused Flag
-#define FLAG_UNUSED_0x91A                           (SYSTEM_FLAGS + 0xBA) // Unused Flag
+#define FLAG_DUALOCKE_GUARDIAN_PLAYA                 (SYSTEM_FLAGS + 0xB7) // Dualocke: guardián de la PLAYA VOLCÁNICA vencido o capturado
+#define FLAG_ITEM_PLAYA_WATER_STONE        0x918 // Dualocke: objeto de la PLAYA VOLCÁNICA
+#define FLAG_ITEM_PLAYA_DAMP_ROCK          0x919 // Dualocke: objeto de la PLAYA VOLCÁNICA
+#define FLAG_ITEM_PLAYA_PEARL              0x91A // Dualocke: objeto de la PLAYA VOLCÁNICA
 #define FLAG_UNUSED_0x91B                           (SYSTEM_FLAGS + 0xBB) // Unused Flag
-#define FLAG_UNUSED_0x91C                           (SYSTEM_FLAGS + 0xBC) // Unused Flag
+#define FLAG_ITEM_TICKET_PLAYA_VOLCANICA   0x91C // Dualocke: Ticket-Recuerdo en la PLAYA VOLCÁNICA
 #define FLAG_UNUSED_0x91D                           (SYSTEM_FLAGS + 0xBD) // Unused Flag
 #define FLAG_UNUSED_0x91E                           (SYSTEM_FLAGS + 0xBE) // Unused Flag
 #define FLAG_UNUSED_0x91F                           (SYSTEM_FLAGS + 0xBF) // Unused Flag

@@ -38717,6 +38717,160 @@
           }
         },
         {
+          "map": "MAP_PLAYA_VOLCANICA",
+          "base_label": "gPlayaVolcanica",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 65,
+                "max_level": 67,
+                "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 65,
+                "max_level": 67,
+                "species": "SPECIES_SLUGMA"
+              },
+              {
+                "min_level": 65,
+                "max_level": 67,
+                "species": "SPECIES_TORKOAL"
+              },
+              {
+                "min_level": 65,
+                "max_level": 67,
+                "species": "SPECIES_CAMERUPT"
+              },
+              {
+                "min_level": 65,
+                "max_level": 67,
+                "species": "SPECIES_MAGCARGO"
+              },
+              {
+                "min_level": 65,
+                "max_level": 67,
+                "species": "SPECIES_SALANDIT"
+              },
+              {
+                "min_level": 66,
+                "max_level": 68,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 66,
+                "max_level": 68,
+                "species": "SPECIES_CRABRAWLER"
+              },
+              {
+                "min_level": 66,
+                "max_level": 68,
+                "species": "SPECIES_DWEBBLE"
+              },
+              {
+                "min_level": 66,
+                "max_level": 68,
+                "species": "SPECIES_SANDYGAST"
+              },
+              {
+                "min_level": 67,
+                "max_level": 69,
+                "species": "SPECIES_TURTONATOR"
+              },
+              {
+                "min_level": 67,
+                "max_level": 69,
+                "species": "SPECIES_LARVESTA"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 65,
+                "max_level": 67,
+                "species": "SPECIES_TENTACOOL"
+              },
+              {
+                "min_level": 65,
+                "max_level": 67,
+                "species": "SPECIES_WINGULL"
+              },
+              {
+                "min_level": 66,
+                "max_level": 68,
+                "species": "SPECIES_PELIPPER"
+              },
+              {
+                "min_level": 67,
+                "max_level": 69,
+                "species": "SPECIES_TENTACRUEL"
+              },
+              {
+                "min_level": 67,
+                "max_level": 69,
+                "species": "SPECIES_MANTINE"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 30,
+            "mons": [
+              {
+                "min_level": 65,
+                "max_level": 67,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 65,
+                "max_level": 67,
+                "species": "SPECIES_TENTACOOL"
+              },
+              {
+                "min_level": 65,
+                "max_level": 67,
+                "species": "SPECIES_KRABBY"
+              },
+              {
+                "min_level": 65,
+                "max_level": 67,
+                "species": "SPECIES_CORPHISH"
+              },
+              {
+                "min_level": 65,
+                "max_level": 67,
+                "species": "SPECIES_CLAUNCHER"
+              },
+              {
+                "min_level": 66,
+                "max_level": 68,
+                "species": "SPECIES_KINGLER"
+              },
+              {
+                "min_level": 66,
+                "max_level": 68,
+                "species": "SPECIES_CRAWDAUNT"
+              },
+              {
+                "min_level": 66,
+                "max_level": 68,
+                "species": "SPECIES_CLAWITZER"
+              },
+              {
+                "min_level": 67,
+                "max_level": 69,
+                "species": "SPECIES_WAILORD"
+              },
+              {
+                "min_level": 67,
+                "max_level": 69,
+                "species": "SPECIES_GYARADOS"
+              }
+            ]
+          }
+        },
+        {
           "map": "MAP_ISLA_NEVADA_CUEVA",
           "base_label": "gIslaNevada_Cueva",
           "land_mons": {

@@ -187,6 +187,14 @@ TICKETS_ISLAS_SUR = [("ISLA_DE_RUINAS", "IslaDeRuinas", "bola", None),
                      ("ISLA_VOLCANICA", "IslaVolcanica_Crater", "bola", None),
                      ("ISLA_ARENOSA", "IslaArenosa", "bola", None)]
 
+# PLAYA VOLCÁNICA (crear_playa_volcanica.py). Con semilla, al azar.
+OBJETOS_PLAYA = [
+    ("WATER_STONE", "PlayaVolcanica", "bola", None),
+    ("DAMP_ROCK", "PlayaVolcanica", "bola", None),
+    ("PEARL", "PlayaVolcanica", "oculta", None),
+]
+TICKETS_PLAYA = [("PLAYA_VOLCANICA", "PlayaVolcanica", "bola", None)]
+
 # Objetos competitivos de generaciones nuevas (misma estructura). Los más fuertes (Pañuelo
 # Elegido, Chaleco Asalto, Gafas Elegidas, Vidasfera) van a partir del tramo 6.
 COMPETITIVOS = [
@@ -308,6 +316,8 @@ GRUPOS = [
     (TICKETS, "FLAG_ITEM_TICKET_", 0x021, 0x04F, "Ticket-Recuerdo en el mapa", "HEART_SCALE"),
     (TICKETS_OCULTOS, "FLAG_ITEM_TICKET_", 0x4E5, 0x4EF, "Ticket-Recuerdo oculto en el mapa", "HEART_SCALE"),
     (OBJETOS_ISLAS, "FLAG_ITEM_ISLA_", 0x8E5, 0x8EF, "objeto de las islas del ferry", None),
+    (OBJETOS_PLAYA, "FLAG_ITEM_PLAYA_", 0x918, 0x91B, "objeto de la PLAYA VOLCÁNICA", None),
+    (TICKETS_PLAYA, "FLAG_ITEM_TICKET_", 0x91C, 0x91C, "Ticket-Recuerdo en la PLAYA VOLCÁNICA", "HEART_SCALE"),
     (OBJETOS_ISLAS_SUR, "FLAG_ITEM_SUR_", 0x90C, 0x913, "objeto de las islas de las rutas del sur", None),
     (TICKETS_ISLAS_SUR, "FLAG_ITEM_TICKET_", 0x914, 0x916, "Ticket-Recuerdo en las islas del sur", "HEART_SCALE"),
     (OBJETOS_BOSQUE, "FLAG_ITEM_BOSQUE_", 0x900, 0x907, "objeto del BOSQUE FRONDOSO y la MANSIÓN OLVIDADA", None),

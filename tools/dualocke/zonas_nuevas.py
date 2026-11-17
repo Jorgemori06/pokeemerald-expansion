@@ -124,6 +124,14 @@ SALVAJES = {
         "water_mons": AGUA_SUR,
         "fishing_mons": PESCA_TROPICAL,
     },
+    # PLAYA VOLCÁNICA (crear_playa_volcanica.py): salvajes en la ceniza; playa y mar
+    "MAP_PLAYA_VOLCANICA": {
+        "land_mons": ["NUMEL", "SLUGMA", "TORKOAL", "CAMERUPT", "MAGCARGO", "SALANDIT",
+                      "KRABBY", "CRABRAWLER", "DWEBBLE", "SANDYGAST", "TURTONATOR", "LARVESTA"],
+        "water_mons": AGUA_SUR,
+        "fishing_mons": ["MAGIKARP", "TENTACOOL", "KRABBY", "CORPHISH", "CLAUNCHER", "KINGLER",
+                         "CRAWDAUNT", "CLAWITZER", "WAILORD", "GYARADOS"],
+    },
     "MAP_ISLA_NEVADA_CUEVA": {
         "land_mons": ["SNORUNT", "SWINUB", "SNOVER", "CUBCHOO", "VANILLITE", "SNOM",
                       "BERGMITE", "SNEASEL", "CETODDLE", "CRYOGONAL", "EISCUE", "FRIGIBAX"],
