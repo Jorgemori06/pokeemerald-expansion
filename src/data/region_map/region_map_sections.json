@@ -1710,6 +1710,14 @@
       "y": 10,
       "width": 1,
       "height": 1
+    },
+    {
+      "id": "MAPSEC_PLAYA_VOLCANICA",
+      "name": "PLAYA VOLCÁNICA",
+      "x": 15,
+      "y": 4,
+      "width": 1,
+      "height": 1
     }
   ]
 }
