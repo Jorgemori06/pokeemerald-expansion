@@ -141,8 +141,7 @@ static const u8 sText_EVO_LEVEL_CASCOON[] = ES(_("{LV}{UP_ARROW} to {STR_VAR_2},
 static const u8 sText_EVO_MOVE[] = ES(_("{LV}{UP_ARROW}, knows {STR_VAR_2}"), _("{LV}{UP_ARROW}, sabe {STR_VAR_2}"));
 static const u8 sText_EVO_LEVEL_RAIN[] = ES(_("{LV}{UP_ARROW} to {STR_VAR_2} while raining"), _("{LV}{UP_ARROW} a {STR_VAR_2} con lluvia"));
 static const u8 sText_EVO_TRADE_SPECIFIC_MON[] = ES(_("Traded for {STR_VAR_2}"), _("Cambiado por {STR_VAR_2}"));
-static const u8 sText_EVO_CRITICAL_HITS[] = ES(_("Land {STR_VAR_2} critical hits in\nsingle battle"), _("{STR_VAR_2} golpes críticos en
-un combate individual"));
+static const u8 sText_EVO_CRITICAL_HITS[] = ES(_("Land {STR_VAR_2} critical hits in\nsingle battle"), _("{STR_VAR_2} golpes críticos en\nun combate individual"));
 static const u8 sText_EVO_SCRIPT_TRIGGER_DMG[] = ES(_("Takes at least {STR_VAR_2} HP in damage"), _("Recibe {STR_VAR_2} PS de daño o más"));
 static const u8 sText_EVO_DARK_SCROLL[] = ES(_("ScrllOfDrknss is used"), _("Usar Pergamino Oscuro"));
 static const u8 sText_EVO_WATER_SCROLL[] = ES(_("ScrollOfWatrs is used"), _("Usar Pergamino Agua"));
