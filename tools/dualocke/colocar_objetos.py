@@ -198,6 +198,14 @@ OBJETOS_SINIESTRO = [
 OBJETOS_SINIESTRO_OCULTOS = [("SPELL_TAG", "BosqueSiniestro", "oculta", None)]
 TICKETS_SINIESTRO = [("BOSQUE_SINIESTRO", "BosqueSiniestro", "bola", None)]
 
+# CIÉNAGA TÓXICA (crear_cienaga_toxica.py). Con semilla, al azar. crear_cienaga_toxica.py los pone en su sitio.
+OBJETOS_CIENAGA = [
+    ("POISON_BARB", "CienagaToxica", "bola", None),
+    ("ABSORB_BULB", "CienagaToxica", "bola", None),
+]
+OBJETOS_CIENAGA_OCULTOS = [("TOXIC_PLATE", "CienagaToxica", "oculta", None)]
+TICKETS_CIENAGA = [("CIENAGA_TOXICA", "CienagaToxica", "bola", None)]
+
 # PLAYA VOLCÁNICA (crear_playa_volcanica.py). Con semilla, al azar.
 # Al rehacer la playa (17/11/2026) se movieron a mano tres: el Ticket-Recuerdo (19,17, junto al risco),
 # la Perla oculta (22,4, en la arena de arriba) y la Piedra Agua (23,34, en la arena): habían quedado en el
@@ -360,6 +368,9 @@ GRUPOS = [
     (OBJETOS_SINIESTRO_OCULTOS, "FLAG_ITEM_SINIESTRO_", 0x468, 0x468, "objeto del BOSQUE SINIESTRO", None),
     (TICKETS_SINIESTRO, "FLAG_ITEM_TICKET_", 0x1AB, 0x1AB, "Ticket-Recuerdo en el BOSQUE SINIESTRO",
      "HEART_SCALE"),
+    (OBJETOS_CIENAGA, "FLAG_ITEM_CIENAGA_", 0x054, 0x055, "objeto de la CIÉNAGA TÓXICA", None),
+    (OBJETOS_CIENAGA_OCULTOS, "FLAG_ITEM_CIENAGA_", 0x479, 0x479, "objeto de la CIÉNAGA TÓXICA", None),
+    (TICKETS_CIENAGA, "FLAG_ITEM_TICKET_", 0x1AA, 0x1AA, "Ticket-Recuerdo en la CIÉNAGA TÓXICA", "HEART_SCALE"),
 ]
 COMPORTAMIENTOS_OK = {"MB_NORMAL", "MB_TALL_GRASS", "MB_LONG_GRASS", "MB_SHORT_GRASS", "MB_DEEP_SAND",
                       "MB_SAND", "MB_CAVE", "MB_ASHGRASS", "MB_FOOTPRINTS",

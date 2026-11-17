@@ -142,6 +142,15 @@ SALVAJES = {
     # Tramo 6: ya evolucionados. Raros, Zoroark y Spiritomb.
     "MAP_BOSQUE_SINIESTRO": {"land_mons": ["LIEPARD", "ARIADOS", "SHIFTRY", "TREVENANT", "HONCHKROW", "SKUNTANK",
                                            "GOURGEIST", "THIEVUL", "SPIDOPS", "GRIMMSNARL", "ZOROARK", "SPIRITOMB"]},
+    # CIÉNAGA TÓXICA (crear_cienaga_toxica.py): el bioma del tipo Veneno. Tramo 3 (nivel 27-31): a medio
+    # evolucionar. Raros, Salandit y Toxel. El agua se surfea más tarde, pero sale al nivel del tramo.
+    "MAP_CIENAGA_TOXICA": {
+        "land_mons": ["GRIMER", "CROAGUNK", "KOFFING", "GLOOM", "WEEPINBELL", "WOOPER_PALDEA",
+                      "ARBOK", "TRUBBISH", "FOONGUS", "GRAFAIAI", "SALANDIT", "TOXEL"],
+        "water_mons": ["WOOPER_PALDEA", "SKRELP", "MAREANIE", "QWILFISH", "CLODSIRE"],
+        "fishing_mons": ["MAGIKARP", "BARBOACH", "BARBOACH", "SKRELP", "QWILFISH",
+                         "SKRELP", "MAREANIE", "QWILFISH", "WHISCASH", "MAREANIE"],
+    },
     "MAP_ISLA_NEVADA_CUEVA": {
         "land_mons": ["SNORUNT", "SWINUB", "SNOVER", "CUBCHOO", "VANILLITE", "SNOM",
                       "BERGMITE", "SNEASEL", "CETODDLE", "CRYOGONAL", "EISCUE", "FRIGIBAX"],
