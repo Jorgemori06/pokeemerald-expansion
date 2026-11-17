@@ -526,7 +526,7 @@
 
 #define FLAG_ITEM_CUMBRE_HARD_STONE        0x1DE // Dualocke: objeto de la CUMBRE METEORO
 #define FLAG_ITEM_CUMBRE_DRAGON_SCALE      0x1DF // Dualocke: objeto de la CUMBRE METEORO
-#define FLAG_ITEM_CUMBRE_ICY_ROCK          0x1E0 // Dualocke: objeto de la CUMBRE METEORO
+#define FLAG_UNUSED_0x1E0                    0x1E0 // Unused Flag
 #define FLAG_ITEM_TICKET_CUMBRE_METEORO    0x1E1 // Dualocke: Ticket-Recuerdo en la CUMBRE METEORO
 #define FLAG_DUALOCKE_MARISMA_DONDOZO        0x1E2 // Dualocke: Dondozo de la MARISMA AZULIZA vencido o capturado
 #define FLAG_DUALOCKE_MARISMA_TATSUGIRI      0x1E3 // Dualocke: Tatsugiri de la MARISMA AZULIZA vencido o capturado
@@ -1186,7 +1186,7 @@
 #define FLAG_ITEM_MOSSDEEP_STEVENS_HOUSE_HM08                       0x46D // Unused Flag, leftover from R/S. HM08 is given to the player directly in Emerald
 #define FLAG_ITEM_ROUTE_119_NUGGET                                  0x46E
 #define FLAG_ITEM_ROUTE_104_POTION                                  0x46F
-#define FLAG_UNUSED_0x470                                           0x470 // Unused Flag
+#define FLAG_ITEM_CUMBRE_ICY_ROCK          0x470 // Dualocke: objeto de la CUMBRE METEORO
 #define FLAG_ITEM_ROUTE_103_PP_UP                                   0x471
 #define FLAG_UNUSED_0x472                                           0x472 // Unused Flag
 #define FLAG_ITEM_ROUTE_108_STAR_PIECE                              0x473
