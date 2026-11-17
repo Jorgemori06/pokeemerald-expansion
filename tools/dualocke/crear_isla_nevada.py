@@ -237,7 +237,13 @@ def zona_region():
         escribir(ruta, texto)
 
 
+# Las filas 0-14 de la RUTA 124 están fuera de la barrera de rocas: a la isla solo se llegaba buceando (lo vio
+# Jorge con alcance.py, #99). Se quitan dos rocas con remolino para llegar surfeando (tramo 7).
+PASOS_RUTA124 = [(11, 0), (18, 16)]
+
+
 def main():
+    cis.quitar_rocas("Route124", PASOS_RUTA124)
     crear_mapas(crear_isla(), crear_cueva())
     zona_region()
     print("Dualocke: ISLA NEVADA y CUEVA HELADA creadas")
