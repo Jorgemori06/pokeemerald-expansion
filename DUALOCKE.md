@@ -562,6 +562,7 @@ El primer bioma "por tipo". Miguel pidió que cada tipo tenga su bioma; el anál
 
 Tres islas nuevas del **tramo 8** (cap 84), cada una pegada al borde de una ruta de mar. Se llega surfeando, sin pantalla de carga, y usan los gráficos de su ruta (si no, la conexión se vería rota). Todo lo hace `tools/dualocke/crear_islas_sur.py`.
 
+- **Paso abierto en la barrera de rocas (17/11/2026):** el borde de cada ruta por el que se entra a su isla estaba fuera de la barrera de rocas del mar, y no se llegaba (lo vio Jorge con `alcance.py`, #99). Se quita una roca suelta de 2 × 2 de la barrera en cada ruta: RUTA 129 (46, 24), RUTA 131 (7, 12) y RUTA 134 (9, 21). Es la que deja el paso más corto sin pasar por corrientes y lejos de las conexiones de los lados (`PASOS` y `quitar_rocas()` en `crear_islas_sur.py`). Con `alcance.py`, las tres islas se alcanzan surfeando.
 - **Sitios elegidos mirando las corrientes:**
   - Las RUTAS 132-134 tienen sus bordes cerrados por rocas, y sus corrientes solo empujan al oeste: no se llega a los huecos.
   - El borde este de la RUTA 127 es una pared de roca.
@@ -674,6 +675,7 @@ Tres islas nuevas del **tramo 8** (cap 84), cada una pegada al borde de una ruta
 `ZONAS.md`, propuesta 1. Una isla al norte de la RUTA 124 con nieve y una cueva de hielo.
 
 - **Cómo se llega:** surfeando hacia el norte desde la RUTA 124, sin pantalla de carga (conexión `up`). **Tramo 7** (cap 73).
+  - **Paso abierto (17/11/2026):** las filas 0-14 de la RUTA 124 estaban fuera de la barrera de rocas, y a la isla solo se llegaba buceando. Se quitan dos rocas con remolino, en (11, 0) y (18, 16) (`PASOS_RUTA124` en `crear_isla_nevada.py`). Con `alcance.py`, se alcanza surfeando en el tramo 7.
 - **La isla** (80 × 40). **Rehecha el 17/11/2026 con `autotile.py`**, como las islas del sur (ver "Dibujar mapas como los del juego"). Antes era el islote de la CUEVA CARDUMEN de la RUTA 125 pegado arriba, cortado por el borde del mapa, con mucho mar vacío.
   - Ahora es una isla grande de arena con su anillo de bajío y una cala al sur, peñas y rocas en el mar.
   - Arriba está la cresta de roca del islote grande de la RUTA 127, sin sus huecos de base secreta. En su pie se abre la entrada de la cueva, con las piezas de la cueva del PILAR CELESTE.

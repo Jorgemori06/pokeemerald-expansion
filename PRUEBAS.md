@@ -67,6 +67,7 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 
 ### Islas de las rutas del sur (desde el 17/11/2026)
 
+- [ ] **Se llega a las tres islas surfeando (17/11/2026):** por el hueco nuevo en las rocas de la RUTA 129 (46, 24), de la RUTA 131 (7, 12) y de la RUTA 134 (9, 21). Que el hueco se vea como un paso normal entre rocas.
 - [ ] **ISLA DE RUINAS:** desde el norte de la RUTA 131, surfeando hacia arriba.
   - La cueva de la orilla de abajo sale por la del montículo, y se vuelve igual.
   - La puerta de la torre lleva a la TORRE; la escalera de arriba ya no está.
@@ -118,7 +119,7 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 
 ### ISLA NEVADA (desde el 16/11/2026)
 
-- [ ] **Conexión:** surfeando hacia el norte desde la RUTA 124 se pasa a la ISLA NEVADA sin cortes, y la nieve empieza al cruzar.
+- [ ] **Conexión:** surfeando hacia el norte desde la RUTA 124 se pasa a la ISLA NEVADA sin cortes, y la nieve empieza al cruzar. Se llega sin bucear, por los huecos nuevos de la RUTA 124 en (18, 16) y (11, 0).
 - [ ] **El mapa:** que no se vean trozos raros de roca en el borde de la RUTA 124 ni en el islote.
 - [ ] **Isla rehecha (17/11/2026):** que las orillas, el bajío, la cresta y las peñas se vean bien. Que la entrada de la cueva, en el pie de la cresta, lleve a la CUEVA HELADA y que la escalera devuelva delante de ella. Que en la cresta y las peñas no se pueda hacer una base secreta.
 - [ ] **Cartel de zona:** "ISLA NEVADA", también en la cueva, y que cuente como zona de captura propia.
