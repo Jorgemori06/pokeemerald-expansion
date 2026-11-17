@@ -49,6 +49,10 @@ jobs:
             tools/wav2agb/wav2agb
           key: tools-${{ runner.os }}-${{ hashFiles('tools/*/Makefile', 'tools/**/*.c', 'tools/**/*.cpp', 'tools/**/*.h') }}
 
+      # Dualocke: que ningún entrenador se pueda alcanzar antes de su tramo con un nivel más alto
+      - name: Entrenadores alcanzables antes de su tramo
+        run: python3 tools/dualocke/alcance.py --comprobar
+
       - name: ROM (Emerald)
         env:
           GAME_VERSION: EMERALD
