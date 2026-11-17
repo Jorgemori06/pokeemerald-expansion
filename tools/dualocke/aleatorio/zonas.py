@@ -16,10 +16,20 @@ PREFIJOS = (
     "SouthernIsland_", "FarawayIsland_", "BirthIsland_", "NavelRock_",   # islas del ferry (#81)
     "GrutaIgnea",                                                         # GRUTA ÍGNEA (#82)
     "IslaNevada",                                                         # ISLA NEVADA (#83)
+    "DesiertoProfundo", "RuinasArenosas",                                 # DESIERTO PROFUNDO y RUINAS (#84)
+    "MarismaAzuliza",                                                     # MARISMA AZULIZA (#87)
+    "BosqueFrondoso", "MansionOlvidada",                                  # BOSQUE FRONDOSO y MANSIÓN (#88)
+    "IslaDeRuinas", "IslaVolcanica", "IslaArenosa",                       # islas de las rutas del sur (#89)
+    "PlayaVolcanica",                                                     # PLAYA VOLCÁNICA (#90)
+    "CumbreMeteoro",                                                      # CUMBRE METEORO (#91)
+    "BosqueSiniestro",                                                    # BOSQUE SINIESTRO (#96)
+    "CienagaToxica",                                                      # CIÉNAGA TÓXICA (#98)
 )
 
 # Flags de los objetos de las zonas nuevas (GRUPOS de colocar_objetos.py)
-FLAGS_OBJETOS = ("FLAG_ITEM_ISLA_", "FLAG_ITEM_GRUTA_", "FLAG_ITEM_NEVADA_")
+FLAGS_OBJETOS = ("FLAG_ITEM_ISLA_", "FLAG_ITEM_GRUTA_", "FLAG_ITEM_NEVADA_", "FLAG_ITEM_DESIERTO_",
+                 "FLAG_ITEM_MARISMA_", "FLAG_ITEM_BOSQUE_", "FLAG_ITEM_SUR_", "FLAG_ITEM_PLAYA_",
+                 "FLAG_ITEM_CUMBRE_", "FLAG_ITEM_SINIESTRO_", "FLAG_ITEM_CIENAGA_")
 
 
 def es_nueva(nombre_mapa):
