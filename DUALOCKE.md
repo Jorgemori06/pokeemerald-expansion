@@ -389,6 +389,23 @@ Qué mira:
 
 Las rarezas del juego original (puertas del ferry fuera del mapa…) están en `ORIGINALES`.
 
+### CUMBRE METEORO (hecho, Miguel, 17/11/2026; falta probarlo)
+
+- **Dónde:** una cueva nueva en la pared de roca de la RUTA 115, junto a la entrada de la CATARATA METEORO (x 31, fila 39; se entra desde abajo, andando). **Tramo 4** (cap 43).
+  - El borde norte de la RUTA 115 está cerrado (bosque y acantilados), así que se entra por una cueva y no por el borde.
+  - La boca es el mismo dibujo que la de la catarata, puesta en una pared lisa: no se quita ninguna base secreta de la ruta.
+- **Todo lo hace `tools/dualocke/crear_cumbre_meteoro.py`.** Dos mapas, con los gráficos de la RUTA 115:
+  - **LADERA** (40 × 20): las terrazas de roca del sur de la RUTA 114 (escaleras, rocas y bordillos de un solo sentido), con hierba alta de montaña (la verde con fondo de roca, 0x212, que en el juego no se usaba). Arriba del todo, otra cueva sube a la cumbre.
+  - **CUMBRE** (22 × 31): las cimas de la RUTA 115, a las que en el juego no se llega. Con nieve (nieve en combate) y hierba escarchada (la de ceniza de la RUTA 113, 0x20A). Arriba espera el guardián.
+  - Las bases secretas de los trozos copiados se tapan con roca, y dos pasan a ser las cuevas.
+  - Desde cada entrada se llega a la salida y al guardián, también con los bordillos (comprobado).
+- **Guardián:** sin semilla, Salamence a nivel 40 (regla `"tope"`); premio, Colmillo Dragón y su megapiedra. `FLAG_DUALOCKE_GUARDIAN_CUMBRE` (0x91D, el último flag libre del sistema que no es diario).
+- **Zona de captura propia:** `MAPSEC_CUMBRE_METEORO` (las dos partes cuentan como una): 116 de 128.
+- **Salvajes:**
+  - Ladera: roca y lucha (Machop, Geodude, Aron, Makuhita, Nosepass, Roggenrola, Rockruff, Timburr, Mienfoo…; raros, Druddigon y Bagon).
+  - Cumbre: hielo, aire y dragón (Snorunt, Skarmory, Noibat, Bergmite, Cubchoo, Amaura, Rookidee, Altaria, Cryogonal…; raros, Frigibax y Bagon).
+- **Objetos:** Piedra Dura y un Ticket-Recuerdo en la ladera; Escama Dragón y Roca Helada (oculta) en la cumbre. `OBJETOS_CUMBRE`: flags normales 0x1DE-0x1E1, porque en la zona del sistema ya no quedan libres que no sean diarios. Los de la ladera se pusieron a mano (`colocar_objetos.py` no les encontró sitio).
+
 ### PLAYA VOLCÁNICA (hecho, Miguel, 17/11/2026; falta probarlo)
 
 - **Dónde:** pegada al borde oeste de la RUTA 122 (la del MONTE PÍRICO). Se llega surfeando, sin pantalla de carga: **tramo 7** (cap 73).

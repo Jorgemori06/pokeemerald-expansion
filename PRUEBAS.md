@@ -33,6 +33,13 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 - [ ] **Tiendas:** una compra por objeto (salvo Balls, Repelentes, Bayas y Caramelos), y el segundo dependiente en las ciudades.
 - [ ] **Caps de nivel:** al llegar al cap no se gana experiencia y los Caramelos Raros no funcionan por encima.
 
+### CUMBRE METEORO (desde el 17/11/2026)
+
+- [ ] **Entrada:** en la RUTA 115, a la derecha de la entrada de la CATARATA METEORO y una terraza más abajo, hay una cueva nueva en la pared. Lleva a la LADERA, y se vuelve igual.
+- [ ] **LADERA:** se puede subir por las escaleras hasta la cueva de arriba (a la derecha). Hay salvajes en la hierba alta.
+- [ ] **CUMBRE:** nieve fuera y en combate, salvajes en la hierba escarchada y el guardián arriba, que da premio y no vuelve a salir.
+- [ ] **Bases secretas:** la de la RUTA 115 que está junto a la cueva nueva sigue funcionando.
+
 ### PLAYA VOLCÁNICA (desde el 17/11/2026)
 
 - [ ] **Entrada:** en la RUTA 122, por el hueco nuevo del anillo de rocas de arriba a la izquierda, se surfea hacia el oeste hasta la playa (sin pantalla de carga), y se vuelve igual.
