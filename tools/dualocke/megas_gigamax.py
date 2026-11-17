@@ -290,8 +290,9 @@ def objetos():
             f'        .name = ES(ITEM_NAME("{en}"), ITEM_NAME("{es}")),',
             "        .price = 0,",
             "        .holdEffect = HOLD_EFFECT_MEGA_STONE,",
-            f'        .description = ES(COMPOUND_STRING("This stone enables\\n"',
-            f'            "{poke} to Mega\\n"',
+            # "Corviknight to Mega" no cabe en la mochila (103 px de 102): con nombres largos, "lets X Mega"
+            f'        .description = ES(COMPOUND_STRING("This stone {"lets" if len(poke) >= 11 else "enables"}\\n"',
+            f'            "{poke} {"" if len(poke) >= 11 else "to "}Mega\\n"',
             f'            "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\\n" "a {poke}.")),',
             "        .pocket = POCKET_MEGA_STONES,",
             "        .sortType = ITEM_TYPE_MEGA_STONE,",

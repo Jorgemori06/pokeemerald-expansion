@@ -7150,8 +7150,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("Corviknightite"), ITEM_NAME("Corviknightita")),
         .price = 0,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
-        .description = ES(COMPOUND_STRING("This stone enables\n"
-            "Corviknight to Mega\n"
+        .description = ES(COMPOUND_STRING("This stone lets\n"
+            "Corviknight Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Corviknight.")),
         .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,

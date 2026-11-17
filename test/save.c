@@ -6,7 +6,9 @@
 // Please note that this simple check is not 100% foolproof, but should be able to catch most unintended shifts.
 #define T_SAVEBLOCK1_SIZE 15568
 #define T_SAVEBLOCK2_SIZE 3884
-#define T_SAVEBLOCK3_SIZE 644 // Dualocke: bolsillos MEDICINAS y MEGAPIEDRAS (4 + 60*4 + 100*4)
+#define T_SAVEBLOCK3_SIZE 764 // Dualocke: bolsillos MEDICINAS y MEGAPIEDRAS (4 + 60*4 + 130*4). Los 30
+                              // huecos nuevos van al final: en una partida de antes salen vacíos
+                              // (al guardar, el sector se llena de ceros antes de copiar).
 #define T_POKEMONSTORAGE_SIZE 34144
 
 TEST("SaveBlock1 is backwards compatible")
