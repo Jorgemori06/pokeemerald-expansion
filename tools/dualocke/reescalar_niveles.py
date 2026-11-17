@@ -82,7 +82,9 @@ TRAMOS = {
         "SOOTOPOLIS_CITY", "CAVE_OF_ORIGIN_*", "SKY_PILLAR_*", "ROUTE129", "ROUTE130",
         "ROUTE131", "PACIFIDLOG_TOWN", "ROUTE132", "ROUTE133", "ROUTE134",
         "SOOTOPOLIS_CITY_GYM_*", "ROUTE110_TRICK_HOUSE_PUZZLE6",
-        "FARAWAY_ISLAND_ENTRANCE", "FARAWAY_ISLAND_INTERIOR"],
+        "FARAWAY_ISLAND_ENTRANCE", "FARAWAY_ISLAND_INTERIOR",
+        # Islas de las rutas del sur (crear_islas_sur.py; Miguel, 17/11/2026)
+        "ISLA_DE_RUINAS", "ISLA_DE_RUINAS_TORRE", "ISLA_VOLCANICA", "ISLA_VOLCANICA_CRATER", "ISLA_ARENOSA"],
     9: ["EVER_GRANDE_CITY", "VICTORY_ROAD_*", "METEOR_FALLS_1F_2R", "METEOR_FALLS_B1F_*",
         "EVER_GRANDE_CITY_*S_ROOM", "ROUTE110_TRICK_HOUSE_PUZZLE7", "ROUTE110_TRICK_HOUSE_PUZZLE8",
         # (los nombres exactos: NAVEL_ROCK_* también cogería los mapas de Rojo Fuego, _FRLG)
@@ -201,7 +203,8 @@ ENTRENADORES_ISLAS = {"TRAINER_TERRY", "TRAINER_CINDY_2", "TRAINER_MIKE_1", "TRA
                       "TRAINER_GINA_AND_MIA_2", "TRAINER_LUCAS_2", "TRAINER_GRUNT_UNUSED",
                       "TRAINER_DUDLEY", "TRAINER_KAYLEE",
                       # BOSQUE FRONDOSO y MANSIÓN OLVIDADA: el equipo lo escribe zonas_nuevas.py
-                      "TRAINER_BRENDAN_PLACEHOLDER", "TRAINER_MAY_PLACEHOLDER", "TRAINER_LEAF"}
+                      "TRAINER_BRENDAN_PLACEHOLDER", "TRAINER_MAY_PLACEHOLDER", "TRAINER_LEAF",
+                      "TRAINER_RED"}  # DARÍO, de la ISLA ARENOSA
 
 
 def calcular_entrenadores(base, mapas):
@@ -407,6 +410,9 @@ ESTATICOS = [
     ("data/maps/GrutaIgnea_Camara/scripts.inc", "MAP_GRUTA_IGNEA_CAMARA", "tope"),
     ("data/maps/IslaNevada_Cueva/scripts.inc", "MAP_ISLA_NEVADA_CUEVA", "tope"),
     ("data/maps/MansionOlvidada_Desvan/scripts.inc", "MAP_MANSION_OLVIDADA_DESVAN", "tope"),
+    ("data/maps/IslaDeRuinas_Torre/scripts.inc", "MAP_ISLA_DE_RUINAS_TORRE", "tope"),
+    ("data/maps/IslaVolcanica_Crater/scripts.inc", "MAP_ISLA_VOLCANICA_CRATER", "tope"),
+    ("data/maps/IslaArenosa/scripts.inc", "MAP_ISLA_ARENOSA", "tope"),
 ]
 
 

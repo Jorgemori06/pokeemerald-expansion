@@ -1543,20 +1543,20 @@
 #define FLAG_UNUSED_0x906                           (SYSTEM_FLAGS + 0xA6) // Unused Flag
 #define FLAG_UNUSED_0x907                           (SYSTEM_FLAGS + 0xA7) // Unused Flag
 #define FLAG_ITEM_TICKET_BOSQUE_FRONDOSO   0x908 // Dualocke: Ticket-Recuerdo en el BOSQUE FRONDOSO
-#define FLAG_UNUSED_0x909                           (SYSTEM_FLAGS + 0xA9) // Unused Flag
-#define FLAG_UNUSED_0x90A                           (SYSTEM_FLAGS + 0xAA) // Unused Flag
-#define FLAG_UNUSED_0x90B                           (SYSTEM_FLAGS + 0xAB) // Unused Flag
-#define FLAG_UNUSED_0x90C                           (SYSTEM_FLAGS + 0xAC) // Unused Flag
-#define FLAG_UNUSED_0x90D                           (SYSTEM_FLAGS + 0xAD) // Unused Flag
-#define FLAG_UNUSED_0x90E                           (SYSTEM_FLAGS + 0xAE) // Unused Flag
-#define FLAG_UNUSED_0x90F                           (SYSTEM_FLAGS + 0xAF) // Unused Flag
-#define FLAG_UNUSED_0x910                           (SYSTEM_FLAGS + 0xB0) // Unused Flag
-#define FLAG_UNUSED_0x911                           (SYSTEM_FLAGS + 0xB1) // Unused Flag
-#define FLAG_UNUSED_0x912                           (SYSTEM_FLAGS + 0xB2) // Unused Flag
+#define FLAG_DUALOCKE_GUARDIAN_ISLA_RUINAS           (SYSTEM_FLAGS + 0xA9) // Dualocke: guardián de la ISLA DE RUINAS vencido o capturado
+#define FLAG_DUALOCKE_GUARDIAN_VOLCAN                (SYSTEM_FLAGS + 0xAA) // Dualocke: guardián de la ISLA VOLCÁNICA vencido o capturado
+#define FLAG_DUALOCKE_GUARDIAN_ARENOSA               (SYSTEM_FLAGS + 0xAB) // Dualocke: guardián de la ISLA ARENOSA vencido o capturado
+#define FLAG_ITEM_SUR_WISE_GLASSES         0x90C // Dualocke: objeto de las islas de las rutas del sur
+#define FLAG_ITEM_SUR_PP_UP                0x90D // Dualocke: objeto de las islas de las rutas del sur
+#define FLAG_ITEM_SUR_FLAME_ORB            0x90E // Dualocke: objeto de las islas de las rutas del sur
+#define FLAG_ITEM_SUR_FIRE_STONE           0x90F // Dualocke: objeto de las islas de las rutas del sur
+#define FLAG_ITEM_SUR_BIG_PEARL            0x910 // Dualocke: objeto de las islas de las rutas del sur
+#define FLAG_ITEM_SUR_SAFETY_GOGGLES       0x911 // Dualocke: objeto de las islas de las rutas del sur
+#define FLAG_ITEM_SUR_PEARL_STRING         0x912 // Dualocke: objeto de las islas de las rutas del sur
 #define FLAG_UNUSED_0x913                           (SYSTEM_FLAGS + 0xB3) // Unused Flag
-#define FLAG_UNUSED_0x914                           (SYSTEM_FLAGS + 0xB4) // Unused Flag
-#define FLAG_UNUSED_0x915                           (SYSTEM_FLAGS + 0xB5) // Unused Flag
-#define FLAG_UNUSED_0x916                           (SYSTEM_FLAGS + 0xB6) // Unused Flag
+#define FLAG_ITEM_TICKET_ISLA_DE_RUINAS    0x914 // Dualocke: Ticket-Recuerdo en las islas del sur
+#define FLAG_ITEM_TICKET_ISLA_VOLCANICA    0x915 // Dualocke: Ticket-Recuerdo en las islas del sur
+#define FLAG_ITEM_TICKET_ISLA_ARENOSA      0x916 // Dualocke: Ticket-Recuerdo en las islas del sur
 #define FLAG_UNUSED_0x917                           (SYSTEM_FLAGS + 0xB7) // Unused Flag
 #define FLAG_UNUSED_0x918                           (SYSTEM_FLAGS + 0xB8) // Unused Flag
 #define FLAG_UNUSED_0x919                           (SYSTEM_FLAGS + 0xB9) // Unused Flag

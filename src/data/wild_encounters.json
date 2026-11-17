@@ -38247,6 +38247,476 @@
           }
         },
         {
+          "map": "MAP_ISLA_DE_RUINAS",
+          "base_label": "gIslaDeRuinas",
+          "water_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_TENTACOOL"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_WINGULL"
+              },
+              {
+                "min_level": 77,
+                "max_level": 79,
+                "species": "SPECIES_PELIPPER"
+              },
+              {
+                "min_level": 78,
+                "max_level": 80,
+                "species": "SPECIES_TENTACRUEL"
+              },
+              {
+                "min_level": 78,
+                "max_level": 80,
+                "species": "SPECIES_MANTINE"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 30,
+            "mons": [
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_TENTACOOL"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_WAILMER"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_CHINCHOU"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_RELICANTH"
+              },
+              {
+                "min_level": 77,
+                "max_level": 79,
+                "species": "SPECIES_LANTURN"
+              },
+              {
+                "min_level": 77,
+                "max_level": 79,
+                "species": "SPECIES_WAILORD"
+              },
+              {
+                "min_level": 77,
+                "max_level": 79,
+                "species": "SPECIES_SHARPEDO"
+              },
+              {
+                "min_level": 78,
+                "max_level": 80,
+                "species": "SPECIES_DHELMISE"
+              },
+              {
+                "min_level": 78,
+                "max_level": 80,
+                "species": "SPECIES_GYARADOS"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ISLA_DE_RUINAS_TORRE",
+          "base_label": "gIslaDeRuinas_Torre",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_BRONZONG"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_GOLURK"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_SIGILYPH"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_BEHEEYEM"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_CLAYDOL"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_CHIMECHO"
+              },
+              {
+                "min_level": 77,
+                "max_level": 79,
+                "species": "SPECIES_SOLROCK"
+              },
+              {
+                "min_level": 77,
+                "max_level": 79,
+                "species": "SPECIES_LUNATONE"
+              },
+              {
+                "min_level": 77,
+                "max_level": 79,
+                "species": "SPECIES_RUNERIGUS"
+              },
+              {
+                "min_level": 77,
+                "max_level": 79,
+                "species": "SPECIES_COFAGRIGUS"
+              },
+              {
+                "min_level": 78,
+                "max_level": 80,
+                "species": "SPECIES_METANG"
+              },
+              {
+                "min_level": 78,
+                "max_level": 80,
+                "species": "SPECIES_ZWEILOUS"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ISLA_VOLCANICA",
+          "base_label": "gIslaVolcanica",
+          "water_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_TENTACOOL"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_WINGULL"
+              },
+              {
+                "min_level": 77,
+                "max_level": 79,
+                "species": "SPECIES_PELIPPER"
+              },
+              {
+                "min_level": 78,
+                "max_level": 80,
+                "species": "SPECIES_TENTACRUEL"
+              },
+              {
+                "min_level": 78,
+                "max_level": 80,
+                "species": "SPECIES_MANTINE"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 30,
+            "mons": [
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_TENTACOOL"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_WAILMER"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_CORSOLA"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_CLAUNCHER"
+              },
+              {
+                "min_level": 77,
+                "max_level": 79,
+                "species": "SPECIES_CLAWITZER"
+              },
+              {
+                "min_level": 77,
+                "max_level": 79,
+                "species": "SPECIES_SHARPEDO"
+              },
+              {
+                "min_level": 77,
+                "max_level": 79,
+                "species": "SPECIES_CRAWDAUNT"
+              },
+              {
+                "min_level": 78,
+                "max_level": 80,
+                "species": "SPECIES_TOXAPEX"
+              },
+              {
+                "min_level": 78,
+                "max_level": 80,
+                "species": "SPECIES_GYARADOS"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ISLA_VOLCANICA_CRATER",
+          "base_label": "gIslaVolcanica_Crater",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_MAGCARGO"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_CAMERUPT"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_TORKOAL"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_MAGMORTAR"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_HEATMOR"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_SALAZZLE"
+              },
+              {
+                "min_level": 77,
+                "max_level": 79,
+                "species": "SPECIES_CENTISKORCH"
+              },
+              {
+                "min_level": 77,
+                "max_level": 79,
+                "species": "SPECIES_COALOSSAL"
+              },
+              {
+                "min_level": 77,
+                "max_level": 79,
+                "species": "SPECIES_ARMAROUGE"
+              },
+              {
+                "min_level": 77,
+                "max_level": 79,
+                "species": "SPECIES_TURTONATOR"
+              },
+              {
+                "min_level": 78,
+                "max_level": 80,
+                "species": "SPECIES_VOLCARONA"
+              },
+              {
+                "min_level": 78,
+                "max_level": 80,
+                "species": "SPECIES_LARVESTA"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ISLA_ARENOSA",
+          "base_label": "gIslaArenosa",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_SANDSLASH"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_DUGTRIO"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_KROOKODILE"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_HIPPOWDON"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_CACTURNE"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_SANDACONDA"
+              },
+              {
+                "min_level": 77,
+                "max_level": 79,
+                "species": "SPECIES_PALOSSAND"
+              },
+              {
+                "min_level": 77,
+                "max_level": 79,
+                "species": "SPECIES_FLYGON"
+              },
+              {
+                "min_level": 77,
+                "max_level": 79,
+                "species": "SPECIES_DRAPION"
+              },
+              {
+                "min_level": 77,
+                "max_level": 79,
+                "species": "SPECIES_STEELIX"
+              },
+              {
+                "min_level": 78,
+                "max_level": 80,
+                "species": "SPECIES_GABITE"
+              },
+              {
+                "min_level": 78,
+                "max_level": 80,
+                "species": "SPECIES_PUPITAR"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_TENTACOOL"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_WINGULL"
+              },
+              {
+                "min_level": 77,
+                "max_level": 79,
+                "species": "SPECIES_PELIPPER"
+              },
+              {
+                "min_level": 78,
+                "max_level": 80,
+                "species": "SPECIES_TENTACRUEL"
+              },
+              {
+                "min_level": 78,
+                "max_level": 80,
+                "species": "SPECIES_MANTINE"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 30,
+            "mons": [
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_LUVDISC"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_LUVDISC"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_CORSOLA"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_FINNEON"
+              },
+              {
+                "min_level": 77,
+                "max_level": 79,
+                "species": "SPECIES_CORSOLA"
+              },
+              {
+                "min_level": 77,
+                "max_level": 79,
+                "species": "SPECIES_LUMINEON"
+              },
+              {
+                "min_level": 77,
+                "max_level": 79,
+                "species": "SPECIES_WISHIWASHI"
+              },
+              {
+                "min_level": 78,
+                "max_level": 80,
+                "species": "SPECIES_BRUXISH"
+              },
+              {
+                "min_level": 78,
+                "max_level": 80,
+                "species": "SPECIES_DHELMISE"
+              }
+            ]
+          }
+        },
+        {
           "map": "MAP_ISLA_NEVADA_CUEVA",
           "base_label": "gIslaNevada_Cueva",
           "land_mons": {

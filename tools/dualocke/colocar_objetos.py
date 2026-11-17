@@ -173,6 +173,20 @@ OBJETOS_BOSQUE = [
 ]
 TICKETS_BOSQUE = [("BOSQUE_FRONDOSO", "BosqueFrondoso", "bola", None)]
 
+# Islas de las rutas del sur (crear_islas_sur.py). Con semilla, al azar.
+OBJETOS_ISLAS_SUR = [
+    ("WISE_GLASSES", "IslaDeRuinas_Torre", "bola", None),
+    ("PP_UP", "IslaDeRuinas", "oculta", None),
+    ("FLAME_ORB", "IslaVolcanica_Crater", "bola", None),
+    ("FIRE_STONE", "IslaVolcanica_Crater", "oculta", None),
+    ("BIG_PEARL", "IslaVolcanica", "oculta", None),
+    ("SAFETY_GOGGLES", "IslaArenosa", "bola", None),
+    ("PEARL_STRING", "IslaArenosa", "oculta", None),
+]
+TICKETS_ISLAS_SUR = [("ISLA_DE_RUINAS", "IslaDeRuinas", "bola", None),
+                     ("ISLA_VOLCANICA", "IslaVolcanica_Crater", "bola", None),
+                     ("ISLA_ARENOSA", "IslaArenosa", "bola", None)]
+
 # Objetos competitivos de generaciones nuevas (misma estructura). Los más fuertes (Pañuelo
 # Elegido, Chaleco Asalto, Gafas Elegidas, Vidasfera) van a partir del tramo 6.
 COMPETITIVOS = [
@@ -294,6 +308,8 @@ GRUPOS = [
     (TICKETS, "FLAG_ITEM_TICKET_", 0x021, 0x04F, "Ticket-Recuerdo en el mapa", "HEART_SCALE"),
     (TICKETS_OCULTOS, "FLAG_ITEM_TICKET_", 0x4E5, 0x4EF, "Ticket-Recuerdo oculto en el mapa", "HEART_SCALE"),
     (OBJETOS_ISLAS, "FLAG_ITEM_ISLA_", 0x8E5, 0x8EF, "objeto de las islas del ferry", None),
+    (OBJETOS_ISLAS_SUR, "FLAG_ITEM_SUR_", 0x90C, 0x913, "objeto de las islas de las rutas del sur", None),
+    (TICKETS_ISLAS_SUR, "FLAG_ITEM_TICKET_", 0x914, 0x916, "Ticket-Recuerdo en las islas del sur", "HEART_SCALE"),
     (OBJETOS_BOSQUE, "FLAG_ITEM_BOSQUE_", 0x900, 0x907, "objeto del BOSQUE FRONDOSO y la MANSIÓN OLVIDADA", None),
     (TICKETS_BOSQUE, "FLAG_ITEM_TICKET_", 0x908, 0x908, "Ticket-Recuerdo en el BOSQUE FRONDOSO", "HEART_SCALE"),
     (OBJETOS_MARISMA, "FLAG_ITEM_MARISMA_", 0x88F, 0x88F, "objeto de la MARISMA AZULIZA", None),
@@ -304,7 +320,8 @@ GRUPOS = [
 ]
 COMPORTAMIENTOS_OK = {"MB_NORMAL", "MB_TALL_GRASS", "MB_LONG_GRASS", "MB_SHORT_GRASS", "MB_DEEP_SAND",
                       "MB_SAND", "MB_CAVE", "MB_ASHGRASS", "MB_FOOTPRINTS",
-                      "MB_INDOOR_ENCOUNTER"}  # el suelo de madera del barco (MANSIÓN OLVIDADA)
+                      "MB_INDOOR_ENCOUNTER",  # el suelo de madera del barco (MANSIÓN OLVIDADA)
+                      "MB_SHALLOW_WATER"}  # la arena de los islotes de la RUTA 127 (ISLA ARENOSA)
 
 
 def comportamientos():

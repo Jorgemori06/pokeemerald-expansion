@@ -855,7 +855,7 @@
 #define TRAINER_MARIELA                     848
 #define TRAINER_ALVARO                      849
 #define TRAINER_EVERETT                     850
-#define TRAINER_RED                         851
+#define TRAINER_RED                         851 // Dualocke: DARÍO, entrenador guay de la ISLA ARENOSA (zonas_nuevas.py)
 #define TRAINER_LEAF                        852 // Dualocke: ALFONSO, caballero de la MANSIÓN OLVIDADA (zonas_nuevas.py)
 #define TRAINER_BRENDAN_PLACEHOLDER         853 // Dualocke: OLIVIA, campista del BOSQUE FRONDOSO (zonas_nuevas.py)
 #define TRAINER_MAY_PLACEHOLDER             854 // Dualocke: ELVIRA, bruja de la MANSIÓN OLVIDADA (zonas_nuevas.py)

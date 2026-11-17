@@ -38,6 +38,8 @@ CUEVA_GRUTA = ["SLUGMA", "NUMEL", "SALANDIT", "SIZZLIPEDE", "ROLYCOLY", "LITWICK
                "HEATMOR", "MAGBY", "CHARCADET", "TURTONATOR", "TORKOAL", "LARVESTA"]
 RUINAS = ["BALTOY", "YAMASK", "GOLETT", "BRONZOR", "SIGILYPH", "RUNERIGUS",
           "ELGYEM", "CLAYDOL", "BRONZONG", "COFAGRIGUS", "SPIRITOMB", "ARCHEN"]
+# Islas de las rutas del sur (crear_islas_sur.py): mar del sur, ruinas, volcán y arena
+AGUA_SUR = ["TENTACOOL", "WINGULL", "PELIPPER", "TENTACRUEL", "MANTINE"]
 MANSION = ["GASTLY", "SHUPPET", "DUSKULL", "MISDREAVUS", "LITWICK", "PHANTUMP",
            "PUMPKABOO", "SINISTEA", "GREAVARD", "DRIFLOON", "ROTOM", "DREEPY"]
 SALVAJES = {
@@ -106,6 +108,22 @@ SALVAJES = {
     # MANSIÓN OLVIDADA: fantasmas en el suelo de madera (los del barco tienen salvajes)
     "MAP_MANSION_OLVIDADA": {"land_mons": MANSION},
     "MAP_MANSION_OLVIDADA_DESVAN": {"land_mons": MANSION},
+    "MAP_ISLA_DE_RUINAS": {"water_mons": AGUA_SUR, "fishing_mons": ["MAGIKARP", "TENTACOOL", "WAILMER", "CHINCHOU", "RELICANTH", "LANTURN",
+                                       "WAILORD", "SHARPEDO", "DHELMISE", "GYARADOS"]},
+    "MAP_ISLA_DE_RUINAS_TORRE": {"land_mons": ["BRONZONG", "GOLURK", "SIGILYPH", "BEHEEYEM", "CLAYDOL", "CHIMECHO",
+                                  "SOLROCK", "LUNATONE", "RUNERIGUS", "COFAGRIGUS", "METANG", "ZWEILOUS"]},
+    "MAP_ISLA_VOLCANICA": {"water_mons": AGUA_SUR, "fishing_mons": ["MAGIKARP", "TENTACOOL", "WAILMER", "CORSOLA", "CLAUNCHER", "CLAWITZER",
+                                       "SHARPEDO", "CRAWDAUNT", "TOXAPEX", "GYARADOS"]},
+    # El CRÁTER: salvajes en la ceniza
+    "MAP_ISLA_VOLCANICA_CRATER": {"land_mons": ["MAGCARGO", "CAMERUPT", "TORKOAL", "MAGMORTAR", "HEATMOR", "SALAZZLE",
+                                   "CENTISKORCH", "COALOSSAL", "ARMAROUGE", "TURTONATOR", "VOLCARONA", "LARVESTA"]},
+    # ISLA ARENOSA: hierba alta entre los árboles del islote de abajo a la izquierda
+    "MAP_ISLA_ARENOSA": {
+        "land_mons": ["SANDSLASH", "DUGTRIO", "KROOKODILE", "HIPPOWDON", "CACTURNE", "SANDACONDA",
+                      "PALOSSAND", "FLYGON", "DRAPION", "STEELIX", "GABITE", "PUPITAR"],
+        "water_mons": AGUA_SUR,
+        "fishing_mons": PESCA_TROPICAL,
+    },
     "MAP_ISLA_NEVADA_CUEVA": {
         "land_mons": ["SNORUNT", "SWINUB", "SNOVER", "CUBCHOO", "VANILLITE", "SNOM",
                       "BERGMITE", "SNEASEL", "CETODDLE", "CRYOGONAL", "EISCUE", "FRIGIBAX"],
@@ -185,6 +203,13 @@ NUEVOS = {
         "cabecera": [("Name", "ALFONSO"), ("Class", "Gentleman"), ("Pic", "Gentleman"), ("Gender", "Male"),
                      ("Music", "Rich"), ("Double Battle", "No"), ("AI", "Check Bad Move")],
         "equipo": ["Drifloon", "Litwick"],
+    },
+    # TRAINER_RED existía sin usar: se reescribe su bloque entero
+    "TRAINER_RED": {
+        "mapa": "MAP_ISLA_ARENOSA",
+        "cabecera": [("Name", "DARÍO"), ("Class", "Cooltrainer"), ("Pic", "Cooltrainer M"), ("Gender", "Male"),
+                     ("Music", "Cool"), ("Double Battle", "No"), ("AI", "Basic Trainer")],
+        "equipo": ["Krookodile", "Hippowdon", "Flygon"],
     },
     "TRAINER_ROQUE": {
         "mapa": "MAP_GRUTA_IGNEA",
