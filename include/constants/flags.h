@@ -524,10 +524,10 @@
 #define FLAG_DEFEATED_HO_OH                  0x1DC
 #define FLAG_DEFEATED_LUGIA                  0x1DD
 
-#define FLAG_UNUSED_0x1DE                    0x1DE // Unused Flag
-#define FLAG_UNUSED_0x1DF                    0x1DF // Unused Flag
-#define FLAG_UNUSED_0x1E0                    0x1E0 // Unused Flag
-#define FLAG_UNUSED_0x1E1                    0x1E1 // Unused Flag
+#define FLAG_ITEM_CUMBRE_HARD_STONE        0x1DE // Dualocke: objeto de la CUMBRE METEORO
+#define FLAG_ITEM_CUMBRE_DRAGON_SCALE      0x1DF // Dualocke: objeto de la CUMBRE METEORO
+#define FLAG_ITEM_CUMBRE_ICY_ROCK          0x1E0 // Dualocke: objeto de la CUMBRE METEORO
+#define FLAG_ITEM_TICKET_CUMBRE_METEORO    0x1E1 // Dualocke: Ticket-Recuerdo en la CUMBRE METEORO
 #define FLAG_UNUSED_0x1E2                    0x1E2 // Unused Flag
 #define FLAG_UNUSED_0x1E3                    0x1E3 // Unused Flag
 
@@ -1563,7 +1563,7 @@
 #define FLAG_ITEM_PLAYA_PEARL              0x91A // Dualocke: objeto de la PLAYA VOLCÁNICA
 #define FLAG_UNUSED_0x91B                           (SYSTEM_FLAGS + 0xBB) // Unused Flag
 #define FLAG_ITEM_TICKET_PLAYA_VOLCANICA   0x91C // Dualocke: Ticket-Recuerdo en la PLAYA VOLCÁNICA
-#define FLAG_UNUSED_0x91D                           (SYSTEM_FLAGS + 0xBD) // Unused Flag
+#define FLAG_DUALOCKE_GUARDIAN_CUMBRE               (SYSTEM_FLAGS + 0xBD) // Dualocke: guardián de la CUMBRE METEORO vencido o capturado
 #define FLAG_UNUSED_0x91E                           (SYSTEM_FLAGS + 0xBE) // Unused Flag
 #define FLAG_UNUSED_0x91F                           (SYSTEM_FLAGS + 0xBF) // Unused Flag
 

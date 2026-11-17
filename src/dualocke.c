@@ -281,7 +281,7 @@ static const u16 sZoneVars[] =
 // del Dualocke (ZONAS.md), que se añaden al final de region_map_sections.json para no mover los
 // bits de las demás en las partidas guardadas.
 #define HOENN_EXTRA_MAPSEC_FIRST MAPSEC_AQUA_HIDEOUT
-#define HOENN_EXTRA_MAPSEC_LAST  MAPSEC_PLAYA_VOLCANICA
+#define HOENN_EXTRA_MAPSEC_LAST  MAPSEC_CUMBRE_METEORO
 #define NUM_DUALOCKE_ZONES (KANTO_MAPSEC_START + HOENN_EXTRA_MAPSEC_LAST - HOENN_EXTRA_MAPSEC_FIRST + 1)
 
 STATIC_ASSERT(NUM_DUALOCKE_ZONES <= ARRAY_COUNT(sZoneVars) * 16, DualockeZoneVarsTooSmall);

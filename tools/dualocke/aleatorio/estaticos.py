@@ -32,7 +32,7 @@ MAPAS_ISLAS = ("SouthernIsland_Interior", "FarawayIsland_Interior", "BirthIsland
                # Los guardianes de las zonas nuevas, igual
                "RuinasArenosas_Camara", "GrutaIgnea_Camara", "IslaNevada_Cueva", "MansionOlvidada_Desvan",
                "IslaDeRuinas_Torre", "IslaVolcanica_Crater", "IslaArenosa",
-               "PlayaVolcanica")
+               "PlayaVolcanica", "CumbreMeteoro")
 
 
 def _nivel_errantes():

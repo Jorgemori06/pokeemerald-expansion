@@ -132,6 +132,11 @@ SALVAJES = {
         "fishing_mons": ["MAGIKARP", "TENTACOOL", "KRABBY", "CORPHISH", "CLAUNCHER", "KINGLER",
                          "CRAWDAUNT", "CLAWITZER", "WAILORD", "GYARADOS"],
     },
+    # CUMBRE METEORO (crear_cumbre_meteoro.py): roca y lucha en la ladera; hielo, aire y dragón arriba
+    "MAP_CUMBRE_METEORO_LADERA": {"land_mons": ["MACHOP", "GEODUDE", "ARON", "MAKUHITA", "NOSEPASS", "SWABLU",
+                                   "ROGGENROLA", "ROCKRUFF", "TIMBURR", "MIENFOO", "DRUDDIGON", "BAGON"]},
+    "MAP_CUMBRE_METEORO": {"land_mons": ["SWABLU", "SNORUNT", "SKARMORY", "NOIBAT", "BERGMITE", "CUBCHOO",
+                                   "AMAURA", "ROOKIDEE", "ALTARIA", "CRYOGONAL", "FRIGIBAX", "BAGON"]},
     "MAP_ISLA_NEVADA_CUEVA": {
         "land_mons": ["SNORUNT", "SWINUB", "SNOVER", "CUBCHOO", "VANILLITE", "SNOM",
                       "BERGMITE", "SNEASEL", "CETODDLE", "CRYOGONAL", "EISCUE", "FRIGIBAX"],

@@ -62,7 +62,9 @@ TRAMOS = {
         "SLATEPORT_CITY_OCEANIC_MUSEUM_*", "ROUTE110", "MAUVILLE_CITY", "ROUTE117",
         "MAUVILLE_CITY_GYM", "ROUTE110_TRICK_HOUSE_PUZZLE1"],
     4: ["ROUTE111", "ROUTE112", "FIERY_PATH", "ROUTE113", "ROUTE114", "METEOR_FALLS_1F_1R",
-        "ROUTE115", "MT_CHIMNEY", "JAGGED_PASS", "LAVARIDGE_TOWN_GYM_*", "ROUTE110_TRICK_HOUSE_PUZZLE2"],
+        "ROUTE115", "MT_CHIMNEY", "JAGGED_PASS", "LAVARIDGE_TOWN_GYM_*", "ROUTE110_TRICK_HOUSE_PUZZLE2",
+        # CUMBRE METEORO, por una cueva de la RUTA 115 (crear_cumbre_meteoro.py; Miguel, 17/11/2026)
+        "CUMBRE_METEORO_LADERA", "CUMBRE_METEORO"],
     5: ["PETALBURG_CITY_GYM", "ROUTE110_TRICK_HOUSE_PUZZLE3",
         "GRUTA_IGNEA", "GRUTA_IGNEA_CAMARA",  # se llega con FUERZA, desde el SENDERO ÍGNEO (Miguel, 16/11/2026)
         # DESIERTO PROFUNDO y RUINAS ARENOSAS, desde el desierto de la RUTA 111 (crear_desierto_profundo.py)
@@ -416,6 +418,7 @@ ESTATICOS = [
     ("data/maps/IslaVolcanica_Crater/scripts.inc", "MAP_ISLA_VOLCANICA_CRATER", "tope"),
     ("data/maps/IslaArenosa/scripts.inc", "MAP_ISLA_ARENOSA", "tope"),
     ("data/maps/PlayaVolcanica/scripts.inc", "MAP_PLAYA_VOLCANICA", "tope"),
+    ("data/maps/CumbreMeteoro/scripts.inc", "MAP_CUMBRE_METEORO", "tope"),
 ]
 
 
