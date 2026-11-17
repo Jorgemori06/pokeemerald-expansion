@@ -41,9 +41,9 @@ NOMBRE = "BOSQUE SINIESTRO"
 RUTA, RUTA_MAPA = "Route123", "MAP_ROUTE123"
 DESPLAZAMIENTO = 82                         # el bosque empieza en la x 82 de la RUTA 123
 ENTRADA_RUTA = range(103, 107)              # en la RUTA 123, fila de abajo: copas de árbol que pasan a ser hierba
-COPA, HIERBA = 0x00E, 0x001
-# Los árboles de la RUTA 123
-INTERIOR, PIE, COPA_HIERBA_ALTA = (0x0C6, 0x0C7), 0x016, 0x025
+HIERBA = 0x001
+# Los árboles de la RUTA 123 (los normales de Hoenn: autotile.arbol_normal() y copa_normal())
+COPA, INTERIOR = at.ARBOL_COPA, at.ARBOL_INTERIOR
 RISCO = (0x0D5, 0x087, 0x0D6)               # el risco del BOSQUE PETALIA: punta izquierda, medio, punta derecha
 FLORES = 0x004
 # T árbol   . hierba   , hierba alta   ~ charca   J risco (se salta hacia abajo)   * flores
@@ -155,29 +155,20 @@ def crear_layout(borde_ruta):
         else:
             assert arriba == HIERBA, ("la entrada no coincide con la de la ruta", x, hex(arriba))
     c = [0] * (ancho * alto)
-    es_arbol = lambda x, y: y >= alto or not 0 <= x < ancho or filas[y][x] == "T"  # noqa: E731
     for y in range(alto):
         for x in range(ancho):
             ch = filas[y][x]
             if ch == "T":
-                if es_arbol(x, y + 1):
-                    # Como en la ruta: se alternan, con un patrón fijo que no parece una rejilla
-                    m = INTERIOR[(x * 7 + y * 3 + (x * y) % 5) % 2]
-                else:
-                    m = PIE
-                c[y * ancho + x] = valor(m)
+                c[y * ancho + x] = valor(at.arbol_normal(filas, x, y))
                 continue
             if ch == "J":
                 punta = 0 if filas[y][x - 1] != "J" else 2 if filas[y][x + 1] != "J" else 1
                 c[y * ancho + x] = valor(RISCO[punta])
                 continue
             v = pintadas[y][x]
-            if y + 1 < alto and filas[y + 1][x] == "T":
-                # La copa del árbol de debajo
-                if ch == ",":
-                    v = valor(COPA_HIERBA_ALTA)
-                elif v & 0x3FF == HIERBA or ch == "*":
-                    v = valor(COPA)
+            copa = at.copa_normal(filas, x, y, v & 0x3FF)   # la copa del árbol de debajo
+            if copa:
+                v = valor(copa)
             elif ch == "*":
                 v = (v & ~0x3FF) | FLORES
             c[y * ancho + x] = v

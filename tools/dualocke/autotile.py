@@ -192,6 +192,32 @@ class Aprendiz:
         return raras
 
 
+# Árboles normales de Hoenn (los de las rutas: RUTA 117, RUTA 123…), de una casilla de ancho. Dentro del bosque se
+# alternan 0x0C6 y 0x0C7; la última fila de una franja (debajo hay suelo) es el pie, 0x016. La copa del árbol de
+# debajo se pinta en la casilla de encima, que se puede pisar: 0x00E sobre hierba y 0x025 sobre hierba alta.
+ARBOL_INTERIOR, ARBOL_PIE = (0x0C6, 0x0C7), 0x016
+ARBOL_COPA, ARBOL_COPA_HIERBA_ALTA = 0x00E, 0x025
+
+
+def arbol_normal(filas, x, y, letra="T"):
+    """La pieza del árbol normal de la casilla (x, y) del plano (fuera del plano, abajo, cuenta como árbol)."""
+    alto, ancho = len(filas), len(filas[0])
+    debajo = y + 1 >= alto or not 0 <= x < ancho or filas[y + 1][x] == letra
+    # Con un patrón fijo que no parece una rejilla, como en las rutas
+    return ARBOL_INTERIOR[(x * 7 + y * 3 + (x * y) % 5) % 2] if debajo else ARBOL_PIE
+
+
+def copa_normal(filas, x, y, pieza, letra="T", hierba_alta=","):
+    """Si debajo de (x, y) empieza un árbol normal, la casilla lleva su copa: devuelve la pieza con copa, o None."""
+    if y + 1 >= len(filas) or filas[y + 1][x] != letra:
+        return None
+    if filas[y][x] == hierba_alta:
+        return ARBOL_COPA_HIERBA_ALTA
+    if pieza == 0x001 or filas[y][x] == "*":
+        return ARBOL_COPA
+    return None
+
+
 # Árboles grandes (gráficos generales, los del BOSQUE PETALIA y la ZONA SAFARI): 2 de ancho, por parejas de
 # columnas pares. Piezas (izquierda, derecha). La copa sobre hierba normal es 0x1CE; sobre hierba alta, 0x1C6.
 COPA, COPA_HIERBA_ALTA = (0x1CE, 0x1CF), (0x1C6, 0x1C7)
