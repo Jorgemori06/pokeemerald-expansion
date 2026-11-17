@@ -468,8 +468,8 @@
 #define FLAG_REGISTERED_DRAKE                (TRAINER_REGISTERED_FLAGS_START + REMATCH_DRAKE)
 #define FLAG_REGISTERED_WALLACE              (TRAINER_REGISTERED_FLAGS_START + REMATCH_WALLACE)
 
-#define FLAG_UNUSED_0x1AA                    0x1AA // Unused Flag
-#define FLAG_UNUSED_0x1AB                    0x1AB // Unused Flag
+#define FLAG_ITEM_SINIESTRO_SPELL_TAG      0x1AA // Dualocke: objeto del BOSQUE SINIESTRO
+#define FLAG_ITEM_TICKET_BOSQUE_SINIESTRO  0x1AB // Dualocke: Ticket-Recuerdo en el BOSQUE SINIESTRO
 
 #define FLAG_DEFEATED_DEOXYS                 0x1AC
 #define FLAG_BATTLED_DEOXYS                  0x1AD
@@ -1326,8 +1326,8 @@
 #define FLAG_DEFEATED_SOOTOPOLIS_GYM                                0x4F7
 #define FLAG_DEFEATED_METEOR_FALLS_STEVEN                           0x4F8
 
-#define FLAG_UNUSED_0x4F9                                           0x4F9 // Unused Flag
-#define FLAG_UNUSED_0x4FA                                           0x4FA // Unused Flag
+#define FLAG_ITEM_SINIESTRO_BLACK_GLASSES  0x4F9 // Dualocke: objeto del BOSQUE SINIESTRO
+#define FLAG_ITEM_SINIESTRO_MOON_STONE     0x4FA // Dualocke: objeto del BOSQUE SINIESTRO
 
 #define FLAG_DEFEATED_ELITE_4_SIDNEY                                0x4FB
 #define FLAG_DEFEATED_ELITE_4_PHOEBE                                0x4FC
@@ -1564,7 +1564,7 @@
 #define FLAG_UNUSED_0x91B                           (SYSTEM_FLAGS + 0xBB) // Unused Flag
 #define FLAG_ITEM_TICKET_PLAYA_VOLCANICA   0x91C // Dualocke: Ticket-Recuerdo en la PLAYA VOLCÁNICA
 #define FLAG_DUALOCKE_GUARDIAN_CUMBRE               (SYSTEM_FLAGS + 0xBD) // Dualocke: guardián de la CUMBRE METEORO vencido o capturado
-#define FLAG_UNUSED_0x91E                           (SYSTEM_FLAGS + 0xBE) // Unused Flag
+#define FLAG_DUALOCKE_GUARDIAN_SINIESTRO             (SYSTEM_FLAGS + 0xBE) // Dualocke: guardián del BOSQUE SINIESTRO vencido o capturado
 #define FLAG_UNUSED_0x91F                           (SYSTEM_FLAGS + 0xBF) // Unused Flag
 
 // Daily Flags

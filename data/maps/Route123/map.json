@@ -23,6 +23,11 @@
       "map": "MAP_ROUTE118",
       "offset": 0,
       "direction": "left"
+    },
+    {
+      "map": "MAP_BOSQUE_SINIESTRO",
+      "offset": 82,
+      "direction": "down"
     }
   ],
   "object_events": [

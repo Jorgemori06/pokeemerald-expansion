@@ -141,7 +141,8 @@
     "IslaArenosa",
     "PlayaVolcanica",
     "CumbreMeteoro_Ladera",
-    "CumbreMeteoro"
+    "CumbreMeteoro",
+    "BosqueSiniestro"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

@@ -1726,6 +1726,14 @@
       "y": 1,
       "width": 1,
       "height": 1
+    },
+    {
+      "id": "MAPSEC_BOSQUE_SINIESTRO",
+      "name": "BOSQUE SINIESTRO",
+      "x": 14,
+      "y": 7,
+      "width": 1,
+      "height": 1
     }
   ]
 }

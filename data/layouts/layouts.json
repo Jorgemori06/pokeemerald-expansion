@@ -9533,6 +9533,16 @@
       "secondary_tileset": "gTileset_Fallarbor",
       "border_filepath": "data/layouts/CumbreMeteoro/border.bin",
       "blockdata_filepath": "data/layouts/CumbreMeteoro/map.bin"
+    },
+    {
+      "id": "LAYOUT_BOSQUE_SINIESTRO",
+      "name": "BosqueSiniestro_Layout",
+      "width": 50,
+      "height": 44,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lilycove",
+      "border_filepath": "data/layouts/BosqueSiniestro/border.bin",
+      "blockdata_filepath": "data/layouts/BosqueSiniestro/map.bin"
     }
   ]
 }
