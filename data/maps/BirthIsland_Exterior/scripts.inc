@@ -16,7 +16,7 @@ BirthIsland_Exterior_OnTransition:
 	@ Dualocke: sin Deoxys ni el puzle del triángulo
 	call BirthIsland_Exterior_EventScript_HideDeoxysAndPuzzle
 	@ Dualocke: el Pokémon fuerte de la isla, con el sprite de la especie que sale con la semilla
-	setvar VAR_0x8004, SPECIES_METAGROSS
+	setvar VAR_0x8004, SPECIES_ROARING_MOON
 	special Dualocke_GraficoPokemonIsla
 	copyvar VAR_OBJ_GFX_ID_1, VAR_RESULT
 	end
@@ -120,10 +120,10 @@ BirthIsland_Exterior_Movement_DeoxysApproach:
 @ Dualocke: el Pokémon fuerte de la isla (data/scripts/dualocke_islas.inc)
 BirthIsland_Exterior_EventScript_Pokemon::
 	lock
-	setvar VAR_TEMP_8, SPECIES_METAGROSS
+	setvar VAR_TEMP_8, SPECIES_ROARING_MOON
 	setvar VAR_TEMP_9, ITEM_ABILITY_PATCH
 	call Dualocke_EventScript_AvisoIsla
-	setwildbattle SPECIES_METAGROSS, 97
+	setwildbattle SPECIES_ROARING_MOON, 97
 	dowildbattle
 	call Dualocke_EventScript_ResultadoIsla
 	goto_if_eq VAR_RESULT, FALSE, BirthIsland_Exterior_EventScript_PokemonSigue

@@ -5,17 +5,17 @@ IslaArenosa_MapScripts::
 @ Dualocke: el guardián de la ISLA ARENOSA, un Pokémon fuerte que se puede capturar, como en las islas del
 @ ferry (data/scripts/dualocke_islas.inc). Con semilla sale otro de su tipo (estaticos.py, islas()).
 IslaArenosa_OnTransition:
-	setvar VAR_0x8004, SPECIES_TYRANITAR
+	setvar VAR_0x8004, SPECIES_SANDY_SHOCKS
 	special Dualocke_GraficoPokemonIsla
 	copyvar VAR_OBJ_GFX_ID_0, VAR_RESULT
 	end
 
 IslaArenosa_EventScript_Pokemon::
 	lock
-	setvar VAR_TEMP_8, SPECIES_TYRANITAR
+	setvar VAR_TEMP_8, SPECIES_SANDY_SHOCKS
 	setvar VAR_TEMP_9, ITEM_SMOOTH_ROCK
 	call Dualocke_EventScript_AvisoIsla
-	setwildbattle SPECIES_TYRANITAR, 81
+	setwildbattle SPECIES_SANDY_SHOCKS, 81
 	dowildbattle
 	call Dualocke_EventScript_ResultadoIsla
 	goto_if_eq VAR_RESULT, FALSE, IslaArenosa_EventScript_PokemonSigue
