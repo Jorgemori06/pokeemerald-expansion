@@ -47,6 +47,7 @@ Una sección por idea, con:
   - **Gráficos nuevos** (un estilo de ruinas que no exista en el juego): **lo más difícil**. Habría que dibujar tiles y paletas a mano.
   - **Reparto del trabajo:** el diseño visual se hace mejor a mano en Porymap. Claude puede encargarse de lo demás: crear el mapa en los datos, conexiones y warps, scripts, encuentros, objetos y entrenadores. También puede generar un mapa sencillo por código, pero sin ver el resultado, así que el diseño fino es mejor en Porymap.
   - **Cosas que habría que tocar después:** los tramos de `reescalar_niveles.py` (para los niveles de la zona nueva), la tabla de `colocar_objetos.py` y la lista de zonas para las reglas de captura y el randomizer.
+  - **Análisis completo de zonas nuevas (Miguel, 16/11/2026): `ZONAS.md`.** Islas en las rutas de mar, SENDERO ÍGNEO profundo, hielo, desierto, ruinas y el orden para hacerlas.
   - **Zona junto a PUEBLO AZULIZA (Miguel, 15/11/2026):** una marisma con plantas y agua al oeste del pueblo, debajo de la RUTA 106, donde ahora no hay nada, con objetos, megapiedras y entrenadores que den cosas.
     - **Hay sitio:** un hueco de unas 36 × 20 casillas entre el acantilado de la CUEVA GRANITO y el pueblo, que no pertenece a ningún mapa.
     - **Entrada sin tocar AZULIZA:** el borde oeste del pueblo ya es arena transitable en las filas 6 a 14. Basta una conexión a la izquierda.
