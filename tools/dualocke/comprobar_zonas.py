@@ -71,6 +71,22 @@ def constantes():
     return nombres
 
 
+def valores_flags():
+    """Valor de cada FLAG_ de include/constants/flags.h (las formas sencillas: 0x123, (OTRO + 0x12))."""
+    valores = {}
+    for nombre, expr in re.findall(r"^#define\s+(FLAG_\w+|SYSTEM_FLAGS|TRAINER_FLAGS_\w+)\s+([^/\n]+)",
+                                   leer("include/constants/flags.h"), re.M):
+        expr = expr.strip()
+        m = re.fullmatch(r"\(?\s*(\w+)\s*\+\s*(0x[0-9A-Fa-f]+|\d+)\s*\)?", expr)
+        if re.fullmatch(r"0x[0-9A-Fa-f]+|\d+", expr):
+            valores[nombre] = int(expr, 0)
+        elif m and m.group(1) in valores:
+            valores[nombre] = valores[m.group(1)] + int(m.group(2), 0)
+        elif expr in valores:
+            valores[nombre] = valores[expr]
+    return valores
+
+
 def etiquetas():
     """Etiquetas de script y de texto de data/ y símbolos de C que usan los scripts."""
     nombres = set()
@@ -88,6 +104,8 @@ def macros_y_ordenes():
 
 def main():
     solo_resumen = "--resumen" in sys.argv
+    global FLAGS
+    FLAGS = valores_flags()
     consts = constantes()
     labels = etiquetas()
     grupos = json.loads(leer("data/maps/map_groups.json"))
@@ -193,6 +211,12 @@ def main():
                 if isinstance(item, str) and item.startswith("ITEM_") and item not in consts                         and not item.startswith(("ITEM_TM_", "ITEM_HM_")):
                     fallo("constante", c, f"bola en ({o['x']}, {o['y']}): {item} no existe")
         for b in m.get("bg_events", []):
+            # Los objetos ocultos necesitan un flag >= FLAG_HIDDEN_ITEMS_START: si no, no compila
+            if b.get("type") == "hidden_item":
+                valor = FLAGS.get(b.get("flag"))
+                if valor is not None and valor < FLAGS["FLAG_HIDDEN_ITEMS_START"]:
+                    fallo("oculto", c, f"objeto oculto en ({b['x']}, {b['y']}): {b['flag']} vale 0x{valor:03X}, "
+                                       f"menos que FLAG_HIDDEN_ITEMS_START (0x{FLAGS['FLAG_HIDDEN_ITEMS_START']:03X})")
             for clave in ("script", ):
                 sc = b.get(clave)
                 if sc and sc not in ("0x0", "NULL") and sc not in labels:
