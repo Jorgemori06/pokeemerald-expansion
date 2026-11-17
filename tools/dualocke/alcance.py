@@ -87,7 +87,9 @@ IGNORAR = {
 # ARBORADA (ALANA), pero la historia no va por ahí. Si alguien lo hace, la red del juego deja a
 # los entrenadores como mucho al cap (Dualocke_CapTrainerMon, src/dualocke.c).
 POR_HISTORIA = ["MAP_ROUTE121", "MAP_ROUTE122", "MAP_LILYCOVE_*", "MAP_MT_PYRE_*", "MAP_ROUTE12[4-9]",
-                "MAP_ROUTE13[0-4]", "MAP_MOSSDEEP_*", "MAP_PACIFIDLOG_*"]
+                "MAP_ROUTE13[0-4]", "MAP_MOSSDEEP_*", "MAP_PACIFIDLOG_*",
+                # Islas nuevas de Miguel (#83, #89; paso abierto en el #100), en esas mismas rutas de mar
+                "MAP_ISLA_NEVADA*", "MAP_ISLA_ARENOSA*", "MAP_ISLA_DE_RUINAS*", "MAP_ISLA_VOLCANICA*"]
 
 GFX_MO = {
     "OBJ_EVENT_GFX_CUTTABLE_TREE": "CORTE",
