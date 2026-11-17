@@ -829,7 +829,7 @@ Al jugar, los líderes eran difíciles por desequilibrio, no por cómo jugaban: 
   | Trampas y arrastre | Trampa Rocas, Púas, Púas Tóxicas o Red Viscosa, y Rugido o Remolino | Rugido o Remolino, y Protección, Tóxico o Mofa |
   | Espacio Raro | Espacio Raro y una mejora | Los lentos, Espacio Raro; los demás, una mejora y Espacio Raro. Los lentos físicos, Maldición |
   | Chetarse | Una mejora de su ataque y Sustituto, Protección o Agilidad | Lo mismo |
-  | Clima | Su clima, y Protección (Velo Aurora con nieve) | Meteorobola y su clima |
+  | Clima | Su clima, y Meteorobola (Velo Aurora con nieve) | Meteorobola y su clima |
   | Estados | Dos de Tóxico, Fuego Fatuo, Onda Trueno, Rayo Confuso, Drenadoras, Bostezo y Deslumbrar | Lo mismo |
   | Pantallas | Reflejo y Pantalla de Luz | Una mejora y una pantalla |
   | Aguante | Tóxico, Drenadoras o Fuego Fatuo, y Recuperación, Respiro o Protección | Lo mismo |
@@ -840,6 +840,10 @@ Al jugar, los líderes eran difíciles por desequilibrio, no por cómo jugaban: 
   - **Clima:** el del tipo del jefe (Agua y Eléctrico, lluvia; Fuego y Planta, sol; Roca, Tierra y Acero, arena; Hielo, nieve) o uno al azar si no tiene.
   - **Mejoras:** los que pegan físico, Danza Espada, Corpulencia o Danza Dragón; los especiales, Maquinación, Paz Mental o Danza Aleteo.
   - Los estilos de cada partida salen en el solucionario (`estilos_de_los_jefes`).
+  - **Comprobado con tests (Jorge, 16/11/2026; `test/dualocke_ia_estilos.c`):** un test por estilo, con la IA de `ia`, mira que el jefe usa de verdad sus movimientos. Si se cambia `ia` en el config, hay que cambiar `IA_JEFES` en el test.
+    - Trampas, Espacio Raro (el lento), chetarse, estados, velocidad y aguante: los usa desde el primer turno.
+    - **Pantallas:** el primer turno ataca y pone la pantalla cuando ha visto un ataque tuyo. Sin `Omniscient` no sabe si pegas físico o especial. Con `Assume Stab` (supone que llevas ataques de tu tipo) la pondría de entrada; no se ha puesto.
+    - **Clima:** la IA solo pone el clima si le sirve al Pokémon que está en el campo. Por eso el primero lleva Meteorobola en vez de Protección: con Protección atacaba y el clima lo ponía el segundo. Hasta el gimnasio 3 solo llevan un movimiento de estrategia (el primero, el clima; los demás, Meteorobola), así que ahí el clima solo sale si al primero le sirve por su tipo o sus ataques.
 - **Movimientos de cada Pokémon:** 2 de estrategia de su estilo y 2 "al azar".
   - **Los 2 al azar:** el mejor ataque de los que aprende por nivel (las tablas al azar) y uno al azar entre todos, como el cuarto de cualquier entrenador.
   - **Hasta el gimnasio 3:** 1 de estrategia, los 2 mejores ataques de su nivel y 1 al azar.
