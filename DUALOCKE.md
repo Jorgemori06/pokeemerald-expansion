@@ -363,6 +363,7 @@ ISLA SUR, ISLA LEJANA, ISLA ORIGEN y ROCA OMBLIGO ya existían, pero solo con un
   - Las islas del ferry llevan Pokémon que recuerdan a Ho-Oh y Lugia, los que había allí: Dragonite, Volcarona y Kingdra. ISLA LEJANA e ISLA ORIGEN, Pokémon Paradoja: Flutter Mane y Roaring Moon.
   - Pokémon Paradoja también en la ISLA ARENOSA (Sandy Shocks) y la PLAYA VOLCÁNICA (Slither Wing). **No son legendarios para el locke:** la regla de legendarios solo mira los restringidos, los singulares y los míticos.
   - Dondozo y Tatsugiri, en la cala de la MARISMA AZULIZA (con SURF).
+  - Hydreigon, en el BOSQUE SINIESTRO.
   - Con semilla salen otros, como siempre (`islas()` de `estaticos.py`): ahí se sortean por especie, así que dos guardianes de la misma especie sin semilla tendrían el mismo con semilla.
 
 - **Sin legendarios (Miguel):** "sustituirlos por Pokémon fuertes (pseudos, Pokémon con mega o Gigamax) capturables y que den recompensa".
@@ -409,6 +410,27 @@ Miguel: la marisma y la playa "quedan raras"; hay que mirar cómo están hechas 
   - **Islas de mar** (RUTAS 127-134): la arena va rodeada de un anillo de bajío de 2 o 3 casillas; sobre la arena hay peñas, y en el mar rocas sueltas y remolinos, separados del bajío (el mar de al lado del bajío lleva orilla). La hierba de una isla va en otra parte, con orilla de mar, y no toca la arena ni el bajío. Las peñas de la RUTA 127 tienen un hueco de base secreta: al copiarlas se tapa.
 - **Para copiar trozos del juego dentro de un plano:** las casillas que pone el script (peñas, un montículo) cuentan para sus vecinas como el terreno de alrededor. Si se marcan como `"pared"`, sus vecinas las ven como un acantilado (por ejemplo, el mar de debajo de un acantilado copiado).
 - **Resultado:** las parejas raras bajaron de 118 a 63 en la marisma y de 240 a 61 en la playa. Las que quedan son uniones entre trozos copiados de otros mapas.
+
+### BOSQUE SINIESTRO (hecho, Miguel, 17/11/2026; falta probarlo)
+
+El primer bioma "por tipo". Miguel pidió que cada tipo tenga su bioma; el análisis de los salvajes sin semilla dio que el tipo **Siniestro** no tenía zona propia: solo salía Poochyena por las rutas normales. Era el sitio F del mapa de propuestas (`fotos_zonas/13_propuestas_biomas.png`).
+
+- **Dónde:** se entra andando por el borde sur de la RUTA 123, al pie del MONTE PÍRICO (x 103-106), sin pantalla de carga. **Tramo 6** (cap 62), el de la RUTA 123.
+  - En esa parte de la RUTA 123, la fila de abajo tenía las copas de los árboles del borde (0x00E, que se pisa). Esas cuatro casillas pasan a ser hierba.
+- **Todo lo hace `tools/dualocke/crear_bosque_siniestro.py`** (50 × 44, con los gráficos de la RUTA 123: General + Lilycove). A la sombra (`WEATHER_SHADE`) y con la música de fuera del MONTE PÍRICO.
+  - **El camino:** un sendero baja hasta un primer claro con hierba alta, donde hay una bruja. Al este hay una charca oscura y al oeste, un callejón.
+  - **El centro:** un claro grande con un risco que se salta hacia abajo; también se rodea por el este.
+  - **El fondo:** un bosque profundo con senderos estrechos, claros de hierba alta y, al final, el claro del guardián. Desde ahí se vuelve a la entrada sin subir el risco (comprobado).
+- **Los árboles normales de Hoenn** (los de la RUTA 123) miden una casilla de ancho:
+  - **Interior:** 0x0C6 y 0x0C7.
+  - **Pie de la franja:** 0x016.
+  - **Copa:** el árbol de debajo pinta su copa en la casilla de hierba de encima, y esa casilla se puede pisar. Es 0x00E sobre hierba y 0x025 sobre hierba alta.
+  - Lo demás lo pinta `autotile.py`. Quedan 2 parejas de piezas que el juego no usa: la punta del risco junto a un árbol, y dos copas distintas juntas.
+- **Guardián:** en el claro del fondo. Sin semilla es Hydreigon (Siniestro/Dragón) a nivel 59 (regla `"tope"`); premio, Tabla Pavor. `FLAG_DUALOCKE_GUARDIAN_SINIESTRO` (0x91E). Con semilla sale otro fuerte (`islas()` de `estaticos.py`).
+- **Zona de captura propia:** `MAPSEC_BOSQUE_SINIESTRO`, al final de la lista, y `HOENN_EXTRA_MAPSEC_LAST` pasa a ser esa: 117 de 128. Cartel de madera.
+- **Salvajes** (hierba alta): Liepard, Ariados, Shiftry, Trevenant, Honchkrow, Skuntank, Gourgeist, Thievul, Spidops y Grimmsnarl; raros, Zoroark y Spiritomb.
+- **Sin entrenadores:** ya no queda ningún hueco libre en la lista (864 de 864). Hay una bruja que avisa del guardián sin decir cuál es (con semilla es otro).
+- **Objetos** (con semilla, al azar): Gafas de Sol, Piedra Lunar, Hechizo oculto y un Ticket-Recuerdo. Como ya no quedan bloques de flags seguidos, van en flags sueltos: 0x4F9, 0x4FA, 0x1AA y 0x1AB. `crear_bosque_siniestro.py` los pone en su sitio (`SITIO_OBJETOS`).
 
 ### CUMBRE METEORO (hecho, Miguel, 17/11/2026; falta probarlo)
 

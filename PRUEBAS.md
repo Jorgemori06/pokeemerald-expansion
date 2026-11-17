@@ -49,6 +49,14 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 - [ ] **Guardián** en la arena (Slither Wing sin semilla): da premio y no vuelve a salir.
 - [ ] **Mapa rehecho (17/11/2026):** se baja de la meseta a la playa saltando el risco o por la escalera, y se sube solo por la escalera. Que no se vea ninguna pieza rara (orillas, risco, árboles, la charca de marea).
 
+### BOSQUE SINIESTRO (desde el 17/11/2026)
+
+- [ ] **Entrada:** bajando por el borde sur de la RUTA 123 (x 103-106) se pasa al bosque sin cortes. Que no se vean copas de árbol sueltas ni troncos cortados en la unión. Al cruzar se oscurece (sombra) y cambia la música.
+- [ ] **El bosque:** que los árboles se vean bien (copas, troncos), que el risco del centro se salte hacia abajo y no se suba, y que se pueda volver a la entrada rodeándolo por el este.
+- [ ] **Cartel** "BOSQUE SINIESTRO", y que cuente como zona de captura propia.
+- [ ] **Salvajes** en la hierba alta (Siniestro, Fantasma y Bicho, nivel 54-58). La bruja del primer claro habla.
+- [ ] **Guardián** del claro del fondo (Hydreigon sin semilla): da la Tabla Pavor y no vuelve a salir. Con semilla, que salga otro.
+
 ### Islas de las rutas del sur (desde el 17/11/2026)
 
 - [ ] **ISLA DE RUINAS:** desde el norte de la RUTA 131, surfeando hacia arriba.
