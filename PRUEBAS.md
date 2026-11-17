@@ -46,7 +46,8 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 - [ ] **La unión:** que no se vea nada raro en el borde, ni desde la playa ni desde la RUTA 122. Es lo más delicado: los dos mapas tienen gráficos distintos.
 - [ ] **Sol fuera y en combate.** Cartel "PLAYA VOLCÁNICA". Salvajes en la ceniza; pesca y surf en el mar.
 - [ ] **Termas:** se ven bien (sin trozos de acantilado ni de hierba raros).
-- [ ] **Guardián** en la arena: da premio y no vuelve a salir.
+- [ ] **Guardián** en la arena (Slither Wing sin semilla): da premio y no vuelve a salir.
+- [ ] **Mapa rehecho (17/11/2026):** se baja de la meseta a la playa saltando el risco o por la escalera, y se sube solo por la escalera. Que no se vea ninguna pieza rara (orillas, risco, árboles, la charca de marea).
 
 ### Islas de las rutas del sur (desde el 17/11/2026)
 
@@ -60,6 +61,7 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 - [ ] **ISLA ARENOSA:** desde el este de la RUTA 129. Tormenta de arena. Salvajes en la hierba alta de entre los árboles. DARÍO lucha.
 - [ ] **Uniones:** que las tres se vean bien desde la ruta y desde la isla, sin trozos raros en el borde.
 - [ ] **Guardianes** (TORRE, CRÁTER e ISLA ARENOSA): dan premio y no vuelven a salir. Cada isla es una zona de captura.
+- [ ] **Guardianes nuevos (17/11/2026), sin semilla:** ISLA SUR Dragonite, ISLA LEJANA Flutter Mane, ISLA ORIGEN Roaring Moon, ROCA OMBLIGO Volcarona (cima) y Kingdra (fondo), ISLA ARENOSA Sandy Shocks. Que salga su sprite en el mapa y que capturar un Pokémon Paradoja no cuente como legendario.
 
 ### BOSQUE FRONDOSO y MANSIÓN OLVIDADA (desde el 17/11/2026)
 
@@ -79,8 +81,11 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 - [ ] **La unión con el pueblo:** que los árboles y la arena sigan bien por el borde (filas 3 a 16).
 - [ ] **Lluvia** y cartel "MARISMA AZULIZA". Es una zona de captura nueva: comprobar que la primera captura cuenta aquí y no en AZULIZA.
 - [ ] **Partida guardada de antes:** las zonas ya gastadas siguen gastadas (la variable nueva empieza a 0).
-- [ ] **TOMÁS y MARGARITA** te ven y luchan; los dos objetos de la hierba alta se pueden coger.
-- [ ] **Pesca** en las dos charcas con la CAÑA VIEJA.
+- [ ] **TOMÁS y MARGARITA** te ven y luchan. El Ticket-Recuerdo de la hierba se puede coger.
+- [ ] **Pesca** en el lago con la CAÑA VIEJA.
+- [ ] **Mapa rehecho (17/11/2026):** la escalera del risco sube de la arena a la pradera. Que no se vea ninguna pieza rara (orillas del lago, risco, árboles, la charca de marea).
+- [ ] **La cala (con SURF):** al otro lado del lago, Dondozo y Tatsugiri (sin semilla) a nivel 59 y la Semilla Milagro. Cada uno da premio y no vuelve a salir. Sin SURF no se llega.
+- [ ] **GOLPE ROCA:** las cuatro rocas se rompen y a veces sale un salvaje.
 
 ### DESIERTO PROFUNDO y RUINAS ARENOSAS (desde el 16/11/2026)
 

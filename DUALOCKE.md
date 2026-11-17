@@ -352,17 +352,24 @@ ISLA SUR, ISLA LEJANA, ISLA ORIGEN y ROCA OMBLIGO ya existían, pero solo con un
 
   | Isla | Medalla | Tramo | Pokémon fuerte (sin semilla) | Nivel | Premio |
   | --- | --- | --- | --- | --- | --- |
-  | ISLA SUR | 6.ª | 7 | Salamence | 70 | Cinta Elección |
-  | ISLA LEJANA | 7.ª | 8 | Tyranitar | 81 | Restos |
-  | ISLA ORIGEN | 8.ª | 9 | Metagross | 97 | Parche Habilidad |
-  | ROCA OMBLIGO, cima | 8.ª | 9 | Charizard | 97 | Vidasfera |
-  | ROCA OMBLIGO, fondo | 8.ª | 9 | Gyarados | 97 | Chaleco Asalto |
+  | ISLA SUR | 6.ª | 7 | Dragonite | 70 | Cinta Elección |
+  | ISLA LEJANA | 7.ª | 8 | Flutter Mane | 81 | Restos |
+  | ISLA ORIGEN | 8.ª | 9 | Roaring Moon | 97 | Parche Habilidad |
+  | ROCA OMBLIGO, cima | 8.ª | 9 | Volcarona | 97 | Vidasfera |
+  | ROCA OMBLIGO, fondo | 8.ª | 9 | Kingdra | 97 | Chaleco Asalto |
+
+- **Guardianes únicos (Miguel, 17/11/2026):** "que cada uno de los guardianes sea único". Antes se repetían Salamence, Tyranitar, Metagross, Charizard y Gyarados. Ahora, sin semilla, no hay dos iguales:
+  - Se quedan Houndoom (GRUTA ÍGNEA), Baxcalibur (ISLA NEVADA), Garchomp (RUINAS ARENOSAS), Gengar (MANSIÓN OLVIDADA), Charizard (ISLA VOLCÁNICA), Salamence (CUMBRE METEORO) y Metagross (ISLA DE RUINAS).
+  - Las islas del ferry llevan Pokémon que recuerdan a Ho-Oh y Lugia, los que había allí: Dragonite, Volcarona y Kingdra. ISLA LEJANA e ISLA ORIGEN, Pokémon Paradoja: Flutter Mane y Roaring Moon.
+  - Pokémon Paradoja también en la ISLA ARENOSA (Sandy Shocks) y la PLAYA VOLCÁNICA (Slither Wing). **No son legendarios para el locke:** la regla de legendarios solo mira los restringidos, los singulares y los míticos.
+  - Dondozo y Tatsugiri, en la cala de la MARISMA AZULIZA (con SURF).
+  - Con semilla salen otros, como siempre (`islas()` de `estaticos.py`): ahí se sortean por especie, así que dos guardianes de la misma especie sin semilla tendrían el mismo con semilla.
 
 - **Sin legendarios (Miguel):** "sustituirlos por Pokémon fuertes (pseudos, Pokémon con mega o Gigamax) capturables y que den recompensa".
   - Latios/Latias, Mew, Deoxys, Ho-Oh y Lugia se quedan en el mapa, pero siempre ocultos (el código del juego los usa, como el Mew que se esconde en la hierba). Tampoco está el puzle del triángulo de la ISLA ORIGEN.
   - En su sitio hay un Pokémon que se puede capturar. Es un estático: no gasta la captura de la zona. Si es de una línea que ya tienes, va a VETADOS, como siempre.
   - **Con semilla sale otro fuerte:** de una línea que acaba en 600 o más de estadísticas base, o con mega (también las de las formas Gigamax). `islas()` en `tools/dualocke/aleatorio/estaticos.py` los sortea aparte, con su propio RNG, así que los demás estáticos y regalos de las semillas en curso no cambian. El sprite del mapa es el de la especie que sale (`Dualocke_GraficoPokemonIsla`).
-  - **Nivel:** el del entrenador normal más fuerte de su tramo (cap − 3), con la regla `"tope"` de `reescalar_niveles.py`.
+  - **Nivel:** el del entrenador normal más fuerte de su tramo (cap − 3), con la regla `"tope"` de `reescalar_niveles.py`. La regla `("tope", tramo)` usa el tope de otro tramo: la cala de la MARISMA AZULIZA está en el tramo 2, pero solo se llega con SURF (tramo 6).
   - **Premio** al vencerlo o capturarlo: el objeto de la tabla y, si tiene mega, su megapiedra (`Dualocke_MegapiedraPokemonIsla`). Si huyes, se queda.
 - **Entrenadores (6):** TERRY y CINDY en la ISLA SUR, MIKE y las gemelas AMY Y LIV en la ISLA LEJANA, las gemelas GINA Y MIA en la ISLA ORIGEN y LUCAS en el cruce de ROCA OMBLIGO.
   - Son entrenadores que existían pero no salían en ningún mapa, así que no se gastan flags ni se rompe la partida guardada.
@@ -389,6 +396,18 @@ Qué mira:
 
 Las rarezas del juego original (puertas del ferry fuera del mapa…) están en `ORIGINALES`.
 
+### Dibujar mapas como los del juego: `autotile.py` (Miguel, 17/11/2026)
+
+Miguel: la marisma y la playa "quedan raras"; hay que mirar cómo están hechas las rutas, playas y pantanos del juego y diseñar igual. `tools/dualocke/autotile.py` aprende de los mapas originales de exterior (sin las zonas nuevas) qué pieza va en cada sitio según sus vecinas.
+
+- **Cómo se usa:** el script de la zona dibuja el mapa con letras (`PLANO`): `.` hierba, `,` hierba alta, `~` agua, `s` arena, `R` risco… `Aprendiz.pintar()` elige cada pieza (las orillas, las esquinas, los bordes de la hierba) y `Aprendiz.revisar()` cuenta las parejas de piezas vecinas que no salen en ningún mapa del juego. `arboles_grandes()` pinta los árboles de 2 × 2 (con la copa de hierba alta si hay hierba alta encima) y avisa si un grupo queda cortado.
+- **Reglas aprendidas del juego:**
+  - La arena de playa **nunca toca la hierba**: siempre hay un risco o agua entre las dos (como la playa de la RUTA 104). El risco va con la hierba arriba o a la izquierda y la arena abajo o a la derecha, y se baja por una escalera.
+  - En una charca, la orilla de arriba y los lados se dibujan sobre el agua, y la de abajo sobre la hierba (o la arena).
+  - Los árboles de AZULIZA solo van sobre arena; AZULIZA no tiene hierba.
+  - Los caminos de tierra tienen su propio borde (piezas 0x118-0x12A).
+- **Resultado:** las parejas raras bajaron de 118 a 63 en la marisma y de 240 a 61 en la playa. Las que quedan son uniones entre trozos copiados de otros mapas.
+
 ### CUMBRE METEORO (hecho, Miguel, 17/11/2026; falta probarlo)
 
 - **Dónde:** una cueva nueva en la pared de roca de la RUTA 115, junto a la entrada de la CATARATA METEORO (x 31, fila 39; se entra desde abajo, andando). **Tramo 4** (cap 43).
@@ -414,17 +433,18 @@ Las rarezas del juego original (puertas del ferry fuera del mapa…) están en `
   - Una conexión entre mapas con gráficos distintos solo se ve bien si, desde cada lado, lo que se ve del otro mapa son gráficos generales. Lo comprueba `tools/dualocke/crear_playa_volcanica.py`, que hace todo.
   - Se cruza por arriba, donde el borde de la RUTA 122 solo tiene mar y rocas generales.
   - Las 8 columnas del este de la playa son solo mar y rocas generales, y desde la fila 8 una fila de rocas no deja acercarse al borde. Desde ahí se vería la orilla del monte, que es de Algaria.
-- **La playa** (40 × 40), con sol:
-  - mar con rocas y una franja de arena con su orilla (gráficos generales, como en AZULIZA);
-  - suelo de ceniza del MONTE CENIZO con manchas de ceniza que tienen salvajes y árboles de ceniza;
-  - dos pozas de aguas termales de LAVACALDA, pegadas al borde de arriba (su borde está dibujado sobre el acantilado) y con arena alrededor. No se puede entrar: son de adorno.
-- **Guardián** en la arena: sin semilla, Gyarados a nivel 70 (regla `"tope"`); premio, Agua Mística y su megapiedra. `FLAG_DUALOCKE_GUARDIAN_PLAYA` (0x917).
+- **La playa** (40 × 40), con sol. **Rehecha el 17/11/2026** con `autotile.py` (ver arriba), como la playa de la RUTA 104 a los pies de un volcán:
+  - **Abajo y a la derecha, la playa:** arena con su orilla y su bajío, una charca de marea, rocas en el mar y un arrecife junto al borde este.
+  - **Un risco** separa la playa de la meseta, con una escalera (x 16-17, fila 18).
+  - **Arriba y a la izquierda, la meseta:** pradera con manchas de hierba alta, árboles, flores, un camino de tierra de la escalera a las termas y una peña volcánica de la RUTA 112.
+  - **Las termas:** el rincón de las aguas termales de LAVACALDA, con su poza y su arena, bajo el acantilado del volcán.
+- **Guardián** en la arena: sin semilla, Slither Wing a nivel 70 (regla `"tope"`); premio, Energía Potenciadora y su megapiedra si tiene. `FLAG_DUALOCKE_GUARDIAN_PLAYA` (0x917).
 - **Un bañista junto a las termas.** No hay entrenadores: ya no queda ninguno libre.
 - **Zona de captura propia:** `MAPSEC_PLAYA_VOLCANICA` (115 de 128).
 - **Salvajes:**
   - Ceniza: Numel, Slugma, Torkoal, Camerupt, Magcargo, Salandit, Krabby, Crabrawler, Dwebble, Sandygast y, raros, Turtonator y Larvesta.
   - Mar: el de las islas del sur. Pesca de cangrejos y Gyarados.
-- **Objetos** (`OBJETOS_PLAYA`, flags 0x918-0x91A, y un Ticket-Recuerdo, 0x91C): Piedra Agua, Roca Lluvia y una Perla oculta. Se movieron a mano: el script los ponía todos junto al guardián.
+- **Objetos** (`OBJETOS_PLAYA`, flags 0x918-0x91A, y un Ticket-Recuerdo, 0x91C): Piedra Agua, Roca Lluvia y una Perla oculta. Se movieron a mano: el script los ponía todos junto al guardián. Al rehacer el mapa se volvieron a mover tres que habían quedado en el risco, en el mar y en el bajío.
 
 ### Islas de las rutas del sur (hecho, Miguel, 17/11/2026; falta probarlo)
 
@@ -447,7 +467,7 @@ Tres islas nuevas del **tramo 8** (cap 84), cada una pegada al borde de una ruta
 - **Guardianes** (el sistema de las islas del ferry, regla `"tope"`: nivel 81), sin semilla:
   - Metagross en la TORRE (premio: Cinta Experto). `FLAG_DUALOCKE_GUARDIAN_ISLA_RUINAS` (0x909).
   - Charizard en el CRÁTER (Roca Calor). `FLAG_DUALOCKE_GUARDIAN_VOLCAN` (0x90A).
-  - Tyranitar en la ISLA ARENOSA (Roca Suave). `FLAG_DUALOCKE_GUARDIAN_ARENOSA` (0x90B).
+  - Sandy Shocks en la ISLA ARENOSA (Roca Suave). `FLAG_DUALOCKE_GUARDIAN_ARENOSA` (0x90B). Era Tyranitar: se cambió para que no se repitiera (ver "Guardianes únicos").
   - Con semilla salen otros fuertes (`islas()` de `estaticos.py`). Cada uno da también su megapiedra.
 - **Zonas de captura propias (3):** `MAPSEC_ISLA_DE_RUINAS`, `MAPSEC_ISLA_VOLCANICA` y `MAPSEC_ISLA_ARENOSA` (cada isla con su interior cuenta como una). Se usan 114 de 128.
 - **Entrenadores:** solo DARÍO, entrenador guay de la ISLA ARENOSA (Krookodile, Hippowdon y Flygon). Es `TRAINER_RED`, el último entrenador de Esmeralda sin usar. **Ya no queda ninguno libre:** para poner más habría que agrandar la lista (y eso mueve los flags del sistema y rompe las partidas guardadas) o reutilizar otros.
@@ -484,12 +504,13 @@ Tres islas nuevas del **tramo 8** (cap 84), cada una pegada al borde de una ruta
 ### MARISMA AZULIZA (hecho, Miguel, 17/11/2026; falta probarlo)
 
 - **Dónde:** al oeste de PUEBLO AZULIZA, pegada al pueblo (conexión por el borde, sin pantalla de carga). Se llega andando por la arena del oeste del pueblo: **tramo 2** (cap 23).
-- **El mapa** (36 × 20), con los gráficos de AZULIZA (General + Dewford):
-  - borde de árboles como el del pueblo;
-  - hierba con manchas de hierba alta y flores;
-  - dos charcas (copiadas de la RUTA 123 y la RUTA 102);
-  - siempre **llueve**;
-  - cartel a la entrada.
+- **El mapa** (48 × 34), con los gráficos de AZULIZA (General + Dewford). **Rehecho el 17/11/2026** con `autotile.py` (ver arriba). Siempre **llueve**.
+  - **Este, la playa de AZULIZA:** arena con grupos de árboles del pueblo, una charca de marea y el cartel a la entrada.
+  - **Un risco** separa la arena de la pradera, más alta, con una escalera (x 29-30, fila 13).
+  - **Centro, la pradera:** manchas de hierba alta y de hierba muy alta, sitios sin hierba, flores, árboles grandes sueltos y en grupo y una charca pequeña.
+  - **Oeste, el lago** (pesca y surf) y, detrás, **una cala que solo se alcanza con SURF**.
+  - Rocas para GOLPE ROCA (Geodude, Nosepass, Roggenrola, Binacle).
+- **La cala (con SURF, tramo 6):** Dondozo y Tatsugiri, cada uno con su flag (`FLAG_DUALOCKE_MARISMA_DONDOZO` 0x1E2 y `FLAG_DUALOCKE_MARISMA_TATSUGIRI` 0x1E3) y su premio: Casco Dentado y Agua Mística. A nivel 59 (regla `("tope", 6)`). Con semilla, otros fuertes. La Semilla Milagro también está en la cala.
 - **Todo lo hace `tools/dualocke/crear_marisma_azuliza.py`.** El mapa va al final del grupo de AZULIZA y de `layouts.json`.
 - **Zona de captura propia:** `MAPSEC_MARISMA_AZULIZA`, al final de la lista. `HOENN_EXTRA_MAPSEC_LAST` pasa a ser esa: 109 bits.
   - Se ha añadido una variable de zonas, `VAR_DUALOCKE_ZONES_7` (era `VAR_UNUSED_0x40FE`, sin usar): ahora caben 128 zonas.
@@ -502,7 +523,7 @@ Tres islas nuevas del **tramo 8** (cap 84), cada una pegada al borde de una ruta
   - Hierba: Wooper, Lotad, Surskit, Yanma, Tympole, Shroomish, Croagunk, Paras, Shellos, Stunfisk, Dewpider y, raro, Goomy.
   - Pesca en las charcas con la CAÑA VIEJA (la dan en AZULIZA): Barboach, Poliwag, Goldeen, Wishiwashi, Tympole, Chewtle, Basculin…
   - Surf, para cuando se vuelva: Surskit, Lotad, Wooper, Poliwag y Chewtle.
-- **Objetos:** Semilla Milagro (`FLAG_ITEM_MARISMA_MIRACLE_SEED`, 0x88F) y un Ticket-Recuerdo (`FLAG_ITEM_TICKET_MARISMA_AZULIZA`, 0x8E3), los dos en la hierba alta.
+- **Objetos:** Semilla Milagro (`FLAG_ITEM_MARISMA_MIRACLE_SEED`, 0x88F, en la cala) y un Ticket-Recuerdo (`FLAG_ITEM_TICKET_MARISMA_AZULIZA`, 0x8E3, en la hierba muy alta del norte).
 
 ### DESIERTO PROFUNDO y RUINAS ARENOSAS (hecho, Miguel, 16/11/2026; falta probarlo)
 
