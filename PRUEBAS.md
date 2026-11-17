@@ -33,6 +33,19 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 - [ ] **Tiendas:** una compra por objeto (salvo Balls, Repelentes, Bayas y Caramelos), y el segundo dependiente en las ciudades.
 - [ ] **Caps de nivel:** al llegar al cap no se gana experiencia y los Caramelos Raros no funcionan por encima.
 
+### Islas de las rutas del sur (desde el 17/11/2026)
+
+- [ ] **ISLA DE RUINAS:** desde el norte de la RUTA 131, surfeando hacia arriba.
+  - La cueva de la orilla de abajo sale por la del montículo, y se vuelve igual.
+  - La puerta de la torre lleva a la TORRE; la escalera de arriba ya no está.
+  - Niebla fuera y Campo de Niebla en combate.
+- [ ] **ISLA VOLCÁNICA:** desde el sur de la RUTA 134 (la parte sin corriente, cerca de PORTUAL).
+  - La cueva del montículo baja al CRÁTER y la cueva nueva del escalón sube.
+  - En la ceniza salen salvajes. Sol fuera y en combate.
+- [ ] **ISLA ARENOSA:** desde el este de la RUTA 129. Tormenta de arena. Salvajes en la hierba alta de entre los árboles. DARÍO lucha.
+- [ ] **Uniones:** que las tres se vean bien desde la ruta y desde la isla, sin trozos raros en el borde.
+- [ ] **Guardianes** (TORRE, CRÁTER e ISLA ARENOSA): dan premio y no vuelven a salir. Cada isla es una zona de captura.
+
 ### BOSQUE FRONDOSO y MANSIÓN OLVIDADA (desde el 17/11/2026)
 
 - [ ] **Entrada:** en el claro del noreste del BOSQUE PETALIA hay dos árboles de CORTE; detrás, el pasillo lleva al BOSQUE FRONDOSO sin pantalla de carga, y se vuelve igual.

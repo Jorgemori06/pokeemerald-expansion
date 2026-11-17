@@ -389,6 +389,38 @@ Qué mira:
 
 Las rarezas del juego original (puertas del ferry fuera del mapa…) están en `ORIGINALES`.
 
+### Islas de las rutas del sur (hecho, Miguel, 17/11/2026; falta probarlo)
+
+Tres islas nuevas del **tramo 8** (cap 84), cada una pegada al borde de una ruta de mar. Se llega surfeando, sin pantalla de carga, y usan los gráficos de su ruta (si no, la conexión se vería rota). Todo lo hace `tools/dualocke/crear_islas_sur.py`.
+
+- **Sitios elegidos mirando las corrientes:**
+  - Las RUTAS 132-134 tienen sus bordes cerrados por rocas, y sus corrientes solo empujan al oeste: no se llega a los huecos.
+  - El borde este de la RUTA 127 es una pared de roca.
+  - Por eso dos islas no están donde decía ZONAS.md (ver cada una).
+- **Los islotes se copian con `isla()`:** solo las casillas que no son mar y están unidas al islote. Así no se cuelan rocas sueltas, corrientes ni trozos de otras islas.
+- **ISLA DE RUINAS**, al norte de la RUTA 131 (en ZONAS.md, al sur de la RUTA 132), junto al PILAR CELESTE:
+  - El islote del PILAR CELESTE con su torre, con niebla (Campo de Niebla en combate).
+  - El rellano de la torre está rodeado de acantilados: la cueva de la orilla de abajo es un túnel que sale por la cueva del montículo.
+  - La puerta de la torre, abierta, lleva a la **TORRE**: la planta 1 del PILAR CELESTE, sin la escalera, con el guardián delante.
+- **ISLA VOLCÁNICA**, al sur de la RUTA 134, donde el mar no tiene corriente (se llega desde PORTUAL):
+  - Un bajío de la RUTA 134 con el montículo del PILAR CELESTE. Sol.
+  - Su cueva baja al **CRÁTER**: la cima del MONTE CENIZO (lago de lava y terrazas, sin la estación del teleférico). Tiene manchas de ceniza con salvajes y una salida nueva: la entrada de la GUARIDA MAGMA del CAMINO ESCABROSO, puesta en un escalón.
+- **ISLA ARENOSA**, al este de la RUTA 129 (en ZONAS.md, al este de la RUTA 127):
+  - Dos islotes de arena y uno de árboles de la RUTA 127, sin las bases secretas. Hierba alta entre los árboles. Tormenta de arena.
+- **Guardianes** (el sistema de las islas del ferry, regla `"tope"`: nivel 81), sin semilla:
+  - Metagross en la TORRE (premio: Cinta Experto). `FLAG_DUALOCKE_GUARDIAN_ISLA_RUINAS` (0x909).
+  - Charizard en el CRÁTER (Roca Calor). `FLAG_DUALOCKE_GUARDIAN_VOLCAN` (0x90A).
+  - Tyranitar en la ISLA ARENOSA (Roca Suave). `FLAG_DUALOCKE_GUARDIAN_ARENOSA` (0x90B).
+  - Con semilla salen otros fuertes (`islas()` de `estaticos.py`). Cada uno da también su megapiedra.
+- **Zonas de captura propias (3):** `MAPSEC_ISLA_DE_RUINAS`, `MAPSEC_ISLA_VOLCANICA` y `MAPSEC_ISLA_ARENOSA` (cada isla con su interior cuenta como una). Se usan 114 de 128.
+- **Entrenadores:** solo DARÍO, entrenador guay de la ISLA ARENOSA (Krookodile, Hippowdon y Flygon). Es `TRAINER_RED`, el último entrenador de Esmeralda sin usar. **Ya no queda ninguno libre:** para poner más habría que agrandar la lista (y eso mueve los flags del sistema y rompe las partidas guardadas) o reutilizar otros.
+- **Salvajes:**
+  - Mar: pesca y surf en las tres islas.
+  - TORRE: POKéMON de ruinas (Bronzong, Golurk, Sigilyph, Beheeyem, Claydol…; raros, Metang y Zweilous).
+  - CRÁTER: de fuego (Magcargo, Camerupt, Torkoal, Magmortar, Salazzle, Coalossal…; raros, Volcarona y Larvesta).
+  - ISLA ARENOSA: de tierra y arena (Sandslash, Krookodile, Hippowdon, Flygon…; raros, Gabite y Pupitar).
+- **Objetos** (`OBJETOS_ISLAS_SUR`, flags 0x90C-0x912, y un Ticket-Recuerdo por isla, 0x914-0x916): Gafas Especiales, Más PP, Llamasfera, Piedra Fuego, Perla Grande, Gafa Protectora y Sarta de Perlas. Se movieron a mano los que el script ponía delante de DARÍO o juntos.
+
 ### BOSQUE FRONDOSO y MANSIÓN OLVIDADA (hecho, Miguel, 17/11/2026; falta probarlo)
 
 - **Dónde:** en el claro del noreste del BOSQUE PETALIA se abre un pasillo entre los árboles, tapado por dos árboles de CORTE (`FLAG_TEMP_13` y `_14`). Lleva al BOSQUE FRONDOSO por el borde, sin pantalla de carga. Hace falta CORTE: **tramo 2** (cap 23).
