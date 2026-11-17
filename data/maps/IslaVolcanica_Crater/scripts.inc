@@ -15,7 +15,7 @@ IslaVolcanica_Crater_EventScript_Pokemon::
 	setvar VAR_TEMP_8, SPECIES_CHARIZARD
 	setvar VAR_TEMP_9, ITEM_HEAT_ROCK
 	call Dualocke_EventScript_AvisoIsla
-	setwildbattle SPECIES_CHARIZARD, 70
+	setwildbattle SPECIES_CHARIZARD, 81
 	dowildbattle
 	call Dualocke_EventScript_ResultadoIsla
 	goto_if_eq VAR_RESULT, FALSE, IslaVolcanica_Crater_EventScript_PokemonSigue

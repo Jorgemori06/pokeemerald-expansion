@@ -27,6 +27,7 @@ Los entrenadores, los salvajes y los objetos los ponen zonas_nuevas.py y colocar
 """
 
 import json
+import re
 import os
 import struct
 import sys
@@ -290,6 +291,13 @@ def guardian(carpeta):
 
 def script_guardian(carpeta, donde):
     _, _, especie, nivel, premio, flag = GUARDIANES[carpeta]
+    # El nivel lo pone reescalar_niveles.py (regla "tope"): si el script ya existe, se conserva el suyo.
+    # Si no, al volver a lanzar este script después de la cadena de niveles se perdería.
+    ruta = f"data/maps/{carpeta}/scripts.inc"
+    if os.path.exists(ruta):
+        anterior = re.search(rf"setwildbattle {especie}, (\d+)", leer(ruta))
+        if anterior:
+            nivel = int(anterior.group(1))
     return f"""
 @ Dualocke: el guardián de {donde}, un Pokémon fuerte que se puede capturar, como en las islas del
 @ ferry (data/scripts/dualocke_islas.inc). Con semilla sale otro de su tipo (estaticos.py, islas()).

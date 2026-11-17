@@ -15,7 +15,7 @@ IslaDeRuinas_Torre_EventScript_Pokemon::
 	setvar VAR_TEMP_8, SPECIES_METAGROSS
 	setvar VAR_TEMP_9, ITEM_EXPERT_BELT
 	call Dualocke_EventScript_AvisoIsla
-	setwildbattle SPECIES_METAGROSS, 70
+	setwildbattle SPECIES_METAGROSS, 81
 	dowildbattle
 	call Dualocke_EventScript_ResultadoIsla
 	goto_if_eq VAR_RESULT, FALSE, IslaDeRuinas_Torre_EventScript_PokemonSigue
