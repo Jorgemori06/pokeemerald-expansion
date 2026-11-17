@@ -748,3 +748,20 @@ void Dualocke_CapWildMonTo(enum Species *species, u8 *level, u32 cap)
         *level = 1;
     *species = Dualocke_SpeciesForWildLevel(*species, *level);
 }
+
+// Ningún POKéMON de un entrenador rival por encima del level cap (red de seguridad, como la de
+// los salvajes): si algún entrenador se alcanza antes de su tramo (tools/dualocke/alcance.py),
+// sus POKéMON salen al cap, con la etapa que les toca para ese nivel. Al cap justo y sin
+// Random(), para que el mismo entrenador salga siempre igual.
+void Dualocke_CapTrainerMon(enum Species *species, u8 *level)
+{
+    Dualocke_CapTrainerMonTo(species, level, GetCurrentLevelCap());
+}
+
+void Dualocke_CapTrainerMonTo(enum Species *species, u8 *level, u32 cap)
+{
+    if (*level <= cap)
+        return;
+    *level = cap;
+    *species = Dualocke_SpeciesForWildLevel(*species, *level);
+}

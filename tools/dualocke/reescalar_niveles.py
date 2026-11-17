@@ -112,6 +112,19 @@ TRAMOS = {
 #   salvajes de la 103 a nivel 9-11 al principio del juego (encontrado jugando, 01/11/2026).
 TRAMO_ENTRENADORES_DE_MAPA = {"MAP_ROUTE103": 3}
 
+# Entrenadores sueltos que se alcanzan antes que el resto de su mapa (los encuentra
+# tools/dualocke/alcance.py). Van al rango de ese tramo, según su nivel original. Se aplica al
+# final: no cuentan para las bandas, los salvajes, los estáticos ni las revanchas, que se quedan
+# como estaban (para no cambiar nada más de las partidas en curso).
+# - RUTA 118, orilla oeste: se pisa nada más salir de MALVALONA (tramo 3), y el resto de la ruta
+#   necesita SURF (tramo 6). Jorge se metió en un doble contra ROSA y DEANDRE a nivel 47 con el
+#   cap a 32 (17/11/2026).
+# - RUTA 111, parte sur: entre MALVALONA y las rocas de GOLPE ROCA (tramo 3); el resto, tramo 4.
+TRAMO_DE_ENTRENADOR = {
+    "TRAINER_ROSE_1": 3, "TRAINER_DEANDRE": 3, "TRAINER_WADE": 3, "TRAINER_DALTON_1": 3,
+    "TRAINER_TYRON": 3, "TRAINER_CELINA": 3, "TRAINER_BIANCA": 3, "TRAINER_HAYDEN": 3,
+}
+
 # Pesca que se alcanza a pie antes que sus entrenadores (que se combaten con SURF): esos mapas
 # pescan al nivel de la pesca de otro mapa del tramo en el que llegas andando, con la CAÑA VIEJA
 # (AZULIZA, tramo 2) o en cuanto llegas (encontrado jugando, 11/11/2026: un Audino de nivel 44
@@ -361,6 +374,12 @@ def main():
         texto = f.read()
     salvajes = json.loads(git_show(WILD))
     resumen_salvajes = calcular_salvajes(salvajes, nuevos, tramo_de, mapas, bandas)
+
+    # Entrenadores sueltos que se alcanzan antes que su mapa: solo cambia su nivel
+    for t, s in TRAMO_DE_ENTRENADOR.items():
+        nmin, nmax = rango_tramo(s)
+        nuevos[t] = [max(2, interpolar(v, *bandas[s], nmin, nmax)) for v in base[t]]
+        tramo_de[t] = s
 
     # Los equipos que han cambiado de tamaño (jefes) los reescribe equipos_jefes.py
     actuales = leer_entrenadores(texto)
