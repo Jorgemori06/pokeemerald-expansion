@@ -44,7 +44,7 @@ LADERA_HIERBA, HIERBA_LADERA = [(14, 58, 27, 61), (13, 64, 25, 67), (7, 69, 15, 
 CUMBRE_TROZO = ("Route115", (18, 0, 40, 31))   # sin la franja del bosque de la izquierda
 CUMBRE_LLEGADA = (25, 24)                     # una base secreta: pasa a ser la cueva de llegada
 CUMBRE_HIERBA, HIERBA_CUMBRE = [(18, 9, 29, 12), (21, 13, 29, 17), (32, 11, 37, 16)], 0x20A
-GUARDIAN = (30, 7, "SPECIES_SALAMENCE", 34, "ITEM_DRAGON_FANG", "FLAG_DUALOCKE_GUARDIAN_CUMBRE")
+GUARDIAN = (21, 7, "SPECIES_SALAMENCE", 34, "ITEM_DRAGON_FANG", "FLAG_DUALOCKE_GUARDIAN_CUMBRE")
 
 
 def leer(ruta):
