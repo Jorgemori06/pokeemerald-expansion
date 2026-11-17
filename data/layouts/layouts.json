@@ -9513,6 +9513,26 @@
       "secondary_tileset": "gTileset_Lavaridge",
       "border_filepath": "data/layouts/PlayaVolcanica/border.bin",
       "blockdata_filepath": "data/layouts/PlayaVolcanica/map.bin"
+    },
+    {
+      "id": "LAYOUT_CUMBRE_METEORO_LADERA",
+      "name": "CumbreMeteoro_Ladera_Layout",
+      "width": 40,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fallarbor",
+      "border_filepath": "data/layouts/CumbreMeteoro_Ladera/border.bin",
+      "blockdata_filepath": "data/layouts/CumbreMeteoro_Ladera/map.bin"
+    },
+    {
+      "id": "LAYOUT_CUMBRE_METEORO",
+      "name": "CumbreMeteoro_Layout",
+      "width": 22,
+      "height": 31,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fallarbor",
+      "border_filepath": "data/layouts/CumbreMeteoro/border.bin",
+      "blockdata_filepath": "data/layouts/CumbreMeteoro/map.bin"
     }
   ]
 }

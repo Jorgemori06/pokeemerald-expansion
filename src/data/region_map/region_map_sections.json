@@ -1718,6 +1718,14 @@
       "y": 4,
       "width": 1,
       "height": 1
+    },
+    {
+      "id": "MAPSEC_CUMBRE_METEORO",
+      "name": "CUMBRE METEORO",
+      "x": 0,
+      "y": 1,
+      "width": 1,
+      "height": 1
     }
   ]
 }

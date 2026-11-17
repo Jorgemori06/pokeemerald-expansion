@@ -373,6 +373,13 @@
       "elevation": 0,
       "dest_map": "MAP_TERRA_CAVE_ENTRANCE",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 31,
+      "y": 39,
+      "elevation": 3,
+      "dest_map": "MAP_CUMBRE_METEORO_LADERA",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
