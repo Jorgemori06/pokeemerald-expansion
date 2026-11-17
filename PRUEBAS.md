@@ -104,6 +104,7 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 
 - [ ] **Conexión:** surfeando hacia el norte desde la RUTA 124 se pasa a la ISLA NEVADA sin cortes, y la nieve empieza al cruzar.
 - [ ] **El mapa:** que no se vean trozos raros de roca en el borde de la RUTA 124 ni en el islote.
+- [ ] **Isla rehecha (17/11/2026):** que las orillas, el bajío, la cresta y las peñas se vean bien. Que la entrada de la cueva, en el pie de la cresta, lleve a la CUEVA HELADA y que la escalera devuelva delante de ella. Que en la cresta y las peñas no se pueda hacer una base secreta.
 - [ ] **Cartel de zona:** "ISLA NEVADA", también en la cueva, y que cuente como zona de captura propia.
 - [ ] **Nieve en combate**, también en la cueva (dentro no nieva, así que ahí no).
 - [ ] **Guardián de la CUEVA HELADA**, abajo del todo: se llega resbalando y da premio.

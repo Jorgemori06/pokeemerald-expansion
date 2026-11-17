@@ -564,7 +564,10 @@ Tres islas nuevas del **tramo 8** (cap 84), cada una pegada al borde de una ruta
 `ZONAS.md`, propuesta 1. Una isla al norte de la RUTA 124 con nieve y una cueva de hielo.
 
 - **Cómo se llega:** surfeando hacia el norte desde la RUTA 124, sin pantalla de carga (conexión `up`). **Tramo 7** (cap 73).
-- **La isla** (80 × 40): mar con el islote grande de la RUTA 125 (el de la entrada de la CUEVA CARDUMEN) y sus bancos de arena, pegados arriba.
+- **La isla** (80 × 40). **Rehecha el 17/11/2026 con `autotile.py`**, como las islas del sur (ver "Dibujar mapas como los del juego"). Antes era el islote de la CUEVA CARDUMEN de la RUTA 125 pegado arriba, cortado por el borde del mapa, con mucho mar vacío.
+  - Ahora es una isla grande de arena con su anillo de bajío y una cala al sur, peñas y rocas en el mar.
+  - Arriba está la cresta de roca del islote grande de la RUTA 127, sin sus huecos de base secreta. En su pie se abre la entrada de la cueva, con las piezas de la cueva del PILAR CELESTE.
+  - Lo hace `crear_isla_nevada.py` con `dibujar()` y `sello()` de `crear_islas_sur.py`.
   - Usa los mismos gráficos que la RUTA 124, para que la conexión se vea bien.
   - Clima `WEATHER_SNOW`: **nieve en combate**. Esmeralda no tiene suelo nevado para fuera, así que la nieve es la que cae.
 - **Guardián de la CUEVA HELADA (17/11/2026):** al fondo de la cueva, donde estaba la Piedra Hielo (que pasa junto al Hielo Perpetuo).
@@ -574,12 +577,12 @@ Tres islas nuevas del **tramo 8** (cap 84), cada una pegada al borde de una ruta
 - **Zona de captura propia:** `MAPSEC_ISLA_NEVADA` (la isla y la cueva cuentan como una), al final de la lista. `HOENN_EXTRA_MAPSEC_LAST` pasa a ser esa: 106 de 112 bits.
 - **Todo lo hace `tools/dualocke/crear_isla_nevada.py`.** La isla va al final del grupo de las rutas y la cueva al de las mazmorras: ningún mapa cambia de número.
 - **Entrenadores (3):**
-  - DUDLEY y KAYLEE, nadadores que existían sin usar, en el agua alrededor del islote. Los reescala `reescalar_niveles.py` (65-67).
+  - DUDLEY y KAYLEE, nadadores que existían sin usar, en el mar al sur de la isla, por donde se llega. Los reescala `reescalar_niveles.py` (65-67).
   - NIEVES, entrenadora guay nueva en la cueva (`TRAINER_NIEVES`, 858; `TRAINERS_COUNT_EMERALD` 859). Lleva Froslass, Abomasnow y Walrein a nivel 69-70 (`zonas_nuevas.py`).
 - **Salvajes:**
   - Agua y pesca: Spheal, Seel, Delibird, Arctovish, Cloyster, Lapras…
   - Cueva: Snorunt, Swinub, Snover, Cubchoo, Vanillite, Snom, Bergmite, Sneasel, Cetoddle, Cryogonal, Eiscue y, raro, Frigibax.
-- **Objetos:** Hielo Perpetuo y Piedra Hielo en la cueva, y una Bola de Nieve oculta en el banco de arena (`OBJETOS_NEVADA`, flags 0x8FA-0x8FC). Después de colocarlos se movieron a mano a sitios que no tapan el pasillo.
+- **Objetos:** Hielo Perpetuo y Piedra Hielo en la cueva, y una Bola de Nieve oculta en la punta oeste de la isla (`OBJETOS_NEVADA`, flags 0x8FA-0x8FC). Después de colocarlos se movieron a mano a sitios que no tapan el pasillo. Los de fuera los pone `crear_isla_nevada.py` en su sitio (`SITIOS`).
 
 ### GRUTA ÍGNEA (hecho, Miguel, 16/11/2026; falta probarlo)
 
