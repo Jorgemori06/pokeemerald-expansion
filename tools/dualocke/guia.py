@@ -148,7 +148,7 @@ def main():
     mapas = Mapas()
     nombres = nombres_es()
     datos = {"megapiedras": [], "tickets": []}
-    grupos = [("megapiedras", c.MEGAPIEDRAS, "FLAG_ITEM_MEGA_", None),
+    grupos = [("megapiedras", c.MEGAPIEDRAS + getattr(c, "MEGAPIEDRAS_GIGAMAX", []), "FLAG_ITEM_MEGA_", None),
               ("tickets", getattr(c, "TICKETS", []) + getattr(c, "TICKETS_OCULTOS", []), "FLAG_ITEM_TICKET_", "Ticket-Recuerdo")]
     for clave, lista, prefijo, nombre_fijo in grupos:
         for objeto, carpeta, tipo, _ in lista:

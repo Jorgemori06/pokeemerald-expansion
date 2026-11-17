@@ -225,6 +225,14 @@
       "elevation": 4,
       "item": "ITEM_ULTRA_BALL",
       "flag": "FLAG_HIDDEN_ITEM_VICTORY_ROAD_1F_ULTRA_BALL"
+    },
+    {
+      "type": "hidden_item",
+      "x": 30,
+      "y": 22,
+      "elevation": 3,
+      "item": "ITEM_DURALUDONITE",
+      "flag": "FLAG_ITEM_MEGA_DURALUDONITE"
     }
   ]
 }

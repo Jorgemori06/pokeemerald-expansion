@@ -1277,32 +1277,32 @@
 #define FLAG_ITEM_COMP_TERRAIN_EXTENDER    0x4C7 // Dualocke: objeto competitivo en el mapa
 #define FLAG_ITEM_COMP_ABILITY_SHIELD      0x4C8 // Dualocke: objeto competitivo en el mapa
 #define FLAG_ITEM_COMP_ABILITY_PATCH       0x4C9 // Dualocke: objeto competitivo en el mapa
-#define FLAG_UNUSED_0x4CA                                           0x4CA // Unused Flag
-#define FLAG_UNUSED_0x4CB                                           0x4CB // Unused Flag
-#define FLAG_UNUSED_0x4CC                                           0x4CC // Unused Flag
-#define FLAG_UNUSED_0x4CD                                           0x4CD // Unused Flag
-#define FLAG_UNUSED_0x4CE                                           0x4CE // Unused Flag
-#define FLAG_UNUSED_0x4CF                                           0x4CF // Unused Flag
-#define FLAG_UNUSED_0x4D0                                           0x4D0 // Unused Flag
-#define FLAG_UNUSED_0x4D1                                           0x4D1 // Unused Flag
-#define FLAG_UNUSED_0x4D2                                           0x4D2 // Unused Flag
-#define FLAG_UNUSED_0x4D3                                           0x4D3 // Unused Flag
-#define FLAG_UNUSED_0x4D4                                           0x4D4 // Unused Flag
-#define FLAG_UNUSED_0x4D5                                           0x4D5 // Unused Flag
-#define FLAG_UNUSED_0x4D6                                           0x4D6 // Unused Flag
-#define FLAG_UNUSED_0x4D7                                           0x4D7 // Unused Flag
-#define FLAG_UNUSED_0x4D8                                           0x4D8 // Unused Flag
-#define FLAG_UNUSED_0x4D9                                           0x4D9 // Unused Flag
-#define FLAG_UNUSED_0x4DA                                           0x4DA // Unused Flag
-#define FLAG_UNUSED_0x4DB                                           0x4DB // Unused Flag
-#define FLAG_UNUSED_0x4DC                                           0x4DC // Unused Flag
-#define FLAG_UNUSED_0x4DD                                           0x4DD // Unused Flag
-#define FLAG_UNUSED_0x4DE                                           0x4DE // Unused Flag
-#define FLAG_UNUSED_0x4DF                                           0x4DF // Unused Flag
-#define FLAG_UNUSED_0x4E0                                           0x4E0 // Unused Flag
-#define FLAG_UNUSED_0x4E1                                           0x4E1 // Unused Flag
-#define FLAG_UNUSED_0x4E2                                           0x4E2 // Unused Flag
-#define FLAG_UNUSED_0x4E3                                           0x4E3 // Unused Flag
+#define FLAG_ITEM_MEGA_ORBEETLITE          0x4CA // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_BUTTERFRITE         0x4CB // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_DREDNAWITE          0x4CC // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_EEVINITE            0x4CD // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_KINGLERITE          0x4CE // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_MEOWTHITE           0x4CF // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_PIKACHUNITE         0x4D0 // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_TOXTRICITITE        0x4D1 // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_MACHAMPITE          0x4D2 // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_CENTISKORCHITE      0x4D3 // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_COALOSSALITE        0x4D4 // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_CINDERACITE         0x4D5 // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_APPLETUNITE         0x4D6 // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_COPPERAJAHITE       0x4D7 // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_SANDACONDITE        0x4D8 // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_GARBODORITE         0x4D9 // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_CORVIKNIGHTITE      0x4DA // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_SNORLAXITE          0x4DB // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_GRIMMSNARLITE       0x4DC // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_INTELEONITE         0x4DD // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_HATTERENITE         0x4DE // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_FLAPPLITE           0x4DF // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_ALCREMITE           0x4E0 // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_RILLABOOMITE        0x4E1 // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_LAPRASITE           0x4E2 // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_DURALUDONITE        0x4E3 // Dualocke: megapiedra de forma Gigamax en el mapa
 #define FLAG_UNUSED_0x4E4                                           0x4E4 // Unused Flag
 #define FLAG_ITEM_TICKET_RUTA_104_2        0x4E5 // Dualocke: Ticket-Recuerdo oculto en el mapa
 #define FLAG_ITEM_TICKET_RUTA_110_2        0x4E6 // Dualocke: Ticket-Recuerdo oculto en el mapa

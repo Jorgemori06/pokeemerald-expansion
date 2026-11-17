@@ -228,6 +228,37 @@ OBJETOS_CUMBRE = [
 OBJETOS_CUMBRE_OCULTOS = [("ICY_ROCK", "CumbreMeteoro", "oculta", None)]
 TICKETS_CUMBRE = [("CUMBRE_METEORO", "CumbreMeteoro_Ladera", "bola", None)]
 
+# Megapiedras de las formas Gigamax (megas_gigamax.py; Miguel, 16/11/2026). Cada una en un sitio que
+# pega con su Pokémon. Van en otro bloque de flags porque en el de arriba ya no caben.
+MEGAPIEDRAS_GIGAMAX = [
+    ("ORBEETLITE", "Route102", "bola", None),
+    ("BUTTERFRITE", "Route104", "oculta", None),
+    ("DREDNAWITE", "Route106", "bola", None),
+    ("EEVINITE", "Route116", "bola", None),
+    ("KINGLERITE", "Route109", "bola", None),
+    ("MEOWTHITE", "SlateportCity", "oculta", None),
+    ("PIKACHUNITE", "Route110", "bola", None),
+    ("TOXTRICITITE", "NewMauville_Entrance", "bola", None),
+    ("MACHAMPITE", "Route112", "bola", None),
+    ("CENTISKORCHITE", "Route112", "oculta", None),
+    ("COALOSSALITE", "JaggedPass", "oculta", None),
+    ("CINDERACITE", "Route113", "oculta", None),
+    ("APPLETUNITE", "Route114", "bola", None),
+    ("COPPERAJAHITE", "Route115", "bola", None),
+    ("SANDACONDITE", "Route111", "oculta", "DESERT|SANDSTORM|STARDUST"),
+    ("GARBODORITE", "AbandonedShip_Corridors_B1F", "bola", None),
+    ("CORVIKNIGHTITE", "FortreeCity", "oculta", None),
+    ("SNORLAXITE", "Route121", "bola", None),
+    ("GRIMMSNARLITE", "Route121", "oculta", None),
+    ("INTELEONITE", "Route122", "bola", None),
+    ("HATTERENITE", "MtPyre_1F", "bola", None),
+    ("FLAPPLITE", "Route123", "oculta", None),
+    ("ALCREMITE", "LilycoveCity", "bola", None),
+    ("RILLABOOMITE", "SafariZone_Northeast", "bola", None),
+    ("LAPRASITE", "Route128", "bola", None),
+    ("DURALUDONITE", "VictoryRoad_1F", "oculta", None),
+]
+
 # Objetos competitivos de generaciones nuevas (misma estructura). Los más fuertes (Pañuelo
 # Elegido, Chaleco Asalto, Gafas Elegidas, Vidasfera) van a partir del tramo 6.
 COMPETITIVOS = [
@@ -345,7 +376,8 @@ TICKETS_OCULTOS = [
 # objeto fijo o None si el objeto es el primer campo de la lista)
 GRUPOS = [
     (MEGAPIEDRAS, "FLAG_ITEM_MEGA_", 0x264, 0x2BB, "megapiedra en el mapa", None),
-    (COMPETITIVOS, "FLAG_ITEM_COMP_", 0x493, 0x4E4, "objeto competitivo en el mapa", None),
+    (COMPETITIVOS, "FLAG_ITEM_COMP_", 0x493, 0x4C9, "objeto competitivo en el mapa", None),
+    (MEGAPIEDRAS_GIGAMAX, "FLAG_ITEM_MEGA_", 0x4CA, 0x4E4, "megapiedra de forma Gigamax en el mapa", None),
     (TICKETS, "FLAG_ITEM_TICKET_", 0x021, 0x04F, "Ticket-Recuerdo en el mapa", "HEART_SCALE"),
     (TICKETS_OCULTOS, "FLAG_ITEM_TICKET_", 0x4E5, 0x4EF, "Ticket-Recuerdo oculto en el mapa", "HEART_SCALE"),
     (OBJETOS_ISLAS, "FLAG_ITEM_ISLA_", 0x8E5, 0x8EF, "objeto de las islas del ferry", None),

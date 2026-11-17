@@ -47,8 +47,10 @@ static const struct FormChange sBlastoiseFormChangeTable[] =
 #if P_FAMILY_CATERPIE
 static const struct FormChange sButterfreeFormChangeTable[] =
 {
-#if P_GIGANTAMAX_FORMS
+#if P_GIGANTAMAX_FORMS && TESTING
     {FORM_CHANGE_BATTLE_GIGANTAMAX, SPECIES_BUTTERFREE_GMAX},
+#elif P_GIGANTAMAX_FORMS // Dualocke: la forma Gigamax es su megaevolución (megas_gigamax.py)
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM, SPECIES_BUTTERFREE_GMAX, ITEM_BUTTERFRITE},
 #endif
     {FORM_CHANGE_FAINT,             SPECIES_BUTTERFREE},
     {FORM_CHANGE_END_BATTLE,        SPECIES_BUTTERFREE},
@@ -83,8 +85,10 @@ static const struct FormChange sPidgeotFormChangeTable[] =
 #if P_FAMILY_PIKACHU
 static const struct FormChange sPikachuFormChangeTable[] =
 {
-#if P_GIGANTAMAX_FORMS
+#if P_GIGANTAMAX_FORMS && TESTING
     {FORM_CHANGE_BATTLE_GIGANTAMAX, SPECIES_PIKACHU_GMAX},
+#elif P_GIGANTAMAX_FORMS // Dualocke: la forma Gigamax es su megaevolución (megas_gigamax.py)
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM, SPECIES_PIKACHU_GMAX, ITEM_PIKACHUNITE},
 #endif
     {FORM_CHANGE_FAINT,             SPECIES_PIKACHU},
     {FORM_CHANGE_END_BATTLE,        SPECIES_PIKACHU},
@@ -117,8 +121,10 @@ static const struct FormChange sClefableFormChangeTable[] =
 #if P_FAMILY_MEOWTH
 static const struct FormChange sMeowthFormChangeTable[] =
 {
-#if P_GIGANTAMAX_FORMS
+#if P_GIGANTAMAX_FORMS && TESTING
     {FORM_CHANGE_BATTLE_GIGANTAMAX, SPECIES_MEOWTH_GMAX},
+#elif P_GIGANTAMAX_FORMS // Dualocke: la forma Gigamax es su megaevolución (megas_gigamax.py)
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM, SPECIES_MEOWTH_GMAX, ITEM_MEOWTHITE},
 #endif
     {FORM_CHANGE_FAINT,             SPECIES_MEOWTH},
     {FORM_CHANGE_END_BATTLE,        SPECIES_MEOWTH},
@@ -141,8 +147,10 @@ static const struct FormChange sAlakazamFormChangeTable[] =
 #if P_FAMILY_MACHOP
 static const struct FormChange sMachampFormChangeTable[] =
 {
-#if P_GIGANTAMAX_FORMS
+#if P_GIGANTAMAX_FORMS && TESTING
     {FORM_CHANGE_BATTLE_GIGANTAMAX, SPECIES_MACHAMP_GMAX},
+#elif P_GIGANTAMAX_FORMS // Dualocke: la forma Gigamax es su megaevolución (megas_gigamax.py)
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM, SPECIES_MACHAMP_GMAX, ITEM_MACHAMPITE},
 #endif
     {FORM_CHANGE_FAINT,             SPECIES_MACHAMP},
     {FORM_CHANGE_END_BATTLE,        SPECIES_MACHAMP},
@@ -206,8 +214,10 @@ static const struct FormChange sSteelixFormChangeTable[] =
 #if P_FAMILY_KRABBY
 static const struct FormChange sKinglerFormChangeTable[] =
 {
-#if P_GIGANTAMAX_FORMS
+#if P_GIGANTAMAX_FORMS && TESTING
     {FORM_CHANGE_BATTLE_GIGANTAMAX, SPECIES_KINGLER_GMAX},
+#elif P_GIGANTAMAX_FORMS // Dualocke: la forma Gigamax es su megaevolución (megas_gigamax.py)
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM, SPECIES_KINGLER_GMAX, ITEM_KINGLERITE},
 #endif
     {FORM_CHANGE_FAINT,             SPECIES_KINGLER},
     {FORM_CHANGE_END_BATTLE,        SPECIES_KINGLER},
@@ -280,8 +290,10 @@ static const struct FormChange sGyaradosFormChangeTable[] =
 #if P_FAMILY_LAPRAS
 static const struct FormChange sLaprasFormChangeTable[] =
 {
-#if P_GIGANTAMAX_FORMS
+#if P_GIGANTAMAX_FORMS && TESTING
     {FORM_CHANGE_BATTLE_GIGANTAMAX, SPECIES_LAPRAS_GMAX},
+#elif P_GIGANTAMAX_FORMS // Dualocke: la forma Gigamax es su megaevolución (megas_gigamax.py)
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM, SPECIES_LAPRAS_GMAX, ITEM_LAPRASITE},
 #endif
     {FORM_CHANGE_FAINT,             SPECIES_LAPRAS},
     {FORM_CHANGE_END_BATTLE,        SPECIES_LAPRAS},
@@ -292,8 +304,10 @@ static const struct FormChange sLaprasFormChangeTable[] =
 #if P_FAMILY_EEVEE
 static const struct FormChange sEeveeFormChangeTable[] =
 {
-#if P_GIGANTAMAX_FORMS
+#if P_GIGANTAMAX_FORMS && TESTING
     {FORM_CHANGE_BATTLE_GIGANTAMAX, SPECIES_EEVEE_GMAX},
+#elif P_GIGANTAMAX_FORMS // Dualocke: la forma Gigamax es su megaevolución (megas_gigamax.py)
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM, SPECIES_EEVEE_GMAX, ITEM_EEVINITE},
 #endif
     {FORM_CHANGE_FAINT,             SPECIES_EEVEE},
     {FORM_CHANGE_END_BATTLE,        SPECIES_EEVEE},
@@ -316,8 +330,10 @@ static const struct FormChange sAerodactylFormChangeTable[] =
 #if P_FAMILY_SNORLAX
 static const struct FormChange sSnorlaxFormChangeTable[] =
 {
-#if P_GIGANTAMAX_FORMS
+#if P_GIGANTAMAX_FORMS && TESTING
     {FORM_CHANGE_BATTLE_GIGANTAMAX, SPECIES_SNORLAX_GMAX},
+#elif P_GIGANTAMAX_FORMS // Dualocke: la forma Gigamax es su megaevolución (megas_gigamax.py)
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM, SPECIES_SNORLAX_GMAX, ITEM_SNORLAXITE},
 #endif
     {FORM_CHANGE_FAINT,             SPECIES_SNORLAX},
     {FORM_CHANGE_END_BATTLE,        SPECIES_SNORLAX},
@@ -1102,8 +1118,10 @@ static const struct FormChange sScraftyFormChangeTable[] =
 #if P_FAMILY_TRUBBISH
 static const struct FormChange sGarbodorFormChangeTable[] =
 {
-#if P_GIGANTAMAX_FORMS
+#if P_GIGANTAMAX_FORMS && TESTING
     {FORM_CHANGE_BATTLE_GIGANTAMAX, SPECIES_GARBODOR_GMAX},
+#elif P_GIGANTAMAX_FORMS // Dualocke: la forma Gigamax es su megaevolución (megas_gigamax.py)
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM, SPECIES_GARBODOR_GMAX, ITEM_GARBODORITE},
 #endif
     {FORM_CHANGE_FAINT,             SPECIES_GARBODOR},
     {FORM_CHANGE_END_BATTLE,        SPECIES_GARBODOR},
@@ -1721,8 +1739,10 @@ static const struct FormChange sMelmetalFormChangeTable[] =
 #if P_FAMILY_GROOKEY
 static const struct FormChange sRillaboomFormChangeTable[] =
 {
-#if P_GIGANTAMAX_FORMS
+#if P_GIGANTAMAX_FORMS && TESTING
     {FORM_CHANGE_BATTLE_GIGANTAMAX, SPECIES_RILLABOOM_GMAX},
+#elif P_GIGANTAMAX_FORMS // Dualocke: la forma Gigamax es su megaevolución (megas_gigamax.py)
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM, SPECIES_RILLABOOM_GMAX, ITEM_RILLABOOMITE},
 #endif
     {FORM_CHANGE_FAINT,             SPECIES_RILLABOOM},
     {FORM_CHANGE_END_BATTLE,        SPECIES_RILLABOOM},
@@ -1733,8 +1753,10 @@ static const struct FormChange sRillaboomFormChangeTable[] =
 #if P_FAMILY_SCORBUNNY
 static const struct FormChange sCinderaceFormChangeTable[] =
 {
-#if P_GIGANTAMAX_FORMS
+#if P_GIGANTAMAX_FORMS && TESTING
     {FORM_CHANGE_BATTLE_GIGANTAMAX, SPECIES_CINDERACE_GMAX},
+#elif P_GIGANTAMAX_FORMS // Dualocke: la forma Gigamax es su megaevolución (megas_gigamax.py)
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM, SPECIES_CINDERACE_GMAX, ITEM_CINDERACITE},
 #endif
     {FORM_CHANGE_FAINT,             SPECIES_CINDERACE},
     {FORM_CHANGE_END_BATTLE,        SPECIES_CINDERACE},
@@ -1745,8 +1767,10 @@ static const struct FormChange sCinderaceFormChangeTable[] =
 #if P_FAMILY_SOBBLE
 static const struct FormChange sInteleonFormChangeTable[] =
 {
-#if P_GIGANTAMAX_FORMS
+#if P_GIGANTAMAX_FORMS && TESTING
     {FORM_CHANGE_BATTLE_GIGANTAMAX, SPECIES_INTELEON_GMAX},
+#elif P_GIGANTAMAX_FORMS // Dualocke: la forma Gigamax es su megaevolución (megas_gigamax.py)
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM, SPECIES_INTELEON_GMAX, ITEM_INTELEONITE},
 #endif
     {FORM_CHANGE_FAINT,             SPECIES_INTELEON},
     {FORM_CHANGE_END_BATTLE,        SPECIES_INTELEON},
@@ -1757,8 +1781,10 @@ static const struct FormChange sInteleonFormChangeTable[] =
 #if P_FAMILY_ROOKIDEE
 static const struct FormChange sCorviknightFormChangeTable[] =
 {
-#if P_GIGANTAMAX_FORMS
+#if P_GIGANTAMAX_FORMS && TESTING
     {FORM_CHANGE_BATTLE_GIGANTAMAX, SPECIES_CORVIKNIGHT_GMAX},
+#elif P_GIGANTAMAX_FORMS // Dualocke: la forma Gigamax es su megaevolución (megas_gigamax.py)
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM, SPECIES_CORVIKNIGHT_GMAX, ITEM_CORVIKNIGHTITE},
 #endif
     {FORM_CHANGE_FAINT,             SPECIES_CORVIKNIGHT},
     {FORM_CHANGE_END_BATTLE,        SPECIES_CORVIKNIGHT},
@@ -1769,8 +1795,10 @@ static const struct FormChange sCorviknightFormChangeTable[] =
 #if P_FAMILY_BLIPBUG
 static const struct FormChange sOrbeetleFormChangeTable[] =
 {
-#if P_GIGANTAMAX_FORMS
+#if P_GIGANTAMAX_FORMS && TESTING
     {FORM_CHANGE_BATTLE_GIGANTAMAX, SPECIES_ORBEETLE_GMAX},
+#elif P_GIGANTAMAX_FORMS // Dualocke: la forma Gigamax es su megaevolución (megas_gigamax.py)
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM, SPECIES_ORBEETLE_GMAX, ITEM_ORBEETLITE},
 #endif
     {FORM_CHANGE_FAINT,             SPECIES_ORBEETLE},
     {FORM_CHANGE_END_BATTLE,        SPECIES_ORBEETLE},
@@ -1781,8 +1809,10 @@ static const struct FormChange sOrbeetleFormChangeTable[] =
 #if P_FAMILY_CHEWTLE
 static const struct FormChange sDrednawFormChangeTable[] =
 {
-#if P_GIGANTAMAX_FORMS
+#if P_GIGANTAMAX_FORMS && TESTING
     {FORM_CHANGE_BATTLE_GIGANTAMAX, SPECIES_DREDNAW_GMAX},
+#elif P_GIGANTAMAX_FORMS // Dualocke: la forma Gigamax es su megaevolución (megas_gigamax.py)
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM, SPECIES_DREDNAW_GMAX, ITEM_DREDNAWITE},
 #endif
     {FORM_CHANGE_FAINT,             SPECIES_DREDNAW},
     {FORM_CHANGE_END_BATTLE,        SPECIES_DREDNAW},
@@ -1793,8 +1823,10 @@ static const struct FormChange sDrednawFormChangeTable[] =
 #if P_FAMILY_ROLYCOLY
 static const struct FormChange sCoalossalFormChangeTable[] =
 {
-#if P_GIGANTAMAX_FORMS
+#if P_GIGANTAMAX_FORMS && TESTING
     {FORM_CHANGE_BATTLE_GIGANTAMAX, SPECIES_COALOSSAL_GMAX},
+#elif P_GIGANTAMAX_FORMS // Dualocke: la forma Gigamax es su megaevolución (megas_gigamax.py)
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM, SPECIES_COALOSSAL_GMAX, ITEM_COALOSSALITE},
 #endif
     {FORM_CHANGE_FAINT,             SPECIES_COALOSSAL},
     {FORM_CHANGE_END_BATTLE,        SPECIES_COALOSSAL},
@@ -1805,8 +1837,10 @@ static const struct FormChange sCoalossalFormChangeTable[] =
 #if P_FAMILY_APPLIN
 static const struct FormChange sFlappleFormChangeTable[] =
 {
-#if P_GIGANTAMAX_FORMS
+#if P_GIGANTAMAX_FORMS && TESTING
     {FORM_CHANGE_BATTLE_GIGANTAMAX, SPECIES_FLAPPLE_GMAX},
+#elif P_GIGANTAMAX_FORMS // Dualocke: la forma Gigamax es su megaevolución (megas_gigamax.py)
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM, SPECIES_FLAPPLE_GMAX, ITEM_FLAPPLITE},
 #endif
     {FORM_CHANGE_FAINT,             SPECIES_FLAPPLE},
     {FORM_CHANGE_END_BATTLE,        SPECIES_FLAPPLE},
@@ -1815,8 +1849,10 @@ static const struct FormChange sFlappleFormChangeTable[] =
 
 static const struct FormChange sAppletunFormChangeTable[] =
 {
-#if P_GIGANTAMAX_FORMS
+#if P_GIGANTAMAX_FORMS && TESTING
     {FORM_CHANGE_BATTLE_GIGANTAMAX, SPECIES_APPLETUN_GMAX},
+#elif P_GIGANTAMAX_FORMS // Dualocke: la forma Gigamax es su megaevolución (megas_gigamax.py)
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM, SPECIES_APPLETUN_GMAX, ITEM_APPLETUNITE},
 #endif
     {FORM_CHANGE_FAINT,             SPECIES_APPLETUN},
     {FORM_CHANGE_END_BATTLE,        SPECIES_APPLETUN},
@@ -1827,8 +1863,10 @@ static const struct FormChange sAppletunFormChangeTable[] =
 #if P_FAMILY_SILICOBRA
 static const struct FormChange sSandacondaFormChangeTable[] =
 {
-#if P_GIGANTAMAX_FORMS
+#if P_GIGANTAMAX_FORMS && TESTING
     {FORM_CHANGE_BATTLE_GIGANTAMAX, SPECIES_SANDACONDA_GMAX},
+#elif P_GIGANTAMAX_FORMS // Dualocke: la forma Gigamax es su megaevolución (megas_gigamax.py)
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM, SPECIES_SANDACONDA_GMAX, ITEM_SANDACONDITE},
 #endif
     {FORM_CHANGE_FAINT,             SPECIES_SANDACONDA},
     {FORM_CHANGE_END_BATTLE,        SPECIES_SANDACONDA},
@@ -1860,8 +1898,10 @@ static const struct FormChange sCramorantGulpMissleFormChangeTable[] =
 #if P_FAMILY_TOXEL
 static const struct FormChange sToxtricityAmpedFormChangeTable[] =
 {
-#if P_GIGANTAMAX_FORMS
+#if P_GIGANTAMAX_FORMS && TESTING
     {FORM_CHANGE_BATTLE_GIGANTAMAX, SPECIES_TOXTRICITY_AMPED_GMAX},
+#elif P_GIGANTAMAX_FORMS // Dualocke: la forma Gigamax es su megaevolución (megas_gigamax.py)
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM, SPECIES_TOXTRICITY_AMPED_GMAX, ITEM_TOXTRICITITE},
 #endif
     {FORM_CHANGE_FAINT,             SPECIES_TOXTRICITY_AMPED},
     {FORM_CHANGE_END_BATTLE,        SPECIES_TOXTRICITY_AMPED},
@@ -1870,8 +1910,10 @@ static const struct FormChange sToxtricityAmpedFormChangeTable[] =
 
 static const struct FormChange sToxtricityLowKeyFormChangeTable[] =
 {
-#if P_GIGANTAMAX_FORMS
+#if P_GIGANTAMAX_FORMS && TESTING
     {FORM_CHANGE_BATTLE_GIGANTAMAX, SPECIES_TOXTRICITY_LOW_KEY_GMAX},
+#elif P_GIGANTAMAX_FORMS // Dualocke: la forma Gigamax es su megaevolución (megas_gigamax.py)
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM, SPECIES_TOXTRICITY_LOW_KEY_GMAX, ITEM_TOXTRICITITE},
 #endif
     {FORM_CHANGE_FAINT,             SPECIES_TOXTRICITY_LOW_KEY},
     {FORM_CHANGE_END_BATTLE,        SPECIES_TOXTRICITY_LOW_KEY},
@@ -1882,8 +1924,10 @@ static const struct FormChange sToxtricityLowKeyFormChangeTable[] =
 #if P_FAMILY_SIZZLIPEDE
 static const struct FormChange sCentiskorchFormChangeTable[] =
 {
-#if P_GIGANTAMAX_FORMS
+#if P_GIGANTAMAX_FORMS && TESTING
     {FORM_CHANGE_BATTLE_GIGANTAMAX, SPECIES_CENTISKORCH_GMAX},
+#elif P_GIGANTAMAX_FORMS // Dualocke: la forma Gigamax es su megaevolución (megas_gigamax.py)
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM, SPECIES_CENTISKORCH_GMAX, ITEM_CENTISKORCHITE},
 #endif
     {FORM_CHANGE_FAINT,             SPECIES_CENTISKORCH},
     {FORM_CHANGE_END_BATTLE,        SPECIES_CENTISKORCH},
@@ -1894,8 +1938,10 @@ static const struct FormChange sCentiskorchFormChangeTable[] =
 #if P_FAMILY_HATENNA
 static const struct FormChange sHattereneFormChangeTable[] =
 {
-#if P_GIGANTAMAX_FORMS
+#if P_GIGANTAMAX_FORMS && TESTING
     {FORM_CHANGE_BATTLE_GIGANTAMAX, SPECIES_HATTERENE_GMAX},
+#elif P_GIGANTAMAX_FORMS // Dualocke: la forma Gigamax es su megaevolución (megas_gigamax.py)
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM, SPECIES_HATTERENE_GMAX, ITEM_HATTERENITE},
 #endif
     {FORM_CHANGE_FAINT,             SPECIES_HATTERENE},
     {FORM_CHANGE_END_BATTLE,        SPECIES_HATTERENE},
@@ -1906,8 +1952,10 @@ static const struct FormChange sHattereneFormChangeTable[] =
 #if P_FAMILY_IMPIDIMP
 static const struct FormChange sGrimmsnarlFormChangeTable[] =
 {
-#if P_GIGANTAMAX_FORMS
+#if P_GIGANTAMAX_FORMS && TESTING
     {FORM_CHANGE_BATTLE_GIGANTAMAX, SPECIES_GRIMMSNARL_GMAX},
+#elif P_GIGANTAMAX_FORMS // Dualocke: la forma Gigamax es su megaevolución (megas_gigamax.py)
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM, SPECIES_GRIMMSNARL_GMAX, ITEM_GRIMMSNARLITE},
 #endif
     {FORM_CHANGE_FAINT,             SPECIES_GRIMMSNARL},
     {FORM_CHANGE_END_BATTLE,        SPECIES_GRIMMSNARL},
@@ -1918,8 +1966,10 @@ static const struct FormChange sGrimmsnarlFormChangeTable[] =
 #if P_FAMILY_MILCERY
 static const struct FormChange sAlcremieFormChangeTable[] =
 {
-#if P_GIGANTAMAX_FORMS
+#if P_GIGANTAMAX_FORMS && TESTING
     {FORM_CHANGE_BATTLE_GIGANTAMAX, SPECIES_ALCREMIE_GMAX},
+#elif P_GIGANTAMAX_FORMS // Dualocke: la forma Gigamax es su megaevolución (megas_gigamax.py)
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM, SPECIES_ALCREMIE_GMAX, ITEM_ALCREMITE},
 #endif
     {FORM_CHANGE_FAINT,             SPECIES_ALCREMIE},
     {FORM_CHANGE_END_BATTLE,        SPECIES_ALCREMIE},
@@ -1965,8 +2015,10 @@ static const struct FormChange sMorpekoFormChangeTable[] =
 #if P_FAMILY_CUFANT
 static const struct FormChange sCopperajahFormChangeTable[] =
 {
-#if P_GIGANTAMAX_FORMS
+#if P_GIGANTAMAX_FORMS && TESTING
     {FORM_CHANGE_BATTLE_GIGANTAMAX, SPECIES_COPPERAJAH_GMAX},
+#elif P_GIGANTAMAX_FORMS // Dualocke: la forma Gigamax es su megaevolución (megas_gigamax.py)
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM, SPECIES_COPPERAJAH_GMAX, ITEM_COPPERAJAHITE},
 #endif
     {FORM_CHANGE_FAINT,             SPECIES_COPPERAJAH},
     {FORM_CHANGE_END_BATTLE,        SPECIES_COPPERAJAH},
@@ -1977,8 +2029,10 @@ static const struct FormChange sCopperajahFormChangeTable[] =
 #if P_FAMILY_DURALUDON
 static const struct FormChange sDuraludonFormChangeTable[] =
 {
-#if P_GIGANTAMAX_FORMS
+#if P_GIGANTAMAX_FORMS && TESTING
     {FORM_CHANGE_BATTLE_GIGANTAMAX, SPECIES_DURALUDON_GMAX},
+#elif P_GIGANTAMAX_FORMS // Dualocke: la forma Gigamax es su megaevolución (megas_gigamax.py)
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM, SPECIES_DURALUDON_GMAX, ITEM_DURALUDONITE},
 #endif
     {FORM_CHANGE_FAINT,             SPECIES_DURALUDON},
     {FORM_CHANGE_END_BATTLE,        SPECIES_DURALUDON},
