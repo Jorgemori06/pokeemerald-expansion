@@ -9,10 +9,10 @@ Uso (desde la raíz del repo; se puede volver a lanzar):
 - **La entrada:** en el claro del noreste del BOSQUE PETALIA se abre un pasillo entre los árboles
   (x 34-35), tapado por dos árboles de CORTE. Lleva al BOSQUE FRONDOSO por el borde (conexión, sin
   pantalla de carga). Hace falta CORTE: **tramo 2**.
-- **BOSQUE FRONDOSO** (36 × 40, gráficos del BOSQUE PETALIA): se dibuja sobre una rejilla de parejas de
-  casillas (los árboles miden 2 de ancho) y `arboles()` pone cada pieza del árbol (copa, tronco, base y
-  bordes) igual que en el bosque. Tiene hierba alta, flores, una charca para pescar y, arriba, la mansión:
-  el edificio largo de CIUDAD FÉRRICA con su verja y su patio.
+- **BOSQUE FRONDOSO** (36 × 40, gráficos del BOSQUE PETALIA): se dibuja con letras (PLANO) y lo pinta
+  autotile.py, como la MARISMA AZULIZA. Grupos de árboles de distinto alto, manchas de hierba alta, claros,
+  flores, una charca para pescar, un risco de un solo sentido y, arriba, la mansión: el edificio largo de
+  CIUDAD FÉRRICA con su verja y su patio.
 - **MANSIÓN OLVIDADA:** las cuatro salas del BARCO ABANDONADO (1F), que con la madera y las camas parecen
   una casa vieja. Se quitan los salvavidas, se abre un paso a la sala de arriba a la izquierda, su puerta
   queda atascada (cartel) y la de la derecha sube al DESVÁN. El suelo de este barco tiene salvajes.
@@ -31,6 +31,7 @@ import struct
 import sys
 
 sys.path.insert(0, "tools/dualocke")
+import autotile as at  # noqa: E402
 import colocar_objetos as co  # noqa: E402
 
 BOSQUE, MANSION, DESVAN = "BosqueFrondoso", "MansionOlvidada", "MansionOlvidada_Desvan"
@@ -38,63 +39,66 @@ MAPAS = {BOSQUE: "MAP_BOSQUE_FRONDOSO", MANSION: "MAP_MANSION_OLVIDADA", DESVAN:
 COLISION = 1 << 10
 
 # --- BOSQUE FRONDOSO ---------------------------------------------------------------------------
-# Una letra = dos casillas. T árbol, . hierba, , hierba alta, * flores, W charca, M mansión.
-# Las filas de árboles entre dos claros tienen que ser impares (copa, cuerpo, [tronco, cuerpo]…, base);
-# las que tocan abajo, también (acaban en tronco, como la fila de arriba del BOSQUE PETALIA).
-REJILLA = """
-TTTTTTTTTTTTTTTTTT
-TTTTTTTTTTTTTTTTTT
-TTT,,,,.....,,,TTT
-TT,,,MMMMMMM,,,,TT
-TT,,.MMMMMMM.,,,TT
-TT,,.MMMMMMM..,,TT
-TT,..MMMMMMM...,TT
-TT,..MMMMMMM...,TT
-TT,,.MMMMMMM..,,TT
-TT,,.MMMMMMM.,,,TT
-TT,,.MMMMMMM.,,,TT
-TT,,,MMMMMMM,,,,TT
-TT,,,,,,..,,,,,,TT
-TTTTTTTT..TTTTTTTT
-TTTTTTTT..TTTTTTTT
-TTTTTTTT..TTTTTTTT
-TT,,,,,,..,,,,*,TT
-TT,,,,,,..,,,,,,TT
-TT,,TTTT..TTTT..TT
-TT,,TTTT..TTTT..TT
-TT,,TTTT..TTTT..TT
-TT..........,,..TT
-TT......*...,,..TT
-TTTTTT..TTTT,,TTTT
-TTTTTT..TTTT,,TTTT
-TTTTTT..TTTT,,TTTT
-TT,WWW,.TT,,,,,,TT
-TT,WWW,.TT,,TT,,TT
-TT,WWW,.TT,,TT,,TT
-TT,WWW,.TT,,TT,,TT
-TT,WWW,.TT,,..,,TT
-TT,,,,..TT,,..,,TT
-TT,,,,........,,TT
-TT*,,,........,,TT
-TT,,,,........,,TT
-TTTTTT........,,TT
-TTTTTT........,,TT
-TTTTTTTT..TTTTTTTT
-TTTTTTTT..TTTTTTTT
-TTTTTTTT..TTTTTTTT
+# Rehecho el 17/11/2026 mirando el BOSQUE PETALIA: grupos de árboles de distinto alto, manchas de hierba
+# alta de borde irregular, claros sin hierba y un risco de un solo sentido entre dos claros. Se pinta con
+# autotile.py (como la MARISMA AZULIZA). Una letra = una casilla:
+# T árbol grande (de 2 de ancho, en x par)   . hierba   , hierba alta   * flores   ~ charca   c cartel
+# J risco del BOSQUE PETALIA (se salta hacia abajo)   M la mansión (copiada de CIUDAD FÉRRICA)
+# El camino de la entrada a la mansión da la vuelta: por el paso del oeste (x 6-9), alrededor del risco por
+# el este y por el paso de x 22-25. De vuelta se puede saltar el risco.
+PLANO = """
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTT....*.....................TTTTTT
+TTTT......MMMMMMMMMMMMMM*.....TTTTTT
+TTTT.,,,..MMMMMMMMMMMMMM..,,,,....TT
+TT..,,,,,.MMMMMMMMMMMMMM.,,,,,,,..TT
+TT..,,,,,,MMMMMMMMMMMMMM.,,,,,,,,.TT
+TT..,,,,,,MMMMMMMMMMMMMM..,,,,,,,,TT
+TT...,,,,.MMMMMMMMMMMMMM...,,,TT..TT
+TTTT..,,,.MMMMMMMMMMMMMM.*....TT,,TT
+TTTT..,,..MMMMMMMMMMMMMM......TT,,TT
+TTTT......MMMMMMMMMMMMMM..........TT
+TT....................c.........TTTT
+TTTTTTTTTTTTTTTTTTTTTT....TTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTT....TTTTTTTTTT
+TTTTTTTTTTTTTTTTTTTTTT....TTTTTTTTTT
+TT,,,,....TTTTTT..........,,TTTTTTTT
+TT,,,,,,..TTTTTT........,,,,TTTT..TT
+TT.,,,,............*...,,,,,,.....TT
+TTJJJJJJJJJJJJJJJJJJ.....,,,,,....TT
+TT.........,,,,,,,..*.....,,,.....TT
+TT.....*..,,,,,,,,,.......TTTTTTTTTT
+TT..........,,,,,.........TTTTTTTTTT
+TTTTTT....TTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTT....TTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTT....TTTTTTTTTTTTTTTTTTTTTTTTTT
+TT................TTTTTTTT........TT
+TT.*........~~~~~~TTTTTTTT........TT
+TT......*.~~~~~~~~.........,,,,...TT
+TT.,,,,...~~~~~~~~..*.....,,,,,,..TT
+TT,,,,,,..~~~~~~~~....TT..,,,,,,,.TT
+TT,,,,,,..~~~~~~~~....TT...,,,,,,,TT
+TT,,,,,...............TT....,,,,..TT
+TT.,,,............................TT
+TT..............................*.TT
+TTTTTTTT.................*........TT
+TTTTTTTT..........................TT
+TTTTTTTTTTTTTTTT..TTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTT..TTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTTTT..TTTTTTTTTTTTTTTTTT
 """
 ANCHO_B, ALTO_B = 36, 40
-# Piezas de árbol (gráficos generales, las mismas del BOSQUE PETALIA): (izquierda, derecha)
-COPA, CUERPO, TRONCO, BASE = (0x1C6, 0x1C7), (0x1D4, 0x1D5), (0x1DC, 0x1DD), (0x1E4, 0x1E5)
-CUERPO_BORDE, BASE_BORDE = (0x1D6, 0x1D7), (0x1E6, 0x1E7)
-HIERBA, HIERBA_ALTA, FLORES = 0x001, 0x00D, 0x004
-# Charca (gráficos generales, como las de la RUTA 102): borde de arriba, lados, agua y orilla de abajo
-CHARCA_ARRIBA, CHARCA_IZQ, AGUA, CHARCA_DER, ORILLA = (0x0B0, 0x0B1, 0x0B2), 0x0B8, 0x0A1, 0x0BA, 0x002
+TERRENO_BOSQUE = {".": "suelo", "*": "suelo", "c": "suelo", ",": "hierba_alta", "~": "estanque"}
+FLORES = 0x004
+RISCO_PETALIA = (0x0D5, 0x087, 0x0D6)        # el risco del BOSQUE PETALIA: punta izquierda, medio, punta derecha
+HIERBA = 0x001
+CUERPO_BORDE, BASE_BORDE = at.CUERPO_BORDE, at.BASE_BORDE   # para el pasillo del BOSQUE PETALIA
 # La mansión: el edificio largo de CIUDAD FÉRRICA con la verja, el patio y dos farolas (x0, y0, x1, y1)
 MANSION_FERRICA = (6, 23, 20, 32)
 SITIO_MANSION = (10, 3)                     # dónde va en el bosque (casilla de arriba a la izquierda)
 PUERTA_MANSION = (13 - 6 + 10, 30 - 23 + 3)  # la puerta del edificio en FÉRRICA era (13, 30)
-CARTEL_MANSION = (20, 12)                    # cartel delante del patio
+CARTEL_MANSION = (22, 12)                    # cartel junto al paso que llega al patio
 # Conexión con el BOSQUE PETALIA: el pasillo del bosque (x 16-17) cae sobre el del BOSQUE PETALIA (x 34-35)
 PASILLO_BOSQUE, PASILLO_PETALIA = 16, 34
 DESPLAZAMIENTO = PASILLO_PETALIA - PASILLO_BOSQUE
@@ -176,93 +180,48 @@ def guardar_layout(carpeta, ancho, alto, celdas, base):
     return ident
 
 
-def arboles(rejilla, ancho, alto):
-    """Devuelve {(x, y): metatile} con las piezas de los árboles de la rejilla de parejas."""
-    filas = [f for f in rejilla.strip().splitlines()]
-    assert len(filas) == alto and all(len(f) * 2 == ancho for f in filas), "la rejilla no mide lo que debe"
-    es_arbol = lambda p, y: 0 <= p < ancho // 2 and 0 <= y < alto and filas[y][p] == "T"  # noqa: E731
-    piezas, fallos = {}, []
-    for p in range(ancho // 2):
-        y = 0
-        while y < alto:
-            if not es_arbol(p, y):
-                y += 1
-                continue
-            y0 = y
-            while y < alto and es_arbol(p, y):
-                y += 1
-            y1 = y - 1
-            arriba, abajo = y0 > 0, y1 < alto - 1   # True si hay claro (no borde del mapa)
-            largo = y1 - y0 + 1
-            if arriba and abajo:
-                ok = largo >= 3 and largo % 2 == 1
-                fila_de = lambda yy: "copa" if yy == y0 else "base" if yy == y1 else (  # noqa: E731
-                    "cuerpo" if (yy - y0) % 2 == 1 else "tronco")
-            elif arriba:      # toca abajo: copa, cuerpo, tronco, cuerpo… y tronco en la última
-                ok = largo >= 3 and largo % 2 == 1
-                fila_de = lambda yy: "copa" if yy == y0 else ("cuerpo" if (yy - y0) % 2 == 1 else "tronco")  # noqa: E731
-            elif abajo:       # toca arriba: …tronco, cuerpo y base
-                ok = largo >= 2
-                fila_de = lambda yy: "base" if yy == y1 else ("cuerpo" if (y1 - yy) % 2 == 1 else "tronco")  # noqa: E731
-            else:
-                ok = True
-                fila_de = lambda yy: "cuerpo" if yy % 2 == 0 else "tronco"  # noqa: E731
-            if not ok:
-                fallos.append(f"columna {p} (x {2 * p}-{2 * p + 1}), filas {y0}-{y1}")
-            for yy in range(y0, y1 + 1):
-                tipo = fila_de(yy)
-                izq, der = {"copa": COPA, "cuerpo": CUERPO, "tronco": TRONCO, "base": BASE}[tipo]
-                if tipo == "cuerpo":
-                    izq = CUERPO_BORDE[0] if not es_arbol(p - 1, yy) and p > 0 else izq
-                    der = CUERPO_BORDE[1] if not es_arbol(p + 1, yy) and p < ancho // 2 - 1 else der
-                if tipo == "base":
-                    izq = BASE_BORDE[0] if not es_arbol(p - 1, yy) and p > 0 else izq
-                    der = BASE_BORDE[1] if not es_arbol(p + 1, yy) and p < ancho // 2 - 1 else der
-                piezas[(2 * p, yy)], piezas[(2 * p + 1, yy)] = izq, der
-    assert not fallos, "filas de árboles de largo imposible: " + "; ".join(fallos)
-    return piezas, filas
-
-
 def crear_bosque():
-    base, petalia = celdas_de("PetalburgWoods")
+    base, _ = celdas_de("PetalburgWoods")
+    aprendiz = at.Aprendiz()
+    filas = PLANO.strip().splitlines()
+    assert len(filas) == ALTO_B and all(len(f) == ANCHO_B for f in filas), "el plano no mide lo que debe"
+    pintadas = aprendiz.pintar([[TERRENO_BOSQUE.get(ch) for ch in f] for f in filas])
     v = valores("PetalburgWoods")
-    v.update({k: x for k, x in valores("Route102").items() if k < 0x200 and k not in v})
-    piezas, filas = arboles(REJILLA, ANCHO_B, ALTO_B)
+    valor = lambda m: v.get(m, aprendiz.valor.get(m, m))  # noqa: E731
     c = [0] * (ANCHO_B * ALTO_B)
     for y in range(ALTO_B):
         for x in range(ANCHO_B):
-            letra = filas[y][x // 2]
-            if letra == "T":
-                c[y * ANCHO_B + x] = v[piezas[(x, y)]]
-            else:
-                c[y * ANCHO_B + x] = v[{",": HIERBA_ALTA, "*": FLORES}.get(letra, HIERBA)]
-    # La charca: el rectángulo de las W
-    ws = [(x, y) for y in range(ALTO_B) for x in range(ANCHO_B) if filas[y][x // 2] == "W"]
-    x0, x1 = min(x for x, _ in ws), max(x for x, _ in ws)
-    y0, y1 = min(y for _, y in ws), max(y for _, y in ws)
-    for y in range(y0, y1 + 1):
-        for x in range(x0, x1 + 1):
-            if y == y1:
-                m = ORILLA
-            elif y == y0:
-                m = CHARCA_ARRIBA[0] if x == x0 else CHARCA_ARRIBA[2] if x == x1 else CHARCA_ARRIBA[1]
-            else:
-                m = CHARCA_IZQ if x == x0 else CHARCA_DER if x == x1 else AGUA
-            c[y * ANCHO_B + x] = v[m]
+            ch = filas[y][x]
+            if ch in "TM":
+                continue
+            if ch == "J":
+                punta = 0 if filas[y][x - 1] != "J" else 2 if filas[y][x + 1] != "J" else 1
+                c[y * ANCHO_B + x] = valor(RISCO_PETALIA[punta])
+                continue
+            celda = pintadas[y][x]
+            if ch == "*":
+                celda = valor(FLORES)
+            c[y * ANCHO_B + x] = celda
+    fallos = at.arboles_grandes(filas, c, valor)
+    assert not fallos, "; ".join(fallos)
     # La mansión, copiada de CIUDAD FÉRRICA
     lf, cf = celdas_de("RustboroCity")
     mx0, my0, mx1, my1 = MANSION_FERRICA
     for y in range(my0, my1):
         for x in range(mx0, mx1):
             c[(SITIO_MANSION[1] + y - my0) * ANCHO_B + SITIO_MANSION[0] + x - mx0] = cf[y * lf["width"] + x]
-    ms = [(x, y) for y in range(ALTO_B) for x in range(ANCHO_B) if filas[y][x // 2] == "M"]
+    ms = [(x, y) for y in range(ALTO_B) for x in range(ANCHO_B) if filas[y][x] == "M"]
     assert (min(ms), max(ms)) == (SITIO_MANSION, (SITIO_MANSION[0] + mx1 - mx0 - 1, SITIO_MANSION[1] + my1 - my0 - 1)), \
-        "las M de la rejilla no coinciden con la mansión"
+        "las M del plano no coinciden con la mansión"
     # El cartel de la mansión: el cartel de madera de FÉRRICA
     cartel = next(cf[b["y"] * lf["width"] + b["x"]] for b in json.loads(leer("data/maps/RustboroCity/map.json"))["bg_events"]
                   if b["type"] == "sign" and b["script"] == "RustboroCity_EventScript_CitySign")
+    assert filas[CARTEL_MANSION[1]][CARTEL_MANSION[0]] == "c", "el cartel no está donde dice el plano"
+    assert filas[CARTEL_MANSION[1] + 1][CARTEL_MANSION[0]] != "T", "el cartel se lee desde abajo"
     c[CARTEL_MANSION[1] * ANCHO_B + CARTEL_MANSION[0]] = cartel
     assert all(x for x in c), "casillas sin dibujar"
+    raras = aprendiz.revisar(c, ANCHO_B, ALTO_B, base["secondary_tileset"])
+    print(f"Dualocke: BOSQUE FRONDOSO: parejas de piezas que el juego no usa: {len(raras)}")
     return guardar_layout(BOSQUE, ANCHO_B, ALTO_B, c, base)
 
 
@@ -323,8 +282,8 @@ def crear_mapas(l_bosque, l_mansion, l_desvan):
         "connections": [{"map": "MAP_PETALBURG_WOODS", "offset": -DESPLAZAMIENTO, "direction": "down"}],
         "warp_events": [{"x": PUERTA_MANSION[0], "y": PUERTA_MANSION[1], "elevation": 0,
                          "dest_map": MAPAS[MANSION], "dest_warp_id": "0"}]},
-        [entrenador("OBJ_EVENT_GFX_BUG_CATCHER", 11, 21, "RIGHT", 4, "BosqueFrondoso_EventScript_Sebas"),
-         entrenador("OBJ_EVENT_GFX_PICNICKER", 15, 30, "LEFT", 3, "BosqueFrondoso_EventScript_Olivia")],
+        [entrenador("OBJ_EVENT_GFX_BUG_CATCHER", 25, 20, "LEFT", 4, "BosqueFrondoso_EventScript_Sebas"),
+         entrenador("OBJ_EVENT_GFX_PICNICKER", 9, 33, "RIGHT", 4, "BosqueFrondoso_EventScript_Olivia")],
         [cartel(*CARTEL_MANSION, "BosqueFrondoso_EventScript_CartelMansion")])
     ex, ey = ENTRADA_MANSION
     mapa_json(MANSION, {
