@@ -5,10 +5,12 @@ Dualocke: la ISLA NEVADA, al norte de la RUTA 124 (ZONAS.md, propuesta 1; Miguel
 Uso (desde la raíz del repo; se puede volver a lanzar):
     python3 tools/dualocke/crear_isla_nevada.py
 
-- **La isla** (80 × 40): mar como el de la RUTA 124, con el islote grande de la RUTA 125 (el de la
-  CUEVA CARDUMEN) y sus bancos de arena pegados arriba. Usa los mismos gráficos que la RUTA 124
-  (General + Mossdeep): hace falta para que la conexión se vea bien. Clima: nieve (nieve en combate).
-  Se llega surfeando hacia el norte desde la RUTA 124, sin pantalla de carga.
+- **La isla** (80 × 40): una isla grande de arena con su anillo de bajío y una cala al sur. Arriba, la
+  cresta de roca de la RUTA 127, con la entrada de la cueva; alrededor, peñas y rocas en el mar. Usa los
+  mismos gráficos que la RUTA 124 (General + Mossdeep): hace falta para que la conexión se vea bien.
+  Clima: nieve (nieve en combate). Se llega surfeando hacia el norte desde la RUTA 124, sin pantalla de carga.
+  **Rehecha el 17/11/2026** con autotile.py, como las islas del sur (crear_islas_sur.py): antes era el islote
+  de la CUEVA CARDUMEN de la RUTA 125 pegado arriba, cortado por el borde del mapa.
 - **La CUEVA HELADA:** la entrada del islote lleva a una cueva de hielo, la sala de hielo de la CUEVA
   CARDUMEN (suelo resbaladizo), con otro contenido.
 - **Zona de captura propia:** MAPSEC_ISLA_NEVADA, al final de la lista (las dos partes cuentan como una).
@@ -24,15 +26,66 @@ import sys
 
 sys.path.insert(0, "tools/dualocke")
 import colocar_objetos as co  # noqa: E402
+import crear_islas_sur as cis  # noqa: E402  (dibujar(), sello() y las peñas de la RUTA 127)
 
 ISLA, CUEVA = "IslaNevada", "IslaNevada_Cueva"
 MAPA_ISLA, MAPA_CUEVA = "MAP_ISLA_NEVADA", "MAP_ISLA_NEVADA_CUEVA"
 MAPSEC = "MAPSEC_ISLA_NEVADA"
 ANCHO, ALTO = 80, 40
-AGUA = ("Route124", 50, 30)                # casilla de mar abierto de la que se copia el agua
-TROZO = ("Route125", 4, 0, 41, 27)         # islote de la CUEVA CARDUMEN y bancos de arena (x 4-40)
-DESPLAZAMIENTO = (18, 0)                   # dónde va el trozo en la isla
-PUERTA_RUTA125 = (22, 19)                  # la entrada de la cueva en la RUTA 125
+# m mar   b bajío   s arena   X roca de mar   W roca con remolino (como en crear_islas_sur.py)
+PLANO = """
+mmmmmmmmmmmmmmmmmmWWmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmWWmmmmmmmmmmmmmmmmmmmm
+mmmmmmmmmmmmmmmmmmWWmmmmmmmmbbbbbbbbbbbbbbbbbbbbbmmmmmmmmmWWmmmmmmmmmmmmmmmmmmmm
+mmmmmmmmmmmmmmmmmmmmmmmmbbbbbbbbbbbbbbbbbbbbbbbbbbbbbmmmmmmmmmmXXmmmmmmmmmmmmmmm
+mmmmmmmmmmmmmmmmmmmmmmbbbbbbbbsssssssssssssssssbbbbbbbbbmmmmmmmXXmmmmmmmmmmmmmmm
+mmmmmmmmmmXXmmmmmmmmbbbbbbsssssssssssssssssssssssssbbbbbbbbmmmmmmmmmmmmmmmmmmmmm
+mmmmmmmmmmXXmmmmmmmbbbbbssssssssssssssssssssssssssssssbbbbbbbmmmmmmmmmmmmmmmmmmm
+mmmmmmmmmmmmmmmmmmbbbbsssssssssssssssssssssssssssssssssssbbbbbmmmmmmmmmmmmmmmmmm
+mmmmmmmmmmmmmmmmmbbbbssssssssssssssssssssssssssssssssssssssbbbbmmmmmmmmmmmmmmmmm
+mmmmmmmmmmmmmmmmmbbbssssssssssssssssssssssssssssssssssssssssbbbbmmmmmmmmmmmmmmmm
+mmmmmmmmmmmmmmmmbbbssssssssssssssssssssssssssssssssssssssssssbbbmmmmmmmmmmmmmmmm
+mmmmmmmmmmmmmmmbbbbsssssssssssssssssssssssssssssssssssssssssssbbmmmmmmXXmmmmmmmm
+mmmmXXmmmmmmbbbbbbssssssssssssssssssssssssssssssssssssssssssssbbmmmmmmXXmmmmmmmm
+mmmmXXmmmmbbbbbbbsssssssssssssssssssssssssssssssssssssssssssssbbmmmmmmmmmmmmmmmm
+mmmmmmmmmmbbbbssssssssssssssssssssssssssssssssssssssssssssssssbbmmmmmmmmmmmmmmmm
+mmmmmmmmmmbbsssssssssssssssssssssssssssssssssssssssssssssssssbbbmmmmmmmmmmmmmmmm
+mmmmmmmmmmbbsssssssssssssssssssssssssssssssssssssssssssssssssbbbmmmmmmmmmWWmmmmm
+mmmmmmmmmmbbbssssssssssssssssssssssssssssssssssssssssssssssssbbmmmmmmmmmmWWmmmmm
+mmmmmmmmmmbbbbbssssssssssssssssssssssssssssssssssssssssssssssbbmmmmmmmmmmmmmmmmm
+mmmmmmmmmmmbbbbbbbssssssssssssssssssssssssssssssssssssssssssbbbmmmmmXXmmmmmmmmmm
+mmmmmmmmmmmmmbbbbbbssssssssssssssssssssssssssssssssssssssssbbbbmmmmmXXmmmmmmmmmm
+mmmmmmXXmmmmmmmmbbbbssssssssssssssssssssssssssssssssssssssbbbbmmmmmmmmmmmmmmmmmm
+mmmmmmXXmmmmmmmmmbbbsssssssssssssssssbbbbssssssssssssssssbbbbmmmmmmmmmmmmmmmmmmm
+mmmmmmmmmmmmmmmmmmbbbssssssssssssssssbbbbbssssssssssssssbbbbmmmmmmmmmmmmmmmmmmmm
+mmmmmmmmmmmmmmmmmmbbbbsssssssssssssssbbbbbbssssssssssssbbbbmmmmmmmmmmmmmmmmmmmmm
+mmmmmmmmmmmmmmmmmmmbbbbbsssssssssssssbbbbbbssssssssssbbbbbmmmmmmmmmmmmmmmmmmmmmm
+mmmmmmmmmmmmmmmmmmmmbbbbbbsssssssssssbbbbbbbsssssssbbbbbbmmmmmmmmmmmmmmmmmXXmmmm
+mmmmmmmmmmmmmmmmmmmmmmbbbbbbbssssssssbbbbbbbssssbbbbbbbmmmmmmmmmmmmmmmmmmmXXmmmm
+mmmmmmmmmmmmmmmmmmmmmmmmbbbbbbbbsssssbbbbbbbsbbbbbbbbmmmmmmmmmmmXXmmmmmmmmmmmmmm
+mmmWWmmmmmmmmXXmmmmmmmmmmmmbbbbbbbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmXXmmmmmmmmmmmmmm
+mmmWWmmmmmmmmXXmmmmmmmmmmmmmmmbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmWWmmmmmmmmmmmmmmmmmm
+mmmmmmmmmmmmmmmmmmmmmmmmXXmmmmmmWWmmmmmmmmmmmmmmmmmmXXmmmmmmWWmmmmmmmmmmmmmmmmmm
+mmmmmmmmmmmmmmmmmmmmmmmmXXmmmmmmWWmmmmmmmmmmmmmmmmmmXXmmmmmmmmmmmmmmmmmmmmmmmmmm
+mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmXXmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmXXmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+"""
+# La cresta de roca del islote grande de la RUTA 127 (se copian solo sus casillas de roca; sus dos huecos de
+# base secreta se tapan). En su pie se abre la cueva, con las piezas de la cueva del PILAR CELESTE.
+CRESTA = ("Route127", (43, 15, 65, 26))
+ROCAS_DEL_MAR = (55, 24)                   # desde aquí (abajo a la derecha) son rocas del mar: no se copian
+SITIO_CRESTA = (27, 3)
+CUEVA_CRESTA = {(56, 21): 0x064, (54, 22): 0x0A9, (55, 22): 0x0A9, (56, 22): 0x0A7, (57, 22): 0x0A9,
+                (58, 22): 0x0A9}         # en la RUTA 127; la cueva es (56, 22)
+PENAS = [(cis.PENA_GRANDE, 46, 14), (cis.PENA_PEQUENA, 24, 16), (cis.PENA_LARGA, 50, 6)]
+# Dónde va cada uno (antes estaban por el mar de alrededor del islote copiado)
+SITIOS = {"IslaNevada_EventScript_Dudley": (14, 31), "IslaNevada_EventScript_Kaylee": (58, 30),
+          "FLAG_ITEM_NEVADA_SNOWBALL": (16, 15)}
 BASE_CUEVA = "ShoalCave_LowTideIceRoom"
 ENTRADA_CUEVA = (17, 10)                   # la escalera de la sala de hielo
 
@@ -78,17 +131,37 @@ def guardar_layout(carpeta, ancho, alto, celdas, base):
     return ident
 
 
+def puerta_cueva():
+    x0, y0 = CRESTA[1][:2]
+    cx, cy = next(p for p, m in CUEVA_CRESTA.items() if m == 0x0A7)
+    return SITIO_CRESTA[0] + cx - x0, SITIO_CRESTA[1] + cy - y0
+
+
 def crear_isla():
-    l124, c124 = celdas_de(AGUA[0])
-    agua = c124[AGUA[2] * l124["width"] + AGUA[1]]
-    celdas = [agua] * (ANCHO * ALTO)
-    l125, c125 = celdas_de(TROZO[0])
-    _, x0, y0, x1, y1 = TROZO
-    dx, dy = DESPLAZAMIENTO
-    for y in range(y0, y1):
-        for x in range(x0, x1):
-            celdas[(y + dy) * ANCHO + (x + dx)] = c125[y * l125["width"] + x]
-    return guardar_layout(ISLA, ANCHO, ALTO, celdas, l124)
+    filas = PLANO.strip().splitlines()
+    assert (len(filas[0]), len(filas)) == (ANCHO, ALTO)
+    fijas = cis.poner_sellos(filas, PENAS)
+    origen, caja = CRESTA
+    _, cr = celdas_de(origen)
+    w = layout_de(origen)["width"]
+    sx, sy = SITIO_CRESTA
+    for (dx, dy), v in cis.sello(origen, caja).items():
+        if caja[0] + dx >= ROCAS_DEL_MAR[0] and caja[1] + dy >= ROCAS_DEL_MAR[1]:
+            continue
+        fijas[(sx + dx, sy + dy)] = v
+    for (x, y), m in CUEVA_CRESTA.items():
+        v = cr[y * w + x]
+        if m == 0x0A7:
+            v &= ~(3 << 10)            # la cueva se pisa
+        fijas[(sx + x - caja[0], sy + y - caja[1])] = (v & ~0x3FF) | m
+    assert all(filas[y][x] == "s" for x, y in fijas), "la cresta o una peña no va sobre arena"
+    px, py = puerta_cueva()
+    assert filas[py + 1][px] == "s" and (px, py + 1) not in fijas, "no se llega a la cueva"
+    _, ancho, alto, c = cis.dibujar(PLANO, fijas)
+    for donde in SITIOS.values():
+        x, y = donde
+        assert not (c[y * ancho + x] >> 10) & 3, ("sitio bloqueado", donde)
+    return guardar_layout(ISLA, ancho, alto, c, layout_de("Route124"))
 
 
 def crear_cueva():
@@ -102,13 +175,17 @@ def mapa_json(carpeta, datos):
     anteriores = json.loads(leer(ruta)) if os.path.exists(ruta) else {}
     datos["object_events"] = anteriores.get("object_events", [])
     datos["bg_events"] = anteriores.get("bg_events", [])
+    for o in datos["object_events"] + datos["bg_events"]:
+        clave = o.get("script") if o.get("script") in SITIOS else o.get("flag")
+        if clave in SITIOS:
+            o["x"], o["y"] = SITIOS[clave]
     escribir(ruta, json.dumps(datos, indent=2, ensure_ascii=False) + "\n")
     if not os.path.exists(f"data/maps/{carpeta}/scripts.inc"):
         escribir(f"data/maps/{carpeta}/scripts.inc", f"{carpeta}_MapScripts::\n\t.byte 0\n")
 
 
 def crear_mapas(layout_isla, layout_cueva):
-    puerta = (PUERTA_RUTA125[0] + DESPLAZAMIENTO[0], PUERTA_RUTA125[1] + DESPLAZAMIENTO[1])
+    puerta = puerta_cueva()
     comun = {"region": "REGION_HOENN", "region_map_section": MAPSEC, "requires_flash": False,
              "allow_cycling": True, "allow_escaping": False, "allow_running": True, "show_map_name": True}
     mapa_json(ISLA, {
