@@ -58,7 +58,7 @@ PERMITIDAS = {
 GRUPO = {"suelo": "tierra", "hierba_alta": "tierra", "hierba_larga": "tierra"}
 VECINAS = [(-1, -1), (0, -1), (1, -1), (-1, 0), (1, 0), (-1, 1), (0, 1), (1, 1)]
 LADOS = [1, 3, 4, 6]   # posiciones de VECINAS que son arriba, izquierda, derecha y abajo
-NUEVOS = ("Marisma", "Playa", "Bosque", "Isla", "Cumbre", "Desierto", "Ruinas", "Gruta", "Mansion")
+NUEVOS = ("Marisma", "Playa", "Bosque", "Isla", "Cumbre", "Desierto", "Ruinas", "Gruta", "Mansion", "Cienaga")
 
 
 def _mapas_originales():
