@@ -24,8 +24,8 @@
     {
       "local_id": "LOCALID_PLAYA_VOLCANICA_GUARDIAN",
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
-      "x": 28,
-      "y": 22,
+      "x": 23,
+      "y": 14,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -37,8 +37,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1",
-      "x": 16,
-      "y": 5,
+      "x": 3,
+      "y": 9,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -50,8 +50,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 27,
-      "y": 36,
+      "x": 23,
+      "y": 34,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -76,8 +76,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 18,
-      "y": 18,
+      "x": 19,
+      "y": 17,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -93,8 +93,8 @@
   "bg_events": [
     {
       "type": "hidden_item",
-      "x": 30,
-      "y": 6,
+      "x": 22,
+      "y": 4,
       "elevation": 3,
       "item": "ITEM_PEARL",
       "flag": "FLAG_ITEM_PLAYA_PEARL"

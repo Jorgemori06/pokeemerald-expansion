@@ -188,6 +188,9 @@ TICKETS_ISLAS_SUR = [("ISLA_DE_RUINAS", "IslaDeRuinas", "bola", None),
                      ("ISLA_ARENOSA", "IslaArenosa", "bola", None)]
 
 # PLAYA VOLCÁNICA (crear_playa_volcanica.py). Con semilla, al azar.
+# Al rehacer la playa (17/11/2026) se movieron a mano tres: el Ticket-Recuerdo (19,17, junto al risco),
+# la Perla oculta (22,4, en la arena de arriba) y la Piedra Agua (23,34, en la arena): habían quedado en el
+# risco, en el mar y en el bajío.
 OBJETOS_PLAYA = [
     ("WATER_STONE", "PlayaVolcanica", "bola", None),
     ("DAMP_ROCK", "PlayaVolcanica", "bola", None),
