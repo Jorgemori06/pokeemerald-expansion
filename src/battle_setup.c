@@ -2231,7 +2231,11 @@ void CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Traine
     for (i = 0; i < monsCount; i++)
     {
         u32 monIndex = monIndices[i];
-        GenerateMonFromTrainerMon(&party[i], &trainer->party[monIndex], trainerGen);
+        // Dualocke: ningún POKéMON de un rival por encima del level cap (no al compañero)
+        struct TrainerMon mon = trainer->party[monIndex];
+        if (party != gParties[B_TRAINER_PLAYER])
+            Dualocke_CapTrainerMon(&mon.species, &mon.lvl);
+        GenerateMonFromTrainerMon(&party[i], &mon, trainerGen);
     }
     Free(trainerGen);
 }

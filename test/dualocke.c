@@ -775,6 +775,32 @@ TEST("Dualocke: un salvaje por encima del cap se queda en el cap o hasta 2 nivel
     }
 }
 
+TEST("Dualocke: un POKéMON de entrenador por encima del cap sale al cap y a su etapa")
+{
+    enum Species species = SPECIES_MANECTRIC;
+    u8 level = 47;
+
+    Dualocke_CapTrainerMonTo(&species, &level, 32);
+    EXPECT_EQ(level, 32);
+    EXPECT_EQ(species, SPECIES_MANECTRIC); // evoluciona a 26
+
+    species = SPECIES_AGGRON;
+    level = 47;
+    Dualocke_CapTrainerMonTo(&species, &level, 32);
+    EXPECT_EQ(level, 32);
+    EXPECT_EQ(species, SPECIES_LAIRON); // Lairon a 32, Aggron a 42
+}
+
+TEST("Dualocke: un POKéMON de entrenador al cap o por debajo no cambia")
+{
+    enum Species species = SPECIES_AGGRON;
+    u8 level = 43;
+
+    Dualocke_CapTrainerMonTo(&species, &level, 43);
+    EXPECT_EQ(level, 43);
+    EXPECT_EQ(species, SPECIES_AGGRON);
+}
+
 TEST("Dualocke: un salvaje por debajo del cap no cambia")
 {
     enum Species species = SPECIES_PIDGEOT;
