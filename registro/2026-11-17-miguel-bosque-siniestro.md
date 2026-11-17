@@ -54,7 +54,7 @@ Análisis de los salvajes sin semilla:
   - un claro con una bruja, una charca, un risco que se salta y un bosque profundo con el claro del guardián.
 - **Guardián:** Hydreigon (sin semilla), premio Tabla Pavor. Flag 0x91E.
 - **Salvajes:** Siniestro, Fantasma y Bicho.
-- **Objetos:** 3 objetos y un Ticket-Recuerdo, en flags sueltos.
+- **Objetos:** 3 objetos y un Ticket-Recuerdo, en flags sueltos. El oculto va en 0x468: los ocultos necesitan un flag de 0x1F4 en adelante.
 - **Zona de captura propia:** 117 de 128.
 - **Otros scripts:** el bosque está apuntado en `reescalar_niveles.py`, `zonas_nuevas.py`, `colocar_objetos.py`, `aleatorio/estaticos.py` y `guia.py`.
 
@@ -66,6 +66,7 @@ Análisis de los salvajes sin semilla:
 - **La unión con la RUTA 123:** se miró en una foto de las dos juntas, y los árboles siguen.
 - **La cadena de niveles, salvajes y objetos:** vuelta a lanzar entera. Solo cambia lo del bosque.
 - **Compilación:** la de GitHub la hará el CI de la PR.
+- **Otro fallo de compilación, de la #91 en adelante:** la Roca Helada oculta de la CUMBRE METEORO tenía el flag 0x1E0, y los ocultos necesitan uno de 0x1F4 en adelante ("Hidden Item flag ... is too small"). Pasó a 0x470, se llevó por la pila, y `comprobar_zonas.py` ahora lo comprueba en todos los mapas.
 
 ## Pendiente
 

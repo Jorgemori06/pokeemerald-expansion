@@ -430,7 +430,7 @@ El primer bioma "por tipo". Miguel pidió que cada tipo tenga su bioma; el anál
 - **Zona de captura propia:** `MAPSEC_BOSQUE_SINIESTRO`, al final de la lista, y `HOENN_EXTRA_MAPSEC_LAST` pasa a ser esa: 117 de 128. Cartel de madera.
 - **Salvajes** (hierba alta): Liepard, Ariados, Shiftry, Trevenant, Honchkrow, Skuntank, Gourgeist, Thievul, Spidops y Grimmsnarl; raros, Zoroark y Spiritomb.
 - **Sin entrenadores:** ya no queda ningún hueco libre en la lista (864 de 864). Hay una bruja que avisa del guardián sin decir cuál es (con semilla es otro).
-- **Objetos** (con semilla, al azar): Gafas de Sol, Piedra Lunar, Hechizo oculto y un Ticket-Recuerdo. Como ya no quedan bloques de flags seguidos, van en flags sueltos: 0x4F9, 0x4FA, 0x1AA y 0x1AB. `crear_bosque_siniestro.py` los pone en su sitio (`SITIO_OBJETOS`).
+- **Objetos** (con semilla, al azar): Gafas de Sol, Piedra Lunar, Hechizo oculto y un Ticket-Recuerdo. Como ya no quedan bloques de flags seguidos, van en flags sueltos: 0x4F9, 0x4FA, 0x468 y 0x1AB. El oculto necesita uno de 0x1F4 en adelante (`FLAG_HIDDEN_ITEMS_START`): si no, no compila, y `comprobar_zonas.py` lo avisa. `crear_bosque_siniestro.py` los pone en su sitio (`SITIO_OBJETOS`).
 
 ### CUMBRE METEORO (hecho, Miguel, 17/11/2026; falta probarlo)
 
