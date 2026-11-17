@@ -363,7 +363,7 @@ ISLA SUR, ISLA LEJANA, ISLA ORIGEN y ROCA OMBLIGO ya existían, pero solo con un
   - Las islas del ferry llevan Pokémon que recuerdan a Ho-Oh y Lugia, los que había allí: Dragonite, Volcarona y Kingdra. ISLA LEJANA e ISLA ORIGEN, Pokémon Paradoja: Flutter Mane y Roaring Moon.
   - Pokémon Paradoja también en la ISLA ARENOSA (Sandy Shocks) y la PLAYA VOLCÁNICA (Slither Wing). **No son legendarios para el locke:** la regla de legendarios solo mira los restringidos, los singulares y los míticos.
   - Dondozo y Tatsugiri, en la cala de la MARISMA AZULIZA (con SURF).
-  - Hydreigon, en el BOSQUE SINIESTRO.
+  - Hydreigon, en el BOSQUE SINIESTRO, y Dragalge, en la CIÉNAGA TÓXICA.
   - Con semilla salen otros, como siempre (`islas()` de `estaticos.py`): ahí se sortean por especie, así que dos guardianes de la misma especie sin semilla tendrían el mismo con semilla.
 
 - **Sin legendarios (Miguel):** "sustituirlos por Pokémon fuertes (pseudos, Pokémon con mega o Gigamax) capturables y que den recompensa".
@@ -410,6 +410,30 @@ Miguel: la marisma y la playa "quedan raras"; hay que mirar cómo están hechas 
   - **Islas de mar** (RUTAS 127-134): la arena va rodeada de un anillo de bajío de 2 o 3 casillas; sobre la arena hay peñas, y en el mar rocas sueltas y remolinos, separados del bajío (el mar de al lado del bajío lleva orilla). La hierba de una isla va en otra parte, con orilla de mar, y no toca la arena ni el bajío. Las peñas de la RUTA 127 tienen un hueco de base secreta: al copiarlas se tapa.
 - **Para copiar trozos del juego dentro de un plano:** las casillas que pone el script (peñas, un montículo) cuentan para sus vecinas como el terreno de alrededor. Si se marcan como `"pared"`, sus vecinas las ven como un acantilado (por ejemplo, el mar de debajo de un acantilado copiado).
 - **Resultado:** las parejas raras bajaron de 118 a 63 en la marisma y de 240 a 61 en la playa. Las que quedan son uniones entre trozos copiados de otros mapas.
+
+### CIÉNAGA TÓXICA (hecho, Miguel, 17/11/2026; falta probarlo)
+
+El segundo bioma "por tipo" (sitio D del mapa de propuestas). El tipo **Veneno** salía en muchas zonas, pero solo por Zubat y Tentacool: no tenía zona propia.
+
+- **Dónde:** se entra andando por el borde sur de la RUTA 117 (x 32-36), junto a su hierba alta, sin pantalla de carga. **Tramo 3** (cap 32), el de la RUTA 117.
+  - Iba a ir al este de la RUTA 110, pero ese borde es todo agua: haría falta SURF, que llega en el tramo 6. Así es la primera zona nueva a la que se llega a pie después del BOSQUE FRONDOSO.
+  - En esa parte de la RUTA 117 la fila de abajo tenía las copas de los árboles del borde; pasan a ser hierba alta (x 32-34) y hierba (x 35-36).
+- **Todo lo hace `tools/dualocke/crear_cienaga_toxica.py`** (60 × 40, con los gráficos de la RUTA 117: General + Mauville). Siempre llueve.
+  - Charcas por todas partes, manchas de hierba alta y un camino de barro que baja desde la entrada y cruza la ciénaga.
+  - Al fondo, la charca grande, con un islote en medio al que se llega por una lengua de tierra: ahí está el guardián.
+  - Los árboles son los normales de Hoenn, con las funciones `arbol_normal()` y `copa_normal()` que ahora comparten el BOSQUE SINIESTRO y la ciénaga en `autotile.py`.
+  - Quedan 16 parejas de piezas que el juego no usa, casi todas en las curvas del camino de barro y en la entrada.
+  - **Sin hierba muy alta:** se probó la de la RUTA 120, pero su borde de abajo solo existe en los gráficos de ARBORADA y quedaba cortada.
+  - **Charcas rectas,** como las de la RUTA 117: con escalones quedaban esquinas sin orilla.
+- **Guardián:** en el islote. Sin semilla es Dragalge (Veneno/Dragón) a nivel 29 (regla `"tope"`); premio, Lodo Negro y su megapiedra. `FLAG_DUALOCKE_GUARDIAN_CIENAGA` (0x472).
+- **Zona de captura propia:** `MAPSEC_CIENAGA_TOXICA`, al final de la lista, y `HOENN_EXTRA_MAPSEC_LAST` pasa a ser esa: 118 de 128. Cartel de madera.
+- **Salvajes** (al final de `wild_encounters.json`, nivel 27-31):
+  - **Hierba alta:** Grimer, Croagunk, Koffing, Gloom, Weepinbell, Wooper de Paldea, Arbok, Trubbish, Foongus y Grafaiai; raros, Salandit y Toxel.
+  - **Pesca:** Barboach, Skrelp, Qwilfish, Mareanie y Whiscash.
+  - **Surf:** más tarde; salen al nivel del tramo 3.
+- **Sin entrenadores** (no queda ningún hueco). Hay una científica que estudia el agua y avisa del islote.
+- **Objetos** (con semilla, al azar): Flecha Venenosa, Bulbo, Tabla Tóxica oculta en el islote y un Ticket-Recuerdo. Flags sueltos: 0x054, 0x055, 0x479 (el oculto necesita uno de 0x1F4 en adelante) y 0x1AA.
+- `autotile.py` ya no aprende de la ciénaga como si fuera un mapa original: "Cienaga" está en la lista de zonas nuevas (`NUEVOS`).
 
 ### BOSQUE SINIESTRO (hecho, Miguel, 17/11/2026; falta probarlo)
 

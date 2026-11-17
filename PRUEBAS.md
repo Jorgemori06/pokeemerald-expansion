@@ -49,6 +49,14 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 - [ ] **Guardián** en la arena (Slither Wing sin semilla): da premio y no vuelve a salir.
 - [ ] **Mapa rehecho (17/11/2026):** se baja de la meseta a la playa saltando el risco o por la escalera, y se sube solo por la escalera. Que no se vea ninguna pieza rara (orillas, risco, árboles, la charca de marea).
 
+### CIÉNAGA TÓXICA (desde el 17/11/2026)
+
+- [ ] **Entrada:** bajando por el borde sur de la RUTA 117 (x 32-36, junto a la hierba alta) se pasa a la ciénaga sin cortes. Que no se vean copas de árbol sueltas en la unión. Al cruzar empieza a llover.
+- [ ] **El mapa:** que las orillas de las charcas y el camino de barro se vean bien, y que la lengua de tierra lleve al islote.
+- [ ] **Cartel** "CIÉNAGA TÓXICA", y que cuente como zona de captura propia.
+- [ ] **Salvajes** en la hierba alta (Veneno, nivel 27-31) y con caña en las charcas. La científica habla.
+- [ ] **Guardián** del islote (Dragalge sin semilla): da el Lodo Negro y no vuelve a salir.
+
 ### BOSQUE SINIESTRO (desde el 17/11/2026)
 
 - [ ] **Entrada:** bajando por el borde sur de la RUTA 123 (x 103-106) se pasa al bosque sin cortes. Que no se vean copas de árbol sueltas ni troncos cortados en la unión. Al cruzar se oscurece (sombra) y cambia la música.
