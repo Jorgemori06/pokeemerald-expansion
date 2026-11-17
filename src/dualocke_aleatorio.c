@@ -1,6 +1,7 @@
 #include "global.h"
 #include "dualocke_aleatorio.h"
 #include "event_data.h"
+#include "item.h"
 #include "move.h"
 #include "pokemon.h"
 #include "random.h"
@@ -204,6 +205,42 @@ void Dualocke_MegapiedraPokemonIsla(void)
             return;
         }
     }
+}
+
+static u32 AnadirEnsenable(enum Species species, enum Move move, u16 *moves, u32 n)
+{
+    u32 i;
+
+    if (move == MOVE_NONE || move == MOVE_UNAVAILABLE || !CanLearnTeachableMove(species, move))
+        return n;
+    for (i = 0; i < n; i++)
+    {
+        if (moves[i] == move)
+            return n;
+    }
+    moves[n] = move;
+    return n + 1;
+}
+
+// Pokédex HGSS: la lista de MT y tutores de la especie con la semilla (la original no sirve: las MT
+// enseñan otros movimientos y cada especie aprende los nuevos con cierta probabilidad).
+u32 Dualocke_MovimientosEnsenables(enum Species species, u16 *moves, u32 max)
+{
+    const u16 *original = GetSpeciesTeachableLearnset(species);
+    u32 i, n = 0;
+
+    for (i = 1; i <= NUM_ALL_MACHINES && n < max; i++)
+        n = AnadirEnsenable(species, GetTMHMMoveId(i), moves, n);
+    for (i = 0; i < ARRAY_COUNT(sDualockeTutores) && n < max; i++)
+        n = AnadirEnsenable(species, sDualockeTutores[i][1], moves, n);
+    for (i = 0; original[i] != MOVE_UNAVAILABLE && n < max; i++)
+    {
+        // Las de una MT que con la semilla ya no enseña ese movimiento no salen
+        if (GetTMHMItemIdFromMoveIdOriginal(original[i]) != ITEM_NONE && GetTMHMItemIdFromMoveId(original[i]) == ITEM_NONE)
+            continue;
+        n = AnadirEnsenable(species, original[i], moves, n);
+    }
+    return n;
 }
 
 // Tutores (callnative en la macro move_tutor): cambia el movimiento de VAR_0x8005 por el de la

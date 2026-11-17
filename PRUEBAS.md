@@ -149,6 +149,18 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 - [ ] **Entrenadores:** TERRY y CINDY (ISLA SUR), MIKE y AMY Y LIV (ISLA LEJANA), GINA Y MIA (ISLA ORIGEN) y LUCAS (ROCA OMBLIGO). Que te vean y no tapen el camino.
 - [ ] **Salvajes:** pesca en las cuatro, hierba en la ISLA LEJANA y cueva en ROCA OMBLIGO, a nivel de su tramo.
 
+### Interfaz (desde el 16/11/2026)
+
+- [ ] **POKéDEX nueva (estilo HeartGold/SoulSilver):**
+  - Que abra desde el menú y se mueva bien por todas las páginas (información, estadísticas, evoluciones, formas, área, grito, tamaño).
+  - Página de estadísticas: que los textos en español quepan (CAPT., RITMO, EXP. BASE, AMISTAD, ECLOSIÓN, grupos huevo) y no se monten unos encima de otros.
+  - Que los movimientos por nivel, las MT y la habilidad sean los de la semilla: comparar con la pantalla de datos de un Pokémon tuyo y con lo que dice una MT al usarla.
+  - Evoluciones: que el método se lea bien en español ("Nv.↑16", "Usar Piedra Fuego", "de noche", "tipo Siniestro en el equipo").
+- [ ] **Combate:** los iconos de tipo del rival junto a su barra; los textos más rápidos se pueden leer; sin la entrada deslizante.
+- [ ] **No se puede huir de un entrenador:** en un combate de entrenador, HUIR da el mensaje de que no se puede.
+- [ ] **Objetos:** al recoger uno sale arriba su imagen y su descripción, y se quita al cerrar el mensaje.
+- [ ] **Carteles de zona:** banda negra arriba con el nombre y la hora. Mirar los nombres largos (CIUDAD ARRECÍPOLIS, CALLE VICTORIA…).
+
 ### Recuerdamovimientos y Ticket-Recuerdo
 
 - [ ] En un Centro Pokémon, la señora a la derecha del PC: sin ticket te lo dice; con ticket enseña un movimiento de nivel y gasta el ticket solo si lo aprende.

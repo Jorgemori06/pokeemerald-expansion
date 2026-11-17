@@ -210,5 +210,5 @@ Una sección por idea, con:
   - **Huir de los entrenadores** (`B_RUN_TRAINER_BATTLE`): está **activado**, y huir cuenta como perder el combate, o sea, perder el locke. Mejor quitarlo para que no pase por error.
   - **Ya están:** ventana de información del movimiento (botón L), última Ball con R, icono de categoría, día y noche, IVs y EVs en la pantalla de datos.
   - **Más grande:** el Pokémon que te sigue (idea 6) y el DexNav. Y lo que no trae el motor (pantalla de datos estilo Blanco/Negro, menú de pausa a pantalla completa) son ramas de otra gente que habría que integrar: más difícil y con más riesgo.
-- **Estado:** Pendiente.
+- **Estado:** Hecho en el #78 (Miguel, 16/11/2026), menos el Pokémon que te sigue y el DexNav. Falta compilarlo y probarlo.
 
