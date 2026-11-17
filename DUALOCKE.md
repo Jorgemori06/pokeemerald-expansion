@@ -454,6 +454,13 @@ Qué mira:
 
 Las rarezas del juego original (puertas del ferry fuera del mapa…) están en `ORIGINALES`.
 
+### Al añadir una zona nueva: que no cambie lo de las partidas en curso (Jorge, 16-17/11/2026)
+
+- **`tools/dualocke/aleatorio/zonas.py`:** hay que poner ahí el prefijo de los mapas de la zona (`PREFIJOS`) y el de los flags de sus objetos (`FLAGS_OBJETOS`, el de su grupo en `colocar_objetos.py`). Así sus salvajes y objetos se sortean aparte, al final. Sin eso, como los mapas se recorren por orden alfabético, los objetos nuevos cambian casi todos los objetos del suelo, la Recogida y lo que piden los intercambios de las semillas en curso. Pasó con el #81 y otra vez con todas las zonas del #84 al #98.
+- **Que se pueda llegar desde el juego, no solo desde el borde de la zona:** `tools/dualocke/alcance.py` (#97) recorre Hoenn desde PUEBLO ESCASO y dice en qué tramo se llega a cada mapa. En las rutas de mar, el mar de fuera de la barrera de rocas es decorado: si la zona se conecta por ese borde, no se puede entrar.
+- **`HOENN_EXTRA_MAPSEC_LAST`** (`src/dualocke.c`) tiene que ser la última zona nueva; si no, la zona no tiene captura propia. `comprobar_zonas.py` lo avisa.
+- **Entrenadores:** están todos los de Esmeralda usados (864 de 864). Una zona nueva con entrenadores nuevos necesita subir `TRAINERS_COUNT`, y eso mueve los flags del sistema de las partidas guardadas: hay que reutilizar o pensarlo antes.
+
 ### Dibujar mapas como los del juego: `autotile.py` (Miguel, 17/11/2026)
 
 Miguel: la marisma y la playa "quedan raras"; hay que mirar cómo están hechas las rutas, playas y pantanos del juego y diseñar igual. `tools/dualocke/autotile.py` aprende de los mapas originales de exterior (sin las zonas nuevas) qué pieza va en cada sitio según sus vecinas.
