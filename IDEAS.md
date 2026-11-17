@@ -47,6 +47,7 @@ Una sección por idea, con:
   - **Gráficos nuevos** (un estilo de ruinas que no exista en el juego): **lo más difícil**. Habría que dibujar tiles y paletas a mano.
   - **Reparto del trabajo:** el diseño visual se hace mejor a mano en Porymap. Claude puede encargarse de lo demás: crear el mapa en los datos, conexiones y warps, scripts, encuentros, objetos y entrenadores. También puede generar un mapa sencillo por código, pero sin ver el resultado, así que el diseño fino es mejor en Porymap.
   - **Cosas que habría que tocar después:** los tramos de `reescalar_niveles.py` (para los niveles de la zona nueva), la tabla de `colocar_objetos.py` y la lista de zonas para las reglas de captura y el randomizer.
+  - **Análisis completo de zonas nuevas (Miguel, 16/11/2026): `ZONAS.md`.** Islas en las rutas de mar, SENDERO ÍGNEO profundo, hielo, desierto, ruinas y el orden para hacerlas.
   - **Zona junto a PUEBLO AZULIZA (Miguel, 15/11/2026):** una marisma con plantas y agua al oeste del pueblo, debajo de la RUTA 106, donde ahora no hay nada, con objetos, megapiedras y entrenadores que den cosas.
     - **Hay sitio:** un hueco de unas 36 × 20 casillas entre el acantilado de la CUEVA GRANITO y el pueblo, que no pertenece a ningún mapa.
     - **Entrada sin tocar AZULIZA:** el borde oeste del pueblo ya es arena transitable en las filas 6 a 14. Basta una conexión a la izquierda.
@@ -193,7 +194,7 @@ Una sección por idea, con:
     6. **Randomizer y guía:** el randomizer saca las megas de la tabla de cambios de forma, así que los jefes podrían llevar las nuevas sin tocar nada. La Pokédex de la guía también las saca del código.
   - **Dificultad:** media. Lo que más lleva es decidir las 26 megas.
   - **Partidas en curso:** con megas nuevas, el as con mega de algunos jefes puede cambiar (hay más donde elegir). Mejor para un locke nuevo, o comprobar con las semillas qué cambia.
-- **Estado:** Pendiente.
+- **Estado:** Hecho (Miguel, 16/11/2026), falta compilarlo y probarlo. La tabla de las 26 está en `DUALOCKE.md`, sección 6.
 
 ### 10. Interfaces y opciones del motor que tenemos apagadas
 
@@ -210,5 +211,5 @@ Una sección por idea, con:
   - **Huir de los entrenadores** (`B_RUN_TRAINER_BATTLE`): está **activado**, y huir cuenta como perder el combate, o sea, perder el locke. Mejor quitarlo para que no pase por error.
   - **Ya están:** ventana de información del movimiento (botón L), última Ball con R, icono de categoría, día y noche, IVs y EVs en la pantalla de datos.
   - **Más grande:** el Pokémon que te sigue (idea 6) y el DexNav. Y lo que no trae el motor (pantalla de datos estilo Blanco/Negro, menú de pausa a pantalla completa) son ramas de otra gente que habría que integrar: más difícil y con más riesgo.
-- **Estado:** Pendiente.
+- **Estado:** Hecho en el #78 (Miguel, 16/11/2026), menos el Pokémon que te sigue y el DexNav. Falta compilarlo y probarlo.
 

@@ -212,7 +212,7 @@ Regla general: **el as de cada jefe va exactamente al nivel del cap**, el resto 
   - **Regalos** (Castform, fósiles, Beldum, iniciales de Johto, huevo de Wynaut): se quedan con su nivel original, para entrenarlos (con Caramelos Raros a 1 ₽).
   - Lo hace `reescalar_niveles.py` (tabla `ESTATICOS`).
   - **Captura de estáticos (decidido, falta implementarlo encima del PR #17):** de los estáticos normales solo se puede capturar el primero de cada tipo (un Kecleon, un Voltorb, un Electrode), sin gastar la zona.
-- **Evoluciones de los entrenadores normales (hecho):** `tools/dualocke/evolucionar_entrenadores.py` evoluciona sus Pokémon según el nivel. Las evoluciones por nivel van a su nivel normal; las que no son por nivel (piedra, amistad…) van a 30 la primera y a 40 la segunda. Los tres scripts se lanzan en orden: `reescalar_niveles.py`, `equipos_jefes.py` y `evolucionar_entrenadores.py`. Después va `ia_entrenadores.py` (la IA de los entrenadores normales, sección 7).
+- **Evoluciones de los entrenadores normales (hecho):** `tools/dualocke/evolucionar_entrenadores.py` evoluciona sus Pokémon según el nivel. Las evoluciones por nivel van a su nivel normal; las que no son por nivel (piedra, amistad…) van a 30 la primera y a 40 la segunda. Los scripts se lanzan en orden: `reescalar_niveles.py`, `zonas_nuevas.py` (los salvajes de las zonas nuevas, que `reescalar_niveles.py` borraría), `equipos_jefes.py` y `evolucionar_entrenadores.py`. Después va `ia_entrenadores.py` (la IA de los entrenadores normales, sección 7).
 - El randomizer **no debe tocar los niveles ni el tamaño de los equipos**: solo especies, movimientos, habilidades y objetos. Al cambiar especies, debe mantener la regla de evolucionar según el nivel.
 
 ## 6. Megas, tiendas y evoluciones
@@ -243,16 +243,57 @@ Regla general: **el as de cada jefe va exactamente al nivel del cap**, el resto 
   - **Objetos:** solo se añade la megapiedra; los que ya llevaban (Baya Zidra…) se quedan, y el resto lo pondrá el randomizer.
   - Los rivales y la IA megaevolucionan sin aro, con solo llevar la piedra.
 - Las **megapiedras** (decidido por Miguel el 23/10/2026) **se encuentran explorando el mapa**: no se venden.
-  - Hay **81**, todas las de Pokémon no legendarios, cada una en un sitio que encaja con ella. Por ejemplo: Cameruptita en Jagged Pass, Garchompita en el desierto, Sharpedonita bajo el agua en la Ruta 124, Glalitita en Shoal Cave…
+  - Hay **107**: las 81 de Pokémon no legendarios de la expansion y 26 de las formas Gigamax (abajo), cada una en un sitio que encaja con ella. Por ejemplo: Cameruptita en Jagged Pass, Garchompita en el desierto, Sharpedonita bajo el agua en la Ruta 124, Glalitita en Shoal Cave…
   - Unas van en **bola de objeto** y otras **ocultas** (para el Buscaobjetos).
   - Las coloca `tools/dualocke/colocar_objetos.py`, que tiene la tabla completa. Cada una tiene su flag `FLAG_ITEM_MEGA_...`, del **0x264 al 0x2B4** de `include/constants/flags.h`. El script busca solo una casilla transitable cerca de algo que ya se pueda alcanzar.
   - Las de antes del aro se pueden recoger, pero no usar hasta tenerlo.
   - **Para el randomizer:** estas ubicaciones son **fijas**. Al barajar los objetos del suelo hay que saltarse los que tienen flag `FLAG_ITEM_MEGA_...` o `FLAG_ITEM_COMP_...`.
+- **Formas Gigamax como megas (Miguel, 16/11/2026; idea 9 de `IDEAS.md`).** El Dinamax no se usa, así que las formas Gigamax son megaevoluciones, cada una con su megapiedra.
+  - **26 megas nuevas** (27 formas: Toxtricity tiene dos y una sola piedra). Venusaur, Charizard, Blastoise y Gengar ya tenían mega, y Urshifu y Melmetal son singulares: se quedan como estaban.
+  - Usan los gráficos de la forma Gigamax. Las estadísticas suman **100 más** que la forma normal, como las megas oficiales. El diseño lo propuso Claude y **Miguel lo aprobó tal cual (16/11/2026)**:
+
+  | Pokémon | Megapiedra | Tipo | Habilidad | PS/Ata/Def/AtE/DfE/Vel (total) | Dónde |
+  | --- | --- | --- | --- | --- | --- |
+  | Butterfree | Butterfrita | Bicho / Psíquico | Cromolente | 60/45/70/130/100/90 (495) | RUTA 104 (oculta) |
+  | Pikachu | Pikachunita | Eléctrico | Transistor | 35/75/50/90/60/110 (420) | RUTA 110 (bola) |
+  | Meowth | Meowthita | Normal / Acero | Experto | 55/75/55/40/50/115 (390) | PORTUAL (oculta) |
+  | Machamp | Machampita | Lucha | Indefenso | 90/160/100/65/100/90 (605) | RUTA 112 (bola) |
+  | Kingler | Kinglerita | Agua / Acero | Garra Dura | 55/160/135/60/70/95 (575) | RUTA 109 (bola) |
+  | Lapras | Laprasita | Agua / Hielo | Nevada | 130/95/110/115/125/60 (635) | RUTA 128 (bola) |
+  | Eevee | Eevinita | Normal | Adaptable | 65/80/70/70/75/65 (425) | RUTA 116 (bola) |
+  | Snorlax | Snorlaxita | Normal / Planta | Sebo | 160/140/95/65/140/40 (640) | RUTA 121 (bola) |
+  | Garbodor | Garbodorita | Veneno | Capa Tóxica | 100/125/112/60/102/75 (574) | BARCO ABANDONADO (bola) |
+  | Rillaboom | Rillaboomita | Planta / Lucha | Herbogénesis | 100/155/110/60/90/115 (630) | ZONA SAFARI (bola) |
+  | Cinderace | Cinderacita | Fuego | Líbero | 80/146/90/70/90/154 (630) | RUTA 113 (oculta) |
+  | Inteleon | Inteleonita | Agua | Francotirador | 70/85/75/165/85/150 (630) | RUTA 122 (bola) |
+  | Corviknight | Corviknightita | Volador / Acero | Coraza Reflejo | 98/127/125/53/105/87 (595) | ARBORADA (oculta) |
+  | Orbeetle | Orbeetlita | Bicho / Psíquico | Psicogénesis | 70/45/120/130/140/100 (605) | RUTA 102 (bola) |
+  | Drednaw | Drednawita | Agua / Roca | Mandíbula Fuerte | 90/145/115/48/88/99 (585) | RUTA 106 (bola) |
+  | Coalossal | Coalossalita | Roca / Fuego | Sequía | 110/80/150/120/120/30 (610) | PASO DESNIVEL (oculta) |
+  | Flapple | Flapplita | Planta / Dragón | Garra Dura | 70/140/90/95/70/120 (585) | RUTA 123 (oculta) |
+  | Appletun | Appletunita | Planta / Dragón | Sebo | 120/85/110/130/110/30 (585) | RUTA 114 (bola) |
+  | Sandaconda | Sandacondita | Tierra | Chorro Arena | 72/137/155/65/90/91 (610) | RUTA 111 (desierto) (oculta) |
+  | Toxtricity (las dos formas) | Toxtricitita | Eléctrico / Veneno | Punk Rock | 75/98/80/154/90/105 (602) | NUEVA MALVALONA (bola) |
+  | Centiskorch | Centiskorchita | Fuego / Bicho | Mandíbula Fuerte | 100/145/85/90/110/95 (625) | RUTA 112 (oculta) |
+  | Hatterene | Hatterenita | Psíquico / Hada | Espejo Mágico | 67/90/115/176/133/29 (610) | MONTE PÍRICO (bola) |
+  | Grimmsnarl | Grimmsnarlita | Siniestro / Hada | Bromista | 95/150/85/95/105/80 (610) | RUTA 121 (oculta) |
+  | Alcremie | Alcremita | Hada | Nebulogénesis | 75/60/95/140/141/84 (595) | CALAGUA (bola) |
+  | Copperajah | Copperajahita | Acero | Potencia Bruta | 122/160/99/80/99/40 (600) | RUTA 115 (bola) |
+  | Duraludon | Duraludonita | Acero / Dragón | Filtro | 70/95/135/150/70/115 (635) | CALLE VICTORIA (oculta) |
+
+  - **Con semilla, la habilidad sale al azar**, como la de todas las especies (también las megas de siempre). La de la tabla vale sin semilla.
+  - **Megapiedras:** "Kinglerita", "Hace megaevolucionar a Kingler.". El icono es el dibujo de la Gengarita con otra paleta: la bola del color principal del Pokémon y la espiral de los otros dos (`graphics/items/icon_palettes/`).
+  - **Dónde:** las coloca `colocar_objetos.py` (tabla `MEGAPIEDRAS_GIGAMAX`), con los flags `FLAG_ITEM_MEGA_...` del **0x4CA al 0x4E3**.
+  - **Bolsillo de megapiedras:** de 100 a 130 (`BAG_MEGASTONES_COUNT`). Es lo último de `SaveBlock3` y las casillas nuevas se leen vacías de las partidas de antes.
+  - **Código:** todo lo hace `tools/dualocke/megas_gigamax.py` (tabla `DISENO`). Para cambiar una mega, se cambia ahí y se vuelve a lanzar.
+    - En `gSpeciesInfo` y en la tabla de cambios de forma, lo nuevo va dentro de `#if TESTING ... #else ... #endif`: en los tests de la expansion se queda la forma Gigamax de siempre, porque los tests del Dinamax la usan.
+    - Las megapiedras son objetos nuevos al final de la lista (874-899): no se mueve el número de ningún objeto de las partidas guardadas.
+  - **Randomizer:** los jefes que llevan as con mega desde el Mega-Aro pueden sacar una de estas, porque el randomizer lee las megas de la tabla de cambios de forma. En las semillas en curso solo cambia el as de esos jefes (de ALANA en adelante); lo demás sale igual.
 - **Objetos competitivos de generaciones nuevas** (decidido por Miguel el 23/10/2026): existían en el motor, pero no se podían conseguir. Ahora hay **55 repartidos por el mapa**, como las megapiedras: Mineral Evolutivo, Banda Focus, Casco Dentado, Botas Gruesas, Pañuelo Elegido, Chaleco Asalto, Gafas Elegidas, Vidasfera, rocas de clima, semillas de terreno, Cápsula y Parche Habilidad, 8 Mentas…
   - Están ordenados por tramo: los más fuertes (Pañuelo Elegido, Chaleco Asalto, Gafas Elegidas, Vidasfera) salen a partir del tramo 6.
   - Los coloca el mismo script. Sus flags son `FLAG_ITEM_COMP_...`, del **0x493 al 0x4C9**.
   - La tabla está en el script y en `registro/2026-10-23-miguel-objetos-competitivos.md`.
-  - **Flags libres que quedan para Jorge:** 0x043-0x04F, 0x2B6-0x2BB, 0x4CA-0x4E4 y el resto de `FLAG_UNUSED_...` (0x2B5 es `FLAG_DUALOCKE_TIENE_BALLS`; 0x021-0x042 y 0x4E5-0x4EF son de los Ticket-Recuerdo).
+  - **Flags libres que quedan para Jorge:** 0x043-0x04F, 0x2B6-0x2BB, 0x4E4 y el resto de `FLAG_UNUSED_...` (0x2B5 es `FLAG_DUALOCKE_TIENE_BALLS`; 0x021-0x042 y 0x4E5-0x4EF son de los Ticket-Recuerdo).
 
 ### Tiendas
 
@@ -331,6 +372,22 @@ Para ver todo sin herramientas externas (pedido por Miguel el 24/10/2026):
 - Código: `include/config/summary_screen.h` (opciones `P_SUMMARY_SCREEN_IV_EV_*`) y `src/pokemon_summary_screen.c` (busca "Dualocke").
 - Pendiente: hacerla más bonita con gráficos nuevos (fondos, iconos). Hace falta dibujarlos y probarlos en el emulador.
 
+### Interfaz: opciones del motor encendidas (Miguel, 16/11/2026)
+
+Miguel: "interfaces más chulas, actualizadas". Son cosas que la expansion ya trae y estaban apagadas. Todas en `include/config/`; ninguna cambia la partida guardada.
+
+- **Pokédex estilo HeartGold/SoulSilver** (`POKEDEX_PLUS_HGSS`, `pokedex_plus_hgss.h`):
+  - Para cada Pokémon: estadísticas base, captura, experiencia, amistad, grupos huevo, habilidades, movimientos y evoluciones (con su método).
+  - **Enseña lo de la semilla:** los movimientos por nivel al azar (ya salían de `GetSpeciesLevelUpLearnset`) y la habilidad al azar (`GetAbilityBySpecies`). Las MT y los tutores se sacan con `Dualocke_MovimientosEnsenables` (`src/dualocke_aleatorio.c`): lo que enseña cada MT con la semilla y si esa especie lo puede aprender, como al usar la MT. La lista original no valía, porque las MT enseñan otros movimientos.
+  - **Traducida:** los 97 textos de `src/pokedex_plus_hgss.c` con `ES()`, medidos con la fuente pequeña para que quepan en sus huecos. Las etiquetas que son dibujos (pestañas) siguen en inglés, como en la Pokédex de antes.
+  - Delante de un tipo o de una naturaleza se pone "tipo" o "naturaleza", porque en español va delante ("tipo Siniestro en el equipo").
+- **Tipos del rival en combate** (`B_SHOW_TYPES` = siempre): iconos de tipo junto a la barra de vida al elegir movimiento.
+- **Descripción al recoger un objeto** (`OW_SHOW_ITEM_DESCRIPTIONS` = siempre): la imagen y lo que hace, arriba. El modo "solo la primera vez" no: añade datos a la partida guardada y rompería las que están en curso.
+- **Carteles de zona estilo Blanco/Negro** (`OW_POPUP_GENERATION` = `GEN_5`), negros, con la hora en 24 h. Ocupan todo el ancho, así que caben todos los nombres en español.
+- **Combates más rápidos:** pausas de texto a la mitad (`B_WAIT_TIME_MULTIPLIER` 16 → 8) y sin la entrada deslizante (`B_FAST_INTRO_NO_SLIDE`).
+- **No se puede huir de un entrenador** (`B_RUN_TRAINER_BATTLE` = `FALSE`). Estaba activado, y huir cuenta como perder el combate (`B_OUTCOME_FORFEITED`), o sea, perder el locke. Así no pasa por error.
+- **Siguen apagados:** el Pokémon que te sigue (idea 6) y el DexNav, que piden más trabajo.
+
 ### Mochila: bolsillos Medicinas y Megapiedras (hecho, Jorge, 26/10/2026)
 
 Lo pidió Jorge al probar: las megapiedras y las pociones se mezclaban con todo en Objetos.
@@ -343,6 +400,322 @@ Lo pidió Jorge al probar: las megapiedras y las pociones se mezclaban con todo 
 - El tutorial de Blasco (la Poción va a Medicinas) guarda y devuelve también ese bolsillo. Las bebidas de la azotea del Centro Comercial dicen que van a MEDICINAS.
 - Depuración: "Fill Pocket Items" llena también Medicinas y da una de cada megapiedra; "Fill Pocket Key Items" da el Mega-Aro.
 - Tests en `test/dualocke.c` (busca "bolsillos").
+
+### Islas del ferry (hecho, Miguel, 16/11/2026; falta probarlo)
+
+ISLA SUR, ISLA LEJANA, ISLA ORIGEN y ROCA OMBLIGO ya existían, pero solo con un billete de evento y después de la Liga. Ahora son las primeras zonas "nuevas" (`ZONAS.md`, propuesta 8).
+
+- **Se abren una por medalla.** El encargado del puerto de CALAGUA da el billete de cada una y el ferry ya no espera a la Liga (`Dualocke_EventScript_BilletesIslas`, `data/scripts/dualocke_islas.inc`):
+
+  | Isla | Medalla | Tramo | Pokémon fuerte (sin semilla) | Nivel | Premio |
+  | --- | --- | --- | --- | --- | --- |
+  | ISLA SUR | 6.ª | 7 | Dragonite | 70 | Cinta Elección |
+  | ISLA LEJANA | 7.ª | 8 | Flutter Mane | 81 | Restos |
+  | ISLA ORIGEN | 8.ª | 9 | Roaring Moon | 97 | Parche Habilidad |
+  | ROCA OMBLIGO, cima | 8.ª | 9 | Volcarona | 97 | Vidasfera |
+  | ROCA OMBLIGO, fondo | 8.ª | 9 | Kingdra | 97 | Chaleco Asalto |
+
+- **Guardianes únicos (Miguel, 17/11/2026):** "que cada uno de los guardianes sea único". Antes se repetían Salamence, Tyranitar, Metagross, Charizard y Gyarados. Ahora, sin semilla, no hay dos iguales:
+  - Se quedan Houndoom (GRUTA ÍGNEA), Baxcalibur (ISLA NEVADA), Garchomp (RUINAS ARENOSAS), Gengar (MANSIÓN OLVIDADA), Charizard (ISLA VOLCÁNICA), Salamence (CUMBRE METEORO) y Metagross (ISLA DE RUINAS).
+  - Las islas del ferry llevan Pokémon que recuerdan a Ho-Oh y Lugia, los que había allí: Dragonite, Volcarona y Kingdra. ISLA LEJANA e ISLA ORIGEN, Pokémon Paradoja: Flutter Mane y Roaring Moon.
+  - Pokémon Paradoja también en la ISLA ARENOSA (Sandy Shocks) y la PLAYA VOLCÁNICA (Slither Wing). **No son legendarios para el locke:** la regla de legendarios solo mira los restringidos, los singulares y los míticos.
+  - Dondozo y Tatsugiri, en la cala de la MARISMA AZULIZA (con SURF).
+  - Hydreigon, en el BOSQUE SINIESTRO, y Dragalge, en la CIÉNAGA TÓXICA.
+  - Con semilla salen otros, como siempre (`islas()` de `estaticos.py`): ahí se sortean por especie, así que dos guardianes de la misma especie sin semilla tendrían el mismo con semilla.
+
+- **Sin legendarios (Miguel):** "sustituirlos por Pokémon fuertes (pseudos, Pokémon con mega o Gigamax) capturables y que den recompensa".
+  - Latios/Latias, Mew, Deoxys, Ho-Oh y Lugia se quedan en el mapa, pero siempre ocultos (el código del juego los usa, como el Mew que se esconde en la hierba). Tampoco está el puzle del triángulo de la ISLA ORIGEN.
+  - En su sitio hay un Pokémon que se puede capturar. Es un estático: no gasta la captura de la zona. Si es de una línea que ya tienes, va a VETADOS, como siempre.
+  - **Con semilla sale otro fuerte:** de una línea que acaba en 600 o más de estadísticas base, o con mega (también las de las formas Gigamax). `islas()` en `tools/dualocke/aleatorio/estaticos.py` los sortea aparte, con su propio RNG, así que los demás estáticos y regalos de las semillas en curso no cambian. El sprite del mapa es el de la especie que sale (`Dualocke_GraficoPokemonIsla`).
+  - **Nivel:** el del entrenador normal más fuerte de su tramo (cap − 3), con la regla `"tope"` de `reescalar_niveles.py`. La regla `("tope", tramo)` usa el tope de otro tramo: la cala de la MARISMA AZULIZA está en el tramo 2, pero solo se llega con SURF (tramo 6).
+  - **Premio** al vencerlo o capturarlo: el objeto de la tabla y, si tiene mega, su megapiedra (`Dualocke_MegapiedraPokemonIsla`). Si huyes, se queda.
+- **Entrenadores (6):** TERRY y CINDY en la ISLA SUR, MIKE y las gemelas AMY Y LIV en la ISLA LEJANA, las gemelas GINA Y MIA en la ISLA ORIGEN y LUCAS en el cruce de ROCA OMBLIGO.
+  - Son entrenadores que existían pero no salían en ningún mapa, así que no se gastan flags ni se rompe la partida guardada.
+  - `reescalar_niveles.py` les pone el nivel de su tramo (`ENTRENADORES_ISLAS`), pero no cuentan para la banda del tramo: así no cambia el nivel de nadie más.
+- **Salvajes** (`tools/dualocke/zonas_nuevas.py`): pesca en las cuatro islas, hierba en el interior de la ISLA SUR y de la ISLA LEJANA, y cueva en ROCA OMBLIGO.
+  - La ISLA SUR no tenía hierba: el 17/11/2026 se puso hierba alta en el claro del bosque, alrededor de la charca, en su `map.bin`. Las tablas van al final de `wild_encounters.json`, para no cambiar los salvajes de las semillas en curso. Cada isla es su propia zona de captura (ya lo era en el mapa de la región).
+- **Objetos:** 11 objetos normales (con semilla, al azar como los demás), colocados con `colocar_objetos.py` (`OBJETOS_ISLAS`, flags `FLAG_ITEM_ISLA_...` del 0x8E5 al 0x8EF).
+- **Textos:** los del ferry y los marineros eran de postgame y estaban en inglés; ahora están en `traduccion/dialogos/41_islas_ferry.tsv`.
+- **Flags nuevos:** `FLAG_DUALOCKE_ISLA_SUR`, `_LEJANA`, `_ORIGEN`, `FLAG_DUALOCKE_OMBLIGO_CIMA` y `_FONDO` (0x881-0x885).
+
+### Comprobar las zonas sin compilar
+
+`python3 tools/dualocke/comprobar_zonas.py` revisa todos los mapas de Hoenn y devuelve los fallos (0 el 17/11/2026, en 944 mapas). Hay que lanzarlo **antes de subir cualquier mapa nuevo**: los primeros mapas nuevos se subieron sin apuntar sus `scripts.inc` en `data/event_scripts.s` y no habrían compilado.
+
+Qué mira:
+
+- scripts apuntados en `event_scripts.s` y layouts (existen y miden lo que dicen);
+- etiquetas de los scripts y constantes (flags, objetos, especies, entrenadores, mapas, música…);
+- puertas (destino y número de puerta) y conexiones (que el otro mapa conecte de vuelta);
+- objetos repetidos en la misma casilla;
+- entrenadores: equipo en `trainers.party`, `TRAINERS_COUNT_EMERALD` y los nuevos de `zonas_nuevas.py` (clase, foto y música que existan, nombre de 10 letras como mucho);
+- salvajes: huecos y especies;
+- zonas de captura: caben en las variables y las nuevas tienen sus carteles.
+
+Las rarezas del juego original (puertas del ferry fuera del mapa…) están en `ORIGINALES`.
+
+### Al añadir una zona nueva: que no cambie lo de las partidas en curso (Jorge, 16-17/11/2026)
+
+- **`tools/dualocke/aleatorio/zonas.py`:** hay que poner ahí el prefijo de los mapas de la zona (`PREFIJOS`) y el de los flags de sus objetos (`FLAGS_OBJETOS`, el de su grupo en `colocar_objetos.py`). Así sus salvajes y objetos se sortean aparte, al final. Sin eso, como los mapas se recorren por orden alfabético, los objetos nuevos cambian casi todos los objetos del suelo, la Recogida y lo que piden los intercambios de las semillas en curso. Pasó con el #81 y otra vez con todas las zonas del #84 al #98.
+- **Que se pueda llegar desde el juego, no solo desde el borde de la zona:** `tools/dualocke/alcance.py` (#97) recorre Hoenn desde PUEBLO ESCASO y dice en qué tramo se llega a cada mapa. En las rutas de mar, el mar de fuera de la barrera de rocas es decorado: si la zona se conecta por ese borde, no se puede entrar.
+- **`HOENN_EXTRA_MAPSEC_LAST`** (`src/dualocke.c`) tiene que ser la última zona nueva; si no, la zona no tiene captura propia. `comprobar_zonas.py` lo avisa.
+- **Entrenadores:** están todos los de Esmeralda usados (864 de 864). Una zona nueva con entrenadores nuevos necesita subir `TRAINERS_COUNT`, y eso mueve los flags del sistema de las partidas guardadas: hay que reutilizar o pensarlo antes.
+
+### Dibujar mapas como los del juego: `autotile.py` (Miguel, 17/11/2026)
+
+Miguel: la marisma y la playa "quedan raras"; hay que mirar cómo están hechas las rutas, playas y pantanos del juego y diseñar igual. `tools/dualocke/autotile.py` aprende de los mapas originales de exterior (sin las zonas nuevas) qué pieza va en cada sitio según sus vecinas.
+
+- **Cómo se usa:** el script de la zona dibuja el mapa con letras (`PLANO`): `.` hierba, `,` hierba alta, `~` agua, `s` arena, `R` risco… `Aprendiz.pintar()` elige cada pieza (las orillas, las esquinas, los bordes de la hierba) y `Aprendiz.revisar()` cuenta las parejas de piezas vecinas que no salen en ningún mapa del juego. `arboles_grandes()` pinta los árboles de 2 × 2 (con la copa de hierba alta si hay hierba alta encima) y avisa si un grupo queda cortado.
+- **Reglas aprendidas del juego:**
+  - La arena de playa **nunca toca la hierba**: siempre hay un risco o agua entre las dos (como la playa de la RUTA 104). El risco va con la hierba arriba o a la izquierda y la arena abajo o a la derecha, y se baja por una escalera.
+  - En una charca, la orilla de arriba y los lados se dibujan sobre el agua, y la de abajo sobre la hierba (o la arena).
+  - Los árboles de AZULIZA solo van sobre arena; AZULIZA no tiene hierba.
+  - Los caminos de tierra tienen su propio borde (piezas 0x118-0x12A).
+  - **Islas de mar** (RUTAS 127-134): la arena va rodeada de un anillo de bajío de 2 o 3 casillas; sobre la arena hay peñas, y en el mar rocas sueltas y remolinos, separados del bajío (el mar de al lado del bajío lleva orilla). La hierba de una isla va en otra parte, con orilla de mar, y no toca la arena ni el bajío. Las peñas de la RUTA 127 tienen un hueco de base secreta: al copiarlas se tapa.
+- **Para copiar trozos del juego dentro de un plano:** las casillas que pone el script (peñas, un montículo) cuentan para sus vecinas como el terreno de alrededor. Si se marcan como `"pared"`, sus vecinas las ven como un acantilado (por ejemplo, el mar de debajo de un acantilado copiado).
+- **Resultado:** las parejas raras bajaron de 118 a 63 en la marisma y de 240 a 61 en la playa. Las que quedan son uniones entre trozos copiados de otros mapas.
+
+### CIÉNAGA TÓXICA (hecho, Miguel, 17/11/2026; falta probarlo)
+
+El segundo bioma "por tipo" (sitio D del mapa de propuestas). El tipo **Veneno** salía en muchas zonas, pero solo por Zubat y Tentacool: no tenía zona propia.
+
+- **Dónde:** se entra andando por el borde sur de la RUTA 117 (x 32-36), junto a su hierba alta, sin pantalla de carga. **Tramo 3** (cap 32), el de la RUTA 117.
+  - Iba a ir al este de la RUTA 110, pero ese borde es todo agua: haría falta SURF, que llega en el tramo 6. Así es la primera zona nueva a la que se llega a pie después del BOSQUE FRONDOSO.
+  - En esa parte de la RUTA 117 la fila de abajo tenía las copas de los árboles del borde; pasan a ser hierba alta (x 32-34) y hierba (x 35-36).
+- **Todo lo hace `tools/dualocke/crear_cienaga_toxica.py`** (60 × 40, con los gráficos de la RUTA 117: General + Mauville). Siempre llueve.
+  - Charcas por todas partes, manchas de hierba alta y un camino de barro que baja desde la entrada y cruza la ciénaga.
+  - Al fondo, la charca grande, con un islote en medio al que se llega por una lengua de tierra: ahí está el guardián.
+  - Los árboles son los normales de Hoenn, con las funciones `arbol_normal()` y `copa_normal()` que ahora comparten el BOSQUE SINIESTRO y la ciénaga en `autotile.py`.
+  - Quedan 16 parejas de piezas que el juego no usa, casi todas en las curvas del camino de barro y en la entrada.
+  - **Sin hierba muy alta:** se probó la de la RUTA 120, pero su borde de abajo solo existe en los gráficos de ARBORADA y quedaba cortada.
+  - **Charcas rectas,** como las de la RUTA 117: con escalones quedaban esquinas sin orilla.
+- **Guardián:** en el islote. Sin semilla es Dragalge (Veneno/Dragón) a nivel 29 (regla `"tope"`); premio, Lodo Negro y su megapiedra. `FLAG_DUALOCKE_GUARDIAN_CIENAGA` (0x472).
+- **Zona de captura propia:** `MAPSEC_CIENAGA_TOXICA`, al final de la lista, y `HOENN_EXTRA_MAPSEC_LAST` pasa a ser esa: 118 de 128. Cartel de madera.
+- **Salvajes** (al final de `wild_encounters.json`, nivel 27-31):
+  - **Hierba alta:** Grimer, Croagunk, Koffing, Gloom, Weepinbell, Wooper de Paldea, Arbok, Trubbish, Foongus y Grafaiai; raros, Salandit y Toxel.
+  - **Pesca:** Barboach, Skrelp, Qwilfish, Mareanie y Whiscash.
+  - **Surf:** más tarde; salen al nivel del tramo 3.
+- **Sin entrenadores** (no queda ningún hueco). Hay una científica que estudia el agua y avisa del islote.
+- **Objetos** (con semilla, al azar): Flecha Venenosa, Bulbo, Tabla Tóxica oculta en el islote y un Ticket-Recuerdo. Flags sueltos: 0x054, 0x055, 0x479 (el oculto necesita uno de 0x1F4 en adelante) y 0x1AA.
+- `autotile.py` ya no aprende de la ciénaga como si fuera un mapa original: "Cienaga" está en la lista de zonas nuevas (`NUEVOS`).
+
+### BOSQUE SINIESTRO (hecho, Miguel, 17/11/2026; falta probarlo)
+
+El primer bioma "por tipo". Miguel pidió que cada tipo tenga su bioma; el análisis de los salvajes sin semilla dio que el tipo **Siniestro** no tenía zona propia: solo salía Poochyena por las rutas normales. Era el sitio F del mapa de propuestas (`fotos_zonas/13_propuestas_biomas.png`).
+
+- **Dónde:** se entra andando por el borde sur de la RUTA 123, al pie del MONTE PÍRICO (x 103-106), sin pantalla de carga. **Tramo 6** (cap 62), el de la RUTA 123.
+  - En esa parte de la RUTA 123, la fila de abajo tenía las copas de los árboles del borde (0x00E, que se pisa). Esas cuatro casillas pasan a ser hierba.
+- **Todo lo hace `tools/dualocke/crear_bosque_siniestro.py`** (50 × 44, con los gráficos de la RUTA 123: General + Lilycove). A la sombra (`WEATHER_SHADE`) y con la música de fuera del MONTE PÍRICO.
+  - **El camino:** un sendero baja hasta un primer claro con hierba alta, donde hay una bruja. Al este hay una charca oscura y al oeste, un callejón.
+  - **El centro:** un claro grande con un risco que se salta hacia abajo; también se rodea por el este.
+  - **El fondo:** un bosque profundo con senderos estrechos, claros de hierba alta y, al final, el claro del guardián. Desde ahí se vuelve a la entrada sin subir el risco (comprobado).
+- **Los árboles normales de Hoenn** (los de la RUTA 123) miden una casilla de ancho:
+  - **Interior:** 0x0C6 y 0x0C7.
+  - **Pie de la franja:** 0x016.
+  - **Copa:** el árbol de debajo pinta su copa en la casilla de hierba de encima, y esa casilla se puede pisar. Es 0x00E sobre hierba y 0x025 sobre hierba alta.
+  - Lo demás lo pinta `autotile.py`. Quedan 2 parejas de piezas que el juego no usa: la punta del risco junto a un árbol, y dos copas distintas juntas.
+- **Guardián:** en el claro del fondo. Sin semilla es Hydreigon (Siniestro/Dragón) a nivel 59 (regla `"tope"`); premio, Tabla Pavor. `FLAG_DUALOCKE_GUARDIAN_SINIESTRO` (0x91E). Con semilla sale otro fuerte (`islas()` de `estaticos.py`).
+- **Zona de captura propia:** `MAPSEC_BOSQUE_SINIESTRO`, al final de la lista, y `HOENN_EXTRA_MAPSEC_LAST` pasa a ser esa: 117 de 128. Cartel de madera.
+- **Salvajes** (hierba alta): Liepard, Ariados, Shiftry, Trevenant, Honchkrow, Skuntank, Gourgeist, Thievul, Spidops y Grimmsnarl; raros, Zoroark y Spiritomb.
+- **Sin entrenadores:** ya no queda ningún hueco libre en la lista (864 de 864). Hay una bruja que avisa del guardián sin decir cuál es (con semilla es otro).
+- **Objetos** (con semilla, al azar): Gafas de Sol, Piedra Lunar, Hechizo oculto y un Ticket-Recuerdo. Como ya no quedan bloques de flags seguidos, van en flags sueltos: 0x4F9, 0x4FA, 0x468 y 0x1AB. El oculto necesita uno de 0x1F4 en adelante (`FLAG_HIDDEN_ITEMS_START`): si no, no compila, y `comprobar_zonas.py` lo avisa. `crear_bosque_siniestro.py` los pone en su sitio (`SITIO_OBJETOS`).
+
+### CUMBRE METEORO (hecho, Miguel, 17/11/2026; falta probarlo)
+
+- **Dónde:** una cueva nueva en la pared de roca de la RUTA 115, junto a la entrada de la CATARATA METEORO (x 31, fila 39; se entra desde abajo, andando). **Tramo 4** (cap 43).
+  - El borde norte de la RUTA 115 está cerrado (bosque y acantilados), así que se entra por una cueva y no por el borde.
+  - La boca es el mismo dibujo que la de la catarata, puesta en una pared lisa: no se quita ninguna base secreta de la ruta.
+- **Todo lo hace `tools/dualocke/crear_cumbre_meteoro.py`.** Dos mapas, con los gráficos de la RUTA 115:
+  - **LADERA** (40 × 20): las terrazas de roca del sur de la RUTA 114 (escaleras, rocas y bordillos de un solo sentido), con hierba alta de montaña (la verde con fondo de roca, 0x212, que en el juego no se usaba). Arriba del todo, otra cueva sube a la cumbre.
+  - **CUMBRE** (22 × 31): las cimas de la RUTA 115, a las que en el juego no se llega. Con nieve (nieve en combate) y hierba escarchada (la de ceniza de la RUTA 113, 0x20A). Arriba espera el guardián.
+  - Las bases secretas de los trozos copiados se tapan con roca, y dos pasan a ser las cuevas.
+  - Desde cada entrada se llega a la salida y al guardián, también con los bordillos (comprobado).
+- **Guardián:** sin semilla, Salamence a nivel 40 (regla `"tope"`); premio, Colmillo Dragón y su megapiedra. `FLAG_DUALOCKE_GUARDIAN_CUMBRE` (0x91D, el último flag libre del sistema que no es diario).
+- **Zona de captura propia:** `MAPSEC_CUMBRE_METEORO` (las dos partes cuentan como una): 116 de 128.
+- **Salvajes:**
+  - Ladera: roca y lucha (Machop, Geodude, Aron, Makuhita, Nosepass, Roggenrola, Rockruff, Timburr, Mienfoo…; raros, Druddigon y Bagon).
+  - Cumbre: hielo, aire y dragón (Snorunt, Skarmory, Noibat, Bergmite, Cubchoo, Amaura, Rookidee, Altaria, Cryogonal…; raros, Frigibax y Bagon).
+- **Objetos:** Piedra Dura y un Ticket-Recuerdo en la ladera; Escama Dragón y Roca Helada (oculta) en la cumbre. `OBJETOS_CUMBRE`: flags normales 0x1DE-0x1E1, porque en la zona del sistema ya no quedan libres que no sean diarios. Los de la ladera se pusieron a mano (`colocar_objetos.py` no les encontró sitio).
+
+### PLAYA VOLCÁNICA (hecho, Miguel, 17/11/2026; falta probarlo)
+
+- **Dónde:** pegada al borde oeste de la RUTA 122 (la del MONTE PÍRICO). Se llega surfeando, sin pantalla de carga: **tramo 7** (cap 73).
+- **Paso:** la RUTA 122 está rodeada por un anillo de rocas sin huecos. Se quitó la roca de arriba a la izquierda (x 5-6, filas 4-5) y se sale por el noroeste (filas 0-7).
+- **Gráficos de LAVACALDA (General + Lavaridge),** distintos de los de la RUTA 122 (General + Lilycove).
+  - Una conexión entre mapas con gráficos distintos solo se ve bien si, desde cada lado, lo que se ve del otro mapa son gráficos generales. Lo comprueba `tools/dualocke/crear_playa_volcanica.py`, que hace todo.
+  - Se cruza por arriba, donde el borde de la RUTA 122 solo tiene mar y rocas generales.
+  - Las 8 columnas del este de la playa son solo mar y rocas generales, y desde la fila 8 una fila de rocas no deja acercarse al borde. Desde ahí se vería la orilla del monte, que es de Algaria.
+- **La playa** (40 × 40), con sol. **Rehecha el 17/11/2026** con `autotile.py` (ver arriba), como la playa de la RUTA 104 a los pies de un volcán:
+  - **Abajo y a la derecha, la playa:** arena con su orilla y su bajío, una charca de marea, rocas en el mar y un arrecife junto al borde este.
+  - **Un risco** separa la playa de la meseta, con una escalera (x 16-17, fila 18).
+  - **Arriba y a la izquierda, la meseta:** pradera con manchas de hierba alta, árboles, flores, un camino de tierra de la escalera a las termas y una peña volcánica de la RUTA 112.
+  - **Las termas:** el rincón de las aguas termales de LAVACALDA, con su poza y su arena, bajo el acantilado del volcán.
+- **Guardián** en la arena: sin semilla, Slither Wing a nivel 70 (regla `"tope"`); premio, Energía Potenciadora y su megapiedra si tiene. `FLAG_DUALOCKE_GUARDIAN_PLAYA` (0x917).
+- **Un bañista junto a las termas.** No hay entrenadores: ya no queda ninguno libre.
+- **Zona de captura propia:** `MAPSEC_PLAYA_VOLCANICA` (115 de 128).
+- **Salvajes:**
+  - Ceniza: Numel, Slugma, Torkoal, Camerupt, Magcargo, Salandit, Krabby, Crabrawler, Dwebble, Sandygast y, raros, Turtonator y Larvesta.
+  - Mar: el de las islas del sur. Pesca de cangrejos y Gyarados.
+- **Objetos** (`OBJETOS_PLAYA`, flags 0x918-0x91A, y un Ticket-Recuerdo, 0x91C): Piedra Agua, Roca Lluvia y una Perla oculta. Se movieron a mano: el script los ponía todos junto al guardián. Al rehacer el mapa se volvieron a mover tres que habían quedado en el risco, en el mar y en el bajío.
+
+### Islas de las rutas del sur (hecho, Miguel, 17/11/2026; falta probarlo)
+
+Tres islas nuevas del **tramo 8** (cap 84), cada una pegada al borde de una ruta de mar. Se llega surfeando, sin pantalla de carga, y usan los gráficos de su ruta (si no, la conexión se vería rota). Todo lo hace `tools/dualocke/crear_islas_sur.py`.
+
+- **Sitios elegidos mirando las corrientes:**
+  - Las RUTAS 132-134 tienen sus bordes cerrados por rocas, y sus corrientes solo empujan al oeste: no se llega a los huecos.
+  - El borde este de la RUTA 127 es una pared de roca.
+  - Por eso dos islas no están donde decía ZONAS.md (ver cada una).
+- **Los islotes se copian con `isla()`:** solo las casillas que no son mar y están unidas al islote. Así no se cuelan rocas sueltas, corrientes ni trozos de otras islas.
+- **Rehechas el 17/11/2026 con `autotile.py`** (ver "Dibujar mapas como los del juego"). Antes eran trozos de islotes copiados tal cual: la arena de la ISLA DE RUINAS acababa cortada en recto contra el mar, la ISLA VOLCÁNICA era un montículo pegado sobre un bajío cuadrado y la ISLA ARENOSA eran tres islotes de la RUTA 127.
+- **ISLA DE RUINAS**, al norte de la RUTA 131 (en ZONAS.md, al sur de la RUTA 132), junto al PILAR CELESTE:
+  - El islote del PILAR CELESTE con su torre, con niebla (Campo de Niebla en combate). Abajo, la franja de arena acaba en una playa (antes se cortaba en recto) y hay rocas en el mar.
+  - El rellano de la torre está rodeado de acantilados: la cueva de la orilla de abajo es un túnel que sale por la cueva del montículo.
+  - La puerta de la torre, abierta, lleva a la **TORRE**: la planta 1 del PILAR CELESTE, sin la escalera, con el guardián delante.
+- **ISLA VOLCÁNICA**, al sur de la RUTA 134, donde el mar no tiene corriente (se llega desde PORTUAL):
+  - Una isla de arena con su anillo de bajío, tres peñas de la RUTA 127, rocas en el mar y, en medio, el montículo del PILAR CELESTE (con la cima de una peña: la suya tenía la sombra de la torre). Sol.
+  - Su cueva baja al **CRÁTER**: la cima del MONTE CENIZO (lago de lava y terrazas, sin la estación del teleférico). Tiene manchas de ceniza con salvajes y una salida nueva: la entrada de la GUARIDA MAGMA del CAMINO ESCABROSO, puesta en un escalón.
+- **ISLA ARENOSA**, al este de la RUTA 129 (en ZONAS.md, al este de la RUTA 127):
+  - Una isla grande de arena con cinco peñas y una cala al sur. Al oeste, un islote de hierba con árboles, flores y hierba alta (la de los salvajes), con orilla de mar: se llega surfeando. Tormenta de arena.
+  - Se llega desde la izquierda: primero se pasa junto al islote y, al llegar a la isla, espera DARÍO (mira a la izquierda). El guardián está en la punta del sur.
+  - Ninguna peña deja hacer bases secretas: el hueco se tapa.
+- **Guardianes** (el sistema de las islas del ferry, regla `"tope"`: nivel 81), sin semilla:
+  - Metagross en la TORRE (premio: Cinta Experto). `FLAG_DUALOCKE_GUARDIAN_ISLA_RUINAS` (0x909).
+  - Charizard en el CRÁTER (Roca Calor). `FLAG_DUALOCKE_GUARDIAN_VOLCAN` (0x90A).
+  - Sandy Shocks en la ISLA ARENOSA (Roca Suave). `FLAG_DUALOCKE_GUARDIAN_ARENOSA` (0x90B). Era Tyranitar: se cambió para que no se repitiera (ver "Guardianes únicos").
+  - Con semilla salen otros fuertes (`islas()` de `estaticos.py`). Cada uno da también su megapiedra.
+- **Zonas de captura propias (3):** `MAPSEC_ISLA_DE_RUINAS`, `MAPSEC_ISLA_VOLCANICA` y `MAPSEC_ISLA_ARENOSA` (cada isla con su interior cuenta como una). Se usan 114 de 128.
+- **Entrenadores:** solo DARÍO, entrenador guay de la ISLA ARENOSA (Krookodile, Hippowdon y Flygon). Es `TRAINER_RED`, el último entrenador de Esmeralda sin usar. **Ya no queda ninguno libre:** para poner más habría que agrandar la lista (y eso mueve los flags del sistema y rompe las partidas guardadas) o reutilizar otros.
+- **Salvajes:**
+  - Mar: pesca y surf en las tres islas.
+  - TORRE: POKéMON de ruinas (Bronzong, Golurk, Sigilyph, Beheeyem, Claydol…; raros, Metang y Zweilous).
+  - CRÁTER: de fuego (Magcargo, Camerupt, Torkoal, Magmortar, Salazzle, Coalossal…; raros, Volcarona y Larvesta).
+  - ISLA ARENOSA: de tierra y arena (Sandslash, Krookodile, Hippowdon, Flygon…; raros, Gabite y Pupitar).
+- **Objetos** (`OBJETOS_ISLAS_SUR`, flags 0x90C-0x912, y un Ticket-Recuerdo por isla, 0x914-0x916): Gafas Especiales, Más PP, Llamasfera, Piedra Fuego, Perla Grande, Gafa Protectora y Sarta de Perlas. Se movieron a mano los que el script ponía delante de DARÍO o juntos.
+
+### BOSQUE FRONDOSO y MANSIÓN OLVIDADA (hecho, Miguel, 17/11/2026; falta probarlo)
+
+- **Dónde:** en el claro del noreste del BOSQUE PETALIA se abre un pasillo entre los árboles, tapado por dos árboles de CORTE (`FLAG_TEMP_13` y `_14`). Lleva al BOSQUE FRONDOSO por el borde, sin pantalla de carga. Hace falta CORTE: **tramo 2** (cap 23).
+- **BOSQUE FRONDOSO** (36 × 40), con los gráficos del BOSQUE PETALIA:
+  - arriba, en un patio con verja y farolas, la mansión (el edificio largo de CIUDAD FÉRRICA) y su cartel;
+  - **rehecho el 17/11/2026 mirando el BOSQUE PETALIA:** franjas y grupos de árboles de distinto alto, árboles sueltos, manchas de hierba alta de borde irregular, claros sin hierba, flores y una charca para pescar;
+  - **el camino da la vuelta:** de la entrada se va al oeste (pasando junto a la charca), se sube por un paso entre los árboles y se rodea por el este un **risco** del BOSQUE PETALIA (de un solo sentido). Después, por otro paso, se llega al patio de la mansión. De vuelta se puede saltar el risco.
+  - El mapa se dibuja en `tools/dualocke/crear_bosque_frondoso.py` con letras, una por casilla (`PLANO`), y lo pinta `autotile.py`, como la MARISMA AZULIZA. Las únicas parejas de piezas que no salen en el juego (42) están en el borde de la mansión copiada.
+  - El cartel de la mansión ahora se puede leer: antes tenía un árbol debajo. La unión con el BOSQUE PETALIA también se arregló: a la derecha del pasillo había hierba encima de un árbol del BOSQUE PETALIA.
+- **MANSIÓN OLVIDADA:** las cuatro salas del BARCO ABANDONADO, que con la madera y las camas parecen una casa vieja.
+  - Sin los salvavidas y con un paso nuevo a la sala de arriba a la izquierda.
+  - La puerta de esa sala está atascada (cartel). La de la derecha sube al **DESVÁN**: dos salas de la planta oculta del barco.
+  - El suelo de madera de ese barco tiene salvajes (`MB_INDOOR_ENCOUNTER`), aunque en el juego original no los usa: aquí salen fantasmas.
+- **Guardián del DESVÁN:** delante de una puerta rota. Sin semilla es Gengar a nivel 20 (cap − 3, regla `"tope"`); premio, Hechizo y su megapiedra. `FLAG_DUALOCKE_GUARDIAN_MANSION` (0x863).
+- **Zonas de captura propias (2):** `MAPSEC_BOSQUE_FRONDOSO` y `MAPSEC_MANSION_OLVIDADA` (las dos plantas). `HOENN_EXTRA_MAPSEC_LAST` pasa a ser la de la mansión: 111 de 128.
+- **Entrenadores (4), a nivel 19-20:**
+  - Bosque: SEBAS, cazabichos (`TRAINER_SEBAS`, 863: Dustox y Ninjask) y OLIVIA, campista (Nuzleaf y Skiploom).
+  - Mansión: ELVIRA, bruja (Shuppet, Duskull y Misdreavus) y ALFONSO, caballero (Drifloon y Litwick).
+  - **Ya no quedan huecos de entrenador** (864 de 864). OLIVIA, ELVIRA y ALFONSO son `TRAINER_BRENDAN_PLACEHOLDER`, `TRAINER_MAY_PLACEHOLDER` y `TRAINER_LEAF`, que existían sin usar en Esmeralda. `zonas_nuevas.py` reescribe su bloque entero y `reescalar_niveles.py` los trata como los de las islas (`ENTRENADORES_ISLAS`). Queda `TRAINER_RED` (851) sin usar; para más habrá que reutilizar otros.
+- **Salvajes:**
+  - Bosque: Sewaddle, Nincada, Seedot, Skwovet, Pikipek, Pineco, Fomantis, Cutiefly, Morelull, Petilil y, raros, Scyther y Heracross.
+  - Charca: Magikarp, Goldeen, Poliwag, Psyduck, Lotad, Marill y, muy raro con la SUPERCAÑA, Dratini.
+  - Mansión: Gastly, Shuppet, Duskull, Misdreavus, Litwick, Phantump, Pumpkaboo, Sinistea, Greavard, Drifloon y, raros, Rotom y Dreepy.
+- **Objetos** (`OBJETOS_BOSQUE`, flags 0x900-0x904, y un Ticket-Recuerdo, 0x908): Polvo Plata y Raíz Grande (oculta) en el bosque, Tela Terrible y Amuleto en la mansión, Piedra Noche en el desván.
+
+### MARISMA AZULIZA (hecho, Miguel, 17/11/2026; falta probarlo)
+
+- **Dónde:** al oeste de PUEBLO AZULIZA, pegada al pueblo (conexión por el borde, sin pantalla de carga). Se llega andando por la arena del oeste del pueblo: **tramo 2** (cap 23).
+- **El mapa** (48 × 34), con los gráficos de AZULIZA (General + Dewford). **Rehecho el 17/11/2026** con `autotile.py` (ver arriba). Siempre **llueve**.
+  - **Este, la playa de AZULIZA:** arena con grupos de árboles del pueblo, una charca de marea y el cartel a la entrada.
+  - **Un risco** separa la arena de la pradera, más alta, con una escalera (x 29-30, fila 13).
+  - **Centro, la pradera:** manchas de hierba alta y de hierba muy alta, sitios sin hierba, flores, árboles grandes sueltos y en grupo y una charca pequeña.
+  - **Oeste, el lago** (pesca y surf) y, detrás, **una cala que solo se alcanza con SURF**.
+  - Rocas para GOLPE ROCA (Geodude, Nosepass, Roggenrola, Binacle).
+- **La cala (con SURF, tramo 6):** Dondozo y Tatsugiri, cada uno con su flag (`FLAG_DUALOCKE_MARISMA_DONDOZO` 0x1E2 y `FLAG_DUALOCKE_MARISMA_TATSUGIRI` 0x1E3) y su premio: Casco Dentado y Agua Mística. A nivel 59 (regla `("tope", 6)`). Con semilla, otros fuertes. La Semilla Milagro también está en la cala.
+- **Todo lo hace `tools/dualocke/crear_marisma_azuliza.py`.** El mapa va al final del grupo de AZULIZA y de `layouts.json`.
+- **Zona de captura propia:** `MAPSEC_MARISMA_AZULIZA`, al final de la lista. `HOENN_EXTRA_MAPSEC_LAST` pasa a ser esa: 109 bits.
+  - Se ha añadido una variable de zonas, `VAR_DUALOCKE_ZONES_7` (era `VAR_UNUSED_0x40FE`, sin usar): ahora caben 128 zonas.
+  - En las partidas guardadas vale 0, así que no se pierde nada.
+- **Entrenadores (2, nuevos), a nivel 19-20:**
+  - TOMÁS, pescador (`TRAINER_TOMAS`, 861): Barboach y Lotad.
+  - MARGARITA, dama aroma (`TRAINER_MARGARITA`, 862): Shroomish y Paras.
+  - `TRAINERS_COUNT_EMERALD` pasa a 863: queda 1 hueco.
+- **Salvajes:**
+  - Hierba: Wooper, Lotad, Surskit, Yanma, Tympole, Shroomish, Croagunk, Paras, Shellos, Stunfisk, Dewpider y, raro, Goomy.
+  - Pesca en las charcas con la CAÑA VIEJA (la dan en AZULIZA): Barboach, Poliwag, Goldeen, Wishiwashi, Tympole, Chewtle, Basculin…
+  - Surf, para cuando se vuelva: Surskit, Lotad, Wooper, Poliwag y Chewtle.
+- **Objetos:** Semilla Milagro (`FLAG_ITEM_MARISMA_MIRACLE_SEED`, 0x88F, en la cala) y un Ticket-Recuerdo (`FLAG_ITEM_TICKET_MARISMA_AZULIZA`, 0x8E3, en la hierba muy alta del norte).
+
+### DESIERTO PROFUNDO y RUINAS ARENOSAS (hecho, Miguel, 16/11/2026; falta probarlo)
+
+`ZONAS.md`, propuesta 5, y las ruinas que pidió Miguel ("el desierto profundo y unas ruinas").
+
+- **Entrada:** un montículo con puerta en la parte este del desierto de la RUTA 111, como el de las RUINAS DESIERTO.
+  - Se llega con las GAFAS AISLANTES: **tramo 5** (cap 50).
+  - Es una puerta y no una conexión por el borde, porque todo el borde este del desierto es roca.
+- **DESIERTO PROFUNDO** (24 × 68): el desierto de la RUTA 111 sin la TORRE ESPEJISMO ni los huecos de base secreta, con **tormenta de arena** (también en combate).
+  - Abajo está la salida.
+  - En el norte, otro montículo lleva a las ruinas.
+- **RUINAS ARENOSAS:** las cuatro plantas de la TORRE ESPEJISMO (17/11/2026; antes eran dos).
+  - **Entrada:** un pasillo alrededor de un bloque central.
+  - **Plantas 2 y 3:** suelo agrietado, igual que en la torre: si se rompe, caes a la planta de abajo (`setholewarp`). En la 3, dos rocas de GOLPE ROCA.
+  - **CÁMARA:** arriba del todo.
+  - **Guardián:** en la CÁMARA hay un Pokémon fuerte que se puede capturar, como en las islas del ferry (`dualocke_islas.inc`). Sin semilla es Garchomp a nivel 47 (cap − 3, regla `"tope"`); con semilla, otro fuerte (`islas()` en `estaticos.py`).
+  - **Premio:** Cascabel Concha y su megapiedra si tiene. Flag `FLAG_DUALOCKE_GUARDIAN_RUINAS` (0x886).
+- **Zonas de captura propias (2):** `MAPSEC_DESIERTO_PROFUNDO` y `MAPSEC_RUINAS_ARENOSAS`, al final de la lista. `HOENN_EXTRA_MAPSEC_LAST` pasa a ser la de las ruinas: 108 de 112 bits.
+- **Todo lo hace `tools/dualocke/crear_desierto_profundo.py`.** Los tres mapas van al final de `gMapGroup_Dungeons`.
+- **Entrenadores (2, nuevos):**
+  - SOLEDAD, experta del desierto (`TRAINER_SOLEDAD`, 860): Flygon, Hippowdon y Cacturne.
+  - RAMIRO, ruinamaníaco de las ruinas (`TRAINER_RAMIRO`, 859): Claydol y Golurk.
+  - Los dos a nivel 46-47. `TRAINERS_COUNT_EMERALD` pasa a 861: quedan 3 huecos.
+- **Salvajes:**
+  - Desierto: Trapinch, Sandshrew, Cacnea, Hippopotas, Sandile, Silicobra, Helioptile, Skorupi, Maractus, Baltoy y, raros, Larvitar y Gible.
+  - Ruinas: Baltoy, Yamask, Golett, Bronzor, Sigilyph, Runerigus, Elgyem, Claydol, Spiritomb, Archen…
+- **Objetos:** Arena Fina y Trozo Estrella en el desierto, Hueso Raro y Piedra Espíritu en las ruinas (`OBJETOS_DESIERTO`, flags 0x8F0-0x8F3).
+
+### ISLA NEVADA (hecho, Miguel, 16/11/2026; falta probarlo)
+
+`ZONAS.md`, propuesta 1. Una isla al norte de la RUTA 124 con nieve y una cueva de hielo.
+
+- **Cómo se llega:** surfeando hacia el norte desde la RUTA 124, sin pantalla de carga (conexión `up`). **Tramo 7** (cap 73).
+- **La isla** (80 × 40). **Rehecha el 17/11/2026 con `autotile.py`**, como las islas del sur (ver "Dibujar mapas como los del juego"). Antes era el islote de la CUEVA CARDUMEN de la RUTA 125 pegado arriba, cortado por el borde del mapa, con mucho mar vacío.
+  - Ahora es una isla grande de arena con su anillo de bajío y una cala al sur, peñas y rocas en el mar.
+  - Arriba está la cresta de roca del islote grande de la RUTA 127, sin sus huecos de base secreta. En su pie se abre la entrada de la cueva, con las piezas de la cueva del PILAR CELESTE.
+  - Lo hace `crear_isla_nevada.py` con `dibujar()` y `sello()` de `crear_islas_sur.py`.
+  - Usa los mismos gráficos que la RUTA 124, para que la conexión se vea bien.
+  - Clima `WEATHER_SNOW`: **nieve en combate**. Esmeralda no tiene suelo nevado para fuera, así que la nieve es la que cae.
+- **Guardián de la CUEVA HELADA (17/11/2026):** al fondo de la cueva, donde estaba la Piedra Hielo (que pasa junto al Hielo Perpetuo).
+  - Sin semilla es Baxcalibur a nivel 70; premio, Garra Afilada y su megapiedra.
+  - `FLAG_DUALOCKE_GUARDIAN_NEVADA` (0x88E).
+- **La CUEVA HELADA** (20 × 30): la entrada del islote lleva a ella. Es la sala de hielo de la CUEVA CARDUMEN (suelo resbaladizo, rocas para frenar), con otros entrenadores y objetos. Se podría rediseñar con Porymap.
+- **Zona de captura propia:** `MAPSEC_ISLA_NEVADA` (la isla y la cueva cuentan como una), al final de la lista. `HOENN_EXTRA_MAPSEC_LAST` pasa a ser esa: 106 de 112 bits.
+- **Todo lo hace `tools/dualocke/crear_isla_nevada.py`.** La isla va al final del grupo de las rutas y la cueva al de las mazmorras: ningún mapa cambia de número.
+- **Entrenadores (3):**
+  - DUDLEY y KAYLEE, nadadores que existían sin usar, en el mar al sur de la isla, por donde se llega. Los reescala `reescalar_niveles.py` (65-67).
+  - NIEVES, entrenadora guay nueva en la cueva (`TRAINER_NIEVES`, 858; `TRAINERS_COUNT_EMERALD` 859). Lleva Froslass, Abomasnow y Walrein a nivel 69-70 (`zonas_nuevas.py`).
+- **Salvajes:**
+  - Agua y pesca: Spheal, Seel, Delibird, Arctovish, Cloyster, Lapras…
+  - Cueva: Snorunt, Swinub, Snover, Cubchoo, Vanillite, Snom, Bergmite, Sneasel, Cetoddle, Cryogonal, Eiscue y, raro, Frigibax.
+- **Objetos:** Hielo Perpetuo y Piedra Hielo en la cueva, y una Bola de Nieve oculta en la punta oeste de la isla (`OBJETOS_NEVADA`, flags 0x8FA-0x8FC). Después de colocarlos se movieron a mano a sitios que no tapan el pasillo. Los de fuera los pone `crear_isla_nevada.py` en su sitio (`SITIOS`).
+
+### GRUTA ÍGNEA (hecho, Miguel, 16/11/2026; falta probarlo)
+
+La primera zona nueva de verdad (`ZONAS.md`, propuesta 7, "SENDERO ÍGNEO profundo"). El nombre es el que usó Miguel: "mejorar la gruta ígnea".
+
+- **CÁMARA DEL MAGMA (17/11/2026):** la salida del sur de la gruta baja a una sala en terrazas con dos pozas de lava (la sala 3 de la planta 3 de la GUARIDA MAGMA, sin su máquina y con la puerta de arriba tapiada).
+  - **Guardián arriba del todo:** sin semilla, Houndoom a nivel 47; premio, Periscopio y su megapiedra.
+  - Usa el mismo sistema que las islas del ferry (`FLAG_DUALOCKE_GUARDIAN_GRUTA`, 0x887).
+  - Cuenta como la misma zona de captura que la gruta.
+- **Dónde:** una boca de cueva en la sala del suroeste del SENDERO ÍGNEO, la de detrás de las rocas. Hace falta FUERZA, que se usa con la 4.ª medalla, así que es del **tramo 5** (cap 50), que antes no tenía casi nada.
+- **El mapa** (59 × 28): es la planta 4 de la GUARIDA MAGMA sin las máquinas del Equipo Magma, que comparte gráficos con el SENDERO ÍGNEO. Es un recorrido largo alrededor de un lago de lava, que no se puede cruzar.
+  - Lo hace `tools/dualocke/crear_gruta_ignea.py`: cada casilla de máquina pasa a ser el suelo de cueva de al lado y se tapa la salida hacia la guarida.
+  - Clima `WEATHER_DROUGHT`: **sol en combate**. Música de la CUEVA ANCESTRAL.
+- **Zona de captura propia:** `MAPSEC_GRUTA_IGNEA`, al final de `region_map_sections.json`.
+  - `HOENN_EXTRA_MAPSEC_LAST` (`src/dualocke.c`) pasa a ser esa: se usan 105 de los 112 bits y los de antes no se mueven.
+  - Las zonas nuevas siguientes van detrás y se cambia esa línea.
+  - Cartel de zona: piedra, y negro en el estilo Blanco/Negro (`src/map_name_popup.c`).
+- **El mapa nuevo va al final** de `layouts.json` y del grupo `gMapGroup_Dungeons`: no cambia el número de ningún mapa de las partidas guardadas.
+- **Entrenadores (3):**
+  - ÍGOR (fogonero) y ROQUE (montañero): `TRAINER_IGOR` y `TRAINER_ROQUE`, dos de los 8 huecos que quedaban (`TRAINERS_COUNT_EMERALD` pasa a 858). Sus equipos los escribe `zonas_nuevas.py` (`NUEVOS`), al nivel de los más fuertes del tramo (46-47).
+  - Una soldado del Equipo Magma: `TRAINER_GRUNT_UNUSED`, que existía sin usar (con los gráficos del Equipo Aqua: `zonas_nuevas.py` se los cambia). La reescala `reescalar_niveles.py`.
+- **Salvajes:** de fuego y de roca de todas las generaciones (Slugma, Salandit, Sizzlipede, Rolycoly, Litwick, Heatmor, Charcadet, Turtonator, Larvesta…), en `zonas_nuevas.py`.
+- **Objetos:** Piedra Fuego, Magmatizador, Carbón y Galleta Lava (`OBJETOS_GRUTA` en `colocar_objetos.py`, flags del 0x8F6 al 0x8F9).
 
 ### Recuerdamovimientos y Ticket-Recuerdo (hecho, Miguel, 26/10/2026)
 
@@ -655,7 +1028,7 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
   - Tests en `test/dualocke.c` (`make check TESTS="Dualocke"`).
   - **Aviso al morir (hecho, Miguel, 24/10/2026):** cuando se debilita un Pokémon tuyo en un combate en el que cuentan las vidas, en vez de "X fainted!" sale "X has died! Lives left: N." (las vidas que quedarán al acabar el combate). Si ya no quedan vidas, o se han debilitado todos, sale "X has died! The locke is lost!". Los Pokémon del compañero (combates dobles con compañero) no cuentan. En los tests de la expansion se deja el texto original. Código: `src/dualocke_aviso.c`, enganchado en `BufferStringBattle` (`src/battle_message.c`).
 - Combate con Máximo en la Ruta 120 que da el Mega-Aro (Jorge, sección 6).
-- Primera captura por zona para los salvajes (Jorge, sección 4). Las zonas gastadas se guardan en `VAR_DUALOCKE_ZONES_0` a `_6` (7 variables libres, un bit por zona; no gasta flags). Tests en `test/dualocke.c`.
+- Primera captura por zona para los salvajes (Jorge, sección 4). Las zonas gastadas se guardan en `VAR_DUALOCKE_ZONES_0` a `_7` (8 variables libres, un bit por zona; no gasta flags; la `_7` se añadió el 17/11/2026 con la MARISMA AZULIZA). Tests en `test/dualocke.c`.
 - Caja de prohibidos (Jorge, sección 4): regalos, eventos, fósiles, estáticos, huevos e intercambios repetidos o legendarios van a la caja 13 ("VETADOS"), bloqueada hasta que dejan de ser repetidos.
 - Randomizer completo (Jorge, sección 7) y traducción al español de la historia (Miguel y Jorge, sección 8).
 - Bolsillos Medicinas y Megapiedras en la mochila (Jorge, sección 6).

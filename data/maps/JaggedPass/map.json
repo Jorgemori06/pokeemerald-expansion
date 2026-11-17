@@ -256,6 +256,14 @@
       "elevation": 3,
       "item": "ITEM_GREAT_BALL",
       "flag": "FLAG_HIDDEN_ITEM_JAGGED_PASS_GREAT_BALL"
+    },
+    {
+      "type": "hidden_item",
+      "x": 13,
+      "y": 7,
+      "elevation": 3,
+      "item": "ITEM_COALOSSALITE",
+      "flag": "FLAG_ITEM_MEGA_COALOSSALITE"
     }
   ]
 }

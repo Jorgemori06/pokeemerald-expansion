@@ -9323,6 +9323,236 @@
       "border_filepath": "data/layouts/OneIsland_KindleRoad_EmberSpa_Frlg/border.bin",
       "blockdata_filepath": "data/layouts/OneIsland_KindleRoad_EmberSpa_Frlg/map.bin",
       "layout_version": "frlg"
+    },
+    {
+      "id": "LAYOUT_GRUTA_IGNEA",
+      "name": "GrutaIgnea_Layout",
+      "width": 59,
+      "height": 28,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lavaridge",
+      "border_filepath": "data/layouts/GrutaIgnea/border.bin",
+      "blockdata_filepath": "data/layouts/GrutaIgnea/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLA_NEVADA",
+      "name": "IslaNevada_Layout",
+      "width": 80,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mossdeep",
+      "border_filepath": "data/layouts/IslaNevada/border.bin",
+      "blockdata_filepath": "data/layouts/IslaNevada/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLA_NEVADA_CUEVA",
+      "name": "IslaNevada_Cueva_Layout",
+      "width": 20,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/IslaNevada_Cueva/border.bin",
+      "blockdata_filepath": "data/layouts/IslaNevada_Cueva/map.bin"
+    },
+    {
+      "id": "LAYOUT_DESIERTO_PROFUNDO",
+      "name": "DesiertoProfundo_Layout",
+      "width": 24,
+      "height": 68,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mauville",
+      "border_filepath": "data/layouts/DesiertoProfundo/border.bin",
+      "blockdata_filepath": "data/layouts/DesiertoProfundo/map.bin"
+    },
+    {
+      "id": "LAYOUT_RUINAS_ARENOSAS",
+      "name": "RuinasArenosas_Layout",
+      "width": 21,
+      "height": 17,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_MirageTower",
+      "border_filepath": "data/layouts/RuinasArenosas/border.bin",
+      "blockdata_filepath": "data/layouts/RuinasArenosas/map.bin"
+    },
+    {
+      "id": "LAYOUT_RUINAS_ARENOSAS_CAMARA",
+      "name": "RuinasArenosas_Camara_Layout",
+      "width": 13,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_MirageTower",
+      "border_filepath": "data/layouts/RuinasArenosas_Camara/border.bin",
+      "blockdata_filepath": "data/layouts/RuinasArenosas_Camara/map.bin"
+    },
+    {
+      "id": "LAYOUT_GRUTA_IGNEA_CAMARA",
+      "name": "GrutaIgnea_Camara_Layout",
+      "width": 33,
+      "height": 24,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lavaridge",
+      "border_filepath": "data/layouts/GrutaIgnea_Camara/border.bin",
+      "blockdata_filepath": "data/layouts/GrutaIgnea_Camara/map.bin"
+    },
+    {
+      "id": "LAYOUT_RUINAS_ARENOSAS_2F",
+      "name": "RuinasArenosas_2F_Layout",
+      "width": 21,
+      "height": 17,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_MirageTower",
+      "border_filepath": "data/layouts/RuinasArenosas_2F/border.bin",
+      "blockdata_filepath": "data/layouts/RuinasArenosas_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_RUINAS_ARENOSAS_3F",
+      "name": "RuinasArenosas_3F_Layout",
+      "width": 21,
+      "height": 17,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_MirageTower",
+      "border_filepath": "data/layouts/RuinasArenosas_3F/border.bin",
+      "blockdata_filepath": "data/layouts/RuinasArenosas_3F/map.bin"
+    },
+    {
+      "id": "LAYOUT_MARISMA_AZULIZA",
+      "name": "MarismaAzuliza_Layout",
+      "width": 48,
+      "height": 34,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Dewford",
+      "border_filepath": "data/layouts/MarismaAzuliza/border.bin",
+      "blockdata_filepath": "data/layouts/MarismaAzuliza/map.bin"
+    },
+    {
+      "id": "LAYOUT_BOSQUE_FRONDOSO",
+      "name": "BosqueFrondoso_Layout",
+      "width": 36,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/BosqueFrondoso/border.bin",
+      "blockdata_filepath": "data/layouts/BosqueFrondoso/map.bin"
+    },
+    {
+      "id": "LAYOUT_MANSION_OLVIDADA",
+      "name": "MansionOlvidada_Layout",
+      "width": 18,
+      "height": 17,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_InsideShip",
+      "border_filepath": "data/layouts/MansionOlvidada/border.bin",
+      "blockdata_filepath": "data/layouts/MansionOlvidada/map.bin"
+    },
+    {
+      "id": "LAYOUT_MANSION_OLVIDADA_DESVAN",
+      "name": "MansionOlvidada_Desvan_Layout",
+      "width": 30,
+      "height": 8,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_InsideShip",
+      "border_filepath": "data/layouts/MansionOlvidada_Desvan/border.bin",
+      "blockdata_filepath": "data/layouts/MansionOlvidada_Desvan/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLA_DE_RUINAS",
+      "name": "IslaDeRuinas_Layout",
+      "width": 40,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Pacifidlog",
+      "border_filepath": "data/layouts/IslaDeRuinas/border.bin",
+      "blockdata_filepath": "data/layouts/IslaDeRuinas/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLA_DE_RUINAS_TORRE",
+      "name": "IslaDeRuinas_Torre_Layout",
+      "width": 14,
+      "height": 14,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Pacifidlog",
+      "border_filepath": "data/layouts/IslaDeRuinas_Torre/border.bin",
+      "blockdata_filepath": "data/layouts/IslaDeRuinas_Torre/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLA_VOLCANICA",
+      "name": "IslaVolcanica_Layout",
+      "width": 40,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Pacifidlog",
+      "border_filepath": "data/layouts/IslaVolcanica/border.bin",
+      "blockdata_filepath": "data/layouts/IslaVolcanica/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLA_VOLCANICA_CRATER",
+      "name": "IslaVolcanica_Crater_Layout",
+      "width": 40,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lavaridge",
+      "border_filepath": "data/layouts/IslaVolcanica_Crater/border.bin",
+      "blockdata_filepath": "data/layouts/IslaVolcanica_Crater/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLA_ARENOSA",
+      "name": "IslaArenosa_Layout",
+      "width": 56,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mossdeep",
+      "border_filepath": "data/layouts/IslaArenosa/border.bin",
+      "blockdata_filepath": "data/layouts/IslaArenosa/map.bin"
+    },
+    {
+      "id": "LAYOUT_PLAYA_VOLCANICA",
+      "name": "PlayaVolcanica_Layout",
+      "width": 40,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lavaridge",
+      "border_filepath": "data/layouts/PlayaVolcanica/border.bin",
+      "blockdata_filepath": "data/layouts/PlayaVolcanica/map.bin"
+    },
+    {
+      "id": "LAYOUT_CUMBRE_METEORO_LADERA",
+      "name": "CumbreMeteoro_Ladera_Layout",
+      "width": 40,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fallarbor",
+      "border_filepath": "data/layouts/CumbreMeteoro_Ladera/border.bin",
+      "blockdata_filepath": "data/layouts/CumbreMeteoro_Ladera/map.bin"
+    },
+    {
+      "id": "LAYOUT_CUMBRE_METEORO",
+      "name": "CumbreMeteoro_Layout",
+      "width": 22,
+      "height": 31,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fallarbor",
+      "border_filepath": "data/layouts/CumbreMeteoro/border.bin",
+      "blockdata_filepath": "data/layouts/CumbreMeteoro/map.bin"
+    },
+    {
+      "id": "LAYOUT_BOSQUE_SINIESTRO",
+      "name": "BosqueSiniestro_Layout",
+      "width": 50,
+      "height": 44,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lilycove",
+      "border_filepath": "data/layouts/BosqueSiniestro/border.bin",
+      "blockdata_filepath": "data/layouts/BosqueSiniestro/map.bin"
+    },
+    {
+      "id": "LAYOUT_CIENAGA_TOXICA",
+      "name": "CienagaToxica_Layout",
+      "width": 60,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mauville",
+      "border_filepath": "data/layouts/CienagaToxica/border.bin",
+      "blockdata_filepath": "data/layouts/CienagaToxica/map.bin"
     }
   ]
 }

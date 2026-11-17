@@ -34,8 +34,13 @@ FarawayIsland_Interior_EventScript_TryRemoveMew::
 
 FarawayIsland_Interior_OnTransition:
 	setvar VAR_FARAWAY_ISLAND_STEP_COUNTER, 0
+	@ Dualocke: sin Mew (ni su escondite en la hierba)
 	setvar VAR_TEMP_1, 1
-	call_if_unset FLAG_CAUGHT_MEW, FarawayIsland_Interior_EventScript_TryShowMew
+	setflag FLAG_HIDE_MEW
+	@ Dualocke: el Pokémon fuerte de la isla, con el sprite de la especie que sale con la semilla
+	setvar VAR_0x8004, SPECIES_FLUTTER_MANE
+	special Dualocke_GraficoPokemonIsla
+	copyvar VAR_OBJ_GFX_ID_0, VAR_RESULT
 	end
 
 FarawayIsland_Interior_EventScript_TryShowMew::
@@ -183,4 +188,23 @@ FarawayIsland_Interior_EventScript_HideMewWhenGrassCut::
 	end
 
 FarawayIsland_Interior_Text_TheFeelingOfBeingWatchedFaded:
-	.string "The feeling of being watched faded…$"
+	.string "Ya no parece que te vigile nadie…$"
+
+@ Dualocke: el Pokémon fuerte de la isla (data/scripts/dualocke_islas.inc)
+FarawayIsland_Interior_EventScript_Pokemon::
+	lock
+	setvar VAR_TEMP_8, SPECIES_FLUTTER_MANE
+	setvar VAR_TEMP_9, ITEM_LEFTOVERS
+	call Dualocke_EventScript_AvisoIsla
+	setwildbattle SPECIES_FLUTTER_MANE, 81
+	dowildbattle
+	call Dualocke_EventScript_ResultadoIsla
+	goto_if_eq VAR_RESULT, FALSE, FarawayIsland_Interior_EventScript_PokemonSigue
+	setflag FLAG_DUALOCKE_ISLA_LEJANA
+	call Dualocke_EventScript_PremioIsla
+	release
+	end
+
+FarawayIsland_Interior_EventScript_PokemonSigue::
+	release
+	end

@@ -1,0 +1,44 @@
+{
+  "id": "MAP_RUINAS_ARENOSAS_CAMARA",
+  "name": "RuinasArenosas_Camara",
+  "layout": "LAYOUT_RUINAS_ARENOSAS_CAMARA",
+  "music": "MUS_MT_CHIMNEY",
+  "region_map_section": "MAPSEC_RUINAS_ARENOSAS",
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "region": "REGION_HOENN",
+  "requires_flash": false,
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "coord_events": [],
+  "warp_events": [
+    {
+      "x": 1,
+      "y": 4,
+      "elevation": 3,
+      "dest_map": "MAP_RUINAS_ARENOSAS_3F",
+      "dest_warp_id": "1"
+    }
+  ],
+  "object_events": [
+    {
+      "local_id": "LOCALID_RUINAS_ARENOSAS_GUARDIAN",
+      "graphics_id": "OBJ_EVENT_GFX_VAR_0",
+      "x": 6,
+      "y": 3,
+      "elevation": 4,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "RuinasArenosas_Camara_EventScript_Pokemon",
+      "flag": "FLAG_DUALOCKE_GUARDIAN_RUINAS"
+    }
+  ],
+  "bg_events": []
+}

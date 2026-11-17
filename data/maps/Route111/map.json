@@ -755,6 +755,13 @@
       "elevation": 0,
       "dest_map": "MAP_TRAINER_HILL_ENTRANCE",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 33,
+      "y": 79,
+      "elevation": 0,
+      "dest_map": "MAP_DESIERTO_PROFUNDO",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
@@ -1217,6 +1224,14 @@
       "elevation": 3,
       "item": "ITEM_HEART_SCALE",
       "flag": "FLAG_ITEM_TICKET_RUTA_111_2"
+    },
+    {
+      "type": "hidden_item",
+      "x": 32,
+      "y": 101,
+      "elevation": 3,
+      "item": "ITEM_SANDACONDITE",
+      "flag": "FLAG_ITEM_MEGA_SANDACONDITE"
     }
   ]
 }

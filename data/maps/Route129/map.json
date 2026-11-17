@@ -28,6 +28,11 @@
       "map": "MAP_UNDERWATER_ROUTE129",
       "offset": 0,
       "direction": "dive"
+    },
+    {
+      "map": "MAP_ISLA_ARENOSA",
+      "offset": 0,
+      "direction": "right"
     }
   ],
   "object_events": [

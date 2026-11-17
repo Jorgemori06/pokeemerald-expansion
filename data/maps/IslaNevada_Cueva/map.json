@@ -1,0 +1,83 @@
+{
+  "id": "MAP_ISLA_NEVADA_CUEVA",
+  "name": "IslaNevada_Cueva",
+  "layout": "LAYOUT_ISLA_NEVADA_CUEVA",
+  "music": "MUS_MT_PYRE",
+  "region": "REGION_HOENN",
+  "region_map_section": "MAPSEC_ISLA_NEVADA",
+  "requires_flash": false,
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "warp_events": [
+    {
+      "x": 17,
+      "y": 10,
+      "elevation": 3,
+      "dest_map": "MAP_ISLA_NEVADA",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_F",
+      "x": 16,
+      "y": 17,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "IslaNevada_Cueva_EventScript_Nieves",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 12,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_NEVER_MELT_ICE",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_NEVADA_NEVER_MELT_ICE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 11,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_ICE_STONE",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_NEVADA_ICE_STONE"
+    },
+    {
+      "local_id": "LOCALID_ISLA_NEVADA_GUARDIAN",
+      "graphics_id": "OBJ_EVENT_GFX_VAR_0",
+      "x": 12,
+      "y": 21,
+      "elevation": 4,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "IslaNevada_Cueva_EventScript_Pokemon",
+      "flag": "FLAG_DUALOCKE_GUARDIAN_NEVADA"
+    }
+  ],
+  "bg_events": []
+}

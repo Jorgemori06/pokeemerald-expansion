@@ -1,0 +1,20 @@
+# Islas del ferry (ISLA SUR, ISLA LEJANA, ISLA ORIGEN, ROCA OMBLIGO): antes eran de postgame y ahora se llega antes de la Liga (Miguel, 16/11/2026)
+EventTicket_Text_ShowOldSeaMap	El ferry a PORTUAL sale…\p¿Perdona?\n¿Quieres ir al sitio de este mapa?\pConozco a alguien que te puede\nayudar mejor. Espera un momento.$
+EventTicket_Text_ThatPass	El ferry a PORTUAL sale…\p¿Eh?\nEse billete…$
+EventTicket_Text_ShowEonTicket	¡Ah del barco! ¿Traes tú ese\nbillete tan raro?\pEse sitio es una isla diminuta,\nmuy lejos, hacia el sur.\pNadie sabe qué nos espera allí.\l¡Se me ponen los pelos de punta!\p¡Todos a bordo!$
+EventTicket_Text_SouthernIslandSailBack	¡Ah del barco! ¿Has visto ya todo\nlo que hay en esta isla?\p¿Volvemos a CALAGUA?$
+EventTicket_Text_SailHome	¡A la orden!\n¡Rumbo a casa!$
+EventTicket_Text_AsYouLike	Como quieras, entonces.$
+SouthernIsland_Interior_Text_Sign	“Todos los sueños son otra realidad.\nNo lo olvides…”$
+SouthernIsland_Exterior_Text_Sign	“Quien siente que olvida sus\nrecuerdos los graba en el corazón…”$
+EventTicket_Text_OldSeaMapTooFar	¿Qué pasa?\p¿Eres quien trae un mapa viejo\ny roto? A ver…\n… … … … … …\p¡Uf! Ese sitio queda muy lejos.\nNo puedo llevarte, lo siento…$
+EventTicket_Text_BrineyHoldOnASecond	SR. ARENQUE: ¡Un momento!\p¿Cómo vamos a decirle que no a\nalguien a quien le debo tanto?$
+EventTicket_Text_BrineyLetsSail	{PLAYER}{KUN}, lo siento muchísimo.\pHas venido a pedirme ayuda y casi\nte mandamos a casa.\pDéjame que lo arregle.\p¡Zarpamos ahora mismo, claro!\p¡Vamos a buscar la isla de\neste MAPA VIEJO!$
+EventTicket_Text_OddTicketGetOnBoard	¿Traes tú ese billete tan raro?\pQuieres ir a una isla que está\nmuy, muy lejos.\pNadie sabe qué hay allí…\p¡Solo de pensarlo me hierve la\nsangre de marinero!\p¡Sube a bordo!$
+FarawayIsland_Entrance_Text_SailorReturn	El SR. ARENQUE es de lo más\ncaprichoso…\p¿Quieres volver a CALAGUA?$
+BirthIsland_Harbor_Text_SailorReturn	Qué isla tan rara, ¿verdad?\n¿Quieres volver a CALAGUA?$
+EventTicket_Text_OddTicketsWhereTo	¿Traes tú esos billetes tan raros?\p… … …Hum.\pCon ellos se llega a islas que\nestán muy, muy lejos.\pNadie sabe qué hay allí ni qué\npuede pasar.\p¡Solo de pensarlo me hierve la\nsangre de marinero!\p¡Sube a bordo! ¿Adónde vamos\nprimero?$
+NavelRock_Harbor_Text_SailorReturn	¿Lo… lo has oído?\nEse gruñido, ahí dentro, al fondo.\p¿Seguro que es seguro?\n¿No deberíamos irnos?$
+FarawayIsland_Entrance_Text_Sign	La letra está borrada, como si se\nhubiera escrito hace mucho…\p…, día 6\nSi alguna persona… pisa este lugar…\lojalá… sea de buen corazón…\lCon esa esperanza, me…$
+FarawayIsland_Interior_Text_Mew	Miuu…$
+FarawayIsland_Interior_Text_TheFeelingOfBeingWatchedFaded	Ya no parece que te vigile nadie…$

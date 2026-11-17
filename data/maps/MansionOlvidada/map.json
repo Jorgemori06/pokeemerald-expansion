@@ -1,0 +1,105 @@
+{
+  "id": "MAP_MANSION_OLVIDADA",
+  "name": "MansionOlvidada",
+  "layout": "LAYOUT_MANSION_OLVIDADA",
+  "music": "MUS_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_MANSION_OLVIDADA",
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": false,
+  "allow_escaping": true,
+  "region": "REGION_HOENN",
+  "requires_flash": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "coord_events": [],
+  "connections": null,
+  "warp_events": [
+    {
+      "x": 4,
+      "y": 16,
+      "elevation": 3,
+      "dest_map": "MAP_BOSQUE_FRONDOSO",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 5,
+      "y": 16,
+      "elevation": 3,
+      "dest_map": "MAP_BOSQUE_FRONDOSO",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 13,
+      "y": 1,
+      "elevation": 3,
+      "dest_map": "MAP_MANSION_OLVIDADA_DESVAN",
+      "dest_warp_id": "0"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_HEX_MANIAC",
+      "x": 13,
+      "y": 13,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "MansionOlvidada_EventScript_Elvira",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN",
+      "x": 2,
+      "y": 5,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "MansionOlvidada_EventScript_Alfonso",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 16,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_REAPER_CLOTH",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_BOSQUE_REAPER_CLOTH"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 7,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_CLEANSE_TAG",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_BOSQUE_CLEANSE_TAG"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 4,
+      "y": 1,
+      "elevation": 3,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "MansionOlvidada_EventScript_PuertaAtascada"
+    }
+  ]
+}

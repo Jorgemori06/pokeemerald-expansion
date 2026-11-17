@@ -33,6 +33,134 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 - [ ] **Tiendas:** una compra por objeto (salvo Balls, Repelentes, Bayas y Caramelos), y el segundo dependiente en las ciudades.
 - [ ] **Caps de nivel:** al llegar al cap no se gana experiencia y los Caramelos Raros no funcionan por encima.
 
+### CUMBRE METEORO (desde el 17/11/2026)
+
+- [ ] **Entrada:** en la RUTA 115, a la derecha de la entrada de la CATARATA METEORO y una terraza más abajo, hay una cueva nueva en la pared. Lleva a la LADERA, y se vuelve igual.
+- [ ] **LADERA:** se puede subir por las escaleras hasta la cueva de arriba (a la derecha). Hay salvajes en la hierba alta.
+- [ ] **CUMBRE:** nieve fuera y en combate, salvajes en la hierba escarchada y el guardián arriba, que da premio y no vuelve a salir.
+- [ ] **Bases secretas:** la de la RUTA 115 que está junto a la cueva nueva sigue funcionando.
+
+### PLAYA VOLCÁNICA (desde el 17/11/2026)
+
+- [ ] **Entrada:** en la RUTA 122, por el hueco nuevo del anillo de rocas de arriba a la izquierda, se surfea hacia el oeste hasta la playa (sin pantalla de carga), y se vuelve igual.
+- [ ] **La unión:** que no se vea nada raro en el borde, ni desde la playa ni desde la RUTA 122. Es lo más delicado: los dos mapas tienen gráficos distintos.
+- [ ] **Sol fuera y en combate.** Cartel "PLAYA VOLCÁNICA". Salvajes en la ceniza; pesca y surf en el mar.
+- [ ] **Termas:** se ven bien (sin trozos de acantilado ni de hierba raros).
+- [ ] **Guardián** en la arena (Slither Wing sin semilla): da premio y no vuelve a salir.
+- [ ] **Mapa rehecho (17/11/2026):** se baja de la meseta a la playa saltando el risco o por la escalera, y se sube solo por la escalera. Que no se vea ninguna pieza rara (orillas, risco, árboles, la charca de marea).
+
+### CIÉNAGA TÓXICA (desde el 17/11/2026)
+
+- [ ] **Entrada:** bajando por el borde sur de la RUTA 117 (x 32-36, junto a la hierba alta) se pasa a la ciénaga sin cortes. Que no se vean copas de árbol sueltas en la unión. Al cruzar empieza a llover.
+- [ ] **El mapa:** que las orillas de las charcas y el camino de barro se vean bien, y que la lengua de tierra lleve al islote.
+- [ ] **Cartel** "CIÉNAGA TÓXICA", y que cuente como zona de captura propia.
+- [ ] **Salvajes** en la hierba alta (Veneno, nivel 27-31) y con caña en las charcas. La científica habla.
+- [ ] **Guardián** del islote (Dragalge sin semilla): da el Lodo Negro y no vuelve a salir.
+
+### BOSQUE SINIESTRO (desde el 17/11/2026)
+
+- [ ] **Entrada:** bajando por el borde sur de la RUTA 123 (x 103-106) se pasa al bosque sin cortes. Que no se vean copas de árbol sueltas ni troncos cortados en la unión. Al cruzar se oscurece (sombra) y cambia la música.
+- [ ] **El bosque:** que los árboles se vean bien (copas, troncos), que el risco del centro se salte hacia abajo y no se suba, y que se pueda volver a la entrada rodeándolo por el este.
+- [ ] **Cartel** "BOSQUE SINIESTRO", y que cuente como zona de captura propia.
+- [ ] **Salvajes** en la hierba alta (Siniestro, Fantasma y Bicho, nivel 54-58). La bruja del primer claro habla.
+- [ ] **Guardián** del claro del fondo (Hydreigon sin semilla): da la Tabla Pavor y no vuelve a salir. Con semilla, que salga otro.
+
+### Islas de las rutas del sur (desde el 17/11/2026)
+
+- [ ] **ISLA DE RUINAS:** desde el norte de la RUTA 131, surfeando hacia arriba.
+  - La cueva de la orilla de abajo sale por la del montículo, y se vuelve igual.
+  - La puerta de la torre lleva a la TORRE; la escalera de arriba ya no está.
+  - Niebla fuera y Campo de Niebla en combate.
+- [ ] **ISLA VOLCÁNICA:** desde el sur de la RUTA 134 (la parte sin corriente, cerca de PORTUAL).
+  - La cueva del montículo baja al CRÁTER y la cueva nueva del escalón sube.
+  - En la ceniza salen salvajes. Sol fuera y en combate.
+- [ ] **ISLA ARENOSA:** desde el este de la RUTA 129. Tormenta de arena. Salvajes en la hierba alta del islote de hierba (al oeste). DARÍO lucha.
+- [ ] **Islas rehechas (17/11/2026):** que las orillas, el bajío y las peñas se vean bien. Que en las peñas no se pueda hacer una base secreta. En la ISLA DE RUINAS, que la playa de abajo una bien con la franja de arena. En la ISLA VOLCÁNICA, que la cima del montículo se vea bien.
+- [ ] **Uniones:** que las tres se vean bien desde la ruta y desde la isla, sin trozos raros en el borde.
+- [ ] **Guardianes** (TORRE, CRÁTER e ISLA ARENOSA): dan premio y no vuelven a salir. Cada isla es una zona de captura.
+- [ ] **Guardianes nuevos (17/11/2026), sin semilla:** ISLA SUR Dragonite, ISLA LEJANA Flutter Mane, ISLA ORIGEN Roaring Moon, ROCA OMBLIGO Volcarona (cima) y Kingdra (fondo), ISLA ARENOSA Sandy Shocks. Que salga su sprite en el mapa y que capturar un Pokémon Paradoja no cuente como legendario.
+
+### BOSQUE FRONDOSO y MANSIÓN OLVIDADA (desde el 17/11/2026)
+
+- [ ] **Entrada:** en el claro del noreste del BOSQUE PETALIA hay dos árboles de CORTE; detrás, el pasillo lleva al BOSQUE FRONDOSO sin pantalla de carga, y se vuelve igual.
+- [ ] **La unión:** que los árboles del borde de abajo del BOSQUE FRONDOSO sigan bien con los del BOSQUE PETALIA, y que no se vea nada raro al ir por el pasillo.
+- [ ] **El bosque:** que ningún árbol salga cortado. Carteles "BOSQUE FRONDOSO" y "MANSIÓN OLVIDADA": cada uno es una zona de captura.
+- [ ] **Bosque rehecho (17/11/2026):** el risco del medio se salta hacia abajo y no se sube; para ir a la mansión se rodea por el este. El cartel de la mansión se lee desde abajo.
+- [ ] **Pesca** en la charca.
+- [ ] **La mansión:** la puerta del edificio entra y sale. Dentro hay salvajes en el suelo de madera.
+  - La puerta de arriba a la izquierda dice que está atascada.
+  - La de la derecha sube al DESVÁN.
+- [ ] **Guardián del DESVÁN**, delante de la puerta rota: da premio al vencerlo o capturarlo y no vuelve a salir.
+- [ ] **Entrenadores:** SEBAS y OLIVIA en el bosque, ELVIRA y ALFONSO en la mansión. Que salgan con su nombre, su foto y su equipo, no con los de BRENDAN, MAY o HOJA.
+
+### MARISMA AZULIZA (desde el 17/11/2026)
+
+- [ ] **Entrada:** desde la arena del oeste de PUEBLO AZULIZA se pasa a la marisma andando, sin pantalla de carga, y se vuelve igual.
+- [ ] **La unión con el pueblo:** que los árboles y la arena sigan bien por el borde (filas 3 a 16).
+- [ ] **Lluvia** y cartel "MARISMA AZULIZA". Es una zona de captura nueva: comprobar que la primera captura cuenta aquí y no en AZULIZA.
+- [ ] **Partida guardada de antes:** las zonas ya gastadas siguen gastadas (la variable nueva empieza a 0).
+- [ ] **TOMÁS y MARGARITA** te ven y luchan. El Ticket-Recuerdo de la hierba se puede coger.
+- [ ] **Pesca** en el lago con la CAÑA VIEJA.
+- [ ] **Mapa rehecho (17/11/2026):** la escalera del risco sube de la arena a la pradera. Que no se vea ninguna pieza rara (orillas del lago, risco, árboles, la charca de marea).
+- [ ] **La cala (con SURF):** al otro lado del lago, Dondozo y Tatsugiri (sin semilla) a nivel 59 y la Semilla Milagro. Cada uno da premio y no vuelve a salir. Sin SURF no se llega.
+- [ ] **GOLPE ROCA:** las cuatro rocas se rompen y a veces sale un salvaje.
+
+### DESIERTO PROFUNDO y RUINAS ARENOSAS (desde el 16/11/2026)
+
+- [ ] **Entrada:** el montículo nuevo del desierto de la RUTA 111 (al este, abajo) lleva al DESIERTO PROFUNDO, y su salida devuelve al mismo sitio.
+- [ ] **El mapa:** que no quede nada de la TORRE ESPEJISMO, y que los bordes (sobre todo el oeste, que es arena cortada) no queden raros.
+- [ ] **Tormenta de arena** fuera y en combate, y carteles "DESIERTO PROFUNDO" y "RUINAS ARENOSAS". Cada uno es una zona de captura.
+- [ ] **Ruinas:** el montículo del norte lleva a la entrada; las escaleras suben por las plantas 2 y 3 hasta la CÁMARA.
+  - En las plantas 2 y 3, el suelo agrietado se rompe y caes a la de abajo.
+  - En la 3, GOLPE ROCA rompe las dos rocas. El guardián tiene el sprite del Pokémon que sale y da premio al vencerlo o capturarlo.
+- [ ] **Entrenadores:** SOLEDAD en el desierto y RAMIRO en las ruinas, a nivel 46-47.
+- [ ] **Salvajes y objetos** de las dos zonas.
+
+### ISLA NEVADA (desde el 16/11/2026)
+
+- [ ] **Conexión:** surfeando hacia el norte desde la RUTA 124 se pasa a la ISLA NEVADA sin cortes, y la nieve empieza al cruzar.
+- [ ] **El mapa:** que no se vean trozos raros de roca en el borde de la RUTA 124 ni en el islote.
+- [ ] **Isla rehecha (17/11/2026):** que las orillas, el bajío, la cresta y las peñas se vean bien. Que la entrada de la cueva, en el pie de la cresta, lleve a la CUEVA HELADA y que la escalera devuelva delante de ella. Que en la cresta y las peñas no se pueda hacer una base secreta.
+- [ ] **Cartel de zona:** "ISLA NEVADA", también en la cueva, y que cuente como zona de captura propia.
+- [ ] **Nieve en combate**, también en la cueva (dentro no nieva, así que ahí no).
+- [ ] **Guardián de la CUEVA HELADA**, abajo del todo: se llega resbalando y da premio.
+- [ ] **CUEVA HELADA:** se entra por el islote y la escalera devuelve fuera. Se puede recorrer resbalando por el hielo y llegar a los objetos y a NIEVES.
+- [ ] **Entrenadores:** DUDLEY y KAYLEE en el agua (te ven al surfear), NIEVES en la cueva.
+- [ ] **Salvajes** de hielo y la Bola de Nieve oculta en el banco de arena.
+
+### GRUTA ÍGNEA (desde el 16/11/2026)
+
+- [ ] **CÁMARA DEL MAGMA:** la salida del sur de la gruta baja a ella. Se sube por las escaleras hasta el guardián, que da premio al vencerlo o capturarlo.
+- [ ] **Entrada:** en la sala del suroeste del SENDERO ÍGNEO (con FUERZA) hay una boca de cueva. Bajando por ella se llega a la GRUTA ÍGNEA, y la puerta del noreste devuelve al mismo sitio.
+- [ ] **El mapa:** que no quede ningún trozo de máquina de la GUARIDA MAGMA, que no se pueda pisar la lava y que se pueda dar toda la vuelta.
+- [ ] **Clima:** el sol fuerte se ve bien dentro de la cueva (si queda raro, se quita) y hay sol en los combates.
+- [ ] **Cartel de zona:** "GRUTA ÍGNEA". Cuenta como zona de captura propia: se puede capturar aunque ya hayas capturado en el SENDERO ÍGNEO.
+- [ ] **Entrenadores:** ROQUE, ÍGOR y la soldado Magma, a nivel 46-47, y te ven al pasar.
+- [ ] **Salvajes y objetos:** POKéMON de fuego y roca a nivel del tramo 5, y los 4 objetos.
+
+### Islas del ferry (desde el 16/11/2026)
+
+- [ ] **Billetes:** con la 6.ª medalla, el encargado del puerto de CALAGUA da el Ticket Eón; con la 7.ª, el Mapa Viejo; con la 8.ª, el Ori-Ticket y el Misti-Ticket. Cada isla sale en la lista de destinos.
+- [ ] **Viaje:** se llega a cada isla y el marinero te devuelve a CALAGUA. Los textos, en español.
+- [ ] **Pokémon fuerte:** el sprite del mapa es el de la especie que sale en el combate (con semilla, otra).
+  - Al vencerlo o capturarlo desaparece y da el premio y su megapiedra. Si huyes, sigue ahí.
+  - Que no salga ningún legendario (ni Mew escondido en la hierba de la ISLA LEJANA, ni el triángulo de la ISLA ORIGEN).
+  - Capturado, va al equipo (o a VETADOS si ya tienes uno de su línea) y no gasta la zona.
+- [ ] **Entrenadores:** TERRY y CINDY (ISLA SUR), MIKE y AMY Y LIV (ISLA LEJANA), GINA Y MIA (ISLA ORIGEN) y LUCAS (ROCA OMBLIGO). Que te vean y no tapen el camino.
+- [ ] **Salvajes:** pesca en las cuatro, hierba en la ISLA LEJANA y cueva en ROCA OMBLIGO, a nivel de su tramo.
+
+### Interfaz (desde el 16/11/2026)
+
+- [ ] **POKéDEX nueva (estilo HeartGold/SoulSilver):**
+  - Que abra desde el menú y se mueva bien por todas las páginas (información, estadísticas, evoluciones, formas, área, grito, tamaño).
+  - Página de estadísticas: que los textos en español quepan (CAPT., RITMO, EXP. BASE, AMISTAD, ECLOSIÓN, grupos huevo) y no se monten unos encima de otros.
+  - Que los movimientos por nivel, las MT y la habilidad sean los de la semilla: comparar con la pantalla de datos de un Pokémon tuyo y con lo que dice una MT al usarla.
+  - Evoluciones: que el método se lea bien en español ("Nv.↑16", "Usar Piedra Fuego", "de noche", "tipo Siniestro en el equipo").
+- [ ] **Combate:** los iconos de tipo del rival junto a su barra; los textos más rápidos se pueden leer; sin la entrada deslizante.
+- [ ] **No se puede huir de un entrenador:** en un combate de entrenador, HUIR da el mensaje de que no se puede.
+- [ ] **Objetos:** al recoger uno sale arriba su imagen y su descripción, y se quita al cerrar el mensaje.
+- [ ] **Carteles de zona:** banda negra arriba con el nombre y la hora. Mirar los nombres largos (CIUDAD ARRECÍPOLIS, CALLE VICTORIA…).
+
 ### Recuerdamovimientos y Ticket-Recuerdo
 
 - [ ] En un Centro Pokémon, la señora a la derecha del PC: sin ticket te lo dice; con ticket enseña un movimiento de nivel y gasta el ticket solo si lo aprende.
@@ -44,6 +172,10 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 
 - [ ] Salvajes, entrenadores, iniciales y rival cambian, sin legendarios donde no toca.
 - [ ] Los jefes llevan su as con megapiedra desde el Mega-Aro, y objetos que les sirven.
+- [ ] **Megas de las formas Gigamax (desde el 16/11/2026):**
+  - Coger alguna de las 26 megapiedras nuevas (la Orbeetlita en la RUTA 102, la Drednawita en la RUTA 106…): que salga con su icono y su nombre, y vaya al bolsillo MEGAPIEDRAS.
+  - Megaevolucionar a uno (con el Mega-Aro): animación de mega, sprite de la forma Gigamax, tipo y estadísticas nuevas en el combate, y que vuelva a la forma normal al acabar o al debilitarse.
+  - Que ningún salvaje salga en forma Gigamax y que el Dinamax siga sin poder usarse.
 - [ ] Habilidades, MT, tutores, intercambios y objetos del suelo cambian, y las MO no.
 - [ ] Los movimientos que se aprenden al subir de nivel son al azar: los de tu inicial, los de los salvajes y los de los entrenadores. Que al principio siempre haya algún ataque y que no salgan ataques muy fuertes a nivel bajo.
 - [ ] `make nueva-partida` da otra semilla y `make` repite la misma.

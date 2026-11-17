@@ -1,0 +1,57 @@
+{
+  "id": "MAP_MANSION_OLVIDADA_DESVAN",
+  "name": "MansionOlvidada_Desvan",
+  "layout": "LAYOUT_MANSION_OLVIDADA_DESVAN",
+  "music": "MUS_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_MANSION_OLVIDADA",
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": false,
+  "allow_escaping": true,
+  "region": "REGION_HOENN",
+  "requires_flash": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "coord_events": [],
+  "connections": null,
+  "warp_events": [
+    {
+      "x": 22,
+      "y": 1,
+      "elevation": 3,
+      "dest_map": "MAP_MANSION_OLVIDADA",
+      "dest_warp_id": "2"
+    }
+  ],
+  "object_events": [
+    {
+      "local_id": "LOCALID_MANSION_OLVIDADA_GUARDIAN",
+      "graphics_id": "OBJ_EVENT_GFX_VAR_0",
+      "x": 7,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MansionOlvidada_Desvan_EventScript_Pokemon",
+      "flag": "FLAG_DUALOCKE_GUARDIAN_MANSION"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 1,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_DUSK_STONE",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_BOSQUE_DUSK_STONE"
+    }
+  ],
+  "bg_events": []
+}

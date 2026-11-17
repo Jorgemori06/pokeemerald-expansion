@@ -133,7 +133,17 @@
     "Underwater_Route128",
     "Underwater_Route129",
     "Underwater_Route105",
-    "Underwater_Route125"
+    "Underwater_Route125",
+    "IslaNevada",
+    "MarismaAzuliza",
+    "IslaDeRuinas",
+    "IslaVolcanica",
+    "IslaArenosa",
+    "PlayaVolcanica",
+    "CumbreMeteoro_Ladera",
+    "CumbreMeteoro",
+    "BosqueSiniestro",
+    "CienagaToxica"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -470,7 +480,20 @@
     "TerraCave_Entrance",
     "TerraCave_End",
     "AlteringCave",
-    "MeteorFalls_StevensCave"
+    "MeteorFalls_StevensCave",
+    "GrutaIgnea",
+    "IslaNevada_Cueva",
+    "DesiertoProfundo",
+    "RuinasArenosas",
+    "RuinasArenosas_Camara",
+    "GrutaIgnea_Camara",
+    "RuinasArenosas_2F",
+    "RuinasArenosas_3F",
+    "BosqueFrondoso",
+    "MansionOlvidada",
+    "MansionOlvidada_Desvan",
+    "IslaDeRuinas_Torre",
+    "IslaVolcanica_Crater"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",

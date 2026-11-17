@@ -476,6 +476,29 @@ gStdScripts_End::
 	.include "data/maps/TerraCave_End/scripts.inc"
 	.include "data/maps/AlteringCave/scripts.inc"
 	.include "data/maps/MeteorFalls_StevensCave/scripts.inc"
+	.include "data/maps/GrutaIgnea/scripts.inc" @ Dualocke: zona nueva
+	.include "data/maps/IslaNevada/scripts.inc" @ Dualocke: zona nueva
+	.include "data/maps/IslaNevada_Cueva/scripts.inc" @ Dualocke: zona nueva
+	.include "data/maps/DesiertoProfundo/scripts.inc" @ Dualocke: zona nueva
+	.include "data/maps/RuinasArenosas/scripts.inc" @ Dualocke: zona nueva
+	.include "data/maps/RuinasArenosas_Camara/scripts.inc" @ Dualocke: zona nueva
+	.include "data/maps/RuinasArenosas_2F/scripts.inc" @ Dualocke: zona nueva
+	.include "data/maps/RuinasArenosas_3F/scripts.inc" @ Dualocke: zona nueva
+	.include "data/maps/GrutaIgnea_Camara/scripts.inc" @ Dualocke: zona nueva
+	.include "data/maps/MarismaAzuliza/scripts.inc" @ Dualocke: zona nueva
+	.include "data/maps/BosqueFrondoso/scripts.inc" @ Dualocke: zona nueva
+	.include "data/maps/MansionOlvidada/scripts.inc" @ Dualocke: zona nueva
+	.include "data/maps/MansionOlvidada_Desvan/scripts.inc" @ Dualocke: zona nueva
+	.include "data/maps/IslaDeRuinas/scripts.inc" @ Dualocke: zona nueva
+	.include "data/maps/IslaDeRuinas_Torre/scripts.inc" @ Dualocke: zona nueva
+	.include "data/maps/IslaVolcanica/scripts.inc" @ Dualocke: zona nueva
+	.include "data/maps/IslaVolcanica_Crater/scripts.inc" @ Dualocke: zona nueva
+	.include "data/maps/IslaArenosa/scripts.inc" @ Dualocke: zona nueva
+	.include "data/maps/PlayaVolcanica/scripts.inc" @ Dualocke: zona nueva
+	.include "data/maps/CumbreMeteoro_Ladera/scripts.inc" @ Dualocke: zona nueva
+	.include "data/maps/CumbreMeteoro/scripts.inc" @ Dualocke: zona nueva
+	.include "data/maps/BosqueSiniestro/scripts.inc" @ Dualocke: zona nueva
+	.include "data/maps/CienagaToxica/scripts.inc" @ Dualocke: zona nueva
 	.include "data/scripts/shared_secret_base.inc"
 	.include "data/maps/BattleColosseum_2P/scripts.inc"
 	.include "data/maps/TradeCenter/scripts.inc"
@@ -1334,6 +1357,7 @@ Common_EventScript_FerryDepartIsland::
 	.include "data/scripts/kecleon.inc"
 	.include "data/scripts/dualocke_segundo_dependiente.inc"
 	.include "data/scripts/dualocke_recuerda_movimientos.inc"
+	.include "data/scripts/dualocke_islas.inc"
 
 Common_EventScript_NameReceivedPartyMon::
 	fadescreen FADE_TO_BLACK

@@ -32,5 +32,14 @@
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 11,
+      "y": 16,
+      "elevation": 3,
+      "item": "ITEM_PEARL_STRING",
+      "flag": "FLAG_ITEM_ISLA_PEARL_STRING"
+    }
+  ]
 }

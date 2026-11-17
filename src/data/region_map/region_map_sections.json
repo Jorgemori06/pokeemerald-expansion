@@ -1630,6 +1630,118 @@
       "y": 4,
       "width": 1,
       "height": 1
+    },
+    {
+      "id": "MAPSEC_GRUTA_IGNEA",
+      "name": "GRUTA ÍGNEA",
+      "x": 6,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_ISLA_NEVADA",
+      "name": "ISLA NEVADA",
+      "x": 21,
+      "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_DESIERTO_PROFUNDO",
+      "name": "DESIERTO PROFUNDO",
+      "x": 9,
+      "y": 3,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_RUINAS_ARENOSAS",
+      "name": "RUINAS ARENOSAS",
+      "x": 9,
+      "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_MARISMA_AZULIZA",
+      "name": "MARISMA AZULIZA",
+      "x": 1,
+      "y": 14,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_BOSQUE_FRONDOSO",
+      "name": "BOSQUE FRONDOSO",
+      "x": 0,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_MANSION_OLVIDADA",
+      "name": "MANSIÓN OLVIDADA",
+      "x": 0,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_ISLA_DE_RUINAS",
+      "name": "ISLA DE RUINAS",
+      "x": 19,
+      "y": 9,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_ISLA_VOLCANICA",
+      "name": "ISLA VOLCÁNICA",
+      "x": 9,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_ISLA_ARENOSA",
+      "name": "ISLA ARENOSA",
+      "x": 26,
+      "y": 10,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_PLAYA_VOLCANICA",
+      "name": "PLAYA VOLCÁNICA",
+      "x": 15,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_CUMBRE_METEORO",
+      "name": "CUMBRE METEORO",
+      "x": 0,
+      "y": 1,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_BOSQUE_SINIESTRO",
+      "name": "BOSQUE SINIESTRO",
+      "x": 14,
+      "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_CIENAGA_TOXICA",
+      "name": "CIÉNAGA TÓXICA",
+      "x": 6,
+      "y": 7,
+      "width": 1,
+      "height": 1
     }
   ]
 }

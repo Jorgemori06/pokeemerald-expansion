@@ -110,6 +110,155 @@ MEGAPIEDRAS = [
     ("SALAMENCITE", "MeteorFalls_B1F_2R", "bola", None),
 ]
 
+# Objetos de las islas del ferry (Miguel, 16/11/2026; data/scripts/dualocke_islas.inc). Son objetos
+# normales del suelo: con semilla, el randomizer los cambia como los demás.
+OBJETOS_ISLAS = [
+    ("PP_UP", "SouthernIsland_Exterior", "oculta", None),
+    ("STAR_PIECE", "SouthernIsland_Exterior", "oculta", None),
+    ("MAX_ELIXIR", "SouthernIsland_Interior", "oculta", None),
+    ("BIG_NUGGET", "FarawayIsland_Entrance", "bola", None),
+    ("PP_MAX", "FarawayIsland_Entrance", "oculta", None),
+    ("ELIXIR", "FarawayIsland_Interior", "bola", None),
+    ("COMET_SHARD", "BirthIsland_Exterior", "bola", None),
+    ("PEARL_STRING", "NavelRock_Exterior", "oculta", None),
+    ("PROTEIN", "NavelRock_Fork", "bola", None),
+    ("CARBOS", "NavelRock_Fork", "oculta", None),
+    ("BALM_MUSHROOM", "NavelRock_B1F", "oculta", None),
+]
+
+# Objetos de la GRUTA ÍGNEA (crear_gruta_ignea.py; Miguel, 16/11/2026), de fuego. Con semilla, al
+# azar como los demás objetos del suelo.
+# La pista es la vista del entrenador que se usa de referencia ("02" ÍGOR, "03" ROQUE, "04" el
+# soldado), para que no salgan todos juntos.
+OBJETOS_GRUTA = [
+    ("FIRE_STONE", "GrutaIgnea", "bola", "03$"),
+    ("MAGMARIZER", "GrutaIgnea", "bola", "04$"),
+    ("CHARCOAL", "GrutaIgnea", "oculta", "02$"),
+    ("LAVA_COOKIE", "GrutaIgnea", "oculta", "04$"),
+]
+
+# Objetos de la ISLA NEVADA y la CUEVA HELADA (crear_isla_nevada.py), de hielo. Con semilla, al azar.
+# Después de colocarlos se movieron a mano en el map.json: los de la cueva, a los sitios de objetos de la
+# sala de hielo de la CUEVA CARDUMEN (no tapan el pasillo); la Bola de Nieve, al banco de arena.
+OBJETOS_NEVADA = [
+    ("NEVER_MELT_ICE", "IslaNevada_Cueva", "bola", None),
+    ("ICE_STONE", "IslaNevada_Cueva", "bola", None),
+    ("SNOWBALL", "IslaNevada", "oculta", None),
+]
+
+# Objetos del DESIERTO PROFUNDO y las RUINAS ARENOSAS (crear_desierto_profundo.py). Con semilla, al azar.
+# La Arena Fina y el Hueso Raro se movieron después a mano: el script los ponía delante de los entrenadores.
+OBJETOS_DESIERTO = [
+    ("SOFT_SAND", "DesiertoProfundo", "bola", None),
+    ("STAR_PIECE", "DesiertoProfundo", "oculta", None),
+    ("RARE_BONE", "RuinasArenosas", "bola", None),
+    ("ODD_KEYSTONE", "RuinasArenosas", "oculta", None),
+]
+
+# MARISMA AZULIZA (crear_marisma_azuliza.py): un objeto y un Ticket-Recuerdo, como en cada ruta.
+# Se movieron después a mano a la hierba alta (4,15 y 24,4): el script los ponía junto a TOMÁS.
+OBJETOS_MARISMA = [("MIRACLE_SEED", "MarismaAzuliza", "bola", None)]
+TICKETS_MARISMA = [("MARISMA_AZULIZA", "MarismaAzuliza", "bola", None)]
+
+# BOSQUE FRONDOSO y MANSIÓN OLVIDADA (crear_bosque_frondoso.py): de bicho y planta en el bosque, de
+# fantasma en la mansión, y un Ticket-Recuerdo en el bosque. Con semilla, al azar.
+# Se movieron después a mano en los map.json: el script los ponía junto a SEBAS y ELVIRA (en su línea de
+# visión) y, en el DESVÁN, en la casilla a la que se baja al entrar por la puerta.
+OBJETOS_BOSQUE = [
+    ("SILVER_POWDER", "BosqueFrondoso", "bola", None),
+    ("BIG_ROOT", "BosqueFrondoso", "oculta", None),
+    ("REAPER_CLOTH", "MansionOlvidada", "bola", None),
+    ("CLEANSE_TAG", "MansionOlvidada", "bola", None),
+    ("DUSK_STONE", "MansionOlvidada_Desvan", "bola", None),
+]
+TICKETS_BOSQUE = [("BOSQUE_FRONDOSO", "BosqueFrondoso", "bola", None)]
+
+# Islas de las rutas del sur (crear_islas_sur.py). Con semilla, al azar.
+# Al rehacer la ISLA VOLCÁNICA y la ISLA ARENOSA (17/11/2026), crear_islas_sur.py mueve los suyos al sitio que
+# les toca en el dibujo nuevo (SITIO_OBJETOS).
+OBJETOS_ISLAS_SUR = [
+    ("WISE_GLASSES", "IslaDeRuinas_Torre", "bola", None),
+    ("PP_UP", "IslaDeRuinas", "oculta", None),
+    ("FLAME_ORB", "IslaVolcanica_Crater", "bola", None),
+    ("FIRE_STONE", "IslaVolcanica_Crater", "oculta", None),
+    ("BIG_PEARL", "IslaVolcanica", "oculta", None),
+    ("SAFETY_GOGGLES", "IslaArenosa", "bola", None),
+    ("PEARL_STRING", "IslaArenosa", "oculta", None),
+]
+TICKETS_ISLAS_SUR = [("ISLA_DE_RUINAS", "IslaDeRuinas", "bola", None),
+                     ("ISLA_VOLCANICA", "IslaVolcanica_Crater", "bola", None),
+                     ("ISLA_ARENOSA", "IslaArenosa", "bola", None)]
+
+# BOSQUE SINIESTRO (crear_bosque_siniestro.py). Con semilla, al azar. crear_bosque_siniestro.py los pone en
+# su sitio (SITIO_OBJETOS). Flags sueltos fuera de los bloques de arriba (ya no quedan bloques seguidos).
+OBJETOS_SINIESTRO = [
+    ("BLACK_GLASSES", "BosqueSiniestro", "bola", None),
+    ("MOON_STONE", "BosqueSiniestro", "bola", None),
+]
+OBJETOS_SINIESTRO_OCULTOS = [("SPELL_TAG", "BosqueSiniestro", "oculta", None)]
+TICKETS_SINIESTRO = [("BOSQUE_SINIESTRO", "BosqueSiniestro", "bola", None)]
+
+# CIÉNAGA TÓXICA (crear_cienaga_toxica.py). Con semilla, al azar. crear_cienaga_toxica.py los pone en su sitio.
+OBJETOS_CIENAGA = [
+    ("POISON_BARB", "CienagaToxica", "bola", None),
+    ("ABSORB_BULB", "CienagaToxica", "bola", None),
+]
+OBJETOS_CIENAGA_OCULTOS = [("TOXIC_PLATE", "CienagaToxica", "oculta", None)]
+TICKETS_CIENAGA = [("CIENAGA_TOXICA", "CienagaToxica", "bola", None)]
+
+# PLAYA VOLCÁNICA (crear_playa_volcanica.py). Con semilla, al azar.
+# Al rehacer la playa (17/11/2026) se movieron a mano tres: el Ticket-Recuerdo (19,17, junto al risco),
+# la Perla oculta (22,4, en la arena de arriba) y la Piedra Agua (23,34, en la arena): habían quedado en el
+# risco, en el mar y en el bajío.
+OBJETOS_PLAYA = [
+    ("WATER_STONE", "PlayaVolcanica", "bola", None),
+    ("DAMP_ROCK", "PlayaVolcanica", "bola", None),
+    ("PEARL", "PlayaVolcanica", "oculta", None),
+]
+TICKETS_PLAYA = [("PLAYA_VOLCANICA", "PlayaVolcanica", "bola", None)]
+
+# CUMBRE METEORO (crear_cumbre_meteoro.py). Con semilla, al azar. Flags normales (0x1DE-0x1E1): en la
+# zona del sistema ya no quedan libres que no sean diarios.
+OBJETOS_CUMBRE = [
+    ("HARD_STONE", "CumbreMeteoro_Ladera", "bola", None),
+    ("DRAGON_SCALE", "CumbreMeteoro", "bola", None),
+]
+# Los objetos ocultos necesitan un flag a partir de FLAG_HIDDEN_ITEMS_START (0x1F4): si no, no compila
+# ("Hidden Item flag ... is too small"). La Roca Helada iba en 0x1E0.
+OBJETOS_CUMBRE_OCULTOS = [("ICY_ROCK", "CumbreMeteoro", "oculta", None)]
+TICKETS_CUMBRE = [("CUMBRE_METEORO", "CumbreMeteoro_Ladera", "bola", None)]
+
+# Megapiedras de las formas Gigamax (megas_gigamax.py; Miguel, 16/11/2026). Cada una en un sitio que
+# pega con su Pokémon. Van en otro bloque de flags porque en el de arriba ya no caben.
+MEGAPIEDRAS_GIGAMAX = [
+    ("ORBEETLITE", "Route102", "bola", None),
+    ("BUTTERFRITE", "Route104", "oculta", None),
+    ("DREDNAWITE", "Route106", "bola", None),
+    ("EEVINITE", "Route116", "bola", None),
+    ("KINGLERITE", "Route109", "bola", None),
+    ("MEOWTHITE", "SlateportCity", "oculta", None),
+    ("PIKACHUNITE", "Route110", "bola", None),
+    ("TOXTRICITITE", "NewMauville_Entrance", "bola", None),
+    ("MACHAMPITE", "Route112", "bola", None),
+    ("CENTISKORCHITE", "Route112", "oculta", None),
+    ("COALOSSALITE", "JaggedPass", "oculta", None),
+    ("CINDERACITE", "Route113", "oculta", None),
+    ("APPLETUNITE", "Route114", "bola", None),
+    ("COPPERAJAHITE", "Route115", "bola", None),
+    ("SANDACONDITE", "Route111", "oculta", "DESERT|SANDSTORM|STARDUST"),
+    ("GARBODORITE", "AbandonedShip_Corridors_B1F", "bola", None),
+    ("CORVIKNIGHTITE", "FortreeCity", "oculta", None),
+    ("SNORLAXITE", "Route121", "bola", None),
+    ("GRIMMSNARLITE", "Route121", "oculta", None),
+    ("INTELEONITE", "Route122", "bola", None),
+    ("HATTERENITE", "MtPyre_1F", "bola", None),
+    ("FLAPPLITE", "Route123", "oculta", None),
+    ("ALCREMITE", "LilycoveCity", "bola", None),
+    ("RILLABOOMITE", "SafariZone_Northeast", "bola", None),
+    ("LAPRASITE", "Route128", "bola", None),
+    ("DURALUDONITE", "VictoryRoad_1F", "oculta", None),
+]
+
 # Objetos competitivos de generaciones nuevas (misma estructura). Los más fuertes (Pañuelo
 # Elegido, Chaleco Asalto, Gafas Elegidas, Vidasfera) van a partir del tramo 6.
 COMPETITIVOS = [
@@ -227,12 +376,38 @@ TICKETS_OCULTOS = [
 # objeto fijo o None si el objeto es el primer campo de la lista)
 GRUPOS = [
     (MEGAPIEDRAS, "FLAG_ITEM_MEGA_", 0x264, 0x2BB, "megapiedra en el mapa", None),
-    (COMPETITIVOS, "FLAG_ITEM_COMP_", 0x493, 0x4E4, "objeto competitivo en el mapa", None),
+    (COMPETITIVOS, "FLAG_ITEM_COMP_", 0x493, 0x4C9, "objeto competitivo en el mapa", None),
+    (MEGAPIEDRAS_GIGAMAX, "FLAG_ITEM_MEGA_", 0x4CA, 0x4E4, "megapiedra de forma Gigamax en el mapa", None),
     (TICKETS, "FLAG_ITEM_TICKET_", 0x021, 0x04F, "Ticket-Recuerdo en el mapa", "HEART_SCALE"),
     (TICKETS_OCULTOS, "FLAG_ITEM_TICKET_", 0x4E5, 0x4EF, "Ticket-Recuerdo oculto en el mapa", "HEART_SCALE"),
+    (OBJETOS_ISLAS, "FLAG_ITEM_ISLA_", 0x8E5, 0x8EF, "objeto de las islas del ferry", None),
+    (OBJETOS_CUMBRE, "FLAG_ITEM_CUMBRE_", 0x1DE, 0x1E0, "objeto de la CUMBRE METEORO", None),
+    (OBJETOS_CUMBRE_OCULTOS, "FLAG_ITEM_CUMBRE_", 0x470, 0x470, "objeto de la CUMBRE METEORO", None),
+    (TICKETS_CUMBRE, "FLAG_ITEM_TICKET_", 0x1E1, 0x1E1, "Ticket-Recuerdo en la CUMBRE METEORO", "HEART_SCALE"),
+    (OBJETOS_PLAYA, "FLAG_ITEM_PLAYA_", 0x918, 0x91B, "objeto de la PLAYA VOLCÁNICA", None),
+    (TICKETS_PLAYA, "FLAG_ITEM_TICKET_", 0x91C, 0x91C, "Ticket-Recuerdo en la PLAYA VOLCÁNICA", "HEART_SCALE"),
+    (OBJETOS_ISLAS_SUR, "FLAG_ITEM_SUR_", 0x90C, 0x913, "objeto de las islas de las rutas del sur", None),
+    (TICKETS_ISLAS_SUR, "FLAG_ITEM_TICKET_", 0x914, 0x916, "Ticket-Recuerdo en las islas del sur", "HEART_SCALE"),
+    (OBJETOS_BOSQUE, "FLAG_ITEM_BOSQUE_", 0x900, 0x907, "objeto del BOSQUE FRONDOSO y la MANSIÓN OLVIDADA", None),
+    (TICKETS_BOSQUE, "FLAG_ITEM_TICKET_", 0x908, 0x908, "Ticket-Recuerdo en el BOSQUE FRONDOSO", "HEART_SCALE"),
+    (OBJETOS_MARISMA, "FLAG_ITEM_MARISMA_", 0x88F, 0x88F, "objeto de la MARISMA AZULIZA", None),
+    (TICKETS_MARISMA, "FLAG_ITEM_TICKET_", 0x8E3, 0x8E3, "Ticket-Recuerdo en la MARISMA AZULIZA", "HEART_SCALE"),
+    (OBJETOS_DESIERTO, "FLAG_ITEM_DESIERTO_", 0x8F0, 0x8F5, "objeto del DESIERTO PROFUNDO y las RUINAS ARENOSAS", None),
+    (OBJETOS_GRUTA, "FLAG_ITEM_GRUTA_", 0x8F6, 0x8F9, "objeto de la GRUTA ÍGNEA", None),
+    (OBJETOS_NEVADA, "FLAG_ITEM_NEVADA_", 0x8FA, 0x8FF, "objeto de la ISLA NEVADA", None),
+    (OBJETOS_SINIESTRO, "FLAG_ITEM_SINIESTRO_", 0x4F9, 0x4FA, "objeto del BOSQUE SINIESTRO", None),
+    # Los ocultos necesitan un flag >= FLAG_HIDDEN_ITEMS_START (0x1F4)
+    (OBJETOS_SINIESTRO_OCULTOS, "FLAG_ITEM_SINIESTRO_", 0x468, 0x468, "objeto del BOSQUE SINIESTRO", None),
+    (TICKETS_SINIESTRO, "FLAG_ITEM_TICKET_", 0x1AB, 0x1AB, "Ticket-Recuerdo en el BOSQUE SINIESTRO",
+     "HEART_SCALE"),
+    (OBJETOS_CIENAGA, "FLAG_ITEM_CIENAGA_", 0x054, 0x055, "objeto de la CIÉNAGA TÓXICA", None),
+    (OBJETOS_CIENAGA_OCULTOS, "FLAG_ITEM_CIENAGA_", 0x479, 0x479, "objeto de la CIÉNAGA TÓXICA", None),
+    (TICKETS_CIENAGA, "FLAG_ITEM_TICKET_", 0x1AA, 0x1AA, "Ticket-Recuerdo en la CIÉNAGA TÓXICA", "HEART_SCALE"),
 ]
 COMPORTAMIENTOS_OK = {"MB_NORMAL", "MB_TALL_GRASS", "MB_LONG_GRASS", "MB_SHORT_GRASS", "MB_DEEP_SAND",
-                      "MB_SAND", "MB_CAVE", "MB_ASHGRASS", "MB_FOOTPRINTS"}
+                      "MB_SAND", "MB_CAVE", "MB_ASHGRASS", "MB_FOOTPRINTS",
+                      "MB_INDOOR_ENCOUNTER",  # el suelo de madera del barco (MANSIÓN OLVIDADA)
+                      "MB_SHALLOW_WATER"}  # la arena de los islotes de la RUTA 127 (ISLA ARENOSA)
 
 
 def comportamientos():
@@ -309,9 +484,8 @@ def _buscar_desde_anclas(anclas, info, ancho, alto, ok, distancia, ocupadas, sol
             vecinas = [info(ax + dx, ay + dy)[1] for dx, dy in ((0, 1), (0, -1), (1, 0), (-1, 0))
                        if 0 <= ax + dx < ancho and 0 <= ay + dy < alto and info(ax + dx, ay + dy)[0] == 0
                        and info(ax + dx, ay + dy)[1] not in (0, 15)]
-            if not vecinas:
-                continue
-            elev = vecinas[0]
+            # Si todo el mapa es de transición (la GRUTA ÍGNEA, como la GUARIDA MAGMA), se queda en 0
+            elev = vecinas[0] if vecinas else elev
         vistos = {(ax, ay)}
         cola = deque([(ax, ay, 0)])
         while cola:
@@ -357,7 +531,9 @@ def asegurar_flags(lista, prefijo, primero, ultimo, comentario, fijo=None):
         nombre = f"{prefijo}{objeto}"
         if nombre in texto:
             continue
-        antigua = re.search(rf"^#define FLAG_UNUSED_0x{valor:03X}\s+0x{valor:X}\b.*$", texto, re.M)
+        # Los de antes del sistema van como "0x123"; los del sistema, como "(SYSTEM_FLAGS + 0x85)"
+        antigua = re.search(rf"^#define FLAG_UNUSED_0x{valor:03X}\s+(0x{valor:X}\b|\(SYSTEM_FLAGS \+ 0x[0-9A-F]+\)).*$",
+                            texto, re.M)
         assert antigua, f"el flag 0x{valor:03X} ya no está libre"
         texto = texto.replace(antigua.group(0),
                               f"#define {nombre:<34} 0x{valor:03X} // Dualocke: {comentario}")

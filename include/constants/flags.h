@@ -106,8 +106,8 @@
 #define FLAG_RESCUED_BIRCH                       0x52
 #define FLAG_LEGENDARIES_IN_SOOTOPOLIS           0x53
 
-#define FLAG_UNUSED_0x054                    0x54  // Unused Flag
-#define FLAG_UNUSED_0x055                    0x55  // Unused Flag
+#define FLAG_ITEM_CIENAGA_POISON_BARB      0x054 // Dualocke: objeto de la CIÉNAGA TÓXICA
+#define FLAG_ITEM_CIENAGA_ABSORB_BULB      0x055 // Dualocke: objeto de la CIÉNAGA TÓXICA
 
 #define FLAG_HIDE_CONTEST_POKE_BALL          0x56  // Always set after new game, object it hides is added directly
 #define FLAG_MET_RIVAL_MOM                   0x57
@@ -468,8 +468,8 @@
 #define FLAG_REGISTERED_DRAKE                (TRAINER_REGISTERED_FLAGS_START + REMATCH_DRAKE)
 #define FLAG_REGISTERED_WALLACE              (TRAINER_REGISTERED_FLAGS_START + REMATCH_WALLACE)
 
-#define FLAG_UNUSED_0x1AA                    0x1AA // Unused Flag
-#define FLAG_UNUSED_0x1AB                    0x1AB // Unused Flag
+#define FLAG_ITEM_TICKET_CIENAGA_TOXICA    0x1AA // Dualocke: Ticket-Recuerdo en la CIÉNAGA TÓXICA
+#define FLAG_ITEM_TICKET_BOSQUE_SINIESTRO  0x1AB // Dualocke: Ticket-Recuerdo en el BOSQUE SINIESTRO
 
 #define FLAG_DEFEATED_DEOXYS                 0x1AC
 #define FLAG_BATTLED_DEOXYS                  0x1AD
@@ -524,12 +524,12 @@
 #define FLAG_DEFEATED_HO_OH                  0x1DC
 #define FLAG_DEFEATED_LUGIA                  0x1DD
 
-#define FLAG_UNUSED_0x1DE                    0x1DE // Unused Flag
-#define FLAG_UNUSED_0x1DF                    0x1DF // Unused Flag
+#define FLAG_ITEM_CUMBRE_HARD_STONE        0x1DE // Dualocke: objeto de la CUMBRE METEORO
+#define FLAG_ITEM_CUMBRE_DRAGON_SCALE      0x1DF // Dualocke: objeto de la CUMBRE METEORO
 #define FLAG_UNUSED_0x1E0                    0x1E0 // Unused Flag
-#define FLAG_UNUSED_0x1E1                    0x1E1 // Unused Flag
-#define FLAG_UNUSED_0x1E2                    0x1E2 // Unused Flag
-#define FLAG_UNUSED_0x1E3                    0x1E3 // Unused Flag
+#define FLAG_ITEM_TICKET_CUMBRE_METEORO    0x1E1 // Dualocke: Ticket-Recuerdo en la CUMBRE METEORO
+#define FLAG_DUALOCKE_MARISMA_DONDOZO        0x1E2 // Dualocke: Dondozo de la MARISMA AZULIZA vencido o capturado
+#define FLAG_DUALOCKE_MARISMA_TATSUGIRI      0x1E3 // Dualocke: Tatsugiri de la MARISMA AZULIZA vencido o capturado
 
 // Mystery Gift Flags (Unknown)
 #define FLAG_MYSTERY_GIFT_DONE               0x1E4
@@ -1178,7 +1178,7 @@
 #define FLAG_ITEM_OLD_MAGMA_HIDEOUT_B1F_MASTER_BALL                 0x465 // Unused Flag, leftover from the Ruby Magma hideout
 #define FLAG_ITEM_OLD_MAGMA_HIDEOUT_B1F_MAX_ELIXIR                  0x466 // Unused Flag, leftover from the Ruby Magma hideout
 #define FLAG_ITEM_OLD_MAGMA_HIDEOUT_B2F_NEST_BALL                   0x467 // Unused Flag, leftover from the Ruby Magma hideout
-#define FLAG_UNUSED_0x468                                           0x468 // Unused Flag
+#define FLAG_ITEM_SINIESTRO_SPELL_TAG      0x468 // Dualocke: objeto del BOSQUE SINIESTRO
 #define FLAG_ITEM_MT_PYRE_2F_ULTRA_BALL                             0x469
 #define FLAG_ITEM_MT_PYRE_4F_SEA_INCENSE                            0x46A
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_WEST_MAX_REVIVE                 0x46B
@@ -1186,16 +1186,16 @@
 #define FLAG_ITEM_MOSSDEEP_STEVENS_HOUSE_HM08                       0x46D // Unused Flag, leftover from R/S. HM08 is given to the player directly in Emerald
 #define FLAG_ITEM_ROUTE_119_NUGGET                                  0x46E
 #define FLAG_ITEM_ROUTE_104_POTION                                  0x46F
-#define FLAG_UNUSED_0x470                                           0x470 // Unused Flag
+#define FLAG_ITEM_CUMBRE_ICY_ROCK          0x470 // Dualocke: objeto de la CUMBRE METEORO
 #define FLAG_ITEM_ROUTE_103_PP_UP                                   0x471
-#define FLAG_UNUSED_0x472                                           0x472 // Unused Flag
+#define FLAG_DUALOCKE_GUARDIAN_CIENAGA     0x472 // Dualocke: guardián de la CIÉNAGA TÓXICA vencido o capturado
 #define FLAG_ITEM_ROUTE_108_STAR_PIECE                              0x473
 #define FLAG_ITEM_ROUTE_109_POTION                                  0x474
 #define FLAG_ITEM_ROUTE_110_ELIXIR                                  0x475
 #define FLAG_ITEM_ROUTE_111_ELIXIR                                  0x476
 #define FLAG_ITEM_ROUTE_113_HYPER_POTION                            0x477
 #define FLAG_ITEM_ROUTE_115_HEAL_POWDER                             0x478
-#define FLAG_UNUSED_0x479                                           0x479 // Unused Flag
+#define FLAG_ITEM_CIENAGA_TOXIC_PLATE      0x479 // Dualocke: objeto de la CIÉNAGA TÓXICA
 #define FLAG_ITEM_ROUTE_116_POTION                                  0x47A
 #define FLAG_ITEM_ROUTE_119_ELIXIR_2                                0x47B
 #define FLAG_ITEM_ROUTE_120_REVIVE                                  0x47C
@@ -1277,32 +1277,32 @@
 #define FLAG_ITEM_COMP_TERRAIN_EXTENDER    0x4C7 // Dualocke: objeto competitivo en el mapa
 #define FLAG_ITEM_COMP_ABILITY_SHIELD      0x4C8 // Dualocke: objeto competitivo en el mapa
 #define FLAG_ITEM_COMP_ABILITY_PATCH       0x4C9 // Dualocke: objeto competitivo en el mapa
-#define FLAG_UNUSED_0x4CA                                           0x4CA // Unused Flag
-#define FLAG_UNUSED_0x4CB                                           0x4CB // Unused Flag
-#define FLAG_UNUSED_0x4CC                                           0x4CC // Unused Flag
-#define FLAG_UNUSED_0x4CD                                           0x4CD // Unused Flag
-#define FLAG_UNUSED_0x4CE                                           0x4CE // Unused Flag
-#define FLAG_UNUSED_0x4CF                                           0x4CF // Unused Flag
-#define FLAG_UNUSED_0x4D0                                           0x4D0 // Unused Flag
-#define FLAG_UNUSED_0x4D1                                           0x4D1 // Unused Flag
-#define FLAG_UNUSED_0x4D2                                           0x4D2 // Unused Flag
-#define FLAG_UNUSED_0x4D3                                           0x4D3 // Unused Flag
-#define FLAG_UNUSED_0x4D4                                           0x4D4 // Unused Flag
-#define FLAG_UNUSED_0x4D5                                           0x4D5 // Unused Flag
-#define FLAG_UNUSED_0x4D6                                           0x4D6 // Unused Flag
-#define FLAG_UNUSED_0x4D7                                           0x4D7 // Unused Flag
-#define FLAG_UNUSED_0x4D8                                           0x4D8 // Unused Flag
-#define FLAG_UNUSED_0x4D9                                           0x4D9 // Unused Flag
-#define FLAG_UNUSED_0x4DA                                           0x4DA // Unused Flag
-#define FLAG_UNUSED_0x4DB                                           0x4DB // Unused Flag
-#define FLAG_UNUSED_0x4DC                                           0x4DC // Unused Flag
-#define FLAG_UNUSED_0x4DD                                           0x4DD // Unused Flag
-#define FLAG_UNUSED_0x4DE                                           0x4DE // Unused Flag
-#define FLAG_UNUSED_0x4DF                                           0x4DF // Unused Flag
-#define FLAG_UNUSED_0x4E0                                           0x4E0 // Unused Flag
-#define FLAG_UNUSED_0x4E1                                           0x4E1 // Unused Flag
-#define FLAG_UNUSED_0x4E2                                           0x4E2 // Unused Flag
-#define FLAG_UNUSED_0x4E3                                           0x4E3 // Unused Flag
+#define FLAG_ITEM_MEGA_ORBEETLITE          0x4CA // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_BUTTERFRITE         0x4CB // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_DREDNAWITE          0x4CC // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_EEVINITE            0x4CD // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_KINGLERITE          0x4CE // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_MEOWTHITE           0x4CF // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_PIKACHUNITE         0x4D0 // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_TOXTRICITITE        0x4D1 // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_MACHAMPITE          0x4D2 // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_CENTISKORCHITE      0x4D3 // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_COALOSSALITE        0x4D4 // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_CINDERACITE         0x4D5 // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_APPLETUNITE         0x4D6 // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_COPPERAJAHITE       0x4D7 // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_SANDACONDITE        0x4D8 // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_GARBODORITE         0x4D9 // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_CORVIKNIGHTITE      0x4DA // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_SNORLAXITE          0x4DB // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_GRIMMSNARLITE       0x4DC // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_INTELEONITE         0x4DD // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_HATTERENITE         0x4DE // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_FLAPPLITE           0x4DF // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_ALCREMITE           0x4E0 // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_RILLABOOMITE        0x4E1 // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_LAPRASITE           0x4E2 // Dualocke: megapiedra de forma Gigamax en el mapa
+#define FLAG_ITEM_MEGA_DURALUDONITE        0x4E3 // Dualocke: megapiedra de forma Gigamax en el mapa
 #define FLAG_UNUSED_0x4E4                                           0x4E4 // Unused Flag
 #define FLAG_ITEM_TICKET_RUTA_104_2        0x4E5 // Dualocke: Ticket-Recuerdo oculto en el mapa
 #define FLAG_ITEM_TICKET_RUTA_110_2        0x4E6 // Dualocke: Ticket-Recuerdo oculto en el mapa
@@ -1326,8 +1326,8 @@
 #define FLAG_DEFEATED_SOOTOPOLIS_GYM                                0x4F7
 #define FLAG_DEFEATED_METEOR_FALLS_STEVEN                           0x4F8
 
-#define FLAG_UNUSED_0x4F9                                           0x4F9 // Unused Flag
-#define FLAG_UNUSED_0x4FA                                           0x4FA // Unused Flag
+#define FLAG_ITEM_SINIESTRO_BLACK_GLASSES  0x4F9 // Dualocke: objeto del BOSQUE SINIESTRO
+#define FLAG_ITEM_SINIESTRO_MOON_STONE     0x4FA // Dualocke: objeto del BOSQUE SINIESTRO
 
 #define FLAG_DEFEATED_ELITE_4_SIDNEY                                0x4FB
 #define FLAG_DEFEATED_ELITE_4_PHOEBE                                0x4FC
@@ -1350,7 +1350,7 @@
 #define FLAG_SYS_POKEMON_GET                         (SYSTEM_FLAGS + 0x0) // FLAG_0x860
 #define FLAG_SYS_POKEDEX_GET                         (SYSTEM_FLAGS + 0x1)
 #define FLAG_SYS_POKENAV_GET                         (SYSTEM_FLAGS + 0x2)
-#define FLAG_UNUSED_0x863                            (SYSTEM_FLAGS + 0x3) // Unused Flag
+#define FLAG_DUALOCKE_GUARDIAN_MANSION               (SYSTEM_FLAGS + 0x3) // Dualocke: guardián de la MANSIÓN OLVIDADA vencido o capturado
 #define FLAG_SYS_GAME_CLEAR                          (SYSTEM_FLAGS + 0x4)
 #define FLAG_SYS_CHAT_USED                           (SYSTEM_FLAGS + 0x5)
 #define FLAG_UNLOCKED_TRENDY_SAYINGS                 (SYSTEM_FLAGS + 0x6)
@@ -1387,13 +1387,13 @@
 #define FLAG_IS_CHAMPION                            (SYSTEM_FLAGS + 0x1F) // Seems to be related to linking.
 #define FLAG_NURSE_UNION_ROOM_REMINDER              (SYSTEM_FLAGS + 0x20)
 
-#define FLAG_UNUSED_0x881                           (SYSTEM_FLAGS + 0x21) // Unused Flag
-#define FLAG_UNUSED_0x882                           (SYSTEM_FLAGS + 0x22) // Unused Flag
-#define FLAG_UNUSED_0x883                           (SYSTEM_FLAGS + 0x23) // Unused Flag
-#define FLAG_UNUSED_0x884                           (SYSTEM_FLAGS + 0x24) // Unused Flag
-#define FLAG_UNUSED_0x885                           (SYSTEM_FLAGS + 0x25) // Unused Flag
-#define FLAG_UNUSED_0x886                           (SYSTEM_FLAGS + 0x26) // Unused Flag
-#define FLAG_UNUSED_0x887                           (SYSTEM_FLAGS + 0x27) // Unused Flag
+#define FLAG_DUALOCKE_ISLA_SUR                       (SYSTEM_FLAGS + 0x21) // Dualocke: Pokémon fuerte de la ISLA SUR vencido o capturado
+#define FLAG_DUALOCKE_ISLA_LEJANA                    (SYSTEM_FLAGS + 0x22) // Dualocke: Pokémon fuerte de la ISLA LEJANA vencido o capturado
+#define FLAG_DUALOCKE_ISLA_ORIGEN                    (SYSTEM_FLAGS + 0x23) // Dualocke: Pokémon fuerte de la ISLA ORIGEN vencido o capturado
+#define FLAG_DUALOCKE_OMBLIGO_CIMA                   (SYSTEM_FLAGS + 0x24) // Dualocke: Pokémon fuerte de la cima de ROCA OMBLIGO vencido o capturado
+#define FLAG_DUALOCKE_OMBLIGO_FONDO                  (SYSTEM_FLAGS + 0x25) // Dualocke: Pokémon fuerte del fondo de ROCA OMBLIGO vencido o capturado
+#define FLAG_DUALOCKE_GUARDIAN_RUINAS                (SYSTEM_FLAGS + 0x26) // Dualocke: guardián de las RUINAS ARENOSAS vencido o capturado
+#define FLAG_DUALOCKE_GUARDIAN_GRUTA                 (SYSTEM_FLAGS + 0x27) // Dualocke: guardián de la CÁMARA DEL MAGMA vencido o capturado
 
 #define FLAG_SYS_USE_FLASH                          (SYSTEM_FLAGS + 0x28)
 #define FLAG_SYS_USE_STRENGTH                       (SYSTEM_FLAGS + 0x29)
@@ -1403,8 +1403,8 @@
 #define FLAG_SYS_SAFARI_MODE                        (SYSTEM_FLAGS + 0x2C)
 #define FLAG_SYS_CRUISE_MODE                        (SYSTEM_FLAGS + 0x2D)
 
-#define FLAG_UNUSED_0x88E                           (SYSTEM_FLAGS + 0x2E) // Unused Flag
-#define FLAG_UNUSED_0x88F                           (SYSTEM_FLAGS + 0x2F) // Unused Flag
+#define FLAG_DUALOCKE_GUARDIAN_NEVADA                (SYSTEM_FLAGS + 0x2E) // Dualocke: guardián de la CUEVA HELADA vencido o capturado
+#define FLAG_ITEM_MARISMA_MIRACLE_SEED     0x88F // Dualocke: objeto de la MARISMA AZULIZA
 
 #define FLAG_SYS_TV_HOME                            (SYSTEM_FLAGS + 0x30)
 #define FLAG_SYS_TV_WATCH                           (SYSTEM_FLAGS + 0x31)
@@ -1503,68 +1503,68 @@
 #define FLAG_ARRIVED_AT_NAVEL_ROCK                  (SYSTEM_FLAGS + 0x81)
 #define FLAG_LANDMARK_TRAINER_HILL                  (SYSTEM_FLAGS + 0x82)
 
-#define FLAG_UNUSED_0x8E3                           (SYSTEM_FLAGS + 0x83) // Unused Flag
+#define FLAG_ITEM_TICKET_MARISMA_AZULIZA   0x8E3 // Dualocke: Ticket-Recuerdo en la MARISMA AZULIZA
 
 #define FLAG_RECEIVED_POKEDEX_FROM_BIRCH            (SYSTEM_FLAGS + 0x84)
 
-#define FLAG_UNUSED_0x8E5                           (SYSTEM_FLAGS + 0x85) // Unused Flag
-#define FLAG_UNUSED_0x8E6                           (SYSTEM_FLAGS + 0x86) // Unused Flag
-#define FLAG_UNUSED_0x8E7                           (SYSTEM_FLAGS + 0x87) // Unused Flag
-#define FLAG_UNUSED_0x8E8                           (SYSTEM_FLAGS + 0x88) // Unused Flag
-#define FLAG_UNUSED_0x8E9                           (SYSTEM_FLAGS + 0x89) // Unused Flag
-#define FLAG_UNUSED_0x8EA                           (SYSTEM_FLAGS + 0x8A) // Unused Flag
-#define FLAG_UNUSED_0x8EB                           (SYSTEM_FLAGS + 0x8B) // Unused Flag
-#define FLAG_UNUSED_0x8EC                           (SYSTEM_FLAGS + 0x8C) // Unused Flag
-#define FLAG_UNUSED_0x8ED                           (SYSTEM_FLAGS + 0x8D) // Unused Flag
-#define FLAG_UNUSED_0x8EE                           (SYSTEM_FLAGS + 0x8E) // Unused Flag
-#define FLAG_UNUSED_0x8EF                           (SYSTEM_FLAGS + 0x8F) // Unused Flag
-#define FLAG_UNUSED_0x8F0                           (SYSTEM_FLAGS + 0x90) // Unused Flag
-#define FLAG_UNUSED_0x8F1                           (SYSTEM_FLAGS + 0x91) // Unused Flag
-#define FLAG_UNUSED_0x8F2                           (SYSTEM_FLAGS + 0x92) // Unused Flag
-#define FLAG_UNUSED_0x8F3                           (SYSTEM_FLAGS + 0x93) // Unused Flag
+#define FLAG_ITEM_ISLA_PP_UP               0x8E5 // Dualocke: objeto de las islas del ferry
+#define FLAG_ITEM_ISLA_STAR_PIECE          0x8E6 // Dualocke: objeto de las islas del ferry
+#define FLAG_ITEM_ISLA_MAX_ELIXIR          0x8E7 // Dualocke: objeto de las islas del ferry
+#define FLAG_ITEM_ISLA_BIG_NUGGET          0x8E8 // Dualocke: objeto de las islas del ferry
+#define FLAG_ITEM_ISLA_PP_MAX              0x8E9 // Dualocke: objeto de las islas del ferry
+#define FLAG_ITEM_ISLA_ELIXIR              0x8EA // Dualocke: objeto de las islas del ferry
+#define FLAG_ITEM_ISLA_COMET_SHARD         0x8EB // Dualocke: objeto de las islas del ferry
+#define FLAG_ITEM_ISLA_PEARL_STRING        0x8EC // Dualocke: objeto de las islas del ferry
+#define FLAG_ITEM_ISLA_PROTEIN             0x8ED // Dualocke: objeto de las islas del ferry
+#define FLAG_ITEM_ISLA_CARBOS              0x8EE // Dualocke: objeto de las islas del ferry
+#define FLAG_ITEM_ISLA_BALM_MUSHROOM       0x8EF // Dualocke: objeto de las islas del ferry
+#define FLAG_ITEM_DESIERTO_SOFT_SAND       0x8F0 // Dualocke: objeto del DESIERTO PROFUNDO y las RUINAS ARENOSAS
+#define FLAG_ITEM_DESIERTO_STAR_PIECE      0x8F1 // Dualocke: objeto del DESIERTO PROFUNDO y las RUINAS ARENOSAS
+#define FLAG_ITEM_DESIERTO_RARE_BONE       0x8F2 // Dualocke: objeto del DESIERTO PROFUNDO y las RUINAS ARENOSAS
+#define FLAG_ITEM_DESIERTO_ODD_KEYSTONE    0x8F3 // Dualocke: objeto del DESIERTO PROFUNDO y las RUINAS ARENOSAS
 #define FLAG_UNUSED_0x8F4                           (SYSTEM_FLAGS + 0x94) // Unused Flag
 #define FLAG_UNUSED_0x8F5                           (SYSTEM_FLAGS + 0x95) // Unused Flag
-#define FLAG_UNUSED_0x8F6                           (SYSTEM_FLAGS + 0x96) // Unused Flag
-#define FLAG_UNUSED_0x8F7                           (SYSTEM_FLAGS + 0x97) // Unused Flag
-#define FLAG_UNUSED_0x8F8                           (SYSTEM_FLAGS + 0x98) // Unused Flag
-#define FLAG_UNUSED_0x8F9                           (SYSTEM_FLAGS + 0x99) // Unused Flag
-#define FLAG_UNUSED_0x8FA                           (SYSTEM_FLAGS + 0x9A) // Unused Flag
-#define FLAG_UNUSED_0x8FB                           (SYSTEM_FLAGS + 0x9B) // Unused Flag
-#define FLAG_UNUSED_0x8FC                           (SYSTEM_FLAGS + 0x9C) // Unused Flag
+#define FLAG_ITEM_GRUTA_FIRE_STONE         0x8F6 // Dualocke: objeto de la GRUTA ÍGNEA
+#define FLAG_ITEM_GRUTA_MAGMARIZER         0x8F7 // Dualocke: objeto de la GRUTA ÍGNEA
+#define FLAG_ITEM_GRUTA_CHARCOAL           0x8F8 // Dualocke: objeto de la GRUTA ÍGNEA
+#define FLAG_ITEM_GRUTA_LAVA_COOKIE        0x8F9 // Dualocke: objeto de la GRUTA ÍGNEA
+#define FLAG_ITEM_NEVADA_NEVER_MELT_ICE    0x8FA // Dualocke: objeto de la ISLA NEVADA
+#define FLAG_ITEM_NEVADA_ICE_STONE         0x8FB // Dualocke: objeto de la ISLA NEVADA
+#define FLAG_ITEM_NEVADA_SNOWBALL          0x8FC // Dualocke: objeto de la ISLA NEVADA
 #define FLAG_UNUSED_0x8FD                           (SYSTEM_FLAGS + 0x9D) // Unused Flag
 #define FLAG_UNUSED_0x8FE                           (SYSTEM_FLAGS + 0x9E) // Unused Flag
 #define FLAG_UNUSED_0x8FF                           (SYSTEM_FLAGS + 0x9F) // Unused Flag
-#define FLAG_UNUSED_0x900                           (SYSTEM_FLAGS + 0xA0) // Unused Flag
-#define FLAG_UNUSED_0x901                           (SYSTEM_FLAGS + 0xA1) // Unused Flag
-#define FLAG_UNUSED_0x902                           (SYSTEM_FLAGS + 0xA2) // Unused Flag
-#define FLAG_UNUSED_0x903                           (SYSTEM_FLAGS + 0xA3) // Unused Flag
-#define FLAG_UNUSED_0x904                           (SYSTEM_FLAGS + 0xA4) // Unused Flag
+#define FLAG_ITEM_BOSQUE_SILVER_POWDER     0x900 // Dualocke: objeto del BOSQUE FRONDOSO y la MANSIÓN OLVIDADA
+#define FLAG_ITEM_BOSQUE_BIG_ROOT          0x901 // Dualocke: objeto del BOSQUE FRONDOSO y la MANSIÓN OLVIDADA
+#define FLAG_ITEM_BOSQUE_REAPER_CLOTH      0x902 // Dualocke: objeto del BOSQUE FRONDOSO y la MANSIÓN OLVIDADA
+#define FLAG_ITEM_BOSQUE_CLEANSE_TAG       0x903 // Dualocke: objeto del BOSQUE FRONDOSO y la MANSIÓN OLVIDADA
+#define FLAG_ITEM_BOSQUE_DUSK_STONE        0x904 // Dualocke: objeto del BOSQUE FRONDOSO y la MANSIÓN OLVIDADA
 #define FLAG_UNUSED_0x905                           (SYSTEM_FLAGS + 0xA5) // Unused Flag
 #define FLAG_UNUSED_0x906                           (SYSTEM_FLAGS + 0xA6) // Unused Flag
 #define FLAG_UNUSED_0x907                           (SYSTEM_FLAGS + 0xA7) // Unused Flag
-#define FLAG_UNUSED_0x908                           (SYSTEM_FLAGS + 0xA8) // Unused Flag
-#define FLAG_UNUSED_0x909                           (SYSTEM_FLAGS + 0xA9) // Unused Flag
-#define FLAG_UNUSED_0x90A                           (SYSTEM_FLAGS + 0xAA) // Unused Flag
-#define FLAG_UNUSED_0x90B                           (SYSTEM_FLAGS + 0xAB) // Unused Flag
-#define FLAG_UNUSED_0x90C                           (SYSTEM_FLAGS + 0xAC) // Unused Flag
-#define FLAG_UNUSED_0x90D                           (SYSTEM_FLAGS + 0xAD) // Unused Flag
-#define FLAG_UNUSED_0x90E                           (SYSTEM_FLAGS + 0xAE) // Unused Flag
-#define FLAG_UNUSED_0x90F                           (SYSTEM_FLAGS + 0xAF) // Unused Flag
-#define FLAG_UNUSED_0x910                           (SYSTEM_FLAGS + 0xB0) // Unused Flag
-#define FLAG_UNUSED_0x911                           (SYSTEM_FLAGS + 0xB1) // Unused Flag
-#define FLAG_UNUSED_0x912                           (SYSTEM_FLAGS + 0xB2) // Unused Flag
+#define FLAG_ITEM_TICKET_BOSQUE_FRONDOSO   0x908 // Dualocke: Ticket-Recuerdo en el BOSQUE FRONDOSO
+#define FLAG_DUALOCKE_GUARDIAN_ISLA_RUINAS           (SYSTEM_FLAGS + 0xA9) // Dualocke: guardián de la ISLA DE RUINAS vencido o capturado
+#define FLAG_DUALOCKE_GUARDIAN_VOLCAN                (SYSTEM_FLAGS + 0xAA) // Dualocke: guardián de la ISLA VOLCÁNICA vencido o capturado
+#define FLAG_DUALOCKE_GUARDIAN_ARENOSA               (SYSTEM_FLAGS + 0xAB) // Dualocke: guardián de la ISLA ARENOSA vencido o capturado
+#define FLAG_ITEM_SUR_WISE_GLASSES         0x90C // Dualocke: objeto de las islas de las rutas del sur
+#define FLAG_ITEM_SUR_PP_UP                0x90D // Dualocke: objeto de las islas de las rutas del sur
+#define FLAG_ITEM_SUR_FLAME_ORB            0x90E // Dualocke: objeto de las islas de las rutas del sur
+#define FLAG_ITEM_SUR_FIRE_STONE           0x90F // Dualocke: objeto de las islas de las rutas del sur
+#define FLAG_ITEM_SUR_BIG_PEARL            0x910 // Dualocke: objeto de las islas de las rutas del sur
+#define FLAG_ITEM_SUR_SAFETY_GOGGLES       0x911 // Dualocke: objeto de las islas de las rutas del sur
+#define FLAG_ITEM_SUR_PEARL_STRING         0x912 // Dualocke: objeto de las islas de las rutas del sur
 #define FLAG_UNUSED_0x913                           (SYSTEM_FLAGS + 0xB3) // Unused Flag
-#define FLAG_UNUSED_0x914                           (SYSTEM_FLAGS + 0xB4) // Unused Flag
-#define FLAG_UNUSED_0x915                           (SYSTEM_FLAGS + 0xB5) // Unused Flag
-#define FLAG_UNUSED_0x916                           (SYSTEM_FLAGS + 0xB6) // Unused Flag
-#define FLAG_UNUSED_0x917                           (SYSTEM_FLAGS + 0xB7) // Unused Flag
-#define FLAG_UNUSED_0x918                           (SYSTEM_FLAGS + 0xB8) // Unused Flag
-#define FLAG_UNUSED_0x919                           (SYSTEM_FLAGS + 0xB9) // Unused Flag
-#define FLAG_UNUSED_0x91A                           (SYSTEM_FLAGS + 0xBA) // Unused Flag
+#define FLAG_ITEM_TICKET_ISLA_DE_RUINAS    0x914 // Dualocke: Ticket-Recuerdo en las islas del sur
+#define FLAG_ITEM_TICKET_ISLA_VOLCANICA    0x915 // Dualocke: Ticket-Recuerdo en las islas del sur
+#define FLAG_ITEM_TICKET_ISLA_ARENOSA      0x916 // Dualocke: Ticket-Recuerdo en las islas del sur
+#define FLAG_DUALOCKE_GUARDIAN_PLAYA                 (SYSTEM_FLAGS + 0xB7) // Dualocke: guardián de la PLAYA VOLCÁNICA vencido o capturado
+#define FLAG_ITEM_PLAYA_WATER_STONE        0x918 // Dualocke: objeto de la PLAYA VOLCÁNICA
+#define FLAG_ITEM_PLAYA_DAMP_ROCK          0x919 // Dualocke: objeto de la PLAYA VOLCÁNICA
+#define FLAG_ITEM_PLAYA_PEARL              0x91A // Dualocke: objeto de la PLAYA VOLCÁNICA
 #define FLAG_UNUSED_0x91B                           (SYSTEM_FLAGS + 0xBB) // Unused Flag
-#define FLAG_UNUSED_0x91C                           (SYSTEM_FLAGS + 0xBC) // Unused Flag
-#define FLAG_UNUSED_0x91D                           (SYSTEM_FLAGS + 0xBD) // Unused Flag
-#define FLAG_UNUSED_0x91E                           (SYSTEM_FLAGS + 0xBE) // Unused Flag
+#define FLAG_ITEM_TICKET_PLAYA_VOLCANICA   0x91C // Dualocke: Ticket-Recuerdo en la PLAYA VOLCÁNICA
+#define FLAG_DUALOCKE_GUARDIAN_CUMBRE               (SYSTEM_FLAGS + 0xBD) // Dualocke: guardián de la CUMBRE METEORO vencido o capturado
+#define FLAG_DUALOCKE_GUARDIAN_SINIESTRO             (SYSTEM_FLAGS + 0xBE) // Dualocke: guardián del BOSQUE SINIESTRO vencido o capturado
 #define FLAG_UNUSED_0x91F                           (SYSTEM_FLAGS + 0xBF) // Unused Flag
 
 // Daily Flags

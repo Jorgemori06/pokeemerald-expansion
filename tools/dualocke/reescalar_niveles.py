@@ -54,25 +54,51 @@ TRAMOS = {
     1: ["ROUTE101", "ROUTE102", "ROUTE103", "ROUTE104", "PETALBURG_WOODS",
         "RUSTBORO_CITY", "RUSTBORO_CITY_GYM"],
     2: ["ROUTE116", "RUSTURF_TUNNEL", "DEWFORD_TOWN", "GRANITE_CAVE_*", "ROUTE106",
-        "DEWFORD_TOWN_GYM"],
+        "DEWFORD_TOWN_GYM",
+        "MARISMA_AZULIZA",  # al oeste de AZULIZA (crear_marisma_azuliza.py; Miguel, 17/11/2026)
+        # al norte del BOSQUE PETALIA, con CORTE (crear_bosque_frondoso.py; Miguel, 17/11/2026)
+        "BOSQUE_FRONDOSO", "MANSION_OLVIDADA", "MANSION_OLVIDADA_DESVAN"],
     3: ["ROUTE109", "ROUTE109_SEASHORE_HOUSE", "SLATEPORT_CITY",
         "SLATEPORT_CITY_OCEANIC_MUSEUM_*", "ROUTE110", "MAUVILLE_CITY", "ROUTE117",
-        "MAUVILLE_CITY_GYM", "ROUTE110_TRICK_HOUSE_PUZZLE1"],
+        "MAUVILLE_CITY_GYM", "ROUTE110_TRICK_HOUSE_PUZZLE1",
+        # CIÉNAGA TÓXICA, al sur de la RUTA 117 (crear_cienaga_toxica.py; Miguel, 17/11/2026)
+        "CIENAGA_TOXICA"],
     4: ["ROUTE111", "ROUTE112", "FIERY_PATH", "ROUTE113", "ROUTE114", "METEOR_FALLS_1F_1R",
-        "ROUTE115", "MT_CHIMNEY", "JAGGED_PASS", "LAVARIDGE_TOWN_GYM_*", "ROUTE110_TRICK_HOUSE_PUZZLE2"],
-    5: ["PETALBURG_CITY_GYM", "ROUTE110_TRICK_HOUSE_PUZZLE3"],
+        "ROUTE115", "MT_CHIMNEY", "JAGGED_PASS", "LAVARIDGE_TOWN_GYM_*", "ROUTE110_TRICK_HOUSE_PUZZLE2",
+        # CUMBRE METEORO, por una cueva de la RUTA 115 (crear_cumbre_meteoro.py; Miguel, 17/11/2026)
+        "CUMBRE_METEORO_LADERA", "CUMBRE_METEORO"],
+    5: ["PETALBURG_CITY_GYM", "ROUTE110_TRICK_HOUSE_PUZZLE3",
+        "GRUTA_IGNEA", "GRUTA_IGNEA_CAMARA",  # se llega con FUERZA, desde el SENDERO ÍGNEO (Miguel, 16/11/2026)
+        # DESIERTO PROFUNDO y RUINAS ARENOSAS, desde el desierto de la RUTA 111 (crear_desierto_profundo.py)
+        "DESIERTO_PROFUNDO", "RUINAS_ARENOSAS", "RUINAS_ARENOSAS_2F", "RUINAS_ARENOSAS_3F",
+        "RUINAS_ARENOSAS_CAMARA"],
     6: ["PETALBURG_CITY", "ROUTE105", "ROUTE107", "ROUTE108", "ABANDONED_SHIP_*",
         "NEW_MAUVILLE_*", "MIRAGE_TOWER_*", "ROUTE118", "ROUTE123", "ROUTE119",
-        "ROUTE119_WEATHER_INSTITUTE_*", "ROUTE120", "FORTREE_CITY_GYM", "ROUTE110_TRICK_HOUSE_PUZZLE4"],
+        "ROUTE119_WEATHER_INSTITUTE_*", "ROUTE120", "FORTREE_CITY_GYM", "ROUTE110_TRICK_HOUSE_PUZZLE4",
+        # BOSQUE SINIESTRO, al sur de la RUTA 123 (crear_bosque_siniestro.py; Miguel, 17/11/2026)
+        "BOSQUE_SINIESTRO"],
     7: ["ROUTE121", "SAFARI_ZONE_*", "LILYCOVE_CITY", "MT_PYRE_*", "ROUTE122",
         "MAGMA_HIDEOUT_*", "AQUA_HIDEOUT_*", "ROUTE124", "ROUTE125", "SHOAL_CAVE_*",
-        "ROUTE126", "ROUTE127", "MOSSDEEP_CITY", "MOSSDEEP_CITY_GYM", "ROUTE110_TRICK_HOUSE_PUZZLE5"],
+        "ROUTE126", "ROUTE127", "MOSSDEEP_CITY", "MOSSDEEP_CITY_GYM", "ROUTE110_TRICK_HOUSE_PUZZLE5",
+        # Islas del ferry: una por medalla (Miguel, 16/11/2026; data/scripts/dualocke_islas.inc)
+        "SOUTHERN_ISLAND_EXTERIOR", "SOUTHERN_ISLAND_INTERIOR",
+        # ISLA NEVADA, al norte de la RUTA 124 (crear_isla_nevada.py)
+        "ISLA_NEVADA", "ISLA_NEVADA_CUEVA",
+        # PLAYA VOLCÁNICA, al oeste de la RUTA 122 (crear_playa_volcanica.py; Miguel, 17/11/2026)
+        "PLAYA_VOLCANICA"],
     8: ["MOSSDEEP_CITY_SPACE_CENTER_*", "UNDERWATER_*", "ROUTE128", "SEAFLOOR_CAVERN_*",
         "SOOTOPOLIS_CITY", "CAVE_OF_ORIGIN_*", "SKY_PILLAR_*", "ROUTE129", "ROUTE130",
         "ROUTE131", "PACIFIDLOG_TOWN", "ROUTE132", "ROUTE133", "ROUTE134",
-        "SOOTOPOLIS_CITY_GYM_*", "ROUTE110_TRICK_HOUSE_PUZZLE6"],
+        "SOOTOPOLIS_CITY_GYM_*", "ROUTE110_TRICK_HOUSE_PUZZLE6",
+        "FARAWAY_ISLAND_ENTRANCE", "FARAWAY_ISLAND_INTERIOR",
+        # Islas de las rutas del sur (crear_islas_sur.py; Miguel, 17/11/2026)
+        "ISLA_DE_RUINAS", "ISLA_DE_RUINAS_TORRE", "ISLA_VOLCANICA", "ISLA_VOLCANICA_CRATER", "ISLA_ARENOSA"],
     9: ["EVER_GRANDE_CITY", "VICTORY_ROAD_*", "METEOR_FALLS_1F_2R", "METEOR_FALLS_B1F_*",
-        "EVER_GRANDE_CITY_*S_ROOM", "ROUTE110_TRICK_HOUSE_PUZZLE7", "ROUTE110_TRICK_HOUSE_PUZZLE8"],
+        "EVER_GRANDE_CITY_*S_ROOM", "ROUTE110_TRICK_HOUSE_PUZZLE7", "ROUTE110_TRICK_HOUSE_PUZZLE8",
+        # (los nombres exactos: NAVEL_ROCK_* también cogería los mapas de Rojo Fuego, _FRLG)
+        "BIRTH_ISLAND_HARBOR", "BIRTH_ISLAND_EXTERIOR", "NAVEL_ROCK_HARBOR", "NAVEL_ROCK_EXTERIOR",
+        "NAVEL_ROCK_ENTRANCE", "NAVEL_ROCK_B1F", "NAVEL_ROCK_FORK", "NAVEL_ROCK_UP?", "NAVEL_ROCK_TOP",
+        "NAVEL_ROCK_DOWN??", "NAVEL_ROCK_BOTTOM"],
     # Postgame: entrenadores a 100 y salvajes a 97
     10: ["SS_TIDAL_*", "METEOR_FALLS_STEVENS_CAVE", "DESERT_UNDERPASS", "ARTISAN_CAVE_*", "ALTERING_CAVE",
          "TERRA_CAVE_*", "MARINE_CAVE_*", "UNDERWATER_MARINE_CAVE"],
@@ -176,17 +202,31 @@ def interpolar(v, vmin, vmax, nmin, nmax):
     return round(nmin + (v - vmin) * (nmax - nmin) / (vmax - vmin))
 
 
+# Entrenadores que no salían en ningún mapa y ahora están en las zonas nuevas (Miguel, 16/11/2026):
+# las islas del ferry y la GRUTA ÍGNEA.
+# - Aunque alguno acabe en _2 o _3 no son revanchas: se reescalan como los normales de su mapa.
+# - No cuentan para la banda de su tramo: así no se mueve el nivel de ningún otro entrenador ni de
+#   los salvajes de las semillas en curso.
+ENTRENADORES_ISLAS = {"TRAINER_TERRY", "TRAINER_CINDY_2", "TRAINER_MIKE_1", "TRAINER_AMY_AND_LIV_3",
+                      "TRAINER_GINA_AND_MIA_2", "TRAINER_LUCAS_2", "TRAINER_GRUNT_UNUSED",
+                      "TRAINER_DUDLEY", "TRAINER_KAYLEE",
+                      # BOSQUE FRONDOSO y MANSIÓN OLVIDADA: el equipo lo escribe zonas_nuevas.py
+                      "TRAINER_BRENDAN_PLACEHOLDER", "TRAINER_MAY_PLACEHOLDER", "TRAINER_LEAF",
+                      "TRAINER_RED"}  # DARÍO, de la ISLA ARENOSA
+
+
 def calcular_entrenadores(base, mapas):
     tramo_de = {t: tramo_de_mapa(m) for t, m in mapas.items()}
     tramo_de = {t: s for t, s in tramo_de.items() if s and t in base and base[t]
-                and not re.search(r"_[2-5]$", t)}
+                and (t in ENTRENADORES_ISLAS or not re.search(r"_[2-5]$", t))}
 
     # Banda original de cada tramo: nivel del Pokémon más fuerte de cada entrenador normal
     bandas = {}
     for s in TRAMOS:
         # La Casa Trampa (opcional) no cuenta para la banda, para no mover la historia principal
         maximos = [max(base[t]) for t, ts in tramo_de.items() if ts == s and "TRICK_HOUSE" not in mapas[t]
-                   and t not in LIDERES and t not in JEFES_FIJOS and not es_jefe_medio(t)]
+                   and t not in LIDERES and t not in JEFES_FIJOS and not es_jefe_medio(t)
+                   and t not in ENTRENADORES_ISLAS]
         if maximos:
             bandas[s] = (percentil(maximos, 0.10), percentil(maximos, 0.95))
 
@@ -366,6 +406,27 @@ ESTATICOS = [
     ("data/maps/MarineCave_End/scripts.inc", None, 10),
     ("data/maps/TerraCave_End/scripts.inc", None, 10),
     ("data/maps/BattleFrontier_OutsideEast/scripts.inc", None, 10),  # Sudowoodo
+    # Pokémon fuertes de las islas del ferry: al nivel del entrenador normal más fuerte de su tramo
+    # (cap − 3): 70, 81 y 97
+    ("data/maps/SouthernIsland_Interior/scripts.inc", "MAP_SOUTHERN_ISLAND_INTERIOR", "tope"),
+    ("data/maps/FarawayIsland_Interior/scripts.inc", "MAP_FARAWAY_ISLAND_INTERIOR", "tope"),
+    ("data/maps/BirthIsland_Exterior/scripts.inc", "MAP_BIRTH_ISLAND_EXTERIOR", "tope"),
+    ("data/maps/NavelRock_Top/scripts.inc", "MAP_NAVEL_ROCK_TOP", "tope"),
+    ("data/maps/NavelRock_Bottom/scripts.inc", "MAP_NAVEL_ROCK_BOTTOM", "tope"),
+    # El guardián de las RUINAS ARENOSAS, igual (crear_desierto_profundo.py)
+    ("data/maps/RuinasArenosas_Camara/scripts.inc", "MAP_RUINAS_ARENOSAS_CAMARA", "tope"),
+    ("data/maps/GrutaIgnea_Camara/scripts.inc", "MAP_GRUTA_IGNEA_CAMARA", "tope"),
+    ("data/maps/IslaNevada_Cueva/scripts.inc", "MAP_ISLA_NEVADA_CUEVA", "tope"),
+    ("data/maps/MansionOlvidada_Desvan/scripts.inc", "MAP_MANSION_OLVIDADA_DESVAN", "tope"),
+    ("data/maps/IslaDeRuinas_Torre/scripts.inc", "MAP_ISLA_DE_RUINAS_TORRE", "tope"),
+    ("data/maps/IslaVolcanica_Crater/scripts.inc", "MAP_ISLA_VOLCANICA_CRATER", "tope"),
+    ("data/maps/IslaArenosa/scripts.inc", "MAP_ISLA_ARENOSA", "tope"),
+    ("data/maps/PlayaVolcanica/scripts.inc", "MAP_PLAYA_VOLCANICA", "tope"),
+    ("data/maps/CumbreMeteoro/scripts.inc", "MAP_CUMBRE_METEORO", "tope"),
+    ("data/maps/BosqueSiniestro/scripts.inc", "MAP_BOSQUE_SINIESTRO", "tope"),
+    ("data/maps/CienagaToxica/scripts.inc", "MAP_CIENAGA_TOXICA", "tope"),
+    # Dondozo y Tatsugiri de la MARISMA AZULIZA: la cala solo se alcanza con SURF (tramo 6)
+    ("data/maps/MarismaAzuliza/scripts.inc", None, ("tope", 6)),
 ]
 
 
@@ -384,6 +445,10 @@ def aplicar_estaticos(nuevos, tramo_de, mapas):
             else:
                 zona = sum(rango_tramo(tramo)) // 2
             nivel = min(CAPS[tramo], zona + SUBIDA_JEFES_MEDIO)
+        elif regla == "tope":
+            nivel = CAPS[tramo_de_mapa(mapa)] - MARGEN_NORMALES
+        elif isinstance(regla, tuple) and regla[0] == "tope":   # ("tope", tramo): el tope de otro tramo
+            nivel = CAPS[regla[1]] - MARGEN_NORMALES
         else:
             nivel = CAPS[regla]
         with open(ruta, encoding="utf-8", newline="") as f:
