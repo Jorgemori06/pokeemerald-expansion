@@ -218,8 +218,23 @@ def entrenadores():
         else:
             _, _, fin = next(b for b in bloques(texto) if b[0] == DESPUES_DE)
             texto = texto[:fin] + nuevo + texto[fin:]
+    texto = separar_bloques(texto)
     with open(TRAINERS, "w", encoding="utf-8", newline="") as f:
         f.write(texto)
+
+
+def separar_bloques(texto):
+    """Cada "=== TRAINER_X ===" tiene que ir detrás de una línea vacía: si no, trainerproc da "expected
+    empty line" y no compila. Pasaba con el primer entrenador nuevo, que va detrás del último de
+    Esmeralda, y ese acaba sin línea vacía (era el final del fichero)."""
+    salto = "\r\n" if "\r\n" in texto else "\n"
+    lineas = texto.split(salto)
+    salida = []
+    for linea in lineas:
+        if linea.startswith("=== TRAINER_") and salida and salida[-1].strip():
+            salida.append("")
+        salida.append(linea)
+    return salto.join(salida)
 
 
 def main():
