@@ -528,8 +528,8 @@
 #define FLAG_ITEM_CUMBRE_DRAGON_SCALE      0x1DF // Dualocke: objeto de la CUMBRE METEORO
 #define FLAG_ITEM_CUMBRE_ICY_ROCK          0x1E0 // Dualocke: objeto de la CUMBRE METEORO
 #define FLAG_ITEM_TICKET_CUMBRE_METEORO    0x1E1 // Dualocke: Ticket-Recuerdo en la CUMBRE METEORO
-#define FLAG_UNUSED_0x1E2                    0x1E2 // Unused Flag
-#define FLAG_UNUSED_0x1E3                    0x1E3 // Unused Flag
+#define FLAG_DUALOCKE_MARISMA_DONDOZO        0x1E2 // Dualocke: Dondozo de la MARISMA AZULIZA vencido o capturado
+#define FLAG_DUALOCKE_MARISMA_TATSUGIRI      0x1E3 // Dualocke: Tatsugiri de la MARISMA AZULIZA vencido o capturado
 
 // Mystery Gift Flags (Unknown)
 #define FLAG_MYSTERY_GIFT_DONE               0x1E4

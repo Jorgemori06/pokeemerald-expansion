@@ -419,6 +419,8 @@ ESTATICOS = [
     ("data/maps/IslaArenosa/scripts.inc", "MAP_ISLA_ARENOSA", "tope"),
     ("data/maps/PlayaVolcanica/scripts.inc", "MAP_PLAYA_VOLCANICA", "tope"),
     ("data/maps/CumbreMeteoro/scripts.inc", "MAP_CUMBRE_METEORO", "tope"),
+    # Dondozo y Tatsugiri de la MARISMA AZULIZA: la cala solo se alcanza con SURF (tramo 6)
+    ("data/maps/MarismaAzuliza/scripts.inc", None, ("tope", 6)),
 ]
 
 
@@ -439,6 +441,8 @@ def aplicar_estaticos(nuevos, tramo_de, mapas):
             nivel = min(CAPS[tramo], zona + SUBIDA_JEFES_MEDIO)
         elif regla == "tope":
             nivel = CAPS[tramo_de_mapa(mapa)] - MARGEN_NORMALES
+        elif isinstance(regla, tuple) and regla[0] == "tope":   # ("tope", tramo): el tope de otro tramo
+            nivel = CAPS[regla[1]] - MARGEN_NORMALES
         else:
             nivel = CAPS[regla]
         with open(ruta, encoding="utf-8", newline="") as f:

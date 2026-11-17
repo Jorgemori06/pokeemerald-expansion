@@ -93,6 +93,7 @@ SALVAJES = {
         "land_mons": ["WOOPER", "LOTAD", "SURSKIT", "YANMA", "TYMPOLE", "SHROOMISH",
                       "CROAGUNK", "PARAS", "SHELLOS", "STUNFISK", "DEWPIDER", "GOOMY"],
         "water_mons": ["SURSKIT", "LOTAD", "WOOPER", "POLIWAG", "CHEWTLE"],
+        "rock_smash_mons": ["GEODUDE", "GEODUDE", "NOSEPASS", "ROGGENROLA", "BINACLE"],
         "fishing_mons": ["MAGIKARP", "BARBOACH", "BARBOACH", "POLIWAG", "GOLDEEN",
                          "WISHIWASHI", "BARBOACH", "TYMPOLE", "CHEWTLE", "BASCULIN"],
     },

@@ -9417,8 +9417,8 @@
     {
       "id": "LAYOUT_MARISMA_AZULIZA",
       "name": "MarismaAzuliza_Layout",
-      "width": 36,
-      "height": 20,
+      "width": 48,
+      "height": 34,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Dewford",
       "border_filepath": "data/layouts/MarismaAzuliza/border.bin",
