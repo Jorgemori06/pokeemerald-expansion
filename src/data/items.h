@@ -7286,8 +7286,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("Centiskorchite"), ITEM_NAME("Centiskorchita")),
         .price = 0,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
-        .description = ES(COMPOUND_STRING("This stone enables\n"
-            "Centiskorch to Mega\n"
+        .description = ES(COMPOUND_STRING("This stone lets\n"
+            "Centiskorch Mega\n"
             "Evolve in battle."), COMPOUND_STRING("Hace megaevolucionar\n" "a Centiskorch.")),
         .pocket = POCKET_MEGA_STONES,
         .sortType = ITEM_TYPE_MEGA_STONE,
