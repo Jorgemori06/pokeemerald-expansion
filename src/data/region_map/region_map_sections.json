@@ -1686,6 +1686,30 @@
       "y": 8,
       "width": 1,
       "height": 1
+    },
+    {
+      "id": "MAPSEC_ISLA_DE_RUINAS",
+      "name": "ISLA DE RUINAS",
+      "x": 19,
+      "y": 9,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_ISLA_VOLCANICA",
+      "name": "ISLA VOLCÁNICA",
+      "x": 9,
+      "y": 11,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_ISLA_ARENOSA",
+      "name": "ISLA ARENOSA",
+      "x": 26,
+      "y": 10,
+      "width": 1,
+      "height": 1
     }
   ]
 }

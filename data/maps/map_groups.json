@@ -135,7 +135,10 @@
     "Underwater_Route105",
     "Underwater_Route125",
     "IslaNevada",
-    "MarismaAzuliza"
+    "MarismaAzuliza",
+    "IslaDeRuinas",
+    "IslaVolcanica",
+    "IslaArenosa"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -483,7 +486,9 @@
     "RuinasArenosas_3F",
     "BosqueFrondoso",
     "MansionOlvidada",
-    "MansionOlvidada_Desvan"
+    "MansionOlvidada_Desvan",
+    "IslaDeRuinas_Torre",
+    "IslaVolcanica_Crater"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",

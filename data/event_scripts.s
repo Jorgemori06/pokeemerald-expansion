@@ -489,6 +489,11 @@ gStdScripts_End::
 	.include "data/maps/BosqueFrondoso/scripts.inc" @ Dualocke: zona nueva
 	.include "data/maps/MansionOlvidada/scripts.inc" @ Dualocke: zona nueva
 	.include "data/maps/MansionOlvidada_Desvan/scripts.inc" @ Dualocke: zona nueva
+	.include "data/maps/IslaDeRuinas/scripts.inc" @ Dualocke: zona nueva
+	.include "data/maps/IslaDeRuinas_Torre/scripts.inc" @ Dualocke: zona nueva
+	.include "data/maps/IslaVolcanica/scripts.inc" @ Dualocke: zona nueva
+	.include "data/maps/IslaVolcanica_Crater/scripts.inc" @ Dualocke: zona nueva
+	.include "data/maps/IslaArenosa/scripts.inc" @ Dualocke: zona nueva
 	.include "data/scripts/shared_secret_base.inc"
 	.include "data/maps/BattleColosseum_2P/scripts.inc"
 	.include "data/maps/TradeCenter/scripts.inc"

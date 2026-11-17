@@ -9453,6 +9453,56 @@
       "secondary_tileset": "gTileset_InsideShip",
       "border_filepath": "data/layouts/MansionOlvidada_Desvan/border.bin",
       "blockdata_filepath": "data/layouts/MansionOlvidada_Desvan/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLA_DE_RUINAS",
+      "name": "IslaDeRuinas_Layout",
+      "width": 40,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Pacifidlog",
+      "border_filepath": "data/layouts/IslaDeRuinas/border.bin",
+      "blockdata_filepath": "data/layouts/IslaDeRuinas/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLA_DE_RUINAS_TORRE",
+      "name": "IslaDeRuinas_Torre_Layout",
+      "width": 14,
+      "height": 14,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Pacifidlog",
+      "border_filepath": "data/layouts/IslaDeRuinas_Torre/border.bin",
+      "blockdata_filepath": "data/layouts/IslaDeRuinas_Torre/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLA_VOLCANICA",
+      "name": "IslaVolcanica_Layout",
+      "width": 40,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Pacifidlog",
+      "border_filepath": "data/layouts/IslaVolcanica/border.bin",
+      "blockdata_filepath": "data/layouts/IslaVolcanica/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLA_VOLCANICA_CRATER",
+      "name": "IslaVolcanica_Crater_Layout",
+      "width": 40,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lavaridge",
+      "border_filepath": "data/layouts/IslaVolcanica_Crater/border.bin",
+      "blockdata_filepath": "data/layouts/IslaVolcanica_Crater/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLA_ARENOSA",
+      "name": "IslaArenosa_Layout",
+      "width": 56,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mossdeep",
+      "border_filepath": "data/layouts/IslaArenosa/border.bin",
+      "blockdata_filepath": "data/layouts/IslaArenosa/map.bin"
     }
   ]
 }

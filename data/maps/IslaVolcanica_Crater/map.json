@@ -1,0 +1,79 @@
+{
+  "id": "MAP_ISLA_VOLCANICA_CRATER",
+  "name": "IslaVolcanica_Crater",
+  "layout": "LAYOUT_ISLA_VOLCANICA_CRATER",
+  "region": "REGION_HOENN",
+  "requires_flash": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "music": "MUS_MT_CHIMNEY",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "region_map_section": "MAPSEC_ISLA_VOLCANICA",
+  "weather": "WEATHER_DROUGHT",
+  "connections": null,
+  "warp_events": [
+    {
+      "x": 22,
+      "y": 22,
+      "elevation": 3,
+      "dest_map": "MAP_ISLA_VOLCANICA",
+      "dest_warp_id": "0"
+    }
+  ],
+  "object_events": [
+    {
+      "local_id": "LOCALID_ISLA_VOLCANICA_CRATER_GUARDIAN",
+      "graphics_id": "OBJ_EVENT_GFX_VAR_0",
+      "x": 20,
+      "y": 16,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "IslaVolcanica_Crater_EventScript_Pokemon",
+      "flag": "FLAG_DUALOCKE_GUARDIAN_VOLCAN"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 23,
+      "y": 20,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_FLAME_ORB",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_SUR_FLAME_ORB"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 22,
+      "y": 26,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_HEART_SCALE",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_TICKET_ISLA_VOLCANICA"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 10,
+      "y": 14,
+      "elevation": 3,
+      "item": "ITEM_FIRE_STONE",
+      "flag": "FLAG_ITEM_SUR_FIRE_STONE"
+    }
+  ],
+  "coord_events": []
+}
