@@ -224,3 +224,13 @@ Una sección por idea, con:
   - Antes hay que comprobar si mGBA 0.10.5, la que usamos, deja leer el teclado desde el script. Si no, habría que esperar a la 0.11.
   - Lo más sencillo para empezar sería un campo de texto en la consola de scripts de mGBA: escribes el nombre ahí, le das a Intro y el script lo mete en la pantalla de nombre.
 - **Estado:** Pendiente.
+
+### 12. Amigos nuestros que regalan un Pokémon en cada Centro Pokémon
+
+- **Qué:** en el Centro Pokémon de cada ciudad, un amigo nuestro te regala un Pokémon.
+- **Propuesta de:** Jorge, 16/11/2026. Decidido por Jorge el 18/11/2026:
+  - **Quién lo da:** amigos nuestros, que elegimos nosotros (nombre y ciudad de cada uno). Va junto con las ideas 4 y 7. Al principio, con un muñeco del juego y su nombre; que se parezcan a ellos, más adelante.
+  - **El Pokémon:** a nivel 1 y completamente al azar con la semilla. No gasta la captura de la ruta, y los repetidos y legendarios van a VETADOS, como los demás regalos.
+  - Si Miguel prefiere que se ajuste a cómo va la partida (nivel o fuerza según las medallas), que su Claude se lo pregunte cuando se haga.
+- **Notas:** se sortea con su propio generador, para no mover el resto del randomizer. Necesita un flag por Centro (o una variable con un bit por ciudad).
+- **Estado:** Pendiente. Falta la lista de amigos y en qué ciudad va cada uno.
