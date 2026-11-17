@@ -1734,6 +1734,14 @@
       "y": 7,
       "width": 1,
       "height": 1
+    },
+    {
+      "id": "MAPSEC_CIENAGA_TOXICA",
+      "name": "CIÉNAGA TÓXICA",
+      "x": 6,
+      "y": 7,
+      "width": 1,
+      "height": 1
     }
   ]
 }

@@ -106,8 +106,8 @@
 #define FLAG_RESCUED_BIRCH                       0x52
 #define FLAG_LEGENDARIES_IN_SOOTOPOLIS           0x53
 
-#define FLAG_UNUSED_0x054                    0x54  // Unused Flag
-#define FLAG_UNUSED_0x055                    0x55  // Unused Flag
+#define FLAG_ITEM_CIENAGA_POISON_BARB      0x054 // Dualocke: objeto de la CIÉNAGA TÓXICA
+#define FLAG_ITEM_CIENAGA_ABSORB_BULB      0x055 // Dualocke: objeto de la CIÉNAGA TÓXICA
 
 #define FLAG_HIDE_CONTEST_POKE_BALL          0x56  // Always set after new game, object it hides is added directly
 #define FLAG_MET_RIVAL_MOM                   0x57
@@ -468,7 +468,7 @@
 #define FLAG_REGISTERED_DRAKE                (TRAINER_REGISTERED_FLAGS_START + REMATCH_DRAKE)
 #define FLAG_REGISTERED_WALLACE              (TRAINER_REGISTERED_FLAGS_START + REMATCH_WALLACE)
 
-#define FLAG_UNUSED_0x1AA                    0x1AA // Unused Flag
+#define FLAG_ITEM_TICKET_CIENAGA_TOXICA    0x1AA // Dualocke: Ticket-Recuerdo en la CIÉNAGA TÓXICA
 #define FLAG_ITEM_TICKET_BOSQUE_SINIESTRO  0x1AB // Dualocke: Ticket-Recuerdo en el BOSQUE SINIESTRO
 
 #define FLAG_DEFEATED_DEOXYS                 0x1AC
@@ -1188,14 +1188,14 @@
 #define FLAG_ITEM_ROUTE_104_POTION                                  0x46F
 #define FLAG_ITEM_CUMBRE_ICY_ROCK          0x470 // Dualocke: objeto de la CUMBRE METEORO
 #define FLAG_ITEM_ROUTE_103_PP_UP                                   0x471
-#define FLAG_UNUSED_0x472                                           0x472 // Unused Flag
+#define FLAG_DUALOCKE_GUARDIAN_CIENAGA     0x472 // Dualocke: guardián de la CIÉNAGA TÓXICA vencido o capturado
 #define FLAG_ITEM_ROUTE_108_STAR_PIECE                              0x473
 #define FLAG_ITEM_ROUTE_109_POTION                                  0x474
 #define FLAG_ITEM_ROUTE_110_ELIXIR                                  0x475
 #define FLAG_ITEM_ROUTE_111_ELIXIR                                  0x476
 #define FLAG_ITEM_ROUTE_113_HYPER_POTION                            0x477
 #define FLAG_ITEM_ROUTE_115_HEAL_POWDER                             0x478
-#define FLAG_UNUSED_0x479                                           0x479 // Unused Flag
+#define FLAG_ITEM_CIENAGA_TOXIC_PLATE      0x479 // Dualocke: objeto de la CIÉNAGA TÓXICA
 #define FLAG_ITEM_ROUTE_116_POTION                                  0x47A
 #define FLAG_ITEM_ROUTE_119_ELIXIR_2                                0x47B
 #define FLAG_ITEM_ROUTE_120_REVIVE                                  0x47C

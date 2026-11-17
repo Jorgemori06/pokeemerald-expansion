@@ -498,6 +498,7 @@ gStdScripts_End::
 	.include "data/maps/CumbreMeteoro_Ladera/scripts.inc" @ Dualocke: zona nueva
 	.include "data/maps/CumbreMeteoro/scripts.inc" @ Dualocke: zona nueva
 	.include "data/maps/BosqueSiniestro/scripts.inc" @ Dualocke: zona nueva
+	.include "data/maps/CienagaToxica/scripts.inc" @ Dualocke: zona nueva
 	.include "data/scripts/shared_secret_base.inc"
 	.include "data/maps/BattleColosseum_2P/scripts.inc"
 	.include "data/maps/TradeCenter/scripts.inc"

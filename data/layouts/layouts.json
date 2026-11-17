@@ -9543,6 +9543,16 @@
       "secondary_tileset": "gTileset_Lilycove",
       "border_filepath": "data/layouts/BosqueSiniestro/border.bin",
       "blockdata_filepath": "data/layouts/BosqueSiniestro/map.bin"
+    },
+    {
+      "id": "LAYOUT_CIENAGA_TOXICA",
+      "name": "CienagaToxica_Layout",
+      "width": 60,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mauville",
+      "border_filepath": "data/layouts/CienagaToxica/border.bin",
+      "blockdata_filepath": "data/layouts/CienagaToxica/map.bin"
     }
   ]
 }
