@@ -138,6 +138,10 @@ SALVAJES = {
                                    "ROGGENROLA", "ROCKRUFF", "TIMBURR", "MIENFOO", "DRUDDIGON", "BAGON"]},
     "MAP_CUMBRE_METEORO": {"land_mons": ["SWABLU", "SNORUNT", "SKARMORY", "NOIBAT", "BERGMITE", "CUBCHOO",
                                    "AMAURA", "ROOKIDEE", "ALTARIA", "CRYOGONAL", "FRIGIBAX", "BAGON"]},
+    # BOSQUE SINIESTRO (crear_bosque_siniestro.py): el bioma del tipo Siniestro, con Fantasma y Bicho.
+    # Tramo 6: ya evolucionados. Raros, Zoroark y Spiritomb.
+    "MAP_BOSQUE_SINIESTRO": {"land_mons": ["LIEPARD", "ARIADOS", "SHIFTRY", "TREVENANT", "HONCHKROW", "SKUNTANK",
+                                           "GOURGEIST", "THIEVUL", "SPIDOPS", "GRIMMSNARL", "ZOROARK", "SPIRITOMB"]},
     "MAP_ISLA_NEVADA_CUEVA": {
         "land_mons": ["SNORUNT", "SWINUB", "SNOVER", "CUBCHOO", "VANILLITE", "SNOM",
                       "BERGMITE", "SNEASEL", "CETODDLE", "CRYOGONAL", "EISCUE", "FRIGIBAX"],

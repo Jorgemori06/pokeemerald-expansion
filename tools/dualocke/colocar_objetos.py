@@ -189,6 +189,15 @@ TICKETS_ISLAS_SUR = [("ISLA_DE_RUINAS", "IslaDeRuinas", "bola", None),
                      ("ISLA_VOLCANICA", "IslaVolcanica_Crater", "bola", None),
                      ("ISLA_ARENOSA", "IslaArenosa", "bola", None)]
 
+# BOSQUE SINIESTRO (crear_bosque_siniestro.py). Con semilla, al azar. crear_bosque_siniestro.py los pone en
+# su sitio (SITIO_OBJETOS). Flags sueltos fuera de los bloques de arriba (ya no quedan bloques seguidos).
+OBJETOS_SINIESTRO = [
+    ("BLACK_GLASSES", "BosqueSiniestro", "bola", None),
+    ("MOON_STONE", "BosqueSiniestro", "bola", None),
+]
+OBJETOS_SINIESTRO_OCULTOS = [("SPELL_TAG", "BosqueSiniestro", "oculta", None)]
+TICKETS_SINIESTRO = [("BOSQUE_SINIESTRO", "BosqueSiniestro", "bola", None)]
+
 # PLAYA VOLCÁNICA (crear_playa_volcanica.py). Con semilla, al azar.
 # Al rehacer la playa (17/11/2026) se movieron a mano tres: el Ticket-Recuerdo (19,17, junto al risco),
 # la Perla oculta (22,4, en la arena de arriba) y la Piedra Agua (23,34, en la arena): habían quedado en el
@@ -343,6 +352,10 @@ GRUPOS = [
     (OBJETOS_DESIERTO, "FLAG_ITEM_DESIERTO_", 0x8F0, 0x8F5, "objeto del DESIERTO PROFUNDO y las RUINAS ARENOSAS", None),
     (OBJETOS_GRUTA, "FLAG_ITEM_GRUTA_", 0x8F6, 0x8F9, "objeto de la GRUTA ÍGNEA", None),
     (OBJETOS_NEVADA, "FLAG_ITEM_NEVADA_", 0x8FA, 0x8FF, "objeto de la ISLA NEVADA", None),
+    (OBJETOS_SINIESTRO, "FLAG_ITEM_SINIESTRO_", 0x4F9, 0x4FA, "objeto del BOSQUE SINIESTRO", None),
+    (OBJETOS_SINIESTRO_OCULTOS, "FLAG_ITEM_SINIESTRO_", 0x1AA, 0x1AA, "objeto del BOSQUE SINIESTRO", None),
+    (TICKETS_SINIESTRO, "FLAG_ITEM_TICKET_", 0x1AB, 0x1AB, "Ticket-Recuerdo en el BOSQUE SINIESTRO",
+     "HEART_SCALE"),
 ]
 COMPORTAMIENTOS_OK = {"MB_NORMAL", "MB_TALL_GRASS", "MB_LONG_GRASS", "MB_SHORT_GRASS", "MB_DEEP_SAND",
                       "MB_SAND", "MB_CAVE", "MB_ASHGRASS", "MB_FOOTPRINTS",

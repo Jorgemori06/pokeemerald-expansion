@@ -72,7 +72,9 @@ TRAMOS = {
         "RUINAS_ARENOSAS_CAMARA"],
     6: ["PETALBURG_CITY", "ROUTE105", "ROUTE107", "ROUTE108", "ABANDONED_SHIP_*",
         "NEW_MAUVILLE_*", "MIRAGE_TOWER_*", "ROUTE118", "ROUTE123", "ROUTE119",
-        "ROUTE119_WEATHER_INSTITUTE_*", "ROUTE120", "FORTREE_CITY_GYM", "ROUTE110_TRICK_HOUSE_PUZZLE4"],
+        "ROUTE119_WEATHER_INSTITUTE_*", "ROUTE120", "FORTREE_CITY_GYM", "ROUTE110_TRICK_HOUSE_PUZZLE4",
+        # BOSQUE SINIESTRO, al sur de la RUTA 123 (crear_bosque_siniestro.py; Miguel, 17/11/2026)
+        "BOSQUE_SINIESTRO"],
     7: ["ROUTE121", "SAFARI_ZONE_*", "LILYCOVE_CITY", "MT_PYRE_*", "ROUTE122",
         "MAGMA_HIDEOUT_*", "AQUA_HIDEOUT_*", "ROUTE124", "ROUTE125", "SHOAL_CAVE_*",
         "ROUTE126", "ROUTE127", "MOSSDEEP_CITY", "MOSSDEEP_CITY_GYM", "ROUTE110_TRICK_HOUSE_PUZZLE5",
@@ -419,6 +421,7 @@ ESTATICOS = [
     ("data/maps/IslaArenosa/scripts.inc", "MAP_ISLA_ARENOSA", "tope"),
     ("data/maps/PlayaVolcanica/scripts.inc", "MAP_PLAYA_VOLCANICA", "tope"),
     ("data/maps/CumbreMeteoro/scripts.inc", "MAP_CUMBRE_METEORO", "tope"),
+    ("data/maps/BosqueSiniestro/scripts.inc", "MAP_BOSQUE_SINIESTRO", "tope"),
     # Dondozo y Tatsugiri de la MARISMA AZULIZA: la cala solo se alcanza con SURF (tramo 6)
     ("data/maps/MarismaAzuliza/scripts.inc", None, ("tope", 6)),
 ]

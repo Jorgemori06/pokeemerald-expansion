@@ -39039,6 +39039,75 @@
           }
         },
         {
+          "map": "MAP_BOSQUE_SINIESTRO",
+          "base_label": "gBosqueSiniestro",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 54,
+                "max_level": 56,
+                "species": "SPECIES_LIEPARD"
+              },
+              {
+                "min_level": 54,
+                "max_level": 56,
+                "species": "SPECIES_ARIADOS"
+              },
+              {
+                "min_level": 54,
+                "max_level": 56,
+                "species": "SPECIES_SHIFTRY"
+              },
+              {
+                "min_level": 54,
+                "max_level": 56,
+                "species": "SPECIES_TREVENANT"
+              },
+              {
+                "min_level": 54,
+                "max_level": 56,
+                "species": "SPECIES_HONCHKROW"
+              },
+              {
+                "min_level": 54,
+                "max_level": 56,
+                "species": "SPECIES_SKUNTANK"
+              },
+              {
+                "min_level": 55,
+                "max_level": 57,
+                "species": "SPECIES_GOURGEIST"
+              },
+              {
+                "min_level": 55,
+                "max_level": 57,
+                "species": "SPECIES_THIEVUL"
+              },
+              {
+                "min_level": 55,
+                "max_level": 57,
+                "species": "SPECIES_SPIDOPS"
+              },
+              {
+                "min_level": 55,
+                "max_level": 57,
+                "species": "SPECIES_GRIMMSNARL"
+              },
+              {
+                "min_level": 56,
+                "max_level": 58,
+                "species": "SPECIES_ZOROARK"
+              },
+              {
+                "min_level": 56,
+                "max_level": 58,
+                "species": "SPECIES_SPIRITOMB"
+              }
+            ]
+          }
+        },
+        {
           "map": "MAP_ISLA_NEVADA_CUEVA",
           "base_label": "gIslaNevada_Cueva",
           "land_mons": {
