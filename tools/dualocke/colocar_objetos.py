@@ -203,8 +203,10 @@ TICKETS_PLAYA = [("PLAYA_VOLCANICA", "PlayaVolcanica", "bola", None)]
 OBJETOS_CUMBRE = [
     ("HARD_STONE", "CumbreMeteoro_Ladera", "bola", None),
     ("DRAGON_SCALE", "CumbreMeteoro", "bola", None),
-    ("ICY_ROCK", "CumbreMeteoro", "oculta", None),
 ]
+# Los objetos ocultos necesitan un flag a partir de FLAG_HIDDEN_ITEMS_START (0x1F4): si no, no compila
+# ("Hidden Item flag ... is too small"). La Roca Helada iba en 0x1E0.
+OBJETOS_CUMBRE_OCULTOS = [("ICY_ROCK", "CumbreMeteoro", "oculta", None)]
 TICKETS_CUMBRE = [("CUMBRE_METEORO", "CumbreMeteoro_Ladera", "bola", None)]
 
 # Objetos competitivos de generaciones nuevas (misma estructura). Los más fuertes (Pañuelo
@@ -329,6 +331,7 @@ GRUPOS = [
     (TICKETS_OCULTOS, "FLAG_ITEM_TICKET_", 0x4E5, 0x4EF, "Ticket-Recuerdo oculto en el mapa", "HEART_SCALE"),
     (OBJETOS_ISLAS, "FLAG_ITEM_ISLA_", 0x8E5, 0x8EF, "objeto de las islas del ferry", None),
     (OBJETOS_CUMBRE, "FLAG_ITEM_CUMBRE_", 0x1DE, 0x1E0, "objeto de la CUMBRE METEORO", None),
+    (OBJETOS_CUMBRE_OCULTOS, "FLAG_ITEM_CUMBRE_", 0x470, 0x470, "objeto de la CUMBRE METEORO", None),
     (TICKETS_CUMBRE, "FLAG_ITEM_TICKET_", 0x1E1, 0x1E1, "Ticket-Recuerdo en la CUMBRE METEORO", "HEART_SCALE"),
     (OBJETOS_PLAYA, "FLAG_ITEM_PLAYA_", 0x918, 0x91B, "objeto de la PLAYA VOLCÁNICA", None),
     (TICKETS_PLAYA, "FLAG_ITEM_TICKET_", 0x91C, 0x91C, "Ticket-Recuerdo en la PLAYA VOLCÁNICA", "HEART_SCALE"),
