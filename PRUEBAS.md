@@ -58,7 +58,8 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 - [ ] **ISLA VOLCÁNICA:** desde el sur de la RUTA 134 (la parte sin corriente, cerca de PORTUAL).
   - La cueva del montículo baja al CRÁTER y la cueva nueva del escalón sube.
   - En la ceniza salen salvajes. Sol fuera y en combate.
-- [ ] **ISLA ARENOSA:** desde el este de la RUTA 129. Tormenta de arena. Salvajes en la hierba alta de entre los árboles. DARÍO lucha.
+- [ ] **ISLA ARENOSA:** desde el este de la RUTA 129. Tormenta de arena. Salvajes en la hierba alta del islote de hierba (al oeste). DARÍO lucha.
+- [ ] **Islas rehechas (17/11/2026):** que las orillas, el bajío y las peñas se vean bien. Que en las peñas no se pueda hacer una base secreta. En la ISLA DE RUINAS, que la playa de abajo una bien con la franja de arena. En la ISLA VOLCÁNICA, que la cima del montículo se vea bien.
 - [ ] **Uniones:** que las tres se vean bien desde la ruta y desde la isla, sin trozos raros en el borde.
 - [ ] **Guardianes** (TORRE, CRÁTER e ISLA ARENOSA): dan premio y no vuelven a salir. Cada isla es una zona de captura.
 - [ ] **Guardianes nuevos (17/11/2026), sin semilla:** ISLA SUR Dragonite, ISLA LEJANA Flutter Mane, ISLA ORIGEN Roaring Moon, ROCA OMBLIGO Volcarona (cima) y Kingdra (fondo), ISLA ARENOSA Sandy Shocks. Que salga su sprite en el mapa y que capturar un Pokémon Paradoja no cuente como legendario.

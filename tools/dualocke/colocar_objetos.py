@@ -174,6 +174,8 @@ OBJETOS_BOSQUE = [
 TICKETS_BOSQUE = [("BOSQUE_FRONDOSO", "BosqueFrondoso", "bola", None)]
 
 # Islas de las rutas del sur (crear_islas_sur.py). Con semilla, al azar.
+# Al rehacer la ISLA VOLCÁNICA y la ISLA ARENOSA (17/11/2026), crear_islas_sur.py mueve los suyos al sitio que
+# les toca en el dibujo nuevo (SITIO_OBJETOS).
 OBJETOS_ISLAS_SUR = [
     ("WISE_GLASSES", "IslaDeRuinas_Torre", "bola", None),
     ("PP_UP", "IslaDeRuinas", "oculta", None),

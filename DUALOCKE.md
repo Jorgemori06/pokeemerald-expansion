@@ -406,6 +406,8 @@ Miguel: la marisma y la playa "quedan raras"; hay que mirar cómo están hechas 
   - En una charca, la orilla de arriba y los lados se dibujan sobre el agua, y la de abajo sobre la hierba (o la arena).
   - Los árboles de AZULIZA solo van sobre arena; AZULIZA no tiene hierba.
   - Los caminos de tierra tienen su propio borde (piezas 0x118-0x12A).
+  - **Islas de mar** (RUTAS 127-134): la arena va rodeada de un anillo de bajío de 2 o 3 casillas; sobre la arena hay peñas, y en el mar rocas sueltas y remolinos, separados del bajío (el mar de al lado del bajío lleva orilla). La hierba de una isla va en otra parte, con orilla de mar, y no toca la arena ni el bajío. Las peñas de la RUTA 127 tienen un hueco de base secreta: al copiarlas se tapa.
+- **Para copiar trozos del juego dentro de un plano:** las casillas que pone el script (peñas, un montículo) cuentan para sus vecinas como el terreno de alrededor. Si se marcan como `"pared"`, sus vecinas las ven como un acantilado (por ejemplo, el mar de debajo de un acantilado copiado).
 - **Resultado:** las parejas raras bajaron de 118 a 63 en la marisma y de 240 a 61 en la playa. Las que quedan son uniones entre trozos copiados de otros mapas.
 
 ### CUMBRE METEORO (hecho, Miguel, 17/11/2026; falta probarlo)
@@ -455,15 +457,18 @@ Tres islas nuevas del **tramo 8** (cap 84), cada una pegada al borde de una ruta
   - El borde este de la RUTA 127 es una pared de roca.
   - Por eso dos islas no están donde decía ZONAS.md (ver cada una).
 - **Los islotes se copian con `isla()`:** solo las casillas que no son mar y están unidas al islote. Así no se cuelan rocas sueltas, corrientes ni trozos de otras islas.
+- **Rehechas el 17/11/2026 con `autotile.py`** (ver "Dibujar mapas como los del juego"). Antes eran trozos de islotes copiados tal cual: la arena de la ISLA DE RUINAS acababa cortada en recto contra el mar, la ISLA VOLCÁNICA era un montículo pegado sobre un bajío cuadrado y la ISLA ARENOSA eran tres islotes de la RUTA 127.
 - **ISLA DE RUINAS**, al norte de la RUTA 131 (en ZONAS.md, al sur de la RUTA 132), junto al PILAR CELESTE:
-  - El islote del PILAR CELESTE con su torre, con niebla (Campo de Niebla en combate).
+  - El islote del PILAR CELESTE con su torre, con niebla (Campo de Niebla en combate). Abajo, la franja de arena acaba en una playa (antes se cortaba en recto) y hay rocas en el mar.
   - El rellano de la torre está rodeado de acantilados: la cueva de la orilla de abajo es un túnel que sale por la cueva del montículo.
   - La puerta de la torre, abierta, lleva a la **TORRE**: la planta 1 del PILAR CELESTE, sin la escalera, con el guardián delante.
 - **ISLA VOLCÁNICA**, al sur de la RUTA 134, donde el mar no tiene corriente (se llega desde PORTUAL):
-  - Un bajío de la RUTA 134 con el montículo del PILAR CELESTE. Sol.
+  - Una isla de arena con su anillo de bajío, tres peñas de la RUTA 127, rocas en el mar y, en medio, el montículo del PILAR CELESTE (con la cima de una peña: la suya tenía la sombra de la torre). Sol.
   - Su cueva baja al **CRÁTER**: la cima del MONTE CENIZO (lago de lava y terrazas, sin la estación del teleférico). Tiene manchas de ceniza con salvajes y una salida nueva: la entrada de la GUARIDA MAGMA del CAMINO ESCABROSO, puesta en un escalón.
 - **ISLA ARENOSA**, al este de la RUTA 129 (en ZONAS.md, al este de la RUTA 127):
-  - Dos islotes de arena y uno de árboles de la RUTA 127, sin las bases secretas. Hierba alta entre los árboles. Tormenta de arena.
+  - Una isla grande de arena con cinco peñas y una cala al sur. Al oeste, un islote de hierba con árboles, flores y hierba alta (la de los salvajes), con orilla de mar: se llega surfeando. Tormenta de arena.
+  - Se llega desde la izquierda: primero se pasa junto al islote y, al llegar a la isla, espera DARÍO (mira a la izquierda). El guardián está en la punta del sur.
+  - Ninguna peña deja hacer bases secretas: el hueco se tapa.
 - **Guardianes** (el sistema de las islas del ferry, regla `"tope"`: nivel 81), sin semilla:
   - Metagross en la TORRE (premio: Cinta Experto). `FLAG_DUALOCKE_GUARDIAN_ISLA_RUINAS` (0x909).
   - Charizard en el CRÁTER (Roca Calor). `FLAG_DUALOCKE_GUARDIAN_VOLCAN` (0x90A).
