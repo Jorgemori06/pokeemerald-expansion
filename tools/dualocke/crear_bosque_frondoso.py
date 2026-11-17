@@ -25,6 +25,7 @@ Uso (desde la raíz del repo; se puede volver a lanzar):
 """
 
 import json
+import re
 import os
 import struct
 import sys
@@ -127,6 +128,16 @@ def leer(ruta):
 def escribir(ruta, texto):
     with open(ruta, "w", encoding="utf-8", newline="") as f:
         f.write(texto)
+
+def con_nivel_actual(ruta, texto):
+    """Conserva el nivel del guardián que haya puesto reescalar_niveles.py (regla "tope") si el script ya
+    existe: si no, al volver a lanzar este script después de la cadena de niveles se perdería."""
+    if os.path.exists(ruta):
+        anterior = re.search(r"setwildbattle (SPECIES_\w+), (\d+)", leer(ruta))
+        if anterior:
+            texto = re.sub(rf"setwildbattle {anterior.group(1)}, \d+", f"setwildbattle {anterior.group(1)}, {anterior.group(2)}", texto)
+    return texto
+
 
 
 LAYOUTS = co.cargar_layouts()
@@ -342,7 +353,7 @@ def crear_mapas(l_bosque, l_mansion, l_desvan):
           "script": f"{DESVAN}_EventScript_Pokemon", "flag": FLAG_GUARDIAN}],
         [])
     for carpeta in (BOSQUE, MANSION, DESVAN):
-        escribir(f"data/maps/{carpeta}/scripts.inc", SCRIPTS[carpeta])
+        escribir(f"data/maps/{carpeta}/scripts.inc", con_nivel_actual(f"data/maps/{carpeta}/scripts.inc", SCRIPTS[carpeta]))
 
     grupos = leer("data/maps/map_groups.json")
     salto = "\r\n" if "\r\n" in grupos else "\n"
