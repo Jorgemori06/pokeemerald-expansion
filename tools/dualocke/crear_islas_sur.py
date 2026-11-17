@@ -465,6 +465,34 @@ def crear_arenosa():
     return guardar_layout(ARENOSA, ancho, alto, c, base)
 
 
+# Rocas sueltas de mar (2 × 2): (arriba izq., arriba der., abajo izq., abajo der.)
+ROCAS_SUELTAS = [(0x175, 0x176, 0x17D, 0x17E), (0x150, 0x151, 0x158, 0x159), (0x15A, 0x15B, 0x158, 0x159),
+                 (0x33B, 0x33D, 0x17D, 0x17E)]
+
+
+def quitar_rocas(carpeta, esquinas):
+    """Quita rocas sueltas de mar (2 × 2, esquina de arriba a la izquierda) de una ruta y pone el mar de al lado.
+    Se usa para abrir paso en la barrera de rocas hasta el borde por el que se entra a una isla. Se puede volver
+    a lanzar: si la roca ya no está, no hace nada."""
+    l, c = celdas_de(carpeta)
+    w = l["width"]
+    for x0, y0 in esquinas:
+        cuatro = tuple(c[(y0 + j) * w + x0 + i] & 0x3FF for j in (0, 1) for i in (0, 1))
+        alrededor = [c[y * w + x] for y in range(y0 - 1, y0 + 3) for x in range(x0 - 1, x0 + 3)
+                     if 0 <= x < w and 0 <= y < l["height"] and not (x0 <= x <= x0 + 1 and y0 <= y <= y0 + 1)]
+        mar = [v for v in alrededor if not (v >> 10) & 3 and comportamiento(l, v & 0x3FF) == "MB_OCEAN_WATER"]
+        if all(comportamiento(l, m) == "MB_OCEAN_WATER" for m in cuatro):
+            continue
+        assert cuatro in ROCAS_SUELTAS, (carpeta, x0, y0, [hex(m) for m in cuatro])
+        assert mar, (carpeta, x0, y0, "sin mar alrededor")
+        valor = max(set(mar), key=mar.count)
+        for j in (0, 1):
+            for i in (0, 1):
+                c[(y0 + j) * w + x0 + i] = valor
+    with open(l["blockdata_filepath"], "wb") as f:
+        f.write(struct.pack(f"<{w * l['height']}H", *c))
+
+
 def mapa_json(carpeta, datos, objetos):
     """map.json con los personajes de este script; conserva los objetos de colocar_objetos.py."""
     ruta = f"data/maps/{carpeta}/map.json"
@@ -646,8 +674,16 @@ def zonas_region():
     escribir(ruta, texto)
 
 
+# El borde de cada ruta por el que se entra a su isla estaba fuera de la barrera de rocas: no se llegaba (lo vio
+# Jorge con alcance.py, #97/#99). Se quita una roca suelta de la barrera, por dentro (lejos de las conexiones
+# de los lados): la que deja el paso más corto sin pasar por corrientes.
+PASOS = {"Route129": [(46, 24)], "Route131": [(7, 12)], "Route134": [(9, 21)]}
+
+
 def main():
     crear_mapas(crear_ruinas(), crear_torre(), crear_volcan(), crear_crater(), crear_arenosa())
+    for ruta, rocas in PASOS.items():
+        quitar_rocas(ruta, rocas)
     zonas_region()
     print("Dualocke: ISLA DE RUINAS, ISLA VOLCÁNICA e ISLA ARENOSA creadas")
 
