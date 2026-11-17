@@ -68,6 +68,7 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 - [ ] **Entrada:** en el claro del noreste del BOSQUE PETALIA hay dos árboles de CORTE; detrás, el pasillo lleva al BOSQUE FRONDOSO sin pantalla de carga, y se vuelve igual.
 - [ ] **La unión:** que los árboles del borde de abajo del BOSQUE FRONDOSO sigan bien con los del BOSQUE PETALIA, y que no se vea nada raro al ir por el pasillo.
 - [ ] **El bosque:** que ningún árbol salga cortado. Carteles "BOSQUE FRONDOSO" y "MANSIÓN OLVIDADA": cada uno es una zona de captura.
+- [ ] **Bosque rehecho (17/11/2026):** el risco del medio se salta hacia abajo y no se sube; para ir a la mansión se rodea por el este. El cartel de la mansión se lee desde abajo.
 - [ ] **Pesca** en la charca.
 - [ ] **La mansión:** la puerta del edificio entra y sale. Dentro hay salvajes en el suelo de madera.
   - La puerta de arriba a la izquierda dice que está atascada.

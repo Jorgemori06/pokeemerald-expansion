@@ -482,9 +482,11 @@ Tres islas nuevas del **tramo 8** (cap 84), cada una pegada al borde de una ruta
 
 - **Dónde:** en el claro del noreste del BOSQUE PETALIA se abre un pasillo entre los árboles, tapado por dos árboles de CORTE (`FLAG_TEMP_13` y `_14`). Lleva al BOSQUE FRONDOSO por el borde, sin pantalla de carga. Hace falta CORTE: **tramo 2** (cap 23).
 - **BOSQUE FRONDOSO** (36 × 40), con los gráficos del BOSQUE PETALIA:
-  - caminos entre árboles, mucha hierba alta, flores y una charca para pescar;
-  - arriba, en un patio con verja y farolas, la mansión (el edificio largo de CIUDAD FÉRRICA) y su cartel.
-  - El mapa se dibuja en `tools/dualocke/crear_bosque_frondoso.py` sobre una rejilla de letras (`REJILLA`, una letra = dos casillas). `arboles()` pone las piezas de cada árbol (copa, cuerpo, tronco, base y bordes) como en el bosque, y avisa si una fila de árboles queda de un largo imposible.
+  - arriba, en un patio con verja y farolas, la mansión (el edificio largo de CIUDAD FÉRRICA) y su cartel;
+  - **rehecho el 17/11/2026 mirando el BOSQUE PETALIA:** franjas y grupos de árboles de distinto alto, árboles sueltos, manchas de hierba alta de borde irregular, claros sin hierba, flores y una charca para pescar;
+  - **el camino da la vuelta:** de la entrada se va al oeste (pasando junto a la charca), se sube por un paso entre los árboles y se rodea por el este un **risco** del BOSQUE PETALIA (de un solo sentido). Después, por otro paso, se llega al patio de la mansión. De vuelta se puede saltar el risco.
+  - El mapa se dibuja en `tools/dualocke/crear_bosque_frondoso.py` con letras, una por casilla (`PLANO`), y lo pinta `autotile.py`, como la MARISMA AZULIZA. Las únicas parejas de piezas que no salen en el juego (42) están en el borde de la mansión copiada.
+  - El cartel de la mansión ahora se puede leer: antes tenía un árbol debajo. La unión con el BOSQUE PETALIA también se arregló: a la derecha del pasillo había hierba encima de un árbol del BOSQUE PETALIA.
 - **MANSIÓN OLVIDADA:** las cuatro salas del BARCO ABANDONADO, que con la madera y las camas parecen una casa vieja.
   - Sin los salvavidas y con un paso nuevo a la sala de arriba a la izquierda.
   - La puerta de esa sala está atascada (cartel). La de la derecha sube al **DESVÁN**: dos salas de la planta oculta del barco.
