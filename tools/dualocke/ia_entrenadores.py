@@ -15,7 +15,8 @@ evitan los movimientos que fallan y eligen al azar entre los demás. Decidido po
 
 - Solo se toca a los que en la expansion original (commit BASE) llevaban "Check Bad Move", así
   que se puede volver a lanzar y cambiar TRAMO_BASICA sin miedo.
-- El tramo de cada entrenador es el de su mapa (la tabla TRAMOS de reescalar_niveles.py).
+- El tramo de cada entrenador es el de su mapa (la tabla TRAMOS de reescalar_niveles.py), salvo
+  los de TRAMO_ENTRENADORES_DE_MAPA y TRAMO_DE_ENTRENADOR, que van con el suyo.
 - Las revanchas (_2 a _5) empiezan con 5 medallas: siempre básica.
 - Los que no salen en ningún mapa (sin usar) se quedan como están.
 - Los jefes con estrategia (líderes, Alto Mando, rival desde la Ruta 119...) llevan su IA aparte:
@@ -46,6 +47,8 @@ def ia_por_entrenador(texto):
 
 def tramo_de(nombre, mapas):
     if nombre in mapas:
+        if nombre in rn.TRAMO_DE_ENTRENADOR:
+            return rn.TRAMO_DE_ENTRENADOR[nombre]
         if rn.de_otro_tramo(nombre, mapas):
             return rn.TRAMO_ENTRENADORES_DE_MAPA[mapas[nombre]]
         return rn.tramo_de_mapa(mapas[nombre])
