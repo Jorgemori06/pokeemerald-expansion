@@ -17,6 +17,7 @@ Cómo anda el jugador (simplificado, del motor):
 - Saltos (MB_JUMP_*): solo en su dirección, y se cae dos casillas más allá.
 - Agua (TILE_FLAG_SURFABLE): con SURF. Cascadas, con CASCADA. Bucear, con BUCEO.
 - Árboles de CORTE, rocas de GOLPE ROCA y rocas de FUERZA (objetos del mapa): con su MO.
+- La tormenta de arena del desierto (SCRIPTS_QUE_BLOQUEAN): con las GAFAS AISLANTES.
 - Barro y raíles de las bicis: con la bici (MALVALONA, tramo 3).
 - Conexiones entre mapas, warps y los viajes con script de la tabla VIAJES (barco del SR. BRINEY,
   teleférico…).
@@ -89,10 +90,17 @@ POR_HISTORIA = ["MAP_ROUTE121", "MAP_ROUTE122", "MAP_LILYCOVE_*", "MAP_MT_PYRE_*
                 "MAP_ROUTE13[0-4]", "MAP_MOSSDEEP_*", "MAP_PACIFIDLOG_*"]
 
 GFX_MO = {
-    "OBJ_EVENT_GFX_CUT_TREE": "CORTE",
+    "OBJ_EVENT_GFX_CUTTABLE_TREE": "CORTE",
     "OBJ_EVENT_GFX_BREAKABLE_ROCK": "GOLPE_ROCA",
     "OBJ_EVENT_GFX_PUSHABLE_BOULDER": "FUERZA",
 }
+for _g, _mo in list(GFX_MO.items()):
+    GFX_MO[_g + "_FRLG"] = _mo
+
+# Casillas con script que no dejan pasar hasta cierto tramo: (trozo del nombre del script, tramo).
+# La tormenta de arena del desierto de la RUTA 111 te echa para atrás sin las GAFAS AISLANTES, que
+# dan después de CANDELA (tramo 5).
+SCRIPTS_QUE_BLOQUEAN = [("ViciousSandstorm", 5)]
 
 # Las elevaciones del motor (puentes, desniveles) no se siguen del todo bien: con ESTRICTO = False
 # se ignoran entre tierra y tierra, así que puede dar de más (se miran a mano) pero no de menos.
@@ -206,6 +214,10 @@ def alcanzables(mundo, tramo):
             mo = GFX_MO.get(o.get("graphics_id"))
             if mo and mo not in puede and isinstance(o.get("x"), int):
                 bloqueos[(mid, o["x"], o["y"])] = True
+        for e in m.get("coord_events", []):
+            for trozo, t in SCRIPTS_QUE_BLOQUEAN:
+                if trozo in e.get("script", "") and tramo < t:
+                    bloqueos[(mid, e["x"], e["y"])] = True
     viajes = {}
     for desde, hasta, t in VIAJES:
         if tramo >= t:
