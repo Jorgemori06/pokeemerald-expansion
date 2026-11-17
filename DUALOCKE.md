@@ -993,7 +993,7 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
 
 ## 9. Estado y siguientes pasos
 
-### Locke en curso (empezado de nuevo el 01/11/2026)
+### Locke en curso (empezado de nuevo el 18/11/2026, con la versión 8)
 
 - ROMs hechas por Claude con `make release` (sin menús de depuración).
   - **Versión 1** (26/10/2026): commit `46ba7600` (con #36 y #37).
@@ -1010,7 +1010,7 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
     - la pesca a pie a 15-21 (#61);
     - los tres primeros gimnasios más suaves (#63);
     - las estadísticas bien leídas en el randomizer (#64). Con la misma semilla cambian unos 50 jefes que aún no se han visto; los salvajes y el resto de entrenadores salen igual.
-  - **Versión 7** (16/11/2026, la actual): commit `8103388b2`, con **las mismas semillas**, así que las partidas siguen (lo que se guarda no ha cambiado). Añade:
+  - **Versión 7** (16/11/2026): commit `8103388b2`, con **las mismas semillas**, así que las partidas siguen (lo que se guarda no ha cambiado). Añade:
     - ningún salvaje por encima del level cap (#66);
     - el muerto que se cambia por la captura va a la caja de muertos, y al encender el PC se entierra al que ya se hubiera colado (#70);
     - la amistad en la pantalla de datos (#72);
@@ -1018,8 +1018,16 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
     - las MO las aprenden todas las especies (#69);
     - Plegaria Vital fuera de las MT y los tutores (#73; con estas dos semillas no salía, así que no cambia nada);
     - jefes con estilo propio y sin IA tramposa, y entrenadores normales con IA básica desde el gimnasio 4 (#74). Con la misma semilla, salvajes, iniciales, MT, tutores y las especies de todos los entrenadores salen igual; cambian los movimientos y los objetos de 36 jefes y la IA de 461 entrenadores.
-- **Semillas actuales (versiones 5, 6 y 7):** Miguel `2918696854` (`Esmeralda Dualocke - Mikemine.gba`), Jorge `2780853751` (`Esmeralda Dualocke - Jorgemori.gba`).
+    - El 17/11/2026 se hizo una ROM de la versión 7 con el arreglo del #97 (entrenadores de las RUTAS 111 y 118 a su nivel), desde su rama, con las mismas semillas.
+  - **Versión 8** (18/11/2026, la actual): commit `9c897c01d`, con **semillas nuevas**: Jorge y Miguel empiezan el locke de cero. Añade:
+    - todo lo de Miguel del 16 y el 17/11, revisado en el #99: opciones del motor (Pokédex HGSS, tipos en combate, no huir de entrenadores, carteles Blanco/Negro; #78), megas de las formas Gigamax (#79) y las zonas nuevas (las islas del ferry, la GRUTA ÍGNEA, la ISLA NEVADA, el DESIERTO PROFUNDO y las RUINAS ARENOSAS, la MARISMA AZULIZA, el BOSQUE FRONDOSO y la MANSIÓN OLVIDADA, las islas del sur, la PLAYA VOLCÁNICA, la CUMBRE METEORO, el BOSQUE SINIESTRO y la CIÉNAGA TÓXICA; del #81 al #98);
+    - el paso abierto en las rocas para llegar a las islas (#100);
+    - los entrenadores que se alcanzan antes de su tramo y la red de seguridad del cap para entrenadores (#97);
+    - la IA de los jefes con tests y la Meteorobola en el primero del clima (#76).
+    - Nada de esto se ha probado todavía en el emulador: hay que ir mirando `PRUEBAS.md` al jugar.
+- **Semillas actuales (versión 8):** Miguel `3632113266` (`Esmeralda Dualocke - Mikemine.gba`), Jorge `2425682645` (`Esmeralda Dualocke - Jorgemori.gba`).
 - Semillas de las versiones anteriores (partidas abandonadas):
+  - versiones 5-7: Miguel `2918696854`, Jorge `2780853751`;
   - versión 4: Miguel `1820821844`, Jorge `5966102869`;
   - versiones 1-3: Miguel `7044754226`, Jorge `6629063067`.
 - **Para regenerar la misma ROM:** `git checkout <commit de la versión>` y `make release SEED=<semilla>`. Con un commit más nuevo, la misma semilla puede barajar distinto si ha cambiado el randomizer o los datos, y la partida guardada puede dejar de servir si cambia lo que se guarda (como pasó con los bolsillos). Si hay que arreglar algo a mitad del locke, se hace la ROM nueva con la misma semilla y se comprueba antes que la partida carga.

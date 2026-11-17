@@ -1,5 +1,29 @@
 # Plan: hacer la ROM ya y seguir con los biomas (Miguel → Jorge, 17/11/2026)
 
+## 0. Preguntas de Jorge para Miguel (18/11/2026), lo primero
+
+**Para el Claude de Miguel:** antes de seguir con nada, pregúntale a Miguel estas cuatro cosas y apunta en `IDEAS.md` (o aquí) lo que diga. Son ideas de Jorge para la próxima partida.
+
+La versión 8 ya está hecha y fusionada (semillas nuevas, `DUALOCKE.md`, sección 9). Lo que hay que decidir:
+
+1. **Regalo de un amigo en cada Centro Pokémon** (`IDEAS.md`, idea 12):
+   - Jorge propone que sea **a nivel 1 y totalmente al azar**.
+   - ¿Le parece bien a Miguel, o prefiere que el nivel o la fuerza vayan según las medallas?
+   - ¿Qué amigos y en qué ciudad va cada uno? Eso lo decidís los dos.
+2. **Nombres del jugador más largos** (idea 8, para que quepa "JORGEMORI"):
+   - Lo hace Jorge.
+   - Cambia lo que se guarda, así que solo puede entrar al empezar una partida nueva.
+3. **Entrenadores en las zonas nuevas:**
+   - Ya no queda ninguno libre (864 de 864).
+   - Jorge amplía la lista, lo que también cambia lo que se guarda.
+   - Después, Miguel pone en cada zona quién va, con qué equipo y a qué nivel.
+   - ¿Le parece bien a Miguel, y en qué zonas los quiere?
+4. **¿Cuándo empezamos el locke de verdad?** Por lo de los puntos 2 y 3:
+   - o se juega ya con la versión 8 y esto queda para el siguiente locke;
+   - o la 8 se usa para probar las zonas (`PRUEBAS.md`) y se empieza en serio cuando estén los nombres y los entrenadores.
+
+Otra cosa de Jorge, que no hay que decidir ahora: escribir los nombres con el teclado del ordenador (idea 11).
+
 **Para Jorge y para su Claude.** Este es el punto de partida para seguir con el trabajo de las zonas sin tener que leer toda la conversación de Miguel. Está escrito para que Claude lo siga paso a paso.
 
 Antes de empezar, Claude tiene que leer:
