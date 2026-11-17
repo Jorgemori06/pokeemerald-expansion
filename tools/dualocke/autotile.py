@@ -151,7 +151,9 @@ class Aprendiz:
             fila = []
             for x in range(ancho):
                 t = rejilla[y][x]
-                if t is None:
+                if t not in TERRENOS:
+                    # None (lo pone el script y cuenta como el terreno de al lado) u otra cosa, como "pared"
+                    # (lo pone el script y sus vecinas lo ven como pared: un acantilado copiado)
                     fila.append(None)
                     continue
                 vec = []
