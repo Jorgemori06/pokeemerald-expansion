@@ -12,17 +12,23 @@ cerrados por rocas y corrientes que solo empujan al oeste, y el borde este de la
 roca, así que dos islas cambian de sitio respecto a ZONAS.md (ver abajo).
 
 - **ISLA DE RUINAS**, al norte de la RUTA 131 (junto al PILAR CELESTE): el islote del PILAR CELESTE
-  (SkyPillar_Outside) con su torre, con niebla (Campo de Niebla en combate). La puerta de la torre (abierta)
-  lleva a la **TORRE**: la planta 1 del PILAR CELESTE, sin la escalera, con el guardián delante.
-- **ISLA VOLCÁNICA**, al sur de la RUTA 134 (donde el mar no tiene corriente): un bajío de la RUTA 134 con
-  el montículo de la cueva del PILAR CELESTE en medio. La cueva baja al **CRÁTER**: la cima del MONTE
-  CENIZO (lava y terrazas) con ceniza que tiene salvajes, una salida nueva y el guardián. Sol.
+  (SkyPillar_Outside) con su torre, con niebla (Campo de Niebla en combate). La franja de arena de abajo acaba
+  en una playa. La puerta de la torre (abierta) lleva a la **TORRE**: la planta 1 del PILAR CELESTE, sin la
+  escalera, con el guardián delante.
+- **ISLA VOLCÁNICA**, al sur de la RUTA 134 (donde el mar no tiene corriente): una isla de arena con su bajío,
+  peñas y, en medio, el montículo de la cueva del PILAR CELESTE. La cueva baja al **CRÁTER**: la cima del
+  MONTE CENIZO (lava y terrazas) con ceniza que tiene salvajes, una salida nueva y el guardián. Sol.
 - **ISLA ARENOSA**, al este de la RUTA 129 (en ZONAS.md iba al este de la RUTA 127, que está cerrado):
-  dos islotes de arena y uno de árboles de la RUTA 127, con hierba alta entre los árboles. Tormenta de arena.
+  una isla grande de arena con peñas y una cala, y al oeste un islote de hierba con árboles y hierba alta.
+  Tormenta de arena.
 
-Los islotes se copian con `isla()`: solo las casillas que no son mar y están unidas al islote (así no se
-cuelan rocas ni trozos de otras islas). Zonas de captura propias: MAPSEC_ISLA_DE_RUINAS,
-MAPSEC_ISLA_VOLCANICA y MAPSEC_ISLA_ARENOSA (cada isla con su interior cuenta como una).
+**Rehechas el 17/11/2026** para que parezcan diseñadas como el juego original: antes eran trozos de islotes
+copiados tal cual. Ahora la ISLA VOLCÁNICA y la ISLA ARENOSA se dibujan con letras (un PLANO) y las pinta
+autotile.py, como la PLAYA VOLCÁNICA. Del juego se copian el islote del PILAR CELESTE (con `isla()`: solo las
+casillas que no son mar y están unidas a él), su montículo y las peñas de la RUTA 127.
+
+Zonas de captura propias: MAPSEC_ISLA_DE_RUINAS, MAPSEC_ISLA_VOLCANICA y MAPSEC_ISLA_ARENOSA (cada isla con
+su interior cuenta como una).
 Los entrenadores, los salvajes y los objetos los ponen zonas_nuevas.py y colocar_objetos.py.
 """
 
@@ -34,6 +40,7 @@ import sys
 from collections import deque
 
 sys.path.insert(0, "tools/dualocke")
+import autotile as at  # noqa: E402
 import colocar_objetos as co  # noqa: E402
 
 RUINAS, TORRE = "IslaDeRuinas", "IslaDeRuinas_Torre"
@@ -45,6 +52,26 @@ MAPSEC = {RUINAS: "MAPSEC_ISLA_DE_RUINAS", TORRE: "MAPSEC_ISLA_DE_RUINAS", VOLCA
           CRATER: "MAPSEC_ISLA_VOLCANICA", ARENOSA: "MAPSEC_ISLA_ARENOSA"}
 COLISION = 1 << 10
 
+# --- Cómo se dibujan (rediseño del 17/11/2026) ---------------------------------------------------
+# Como la PLAYA VOLCÁNICA: cada isla es un dibujo de letras (PLANO) y lo pinta autotile.py con las piezas que
+# ha aprendido de los mapas originales. Mirando las islas de las RUTAS 127-134:
+#   - la arena tiene siempre su orilla, y alrededor un anillo de bajío de 2 o 3 casillas antes del mar;
+#   - sobre la arena hay peñas (las de los islotes de la RUTA 127) y en el mar, rocas sueltas y remolinos;
+#   - la hierba no toca el mar: va en un claro dentro de la arena.
+#   - como en ARRECÍPOLIS, entre la arena y la hierba hay un camino de tierra (la arena nunca toca la hierba).
+# m mar   b bajío   s arena   c camino de tierra   . hierba   , hierba alta   * flores   T árbol grande
+# X roca de mar (2 × 2)   W roca con remolino (2 × 2)
+TERRENO = {"m": "mar", "b": "bajio", "s": "arena", "c": "camino", ".": "suelo", "*": "suelo", ",": "hierba_alta"}
+FLORES = 0x004
+ROCAS = {"X": (0x175, 0x176, 0x17D, 0x17E), "W": (0x150, 0x151, 0x158, 0x159)}   # piezas generales
+# Peñas de los islotes de arena de la RUTA 127 (se copian solo sus casillas de roca): (mapa, caja x0, y0, x1, y1)
+PENA_GRANDE = ("Route127", (55, 61, 63, 68))
+PENA_PEQUENA = ("Route127", (56, 70, 62, 73))
+PENA_LARGA = ("Route127", (64, 61, 70, 64))
+# El hueco de base secreta se tapa con el pie de la peña (0x079). Así no se pueden hacer bases secretas aquí:
+# las demás piezas que van entre las esquinas del pie (0x0AB y 0x0AC) también son bases secretas.
+BASE_SECRETA, PIE_PENA = 0x1A8, 0x079
+
 # --- ISLA DE RUINAS ------------------------------------------------------------------------------
 RUINAS_TAM = (40, 30)
 RUINAS_ISLOTE = ("SkyPillar_Outside", (0, 0, 28, 22), (14, 10), (6, 0))  # mapa, caja, semilla, dónde
@@ -54,32 +81,133 @@ PUERTA_ABIERTA = {(14, 4): 0x2AA, (14, 5): 0x2B2}
 # Aquí la cueva de la orilla de abajo y la del montículo son un túnel: se entra por una y se sale por la otra.
 CUEVA_PILAR, CUEVA_ORILLA = (17, 13), (15, 20)
 RUINAS_RUTA, RUINAS_DESPLAZAMIENTO = "MAP_ROUTE131", 15   # la isla empieza en la x 15 de la RUTA 131
+# En el PILAR CELESTE la franja de arena de abajo sigue fuera del mapa: aquí acaba en una playa (filas 22-29).
+RUINAS_FILA_PLAYA = 22
+# La roca con remolino de la orilla (x 20-21 del PILAR CELESTE) tiene su mitad de abajo en la fila 22: se copia
+RUINAS_ROCA_ORILLA = [(20, 22), (21, 22)]
+RUINAS_PLAYA = """
+mmmmmmmmmmmmmmmmmmmsssssmmmmmmmmmmmmmmmm
+mmmmmmmmmmmmmmmmmmsssssssmmmmmmmmmmmmmmm
+mmmmmmmmmmmmmmmmmsssssssssmmmmmmXXmmmmmm
+mmmmmmmmmmmmmmmmmsssssssssmmmmmmXXmmmmmm
+mmmmmmmmXXmmmmmmmmsssssssmmmmmmmmmmmmmmm
+mmmWWmmmXXmmmmmmmmmmsssmmmmmmmmmmmmmmmmm
+mmmWWmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmXXmm
+mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmXXmm
+"""
 TORRE_BASE = "SkyPillar_1F"
 ESCALERA_TORRE, PARED_TORRE = (10, 1), (9, 1)
 ENTRADA_TORRE = ((6, 13), (7, 13))
 
 # --- ISLA VOLCÁNICA ------------------------------------------------------------------------------
-VOLCAN_TAM = (40, 30)
-VOLCAN_ISLOTE = ("Route134", (16, 21, 36, 35), (25, 28), (4, 8))
-MONTICULO = ("SkyPillar_Outside", (14, 9, 21, 14))   # el montículo con la cueva (17, 13)
-SITIO_MONTICULO = (7, 4)                     # dentro del trozo del bajío (tapa la roca del medio)
+# Una isla de arena con su bajío. En medio, el montículo del PILAR CELESTE con la cueva
+# que baja al CRÁTER; alrededor, peñas y rocas en el mar. Se llega desde arriba (la RUTA 134).
+VOLCAN_PLANO = """
+mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmWWmmmmmmmm
+mmmmmmmWWmmmmmmmmmmmmmmmmmmmmmWWmmXXmmmm
+mmmXXmmWWmmmmmmmmmmmmmmmmmmmmmmmmmXXmmmm
+mmmXXmmmmmmmmmbbbbbbbbbbbbmmmmmmmmmmmmmm
+mmmmmmmmmmmbbbbbbbbbbbbbbbbbbmmmmmmmmmmm
+mmmmmmmmmbbbbbbbssssssssbbbbbbbmmmmmmmmm
+mmmmmmmmbbbbbssssssssssssssbbbbbmmmmmmmm
+mmmmmmmbbbbssssssssssssssssssbbbbmmmXXmm
+mmmmmmbbbbssssssssssssssssssssbbbbmmXXmm
+mmmmmmbbbssssssssssssssssssssssbbbmmmmmm
+mmmmmbbbssssssssssssssssssssssssbbmmmmmm
+mmmmmbbbssssssssssssssssssssssssbbbmmmmm
+mXXmmbbsssssssssssssssssssssssssbbbmmmmm
+mXXmmbbssssssssssssssssssssssssssbbbmmmm
+mmmmmbbssssssssssssssssssssssssssbbbbmmm
+mmmmmbbbssssssssssssssssssssssssssbbbmmm
+mmmmmbbbsssssssssssssssssssssssssssbbmmm
+mWWmmmbbbssssssssssssssssssssssssssbbmmm
+mWWmmmbbbsssssssssssssssssssssssssbbbmmm
+mmmmmmmbbbsssssssssssssssssssssssbbbbmmm
+mmmmmmmbbbbsssssssssssssssssssssbbbbmmmm
+mmmXXmmmbbbbbsssssssssssssssssbbbbbmmmmm
+mmmXXmmmmbbbbbbssssssssssssbbbbbbbmmmmXX
+mmmmmmmmmmmbbbbbbsssssssbbbbbbbbmmmmmmXX
+mmmmmmmmmmmmmbbbbbbbbbbbbbbbbmmmmmmmmmmm
+mmmmmmmmmmmmmmmbbbbbbbbbbbmmmmmmmmmmmmmm
+mmmmmmmmmWWmmmmmmmmmmmmmmmmmmmmmmXXmmmmm
+mmmmmmmmmWWmmmmmmmmmmmmmmmmmXXmmmXXmmmmm
+mmmmmmmmmmmmmmmmmmmmmmmmmmmmXXmmmmmmmmmm
+"""
+MONTICULO = ("SkyPillar_Outside", (14, 9, 21, 14), (17, 13))   # el montículo (caja) y su cueva
+PIEDRA_MONTICULO = (20, 9)                  # una piedrecita pegada al montículo: no se copia
+# La cima del montículo lleva la sombra de la torre (arena oscura): aquí va la cima de una peña de la RUTA 127
+CIMA_MONTICULO = {(16, 9): 0x080, (17, 9): 0x081, (18, 9): 0x081, (19, 9): 0x082, (19, 10): 0x0BF,
+                  (20, 10): 0x082, (19, 11): 0x06D}
+SITIO_MONTICULO = (16, 9)
+VOLCAN_PENAS = [(PENA_GRANDE, 8, 12), (PENA_PEQUENA, 24, 9), (PENA_LARGA, 16, 19)]
 CRATER_BASE, CRATER_FILAS = "MtChimney", 30   # la cima del MONTE CENIZO, sin la estación del teleférico
 PUERTA_CRATER, METATILE_PUERTA = (22, 22), 0x25E   # la entrada de la GUARIDA MAGMA del CAMINO ESCABROSO
 SUELO_CRATER, CENIZA = 0x271, 0x207
 CENIZA_ZONAS = [(12, 16, 18, 21), (23, 16, 29, 21), (19, 25, 27, 29), (9, 13, 12, 16)]
 
 # --- ISLA ARENOSA --------------------------------------------------------------------------------
-ARENOSA_TAM = (56, 40)
-ARENOSA_ISLOTES = [("Route127", (43, 13, 67, 27), (54, 20), (8, 2)),
-                   ("Route127", (60, 34, 70, 45), (64, 38), (9, 24)),
-                   ("Route127", (50, 58, 71, 76), (60, 66), (30, 21))]
-BASE_SECRETA = 0x1A8
-ARBOLES_ISLOTE = 1                           # el segundo islote: hierba alta entre los árboles
+# Una isla grande de arena con peñas y una cala al sur. Al oeste, un islote de hierba con
+# árboles y hierba alta, con orilla de mar (la arena y la hierba no se tocan). Se llega desde la izquierda
+# (la RUTA 129): primero el islote, luego la isla, donde espera DARÍO.
+ARENOSA_PLANO = """
+mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmXXmmmmmmm
+mmmmmmmmmmmmmmmmmmmmmmbbbbbbbbbbbbbbbbbmmmmmmmmXXmmmmmmm
+mmmmmmmmmmmmmmmmmmmmbbbbbbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmm
+mmmmmmmmmmmmmmmmmmmmbbbbsssssssssssssbbbbbbbmmmmmmmmmmmm
+mmmXXmmmmmmmmXXmmmmbbbssssssssssssssssssbbbbbbmmmmmmmmmm
+mmmXXmmmmmmmmXXmmmbbbsssssssssssssssssssssbbbbbbmmmmmmmm
+mmmmmmmmmmmmmmmmmbbbssssssssssssssssssssssssbbbbmmmmmmmm
+mmmmmmmmmmmmmmmmmbbsssssssssssssssssssssssssssbbmmmmmmmm
+mmWWmmmmmmmmmmmmmbbsssssssssssssssssssssssssssbbbmmmXXmm
+mmWWmmmmmmmmmmmmmbbsssssssssssssssssssssssssssbbbbmmXXmm
+mmmmmmmmmmmmmmmmmbbssssssssssssssssssssssssssssbbbmmmmmm
+mmmmmm.....mmmmmmbbsssssssssssssssssssssssssssssbbmmmmmm
+mmmm....*....mmmmbbsssssssssssssssssssssssssssssbbmmmmmm
+mmm..........mmmmbbsssssssssssssssssssssssssssssbbmmmmmm
+mmm.TTTT.,,,.mmmmbbsssssssssssssssssssssssssssssbbmmmmmm
+mmm.TTTT.,,,.mmmmbbsssssssssssssssssssssssssssssbbmmmmmm
+mmm.TTTT..,,.mmmmbbsssssssssssssssssssssssssssssbbmmmmmm
+mmm.TTTT.,,,.mmmmbbsssssssssssssssssssssssssssssbbmmmmmm
+mmm.TTTT.,,..mmmmbbsssssssssssssssssssssssssssssbbmmmmmm
+mmm.TTTT.....mmmmbbsssssssssssssssssssssssssssssbbmmXXmm
+mmm.TTTT...*.mmmmbbsssssssssssssssssssssssssssssbbmmXXmm
+mmm..........mmmmbbbssssssssssssssssssssssssssssbbmmmmmm
+mmm..,,,,.TT.mmmmbbbssssssssssssssssssssssssssssbbmmmmmm
+mmm.,,,,,,TT.mmmmmbbssssssssssssssssssssssssssssbbmmmmmm
+mmm.,,,,,,TT.mmmmmbbssssssssssssssssssssssssssssbbmmmmmm
+mmm..,,,,,,..mmmmmbbssssssssssssssssssssssssssssbbmmWWmm
+mmm...,,,,.*.mmmmmbbssssssssssssbbbbssssssssssssbbmmWWmm
+mmm.*..,,....mmmmmbbbsssssssssssbbbbssssssssssssbbmmmmmm
+mmmm........mmmmmmmbbbssssssssssbbbbsssssssssssbbbmmmmmm
+mmmmm......mmmmmmmmmbbbsssssssssbbbbbssssssssssbbbmmmmmm
+mmmmmm....mmmmmmmmmmbbbbssssssssbbbbbsssssssssbbbmmmmmmm
+mmmmmmmmmmmmmmmmmmmmmbbbbssssssbbbbbbbsssssssbbbbmmmmmmm
+mmmmmmmmmmmmmmmmmmmmmmbbbbbssssbbbbbbbssssssbbbbmmmXXmmm
+mXXmmmmmmmmmWWmmmmmmmmmbbbbbbssbbbbbbbbsssbbbbbmmmmXXmmm
+mXXmmmmmmmmmWWmmmmmmmmmmmbbbbbbbbbbbbbbbbbbbbbmmmmmmmmmm
+mmmmmmmmmmmmmmmmmmmmmmmmmmmbbbbbbbbbbbbbbbbbmmmmmmmmmmmm
+mmmmmmmmXXmmmmmmmmmmmmmmmmmmmbbbbbbbbbbbbmmmmmmmmmmmmmmm
+mmmmmmmmXXmmmmmmmmmmXXmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+mmmmmmmmmmmmmmmmmmmmXXmmmmmmmmmmmmmmmmmmmmmmXXmmmmmmmmmm
+mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmXXmmmmmmmmmm
+"""
+ARENOSA_PENAS = [(PENA_GRANDE, 22, 4), (PENA_PEQUENA, 34, 5), (PENA_LARGA, 40, 18), (PENA_GRANDE, 23, 21),
+                 (PENA_PEQUENA, 40, 24)]
+SITIO_DARIO = (21, 14)                           # mira a la izquierda, a donde se llega surfeando
+
+# Dónde va cada objeto (los pone colocar_objetos.py; aquí se mueven al sitio que les toca en el dibujo nuevo)
+SITIO_OBJETOS = {
+    "FLAG_ITEM_SUR_BIG_PEARL": (30, 19),
+    "FLAG_ITEM_SUR_SAFETY_GOGGLES": (44, 9),
+    "FLAG_ITEM_TICKET_ISLA_ARENOSA": (6, 28),
+    "FLAG_ITEM_SUR_PEARL_STRING": (45, 24),
+}
 
 GUARDIANES = {   # mapa: (x, y, especie, nivel sin reescalar, premio, flag)
     TORRE: (10, 2, "SPECIES_METAGROSS", 70, "ITEM_EXPERT_BELT", "FLAG_DUALOCKE_GUARDIAN_ISLA_RUINAS"),
     CRATER: (20, 16, "SPECIES_CHARIZARD", 70, "ITEM_HEAT_ROCK", "FLAG_DUALOCKE_GUARDIAN_VOLCAN"),
-    ARENOSA: (41, 26, "SPECIES_SANDY_SHOCKS", 70, "ITEM_SMOOTH_ROCK", "FLAG_DUALOCKE_GUARDIAN_ARENOSA"),
+    ARENOSA: (41, 30, "SPECIES_SANDY_SHOCKS", 70, "ITEM_SMOOTH_ROCK", "FLAG_DUALOCKE_GUARDIAN_ARENOSA"),
 }
 
 
@@ -166,16 +294,102 @@ def isla(celdas, ancho, alto, origen, caja, semilla, sitio, mar):
     return copiadas
 
 
+_APRENDIZ = []
+
+
+def aprendiz():
+    if not _APRENDIZ:
+        _APRENDIZ.append(at.Aprendiz())
+    return _APRENDIZ[0]
+
+
+def sello(origen, caja):
+    """{(dx, dy): valor} con las casillas de roca (con colisión) de un trozo de mapa. El hueco de base secreta
+    de las peñas se tapa con su pie."""
+    l, c = celdas_de(origen)
+    x0, y0, x1, y1 = caja
+    trozo = {}
+    for y in range(y0, y1):
+        for x in range(x0, x1):
+            v = c[y * l["width"] + x]
+            if (v >> 10) & 3:
+                if v & 0x3FF == BASE_SECRETA:
+                    v = (v & ~0x3FF) | PIE_PENA
+                trozo[(x - x0, y - y0)] = v
+    return trozo
+
+
+def poner_sellos(filas, sellos):
+    """{(x, y): valor} de las peñas de una isla; comprueba que cada una va sobre arena."""
+    fijas = {}
+    for (origen, caja), sx, sy in sellos:
+        for (dx, dy), v in sello(origen, caja).items():
+            assert filas[sy + dy][sx + dx] == "s", ("la peña no va sobre arena", origen, caja, sx + dx, sy + dy)
+            fijas[(sx + dx, sy + dy)] = v
+    return fijas
+
+
+def dibujar(plano, fijas, paredes=()):
+    """Pinta un PLANO con autotile.py. `fijas`: {(x, y): valor} que pone el script (peñas, el montículo…); para
+    las piezas de al lado cuentan como el terreno de alrededor. `paredes`: casillas fijas que las de al lado ven
+    como pared (un acantilado copiado). Devuelve (filas, ancho, alto, celdas)."""
+    filas = plano.strip().splitlines()
+    alto, ancho = len(filas), len(filas[0])
+    assert all(len(f) == ancho for f in filas), "las filas del plano no miden lo mismo"
+    a = aprendiz()
+    valor = lambda m: a.valor.get(m, m)  # noqa: E731
+    rejilla = [[None if (x, y) in fijas or ch in "XWT" else TERRENO[ch] for x, ch in enumerate(f)]
+               for y, f in enumerate(filas)]
+    for x, y in paredes:
+        rejilla[y][x] = "pared"
+    pintadas = a.pintar(rejilla)
+    c = [0] * (ancho * alto)
+    for y in range(alto):
+        for x in range(ancho):
+            ch = filas[y][x]
+            if (x, y) in fijas:
+                c[y * ancho + x] = fijas[(x, y)]
+            elif ch in ROCAS:
+                # Cada roca es de 2 × 2: la esquina de arriba a la izquierda es la primera de su grupo
+                x0 = x
+                while x0 > 0 and filas[y][x0 - 1] == ch:
+                    x0 -= 1
+                y0 = y
+                while y0 > 0 and filas[y0 - 1][x] == ch:
+                    y0 -= 1
+                c[y * ancho + x] = valor(ROCAS[ch][((y - y0) % 2) * 2 + (x - x0) % 2])
+            elif ch != "T" and pintadas[y][x] is not None:
+                v = pintadas[y][x]
+                c[y * ancho + x] = (v & ~0x3FF) | FLORES if ch == "*" else v
+    fallos = at.arboles_grandes(filas, c, valor)
+    assert not fallos, "; ".join(fallos)
+    return filas, ancho, alto, c
+
+
 def crear_ruinas():
     ancho, alto = RUINAS_TAM
     mar = mar_de("Route131")
     c = [mar] * (ancho * alto)
     origen, caja, semilla, sitio = RUINAS_ISLOTE
-    isla(c, ancho, alto, origen, caja, semilla, sitio, mar)
+    copiadas = isla(c, ancho, alto, origen, caja, semilla, sitio, mar)
     _, cp = celdas_de(origen)
     wp = LAYOUTS[json.loads(leer(f"data/maps/{origen}/map.json"))["layout"]]["width"]
     for (x, y), m in PUERTA_ABIERTA.items():
         c[(sitio[1] + y) * ancho + sitio[0] + x] = (cp[y * wp + x] & ~0x3FF) | m
+    # La playa de abajo: se pinta el plano entero y se ponen solo sus filas. Arriba, las rocas del islote copiado
+    # cuentan como pared; su arena y su mar, como el terreno de al lado.
+    playa = RUINAS_PLAYA.strip().splitlines()
+    assert len(playa) == alto - RUINAS_FILA_PLAYA
+    arriba = ["".join("s" if (x, y) in copiadas else "m" for x in range(ancho)) for y in range(RUINAS_FILA_PLAYA)]
+    fijas = {(x, y): c[y * ancho + x] for y in range(RUINAS_FILA_PLAYA) for x in range(ancho)}
+    paredes = [(x, y) for (x, y), v in copiadas.items() if y < RUINAS_FILA_PLAYA and (v >> 10) & 3]
+    _, _, _, pintadas = dibujar("\n".join(arriba + playa), fijas, paredes)
+    for i in range(RUINAS_FILA_PLAYA * ancho, ancho * alto):
+        c[i] = pintadas[i]
+    for x, y in RUINAS_ROCA_ORILLA:
+        nx, ny = sitio[0] + x, sitio[1] + y
+        assert playa[ny - RUINAS_FILA_PLAYA][nx] == "m", "la roca de la orilla no va en el mar"
+        c[ny * ancho + nx] = cp[y * wp + x]
     base = LAYOUTS[json.loads(leer("data/maps/Route131/map.json"))["layout"]]
     return guardar_layout(RUINAS, ancho, alto, c, base)
 
@@ -192,36 +406,31 @@ def crear_torre():
 
 
 def crear_volcan():
-    ancho, alto = VOLCAN_TAM
-    mar = mar_de("Route134")
-    c = [mar] * (ancho * alto)
-    origen, caja, semilla, sitio = VOLCAN_ISLOTE
-    copiadas = isla(c, ancho, alto, origen, caja, semilla, sitio, mar)
-    # El bajío está rodeado de corriente en la RUTA 134: sus bordes (y el mar que se copia) llevan dibujadas
-    # las rayas de la corriente. Aquí el mar está en calma: mar liso y bajío liso, como su borde de abajo.
-    l134 = LAYOUTS[json.loads(leer(f"data/maps/{origen}/map.json"))["layout"]]
-    bajios = [v for v in copiadas.values() if comportamiento(l134, v & 0x3FF) == "MB_SHALLOW_WATER"]
-    bajio = max(set(bajios), key=bajios.count)
-    for (x, y), v in copiadas.items():
-        if comportamiento(l134, v & 0x3FF) == "MB_OCEAN_WATER":
-            c[y * ancho + x] = mar
-        elif comportamiento(l134, v & 0x3FF) == "MB_SHALLOW_WATER":
-            c[y * ancho + x] = bajio
-    lm, cm = celdas_de(MONTICULO[0])
-    x0, y0, x1, y1 = MONTICULO[1]
-    for y in range(y0, y1):
-        for x in range(x0, x1):
-            nx, ny = sitio[0] + SITIO_MONTICULO[0] + x - x0, sitio[1] + SITIO_MONTICULO[1] + y - y0
-            c[ny * ancho + nx] = cm[y * lm["width"] + x]
+    filas = VOLCAN_PLANO.strip().splitlines()
+    fijas = poner_sellos(filas, VOLCAN_PENAS)
+    # El montículo: sus casillas de roca y la cueva
+    origen, caja, cueva = MONTICULO
+    l, cm = celdas_de(origen)
+    mx, my = SITIO_MONTICULO
+    for (dx, dy), v in sello(origen, caja).items():
+        donde = (caja[0] + dx, caja[1] + dy)
+        if donde in CIMA_MONTICULO:
+            v = (v & ~0x3FF) | CIMA_MONTICULO[donde]
+        if donde != PIEDRA_MONTICULO:
+            fijas[(mx + dx, my + dy)] = v
+    cx, cy = cueva_volcan()
+    fijas[(cx, cy)] = cm[cueva[1] * l["width"] + cueva[0]]
+    assert all(filas[y][x] == "s" for x, y in fijas), "el montículo o una peña no va sobre arena"
+    assert filas[cy + 1][cx] == "s" and (cx, cy + 1) not in fijas, "no se llega a la cueva"
+    _, ancho, alto, c = dibujar(VOLCAN_PLANO, fijas)
     base = LAYOUTS[json.loads(leer("data/maps/Route134/map.json"))["layout"]]
     return guardar_layout(VOLCAN, ancho, alto, c, base)
 
 
 def cueva_volcan():
     """La cueva del montículo en la ISLA VOLCÁNICA (era la (17, 13) del PILAR CELESTE)."""
-    sx, sy = VOLCAN_ISLOTE[3]
-    mx, my = SITIO_MONTICULO
-    return sx + mx + 17 - MONTICULO[1][0], sy + my + 13 - MONTICULO[1][1]
+    (x0, y0, _, _), (cx, cy) = MONTICULO[1], MONTICULO[2]
+    return SITIO_MONTICULO[0] + cx - x0, SITIO_MONTICULO[1] + cy - y0
 
 
 def crear_crater():
@@ -247,24 +456,11 @@ def crear_crater():
 
 
 def crear_arenosa():
-    ancho, alto = ARENOSA_TAM
-    mar = mar_de("Route129")
-    c = [mar] * (ancho * alto)
-    for i, (origen, caja, semilla, sitio) in enumerate(ARENOSA_ISLOTES):
-        copiadas = isla(c, ancho, alto, origen, caja, semilla, sitio, mar)
-        # Las bases secretas: roca lisa (la de su izquierda)
-        for (x, y), v in copiadas.items():
-            if v & 0x3FF == BASE_SECRETA:
-                c[y * ancho + x] = c[y * ancho + x - 1]
-        if i == ARBOLES_ISLOTE:
-            # Hierba alta en el bajío de dentro del islote (las casillas de bajío rodeadas de islote)
-            bajio = max(set(v for v in copiadas.values()), key=list(copiadas.values()).count)
-            hierba = 0x00D | (bajio & ~0x3FF & ~(3 << 10))
-            for (x, y), v in copiadas.items():
-                if v == bajio and all((x + dx, y + dy) in copiadas for dx in (-1, 0, 1) for dy in (-1, 0, 1)):
-                    c[y * ancho + x] = hierba
-    gx, gy = GUARDIANES[ARENOSA][:2]
-    assert (c[gy * ancho + gx] >> 10) & 3 == 0 and c[gy * ancho + gx] != mar, "el guardián de la isla no está en tierra"
+    filas = ARENOSA_PLANO.strip().splitlines()
+    _, ancho, alto, c = dibujar(ARENOSA_PLANO, poner_sellos(filas, ARENOSA_PENAS))
+    for x, y in (GUARDIANES[ARENOSA][:2], SITIO_DARIO):
+        assert filas[y][x] == "s" and not (c[y * ancho + x] >> 10) & 3, \
+            ("el guardián o DARÍO no está en la arena", x, y)
     base = LAYOUTS[json.loads(leer("data/maps/Route129/map.json"))["layout"]]
     return guardar_layout(ARENOSA, ancho, alto, c, base)
 
@@ -277,6 +473,9 @@ def mapa_json(carpeta, datos, objetos):
     datos["object_events"] = objetos + [o for o in anteriores.get("object_events", [])
                                         if str(o.get("flag", "")).startswith("FLAG_ITEM_")]
     datos["bg_events"] = [b for b in anteriores.get("bg_events", []) if b.get("type") == "hidden_item"]
+    for o in datos["object_events"] + datos["bg_events"]:
+        if o.get("flag") in SITIO_OBJETOS:
+            o["x"], o["y"] = SITIO_OBJETOS[o["flag"]]
     datos["coord_events"] = []
     escribir(ruta, json.dumps(datos, indent=2, ensure_ascii=False) + "\n")
 
@@ -371,8 +570,8 @@ def crear_mapas(l_ruinas, l_torre, l_volcan, l_crater, l_arenosa):
                         "connections": [{"map": "MAP_ROUTE129", "offset": 0, "direction": "left"}],
                         "warp_events": []},
                        [guardian(ARENOSA),
-                        {"graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_M", "x": 16, "y": 12, "elevation": 3,
-                         "movement_type": "MOVEMENT_TYPE_FACE_RIGHT", "movement_range_x": 0, "movement_range_y": 0,
+                        {"graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_M", "x": SITIO_DARIO[0], "y": SITIO_DARIO[1], "elevation": 3,
+                         "movement_type": "MOVEMENT_TYPE_FACE_LEFT", "movement_range_x": 0, "movement_range_y": 0,
                          "trainer_type": "TRAINER_TYPE_NORMAL", "trainer_sight_or_berry_tree_id": "4",
                          "script": "IslaArenosa_EventScript_Dario", "flag": "0"}])
     escribir(f"data/maps/{RUINAS}/scripts.inc", f"{RUINAS}_MapScripts::\n\t.byte 0\n")
@@ -425,7 +624,7 @@ IslaArenosa_Text_DarioDefeat:
 	.string "Se me ha metido arena en los ojos.$"
 
 IslaArenosa_Text_DarioPostBattle:
-	.string "En el islote de abajo vive un\\n"
+	.string "Al sur de esta isla vive un\\n"
 	.string "POKéMON enorme. Ten cuidado.$"
 """
 

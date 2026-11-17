@@ -42,5 +42,5 @@ IslaArenosa_Text_DarioDefeat:
 	.string "Se me ha metido arena en los ojos.$"
 
 IslaArenosa_Text_DarioPostBattle:
-	.string "En el islote de abajo vive un\n"
+	.string "Al sur de esta isla vive un\n"
 	.string "POKéMON enorme. Ten cuidado.$"
