@@ -33,6 +33,14 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 - [ ] **Tiendas:** una compra por objeto (salvo Balls, Repelentes, Bayas y Caramelos), y el segundo dependiente en las ciudades.
 - [ ] **Caps de nivel:** al llegar al cap no se gana experiencia y los Caramelos Raros no funcionan por encima.
 
+### PLAYA VOLCÁNICA (desde el 17/11/2026)
+
+- [ ] **Entrada:** en la RUTA 122, por el hueco nuevo del anillo de rocas de arriba a la izquierda, se surfea hacia el oeste hasta la playa (sin pantalla de carga), y se vuelve igual.
+- [ ] **La unión:** que no se vea nada raro en el borde, ni desde la playa ni desde la RUTA 122. Es lo más delicado: los dos mapas tienen gráficos distintos.
+- [ ] **Sol fuera y en combate.** Cartel "PLAYA VOLCÁNICA". Salvajes en la ceniza; pesca y surf en el mar.
+- [ ] **Termas:** se ven bien (sin trozos de acantilado ni de hierba raros).
+- [ ] **Guardián** en la arena: da premio y no vuelve a salir.
+
 ### Islas de las rutas del sur (desde el 17/11/2026)
 
 - [ ] **ISLA DE RUINAS:** desde el norte de la RUTA 131, surfeando hacia arriba.

@@ -389,6 +389,26 @@ Qué mira:
 
 Las rarezas del juego original (puertas del ferry fuera del mapa…) están en `ORIGINALES`.
 
+### PLAYA VOLCÁNICA (hecho, Miguel, 17/11/2026; falta probarlo)
+
+- **Dónde:** pegada al borde oeste de la RUTA 122 (la del MONTE PÍRICO). Se llega surfeando, sin pantalla de carga: **tramo 7** (cap 73).
+- **Paso:** la RUTA 122 está rodeada por un anillo de rocas sin huecos. Se quitó la roca de arriba a la izquierda (x 5-6, filas 4-5) y se sale por el noroeste (filas 0-7).
+- **Gráficos de LAVACALDA (General + Lavaridge),** distintos de los de la RUTA 122 (General + Lilycove).
+  - Una conexión entre mapas con gráficos distintos solo se ve bien si, desde cada lado, lo que se ve del otro mapa son gráficos generales. Lo comprueba `tools/dualocke/crear_playa_volcanica.py`, que hace todo.
+  - Se cruza por arriba, donde el borde de la RUTA 122 solo tiene mar y rocas generales.
+  - Las 8 columnas del este de la playa son solo mar y rocas generales, y desde la fila 8 una fila de rocas no deja acercarse al borde. Desde ahí se vería la orilla del monte, que es de Algaria.
+- **La playa** (40 × 40), con sol:
+  - mar con rocas y una franja de arena con su orilla (gráficos generales, como en AZULIZA);
+  - suelo de ceniza del MONTE CENIZO con manchas de ceniza que tienen salvajes y árboles de ceniza;
+  - dos pozas de aguas termales de LAVACALDA, pegadas al borde de arriba (su borde está dibujado sobre el acantilado) y con arena alrededor. No se puede entrar: son de adorno.
+- **Guardián** en la arena: sin semilla, Gyarados a nivel 70 (regla `"tope"`); premio, Agua Mística y su megapiedra. `FLAG_DUALOCKE_GUARDIAN_PLAYA` (0x917).
+- **Un bañista junto a las termas.** No hay entrenadores: ya no queda ninguno libre.
+- **Zona de captura propia:** `MAPSEC_PLAYA_VOLCANICA` (115 de 128).
+- **Salvajes:**
+  - Ceniza: Numel, Slugma, Torkoal, Camerupt, Magcargo, Salandit, Krabby, Crabrawler, Dwebble, Sandygast y, raros, Turtonator y Larvesta.
+  - Mar: el de las islas del sur. Pesca de cangrejos y Gyarados.
+- **Objetos** (`OBJETOS_PLAYA`, flags 0x918-0x91A, y un Ticket-Recuerdo, 0x91C): Piedra Agua, Roca Lluvia y una Perla oculta. Se movieron a mano: el script los ponía todos junto al guardián.
+
 ### Islas de las rutas del sur (hecho, Miguel, 17/11/2026; falta probarlo)
 
 Tres islas nuevas del **tramo 8** (cap 84), cada una pegada al borde de una ruta de mar. Se llega surfeando, sin pantalla de carga, y usan los gráficos de su ruta (si no, la conexión se vería rota). Todo lo hace `tools/dualocke/crear_islas_sur.py`.
