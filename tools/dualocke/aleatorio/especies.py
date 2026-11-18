@@ -32,6 +32,7 @@ class Especie:
         self.nombre_es = ""
         self.stats = {}                 # {"HP": 45, "Attack": 49, ...} (baseHP, baseAttack...)
         self.habilidades = []           # [ABILITY_X, ...] sin ABILITY_NONE
+        self.huecos_habilidad = []      # los 3 huecos originales: [normal, normal 2, oculta], con ABILITY_NONE
         self.por_nivel = []             # [(nivel, MOVE_X)] de su levelUpLearnset (0 = al evolucionar)
         self.tabla_aprendizaje = None   # nombre de su levelUpLearnset (sXLevelUpLearnset)
 
@@ -217,7 +218,9 @@ def leer_especies(cpp="arm-none-eabi-cpp", cppflags=None):
                    re.findall(r"\.base(HP|Attack|Defense|Speed|SpAttack|SpDefense)\s*=\s*([^,]+),", cuerpo)}
         habilidades = re.search(r"\.abilities\s*=\s*\{([^}]*)\}", cuerpo)
         if habilidades:
-            e.habilidades = [h for h in re.findall(r"ABILITY_\w+", habilidades.group(1)) if h != "ABILITY_NONE"]
+            todas = re.findall(r"ABILITY_\w+", habilidades.group(1))
+            e.habilidades = [h for h in todas if h != "ABILITY_NONE"]
+            e.huecos_habilidad = (todas + ["ABILITY_NONE"] * 3)[:3]
         aprende = re.search(r"\.levelUpLearnset\s*=\s*(s\w+)", cuerpo)
         e.por_nivel = aprendizajes.get(aprende.group(1), []) if aprende else []
         e.tabla_aprendizaje = aprende.group(1) if aprende else None

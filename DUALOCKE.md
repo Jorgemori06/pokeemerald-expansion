@@ -285,7 +285,7 @@ Regla general: **el as de cada jefe va exactamente al nivel del cap**, el resto 
   | Copperajah | Copperajahita | Acero | Potencia Bruta | 122/160/99/80/99/40 (600) | RUTA 115 (bola) |
   | Duraludon | Duraludonita | Acero / Dragón | Filtro | 70/95/135/150/70/115 (635) | CALLE VICTORIA (oculta) |
 
-  - **Con semilla, la habilidad sale al azar**, como la de todas las especies (también las megas de siempre). La de la tabla vale sin semilla.
+  - **Con semilla, las habilidades salen al azar**, como las de todas las especies (también las megas de siempre). La de la tabla vale sin semilla.
   - **Megapiedras:** "Kinglerita", "Hace megaevolucionar a Kingler.". El icono es el dibujo de la Gengarita con otra paleta: la bola del color principal del Pokémon y la espiral de los otros dos (`graphics/items/icon_palettes/`).
   - **Dónde:** las coloca `colocar_objetos.py` (tabla `MEGAPIEDRAS_GIGAMAX`), con los flags `FLAG_ITEM_MEGA_...` del **0x4CA al 0x4E3**.
   - **Bolsillo de megapiedras:** de 100 a 130 (`BAG_MEGASTONES_COUNT`). Es lo último de `SaveBlock3` y las casillas nuevas se leen vacías de las partidas de antes.
@@ -780,8 +780,11 @@ Están en **`tools/dualocke/randomizer_config.json`**, que es el archivo que deb
 
 **Pokémon**
 - Iniciales aleatorios (forma base de 3 fases y en triángulo de tipos, ver arriba). **Hecho** (`tools/dualocke/aleatorio/iniciales.py`): además, las dos evoluciones tienen que ser por nivel o con objeto, para poder hacerlas en el juego. Salen en `src/data/dualocke_iniciales.h` (generado; lo usa `src/starter_choose.c`).
-- Habilidades aleatorias, permitiendo Superguarda. **Hecho** (`tools/dualocke/aleatorio/habilidades.py`; decidido por Miguel en el #27): **una por especie**, la misma en todos sus huecos (todos los Zigzagoon con la misma, también los del jugador). Ninguna prohibida, tampoco en los jefes. Solo se quitan las que dependen de una especie y el juego no deja cambiar (Cambio Táctico, Multitipo, Disfraz…: `cantBeOverwritten`).
-  - **Parche Habilidad** (arreglo, Jorge, 18/11/2026; lo vio Miguel jugando): como la habilidad oculta es la misma que la normal, gastaba el parche sin cambiar nada. Ahora dice "No tendría efecto" y no se gasta. La Cápsula Habilidad ya lo hacía. Que el parche sirva para algo, por ejemplo con una habilidad oculta propia al azar, está pendiente de decidir.
+- Habilidades aleatorias, permitiendo Superguarda. **Hecho** (`tools/dualocke/aleatorio/habilidades.py`). Por especie: todos los Zigzagoon tienen las mismas, también los del jugador. Ninguna prohibida, tampoco en los jefes. Solo se quitan las que dependen de una especie y el juego no deja cambiar (Cambio Táctico, Multitipo, Disfraz…: `cantBeOverwritten`).
+  - **Tantas como en el juego original, y distintas (Miguel, 18/11/2026; antes, desde el #27, era una sola en todos los huecos).** Si la especie tenía dos normales y una oculta, tiene tres al azar en esos huecos; si tenía una normal y la oculta, dos; si solo una, una. Así sirven la Cápsula (cambia entre las normales) y el Parche (pasa a la oculta). Lo comprueba el randomizer: con las dos semillas, las 1571 especies tienen los mismos huecos vacíos y repetidos que en el original.
+  - **Las semillas en curso no cambian en nada más:** la habilidad del primer hueco es la misma que salía antes, y las otras se sortean con su propio RNG (`{semilla}|habilidades|huecos`). En la partida, los Pokémon que tenían el hueco 1 o el oculto pasan a tener su habilidad nueva; los del hueco 0 se quedan con la suya.
+  - En el juego: `sDualockeHabilidades[NUM_SPECIES][3]` (generada) y `Dualocke_HabilidadAleatoria(especie, hueco)`, que usa `GetSpeciesAbility`. La pantalla de datos (START) ya enseñaba todas las de la especie.
+  - **Parche Habilidad** (arreglo, Jorge, 18/11/2026; lo vio Miguel jugando): si no cambia la habilidad, dice "No tendría efecto" y no se gasta. La Cápsula Habilidad ya lo hacía.
   - **Sin habilidades de relleno** (arreglado el 27/10/2026, Jorge): `ABILITY_314`, `ABILITY_317` y Guardia Aura no hacen nada y ya no salen. Si el sorteo cae en una, solo esa especie se vuelve a sortear, así que las semillas en curso no cambian en nada más.
 - Pokémon estáticos completamente aleatorios. **Hecho** (`tools/dualocke/aleatorio/estaticos.py`; decidido por Jorge el 25/10/2026):
   - **Estáticos** (`setwildbattle`: Kecleon, Voltorb, Electrode, Regis, Groudon, Kyogre, Rayquaza, Sudowoodo; y los errantes Latios/Latias): **todo al azar**, legendarios incluidos, a su nivel. Cada especie original cambia por la misma en todos sus sitios (todos los Kecleon del Detector son la misma especie nueva).
@@ -1051,6 +1054,8 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
     - el Parche Habilidad ya no se gasta sin hacer nada;
     - DEVON revive los fósiles de todas las generaciones.
     - Solucionario comparado con la 8: idéntico, más los 13 fósiles nuevos en los regalos.
+  - **Versión 8.3** (18/11/2026): las mismas semillas. Cada especie tiene tantas habilidades como en el original, distintas (decidido por Miguel). Las partidas siguen valiendo; los Pokémon con el hueco 1 o el oculto cambian de habilidad, el resto se queda igual.
+    - Solucionario comparado con la 8.2: idéntico salvo las habilidades, y en ellas la primera de cada especie es la misma.
 - **Semillas actuales (versión 8):** Miguel `3632113266` (`Esmeralda Dualocke - Mikemine.gba`), Jorge `2425682645` (`Esmeralda Dualocke - Jorgemori.gba`).
 - Semillas de las versiones anteriores (partidas abandonadas):
   - versiones 5-7: Miguel `2918696854`, Jorge `2780853751`;

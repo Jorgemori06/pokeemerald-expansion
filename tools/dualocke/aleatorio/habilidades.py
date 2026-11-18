@@ -2,8 +2,13 @@
 Dualocke: habilidades aleatorias (randomizer_config.json, "pokemon" -> "habilidades_aleatorias";
 decidido por Miguel en el PR #27, 25/10/2026).
 
-- Por especie: todos los Zigzagoon tienen la misma habilidad, también los del jugador. Cada forma
+- Por especie: todos los Zigzagoon tienen las mismas, también los del jugador. Cada forma
   (megas, regionales...) es una especie aparte.
+- Tantas habilidades como en el juego original, y distintas entre sí (Miguel, 18/11/2026): si tenía
+  dos normales y una oculta, tiene tres distintas al azar en esos mismos huecos; si tenía una normal y
+  la oculta, dos. Así sirven el Parche y la Cápsula Habilidad. Antes era una sola en todos los huecos
+  (#27): la del primer hueco sigue siendo la que salía, y las demás se sortean aparte, con su propio
+  RNG, para no cambiar nada más de las semillas en curso.
 - Ninguna prohibida, tampoco en los jefes (Superguarda incluida: "permitir_superguarda").
 - Solo se quitan las que dependen de una especie concreta y el juego no deja cambiar (Cambio
   Táctico, Multitipo, Banco, Disfraz...: las que tienen cantBeOverwritten).
@@ -51,25 +56,51 @@ def leer_habilidades(cpp="arm-none-eabi-cpp", cppflags=None):
 
 
 def randomizar(pokedex, habilidades, semilla, config):
-    """{SPECIES_X: ABILITY_Y} para todas las especies que tienen habilidad."""
+    """{SPECIES_X: [hueco 0, hueco 1, hueco 2]} para todas las especies que tienen habilidad. En los
+    huecos que la especie no tiene en el original va ABILITY_NONE."""
     if not config.get("pokemon", {}).get("habilidades_aleatorias"):
         return {}
     lista = sorted(habilidades)
     if not config["pokemon"].get("permitir_superguarda", True):
         lista.remove("ABILITY_WONDER_GUARD")
     validas = [h for h in lista if h not in RELLENO]
+    # La del primer hueco: el mismo sorteo que cuando era una por especie
     rng = random.Random(f"{semilla}|habilidades")
-    resultado = {}
+    primera = {}
     for nombre, e in sorted(pokedex.especies.items()):
         if not e.habilidades:
             continue
         habilidad = rng.choice(lista)
         if habilidad in RELLENO:
             habilidad = random.Random(f"{semilla}|habilidades|{nombre}").choice(validas)
-        resultado[nombre] = habilidad
+        primera[nombre] = habilidad
+    # Las demás, aparte
+    rng = random.Random(f"{semilla}|habilidades|huecos")
+    resultado = {}
+    for nombre, e in sorted(pokedex.especies.items()):
+        if nombre not in primera:
+            continue
+        huecos = e.huecos_habilidad or [e.habilidades[0], "ABILITY_NONE", "ABILITY_NONE"]
+        # Si el primer hueco está vacío en el original (pasa en alguna forma), la habilidad va al primero que tenga
+        nuevas = {}
+        for original in huecos:
+            if original == "ABILITY_NONE" or original in nuevas:
+                continue
+            if not nuevas:
+                nuevas[original] = primera[nombre]
+            else:
+                usadas = set(nuevas.values())
+                nuevas[original] = rng.choice([h for h in validas if h not in usadas])
+        resultado[nombre] = [nuevas.get(h, "ABILITY_NONE") for h in huecos]
     return resultado
 
 
 def comprobar(resultado):
-    """Ninguna especie con una habilidad de relleno."""
-    return [f"{especie}: {h} no hace nada" for especie, h in resultado.items() if h in RELLENO]
+    """Ninguna especie con una habilidad de relleno ni con dos huecos distintos de la misma."""
+    errores = []
+    for especie, huecos in resultado.items():
+        errores += [f"{especie}: {h} no hace nada" for h in huecos if h in RELLENO]
+        llenos = [h for h in huecos if h != "ABILITY_NONE"]
+        if not llenos:
+            errores.append(f"{especie}: sin habilidad")
+    return errores
