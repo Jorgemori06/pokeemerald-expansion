@@ -590,6 +590,52 @@ def main():
             f.write(nuevo)
     if fallos:
         print("\nSin sitio (hay que colocarlas a mano):", ", ".join(fallos))
+    if not solo_resumen:
+        ajustar_alturas(todos, layouts)
+
+
+def ajustar_alturas(todos, layouts):
+    """Pone a cada objeto colocado por este script la altura del suelo en el que está. Un objeto con otra altura
+    que la del jugador no se puede coger: pasó en la LADERA de la CUMBRE METEORO, que se rehízo con el suelo a otra
+    altura cuando sus objetos ya estaban puestos (lo vio Miguel jugando, 18/11/2026)."""
+    flags_por_mapa = {}
+    for piedra, carpeta, _, _, prefijo, _ in todos:
+        flags_por_mapa.setdefault(carpeta, set()).add(f"{prefijo}{piedra}")
+    for carpeta, flags in sorted(flags_por_mapa.items()):
+        ruta = f"data/maps/{carpeta}/map.json"
+        with open(ruta, encoding="utf-8", newline="") as f:
+            crudo = f.read()
+        mapa = json.loads(crudo)
+        l = layouts[mapa["layout"]]
+        w, h = l["width"], l["height"]
+        with open(l["blockdata_filepath"], "rb") as f:
+            celdas = struct.unpack(f"<{w * h}H", f.read())
+
+        def altura(x, y):
+            alt = celdas[y * w + x] >> 12
+            if alt not in (0, 15):
+                return alt
+            vecinas = [celdas[ny * w + nx] >> 12 for nx, ny in ((x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1))
+                       if 0 <= nx < w and 0 <= ny < h and not (celdas[ny * w + nx] >> 10) & 3]
+            vecinas = [a for a in vecinas if a not in (0, 15)]
+            return max(set(vecinas), key=vecinas.count) if vecinas else None
+
+        cambios = 0
+        for o in mapa.get("object_events", []) + mapa.get("bg_events", []):
+            if o.get("flag") not in flags:
+                continue
+            alt = altura(o["x"], o["y"])
+            if alt is not None and o.get("elevation") != alt:
+                print(f"Altura de {o['flag']} en {carpeta} ({o['x']}, {o['y']}): {o.get('elevation')} -> {alt}")
+                # Se cambia en el texto, para no reformatear el map.json
+                patron = re.compile(r'(\{[^{}]*"flag": "' + re.escape(o["flag"]) + r'"[^{}]*\})', re.S)
+                bloque = patron.search(crudo).group(1)
+                crudo = crudo.replace(bloque, re.sub(r'"elevation": \d+', f'"elevation": {alt}', bloque), 1)
+                cambios += 1
+        if cambios:
+            json.loads(crudo)
+            with open(ruta, "w", encoding="utf-8", newline="") as f:
+                f.write(crudo)
 
 
 if __name__ == "__main__":
