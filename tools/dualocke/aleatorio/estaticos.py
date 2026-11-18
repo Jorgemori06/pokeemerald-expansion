@@ -92,6 +92,7 @@ def randomizar(pokedex, semilla):
         usadas.add(raiz)
         mapa_regalos[original] = raiz
     mapa_estaticos.update(islas(pokedex, semilla, usadas))
+    mapa_regalos.update(fosiles(pokedex, semilla, usadas))
     return mapa_estaticos, mapa_regalos
 
 
@@ -120,3 +121,22 @@ def islas(pokedex, semilla, usadas):
         resultado[original] = pokedex.evolucionar(raiz, estaticos[original], rng)
     return resultado
 
+
+NIVEL_FOSIL = 20  # como el Fósil Raíz y el Fósil Garra
+
+
+def fosiles(pokedex, semilla, usadas):
+    """{original: nueva} de los fósiles de otras generaciones que revive DEVON (src/data/dualocke_fosiles.h).
+    Se sortean aparte, con su propio RNG y después de todo lo demás, para no cambiar los regalos ni los
+    estáticos de las semillas en curso (se añadieron el 18/11/2026, con la versión 8 ya empezada)."""
+    with open("src/data/dualocke_fosiles.h", encoding="utf-8") as f:
+        originales = re.findall(r"\{\s*ITEM_\w+\s*,\s*(SPECIES_\w+)\s*\}", f.read())
+    sin_legendarios = pokedex.raices_validas()
+    rng = random.Random(f"{semilla}|estaticos|fosiles")
+    resultado = {}
+    for original in originales:
+        original = pokedex.alias.get(original, original)
+        raiz = rng.choice([r for r in sin_legendarios if r not in usadas] or sin_legendarios)
+        usadas.add(raiz)
+        resultado[original] = pokedex.evolucionar(raiz, NIVEL_FOSIL, rng)
+    return resultado

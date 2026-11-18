@@ -640,4 +640,6 @@ gSpecials::
 	def_special CheckAddCoins
 	def_special Dualocke_AbrirSegundoDependiente, waitstate=1 @ Dualocke: segundo dependiente de las tiendas
 	def_special Dualocke_GraficoPokemonIsla @ Dualocke: sprite del Pokémon fuerte de las islas del ferry
+	def_special Dualocke_BuscarFosil @ Dualocke: fósiles de otras generaciones en DEVON
+	def_special Dualocke_EspecieFosil @ Dualocke: el Pokémon del fósil que se está reviviendo
 	def_special Dualocke_MegapiedraPokemonIsla @ Dualocke: megapiedra del Pokémon fuerte de las islas

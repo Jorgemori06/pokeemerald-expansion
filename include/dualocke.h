@@ -33,6 +33,8 @@ void Dualocke_CapWildMon(enum Species *species, u8 *level);
 void Dualocke_CapWildMonTo(enum Species *species, u8 *level, u32 cap);
 void Dualocke_CapTrainerMon(enum Species *species, u8 *level);
 void Dualocke_CapTrainerMonTo(enum Species *species, u8 *level, u32 cap);
+void Dualocke_BuscarFosil(void);
+void Dualocke_EspecieFosil(void);
 
 // Primera captura por zona (Capture Clause).
 // Estado del encuentro salvaje del combate actual.
