@@ -526,6 +526,11 @@ El primer bioma "por tipo". Miguel pidió que cada tipo tenga su bioma; el anál
 
 ### CUMBRE METEORO (hecho, Miguel, 17/11/2026; falta probarlo)
 
+- **Arreglo del 18/11/2026** (Miguel jugando, se quedó encerrado):
+  - Las cuevas van a altura 0: estaban a 3, y el suelo de la LADERA está a 5, así que no funcionaban.
+  - Sus dos objetos se pasan a la altura del suelo.
+  - El borde de los dos mapas es montaña (el de la RUTA 114). Antes era mar.
+
 - **Dónde:** una cueva nueva en la pared de roca de la RUTA 115, junto a la entrada de la CATARATA METEORO (x 31, fila 39; se entra desde abajo, andando). **Tramo 4** (cap 43).
   - El borde norte de la RUTA 115 está cerrado (bosque y acantilados), así que se entra por una cueva y no por el borde.
   - La boca es el mismo dibujo que la de la catarata, puesta en una pared lisa: no se quita ninguna base secreta de la ruta.
@@ -624,6 +629,11 @@ Tres islas nuevas del **tramo 8** (cap 84), cada una pegada al borde de una ruta
 - **Objetos** (`OBJETOS_BOSQUE`, flags 0x900-0x904, y un Ticket-Recuerdo, 0x908): Polvo Plata y Raíz Grande (oculta) en el bosque, Tela Terrible y Amuleto en la mansión, Piedra Noche en el desván.
 
 ### MARISMA AZULIZA (hecho, Miguel, 17/11/2026; falta probarlo)
+
+- **Arreglo del 18/11/2026** (Miguel jugando):
+  - La marisma va a la altura de AZULIZA (`DESPLAZAMIENTO_AZULIZA` 0). Antes sobresalía 7 filas por encima, donde está la RUTA 106, y desde el pueblo se veía un muro de árboles sobre la playa.
+  - Sin hierba muy alta: con los gráficos de AZULIZA no tiene borde de abajo.
+  - Sin la charquita de 2 × 2 de abajo.
 
 - **Dónde:** al oeste de PUEBLO AZULIZA, pegada al pueblo (conexión por el borde, sin pantalla de carga). Se llega andando por la arena del oeste del pueblo: **tramo 2** (cap 23).
 - **El mapa** (48 × 34), con los gráficos de AZULIZA (General + Dewford). **Rehecho el 17/11/2026** con `autotile.py` (ver arriba). Siempre **llueve**.
