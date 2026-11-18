@@ -148,8 +148,13 @@ def main():
     mapas = Mapas()
     nombres = nombres_es()
     datos = {"megapiedras": [], "tickets": []}
+    # Los Ticket-Recuerdo: los de las rutas (TICKETS, TICKETS_OCULTOS) y uno por cada zona nueva (TICKETS_CUMBRE,
+    # TICKETS_PLAYA…: todas las listas TICKETS_ de colocar_objetos.py)
+    tickets = []
+    for nombre in sorted(n for n in dir(c) if n == "TICKETS" or n.startswith("TICKETS_")):
+        tickets += getattr(c, nombre)
     grupos = [("megapiedras", c.MEGAPIEDRAS + getattr(c, "MEGAPIEDRAS_GIGAMAX", []), "FLAG_ITEM_MEGA_", None),
-              ("tickets", getattr(c, "TICKETS", []) + getattr(c, "TICKETS_OCULTOS", []), "FLAG_ITEM_TICKET_", "Ticket-Recuerdo")]
+              ("tickets", tickets, "FLAG_ITEM_TICKET_", "Ticket-Recuerdo")]
     for clave, lista, prefijo, nombre_fijo in grupos:
         for objeto, carpeta, tipo, _ in lista:
             sitio = mapas.describir(carpeta, f"{prefijo}{objeto}", tipo)
