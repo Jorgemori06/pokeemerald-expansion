@@ -53,6 +53,10 @@ jobs:
       - name: Entrenadores alcanzables antes de su tramo
         run: python3 tools/dualocke/alcance.py --comprobar
 
+      # Dualocke: que en las zonas nuevas nadie se quede encerrado (barro, saltos)
+      - name: Zonas nuevas sin sitios sin salida
+        run: python3 tools/dualocke/sin_salida.py --comprobar
+
       - name: ROM (Emerald)
         env:
           GAME_VERSION: EMERALD
