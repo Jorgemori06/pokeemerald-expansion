@@ -127,7 +127,8 @@ Recomendación de Miguel: seguir por **E (Eléctrico)** o **A (Lucha)**, que son
   - Libres que no son de Jorge: 0x068, 0x0E9, 0x1DA, 0x1E0, 0x2D9 y 0x4FF.
   - Del sistema: 0x8F4, 0x8F5, 0x8FD-0x8FF, 0x905-0x907, 0x913 y 0x91B. No usar 0x91F: lo usa `DAILY_FLAGS_START`.
   - **Los objetos ocultos necesitan un flag de 0x1F4 en adelante** (`FLAG_HIDDEN_ITEMS_START`); si no, no compila. `comprobar_zonas.py` ya lo avisa.
-  - Los de 0x043-0x04F, 0x2B6-0x2BB y 0x4CA-0x4E4 se dejaron para Jorge.
+  - Los de 0x043-0x04F y 0x2B7-0x2BB se dejaron para Jorge. 0x2B6 ya lo usa `FLAG_DUALOCKE_CAJAS_REVISADAS`.
+  - **0x4CA-0x4E3 no están libres:** son las megapiedras Gigamax (`FLAG_ITEM_MEGA_*`, #79). De ese bloque solo queda 0x4E4. (Comprobado con el preprocesador el 18/11/2026.)
 
 ---
 
