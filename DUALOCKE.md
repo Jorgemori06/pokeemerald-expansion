@@ -1003,7 +1003,7 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
 
 ## 9. Estado y siguientes pasos
 
-### Locke en curso (empezado de nuevo el 18/11/2026, con la versión 8)
+### Locke en curso (empezado de nuevo el 18/11/2026, con la versión 8; ahora la 8.1)
 
 - ROMs hechas por Claude con `make release` (sin menús de depuración).
   - **Versión 1** (26/10/2026): commit `46ba7600` (con #36 y #37).
@@ -1035,6 +1035,11 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
     - los entrenadores que se alcanzan antes de su tramo y la red de seguridad del cap para entrenadores (#97);
     - la IA de los jefes con tests y la Meteorobola en el primero del clima (#76).
     - Nada de esto se ha probado todavía en el emulador: hay que ir mirando `PRUEBAS.md` al jugar.
+  - **Versión 8.1** (18/11/2026): commit `978ad496bd`, las mismas semillas, así que las partidas siguen valiendo. Lleva los arreglos de lo que vio Miguel jugando hasta la 3.ª medalla (#105):
+    - las cuevas de la CUMBRE METEORO, donde se quedaba encerrado;
+    - la MARISMA AZULIZA ya no tapa la RUTA 106 desde AZULIZA;
+    - la hierba muy alta cortada de la marisma.
+    - Solucionario comparado con la 8 en las dos semillas: idéntico.
 - **Semillas actuales (versión 8):** Miguel `3632113266` (`Esmeralda Dualocke - Mikemine.gba`), Jorge `2425682645` (`Esmeralda Dualocke - Jorgemori.gba`).
 - Semillas de las versiones anteriores (partidas abandonadas):
   - versiones 5-7: Miguel `2918696854`, Jorge `2780853751`;
