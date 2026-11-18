@@ -36,6 +36,7 @@ CUEVA = 0x261                                 # boca de cueva de la CATARATA MET
 PARED = 0x265                                 # pared de roca en la que va la boca
 SUELO = 0x241
 BASE_SECRETA = 0x208
+BARRO = 0x0E8                                 # cuesta de barro: solo se sube con la bici de carreras
 ENTRADA_RUTA115 = (31, 39)                    # pared lisa junto a la base secreta (32, 39)
 LADERA_TROZO = ("Route114", (0, 56, 40, 76))
 LADERA_LLEGADA = (8, 63)                      # la boca de la catarata en la RUTA 114
@@ -87,6 +88,10 @@ def recortar(origen, caja, cuevas, hierba, valor_hierba):
                 v = cueva
             elif v & 0x3FF == BASE_SECRETA:
                 v = c[y * w + x - 1]
+            elif v & 0x3FF == BARRO:
+                # La cuesta de barro de la RUTA 115 era la única vuelta desde el guardián: sin la bici de
+                # carreras no se salía (Miguel, 18/11/2026). Pasa a ser suelo, con su altura.
+                v = (v & ~0x3FF) | SUELO
             elif v & 0x3FF == SUELO and not (v >> 10) & 3 and any(a <= x < b and e <= y < f for a, e, b, f in hierba):
                 v = (v & ~0x3FF) | valor_hierba
             nuevas.append(v)
