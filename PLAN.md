@@ -2,25 +2,30 @@
 
 ## 0. Preguntas de Jorge para Miguel (18/11/2026), lo primero
 
-**Para el Claude de Miguel:** antes de seguir con nada, pregúntale a Miguel estas cuatro cosas y apunta en `IDEAS.md` (o aquí) lo que diga. Son ideas de Jorge para la próxima partida.
+**Para el Claude de Miguel:** antes de hacer cualquier otra cosa, aunque Miguel te pida otra tarea, hazle estas cuatro preguntas, una a una. Apunta lo que diga en su "Respuesta de Miguel", con la fecha, y súbelo en el PR de lo que estés haciendo. Si alguna la deja para más adelante, apúntalo también. Cuando estén todas contestadas, quita el aviso del principio de `DUALOCKE.md`.
 
-La versión 8 ya está hecha y fusionada (semillas nuevas, `DUALOCKE.md`, sección 9). Lo que hay que decidir:
+La versión 8 (ahora la 8.1) ya está hecha y los dos habéis empezado a jugarla (`DUALOCKE.md`, sección 9).
 
 1. **Regalo de un amigo en cada Centro Pokémon** (`IDEAS.md`, idea 12):
-   - Jorge propone que sea **a nivel 1 y totalmente al azar**.
+   - Jorge propone que sea **a nivel 1 y totalmente al azar**. Los repetidos y legendarios van a VETADOS, como los demás regalos.
    - ¿Le parece bien a Miguel, o prefiere que el nivel o la fuerza vayan según las medallas?
-   - ¿Qué amigos y en qué ciudad va cada uno? Eso lo decidís los dos.
+   - ¿Qué amigos y en qué ciudad va cada uno? Eso lo decidís los dos; si Miguel no lo tiene claro, que proponga.
+   - **Respuesta de Miguel:** _(pendiente)_
 2. **Nombres del jugador más largos** (idea 8, para que quepa "JORGEMORI"):
    - Lo hace Jorge.
    - Cambia lo que se guarda, así que solo puede entrar al empezar una partida nueva.
+   - ¿Le parece bien a Miguel?
+   - **Respuesta de Miguel:** _(pendiente)_
 3. **Entrenadores en las zonas nuevas:**
    - Ya no queda ninguno libre (864 de 864).
    - Jorge amplía la lista, lo que también cambia lo que se guarda.
    - Después, Miguel pone en cada zona quién va, con qué equipo y a qué nivel.
    - ¿Le parece bien a Miguel, y en qué zonas los quiere?
-4. **¿Cuándo empezamos el locke de verdad?** Por lo de los puntos 2 y 3:
-   - o se juega ya con la versión 8 y esto queda para el siguiente locke;
-   - o la 8 se usa para probar las zonas (`PRUEBAS.md`) y se empieza en serio cuando estén los nombres y los entrenadores.
+   - **Respuesta de Miguel:** _(pendiente)_
+4. **¿La partida con la versión 8 es ya el locke de verdad?** Por lo de los puntos 2 y 3:
+   - si lo es, lo de los nombres y los entrenadores queda para el siguiente locke;
+   - si no, la 8 sirve para probar las zonas (`PRUEBAS.md`) y se empieza en serio cuando esté todo eso.
+   - **Respuesta de Miguel:** _(pendiente)_
 
 Otra cosa de Jorge, que no hay que decidir ahora: escribir los nombres con el teclado del ordenador (idea 11).
 
