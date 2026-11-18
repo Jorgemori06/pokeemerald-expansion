@@ -107,7 +107,7 @@ Salen del mapa de propuestas (letras A-I). Antes de empezar cualquiera, hay que 
 | | Bioma | Tipo | Dónde | Tramo | Cómo se entra / ojo con |
 | --- | --- | --- | --- | --- | --- |
 | A | Isla Dojo | Lucha (y Roca) | Al sur de PUEBLO AZULIZA | 2 | El borde sur de AZULIZA tiene 12 casillas de arena pisables (x 3-19). Gráficos de AZULIZA: arena, rocas y árboles de playa. Tema: el gimnasio de Lucha de MARCIAL. |
-| B | Mina abandonada | Acero (y Tierra) | Al oeste de CIUDAD FÉRRICA (Devon) | 1-2 o 6 | El borde oeste de FÉRRICA es agua (haría falta SURF, tramo 6). Para que sea temprana: una **cueva** en una pared, como la CUMBRE METEORO (RUTA 116 o la de FÉRRICA). Interior de cueva o de la GUARIDA MAGMA. |
+| B | **Cantera** (idea de Miguel, 18/11/2026) | Acero (y Tierra, Roca) | **RUTA 116, por la salida del TÚNEL FERVERGAL** (sus dos bocas están en (47, 8) y (65, 10)) | 2 | Miguel la propuso jugando. Se entraría por una cueva o un paso nuevo junto a la salida del túnel, como la CUMBRE METEORO; ojo con las alturas de la puerta (ver "Arreglos del 18/11/2026"). Rocas de GOLPE ROCA, vagonetas o raíles si hay gráficos. Sustituye a la "mina al oeste de FÉRRICA", que necesitaba SURF. |
 | C | Prado de las Hadas | Hada (y Planta, Bicho) | Al norte de la RUTA 117 | 3 | Borde norte de la 117, pisable en x 38-59. Flores y hierba, gráficos de Malvalona. Va junto a la CIÉNAGA (que está al sur de la misma ruta). |
 | E | Central de la tormenta | Eléctrico (y Acero) | Al sur de la RUTA 118 | 6 | Borde sur, agua en x 0-12: con SURF, que en el tramo 6 ya se tiene. Clima de tormenta (`WEATHER_RAIN_THUNDERSTORM`). Por dentro, una central abandonada: interior de NUEVA MALVALONA. |
 | G | Selva de ARBORADA | Planta (y Bicho) | Al sur de CIUDAD ARBORADA | 6 | Borde sur de ARBORADA, 7 casillas pisables (x 9-36). Gráficos de ARBORADA: tienen la hierba muy alta con su borde, que en Malvalona no existe. |
@@ -192,6 +192,17 @@ Los textos van en español, con lenguaje neutro (sin dar por hecho el género de
 ---
 
 ## 5. Otras mejoras para más adelante
+
+### Arreglos del 18/11/2026 (Miguel jugando la versión 8)
+
+- **Puertas:** una puerta solo se usa si su **altura** es la del jugador, o 0. En la LADERA de la CUMBRE METEORO estaban a 3 sobre suelo a 5 y no se podía salir.
+  - En las zonas nuevas, las puertas de cueva van a **altura 0**, como las del juego.
+  - `comprobar_zonas.py` lo avisa.
+- **Objetos:** lo mismo; con otra altura no se pueden coger. `colocar_objetos.py` les ajusta la altura al suelo cada vez que se lanza. Por eso, si se rehace un mapa con los objetos ya puestos, hay que volver a lanzarlo.
+- **El borde del mapa** (lo que se ve fuera) tiene que pegar con la zona. La CUMBRE tenía el de la RUTA 115, que es mar.
+- **Que una zona no sobresalga por encima ni por debajo del mapa al que se pega,** si por ahí hay otro mapa. La MARISMA AZULIZA se pisaba con la RUTA 106.
+- **La hierba muy alta** solo tiene su borde con los gráficos de ARBORADA. Con otros queda cortada.
+
 
 - **Probar en el emulador todo `PRUEBAS.md`.** Es lo que más falta: nada de lo de las zonas se ha jugado todavía.
 - **Pulir las uniones que quedan raras**, cuando se vean jugando:

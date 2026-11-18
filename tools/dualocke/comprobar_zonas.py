@@ -87,6 +87,22 @@ def valores_flags():
     return valores
 
 
+# Prefijos de las carpetas de las zonas nuevas (los mismos que NUEVOS de autotile.py)
+NUEVOS = ("Marisma", "Playa", "Bosque", "Isla", "Cumbre", "Desierto", "Ruinas", "Gruta", "Mansion", "Cienaga")
+
+
+def alturas_alrededor(info, x, y, w, h, con_la_suya=False):
+    """Alturas (sin 0 ni 15) de las casillas que se pisan junto a (x, y) (y la suya, si se pide)."""
+    sitios = [(x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)] + ([(x, y)] if con_la_suya else [])
+    alturas = set()
+    for nx, ny in sitios:
+        if 0 <= nx < w and 0 <= ny < h:
+            colision, alt, _ = info(nx, ny)
+            if not colision and alt not in (0, 15):
+                alturas.add(alt)
+    return alturas
+
+
 def etiquetas():
     """Etiquetas de script y de texto de data/ y símbolos de C que usan los scripts."""
     nombres = set()
@@ -183,6 +199,24 @@ def main():
                         fallo("puerta", c, f"la puerta {n} va a la puerta {wp['dest_warp_id']} de {destino}, que solo tiene {len(otras)}")
             if not (0 <= wp["x"] < w and 0 <= wp["y"] < h):
                 fallo("puerta", c, f"la puerta {n} está fuera del mapa ({wp['x']}, {wp['y']})")
+            elif c.startswith(NUEVOS) and wp.get("elevation") not in (0, 15):
+                # Una puerta solo se usa si su altura es la del jugador (o 0). Pasó en la LADERA de la CUMBRE
+                # METEORO: puertas a 3 sobre suelo a 5, y no se podía salir (Miguel, 18/11/2026).
+                alturas = alturas_alrededor(info, wp["x"], wp["y"], w, h)
+                if alturas and wp["elevation"] not in alturas:
+                    fallo("altura", c, f"la puerta {n} está a altura {wp['elevation']} y el suelo de al lado a "
+                                       f"{sorted(alturas)}: no se puede usar (pon 0)")
+        # objetos con una altura que no es la del suelo: no se pueden coger ni hablarles
+        if c.startswith(NUEVOS):
+            for o in m.get("object_events", []) + m.get("bg_events", []):
+                if not (isinstance(o.get("x"), int) and 0 <= o["x"] < w and 0 <= o["y"] < h):
+                    continue
+                if o.get("elevation") in (0, 15, None):
+                    continue
+                alturas = alturas_alrededor(info, o["x"], o["y"], w, h, con_la_suya=True)
+                if alturas and o["elevation"] not in alturas:
+                    fallo("altura", c, f"({o['x']}, {o['y']}) {o.get('flag') or o.get('script')}: altura "
+                                       f"{o['elevation']} sobre suelo a {sorted(alturas)}")
         # conexiones
         for con in m.get("connections") or []:
             if con["map"] not in por_id:

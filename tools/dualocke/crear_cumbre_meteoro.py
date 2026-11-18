@@ -97,7 +97,10 @@ def guardar_layout(carpeta, ancho, alto, celdas, base):
     os.makedirs(f"data/layouts/{carpeta}", exist_ok=True)
     with open(f"data/layouts/{carpeta}/map.bin", "wb") as f:
         f.write(struct.pack(f"<{ancho * alto}H", *celdas))
-    with open(base["border_filepath"], "rb") as f, open(f"data/layouts/{carpeta}/border.bin", "wb") as g:
+    # El borde (lo que se ve fuera del mapa) es el de la RUTA 114, montaña con los mismos gráficos. Antes era el
+    # de la RUTA 115, que es mar: el mapa se veía cortado por agua (lo vio Miguel jugando, 18/11/2026).
+    borde = LAYOUTS[json.loads(leer("data/maps/Route114/map.json"))["layout"]]["border_filepath"]
+    with open(borde, "rb") as f, open(f"data/layouts/{carpeta}/border.bin", "wb") as g:
         g.write(f.read())
     ident = "LAYOUT_" + MAPAS[carpeta][4:]
     texto = leer("data/layouts/layouts.json")
@@ -128,10 +131,16 @@ def entrada_ruta115():
     ruta = "data/maps/Route115/map.json"
     texto = leer(ruta)
     if MAPAS[LADERA] not in texto:
-        texto = co.insertar_en_lista(texto, "warp_events", {"x": x, "y": y, "elevation": 3,
+        texto = co.insertar_en_lista(texto, "warp_events", {"x": x, "y": y, "elevation": 0,
                                                             "dest_map": MAPAS[LADERA], "dest_warp_id": "0"})
         json.loads(texto)
         escribir(ruta, texto)
+    # Las puertas van a altura 0, que vale para cualquier altura (como la de la CATARATA METEORO)
+    mapa = json.loads(leer(ruta))
+    for wp in mapa["warp_events"]:
+        if wp["dest_map"] == MAPAS[LADERA]:
+            wp["elevation"] = 0
+    escribir(ruta, json.dumps(mapa, indent=2, ensure_ascii=False) + "\n")
     warps = json.loads(leer(ruta))["warp_events"]
     return next(i for i, wp in enumerate(warps) if wp["dest_map"] == MAPAS[LADERA])
 
@@ -175,15 +184,16 @@ def main():
     mapa_json(LADERA, {"id": MAPAS[LADERA], "name": LADERA, "layout": l_ladera, "music": "MUS_ROUTE113",
                        "weather": "WEATHER_SUNNY", **comun,
                        "warp_events": [
-                           {"x": llegada[0], "y": llegada[1], "elevation": 3, "dest_map": "MAP_ROUTE115",
+                           # Altura 0: el suelo de la LADERA está a 5 y con 3 no se salía (Miguel, 18/11/2026)
+                           {"x": llegada[0], "y": llegada[1], "elevation": 0, "dest_map": "MAP_ROUTE115",
                             "dest_warp_id": str(puerta_ruta115)},
-                           {"x": subida[0], "y": subida[1], "elevation": 3, "dest_map": MAPAS[CUMBRE],
+                           {"x": subida[0], "y": subida[1], "elevation": 0, "dest_map": MAPAS[CUMBRE],
                             "dest_warp_id": "0"}]}, [])
     c_llegada = en_trozo(CUMBRE_TROZO[1], *CUMBRE_LLEGADA)
     _, _, especie, nivel, premio, flag = GUARDIAN
     mapa_json(CUMBRE, {"id": MAPAS[CUMBRE], "name": CUMBRE, "layout": l_cumbre, "music": "MUS_ROUTE120",
                        "weather": "WEATHER_SNOW", **comun,
-                       "warp_events": [{"x": c_llegada[0], "y": c_llegada[1], "elevation": 3,
+                       "warp_events": [{"x": c_llegada[0], "y": c_llegada[1], "elevation": 0,
                                         "dest_map": MAPAS[LADERA], "dest_warp_id": "1"}]},
               [{"local_id": "LOCALID_CUMBRE_METEORO_GUARDIAN", "graphics_id": "OBJ_EVENT_GFX_VAR_0",
                 "x": gx, "y": gy, "elevation": 3, "movement_type": "MOVEMENT_TYPE_FACE_DOWN",

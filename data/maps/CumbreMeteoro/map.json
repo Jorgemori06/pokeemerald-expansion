@@ -18,7 +18,7 @@
     {
       "x": 7,
       "y": 24,
-      "elevation": 3,
+      "elevation": 0,
       "dest_map": "MAP_CUMBRE_METEORO_LADERA",
       "dest_warp_id": "1"
     }

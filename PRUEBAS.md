@@ -37,6 +37,7 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 
 - [ ] **Entrada:** en la RUTA 115, a la derecha de la entrada de la CATARATA METEORO y una terraza más abajo, hay una cueva nueva en la pared. Lleva a la LADERA, y se vuelve igual.
 - [ ] **LADERA:** se puede subir por las escaleras hasta la cueva de arriba (a la derecha). Hay salvajes en la hierba alta.
+- [ ] **Arreglo del 18/11/2026:** las dos cuevas de la LADERA (la de bajada a la RUTA 115 y la de subida a la CUMBRE) ya funcionan, y se pueden coger la Piedra Dura y el Ticket-Recuerdo. Fuera del mapa se ve montaña, no agua.
 - [ ] **CUMBRE:** nieve fuera y en combate, salvajes en la hierba escarchada y el guardián arriba, que da premio y no vuelve a salir.
 - [ ] **Bases secretas:** la de la RUTA 115 que está junto a la cueva nueva sigue funcionando.
 
@@ -97,7 +98,8 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 ### MARISMA AZULIZA (desde el 17/11/2026)
 
 - [ ] **Entrada:** desde la arena del oeste de PUEBLO AZULIZA se pasa a la marisma andando, sin pantalla de carga, y se vuelve igual.
-- [ ] **La unión con el pueblo:** que los árboles y la arena sigan bien por el borde (filas 3 a 16).
+- [ ] **La unión con el pueblo:** que los árboles y la arena sigan bien por el borde.
+- [ ] **Arreglo del 18/11/2026:** desde AZULIZA ya no se ve un muro de árboles encima de la playa de la RUTA 106 (la marisma ya no sobresale por encima del pueblo). En la marisma no hay hierba muy alta cortada ni la charquita suelta de abajo.
 - [ ] **Lluvia** y cartel "MARISMA AZULIZA". Es una zona de captura nueva: comprobar que la primera captura cuenta aquí y no en AZULIZA.
 - [ ] **Partida guardada de antes:** las zonas ya gastadas siguen gastadas (la variable nueva empieza a 0).
 - [ ] **TOMÁS y MARGARITA** te ven y luchan. El Ticket-Recuerdo de la hierba se puede coger.
@@ -221,6 +223,23 @@ Mapa, qué se hizo, qué pasó y, si se puede, una captura. Si es un texto, la e
 **No era fallo:** no poder huir de un Dreepy después de tirarle una Ball. Usó Acoso, que atrapa (en los juegos oficiales pasa igual).
 
 **Pendiente (son imágenes):** PROFILE, ABILITY y TRAINER MEMO en los datos; MOVE INFO en combate; los iconos de tipo (ICE, GROUND…); PRESS START y "New Game" en el título; PARTY POKéMON, CLOSE BOX y PKMN DATA en el PC.
+
+### 3. Miguel, 18/11/2026 (versión 8, hasta la 3.ª medalla)
+
+**Bien:**
+- Hasta la 1.ª medalla, el BOSQUE FRONDOSO y la MANSIÓN OLVIDADA, CIUDAD PORTUAL y hasta el 3.er gimnasio.
+
+**Fallos (arreglados en `miguel/arreglos-prueba-1`):**
+- **CUMBRE METEORO:** te quedabas encerrado.
+  - Las dos cuevas de la LADERA no funcionaban: estaban a altura 3 y el suelo, a 5. Una puerta solo se usa si su altura es la del jugador, o 0. Ahora van a 0, como la de la CATARATA METEORO.
+  - Sus dos objetos, por lo mismo, no se podían coger.
+  - El borde del mapa era mar (copiado de la RUTA 115) y se veía el mapa "cortado por agua". Ahora es montaña (el de la RUTA 114).
+- **MARISMA AZULIZA:**
+  - Baldosas mal puestas: la hierba muy alta no tiene borde de abajo con los gráficos de AZULIZA y quedaba cortada. Ahora es hierba alta. También se quitó una charquita de 2 × 2 suelta.
+  - Árboles en AZULIZA, la ciudad del 2.º gimnasio: la marisma sobresalía 7 filas por encima del pueblo, justo donde está la RUTA 106. Ahora va a la altura del pueblo. (La #103 de Jorge lo tapaba cambiando el orden de las conexiones.)
+- **Para que no vuelva a pasar:** `comprobar_zonas.py` avisa de puertas y objetos de las zonas nuevas a una altura que no es la del suelo, y `colocar_objetos.py` ajusta la altura de sus objetos al suelo en el que están.
+
+**Idea:** una CANTERA con POKéMON de tipo Acero en la RUTA 116, por la salida del TÚNEL FERVERGAL (apuntada en `PLAN.md`).
 
 ### 2. Jorge, 26/10/2026 (tarde, con el menú de depuración)
 

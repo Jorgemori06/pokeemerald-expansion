@@ -32,28 +32,32 @@ import autotile as at  # noqa: E402
 import colocar_objetos as co  # noqa: E402
 
 CARPETA, MAPA, MAPSEC = "MarismaAzuliza", "MAP_MARISMA_AZULIZA", "MAPSEC_MARISMA_AZULIZA"
-DESPLAZAMIENTO_AZULIZA = 7     # fila de la marisma que queda junto a la fila 0 de AZULIZA
+# Fila de la marisma que queda junto a la fila 0 de AZULIZA. Era 7, y la marisma sobresalía 7 filas por encima del
+# pueblo, justo donde está la RUTA 106: desde AZULIZA se veía un muro de árboles sobre la playa (lo vio Miguel
+# jugando, 18/11/2026). Con 0 no sobresale; la entrada sigue cayendo en la arena (filas 6-13 de AZULIZA).
+DESPLAZAMIENTO_AZULIZA = 0
 # D árbol pequeño (de AZULIZA, 1 de ancho)   T árbol grande (2 de ancho; columnas pares)
 # E franja copiada del borde oeste de AZULIZA   . hierba   , hierba alta   ; hierba muy alta
-# ~ agua   m agua de mar (charca de marea)   s arena   * flores   c cartel   R risco (como el de la playa de la RUTA 104)   1 2 su escalera
+# ~ agua   m agua de mar (charca de marea)
+# (Sin hierba muy alta desde el 18/11/2026: con los gráficos de AZULIZA no tiene borde de abajo y quedaba cortada.)   s arena   * flores   c cartel   R risco (como el de la playa de la RUTA 104)   1 2 su escalera
 PLANO = """
 TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTDDDDDDDDDDEEEE
 TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTDDDDDDDDDDEEEE
 TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTDDDDDDDDDDEEEE
 TTTTTTTT.........................RsssDDDDDDDEEEE
-TTTTTTTT..;;;;;;...;;;;;;;;;.*...RssDsssssssEEEE
-TTTTTTTT..;;;;;;...;;;;;;;;;..*..RssDsssssssEEEE
-TTTTTTTT...........;;;;;;;;;.*...RssDsssssssEEEE
-TTTTTTTT..~~~~~~...;;;;;;;;;.....RssssDDssssEEEE
+TTTTTTTT..,,,,,,...,,,,,,,,,.*...RssDsssssssEEEE
+TTTTTTTT..,,,,,,...,,,,,,,,,..*..RssDsssssssEEEE
+TTTTTTTT...........,,,,,,,,,.*...RssDsssssssEEEE
+TTTTTTTT..~~~~~~...,,,,,,,,,.....RssssDDssssEEEE
 TTTTTTTT~~~~~~~~~~............TT.RssssDDssssEEEE
 TTTTTTTT~~~~~~~~~~~...........TT.RssssDDssssEEEE
 TT....~~~~~~~~~~~~~~..,,,,,...TT.RsDDsssssssEEEE
 TT....~~~~~~~~~~~~~~..,,,,,......RsDDsssssssEEEE
-TT;;..~~~~~~~~~~~~~~~.,,,,,......RsDDscsssssEEEE
-TT;;..~~~~~~~~~~~~~~~.,,,,,RR12RRRssssssssssEEEE
-TT;;..~~~~~~~~~~~~~~..,,,,,RssssssssssssssssEEEE
-TT;;..~~~~~~~~~~~~~...,,,,,RsssssssssmmmmsssEEEE
-TT;;..~~~~~~~~~~~~~........RsssssssssmmmmsssEEEE
+TT,,..~~~~~~~~~~~~~~~.,,,,,......RsDDscsssssEEEE
+TT,,..~~~~~~~~~~~~~~~.,,,,,RR12RRRssssssssssEEEE
+TT,,..~~~~~~~~~~~~~~..,,,,,RssssssssssssssssEEEE
+TT,,..~~~~~~~~~~~~~...,,,,,RsssssssssmmmmsssEEEE
+TT,,..~~~~~~~~~~~~~........RsssssssssmmmmsssEEEE
 TT....~~~~~~~~~~~~~~.......RssDDsssssmmmmsssEEEE
 TT....~~~~~~~~~~~~~~..TTTT.RssDDssssssssssssEEEE
 TT*...~~~~~~~~~~~~~~~.TTTT.RssDDssssssssssssEEEE
@@ -61,12 +65,12 @@ TT*...~~~~~~~~~~~~~~~.TTTT.RssssssssssssssssEEEE
 TT.*..~~~~~~~~~~~~~~.*TTTT.RsssssssssssssDDsEEEE
 TT....~~~~~~~~~~~~~...TTTT.RsssssssDsssssDDsEEEE
 TT.....~~~~~~~~~~~~.*......RsssssssDsssssDDsEEEE
-TT......~~~~~~~~~~..;;;;;;.RsssssssDssssssssEEEE
-TTTTTTTTTT~~~~~~~...;;;;;;.RsssssssssDssssssEEEE
-TTTTTTTTTT.~~~~.....;;;;;;.RssssDDsssDssssssEEEE
-TTTTTTTTTT....TT.~~.;;;;;;.RssssDDsssDssssssEEEE
-TTTTTTTTTT..*.TT.~~.;;;;;;.RssssDDssssssssssEEEE
-TTTTTTTTTT...*TT....;;;;;;.RssssssssssssssssEEEE
+TT......~~~~~~~~~~..,,,,,,.RsssssssDssssssssEEEE
+TTTTTTTTTT~~~~~~~...,,,,,,.RsssssssssDssssssEEEE
+TTTTTTTTTT.~~~~.....,,,,,,.RssssDDsssDssssssEEEE
+TTTTTTTTTT....TT....,,,,,,.RssssDDsssDssssssEEEE
+TTTTTTTTTT..*.TT....,,,,,,.RssssDDssssssssssEEEE
+TTTTTTTTTT...*TT....,,,,,,.RssssssssssssssssEEEE
 TT.........................RssssssssssDDDDDDEEEE
 TTTTTTTTTTTTTTTTTTTTTTTTTTTTDDDDDDDDDDDDDDDDEEEE
 TTTTTTTTTTTTTTTTTTTTTTTTTTTTDDDDDDDDDDDDDDDDEEEE
