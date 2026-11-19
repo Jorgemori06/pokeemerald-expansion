@@ -16,13 +16,21 @@ salida. Anda como el jugador sin bici ni MO:
 No mira las alturas (como alcance.py con ESTRICTO = False) ni los objetos del mapa (árboles de CORTE,
 rocas…).
 
-Por qué: en la CUMBRE METEORO se bajaba al guardián por una cuesta de barro y solo se podía volver con la
+También mira que **ninguna persona ni entrenador tape el paso**: entre las salidas del mapa (puertas,
+bordes y los sitios a los que te lleva un script, como el barco) se tiene que poder ir igual con ellos
+que sin ellos. Cuentan las personas que no se mueven y no desaparecen nunca (flag "0"); los objetos y
+las rocas, árboles y peñas de MO no.
+
+Por qué: en la ISLA SUR, TERRY estaba en la única casilla del sendero y no dejaba llegar a la cueva
+(Miguel, 19/11/2026). Y en la CUMBRE METEORO se bajaba al guardián por una cuesta de barro y solo se podía volver con la
 bici de carreras. Miguel se quedó encerrado jugando (18/11/2026). Con la cumbre de antes, esto da 92
 casillas sin vuelta.
 """
 
 import argparse
+import glob
 import os
+import re
 import sys
 from collections import deque
 
@@ -34,7 +42,7 @@ DIRS = {"up": (0, -1), "down": (0, 1), "left": (-1, 0), "right": (1, 0)}
 SALTOS = {"MB_JUMP_NORTH": "up", "MB_JUMP_SOUTH": "down", "MB_JUMP_EAST": "right", "MB_JUMP_WEST": "left"}
 
 
-def pasos(mundo, mid, puertas, x, y):
+def pasos(mundo, mid, puertas, x, y, tapadas=frozenset()):
     """Casillas a las que se pasa desde (x, y) en un paso (o en un salto)."""
     w, h, c = mundo.rejilla(mid)
     for d, (dx, dy) in DIRS.items():
@@ -50,7 +58,7 @@ def pasos(mundo, mid, puertas, x, y):
             continue
         if mb == "MB_MUDDY_SLOPE" and d != "down":
             continue
-        if mb in mundo.surf:
+        if mb in mundo.surf or (nx, ny) in tapadas:
             continue
         yield nx, ny
 
@@ -89,12 +97,64 @@ def sin_vuelta(mundo, mid):
     return sorted(delante - atras)
 
 
+def llegadas_por_script():
+    """{MAP_X: {(x, y)}}: sitios a los que te llevan los scripts (warp MAP_X, x, y), como el barco."""
+    llegadas = {}
+    for ruta in glob.glob("data/**/*.inc", recursive=True):
+        texto = open(ruta, encoding="utf-8", errors="replace").read()
+        for mapa, x, y in re.findall(r"^\s*warp\w*\s+(MAP_\w+)\s*,\s*(\d+)\s*,\s*(\d+)", texto, re.M):
+            llegadas.setdefault(mapa, set()).add((int(x), int(y)))
+    return llegadas
+
+
+def personas_fijas(m):
+    """Casillas con una persona o entrenador que no se mueve ni desaparece."""
+    fijas = set()
+    for o in m.get("object_events", []):
+        if str(o.get("flag", "0")) != "0" or o["graphics_id"] in a.GFX_MO or "ITEM_BALL" in o["graphics_id"]:
+            continue
+        if any(t in o["movement_type"] for t in ("WANDER", "WALK")):
+            continue
+        fijas.add((o["x"], o["y"]))
+    return fijas
+
+
+def tapados(mundo, mid, llegadas):
+    """[(salida, salida a la que ya no se llega por las personas)]."""
+    m = mundo.mapas[mid]
+    w, h, c = mundo.rejilla(mid)
+    puertas = {(p["x"], p["y"]) for p in m.get("warp_events", [])}
+    salidas = set(puertas) | {p for p in llegadas if 0 <= p[0] < w and 0 <= p[1] < h}
+    for con in m.get("connections") or []:
+        borde = {"up": [(x, 0) for x in range(w)], "down": [(x, h - 1) for x in range(w)],
+                 "left": [(0, y) for y in range(h)], "right": [(w - 1, y) for y in range(h)]}.get(con["direction"], [])
+        salidas |= {p for p in borde if not c[p[1] * w + p[0]][0]}
+    fijas = personas_fijas(m)
+    salidas -= fijas
+
+    def alcanzables(ini, tapadas):
+        vistos, cola = {ini}, deque([ini])
+        while cola:
+            for n in pasos(mundo, mid, puertas, *cola.popleft(), tapadas=tapadas):
+                if n not in vistos:
+                    vistos.add(n)
+                    cola.append(n)
+        return vistos
+
+    malos = []
+    for s in sorted(salidas):
+        sin, con = alcanzables(s, frozenset()), alcanzables(s, frozenset(fijas))
+        malos += [(s, t) for t in sorted(salidas & (sin - con))]
+    return malos
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     p.add_argument("--comprobar", action="store_true")
     args = p.parse_args()
     mundo = a.Mundo()
     malos = 0
+    llegadas = llegadas_por_script()
     for mid, m in sorted(mundo.mapas.items()):
         carpeta = os.path.basename(m["carpeta"])
         if not zonas.es_nueva(carpeta) or carpeta.endswith("_Frlg"):  # los de Rojo Fuego no están en el juego
@@ -103,7 +163,11 @@ def main():
         if casillas:
             malos += 1
             print(f"{mid}: {len(casillas)} casillas sin vuelta, por ejemplo {casillas[:6]}")
-    print(f"{malos} mapas de zonas nuevas con sitios sin vuelta.")
+        cortes = tapados(mundo, mid, llegadas.get(mid, set()))
+        if cortes:
+            malos += 1
+            print(f"{mid}: una persona tapa el paso entre {len(cortes)} parejas de salidas, por ejemplo {cortes[:3]}")
+    print(f"{malos} problemas en los mapas de zonas nuevas (sitios sin vuelta o paso tapado).")
     if args.comprobar and malos:
         sys.exit(1)
 
