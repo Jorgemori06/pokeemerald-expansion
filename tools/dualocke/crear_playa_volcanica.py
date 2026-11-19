@@ -46,8 +46,8 @@ ROCA = (0x175, 0x176, 0x17D, 0x17E)      # roca de mar (general): arriba izq., a
 # T árbol grande   . hierba   , hierba alta   * flores   c camino de tierra   s arena   b bajío   m mar
 # R risco   1 2 su escalera
 PLANO = """
-LLLLLLLLKKKKKKKKKKKKRsssssbbmmmmmmmmmmmm
-LLLLLLLLKKKKKKKKKKKKRsssssbbmmmmmmmmmmmm
+LLLLLLLLKKKKKKKKKKKKKKKKKKXXXXXXXXXXXXXX
+LLLLLLLLKKKKKKKKKKKKKKKKKKXXXXXXXXXXXXXX
 LLLLLLLL............Rssssssbbmmmmmmmmmmm
 LLLLLLLL....,,,,,,,,Rssssssbbmmmmmmmmmmm
 LLLLLLLL....,,,,,,,,Rssssssbbmmmmmmmmmmm
@@ -83,9 +83,9 @@ TT,,,,,,..TT..RssssssssssssbbmmmmmmmmmXX
 TT,,,,,,..TT..RssssssssssssbbmmmmmmmmmXX
 TT........TT..RssssssssssssbbmmmmmmmmmXX
 TT............RssssssssssssbbmmmmmmmmmXX
-TTTTTTTTTTTTTTRssssssssssssbbmmmmmmmmmXX
-TTTTTTTTTTTTTTRssssssssssssbbmmmmmmmmmXX
-TTTTTTTTTTTTTTRssssssssssssbbmmmmmmmmmXX
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTbmmmmmmmmmXX
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTXXXXXXXXXXXX
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTXXXXXXXXXXXX
 """
 TERRENO = {".": "suelo", "*": "suelo", ",": "hierba_alta", "c": "camino", "s": "arena", "b": "bajio", "m": "mar",
            "R": "risco", "1": "risco", "2": "risco"}
@@ -189,7 +189,9 @@ def crear_layout():
     gx, gy = GUARDIAN[:2]
     assert not (c[gy * ancho + gx] >> 10) & 3, "el guardián no está en el suelo"
 
-    base = LAYOUTS[json.loads(leer("data/maps/MtChimney/map.json"))["layout"]]
+    # Borde de árboles, como la playa de la RUTA 104 (antes era la roca del MONTE CENIZO y se veía un
+    # relleno rosa al acercarse a los bordes; Miguel, 19/11/2026)
+    base = LAYOUTS[json.loads(leer("data/maps/Route104/map.json"))["layout"]]
     os.makedirs(f"data/layouts/{PLAYA}", exist_ok=True)
     with open(f"data/layouts/{PLAYA}/map.bin", "wb") as f:
         f.write(struct.pack(f"<{ancho * alto}H", *c))

@@ -56,6 +56,25 @@ powershell -ExecutionPolicy Bypass -File tools\dualocke\instalar_windows.ps1
 - El juego sale **randomizado** con tu semilla (la misma cada vez que actualizas) y compilado con **`make release`**, así que no tiene los menús de depuración (R + START en el mapa, SELECT en combate). Con **`-NuevaPartida`** genera otra semilla para empezar un locke nuevo (pide confirmación, porque la partida guardada deja de cuadrar). Con **`-SinRandom`** compila el juego sin randomizar y con los menús de depuración, para probar, y lo copia aparte como `Dualocke-sin-random.gba`.
 - Si no tienes el repo en Windows, descarga solo el script desde GitHub (`tools/dualocke/instalar_windows.ps1`).
 
+### Probar la ROM en un emulador sin jugar (Jorge, 19/11/2026)
+
+`tools/dualocke/emulador/` lleva un emulador sin pantalla (mGBA como librería) para comprobar cosas del juego desde un script, sin jugar: entrar en un mapa, andar, surfear, combatir, capturar y hacer fotos de la pantalla.
+
+- **ROM de pruebas:** `make DUALOCKE_PRUEBA=1 [SEED=...]` crea `pokeemerald-prueba.gba` (con su `.elf` y su `.map`), en su propia carpeta de compilación. Nunca es la que se juega: lo de las pruebas solo se compila con esa opción (`#ifdef DUALOCKE_PRUEBA`) y la ROM normal y la de `make release` salen igual que antes.
+  - Al darle a "Nueva partida", si el emulador ha escrito en `gDualockePrueba` (`src/dualocke_prueba.c`), la partida empieza directamente en el mapa y la casilla que se le diga: sin la charla de Abedul ni el camión, con las 8 medallas, las gafas, las bicis, la supercaña, 20 Master Ball y un Lapras con SURF, CASCADA, BUCEO y FUERZA.
+  - Modo foto: cuevas con luz, sin lluvia ni tormenta de arena, y los entrenadores no te ven.
+- **Emulador:** `emulador.py` (lo usa Python; necesita `apt install libmgba-dev`, y compila solo `gbarun.c` la primera vez). Por ejemplo:
+  ```python
+  from emulador import Emulador
+  with Emulador() as emu:
+      emu.empezar("MAP_ROUTE111", 33, 81)
+      emu.andar("arriba", 2)
+      print(emu.mapa(), emu.posicion())
+      emu.foto("/tmp/foto.png")
+  ```
+  También sabe si estás en combate, huir, capturar con Master Ball (con el mote obligatorio) y guardar o cargar el estado.
+- Con él se comprobó (19/11/2026) que la puerta del DESIERTO PROFUNDO funciona, y que surfear, combatir y capturar en la PLAYA VOLCÁNICA no rompe al personaje.
+
 ### Entorno (Windows), paso a paso
 
 1. WSL con Ubuntu: en PowerShell como administrador, `wsl --install`, y reiniciar si lo pide.
@@ -436,6 +455,7 @@ ISLA SUR, ISLA LEJANA, ISLA ORIGEN y ROCA OMBLIGO ya existían, pero solo con un
   - **Nivel:** el del entrenador normal más fuerte de su tramo (cap − 3), con la regla `"tope"` de `reescalar_niveles.py`. La regla `("tope", tramo)` usa el tope de otro tramo: la cala de la MARISMA AZULIZA está en el tramo 2, pero solo se llega con SURF (tramo 6).
   - **Premio** al vencerlo o capturarlo: el objeto de la tabla y, si tiene mega, su megapiedra (`Dualocke_MegapiedraPokemonIsla`). Si huyes, se queda.
 - **Entrenadores (6):** TERRY y CINDY en la ISLA SUR, MIKE y las gemelas AMY Y LIV en la ISLA LEJANA, las gemelas GINA Y MIA en la ISLA ORIGEN y LUCAS en el cruce de ROCA OMBLIGO.
+  - **Movidos el 19/11/2026** porque tapaban el paso aunque los vencieras: TERRY, de la única casilla del sendero de la ISLA SUR (19, 8) a un lado del camino (25, 10), mirando a la izquierda; MIKE, del pasillo de la ISLA LEJANA (10, 22) a un hueco al lado (11, 26), mirando a la izquierda. Siguen viéndote al pasar.
   - Son entrenadores que existían pero no salían en ningún mapa, así que no se gastan flags ni se rompe la partida guardada.
   - `reescalar_niveles.py` les pone el nivel de su tramo (`ENTRENADORES_ISLAS`), pero no cuentan para la banda del tramo: así no cambia el nivel de nadie más.
 - **Salvajes** (`tools/dualocke/zonas_nuevas.py`): pesca en las cuatro islas, hierba en el interior de la ISLA SUR y de la ISLA LEJANA, y cueva en ROCA OMBLIGO.
@@ -464,6 +484,7 @@ Las rarezas del juego original (puertas del ferry fuera del mapa…) están en `
 
 - **`tools/dualocke/aleatorio/zonas.py`:** hay que poner ahí el prefijo de los mapas de la zona (`PREFIJOS`) y el de los flags de sus objetos (`FLAGS_OBJETOS`, el de su grupo en `colocar_objetos.py`). Así sus salvajes y objetos se sortean aparte, al final. Sin eso, como los mapas se recorren por orden alfabético, los objetos nuevos cambian casi todos los objetos del suelo, la Recogida y lo que piden los intercambios de las semillas en curso. Pasó con el #81 y otra vez con todas las zonas del #84 al #98.
 - **Que nadie se quede encerrado:** `tools/dualocke/sin_salida.py` mira, en cada mapa de las zonas nuevas, si desde todo sitio al que se llega andando se puede volver a una salida. El barro solo se baja sin la bici de carreras, y los saltos son de un sentido. En la CUMBRE METEORO se bajaba al guardián por una cuesta de barro y Miguel se quedó encerrado (18/11/2026). Va en el CI.
+- **Que ningún entrenador ni persona tape el paso** (también en `sin_salida.py`, 19/11/2026): entre las salidas del mapa (puertas, bordes y los sitios a los que te deja un script, como el barco) se tiene que poder ir igual con las personas que sin ellas. Cuentan las que no se mueven ni desaparecen nunca (flag `"0"`). En la ISLA SUR, TERRY estaba en la única casilla del sendero y no se llegaba a la cueva (lo vio Miguel); en la ISLA LEJANA, MIKE tapaba igual un pasillo de una casilla (lo vio el script).
 - **Que se pueda llegar desde el juego, no solo desde el borde de la zona:** `tools/dualocke/alcance.py` (#97) recorre Hoenn desde PUEBLO ESCASO y dice en qué tramo se llega a cada mapa. En las rutas de mar, el mar de fuera de la barrera de rocas es decorado: si la zona se conecta por ese borde, no se puede entrar.
 - **`HOENN_EXTRA_MAPSEC_LAST`** (`src/dualocke.c`) tiene que ser la última zona nueva; si no, la zona no tiene captura propia. `comprobar_zonas.py` lo avisa.
 - **Entrenadores:** están todos los de Esmeralda usados (864 de 864). Una zona nueva con entrenadores nuevos necesita subir `TRAINERS_COUNT`, y eso mueve los flags del sistema de las partidas guardadas: hay que reutilizar o pensarlo antes.
@@ -562,6 +583,9 @@ El primer bioma "por tipo". Miguel pidió que cada tipo tenga su bioma; el anál
   - **Un risco** separa la playa de la meseta, con una escalera (x 16-17, fila 18).
   - **Arriba y a la izquierda, la meseta:** pradera con manchas de hierba alta, árboles, flores, un camino de tierra de la escalera a las termas y una peña volcánica de la RUTA 112.
   - **Las termas:** el rincón de las aguas termales de LAVACALDA, con su poza y su arena, bajo el acantilado del volcán.
+- **Bordes (arreglo, 19/11/2026; lo vio Miguel jugando):** el borde del mapa era la roca rosa del MONTE CENIZO y se veía un relleno rosa al acercarse a los bordes, y la arena y el mar se cortaban de golpe arriba y abajo. Ahora el borde es de árboles, como la playa de la RUTA 104. Arriba, el acantilado del volcán sigue sobre la arena y el mar acaba en una fila de rocas; abajo, la playa acaba en árboles y el mar en rocas. Se sigue cruzando a la RUTA 122 por las filas 2-7.
+  - Miguel dijo además que "las capturas en el agua rompen el personaje" y que hay "gráficos raros". No se ha podido reproducir: en el emulador se surfeó, se combatió, se huyó y se capturó en el agua de la playa y el personaje se ve bien. Falta que diga dónde le pasó (una foto o el `.sav`).
+  - El tiempo es **sequía** (`WEATHER_DROUGHT`, sol también en combate): aclara mucho los colores del mapa. Si son esos los "gráficos raros", con `WEATHER_SUNNY` se ve normal, pero no hay sol en combate. Lo decide Miguel.
 - **Guardián** en la arena: sin semilla, Slither Wing a nivel 70 (regla `"tope"`); premio, Energía Potenciadora y su megapiedra si tiene. `FLAG_DUALOCKE_GUARDIAN_PLAYA` (0x917).
 - **Un bañista junto a las termas.** No hay entrenadores: ya no queda ninguno libre.
 - **Zona de captura propia:** `MAPSEC_PLAYA_VOLCANICA` (115 de 128).
@@ -1058,6 +1082,11 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
     - Solucionario comparado con la 8: idéntico, más los 13 fósiles nuevos en los regalos.
   - **Versión 8.3** (18/11/2026): las mismas semillas. Cada especie tiene tantas habilidades como en el original, distintas (decidido por Miguel). Las partidas siguen valiendo; los Pokémon con el hueco 1 o el oculto cambian de habilidad, el resto se queda igual.
     - Solucionario comparado con la 8.2: idéntico salvo las habilidades, y en ellas la primera de cada especie es la misma.
+  - **Versión 8.4** (19/11/2026): las mismas semillas; las partidas siguen valiendo. Arregla lo que vio Miguel jugando:
+    - TERRY ya no tapa el camino de la ISLA SUR, ni MIKE el de la ISLA LEJANA;
+    - los bordes de la PLAYA VOLCÁNICA;
+    - fotos del juego en las pistas de megapiedras y Ticket-Recuerdo de la guía.
+    - Solucionario comparado con la 8.3: idéntico.
 - **Semillas actuales (versión 8):** Miguel `3632113266` (`Esmeralda Dualocke - Mikemine.gba`), Jorge `2425682645` (`Esmeralda Dualocke - Jorgemori.gba`).
 - Semillas de las versiones anteriores (partidas abandonadas):
   - versiones 5-7: Miguel `2918696854`, Jorge `2780853751`;
@@ -1092,7 +1121,8 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
 - Randomizer completo (Jorge, sección 7) y traducción al español de la historia (Miguel y Jorge, sección 8).
 - Bolsillos Medicinas y Megapiedras en la mochila (Jorge, sección 6).
 - Recuerdamovimientos en los Centros Pokémon y Ticket-Recuerdo por las rutas (Miguel, sección 6).
-- **Guía para jugar** en `GUIA.html` (se abre con el navegador): cómo avanzar, caps y niveles de los jefes, objetos nuevos, pistas de megapiedras y Ticket-Recuerdo, y novedades. Tiene también una **Pokédex** (estadísticas base, tipos, debilidades, evoluciones y megas, con sprites). Las pistas salen de los mapas con `python3 tools/dualocke/guia.py` y la Pokédex del código con `python3 tools/dualocke/guia_pokedex.py`; el resto se edita a mano. Las evoluciones raras salen explicadas: Tandemaus (nivel 25 subiendo en combate, no con Caramelo Raro fuera de combate), Shedinja, Sirfetch'd y las que no se pueden hacer en Hoenn (Runerigus, Urshifu).
+- **Guía para jugar** en `GUIA.html` (se abre con el navegador): cómo avanzar, caps y niveles de los jefes, objetos nuevos, pistas de megapiedras y Ticket-Recuerdo, y novedades. Tiene también una **Pokédex** (estadísticas base, tipos, debilidades, evoluciones y megas, con sprites). Las pistas salen de los mapas con `python3 tools/dualocke/guia.py` y la Pokédex del código con `python3 tools/dualocke/guia_pokedex.py`; el resto se edita a mano.
+  - **Fotos de las pistas** (pedidas por Miguel, 19/11/2026): cada megapiedra y cada Ticket-Recuerdo tiene, entre "Más pistas" y "Solución", una **foto del juego** con el sitio marcado con un círculo rojo. Las saca `python3 tools/dualocke/emulador/fotos_guia.py` con el emulador sin pantalla (ver la sección 3), poniendo al jugador al lado; van dentro de `GUIA.html` (WebP, unos 2,7 MB las 161). Si se mueve un objeto: `guia.py` y después `fotos_guia.py`. Las evoluciones raras salen explicadas: Tandemaus (nivel 25 subiendo en combate, no con Caramelo Raro fuera de combate), Shedinja, Sirfetch'd y las que no se pueden hacer en Hoenn (Runerigus, Urshifu).
 - **Siguiente: jugar y probarlo todo junto.** Lista de qué mirar en `PRUEBAS.md`.
 
 ### Pendiente para el próximo locke
@@ -1143,7 +1173,8 @@ Quién hace cada cosa y cómo se sube: sección 13.
 | Equipos de los jefes (+1/+2, megas) | `tools/dualocke/equipos_jefes.py` |
 | Megapiedras, objetos competitivos y Ticket-Recuerdo por el mapa | `tools/dualocke/colocar_objetos.py` |
 | Recuerdamovimientos de los Centros Pokémon | `data/scripts/dualocke_recuerda_movimientos.inc` |
-| Guía para jugar (walkthrough, caps, pistas de objetos, Pokédex, novedades) | `GUIA.html` (pistas: `tools/dualocke/guia.py`; Pokédex: `tools/dualocke/guia_pokedex.py`) |
+| Guía para jugar (walkthrough, caps, pistas de objetos, Pokédex, novedades) | `GUIA.html` (pistas: `tools/dualocke/guia.py`; fotos de las pistas: `tools/dualocke/emulador/fotos_guia.py`; Pokédex: `tools/dualocke/guia_pokedex.py`) |
+| Emulador sin pantalla y ROM de pruebas (`make DUALOCKE_PRUEBA=1`) | `tools/dualocke/emulador/`, `src/dualocke_prueba.c`, `include/dualocke_prueba.h`; ganchos con `#ifdef DUALOCKE_PRUEBA` en `main_menu.c`, `new_game.c`, `overworld.c`, `field_weather_effect.c` y `trainer_see.c` |
 | Evolución por nivel de los entrenadores normales | `tools/dualocke/evolucionar_entrenadores.py` |
 | Entrenadores | `src/data/trainers.party` |
 | Tiendas | scripts de cada mapa en `data/maps/*/scripts.inc` (`pokemart`) |

@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke_prueba.h"
 #include "battle_anim.h"
 #include "event_object_movement.h"
 #include "fieldmap.h"
@@ -2528,6 +2529,10 @@ void SetSavedWeatherFromCurrMapHeader(void)
 {
     enum OverworldWeather oldWeather = gSaveBlock1Ptr->weather;
     gSaveBlock1Ptr->weather = TranslateWeatherNum(gMapHeader.weather);
+#ifdef DUALOCKE_PRUEBA
+    if (Dualocke_PruebaFoto())
+        gSaveBlock1Ptr->weather = WEATHER_NONE;
+#endif
     UpdateRainCounter(gSaveBlock1Ptr->weather, oldWeather);
 }
 
