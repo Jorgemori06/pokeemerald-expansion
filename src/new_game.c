@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke_prueba.h"
 #include "dualocke.h"
 #include "clock.h"
 #include "new_game.h"
@@ -136,6 +137,10 @@ static void ClearFrontierRecord(void)
 
 static void WarpToTruck(void)
 {
+#ifdef DUALOCKE_PRUEBA
+    if (Dualocke_PruebaDestino())
+        return;
+#endif
     if (IS_FRLG)
         SetWarpDestination(MAP_GROUP(MAP_PALLET_TOWN_PLAYERS_HOUSE_2F), MAP_NUM(MAP_PALLET_TOWN_PLAYERS_HOUSE_2F), WARP_ID_NONE, 6, 6);
     else
@@ -228,6 +233,9 @@ void NewGameInitData(void)
     InitMatchCallCounters();
     ClearMysteryGift();
     WipeTrainerNameRecords();
+#ifdef DUALOCKE_PRUEBA
+    Dualocke_PruebaPreparar();
+#endif
     ResetTrainerHillResults();
     ResetTrainerTowerResults();
     ResetContestLinkResults();

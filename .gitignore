@@ -69,3 +69,6 @@ __pycache__
 dualocke_semilla.txt
 src/data/dualocke_iniciales.h
 src/data/dualocke_aleatorio.h
+
+# Dualocke: el emulador de pruebas se compila solo (tools/dualocke/emulador/gbarun.c)
+tools/dualocke/emulador/gbarun

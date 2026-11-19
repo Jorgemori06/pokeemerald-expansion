@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke_prueba.h"
 #include "battle_setup.h"
 #include "event_data.h"
 #include "event_object_movement.h"
@@ -438,6 +439,11 @@ bool8 CheckForTrainersWantingBattle(void)
     u8 i;
     u8 trainerObjects[OBJECT_EVENTS_COUNT] = {0};
     u8 trainerObjectsCount = 0;
+
+#ifdef DUALOCKE_PRUEBA
+    if (Dualocke_PruebaFoto()) // las fotos de la guía, sin entrenadores que vienen a por ti
+        return FALSE;
+#endif
 
     if (FlagGet(OW_FLAG_NO_TRAINER_SEE))
         return FALSE;

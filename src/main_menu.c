@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke_prueba.h"
 #include "dualocke_es.h"
 #include "trainer_pokemon_sprites.h"
 #include "bg.h"
@@ -1297,6 +1298,15 @@ static void HighlightSelectedMainMenuItem(enum PartyMenuType menuType, u8 select
 
 static void Task_NewGameBirchSpeech_Init(u8 taskId)
 {
+#ifdef DUALOCKE_PRUEBA
+    if (Dualocke_PruebaActiva())
+    {
+        Dualocke_PruebaNombre();
+        SetMainCallback2(CB2_NewGame);
+        DestroyTask(taskId);
+        return;
+    }
+#endif
     SetGpuReg(REG_OFFSET_DISPCNT, 0);
     SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_OBJ_ON | DISPCNT_OBJ_1D_MAP);
     InitBgFromTemplate(&sBirchBgTemplate);

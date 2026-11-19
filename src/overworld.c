@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke_prueba.h"
 #include "overworld.h"
 #include "battle_pyramid.h"
 #include "battle_setup.h"
@@ -1104,6 +1105,11 @@ bool32 Overworld_IsBikingAllowed(void)
 // Flash level of 8 is fully black
 void SetDefaultFlashLevel(void)
 {
+#ifdef DUALOCKE_PRUEBA
+    if (Dualocke_PruebaFoto())
+        gSaveBlock1Ptr->flashLevel = 0;
+    else
+#endif
     if (!gMapHeader.cave)
         gSaveBlock1Ptr->flashLevel = 0;
     else if (FlagGet(FLAG_SYS_USE_FLASH))
@@ -1942,6 +1948,10 @@ void CB2_NewGame(void)
         gFieldCallback = FieldCB_WarpExitFadeFromBlack;
     else
         gFieldCallback = ExecuteTruckSequence;
+#ifdef DUALOCKE_PRUEBA
+    if (Dualocke_PruebaActiva())
+        gFieldCallback = FieldCB_WarpExitFadeFromBlack;
+#endif
     gFieldCallback2 = NULL;
     DoMapLoadLoop(&gMain.state);
     SetFieldVBlankCallback();

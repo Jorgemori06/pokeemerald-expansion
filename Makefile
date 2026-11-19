@@ -96,6 +96,12 @@ ifeq ($(RELEASE),1)
 	FILE_NAME := $(FILE_NAME)-release
 endif
 
+# Dualocke: ROM de pruebas para el emulador sin pantalla (tools/dualocke/emulador/). Nunca es la que se juega.
+DUALOCKE_PRUEBA ?= 0
+ifeq ($(DUALOCKE_PRUEBA),1)
+	FILE_NAME := $(FILE_NAME)-prueba
+endif
+
 ROM_NAME := $(FILE_NAME).gba
 OBJ_DIR_NAME := $(BUILD_DIR)/$(BUILD_NAME)
 OBJ_DIR_NAME_TEST := $(BUILD_DIR)/$(BUILD_NAME)-test
@@ -123,6 +129,9 @@ ifeq ($(DEBUG),1)
 endif
 ifeq ($(RELEASE),1)
   OBJ_DIR := $(OBJ_DIR_NAME_RELEASE)
+endif
+ifeq ($(DUALOCKE_PRUEBA),1)
+  OBJ_DIR := $(BUILD_DIR)/$(BUILD_NAME)-prueba
 endif
 ELF := $(ROM:.gba=.elf)
 MAP := $(ROM:.gba=.map)
@@ -157,6 +166,9 @@ else
 O_LEVEL ?= 2
 endif
 CPPFLAGS := $(INCLUDE_CPP_ARGS) -Wno-trigraphs -DMODERN=1 -DTESTING=$(TEST) -D$(GAME_VERSION) -std=gnu17
+ifeq ($(DUALOCKE_PRUEBA),1)
+  CPPFLAGS += -DDUALOCKE_PRUEBA
+endif
 ifeq ($(RELEASE),1)
 	override CPPFLAGS += -DRELEASE
 	ifeq ($(USE_LTO_ON_RELEASE),1)
