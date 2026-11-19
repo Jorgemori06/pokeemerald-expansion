@@ -162,6 +162,7 @@ def main():
                 print(f"Dualocke: {objeto} no está en {carpeta} (¿falta lanzar colocar_objetos.py?)")
                 continue
             sitio["nombre"] = nombre_fijo or nombres.get(f"ITEM_{objeto}", objeto)
+            sitio["mapa"] = carpeta  # para las fotos (tools/dualocke/emulador/fotos_guia.py)
             datos[clave].append(sitio)
     for lista in datos.values():
         lista.sort(key=lambda s: (s["tramo"], s["zona"], s["parte"], s["nombre"]))
