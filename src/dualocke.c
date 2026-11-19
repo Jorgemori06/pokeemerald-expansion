@@ -17,6 +17,8 @@
 #include "constants/moves.h"
 #include "constants/battle.h"
 #include "constants/region_map_sections.h"
+#include "dualocke_aleatorio.h"
+#include "data/dualocke_fosiles.h"
 
 // Dualocke: sistema de vidas y caja de muertos.
 // - Cada Pokémon del jugador que acaba un combate debilitado muere: se mueve a la
@@ -764,4 +766,37 @@ void Dualocke_CapTrainerMonTo(enum Species *species, u8 *level, u32 cap)
         return;
     *level = cap;
     *species = Dualocke_SpeciesForWildLevel(*species, *level);
+}
+
+// Fósiles de otras generaciones (los reparte el randomizer de objetos del suelo): el INVESTIGADOR de
+// DEVON solo sabía revivir el Fósil Raíz y el Fósil Garra (lo vio Miguel, 18/11/2026).
+// data/scripts/dualocke_fosiles.inc. VAR_RESULT: el primero de la tabla que lleve el jugador, o ITEM_NONE.
+void Dualocke_BuscarFosil(void)
+{
+    u32 i;
+
+    gSpecialVar_Result = ITEM_NONE;
+    for (i = 0; i < ARRAY_COUNT(sDualockeFosiles); i++)
+    {
+        if (CheckBagHasItem(sDualockeFosiles[i][0], 1))
+        {
+            gSpecialVar_Result = sDualockeFosiles[i][0];
+            return;
+        }
+    }
+}
+
+// Del fósil que se está reviviendo (VAR_WHICH_FOSSIL_REVIVED guarda su objeto): VAR_0x8004 = la especie
+// original (la que se pasa a givemon, que la cambia por la de la semilla) y VAR_0x8005 = la que sale.
+void Dualocke_EspecieFosil(void)
+{
+    u32 i, item = VarGet(VAR_WHICH_FOSSIL_REVIVED);
+
+    gSpecialVar_0x8004 = SPECIES_NONE;
+    for (i = 0; i < ARRAY_COUNT(sDualockeFosiles); i++)
+    {
+        if (sDualockeFosiles[i][0] == item)
+            gSpecialVar_0x8004 = sDualockeFosiles[i][1];
+    }
+    gSpecialVar_0x8005 = Dualocke_RegaloAleatorio(gSpecialVar_0x8004);
 }

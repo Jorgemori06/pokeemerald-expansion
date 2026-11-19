@@ -810,3 +810,32 @@ TEST("Dualocke: un salvaje por debajo del cap no cambia")
     EXPECT_EQ(level, 40);
     EXPECT_EQ(species, SPECIES_PIDGEOT);
 }
+
+TEST("Dualocke: DEVON encuentra los fósiles de otras generaciones en la mochila")
+{
+    ClearBag();
+    Dualocke_BuscarFosil();
+    EXPECT_EQ(gSpecialVar_Result, ITEM_NONE);
+
+    AddBagItem(ITEM_PLUME_FOSSIL, 1);
+    Dualocke_BuscarFosil();
+    EXPECT_EQ(gSpecialVar_Result, ITEM_PLUME_FOSSIL);
+    ClearBag();
+}
+
+TEST("Dualocke: el fósil que se revive da su POKéMON (sin semilla, el original)")
+{
+    VarSet(VAR_WHICH_FOSSIL_REVIVED, ITEM_PLUME_FOSSIL);
+    Dualocke_EspecieFosil();
+    EXPECT_EQ(gSpecialVar_0x8004, SPECIES_ARCHEN);
+    EXPECT_EQ(gSpecialVar_0x8005, SPECIES_ARCHEN);
+
+    VarSet(VAR_WHICH_FOSSIL_REVIVED, ITEM_OLD_AMBER);
+    Dualocke_EspecieFosil();
+    EXPECT_EQ(gSpecialVar_0x8004, SPECIES_AERODACTYL);
+
+    // Los de Esmeralda (1 y 2) siguen con su script original: aquí no dan nada
+    VarSet(VAR_WHICH_FOSSIL_REVIVED, 1);
+    Dualocke_EspecieFosil();
+    EXPECT_EQ(gSpecialVar_0x8004, SPECIES_NONE);
+}

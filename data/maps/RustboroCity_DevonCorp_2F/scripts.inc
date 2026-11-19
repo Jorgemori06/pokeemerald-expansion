@@ -64,7 +64,7 @@ RustboroCity_DevonCorp_2F_EventScript_FossilScientist::
 	goto_if_eq VAR_RESULT, TRUE, RustboroCity_DevonCorp_2F_EventScript_NoticeRootFossil
 	checkitem ITEM_CLAW_FOSSIL
 	goto_if_eq VAR_RESULT, TRUE, RustboroCity_DevonCorp_2F_EventScript_NoticeClawFossil
-	release
+	goto Dualocke_EventScript_FosilOtro  @ Dualocke: fósiles de otras generaciones
 	end
 
 @ This whole section has needless duplication and could be condensed considerably
@@ -127,6 +127,7 @@ RustboroCity_DevonCorp_2F_EventScript_StillRegenerating::
 RustboroCity_DevonCorp_2F_EventScript_FossilMonReady::
 	goto_if_eq VAR_WHICH_FOSSIL_REVIVED, 1, RustboroCity_DevonCorp_2F_EventScript_LileepReady
 	goto_if_eq VAR_WHICH_FOSSIL_REVIVED, 2, RustboroCity_DevonCorp_2F_EventScript_AnorithReady
+	goto Dualocke_EventScript_FosilListo  @ Dualocke: fósiles de otras generaciones
 	end
 
 RustboroCity_DevonCorp_2F_EventScript_LileepReady::

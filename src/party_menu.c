@@ -5046,7 +5046,10 @@ void Task_AbilityPatch(u8 taskId)
     {
     case 0:
         // Can't use.
+        // Dualocke: con la semilla cada especie tiene una sola habilidad en todos sus huecos, así que el
+        // parche no la cambiaría; antes se gastaba igual (lo vio Miguel, 18/11/2026)
         if (GetSpeciesAbility(tSpecies, tAbilityNum) == 0
+            || GetSpeciesAbility(tSpecies, tAbilityNum) == GetMonAbility(&gParties[B_TRAINER_PLAYER][tMonId])
             || !tSpecies
             )
         {

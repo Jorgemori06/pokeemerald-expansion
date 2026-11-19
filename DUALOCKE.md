@@ -461,6 +461,7 @@ Las rarezas del juego original (puertas del ferry fuera del mapa…) están en `
 ### Al añadir una zona nueva: que no cambie lo de las partidas en curso (Jorge, 16-17/11/2026)
 
 - **`tools/dualocke/aleatorio/zonas.py`:** hay que poner ahí el prefijo de los mapas de la zona (`PREFIJOS`) y el de los flags de sus objetos (`FLAGS_OBJETOS`, el de su grupo en `colocar_objetos.py`). Así sus salvajes y objetos se sortean aparte, al final. Sin eso, como los mapas se recorren por orden alfabético, los objetos nuevos cambian casi todos los objetos del suelo, la Recogida y lo que piden los intercambios de las semillas en curso. Pasó con el #81 y otra vez con todas las zonas del #84 al #98.
+- **Que nadie se quede encerrado:** `tools/dualocke/sin_salida.py` mira, en cada mapa de las zonas nuevas, si desde todo sitio al que se llega andando se puede volver a una salida. El barro solo se baja sin la bici de carreras, y los saltos son de un sentido. En la CUMBRE METEORO se bajaba al guardián por una cuesta de barro y Miguel se quedó encerrado (18/11/2026). Va en el CI.
 - **Que se pueda llegar desde el juego, no solo desde el borde de la zona:** `tools/dualocke/alcance.py` (#97) recorre Hoenn desde PUEBLO ESCASO y dice en qué tramo se llega a cada mapa. En las rutas de mar, el mar de fuera de la barrera de rocas es decorado: si la zona se conecta por ese borde, no se puede entrar.
 - **`HOENN_EXTRA_MAPSEC_LAST`** (`src/dualocke.c`) tiene que ser la última zona nueva; si no, la zona no tiene captura propia. `comprobar_zonas.py` lo avisa.
 - **Entrenadores:** están todos los de Esmeralda usados (864 de 864). Una zona nueva con entrenadores nuevos necesita subir `TRAINERS_COUNT`, y eso mueve los flags del sistema de las partidas guardadas: hay que reutilizar o pensarlo antes.
@@ -780,10 +781,15 @@ Están en **`tools/dualocke/randomizer_config.json`**, que es el archivo que deb
 **Pokémon**
 - Iniciales aleatorios (forma base de 3 fases y en triángulo de tipos, ver arriba). **Hecho** (`tools/dualocke/aleatorio/iniciales.py`): además, las dos evoluciones tienen que ser por nivel o con objeto, para poder hacerlas en el juego. Salen en `src/data/dualocke_iniciales.h` (generado; lo usa `src/starter_choose.c`).
 - Habilidades aleatorias, permitiendo Superguarda. **Hecho** (`tools/dualocke/aleatorio/habilidades.py`; decidido por Miguel en el #27): **una por especie**, la misma en todos sus huecos (todos los Zigzagoon con la misma, también los del jugador). Ninguna prohibida, tampoco en los jefes. Solo se quitan las que dependen de una especie y el juego no deja cambiar (Cambio Táctico, Multitipo, Disfraz…: `cantBeOverwritten`).
+  - **Parche Habilidad** (arreglo, Jorge, 18/11/2026; lo vio Miguel jugando): como la habilidad oculta es la misma que la normal, gastaba el parche sin cambiar nada. Ahora dice "No tendría efecto" y no se gasta. La Cápsula Habilidad ya lo hacía. Que el parche sirva para algo, por ejemplo con una habilidad oculta propia al azar, está pendiente de decidir.
   - **Sin habilidades de relleno** (arreglado el 27/10/2026, Jorge): `ABILITY_314`, `ABILITY_317` y Guardia Aura no hacen nada y ya no salen. Si el sorteo cae en una, solo esa especie se vuelve a sortear, así que las semillas en curso no cambian en nada más.
 - Pokémon estáticos completamente aleatorios. **Hecho** (`tools/dualocke/aleatorio/estaticos.py`; decidido por Jorge el 25/10/2026):
   - **Estáticos** (`setwildbattle`: Kecleon, Voltorb, Electrode, Regis, Groudon, Kyogre, Rayquaza, Sudowoodo; y los errantes Latios/Latias): **todo al azar**, legendarios incluidos, a su nivel. Cada especie original cambia por la misma en todos sus sitios (todos los Kecleon del Detector son la misma especie nueva).
   - **Regalos** (Beldum, fósiles, Castform, iniciales de Johto) **y huevos** (Wynaut, Pichu): al azar, sin legendarios, a su nivel; los huevos, siempre la forma base.
+  - **Fósiles de otras generaciones** (arreglo, Jorge, 18/11/2026; lo vio Miguel jugando): el randomizer de objetos del suelo reparte todos los fósiles (Fósil Pluma, Fósil Coraza, Ámbar Viejo, los de Galar…), pero el INVESTIGADOR de DEVON solo sabía revivir el Raíz y el Garra.
+    - Ahora revive cualquiera, a nivel 20: `data/scripts/dualocke_fosiles.inc`, con la tabla de fósiles y su POKéMON en `src/data/dualocke_fosiles.h`.
+    - Con semilla sale otro al azar, como los demás regalos: si es repetido o legendario, va a VETADOS. Se sortean aparte (`fosiles()` en `aleatorio/estaticos.py`, con su propio generador), así que los regalos de antes no cambian.
+    - Los de Galar, que en los juegos de verdad se juntan de dos en dos, aquí reviven uno cada uno.
   - El **sprite del mapa** y los **textos** siguen siendo los del original ("Has recibido un BELDUM"): se descubre al combatir o al recibirlo (decidido por Jorge: da igual). El mensaje de "enviado al PC" sí nombra al nuevo.
   - No se tocan los scripts: `src/dualocke_aleatorio.c` cambia la especie al vuelo en `setwildbattle`, `givemon`, `giveegg` y los errantes, con la tabla generada `src/data/dualocke_aleatorio.h` (vacía sin semilla).
 - Estadísticas base de Gen 9 (ya vienen así en el motor) sin aleatorizar sus valores.
@@ -1003,7 +1009,7 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
 
 ## 9. Estado y siguientes pasos
 
-### Locke en curso (empezado de nuevo el 18/11/2026, con la versión 8; ahora la 8.1)
+### Locke en curso (empezado de nuevo el 18/11/2026, con la versión 8; ahora la 8.2)
 
 - ROMs hechas por Claude con `make release` (sin menús de depuración).
   - **Versión 1** (26/10/2026): commit `46ba7600` (con #36 y #37).
@@ -1040,6 +1046,11 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
     - la MARISMA AZULIZA ya no tapa la RUTA 106 desde AZULIZA;
     - la hierba muy alta cortada de la marisma.
     - Solucionario comparado con la 8 en las dos semillas: idéntico.
+  - **Versión 8.2** (18/11/2026): las mismas semillas, así que las partidas siguen valiendo. Arregla lo siguiente que vio Miguel jugando:
+    - se sale de la zona del guardián de la CUMBRE METEORO sin la bici de carreras;
+    - el Parche Habilidad ya no se gasta sin hacer nada;
+    - DEVON revive los fósiles de todas las generaciones.
+    - Solucionario comparado con la 8: idéntico, más los 13 fósiles nuevos en los regalos.
 - **Semillas actuales (versión 8):** Miguel `3632113266` (`Esmeralda Dualocke - Mikemine.gba`), Jorge `2425682645` (`Esmeralda Dualocke - Jorgemori.gba`).
 - Semillas de las versiones anteriores (partidas abandonadas):
   - versiones 5-7: Miguel `2918696854`, Jorge `2780853751`;
