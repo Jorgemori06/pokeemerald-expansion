@@ -113,12 +113,18 @@ bool32 Dualocke_IntercambioAleatorio(u32 intercambio, enum Species *especie, enu
     return FALSE;
 }
 
-// Habilidad de la especie con el randomizer (una por especie), o ABILITY_NONE si no cambia
-enum Ability Dualocke_HabilidadAleatoria(enum Species species)
+// Habilidades de la especie con el randomizer, en sus 3 huecos (tantas como en el original, distintas).
+// Devuelve ABILITY_NONE si la especie no cambia; entonces vale la original.
+bool32 Dualocke_HabilidadesAleatorias(enum Species species)
 {
-    if (species >= NUM_SPECIES)
+    return species < NUM_SPECIES && sDualockeHabilidades[species][0] != ABILITY_NONE;
+}
+
+enum Ability Dualocke_HabilidadAleatoria(enum Species species, u8 slot)
+{
+    if (!Dualocke_HabilidadesAleatorias(species) || slot >= 3)
         return ABILITY_NONE;
-    return sDualockeHabilidades[species];
+    return sDualockeHabilidades[species][slot];
 }
 
 // Movimiento que enseña una MT (el original si no cambia)

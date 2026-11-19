@@ -59,9 +59,9 @@ def generar(comentario, estaticos=None, regalos=None, suelo=None, recogida=None,
         filas.append(f"    {{{clave}, {i['especie']}, {i['pide']}, {i['objeto']}, {{{ivs}}}}},")
     lineas += filas or ["    {0xFFFF},"]
     lineas += ["};"]
-    lineas += ["// Habilidades: una por especie (0 = la original)",
-               "static const u16 sDualockeHabilidades[NUM_SPECIES] =", "{"]
-    lineas += [f"    [{e}] = {h}," for e, h in sorted((habilidades or {}).items())] or ["    0,"]
+    lineas += ["// Habilidades por especie, en sus 3 huecos (0 en los 3 = las originales)",
+               "static const u16 sDualockeHabilidades[NUM_SPECIES][3] =", "{"]
+    lineas += [f"    [{e}] = {{{', '.join(h)}}}," for e, h in sorted((habilidades or {}).items())] or ["    {0},"]
     lineas += ["};"]
     lineas += ["// MT: objeto -> movimiento nuevo; quién las aprende, con qué probabilidad (en %)",
                f"#define DUALOCKE_COMPATIBILIDAD_MT {compatibilidad_mt if mts else 0}",

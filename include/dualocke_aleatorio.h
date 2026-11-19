@@ -18,7 +18,8 @@ enum Item Dualocke_ObjetoSalvaje(bool32 masProbable);
 bool32 Dualocke_IntercambioAleatorio(u32 intercambio, enum Species *especie, enum Species *pide, enum Item *objeto, u8 *ivs);
 
 // Habilidades (habilidades.py): ABILITY_NONE si la especie se queda con las suyas
-enum Ability Dualocke_HabilidadAleatoria(enum Species species);
+bool32 Dualocke_HabilidadesAleatorias(enum Species species);
+enum Ability Dualocke_HabilidadAleatoria(enum Species species, u8 slot);
 
 // MT (mts.py). Dualocke_MovimientoMT y Dualocke_ObjetoMT están declaradas en include/item.h.
 s32 Dualocke_PuedeAprenderMT(enum Species species, enum Move move);

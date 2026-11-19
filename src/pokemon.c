@@ -3225,10 +3225,10 @@ enum Type GetSpeciesType(enum Species species, u8 slot)
 
 enum Ability GetSpeciesAbility(enum Species species, u8 slot)
 {
-    // Dualocke: con el randomizer, una habilidad al azar por especie (la misma en todos los huecos)
-    enum Ability ability = Dualocke_HabilidadAleatoria(SanitizeSpeciesId(species));
-    if (ability != ABILITY_NONE)
-        return ability;
+    // Dualocke: con el randomizer, sus habilidades al azar (tantas como en el original, distintas). Los
+    // huecos que la especie no tiene siguen vacíos.
+    if (Dualocke_HabilidadesAleatorias(SanitizeSpeciesId(species)))
+        return Dualocke_HabilidadAleatoria(SanitizeSpeciesId(species), slot);
     return gSpeciesInfo[SanitizeSpeciesId(species)].abilities[slot];
 }
 
