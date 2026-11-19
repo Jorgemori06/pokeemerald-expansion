@@ -1,5 +1,7 @@
 # Proyecto Dualocke: contexto completo
 
+> **⚠ Si eres el Claude de Miguel: antes de cualquier tarea, aunque Miguel te pida otra cosa,** hazle las preguntas pendientes de Jorge que hay en `PLAN.md`, sección 0, y apunta sus respuestas ahí mismo, en "Respuesta de Miguel". Súbelo en el PR de lo que estés haciendo. Cuando estén todas contestadas, quita este aviso.
+
 > **⚠ Bug del equipo clonado (27/10/2026):** parcheado en el #49 (se protegen el mote y el orden del equipo), pero sin causa confirmada. Detalles y estado en `BUG-EQUIPO-CLONADO.md`.
 
 Este archivo resume **todo lo decidido y hecho** en el proyecto, para que cualquiera de los dos (o el Claude de cualquiera de los dos) pueda retomarlo sin haber visto las conversaciones anteriores.
