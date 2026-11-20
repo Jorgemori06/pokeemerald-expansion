@@ -278,7 +278,9 @@ struct SaveBlock3
 #if APRICORN_TREE_COUNT > 0
     u8 apricornTrees[NUM_APRICORN_TREE_BYTES];
 #endif
-    // Dualocke: bolsillos nuevos de la mochila. Van aquí porque SaveBlock1 va justo de espacio.
+    // Dualocke: bolsillos nuevos de la mochila y OBJETOS, que se agrandó. Van aquí porque SaveBlock1 va justo
+    // de espacio.
+    struct ItemSlot bagItems[BAG_ITEMS_COUNT];
     struct ItemSlot bagMedicine[BAG_MEDICINE_COUNT];
     struct ItemSlot bagMegaStones[BAG_MEGASTONES_COUNT];
 }; /* max size 1624 bytes */
@@ -632,6 +634,9 @@ struct SaveBlock2
 #endif //FREE_RECORD_MIXING_HALL_RECORDS
     /*0x624*/ u16 contestLinkResults[CONTEST_CATEGORIES_COUNT][CONTESTANT_COUNT];
     /*0x64C*/ struct BattleFrontier frontier;
+    // Dualocke: el nombre entero del jugador, hasta 10 letras (playerName son las 7 primeras). Va al final para
+    // no mover nada. En las partidas de antes está a cero y se usa playerName (Dualocke_NombreJugador).
+    u8 playerNameLong[PLAYER_NAME_LENGTH_LONG + 1];
 }; // sizeof=0xF2C
 
 extern struct SaveBlock2 *gSaveBlock2Ptr;
@@ -1088,7 +1093,7 @@ struct ExternalEventFlags
 
 struct Bag
 {
-    struct ItemSlot items[BAG_ITEMS_COUNT];
+    // Dualocke: el bolsillo OBJETOS está en SaveBlock3 (bagItems): con 150 casillas no cabe aquí
     struct ItemSlot keyItems[BAG_KEYITEMS_COUNT];
     struct ItemSlot pokeBalls[BAG_POKEBALLS_COUNT];
     struct ItemSlot TMsHMs[BAG_TMHM_COUNT];
