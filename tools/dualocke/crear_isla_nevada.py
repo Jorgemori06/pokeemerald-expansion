@@ -33,6 +33,9 @@ MAPA_ISLA, MAPA_CUEVA = "MAP_ISLA_NEVADA", "MAP_ISLA_NEVADA_CUEVA"
 MAPSEC = "MAPSEC_ISLA_NEVADA"
 ANCHO, ALTO = 80, 40
 # m mar   b bajío   s arena   X roca de mar   W roca con remolino (como en crear_islas_sur.py)
+# Abajo, una fila de rocas cierra el mar salvo en las columnas 10-41, por donde se llega desde la RUTA 124:
+# bajando por el resto se llegaba a dos rincones de la 124 cerrados por rocas, y de ahí a ARRECÍPOLIS y a
+# la RUTA 125 (Miguel, 20/11/2026).
 PLANO = """
 mmmmmmmmmmmmmmmmmmWWmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmWWmmmmmmmmmmmmmmmmmmmm
 mmmmmmmmmmmmmmmmmmWWmmmmmmmmbbbbbbbbbbbbbbbbbbbbbmmmmmmmmmWWmmmmmmmmmmmmmmmmmmmm
@@ -72,8 +75,8 @@ mmmmmmmmmmmmmmmmmmmmmmmmXXmmmmmmWWmmmmmmmmmmmmmmmmmmXXmmmmmmWWmmmmmmmmmmmmmmmmmm
 mmmmmmmmmmmmmmmmmmmmmmmmXXmmmmmmWWmmmmmmmmmmmmmmmmmmXXmmmmmmmmmmmmmmmmmmmmmmmmmm
 mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmXXmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmXXmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
-mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
-mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+XXXXXXXXXXmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 """
 # La cresta de roca del islote grande de la RUTA 127 (se copian solo sus casillas de roca; sus dos huecos de
 # base secreta se tapan). En su pie se abre la cueva, con las piezas de la cueva del PILAR CELESTE.
