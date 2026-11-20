@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke.h"
 #include "scanline_effect.h"
 #include "palette.h"
 #include "task.h"
@@ -1018,7 +1019,8 @@ static void PrintNameOnCardFront(void)
     u8 buffer[32];
     u8 *txtPtr;
     txtPtr = StringCopy(buffer, gText_TrainerCardName);
-    StringCopy(txtPtr, sData->trainerCard.playerName);
+    // Dualocke: en tu ficha, el nombre entero
+    StringCopy(txtPtr, sData->isLink ? sData->trainerCard.playerName : Dualocke_NombreJugador());
     ConvertInternationalString(txtPtr, sData->language);
     if (sData->cardType == CARD_TYPE_FRLG)
         AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_NORMAL, 20, 28, sTrainerCardTextColors, TEXT_SKIP_DRAW, buffer);
@@ -1176,7 +1178,7 @@ static void PrintProfilePhraseOnCard(void)
 
 static void BufferNameForCardBack(void)
 {
-    StringCopy(sData->textPlayersCard, sData->trainerCard.playerName);
+    StringCopy(sData->textPlayersCard, sData->isLink ? sData->trainerCard.playerName : Dualocke_NombreJugador()); // Dualocke
     ConvertInternationalString(sData->textPlayersCard, sData->language);
     if (sData->cardType != CARD_TYPE_FRLG)
     {

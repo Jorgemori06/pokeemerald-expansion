@@ -3,6 +3,7 @@
 #include "battle_pike.h"
 #include "battle_pyramid.h"
 #include "dualocke.h"
+#include "constants/characters.h"
 #include "event_data.h"
 #include "global.fieldmap.h"
 #include "item.h"
@@ -35,6 +36,42 @@ void Dualocke_InitNewGame(void)
     FlagClear(FLAG_DUALOCKE_LOCKE_LOST);
     StringCopy(GetBoxNamePtr(DUALOCKE_DEAD_BOX), sText_DeadBoxName);
     StringCopy(GetBoxNamePtr(DUALOCKE_BANNED_BOX), sText_BannedBoxName);
+}
+
+// El nombre del jugador para enseñarlo: el largo (hasta 10 letras) si se ha puesto, y si no, el de 7. Las
+// partidas de antes tienen playerNameLong a cero (sin EOS): se usa playerName.
+const u8 *Dualocke_NombreJugador(void)
+{
+    const u8 *largo = gSaveBlock2Ptr->playerNameLong;
+    u32 i;
+
+    if (largo[0] == EOS)
+        return gSaveBlock2Ptr->playerName;
+    for (i = 0; i <= PLAYER_NAME_LENGTH_LONG; i++)
+    {
+        if (largo[i] == EOS)
+            return largo;
+    }
+    return gSaveBlock2Ptr->playerName;
+}
+
+// Después de poner el nombre en la pantalla de nombres (que escribe en playerNameLong): playerName son sus 7
+// primeras letras, para todo lo que guarda el nombre con tamaño fijo (el EO de los Pokémon, bases secretas…).
+// Si se ha puesto el nombre en playerName (los nombres por defecto), se copia al largo.
+void Dualocke_GuardarNombreJugador(void)
+{
+    u8 *largo = gSaveBlock2Ptr->playerNameLong;
+    u32 i;
+
+    largo[PLAYER_NAME_LENGTH_LONG] = EOS;
+    if (largo[0] == EOS)
+    {
+        StringCopy(largo, gSaveBlock2Ptr->playerName);
+        return;
+    }
+    for (i = 0; i < PLAYER_NAME_LENGTH && largo[i] != EOS; i++)
+        gSaveBlock2Ptr->playerName[i] = largo[i];
+    gSaveBlock2Ptr->playerName[i] = EOS;
 }
 
 u32 Dualocke_GetLives(void)
