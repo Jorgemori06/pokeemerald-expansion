@@ -31,6 +31,19 @@ La versión 8 (ahora la 8.1) ya está hecha y los dos habéis empezado a jugarla
 
 Otra cosa de Jorge, que no hay que decidir ahora: escribir los nombres con el teclado del ordenador (idea 11).
 
+### Las dudas de Jorge del 19/11/2026 (`registro/2026-11-19-jorge-arreglos-prueba-3.md`)
+
+Contestadas por Miguel el 20/11/2026:
+
+1. **DESIERTO PROFUNDO, "no se puede entrar":** Miguel **no encontró el montículo**. La entrada funciona; lo que falla es que no se ve.
+   - **Propuesta:** que se note más. Por ejemplo, un cartel o una pista junto a la puerta de las RUINAS DESIERTO, o una pista en la guía con foto. Está sin decidir quién lo hace.
+2. **PLAYA VOLCÁNICA, el personaje roto:** le pasó **al volver de capturar** un Pokémon en el agua (al acabar el combate, surfeando).
+   - Jorge no lo reproduce en el emulador. Lo siguiente es probar justo eso varias veces: capturar surfeando en la PLAYA VOLCÁNICA y mirar el personaje al volver al mapa.
+3. **PLAYA VOLCÁNICA, el tiempo:** **sol normal** (`WEATHER_SUNNY`), como propone Jorge.
+4. **PLAYA VOLCÁNICA, el estilo:** **rehacerla entera** con `autotile.py`, como las islas del sur.
+   - En vez de la piedra rojiza, Miguel quiere **un paisaje en el que la playa se mezcle con una zona de ceniza**, como la RUTA 113 (la de encima del volcán).
+   - Lo hace Miguel con su Claude, en una rama aparte, conservando el cruce con la RUTA 122 y el cierre arriba y abajo de la #111.
+
 **Para Jorge y para su Claude.** Este es el punto de partida para seguir con el trabajo de las zonas sin tener que leer toda la conversación de Miguel. Está escrito para que Claude lo siga paso a paso.
 
 Antes de empezar, Claude tiene que leer:

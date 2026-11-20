@@ -30,12 +30,22 @@
 | 3 | Entrenadores en las zonas nuevas | **Sí, pero solo en algunas zonas.** Qué zonas y con qué equipos lo decide Miguel más adelante. |
 | 4 | ¿La versión 8 es ya el locke de verdad? | **No, es de prueba.** El locke de verdad empieza cuando estén los nombres, los entrenadores y la mochila más grande. |
 
+## Las dudas de Jorge del 19/11/2026
+
+| Duda | Respuesta de Miguel |
+|---|---|
+| ¿Dónde no pudiste entrar al DESIERTO PROFUNDO? | **No encontró el montículo.** La entrada funciona, pero no se ve: hace falta una pista (cartel o guía). |
+| ¿Cuándo se rompió el personaje en la PLAYA VOLCÁNICA? | **Al volver de capturar** un Pokémon en el agua. |
+| ¿La PLAYA VOLCÁNICA pasa a `WEATHER_SUNNY`? | **Sí, sol normal.** |
+| ¿Basta el arreglo de la #111 o se rehace la PLAYA? | **Rehacerla entera** con `autotile.py`, con la playa mezclada con ceniza, como la RUTA 113, en vez de la piedra rojiza. |
+
 ## Qué se ha cambiado (rama `miguel/respuestas-jorge`)
 
 - **`PLAN.md`, sección 0:** cada pregunta tiene su "Respuesta de Miguel" con la fecha, y el aviso para el Claude de Miguel queda tachado.
 - **`PLAN.md`, sección 5:** el punto de los entrenadores apunta a la decisión.
 - **`IDEAS.md`, ideas 8 y 12:** lo que ha dicho Miguel.
 - **`DUALOCKE.md`:** fuera el aviso del principio, porque ya están todas contestadas.
+- **`PLAN.md`, sección 0:** las dudas de Jorge del 19/11/2026, con las respuestas.
 
 ## Pendiente
 
@@ -43,8 +53,5 @@
 - **Miguel:**
   - en qué zonas van entrenadores, y cuáles;
   - la lista de amigos de los Centros Pokémon (con Jorge);
-  - las dudas de Jorge del 19/11/2026 (`registro/2026-11-19-jorge-arreglos-prueba-3.md`):
-    - dónde no pudo entrar al DESIERTO PROFUNDO;
-    - cuándo se le rompió el personaje en la playa;
-    - si la PLAYA VOLCÁNICA pasa a `WEATHER_SUNNY`.
+  - rehacer la PLAYA VOLCÁNICA (ver arriba).
 - **Los biomas que quedan** (`PLAN.md`, sección 3), empezando por la CANTERA (B).
