@@ -2,7 +2,9 @@
 
 ## 0. Preguntas de Jorge para Miguel (18/11/2026), lo primero
 
-**Para el Claude de Miguel:** antes de hacer cualquier otra cosa, aunque Miguel te pida otra tarea, hazle estas cuatro preguntas, una a una. Apunta lo que diga en su "Respuesta de Miguel", con la fecha, y súbelo en el PR de lo que estés haciendo. Si alguna la deja para más adelante, apúntalo también. Cuando estén todas contestadas, quita el aviso del principio de `DUALOCKE.md`.
+**Contestadas por Miguel el 20/11/2026** (ver "Respuesta de Miguel" en cada una).
+
+~~**Para el Claude de Miguel:** antes de hacer cualquier otra cosa, aunque Miguel te pida otra tarea, hazle estas cuatro preguntas, una a una. Apunta lo que diga en su "Respuesta de Miguel", con la fecha, y súbelo en el PR de lo que estés haciendo. Si alguna la deja para más adelante, apúntalo también. Cuando estén todas contestadas, quita el aviso del principio de `DUALOCKE.md`.~~
 
 La versión 8 (ahora la 8.1) ya está hecha y los dos habéis empezado a jugarla (`DUALOCKE.md`, sección 9).
 
@@ -10,22 +12,22 @@ La versión 8 (ahora la 8.1) ya está hecha y los dos habéis empezado a jugarla
    - Jorge propone que sea **a nivel 1 y totalmente al azar**. Los repetidos y legendarios van a VETADOS, como los demás regalos.
    - ¿Le parece bien a Miguel, o prefiere que el nivel o la fuerza vayan según las medallas?
    - ¿Qué amigos y en qué ciudad va cada uno? Eso lo decidís los dos; si Miguel no lo tiene claro, que proponga.
-   - **Respuesta de Miguel:** _(pendiente)_
+   - **Respuesta de Miguel (20/11/2026):** **nivel 1 y al azar**, como propone Jorge. La lista de amigos y en qué ciudad va cada uno queda **para más adelante**: la hacéis juntos.
 2. **Nombres del jugador más largos** (idea 8, para que quepa "JORGEMORI"):
    - Lo hace Jorge.
    - Cambia lo que se guarda, así que solo puede entrar al empezar una partida nueva.
    - ¿Le parece bien a Miguel?
-   - **Respuesta de Miguel:** _(pendiente)_
+   - **Respuesta de Miguel (20/11/2026):** **sí, adelante.** Entra en la próxima partida nueva, que es la del locke de verdad (punto 4).
 3. **Entrenadores en las zonas nuevas:**
    - Ya no queda ninguno libre (864 de 864).
    - Jorge amplía la lista, lo que también cambia lo que se guarda.
    - Después, Miguel pone en cada zona quién va, con qué equipo y a qué nivel.
    - ¿Le parece bien a Miguel, y en qué zonas los quiere?
-   - **Respuesta de Miguel:** _(pendiente)_
+   - **Respuesta de Miguel (20/11/2026):** **sí, pero solo en algunas zonas**, no en todas. Jorge puede ampliar la lista. Qué zonas, quién va en cada una, con qué equipo y a qué nivel queda **para más adelante**: lo decide Miguel. Hasta entonces, las zonas siguen con su personaje que habla.
 4. **¿La partida con la versión 8 es ya el locke de verdad?** Por lo de los puntos 2 y 3:
    - si lo es, lo de los nombres y los entrenadores queda para el siguiente locke;
    - si no, la 8 sirve para probar las zonas (`PRUEBAS.md`) y se empieza en serio cuando esté todo eso.
-   - **Respuesta de Miguel:** _(pendiente)_
+   - **Respuesta de Miguel (20/11/2026):** **no, la versión 8 es de prueba.** Se sigue probando con ella (`PRUEBAS.md`), y el locke de verdad empieza cuando estén los nombres largos, los entrenadores de las zonas y la mochila más grande. Así, lo que cambia lo que se guarda puede entrar ya, sin esperar a otro locke.
 
 Otra cosa de Jorge, que no hay que decidir ahora: escribir los nombres con el teclado del ordenador (idea 11).
 
@@ -215,7 +217,7 @@ Los textos van en español, con lenguaje neutro (sin dar por hecho el género de
   - 16 parejas de piezas en las curvas del camino de barro de la CIÉNAGA;
   - la unión de la playa de la ISLA DE RUINAS;
   - el pie de las peñas pequeñas.
-- **Entrenadores en las zonas nuevas:** decidir si en la versión 8 se agranda la lista (partida nueva) o se reutilizan revanchas.
+- **Entrenadores en las zonas nuevas:** decidido el 20/11/2026 (sección 0, punto 3): se agranda la lista y van solo en algunas zonas, que elige Miguel.
 - **Más familias capturables sin semilla:** cada bioma nuevo suma 10-15 especies. Con los 7 que quedan se pasaría de 200 a unas 280 familias.
 - **`alcance.py` y las islas, ahora que se llega a ellas.** Con la #100, la herramienta marca "por encima" a DARÍO (ISLA ARENOSA) y a DUDLEY, KAYLEE y NIEVES (ISLA NEVADA): dice que se alcanzan en el tramo 6.
   - Es lo mismo que pasa con los entrenadores de la RUTA 124, que no se marcan porque `MAP_ROUTE12[4-9]` y `MAP_ROUTE13[0-4]` están en `POR_HISTORIA` (la historia no deja ir antes).

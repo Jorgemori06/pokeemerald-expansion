@@ -171,7 +171,8 @@ Una sección por idea, con:
     - Hay que revisar que el nombre largo quepa en los textos (diálogos con `{PLAYER}`, ficha, menú de guardar) y en la pantalla de poner nombre.
     - Las estructuras de los juegos por cable y la mezcla de récords guardan el nombre con tamaño fijo. Como no jugamos por cable, se pueden dejar o recortar al copiar.
   - El nombre del rival (Aura/Bruno) y los de las cajas del PC no hace falta tocarlos.
-- **Estado:** Pendiente (para el siguiente locke).
+- **Miguel está de acuerdo (20/11/2026).** Entra en la próxima partida nueva: la versión 8 es de prueba y el locke de verdad empieza después (`PLAN.md`, sección 0).
+- **Estado:** Pendiente (para la próxima partida nueva).
 
 ### 9. Las formas Gigamax como megaevoluciones
 
@@ -231,6 +232,6 @@ Una sección por idea, con:
 - **Propuesta de:** Jorge, 16/11/2026. Decidido por Jorge el 18/11/2026:
   - **Quién lo da:** amigos nuestros, que elegimos nosotros (nombre y ciudad de cada uno). Va junto con las ideas 4 y 7. Al principio, con un muñeco del juego y su nombre; que se parezcan a ellos, más adelante.
   - **El Pokémon:** a nivel 1 y completamente al azar con la semilla. No gasta la captura de la ruta, y los repetidos y legendarios van a VETADOS, como los demás regalos.
-  - Si Miguel prefiere que se ajuste a cómo va la partida (nivel o fuerza según las medallas), que su Claude se lo pregunte cuando se haga.
+  - **Miguel está de acuerdo (20/11/2026):** nivel 1 y al azar, sin depender de las medallas.
 - **Notas:** se sortea con su propio generador, para no mover el resto del randomizer. Necesita un flag por Centro (o una variable con un bit por ciudad).
 - **Estado:** Pendiente. Falta la lista de amigos y en qué ciudad va cada uno.
