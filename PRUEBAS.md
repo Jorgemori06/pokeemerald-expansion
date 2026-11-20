@@ -45,14 +45,12 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 
 - [ ] **Entrada:** en la RUTA 122, por el hueco nuevo del anillo de rocas de arriba a la izquierda, se surfea hacia el oeste hasta la playa (sin pantalla de carga), y se vuelve igual.
 - [ ] **La unión:** que no se vea nada raro en el borde, ni desde la playa ni desde la RUTA 122. Es lo más delicado: los dos mapas tienen gráficos distintos.
-- [ ] **Sol normal** fuera, **sin sol en combate** (Miguel, 20/11/2026). Cartel "PLAYA VOLCÁNICA". Salvajes en la hierba con ceniza; pesca y surf en el mar.
+- [ ] **Sol fuera y en combate.** Cartel "PLAYA VOLCÁNICA". Salvajes en la ceniza; pesca y surf en el mar.
+  - Miguel eligió el 20/11/2026 cambiarlo a **sol normal** (sin sol en combate). Cuando se haga, cambia esta línea.
 - [ ] **El personaje al capturar surfeando:** a Miguel se le rompió **al volver de capturar** un Pokémon en el agua (20/11/2026). Probarlo varias veces y hacer foto si pasa.
+- [ ] **Termas:** se ven bien (sin trozos de acantilado ni de hierba raros).
 - [ ] **Guardián** en la arena (Slither Wing sin semilla): da premio y no vuelve a salir.
-- [ ] **Mapa rehecho con ceniza (20/11/2026),** con los gráficos de la RUTA 113:
-  - Que no se vea ninguna pieza rara: los árboles con ceniza (sobre todo donde el bosque acaba, arriba a la derecha y abajo a la derecha), el bosque del borde, los saltos y donde la ceniza toca la arena.
-  - Desde la arena de arriba se pasa andando a la meseta de ceniza; desde la meseta se baja a la playa de abajo saltando, y se vuelve a subir por la lengua de ceniza del este (x 16-20, filas 15-19).
-  - Al pisar la hierba con ceniza, se le cae la ceniza, como en la RUTA 113.
-  - El Ticket-Recuerdo está en la mancha de ceniza del sur, junto a la roca (19, 27).
+- [ ] **Mapa rehecho (17/11/2026):** se baja de la meseta a la playa saltando el risco o por la escalera, y se sube solo por la escalera. Que no se vea ninguna pieza rara (orillas, risco, árboles, la charca de marea).
 
 ### CIÉNAGA TÓXICA (desde el 17/11/2026)
 

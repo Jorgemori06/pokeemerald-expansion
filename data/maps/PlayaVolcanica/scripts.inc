@@ -1,16 +1,10 @@
 PlayaVolcanica_MapScripts::
-	map_script MAP_SCRIPT_ON_RESUME, PlayaVolcanica_OnResume
 	map_script MAP_SCRIPT_ON_TRANSITION, PlayaVolcanica_OnTransition
 	.byte 0
 
 @ Dualocke: la PLAYA VOLCÁNICA, al oeste del MONTE PÍRICO (tools/dualocke/crear_playa_volcanica.py).
 @ El guardián es un Pokémon fuerte que se puede capturar, como en las islas del ferry
 @ (data/scripts/dualocke_islas.inc). Con semilla sale otro de su tipo (estaticos.py, islas()).
-@ Al pisar la hierba con ceniza se le cae la ceniza, como en la RUTA 113.
-PlayaVolcanica_OnResume:
-	setstepcallback STEP_CB_ASH
-	end
-
 PlayaVolcanica_OnTransition:
 	setvar VAR_0x8004, SPECIES_SLITHER_WING
 	special Dualocke_GraficoPokemonIsla
@@ -35,12 +29,12 @@ PlayaVolcanica_EventScript_PokemonSigue::
 	release
 	end
 
-PlayaVolcanica_EventScript_Vecino::
-	msgbox PlayaVolcanica_Text_Vecino, MSGBOX_NPC
+PlayaVolcanica_EventScript_Banista::
+	msgbox PlayaVolcanica_Text_Banista, MSGBOX_NPC
 	end
 
-PlayaVolcanica_Text_Vecino:
-	.string "Cuando el MONTE PÍRICO echa humo,\n"
-	.string "la ceniza llega hasta esta playa.\p"
+PlayaVolcanica_Text_Banista:
+	.string "Estas aguas las calienta el volcán\n"
+	.string "que hay bajo el MONTE PÍRICO.\p"
 	.string "Dicen que un POKéMON enorme sale\n"
-	.string "del mar a tomar el sol en la arena.$"
+	.string "del mar a tomar el sol.$"
