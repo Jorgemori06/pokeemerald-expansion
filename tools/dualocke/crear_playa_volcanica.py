@@ -1,27 +1,35 @@
 #!/usr/bin/env python3
 """
-Dualocke: la PLAYA VOLCÁNICA, al oeste del MONTE PÍRICO (ZONAS.md, propuesta 10; rehecha el 17/11/2026 para
-que parezca diseñada como el juego original).
+Dualocke: la PLAYA VOLCÁNICA, al oeste del MONTE PÍRICO (ZONAS.md, propuesta 10). Rehecha el 17/11/2026 para
+que pareciera diseñada como el juego original, y otra vez el 20/11/2026 con ceniza (Miguel: "más que la
+piedra rojiza que forma la playa, un paisaje donde se mezcle la playa con una zona de ceniza, como la ruta
+de arriba del volcán").
 
 Uso (desde la raíz del repo; se puede volver a lanzar):
     python3 tools/dualocke/crear_playa_volcanica.py
 
-**Cómo se dibuja.** Como la MARISMA AZULIZA: el mapa es un dibujo de letras (PLANO) y lo pinta autotile.py con
-las piezas que ha aprendido de los mapas originales. Copia tal cual tres cosas del juego: el rincón de las
-termas de LAVACALDA (con su acantilado, su poza y su arena), la peña volcánica de la RUTA 112 y las rocas
-del mar de la RUTA 122.
+**Cómo se dibuja.** El mapa es un dibujo de letras (PLANO). La arena, el bajío y el mar los pinta autotile.py
+con las piezas generales que ha aprendido de los mapas originales. La ceniza usa las piezas de la RUTA 113
+(gráficos de PARDA, `gTileset_Fallarbor`), puestas como allí:
+- **Suelo de ceniza** (0x218) y **hierba con ceniza** (0x20A): sin bordes, como en la RUTA 113. La hierba
+  tiene salvajes y, al pisarla, se le cae la ceniza (como en la RUTA 113: `STEP_CB_ASH`; con el Saco Hollín
+  se recoge).
+- **Árboles con ceniza:** cada árbol ocupa dos columnas (la de la izquierda, impar). Las filas del bosque
+  alternan "arriba" (0x275/0x276) y "abajo" (0x26D/0x26E); encima del bosque va la copa sobre la ceniza
+  (0x204/0x205, se pasa por debajo) y debajo, el pie (0x20C/0x20D). A los lados, igual: junto a una fila de
+  "abajo" va una copa y junto a una de "arriba", un pie. `bosque()` lo hace solo.
+- **Saltos** (0x21B-0x21D): separan la meseta de ceniza de la playa de abajo. Se bajan, no se suben.
+- **Rocas** (0x219).
+La ceniza toca la arena directamente: es la mezcla de playa y ceniza que pidió Miguel. Nunca toca el agua.
 
-**El diseño** (como la playa de la RUTA 104, a los pies de un volcán):
-- **Playa:** arena junto al mar, con su orilla y su bajío, una charca de marea y rocas en el mar.
-- **Risco:** una franja de roca separa la playa (abajo) de la meseta (arriba), con una escalera. En el
-  juego la arena de playa nunca toca la hierba: siempre hay un risco o agua entre las dos.
-- **Meseta:** pradera con hierba alta, árboles, un camino de tierra hasta las termas, la peña volcánica y,
-  arriba, el acantilado del volcán. Sol (sol en combate).
-- **Guardián** en la playa y un bañista en las termas. **Tramo 7.**
+**El diseño:** la meseta de ceniza al noroeste, con hierba con ceniza y rocas; la playa al este, a lo largo
+del mar, y, bajando los saltos, una playa ancha al sur con manchas de ceniza. Bosque con ceniza en los bordes
+de tierra y rocas de mar en los del mar. **Sol** (sol normal, sin sol en combate; Miguel, 20/11/2026). Guardián
+en la playa y un vecino junto al mar. **Tramo 7.**
 
-**La unión con la RUTA 122** (gráficos General + Algaria; la playa es General + LAVACALDA). Una conexión entre
-mapas de gráficos distintos solo se ve bien si lo que se ve del otro mapa son gráficos generales:
-- Se cruza por arriba (filas 0-7), donde el borde de la RUTA 122 solo tiene mar y rocas generales. En la
+**La unión con la RUTA 122** (gráficos General + Algaria). Una conexión entre mapas de gráficos distintos solo
+se ve bien si lo que se ve del otro mapa son gráficos generales:
+- Se cruza por arriba (filas 2-7), donde el borde de la RUTA 122 solo tiene mar y rocas generales. En la
   RUTA 122 se quita una roca del anillo (x 5-6, filas 4-5) para poder salir por ahí.
 - Las 8 columnas del este de la playa son solo mar y rocas generales, y desde la fila 8 un arrecife no deja
   acercarse al borde (desde ahí se vería la orilla del monte, que es de Algaria). El script lo comprueba.
@@ -38,64 +46,70 @@ import autotile as at  # noqa: E402
 import colocar_objetos as co  # noqa: E402
 
 PLAYA, MAPA, MAPSEC = "PlayaVolcanica", "MAP_PLAYA_VOLCANICA", "MAPSEC_PLAYA_VOLCANICA"
+SECUNDARIO = "gTileset_Fallarbor"
 ROCA_RUTA122 = (5, 4)                     # la roca (2 × 2) que se quita del anillo de la RUTA 122
 FILAS_CRUCE = 8                           # filas 0-7: por aquí se pasa de un mapa a otro
 BANDA_GENERAL = 8                         # las últimas 8 columnas, solo gráficos generales
 ROCA = (0x175, 0x176, 0x17D, 0x17E)      # roca de mar (general): arriba izq., arriba der., abajo izq., abajo der.
-# L rincón de las termas   K acantilado del volcán   M peña volcánica   X roca de mar (2 × 2)
-# T árbol grande   . hierba   , hierba alta   * flores   c camino de tierra   s arena   b bajío   m mar
-# R risco   1 2 su escalera
+# F bosque con ceniza   . ceniza   , hierba con ceniza   o roca   _ salto (se baja hacia el sur)
+# s arena   b bajío   m mar   X roca de mar (2 × 2)
 PLANO = """
-LLLLLLLLKKKKKKKKKKKKKKKKKKXXXXXXXXXXXXXX
-LLLLLLLLKKKKKKKKKKKKKKKKKKXXXXXXXXXXXXXX
-LLLLLLLL............Rssssssbbmmmmmmmmmmm
-LLLLLLLL....,,,,,,,,Rssssssbbmmmmmmmmmmm
-LLLLLLLL....,,,,,,,,Rssssssbbmmmmmmmmmmm
-LLLLLLLL....,,,,,,,,Rssssssbbmmmmmmmmmmm
-LLLLLLLL....,,,,,,,,Rssssssbbmmmmmmmmmmm
-LLLLLLLL............Rssssssbbmmmmmmmmmmm
-LLLLLLLLccc.....TT..RssssssbbmmmmmmmmmXX
-LLLLLLLLccc.....TT..RsssssbbmmmmmmmmmmXX
-LLLLLLLLccc.....TT..RsssssbbmmmmmmmmmmXX
-TT......cccccccccc..RsssssbbmmmmmmmmmmXX
-TT......cccccccccc..RsssssbbmmmmmmmmmmXX
-TT.,,,,,.cccccccccc.RssssbbmmmmmmXXmmmXX
-TT.,,,,,.......cccc.RssssbbmmmmmmXXmmmXX
-TT.,,,,,.*..TT.cccc.RssssbbmmmmmmmmmmmXX
-TT.,,,,,..*.TT.cccc.RssssbbmmmmmmmmmmmXX
-TT.,,,,,....TT.cccc.RssssbbmmmmmmmmmmmXX
-TT.,,,,,....TTRR12RRRssssbbmmmmmmmmmmmXX
-TT.,,,,,....TTRssssssssssbbmmmmmmmmmmmXX
-TT......*.....RssssssssssbbmmmmmmmmmmmXX
-TT........,,,,RssssssssssbbmmmmmmmmmmmXX
-TT...*....,,,,RssssssssssbbmmmmmmmmmmmXX
-TT........,,,,RssssssssssbbmmmmmmmmmmmXX
-TT........,,,,RssssssssssbbmmmmmmmXXmmXX
-TT.MMMMMMMMM,,RssssssssssbbmmmmmmmXXmmXX
-TT.MMMMMMMMM..RssssssssssbbmmmmmmmmmmmXX
-TT.MMMMMMMMM..RsssssssmmmsbbmmmmmmmmmmXX
-TT.MMMMMMMMM..RsssssssmmmsbbmmmmmmmmmmXX
-TT..........*.RsssssssssssbbmmmmmmmmmmXX
-TT,,,,,,.....*RssssssssssssbbmmmmmmmmmXX
-TT,,,,,,..TT..RssssssssssssbbmmmXXmmmmXX
-TT,,,,,,..TT..RssssssssssssbbmmmXXmmmmXX
-TT,,,,,,..TT..RssssssssssssbbmmmmmmmmmXX
-TT,,,,,,..TT..RssssssssssssbbmmmmmmmmmXX
-TT........TT..RssssssssssssbbmmmmmmmmmXX
-TT............RssssssssssssbbmmmmmmmmmXX
-TTTTTTTTTTTTTTTTTTTTTTTTTTTTbmmmmmmmmmXX
-TTTTTTTTTTTTTTTTTTTTTTTTTTTTXXXXXXXXXXXX
-TTTTTTTTTTTTTTTTTTTTTTTTTTTTXXXXXXXXXXXX
+FFFFFFFFFFFFFFFFFFFFFFF.XXXXXXXXXXXXXXXX
+FFFFFFFFFFFFFFFFFFFFFFF.XXXXXXXXXXXXXXXX
+FFF.....................ssbbmmmmmmmmmmmm
+FFF......,,,,,,,.......sssbbmmmmmmmmmmmm
+FFF......,,,,,,,......ssssbbmmmmmmmmmmmm
+FFF......,,,,,,,......ssssbbmmmmmmmmmmmm
+FFF...o...............ssssbbmmmmmmmmmmmm
+FFF..............o....ssssbbmmmmmmmmmmmm
+FFF.,,,,,............sssssbbmmmmmmmmmmXX
+FFF.,,,,,....,,,,....sssssbbmmmmmmmmmmXX
+FFF.,,,,,....,,,,....sssssbbmmmmmmmmmmXX
+FFF.,,,,,....,,,,....ssssbbmmmmmmmmmmmXX
+FFF..........,,,,....ssssbbmmmmmmmmmmmXX
+FFF..o...............ssssbbmmmmmmXXmmmXX
+FFF..................ssssbbmmmmmmXXmmmXX
+FFF.____________.....ssssbbmmmmmmmmmmmXX
+FFF.ssssssssssss.,,,.ssssbbmmmmmmmmmmmXX
+FFF.ssssssssssss.,,,.ssssbbmmmmmmmmmmmXX
+FFF.ssssssssssss.,,,.ssssbbmmmmmmmmmmmXX
+FFF.sssssssssssss...sssssbbmmmmmmmmmmmXX
+FFF.sssss..ssssssssssssssbbmmmmmmmmmmmXX
+FFF.ssss.,,.sssssssssssssbbmmmmmmmmmmmXX
+FFF.ssss.,,,.ssssssssssssbbmmmmmmmXXmmXX
+FFF.sssss...ssssssssssssssbbmmmmmmXXmmXX
+FFF.ssssssssssssss...sssssbbmmmmmmmmmmXX
+FFF.sssssssssssss.,,,.ssssbbmmmmmmmmmmXX
+FFF..ssssssssssss.,,,.ssssbbmmmmmmmmmmXX
+FFF..ssssssssssss.,,o.ssssbbmmmmmmmmmmXX
+FFF..sssssssssssss...sssssbbmmmmmmmmmmXX
+FFF.,,ssssssssssssssssssssbbmmmmmmmmmmXX
+FFF.,,ssssssssssssssssssssbbmmmmmXXmmmXX
+FFF.,,,sssssssssssssssssssbbmmmmmXXmmmXX
+FFF.,,,sssssssssssssssssssbbmmmmmmmmmmXX
+FFF..,,,sssssssssssssssssbbmmmmmmmmmmmXX
+FFF....ssssssssssssssssssbbmmmmmmmmmmmXX
+FFF.....sssssssssssssssssbbmmmmmmmmmmmXX
+FFF......ssssssssssssssssbbmmmmmmmmmmmXX
+FFF.....................sssbbmmmmmmmmmXX
+FFFFFFFFFFFFFFFFFFFFFFF.XXXXXXXXXXXXXXXX
+FFFFFFFFFFFFFFFFFFFFFFF.XXXXXXXXXXXXXXXX
 """
-TERRENO = {".": "suelo", "*": "suelo", ",": "hierba_alta", "c": "camino", "s": "arena", "b": "bajio", "m": "mar",
-           "R": "risco", "1": "risco", "2": "risco"}
-FLORES = 0x004
-TERMAS = ("LavaridgeTown", (0, 0, 8, 11))     # el rincón de las termas (x0, y0, x1, y1)
-TERMAS_TAPAR = [(5, 1), (6, 1), (7, 1)]       # la pasarela del acantilado: aquí, acantilado
-ACANTILADO = ("LavaridgeTown", 2)              # columna de la que se copia el acantilado (filas 0 y 1)
-PENA = ("Route112", (23, 46, 32, 50))          # la peña volcánica, sobre hierba
-GUARDIAN = (23, 14, "SPECIES_SLITHER_WING", 70, "ITEM_BOOSTER_ENERGY", "FLAG_DUALOCKE_GUARDIAN_PLAYA")
-BANISTA = (3, 9)                               # en la arena de las termas
+TERRENO = {"s": "arena", "b": "bajio", "m": "mar", "X": "mar"}
+CENIZA = "F.,o_"                       # lo que es ceniza (para autotile, arena: la arena de al lado va lisa)
+# Piezas de la RUTA 113 con su valor de allí (colisión y altura): (par, impar) según la columna
+SUELO, HIERBA, PENA = 0x3218, 0x320A, 0x0619
+SALTO = (0x061B, 0x061C, 0x061D)       # extremo izquierdo, medio, extremo derecho
+COPA, PIE = (0x3204, 0x3205), (0x060C, 0x060D)
+ARRIBA, ABAJO = (0x0675, 0x0676), (0x066D, 0x066E)
+GUARDIAN = (14, 27, "SPECIES_SLITHER_WING", 70, "ITEM_BOOSTER_ENERGY", "FLAG_DUALOCKE_GUARDIAN_PLAYA")
+VECINO = (24, 4)                       # en la arena de arriba, junto al mar
+SITIO_OBJETOS = {
+    "FLAG_ITEM_PLAYA_WATER_STONE": (5, 18),            # en la playa de abajo, junto al bosque
+    "FLAG_ITEM_PLAYA_DAMP_ROCK": (5, 6),               # en la meseta, junto a la roca
+    "FLAG_ITEM_PLAYA_PEARL": (22, 35),                 # oculta, en la arena del sur
+    "FLAG_ITEM_TICKET_PLAYA_VOLCANICA": (19, 27),      # en la mancha de ceniza, junto a la roca
+}
 
 
 def leer(ruta):
@@ -126,11 +140,36 @@ def celdas_de(carpeta):
     return l, list(struct.unpack(f"<{l['width'] * l['height']}H", open(l["blockdata_filepath"], "rb").read()))
 
 
-def copiar(origen, caja):
-    """{(dx, dy): valor} de un trozo de un mapa."""
-    l, c = celdas_de(origen)
-    x0, y0, x1, y1 = caja
-    return {(x - x0, y - y0): c[y * l["width"] + x] for y in range(y0, y1) for x in range(x0, x1)}
+def bosque(filas):
+    """{(x, y): valor} de los árboles con ceniza y lo que va a su alrededor (copas y pies).
+
+    Las filas pares del bosque son "arriba" y las impares, "abajo" (así, el bosque de arriba, de las filas
+    0-1, y el de abajo, de las 38-39, acaban bien). Un bosque tiene que acabar por abajo en una fila de
+    "abajo" (impar), empezar por arriba en una de "arriba" (par) y, a los lados, ir de una columna impar a
+    una par, salvo en el borde del mapa."""
+    alto, ancho = len(filas), len(filas[0])
+    es = lambda x, y: 0 <= x < ancho and 0 <= y < alto and filas[y][x] == "F"  # noqa: E731
+    tipo = lambda y: ARRIBA if y % 2 == 0 else ABAJO  # noqa: E731
+    piezas = {}
+    for y in range(alto):
+        for x in range(ancho):
+            if es(x, y):
+                assert es(x, y + 1) or y == alto - 1 or y % 2 == 1, ("el bosque acaba en una fila de arriba", x, y)
+                assert es(x, y - 1) or y == 0 or y % 2 == 0, ("el bosque empieza en una fila de abajo", x, y)
+                assert es(x - 1, y) or x == 0 or x % 2 == 1, ("el bosque empieza en una columna par", x, y)
+                assert es(x + 1, y) or x == ancho - 1 or x % 2 == 0, ("el bosque acaba en una columna impar", x, y)
+                piezas[(x, y)] = tipo(y)[x % 2]
+                continue
+            if es(x, y + 1):
+                piezas[(x, y)] = COPA[x % 2]
+            elif es(x, y - 1):
+                piezas[(x, y)] = PIE[x % 2]
+            elif es(x - 1, y) or es(x + 1, y):
+                piezas[(x, y)] = (COPA if tipo(y) == ABAJO else PIE)[x % 2]
+            else:
+                continue
+            assert filas[y][x] in CENIZA, ("al lado del bosque tiene que haber ceniza", x, y)
+    return piezas
 
 
 def crear_layout():
@@ -138,16 +177,9 @@ def crear_layout():
     filas = PLANO.strip().splitlines()
     alto, ancho = len(filas), len(filas[0])
     assert all(len(f) == ancho for f in filas), "las filas del plano no miden lo mismo"
-    pintadas = aprendiz.pintar([[TERRENO.get(ch) for ch in f] for f in filas])
-    valor = lambda m: aprendiz.valor.get(m, m)  # noqa: E731
+    pintadas = aprendiz.pintar([[TERRENO.get(ch, "arena") for ch in f] for f in filas])
+    arboles = bosque(filas)
     c = [0] * (ancho * alto)
-    termas = copiar(TERMAS[0], TERMAS[1])
-    lt, ct = celdas_de(TERMAS[0])
-    cara = ct[1 * lt["width"] + ACANTILADO[1]]
-    cima = ct[0 * lt["width"] + ACANTILADO[1]]
-    for x, y in TERMAS_TAPAR:
-        termas[(x, y)] = cara
-    pena = copiar(PENA[0], PENA[1])
     _, c122 = celdas_de("Route122")
     roca = {}
     for m in ROCA:   # el valor de la roca de mar, tal como está en la RUTA 122 (con colisión)
@@ -155,14 +187,8 @@ def crear_layout():
     for y in range(alto):
         for x in range(ancho):
             ch = filas[y][x]
-            if ch == "L":
-                c[y * ancho + x] = termas[(x, y)]
-            elif ch == "K":
-                c[y * ancho + x] = cima if y == 0 else cara
-            elif ch == "M":
-                x0 = min(xx for xx in range(ancho) if filas[y][xx] == "M")
-                y0 = min(yy for yy in range(alto) if filas[yy][x] == "M")
-                c[y * ancho + x] = pena[(x - x0, y - y0)]
+            if (x, y) in arboles:
+                v = arboles[(x, y)]
             elif ch == "X":
                 # Cada roca es de 2 × 2: la esquina de arriba a la izquierda es la primera X de su grupo
                 x0 = x
@@ -171,27 +197,34 @@ def crear_layout():
                 y0 = y
                 while y0 > 0 and filas[y0 - 1][x] == "X":
                     y0 -= 1
-                c[y * ancho + x] = roca[ROCA[((y - y0) % 2) * 2 + (x - x0) % 2]]
-            elif ch == "T":
-                continue
+                v = roca[ROCA[((y - y0) % 2) * 2 + (x - x0) % 2]]
+            elif ch == ".":
+                v = SUELO
+            elif ch == ",":
+                v = HIERBA
+            elif ch == "o":
+                v = PENA
+            elif ch == "_":
+                izq, der = filas[y][x - 1] == "_", filas[y][x + 1] == "_"
+                assert filas[y - 1][x] in ".,o" and filas[y][x - 1] in "._" and filas[y][x + 1] in "._", \
+                    ("el salto tiene que tener ceniza arriba y a los lados", x, y)
+                v = SALTO[1] if izq and der else SALTO[0] if der else SALTO[2]
             else:
                 v = pintadas[y][x]
-                if ch == "*":
-                    v = (v & ~0x3FF) | FLORES
-                elif ch in "12":
-                    v = valor(at.ESCALERA_RISCO[int(ch) - 1])
-                c[y * ancho + x] = v
-    fallos = at.arboles_grandes(filas, c, valor)
-    assert not fallos, "; ".join(fallos)
+            # La ceniza nunca toca el agua (no hay piezas de orilla para ella)
+            if ch in CENIZA:
+                assert all(filas[yy][xx] not in "bm" for yy in range(max(0, y - 1), min(alto, y + 2))
+                           for xx in range(max(0, x - 1), min(ancho, x + 2))), ("ceniza junto al agua", x, y)
+            c[y * ancho + x] = v
     assert all(c), "casillas sin pintar"
     # La banda del este (la que se ve desde la RUTA 122) solo tiene gráficos generales
     assert all(c[y * ancho + x] & 0x3FF < 0x200 for y in range(alto) for x in range(ancho - BANDA_GENERAL, ancho))
-    gx, gy = GUARDIAN[:2]
-    assert not (c[gy * ancho + gx] >> 10) & 3, "el guardián no está en el suelo"
+    for donde in [GUARDIAN[:2], VECINO] + list(SITIO_OBJETOS.values()):
+        x, y = donde
+        assert not (c[y * ancho + x] >> 10) & 3 and (x, y) not in arboles, ("objeto o persona fuera del suelo", donde)
 
-    # Borde de árboles, como la playa de la RUTA 104 (antes era la roca del MONTE CENIZO y se veía un
-    # relleno rosa al acercarse a los bordes; Miguel, 19/11/2026)
-    base = LAYOUTS[json.loads(leer("data/maps/Route104/map.json"))["layout"]]
+    # Borde de árboles con ceniza, el de la RUTA 113
+    base = LAYOUTS[json.loads(leer("data/maps/Route113/map.json"))["layout"]]
     os.makedirs(f"data/layouts/{PLAYA}", exist_ok=True)
     with open(f"data/layouts/{PLAYA}/map.bin", "wb") as f:
         f.write(struct.pack(f"<{ancho * alto}H", *c))
@@ -202,12 +235,17 @@ def crear_layout():
     if f'"{ident}"' not in texto:
         texto = co.insertar_en_lista(texto, "layouts", {
             "id": ident, "name": f"{PLAYA}_Layout", "width": ancho, "height": alto,
-            "primary_tileset": "gTileset_General", "secondary_tileset": "gTileset_Lavaridge",
+            "primary_tileset": "gTileset_General", "secondary_tileset": SECUNDARIO,
             "border_filepath": f"data/layouts/{PLAYA}/border.bin",
             "blockdata_filepath": f"data/layouts/{PLAYA}/map.bin"})
-        json.loads(texto)
-        escribir("data/layouts/layouts.json", texto)
-    raras = aprendiz.revisar(c, ancho, alto, "gTileset_Lavaridge")
+    else:
+        # Antes era de LAVACALDA (las termas): se cambia solo el secundario de esta entrada
+        i = texto.index(f'"{ident}"')
+        j = texto.index("}", i)
+        texto = texto[:i] + re.sub(r'("secondary_tileset":\s*")\w+(")', rf"\g<1>{SECUNDARIO}\2", texto[i:j]) + texto[j:]
+    json.loads(texto)
+    escribir("data/layouts/layouts.json", texto)
+    raras = aprendiz.revisar(c, ancho, alto, SECUNDARIO)
     print(f"Dualocke: PLAYA VOLCÁNICA: parejas de piezas que el juego no usa: {len(raras)}")
     return ident
 
@@ -242,16 +280,16 @@ def crear_mapa(layout):
     gx, gy, _, _, _, flag = GUARDIAN
     objetos = [
         {"local_id": "LOCALID_PLAYA_VOLCANICA_GUARDIAN", "graphics_id": "OBJ_EVENT_GFX_VAR_0", "x": gx, "y": gy,
-         "elevation": 3, "movement_type": "MOVEMENT_TYPE_FACE_LEFT", "movement_range_x": 0, "movement_range_y": 0,
+         "elevation": 3, "movement_type": "MOVEMENT_TYPE_FACE_DOWN", "movement_range_x": 0, "movement_range_y": 0,
          "trainer_type": "TRAINER_TYPE_NONE", "trainer_sight_or_berry_tree_id": "0",
          "script": f"{PLAYA}_EventScript_Pokemon", "flag": flag},
-        {"graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1", "x": BANISTA[0], "y": BANISTA[1], "elevation": 3,
-         "movement_type": "MOVEMENT_TYPE_FACE_UP", "movement_range_x": 0, "movement_range_y": 0,
+        {"graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1", "x": VECINO[0], "y": VECINO[1], "elevation": 3,
+         "movement_type": "MOVEMENT_TYPE_FACE_RIGHT", "movement_range_x": 0, "movement_range_y": 0,
          "trainer_type": "TRAINER_TYPE_NONE", "trainer_sight_or_berry_tree_id": "0",
-         "script": f"{PLAYA}_EventScript_Banista", "flag": "0"}]
+         "script": f"{PLAYA}_EventScript_Vecino", "flag": "0"}]
     datos = {
         "id": MAPA, "name": PLAYA, "layout": layout, "music": "MUS_ROUTE119", "region": "REGION_HOENN",
-        "region_map_section": MAPSEC, "requires_flash": False, "weather": "WEATHER_DROUGHT",
+        "region_map_section": MAPSEC, "requires_flash": False, "weather": "WEATHER_SUNNY",
         "map_type": "MAP_TYPE_ROUTE", "allow_cycling": True, "allow_escaping": False, "allow_running": True,
         "show_map_name": True, "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
         "connections": [{"map": "MAP_ROUTE122", "offset": 0, "direction": "right"}],
@@ -260,6 +298,10 @@ def crear_mapa(layout):
         "warp_events": [], "coord_events": [],
         "bg_events": [b for b in anteriores.get("bg_events", []) if b.get("type") == "hidden_item"],
     }
+    for o in datos["object_events"] + datos["bg_events"]:
+        if o.get("flag") in SITIO_OBJETOS:
+            o["x"], o["y"] = SITIO_OBJETOS[o["flag"]]
+            o["elevation"] = 3
     escribir(ruta, json.dumps(datos, indent=2, ensure_ascii=False) + "\n")
     escribir(f"data/maps/{PLAYA}/scripts.inc", con_nivel_actual(f"data/maps/{PLAYA}/scripts.inc", SCRIPTS))
 
@@ -287,12 +329,18 @@ def crear_mapa(layout):
 
 _, _, ESPECIE, NIVEL, PREMIO, FLAG = GUARDIAN
 SCRIPTS = f"""{PLAYA}_MapScripts::
+	map_script MAP_SCRIPT_ON_RESUME, {PLAYA}_OnResume
 	map_script MAP_SCRIPT_ON_TRANSITION, {PLAYA}_OnTransition
 	.byte 0
 
 @ Dualocke: la PLAYA VOLCÁNICA, al oeste del MONTE PÍRICO (tools/dualocke/crear_playa_volcanica.py).
 @ El guardián es un Pokémon fuerte que se puede capturar, como en las islas del ferry
 @ (data/scripts/dualocke_islas.inc). Con semilla sale otro de su tipo (estaticos.py, islas()).
+@ Al pisar la hierba con ceniza se le cae la ceniza, como en la RUTA 113.
+{PLAYA}_OnResume:
+	setstepcallback STEP_CB_ASH
+	end
+
 {PLAYA}_OnTransition:
 	setvar VAR_0x8004, {ESPECIE}
 	special Dualocke_GraficoPokemonIsla
@@ -317,15 +365,15 @@ SCRIPTS = f"""{PLAYA}_MapScripts::
 	release
 	end
 
-{PLAYA}_EventScript_Banista::
-	msgbox {PLAYA}_Text_Banista, MSGBOX_NPC
+{PLAYA}_EventScript_Vecino::
+	msgbox {PLAYA}_Text_Vecino, MSGBOX_NPC
 	end
 
-{PLAYA}_Text_Banista:
-	.string "Estas aguas las calienta el volcán\\n"
-	.string "que hay bajo el MONTE PÍRICO.\\p"
+{PLAYA}_Text_Vecino:
+	.string "Cuando el MONTE PÍRICO echa humo,\\n"
+	.string "la ceniza llega hasta esta playa.\\p"
 	.string "Dicen que un POKéMON enorme sale\\n"
-	.string "del mar a tomar el sol.$"
+	.string "del mar a tomar el sol en la arena.$"
 """
 
 

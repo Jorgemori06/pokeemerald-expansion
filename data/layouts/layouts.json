@@ -9510,7 +9510,7 @@
       "width": 40,
       "height": 40,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Lavaridge",
+      "secondary_tileset": "gTileset_Fallarbor",
       "border_filepath": "data/layouts/PlayaVolcanica/border.bin",
       "blockdata_filepath": "data/layouts/PlayaVolcanica/map.bin"
     },
