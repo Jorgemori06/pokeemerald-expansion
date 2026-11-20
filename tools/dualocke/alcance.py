@@ -40,6 +40,8 @@ from collections import deque
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import reescalar_niveles as rn  # noqa: E402
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import variantes  # noqa: E402
 
 # Lo que se puede usar en cada tramo (tramo N = entre la medalla N-1 y la N)
 MO = {
@@ -170,7 +172,9 @@ class Mundo:
     def rejilla(self, map_id):
         """(ancho, alto, [(colisión, elevación, comportamiento)])."""
         if map_id not in self.rejillas:
-            l = self.layouts[self.mapas[map_id]["layout"]]
+            ident = self.mapas[map_id]["layout"]
+            # el dibujo que se ve en el juego, si el mapa lo cambia al entrar (RUTA 131; ver variantes.py)
+            l = self.layouts[variantes.EN_JUEGO.get(ident, ident)]
             with open(l["blockdata_filepath"], "rb") as f:
                 datos = f.read()
             bloques = struct.unpack(f"<{len(datos) // 2}H", datos)
