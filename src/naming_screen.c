@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke.h"
 #include "dualocke_es.h"
 #include "naming_screen.h"
 #include "malloc.h"
@@ -410,6 +411,13 @@ void DoNamingScreen(u8 templateNum, u8 *destBuffer, u16 monSpeciesOrPlayerGender
     }
     else
     {
+        // Dualocke: el nombre del jugador se escribe entero (hasta 10 letras) en playerNameLong; al salir,
+        // playerName se queda con las 7 primeras (Dualocke_GuardarNombreJugador)
+        if (templateNum == NAMING_SCREEN_PLAYER && destBuffer == gSaveBlock2Ptr->playerName)
+        {
+            memset(gSaveBlock2Ptr->playerNameLong, EOS, sizeof(gSaveBlock2Ptr->playerNameLong));
+            destBuffer = gSaveBlock2Ptr->playerNameLong;
+        }
         sNamingScreen->templateNum = templateNum;
         sNamingScreen->monSpecies = monSpeciesOrPlayerGender;
         sNamingScreen->monGender = monGender;
@@ -697,7 +705,11 @@ static bool8 MainState_Exit(void)
     if (!gPaletteFade.active)
     {
         if (sNamingScreen->templateNum == NAMING_SCREEN_PLAYER)
+        {
             SeedRngAndSetTrainerId();
+            if (sNamingScreen->destBuffer == gSaveBlock2Ptr->playerNameLong)
+                Dualocke_GuardarNombreJugador();
+        }
         if (sNamingScreen->templateNum == NAMING_SCREEN_CAUGHT_MON
          && CalculatePlayerPartyCount() < PARTY_SIZE)
             SetMainCallback2(BattleMainCB2);
@@ -2185,7 +2197,7 @@ static void UNUSED Debug_NamingScreenNickname(void)
 static const struct NamingScreenTemplate sPlayerNamingScreenTemplate =
 {
     .copyExistingString = FALSE,
-    .maxChars = PLAYER_NAME_LENGTH,
+    .maxChars = PLAYER_NAME_LENGTH_LONG, // Dualocke: hasta 10 letras (escribe en playerNameLong)
     .iconFunction = 1,
     .addGenderIcon = FALSE,
     .initialPage = KBPAGE_LETTERS_UPPER,

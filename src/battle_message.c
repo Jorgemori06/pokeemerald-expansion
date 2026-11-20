@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke.h"
 #include "battle.h"
 #include "battle_anim.h"
 #include "battle_ai_record.h"
@@ -3054,7 +3055,7 @@ static const u8 *BattleStringGetPlayerName(u8 *text, enum BattlerId battler)
         if (gBattleTypeFlags & BATTLE_TYPE_RECORDED)
             toCpy = gLinkPlayers[0].name;
         else
-            toCpy = gSaveBlock2Ptr->playerName;
+            toCpy = Dualocke_NombreJugador(); // Dualocke: el nombre entero
         break;
     case B_POSITION_PLAYER_RIGHT:
         if (((gBattleTypeFlags & BATTLE_TYPE_RECORDED) && !(gBattleTypeFlags & (BATTLE_TYPE_MULTI | BATTLE_TYPE_INGAME_PARTNER)))
@@ -3073,7 +3074,7 @@ static const u8 *BattleStringGetPlayerName(u8 *text, enum BattlerId battler)
         }
         else
         {
-            toCpy = gSaveBlock2Ptr->playerName;
+            toCpy = Dualocke_NombreJugador(); // Dualocke: el nombre entero
         }
         break;
     default:

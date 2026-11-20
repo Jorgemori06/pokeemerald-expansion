@@ -149,7 +149,7 @@ void ApplyNewEncryptionKeyToBagItems(u32 newKey)
 
 void SetBagItemsPointers(void)
 {
-    gBagPockets[POCKET_ITEMS].itemSlots = gSaveBlock1Ptr->bag.items;
+    gBagPockets[POCKET_ITEMS].itemSlots = gSaveBlock3Ptr->bagItems; // Dualocke: en SaveBlock3
     gBagPockets[POCKET_ITEMS].capacity = BAG_ITEMS_COUNT;
     gBagPockets[POCKET_ITEMS].id = POCKET_ITEMS;
 
@@ -575,6 +575,7 @@ void MoveItemSlotInPC(struct ItemSlot *itemSlots, u32 from, u32 to)
 void ClearBag(void)
 {
     CpuFastFill(0, &gSaveBlock1Ptr->bag, sizeof(struct Bag));
+    memset(gSaveBlock3Ptr->bagItems, 0, sizeof(gSaveBlock3Ptr->bagItems));
     memset(gSaveBlock3Ptr->bagMedicine, 0, sizeof(gSaveBlock3Ptr->bagMedicine));
     memset(gSaveBlock3Ptr->bagMegaStones, 0, sizeof(gSaveBlock3Ptr->bagMegaStones));
 }
