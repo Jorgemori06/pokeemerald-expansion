@@ -1087,6 +1087,13 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
     - los bordes de la PLAYA VOLCÁNICA;
     - fotos del juego en las pistas de megapiedras y Ticket-Recuerdo de la guía.
     - Solucionario comparado con la 8.3: idéntico.
+  - **Arreglos de la cuarta prueba de Miguel** (20/11/2026; mismas semillas, sin ROM nueva todavía; solucionario idéntico al de la 8.4):
+    - **Reinicio al capturar al guardián de la ISLA NEVADA:** no era el guardián. NIEVES usaba un gráfico de Rojo Fuego (`OBJ_EVENT_GFX_COOLTRAINER_F`), que en Esmeralda no existe: su sprite salía con datos basura y, al animarse, el juego saltaba a una dirección mala y se reiniciaba. Igual DARÍO (ISLA ARENOSA) y el bañista de la PLAYA VOLCÁNICA (seguramente el "personaje roto"). Cambiados por los de Esmeralda, y `tools/dualocke/graficos.py` lo comprueba en el CI.
+    - **Mapas con más de un dibujo** (`tools/dualocke/variantes.py`, en el CI): la RUTA 131 usa siempre `LAYOUT_ROUTE131_SKY_PILLAR` y el paso a la ISLA DE RUINAS se había abierto en el otro dibujo (en el juego estaba cerrado); la RUTA 111 usa `LAYOUT_ROUTE111_NO_MIRAGE_TOWER` cuando no se ve la TORRE ESPEJISMO (al azar, y siempre después del fósil) y ahí no estaba la puerta del DESIERTO PROFUNDO. Ahora están en los dos. `alcance.py` mira el dibujo del juego.
+    - **ISLA NEVADA:** una fila de rocas abajo, salvo por donde se llega: bajando por el resto se salía a ARRECÍPOLIS y a la RUTA 125.
+    - **ISLA VOLCÁNICA:** 10 casillas a la derecha bajo la RUTA 134, para que no quede al lado del puerto de PORTUAL (al cruzar, el puerto aparecía y desaparecía).
+    - **Combate con MÁXIMO PEÑAS en el CENTRO ESPACIAL:** su equipo se quedó a nivel 42-44 contra MAXI (84) y TATIANA (75-81). `tools/dualocke/companeros.py` lo pone al nivel del tramo (84): Metagross, Skarmory y Aggron, sin ataques que te den a ti. Lo revisa Miguel.
+    - Pendiente: lo de Ferrocuello y el Campo de Niebla en la RUTA 124 (hace falta el `.sav` de Miguel para ver su equipo) y mejorar el dibujo de la ISLA VOLCÁNICA.
 - **Semillas actuales (versión 8):** Miguel `3632113266` (`Esmeralda Dualocke - Mikemine.gba`), Jorge `2425682645` (`Esmeralda Dualocke - Jorgemori.gba`).
 - Semillas de las versiones anteriores (partidas abandonadas):
   - versiones 5-7: Miguel `2918696854`, Jorge `2780853751`;
