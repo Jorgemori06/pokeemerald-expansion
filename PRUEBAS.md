@@ -45,8 +45,11 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 
 - [ ] **Entrada:** en la RUTA 122, por el hueco nuevo del anillo de rocas de arriba a la izquierda, se surfea hacia el oeste hasta la playa (sin pantalla de carga), y se vuelve igual.
 - [ ] **La unión:** que no se vea nada raro en el borde, ni desde la playa ni desde la RUTA 122. Es lo más delicado: los dos mapas tienen gráficos distintos.
-- [ ] **Sol fuera y en combate.** Cartel "PLAYA VOLCÁNICA". Salvajes en la ceniza; pesca y surf en el mar.
-  - Miguel eligió el 20/11/2026 cambiarlo a **sol normal** (sin sol en combate). Cuando se haga, cambia esta línea.
+- [ ] **Sol normal** fuera, **sin sol en combate** (Miguel, 20/11/2026). Cartel "PLAYA VOLCÁNICA". Salvajes en la hierba alta; pesca y surf en el mar.
+- [ ] **La ceniza (20/11/2026):** la hierba alta y el césped de la meseta se ven de color ceniza, como en la RUTA 113, y los árboles y las hojas de las flores siguen verdes.
+  - Que no quede ningún trozo verde suelto (bordes del camino, del risco, de las termas y de la peña).
+  - Que la unión con la RUTA 122 se siga viendo bien (ahí solo hay mar y rocas, que no cambian de color).
+  - Al pasar por la hierba alta salen las hojitas verdes de siempre (son un efecto aparte, con sus propios colores, no del mapa): mirar si quedan raras.
 - [ ] **El personaje al capturar surfeando:** a Miguel se le rompió **al volver de capturar** un Pokémon en el agua (20/11/2026). Probarlo varias veces y hacer foto si pasa.
 - [ ] **Termas:** se ven bien (sin trozos de acantilado ni de hierba raros).
 - [ ] **Guardián** en la arena (Slither Wing sin semilla): da premio y no vuelve a salir.

@@ -9509,8 +9509,8 @@
       "name": "PlayaVolcanica_Layout",
       "width": 40,
       "height": 40,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Lavaridge",
+      "primary_tileset": "gTileset_GeneralCeniza",
+      "secondary_tileset": "gTileset_LavaridgeCeniza",
       "border_filepath": "data/layouts/PlayaVolcanica/border.bin",
       "blockdata_filepath": "data/layouts/PlayaVolcanica/map.bin"
     },

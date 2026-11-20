@@ -568,11 +568,11 @@ El primer bioma "por tipo". Miguel pidió que cada tipo tenga su bioma; el anál
   - Cumbre: hielo, aire y dragón (Snorunt, Skarmory, Noibat, Bergmite, Cubchoo, Amaura, Rookidee, Altaria, Cryogonal…; raros, Frigibax y Bagon).
 - **Objetos:** Piedra Dura y un Ticket-Recuerdo en la ladera; Escama Dragón y Roca Helada (oculta) en la cumbre. `OBJETOS_CUMBRE`: flags normales 0x1DE-0x1E1, porque en la zona del sistema ya no quedan libres que no sean diarios. Los de la ladera se pusieron a mano (`colocar_objetos.py` no les encontró sitio).
 
-### PLAYA VOLCÁNICA (hecho, Miguel, 17/11/2026; falta probarlo)
+### PLAYA VOLCÁNICA (hecho, Miguel, 17/11/2026; con ceniza el 20/11/2026; falta probarlo)
 
 - **Dónde:** pegada al borde oeste de la RUTA 122 (la del MONTE PÍRICO). Se llega surfeando, sin pantalla de carga: **tramo 7** (cap 73).
 - **Paso:** la RUTA 122 está rodeada por un anillo de rocas sin huecos. Se quitó la roca de arriba a la izquierda (x 5-6, filas 4-5) y se sale por el noroeste (filas 0-7).
-- **Gráficos de LAVACALDA (General + Lavaridge),** distintos de los de la RUTA 122 (General + Lilycove).
+- **Gráficos de LAVACALDA (General + Lavaridge),** distintos de los de la RUTA 122 (General + Lilycove). Desde el 20/11/2026, una copia de los dos con los verdes en color ceniza (ver "Ceniza", abajo).
   - Una conexión entre mapas con gráficos distintos solo se ve bien si, desde cada lado, lo que se ve del otro mapa son gráficos generales. Lo comprueba `tools/dualocke/crear_playa_volcanica.py`, que hace todo.
   - Se cruza por arriba, donde el borde de la RUTA 122 solo tiene mar y rocas generales.
   - Las 8 columnas del este de la playa son solo mar y rocas generales, y desde la fila 8 una fila de rocas no deja acercarse al borde. Desde ahí se vería la orilla del monte, que es de Algaria.
@@ -583,7 +583,17 @@ El primer bioma "por tipo". Miguel pidió que cada tipo tenga su bioma; el anál
   - **Las termas:** el rincón de las aguas termales de LAVACALDA, con su poza y su arena, bajo el acantilado del volcán.
 - **Bordes (arreglo, 19/11/2026; lo vio Miguel jugando):** el borde del mapa era la roca rosa del MONTE CENIZO y se veía un relleno rosa al acercarse a los bordes, y la arena y el mar se cortaban de golpe arriba y abajo. Ahora el borde es de árboles, como la playa de la RUTA 104. Arriba, el acantilado del volcán sigue sobre la arena y el mar acaba en una fila de rocas; abajo, la playa acaba en árboles y el mar en rocas. Se sigue cruzando a la RUTA 122 por las filas 2-7.
   - Miguel dijo además que "las capturas en el agua rompen el personaje" y que hay "gráficos raros". No se ha podido reproducir: en el emulador se surfeó, se combatió, se huyó y se capturó en el agua de la playa y el personaje se ve bien. Falta que diga dónde le pasó (una foto o el `.sav`).
-  - El tiempo es **sequía** (`WEATHER_DROUGHT`, sol también en combate): aclara mucho los colores del mapa. Si son esos los "gráficos raros", con `WEATHER_SUNNY` se ve normal, pero no hay sol en combate. Lo decide Miguel.
+  - El tiempo era **sequía**, que aclara mucho los colores del mapa. Miguel eligió **sol normal** (`WEATHER_SUNNY`, sin sol en combate; 20/11/2026).
+  - Más tarde (20/11/2026) Miguel concretó que le pasó **al volver de capturar** un Pokémon en el agua.
+- **Ceniza (Miguel, 20/11/2026):** "solo cambiaría la hierba y el césped verde por el de ceniza", como en la RUTA 113. El mapa es el mismo; cambian los colores.
+  - Antes se probó un mapa nuevo con las piezas de ceniza de la RUTA 113 (gráficos de PARDA) y a Miguel no le gustó: prefiere la estructura de antes.
+  - Las piezas de ceniza de PARDA no se pueden mezclar con las termas, el acantilado ni la peña, que son de LAVACALDA. Además, muchas piezas mezclan hierba con otra cosa (bordes del camino, del risco, de las termas…), así que cambiar las piezas una a una dejaría bordes verdes.
+  - **Solución:** la playa usa `gTileset_GeneralCeniza` y `gTileset_LavaridgeCeniza`. Son copias de General y LAVACALDA con los mismos dibujos, piezas, comportamientos y animaciones, pero con otras paletas (`data/tilesets/primary/general_ceniza/` y `data/tilesets/secondary/lavaridge_ceniza/`).
+  - En esas paletas, los cuatro verdes del suelo y la hierba pasan a los cuatro colores de la ceniza de la RUTA 113. Los verdes de las hojas (árboles y flores) no cambian: en la RUTA 113 los árboles también son verdes.
+  - Lo hace `paletas_ceniza()` en `crear_playa_volcanica.py`: escribe las paletas y añade las dos copias a `src/data/tilesets/graphics.h` y `headers.h`.
+  - **La unión con la RUTA 122 no cambia:** desde la playa, la parte de la ruta que se ve se pinta con las paletas de la playa, pero allí solo hay mar y rocas, que no usan ninguno de los colores cambiados (comprobado pieza a pieza).
+  - `ver_mapa.py` y `ver_mundo.py` ahora usan las paletas de cada tileset (`carpetas_paletas()`), para que las fotos salgan con la ceniza.
+  - **Lo que no cambia de color:** las hojitas que salen al pasar por la hierba alta. Son un efecto aparte, con sus propios colores, y siguen verdes.
 - **Guardián** en la arena: sin semilla, Slither Wing a nivel 70 (regla `"tope"`); premio, Energía Potenciadora y su megapiedra si tiene. `FLAG_DUALOCKE_GUARDIAN_PLAYA` (0x917).
 - **Un bañista junto a las termas.** No hay entrenadores: ya no queda ninguno libre.
 - **Zona de captura propia:** `MAPSEC_PLAYA_VOLCANICA` (115 de 128).
