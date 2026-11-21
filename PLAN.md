@@ -19,9 +19,10 @@ Miguel probó la versión 8.5 (#114). **Las partidas de prueba siguen; el locke 
 1. **Lo de Jorge:** revisar la #115 (nombre largo y mochila) y que las PR abiertas se fusionen sin choques (hecho el 21/11/2026: la #112, la #113 y la #115 se fusionan en cualquier orden).
 2. **Los arreglos de la tabla de arriba:** ISLA DE RUINAS, DESIERTO PROFUNDO y RUINAS ARENOSAS, e ISLA VOLCÁNICA. **Hechos el 21/11/2026** (rama `miguel/arreglos-prueba-5`; sin probar en el emulador).
 3. **Los biomas nuevos:**
-   - **CANTERA** (Acero, propuesta B): en curso en la rama `miguel/cantera`. Entrada por una cueva nueva en (67, 10) de la RUTA 116, junto a la salida este del TÚNEL FERVERGAL; tramo 3.
-   - **Prado de las Hadas** (Hada; propuesta C, en otro sitio): en la RUTA 119, antes del INSTITUTO METEOROLÓGICO, junto a la zona de vallas y jardín. Una entrada a un bosque o prado de flores.
-   - **Isla del dragón** (Dragón; propuesta I, en otro sitio si hace falta): una o más islas con cascadas y montañas, con aire épico, para la última parte del juego.
+   **Hechos el 21/11/2026** (rama `miguel/biomas`; sin probar en el emulador). Ver `DUALOCKE.md`.
+   - **CANTERA** (Acero, propuesta B): por una cueva nueva en (67, 10) de la RUTA 116, junto a la salida este del TÚNEL FERVERGAL; tramo 3. Guardián Aggron.
+   - **PRADO DE HADAS** (Hada, propuesta C): junto al INSTITUTO METEOROLÓGICO, por el oeste de la RUTA 119; tramo 6. Guardián Gardevoir.
+   - **ISLA DEL DRAGÓN** (Dragón, propuesta I): al sur de la RUTA 130, con el VALLE DEL DRAGÓN (la gran cascada de COLOSALIA); tramo 8. Guardián Haxorus.
 4. **Comprobar** que las habilidades (#110), el Parche Habilidad (#109) y la mochila (#115) van bien jugando.
 5. **Los amigos de los Centros Pokémon** (`IDEAS.md`, idea 12): ir añadiéndolos, cada uno con su regalo (nivel 1, al azar). Falta la lista de amigos y en qué ciudad va cada uno.
 6. **Los entrenadores de las zonas nuevas** (para el locke de verdad): Miguel dirá en qué zonas y con qué equipos.
@@ -165,17 +166,18 @@ Recomendación de Miguel: seguir por **E (Eléctrico)** o **A (Lucha)**, que son
 
 ### Límites que hay que tener en cuenta
 
-- **Zonas de captura:** 118 de 128 → caben **10 más**. Cada bioma usa una.
+- **Zonas de captura:** 121 de 128 (21/11/2026) → caben **7 más**. Cada bioma usa una.
 - **Entrenadores:** **864 de 864, no queda ninguno libre.** Las zonas nuevas se están haciendo sin entrenadores (con un personaje que habla).
   - Para tener entrenadores hay que **agrandar la lista** (`TRAINERS_COUNT`). Eso mueve los flags del sistema y **rompe las partidas guardadas**.
   - La otra opción es reutilizar revanchas (`_2` a `_5`).
   - Es una decisión para cuando se empiece una partida nueva (versión 8).
 - **Flags:** ya no quedan bloques seguidos; cada zona coge flags sueltos.
-  - Libres que no son de Jorge: 0x068, 0x0E9, 0x1DA, 0x1E0, 0x2D9 y 0x4FF.
-  - Del sistema: 0x8F4, 0x8F5, 0x8FD-0x8FF y 0x905-0x907 (0x913 y 0x91B son ya los interruptores de las RUINAS ARENOSAS, 21/11/2026). No usar 0x91F: lo usa `DAILY_FLAGS_START`.
+  - **Desde el 21/11/2026 ya no queda casi ninguno:** la CANTERA usa 0x068, 0x0E9, 0x1DA, 0x2D9 y 0x4FF; el PRADO DE HADAS, 0x4E4, 0x8F4, 0x8F5, 0x8FD y 0x8FE; la ISLA DEL DRAGÓN, 0x8FF y 0x905-0x907; los interruptores de las RUINAS ARENOSAS, 0x913 y 0x91B.
+  - Quedan 0x1E0 (sin usar) y los de Jorge (0x043-0x04F, 0x2B7-0x2BB). No usar 0x91F: lo usa `DAILY_FLAGS_START`.
+  - **Para más zonas hará falta liberar flags** (por ejemplo, agrandar la lista al empezar la partida nueva, como los entrenadores).
   - **Los objetos ocultos necesitan un flag de 0x1F4 en adelante** (`FLAG_HIDDEN_ITEMS_START`); si no, no compila. `comprobar_zonas.py` ya lo avisa.
   - Los de 0x043-0x04F y 0x2B7-0x2BB se dejaron para Jorge. 0x2B6 ya lo usa `FLAG_DUALOCKE_CAJAS_REVISADAS`.
-  - **0x4CA-0x4E3 no están libres:** son las megapiedras Gigamax (`FLAG_ITEM_MEGA_*`, #79). De ese bloque solo queda 0x4E4. (Comprobado con el preprocesador el 18/11/2026.)
+  - **0x4CA-0x4E3 no están libres:** son las megapiedras Gigamax (`FLAG_ITEM_MEGA_*`, #79). 0x4E4 es ahora el guardián del PRADO DE HADAS.
 
 ---
 

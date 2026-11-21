@@ -63,6 +63,29 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 - [ ] **Salvajes** en la hierba alta (Veneno, nivel 27-31) y con caña en las charcas. La científica habla.
 - [ ] **Guardián** del islote (Dragalge sin semilla): da el Lodo Negro y no vuelve a salir.
 
+### CANTERA (desde el 21/11/2026)
+
+- [ ] **Entrada:** en la RUTA 116, la cueva nueva a la derecha de la salida este del TÚNEL FERVERGAL lleva a la cantera, y se vuelve igual. Que las dos bocas se vean bien juntas.
+- [ ] **El mapa:** la pared de arriba con la boca, las tres terrazas con sus escaleras y los riscos. Que no se vea ninguna pieza rara.
+- [ ] **GOLPE ROCA** rompe las seis rocas; vuelven al salir y entrar.
+- [ ] **Cartel** "CANTERA" y zona de captura propia. Salvajes de Acero en la hierba alta (nivel 27-31). La persona de la entrada habla.
+- [ ] **Guardián** del fondo (Aggron sin semilla): da la Tabla Acero y no vuelve a salir.
+
+### PRADO DE HADAS (desde el 21/11/2026)
+
+- [ ] **Entrada:** junto al INSTITUTO METEOROLÓGICO, por el oeste (borde izquierdo de la RUTA 119), se pasa al prado sin pantalla de carga, y se vuelve igual. Que los árboles del borde y el pie del árbol de encima de la entrada se vean bien.
+- [ ] **El prado:** las flores, las charcas (con su orilla) y la hierba alta y muy alta. Que no haya copas de árbol sueltas.
+- [ ] **Cartel** "PRADO DE HADAS" y zona de captura propia. Salvajes de Hada; SURF y caña en las charcas. La florista habla.
+- [ ] **Guardián** del claro del norte (Gardevoir sin semilla): da la Tabla Duende y no vuelve a salir.
+
+### ISLA DEL DRAGÓN (desde el 21/11/2026)
+
+- [ ] **Entrada:** surfeando hacia el sur desde el borde de abajo de la RUTA 130 (de la x 40 en adelante) se llega a la isla. Que la unión se vea bien.
+- [ ] **La isla:** se rodea el montículo hasta su cueva (mira al sur), que baja al VALLE DEL DRAGÓN.
+- [ ] **El valle:** sin el Centro Pokémon ni carteles. Salvajes de Dragón en la hierba alta de la izquierda. Se baja al lago y por la cascada surfeando; se vuelve a subir con CASCADA.
+- [ ] **Cartel** "ISLA DEL DRAGÓN" (las dos partes son una zona de captura).
+- [ ] **Guardián** de la meseta (Haxorus sin semilla): da la Tabla Draco y no vuelve a salir.
+
 ### BOSQUE SINIESTRO (desde el 17/11/2026)
 
 - [ ] **Entrada:** bajando por el borde sur de la RUTA 123 (x 103-106) se pasa al bosque sin cortes. Que no se vean copas de árbol sueltas ni troncos cortados en la unión. Al cruzar se oscurece (sombra) y cambia la música.
