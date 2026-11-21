@@ -9553,6 +9553,16 @@
       "secondary_tileset": "gTileset_Mauville",
       "border_filepath": "data/layouts/CienagaToxica/border.bin",
       "blockdata_filepath": "data/layouts/CienagaToxica/map.bin"
+    },
+    {
+      "id": "LAYOUT_DESIERTO_PROFUNDO_CUEVA",
+      "name": "DesiertoProfundo_Cueva_Layout",
+      "width": 40,
+      "height": 23,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/DesiertoProfundo_Cueva/border.bin",
+      "blockdata_filepath": "data/layouts/DesiertoProfundo_Cueva/map.bin"
     }
   ]
 }
