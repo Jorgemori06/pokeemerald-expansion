@@ -444,6 +444,7 @@ ISLA SUR, ISLA LEJANA, ISLA ORIGEN y ROCA OMBLIGO ya existían, pero solo con un
   - Pokémon Paradoja también en la ISLA ARENOSA (Sandy Shocks) y la PLAYA VOLCÁNICA (Slither Wing). **No son legendarios para el locke:** la regla de legendarios solo mira los restringidos, los singulares y los míticos.
   - Dondozo y Tatsugiri, en la cala de la MARISMA AZULIZA (con SURF).
   - Hydreigon, en el BOSQUE SINIESTRO, y Dragalge, en la CIÉNAGA TÓXICA.
+  - Aggron, en la CANTERA; Gardevoir, en el PRADO DE HADAS, y Haxorus, en el VALLE DEL DRAGÓN (21/11/2026).
   - Con semilla salen otros, como siempre (`islas()` de `estaticos.py`): ahí se sortean por especie, así que dos guardianes de la misma especie sin semilla tendrían el mismo con semilla.
 
 - **Sin legendarios (Miguel):** "sustituirlos por Pokémon fuertes (pseudos, Pokémon con mega o Gigamax) capturables y que den recompensa".
@@ -524,6 +525,54 @@ El segundo bioma "por tipo" (sitio D del mapa de propuestas). El tipo **Veneno**
 - **Sin entrenadores** (no queda ningún hueco). Hay una científica que estudia el agua y avisa del islote.
 - **Objetos** (con semilla, al azar): Flecha Venenosa, Bulbo, Tabla Tóxica oculta en el islote y un Ticket-Recuerdo. Flags sueltos: 0x054, 0x055, 0x479 (el oculto necesita uno de 0x1F4 en adelante) y 0x1AA.
 - `autotile.py` ya no aprende de la ciénaga como si fuera un mapa original: "Cienaga" está en la lista de zonas nuevas (`NUEVOS`).
+
+### CANTERA (hecho, Miguel, 21/11/2026; falta probarlo)
+
+Idea de Miguel jugando (18/11/2026): "una Cantera de tipo Acero en la RUTA 116, por la salida del Túnel Fervergal". El bioma del tipo Acero (`PLAN.md`, propuesta B). Todo lo hace `tools/dualocke/crear_cantera.py`.
+
+- **Entrada:** una boca de cueva nueva en la RUTA 116, en la misma pared que la salida este del TÚNEL FERVERGAL: la del túnel está en (65, 10) y la de la cantera en (67, 10), con el mismo dibujo. Puerta a altura 0. No se quita ninguna base secreta.
+  - A esa parte de la ruta se llega cruzando el túnel, con GOLPE ROCA: **tramo 3**, como la CIÉNAGA TÓXICA.
+- **La cantera** (40 × 30, gráficos de la RUTA 116):
+  - arriba, la pared de roca con la boca de la cueva (relleno de montaña y una cara de dos filas, con los valores de la RUTA 116);
+  - tres terrazas separadas por riscos, cada uno con su escalera (`autotile.py`);
+  - suelo de tierra, manchas de hierba alta (los salvajes), seis rocas de GOLPE ROCA (vuelven al salir) y árboles a los lados y abajo.
+- **Guardián:** Aggron (Miguel, 21/11/2026), en el fondo. Premio, Tabla Acero. `FLAG_DUALOCKE_GUARDIAN_CANTERA` (0x4FF).
+- **Una persona que trabaja en la cantera,** junto a la entrada. No hay entrenadores: no queda ninguno libre.
+- **Zona de captura propia:** `MAPSEC_CANTERA` (119 de 128).
+- **Salvajes** (tramo 3, a medio evolucionar): Aron, Nosepass, Graveler, Carkol, Magneton, Klink, Ferroseed, Pawniard, Drilbur, Cufant y, raros, Tinkatuff y Honedge.
+- **Objetos:** Piedra Dura (0x068), Revestimiento Metálico (0x0E9), Bola Férrea oculta (0x2D9) y un Ticket-Recuerdo (0x1DA). Flags sueltos: un grupo de `colocar_objetos.py` por flag.
+
+### PRADO DE HADAS (hecho, Miguel, 21/11/2026; falta probarlo)
+
+El bioma del tipo Hada (`PLAN.md`, propuesta C). Miguel lo quería "en la ruta de antes del Instituto Meteorológico, al lado de la zona de vallas, de jardín". Todo lo hace `tools/dualocke/crear_prado_hadas.py`.
+
+- **Entrada:** junto al INSTITUTO METEOROLÓGICO, por el oeste. Se cortan los árboles del borde izquierdo de la RUTA 119 en las filas 33-34: la fila 32 pasa a ser pie de árbol y las 33-34, hierba (en (2, 32) está el instituto). El prado va a la izquierda de la ruta (su fila 0 es la -1 de la ruta) y se cruza sin pantalla de carga: **tramo 6**.
+  - El jardín con vallas del lago, al norte del instituto, no se alcanza en el tramo 6 (`alcance.py`): por eso la entrada va junto al instituto.
+- **El prado** (40 × 36, gráficos de la RUTA 119): un camino de tierra lleva de la entrada al centro. Alrededor, flores, tres charcas, hierba alta y hierba muy alta (con su borde: los gráficos de ARBORADA lo tienen). Al norte, junto a la charca grande, un claro con un anillo de flores donde espera el guardián.
+  - La columna de la derecha del prado son árboles donde la ruta no se pisa (árboles, y en las filas 23-26 de la ruta, el acantilado de encima del instituto). Las flores nunca van junto a una charca: se perdería su orilla. El script lo comprueba.
+- **Guardián:** Gardevoir (Miguel, 21/11/2026). Premio, Tabla Duende. `FLAG_DUALOCKE_GUARDIAN_PRADO` (0x4E4).
+- **Una florista** junto a la entrada.
+- **Zona de captura propia:** `MAPSEC_PRADO_HADAS` (120 de 128).
+- **Salvajes** (tramo 6): Clefable, Wigglytuff, Granbull, Azumarill, Togetic, Kirlia, Floette, Aromatisse, Slurpuff, Dedenne y, raros, Comfey y Mimikyu. En las charcas (SURF y caña): Marill, Azumarill, Luvdisc, Goldeen, Surskit y Seaking.
+- **Objetos:** Piedra Día y Saquito Fragante (0x8F4-0x8F5), Pluma Feérica oculta (0x8FD) y un Ticket-Recuerdo (0x8FE).
+
+### ISLA DEL DRAGÓN y VALLE DEL DRAGÓN (hecho, Miguel, 21/11/2026; falta probarlo)
+
+El bioma del tipo Dragón (`PLAN.md`, propuesta I). Miguel: "una zona con cascadas o montañas, que le dé un aire épico, dirigida a la última parte del juego"; se llega surfeando desde una ruta del sur. Todo lo hace `tools/dualocke/crear_isla_dragon.py`.
+
+- **Entrada:** surfeando hacia el sur desde el borde de abajo de la RUTA 130 (la isla empieza en su x 40). Se alcanza en el tramo 7-8, como las otras islas del sur; sus niveles son los del **tramo 8**.
+- **ISLA DEL DRAGÓN** (40 × 34, gráficos de la RUTA 134):
+  - una isla de arena con su bajío, tres peñas de la RUTA 127 y rocas en el mar;
+  - en medio, el montículo del PILAR CELESTE con su cueva (como en la ISLA VOLCÁNICA). La cueva mira al sur: se rodea el montículo;
+  - las 8 filas de arriba son mar, que es lo que se ve desde la RUTA 130 (tiene otros gráficos).
+- **VALLE DEL DRAGÓN** (40 × 40): la mitad de abajo de CIUDAD COLOSALIA, la de la gran cascada.
+  - Sin el Centro Pokémon (es hierba corta) ni los carteles; las flores de la izquierda son hierba alta (los salvajes).
+  - Se llega por la cueva de arriba (la de la CALLE VICTORIA), a la meseta con flores. Por las escaleras se baja al lago de arriba y la gran cascada cae al mar; para volver a subir hace falta CASCADA.
+  - Cada cosa va a la altura del suelo en el que está: el valle tiene varias.
+- **Guardián:** Haxorus (Miguel, 21/11/2026), en la meseta, frente a la cascada. Premio, Tabla Draco. `FLAG_DUALOCKE_GUARDIAN_DRAGON` (0x8FF).
+- **Zona de captura propia:** `MAPSEC_ISLA_DRAGON`, las dos partes (121 de 128).
+- **Salvajes** (tramo 8): en la hierba, Flygon, Altaria, Noivern, Tyrantrum, Duraludon, Drampa, Goodra, Kommo-o, Salamence, Garchomp y, raros, Dragapult y Dragonite. En el agua, Dragonair, Seadra, Dragalge, Kingdra y Gyarados; con caña, también Horsea, Dratini y Skrelp.
+- **Objetos:** Escama Dragón (0x905), Colmillo Dragón oculto (0x906) y un Ticket-Recuerdo (0x907).
 
 ### BOSQUE SINIESTRO (hecho, Miguel, 17/11/2026; falta probarlo)
 

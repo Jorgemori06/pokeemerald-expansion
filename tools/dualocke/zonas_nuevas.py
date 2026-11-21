@@ -151,6 +151,33 @@ SALVAJES = {
         "fishing_mons": ["MAGIKARP", "BARBOACH", "BARBOACH", "SKRELP", "QWILFISH",
                          "SKRELP", "MAREANIE", "QWILFISH", "WHISCASH", "MAREANIE"],
     },
+    # CANTERA (crear_cantera.py): el bioma del tipo Acero, con Roca y Tierra. Tramo 3 (nivel 27-31): a medio
+    # evolucionar. Raros, Tinkatuff y Honedge.
+    "MAP_CANTERA": {"land_mons": ["ARON", "NOSEPASS", "GRAVELER", "CARKOL", "MAGNETON", "KLINK",
+                                  "FERROSEED", "PAWNIARD", "DRILBUR", "CUFANT", "TINKATUFF", "HONEDGE"]},
+    # PRADO DE HADAS (crear_prado_hadas.py): el bioma del tipo Hada. Tramo 6: ya evolucionados. Raros, Comfey y
+    # Mimikyu. Las charcas se surfean y se pesca.
+    "MAP_PRADO_HADAS": {
+        "land_mons": ["CLEFABLE", "WIGGLYTUFF", "GRANBULL", "AZUMARILL", "TOGETIC", "KIRLIA",
+                      "FLOETTE", "AROMATISSE", "SLURPUFF", "DEDENNE", "COMFEY", "MIMIKYU"],
+        "water_mons": ["MARILL", "AZUMARILL", "LUVDISC", "GOLDEEN", "SURSKIT"],
+        "fishing_mons": ["MAGIKARP", "GOLDEEN", "LUVDISC", "MARILL", "GOLDEEN",
+                         "LUVDISC", "MARILL", "AZUMARILL", "SEAKING", "AZUMARILL"],
+    },
+    # ISLA DEL DRAGÓN (crear_isla_dragon.py): el bioma del tipo Dragón. Tramo 8: evolucionados. Raros, Dragapult
+    # y Dragonite. En el mar de la isla y en el del valle, dragones de agua.
+    "MAP_ISLA_DRAGON": {
+        "water_mons": ["DRAGONAIR", "SEADRA", "DRAGALGE", "KINGDRA", "GYARADOS"],
+        "fishing_mons": ["MAGIKARP", "HORSEA", "DRATINI", "SKRELP", "SEADRA",
+                         "DRAGONAIR", "DRAGALGE", "KINGDRA", "GYARADOS", "DRAGONAIR"],
+    },
+    "MAP_ISLA_DRAGON_VALLE": {
+        "land_mons": ["FLYGON", "ALTARIA", "NOIVERN", "TYRANTRUM", "DURALUDON", "DRAMPA",
+                      "GOODRA", "KOMMO_O", "SALAMENCE", "GARCHOMP", "DRAGAPULT", "DRAGONITE"],
+        "water_mons": ["DRAGONAIR", "SEADRA", "DRAGALGE", "KINGDRA", "GYARADOS"],
+        "fishing_mons": ["MAGIKARP", "HORSEA", "DRATINI", "SKRELP", "SEADRA",
+                         "DRAGONAIR", "DRAGALGE", "KINGDRA", "GYARADOS", "DRAGONAIR"],
+    },
     "MAP_ISLA_NEVADA_CUEVA": {
         "land_mons": ["SNORUNT", "SWINUB", "SNOVER", "CUBCHOO", "VANILLITE", "SNOM",
                       "BERGMITE", "SNEASEL", "CETODDLE", "CRYOGONAL", "EISCUE", "FRIGIBAX"],
