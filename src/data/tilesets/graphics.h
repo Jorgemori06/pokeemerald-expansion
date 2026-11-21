@@ -176,6 +176,48 @@ const u16 gTilesetPalettes_Lavaridge[][16] =
     INCGFX_U16("data/tilesets/secondary/lavaridge/palettes/15.pal", ".gbapal"),
 };
 
+// Dualocke: la PLAYA VOLCÁNICA con ceniza (crear_playa_volcanica.py)
+const u16 gTilesetPalettes_LavaridgeCeniza[][16] =
+{
+    INCGFX_U16("data/tilesets/secondary/lavaridge_ceniza/palettes/00.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/lavaridge_ceniza/palettes/01.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/lavaridge_ceniza/palettes/02.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/lavaridge_ceniza/palettes/03.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/lavaridge_ceniza/palettes/04.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/lavaridge_ceniza/palettes/05.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/lavaridge_ceniza/palettes/06.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/lavaridge_ceniza/palettes/07.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/lavaridge_ceniza/palettes/08.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/lavaridge_ceniza/palettes/09.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/lavaridge_ceniza/palettes/10.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/lavaridge_ceniza/palettes/11.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/lavaridge_ceniza/palettes/12.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/lavaridge_ceniza/palettes/13.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/lavaridge_ceniza/palettes/14.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/lavaridge_ceniza/palettes/15.pal", ".gbapal"),
+};
+
+// Dualocke: la PLAYA VOLCÁNICA con ceniza (crear_playa_volcanica.py)
+const u16 gTilesetPalettes_GeneralCeniza[][16] =
+{
+    INCGFX_U16("data/tilesets/primary/general_ceniza/palettes/00.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/general_ceniza/palettes/01.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/general_ceniza/palettes/02.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/general_ceniza/palettes/03.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/general_ceniza/palettes/04.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/general_ceniza/palettes/05.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/general_ceniza/palettes/06.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/general_ceniza/palettes/07.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/general_ceniza/palettes/08.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/general_ceniza/palettes/09.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/general_ceniza/palettes/10.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/general_ceniza/palettes/11.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/general_ceniza/palettes/12.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/general_ceniza/palettes/13.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/general_ceniza/palettes/14.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/general_ceniza/palettes/15.pal", ".gbapal"),
+};
+
 const u32 gTilesetTiles_Fallarbor[] = INCGFX_U32("data/tilesets/secondary/fallarbor/tiles.png", ".4bpp.fastSmol");
 
 const u16 gTilesetPalettes_Fallarbor[][16] =

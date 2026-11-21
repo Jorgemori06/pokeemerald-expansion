@@ -1,8 +1,36 @@
 # Plan: hacer la ROM ya y seguir con los biomas (Miguel → Jorge, 17/11/2026)
 
-## 0. Preguntas de Jorge para Miguel (18/11/2026), lo primero
+## 0. Quinta prueba de Miguel y lo siguiente (21/11/2026), lo primero
 
-**Para el Claude de Miguel:** antes de hacer cualquier otra cosa, aunque Miguel te pida otra tarea, hazle estas cuatro preguntas, una a una. Apunta lo que diga en su "Respuesta de Miguel", con la fecha, y súbelo en el PR de lo que estés haciendo. Si alguna la deja para más adelante, apúntalo también. Cuando estén todas contestadas, quita el aviso del principio de `DUALOCKE.md`.
+Miguel probó la versión 8.5 (#114). **Las partidas de prueba siguen; el locke de verdad empieza con la #115 y los entrenadores nuevos.**
+
+### Cómo va lo que arregló Jorge en la #114
+
+| Zona | Cómo está | Qué hay que hacer |
+| --- | --- | --- |
+| ISLA NEVADA: reinicio al capturar al guardián | **Arreglado** (Miguel lo ha probado) | Nada. La isla "ya está muy bien". |
+| ISLA DE RUINAS | **Sigue sin poder entrar** (Miguel no sabe bien por dónde falla) | **Rehacerla:** una entrada más clara y una zona mejor. |
+| DESIERTO PROFUNDO | **Se entra y funciona bien** | **Rehacerlo** (y las RUINAS ARENOSAS): ahora es el mismo dibujo que el desierto y la TORRE ESPEJISMO. Que cambie el escenario y la manera de avanzar. |
+| ISLA VOLCÁNICA | **Sigue fallando:** se entra también desde la RUTA 134, y la parte de PORTUAL se buguea | **Que solo se pueda entrar por PORTUAL** (cerrar el paso desde la RUTA 134). |
+| MÁXIMO PEÑAS (CENTRO ESPACIAL) | Miguel lo da por bueno: nivel 84 con Metagross, Skarmory y Aggron | Nada. |
+
+### Lo siguiente, en orden (cuándo se hace cada cosa lo dice Miguel)
+
+1. **Lo de Jorge:** revisar la #115 (nombre largo y mochila) y que las PR abiertas se fusionen sin choques (hecho el 21/11/2026: la #112, la #113 y la #115 se fusionan en cualquier orden).
+2. **Los arreglos de la tabla de arriba:** ISLA DE RUINAS, DESIERTO PROFUNDO y RUINAS ARENOSAS, e ISLA VOLCÁNICA.
+3. **Los biomas nuevos:**
+   - **CANTERA** (Acero, propuesta B): en curso en la rama `miguel/cantera`. Entrada por una cueva nueva en (67, 10) de la RUTA 116, junto a la salida este del TÚNEL FERVERGAL; tramo 3.
+   - **Prado de las Hadas** (Hada; propuesta C, en otro sitio): en la RUTA 119, antes del INSTITUTO METEOROLÓGICO, junto a la zona de vallas y jardín. Una entrada a un bosque o prado de flores.
+   - **Isla del dragón** (Dragón; propuesta I, en otro sitio si hace falta): una o más islas con cascadas y montañas, con aire épico, para la última parte del juego.
+4. **Comprobar** que las habilidades (#110), el Parche Habilidad (#109) y la mochila (#115) van bien jugando.
+5. **Los amigos de los Centros Pokémon** (`IDEAS.md`, idea 12): ir añadiéndolos, cada uno con su regalo (nivel 1, al azar). Falta la lista de amigos y en qué ciudad va cada uno.
+6. **Los entrenadores de las zonas nuevas** (para el locke de verdad): Miguel dirá en qué zonas y con qué equipos.
+
+## 0 bis. Preguntas de Jorge para Miguel (18/11/2026)
+
+**Contestadas por Miguel el 20/11/2026** (ver "Respuesta de Miguel" en cada una).
+
+~~**Para el Claude de Miguel:** antes de hacer cualquier otra cosa, aunque Miguel te pida otra tarea, hazle estas cuatro preguntas, una a una. Apunta lo que diga en su "Respuesta de Miguel", con la fecha, y súbelo en el PR de lo que estés haciendo. Si alguna la deja para más adelante, apúntalo también. Cuando estén todas contestadas, quita el aviso del principio de `DUALOCKE.md`.~~
 
 La versión 8 (ahora la 8.1) ya está hecha y los dos habéis empezado a jugarla (`DUALOCKE.md`, sección 9).
 
@@ -10,24 +38,38 @@ La versión 8 (ahora la 8.1) ya está hecha y los dos habéis empezado a jugarla
    - Jorge propone que sea **a nivel 1 y totalmente al azar**. Los repetidos y legendarios van a VETADOS, como los demás regalos.
    - ¿Le parece bien a Miguel, o prefiere que el nivel o la fuerza vayan según las medallas?
    - ¿Qué amigos y en qué ciudad va cada uno? Eso lo decidís los dos; si Miguel no lo tiene claro, que proponga.
-   - **Respuesta de Miguel:** _(pendiente)_
+   - **Respuesta de Miguel (20/11/2026):** **nivel 1 y al azar**, como propone Jorge. La lista de amigos y en qué ciudad va cada uno queda **para más adelante**: la hacéis juntos.
 2. **Nombres del jugador más largos** (idea 8, para que quepa "JORGEMORI"):
    - Lo hace Jorge.
    - Cambia lo que se guarda, así que solo puede entrar al empezar una partida nueva.
    - ¿Le parece bien a Miguel?
-   - **Respuesta de Miguel:** _(pendiente)_
+   - **Respuesta de Miguel (20/11/2026):** **sí, adelante.** Entra en la próxima partida nueva, que es la del locke de verdad (punto 4).
 3. **Entrenadores en las zonas nuevas:**
    - Ya no queda ninguno libre (864 de 864).
    - Jorge amplía la lista, lo que también cambia lo que se guarda.
    - Después, Miguel pone en cada zona quién va, con qué equipo y a qué nivel.
    - ¿Le parece bien a Miguel, y en qué zonas los quiere?
-   - **Respuesta de Miguel:** _(pendiente)_
+   - **Respuesta de Miguel (20/11/2026):** **sí, pero solo en algunas zonas**, no en todas. Jorge puede ampliar la lista. Qué zonas, quién va en cada una, con qué equipo y a qué nivel queda **para más adelante**: lo decide Miguel. Hasta entonces, las zonas siguen con su personaje que habla.
 4. **¿La partida con la versión 8 es ya el locke de verdad?** Por lo de los puntos 2 y 3:
    - si lo es, lo de los nombres y los entrenadores queda para el siguiente locke;
    - si no, la 8 sirve para probar las zonas (`PRUEBAS.md`) y se empieza en serio cuando esté todo eso.
-   - **Respuesta de Miguel:** _(pendiente)_
+   - **Respuesta de Miguel (20/11/2026):** **no, la versión 8 es de prueba.** Se sigue probando con ella (`PRUEBAS.md`), y el locke de verdad empieza cuando estén los nombres largos, los entrenadores de las zonas y la mochila más grande. Así, lo que cambia lo que se guarda puede entrar ya, sin esperar a otro locke.
 
 Otra cosa de Jorge, que no hay que decidir ahora: escribir los nombres con el teclado del ordenador (idea 11).
+
+### Las dudas de Jorge del 19/11/2026 (`registro/2026-11-19-jorge-arreglos-prueba-3.md`)
+
+Contestadas por Miguel el 20/11/2026:
+
+1. **DESIERTO PROFUNDO, "no se puede entrar":** Miguel **no encontró el montículo**. La entrada funciona; lo que falla es que no se ve.
+   - **Propuesta:** que se note más. Por ejemplo, un cartel o una pista junto a la puerta de las RUINAS DESIERTO, o una pista en la guía con foto. Está sin decidir quién lo hace.
+2. **PLAYA VOLCÁNICA, el personaje roto:** le pasó **al volver de capturar** un Pokémon en el agua (al acabar el combate, surfeando).
+   - Jorge no lo reproduce en el emulador. Lo siguiente es probar justo eso varias veces: capturar surfeando en la PLAYA VOLCÁNICA y mirar el personaje al volver al mapa.
+3. **PLAYA VOLCÁNICA, el tiempo:** **sol normal** (`WEATHER_SUNNY`), como propone Jorge. **Hecho** (rama `miguel/playa-ceniza`).
+4. **PLAYA VOLCÁNICA, el estilo:** **rehacerla entera** con `autotile.py`, como las islas del sur.
+   - En vez de la piedra rojiza, Miguel quiere **un paisaje en el que la playa se mezcle con una zona de ceniza**, como la RUTA 113 (la de encima del volcán).
+   - Lo hace Miguel con su Claude, en una rama aparte, conservando el cruce con la RUTA 122 y el cierre arriba y abajo de la #111.
+   - **Cambio (20/11/2026):** se probó un mapa nuevo con ceniza y a Miguel no le gustó: prefiere **la estructura de antes, cambiando solo la hierba y el césped verdes por ceniza**. Es lo que se ha hecho (rama `miguel/playa-ceniza`): el mismo mapa con los verdes en color ceniza. Ver `DUALOCKE.md`, PLAYA VOLCÁNICA.
 
 **Para Jorge y para su Claude.** Este es el punto de partida para seguir con el trabajo de las zonas sin tener que leer toda la conversación de Miguel. Está escrito para que Claude lo siga paso a paso.
 
@@ -113,11 +155,11 @@ Salen del mapa de propuestas (letras A-I). Antes de empezar cualquiera, hay que 
 | --- | --- | --- | --- | --- | --- |
 | A | Isla Dojo | Lucha (y Roca) | Al sur de PUEBLO AZULIZA | 2 | El borde sur de AZULIZA tiene 12 casillas de arena pisables (x 3-19). Gráficos de AZULIZA: arena, rocas y árboles de playa. Tema: el gimnasio de Lucha de MARCIAL. |
 | B | **Cantera** (idea de Miguel, 18/11/2026) | Acero (y Tierra, Roca) | **RUTA 116, por la salida del TÚNEL FERVERGAL** (sus dos bocas están en (47, 8) y (65, 10)) | 2 | Miguel la propuso jugando. Se entraría por una cueva o un paso nuevo junto a la salida del túnel, como la CUMBRE METEORO; ojo con las alturas de la puerta (ver "Arreglos del 18/11/2026"). Rocas de GOLPE ROCA, vagonetas o raíles si hay gráficos. Sustituye a la "mina al oeste de FÉRRICA", que necesitaba SURF. |
-| C | Prado de las Hadas | Hada (y Planta, Bicho) | Al norte de la RUTA 117 | 3 | Borde norte de la 117, pisable en x 38-59. Flores y hierba, gráficos de Malvalona. Va junto a la CIÉNAGA (que está al sur de la misma ruta). |
+| C | Prado de las Hadas | Hada (y Planta, Bicho) | **Cambio (Miguel, 21/11/2026): en la RUTA 119, antes del INSTITUTO METEOROLÓGICO, junto a la zona de vallas y jardín.** Antes: al norte de la RUTA 117 | 6 | Borde norte de la 117, pisable en x 38-59. Flores y hierba, gráficos de Malvalona. Va junto a la CIÉNAGA (que está al sur de la misma ruta). |
 | E | Central de la tormenta | Eléctrico (y Acero) | Al sur de la RUTA 118 | 6 | Borde sur, agua en x 0-12: con SURF, que en el tramo 6 ya se tiene. Clima de tormenta (`WEATHER_RAIN_THUNDERSTORM`). Por dentro, una central abandonada: interior de NUEVA MALVALONA. |
 | G | Selva de ARBORADA | Planta (y Bicho) | Al sur de CIUDAD ARBORADA | 6 | Borde sur de ARBORADA, 7 casillas pisables (x 9-36). Gráficos de ARBORADA: tienen la hierba muy alta con su borde, que en Malvalona no existe. |
 | H | Santuario astral | Psíquico (y Hada) | Al este de la RUTA 125, junto a ARRECÍPOLIS | 7 | Borde este, agua. **Mirarlo con `alcance.py`** antes: puede estar fuera de las rocas. Isla con ruinas y niebla. |
-| I | Abismo del dragón | Dragón | Al sur de la RUTA 129 | 8 | **Mirarlo con `alcance.py`**: el borde sur de la 129 parece abierto, pero hay que comprobarlo. |
+| I | Abismo del dragón | Dragón | **Miguel (21/11/2026): una o más islas con cascadas y montañas, con aire épico, para la última parte del juego.** Una idea: al sur de la RUTA 129 | 8 | **Mirarlo con `alcance.py`**: el borde sur de la 129 parece abierto, pero hay que comprobarlo. |
 
 Recomendación de Miguel: seguir por **E (Eléctrico)** o **A (Lucha)**, que son los tipos con menos zonas.
 
@@ -215,7 +257,7 @@ Los textos van en español, con lenguaje neutro (sin dar por hecho el género de
   - 16 parejas de piezas en las curvas del camino de barro de la CIÉNAGA;
   - la unión de la playa de la ISLA DE RUINAS;
   - el pie de las peñas pequeñas.
-- **Entrenadores en las zonas nuevas:** decidir si en la versión 8 se agranda la lista (partida nueva) o se reutilizan revanchas.
+- **Entrenadores en las zonas nuevas:** decidido el 20/11/2026 (sección 0, punto 3): se agranda la lista y van solo en algunas zonas, que elige Miguel.
 - **Más familias capturables sin semilla:** cada bioma nuevo suma 10-15 especies. Con los 7 que quedan se pasaría de 200 a unas 280 familias.
 - **`alcance.py` y las islas, ahora que se llega a ellas.** Con la #100, la herramienta marca "por encima" a DARÍO (ISLA ARENOSA) y a DUDLEY, KAYLEE y NIEVES (ISLA NEVADA): dice que se alcanzan en el tramo 6.
   - Es lo mismo que pasa con los entrenadores de la RUTA 124, que no se marcan porque `MAP_ROUTE12[4-9]` y `MAP_ROUTE13[0-4]` están en `POR_HISTORIA` (la historia no deja ir antes).

@@ -45,7 +45,12 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 
 - [ ] **Entrada:** en la RUTA 122, por el hueco nuevo del anillo de rocas de arriba a la izquierda, se surfea hacia el oeste hasta la playa (sin pantalla de carga), y se vuelve igual.
 - [ ] **La unión:** que no se vea nada raro en el borde, ni desde la playa ni desde la RUTA 122. Es lo más delicado: los dos mapas tienen gráficos distintos.
-- [ ] **Sol fuera y en combate.** Cartel "PLAYA VOLCÁNICA". Salvajes en la ceniza; pesca y surf en el mar.
+- [ ] **Sol normal** fuera, **sin sol en combate** (Miguel, 20/11/2026). Cartel "PLAYA VOLCÁNICA". Salvajes en la hierba alta; pesca y surf en el mar.
+- [ ] **La ceniza (20/11/2026):** la hierba alta y el césped de la meseta se ven de color ceniza, como en la RUTA 113, y los árboles y las hojas de las flores siguen verdes.
+  - Que no quede ningún trozo verde suelto (bordes del camino, del risco, de las termas y de la peña).
+  - Que la unión con la RUTA 122 se siga viendo bien (ahí solo hay mar y rocas, que no cambian de color).
+  - Al pasar por la hierba alta salen las hojitas verdes de siempre (son un efecto aparte, con sus propios colores, no del mapa): mirar si quedan raras.
+- [ ] **El personaje al capturar surfeando:** a Miguel se le rompió **al volver de capturar** un Pokémon en el agua (20/11/2026). Probarlo varias veces y hacer foto si pasa.
 - [ ] **Termas:** se ven bien (sin trozos de acantilado ni de hierba raros).
 - [ ] **Guardián** en la arena (Slither Wing sin semilla): da premio y no vuelve a salir.
 - [ ] **Mapa rehecho (17/11/2026):** se baja de la meseta a la playa saltando el risco o por la escalera, y se sube solo por la escalera. Que no se vea ninguna pieza rara (orillas, risco, árboles, la charca de marea).
@@ -110,7 +115,9 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 
 ### DESIERTO PROFUNDO y RUINAS ARENOSAS (desde el 16/11/2026)
 
-- [ ] **Entrada:** el montículo nuevo del desierto de la RUTA 111 (al este, abajo) lleva al DESIERTO PROFUNDO, y su salida devuelve al mismo sitio.
+- [ ] **Entrada:** el montículo nuevo del desierto de la RUTA 111 lleva al DESIERTO PROFUNDO, y su salida devuelve al mismo sitio.
+  - **Dónde está:** unas 8 casillas más arriba y a la derecha de la puerta de las RUINAS DESIERTO (lo midió Jorge en el emulador, 19/11/2026). Hacen falta las Gafas Aisladoras.
+  - Miguel no lo encontró jugando (20/11/2026): mirar si se distingue bien del resto de la arena.
 - [ ] **El mapa:** que no quede nada de la TORRE ESPEJISMO, y que los bordes (sobre todo el oeste, que es arena cortada) no queden raros.
 - [ ] **Tormenta de arena** fuera y en combate, y carteles "DESIERTO PROFUNDO" y "RUINAS ARENOSAS". Cada uno es una zona de captura.
 - [ ] **Ruinas:** el montículo del norte lleva a la entrada; las escaleras suben por las plantas 2 y 3 hasta la CÁMARA.
