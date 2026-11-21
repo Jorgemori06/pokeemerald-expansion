@@ -67,6 +67,13 @@ VIAJES = [
     # Teleférico de la RUTA 112 a la cima del MONTE CENIZO
     ("MAP_ROUTE112_CABLE_CAR_STATION", "MAP_MT_CHIMNEY_CABLE_CAR_STATION", 4),
     ("MAP_MT_CHIMNEY_CABLE_CAR_STATION", "MAP_ROUTE112_CABLE_CAR_STATION", 4),
+    # Barca del muelle de PORTUAL a la ISLA VOLCÁNICA, desde la 7.ª medalla (crear_islas_sur.py; Miguel,
+    # 21/11/2026). La isla ya no está pegada a la RUTA 134.
+    ("MAP_SLATEPORT_CITY", "MAP_ISLA_VOLCANICA", 8),
+    ("MAP_ISLA_VOLCANICA", "MAP_SLATEPORT_CITY", 8),
+    # Arenas movedizas del DESIERTO PROFUNDO: caes a la CUEVA de abajo (crear_desierto_profundo.py; Miguel,
+    # 21/11/2026). Se llega a la sala buena (su escalera es el warp 0), que sale junto a las ruinas.
+    ("MAP_DESIERTO_PROFUNDO", "MAP_DESIERTO_PROFUNDO_CUEVA", 5),
 ]
 
 # Entrenadores que da por alcanzables antes de tiempo, pero que no lo son por la historia

@@ -1553,7 +1553,7 @@
 #define FLAG_ITEM_SUR_BIG_PEARL            0x910 // Dualocke: objeto de las islas de las rutas del sur
 #define FLAG_ITEM_SUR_SAFETY_GOGGLES       0x911 // Dualocke: objeto de las islas de las rutas del sur
 #define FLAG_ITEM_SUR_PEARL_STRING         0x912 // Dualocke: objeto de las islas de las rutas del sur
-#define FLAG_UNUSED_0x913                           (SYSTEM_FLAGS + 0xB3) // Unused Flag
+#define FLAG_DUALOCKE_RUINAS_2F_ABIERTA    0x913 // Dualocke: interruptor de las RUINAS ARENOSAS pulsado
 #define FLAG_ITEM_TICKET_ISLA_DE_RUINAS    0x914 // Dualocke: Ticket-Recuerdo en las islas del sur
 #define FLAG_ITEM_TICKET_ISLA_VOLCANICA    0x915 // Dualocke: Ticket-Recuerdo en las islas del sur
 #define FLAG_ITEM_TICKET_ISLA_ARENOSA      0x916 // Dualocke: Ticket-Recuerdo en las islas del sur
@@ -1561,7 +1561,7 @@
 #define FLAG_ITEM_PLAYA_WATER_STONE        0x918 // Dualocke: objeto de la PLAYA VOLCÁNICA
 #define FLAG_ITEM_PLAYA_DAMP_ROCK          0x919 // Dualocke: objeto de la PLAYA VOLCÁNICA
 #define FLAG_ITEM_PLAYA_PEARL              0x91A // Dualocke: objeto de la PLAYA VOLCÁNICA
-#define FLAG_UNUSED_0x91B                           (SYSTEM_FLAGS + 0xBB) // Unused Flag
+#define FLAG_DUALOCKE_RUINAS_3F_ABIERTA    0x91B // Dualocke: interruptor de las RUINAS ARENOSAS pulsado
 #define FLAG_ITEM_TICKET_PLAYA_VOLCANICA   0x91C // Dualocke: Ticket-Recuerdo en la PLAYA VOLCÁNICA
 #define FLAG_DUALOCKE_GUARDIAN_CUMBRE               (SYSTEM_FLAGS + 0xBD) // Dualocke: guardián de la CUMBRE METEORO vencido o capturado
 #define FLAG_DUALOCKE_GUARDIAN_SINIESTRO             (SYSTEM_FLAGS + 0xBE) // Dualocke: guardián del BOSQUE SINIESTRO vencido o capturado

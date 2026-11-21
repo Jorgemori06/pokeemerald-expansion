@@ -9,15 +9,15 @@ Miguel probó la versión 8.5 (#114). **Las partidas de prueba siguen; el locke 
 | Zona | Cómo está | Qué hay que hacer |
 | --- | --- | --- |
 | ISLA NEVADA: reinicio al capturar al guardián | **Arreglado** (Miguel lo ha probado) | Nada. La isla "ya está muy bien". |
-| ISLA DE RUINAS | **Sigue sin poder entrar** (Miguel no sabe bien por dónde falla) | **Rehacerla:** una entrada más clara y una zona mejor. |
-| DESIERTO PROFUNDO | **Se entra y funciona bien** | **Rehacerlo** (y las RUINAS ARENOSAS): ahora es el mismo dibujo que el desierto y la TORRE ESPEJISMO. Que cambie el escenario y la manera de avanzar. |
-| ISLA VOLCÁNICA | **Sigue fallando:** se entra también desde la RUTA 134, y la parte de PORTUAL se buguea | **Que solo se pueda entrar por PORTUAL** (cerrar el paso desde la RUTA 134). |
+| ISLA DE RUINAS | **Sigue sin poder entrar** (Miguel no sabe bien por dónde falla) | **Hecho (21/11/2026):** al sur de la RUTA 129, templo en ruinas con playa, escalinata, patio y torre. |
+| DESIERTO PROFUNDO | **Se entra y funciona bien** | **Hecho (21/11/2026):** dunas con arenas movedizas que llevan a una cueva de tres salas; en las RUINAS ARENOSAS, interruptores. |
+| ISLA VOLCÁNICA | **Sigue fallando:** se entra también desde la RUTA 134, y la parte de PORTUAL se buguea | **Hecho (21/11/2026):** en barca desde el muelle de PORTUAL, desde la 7.ª medalla; ya no está pegada a la ruta. |
 | MÁXIMO PEÑAS (CENTRO ESPACIAL) | Miguel lo da por bueno: nivel 84 con Metagross, Skarmory y Aggron | Nada. |
 
 ### Lo siguiente, en orden (cuándo se hace cada cosa lo dice Miguel)
 
 1. **Lo de Jorge:** revisar la #115 (nombre largo y mochila) y que las PR abiertas se fusionen sin choques (hecho el 21/11/2026: la #112, la #113 y la #115 se fusionan en cualquier orden).
-2. **Los arreglos de la tabla de arriba:** ISLA DE RUINAS, DESIERTO PROFUNDO y RUINAS ARENOSAS, e ISLA VOLCÁNICA.
+2. **Los arreglos de la tabla de arriba:** ISLA DE RUINAS, DESIERTO PROFUNDO y RUINAS ARENOSAS, e ISLA VOLCÁNICA. **Hechos el 21/11/2026** (rama `miguel/arreglos-prueba-5`; sin probar en el emulador).
 3. **Los biomas nuevos:**
    - **CANTERA** (Acero, propuesta B): en curso en la rama `miguel/cantera`. Entrada por una cueva nueva en (67, 10) de la RUTA 116, junto a la salida este del TÚNEL FERVERGAL; tramo 3.
    - **Prado de las Hadas** (Hada; propuesta C, en otro sitio): en la RUTA 119, antes del INSTITUTO METEOROLÓGICO, junto a la zona de vallas y jardín. Una entrada a un bosque o prado de flores.
@@ -172,7 +172,7 @@ Recomendación de Miguel: seguir por **E (Eléctrico)** o **A (Lucha)**, que son
   - Es una decisión para cuando se empiece una partida nueva (versión 8).
 - **Flags:** ya no quedan bloques seguidos; cada zona coge flags sueltos.
   - Libres que no son de Jorge: 0x068, 0x0E9, 0x1DA, 0x1E0, 0x2D9 y 0x4FF.
-  - Del sistema: 0x8F4, 0x8F5, 0x8FD-0x8FF, 0x905-0x907, 0x913 y 0x91B. No usar 0x91F: lo usa `DAILY_FLAGS_START`.
+  - Del sistema: 0x8F4, 0x8F5, 0x8FD-0x8FF y 0x905-0x907 (0x913 y 0x91B son ya los interruptores de las RUINAS ARENOSAS, 21/11/2026). No usar 0x91F: lo usa `DAILY_FLAGS_START`.
   - **Los objetos ocultos necesitan un flag de 0x1F4 en adelante** (`FLAG_HIDDEN_ITEMS_START`); si no, no compila. `comprobar_zonas.py` ya lo avisa.
   - Los de 0x043-0x04F y 0x2B7-0x2BB se dejaron para Jorge. 0x2B6 ya lo usa `FLAG_DUALOCKE_CAJAS_REVISADAS`.
   - **0x4CA-0x4E3 no están libres:** son las megapiedras Gigamax (`FLAG_ITEM_MEGA_*`, #79). De ese bloque solo queda 0x4E4. (Comprobado con el preprocesador el 18/11/2026.)

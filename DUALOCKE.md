@@ -606,18 +606,21 @@ El primer bioma "por tipo". Miguel pidió que cada tipo tenga su bioma; el anál
 
 Tres islas nuevas del **tramo 8** (cap 84), cada una pegada al borde de una ruta de mar. Se llega surfeando, sin pantalla de carga, y usan los gráficos de su ruta (si no, la conexión se vería rota). Todo lo hace `tools/dualocke/crear_islas_sur.py`.
 
-- **Paso abierto en la barrera de rocas (17/11/2026):** el borde de cada ruta por el que se entra a su isla estaba fuera de la barrera de rocas del mar, y no se llegaba (lo vio Jorge con `alcance.py`, #99). Se quita una roca suelta de 2 × 2 de la barrera en cada ruta: RUTA 129 (46, 24), RUTA 131 (7, 12) y RUTA 134 (9, 21). Es la que deja el paso más corto sin pasar por corrientes y lejos de las conexiones de los lados (`PASOS` y `quitar_rocas()` en `crear_islas_sur.py`). Con `alcance.py`, las tres islas se alcanzan surfeando.
+- **Cambios del 21/11/2026 (Miguel, quinta prueba):** la ISLA DE RUINAS pasa al sur de la RUTA 129 (encima de la 131 no se llegaba) y la ISLA VOLCÁNICA se deja de pegar a la RUTA 134: se va en barca desde PORTUAL. Ver cada una.
+- **Paso abierto en la barrera de rocas (17/11/2026):** el borde de cada ruta por el que se entra a su isla estaba fuera de la barrera de rocas del mar, y no se llegaba (lo vio Jorge con `alcance.py`, #99). Se quita una roca suelta de 2 × 2 de la barrera en cada ruta: RUTA 129 (46, 24), RUTA 131 (7, 12) y RUTA 134 (9, 21). **Desde el 21/11/2026** la de la RUTA 134 vuelve a su sitio (la isla ya no está ahí). La de la RUTA 131 se queda: por ese hueco se llega también a la parte norte de las RUTAS 128-131. Es la que deja el paso más corto sin pasar por corrientes y lejos de las conexiones de los lados (`PASOS` y `quitar_rocas()` en `crear_islas_sur.py`). Con `alcance.py`, las tres islas se alcanzan surfeando.
 - **Sitios elegidos mirando las corrientes:**
   - Las RUTAS 132-134 tienen sus bordes cerrados por rocas, y sus corrientes solo empujan al oeste: no se llega a los huecos.
   - El borde este de la RUTA 127 es una pared de roca.
   - Por eso dos islas no están donde decía ZONAS.md (ver cada una).
 - **Los islotes se copian con `isla()`:** solo las casillas que no son mar y están unidas al islote. Así no se cuelan rocas sueltas, corrientes ni trozos de otras islas.
 - **Rehechas el 17/11/2026 con `autotile.py`** (ver "Dibujar mapas como los del juego"). Antes eran trozos de islotes copiados tal cual: la arena de la ISLA DE RUINAS acababa cortada en recto contra el mar, la ISLA VOLCÁNICA era un montículo pegado sobre un bajío cuadrado y la ISLA ARENOSA eran tres islotes de la RUTA 127.
-- **ISLA DE RUINAS**, al norte de la RUTA 131 (en ZONAS.md, al sur de la RUTA 132), junto al PILAR CELESTE:
-  - El islote del PILAR CELESTE con su torre, con niebla (Campo de Niebla en combate). Abajo, la franja de arena acaba en una playa (antes se cortaba en recto) y hay rocas en el mar.
-  - El rellano de la torre está rodeado de acantilados: la cueva de la orilla de abajo es un túnel que sale por la cueva del montículo.
+- **ISLA DE RUINAS**, al sur de la RUTA 129, desde su x 20 (hasta el 21/11/2026 estaba al norte de la RUTA 131, junto al PILAR CELESTE, y sus corrientes no dejaban llegar; Miguel no pudo entrar):
+  - **Por qué ahí:** todo el borde de abajo de la RUTA 129 es mar abierto y se alcanza en el tramo 8. Encima de la RUTA 130 aparece la ISLA ESPEJISMO (otros gráficos: desde la isla se vería rota), y a la izquierda de la RUTA 128 no se llega (solo se llegaba a través de la isla vieja, que hacía de puente sin querer).
+  - **Un templo en ruinas:** el islote del PILAR CELESTE con su torre, con niebla (Campo de Niebla en combate). Se ve desde la ruta y se rodea surfeando hasta una **playa grande** en su cara sur (8 filas de mar arriba dejan sitio para rodearla).
+  - De la playa sube una **escalinata de piedra** (antes, una cueva escondida que llevaba al montículo) a un **patio enlosado** con columnas de piedra, donde estaba el montículo; al fondo, la torre.
   - La puerta de la torre, abierta, lleva a la **TORRE**: la planta 1 del PILAR CELESTE, sin la escalera, con el guardián delante.
-- **ISLA VOLCÁNICA**, al sur de la RUTA 134, donde el mar no tiene corriente (se llega desde PORTUAL):
+- **ISLA VOLCÁNICA**, al sur de la RUTA 134. **Desde el 21/11/2026 se va en barca desde PORTUAL** (Miguel): ya no está pegada a la ruta, porque así se veía mal el borde de PORTUAL (el puerto aparecía y desaparecía) y se entraba desde toda la ruta.
+  - Un marinero en la punta del muelle de PORTUAL (38, 34) lleva a la isla desde la 7.ª medalla (el tramo de la isla); antes dice que el mar está muy bravo. En la playa de abajo de la isla, junto a la barca, el mismo marinero trae de vuelta. `alcance.py` conoce el viaje (`VIAJES`).
   - Una isla de arena con su anillo de bajío, tres peñas de la RUTA 127, rocas en el mar y, en medio, el montículo del PILAR CELESTE (con la cima de una peña: la suya tenía la sombra de la torre). Sol.
   - Su cueva baja al **CRÁTER**: la cima del MONTE CENIZO (lago de lava y terrazas, sin la estación del teleférico). Tiene manchas de ceniza con salvajes y una salida nueva: la entrada de la GUARIDA MAGMA del CAMINO ESCABROSO, puesta en un escalón.
 - **ISLA ARENOSA**, al este de la RUTA 129 (en ZONAS.md, al este de la RUTA 127):
@@ -702,9 +705,14 @@ Tres islas nuevas del **tramo 8** (cap 84), cada una pegada al borde de una ruta
 - **DESIERTO PROFUNDO** (24 × 68): el desierto de la RUTA 111 sin la TORRE ESPEJISMO ni los huecos de base secreta, con **tormenta de arena** (también en combate).
   - Abajo está la salida.
   - En el norte, otro montículo lleva a las ruinas.
+  - **Rehecho el 21/11/2026 (Miguel: era el mismo dibujo que el desierto y se avanzaba igual): dunas y arenas movedizas.**
+    - Todo es arena clara, y una fila de peñas corta el paso al norte: a las ruinas no se llega andando.
+    - Hay cuatro **arenas movedizas**, los únicos hoyos de arena honda (3 × 3): al pisar el centro, "¡La arena se hunde! ¡Es arena movediza!" y caes a la **CUEVA** de abajo, cada una a una sala.
+    - La **CUEVA** (`DesiertoProfundo_Cueva`, 40 × 23) es un trozo del PASO DESIERTO (la cueva de arena del juego) partido en tres salas con rocas. Cada sala tiene una escalera: la de la sala buena sale al norte, junto a las ruinas, y las otras dos devuelven a la entrada del desierto. El script comprueba que las salas no se tocan.
+    - SOLEDAD da la pista después del combate. `alcance.py` conoce la caída (`VIAJES`).
 - **RUINAS ARENOSAS:** las cuatro plantas de la TORRE ESPEJISMO (17/11/2026; antes eran dos).
   - **Entrada:** un pasillo alrededor de un bloque central.
-  - **Plantas 2 y 3:** suelo agrietado, igual que en la torre: si se rompe, caes a la planta de abajo (`setholewarp`). En la 3, dos rocas de GOLPE ROCA.
+  - **Plantas 2 y 3: interruptores** (desde el 21/11/2026, Miguel; antes, suelo agrietado como en la torre). Dos puertas de piedra cierran el paso a la escalera siguiente por los dos lados del pasillo, y el interruptor (una losa morada en el suelo) está en la otra punta: hay que dar la vuelta. Al pisarlo, "¡Clac! Algo de piedra se ha movido en esta planta", y las puertas se abren y se quedan abiertas (`FLAG_DUALOCKE_RUINAS_2F_ABIERTA` 0x913 y `FLAG_DUALOCKE_RUINAS_3F_ABIERTA` 0x91B). Ya no hay suelo agrietado ni rocas de GOLPE ROCA.
   - **CÁMARA:** arriba del todo.
   - **Guardián:** en la CÁMARA hay un Pokémon fuerte que se puede capturar, como en las islas del ferry (`dualocke_islas.inc`). Sin semilla es Garchomp a nivel 47 (cap − 3, regla `"tope"`); con semilla, otro fuerte (`islas()` en `estaticos.py`).
   - **Premio:** Cascabel Concha y su megapiedra si tiene. Flag `FLAG_DUALOCKE_GUARDIAN_RUINAS` (0x886).
