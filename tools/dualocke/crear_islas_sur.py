@@ -42,6 +42,7 @@ from collections import deque
 sys.path.insert(0, "tools/dualocke")
 import autotile as at  # noqa: E402
 import colocar_objetos as co  # noqa: E402
+import variantes  # noqa: E402
 
 RUINAS, TORRE = "IslaDeRuinas", "IslaDeRuinas_Torre"
 VOLCAN, CRATER = "IslaVolcanica", "IslaVolcanica_Crater"
@@ -81,6 +82,11 @@ PUERTA_ABIERTA = {(14, 4): 0x2AA, (14, 5): 0x2B2}
 # Aquí la cueva de la orilla de abajo y la del montículo son un túnel: se entra por una y se sale por la otra.
 CUEVA_PILAR, CUEVA_ORILLA = (17, 13), (15, 20)
 RUINAS_RUTA, RUINAS_DESPLAZAMIENTO = "MAP_ROUTE131", 15   # la isla empieza en la x 15 de la RUTA 131
+# La ISLA VOLCÁNICA empieza en la x 10 de la RUTA 134. Antes empezaba en la 0 y quedaba justo al lado del
+# puerto de PORTUAL, pero los dos mapas no se conocen: al pasar de la RUTA 134 a la isla, el puerto
+# desaparecía de golpe de la pantalla, y al volver aparecía (lo vio Miguel, 20/11/2026). Desde 8 casillas
+# de distancia ya no se ve PORTUAL desde la isla, ni la isla desde PORTUAL.
+VOLCAN_DESPLAZAMIENTO = 10
 # En el PILAR CELESTE la franja de arena de abajo sigue fuera del mapa: aquí acaba en una playa (filas 22-29).
 RUINAS_FILA_PLAYA = 22
 # La roca con remolino de la orilla (x 20-21 del PILAR CELESTE) tiene su mitad de abajo en la fila 22: se copia
@@ -473,8 +479,15 @@ ROCAS_SUELTAS = [(0x175, 0x176, 0x17D, 0x17E), (0x150, 0x151, 0x158, 0x159), (0x
 def quitar_rocas(carpeta, esquinas):
     """Quita rocas sueltas de mar (2 × 2, esquina de arriba a la izquierda) de una ruta y pone el mar de al lado.
     Se usa para abrir paso en la barrera de rocas hasta el borde por el que se entra a una isla. Se puede volver
-    a lanzar: si la roca ya no está, no hace nada."""
-    l, c = celdas_de(carpeta)
+    a lanzar: si la roca ya no está, no hace nada. Lo hace en todos los dibujos de la ruta: la RUTA 131 usa en
+    el juego LAYOUT_ROUTE131_SKY_PILLAR, y el paso a la ISLA DE RUINAS estaba abierto solo en el otro (lo vio
+    Miguel, 20/11/2026; ver variantes.py)."""
+    for ident in variantes.layouts_de(carpeta):
+        _quitar_rocas(LAYOUTS[ident], carpeta, esquinas)
+
+
+def _quitar_rocas(l, carpeta, esquinas):
+    c = list(struct.unpack(f"<{l['width'] * l['height']}H", open(l["blockdata_filepath"], "rb").read()))
     w = l["width"]
     for x0, y0 in esquinas:
         cuatro = tuple(c[(y0 + j) * w + x0 + i] & 0x3FF for j in (0, 1) for i in (0, 1))
@@ -584,7 +597,7 @@ def crear_mapas(l_ruinas, l_torre, l_volcan, l_crater, l_arenosa):
     cueva = cueva_volcan()
     mapa_json(VOLCAN, {"id": MAPAS[VOLCAN], "name": VOLCAN, "layout": l_volcan, **mar, **comun,
                        "region_map_section": MAPSEC[VOLCAN], "weather": "WEATHER_DROUGHT",
-                       "connections": [{"map": "MAP_ROUTE134", "offset": 0, "direction": "up"}],
+                       "connections": [{"map": "MAP_ROUTE134", "offset": -VOLCAN_DESPLAZAMIENTO, "direction": "up"}],
                        "warp_events": [{"x": cueva[0], "y": cueva[1], "elevation": 3, "dest_map": MAPAS[CRATER],
                                         "dest_warp_id": "0"}]}, [])
     mapa_json(CRATER, {"id": MAPAS[CRATER], "name": CRATER, "layout": l_crater, **comun,
@@ -598,7 +611,7 @@ def crear_mapas(l_ruinas, l_torre, l_volcan, l_crater, l_arenosa):
                         "connections": [{"map": "MAP_ROUTE129", "offset": 0, "direction": "left"}],
                         "warp_events": []},
                        [guardian(ARENOSA),
-                        {"graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_M", "x": SITIO_DARIO[0], "y": SITIO_DARIO[1], "elevation": 3,
+                        {"graphics_id": "OBJ_EVENT_GFX_MAN_3", "x": SITIO_DARIO[0], "y": SITIO_DARIO[1], "elevation": 3,
                          "movement_type": "MOVEMENT_TYPE_FACE_LEFT", "movement_range_x": 0, "movement_range_y": 0,
                          "trainer_type": "TRAINER_TYPE_NORMAL", "trainer_sight_or_berry_tree_id": "4",
                          "script": "IslaArenosa_EventScript_Dario", "flag": "0"}])
@@ -626,7 +639,7 @@ def crear_mapas(l_ruinas, l_torre, l_volcan, l_crater, l_arenosa):
 
     # Las rutas se conectan con su isla
     for ruta_mapa, isla_mapa, direccion, desplazamiento in (("Route131", RUINAS, "up", RUINAS_DESPLAZAMIENTO),
-                                                           ("Route134", VOLCAN, "down", 0),
+                                                           ("Route134", VOLCAN, "down", VOLCAN_DESPLAZAMIENTO),
                                                            ("Route129", ARENOSA, "right", 0)):
         ruta = f"data/maps/{ruta_mapa}/map.json"
         texto = leer(ruta)

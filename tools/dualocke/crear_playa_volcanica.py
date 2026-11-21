@@ -245,7 +245,7 @@ def crear_mapa(layout):
          "elevation": 3, "movement_type": "MOVEMENT_TYPE_FACE_LEFT", "movement_range_x": 0, "movement_range_y": 0,
          "trainer_type": "TRAINER_TYPE_NONE", "trainer_sight_or_berry_tree_id": "0",
          "script": f"{PLAYA}_EventScript_Pokemon", "flag": flag},
-        {"graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1", "x": BANISTA[0], "y": BANISTA[1], "elevation": 3,
+        {"graphics_id": "OBJ_EVENT_GFX_OLD_MAN", "x": BANISTA[0], "y": BANISTA[1], "elevation": 3,
          "movement_type": "MOVEMENT_TYPE_FACE_UP", "movement_range_x": 0, "movement_range_y": 0,
          "trainer_type": "TRAINER_TYPE_NONE", "trainer_sight_or_berry_tree_id": "0",
          "script": f"{PLAYA}_EventScript_Banista", "flag": "0"}]
