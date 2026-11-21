@@ -25,13 +25,14 @@ PREFIJOS = (
     "BosqueSiniestro",                                                    # BOSQUE SINIESTRO (#96)
     "CienagaToxica",                                                      # CIÉNAGA TÓXICA (#98)
     "Cantera",                                                            # CANTERA (21/11/2026)
+    "PradoHadas",                                                         # PRADO DE HADAS (21/11/2026)
 )
 
 # Flags de los objetos de las zonas nuevas (GRUPOS de colocar_objetos.py)
 FLAGS_OBJETOS = ("FLAG_ITEM_ISLA_", "FLAG_ITEM_GRUTA_", "FLAG_ITEM_NEVADA_", "FLAG_ITEM_DESIERTO_",
                  "FLAG_ITEM_MARISMA_", "FLAG_ITEM_BOSQUE_", "FLAG_ITEM_SUR_", "FLAG_ITEM_PLAYA_",
                  "FLAG_ITEM_CUMBRE_", "FLAG_ITEM_SINIESTRO_", "FLAG_ITEM_CIENAGA_",
-                 "FLAG_ITEM_CANTERA_")
+                 "FLAG_ITEM_CANTERA_", "FLAG_ITEM_PRADO_")
 
 
 def es_nueva(nombre_mapa):

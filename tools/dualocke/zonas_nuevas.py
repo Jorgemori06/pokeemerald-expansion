@@ -155,6 +155,15 @@ SALVAJES = {
     # evolucionar. Raros, Tinkatuff y Honedge.
     "MAP_CANTERA": {"land_mons": ["ARON", "NOSEPASS", "GRAVELER", "CARKOL", "MAGNETON", "KLINK",
                                   "FERROSEED", "PAWNIARD", "DRILBUR", "CUFANT", "TINKATUFF", "HONEDGE"]},
+    # PRADO DE HADAS (crear_prado_hadas.py): el bioma del tipo Hada. Tramo 6: ya evolucionados. Raros, Comfey y
+    # Mimikyu. Las charcas se surfean y se pesca.
+    "MAP_PRADO_HADAS": {
+        "land_mons": ["CLEFABLE", "WIGGLYTUFF", "GRANBULL", "AZUMARILL", "TOGETIC", "KIRLIA",
+                      "FLOETTE", "AROMATISSE", "SLURPUFF", "DEDENNE", "COMFEY", "MIMIKYU"],
+        "water_mons": ["MARILL", "AZUMARILL", "LUVDISC", "GOLDEEN", "SURSKIT"],
+        "fishing_mons": ["MAGIKARP", "GOLDEEN", "LUVDISC", "MARILL", "GOLDEEN",
+                         "LUVDISC", "MARILL", "AZUMARILL", "SEAKING", "AZUMARILL"],
+    },
     "MAP_ISLA_NEVADA_CUEVA": {
         "land_mons": ["SNORUNT", "SWINUB", "SNOVER", "CUBCHOO", "VANILLITE", "SNOM",
                       "BERGMITE", "SNEASEL", "CETODDLE", "CRYOGONAL", "EISCUE", "FRIGIBAX"],

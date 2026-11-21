@@ -9573,6 +9573,16 @@
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/Cantera/border.bin",
       "blockdata_filepath": "data/layouts/Cantera/map.bin"
+    },
+    {
+      "id": "LAYOUT_PRADO_HADAS",
+      "name": "PradoHadas_Layout",
+      "width": 40,
+      "height": 36,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/PradoHadas/border.bin",
+      "blockdata_filepath": "data/layouts/PradoHadas/map.bin"
     }
   ]
 }

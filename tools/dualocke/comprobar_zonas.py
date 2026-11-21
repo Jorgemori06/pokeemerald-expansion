@@ -88,7 +88,7 @@ def valores_flags():
 
 
 # Prefijos de las carpetas de las zonas nuevas (los mismos que NUEVOS de autotile.py)
-NUEVOS = ("Marisma", "Playa", "Bosque", "Isla", "Cumbre", "Desierto", "Ruinas", "Gruta", "Mansion", "Cienaga", "Cantera")
+NUEVOS = ("Marisma", "Playa", "Bosque", "Isla", "Cumbre", "Desierto", "Ruinas", "Gruta", "Mansion", "Cienaga", "Cantera", "Prado")
 
 
 def alturas_alrededor(info, x, y, w, h, con_la_suya=False):
