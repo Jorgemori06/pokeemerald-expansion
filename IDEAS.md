@@ -163,6 +163,7 @@ Una sección por idea, con:
 
 - **Qué:** que quepan nombres más largos. Ahora el nombre del jugador tiene un máximo de 7 letras y "JORGEMORI" (9) no cabe. Para la versión general; en la personalizada (idea 5) el nombre ya vendría puesto.
 - **Propuesta de:** Jorge, 27/10/2026, al empezar el locke (se ha tenido que poner "JORGE").
+- **Miguel está de acuerdo (20/11/2026).** Entra en la próxima partida nueva: la versión 8 es de prueba y el locke de verdad empieza después (`PLAN.md`, sección 0).
 - **Notas (viabilidad, sin planificar):**
   - **Motes de los Pokémon: ya caben 12 letras** (`POKEMON_NAME_LENGTH` = 12 en la expansion; en el Esmeralda original eran 10). Subirlo más es difícil: el mote se guarda dentro de cada Pokémon y cambiaría el tamaño de todos los Pokémon guardados (equipo y cajas). No parece que haga falta.
   - **Nombre del jugador: dificultad media.**
@@ -171,8 +172,7 @@ Una sección por idea, con:
     - Hay que revisar que el nombre largo quepa en los textos (diálogos con `{PLAYER}`, ficha, menú de guardar) y en la pantalla de poner nombre.
     - Las estructuras de los juegos por cable y la mezcla de récords guardan el nombre con tamaño fijo. Como no jugamos por cable, se pueden dejar o recortar al copiar.
   - El nombre del rival (Aura/Bruno) y los de las cajas del PC no hace falta tocarlos.
-- **Miguel está de acuerdo (20/11/2026).** Entra en la próxima partida nueva: la versión 8 es de prueba y el locke de verdad empieza después (`PLAN.md`, sección 0).
-- **Estado:** Pendiente (para la próxima partida nueva).
+- **Estado:** Pendiente (para el siguiente locke).
 
 ### 9. Las formas Gigamax como megaevoluciones
 
