@@ -128,7 +128,7 @@
 #define FLAG_MOSSDEEP_GYM_SWITCH_3           0x66 //
 #define FLAG_MOSSDEEP_GYM_SWITCH_4           0x67 //
 
-#define FLAG_UNUSED_0x068                    0x68  // Unused Flag
+#define FLAG_ITEM_CANTERA_HARD_STONE       0x068 // Dualocke: objeto de la CANTERA
 
 #define FLAG_OCEANIC_MUSEUM_MET_REPORTER     0x69
 #define FLAG_RECEIVED_HM_STRENGTH            0x6A
@@ -263,7 +263,7 @@
 #define FLAG_RECEIVED_TM_ROAR                0xE7
 #define FLAG_RECEIVED_TM_GIGA_DRAIN          0xE8
 
-#define FLAG_UNUSED_0x0E9                    0xE9 // Unused Flag
+#define FLAG_ITEM_CANTERA_METAL_COAT       0x0E9 // Dualocke: objeto de la CANTERA
 
 #define FLAG_RECEIVED_TM_REST                0xEA
 #define FLAG_RECEIVED_TM_ATTRACT             0xEB
@@ -518,7 +518,7 @@
 #define FLAG_ENABLE_TATE_AND_LIZA_MATCH_CALL 0x1D8
 #define FLAG_ENABLE_JUAN_MATCH_CALL          0x1D9
 
-#define FLAG_UNUSED_0x1DA                    0x1DA // Unused Flag
+#define FLAG_ITEM_TICKET_CANTERA           0x1DA // Dualocke: Ticket-Recuerdo en la CANTERA
 
 #define FLAG_SHOWN_MYSTIC_TICKET             0x1DB
 #define FLAG_DEFEATED_HO_OH                  0x1DC
@@ -776,7 +776,7 @@
 #define FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_INVISIBLE_NINJA_BOY   0x2D7
 #define FLAG_HIDE_PETALBURG_CITY_WALLYS_MOM                         0x2D8
 
-#define FLAG_UNUSED_0x2D9                                           0x2D9 // Unused Flag
+#define FLAG_ITEM_CANTERA_IRON_BALL        0x2D9 // Dualocke: objeto de la CANTERA
 
 #define FLAG_HIDE_LILYCOVE_FAN_CLUB_INTERVIEWER                     0x2DA
 #define FLAG_HIDE_RUSTBORO_CITY_AQUA_GRUNT                          0x2DB
@@ -1334,7 +1334,7 @@
 #define FLAG_DEFEATED_ELITE_4_GLACIA                                0x4FD
 #define FLAG_DEFEATED_ELITE_4_DRAKE                                 0x4FE
 
-#define FLAG_UNUSED_0x4FF                                           0x4FF // Unused Flag
+#define FLAG_DUALOCKE_GUARDIAN_CANTERA     0x4FF // Dualocke: guardián de la CANTERA vencido o capturado
 
 // Trainer Flags
 // Trainer flags occupy 0x500 - 0x85F, the last 9 of which are unused

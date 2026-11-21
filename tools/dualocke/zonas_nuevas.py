@@ -151,6 +151,10 @@ SALVAJES = {
         "fishing_mons": ["MAGIKARP", "BARBOACH", "BARBOACH", "SKRELP", "QWILFISH",
                          "SKRELP", "MAREANIE", "QWILFISH", "WHISCASH", "MAREANIE"],
     },
+    # CANTERA (crear_cantera.py): el bioma del tipo Acero, con Roca y Tierra. Tramo 3 (nivel 27-31): a medio
+    # evolucionar. Raros, Tinkatuff y Honedge.
+    "MAP_CANTERA": {"land_mons": ["ARON", "NOSEPASS", "GRAVELER", "CARKOL", "MAGNETON", "KLINK",
+                                  "FERROSEED", "PAWNIARD", "DRILBUR", "CUFANT", "TINKATUFF", "HONEDGE"]},
     "MAP_ISLA_NEVADA_CUEVA": {
         "land_mons": ["SNORUNT", "SWINUB", "SNOVER", "CUBCHOO", "VANILLITE", "SNOM",
                       "BERGMITE", "SNEASEL", "CETODDLE", "CRYOGONAL", "EISCUE", "FRIGIBAX"],

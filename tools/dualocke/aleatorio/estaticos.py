@@ -33,7 +33,7 @@ MAPAS_ISLAS = ("SouthernIsland_Interior", "FarawayIsland_Interior", "BirthIsland
                "RuinasArenosas_Camara", "GrutaIgnea_Camara", "IslaNevada_Cueva", "MansionOlvidada_Desvan",
                "IslaDeRuinas_Torre", "IslaVolcanica_Crater", "IslaArenosa",
                "PlayaVolcanica", "CumbreMeteoro", "MarismaAzuliza", "BosqueSiniestro",
-               "CienagaToxica")
+               "CienagaToxica", "Cantera")
 
 
 def _nivel_errantes():

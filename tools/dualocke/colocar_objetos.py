@@ -206,6 +206,13 @@ OBJETOS_CIENAGA = [
 OBJETOS_CIENAGA_OCULTOS = [("TOXIC_PLATE", "CienagaToxica", "oculta", None)]
 TICKETS_CIENAGA = [("CIENAGA_TOXICA", "CienagaToxica", "bola", None)]
 
+# CANTERA (crear_cantera.py). Con semilla, al azar. crear_cantera.py los pone en su sitio (SITIO_OBJETOS).
+# Flags sueltos: un grupo por flag.
+OBJETOS_CANTERA = [("HARD_STONE", "Cantera", "bola", None)]
+OBJETOS_CANTERA_2 = [("METAL_COAT", "Cantera", "bola", None)]
+OBJETOS_CANTERA_OCULTOS = [("IRON_BALL", "Cantera", "oculta", None)]
+TICKETS_CANTERA = [("CANTERA", "Cantera", "bola", None)]
+
 # PLAYA VOLCÁNICA (crear_playa_volcanica.py). Con semilla, al azar.
 # Al rehacer la playa (17/11/2026) se movieron a mano tres: el Ticket-Recuerdo (19,17, junto al risco),
 # la Perla oculta (22,4, en la arena de arriba) y la Piedra Agua (23,34, en la arena): habían quedado en el
@@ -403,6 +410,10 @@ GRUPOS = [
     (OBJETOS_CIENAGA, "FLAG_ITEM_CIENAGA_", 0x054, 0x055, "objeto de la CIÉNAGA TÓXICA", None),
     (OBJETOS_CIENAGA_OCULTOS, "FLAG_ITEM_CIENAGA_", 0x479, 0x479, "objeto de la CIÉNAGA TÓXICA", None),
     (TICKETS_CIENAGA, "FLAG_ITEM_TICKET_", 0x1AA, 0x1AA, "Ticket-Recuerdo en la CIÉNAGA TÓXICA", "HEART_SCALE"),
+    (OBJETOS_CANTERA, "FLAG_ITEM_CANTERA_", 0x068, 0x068, "objeto de la CANTERA", None),
+    (OBJETOS_CANTERA_2, "FLAG_ITEM_CANTERA_", 0x0E9, 0x0E9, "objeto de la CANTERA", None),
+    (OBJETOS_CANTERA_OCULTOS, "FLAG_ITEM_CANTERA_", 0x2D9, 0x2D9, "objeto de la CANTERA", None),
+    (TICKETS_CANTERA, "FLAG_ITEM_TICKET_", 0x1DA, 0x1DA, "Ticket-Recuerdo en la CANTERA", "HEART_SCALE"),
 ]
 COMPORTAMIENTOS_OK = {"MB_NORMAL", "MB_TALL_GRASS", "MB_LONG_GRASS", "MB_SHORT_GRASS", "MB_DEEP_SAND",
                       "MB_SAND", "MB_CAVE", "MB_ASHGRASS", "MB_FOOTPRINTS",

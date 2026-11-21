@@ -62,7 +62,9 @@ TRAMOS = {
         "SLATEPORT_CITY_OCEANIC_MUSEUM_*", "ROUTE110", "MAUVILLE_CITY", "ROUTE117",
         "MAUVILLE_CITY_GYM", "ROUTE110_TRICK_HOUSE_PUZZLE1",
         # CIÉNAGA TÓXICA, al sur de la RUTA 117 (crear_cienaga_toxica.py; Miguel, 17/11/2026)
-        "CIENAGA_TOXICA"],
+        "CIENAGA_TOXICA",
+        # CANTERA, por una cueva de la RUTA 116 junto al TÚNEL FERVERGAL (crear_cantera.py; Miguel, 21/11/2026)
+        "CANTERA"],
     4: ["ROUTE111", "ROUTE112", "FIERY_PATH", "ROUTE113", "ROUTE114", "METEOR_FALLS_1F_1R",
         "ROUTE115", "MT_CHIMNEY", "JAGGED_PASS", "LAVARIDGE_TOWN_GYM_*", "ROUTE110_TRICK_HOUSE_PUZZLE2",
         # CUMBRE METEORO, por una cueva de la RUTA 115 (crear_cumbre_meteoro.py; Miguel, 17/11/2026)
@@ -444,6 +446,7 @@ ESTATICOS = [
     ("data/maps/CumbreMeteoro/scripts.inc", "MAP_CUMBRE_METEORO", "tope"),
     ("data/maps/BosqueSiniestro/scripts.inc", "MAP_BOSQUE_SINIESTRO", "tope"),
     ("data/maps/CienagaToxica/scripts.inc", "MAP_CIENAGA_TOXICA", "tope"),
+    ("data/maps/Cantera/scripts.inc", "MAP_CANTERA", "tope"),
     # Dondozo y Tatsugiri de la MARISMA AZULIZA: la cala solo se alcanza con SURF (tramo 6)
     ("data/maps/MarismaAzuliza/scripts.inc", None, ("tope", 6)),
 ]

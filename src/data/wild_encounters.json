@@ -39262,6 +39262,75 @@
           }
         },
         {
+          "map": "MAP_CANTERA",
+          "base_label": "gCantera",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_ARON"
+              },
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_NOSEPASS"
+              },
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_GRAVELER"
+              },
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_CARKOL"
+              },
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_MAGNETON"
+              },
+              {
+                "min_level": 24,
+                "max_level": 26,
+                "species": "SPECIES_KLINK"
+              },
+              {
+                "min_level": 25,
+                "max_level": 27,
+                "species": "SPECIES_FERROSEED"
+              },
+              {
+                "min_level": 25,
+                "max_level": 27,
+                "species": "SPECIES_PAWNIARD"
+              },
+              {
+                "min_level": 25,
+                "max_level": 27,
+                "species": "SPECIES_DRILBUR"
+              },
+              {
+                "min_level": 25,
+                "max_level": 27,
+                "species": "SPECIES_CUFANT"
+              },
+              {
+                "min_level": 26,
+                "max_level": 28,
+                "species": "SPECIES_TINKATUFF"
+              },
+              {
+                "min_level": 26,
+                "max_level": 28,
+                "species": "SPECIES_HONEDGE"
+              }
+            ]
+          }
+        },
+        {
           "map": "MAP_ISLA_NEVADA_CUEVA",
           "base_label": "gIslaNevada_Cueva",
           "land_mons": {

@@ -9563,6 +9563,16 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/DesiertoProfundo_Cueva/border.bin",
       "blockdata_filepath": "data/layouts/DesiertoProfundo_Cueva/map.bin"
+    },
+    {
+      "id": "LAYOUT_CANTERA",
+      "name": "Cantera_Layout",
+      "width": 40,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/Cantera/border.bin",
+      "blockdata_filepath": "data/layouts/Cantera/map.bin"
     }
   ]
 }
