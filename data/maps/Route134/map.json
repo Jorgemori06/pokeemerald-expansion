@@ -23,11 +23,6 @@
       "map": "MAP_ROUTE133",
       "offset": 0,
       "direction": "right"
-    },
-    {
-      "map": "MAP_ISLA_VOLCANICA",
-      "offset": 10,
-      "direction": "down"
     }
   ],
   "object_events": [
