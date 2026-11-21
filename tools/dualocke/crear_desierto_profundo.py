@@ -27,6 +27,7 @@ import sys
 
 sys.path.insert(0, "tools/dualocke")
 import colocar_objetos as co  # noqa: E402
+import variantes  # noqa: E402
 
 DESIERTO, RUINAS, CAMARA = "DesiertoProfundo", "RuinasArenosas", "RuinasArenosas_Camara"
 PLANTA2, PLANTA3 = "RuinasArenosas_2F", "RuinasArenosas_3F"
@@ -214,9 +215,15 @@ def entrada_ruta111():
     l111, c111 = celdas_de("Route111")
     w = l111["width"]
     x, y = SITIO_RUTA111
-    estampar(c111, w, monticulo(c111, w), x, y)
-    with open(l111["blockdata_filepath"], "wb") as f:
-        f.write(struct.pack(f"<{w * l111['height']}H", *c111))
+    bloque = monticulo(c111, w)
+    # En todos los dibujos de la RUTA 111: al derrumbarse la TORRE ESPEJISMO el juego pasa a usar
+    # LAYOUT_ROUTE111_NO_MIRAGE_TOWER, y sin esto la puerta desaparecía (lo vio Miguel, 20/11/2026)
+    for ident in variantes.layouts_de("Route111"):
+        l = LAYOUTS[ident]
+        c = list(struct.unpack(f"<{l['width'] * l['height']}H", open(l["blockdata_filepath"], "rb").read()))
+        estampar(c, w, bloque, x, y)
+        with open(l["blockdata_filepath"], "wb") as f:
+            f.write(struct.pack(f"<{w * l['height']}H", *c))
     ruta = "data/maps/Route111/map.json"
     texto = leer(ruta)
     if MAPAS[DESIERTO] not in texto:

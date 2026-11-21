@@ -179,6 +179,16 @@ class Emulador:
                 self.pulsar("a", despues=40)
         return False
 
+    def hablar(self, direccion, maximo=15):
+        """Mira hacia `direccion` y pulsa A hasta que empieza un combate (True) o se acaban los intentos."""
+        self.pulsar(direccion, fotogramas=3, despues=10)
+        for _ in range(maximo):
+            self.pulsar("a", despues=40)
+            if self.en_combate():
+                self.avanzar(300)
+                return True
+        return False
+
     def huir(self):
         """En un combate salvaje: HUIR (el cursor se pone en HUIR escribiendo en la memoria) y esperar a
         volver al mapa."""

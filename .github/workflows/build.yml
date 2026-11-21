@@ -57,6 +57,14 @@ jobs:
       - name: Zonas nuevas sin sitios sin salida
         run: python3 tools/dualocke/sin_salida.py --comprobar
 
+      # Dualocke: que ningún personaje use un gráfico de Rojo Fuego (sale basura y el juego se reinicia)
+      - name: Sin gráficos de Rojo Fuego en Esmeralda
+        run: python3 tools/dualocke/graficos.py --comprobar
+
+      # Dualocke: lo que se dibuja en un mapa original, en todos sus dibujos (RUTA 111 sin torre, RUTA 131...)
+      - name: Mapas con más de un dibujo
+        run: python3 tools/dualocke/variantes.py --comprobar
+
       - name: ROM (Emerald)
         env:
           GAME_VERSION: EMERALD
