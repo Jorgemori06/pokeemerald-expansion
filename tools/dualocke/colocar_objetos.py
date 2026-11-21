@@ -218,6 +218,11 @@ OBJETOS_PRADO = [("SHINY_STONE", "PradoHadas", "bola", None), ("SACHET", "PradoH
 OBJETOS_PRADO_OCULTOS = [("FAIRY_FEATHER", "PradoHadas", "oculta", None)]
 TICKETS_PRADO = [("PRADO_HADAS", "PradoHadas", "bola", None)]
 
+# ISLA DEL DRAGÓN (crear_isla_dragon.py). Con semilla, al azar. crear_isla_dragon.py los pone en su sitio.
+OBJETOS_DRAGON = [("DRAGON_SCALE", "IslaDragon_Valle", "bola", None)]
+OBJETOS_DRAGON_OCULTOS = [("DRAGON_FANG", "IslaDragon_Valle", "oculta", None)]
+TICKETS_DRAGON = [("ISLA_DRAGON", "IslaDragon_Valle", "bola", None)]
+
 # PLAYA VOLCÁNICA (crear_playa_volcanica.py). Con semilla, al azar.
 # Al rehacer la playa (17/11/2026) se movieron a mano tres: el Ticket-Recuerdo (19,17, junto al risco),
 # la Perla oculta (22,4, en la arena de arriba) y la Piedra Agua (23,34, en la arena): habían quedado en el
@@ -422,6 +427,9 @@ GRUPOS = [
     (OBJETOS_PRADO, "FLAG_ITEM_PRADO_", 0x8F4, 0x8F5, "objeto del PRADO DE HADAS", None),
     (OBJETOS_PRADO_OCULTOS, "FLAG_ITEM_PRADO_", 0x8FD, 0x8FD, "objeto del PRADO DE HADAS", None),
     (TICKETS_PRADO, "FLAG_ITEM_TICKET_", 0x8FE, 0x8FE, "Ticket-Recuerdo en el PRADO DE HADAS", "HEART_SCALE"),
+    (OBJETOS_DRAGON, "FLAG_ITEM_DRAGON_", 0x905, 0x905, "objeto de la ISLA DEL DRAGÓN", None),
+    (OBJETOS_DRAGON_OCULTOS, "FLAG_ITEM_DRAGON_", 0x906, 0x906, "objeto de la ISLA DEL DRAGÓN", None),
+    (TICKETS_DRAGON, "FLAG_ITEM_TICKET_", 0x907, 0x907, "Ticket-Recuerdo en la ISLA DEL DRAGÓN", "HEART_SCALE"),
 ]
 COMPORTAMIENTOS_OK = {"MB_NORMAL", "MB_TALL_GRASS", "MB_LONG_GRASS", "MB_SHORT_GRASS", "MB_DEEP_SAND",
                       "MB_SAND", "MB_CAVE", "MB_ASHGRASS", "MB_FOOTPRINTS",

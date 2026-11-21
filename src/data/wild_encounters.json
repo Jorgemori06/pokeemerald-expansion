@@ -39485,6 +39485,249 @@
           }
         },
         {
+          "map": "MAP_ISLA_DRAGON",
+          "base_label": "gIslaDragon",
+          "water_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_DRAGONAIR"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_SEADRA"
+              },
+              {
+                "min_level": 77,
+                "max_level": 79,
+                "species": "SPECIES_DRAGALGE"
+              },
+              {
+                "min_level": 78,
+                "max_level": 80,
+                "species": "SPECIES_KINGDRA"
+              },
+              {
+                "min_level": 78,
+                "max_level": 80,
+                "species": "SPECIES_GYARADOS"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 30,
+            "mons": [
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_DRATINI"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_SKRELP"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_SEADRA"
+              },
+              {
+                "min_level": 77,
+                "max_level": 79,
+                "species": "SPECIES_DRAGONAIR"
+              },
+              {
+                "min_level": 77,
+                "max_level": 79,
+                "species": "SPECIES_DRAGALGE"
+              },
+              {
+                "min_level": 77,
+                "max_level": 79,
+                "species": "SPECIES_KINGDRA"
+              },
+              {
+                "min_level": 78,
+                "max_level": 80,
+                "species": "SPECIES_GYARADOS"
+              },
+              {
+                "min_level": 78,
+                "max_level": 80,
+                "species": "SPECIES_DRAGONAIR"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ISLA_DRAGON_VALLE",
+          "base_label": "gIslaDragon_Valle",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_FLYGON"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_ALTARIA"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_NOIVERN"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_TYRANTRUM"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_DURALUDON"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_DRAMPA"
+              },
+              {
+                "min_level": 77,
+                "max_level": 79,
+                "species": "SPECIES_GOODRA"
+              },
+              {
+                "min_level": 77,
+                "max_level": 79,
+                "species": "SPECIES_KOMMO_O"
+              },
+              {
+                "min_level": 77,
+                "max_level": 79,
+                "species": "SPECIES_SALAMENCE"
+              },
+              {
+                "min_level": 77,
+                "max_level": 79,
+                "species": "SPECIES_GARCHOMP"
+              },
+              {
+                "min_level": 78,
+                "max_level": 80,
+                "species": "SPECIES_DRAGAPULT"
+              },
+              {
+                "min_level": 78,
+                "max_level": 80,
+                "species": "SPECIES_DRAGONITE"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_DRAGONAIR"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_SEADRA"
+              },
+              {
+                "min_level": 77,
+                "max_level": 79,
+                "species": "SPECIES_DRAGALGE"
+              },
+              {
+                "min_level": 78,
+                "max_level": 80,
+                "species": "SPECIES_KINGDRA"
+              },
+              {
+                "min_level": 78,
+                "max_level": 80,
+                "species": "SPECIES_GYARADOS"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 30,
+            "mons": [
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_HORSEA"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_DRATINI"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_SKRELP"
+              },
+              {
+                "min_level": 76,
+                "max_level": 78,
+                "species": "SPECIES_SEADRA"
+              },
+              {
+                "min_level": 77,
+                "max_level": 79,
+                "species": "SPECIES_DRAGONAIR"
+              },
+              {
+                "min_level": 77,
+                "max_level": 79,
+                "species": "SPECIES_DRAGALGE"
+              },
+              {
+                "min_level": 77,
+                "max_level": 79,
+                "species": "SPECIES_KINGDRA"
+              },
+              {
+                "min_level": 78,
+                "max_level": 80,
+                "species": "SPECIES_GYARADOS"
+              },
+              {
+                "min_level": 78,
+                "max_level": 80,
+                "species": "SPECIES_DRAGONAIR"
+              }
+            ]
+          }
+        },
+        {
           "map": "MAP_ISLA_NEVADA_CUEVA",
           "base_label": "gIslaNevada_Cueva",
           "land_mons": {

@@ -209,6 +209,7 @@ static const u8 sMapSectionToThemeId[MAPSEC_COUNT - KANTO_MAPSEC_COUNT - 1] =
     [MAPSEC_CIENAGA_TOXICA - KANTO_MAPSEC_COUNT] = MAPPOPUP_THEME_WOOD, // Dualocke: zona nueva
     [MAPSEC_CANTERA - KANTO_MAPSEC_COUNT] = MAPPOPUP_THEME_WOOD, // Dualocke: zona nueva
     [MAPSEC_PRADO_HADAS - KANTO_MAPSEC_COUNT] = MAPPOPUP_THEME_WOOD, // Dualocke: zona nueva
+    [MAPSEC_ISLA_DRAGON - KANTO_MAPSEC_COUNT] = MAPPOPUP_THEME_WOOD, // Dualocke: zona nueva
 };
 
 #if OW_POPUP_GENERATION == GEN_5
@@ -346,6 +347,7 @@ static const u8 sRegionMapSectionId_To_PopUpThemeIdMapping_BW[] =
     [MAPSEC_CIENAGA_TOXICA - KANTO_MAPSEC_COUNT] = MAPPOPUP_THEME_BW_DEFAULT, // Dualocke: zona nueva
     [MAPSEC_CANTERA - KANTO_MAPSEC_COUNT] = MAPPOPUP_THEME_BW_DEFAULT, // Dualocke: zona nueva
     [MAPSEC_PRADO_HADAS - KANTO_MAPSEC_COUNT] = MAPPOPUP_THEME_BW_DEFAULT, // Dualocke: zona nueva
+    [MAPSEC_ISLA_DRAGON - KANTO_MAPSEC_COUNT] = MAPPOPUP_THEME_BW_DEFAULT, // Dualocke: zona nueva
 };
 
 static const u8 sText_PyramidFloor1[] = ES(_("PYRAMID FLOOR 1"), _("PIRÁMIDE PLANTA 1"));

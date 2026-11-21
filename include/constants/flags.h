@@ -1533,15 +1533,15 @@
 #define FLAG_ITEM_NEVADA_SNOWBALL          0x8FC // Dualocke: objeto de la ISLA NEVADA
 #define FLAG_ITEM_PRADO_FAIRY_FEATHER      0x8FD // Dualocke: objeto del PRADO DE HADAS
 #define FLAG_ITEM_TICKET_PRADO_HADAS       0x8FE // Dualocke: Ticket-Recuerdo en el PRADO DE HADAS
-#define FLAG_UNUSED_0x8FF                           (SYSTEM_FLAGS + 0x9F) // Unused Flag
+#define FLAG_DUALOCKE_GUARDIAN_DRAGON      0x8FF // Dualocke: guardián de la ISLA DEL DRAGÓN vencido o capturado
 #define FLAG_ITEM_BOSQUE_SILVER_POWDER     0x900 // Dualocke: objeto del BOSQUE FRONDOSO y la MANSIÓN OLVIDADA
 #define FLAG_ITEM_BOSQUE_BIG_ROOT          0x901 // Dualocke: objeto del BOSQUE FRONDOSO y la MANSIÓN OLVIDADA
 #define FLAG_ITEM_BOSQUE_REAPER_CLOTH      0x902 // Dualocke: objeto del BOSQUE FRONDOSO y la MANSIÓN OLVIDADA
 #define FLAG_ITEM_BOSQUE_CLEANSE_TAG       0x903 // Dualocke: objeto del BOSQUE FRONDOSO y la MANSIÓN OLVIDADA
 #define FLAG_ITEM_BOSQUE_DUSK_STONE        0x904 // Dualocke: objeto del BOSQUE FRONDOSO y la MANSIÓN OLVIDADA
-#define FLAG_UNUSED_0x905                           (SYSTEM_FLAGS + 0xA5) // Unused Flag
-#define FLAG_UNUSED_0x906                           (SYSTEM_FLAGS + 0xA6) // Unused Flag
-#define FLAG_UNUSED_0x907                           (SYSTEM_FLAGS + 0xA7) // Unused Flag
+#define FLAG_ITEM_DRAGON_DRAGON_SCALE      0x905 // Dualocke: objeto de la ISLA DEL DRAGÓN
+#define FLAG_ITEM_DRAGON_DRAGON_FANG       0x906 // Dualocke: objeto de la ISLA DEL DRAGÓN
+#define FLAG_ITEM_TICKET_ISLA_DRAGON       0x907 // Dualocke: Ticket-Recuerdo en la ISLA DEL DRAGÓN
 #define FLAG_ITEM_TICKET_BOSQUE_FRONDOSO   0x908 // Dualocke: Ticket-Recuerdo en el BOSQUE FRONDOSO
 #define FLAG_DUALOCKE_GUARDIAN_ISLA_RUINAS           (SYSTEM_FLAGS + 0xA9) // Dualocke: guardián de la ISLA DE RUINAS vencido o capturado
 #define FLAG_DUALOCKE_GUARDIAN_VOLCAN                (SYSTEM_FLAGS + 0xAA) // Dualocke: guardián de la ISLA VOLCÁNICA vencido o capturado

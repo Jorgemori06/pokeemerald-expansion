@@ -96,7 +96,9 @@ TRAMOS = {
         "SOOTOPOLIS_CITY_GYM_*", "ROUTE110_TRICK_HOUSE_PUZZLE6",
         "FARAWAY_ISLAND_ENTRANCE", "FARAWAY_ISLAND_INTERIOR",
         # Islas de las rutas del sur (crear_islas_sur.py; Miguel, 17/11/2026)
-        "ISLA_DE_RUINAS", "ISLA_DE_RUINAS_TORRE", "ISLA_VOLCANICA", "ISLA_VOLCANICA_CRATER", "ISLA_ARENOSA"],
+        "ISLA_DE_RUINAS", "ISLA_DE_RUINAS_TORRE", "ISLA_VOLCANICA", "ISLA_VOLCANICA_CRATER", "ISLA_ARENOSA",
+        # ISLA DEL DRAGÓN, al sur de la RUTA 130 (crear_isla_dragon.py; Miguel, 21/11/2026)
+        "ISLA_DRAGON", "ISLA_DRAGON_VALLE"],
     9: ["EVER_GRANDE_CITY", "VICTORY_ROAD_*", "METEOR_FALLS_1F_2R", "METEOR_FALLS_B1F_*",
         "EVER_GRANDE_CITY_*S_ROOM", "ROUTE110_TRICK_HOUSE_PUZZLE7", "ROUTE110_TRICK_HOUSE_PUZZLE8",
         # (los nombres exactos: NAVEL_ROCK_* también cogería los mapas de Rojo Fuego, _FRLG)
@@ -450,6 +452,7 @@ ESTATICOS = [
     ("data/maps/CienagaToxica/scripts.inc", "MAP_CIENAGA_TOXICA", "tope"),
     ("data/maps/Cantera/scripts.inc", "MAP_CANTERA", "tope"),
     ("data/maps/PradoHadas/scripts.inc", "MAP_PRADO_HADAS", "tope"),
+    ("data/maps/IslaDragon_Valle/scripts.inc", "MAP_ISLA_DRAGON_VALLE", "tope"),
     # Dondozo y Tatsugiri de la MARISMA AZULIZA: la cala solo se alcanza con SURF (tramo 6)
     ("data/maps/MarismaAzuliza/scripts.inc", None, ("tope", 6)),
 ]

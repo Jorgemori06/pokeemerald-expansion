@@ -1758,6 +1758,14 @@
       "y": 0,
       "width": 1,
       "height": 1
+    },
+    {
+      "id": "MAPSEC_ISLA_DRAGON",
+      "name": "ISLA DEL DRAGÓN",
+      "x": 21,
+      "y": 11,
+      "width": 1,
+      "height": 1
     }
   ]
 }
