@@ -73,12 +73,15 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 
 ### Islas de las rutas del sur (desde el 17/11/2026)
 
-- [ ] **Se llega a las tres islas surfeando (17/11/2026):** por el hueco nuevo en las rocas de la RUTA 129 (46, 24), de la RUTA 131 (7, 12) y de la RUTA 134 (9, 21). Que el hueco se vea como un paso normal entre rocas.
-- [ ] **ISLA DE RUINAS:** desde el norte de la RUTA 131, surfeando hacia arriba.
-  - La cueva de la orilla de abajo sale por la del montículo, y se vuelve igual.
+- [ ] **Se llega surfeando a la ISLA ARENOSA y a la ISLA DE RUINAS:** por el hueco de las rocas de la RUTA 129 (46, 24).
+- [ ] **ISLA DE RUINAS (rehecha el 21/11/2026):** desde el borde de abajo de la RUTA 129 se ve la isla; se rodea surfeando hasta la playa grande del sur.
+  - De la playa, la escalinata de piedra sube al patio enlosado con columnas, y al fondo está la torre. Que la escalinata, el patio y la sombra de la torre se vean bien, y la torre por arriba.
   - La puerta de la torre lleva a la TORRE; la escalera de arriba ya no está.
   - Niebla fuera y Campo de Niebla en combate.
-- [ ] **ISLA VOLCÁNICA:** desde el sur de la RUTA 134 (la parte sin corriente, cerca de PORTUAL).
+  - Desde el norte de la RUTA 131 ya no se va a ninguna isla.
+- [ ] **ISLA VOLCÁNICA (cambiada el 21/11/2026): en barca desde PORTUAL.**
+  - El marinero de la punta del muelle de PORTUAL dice que el mar está bravo hasta la 7.ª medalla; con ella, te lleva a la playa de abajo de la isla. El de la isla te trae de vuelta al muelle.
+  - En la RUTA 134 ya no se pasa a la isla, y la roca de (9, 21) está otra vez. Que el borde de PORTUAL ya no aparezca ni desaparezca.
   - La cueva del montículo baja al CRÁTER y la cueva nueva del escalón sube.
   - En la ceniza salen salvajes. Sol fuera y en combate.
 - [ ] **ISLA ARENOSA:** desde el este de la RUTA 129. Tormenta de arena. Salvajes en la hierba alta del islote de hierba (al oeste). DARÍO lucha.
@@ -119,10 +122,15 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
   - **Dónde está:** unas 8 casillas más arriba y a la derecha de la puerta de las RUINAS DESIERTO (lo midió Jorge en el emulador, 19/11/2026). Hacen falta las Gafas Aisladoras.
   - Miguel no lo encontró jugando (20/11/2026): mirar si se distingue bien del resto de la arena.
 - [ ] **El mapa:** que no quede nada de la TORRE ESPEJISMO, y que los bordes (sobre todo el oeste, que es arena cortada) no queden raros.
+- [ ] **Dunas y arenas movedizas (21/11/2026):**
+  - Una fila de peñas corta el paso: a las ruinas no se llega andando.
+  - Las 4 arenas movedizas (cuadrados de arena honda): al pisar el centro sale el mensaje y caes a la CUEVA, cada una a una sala.
+  - En la sala buena (la arena movediza de abajo a la derecha), la escalera sale junto a las ruinas; en las otras, la escalera devuelve a la entrada.
+  - Que las rocas que separan las salas se vean bien.
 - [ ] **Tormenta de arena** fuera y en combate, y carteles "DESIERTO PROFUNDO" y "RUINAS ARENOSAS". Cada uno es una zona de captura.
 - [ ] **Ruinas:** el montículo del norte lleva a la entrada; las escaleras suben por las plantas 2 y 3 hasta la CÁMARA.
-  - En las plantas 2 y 3, el suelo agrietado se rompe y caes a la de abajo.
-  - En la 3, GOLPE ROCA rompe las dos rocas. El guardián tiene el sprite del Pokémon que sale y da premio al vencerlo o capturarlo.
+  - **Interruptores (21/11/2026):** en las plantas 2 y 3, las puertas de piedra no dejan llegar a la escalera; al pisar la losa morada de la otra punta se abren y se quedan abiertas (también al salir y volver).
+  - El guardián tiene el sprite del Pokémon que sale y da premio al vencerlo o capturarlo.
 - [ ] **Entrenadores:** SOLEDAD en el desierto y RAMIRO en las ruinas, a nivel 46-47.
 - [ ] **Salvajes y objetos** de las dos zonas.
 
