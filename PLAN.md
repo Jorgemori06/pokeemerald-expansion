@@ -1,6 +1,32 @@
 # Plan: hacer la ROM ya y seguir con los biomas (Miguel → Jorge, 17/11/2026)
 
-## 0. Preguntas de Jorge para Miguel (18/11/2026), lo primero
+## 0. Quinta prueba de Miguel y lo siguiente (21/11/2026), lo primero
+
+Miguel probó la versión 8.5 (#114). **Las partidas de prueba siguen; el locke de verdad empieza con la #115 y los entrenadores nuevos.**
+
+### Cómo va lo que arregló Jorge en la #114
+
+| Zona | Cómo está | Qué hay que hacer |
+| --- | --- | --- |
+| ISLA NEVADA: reinicio al capturar al guardián | **Arreglado** (Miguel lo ha probado) | Nada. La isla "ya está muy bien". |
+| ISLA DE RUINAS | **Sigue sin poder entrar** (Miguel no sabe bien por dónde falla) | **Rehacerla:** una entrada más clara y una zona mejor. |
+| DESIERTO PROFUNDO | **Se entra y funciona bien** | **Rehacerlo** (y las RUINAS ARENOSAS): ahora es el mismo dibujo que el desierto y la TORRE ESPEJISMO. Que cambie el escenario y la manera de avanzar. |
+| ISLA VOLCÁNICA | **Sigue fallando:** se entra también desde la RUTA 134, y la parte de PORTUAL se buguea | **Que solo se pueda entrar por PORTUAL** (cerrar el paso desde la RUTA 134). |
+| MÁXIMO PEÑAS (CENTRO ESPACIAL) | Miguel lo da por bueno: nivel 84 con Metagross, Skarmory y Aggron | Nada. |
+
+### Lo siguiente, en orden (cuándo se hace cada cosa lo dice Miguel)
+
+1. **Lo de Jorge:** revisar la #115 (nombre largo y mochila) y que las PR abiertas se fusionen sin choques (hecho el 21/11/2026: la #112, la #113 y la #115 se fusionan en cualquier orden).
+2. **Los arreglos de la tabla de arriba:** ISLA DE RUINAS, DESIERTO PROFUNDO y RUINAS ARENOSAS, e ISLA VOLCÁNICA.
+3. **Los biomas nuevos:**
+   - **CANTERA** (Acero, propuesta B): en curso en la rama `miguel/cantera`. Entrada por una cueva nueva en (67, 10) de la RUTA 116, junto a la salida este del TÚNEL FERVERGAL; tramo 3.
+   - **Prado de las Hadas** (Hada; propuesta C, en otro sitio): en la RUTA 119, antes del INSTITUTO METEOROLÓGICO, junto a la zona de vallas y jardín. Una entrada a un bosque o prado de flores.
+   - **Isla del dragón** (Dragón; propuesta I, en otro sitio si hace falta): una o más islas con cascadas y montañas, con aire épico, para la última parte del juego.
+4. **Comprobar** que las habilidades (#110), el Parche Habilidad (#109) y la mochila (#115) van bien jugando.
+5. **Los amigos de los Centros Pokémon** (`IDEAS.md`, idea 12): ir añadiéndolos, cada uno con su regalo (nivel 1, al azar). Falta la lista de amigos y en qué ciudad va cada uno.
+6. **Los entrenadores de las zonas nuevas** (para el locke de verdad): Miguel dirá en qué zonas y con qué equipos.
+
+## 0 bis. Preguntas de Jorge para Miguel (18/11/2026)
 
 **Contestadas por Miguel el 20/11/2026** (ver "Respuesta de Miguel" en cada una).
 
@@ -128,11 +154,11 @@ Salen del mapa de propuestas (letras A-I). Antes de empezar cualquiera, hay que 
 | --- | --- | --- | --- | --- | --- |
 | A | Isla Dojo | Lucha (y Roca) | Al sur de PUEBLO AZULIZA | 2 | El borde sur de AZULIZA tiene 12 casillas de arena pisables (x 3-19). Gráficos de AZULIZA: arena, rocas y árboles de playa. Tema: el gimnasio de Lucha de MARCIAL. |
 | B | **Cantera** (idea de Miguel, 18/11/2026) | Acero (y Tierra, Roca) | **RUTA 116, por la salida del TÚNEL FERVERGAL** (sus dos bocas están en (47, 8) y (65, 10)) | 2 | Miguel la propuso jugando. Se entraría por una cueva o un paso nuevo junto a la salida del túnel, como la CUMBRE METEORO; ojo con las alturas de la puerta (ver "Arreglos del 18/11/2026"). Rocas de GOLPE ROCA, vagonetas o raíles si hay gráficos. Sustituye a la "mina al oeste de FÉRRICA", que necesitaba SURF. |
-| C | Prado de las Hadas | Hada (y Planta, Bicho) | Al norte de la RUTA 117 | 3 | Borde norte de la 117, pisable en x 38-59. Flores y hierba, gráficos de Malvalona. Va junto a la CIÉNAGA (que está al sur de la misma ruta). |
+| C | Prado de las Hadas | Hada (y Planta, Bicho) | **Cambio (Miguel, 21/11/2026): en la RUTA 119, antes del INSTITUTO METEOROLÓGICO, junto a la zona de vallas y jardín.** Antes: al norte de la RUTA 117 | 6 | Borde norte de la 117, pisable en x 38-59. Flores y hierba, gráficos de Malvalona. Va junto a la CIÉNAGA (que está al sur de la misma ruta). |
 | E | Central de la tormenta | Eléctrico (y Acero) | Al sur de la RUTA 118 | 6 | Borde sur, agua en x 0-12: con SURF, que en el tramo 6 ya se tiene. Clima de tormenta (`WEATHER_RAIN_THUNDERSTORM`). Por dentro, una central abandonada: interior de NUEVA MALVALONA. |
 | G | Selva de ARBORADA | Planta (y Bicho) | Al sur de CIUDAD ARBORADA | 6 | Borde sur de ARBORADA, 7 casillas pisables (x 9-36). Gráficos de ARBORADA: tienen la hierba muy alta con su borde, que en Malvalona no existe. |
 | H | Santuario astral | Psíquico (y Hada) | Al este de la RUTA 125, junto a ARRECÍPOLIS | 7 | Borde este, agua. **Mirarlo con `alcance.py`** antes: puede estar fuera de las rocas. Isla con ruinas y niebla. |
-| I | Abismo del dragón | Dragón | Al sur de la RUTA 129 | 8 | **Mirarlo con `alcance.py`**: el borde sur de la 129 parece abierto, pero hay que comprobarlo. |
+| I | Abismo del dragón | Dragón | **Miguel (21/11/2026): una o más islas con cascadas y montañas, con aire épico, para la última parte del juego.** Una idea: al sur de la RUTA 129 | 8 | **Mirarlo con `alcance.py`**: el borde sur de la 129 parece abierto, pero hay que comprobarlo. |
 
 Recomendación de Miguel: seguir por **E (Eléctrico)** o **A (Lucha)**, que son los tipos con menos zonas.
 
