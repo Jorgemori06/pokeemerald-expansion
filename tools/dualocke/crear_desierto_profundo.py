@@ -20,10 +20,13 @@ Uso (desde la raíz del repo; se puede volver a lanzar):
   - la **CUEVA** (DesiertoProfundo_Cueva) es un trozo del PASO DESIERTO, la cueva de arena del juego,
     partida en tres salas con rocas. Cada sala tiene una escalera: dos te devuelven a la entrada del
     desierto y solo una (la de la arena movediza buena) sale al norte, junto a las ruinas.
-- **RUINAS ARENOSAS:** las cuatro plantas de la TORRE ESPEJISMO: la entrada, dos plantas con suelo
-  agrietado (si se rompe, caes a la de abajo; en la tercera hay rocas de GOLPE ROCA) y la CÁMARA,
-  la sala del fósil, donde está el guardián: un Pokémon fuerte que se puede capturar (como en las
-  islas del ferry, data/scripts/dualocke_islas.inc).
+- **RUINAS ARENOSAS:** las cuatro plantas de la TORRE ESPEJISMO: la entrada, dos plantas con
+  **interruptores** y la CÁMARA, la sala del fósil, donde está el guardián: un Pokémon fuerte que se puede
+  capturar (como en las islas del ferry, data/scripts/dualocke_islas.inc).
+  - **Interruptores (Miguel, 21/11/2026; antes, suelo agrietado como en la TORRE ESPEJISMO).** En las
+    plantas 2 y 3, unas puertas de piedra cierran el paso a la escalera siguiente por los dos lados del
+    pasillo, y el interruptor (una losa morada en el suelo) está al otro lado: hay que dar la vuelta. Al
+    pisarlo se abren las puertas de la planta y se quedan abiertas (un flag por planta, INTERRUPTORES).
 - **Zonas de captura propias:** MAPSEC_DESIERTO_PROFUNDO y MAPSEC_RUINAS_ARENOSAS, al final de la lista.
 - Los mapas van al final de su grupo y de layouts.json.
 Los entrenadores, los salvajes y los objetos los ponen zonas_nuevas.py y colocar_objetos.py.
@@ -31,6 +34,7 @@ Los entrenadores, los salvajes y los objetos los ponen zonas_nuevas.py y colocar
 
 import json
 import os
+import re
 import struct
 import sys
 
@@ -59,19 +63,14 @@ CUEVA_ROCAS = [(12, 10), (12, 11), (12, 12), (26, 9), (26, 10), (0, 10), (0, 11)
 ESCALERA = 0x323E
 # Escaleras de la cueva: la de la sala buena (warp 0) sale junto a las ruinas; las otras, a la entrada
 ESCALERAS = [((34, 8), "ruinas"), ((3, 4), "inicio"), ((21, 14), "inicio")]
-# Plantas con suelo agrietado: como en la TORRE ESPEJISMO, al romperse caes a la planta de abajo
-AGUJEROS = """{carpeta}_MapScripts::
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, CaveHole_CheckFallDownHole
-	map_script MAP_SCRIPT_ON_TRANSITION, CaveHole_FixCrackedGround
-	map_script MAP_SCRIPT_ON_RESUME, {carpeta}_SetHoleWarp
-	.byte 0
-
-@ Dualocke: RUINAS ARENOSAS (tools/dualocke/crear_desierto_profundo.py). Si el suelo se rompe, caes abajo
-{carpeta}_SetHoleWarp:
-	setstepcallback STEP_CB_CRACKED_FLOOR
-	setholewarp {abajo}
-	end
-"""
+# Interruptores de las plantas 2 y 3 (Miguel, 21/11/2026): planta -> flag, su valor, el interruptor y las
+# puertas de piedra que abre
+INTERRUPTORES = {
+    PLANTA2: ("FLAG_DUALOCKE_RUINAS_2F_ABIERTA", 0x913, (3, 11), [(16, 8), (10, 13), (10, 14)]),
+    PLANTA3: ("FLAG_DUALOCKE_RUINAS_3F_ABIERTA", 0x91B, (3, 12), [(10, 2), (10, 3), (3, 8), (4, 8)]),
+}
+SUELO_RUINAS, BOTON, BOTON_PULSADO, PUERTA = 0x3211, 0x3237, 0x3232, 0x3613
+AGRIETADO = 0x22F                        # suelo agrietado de la TORRE ESPEJISMO: aquí, suelo normal
 CAJA = (16, 30, 40, 98)                  # trozo de la RUTA 111 (x0, y0, x1, y1)
 TORRE = range(0x3D8, 0x3F3)              # metatiles de la TORRE ESPEJISMO
 ARENA = 0x251                            # arena lisa del desierto
@@ -301,21 +300,11 @@ def crear_mapas(layout_desierto, layout_ruinas, layout_camara, layout_2f, layout
             (PLANTA3, layout_3f, MAPAS[PLANTA2],
              [{"x": 18, "y": 12, "elevation": 3, "dest_map": MAPAS[PLANTA2], "dest_warp_id": "0"},
               {"x": 2, "y": 4, "elevation": 3, "dest_map": MAPAS[CAMARA], "dest_warp_id": "0"}])):
-        if not os.path.exists(f"data/maps/{carpeta}/scripts.inc"):
-            os.makedirs(f"data/maps/{carpeta}", exist_ok=True)
-            escribir(f"data/maps/{carpeta}/scripts.inc", AGUJEROS.format(carpeta=carpeta, abajo=abajo))
         mapa_json(carpeta, {
             "id": MAPAS[carpeta], "name": carpeta, "layout": layout, "music": "MUS_MT_CHIMNEY",
             "region_map_section": "MAPSEC_RUINAS_ARENOSAS", "weather": "WEATHER_NONE",
             "map_type": "MAP_TYPE_UNDERGROUND", **comun, "warp_events": warps})
-    # Las rocas de GOLPE ROCA de la planta 3, como en la torre
-    ruta = f"data/maps/{PLANTA3}/map.json"
-    if "OBJ_EVENT_GFX_BREAKABLE_ROCK" not in leer(ruta):
-        texto = leer(ruta)
-        for o in json.loads(leer("data/maps/MirageTower_3F/map.json"))["object_events"]:
-            texto = co.insertar_en_lista(texto, "object_events", o)
-        json.loads(texto)
-        escribir(ruta, texto)
+    interruptores()
     mapa_json(CAMARA, {
         "id": MAPAS[CAMARA], "name": CAMARA, "layout": layout_camara, "music": "MUS_MT_CHIMNEY",
         "region_map_section": "MAPSEC_RUINAS_ARENOSAS", "weather": "WEATHER_NONE",
@@ -342,6 +331,62 @@ def crear_mapas(layout_desierto, layout_ruinas, layout_camara, layout_2f, layout
         a = '\t.include "data/maps/RuinasArenosas_3F/scripts.inc" @ Dualocke: zona nueva' + salto
         assert texto.count(a) == 1
         escribir("data/event_scripts.s", texto.replace(a, a + linea + salto))
+
+
+def interruptores():
+    """Las plantas 2 y 3 de las RUINAS ARENOSAS: suelo normal, puertas de piedra, el interruptor y sus scripts."""
+    flags = leer("include/constants/flags.h")
+    for carpeta, (flag, valor, boton, puertas) in INTERRUPTORES.items():
+        if flag not in flags:
+            antigua = re.search(rf"^#define FLAG_UNUSED_0x{valor:03X}\s+(0x{valor:X}\b|\(SYSTEM_FLAGS \+ 0x[0-9A-F]+\)).*$",
+                                flags, re.M)
+            assert antigua, f"el flag 0x{valor:03X} ya no está libre"
+            flags = flags.replace(antigua.group(0), f"#define {flag:<34} 0x{valor:03X} "
+                                                    "// Dualocke: interruptor de las RUINAS ARENOSAS pulsado")
+        l, c = celdas_de(carpeta)
+        w = l["width"]
+        for i, v in enumerate(c):
+            if v & 0x3FF == AGRIETADO:
+                c[i] = SUELO_RUINAS
+        for x, y in puertas + [boton]:
+            assert not (c[y * w + x] >> 10) & 3, ("ahí no hay suelo", carpeta, x, y, hex(c[y * w + x]))
+        suelo = {(x, y): c[y * w + x] & 0x3FF for x, y in puertas}   # al abrir, la puerta vuelve a ser este suelo
+        for x, y in puertas:
+            c[y * w + x] = PUERTA
+        c[boton[1] * w + boton[0]] = BOTON
+        with open(l["blockdata_filepath"], "wb") as f:
+            f.write(struct.pack(f"<{w * l['height']}H", *c))
+        ruta = f"data/maps/{carpeta}/map.json"
+        m = json.loads(leer(ruta))
+        m["object_events"] = [o for o in m["object_events"] if o["graphics_id"] != "OBJ_EVENT_GFX_BREAKABLE_ROCK"]
+        m["coord_events"] = [{"type": "trigger", "x": boton[0], "y": boton[1], "elevation": 3, "var": "VAR_TEMP_1",
+                              "var_value": "0", "script": f"{carpeta}_EventScript_Interruptor"}]
+        escribir(ruta, json.dumps(m, indent=2, ensure_ascii=False) + "\n")
+        abrir = "".join(f"\tsetmetatile {x}, {y}, 0x{suelo[(x, y)]:03X}, FALSE\n" for x, y in puertas)
+        abrir += f"\tsetmetatile {boton[0]}, {boton[1]}, 0x{BOTON_PULSADO & 0x3FF:03X}, FALSE\n"
+        escribir(f"data/maps/{carpeta}/scripts.inc", (
+            f"{carpeta}_MapScripts::\n\tmap_script MAP_SCRIPT_ON_LOAD, {carpeta}_OnLoad\n\t.byte 0\n\n"
+            "@ Dualocke: RUINAS ARENOSAS (tools/dualocke/crear_desierto_profundo.py). El interruptor abre las puertas\n"
+            "@ de piedra de esta planta, que se quedan abiertas.\n"
+            f"{carpeta}_OnLoad:\n\tgoto_if_unset {flag}, {carpeta}_OnLoadFin\n\tcall {carpeta}_Abrir\n"
+            f"{carpeta}_OnLoadFin:\n\tend\n\n"
+            f"{carpeta}_Abrir:\n{abrir}\treturn\n\n"
+            f"{carpeta}_EventScript_Interruptor::\n\tlockall\n\tgoto_if_set {flag}, {carpeta}_EventScript_InterruptorFin\n"
+            f"\tsetflag {flag}\n\tplayse SE_SWITCH\n\tcall {carpeta}_Abrir\n\tspecial DrawWholeMapView\n"
+            f"\tplayse SE_M_STRENGTH\n\tmsgbox RuinasArenosas_Text_Interruptor, MSGBOX_DEFAULT\n"
+            f"{carpeta}_EventScript_InterruptorFin:\n\treleaseall\n\tend\n"))
+    escribir("include/constants/flags.h", flags)
+    # El texto, una vez, en la planta 1
+    ruta = f"data/maps/{RUINAS}/scripts.inc"
+    texto = leer(ruta)
+    if "RuinasArenosas_Text_Interruptor:" not in texto:
+        salto = "\r\n" if "\r\n" in texto else "\n"
+        texto = texto.rstrip() + salto + salto + salto.join([
+            "@ Dualocke: al pisar un interruptor de las plantas 2 y 3 (crear_desierto_profundo.py)",
+            "RuinasArenosas_Text_Interruptor:",
+            '\t.string "¡Clac! Algo de piedra se ha movido\\n"',
+            '\t.string "en esta planta.$"']) + salto
+        escribir(ruta, texto)
 
 
 def entrada_ruta111():
