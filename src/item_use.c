@@ -1222,7 +1222,11 @@ bool32 CannotUseItemsInBattle(enum Item itemId, struct Pokemon *mon)
     if (battlerTarget < MAX_POSITION_COUNT && GetItemType(itemId) != ITEM_USE_BAG_MENU)
     {
         if (gBattleMons[battlerTarget].volatiles.embargoTimer)
+        {
+            // Dualocke: party_menu.c enseña gStringVar4 (el motivo) desde la #123; aquí, el texto de siempre
+            StringExpandPlaceholders(gStringVar4, gText_WontHaveEffect);
             return TRUE;
+        }
     }
 
     // Dualocke (Items Clause): los Objetos X (incluidos Directo, Protección X y Maxisetas) no se pueden usar

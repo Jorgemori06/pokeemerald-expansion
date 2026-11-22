@@ -47,6 +47,16 @@ Se cambia fácil si Miguel o Jorge prefieren otra cosa.
 - **Compilación y `make check`:** los hará el CI.
 - **Sin probar en el emulador:** con el bot de Jorge se puede (una partida en la Liga).
 
+## Después de la prueba de Jorge (22/11/2026, tarde)
+
+Jorge lo probó todo junto con el bot (`registro/2026-11-22-jorge-prueba-todo-junto.md`):
+- **compila, y la regla funciona:** la tienda, la cura en cada sala, el contador y los curativos del rival;
+- **un fallo:** el mensaje de la regla no salía, sino "No tendrá ningún efecto". Lo arregló él en el #123 (`src/party_menu.c` enseña ahora el motivo que deja `CannotUseItemsInBattle`), y ya está en esta rama.
+
+Encima, dos cosas pequeñas:
+- **Embargo:** con el arreglo del #123, si el Pokémon está bajo Embargo, `CannotUseItemsInBattle` salía sin poner texto y se habría visto el último mensaje que hubiera. Ahora pone "No tendrá ningún efecto", como antes.
+- **El mote al curar** (Jorge lo vio de paso): al usar un curativo de PS en combate salía "Mandibuzz ha recuperado PS.", con el nombre de la especie (`BS_ItemRestoreHP`, de la expansion). Ahora sale el mote ("Gus ha recuperado PS."), y en los del rival, con su artículo y "rival". En los tests de la expansion sigue como en el original.
+
 ## Pendiente
 
-- Probarlo en el emulador: tienda, mensaje al no poder curar, que deje curar después de que el rival use un RESTAURAR TODO, y la cura al entrar en cada sala.
+- Que Jorge vea en el emulador el mensaje con el mote y fusione.
