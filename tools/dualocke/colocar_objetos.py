@@ -634,7 +634,11 @@ def mover_las_que_tapan():
 # Repartir (Jorge y Miguel, 22/11/2026): con buscar_casilla() todos los objetos de un mapa acababan en la misma ancla
 # (la primera que tenía sitio): hasta 11 en un cuadrado de 7x7 en la RUTA 119. --repartir los vuelve a colocar,
 # solo en los mapas amontonados, lo más lejos posible de los demás objetos del mapa. Cada objeto solo va a casillas a
-# las que se llega en el mismo tramo que a la suya (alcance.py): no se adelanta ni se retrasa ninguno.
+# las que se llega en el mismo tramo que a la suya (alcance.py): no se adelanta ni se retrasa ninguno. Y siguen en su
+# contexto (Jorge, 22/11/2026): con la pista de su tabla (las del desierto de la RUTA 111, junto a lo del desierto) y en el
+# mismo tipo de suelo que antes (arena, hierba alta, cueva…).
+TERRENOS = {"MB_SAND": "arena", "MB_DEEP_SAND": "arena", "MB_FOOTPRINTS": "arena", "MB_TALL_GRASS": "hierba",
+            "MB_LONG_GRASS": "hierba", "MB_ASHGRASS": "ceniza", "MB_CAVE": "cueva", "MB_SHALLOW_WATER": "agua"}
 NUESTROS = re.compile(r"^FLAG_ITEM_(MEGA|COMP|TICKET)_")
 AMONTONADO = 5  # objetos en un cuadrado de 7x7 a partir de los que se reparte el mapa
 
@@ -691,6 +695,8 @@ def repartir(solo_resumen=False):
     import sin_salida  # noqa: E402
     mb, tilesets, layouts = comportamientos(), atributos_tilesets(), cargar_layouts()
     ok = {mb[n] for n in COMPORTAMIENTOS_OK if n in mb}
+    terreno_de = {mb[n]: t for n, t in TERRENOS.items() if n in mb}
+    pistas = {prefijo + objeto: pista for lista, prefijo, *_ in GRUPOS for objeto, _, _, pista in lista}
     mundo, llegadas = alcance.Mundo(), sin_salida.llegadas_por_script()
     tramo_de = {}
     for t in range(9, 0, -1):
@@ -717,9 +723,11 @@ def repartir(solo_resumen=False):
         fijos = [(o[0], o[1]) for o in objetos if o[2] not in flags]
         ocupadas = {(e["x"], e["y"]) for k in ("object_events", "bg_events", "warp_events", "coord_events")
                     for e in trabajo.get(k, [])}
-        anclas = [(o["x"], o["y"], "") for o in trabajo.get("object_events", [])
+        anclas = [(o["x"], o["y"], str(o.get("flag", "")) + str(o.get("trainer_sight_or_berry_tree_id", "")))
+                  for o in trabajo.get("object_events", [])
                   if o.get("graphics_id") == "OBJ_EVENT_GFX_ITEM_BALL" or o.get("trainer_type", "TRAINER_TYPE_NONE") != "TRAINER_TYPE_NONE"]
-        anclas += [(b["x"], b["y"], "") for b in trabajo.get("bg_events", []) if b.get("type") == "hidden_item"]
+        anclas += [(b["x"], b["y"], b.get("flag", "") + b.get("item", "")) for b in trabajo.get("bg_events", [])
+                   if b.get("type") == "hidden_item"]
         anclas += [(w["x"], w["y"], "") for w in trabajo.get("warp_events", [])]
         anclas += [(o["x"], o["y"], "") for o in trabajo.get("object_events", [])]
         layout = layouts[mapa["layout"]]
@@ -740,10 +748,15 @@ def repartir(solo_resumen=False):
         for x0, y0, flag, tipo in sorted(nuestros, key=lambda o: o[3] != "bola"):
             distancia = (1, 4) if tipo == "bola" else (3, 8)
             tramo = tramo_de.get((mid, x0, y0))
+            terreno = terreno_de.get(info(x0, y0)[2], "suelo")
+            pista = pistas.get(flag)
+            suyas = [a for a in anclas if pista and re.search(pista, a[2])] or anclas
             sitios = {}
             for solo_suelo in (True, False):
-                sitios = _casillas_desde_anclas(anclas, info, ancho, alto, ok, distancia, ocupadas, solo_suelo)
+                sitios = _casillas_desde_anclas(suyas, info, ancho, alto, ok, distancia, ocupadas, solo_suelo)
                 sitios = {c: e for c, e in sitios.items() if tramo_de.get((mid,) + c) == tramo}
+                mismo = {c: e for c, e in sitios.items() if terreno_de.get(info(*c)[2], "suelo") == terreno}
+                sitios = mismo or sitios
                 if sitios:
                     break
             otros = fijos + puestos
@@ -771,7 +784,7 @@ def repartir(solo_resumen=False):
         despues = montón(fijos + puestos)
         print(f"{carpeta}: {len(nuestros)} objetos, montón de {antes} -> {despues}")
         for flag, ((x, y), elev) in nuevos.items():
-            print(f"    {flag}: -> ({x}, {y}), tramo {tramo_de.get((mid, x, y))}")
+            print(f"    {flag}: -> ({x}, {y}), tramo {tramo_de.get((mid, x, y))}, {terreno_de.get(info(x, y)[2], 'suelo')}")
             # Solo se cambian x, y y altura dentro del bloque de este objeto (se busca por su flag, que es único)
             i = crudo.index(f'"flag": "{flag}"')
             ini, fin = crudo.rindex("{", 0, i), crudo.index("}", i)
