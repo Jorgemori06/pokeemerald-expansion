@@ -72,3 +72,6 @@ src/data/dualocke_aleatorio.h
 
 # Dualocke: el emulador de pruebas se compila solo (tools/dualocke/emulador/gbarun.c)
 tools/dualocke/emulador/gbarun
+
+# Bot de tools/dualocke/bot: ROM, estados guardados, diario y fotos de la partida
+partida_bot/
