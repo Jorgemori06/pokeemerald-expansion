@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke_es.h"
 #include "pokenav.h"
 #include "window.h"
 #include "strings.h"
@@ -93,9 +94,9 @@ static u32 LoopedTask_PrintCheckPageInfo(s32);
 static const u16 sListArrow_Pal[] = INCGFX_U16("graphics/pokenav/list_arrows.png", ".gbapal");
 static const u32 sListArrow_Gfx[] = INCGFX_U32("graphics/pokenav/list_arrows.png", ".4bpp.smol");
 
-static const u8 gText_PokenavMatchCall_Strategy[] = _("STRATEGY");
-static const u8 gText_PokenavMatchCall_TrainerPokemon[] = _("TRAINER'S POKéMON");
-static const u8 gText_PokenavMatchCall_SelfIntroduction[] = _("SELF-INTRODUCTION");
+static const u8 gText_PokenavMatchCall_Strategy[] = ES(_("STRATEGY"), _("ESTRATEGIA"));
+static const u8 gText_PokenavMatchCall_TrainerPokemon[] = ES(_("TRAINER'S POKéMON"), _("SUS POKéMON"));
+static const u8 gText_PokenavMatchCall_SelfIntroduction[] = ES(_("SELF-INTRODUCTION"), _("PRESENTACIÓN"));
 
 bool32 CreatePokenavList(const struct BgTemplate *bgTemplate, struct PokenavListTemplate *listTemplate, u32 tileOffset)
 {

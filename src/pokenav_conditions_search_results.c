@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke_es.h"
 #include "pokenav.h"
 #include "bg.h"
 #include "menu.h"
@@ -22,7 +23,7 @@ enum
     CONDITION_SEARCH_FUNC_SELECT_MON,
 };
 
-static const u8 gText_NumberIndex[] = _("No. {DYNAMIC 0}");
+static const u8 gText_NumberIndex[] = ES(_("No. {DYNAMIC 0}"), _("N.º {DYNAMIC 0}"));
 
 struct Pokenav_SearchResults
 {
