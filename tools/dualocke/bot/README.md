@@ -39,11 +39,14 @@ El bot apunta todo en `diario.txt`: cada combate turno a turno, capturas, curas,
 
 - **Moverse:** `ir(e, mapa, x, y)` planea el camino por todo Hoenn (puertas, conexiones, saltos, alturas, surf, buceo, corrientes, cascada, teleférico) y lo anda; por el camino lucha, cura en el Centro más cercano, rompe rocas, corta árboles, coge Balls que tapan y empuja rocas de FUERZA. `hablar_con(e, mapa, x, y)`, `hablar_y_elegir(...)` (menús de opciones), `volar(e, mapsec)`, `curar`, `comprar`, `usar_objeto`, `usar_clave`, `cuerda_huida`, `foto_equipo`.
 - **Combatir:** `seguir(e)` pasa textos y juega los combates. Elige el movimiento que más daño hace (con tipos, STAB, golpes múltiples, inmunidades que ha visto), cambia si le van a tumbar, juega dobles y el combate múltiple con Steven, captura el primer Pokémon de cada zona sin dejar que se le muera nadie (si nadie aguanta, huye) y aprende/olvida movimientos protegiendo las MO.
+- **Zonas nuevas:** hielo que resbala (se desliza hasta chocar), arenas movedizas del DESIERTO PROFUNDO (lee de los scripts de las zonas nuevas las casillas que te llevan a otro sitio), la barca de la ISLA VOLCÁNICA, y `e.no_huir = True` para pelear con guardianes y estáticos en vez de huir.
 - **Puzles:** gimnasios de Malvalona, Arborada (puertas giratorias), Petalia, Algaria (estatuas que giran; simula el puzle entero), Arrecípolis (hielo: recorrido que pisa cada casilla una vez), rocas de FUERZA con rocas rompibles en medio (búsqueda en anchura), y el suelo agrietado del Pilar Celeste con la BICI CARRERA (prueba de verdad en el emulador qué pasa con cada tecla y busca con A*).
 - **Reintentos:** `intentar(e, accion)` recarga si se pierde una vida o el locke; `con_ayuda(e, accion, nombre)` lo intenta limpio y, si no sale, lo repite con la **ayuda declarada** (rellena la vida de los suyos en combate y deja la del rival a 1), apuntándolo en el diario. Sirve para seguir probando la historia, **no** para medir la dificultad: el bot combate peor que una persona y no usa objetos curativos.
 
 ## Herramientas
 
+- `probar_zonas.py`: recorre zonas (vuela a la ciudad más cercana, llega, captura, pelea con el guardián y vuelve a un Centro) y apunta el resultado en `zonas.json`.
+- Emulador: `sacar_sav FICHERO` y `meter_sav FICHERO` sacan y meten la partida guardada del juego (la de la batería), para seguir en una ROM nueva una partida de otra.
 - `eventos.py MAP_X [--dibujo]`: eventos de un mapa y, con `--dibujo`, la rejilla tal como la ve el planificador.
 
 ## Limitaciones

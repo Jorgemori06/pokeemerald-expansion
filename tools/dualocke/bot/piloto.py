@@ -295,11 +295,24 @@ def vecinos(mid, x, y, z, surf, tapadas, bloqueos):
         if mb == "MB_BUMPY_SLOPE":      # hace falta la Bici Acrobática
             continue
         ok, z2 = puede_entrar(c, w, h, nx, ny, z, surf, en_agua)
-        if ok:
+        if ok and mb == "MB_ICE":
+            # hielo resbaladizo: se sigue deslizando hasta chocar o salir del hielo
+            cx, cy = nx, ny
+            while c[cy * w + cx][2] == "MB_ICE":
+                tx, ty = cx + dx, cy + dy
+                if not (0 <= tx < w and 0 <= ty < h) or (tx, ty) in tapadas or (tx, ty) in warps:
+                    break
+                ok2, z3 = puede_entrar(c, w, h, tx, ty, z2, surf, False)
+                if not ok2:
+                    break
+                cx, cy, z2 = tx, ty, z3
+            yield d, (mid, cx, cy, z2)
+        elif ok:
             yield d, (mid, nx, ny, z2)
 
 
 PUEDE_BUCEAR = [False]
+SIN_VIAJES = [False]
 PUEDE_CASCADA = [False]
 BUCEABLE = ("MB_INTERIOR_DEEP_WATER", "MB_DEEP_WATER", "MB_SOOTOPOLIS_DEEP_WATER")
 NO_EMERGER = ("MB_NO_SURFACING", "MB_SEAWEED_NO_SURFACING")
@@ -335,9 +348,41 @@ def buceos(mid, x, y):
     return []
 
 
+def _saltos_por_script():
+    """Casillas de las zonas nuevas con un script que te lleva a otro sitio al pisarlas (arenas movedizas
+    del DESIERTO PROFUNDO...): {mapa: {(x, y): (destino, x, y)}}."""
+    import glob
+    import re as _r
+    nuevos = ("Marisma", "Playa", "Bosque", "Isla", "Cumbre", "Desierto", "Ruinas", "Gruta", "Mansion", "Cienaga",
+              "Cantera", "Prado")
+    res = {}
+    for carpeta in glob.glob(os.path.join(RAIZ_REPO, "data/maps/*/")):
+        nombre = os.path.basename(carpeta.rstrip("/"))
+        if not nombre.startswith(nuevos) or not os.path.exists(carpeta + "scripts.inc"):
+            continue
+        m = json.load(open(carpeta + "map.json"))
+        txt = open(carpeta + "scripts.inc").read()
+        for c in m.get("coord_events") or []:
+            sc = c.get("script")
+            i = txt.find(sc + "::")
+            if not sc or i < 0:
+                continue
+            bloque = txt[i:txt.find("\n\n", i)]
+            w = _r.search(r"warp\w*\s+(MAP_\w+),\s*(\d+),\s*(\d+)", bloque)
+            if w:
+                res.setdefault(m["id"], {})[(c["x"], c["y"])] = (w.group(1), int(w.group(2)), int(w.group(3)))
+    return res
+
+
+SALTOS_SCRIPT = _saltos_por_script()
+
+
 VIAJES = {   # mapa -> [(destino, x, y, (x, y) de con quién hablar)]
     "MAP_ROUTE112_CABLE_CAR_STATION": [("MAP_MT_CHIMNEY_CABLE_CAR_STATION", 6, 7, (6, 6))],
     "MAP_MT_CHIMNEY_CABLE_CAR_STATION": [("MAP_ROUTE112_CABLE_CAR_STATION", 6, 7, (6, 6))],
+    # barca de la ISLA VOLCÁNICA (desde la 7.ª medalla)
+    "MAP_SLATEPORT_CITY": [("MAP_ISLA_VOLCANICA", 20, 24, (38, 34))],
+    "MAP_ISLA_VOLCANICA": [("MAP_SLATEPORT_CITY", 38, 33, (21, 24))],
 }
 
 
@@ -361,6 +406,15 @@ def planear(origen, objetivo, surf=False, tapadas_mapa=None, bloqueos=frozenset(
                 s = p
             return camino[::-1]
         mid, x, y, z = s
+        # casilla con script que te lleva a otro sitio (arenas movedizas...)
+        if (x, y) in SALTOS_SCRIPT.get(mid, {}) and prev[s] is not None:
+            dm, dx_, dy_ = SALTOS_SCRIPT[mid][(x, y)]
+            if not (solo_mapa and dm != solo_mapa):
+                n = (dm, dx_, dy_, 0)
+                if n not in prev:
+                    prev[n] = ("warp", s)
+                    cola.append(n)
+            continue
         # un warp lleva a otro mapa (si no es el de origen recién pisado)
         w_, h_, c_, warps, _ = info_mapa(mid)
         if (x, y) in warps and prev[s] is not None and prev[s][0] != "warp" and (c_[y * w_ + x][2] != "MB_NORMAL" or c_[y * w_ + x][0]):
@@ -389,7 +443,7 @@ def planear(origen, objetivo, surf=False, tapadas_mapa=None, bloqueos=frozenset(
                 if n not in prev:
                     prev[n] = (tipo, s)
                     cola.append(n)
-        if prev[s] is None or prev[s][0] != "viaje":
+        if (prev[s] is None or prev[s][0] != "viaje") and not SIN_VIAJES[0]:
             for dm, dx_, dy_, quien in VIAJES.get(mid, []):
                 n = (dm, dx_, dy_, 3)
                 if n not in prev:
@@ -568,11 +622,12 @@ def ir_a(e, objetivo, surf=None, max_intentos=60, correr=True, al_lado=False):
             if d == "viaje":
                 quien = next(q for dm, _, _, q in VIAJES[e.mapa()] if dm == sig[0])
                 mm = e.mapa()
-                for _ in range(10):
-                    if e.pos() == (quien[0], quien[1] + 1):
-                        break
-                    e.paso(hacia(e.pos()[0], e.pos()[1], quien[0], quien[1] + 1))
-                e.mirar("arriba")
+                SIN_VIAJES[0] = True          # para llegar hasta quien te lleva no vale otro viaje
+                try:
+                    ir_a(e, (mm,) + tuple(quien), al_lado=True, max_intentos=6)
+                finally:
+                    SIN_VIAJES[0] = False
+                e.mirar(hacia(e.pos()[0], e.pos()[1], quien[0], quien[1]))
                 pulsar_a(e, intentos=2)
                 for _ in range(80):
                     if e.mapa() != mm and e.controlable():
@@ -994,7 +1049,7 @@ class Combate:
                      f"[{', '.join(MOVES[m]['nombre'] for m in rival['movs'] if m)}]")
             self.usar_mov(b, k)
             return
-        if salvaje and self.huir:
+        if salvaje and self.huir and not getattr(e, "no_huir", False):   # no_huir: guardianes y estáticos
             self.accion(b, 3)
             return
         # ¿cambiar? si me tumban este turno sin que yo le tumbe, y hay otro que aguanta el golpe
