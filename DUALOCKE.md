@@ -1028,6 +1028,12 @@ Hecho: **toda la tabla de mensajes de combate** (693 de 699; los 6 restantes son
 
 **Título del mote (arreglo, Jorge, 07/11/2026, encontrado jugando):** salía "Torchic¿Mote de ?", porque la especie se escribía delante y el título detrás, con el hueco `{STR_VAR_1}` vacío. Ahora `Dualocke_BuildMonNamingTitle` (`src/naming_screen.c`) mete la especie en el hueco: "¿Mote de Torchic?".
 
+**Textos que se veían en inglés jugando (Jorge, 22/11/2026, los vio el bot que se pasa el juego):**
+- OPCIONES: en VEL. TEXTO salía "LENTAMEDIARÁPIDA" (no cabían entre x 104 y 198): esa fila empieza ahora en x 76 (`src/option_menu.c`).
+- Menú de un POKéMON del equipo: DATOS, MOVER, OBJETO, QUITAR, CARTA, LEER, CAMBIAR, ENVIAR… (`src/data/party_menu.h`).
+- POKéNAV: descripciones del menú, barra de ayuda, AGENDA (nombres y descripciones de los contactos, LLAMAR/VER/SALIR, la ficha de MÁXIMO y de tu rival), búsqueda por condición (CARISMA, BELLEZA, DULZURA, INGENIO, DUREZA) y cintas (`src/pokenav_*.c`).
+- **Gráficos con el texto dibujado:** los botones y cabeceras del POKéNAV (MAPA HOENN, CONDICIÓN, AGENDA, CINTAS, APAGAR, MENÚ, COMPLETO/AMPLIADO…, y "POKéNAV" arriba y abajo en vez de "POKéMON NAVIGATOR"), el PC (DATOS, EQUIPO, SALIR, CERRAR CAJA), la ficha de entrenador (FICHA ENTRENADOR, MEDALLAS) y el dinero de las tiendas (DINERO). Los hace `tools/dualocke/textos_graficos.py`: monta cada gráfico como se ve en el juego (con su tilemap o con los trozos del sprite), borra el texto inglés y escribe el español con las fuentes del juego y los colores del original, y devuelve cada píxel a su tile. Si un tile se usa en varios sitios y solo cambia en uno, usa un tile libre y cambia el tilemap; en la cabecera del POKéNAV no quedaba ninguno y "POKéNAV" se monta solo con el tilemap, con las letras de "POKéMON". Para letras que no hay en las fuentes (las de 5 píxeles de "MONEY" y las gruesas de "BADGES") tiene unas pocas dibujadas a mano. Se puede volver a lanzar y no cambia nada; con `--ver /tmp/x` guarda cómo queda cada pantalla. Probado en el emulador con la ROM de pruebas.
+
 **Pendiente (imágenes, no texto):** los botones de la pantalla de nombres (lower/upper, BACK, B BUTTON, OK, START, SELECT, en `graphics/naming_screen/`), las cabeceras PROFILE, ABILITY y TRAINER MEMO de la pantalla de datos (`graphics/summary_screen/tiles.png`), el botón MOVE INFO del combate (`graphics/battle_interface/move_info_window_*.png`), los iconos de los tipos (ICE, GROUND…) y PRESS START en la pantalla de título. Quedan en inglés archivos menos vistos (Pokédex HGSS y DexNav, desactivados; concursos; Baya-Licuadora; depuración).
 
 Reglas para los menús: mantener los códigos y el mismo número de saltos `\n`, `\l` y `\p`, y que cada línea no sea mucho más larga que la inglesa (los recuadros tienen ancho fijo). Los nombres van en mayúsculas como en el original (MOCHILA, GUARDAR, CARTA…).
@@ -1178,6 +1184,7 @@ Quién hace cada cosa y cómo se sube: sección 13.
 | Desde qué tramo se llega a cada entrenador (y si va por encima) | `tools/dualocke/alcance.py` (en el CI) |
 | Ningún POKéMON de entrenador por encima del cap | `src/dualocke.c` (`Dualocke_CapTrainerMon`), llamado desde `src/battle_setup.c` (`CreateNPCTrainerPartyFromTrainer`) |
 | Equipos de los jefes (+1/+2, megas) | `tools/dualocke/equipos_jefes.py` |
+| Textos dibujados en los gráficos (POKéNAV, PC, ficha, dinero) | `tools/dualocke/textos_graficos.py` |
 | Megapiedras, objetos competitivos y Ticket-Recuerdo por el mapa | `tools/dualocke/colocar_objetos.py` |
 | Recuerdamovimientos de los Centros Pokémon | `data/scripts/dualocke_recuerda_movimientos.inc` |
 | Guía para jugar (walkthrough, caps, pistas de objetos, Pokédex, novedades) | `GUIA.html` (pistas: `tools/dualocke/guia.py`; fotos de las pistas: `tools/dualocke/emulador/fotos_guia.py`; Pokédex: `tools/dualocke/guia_pokedex.py`) |
