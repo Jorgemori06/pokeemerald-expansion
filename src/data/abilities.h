@@ -96,12 +96,17 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_OBLIVIOUS] =
     {
         .name = ES(_("Oblivious"), _("Despiste")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_OBLIVIOUS_TAUNT >= GEN_6
             "Blocks Attract and Taunt."),
         #else
             "Prevents attraction."),
         #endif
+#else
+        .description = COMPOUND_STRING("Evita Atracción y Mofa."),
+#endif
         .aiRating = 2,
         .breakable = TRUE,
     },
@@ -246,12 +251,17 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_LIGHTNING_ROD] =
     {
         .name = ES(_("Lightning Rod"), _("Pararrayos")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_REDIRECT_ABILITY_IMMUNITY >= GEN_4
             "Draws Electr. to up Sp. Atk."),
         #else
             "Draws Electric moves."),
         #endif
+#else
+        .description = COMPOUND_STRING("Atrae Eléctr. y sube At. Esp."),
+#endif
         .aiRating = 7,
         .breakable = TRUE,
     },
@@ -324,12 +334,17 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_MAGMA_ARMOR] =
     {
         .name = ES(_("Magma Armor"), _("Escudo Magma")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_USE_FROSTBITE
             "Prevents frostbite."),
         #else
             "Prevents freezing."),
         #endif
+#else
+        .description = COMPOUND_STRING("Evita la congelación."),
+#endif
         .aiRating = 1,
         .breakable = TRUE,
     },
@@ -643,6 +658,8 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_SNOW_CLOAK] =
     {
         .name = ES(_("Snow Cloak"), _("Manto Níveo")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_PREFERRED_ICE_WEATHER == B_ICE_WEATHER_HAIL
             "Boosts evasion in hail."),
@@ -651,6 +668,9 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         #else
             "Ups evasion in hail or snow."),
         #endif
+#else
+        .description = COMPOUND_STRING("Más evasión con granizo/nieve."),
+#endif
         .aiRating = 3,
         .breakable = TRUE,
     },
@@ -888,12 +908,17 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_STORM_DRAIN] =
     {
         .name = ES(_("Storm Drain"), _("Colector")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_REDIRECT_ABILITY_IMMUNITY >= GEN_4
             "Draws Water to up Sp. Atk."),
         #else
             "Draws Water-type moves."),
         #endif
+#else
+        .description = COMPOUND_STRING("Atrae Agua y sube At. Esp."),
+#endif
         .aiRating = 7,
         .breakable = TRUE,
     },
@@ -901,6 +926,8 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_ICE_BODY] =
     {
         .name = ES(_("Ice Body"), _("Gélido")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_PREFERRED_ICE_WEATHER == B_ICE_WEATHER_HAIL
             "Slight HP recovery in hail."),
@@ -909,6 +936,9 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         #else
             "HP recovery in hail or snow."),
         #endif
+#else
+        .description = COMPOUND_STRING("Recupera PS con granizo/nieve."),
+#endif
         .aiRating = 3,
     },
 
@@ -926,7 +956,7 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     #if B_SNOW_WARNING >= GEN_9
         .description = ES(COMPOUND_STRING("Summons snow in battle."), COMPOUND_STRING("Hace que nieve.")),
     #else
-        .description = COMPOUND_STRING("Summons hail in battle."),
+        .description = ES(COMPOUND_STRING("Summons hail in battle."), COMPOUND_STRING("Hace que nieve.")),
     #endif
         .aiRating = 8,
     },
@@ -1117,12 +1147,17 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_OVERCOAT] =
     {
         .name = ES(_("Overcoat"), _("Funda")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_POWDER_OVERCOAT >= GEN_6
             "Blocks weather and powder."),
         #else
             "Prevents weather damage."),
         #endif
+#else
+        .description = COMPOUND_STRING("Bloquea el clima y los polvos."),
+#endif
         .aiRating = 5,
         .breakable = TRUE,
     },
@@ -1580,6 +1615,8 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_SLUSH_RUSH] =
     {
         .name = ES(_("Slush Rush"), _("Quitanieves")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_PREFERRED_ICE_WEATHER == B_ICE_WEATHER_HAIL
             "Boosts Speed in hail."),
@@ -1588,6 +1625,9 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         #else
             "Ups Speed in hail or snow."),
         #endif
+#else
+        .description = COMPOUND_STRING("Veloz con granizo o nieve."),
+#endif
         .aiRating = 5,
     },
 
@@ -1854,24 +1894,34 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_INTREPID_SWORD] =
     {
         .name = ES(_("Intrepid Sword"), _("Espada Indómita")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_INTREPID_SWORD >= GEN_9
             "Ups Attack on entry once."),
         #else
             "Raises Attack on entry."),
         #endif
+#else
+        .description = COMPOUND_STRING("Sube Ataque al salir. 1 vez."),
+#endif
         .aiRating = 3,
     },
 
     [ABILITY_DAUNTLESS_SHIELD] =
     {
         .name = ES(_("Dauntless Shield"), _("Escudo Recio")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_DAUNTLESS_SHIELD >= GEN_9
             "Ups Defense on entry once."),
         #else
             "Raises Defense on entry."),
         #endif
+#else
+        .description = COMPOUND_STRING("Sube Defensa al salir, 1 vez."),
+#endif
         .aiRating = 3,
     },
 
@@ -1970,6 +2020,8 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
     [ABILITY_ICE_FACE] =
     {
         .name = ES(_("Ice Face"), _("Cara de Hielo")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_PREFERRED_ICE_WEATHER == B_ICE_WEATHER_HAIL
             "Hail renews one free hit."),
@@ -1978,6 +2030,9 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         #else
             "Hail & snow renew free hit."),
         #endif
+#else
+        .description = COMPOUND_STRING("El granizo renueva su escudo."),
+#endif
         .aiRating = 4,
         .cantBeCopied = TRUE,
         .cantBeSwapped = TRUE,

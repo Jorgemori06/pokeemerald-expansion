@@ -2,6 +2,7 @@ constante,espanol,origen
 MOVE_10000000_VOLT_THUNDERBOLT,Pikachu con gorra suelta una descarga. Muchos críticos.,propia
 MOVE_ABSORB,Absorbe la mitad del daño que causa.,propia
 MOVE_ACCELEROCK,Lanza una roca rapidísima. Siempre va primero.,propia
+MOVE_ACID,Rocía un ácido corrosivo. Puede bajar la Def. Esp.,propia
 MOVE_ACID_ARMOR,Licúa su cuerpo y sube mucho la Defensa.,propia
 MOVE_ACID_DOWNPOUR,Hunde al rival en un pantano tóxico. Potencia variable.,propia
 MOVE_ACID_SPRAY,Ácido que derrite. Baja mucho la Def. Esp.,propia
@@ -38,6 +39,7 @@ MOVE_ATTRACT,El sexo opuesto atacará menos.,propia
 MOVE_AURA_SPHERE,Una esfera de aura que nunca falla.,propia
 MOVE_AURA_WHEEL,Sube la Velocidad. Su tipo depende de la forma.,propia
 MOVE_AURORA_BEAM,Rayo multicolor que puede reducir el Ataque.,oficial
+MOVE_AURORA_VEIL,Debilita los ataques. Solo con granizo o nieve.,propia
 MOVE_AUTOTOMIZE,Se quita peso y sube mucho la Velocidad.,propia
 MOVE_AVALANCHE,Más fuerte si el rival le ha hecho daño.,propia
 MOVE_AXE_KICK,"Si falla, se hace daño. Puede confundir.",propia
@@ -61,6 +63,7 @@ MOVE_BITE,Un voraz bocado que puede amedrentar al objetivo.,oficial
 MOVE_BITTER_BLADE,Un tajo que absorbe la mitad del daño.,propia
 MOVE_BITTER_MALICE,Un rencor escalofriante. Baja el Ataque rival.,propia
 MOVE_BLACK_HOLE_ECLIPSE,Lo absorbe en energía oscura. Potencia variable.,propia
+MOVE_BLAST_BURN,"Muy potente, pero el usuario descansa el turno siguiente.",propia
 MOVE_BLAZE_KICK,Patada con muchos críticos. Puede quemar.,propia
 MOVE_BLAZING_TORQUE,---,propia
 MOVE_BLEAKWIND_STORM,Vientos helados. Puede bajar la Velocidad.,propia
@@ -78,6 +81,7 @@ MOVE_BONE_CLUB,Aporrea con un hueso. Puede hacer retroceder al objetivo.,oficial
 MOVE_BONE_RUSH,Golpea con un hueso de 2 a 5 veces.,propia
 MOVE_BOOMBURST,Una onda sonora destructiva contra todo.,propia
 MOVE_BOUNCE,Bota y cae al turno siguiente. Puede paralizar.,propia
+MOVE_BOUNCY_BUBBLE,Burbujas que absorben todo el daño que hacen.,propia
 MOVE_BRANCH_POKE,Ataca pinchando al objetivo con una rama afilada.,oficial
 MOVE_BRAVE_BIRD,Una carga en vuelo bajo que daña al usuario.,propia
 MOVE_BREAKING_SWIPE,Ataca con la cola y baja el Ataque rival.,propia
@@ -108,9 +112,11 @@ MOVE_CHARGE_BEAM,Un rayo eléctrico. Puede subir el At. Esp.,propia
 MOVE_CHARM,Engatusa al objetivo y reduce mucho su Ataque.,oficial
 MOVE_CHATTER,Ataque sonoro que confunde al rival.,propia
 MOVE_CHILLING_WATER,Agua helada que baja el Ataque del objetivo.,propia
+MOVE_CHILLY_RECEPTION,Un mal chiste trae nieve. El usuario se retira.,propia
 MOVE_CHIP_AWAY,Ignora los cambios de caract. del rival.,propia
 MOVE_CHLOROBLAST,Un estallido de clorofila que daña al usuario.,propia
 MOVE_CIRCLE_THROW,Lanza al rival: lo cambia o acaba el combate salvaje.,propia
+MOVE_CLAMP,Atrapa y oprime al rival durante 4 o 5 turnos.,propia
 MOVE_CLANGING_SCALES,"Hace un ruido enorme, pero baja su Defensa.",propia
 MOVE_CLANGOROUS_SOUL,Gasta PS para subir todas sus caract.,propia
 MOVE_CLANGOROUS_SOULBLAZE,Kommo-o ataca con todo. Sube todas sus caract.,propia
@@ -127,6 +133,7 @@ MOVE_CONFUSE_RAY,Rayo siniestro que confunde al objetivo.,oficial
 MOVE_CONFUSION,Débil ataque telequinético que puede causar confusión.,oficial
 MOVE_CONSTRICT,Constriñe para herir y puede bajar la Velocidad.,oficial
 MOVE_CONTINENTAL_CRUSH,Le cae una montaña encima. Potencia variable.,propia
+MOVE_CONVERSION,El usuario pasa a ser del tipo de su primer movimiento.,propia
 MOVE_CONVERSION_2,Pasa a resistir el tipo del último ataque.,propia
 MOVE_COPYCAT,Imita el último movimiento usado.,propia
 MOVE_CORE_ENFORCER,Un rayo que anula la habilidad del rival.,propia
@@ -134,6 +141,7 @@ MOVE_CORKSCREW_CRASH,Gira muy rápido y embiste. Potencia variable.,propia
 MOVE_CORROSIVE_GAS,Un gas ácido que derrite los objetos de los demás.,propia
 MOVE_COSMIC_POWER,Un poder místico sube la Defensa y la Def. Esp.,propia
 MOVE_COTTON_GUARD,Se envuelve en algodón. Sube muchísimo la Defensa.,propia
+MOVE_COTTON_SPORE,Esporas pegajosas que bajan mucho la Velocidad.,propia
 MOVE_COUNTER,Devuelve un golpe físico por duplicado.,oficial
 MOVE_COURT_CHANGE,Intercambia los efectos de cada lado del campo.,propia
 MOVE_COVET,Pide con ternura el objeto del rival.,propia
@@ -141,6 +149,7 @@ MOVE_CRABHAMMER,Golpea con una pinza. Muchos golpes críticos.,propia
 MOVE_CRAFTY_SHIELD,Bloquea mov. de estado durante un turno.,propia
 MOVE_CROSS_CHOP,Corte doble que suele propinar un golpe crítico.,oficial
 MOVE_CROSS_POISON,Tajo que puede envenenar al objetivo. Suele ser crítico.,oficial
+MOVE_CRUNCH,Muerde con colmillos. Puede bajar la Defensa.,propia
 MOVE_CRUSH_CLAW,Garras afiladas. Puede bajar la Defensa.,propia
 MOVE_CRUSH_GRIP,"Cuantos más PS tenga el rival, más fuerte.",propia
 MOVE_CURSE,Funciona de forma distinta si es Fantasma.,propia
@@ -159,6 +168,7 @@ MOVE_DEVASTATING_DRAKE,Desarrolla su aura y ataca. Potencia variable.,propia
 MOVE_DIAMOND_STORM,Una tormenta de diamantes. Puede subir Defensa.,propia
 MOVE_DIG,Primer turno: cava. Segundo turno: ataca.,oficial
 MOVE_DIRE_CLAW,"Críticos; puede paralizar, envenenar o dormir.",propia
+MOVE_DISABLE,El rival no puede usar su último movimiento 4 turnos.,propia
 MOVE_DISARMING_VOICE,Un grito encantador que nunca falla.,propia
 MOVE_DISCHARGE,Electrocuta a todos los demás. Puede paralizar.,propia
 MOVE_DIVE,Bucea el 1.er turno y ataca en el siguiente.,propia
@@ -209,6 +219,7 @@ MOVE_ELECTRO_DRIFT,Electricidad futurista. Más fuerte si es supereficaz.,propia
 MOVE_ELECTRO_SHOT,Acumula electricidad y lanza un disparo.,propia
 MOVE_EMBARGO,Impide que el rival use objetos.,propia
 MOVE_EMBER,Ataca con llamas pequeñas que pueden causar quemaduras.,oficial
+MOVE_ENCORE,Obliga al rival a repetir su último movimiento 3 turnos.,propia
 MOVE_ENDEAVOR,Iguala los PS del rival a los del usuario.,propia
 MOVE_ENDURE,Aguanta cualquier ataque 1 turno con 1 PS.,propia
 MOVE_ENERGY_BALL,Usa la fuerza natural. Puede bajar la Def. Esp.,propia
@@ -231,6 +242,7 @@ MOVE_FALSE_SWIPE,Deja al rival con al menos 1 PS.,propia
 MOVE_FEATHER_DANCE,Lo envuelve en plumas y baja mucho su Ataque.,propia
 MOVE_FEINT,Golpea aunque se proteja y anula la protección.,propia
 MOVE_FEINT_ATTACK,Atrae al rival y golpea sin fallar.,propia
+MOVE_FELL_STINGER,"Si debilita al rival, sube muchísimo el Ataque.",propia
 MOVE_FICKLE_BEAM,Un rayo de luz. A veces el doble de fuerte.,propia
 MOVE_FIERY_DANCE,Danza en llamas. Puede subir el At. Esp.,propia
 MOVE_FIERY_WRATH,Un ataque lleno de ira. Puede amedrentar.,propia
@@ -241,6 +253,7 @@ MOVE_FIRE_FANG,Puede amedrentar o quemar al rival.,propia
 MOVE_FIRE_LASH,Azota con fuego y baja la Defensa rival.,propia
 MOVE_FIRE_PLEDGE,Una columna de fuego. Puede quemar la hierba.,propia
 MOVE_FIRE_PUNCH,Puñetazo ardiente que puede causar quemaduras.,oficial
+MOVE_FIRE_SPIN,Atrapa al rival en fuego durante 4 o 5 turnos.,propia
 MOVE_FIRST_IMPRESSION,Golpea fuerte y primero. Solo el 1.er turno.,propia
 MOVE_FISHIOUS_REND,Doble de potencia si actúa antes que el rival.,propia
 MOVE_FISSURE,Lo hace caer en una grieta. KO de un golpe.,propia
@@ -272,7 +285,9 @@ MOVE_FORESTS_CURSE,Maldice al rival y le añade el tipo Planta.,propia
 MOVE_FOUL_PLAY,Más daño cuanto más Ataque tenga el rival.,propia
 MOVE_FREEZE_DRY,Supereficaz contra el tipo Agua.,propia
 MOVE_FREEZE_SHOCK,Potente mov. de 2 turnos. Puede paralizar.,propia
+MOVE_FREEZING_GLARE,Lanza poder psíquico con los ojos. Puede congelar.,propia
 MOVE_FREEZY_FROST,Un cristal que anula los cambios de caract.,propia
+MOVE_FRENZY_PLANT,"Muy potente, pero el usuario descansa el turno siguiente.",propia
 MOVE_FROST_BREATH,Un aliento helado que siempre es crítico.,propia
 MOVE_FRUSTRATION,Más fuerte cuanto menos aprecio le tenga.,propia
 MOVE_FURY_ATTACK,Cornea al objetivo de dos a cinco veces.,oficial
@@ -289,6 +304,7 @@ MOVE_GEOMANCY,"Sube At. Esp., Def. Esp. y Velocidad al 2.º turno.",propia
 MOVE_GIGATON_HAMMER,Un martillo enorme. No puede usarse dos veces seguidas.,propia
 MOVE_GIGAVOLT_HAVOC,Lanza mucha electricidad. Potencia variable.,propia
 MOVE_GIGA_DRAIN,Absorbe la mitad del daño que causa.,propia
+MOVE_GIGA_IMPACT,"Muy potente, pero el usuario descansa el turno siguiente.",propia
 MOVE_GLACIAL_LANCE,Lanza una lanza de hielo contra los rivales.,propia
 MOVE_GLACIATE,Sopla aire helado y baja la Velocidad rival.,propia
 MOVE_GLAIVE_RUSH,Al turno sig. le aciertan siempre y con doble daño.,propia
@@ -302,6 +318,7 @@ MOVE_GRASS_WHISTLE,Agradable melodía que adormece al objetivo.,oficial
 MOVE_GRAVITY,Aumenta la gravedad y anula la levitación.,propia
 MOVE_GRAV_APPLE,Deja caer una manzana. Baja la Defensa rival.,propia
 MOVE_GROWL,Dulce gruñido que reduce el Ataque del equipo rival.,oficial
+MOVE_GROWTH,Hace crecer el cuerpo. Sube el Ataque y el At. Esp.,propia
 MOVE_GRUDGE,"Si se debilita, quita los PP del último mov. rival.",propia
 MOVE_GUARDIAN_OF_ALOLA,El espíritu de la tierra quita muchos PS rivales.,propia
 MOVE_GUARD_SPLIT,Promedia con el rival su Defensa y su Def. Esp.,propia
@@ -325,6 +342,8 @@ MOVE_G_MAX_GRAVITAS,Orbeetle Gigamax. Cambia la gravedad 5 turnos.,propia
 MOVE_G_MAX_HYDROSNIPE,Inteleon Gigamax. Ignora la habilidad rival.,propia
 MOVE_G_MAX_MALODOR,Garbodor Gigamax. Envenena a los rivales.,propia
 MOVE_G_MAX_MELTDOWN,Melmetal Gigamax. Atormenta a los rivales.,propia
+MOVE_G_MAX_ONE_BLOW,Ataque Gigamax de Urshifu. Ignora la Maxibarrera.,propia
+MOVE_G_MAX_RAPID_FLOW,Ataque Gigamax de Urshifu. Ignora la Maxibarrera.,propia
 MOVE_G_MAX_REPLENISH,Snorlax Gigamax. Puede recuperar bayas comidas.,propia
 MOVE_G_MAX_RESONANCE,Lapras Gigamax. Reduce el daño 5 turnos.,propia
 MOVE_G_MAX_SANDBLAST,Sandaconda Gigamax. Atrapa en arena.,propia
@@ -341,6 +360,7 @@ MOVE_G_MAX_VOLCALITH,Coalossal Gigamax. Daña 4 turnos a no Roca.,propia
 MOVE_G_MAX_VOLT_CRASH,Pikachu Gigamax. Paraliza a los rivales.,propia
 MOVE_G_MAX_WILDFIRE,Charizard Gigamax. Daña 4 turnos a no Fuego.,propia
 MOVE_G_MAX_WIND_RAGE,Corviknight Gigamax. Quita las barreras rivales.,propia
+MOVE_HAIL,Desata una granizada que daña en cada turno.,propia
 MOVE_HAMMER_ARM,Golpe con un puño pesado. Baja su Velocidad.,propia
 MOVE_HAPPY_HOUR,Duplica el dinero que se gana.,propia
 MOVE_HARDEN,Tensa los músculos para subir la Defensa.,propia
@@ -373,11 +393,13 @@ MOVE_HORN_DRILL,Usa el cuerno como un taladro. KO de un golpe.,propia
 MOVE_HORN_LEECH,Absorbe con los cuernos la mitad del daño.,propia
 MOVE_HOWL,Aullido que sube el ánimo y aumenta el Ataque del equipo.,oficial
 MOVE_HURRICANE,Un viento feroz. Puede confundir al rival.,propia
+MOVE_HYDRO_CANNON,"Muy potente, pero el usuario descansa el turno siguiente.",propia
 MOVE_HYDRO_PUMP,Lanza una gran masa de agua a presión para atacar.,oficial
 MOVE_HYDRO_STEAM,Más potencia con sol intenso.,propia
 MOVE_HYDRO_VORTEX,Un remolino enorme engulle al rival. Potencia variable.,propia
 MOVE_HYPERSPACE_FURY,"Ignora la protección, pero baja su Defensa.",propia
 MOVE_HYPERSPACE_HOLE,Ataca desde un agujero. Ignora protección.,propia
+MOVE_HYPER_BEAM,"Muy potente, pero el usuario descansa el turno siguiente.",propia
 MOVE_HYPER_DRILL,Una punta giratoria que atraviesa la protección.,propia
 MOVE_HYPER_FANG,Ataca con agudos colmillos. Puede amedrentar al objetivo.,oficial
 MOVE_HYPER_VOICE,Grito desgarrador que inflige daño al objetivo.,oficial
@@ -385,6 +407,7 @@ MOVE_HYPNOSIS,Hipnotiza al rival y lo duerme.,propia
 MOVE_ICE_BALL,"Ataca 5 turnos, cada golpe más fuerte.",propia
 MOVE_ICE_BEAM,Rayo de hielo que puede llegar a congelar.,oficial
 MOVE_ICE_BURN,Potente mov. de 2 turnos. Puede quemar.,propia
+MOVE_ICE_FANG,Puede congelar o hacer retroceder al rival.,propia
 MOVE_ICE_HAMMER,Golpe con un puño pesado. Baja su Velocidad.,propia
 MOVE_ICE_PUNCH,Puñetazo helado que puede llegar a congelar.,oficial
 MOVE_ICE_SHARD,Lanza un trozo de hielo. Siempre va primero.,propia
@@ -393,9 +416,11 @@ MOVE_ICICLE_CRASH,Lanza grandes carámbanos. Puede amedrentar al objetivo.,ofici
 MOVE_ICICLE_SPEAR,Lanza de 2 a 5 carámbanos seguidos.,propia
 MOVE_ICY_WIND,Viento helado que baja la Velocidad rival.,propia
 MOVE_IMPRISON,El rival no puede usar mov. que el usuario conoce.,propia
+MOVE_INCINERATE,Quema bayas y gemas del rival para que no las use.,propia
 MOVE_INFERNAL_PARADE,Más daño si el rival tiene estado. Puede quemar.,propia
 MOVE_INFERNO,Ataca con una gran ráfaga de fuego que causa quemaduras.,oficial
 MOVE_INFERNO_OVERDRIVE,Lanza un fuego intenso. Potencia variable.,propia
+MOVE_INFESTATION,Infesta al rival y lo ataca durante 4 o 5 turnos.,propia
 MOVE_INGRAIN,"Echa raíces que curan PS, pero no puede cambiarse.",propia
 MOVE_INSTRUCT,Ordena al objetivo que repita su último mov.,propia
 MOVE_ION_DELUGE,Electrifica los mov. de tipo Normal.,propia
@@ -410,6 +435,8 @@ MOVE_JUMP_KICK,"Da un salto y pega una patada. Si falla, se lesiona.",oficial
 MOVE_JUNGLE_HEALING,Cura PS y estado a él y a sus aliados.,propia
 MOVE_KARATE_CHOP,Da un golpe cortante. Suele ser crítico.,oficial
 MOVE_KINESIS,Distrae al rival y le baja la precisión.,propia
+MOVE_KINGS_SHIELD,Bloquea el daño y baja el Ataque de quien lo toque.,propia
+MOVE_KNOCK_OFF,"Daña más si el rival lleva objeto, y se lo quita.",propia
 MOVE_KOWTOW_CLEAVE,Hace una reverencia y corta. Nunca falla.,propia
 MOVE_LANDS_WRATH,Reúne la fuerza de la tierra contra los rivales.,propia
 MOVE_LASER_FOCUS,Su próximo mov. será un golpe crítico.,propia
@@ -447,6 +474,7 @@ MOVE_MAGICAL_TORQUE,---,propia
 MOVE_MAGIC_COAT,Devuelve los efectos de estado al atacante.,propia
 MOVE_MAGIC_POWDER,Un polvo mágico convierte al objetivo en Psíquico.,propia
 MOVE_MAGIC_ROOM,Los objetos no tienen efecto durante 5 turnos.,propia
+MOVE_MAGMA_STORM,Atrapa al rival en magma durante 4 o 5 turnos.,propia
 MOVE_MAGNETIC_FLUX,Sube las defensas de los que tienen Más o Menos.,propia
 MOVE_MAGNET_BOMB,Lanza un imán que nunca falla.,propia
 MOVE_MAGNET_RISE,Levita gracias al electromagnetismo.,propia
@@ -462,6 +490,7 @@ MOVE_MAX_FLARE,Ataque Dinamax Fuego. Hace salir el sol.,propia
 MOVE_MAX_FLUTTERBY,Ataque Dinamax Bicho. Baja el At. Esp. rival.,propia
 MOVE_MAX_GEYSER,Ataque Dinamax Agua. Hace que llueva.,propia
 MOVE_MAX_GUARD,Esquiva ataques; puede fallar si se repite.,propia
+MOVE_MAX_HAILSTORM,Ataque Dinamax de tipo Hielo. Desata granizo.,propia
 MOVE_MAX_KNUCKLE,Ataque Dinamax Lucha. Sube el Ataque aliado.,propia
 MOVE_MAX_LIGHTNING,Ataque Dinamax Eléctrico. Crea campo eléctrico.,propia
 MOVE_MAX_MINDSTORM,Ataque Dinamax Psíquico. Crea campo psíquico.,propia
@@ -514,6 +543,7 @@ MOVE_MUDDY_WATER,Ataca con agua turbia. Puede bajar la precisión.,propia
 MOVE_MUD_BOMB,Lanza barro que daña y baja la precisión.,propia
 MOVE_MUD_SHOT,Lanza barro al rival y baja su Velocidad.,propia
 MOVE_MUD_SLAP,Echa lodo en la cara para bajar la Precisión.,oficial
+MOVE_MUD_SPORT,El barro debilita los ataques Eléctricos 5 turnos.,propia
 MOVE_MULTI_ATTACK,Su tipo cambia según el disco que lleve.,propia
 MOVE_MYSTICAL_FIRE,Un fuego mágico. Baja el At. Esp. del rival.,propia
 MOVE_MYSTICAL_POWER,Un poder misterioso que sube su At. Esp.,propia
@@ -561,6 +591,7 @@ MOVE_PLAY_NICE,Se hace amigo del rival y le baja el Ataque.,propia
 MOVE_PLAY_ROUGH,Juega duro con el rival. Puede bajar el Ataque.,propia
 MOVE_PLUCK,Se come la baya del rival y gana su efecto.,propia
 MOVE_POISON_FANG,Colmillos afilados. Puede envenenar gravemente.,propia
+MOVE_POISON_GAS,Envuelve a los rivales en un gas tóxico que envenena.,propia
 MOVE_POISON_JAB,Un pinchazo que puede envenenar al rival.,propia
 MOVE_POISON_POWDER,Polvo tóxico que envenena al objetivo.,oficial
 MOVE_POISON_STING,Lanza un aguijón tóxico que puede envenenar al objetivo.,oficial
@@ -616,6 +647,7 @@ MOVE_RAIN_DANCE,Potencia los mov. Agua durante 5 turnos.,propia
 MOVE_RAPID_SPIN,Gira para quitar trampas y subir la Velocidad.,propia
 MOVE_RAZOR_LEAF,Corta con hojas afiladas. Un ataque que suele ser crítico.,oficial
 MOVE_RAZOR_SHELL,Corta con conchas afiladas. Puede bajar Defensa.,propia
+MOVE_RAZOR_WIND,Ataque de dos turnos. Suele dar un golpe crítico.,propia
 MOVE_RECOVER,Restaura hasta la mitad de los PS máximos.,oficial
 MOVE_RECYCLE,Recupera un objeto usado para usarlo otra vez.,propia
 MOVE_REFLECT,Una barrera de luz reduce el daño físico 5 turnos.,propia
@@ -631,6 +663,7 @@ MOVE_REVERSAL,Hace más daño cuantos menos PS tenga.,propia
 MOVE_REVIVAL_BLESSING,Revive a un aliado con la mitad de sus PS.,propia
 MOVE_RISING_VOLTAGE,Doble de potencia en campo eléctrico.,propia
 MOVE_ROAR,"Se lleva al objetivo, que es sustituido por otro Pokémon.",oficial
+MOVE_ROAR_OF_TIME,"Muy potente, pero el usuario descansa el turno siguiente.",propia
 MOVE_ROCK_BLAST,Lanza rocas de 2 a 5 veces seguidas.,propia
 MOVE_ROCK_CLIMB,Ataca con una gran embestida. Puede confundir al objetivo.,oficial
 MOVE_ROCK_POLISH,Se pule el cuerpo y sube mucho la Velocidad.,propia
@@ -638,6 +671,7 @@ MOVE_ROCK_SLIDE,Lanza grandes pedruscos. Puede amedrentar al objetivo.,oficial
 MOVE_ROCK_SMASH,Rompe rocas. Puede bajar la Defensa.,propia
 MOVE_ROCK_THROW,Tira una pequeña roca al objetivo.,oficial
 MOVE_ROCK_TOMB,Bloquea al rival con rocas y baja su Velocidad.,propia
+MOVE_ROCK_WRECKER,"Muy potente, pero el usuario descansa el turno siguiente.",propia
 MOVE_ROLE_PLAY,Imita al objetivo y copia su habilidad.,propia
 MOVE_ROLLING_KICK,Patada rápida girando. Puede amedrentar.,propia
 MOVE_ROLLOUT,"Ataca 5 turnos, cada vez con más fuerza.",propia
@@ -652,6 +686,7 @@ MOVE_SALT_CURE,Daña cada turno. Doble contra Acero y Agua.,propia
 MOVE_SANDSEAR_STORM,Arena ardiente brutal. Puede quemar.,propia
 MOVE_SANDSTORM,Crea una tormenta de arena de 5 turnos.,propia
 MOVE_SAND_ATTACK,Arroja arena a la cara y baja la Precisión.,oficial
+MOVE_SAND_TOMB,Atrapa y daña al rival en arena 4 o 5 turnos.,propia
 MOVE_SAPPY_SEED,Esparce semillas que roban PS cada turno.,propia
 MOVE_SAVAGE_SPIN_OUT,Lo atrapa con hilos de seda. Potencia variable.,propia
 MOVE_SCALD,Lanza agua hirviendo. Puede quemar.,propia
@@ -677,6 +712,7 @@ MOVE_SHADOW_SNEAK,Alarga su sombra para atacar primero.,propia
 MOVE_SHARPEN,Reduce sus polígonos y sube el Ataque.,propia
 MOVE_SHATTERED_PSYCHE,Controla al rival para dañarlo. Potencia variable.,propia
 MOVE_SHED_TAIL,Crea un sustituto y luego se cambia.,propia
+MOVE_SHEER_COLD,Fulmina de un golpe. Falla más si no es de tipo Hielo.,propia
 MOVE_SHELL_SIDE_ARM,Elige daño físico o especial. Puede envenenar.,propia
 MOVE_SHELL_SMASH,"Sube mucho ataque y Velocidad, baja defensas.",propia
 MOVE_SHELL_TRAP,Una coraza trampa que daña al tocarla.,propia
@@ -716,6 +752,7 @@ MOVE_SNARL,Grita al rival y le baja el At. Esp.,propia
 MOVE_SNATCH,Roba el siguiente mov. de curación o de caract.,propia
 MOVE_SNIPE_SHOT,Ignora los efectos que atraen los ataques.,propia
 MOVE_SNORE,Ruidoso; solo dormido. Puede amedrentar.,propia
+MOVE_SNOWSCAPE,Sube la Defensa del tipo Hielo durante 5 turnos.,propia
 MOVE_SOAK,Moja al rival y lo convierte en tipo Agua.,propia
 MOVE_SOFT_BOILED,Restaura la mitad de los PS máximos del usuario.,oficial
 MOVE_SOLAR_BEAM,Absorbe luz un turno y ataca en el siguiente.,propia
@@ -736,6 +773,7 @@ MOVE_SPIKY_SHIELD,Esquiva ataques y daña a quien le toca.,propia
 MOVE_SPIN_OUT,Fuerza las piernas. Baja mucho su Velocidad.,propia
 MOVE_SPIRIT_BREAK,Un golpe que quiebra el ánimo. Baja el At. Esp.,propia
 MOVE_SPIRIT_SHACKLE,"Tras recibir el golpe, el rival no puede huir.",propia
+MOVE_SPITE,Quita 4 PP al último movimiento que usó el rival.,propia
 MOVE_SPIT_UP,Libera de una vez la energía acumulada con Reserva.,oficial
 MOVE_SPLASH,No tiene ningún efecto. Solo salpica.,oficial
 MOVE_SPLINTERED_STORMSHARDS,Lycanroc ataca con todo. Quita el campo.,propia
@@ -750,6 +788,7 @@ MOVE_STEEL_BEAM,Dispara un rayo de acero. Daña al usuario.,propia
 MOVE_STEEL_ROLLER,Destruye el campo. Falla si no hay campo.,propia
 MOVE_STEEL_WING,Golpea con alas duras. Puede subir la Defensa.,propia
 MOVE_STICKY_WEB,Teje una red que frena al rival que entra.,propia
+MOVE_STOCKPILE,Acumula fuerza hasta 3 veces. Sube las defensas.,propia
 MOVE_STOKED_SPARKSURFER,Raichu de Alola ataca con todo. Paraliza.,propia
 MOVE_STOMP,Tremendo pisotón que puede hacer retroceder al objetivo.,oficial
 MOVE_STOMPING_TANTRUM,Doble de potencia si su mov. anterior falló.,propia
@@ -781,6 +820,7 @@ MOVE_SURGING_STRIKES,Domina el estilo Agua: 3 golpes críticos.,propia
 MOVE_SWAGGER,"Confunde al rival, pero le sube mucho el Ataque.",propia
 MOVE_SWALLOW,Absorbe la energía acumulada con Reserva y restaura PS.,oficial
 MOVE_SWEET_KISS,Da un beso con tal dulzura que causa confusión.,oficial
+MOVE_SWEET_SCENT,Atrae a los rivales y baja mucho su evasión.,propia
 MOVE_SWIFT,Lanza rayos en forma de estrella que no fallan nunca.,oficial
 MOVE_SWITCHEROO,Cambia los objetos con el rival en un instante.,propia
 MOVE_SWORDS_DANCE,Baile frenético que aumenta mucho el Ataque.,oficial
@@ -789,17 +829,21 @@ MOVE_SYNTHESIS,Recupera PS. La cantidad depende del tiempo.,propia
 MOVE_SYRUP_BOMB,Baja la Velocidad rival cada turno durante 3 turnos.,propia
 MOVE_TACHYON_CUTTER,Lanza cuchillas de partículas. Golpea dos veces.,propia
 MOVE_TACKLE,Embestida con todo el cuerpo.,oficial
+MOVE_TAILWIND,Viento que sube la Velocidad del equipo 4 turnos.,propia
+MOVE_TAIL_GLOW,Emite un destello que sube muchísimo el At. Esp.,propia
 MOVE_TAIL_SLAP,Golpea con la cola de dos a cinco veces seguidas.,oficial
 MOVE_TAIL_WHIP,Agita la cola para bajar la Defensa del equipo rival.,oficial
 MOVE_TAKE_DOWN,Carga desmedida que también hiere al agresor.,oficial
 MOVE_TAKE_HEART,Cura su estado y sube su ataque y defensa esp.,propia
 MOVE_TAR_SHOT,Baja la Velocidad y lo hace débil al Fuego.,propia
+MOVE_TAUNT,"Durante 3 turnos, el rival solo puede atacar.",propia
 MOVE_TEARFUL_LOOK,Llora y baja el Ataque y el At. Esp. del rival.,propia
 MOVE_TEATIME,Todos toman el té y se comen sus bayas.,propia
 MOVE_TECHNO_BLAST,Su tipo depende del disco que lleve.,propia
 MOVE_TECTONIC_RAGE,Excava y embiste al rival. Potencia variable.,propia
 MOVE_TEETER_DANCE,Confunde a todos los demás.,propia
 MOVE_TELEKINESIS,Hace flotar al rival; es más fácil darle 3 turnos.,propia
+MOVE_TELEPORT,El usuario se cambia por otro Pokémon del equipo.,propia
 MOVE_TEMPER_FLARE,Doble de potencia si su mov. anterior falló.,propia
 MOVE_TERA_BLAST,"Si ha teracristalizado, usa su teratipo.",propia
 MOVE_TERA_STARSTORM,"En forma Astral de Terapagos, da a todos.",propia
@@ -813,6 +857,7 @@ MOVE_THUNDER,Un poderoso rayo que daña al objetivo y puede paralizarlo.,oficial
 MOVE_THUNDERBOLT,Potente ataque eléctrico que puede paralizar al objetivo.,oficial
 MOVE_THUNDERCLAP,Ataca primero si el rival va a atacar.,propia
 MOVE_THUNDEROUS_KICK,Una patada como un rayo. Baja la Defensa rival.,propia
+MOVE_THUNDER_CAGE,Atrapa al rival en una jaula eléctrica 4 o 5 turnos.,propia
 MOVE_THUNDER_FANG,Puede amedrentar o paralizar al rival.,propia
 MOVE_THUNDER_PUNCH,Puñetazo eléctrico que puede paralizar al adversario.,oficial
 MOVE_THUNDER_SHOCK,Ataque eléctrico que puede paralizar al objetivo.,oficial
@@ -842,6 +887,7 @@ MOVE_TWINKLE_TACKLE,Juega con el rival en un espacio. Potencia variable.,propia
 MOVE_TWIN_BEAM,Rayos de los ojos que golpean dos veces.,propia
 MOVE_TWISTER,Crea un tornado contra los rivales. Puede amedrentar.,propia
 MOVE_UPPER_HAND,Amedrenta si el rival iba a usar prioridad.,propia
+MOVE_UPROAR,Arma un alboroto durante 3 turnos que impide dormir.,propia
 MOVE_U_TURN,Ataca y vuelve para dar el relevo a otro.,propia
 MOVE_VACUUM_WAVE,Gira los puños y lanza una onda que va primero.,propia
 MOVE_VEEVEE_VOLLEY,El cariño de Eevee le da potencia. No falla.,propia
@@ -860,9 +906,11 @@ MOVE_WATER_GUN,Ataca disparando agua con gran potencia.,oficial
 MOVE_WATER_PLEDGE,Una columna de agua. Puede crear un arcoíris.,propia
 MOVE_WATER_PULSE,Ondas ultrasónicas. Puede confundir al rival.,propia
 MOVE_WATER_SHURIKEN,Estrellas de agua de 2 a 5 veces. Va primero.,propia
+MOVE_WATER_SPORT,El agua debilita los ataques de Fuego 5 turnos.,propia
 MOVE_WATER_SPOUT,"Cuantos más PS tenga, más daño hace.",propia
 MOVE_WAVE_CRASH,Embiste envuelto en agua. Daña al usuario.,propia
 MOVE_WEATHER_BALL,Su tipo y potencia cambian con el tiempo.,propia
+MOVE_WHIRLPOOL,Atrapa y daña al rival en un remolino 4 o 5 turnos.,propia
 MOVE_WHIRLWIND,"Se lleva al objetivo, que es sustituido por otro Pokémon.",oficial
 MOVE_WICKED_BLOW,Domina el estilo Siniestro: siempre crítico.,propia
 MOVE_WICKED_TORQUE,---,propia
@@ -877,9 +925,11 @@ MOVE_WONDER_ROOM,Se cambian Defensa y Def. Esp. durante 5 turnos.,propia
 MOVE_WOOD_HAMMER,Golpe con todo el cuerpo. Daña al usuario.,propia
 MOVE_WORK_UP,Se anima: sube el Ataque y el At. Esp.,propia
 MOVE_WORRY_SEED,Planta una semilla que da Insomnio al rival.,propia
+MOVE_WRAP,Envuelve y oprime al rival durante 4 o 5 turnos.,propia
 MOVE_WRING_OUT,"Cuantos más PS tenga el rival, más fuerte.",propia
 MOVE_X_SCISSOR,"Corta en cruz con guadañas, garras…",propia
 MOVE_YAWN,"Hace bostezar al rival, que se duerme al turno siguiente.",propia
 MOVE_ZAP_CANNON,"Potente y siempre paraliza, pero poco preciso.",propia
 MOVE_ZEN_HEADBUTT,Un fuerte cabezazo. Puede amedrentar.,propia
 MOVE_ZING_ZAP,Un choque eléctrico. Puede amedrentar.,propia
+MOVE_ZIPPY_ZAP,Ataque eléctrico que siempre va primero y sube la evasión.,propia

@@ -48,6 +48,7 @@ ABILITY_CUTE_CHARM,Puede enamorar al tocarlo.,propia
 ABILITY_DAMP,Impide autodestruirse.,propia
 ABILITY_DANCER,Baila cuando otros bailan.,propia
 ABILITY_DARK_AURA,Potencia todo mov. Siniestro.,propia
+ABILITY_DAUNTLESS_SHIELD,"Sube Defensa al salir, 1 vez.",propia
 ABILITY_DAZZLING,Bloquea mov. con prioridad.,propia
 ABILITY_DEFEATIST,Mitad de ataque a mitad de PS.,propia
 ABILITY_DEFIANT,"Si le bajan algo, sube Ataque.",propia
@@ -110,6 +111,8 @@ ABILITY_HUNGER_SWITCH,Cambia de forma cada turno.,propia
 ABILITY_HUSTLE,"Más Ataque, menos precisión.",propia
 ABILITY_HYDRATION,Se cura el estado con lluvia.,propia
 ABILITY_HYPER_CUTTER,No le baja el Ataque.,propia
+ABILITY_ICE_BODY,Recupera PS con granizo/nieve.,propia
+ABILITY_ICE_FACE,El granizo renueva su escudo.,propia
 ABILITY_ICE_SCALES,Mitad de daño especial.,propia
 ABILITY_ILLUSION,Se disfraza de un compañero.,propia
 ABILITY_IMMUNITY,Evita el envenenamiento.,oficial
@@ -119,6 +122,7 @@ ABILITY_INNARDS_OUT,Daña al rival al debilitarse.,propia
 ABILITY_INNER_FOCUS,Evita el retroceso.,oficial
 ABILITY_INSOMNIA,Evita el quedarse dormido.,oficial
 ABILITY_INTIMIDATE,Baja el Ataque del rival.,oficial
+ABILITY_INTREPID_SWORD,Sube Ataque al salir. 1 vez.,propia
 ABILITY_IRON_BARBS,Hiere al hacer contacto.,oficial
 ABILITY_IRON_FIST,Potencia los puñetazos.,propia
 ABILITY_JUSTIFIED,Siniestro le sube el Ataque.,propia
@@ -127,6 +131,7 @@ ABILITY_KLUTZ,No puede usar su objeto.,propia
 ABILITY_LEAF_GUARD,"Al sol, sin problemas estado.",propia
 ABILITY_LEVITATE,Inmune a mov. Tierra.,propia
 ABILITY_LIBERO,Toma el tipo del mov. usado.,propia
+ABILITY_LIGHTNING_ROD,Atrae Eléctr. y sube At. Esp.,propia
 ABILITY_LIGHT_METAL,Reduce a la mitad su peso.,oficial
 ABILITY_LIMBER,Evita ser paralizado.,oficial
 ABILITY_LINGERING_AROMA,Contagia su habilidad.,propia
@@ -160,8 +165,10 @@ ABILITY_NEUTRALIZING_GAS,Anula las otras habilidades.,propia
 ABILITY_NONE,Sin habilidad.,propia
 ABILITY_NORMALIZE,Sus mov. pasan a ser Normal.,propia
 ABILITY_NO_GUARD,Todos los ataques aciertan.,propia
+ABILITY_OBLIVIOUS,Evita Atracción y Mofa.,propia
 ABILITY_OPPORTUNIST,Copia subidas del rival.,propia
 ABILITY_ORICHALCUM_PULSE,Saca el sol y sube Ataque.,propia
+ABILITY_OVERCOAT,Bloquea el clima y los polvos.,propia
 ABILITY_OVERGROW,Potencia Planta con pocos PS.,propia
 ABILITY_OWN_TEMPO,Evita ser confundido.,oficial
 ABILITY_PARENTAL_BOND,Ataque doble en familia.,oficial
@@ -228,7 +235,9 @@ ABILITY_SHIELD_DUST,Bloquea efectos secundarios.,propia
 ABILITY_SIMPLE,Duplica cambios de caract.,propia
 ABILITY_SKILL_LINK,Máx. golpes en mov. múltiples.,propia
 ABILITY_SLOW_START,Tarda 5 turnos en arrancar.,propia
+ABILITY_SLUSH_RUSH,Veloz con granizo o nieve.,propia
 ABILITY_SNIPER,Potencia los golpes críticos.,propia
+ABILITY_SNOW_CLOAK,Más evasión con granizo/nieve.,propia
 ABILITY_SNOW_WARNING,Hace que nieve.,propia
 ABILITY_SOLAR_POWER,El sol potencia pero daña.,propia
 ABILITY_SOLID_ROCK,Reduce los supereficaces.,propia
@@ -248,6 +257,7 @@ ABILITY_STEELWORKER,Potencia mov. Acero.,propia
 ABILITY_STEELY_SPIRIT,Potencia mov. Acero aliados.,propia
 ABILITY_STENCH,Puede amedrentar al atacar.,propia
 ABILITY_STICKY_HOLD,No le quitan el objeto.,propia
+ABILITY_STORM_DRAIN,Atrae Agua y sube At. Esp.,propia
 ABILITY_STRONG_JAW,Potencia los mordiscos.,propia
 ABILITY_STURDY,Anula los KO de un golpe.,propia
 ABILITY_SUCTION_CUPS,No pueden obligarle a cambiar.,propia

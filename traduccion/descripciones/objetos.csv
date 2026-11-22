@@ -30,6 +30,10 @@ ITEM_ASSAULT_VEST,"Sube la Def. Esp., pero no deja usar mov. de estado.",propia
 ITEM_AUDINITE,Hace megaevolucionar a Audino.,propia
 ITEM_AURORA_TICKET,El billete para ir en barco a Isla Origen.,propia
 ITEM_AUSPICIOUS_ARMOR,Una armadura que hace evolucionar a algunos.,propia
+ITEM_AUX_EVASION,Sube mucho la evasión durante un combate.,propia
+ITEM_AUX_GUARD,Sube mucho las defensas durante un combate.,propia
+ITEM_AUX_POWER,Sube mucho los ataques durante un combate.,propia
+ITEM_AUX_POWERGUARD,Sube mucho ataques y defensas en un combate.,propia
 ITEM_AWAKENING,Despierta a un Pokémon dormido.,propia
 ITEM_BABIRI_BERRY,Debilita un mov. Acero supereficaz una vez.,propia
 ITEM_BALM_MUSHROOM,Huele muy bien. Se vende cara.,propia
@@ -143,6 +147,7 @@ ITEM_DEVON_PARTS,Contiene piezas de algo fabricado por Devon S. A.,oficial
 ITEM_DEVON_SCOPE,Un aparato de Devon que revela Pokémon invisibles.,propia
 ITEM_DIANCITE,Hace megaevolucionar a Diancie.,propia
 ITEM_DIRE_HIT,Sube el índice de golpe crítico en un combate.,propia
+ITEM_DIVE_BALL,Ball que funciona mejor con Pokémon del agua.,propia
 ITEM_DNA_SPLICERS,Fusiona a Kyurem con cierto Pokémon.,propia
 ITEM_DOME_FOSSIL,Un trozo de caparazón de un Pokémon antiguo.,propia
 ITEM_DOUSE_DRIVE,Tecno Shock pasa a ser de tipo Agua.,propia
@@ -158,6 +163,7 @@ ITEM_DRAGON_SCALE,Una escama rara de los Pokémon de tipo Dragón.,propia
 ITEM_DRAGON_TERA_SHARD,Fragmentos que deja un Pokémon teracristalizado.,propia
 ITEM_DRAMPANITE,Hace megaevolucionar a Drampa.,propia
 ITEM_DREAD_PLATE,Potencia los movimientos de tipo Siniestro.,propia
+ITEM_DREAM_BALL,Ball que funciona mejor con Pokémon dormidos.,propia
 ITEM_DREAM_MAIL,Carta con un dibujo del Pokémon que la lleva.,propia
 ITEM_DUBIOUS_DISC,Un disco transparente lleno de datos dudosos.,propia
 ITEM_DURIN_BERRY,Para hacer {POKEBLOCK}. Se puede plantar.,propia
@@ -212,6 +218,7 @@ ITEM_FIGHTING_MEMORY,Datos de tipo Lucha. Cambia el tipo de Silvally.,propia
 ITEM_FIGHTING_TERA_SHARD,Fragmentos que deja un Pokémon teracristalizado.,propia
 ITEM_FIGHTINIUM_Z,Mejora los mov. de tipo Lucha a mov. Z.,propia
 ITEM_FIGY_BERRY,Una baya muy rara en la región de Teselia.,oficial
+ITEM_FINE_REMEDY,Polvo amargo que restaura 60 PS.,propia
 ITEM_FIRE_GEM,Pluma que aumenta un poco la Defensa de base de un Pokémon.,oficial
 ITEM_FIRE_MEMORY,Datos de tipo Fuego. Cambia el tipo de Silvally.,propia
 ITEM_FIRE_STONE,Hace evolucionar a ciertos Pokémon.,propia
@@ -235,6 +242,7 @@ ITEM_FOSSILIZED_DINO,Fósil de un Pokémon antiguo que vivía en el mar.,propia
 ITEM_FOSSILIZED_DRAKE,Fósil de un Pokémon antiguo de tierra.,propia
 ITEM_FOSSILIZED_FISH,Fósil de un Pokémon antiguo que vivía en el mar.,propia
 ITEM_FRESH_START_MOCHI,Un pastel que deja a cero los puntos de base.,propia
+ITEM_FRESH_WATER,Agua mineral que restaura 30 PS.,propia
 ITEM_FRIEND_BALL,El Pokémon atrapado le coge más cariño.,propia
 ITEM_FROSLASSITE,Hace megaevolucionar a Froslass.,propia
 ITEM_FULL_HEAL,Cura todos los problemas de estado.,propia
@@ -313,10 +321,13 @@ ITEM_HM_FLASH,Un destello potente que baja la precisión.,propia
 ITEM_HM_FLY,Vuela el 1.er turno y ataca en el siguiente.,propia
 ITEM_HM_ROCK_SMASH,Rompe rocas. Puede bajar la Defensa.,propia
 ITEM_HM_STRENGTH,Reúne una fuerza enorme y golpea al rival.,propia
+ITEM_HM_SURF,Inunda el terreno de combate con una ola gigante.,propia
+ITEM_HM_WATERFALL,Ataque que sube cascadas. Puede hacer retroceder.,propia
 ITEM_HONDEW_BERRY,"Le coge cariño, pero baja la base de At. Esp.",propia
 ITEM_HONEY,Miel dulce que atrae a Pokémon salvajes.,propia
 ITEM_HOUNDOOMINITE,Hace megaevolucionar a Houndoom.,propia
 ITEM_HP_UP,Nutritiva bebida que potencia los PS de base de un Pokémon.,oficial
+ITEM_HYPER_POTION,Restaura 120 PS a un Pokémon.,propia
 ITEM_IAPAPA_BERRY,Una baya muy rara en la región de Teselia.,oficial
 ITEM_ICE_GEM,Potencia una vez un movimiento de tipo Hielo.,propia
 ITEM_ICE_HEAL,Medicina en espray que descongela a un Pokémon.,oficial
@@ -356,6 +367,7 @@ ITEM_LAX_INCENSE,Baja la precisión de los rivales.,propia
 ITEM_LAX_MINT,"Al olerla, sube Defensa y baja Def. Esp.",propia
 ITEM_LEADERS_CREST,Un trozo de hoja que llevan los Bisharp líderes.,propia
 ITEM_LEAF_STONE,Hace evolucionar a ciertos Pokémon.,propia
+ITEM_LEEK,Sube los críticos de Farfetch'd y Sirfetch'd.,propia
 ITEM_LEFTOVERS,Recupera PS poco a poco en combate.,propia
 ITEM_LEMONADE,Bebida muy dulce que restaura 70 PS de un Pokémon.,oficial
 ITEM_LEPPA_BERRY,Restaura 10 PP en combate.,propia
@@ -364,6 +376,7 @@ ITEM_LEVEL_BALL,Va mejor con Pokémon de menos nivel.,propia
 ITEM_LIECHI_BERRY,Sube el Ataque en un apuro.,propia
 ITEM_LIFE_ORB,"Potencia los mov., pero resta PS al golpear.",propia
 ITEM_LIFT_KEY,La llave del ascensor de la guarida Rocket.,propia
+ITEM_LIGHT_BALL,Sube el Ataque y el At. Esp. de Pikachu.,propia
 ITEM_LIGHT_CLAY,Las barreras como Pantalla de Luz duran más.,propia
 ITEM_LINKING_CORD,Un cordón lleno de energía que adoran algunos.,propia
 ITEM_LOADED_DICE,Sus mov. de varios golpes golpean más veces.,propia
@@ -415,6 +428,7 @@ ITEM_MECH_MAIL,Carta con dibujos de Magnemite para llevar.,propia
 ITEM_MEDICHAMITE,Hace megaevolucionar a Medicham.,propia
 ITEM_MEGANIUMITE,Hace megaevolucionar a Meganium.,propia
 ITEM_MEGA_RING,Permite megaevolucionar con megapiedras.,propia
+ITEM_MENTAL_HERB,"Libra una vez de Atracción, Mofa y similares.",propia
 ITEM_MEOWSTICITE,Hace megaevolucionar a Meowstic.,propia
 ITEM_METAGROSSITE,Hace megaevolucionar a Metagross.,propia
 ITEM_METAL_ALLOY,Un metal raro que hace evolucionar a algunos.,propia
@@ -643,6 +657,7 @@ ITEM_SOFT_SAND,Potencia los movimientos de tipo Tierra.,propia
 ITEM_SOLGANIUM_Z,Mejora Meteoimpacto de Solgaleo a mov. Z.,propia
 ITEM_SOOTHE_BELL,Calma al portador y le hace coger cariño.,propia
 ITEM_SOOT_SACK,Una bolsa para recoger ceniza volcánica.,propia
+ITEM_SOUL_DEW,Potencia los ataques Psíquico y Dragón de Latios y Latias.,propia
 ITEM_SPELL_TAG,Potencia los movimientos de tipo Fantasma.,propia
 ITEM_SPELON_BERRY,Para hacer {POKEBLOCK}. Se puede plantar.,propia
 ITEM_SPLASH_PLATE,Potencia los movimientos de tipo Agua.,propia
@@ -669,7 +684,9 @@ ITEM_STRANGE_BALL,Una Ball que ha viajado por el espacio y el tiempo.,propia
 ITEM_STRANGE_SOUVENIR,Un adorno con un Pokémon de Alola.,propia
 ITEM_STRAWBERRY_SWEET,"Dulce de fresa. Si lo lleva Milcery, se alegra.",propia
 ITEM_SUN_STONE,Hace evolucionar a ciertos Pokémon.,propia
+ITEM_SUPERB_REMEDY,Polvo amargo que restaura 120 PS.,propia
 ITEM_SUPER_LURE,Atrae más Pokémon durante 200 pasos.,propia
+ITEM_SUPER_POTION,Restaura 60 PS a un Pokémon.,propia
 ITEM_SUPER_REPEL,Ahuyenta a Pokémon débiles durante 200 pasos.,propia
 ITEM_SUPER_ROD,La mejor caña para pescar Pokémon.,propia
 ITEM_SURPRISE_MULCH,Un abono que causa mutaciones en las bayas.,propia
@@ -711,6 +728,7 @@ ITEM_TM98,Embiste con un gran impulso que puede hacer retroceder.,oficial
 ITEM_TM99,Inflige daño a los oponentes con una potente luz.,oficial
 ITEM_TM_AERIAL_ACE,Un ataque rapidísimo que no se puede esquivar.,propia
 ITEM_TM_ATTRACT,El sexo opuesto atacará menos.,propia
+ITEM_TM_BLIZZARD,Ventisca de nieve que puede congelar al rival.,propia
 ITEM_TM_BRICK_BREAK,Rompe barreras como Pantalla de Luz y daña.,propia
 ITEM_TM_BULK_UP,Tensa el cuerpo y sube el Ataque y la Defensa.,propia
 ITEM_TM_BULLET_SEED,Dispara de 2 a 5 semillas seguidas.,propia
@@ -726,7 +744,10 @@ ITEM_TM_FLAMETHROWER,Lanza un chorro de fuego. Puede quemar.,propia
 ITEM_TM_FOCUS_PUNCH,"Potente, pero falla si el rival le golpea antes.",propia
 ITEM_TM_FRUSTRATION,Más fuerte cuanto menos aprecio le tenga.,propia
 ITEM_TM_GIGA_DRAIN,Recupera la mitad del daño que causa.,propia
+ITEM_TM_HAIL,Desata una granizada que daña en cada turno.,propia
 ITEM_TM_HIDDEN_POWER,Su tipo depende del Pokémon que lo usa.,propia
+ITEM_TM_HYPER_BEAM,"Muy potente, pero el usuario descansa el turno siguiente.",propia
+ITEM_TM_ICE_BEAM,Rayo de hielo que puede congelar al rival.,propia
 ITEM_TM_IRON_TAIL,Golpea con la cola dura. Puede bajar la Defensa.,propia
 ITEM_TM_LIGHT_SCREEN,Una barrera de luz que reduce el daño especial.,propia
 ITEM_TM_OVERHEAT,"Ataca con todo, pero baja mucho su At. Esp.",propia
@@ -749,6 +770,7 @@ ITEM_TM_SNATCH,Roba el siguiente mov. de curación o de caract.,propia
 ITEM_TM_SOLAR_BEAM,Absorbe luz un turno y ataca en el siguiente.,propia
 ITEM_TM_STEEL_WING,Golpea con alas duras. Puede subir la Defensa.,propia
 ITEM_TM_SUNNY_DAY,Potencia los mov. Fuego durante 5 turnos.,propia
+ITEM_TM_TAUNT,"Durante 3 turnos, el rival solo puede atacar.",propia
 ITEM_TM_THIEF,"Al atacar, roba el objeto del rival.",propia
 ITEM_TM_THUNDER,Lanza un rayo al rival. Puede paralizar.,propia
 ITEM_TM_THUNDERBOLT,Potente ataque eléctrico. Puede paralizar.,propia
@@ -792,6 +814,12 @@ ITEM_WIKI_BERRY,Una baya muy rara en la región de Teselia.,oficial
 ITEM_WISE_GLASSES,Unas gafas que potencian un poco los mov. especiales.,propia
 ITEM_WISHING_PIECE,Se echa en una guarida para atraer un Dinamax.,propia
 ITEM_WOOD_MAIL,Carta con dibujos de Slakoth para llevar.,propia
+ITEM_X_ACCURACY,Sube mucho la precisión durante un combate.,propia
+ITEM_X_ATTACK,Sube mucho el Ataque durante un combate.,propia
+ITEM_X_DEFENSE,Sube mucho la Defensa durante un combate.,propia
+ITEM_X_SPEED,Sube mucho la Velocidad durante un combate.,propia
+ITEM_X_SP_ATK,Sube mucho el At. Esp. durante un combate.,propia
+ITEM_X_SP_DEF,Sube mucho la Def. Esp. durante un combate.,propia
 ITEM_YACHE_BERRY,Debilita un mov. Hielo supereficaz una vez.,propia
 ITEM_YELLOW_APRICORN,Bonguri de color amarillo y aroma refrescante.,oficial
 ITEM_YELLOW_FLUTE,Una flauta de juguete de cristal amarillo.,oficial
