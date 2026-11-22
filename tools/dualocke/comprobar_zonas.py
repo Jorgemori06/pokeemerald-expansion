@@ -15,7 +15,9 @@ Qué mira en cada mapa (los de Rojo Fuego, _Frlg, se saltan):
 - puertas (warps): el mapa de destino existe, el número de puerta de destino existe y la puerta
   está dentro del mapa (en el juego original hay muchas en casillas con colisión: es normal);
 - conexiones: el otro mapa tiene la conexión de vuelta y, en las zonas nuevas, las casillas que se
-  pisan a los dos lados del borde tienen la misma altura (si no, no se pasa: PRADO DE HADAS, 22/11/2026);
+  pisan a los dos lados del borde tienen la misma altura (si no, no se pasa: PRADO DE HADAS, 22/11/2026), y
+  un mapa de arriba o de abajo no llega a las 7 columnas de un lado con otro mapa al lado (ISLA DEL DRAGÓN,
+  22/11/2026: al cruzar desde el mapa de al lado, el juego copia lo que se veía allí y lo tapa);
 - puertas sin animación (MB_NON_ANIMATED_DOOR): sin colisión, porque se cruzan al pisarlas (TORRE de la
   ISLA DE RUINAS, 22/11/2026);
 - objetos: en casillas que se pueden pisar, sin dos en la misma casilla, con constantes que
@@ -276,6 +278,25 @@ def main():
                     if malas:
                         fallo("altura", c, f"{con['direction']} con {con['map']}: en {malas[:4]} las casillas de los "
                                            "dos lados tienen distinta altura y no se pasa")
+            if con["direction"] in ("up", "down") and (c.startswith(NUEVOS) or otro.startswith(NUEVOS)):
+                # Al cruzar desde el mapa de la izquierda o de la derecha, MoveMapViewToBackup (src/fieldmap.c)
+                # copia lo que se veía en ese mapa, 7 columnas hacia dentro. Si ese mapa no tiene nada arriba o
+                # abajo ahí, el mapa de arriba o de abajo queda tapado y no se pasa (ISLA DEL DRAGÓN, #117).
+                # Solo importa si en esas columnas se puede cruzar el borde (en la CIÉNAGA TÓXICA y la ISLA NEVADA
+                # hay árboles o rocas a un lado).
+                lo = layouts.get(mapas[otro].get("layout"))
+                lados = {o["direction"] for o in m.get("connections") or []}
+                if lo:
+                    ow, oh, oinfo = rejilla_de(lo, atributos, mb)
+                    off = con["offset"]
+                    xs = [x for x in range(max(off, 0), min(off + ow, w))
+                          if ("right" in lados and x >= w - 7) or ("left" in lados and x < 7)]
+                    y, oy = (h - 1, 0) if con["direction"] == "down" else (0, oh - 1)
+                    cruzan = [x for x in xs if not info(x, y)[0] and not oinfo(x - off, oy)[0]]
+                    if cruzan:
+                        fallo("conexión", c, f"{con['direction']} con {con['map']}: en las x {cruzan[0]}-{cruzan[-1]}, "
+                                             "a menos de 7 columnas de un lado con otro mapa al lado, se cruza el "
+                                             "borde; al llegar desde ese mapa se tapa y no se pasa (apártalo)")
         # objetos
         vistos = {}
         for o in m.get("object_events", []):

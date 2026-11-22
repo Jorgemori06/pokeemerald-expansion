@@ -161,6 +161,13 @@ def crear_layout(borde_ruta):
                 v = (v & ~0x3FF) | FLORES
             c[y * ancho + x] = v
     assert all(c), "casillas sin pintar"
+    # La entrada: la hierba de la ruta está a altura 4 y la del prado a 3, y el juego no deja pasar de una a
+    # otra. Las casillas del borde del prado que dan a la entrada van a altura 0, la de paso (como en las
+    # escaleras): desde ella se puede ir a las dos alturas. Antes no se entraba (lo vio el bot de Jorge, #117,
+    # 22/11/2026); comprobar_zonas.py lo mira ahora en todas las conexiones de las zonas nuevas.
+    for y in range(alto):
+        if borde_ruta[y] is not None and filas[y][-1] != "T" and borde_ruta[y] >> 12 != c[y * ancho + ancho - 1] >> 12:
+            c[y * ancho + ancho - 1] &= 0x0FFF
     for donde in [GUARDIAN[:2], FLORISTA] + list(SITIO_OBJETOS.values()):
         x, y = donde
         assert filas[y][x] in ".,;*c" and not (c[y * ancho + x] >> 10) & 3, ("objeto o persona fuera del suelo", donde)

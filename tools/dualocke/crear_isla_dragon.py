@@ -8,7 +8,12 @@ Uso (desde la raíz del repo; se puede volver a lanzar):
     python3 tools/dualocke/crear_isla_dragon.py
 
 - **Entrada:** surfeando hacia el sur desde el borde de abajo de la RUTA 130 (se alcanza en el **tramo 8**,
-  `alcance.py`). La isla empieza en la x 40 de la ruta.
+  `alcance.py`). La isla empieza en la x 33 de la ruta.
+  - **No llega a la esquina de la derecha (22/11/2026).** Empezaba en la x 40 y llegaba hasta la 79. Al pasar de
+    la RUTA 129 a la 130, el juego copia lo que se veía en la 129 (MoveMapViewToBackup, src/fieldmap.c). Debajo
+    de la 129, en esas 7 columnas, no hay nada, así que la isla quedaba tapada en las x 73-79 y desde ahí no se
+    bajaba (lo vio el bot de Jorge, #117). Ahora va de la x 33 a la 72. comprobar_zonas.py lo mira en las
+    conexiones de las zonas nuevas.
 - **ISLA DEL DRAGÓN** (40 × 34): una isla de arena con su bajío, rocas en el mar y tres peñas. En medio, el
   montículo del PILAR CELESTE con su cueva (como en la ISLA VOLCÁNICA): la cueva mira al sur, así que se rodea el
   montículo. Las 8 filas de arriba son mar, que es lo que se ve desde la ruta (gráficos distintos).
@@ -36,7 +41,7 @@ import crear_islas_sur as islas  # noqa: E402
 ISLA, VALLE = "IslaDragon", "IslaDragon_Valle"
 MAPAS = {ISLA: "MAP_ISLA_DRAGON", VALLE: "MAP_ISLA_DRAGON_VALLE"}
 MAPSEC, NOMBRE = "MAPSEC_ISLA_DRAGON", "ISLA DEL DRAGÓN"
-RUTA, RUTA_MAPA, DESPLAZAMIENTO = "Route130", "MAP_ROUTE130", 40
+RUTA, RUTA_MAPA, DESPLAZAMIENTO = "Route130", "MAP_ROUTE130", 33
 TAM_ISLA = (40, 34)
 CENTRO, RADIOS = (20, 19), (15, 9)          # la isla: una elipse de arena con su anillo de bajío
 SITIO_MONTICULO = (17, 15)                   # la cueva queda en (20, 19), mirando al sur
@@ -217,6 +222,17 @@ def crear_mapas(l_isla, cueva, l_valle):
 
     ruta = f"data/maps/{RUTA}/map.json"
     texto = leer(ruta)
+    m = json.loads(texto)
+    for con in m["connections"]:
+        if con["map"] == MAPAS[ISLA] and con["offset"] != DESPLAZAMIENTO:   # cambió el 22/11/2026
+            con["offset"] = DESPLAZAMIENTO
+            texto = json.dumps(m, indent=2, ensure_ascii=False) + chr(10)
+            escribir(ruta, texto)
+    # Lo que se ve de la RUTA 130 desde la isla (sus 8 filas de abajo) son piezas generales
+    lr = LAYOUTS[m["layout"]]
+    cr = struct.unpack(f"<{lr['width'] * lr['height']}H", open(lr["blockdata_filepath"], "rb").read())
+    assert all(cr[y * lr["width"] + x] & 0x3FF < 0x200 for y in range(lr["height"] - 8, lr["height"])
+               for x in range(DESPLAZAMIENTO, DESPLAZAMIENTO + TAM_ISLA[0])), "desde la isla se vería mal la ruta"
     if MAPAS[ISLA] not in texto:
         texto = co.insertar_en_lista(texto, "connections", {"map": MAPAS[ISLA], "offset": DESPLAZAMIENTO,
                                                             "direction": "down"})

@@ -73,14 +73,14 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 
 ### PRADO DE HADAS (desde el 21/11/2026)
 
-- [ ] **Entrada:** junto al INSTITUTO METEOROLÓGICO, por el oeste (borde izquierdo de la RUTA 119), se pasa al prado sin pantalla de carga, y se vuelve igual. Que los árboles del borde y el pie del árbol de encima de la entrada se vean bien.
+- [ ] **Entrada:** junto al INSTITUTO METEOROLÓGICO, por el oeste (borde izquierdo de la RUTA 119), se pasa al prado sin pantalla de carga, y se vuelve igual (22/11/2026: antes no se entraba, por la altura). Que los árboles del borde y el pie del árbol de encima de la entrada se vean bien.
 - [ ] **El prado:** las flores, las charcas (con su orilla) y la hierba alta y muy alta. Que no haya copas de árbol sueltas.
 - [ ] **Cartel** "PRADO DE HADAS" y zona de captura propia. Salvajes de Hada; SURF y caña en las charcas. La florista habla.
 - [ ] **Guardián** del claro del norte (Gardevoir sin semilla): da la Tabla Duende y no vuelve a salir.
 
 ### ISLA DEL DRAGÓN (desde el 21/11/2026)
 
-- [ ] **Entrada:** surfeando hacia el sur desde el borde de abajo de la RUTA 130 (de la x 40 en adelante) se llega a la isla. Que la unión se vea bien.
+- [ ] **Entrada:** surfeando hacia el sur desde el borde de abajo de la RUTA 130 (de la x 33 a la 72) se llega a la isla. Que la unión se vea bien. Que también se baje después de llegar a la RUTA 130 desde la 129 (22/11/2026: antes, en la esquina de la derecha no se bajaba).
 - [ ] **La isla:** se rodea el montículo hasta su cueva (mira al sur), que baja al VALLE DEL DRAGÓN.
 - [ ] **El valle:** sin el Centro Pokémon ni carteles. Salvajes de Dragón en la hierba alta de la izquierda. Se baja al lago y por la cascada surfeando; se vuelve a subir con CASCADA.
 - [ ] **Cartel** "ISLA DEL DRAGÓN" (las dos partes son una zona de captura).

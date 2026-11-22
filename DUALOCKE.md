@@ -547,6 +547,7 @@ Idea de Miguel jugando (18/11/2026): "una Cantera de tipo Acero en la RUTA 116, 
 El bioma del tipo Hada (`PLAN.md`, propuesta C). Miguel lo quería "en la ruta de antes del Instituto Meteorológico, al lado de la zona de vallas, de jardín". Todo lo hace `tools/dualocke/crear_prado_hadas.py`.
 
 - **Entrada:** junto al INSTITUTO METEOROLÓGICO, por el oeste. Se cortan los árboles del borde izquierdo de la RUTA 119 en las filas 33-34: la fila 32 pasa a ser pie de árbol y las 33-34, hierba (en (2, 32) está el instituto). El prado va a la izquierda de la ruta (su fila 0 es la -1 de la ruta) y se cruza sin pantalla de carga: **tramo 6**.
+  - **Altura de la entrada (22/11/2026):** la hierba de la ruta está a altura 4 y la del prado a 3, y el juego no deja pasar de una a otra: no se entraba (lo vio el bot de Jorge, #117). Las dos casillas del borde del prado que dan a la entrada van a altura 0, la de paso, desde la que se puede ir a las dos. `comprobar_zonas.py` mira ahora la altura a los dos lados de las conexiones de las zonas nuevas.
   - El jardín con vallas del lago, al norte del instituto, no se alcanza en el tramo 6 (`alcance.py`): por eso la entrada va junto al instituto.
 - **El prado** (40 × 36, gráficos de la RUTA 119): un camino de tierra lleva de la entrada al centro. Alrededor, flores, tres charcas, hierba alta y hierba muy alta (con su borde: los gráficos de ARBORADA lo tienen). Al norte, junto a la charca grande, un claro con un anillo de flores donde espera el guardián.
   - La columna de la derecha del prado son árboles donde la ruta no se pisa (árboles, y en las filas 23-26 de la ruta, el acantilado de encima del instituto). Las flores nunca van junto a una charca: se perdería su orilla. El script lo comprueba.
@@ -560,7 +561,8 @@ El bioma del tipo Hada (`PLAN.md`, propuesta C). Miguel lo quería "en la ruta d
 
 El bioma del tipo Dragón (`PLAN.md`, propuesta I). Miguel: "una zona con cascadas o montañas, que le dé un aire épico, dirigida a la última parte del juego"; se llega surfeando desde una ruta del sur. Todo lo hace `tools/dualocke/crear_isla_dragon.py`.
 
-- **Entrada:** surfeando hacia el sur desde el borde de abajo de la RUTA 130 (la isla empieza en su x 40). Se alcanza en el tramo 7-8, como las otras islas del sur; sus niveles son los del **tramo 8**.
+- **Entrada:** surfeando hacia el sur desde el borde de abajo de la RUTA 130 (la isla va de su x 33 a la 72). Se alcanza en el tramo 7-8, como las otras islas del sur; sus niveles son los del **tramo 8**.
+  - **La esquina de la derecha (22/11/2026):** antes la isla iba de la x 40 a la 79. Al pasar de la RUTA 129 a la 130, el juego copia lo que se veía en la 129 (`MoveMapViewToBackup`, `src/fieldmap.c`), y debajo de la 129 no hay nada en esas columnas: la isla quedaba tapada en las x 73-79 y desde ahí no se bajaba (lo vio el bot de Jorge, #117). Ahora acaba en la x 72. `comprobar_zonas.py` avisa si una zona nueva de arriba o de abajo se puede cruzar a menos de 7 columnas de un lado con otro mapa al lado.
 - **ISLA DEL DRAGÓN** (40 × 34, gráficos de la RUTA 134):
   - una isla de arena con su bajío, tres peñas de la RUTA 127 y rocas en el mar;
   - en medio, el montículo del PILAR CELESTE con su cueva (como en la ISLA VOLCÁNICA). La cueva mira al sur: se rodea el montículo;
