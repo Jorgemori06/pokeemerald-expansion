@@ -3878,7 +3878,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .levelUpLearnset = sToxtricityLowKeyLevelUpLearnset,
         .teachableLearnset = sToxtricityLowKeyTeachableLearnset,
         .formSpeciesIdTable = sToxtricityFormSpeciesIdTable,
-        .formChangeTable = sToxtricityAmpedFormChangeTable,
+        .formChangeTable = sToxtricityLowKeyFormChangeTable,
     },
 
 #if P_GIGANTAMAX_FORMS
@@ -3954,7 +3954,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .levelUpLearnset = sToxtricityLowKeyLevelUpLearnset,
         .teachableLearnset = sToxtricityLowKeyTeachableLearnset,
         .formSpeciesIdTable = sToxtricityFormSpeciesIdTable,
-        .formChangeTable = sToxtricityAmpedFormChangeTable,
+        .formChangeTable = sToxtricityLowKeyFormChangeTable,
     },
 #endif //P_GIGANTAMAX_FORMS
 #endif //P_FAMILY_TOXEL

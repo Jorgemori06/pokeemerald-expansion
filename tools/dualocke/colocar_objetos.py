@@ -6,11 +6,13 @@ Ticket-Recuerdo (uno por ruta como mínimo, para el que recuerda movimientos de 
 Uso (desde la raíz del repo):
     python3 tools/dualocke/colocar_objetos.py            # coloca los que falten
     python3 tools/dualocke/colocar_objetos.py --resumen  # solo enseña dónde irían
+    python3 tools/dualocke/colocar_objetos.py --mover    # mueve las Balls que tapan el paso (sin_salida.py)
 
 Cada megapiedra va en un mapa de la tabla, como bola de objeto ("bola") o como objeto oculto
 ("oculta"). La casilla se busca automáticamente cerca de algo que seguro se puede alcanzar
 (un objeto o un entrenador que ya están en ese mapa): solo casillas transitables, a la misma
-altura, sin otros objetos, puertas ni eventos. Cada objeto usa su propio flag
+altura, sin otros objetos, puertas ni eventos, y en las que una Ball no tape el paso a una puerta, una
+salida, una persona o un cartel (sin_salida.bolas_que_tapan; esto también lo mira el CI). Cada objeto usa su propio flag
 (FLAG_ITEM_MEGA_..., FLAG_ITEM_COMP_... o FLAG_ITEM_TICKET_..., en include/constants/flags.h)
 para no volver a aparecer.
 
@@ -466,7 +468,7 @@ def cargar_layouts():
         return {l["id"]: l for l in json.load(f)["layouts"] if "id" in l}
 
 
-def buscar_casilla(mapa, layout, tilesets, mb, tipo, pista, ocupadas):
+def buscar_casilla(mapa, layout, tilesets, mb, tipo, pista, ocupadas, vale=lambda x, y: True):
     ancho, alto = layout["width"], layout["height"]
     datos = open(layout["blockdata_filepath"], "rb").read()
     celdas = struct.unpack(f"<{ancho * alto}H", datos)
@@ -495,13 +497,13 @@ def buscar_casilla(mapa, layout, tilesets, mb, tipo, pista, ocupadas):
     # Primero solo suelo firme (hierba, arena, cueva…); si no hay, también casillas como la del
     # ancla (agua, puentes), para que en las rutas de mar no salgan flotando si hay una playa
     for solo_suelo in (True, False):
-        sitio = _buscar_desde_anclas(anclas, info, ancho, alto, ok, distancia, ocupadas, solo_suelo)
+        sitio = _buscar_desde_anclas(anclas, info, ancho, alto, ok, distancia, ocupadas, solo_suelo, vale)
         if sitio:
             return sitio
     return None
 
 
-def _buscar_desde_anclas(anclas, info, ancho, alto, ok, distancia, ocupadas, solo_suelo):
+def _buscar_desde_anclas(anclas, info, ancho, alto, ok, distancia, ocupadas, solo_suelo, vale):
     for ax, ay, _ in anclas:
         if not (0 <= ax < ancho and 0 <= ay < alto):
             continue
@@ -519,7 +521,7 @@ def _buscar_desde_anclas(anclas, info, ancho, alto, ok, distancia, ocupadas, sol
             x, y, d = cola.popleft()
             if distancia[0] <= d <= distancia[1] and (x, y) not in ocupadas:
                 col, e, comp = info(x, y)
-                if col == 0 and e == elev and (comp in ok or (not solo_suelo and comp == comp_ancla)):
+                if col == 0 and e == elev and (comp in ok or (not solo_suelo and comp == comp_ancla)) and vale(x, y):
                     return x, y, elev
             if d >= distancia[1]:
                 continue
@@ -568,13 +570,82 @@ def asegurar_flags(lista, prefijo, primero, ultimo, comentario, fijo=None):
         f.write(texto)
 
 
+def mover_las_que_tapan():
+    """Mueve a la casilla buena más cercana (a 1-4 pasos) cada Ball nuestra que tape el paso. Solo cambia su x e y
+    en el map.json, sin quitarla de la lista: así no cambia el número de los demás objetos del mapa, que usan los
+    scripts."""
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import alcance  # noqa: E402
+    import sin_salida  # noqa: E402
+    mb, tilesets, layouts = comportamientos(), atributos_tilesets(), cargar_layouts()
+    mundo, llegadas = alcance.Mundo(), sin_salida.llegadas_por_script()
+    for mid, m in sorted(mundo.mapas.items()):
+        if m["carpeta"].endswith("_Frlg"):
+            continue
+        for (bx, by), tapa in sin_salida.bolas_que_tapan(mundo, mid, llegadas.get(mid, set())):
+            ruta = os.path.join(m["carpeta"], "map.json")
+            with open(ruta, encoding="utf-8", newline="") as f:
+                crudo = f.read()
+            mapa = json.loads(crudo)
+            bola = next(o for o in mapa["object_events"] if (o["x"], o["y"]) == (bx, by) and "ITEM_BALL" in o["graphics_id"])
+            ocupadas = {(o["x"], o["y"]) for o in mapa.get("object_events", []) + mapa.get("bg_events", [])
+                        + mapa.get("warp_events", []) + mapa.get("coord_events", [])}
+            mundo.mapas[mid] = dict(mapa, carpeta=m["carpeta"])
+            # Se prueba con la Ball ya quitada de donde estaba
+            mundo.mapas[mid]["object_events"] = [o for o in mapa["object_events"] if o is not bola]
+            layout = layouts[mapa["layout"]]
+            ancho, alto = layout["width"], layout["height"]
+            celdas = struct.unpack(f"<{ancho * alto}H", open(layout["blockdata_filepath"], "rb").read())
+            prim, sec = tilesets.get(layout["primary_tileset"], []), tilesets.get(layout["secondary_tileset"], [])
+
+            def info(x, y):
+                v = celdas[y * ancho + x]
+                mt = v & 0x3FF
+                comp = (prim[mt] if mt < 512 and mt < len(prim) else
+                        sec[mt - 512] if mt >= 512 and mt - 512 < len(sec) else -1)
+                return (v >> 10) & 3, v >> 12, comp
+
+            def vale(x, y):
+                return not sin_salida.bolas_que_tapan(mundo, mid, llegadas.get(mid, set()), [(x, y)])
+            ok = {mb[n] for n in COMPORTAMIENTOS_OK if n in mb}
+            sitio = None
+            for solo_suelo in (True, False):
+                sitio = sitio or _buscar_desde_anclas([(bx, by, "")], info, ancho, alto, ok, (1, 4), ocupadas, solo_suelo, vale)
+            if not sitio:
+                print(f"{mid}: la Ball de ({bx}, {by}) tapa {', '.join(tapa[:2])} y no hay sitio cerca: hay que moverla a mano")
+                continue
+            x, y, _ = sitio
+            # Cambia "x" e "y" solo dentro del bloque de esta Ball (se busca por su flag, que es único)
+            i = crudo.index(f'"flag": "{bola["flag"]}"')
+            ini = crudo.rindex("{", 0, i)
+            bloque = crudo[ini:i]
+            bloque = re.sub(r'"x": \d+', f'"x": {x}', bloque, count=1)
+            bloque = re.sub(r'"y": \d+', f'"y": {y}', bloque, count=1)
+            crudo = crudo[:ini] + bloque + crudo[i:]
+            json.loads(crudo)
+            with open(ruta, "w", encoding="utf-8", newline="") as f:
+                f.write(crudo)
+            mundo.mapas[mid] = dict(json.loads(crudo), carpeta=m["carpeta"])
+            print(f"{mid}: Ball {bola['flag']} de ({bx}, {by}) a ({x}, {y})")
+
+
 def main():
+    if "--mover" in sys.argv:
+        mover_las_que_tapan()
+        todos = [(objeto, carpeta, tipo, pista, prefijo, fijo or objeto)
+                 for lista, prefijo, _, _, _, fijo in GRUPOS for objeto, carpeta, tipo, pista in lista]
+        ajustar_alturas(todos, cargar_layouts())
+        return
     solo_resumen = "--resumen" in sys.argv
     mb = comportamientos()
     tilesets = atributos_tilesets()
     layouts = cargar_layouts()
     fallos = []
     colocadas = {}  # en --resumen no se escribe el mapa: así no se repiten casillas
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import alcance  # noqa: E402
+    import sin_salida  # noqa: E402
+    mundo, llegadas = alcance.Mundo(), sin_salida.llegadas_por_script()
     if not solo_resumen:
         for grupo in GRUPOS:
             asegurar_flags(*grupo)
@@ -594,7 +665,12 @@ def main():
         ocupadas |= {(w["x"], w["y"]) for w in mapa.get("warp_events", [])}
         ocupadas |= {(c["x"], c["y"]) for c in mapa.get("coord_events", [])}
         ocupadas |= {(x, y) for x, y in colocadas.get(carpeta, [])}
-        sitio = buscar_casilla(mapa, layouts[mapa["layout"]], tilesets, mb, tipo, pista, ocupadas)
+        mundo.mapas[mapa["id"]] = dict(mapa, carpeta=os.path.dirname(ruta))  # con lo ya colocado en esta pasada
+
+        def vale(x, y):
+            # Una oculta no tapa nada; una Ball no puede tapar el paso
+            return tipo != "bola" or not sin_salida.bolas_que_tapan(mundo, mapa["id"], llegadas.get(mapa["id"], set()), [(x, y)])
+        sitio = buscar_casilla(mapa, layouts[mapa["layout"]], tilesets, mb, tipo, pista, ocupadas, vale)
         if not sitio:
             fallos.append(f"{piedra} ({carpeta})")
             continue
