@@ -454,8 +454,8 @@ def main():
         "grupos": grupos,
         "puntos": puntos,
         "sueltos": sueltos,
-        "nombresSec": {sec: nombre_sec(sec) for sec in {i["sec"] for i in info.values()} if sec},
-        "captura": sorted(con_salvajes, key=lambda s: nombre_sec(s)),
+        "nombresSec": {sec: nombre_sec(sec) for sec in sorted({i["sec"] for i in info.values()}) if sec},
+        "captura": sorted(con_salvajes, key=lambda s: (nombre_sec(s), s)),
         "nuevas": nuevas,
         "tamMundo": [max(v[0] + info[c]["w"] for c, v in mundo.items()), max(v[1] + info[c]["h"] for c, v in mundo.items())],
     }
