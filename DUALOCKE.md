@@ -360,6 +360,8 @@ Regla de compra: una unidad de cada objeto por tienda, salvo Balls, Repelentes, 
   - `src/dualocke_liga.c` (contadores y qué combate es de la Liga);
   - `CannotUseItemsInBattle` en `src/item_use.c` (no deja usar el curativo);
   - `HandleAction_UseItem` en `src/battle_util.c` (cuenta los curativos);
+  - `ItemUseCB_BattleScript` y `TryUseItemOnMove` en `src/party_menu.c` enseñan el motivo que deja `CannotUseItemsInBattle` en `gStringVar4`. Antes ponían siempre "No tendrá ningún efecto", así que el mensaje de la regla no salía nunca: los curativos se eligen sobre un Pokémon del equipo (lo vio Jorge con el bot, 22/11/2026).
+- **Probado en el emulador** (Jorge, con el bot y la ROM release, 22/11/2026): la tienda (el aviso y dos compras seguidas de RESTAURAR TODO, cobradas enteras); la cura al entrar en la sala de SIXTO (con PS bajados a mano); que no deja curar antes que el rival (con el mensaje de la regla); que deja cuando el rival ha curado una vez y vuelve a bloquear la segunda; y que se cuentan los del rival (SIXTO usó 2 en un combate entero).
   - `Dualocke_OnBattleStart` en `src/dualocke.c` (pone los contadores a 0);
   - `data/scripts/dualocke_liga.inc` (cura y textos), llamado desde `data/scripts/elite_four.inc` y la sala del Campeón.
 
