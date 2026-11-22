@@ -785,7 +785,7 @@ static const u16 sUnusedData[] =
     0x0121, 0x013b, 0x000f, 0x0013, 0x0039, 0x0046, 0x0094, 0x00f9, 0x007f, 0x0123,
 };
 
-static const u8 sText_Trade4[] = _("TRADE");
+static const u8 sText_Trade4[] = ES(_("TRADE"), _("CAMBIAR"));
 
 struct
 {
@@ -793,34 +793,34 @@ struct
     TaskFunc func;
 } static const sCursorOptions[MENU_FIELD_MOVES] =
 {
-    [MENU_SUMMARY]         = {COMPOUND_STRING("SUMMARY"),         CursorCb_Summary},
-    [MENU_SWITCH]          = {COMPOUND_STRING("SWITCH"),          CursorCb_Switch},
+    [MENU_SUMMARY]         = {ES(COMPOUND_STRING("SUMMARY"), COMPOUND_STRING("DATOS")),         CursorCb_Summary},
+    [MENU_SWITCH]          = {ES(COMPOUND_STRING("SWITCH"), COMPOUND_STRING("MOVER")),          CursorCb_Switch},
     [MENU_CANCEL1]         = {gText_Cancel2,                      CursorCb_Cancel1},
-    [MENU_ITEM]            = {COMPOUND_STRING("ITEM"),            CursorCb_Item},
+    [MENU_ITEM]            = {ES(COMPOUND_STRING("ITEM"), COMPOUND_STRING("OBJETO")),            CursorCb_Item},
     [MENU_GIVE]            = {gMenuText_Give,                     CursorCb_Give},
-    [MENU_TAKE_ITEM]       = {COMPOUND_STRING("TAKE"),            CursorCb_TakeItem},
-    [MENU_MOVE_ITEM]       = {COMPOUND_STRING("MOVE"),            CursorCb_MoveItem},
-    [MENU_MAIL]            = {COMPOUND_STRING("MAIL"),            CursorCb_Mail},
-    [MENU_TAKE_MAIL]       = {COMPOUND_STRING("TAKE"),            CursorCb_TakeMail},
-    [MENU_READ]            = {COMPOUND_STRING("READ"),            CursorCb_Read},
+    [MENU_TAKE_ITEM]       = {ES(COMPOUND_STRING("TAKE"), COMPOUND_STRING("QUITAR")),            CursorCb_TakeItem},
+    [MENU_MOVE_ITEM]       = {ES(COMPOUND_STRING("MOVE"), COMPOUND_STRING("MOVER")),            CursorCb_MoveItem},
+    [MENU_MAIL]            = {ES(COMPOUND_STRING("MAIL"), COMPOUND_STRING("CARTA")),            CursorCb_Mail},
+    [MENU_TAKE_MAIL]       = {ES(COMPOUND_STRING("TAKE"), COMPOUND_STRING("QUITAR")),            CursorCb_TakeMail},
+    [MENU_READ]            = {ES(COMPOUND_STRING("READ"), COMPOUND_STRING("LEER")),            CursorCb_Read},
     [MENU_CANCEL2]         = {gText_Cancel2,                      CursorCb_Cancel2},
-    [MENU_SHIFT]           = {COMPOUND_STRING("SHIFT"),           CursorCb_SendMon},
-    [MENU_SEND_OUT]        = {COMPOUND_STRING("SEND OUT"),        CursorCb_SendMon},
-    [MENU_ENTER]           = {COMPOUND_STRING("ENTER"),           CursorCb_Enter},
-    [MENU_NO_ENTRY]        = {COMPOUND_STRING("NO ENTRY"),        CursorCb_NoEntry},
-    [MENU_STORE]           = {COMPOUND_STRING("STORE"),           CursorCb_Store},
+    [MENU_SHIFT]           = {ES(COMPOUND_STRING("SHIFT"), COMPOUND_STRING("CAMBIAR")),           CursorCb_SendMon},
+    [MENU_SEND_OUT]        = {ES(COMPOUND_STRING("SEND OUT"), COMPOUND_STRING("ENVIAR")),        CursorCb_SendMon},
+    [MENU_ENTER]           = {ES(COMPOUND_STRING("ENTER"), COMPOUND_STRING("ENTRAR")),           CursorCb_Enter},
+    [MENU_NO_ENTRY]        = {ES(COMPOUND_STRING("NO ENTRY"), COMPOUND_STRING("NO ENTRA")),        CursorCb_NoEntry},
+    [MENU_STORE]           = {ES(COMPOUND_STRING("STORE"), COMPOUND_STRING("GUARDAR")),           CursorCb_Store},
     [MENU_REGISTER]        = {gText_Register,                     CursorCb_Register},
     [MENU_TRADE1]          = {sText_Trade4,                       CursorCb_Trade1},
     [MENU_TRADE2]          = {sText_Trade4,                       CursorCb_Trade2},
     [MENU_TOSS]            = {gMenuText_Toss,                     CursorCb_Toss},
-    [MENU_CATALOG_BULB]    = {COMPOUND_STRING("Light bulb"),      CursorCb_CatalogBulb},
-    [MENU_CATALOG_OVEN]    = {COMPOUND_STRING("Microwave oven"),  CursorCb_CatalogOven},
-    [MENU_CATALOG_WASHING] = {COMPOUND_STRING("Washing machine"), CursorCb_CatalogWashing},
-    [MENU_CATALOG_FRIDGE]  = {COMPOUND_STRING("Refrigerator"),    CursorCb_CatalogFridge},
-    [MENU_CATALOG_FAN]     = {COMPOUND_STRING("Electric fan"),    CursorCb_CatalogFan},
-    [MENU_CATALOG_MOWER]   = {COMPOUND_STRING("Lawn mower"),      CursorCb_CatalogMower},
-    [MENU_CHANGE_FORM]     = {COMPOUND_STRING("Change form"),     CursorCb_ChangeForm},
-    [MENU_CHANGE_ABILITY]  = {COMPOUND_STRING("Change Ability"),  CursorCb_ChangeAbility},
+    [MENU_CATALOG_BULB]    = {ES(COMPOUND_STRING("Light bulb"), COMPOUND_STRING("Bombilla")),      CursorCb_CatalogBulb},
+    [MENU_CATALOG_OVEN]    = {ES(COMPOUND_STRING("Microwave oven"), COMPOUND_STRING("Microondas")),  CursorCb_CatalogOven},
+    [MENU_CATALOG_WASHING] = {ES(COMPOUND_STRING("Washing machine"), COMPOUND_STRING("Lavadora")), CursorCb_CatalogWashing},
+    [MENU_CATALOG_FRIDGE]  = {ES(COMPOUND_STRING("Refrigerator"), COMPOUND_STRING("Frigorífico")),    CursorCb_CatalogFridge},
+    [MENU_CATALOG_FAN]     = {ES(COMPOUND_STRING("Electric fan"), COMPOUND_STRING("Ventilador")),    CursorCb_CatalogFan},
+    [MENU_CATALOG_MOWER]   = {ES(COMPOUND_STRING("Lawn mower"), COMPOUND_STRING("Cortacésped")),      CursorCb_CatalogMower},
+    [MENU_CHANGE_FORM]     = {ES(COMPOUND_STRING("Change form"), COMPOUND_STRING("Cambiar forma")),     CursorCb_ChangeForm},
+    [MENU_CHANGE_ABILITY]  = {ES(COMPOUND_STRING("Change Ability"), COMPOUND_STRING("Cambiar habil.")),  CursorCb_ChangeAbility},
 };
 
 static const u8 sPartyMenuAction_SummarySwitchCancel[] = {MENU_SUMMARY, MENU_SWITCH, MENU_CANCEL1};
