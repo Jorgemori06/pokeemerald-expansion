@@ -175,6 +175,8 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ES(ITEM_NAME("Dive Ball"), ITEM_NAME("Buceo Ball")),
         .price = 1000,
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "A Ball that works\n"
             "better on Pokémon\n"
@@ -183,6 +185,9 @@ const struct ItemInfo gItemsInfo[] =
         #else
             "on the ocean floor."),
         #endif
+#else
+        .description = COMPOUND_STRING("Ball que funciona\n" "mejor con Pokémon\n" "del agua."),
+#endif
         .pocket = POCKET_POKE_BALLS,
         .type = ITEM_USE_BAG_MENU,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
@@ -375,6 +380,8 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ES(ITEM_NAME("Dream Ball"), ITEM_NAME("Ensueño Ball")),
         .price = 0,
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_DREAM_BALL_MODIFIER >= GEN_8
             "A Ball that works\n"
@@ -385,6 +392,9 @@ const struct ItemInfo gItemsInfo[] =
             "appears in the\n"
             "Entree Forest."),
         #endif
+#else
+        .description = COMPOUND_STRING("Ball que funciona\n" "mejor con Pokémon\n" "dormidos."),
+#endif
         .pocket = POCKET_POKE_BALLS,
         .type = ITEM_USE_BAG_MENU,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
@@ -493,6 +503,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("Super Potion"), ITEM_NAME("Superpoción")),
         .price = 700,
         .holdEffectParam = 60,
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "Restores the HP of\n"
             "a Pokémon by\n"
@@ -501,6 +513,9 @@ const struct ItemInfo gItemsInfo[] =
         #else
             "50 points."),
         #endif
+#else
+        .description = COMPOUND_STRING("Restaura 60 PS a un\n" "Pokémon."),
+#endif
         .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
@@ -517,6 +532,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("Hyper Potion"), ITEM_NAME("Hiperpoción")),
         .price = (I_PRICE >= GEN_2 && I_PRICE <= GEN_6) ? 1200 : 1500,
         .holdEffectParam = 120,
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "Restores the HP of\n"
             "a Pokémon by\n"
@@ -525,6 +542,9 @@ const struct ItemInfo gItemsInfo[] =
         #else
             "200 points."),
         #endif
+#else
+        .description = COMPOUND_STRING("Restaura 120 PS a un\n" "Pokémon."),
+#endif
         .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
@@ -614,6 +634,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("Fresh Water"), ITEM_NAME("Agua Fresca")),
         .price = 200,
         .holdEffectParam = 30,
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "A mineral water\n"
             "that restores HP\n"
@@ -622,6 +644,9 @@ const struct ItemInfo gItemsInfo[] =
         #else
             "by 50 points."),
         #endif
+#else
+        .description = COMPOUND_STRING("Agua mineral que\n" "restaura 30 PS."),
+#endif
         .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
@@ -638,6 +663,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("Soda Pop"), ITEM_NAME("Refresco")),
         .price = 300,
         .holdEffectParam = 50,
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "A fizzy soda drink\n"
             "that restores HP\n"
@@ -646,6 +673,9 @@ const struct ItemInfo gItemsInfo[] =
         #else
             "by 60 points."),
         #endif
+#else
+        .description = COMPOUND_STRING("Chispeante bebida\n" "gaseosa que restaura\n" "50 PS de un Pokémon."),
+#endif
         .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
@@ -662,6 +692,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("Lemonade"), ITEM_NAME("Limonada")),
         .price = (I_PRICE >= GEN_7) ? 400 : 350,
         .holdEffectParam = 70,
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "A very sweet drink\n"
             "that restores HP\n"
@@ -670,6 +702,9 @@ const struct ItemInfo gItemsInfo[] =
         #else
             "by 80 points."),
         #endif
+#else
+        .description = COMPOUND_STRING("Bebida muy dulce que\n" "restaura 70 PS de un\n" "Pokémon."),
+#endif
         .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
@@ -704,6 +739,8 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ES(ITEM_NAME("Energy Powder"), ITEM_NAME("Polvo Energía")),
         .price = 500,
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "A bitter powder\n"
             "that restores HP\n"
@@ -712,6 +749,9 @@ const struct ItemInfo gItemsInfo[] =
         #else
             "by 50 points."),
         #endif
+#else
+        .description = COMPOUND_STRING("Polvo medicinal muy\n" "amargo que restaura\n" "60 PS de un Pokémon."),
+#endif
         .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
@@ -727,6 +767,8 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ES(ITEM_NAME("Energy Root"), ITEM_NAME("Raíz Energía")),
         .price = (I_PRICE >= GEN_7) ? 1200 : 800,
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "A bitter root\n"
             "that restores HP\n"
@@ -735,6 +777,9 @@ const struct ItemInfo gItemsInfo[] =
         #else
             "by 200 points."),
         #endif
+#else
+        .description = COMPOUND_STRING("Raíz muy amarga que\n" "restaura 120 PS de\n" "un Pokémon."),
+#endif
         .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
@@ -849,6 +894,8 @@ const struct ItemInfo gItemsInfo[] =
     #else
         .price = 250,
     #endif
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_USE_FROSTBITE
             "Heals Pokémon\n"
@@ -857,6 +904,9 @@ const struct ItemInfo gItemsInfo[] =
             "Defrosts a frozen\n"
             "Pokémon."),
         #endif
+#else
+        .description = COMPOUND_STRING("Medicina en espray\n" "que descongela a un\n" "Pokémon."),
+#endif
         .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_STATUS_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
@@ -2220,6 +2270,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("X Attack"), ITEM_NAME("Ataque X")),
         .price = (I_PRICE >= GEN_7) ? 1000 : 500,
         .holdEffectParam = X_ITEM_STAGES,
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_X_ITEMS_BUFF >= GEN_7
             "Sharply raises the\n"
@@ -2230,6 +2282,9 @@ const struct ItemInfo gItemsInfo[] =
             "Attack during one\n"
             "battle."),
         #endif
+#else
+        .description = COMPOUND_STRING("Sube mucho el Ataque\n" "durante un combate."),
+#endif
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_X_ITEM,
         .type = B_X_ITEMS_CROSSUSE ? ITEM_USE_BATTLER : ITEM_USE_BAG_MENU,
@@ -2246,6 +2301,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("X Defense"), ITEM_NAME("Defensa X")),
         .price = (I_PRICE >= GEN_7) ? 2000 : 550,
         .holdEffectParam = X_ITEM_STAGES,
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_X_ITEMS_BUFF >= GEN_7
             "Sharply raises the\n"
@@ -2256,6 +2313,9 @@ const struct ItemInfo gItemsInfo[] =
             "Defense during one\n"
             "battle."),
         #endif
+#else
+        .description = COMPOUND_STRING("Sube mucho la\n" "Defensa durante un\n" "combate."),
+#endif
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_X_ITEM,
         .type = B_X_ITEMS_CROSSUSE ? ITEM_USE_BATTLER : ITEM_USE_BAG_MENU,
@@ -2272,6 +2332,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("X Sp. Atk"), ITEM_NAME("At. Especial X")),
         .price = (I_PRICE >= GEN_7) ? 1000 : 350,
         .holdEffectParam = X_ITEM_STAGES,
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_X_ITEMS_BUFF >= GEN_7
             "Sharply raises the\n"
@@ -2282,6 +2344,9 @@ const struct ItemInfo gItemsInfo[] =
             "Sp. Atk during one\n"
             "battle."),
         #endif
+#else
+        .description = COMPOUND_STRING("Sube mucho el At.\n" "Esp. durante un\n" "combate."),
+#endif
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_X_ITEM,
         .type = B_X_ITEMS_CROSSUSE ? ITEM_USE_BATTLER : ITEM_USE_BAG_MENU,
@@ -2298,6 +2363,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("X Sp. Def"), ITEM_NAME("Def. Especial X")),
         .price = (I_PRICE >= GEN_7) ? 2000 : 350,
         .holdEffectParam = X_ITEM_STAGES,
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_X_ITEMS_BUFF >= GEN_7
             "Sharply raises the\n"
@@ -2308,6 +2375,9 @@ const struct ItemInfo gItemsInfo[] =
             "Sp. Def during one\n"
             "battle."),
         #endif
+#else
+        .description = COMPOUND_STRING("Sube mucho la Def.\n" "Esp. durante un\n" "combate."),
+#endif
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_X_ITEM,
         .type = B_X_ITEMS_CROSSUSE ? ITEM_USE_BATTLER : ITEM_USE_BAG_MENU,
@@ -2324,6 +2394,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("X Speed"), ITEM_NAME("Velocidad X")),
         .price = (I_PRICE >= GEN_7) ? 1000 : 350,
         .holdEffectParam = X_ITEM_STAGES,
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_X_ITEMS_BUFF >= GEN_7
             "Sharply raises the\n"
@@ -2334,6 +2406,9 @@ const struct ItemInfo gItemsInfo[] =
             "Speed during one\n"
             "battle."),
         #endif
+#else
+        .description = COMPOUND_STRING("Sube mucho la\n" "Velocidad durante un\n" "combate."),
+#endif
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_X_ITEM,
         .type = B_X_ITEMS_CROSSUSE ? ITEM_USE_BATTLER : ITEM_USE_BAG_MENU,
@@ -2351,6 +2426,8 @@ const struct ItemInfo gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("X Accuracies"),
         .price = (I_PRICE >= GEN_7) ? 1000 : 950,
         .holdEffectParam = X_ITEM_STAGES,
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_X_ITEMS_BUFF >= GEN_7
             "Sharply raises\n"
@@ -2361,6 +2438,9 @@ const struct ItemInfo gItemsInfo[] =
             "of moves\n"
             "during one battle."),
         #endif
+#else
+        .description = COMPOUND_STRING("Sube mucho la\n" "precisión durante un\n" "combate."),
+#endif
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_X_ITEM,
         .type = B_X_ITEMS_CROSSUSE ? ITEM_USE_BATTLER : ITEM_USE_BAG_MENU,
@@ -3319,10 +3399,9 @@ const struct ItemInfo gItemsInfo[] =
             "growth, but dries\n"
             "the soil faster."), COMPOUND_STRING("Las bayas crecen\n" "antes, pero el suelo\n" "se seca.")),
     #else
-        .description = COMPOUND_STRING(
-            "It appears to be\n"
+        .description = ES(COMPOUND_STRING("It appears to be\n"
             "unsuitable for\n"
-            "the soil."),
+            "the soil."), COMPOUND_STRING("Las bayas crecen\n" "antes, pero el suelo\n" "se seca.")),
     #endif
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_GROWTH,
@@ -3344,10 +3423,9 @@ const struct ItemInfo gItemsInfo[] =
             "dry slower, but\n"
             "slows Berry growth."), COMPOUND_STRING("El suelo se seca\n" "menos, pero crecen\n" "más lento.")),
     #else
-        .description = COMPOUND_STRING(
-            "It appears to be\n"
+        .description = ES(COMPOUND_STRING("It appears to be\n"
             "unsuitable for\n"
-            "the soil."),
+            "the soil."), COMPOUND_STRING("El suelo se seca\n" "menos, pero crecen\n" "más lento.")),
     #endif
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_GROWTH,
@@ -3369,10 +3447,9 @@ const struct ItemInfo gItemsInfo[] =
             "ripened Berries\n"
             "remain on plants."), COMPOUND_STRING("Las bayas maduras\n" "duran más en la\n" "planta.")),
     #else
-        .description = COMPOUND_STRING(
-            "It appears to be\n"
+        .description = ES(COMPOUND_STRING("It appears to be\n"
             "unsuitable for\n"
-            "the soil."),
+            "the soil."), COMPOUND_STRING("Las bayas maduras\n" "duran más en la\n" "planta.")),
     #endif
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_GROWTH,
@@ -3394,10 +3471,9 @@ const struct ItemInfo gItemsInfo[] =
             "plants grow where\n"
             "mature ones withered."), COMPOUND_STRING("Más plantas nuevas\n" "donde se secaron\n" "otras.")),
     #else
-        .description = COMPOUND_STRING(
-            "It appears to be\n"
+        .description = ES(COMPOUND_STRING("It appears to be\n"
             "unsuitable for\n"
-            "the soil."),
+            "the soil."), COMPOUND_STRING("Más plantas nuevas\n" "donde se secaron\n" "otras.")),
     #endif
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_GROWTH,
@@ -3419,10 +3495,9 @@ const struct ItemInfo gItemsInfo[] =
             "growing Berries that\n"
             "increases the harvest."), COMPOUND_STRING("Un abono que da más\n" "bayas.")),
     #else
-        .description = COMPOUND_STRING(
-            "It appears to be\n"
+        .description = ES(COMPOUND_STRING("It appears to be\n"
             "unsuitable for\n"
-            "the soil."),
+            "the soil."), COMPOUND_STRING("Un abono que da más\n" "bayas.")),
     #endif
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_GROWTH,
@@ -3444,10 +3519,9 @@ const struct ItemInfo gItemsInfo[] =
             "growing Berries that\n"
             "causes mutations."), COMPOUND_STRING("Un abono que causa\n" "mutaciones en las\n" "bayas.")),
     #else
-        .description = COMPOUND_STRING(
-            "It appears to be\n"
+        .description = ES(COMPOUND_STRING("It appears to be\n"
             "unsuitable for\n"
-            "the soil."),
+            "the soil."), COMPOUND_STRING("Un abono que causa\n" "mutaciones en las\n" "bayas.")),
     #endif
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_GROWTH,
@@ -3469,10 +3543,9 @@ const struct ItemInfo gItemsInfo[] =
             "harvest that can be\n"
             "grown by watering."), COMPOUND_STRING("Da más bayas al\n" "regarlas.")),
     #else
-        .description = COMPOUND_STRING(
-            "It appears to be\n"
+        .description = ES(COMPOUND_STRING("It appears to be\n"
             "unsuitable for\n"
-            "the soil."),
+            "the soil."), COMPOUND_STRING("Da más bayas al\n" "regarlas.")),
     #endif
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_GROWTH,
@@ -3494,10 +3567,9 @@ const struct ItemInfo gItemsInfo[] =
             "effects of Rich, Boost,\n"
             "and Surprise Mulch."), COMPOUND_STRING("Abono con el efecto\n" "de Rico, Mejora y\n" "Sorpresa.")),
     #else
-        .description = COMPOUND_STRING(
-            "It appears to be\n"
+        .description = ES(COMPOUND_STRING("It appears to be\n"
             "unsuitable for\n"
-            "the soil."),
+            "the soil."), COMPOUND_STRING("Abono con el efecto\n" "de Rico, Mejora y\n" "Sorpresa.")),
     #endif
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_GROWTH,
@@ -8320,6 +8392,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("Light Ball"), ITEM_NAME("Bola Luminosa")),
         .price = (I_PRICE >= GEN_7) ? 1000 : 100,
         .holdEffect = HOLD_EFFECT_LIGHT_BALL,
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "A held item that\n"
         #if B_LIGHT_BALL_ATTACK_BOOST
@@ -8329,6 +8403,9 @@ const struct ItemInfo gItemsInfo[] =
             "boosts the Sp. Atk\n"
             "of Pikachu."),
         #endif
+#else
+        .description = COMPOUND_STRING("Sube el Ataque y el\n" "At. Esp. de Pikachu."),
+#endif
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -8343,6 +8420,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("Leek"), ITEM_NAME("Puerro")),
         .price = (I_PRICE >= GEN_7) ? 1000 : 200,
         .holdEffect = HOLD_EFFECT_LEEK,
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if P_GALARIAN_FORMS
             "Raises Farfetch'd\n"
@@ -8353,6 +8432,9 @@ const struct ItemInfo gItemsInfo[] =
             "raises Farfetch'd's\n"
             "critical-hit ratio."),
         #endif
+#else
+        .description = COMPOUND_STRING("Sube los críticos de\n" "Farfetch'd y\n" "Sirfetch'd."),
+#endif
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -8474,6 +8556,8 @@ const struct ItemInfo gItemsInfo[] =
         .price = (I_PRICE >= GEN_7) ? 0 : 200,
         .holdEffect = HOLD_EFFECT_SOUL_DEW,
         .holdEffectParam = B_SOUL_DEW_BOOST >= GEN_7 ? 20 : 50,
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_SOUL_DEW_BOOST >= GEN_7
             "Boosts Latios or\n"
@@ -8484,6 +8568,9 @@ const struct ItemInfo gItemsInfo[] =
             "Sp. Atk & Sp. Def of\n"
             "Latios & Latias."),
         #endif
+#else
+        .description = COMPOUND_STRING("Potencia los ataques\n" "Psíquico y Dragón de\n" "Latios y Latias."),
+#endif
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_SPECIAL_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -8560,10 +8647,9 @@ const struct ItemInfo gItemsInfo[] =
             "raises the power of\n"
             "Water-type moves."), COMPOUND_STRING("Potencia los\n" "movimientos de tipo\n" "Agua.")),
     #else
-        .description = COMPOUND_STRING(
-            "A held item that\n"
+        .description = ES(COMPOUND_STRING("A held item that\n"
             "slightly boosts\n"
-            "Water-type moves."),
+            "Water-type moves."), COMPOUND_STRING("Potencia los\n" "movimientos de tipo\n" "Agua.")),
     #endif
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_INCENSE,
@@ -8587,10 +8673,9 @@ const struct ItemInfo gItemsInfo[] =
             "foe's accuracy."), COMPOUND_STRING("Baja la precisión de\n" "los rivales.")),
     #else
         .holdEffectParam = 5,
-        .description = COMPOUND_STRING(
-            "A hold item that\n"
+        .description = ES(COMPOUND_STRING("A hold item that\n"
             "slightly cuts the\n"
-            "foe's accuracy."),
+            "foe's accuracy."), COMPOUND_STRING("Baja la precisión de\n" "los rivales.")),
     #endif
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_INCENSE,
@@ -9506,15 +9591,13 @@ const struct ItemInfo gItemsInfo[] =
             "hailstorm when the\n"
             "holder summons it."), COMPOUND_STRING("Alarga el granizo o\n" "la nieve del\n" "portador.")),
     #elif B_PREFERRED_ICE_WEATHER == B_ICE_WEATHER_SNOW
-        .description = COMPOUND_STRING(
-            "Extends a\n"
+        .description = ES(COMPOUND_STRING("Extends a\n"
             "snowstorm when the\n"
-            "holder summons it."),
+            "holder summons it."), COMPOUND_STRING("Alarga el granizo o\n" "la nieve del\n" "portador.")),
     #else
-        .description = COMPOUND_STRING(
-            "Extends hail or\n"
+        .description = ES(COMPOUND_STRING("Extends hail or\n"
             "snow when the\n"
-            "holder summons it."),
+            "holder summons it."), COMPOUND_STRING("Alarga el granizo o\n" "la nieve del\n" "portador.")),
     #endif
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_HELD_ITEM,
@@ -9760,10 +9843,9 @@ const struct ItemInfo gItemsInfo[] =
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
     #else
-        .description = COMPOUND_STRING(
-            "A held item that\n"
+        .description = ES(COMPOUND_STRING("A held item that\n"
             "gets Exp. Points\n"
-            "from battles."),
+            "from battles."), COMPOUND_STRING("Reparte la\n" "experiencia entre\n" "todo el equipo.")),
         .price = (I_PRICE == GEN_1) ? 1 : 3000,
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_HELD_ITEM,
@@ -9833,6 +9915,8 @@ const struct ItemInfo gItemsInfo[] =
         .price = 100,
     #endif
         .holdEffect = HOLD_EFFECT_MENTAL_HERB,
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_MENTAL_HERB >= GEN_5
             "Snaps Pokémon out\n"
@@ -9843,6 +9927,9 @@ const struct ItemInfo gItemsInfo[] =
             "snaps Pokémon out\n"
             "of attraction once."),
         #endif
+#else
+        .description = COMPOUND_STRING("Libra una vez de\n" "Atracción, Mofa y\n" "similares."),
+#endif
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_HELD_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -11025,6 +11112,8 @@ const struct ItemInfo gItemsInfo[] =
         .pluralName = ITEM_PLURAL_NAME("Aspear Berries"),
         .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
         .holdEffect = HOLD_EFFECT_CURE_FRZ,
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "A held item that\n"
         #if B_USE_FROSTBITE
@@ -11033,6 +11122,9 @@ const struct ItemInfo gItemsInfo[] =
             "defrosts Pokémon\n"
         #endif
             "in battle."),
+#else
+        .description = COMPOUND_STRING("Los Pokémon pueden\n" "llevarla o usarla\n" "para descongelarse."),
+#endif
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -11135,10 +11227,9 @@ const struct ItemInfo gItemsInfo[] =
     #else
         .holdEffect = HOLD_EFFECT_RESTORE_HP,
         .holdEffectParam = 30,
-        .description = COMPOUND_STRING(
-            "A held item that\n"
+        .description = ES(COMPOUND_STRING("A held item that\n"
             "restores 30 HP in\n"
-            "battle."),
+            "battle."), COMPOUND_STRING("Una baya muy rara en\n" "la región de\n" "Teselia.")),
     #endif
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_PARTY_MENU,
@@ -12243,6 +12334,8 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ES(ITEM_NAME("TM07"), ITEM_NAME("MT07")),
         .price = 3000,
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_PREFERRED_ICE_WEATHER == B_ICE_WEATHER_SNOW
             "Boosts the\n"
@@ -12253,6 +12346,9 @@ const struct ItemInfo gItemsInfo[] =
             "types except Ice\n"
             "for 5 turns."),
         #endif
+#else
+        .description = COMPOUND_STRING("Desata una granizada\n" "que daña en cada\n" "turno."),
+#endif
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -12315,6 +12411,8 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ES(ITEM_NAME("TM12"), ITEM_NAME("MT12")),
         .price = 3000,
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "The foe can only\n"
             "use attack moves\n"
@@ -12325,6 +12423,9 @@ const struct ItemInfo gItemsInfo[] =
         #else
             "for 2 turns."),
         #endif
+#else
+        .description = COMPOUND_STRING("Durante 3 turnos, el\n" "rival solo puede\n" "atacar."),
+#endif
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -12335,6 +12436,8 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ES(ITEM_NAME("TM13"), ITEM_NAME("MT13")),
         .price = 3000,
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "Fires an icy cold\n"
             "beam that may\n"
@@ -12343,6 +12446,9 @@ const struct ItemInfo gItemsInfo[] =
         #else
             "freeze the foe."),
         #endif
+#else
+        .description = COMPOUND_STRING("Rayo de hielo que\n" "puede congelar al\n" "rival."),
+#endif
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -12353,6 +12459,8 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ES(ITEM_NAME("TM14"), ITEM_NAME("MT14")),
         .price = 5500,
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_USE_FROSTBITE
             "A snow-and-wind\n"
@@ -12363,6 +12471,9 @@ const struct ItemInfo gItemsInfo[] =
             "wind attack that\n"
             "may freeze the foe."),
         #endif
+#else
+        .description = COMPOUND_STRING("Ventisca de nieve\n" "que puede congelar\n" "al rival."),
+#endif
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -12373,6 +12484,8 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ES(ITEM_NAME("TM15"), ITEM_NAME("MT15")),
         .price = 7500,
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_SKIP_RECHARGE != GEN_1
             "Powerful, but needs\n"
@@ -12383,6 +12496,9 @@ const struct ItemInfo gItemsInfo[] =
             "it doesn't knock\n"
             "out the target."),
         #endif
+#else
+        .description = COMPOUND_STRING("Muy potente, pero el\n" "usuario descansa el\n" "turno siguiente."),
+#endif
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13424,6 +13540,8 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ES(ITEM_NAME("HM03"), ITEM_NAME("MO03")),
         .price = 0,
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "Creates a huge\n"
             "wave, then crashes\n"
@@ -13432,6 +13550,9 @@ const struct ItemInfo gItemsInfo[] =
         #else
             "it down on foes."),
         #endif
+#else
+        .description = COMPOUND_STRING("Inunda el terreno de\n" "combate con una ola\n" "gigante."),
+#endif
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -13481,6 +13602,8 @@ const struct ItemInfo gItemsInfo[] =
     {
         .name = ES(ITEM_NAME("HM07"), ITEM_NAME("MO07")),
         .price = 0,
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_UPDATED_MOVE_DATA >= GEN_4
             "Attacks with power\n"
@@ -13491,6 +13614,9 @@ const struct ItemInfo gItemsInfo[] =
             "with enough power\n"
             "to climb waterfalls."),
         #endif
+#else
+        .description = COMPOUND_STRING("Ataque que sube\n" "cascadas. Puede\n" "hacer retroceder."),
+#endif
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -15562,6 +15688,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("Fine Remedy"), ITEM_NAME("Remedio Fino")),
         .pluralName = ITEM_PLURAL_NAME("Fine Remedies"),
         .price = 150,
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "A bitter powder\n"
             "that restores HP\n"
@@ -15570,6 +15698,9 @@ const struct ItemInfo gItemsInfo[] =
         #else
             "by 50 points."),
         #endif
+#else
+        .description = COMPOUND_STRING("Polvo amargo que\n" "restaura 60 PS."),
+#endif
         .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
@@ -15586,6 +15717,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("Superb Remedy"), ITEM_NAME("Remedio Excelso")),
         .pluralName = ITEM_PLURAL_NAME("Superb Remedies"),
         .price = 750,
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "A bitter powder\n"
             "that restores HP\n"
@@ -15594,6 +15727,9 @@ const struct ItemInfo gItemsInfo[] =
         #else
             "by 200 points."),
         #endif
+#else
+        .description = COMPOUND_STRING("Polvo amargo que\n" "restaura 120 PS."),
+#endif
         .pocket = POCKET_MEDICINE,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
@@ -15610,6 +15746,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("Aux Evasion"), ITEM_NAME("Aux. Evasión")),
         .price = 800,
         .holdEffectParam = X_ITEM_STAGES,
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_X_ITEMS_BUFF >= GEN_7
             "Sharply raises\n"
@@ -15619,6 +15757,9 @@ const struct ItemInfo gItemsInfo[] =
             "Raises evasiveness\n"
             "during one battle."),
         #endif
+#else
+        .description = COMPOUND_STRING("Sube mucho la\n" "evasión durante un\n" "combate."),
+#endif
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_AUX_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -15633,6 +15774,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("Aux Guard"), ITEM_NAME("Aux. Defensa")),
         .price = 400,
         .holdEffectParam = X_ITEM_STAGES,
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_X_ITEMS_BUFF >= GEN_7
             "Sharply raises\n"
@@ -15643,6 +15786,9 @@ const struct ItemInfo gItemsInfo[] =
             "and Sp. Def\n"
             "during one battle."),
         #endif
+#else
+        .description = COMPOUND_STRING("Sube mucho las\n" "defensas durante un\n" "combate."),
+#endif
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_AUX_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -15657,6 +15803,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("Aux Power"), ITEM_NAME("Aux. Ataque")),
         .price = 400,
         .holdEffectParam = X_ITEM_STAGES,
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_X_ITEMS_BUFF >= GEN_7
             "Sharply raises\n"
@@ -15667,6 +15815,9 @@ const struct ItemInfo gItemsInfo[] =
             "and Sp. Atk\n"
             "during one battle."),
         #endif
+#else
+        .description = COMPOUND_STRING("Sube mucho los\n" "ataques durante un\n" "combate."),
+#endif
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_AUX_ITEM,
         .type = ITEM_USE_BAG_MENU,
@@ -15681,6 +15832,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ES(ITEM_NAME("Aux Powerguard"), ITEM_NAME("Aux. Total")),
         .price = 1200,
         .holdEffectParam = X_ITEM_STAGES,
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_X_ITEMS_BUFF >= GEN_7
             "Sharply raises\n"
@@ -15691,6 +15844,9 @@ const struct ItemInfo gItemsInfo[] =
             "and defenses\n"
             "during one battle."),
         #endif
+#else
+        .description = COMPOUND_STRING("Sube mucho ataques y\n" "defensas en un\n" "combate."),
+#endif
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_AUX_ITEM,
         .type = ITEM_USE_BAG_MENU,

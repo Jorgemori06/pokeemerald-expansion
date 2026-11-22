@@ -33,6 +33,8 @@ FUENTES = {  # nombre: (tabla de anchos en src/fonts.c, primera fila de las may�
     "small": ("gFontSmallLatinGlyphWidths", 4),
     "narrow": ("gFontNarrowLatinGlyphWidths", 3),
     "short": ("gFontShortLatinGlyphWidths", 3),
+    "small_narrow": ("gFontSmallNarrowLatinGlyphWidths", 4),
+    "small_narrower": ("gFontSmallNarrowerLatinGlyphWidths", 4),
 }
 _cache = {}
 
@@ -94,6 +96,11 @@ MINI = {
     "E": ["1111", "1000", "1110", "1000", "1111"],
     "R": ["1110", "1001", "1110", "1010", "1001"],
     "O": ["0110", "1001", "1001", "1001", "0110"],
+    # copiadas del botón MOVE INFO del combate
+    "M": ["10001", "11011", "10101", "10001", "10001"],
+    "V": ["101", "101", "101", "101", "010"],
+    "F": ["111", "100", "110", "100", "100"],
+    ".": ["0", "0", "0", "0", "1"],
 }
 
 
@@ -106,6 +113,16 @@ MEDALLAS = {
     "A": ["001100", "011110", "110011", "111111", "110011", "110011"],
     "L": ["11000", "11000", "11000", "11000", "11000", "11111"],
     "S": ["0111110", "1100000", "0111110", "0000011", "0000011", "1111110"],
+}
+
+
+# Letras de 5 píxeles de "B BUTTON" de la pantalla de nombres (copiadas de ahí). La primera fila es la del acento.
+BOTON = {
+    "B": ["...", "11.", "1.1", "11.", "1.1", "11."],
+    "O": ["...", "111", "1.1", "1.1", "1.1", "111"],
+    "T": ["...", "111", ".1.", ".1.", ".1.", ".1."],
+    "Ó": [".1.", "111", "1.1", "1.1", "1.1", "111"],
+    "N": ["....", "1..1", "11.1", "1.11", "1..1", "1..1"],
 }
 
 
@@ -129,7 +146,11 @@ def dibujo_mini(texto, letras=MINI):
 class Tiles:
     """Un PNG de tiles que se ve en pantalla a través de uno o varios tilemaps."""
 
-    def __init__(self, png, tilemaps, base=0):
+    def __init__(self, png, tilemaps, base=0, reservados=(), copia=None, libres=None):
+        """reservados: tiles que no se pueden tomar como libres aunque no los use ningún tilemap (los usa el
+        código). libres: si se da, solo se pueden tomar estos (y si están vacíos). copia: (otro png con los
+        mismos tiles, tiles propios suyos que no se copian)."""
+        self.reservados, self.copia, self.solo_libres = set(reservados), copia, libres
         self.png = os.path.join(RAIZ, png)
         self.im = Image.open(self.png)
         w, h = self.im.size
@@ -178,7 +199,9 @@ class Tiles:
             # el dibujo del tile tal como está guardado (deshaciendo el volteo)
             tile = [[g[cy + (7 - y if vf else y)][cx + (7 - x if hf else x)] for x in range(8)] for y in range(8)]
             por_tile.setdefault(t, []).append((i, tile))
-        libres = sorted(set(range(len(self.tiles))) - self.usados())
+        libres = sorted(set(range(len(self.tiles))) - self.usados() - self.reservados)
+        if self.solo_libres is not None:
+            libres = [t for t in libres if t in self.solo_libres and all(v == 0 for fila in self.tiles[t] for v in fila)]
         for t, sitios in por_tile.items():
             distintos = []
             for _, tile in sitios:
@@ -210,6 +233,18 @@ class Tiles:
                 for x in range(8):
                     px[tx * 8 + x, ty * 8 + y] = tile[y][x]
         self.im.save(self.png)
+        if self.copia:
+            otro, propios = self.copia
+            im = Image.open(os.path.join(RAIZ, otro))
+            po = im.load()
+            for i, tile in enumerate(self.tiles):
+                if i in propios:
+                    continue
+                tx, ty = i % self.ancho_tiles, i // self.ancho_tiles
+                for y in range(8):
+                    for x in range(8):
+                        po[tx * 8 + x, ty * 8 + y] = tile[y][x]
+            im.save(os.path.join(RAIZ, otro))
         for nombre in self.mapas_cambiados:
             m = self.mapas[nombre][0]
             open(self.rutas[nombre], "wb").write(struct.pack(f"<{len(m)}H", *m))
@@ -243,11 +278,12 @@ class Tira:
 # ---------------------------------------------------------------- borrar y escribir
 
 def cambiar_texto(g, caja, texto, fuente="normal", letra=1, sombra=2, borrar=None, contorno=None,
-                  negrita=False, alinear="centro", arriba=0, letra_extra=0):
+                  negrita=False, alinear="centro", arriba=0, letra_extra=0, acento_pegado=False):
     """Borra en `caja` (x0, y0, x1, y1, incluidos) los píxeles de los colores `borrar` y escribe `texto`.
     letra: índice de la paleta de la letra (o {fila: índice}, para los degradados); sombra: el de la sombra
     (None, sin sombra); contorno: un borde de un píxel alrededor de la letra. arriba: fila de la pantalla en
-    la que empiezan las mayúsculas. alinear: "izq", "centro", "der" (en el sitio del texto que había) o un x."""
+    la que empiezan las mayúsculas. alinear: "izq", "centro", "der" (en el sitio del texto que había) o un x.
+    acento_pegado: baja los acentos una fila (pegados a la letra), para que quepan en una barra con poco alto."""
     x0, y0, x1, y1 = caja
     borrar = set(borrar if borrar is not None else [letra] if isinstance(letra, int) else letra.values())
     borrar |= {c for c in (sombra, contorno) if c is not None}
@@ -260,12 +296,15 @@ def cambiar_texto(g, caja, texto, fuente="normal", letra=1, sombra=2, borrar=Non
         for x in range(x0, x1 + 1):
             if g[y][x] in borrar and fondo:
                 g[y][x] = fondo[0][0]
-    if fuente in ("mini", "medallas"):
-        pix = dibujo_mini(texto, MINI if fuente == "mini" else MEDALLAS)
+    if fuente in ("mini", "medallas", "boton"):
+        pix = dibujo_mini(texto, {"mini": MINI, "medallas": MEDALLAS, "boton": BOTON}[fuente])
     else:
         pix = dibujo(texto, fuente, negrita, letra_extra)
-    if fuente == "normal" and max(x for x, _ in pix) + 3 > x1 - x0:  # no cabe: la fuente estrecha del juego
-        pix = dibujo(texto, "narrow", negrita, letra_extra)
+    estrecha = {"normal": "narrow", "small": "small_narrow"}
+    if fuente in estrecha and max(x for x, _ in pix) + 3 > x1 - x0:  # no cabe: la fuente estrecha del juego
+        pix = dibujo(texto, estrecha[fuente], negrita, letra_extra)
+    if acento_pegado:
+        pix = {(x, y + 1 if y < 0 else y): v for (x, y), v in sorted(pix.items(), key=lambda p: -p[0][1]) if y != -1}
     if sombra is None:
         pix = {p: v for p, v in pix.items() if v == 1}
     if contorno is not None:
@@ -360,6 +399,60 @@ def cambios():
                        ("tough.png", "DUREZA")]:
         c.append((Tira(cab + png, 16), {None: [dict(caja=(0, 2, 61, 15), texto=texto, arriba=4)]}))
 
+    # Pantalla de datos del POKéMON: las etiquetas de las barras (fuente pequeña, letra 2 y sombra 6). La caja es la
+    # barra, sin el degradado del final. EXP. y AMISTAD ya están bien.
+    def etiqueta(x0, x1, y, texto):
+        return dict(caja=(x0, y - 1, x1, y + 7), texto=texto, fuente="small", letra=0x2, sombra=0x6, alinear="izq",
+                    arriba=y, acento_pegado=True)
+    sumario = "graphics/summary_screen/"
+    # con la letra más estrecha, para que no pase del sitio de "TRAINER MEMO" (no queda ningún tile libre)
+    notas = dict(etiqueta(96, 167, 104, "NOTAS ENTRENADOR"), fuente="small_narrower")
+    paginas = {"info": "page_info", "datos": "page_skills", "movs": "page_battle_moves",
+               "concursos": "page_contest_moves", "huevo": "page_info_egg"}
+    # Con los IV/EV en los datos (P_SUMMARY_SCREEN_IV_EV…) el juego usa iv_ev_tiles.png, que es igual salvo los
+    # tiles 218-223: se le copia todo lo demás.
+    iv_ev = range(218, 224)
+    # El código pinta a mano tiles que no salen en ningún tilemap (los corazones de los concursos, la etiqueta de
+    # los IV/EV, rellenos de un color…): los nuevos solo pueden ser los vacíos del final del gráfico (234-239).
+    c.append((Tiles(sumario + "tiles.png", {k: (f"{sumario}{v}.bin", 32, 32) for k, v in paginas.items()},
+                    reservados=iv_ev, copia=(sumario + "iv_ev_tiles.png", set(iv_ev)), libres=range(234, 240)), {
+        "info": [etiqueta(96, 177, 24, "PERFIL"), etiqueta(96, 177, 64, "HABILIDAD"), notas],
+        "huevo": [etiqueta(96, 177, 24, "PERFIL"), etiqueta(96, 177, 64, "ESTADO"), notas],
+        # CARACT.: el código vuelve a poner los tiles 169-172 (x 96-127) al cambiar entre estadísticas, IV y EV
+        # (WriteToStatsTilemapBuffer) y borra los de después: tiene que caber ahí
+        "datos": [etiqueta(96, 149, 24, "OBJETO"), dict(etiqueta(96, 127, 48, "CARACT."), fuente="small_narrower")],
+        "movs": [etiqueta(96, 177, 24, "MOVIMIENTOS"), etiqueta(16, 65, 112, "EFECTO"),
+                 etiqueta(96, 177, 112, "DESCRIPCIÓN")],
+        "concursos": [etiqueta(96, 177, 24, "MOVIMIENTOS"), etiqueta(16, 65, 112, "EFECTO"),
+                      etiqueta(96, 177, 112, "DESCRIPCIÓN")],
+    }))
+    # Botón de la descripción del movimiento en combate: MOVE / INFO → INFO / MOV. (letras de 5 píxeles, color 5)
+    for lado in ("l", "r"):
+        c.append((Tira(f"graphics/battle_interface/move_info_window_{lado}.png", 32), {None: [
+            dict(caja=(6, 10, 26, 15), texto="INFO", fuente="mini", letra=0x5, sombra=None, arriba=11),
+            dict(caja=(6, 16, 26, 21), texto="MOV.", fuente="mini", letra=0x5, sombra=None, arriba=17)]}))
+    # Iconos de los tipos y de las categorías de concurso (letra f, sombra e; caben 30 píxeles: los nombres largos
+    # van abreviados, y las categorías, con la fuente pequeña más estrecha del juego)
+    tipos = {"bug": "BICHO", "dark": "SINIE.", "dragon": "DRAGÓN", "electric": "ELÉCT.", "fairy": "HADA",
+             "fight": "LUCHA", "fire": "FUEGO", "flying": "VOLAD.", "ghost": "FANT.", "grass": "PLANTA",
+             "ground": "TIERRA", "ice": "HIELO", "poison": "VENENO", "psychic": "PSÍQ.", "rock": "ROCA",
+             "steel": "ACERO", "stellar": "ASTRAL", "water": "AGUA",
+             "contest_beauty": "BELLEZA", "contest_cool": "CARISMA", "contest_cute": "DULZURA",
+             "contest_smart": "INGENIO", "contest_tough": "DUREZA"}
+    for tipo, texto in tipos.items():
+        c.append((Tira(f"graphics/types/{tipo}.png", 16), {None: [
+            dict(caja=(1, 2, 30, 12), texto=texto, fuente="small_narrower" if tipo.startswith("contest") else "small",
+                 letra=0xF, sombra=0xE, arriba=4, acento_pegado=True)]}))
+    # Pantalla de nombres (motes): BACK → BORRAR, B BUTTON → B BOTÓN, y las pestañas del teclado
+    nombres = "graphics/naming_screen/"
+    c.append((Tira(nombres + "back_button.png", 24), {None: [
+        dict(caja=(7, 5, 33, 11), texto="BORRAR", fuente="small_narrower", letra=0x1, sombra=None, arriba=5),
+        dict(caja=(10, 16, 36, 21), texto="BOTÓN", fuente="boton", letra=0x1, sombra=None, borrar={0x1, 0x3},
+             arriba=16)]}))
+    for png, texto, sombra in [("page_swap_upper.png", "ABC", 0x6), ("page_swap_lower.png", "abc", 0x8),
+                               ("page_swap_others.png", "otros", 0xA)]:
+        c.append((Tira(nombres + png, 8), {None: [dict(caja=(0, 0, 23, 7), texto=texto, fuente="small", letra=0x1,
+                                                       sombra=sombra, arriba=0)]}))
     # Cabecera del POKéNAV: "POKéMON NAVIGATOR" arriba (letra grande) y abajo a la derecha (la pequeña del juego)
     cabecera = Tiles("graphics/pokenav/header.png", {"cabecera": ("graphics/pokenav/header.bin", 32, 32)})
     cabecera_pokenav(cabecera)

@@ -25,6 +25,9 @@ TABLAS = {
     'habilidades': ('src/data/abilities.h', 'ABILITY_', 30, 1),  # la pantalla de datos estrecha la letra si hace falta
 }
 CAD = r'"(?:[^"\\]|\\.)*"'
+# Las descripciones con un #if dentro (cambian según la generación) no se pueden meter en ES(): se dejan
+# como "#if TESTING <la original> #else <la española> #endif", con esta marca para no volver a tocarlas.
+MARCA_IF = '// Dualocke: descripción con #if (aplicar_descripciones.py)'
 DESC = re.compile(r'(\.description\s*=\s*)COMPOUND_STRING\(((?:\s*' + CAD + r')+)\s*\)')
 
 
@@ -40,6 +43,41 @@ def bloques(datos, prefijo):
 
 def ingles(partes):
     return ''.join(re.findall(r'"((?:[^"\\]|\\.)*)"', partes))
+
+
+def descripcion_con_if(bloque):
+    """(inicio, fin, inglés) de un .description = COMPOUND_STRING(...) que DESC no reconoce (con #if, macros como
+    BINDING_TURNS o comentarios dentro), o None. Acaba en la
+    primera línea en la que ya se ha cerrado el COMPOUND_STRING y no queda ningún #if abierto."""
+    m = re.search(r'^[ \t]*\.description\s*=\s*COMPOUND_STRING\(', bloque, re.M)
+    if not m or MARCA_IF in bloque:
+        return None
+    nivel, cerrado, pos = 0, False, m.end()
+    for linea in bloque[m.end():].splitlines(keepends=True):
+        pos += len(linea)
+        t = linea.strip()
+        if t.startswith('#if'):
+            nivel += 1
+        elif t.startswith('#endif'):
+            nivel -= 1
+        elif t.endswith('),') or t.endswith(')'):
+            cerrado = True
+        if cerrado and nivel == 0:
+            texto = bloque[m.start():pos]
+            # el inglés de la primera rama de cada #if, para la lista de pendientes
+            primero, salta = [], 0
+            for li in texto.splitlines():
+                li = li.strip()
+                if li.startswith(('#elif', '#else')):
+                    salta += 1
+                elif li.startswith('#endif'):
+                    salta -= 1
+                elif li.startswith('#if'):
+                    pass
+                elif salta == 0:
+                    primero.append(li)
+            return m.start(), pos, ingles(' '.join(primero))
+    return None
 
 
 def cortar(texto, ancho, lineas):
@@ -66,8 +104,31 @@ def main():
         hechas = faltan = 0
         for const, ini, fin in bloques(datos, prefijo):
             bloque = datos[ini:fin]
+            if MARCA_IF in bloque:  # ya hecha (la española del #else no se vuelve a tocar)
+                continue
             m = DESC.search(bloque)
             if not m:
+                con_if = descripcion_con_if(bloque)
+                if not con_if:
+                    continue
+                d0, d1, en = con_if
+                es = trad.get(const)
+                if not es:
+                    faltan += 1
+                    salida_pend.append(f'{tabla}\t{const}\t{en.replace(chr(92) + "n", " ")}')
+                    continue
+                trozos, ok = cortar(es, ancho, lineas)
+                if not ok:
+                    print(f'[{tabla}] NO CABE ({len(trozos)} líneas > {lineas}): {const}: {es}')
+                    errores += 1
+                hechas += 1
+                es_c = ' '.join('"' + t + ('\\n' if i < len(trozos) - 1 else '') + '"' for i, t in enumerate(trozos))
+                original = datos[ini + d0:ini + d1]
+                sangria = re.match(r'[ \t]*', original).group(0)
+                nuevo.append(datos[pos:ini + d0])
+                nuevo.append(f'{sangria}{MARCA_IF}\n#if TESTING\n{original}#else\n'
+                             f'{sangria}.description = COMPOUND_STRING({es_c}),\n#endif\n')
+                pos = ini + d1
                 continue
             en = ingles(m.group(2))
             if en in ('?????', ''):

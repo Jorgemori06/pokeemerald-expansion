@@ -208,6 +208,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_ICE_PUNCH] =
     {
         .name = ES(COMPOUND_STRING("Ice Punch"), COMPOUND_STRING("Puño Hielo")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "An icy punch that may\n"
         #if B_USE_FROSTBITE
@@ -215,6 +217,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         #else
             "freeze the foe."),
         #endif
+#else
+        .description = COMPOUND_STRING("Puñetazo helado que puede\n" "llegar a congelar."),
+#endif
         .effect = EFFECT_HIT,
         .power = 75,
         .type = TYPE_ICE,
@@ -331,6 +336,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_RAZOR_WIND] =
     {
         .name = ES(COMPOUND_STRING("Razor Wind"), COMPOUND_STRING("Viento Cortante")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_UPDATED_MOVE_DATA == GEN_3 || B_UPDATED_MOVE_DATA == GEN_1
             "A 2-turn move that strikes\n"
@@ -339,6 +346,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "A 2-turn move with a\n"
             "high critical-hit ratio."),
         #endif
+#else
+        .description = COMPOUND_STRING("Ataque de dos turnos. Suele\n" "dar un golpe crítico."),
+#endif
         .effect = EFFECT_TWO_TURNS_ATTACK,
         .power = 80,
         .type = TYPE_NORMAL,
@@ -530,9 +540,14 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_BIND] =
     {
         .name = ES(COMPOUND_STRING("Bind"), COMPOUND_STRING("Atadura")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "Binds and squeezes the foe\n"
             "for "BINDING_TURNS" turns."),
+#else
+        .description = COMPOUND_STRING("Ata y oprime de cuatro a\n" "cinco turnos."),
+#endif
         .effect = EFFECT_HIT,
         .power = 15,
         .type = TYPE_NORMAL,
@@ -910,9 +925,14 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_WRAP] =
     {
         .name = ES(COMPOUND_STRING("Wrap"), COMPOUND_STRING("Constricción")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "Wraps and squeezes the foe\n"
             BINDING_TURNS" times with vines, etc."),
+#else
+        .description = COMPOUND_STRING("Envuelve y oprime al rival\n" "durante 4 o 5 turnos."),
+#endif
         .effect = EFFECT_HIT,
         .power = 15,
         .type = TYPE_NORMAL,
@@ -1297,6 +1317,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_DISABLE] =
     {
         .name = ES(COMPOUND_STRING("Disable"), COMPOUND_STRING("Anulación")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_DISABLE_TURNS >= GEN_5
             "For 4 turns, prevents foe\n"
@@ -1306,6 +1328,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "For 2-5 turns, prevents foe\n"
         #endif
             "from using last used move."),
+#else
+        .description = COMPOUND_STRING("El rival no puede usar su\n" "último movimiento 4 turnos."),
+#endif
     #if B_UPDATED_MOVE_DATA >= GEN_5
         .accuracy = 100,
     #elif B_UPDATED_MOVE_DATA == GEN_4
@@ -1334,6 +1359,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_ACID] =
     {
         .name = ES(COMPOUND_STRING("Acid"), COMPOUND_STRING("Ácido")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "Sprays a hide-melting acid.\n"
         #if B_UPDATED_MOVE_DATA >= GEN_4
@@ -1341,6 +1368,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         #else
             "May lower Defense."),
         #endif
+#else
+        .description = COMPOUND_STRING("Rocía un ácido corrosivo.\n" "Puede bajar la Def. Esp."),
+#endif
         .effect = EFFECT_HIT,
         .power = 40,
         .type = TYPE_POISON,
@@ -1480,6 +1510,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_SURF] =
     {
         .name = COMPOUND_STRING("Surf"),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "Creates a huge wave, then\n"
         #if B_UPDATED_MOVE_DATA >= GEN_4
@@ -1487,6 +1519,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         #else
             "crashes it down on the foes."),
         #endif
+#else
+        .description = COMPOUND_STRING("Inunda el terreno de combate\n" "con una ola gigante."),
+#endif
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 90 : 95,
         .type = TYPE_WATER,
@@ -1508,6 +1543,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_ICE_BEAM] =
     {
         .name = ES(COMPOUND_STRING("Ice Beam"), COMPOUND_STRING("Rayo Hielo")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "Blasts the foe with an icy\n"
         #if B_USE_FROSTBITE
@@ -1515,6 +1552,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         #else
             "beam that may freeze it."),
         #endif
+#else
+        .description = COMPOUND_STRING("Rayo de hielo que puede\n" "llegar a congelar."),
+#endif
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 90 : 95,
         .type = TYPE_ICE,
@@ -1540,6 +1580,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_BLIZZARD] =
     {
         .name = ES(COMPOUND_STRING("Blizzard"), COMPOUND_STRING("Ventisca")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "Hits the foes with an icy\n"
         #if B_USE_FROSTBITE
@@ -1547,6 +1589,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         #else
             "storm that may freeze."),
         #endif
+#else
+        .description = COMPOUND_STRING("Tormenta de hielo que puede\n" "llegar a congelar."),
+#endif
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 110 : 120,
         .type = TYPE_ICE,
@@ -1647,6 +1692,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_HYPER_BEAM] =
     {
         .name = ES(COMPOUND_STRING("Hyper Beam"), COMPOUND_STRING("Hiperrayo")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_SKIP_RECHARGE != GEN_1
             "Powerful, but leaves the\n"
@@ -1655,6 +1702,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Leaves the user immobile if\n"
             "it doesn't KO the target."),
         #endif
+#else
+        .description = COMPOUND_STRING("Muy potente, pero el usuario\n" "descansa el turno siguiente."),
+#endif
         .effect = EFFECT_HIT,
         .power = 150,
         .type = TYPE_NORMAL,
@@ -1745,6 +1795,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_LOW_KICK] =
     {
         .name = ES(COMPOUND_STRING("Low Kick"), COMPOUND_STRING("Patada Baja")),
+            // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
             .description = COMPOUND_STRING(
     #if B_UPDATED_MOVE_DATA >= GEN_3
             "A kick that inflicts more\n"
@@ -1757,6 +1809,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             .chance = 30,
         }),
     #endif
+#else
+            .description = COMPOUND_STRING("Patada baja. Cuanto más pesa\n" "el objetivo, más daño causa."),
+#endif
         .effect = B_UPDATED_MOVE_DATA >= GEN_3 ? EFFECT_LOW_KICK : EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_3 ? 1 : 50,
         .type = TYPE_FIGHTING,
@@ -1931,6 +1986,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_GROWTH] =
     {
         .name = ES(COMPOUND_STRING("Growth"), COMPOUND_STRING("Desarrollo")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_GROWTH_STAT_RAISE >= GEN_5
             "Forces the body to grow and\n"
@@ -1939,6 +1996,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Forces the body to grow\n"
             "and raises Sp. Atk."),
         #endif
+#else
+        .description = COMPOUND_STRING("Hace crecer el cuerpo. Sube\n" "el Ataque y el At. Esp."),
+#endif
         .effect = EFFECT_GROWTH,
         .power = 0,
         .type = B_UPDATED_MOVE_TYPES >= GEN_CHAMPIONS ? TYPE_GRASS : TYPE_NORMAL,
@@ -2123,6 +2183,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_STRING_SHOT] =
     {
         .name = ES(COMPOUND_STRING("String Shot"), COMPOUND_STRING("Disparo Demora")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "Binds the foe with string\n"
         #if B_UPDATED_MOVE_DATA >= GEN_6
@@ -2130,6 +2192,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         #else
             "to lower its Speed."),
         #endif
+#else
+        .description = COMPOUND_STRING("Lanza seda a los rivales y\n" "reduce mucho su Velocidad."),
+#endif
         .effect = EFFECT_STAT_CHANGE,
         .power = 0,
         .type = TYPE_BUG,
@@ -2177,9 +2242,14 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_FIRE_SPIN] =
     {
         .name = ES(COMPOUND_STRING("Fire Spin"), COMPOUND_STRING("Giro Fuego")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "Traps the foe in a ring of\n"
             "fire for "BINDING_TURNS" turns."),
+#else
+        .description = COMPOUND_STRING("Atrapa al rival en fuego\n" "durante 4 o 5 turnos."),
+#endif
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_5 ? 35 : 15,
         .type = TYPE_FIRE,
@@ -2609,6 +2679,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_TELEPORT] =
     {
         .name = ES(COMPOUND_STRING("Teleport"), COMPOUND_STRING("Teletransporte")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_TELEPORT_BEHAVIOR >= GEN_8
             "The user switches places\n"
@@ -2617,6 +2689,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "A psychic move for fleeing\n"
             "from battle instantly."),
         #endif
+#else
+        .description = COMPOUND_STRING("El usuario se cambia por otro\n" "Pokémon del equipo."),
+#endif
         .effect = EFFECT_TELEPORT,
         .power = 0,
         .type = TYPE_PSYCHIC,
@@ -2808,6 +2883,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_MINIMIZE] =
     {
         .name = ES(COMPOUND_STRING("Minimize"), COMPOUND_STRING("Reducción")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "Minimizes the user's size\n"
         #if B_MINIMIZE_EVASION >= GEN_5
@@ -2815,6 +2892,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         #else
             "to raise evasiveness."),
         #endif
+#else
+        .description = COMPOUND_STRING("El usuario mengua para\n" "aumentar mucho la Evasión."),
+#endif
         .effect = EFFECT_MINIMIZE,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -3342,9 +3422,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             .chance = 20,
         }),
     #else
-        .description = COMPOUND_STRING(
-            "Charges the foe with speed\n"
-            "to climb waterfalls."),
+        .description = ES(COMPOUND_STRING("Charges the foe with speed\n"
+            "to climb waterfalls."), COMPOUND_STRING("Embiste con un gran impulso\n" "que puede hacer retroceder.")),
     #endif
         .effect = EFFECT_HIT,
         .power = 80,
@@ -3366,9 +3445,14 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_CLAMP] =
     {
         .name = ES(COMPOUND_STRING("Clamp"), COMPOUND_STRING("Tenaza")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "Traps and squeezes the\n"
             "foe for "BINDING_TURNS" turns."),
+#else
+        .description = COMPOUND_STRING("Atrapa y oprime al rival\n" "durante 4 o 5 turnos."),
+#endif
         .effect = EFFECT_HIT,
         .power = 35,
         .type = TYPE_WATER,
@@ -3425,9 +3509,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             .onChargeTurnOnly = TRUE,
         }),
     #else
-        .description = COMPOUND_STRING(
-            "Tucks in the head, then\n"
-            "attacks on the next turn."),
+        .description = ES(COMPOUND_STRING("Tucks in the head, then\n"
+            "attacks on the next turn."), COMPOUND_STRING("Sube la Defensa y ataca en el\n" "turno siguiente.")),
     #endif
         .effect = EFFECT_TWO_TURNS_ATTACK,
         .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 130 : 100,
@@ -3666,6 +3749,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_POISON_GAS] =
     {
         .name = ES(COMPOUND_STRING("Poison Gas"), COMPOUND_STRING("Gas Venenoso")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_UPDATED_MOVE_DATA >= GEN_5
             "Envelops the foes in a toxic\n"
@@ -3673,6 +3758,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Envelops the foe in a toxic\n"
         #endif
             "gas that poisons."),
+#else
+        .description = COMPOUND_STRING("Envuelve a los rivales en un\n" "gas tóxico que envenena."),
+#endif
     #if B_UPDATED_MOVE_DATA >= GEN_6
         .accuracy = 90,
     #elif B_UPDATED_MOVE_DATA == GEN_5
@@ -3781,9 +3869,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             .chance = 30,
         }),
     #else
-        .description = COMPOUND_STRING(
-            "Searches out weak spots,\n"
-            "then strikes the next turn."),
+        .description = ES(COMPOUND_STRING("Searches out weak spots,\n"
+            "then strikes the next turn."), COMPOUND_STRING("Ataca en 2 turnos. Muchos\n" "críticos; puede amedrentar.")),
     #endif
         .effect = EFFECT_TWO_TURNS_ATTACK,
         .power = 140,
@@ -3872,9 +3959,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             .chance = 20,
         }),
     #else
-        .description = COMPOUND_STRING(
-            "The foe is hit with a\n"
-            "rhythmic punch."),
+        .description = ES(COMPOUND_STRING("The foe is hit with a\n"
+            "rhythmic punch."), COMPOUND_STRING("Rítmicos puñetazos que pueden\n" "causar confusión.")),
     #endif
         .effect = EFFECT_HIT,
         .power = 70,
@@ -4154,9 +4240,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             .chance = 30,
         }),
     #else
-        .description = COMPOUND_STRING(
-            "Hits the foes with an\n"
-            "avalanche of boulders."),
+        .description = ES(COMPOUND_STRING("Hits the foes with an\n"
+            "avalanche of boulders."), COMPOUND_STRING("Lanza grandes pedruscos.\n" "Puede amedrentar al objetivo.")),
     #endif
         .effect = EFFECT_HIT,
         .power = 75,
@@ -4233,6 +4318,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_CONVERSION] =
     {
         .name = ES(COMPOUND_STRING("Conversion"), COMPOUND_STRING("Conversión")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "Changes the user's type into\n"
         #if B_UPDATED_CONVERSION >= GEN_6
@@ -4240,6 +4327,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         #else
             "a known move's type."),
         #endif
+#else
+        .description = COMPOUND_STRING("El usuario pasa a ser del\n" "tipo de su primer movimiento."),
+#endif
         .effect = EFFECT_CONVERSION,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -4268,9 +4358,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = ES(COMPOUND_STRING("Fires three types of beams.\n"
             "May burn/parlyz/frostbite."), COMPOUND_STRING("Tres rayos a la vez. Puede\n" "quemar, paralizar o helar.")),
         #else
-        .description = COMPOUND_STRING(
-            "Fires three types of beams.\n"
-            "May burn/paralyze/freeze."),
+        .description = ES(COMPOUND_STRING("Fires three types of beams.\n"
+            "May burn/paralyze/freeze."), COMPOUND_STRING("Tres rayos a la vez. Puede\n" "quemar, paralizar o helar.")),
         #endif
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_RANDOM_FROM_LIST,
@@ -4278,9 +4367,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             .argument.randomMoveEffects = { MOVE_EFFECT_BURN, MOVE_EFFECT_PARALYSIS, MOVE_EFFECT_FREEZE_OR_FROSTBITE },
         }),
     #else
-        .description = COMPOUND_STRING(
-            "A triangular field of energy\n"
-            "is created and launched."),
+        .description = ES(COMPOUND_STRING("A triangular field of energy\n"
+            "is created and launched."), COMPOUND_STRING("Tres rayos a la vez. Puede\n" "quemar, paralizar o helar.")),
     #endif
         .effect = EFFECT_HIT,
         .power = 80,
@@ -4725,6 +4813,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_COTTON_SPORE] =
     {
         .name = ES(COMPOUND_STRING("Cotton Spore"), COMPOUND_STRING("Esporagodón")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_UPDATED_MOVE_DATA >= GEN_6
             "Spores cling to the foes,\n"
@@ -4732,6 +4822,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Spores cling to the foe,\n"
         #endif
             "harshly lowering Speed."),
+#else
+        .description = COMPOUND_STRING("Esporas pegajosas que bajan\n" "mucho la Velocidad."),
+#endif
         .effect = EFFECT_STAT_CHANGE,
         .power = 0,
         .type = TYPE_GRASS,
@@ -4780,6 +4873,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_SPITE] =
     {
         .name = ES(COMPOUND_STRING("Spite"), COMPOUND_STRING("Rencor")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "Spitefully cuts the PP of\n"
         #if B_PP_REDUCED_BY_SPITE >= GEN_4
@@ -4787,6 +4882,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         #else
             "the foe's last move by 2-5."),
         #endif
+#else
+        .description = COMPOUND_STRING("Quita 4 PP al último\n" "movimiento que usó el rival."),
+#endif
         .effect = EFFECT_SPITE,
         .power = 0,
         .type = TYPE_GHOST,
@@ -4809,6 +4907,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_POWDER_SNOW] =
     {
         .name = ES(COMPOUND_STRING("Powder Snow"), COMPOUND_STRING("Nieve Polvo")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "Blasts the foes with a snowy\n"
         #if B_USE_FROSTBITE
@@ -4816,6 +4916,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         #else
             "gust. May cause freezing."),
         #endif
+#else
+        .description = COMPOUND_STRING("Lanza nieve que puede llegar\n" "a congelar."),
+#endif
         .effect = EFFECT_HIT,
         .power = 40,
         .type = TYPE_ICE,
@@ -6000,6 +6103,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_ENCORE] =
     {
         .name = ES(COMPOUND_STRING("Encore"), COMPOUND_STRING("Otra Vez")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_ENCORE_TURNS >= GEN_5
             "Makes the foe repeat its\n"
@@ -6011,6 +6116,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Makes the foe repeat its\n"
             "last move over 2-6 turns."),
         #endif
+#else
+        .description = COMPOUND_STRING("Obliga al rival a repetir su\n" "último movimiento 3 turnos."),
+#endif
         .effect = EFFECT_ENCORE,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -6067,9 +6175,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             .chance = 100,
         }),
     #else
-        .description = COMPOUND_STRING(
-            "Spins the body at high\n"
-            "speed to remove traps."),
+        .description = ES(COMPOUND_STRING("Spins the body at high\n"
+            "speed to remove traps."), COMPOUND_STRING("Gira para quitar trampas y\n" "subir la Velocidad.")),
     #endif
         .effect = EFFECT_RAPID_SPIN,
         .power = B_UPDATED_MOVE_DATA >= GEN_8 ? 50 : 20,
@@ -6091,6 +6198,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_SWEET_SCENT] =
     {
         .name = ES(COMPOUND_STRING("Sweet Scent"), COMPOUND_STRING("Dulce Aroma")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_UPDATED_MOVE_DATA >= GEN_6
             "Allures the foes to harshly\n"
@@ -6099,6 +6208,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Allures the foes to lower\n"
             "evasiveness."),
         #endif
+#else
+        .description = COMPOUND_STRING("Atrae a los rivales y baja\n" "mucho su evasión."),
+#endif
         .effect = EFFECT_STAT_CHANGE,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -6401,6 +6513,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_CRUNCH] =
     {
         .name = ES(COMPOUND_STRING("Crunch"), COMPOUND_STRING("Triturar")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "Crunches with sharp fangs.\n"
         #if B_UPDATED_MOVE_DATA >= GEN_4
@@ -6408,6 +6522,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         #else
             "May lower Sp. Def."),
         #endif
+#else
+        .description = COMPOUND_STRING("Muerde con colmillos. Puede\n" "bajar la Defensa."),
+#endif
         .effect = EFFECT_HIT,
         .power = 80,
         .type = TYPE_DARK,
@@ -6629,9 +6746,14 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_WHIRLPOOL] =
     {
         .name = ES(COMPOUND_STRING("Whirlpool"), COMPOUND_STRING("Torbellino")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "Traps and hurts the foe in\n"
             "a whirlpool for "BINDING_TURNS" turns."),
+#else
+        .description = COMPOUND_STRING("Atrapa y daña al rival en un\n" "remolino 4 o 5 turnos."),
+#endif
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_5 ? 35 : 15,
         .type = TYPE_WATER,
@@ -6709,6 +6831,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_UPROAR] =
     {
         .name = ES(COMPOUND_STRING("Uproar"), COMPOUND_STRING("Alboroto")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_UPROAR_TURNS >= GEN_5
             "Causes an uproar for 3\n"
@@ -6716,6 +6840,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Causes an uproar for 2 to 5\n"
         #endif
             "turns and prevents sleep."),
+#else
+        .description = COMPOUND_STRING("Arma un alboroto durante 3\n" "turnos que impide dormir."),
+#endif
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_5 ? 90 : 50,
         .type = TYPE_NORMAL,
@@ -6744,6 +6871,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_STOCKPILE] =
     {
         .name = ES(COMPOUND_STRING("Stockpile"), COMPOUND_STRING("Reserva")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "Charges up power for up to\n"
         #if B_STOCKPILE_RAISES_DEFS >= GEN_4
@@ -6751,6 +6880,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         #else
             "3 turns."),
         #endif
+#else
+        .description = COMPOUND_STRING("Acumula fuerza hasta 3 veces.\n" "Sube las defensas."),
+#endif
         .effect = EFFECT_STOCKPILE,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -6854,6 +6986,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_HAIL] =
     {
         .name = ES(COMPOUND_STRING("Hail"), COMPOUND_STRING("Granizo")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_PREFERRED_ICE_WEATHER == B_ICE_WEATHER_SNOW
             "Boosts the Defense of Ice-\n"
@@ -6862,6 +6996,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Summons a hailstorm that\n"
             "strikes every turn."),
         #endif
+#else
+        .description = COMPOUND_STRING("Desata una granizada que daña\n" "en cada turno."),
+#endif
         .effect = EFFECT_WEATHER,
         .power = 0,
         .type = TYPE_ICE,
@@ -7126,19 +7263,16 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = ES(COMPOUND_STRING("Ups the user's next Electric\n"
             "move. It also raises Sp. Def."), COMPOUND_STRING("Potencia su próximo mov.\n" "Eléctrico y sube Def. Esp.")),
         #else
-        .description = COMPOUND_STRING(
-            "Charges power to boost the\n"
-            "Electric move used next."),
+        .description = ES(COMPOUND_STRING("Charges power to boost the\n"
+            "Electric move used next."), COMPOUND_STRING("Potencia su próximo mov.\n" "Eléctrico y sube Def. Esp.")),
         #endif
     #else
         #if B_CHARGE_SPDEF_RAISE >= GEN_5
-        .description = COMPOUND_STRING(
-            "Ups the user's next move if\n"
-            "Electric. Also raises Sp. Def."),
+        .description = ES(COMPOUND_STRING("Ups the user's next move if\n"
+            "Electric. Also raises Sp. Def."), COMPOUND_STRING("Potencia su próximo mov.\n" "Eléctrico y sube Def. Esp.")),
         #else
-        .description = COMPOUND_STRING(
-            "Charges power to boost the\n"
-            "Electric move used next turn."),
+        .description = ES(COMPOUND_STRING("Charges power to boost the\n"
+            "Electric move used next turn."), COMPOUND_STRING("Potencia su próximo mov.\n" "Eléctrico y sube Def. Esp.")),
         #endif
     #endif
         .effect = EFFECT_CHARGE,
@@ -7170,6 +7304,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_TAUNT] =
     {
         .name = ES(COMPOUND_STRING("Taunt"), COMPOUND_STRING("Mofa")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "The foe can use only attack\n"
         #if B_TAUNT_TURNS >= GEN_5
@@ -7179,6 +7315,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         #else
             "moves for 2 turns."),
         #endif
+#else
+        .description = COMPOUND_STRING("Durante 3 turnos, el rival\n" "solo puede atacar."),
+#endif
         .effect = EFFECT_TAUNT,
         .power = 0,
         .type = TYPE_DARK,
@@ -7511,6 +7650,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_KNOCK_OFF] =
     {
         .name = ES(COMPOUND_STRING("Knock Off"), COMPOUND_STRING("Desarme")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_KNOCK_OFF_DMG >= GEN_6 && B_KNOCK_OFF_REMOVAL >= GEN_5
             "Deals more damage to a foe\n"
@@ -7519,6 +7660,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Knocks down the foe's held\n"
             "item to prevent its use."),
         #endif
+#else
+        .description = COMPOUND_STRING("Daña más si el rival lleva\n" "objeto, y se lo quita."),
+#endif
         .effect = EFFECT_KNOCK_OFF,
         .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 65 : 20,
         .type = TYPE_DARK,
@@ -7811,6 +7955,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_TAIL_GLOW] =
     {
         .name = ES(COMPOUND_STRING("Tail Glow"), COMPOUND_STRING("Luminicola")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_UPDATED_MOVE_DATA >= GEN_5
             "Flashes a light that\n"
@@ -7819,6 +7965,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Flashes a light that sharply\n"
             "raises Sp. Atk."),
         #endif
+#else
+        .description = COMPOUND_STRING("Emite un destello que sube\n" "muchísimo el At. Esp."),
+#endif
         .effect = EFFECT_STAT_CHANGE,
         .power = 0,
         .type = TYPE_BUG,
@@ -7977,6 +8126,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_MUD_SPORT] =
     {
         .name = ES(COMPOUND_STRING("Mud Sport"), COMPOUND_STRING("Chapoteo Lodo")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_UPDATED_MOVE_DATA >= GEN_6
             "Mud weakens Electric-\n"
@@ -7985,6 +8136,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Covers the user in mud to\n"
             "weaken all Electric moves."),
         #endif
+#else
+        .description = COMPOUND_STRING("El barro debilita los ataques\n" "Eléctricos 5 turnos."),
+#endif
         .effect = EFFECT_MUD_SPORT,
         .power = 0,
         .type = TYPE_GROUND,
@@ -8162,6 +8316,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_BLAST_BURN] =
     {
         .name = ES(COMPOUND_STRING("Blast Burn"), COMPOUND_STRING("Anillo Ígneo")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_SKIP_RECHARGE != GEN_1
             "Powerful, but leaves the\n"
@@ -8170,6 +8326,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Leaves the user immobile if\n"
             "it doesn't KO the target."),
         #endif
+#else
+        .description = COMPOUND_STRING("Muy potente, pero el usuario\n" "descansa el turno siguiente."),
+#endif
         .effect = EFFECT_HIT,
         .power = 150,
         .type = TYPE_FIRE,
@@ -8193,6 +8352,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_HYDRO_CANNON] =
     {
         .name = ES(COMPOUND_STRING("Hydro Cannon"), COMPOUND_STRING("Hidrocañón")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_SKIP_RECHARGE != GEN_1
             "Powerful, but leaves the\n"
@@ -8201,6 +8362,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Leaves the user immobile if\n"
             "it doesn't KO the target."),
         #endif
+#else
+        .description = COMPOUND_STRING("Muy potente, pero el usuario\n" "descansa el turno siguiente."),
+#endif
         .effect = EFFECT_HIT,
         .power = 150,
         .type = TYPE_WATER,
@@ -8722,9 +8886,14 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_SAND_TOMB] =
     {
         .name = ES(COMPOUND_STRING("Sand Tomb"), COMPOUND_STRING("Bucle Arena")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "Traps and hurts the foe in\n"
             "quicksand for "BINDING_TURNS" turns."),
+#else
+        .description = COMPOUND_STRING("Atrapa y daña al rival en\n" "arena 4 o 5 turnos."),
+#endif
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_5 ? 35 : 15,
         .type = TYPE_GROUND,
@@ -8748,6 +8917,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_SHEER_COLD] =
     {
         .name = ES(COMPOUND_STRING("Sheer Cold"), COMPOUND_STRING("Frío Polar")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_SHEER_COLD_ACC >= GEN_7
             "Causes fainting. Unlikely to\n"
@@ -8756,6 +8927,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "A chilling attack that\n"
             "causes fainting if it hits."),
         #endif
+#else
+        .description = COMPOUND_STRING("Fulmina de un golpe. Falla\n" "más si no es de tipo Hielo."),
+#endif
         .effect = EFFECT_OHKO,
         .power = 1,
         .type = TYPE_ICE,
@@ -8923,6 +9097,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_HOWL] =
     {
         .name = ES(COMPOUND_STRING("Howl"), COMPOUND_STRING("Aullido")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_UPDATED_MOVE_DATA >= GEN_8
             "Howls to raise the spirit\n"
@@ -8931,6 +9107,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Howls to raise the spirit\n"
             "and raises Attack."),
         #endif
+#else
+        .description = COMPOUND_STRING("Aullido que sube el ánimo y\n" "aumenta el Ataque del equipo."),
+#endif
         .power = 0,
         .effect = EFFECT_STAT_CHANGE,
         .type = TYPE_NORMAL,
@@ -8983,6 +9162,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_FRENZY_PLANT] =
     {
         .name = ES(COMPOUND_STRING("Frenzy Plant"), COMPOUND_STRING("Planta Feroz")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_SKIP_RECHARGE != GEN_1
             "Powerful, but leaves the\n"
@@ -8991,6 +9172,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Leaves the user immobile if\n"
             "it doesn't KO the target."),
         #endif
+#else
+        .description = COMPOUND_STRING("Muy potente, pero el usuario\n" "descansa el turno siguiente."),
+#endif
         .effect = EFFECT_HIT,
         .power = 150,
         .type = TYPE_GRASS,
@@ -9162,9 +9346,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             .chance = 10,
         }),
     #else
-        .description = COMPOUND_STRING(
-            "A life-risking tackle that\n"
-            "slightly hurts the user."),
+        .description = ES(COMPOUND_STRING("A life-risking tackle that\n"
+            "slightly hurts the user."), COMPOUND_STRING("Placaje arriesgado que daña\n" "al usuario. Puede paralizar.")),
     #endif
         .effect = EFFECT_RECOIL,
         .power = 120,
@@ -9208,6 +9391,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_WATER_SPORT] =
     {
         .name = ES(COMPOUND_STRING("Water Sport"), COMPOUND_STRING("Hidrochorro")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_UPDATED_MOVE_DATA >= GEN_6
             "Water weakens Fire-\n"
@@ -9216,6 +9401,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "The user becomes soaked to\n"
             "weaken all Fire-type moves."),
         #endif
+#else
+        .description = COMPOUND_STRING("El agua debilita los ataques\n" "de Fuego 5 turnos."),
+#endif
         .effect = EFFECT_WATER_SPORT,
         .power = 0,
         .type = TYPE_WATER,
@@ -9705,6 +9893,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_TAILWIND] =
     {
         .name = ES(COMPOUND_STRING("Tailwind"), COMPOUND_STRING("Viento Afín")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "Whips up a wind that boosts\n"
         #if B_TAILWIND_TURNS >= GEN_5
@@ -9712,6 +9902,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         #else
             "allies' Speed for 3 turns."),
         #endif
+#else
+        .description = COMPOUND_STRING("Viento que sube la Velocidad\n" "del equipo 4 turnos."),
+#endif
         .effect = EFFECT_TAILWIND,
         .power = 0,
         .type = TYPE_FLYING,
@@ -10898,6 +11091,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_GIGA_IMPACT] =
     {
         .name = ES(COMPOUND_STRING("Giga Impact"), COMPOUND_STRING("Gigaimpacto")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_SKIP_RECHARGE != GEN_1
             "Powerful, but leaves the\n"
@@ -10906,6 +11101,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Leaves the user immobile if\n"
             "it doesn't KO the target."),
         #endif
+#else
+        .description = COMPOUND_STRING("Muy potente, pero el usuario\n" "descansa el turno siguiente."),
+#endif
         .effect = EFFECT_HIT,
         .power = 150,
         .type = TYPE_NORMAL,
@@ -11073,6 +11271,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_ICE_FANG] =
     {
         .name = ES(COMPOUND_STRING("Ice Fang"), COMPOUND_STRING("Colmillo Hielo")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "May cause flinching or\n"
         #if B_USE_FROSTBITE
@@ -11080,6 +11280,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         #else
             "leave the foe frozen."),
         #endif
+#else
+        .description = COMPOUND_STRING("Puede congelar o hacer\n" "retroceder al rival."),
+#endif
         .effect = EFFECT_HIT,
         .power = 65,
         .type = TYPE_ICE,
@@ -11475,6 +11678,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_ROCK_WRECKER] =
     {
         .name = ES(COMPOUND_STRING("Rock Wrecker"), COMPOUND_STRING("Romperrocas")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_SKIP_RECHARGE != GEN_1
             "Powerful, but leaves the\n"
@@ -11483,6 +11688,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Leaves the user immobile if\n"
             "it doesn't KO the target."),
         #endif
+#else
+        .description = COMPOUND_STRING("Muy potente, pero el usuario\n" "descansa el turno siguiente."),
+#endif
         .effect = EFFECT_HIT,
         .power = 150,
         .type = TYPE_ROCK,
@@ -11970,6 +12178,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_ROAR_OF_TIME] =
     {
         .name = ES(COMPOUND_STRING("Roar of Time"), COMPOUND_STRING("Distorsión")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_SKIP_RECHARGE != GEN_1
             "Powerful, but leaves the\n"
@@ -11978,6 +12188,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Leaves the user immobile if\n"
             "it doesn't KO the target."),
         #endif
+#else
+        .description = COMPOUND_STRING("Muy potente, pero el usuario\n" "descansa el turno siguiente."),
+#endif
         .effect = EFFECT_HIT,
         .power = 150,
         .type = TYPE_DRAGON,
@@ -12067,9 +12280,14 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_MAGMA_STORM] =
     {
         .name = ES(COMPOUND_STRING("Magma Storm"), COMPOUND_STRING("Lluvia Ígnea")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "Traps the foe in a vortex\n"
             "of fire for "BINDING_TURNS" turns."),
+#else
+        .description = COMPOUND_STRING("Atrapa al rival en magma\n" "durante 4 o 5 turnos."),
+#endif
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 100 : 120,
         .type = TYPE_FIRE,
@@ -13220,6 +13438,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_INCINERATE] =
     {
         .name = ES(COMPOUND_STRING("Incinerate"), COMPOUND_STRING("Calcinación")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_INCINERATE_GEMS >= GEN_6
             "Burns up certain items,\n"
@@ -13227,6 +13447,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Burns up Berries,\n"
         #endif
             "making them unusable."),
+#else
+        .description = COMPOUND_STRING("Quema bayas y gemas del rival\n" "para que no las use."),
+#endif
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 60 : 30,
         .type = TYPE_FIRE,
@@ -14588,6 +14811,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_FELL_STINGER] =
     {
         .name = ES(COMPOUND_STRING("Fell Stinger"), COMPOUND_STRING("Aguijón Letal")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "If the foe is KO'd, Attack\n"
         #if B_FELL_STINGER_STAT_RAISE >= GEN_7
@@ -14595,6 +14820,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         #else
             "is sharply raised."),
         #endif
+#else
+        .description = COMPOUND_STRING("Si debilita al rival, sube\n" "muchísimo el Ataque."),
+#endif
         .effect = EFFECT_FELL_STINGER,
         .power = B_UPDATED_MOVE_DATA >= GEN_7 ? 50 : 30,
         .type = TYPE_BUG,
@@ -14790,6 +15018,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = ES(COMPOUND_STRING("Freeze-Dry"), COMPOUND_STRING("Liofilización")),
         #if B_UPDATED_MOVE_DATA < GEN_CHAMPIONS
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "Super effective on Water-\n"
             #if B_USE_FROSTBITE == TRUE
@@ -14797,6 +15027,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             #else
                 "types. May cause freezing."),
             #endif
+#else
+        .description = COMPOUND_STRING("Supereficaz contra el tipo\n" "Agua."),
+#endif
         #else
         .description = ES(COMPOUND_STRING("Super effective on Water-\n"
             "types."), COMPOUND_STRING("Supereficaz contra el tipo\n" "Agua.")),
@@ -15166,6 +15399,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_KINGS_SHIELD] =
     {
         .name = ES(COMPOUND_STRING("King's Shield"), COMPOUND_STRING("Escudo Real")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_KINGS_SHIELD_LOWER_ATK >= GEN_8
             "Evades damage and\n"
@@ -15173,6 +15408,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Evades damage and harshly\n"
         #endif
             "lowers Attack on contact."),
+#else
+        .description = COMPOUND_STRING("Bloquea el daño y baja el\n" "Ataque de quien lo toque."),
+#endif
         .effect = EFFECT_PROTECT,
         .power = 0,
         .type = TYPE_STEEL,
@@ -15779,9 +16017,14 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_INFESTATION] =
     {
         .name = ES(COMPOUND_STRING("Infestation"), COMPOUND_STRING("Acoso")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "The foe is infested and\n"
             "attacked for "BINDING_TURNS" turns."),
+#else
+        .description = COMPOUND_STRING("Infesta al rival y lo ataca\n" "durante 4 o 5 turnos."),
+#endif
         .effect = EFFECT_HIT,
         .power = 20,
         .type = TYPE_BUG,
@@ -16908,6 +17151,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_AURORA_VEIL] =
     {
         .name = ES(COMPOUND_STRING("Aurora Veil"), COMPOUND_STRING("Velo Aurora")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_PREFERRED_ICE_WEATHER == B_ICE_WEATHER_SNOW
             "Weakens all attacks, but\n"
@@ -16919,6 +17164,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Weakens all attacks, but\n"
             "only usable with hail."),
         #endif
+#else
+        .description = COMPOUND_STRING("Debilita los ataques. Solo\n" "con granizo o nieve."),
+#endif
         .effect = EFFECT_AURORA_VEIL,
         .power = 0,
         .type = TYPE_ICE,
@@ -17377,6 +17625,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_ZIPPY_ZAP] =
     {
         .name = ES(COMPOUND_STRING("Zippy Zap"), COMPOUND_STRING("Pikaturbo")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_UPDATED_MOVE_DATA >= GEN_8
             "Electric bursts always go\n"
@@ -17385,6 +17635,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Electric bursts always go\n"
             "first and land a critical hit."),
         #endif
+#else
+        .description = COMPOUND_STRING("Ataque eléctrico que siempre\n" "va primero y sube la evasión."),
+#endif
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_8 ? 80 : 50,
         .type = TYPE_ELECTRIC,
@@ -17475,6 +17728,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_BOUNCY_BUBBLE] =
     {
         .name = ES(COMPOUND_STRING("Bouncy Bubble"), COMPOUND_STRING("Vapodrenaje")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "Shoots bubbles that absorb\n"
         #if B_UPDATED_MOVE_DATA >= GEN_8
@@ -17482,6 +17737,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         #else
             "half the damage inflicted."),
         #endif
+#else
+        .description = COMPOUND_STRING("Burbujas que absorben todo el\n" "daño que hacen."),
+#endif
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_8 ? 60 : 90,
         .type = TYPE_WATER,
@@ -19104,9 +19362,14 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_THUNDER_CAGE] =
     {
         .name = ES(COMPOUND_STRING("Thunder Cage"), COMPOUND_STRING("Electrojaula")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "Traps the foe in a cage of\n"
             "electricity for "BINDING_TURNS" turns."),
+#else
+        .description = COMPOUND_STRING("Atrapa al rival en una jaula\n" "eléctrica 4 o 5 turnos."),
+#endif
         .effect = EFFECT_HIT,
         .power = 80,
         .type = TYPE_ELECTRIC,
@@ -19151,6 +19414,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_FREEZING_GLARE] =
     {
         .name = ES(COMPOUND_STRING("Freezing Glare"), COMPOUND_STRING("Mirada Heladora")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "Shoots psychic power from\n"
         #if B_USE_FROSTBITE
@@ -19158,6 +19423,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         #else
             "the eyes. May freeze the foe."),
         #endif
+#else
+        .description = COMPOUND_STRING("Lanza poder psíquico con los\n" "ojos. Puede congelar."),
+#endif
         .power = 90,
         .effect = EFFECT_HIT,
         .type = TYPE_PSYCHIC,
@@ -20422,6 +20690,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_CHILLY_RECEPTION] =
     {
         .name = ES(COMPOUND_STRING("Chilly Reception"), COMPOUND_STRING("Fría Acogida")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
         #if B_PREFERRED_ICE_WEATHER == B_ICE_WEATHER_HAIL
             "Bad joke summons hailstorm.\n"
@@ -20430,6 +20700,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Bad joke summons snowstorm.\n"
             "The user also switches out."),
         #endif
+#else
+        .description = COMPOUND_STRING("Un mal chiste trae nieve. El\n" "usuario se retira."),
+#endif
         .effect = EFFECT_WEATHER_AND_SWITCH,
         .power = 0,
         .type = TYPE_ICE,
@@ -20473,6 +20746,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_SNOWSCAPE] =
     {
         .name = ES(COMPOUND_STRING("Snowscape"), COMPOUND_STRING("Paisaje Nevado")),
+            // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
             .description = COMPOUND_STRING(
         #if B_PREFERRED_ICE_WEATHER == B_ICE_WEATHER_HAIL
             "Summons a hailstorm that\n"
@@ -20481,6 +20756,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Boosts the Defense of Ice-\n"
             "type Pokémon for 5 turns."),
         #endif
+#else
+            .description = COMPOUND_STRING("Sube la Defensa del tipo\n" "Hielo durante 5 turnos."),
+#endif
         .effect = EFFECT_WEATHER,
         .power = 0,
         .type = TYPE_ICE,
@@ -22039,6 +22317,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_MAX_HAILSTORM] =
     {
         .name = ES(COMPOUND_STRING("Max Hailstorm"), COMPOUND_STRING("Maxihelada")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(
             "Ice Dynamax attack.\n"
         #if B_PREFERRED_ICE_WEATHER == B_ICE_WEATHER_SNOW
@@ -22046,6 +22326,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         #else
             "Summons a hailstorm."),
         #endif
+#else
+        .description = COMPOUND_STRING("Ataque Dinamax de tipo Hielo.\n" "Desata granizo."),
+#endif
         .effect = EFFECT_MAX_MOVE,
         .power = 1,
         .type = TYPE_ICE,
@@ -22892,9 +23175,14 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_G_MAX_ONE_BLOW] =
     {
         .name = ES(COMPOUND_STRING("G-Max One Blow"), COMPOUND_STRING("Gigagolpe Brutal")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(    //ANIM TODO
             "G-Max Urshifu attack.\n"
             "Can ignore Max Guard."),
+#else
+        .description = COMPOUND_STRING("Ataque Gigamax de Urshifu.\n" "Ignora la Maxibarrera."),
+#endif
         .effect = EFFECT_MAX_MOVE,
         .power = 10,
         .type = TYPE_DARK,
@@ -22910,9 +23198,14 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_G_MAX_RAPID_FLOW] =
     {
         .name = ES(COMPOUND_STRING("G-Max Rapid Flow"), COMPOUND_STRING("Gigagolpe Fluido")),
+        // Dualocke: descripción con #if (aplicar_descripciones.py)
+#if TESTING
         .description = COMPOUND_STRING(    //ANIM TODO
             "G-Max Urshifu attack.\n"
             "Can ignore Max Guard."),
+#else
+        .description = COMPOUND_STRING("Ataque Gigamax de Urshifu.\n" "Ignora la Maxibarrera."),
+#endif
         .effect = EFFECT_MAX_MOVE,
         .power = 10,
         .type = TYPE_WATER,
