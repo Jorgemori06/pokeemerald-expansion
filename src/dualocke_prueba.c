@@ -2,7 +2,9 @@
 #include "dualocke_prueba.h"
 
 #ifdef DUALOCKE_PRUEBA
+#include "dualocke.h"
 #include "event_data.h"
+#include "constants/characters.h"
 #include "item.h"
 #include "overworld.h"
 #include "pokemon.h"
@@ -27,8 +29,11 @@ bool32 Dualocke_PruebaFoto(void)
 
 void Dualocke_PruebaNombre(void)
 {
-    static const u8 sNombre[] = _("PRUEBA");
-    StringCopy(gSaveBlock2Ptr->playerName, sNombre);
+    // Un nombre de más de 7 letras, para probar el nombre largo (como si se escribiera en la pantalla de nombres)
+    static const u8 sNombre[] = _("JORGEMORI");
+    memset(gSaveBlock2Ptr->playerNameLong, EOS, sizeof(gSaveBlock2Ptr->playerNameLong));
+    StringCopy(gSaveBlock2Ptr->playerNameLong, sNombre);
+    Dualocke_GuardarNombreJugador();
     gSaveBlock2Ptr->playerGender = MALE;
 }
 

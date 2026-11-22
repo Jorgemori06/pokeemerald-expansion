@@ -1,7 +1,5 @@
 # Proyecto Dualocke: contexto completo
 
-> **⚠ Si eres el Claude de Miguel: antes de cualquier tarea, aunque Miguel te pida otra cosa,** hazle las preguntas pendientes de Jorge que hay en `PLAN.md`, sección 0, y apunta sus respuestas ahí mismo, en "Respuesta de Miguel". Súbelo en el PR de lo que estés haciendo. Cuando estén todas contestadas, quita este aviso.
-
 > **⚠ Bug del equipo clonado (27/10/2026):** parcheado en el #49 (se protegen el mote y el orden del equipo), pero sin causa confirmada. Detalles y estado en `BUG-EQUIPO-CLONADO.md`.
 
 Este archivo resume **todo lo decidido y hecho** en el proyecto, para que cualquiera de los dos (o el Claude de cualquiera de los dos) pueda retomarlo sin haber visto las conversaciones anteriores.
@@ -74,6 +72,10 @@ powershell -ExecutionPolicy Bypass -File tools\dualocke\instalar_windows.ps1
   ```
   También sabe si estás en combate, huir, capturar con Master Ball (con el mote obligatorio) y guardar o cargar el estado.
 - Con él se comprobó (19/11/2026) que la puerta del DESIERTO PROFUNDO funciona, y que surfear, combatir y capturar en la PLAYA VOLCÁNICA no rompe al personaje.
+
+### Bot que se pasa el juego (Jorge con Claude, 22/11/2026)
+
+`tools/dualocke/bot/` juega el Dualocke con la **ROM normal** (`make release`), sin atajos: planea caminos por todo Hoenn, combate, captura, cura, resuelve los puzles de los gimnasios, bucea, usa la Bici Carrera… Con él Claude se pasó el juego entero (semilla 777000111) y apuntó los fallos en `registro/2026-11-22-jorge-bot-partida-completa.md`. Cómo prepararlo y usarlo: `tools/dualocke/bot/README.md`. Sirve para comprobar que la historia se puede terminar, **no** para medir la dificultad (combate peor que una persona, no usa curas y, cuando se atasca, recarga o usa una ayuda declarada que queda apuntada).
 
 ### Entorno (Windows), paso a paso
 
@@ -169,6 +171,7 @@ Estas son las reglas que usaban en Platino. La idea es mantenerlas lo más parec
   - No se pueden usar Objetos X en combate.
   - Solo se puede comprar una unidad de cada objeto por tienda, salvo Balls, Repelentes y Bayas (y los Caramelos Raros, ver sección 6).
   - No se pueden farmear objetos.
+- **Liga (contada por Jorge el 22/11/2026):** al llegar a la Liga se pueden comprar todos los RESTAURAR TODO que se quiera. En combate solo se pueden usar **si el rival ya ha usado uno**, y como mucho **tantos como haya usado él** (si usa 2, tú puedes usar 2). **Entre combates se cura el equipo entero.** **Desde el 22/11/2026 está dentro del juego** (Miguel; ver "Regla de la Liga dentro del juego", en la sección 6).
 - **Win Clause:**
   - Gana quien venza al Campeón sin perder todas las vidas y sin perder ningún combate (6 Pokémon debilitados).
   - Empate (los dos ganan o los dos pierden): decide el marcador de los combates entre ellos.
@@ -189,6 +192,7 @@ Estas son las reglas que usaban en Platino. La idea es mantenerlas lo más parec
 | Primera captura por ruta + dupes + sin legendarios + shiny libre + caja de prohibidos | El juego bloquea lanzar Balls cuando no se puede capturar; los regalos repetidos/legendarios van a la caja de prohibidos | Medio | **Hecho** |
 | Victoria, combates en Showdown, capturas extra | Fuera del juego, por honor | — | — |
 | No farmear | Por honor | — | — |
+| Regla de la Liga (RESTAURAR TODO solo si el rival cura, curar entre combates) | Tienda en la Liga, contador en combate y cura al pasar de sala | Medio | **Hecho** (Miguel, 22/11/2026) |
 
 ## 5. Curva de niveles y level caps
 
@@ -343,6 +347,22 @@ Regla de compra: una unidad de cada objeto por tienda, salvo Balls, Repelentes, 
 - Lo comprado se guarda en 6 variables (`VAR_DUALOCKE_COMPRAS_0`-`5`, 0x4083-0x40A1), un bit por pareja.
 - Código: `src/dualocke_compras.c` y tres enganches en `src/shop.c` (al elegir, en la cantidad y al pagar).
 
+**Regla de la Liga dentro del juego (hecho, Miguel, 22/11/2026):** la regla que contó Jorge (sección 4).
+
+- **Tienda de la Liga** (`EverGrandeCity_PokemonLeague_1F`): vende **RESTAURAR TODO** a su precio normal (3000 ₽) y **sin límite**: es la única excepción a "una compra por objeto" (`EXENTOS_TIENDA` en `compras_limitadas.py`; la tabla de compras no cambia, así que las partidas guardadas siguen bien). Antes de abrirla, el dependiente recuerda la regla.
+- **En combate contra el Alto Mando y el Campeón** (SIXTO, FÁTIMA, NÍVEA, DRACÓN y PLUBIO): un curativo de la mochila solo se puede usar si el rival ya ha usado uno, y como mucho tantos como él. Si no, sale "Regla de la Liga: no puedes curar más veces que el rival." y no se gasta.
+  - Cuentan todos los curativos: PS, estados, PP y la Flauta (el rival solo lleva RESTAURAR TODO). Los Objetos X y Revivir ya estaban prohibidos.
+  - Los dos contadores empiezan a 0 en cada combate. Se suma al usarse, no al elegirlo.
+- **Cura entre combates:** al entrar en cada sala del Alto Mando y en la del Campeón, el equipo se cura entero, con la música del Centro Pokémon y el mensaje "Regla de la Liga: ¡tu equipo se ha recuperado por completo!".
+- Código:
+  - `src/dualocke_liga.c` (contadores y qué combate es de la Liga);
+  - `CannotUseItemsInBattle` en `src/item_use.c` (no deja usar el curativo);
+  - `HandleAction_UseItem` en `src/battle_util.c` (cuenta los curativos);
+  - `ItemUseCB_BattleScript` y `TryUseItemOnMove` en `src/party_menu.c` enseñan el motivo que deja `CannotUseItemsInBattle` en `gStringVar4`. Antes ponían siempre "No tendrá ningún efecto", así que el mensaje de la regla no salía nunca: los curativos se eligen sobre un Pokémon del equipo (lo vio Jorge con el bot, 22/11/2026).
+- **Probado en el emulador** (Jorge, con el bot y la ROM release, 22/11/2026): la tienda (el aviso y dos compras seguidas de RESTAURAR TODO, cobradas enteras); la cura al entrar en la sala de SIXTO (con PS bajados a mano); que no deja curar antes que el rival (con el mensaje de la regla); que deja cuando el rival ha curado una vez y vuelve a bloquear la segunda; y que se cuentan los del rival (SIXTO usó 2 en un combate entero).
+  - `Dualocke_OnBattleStart` en `src/dualocke.c` (pone los contadores a 0);
+  - `data/scripts/dualocke_liga.inc` (cura y textos), llamado desde `data/scripts/elite_four.inc` y la sala del Campeón.
+
 **Contenido del dependiente principal (hecho, Miguel, 23/10/2026):**
 
 - **Básicos en todas las tiendas:** Poké Ball, Super Ball (desde 1 medalla), Ultra Ball (5), Repelente, Superrepelente (2), Máximo Repelente (5), Cuerda Huida y Caramelo Raro.
@@ -413,6 +433,24 @@ Miguel: "interfaces más chulas, actualizadas". Son cosas que la expansion ya tr
 - **No se puede huir de un entrenador** (`B_RUN_TRAINER_BATTLE` = `FALSE`). Estaba activado, y huir cuenta como perder el combate (`B_OUTCOME_FORFEITED`), o sea, perder el locke. Así no pasa por error.
 - **Siguen apagados:** el Pokémon que te sigue (idea 6) y el DexNav, que piden más trabajo.
 
+### Mochila más grande (hecho, Jorge, 20/11/2026; lo pidió Miguel). **Rompe las partidas guardadas**
+
+- **Por qué:** salen unos 370 objetos distintos del bolsillo OBJETOS y cabían 30; 37 objetos clave para 30 casillas (si se llena, no se puede recibir uno); 28 tipos de Poké Ball para 16; 68 bayas para 46.
+- **Casillas:** OBJETOS 150 (antes 30), OBJ. CLAVE 50 (30), POKé BALLS 30 (16), BAYAS 70 (46), MEDICINAS 70 (60). MT Y MO (64) y MEGAPIEDRAS (130) igual. `include/constants/global.h`.
+- **OBJETOS pasa a `SaveBlock3`** (`bagItems`), con MEDICINAS y MEGAPIEDRAS: con 150 casillas no cabe en `SaveBlock1`. Los demás siguen en `struct Bag` (`SaveBlock1`).
+- **Espacio que queda:** `SaveBlock1` 192 bytes, `SaveBlock2` 72, `SaveBlock3` 220.
+- Se mueve todo lo que va detrás en la partida guardada: **hace falta empezar partida nueva.** Va con el nombre largo y los entrenadores nuevos, para el locke de verdad (Miguel, #112).
+- Tests en `test/dualocke.c` ("la mochila tiene los bolsillos más grandes").
+
+### Nombre del jugador de hasta 10 letras (hecho, Jorge, 20/11/2026; idea 8 de `IDEAS.md`)
+
+- **Por qué:** "JORGEMORI" (9 letras) no cabía en las 7 de siempre.
+- **Cómo:** el nombre entero se guarda aparte, al final de `SaveBlock2` (`playerNameLong`, `PLAYER_NAME_LENGTH_LONG` = 10). `playerName` se queda con las 7 primeras letras para todo lo que guarda el nombre con tamaño fijo: el EO de cada Pokémon (no caben más letras sin cambiar el tamaño de todos los Pokémon guardados), bases secretas, programas de la tele, juegos por cable… Así no cambia el tamaño de nada.
+- **La pantalla de nombres** escribe en `playerNameLong` (hasta 10) y al salir `Dualocke_GuardarNombreJugador` copia las 7 primeras a `playerName` (`src/naming_screen.c`).
+- **Dónde se ve entero** (`Dualocke_NombreJugador`, en `src/dualocke.c`): diálogos (`{PLAYER}`), combates, menú de pausa (ahora 2 casillas más ancho), ficha de entrenador, menú de guardar, menú de continuar, Salón de la Fama, Pokédex y el EO en los datos de tus Pokémon.
+- **Partidas de antes:** `playerNameLong` está a cero y se usa `playerName`. El nombre largo no rompe nada por sí solo; lo que obliga a empezar de nuevo es la mochila.
+- Probado en el emulador con "JORGEMORI" (la ROM de pruebas ya empieza con ese nombre). Tests en `test/dualocke.c`.
+
 ### Mochila: bolsillos Medicinas y Megapiedras (hecho, Jorge, 26/10/2026)
 
 Lo pidió Jorge al probar: las megapiedras y las pociones se mezclaban con todo en Objetos.
@@ -446,6 +484,7 @@ ISLA SUR, ISLA LEJANA, ISLA ORIGEN y ROCA OMBLIGO ya existían, pero solo con un
   - Pokémon Paradoja también en la ISLA ARENOSA (Sandy Shocks) y la PLAYA VOLCÁNICA (Slither Wing). **No son legendarios para el locke:** la regla de legendarios solo mira los restringidos, los singulares y los míticos.
   - Dondozo y Tatsugiri, en la cala de la MARISMA AZULIZA (con SURF).
   - Hydreigon, en el BOSQUE SINIESTRO, y Dragalge, en la CIÉNAGA TÓXICA.
+  - Aggron, en la CANTERA; Gardevoir, en el PRADO DE HADAS, y Haxorus, en el VALLE DEL DRAGÓN (21/11/2026).
   - Con semilla salen otros, como siempre (`islas()` de `estaticos.py`): ahí se sortean por especie, así que dos guardianes de la misma especie sin semilla tendrían el mismo con semilla.
 
 - **Sin legendarios (Miguel):** "sustituirlos por Pokémon fuertes (pseudos, Pokémon con mega o Gigamax) capturables y que den recompensa".
@@ -528,6 +567,56 @@ El segundo bioma "por tipo" (sitio D del mapa de propuestas). El tipo **Veneno**
 - **Objetos** (con semilla, al azar): Flecha Venenosa, Bulbo, Tabla Tóxica oculta en el islote y un Ticket-Recuerdo. Flags sueltos: 0x054, 0x055, 0x479 (el oculto necesita uno de 0x1F4 en adelante) y 0x1AA.
 - `autotile.py` ya no aprende de la ciénaga como si fuera un mapa original: "Cienaga" está en la lista de zonas nuevas (`NUEVOS`).
 
+### CANTERA (hecho, Miguel, 21/11/2026; falta probarlo)
+
+Idea de Miguel jugando (18/11/2026): "una Cantera de tipo Acero en la RUTA 116, por la salida del Túnel Fervergal". El bioma del tipo Acero (`PLAN.md`, propuesta B). Todo lo hace `tools/dualocke/crear_cantera.py`.
+
+- **Entrada:** una boca de cueva nueva en la RUTA 116, en la misma pared que la salida este del TÚNEL FERVERGAL: la del túnel está en (65, 10) y la de la cantera en (67, 10), con el mismo dibujo. Puerta a altura 0. No se quita ninguna base secreta.
+  - A esa parte de la ruta se llega cruzando el túnel, con GOLPE ROCA: **tramo 3**, como la CIÉNAGA TÓXICA.
+- **La cantera** (40 × 30, gráficos de la RUTA 116):
+  - arriba, la pared de roca con la boca de la cueva (relleno de montaña y una cara de dos filas, con los valores de la RUTA 116);
+  - tres terrazas separadas por riscos, cada uno con su escalera (`autotile.py`);
+  - suelo de tierra, manchas de hierba alta (los salvajes), seis rocas de GOLPE ROCA (vuelven al salir) y árboles a los lados y abajo.
+- **Guardián:** Aggron (Miguel, 21/11/2026), en el fondo. Premio, Tabla Acero. `FLAG_DUALOCKE_GUARDIAN_CANTERA` (0x4FF).
+- **Una persona que trabaja en la cantera,** junto a la entrada. No hay entrenadores: no queda ninguno libre.
+- **Zona de captura propia:** `MAPSEC_CANTERA` (119 de 128).
+- **Salvajes** (tramo 3, a medio evolucionar): Aron, Nosepass, Graveler, Carkol, Magneton, Klink, Ferroseed, Pawniard, Drilbur, Cufant y, raros, Tinkatuff y Honedge.
+- **Objetos:** Piedra Dura (0x068), Revestimiento Metálico (0x0E9), Bola Férrea oculta (0x2D9) y un Ticket-Recuerdo (0x1DA). Flags sueltos: un grupo de `colocar_objetos.py` por flag.
+
+### PRADO DE HADAS (hecho, Miguel, 21/11/2026; falta probarlo)
+
+El bioma del tipo Hada (`PLAN.md`, propuesta C). Miguel lo quería "en la ruta de antes del Instituto Meteorológico, al lado de la zona de vallas, de jardín". Todo lo hace `tools/dualocke/crear_prado_hadas.py`.
+
+- **Entrada:** junto al INSTITUTO METEOROLÓGICO, por el oeste. Se cortan los árboles del borde izquierdo de la RUTA 119 en las filas 33-34: la fila 32 pasa a ser pie de árbol y las 33-34, hierba (en (2, 32) está el instituto). El prado va a la izquierda de la ruta (su fila 0 es la -1 de la ruta) y se cruza sin pantalla de carga: **tramo 6**.
+  - **Altura de la entrada (22/11/2026):** la hierba de la ruta está a altura 4 y la del prado a 3, y el juego no deja pasar de una a otra: no se entraba (lo vio el bot de Jorge, #117). Las dos casillas del borde del prado que dan a la entrada van a altura 0, la de paso, desde la que se puede ir a las dos. `comprobar_zonas.py` mira ahora la altura a los dos lados de las conexiones de las zonas nuevas.
+  - El jardín con vallas del lago, al norte del instituto, no se alcanza en el tramo 6 (`alcance.py`): por eso la entrada va junto al instituto.
+- **El prado** (40 × 36, gráficos de la RUTA 119): un camino de tierra lleva de la entrada al centro. Alrededor, flores, tres charcas, hierba alta y hierba muy alta (con su borde: los gráficos de ARBORADA lo tienen). Al norte, junto a la charca grande, un claro con un anillo de flores donde espera el guardián.
+  - La columna de la derecha del prado son árboles donde la ruta no se pisa (árboles, y en las filas 23-26 de la ruta, el acantilado de encima del instituto). Las flores nunca van junto a una charca: se perdería su orilla. El script lo comprueba.
+- **Guardián:** Gardevoir (Miguel, 21/11/2026). Premio, Tabla Duende. `FLAG_DUALOCKE_GUARDIAN_PRADO` (0x4E4).
+- **Una florista** junto a la entrada.
+- **Zona de captura propia:** `MAPSEC_PRADO_HADAS` (120 de 128).
+- **Salvajes** (tramo 6): Clefable, Wigglytuff, Granbull, Azumarill, Togetic, Kirlia, Floette, Aromatisse, Slurpuff, Dedenne y, raros, Comfey y Mimikyu. En las charcas (SURF y caña): Marill, Azumarill, Luvdisc, Goldeen, Surskit y Seaking.
+- **Objetos:** Piedra Día y Saquito Fragante (0x8F4-0x8F5), Pluma Feérica oculta (0x8FD) y un Ticket-Recuerdo (0x8FE).
+
+### ISLA DEL DRAGÓN y VALLE DEL DRAGÓN (hecho, Miguel, 21/11/2026; falta probarlo)
+
+El bioma del tipo Dragón (`PLAN.md`, propuesta I). Miguel: "una zona con cascadas o montañas, que le dé un aire épico, dirigida a la última parte del juego"; se llega surfeando desde una ruta del sur. Todo lo hace `tools/dualocke/crear_isla_dragon.py`.
+
+- **Entrada:** surfeando hacia el sur desde el borde de abajo de la RUTA 130 (la isla va de su x 33 a la 72). Se alcanza en el tramo 7-8, como las otras islas del sur; sus niveles son los del **tramo 8**.
+  - **La esquina de la derecha (22/11/2026):** antes la isla iba de la x 40 a la 79. Al pasar de la RUTA 129 a la 130, el juego copia lo que se veía en la 129 (`MoveMapViewToBackup`, `src/fieldmap.c`), y debajo de la 129 no hay nada en esas columnas: la isla quedaba tapada en las x 73-79 y desde ahí no se bajaba (lo vio el bot de Jorge, #117). Ahora acaba en la x 72. `comprobar_zonas.py` avisa si una zona nueva de arriba o de abajo se puede cruzar a menos de 7 columnas de un lado con otro mapa al lado.
+- **ISLA DEL DRAGÓN** (40 × 34, gráficos de la RUTA 134):
+  - una isla de arena con su bajío, tres peñas de la RUTA 127 y rocas en el mar;
+  - en medio, el montículo del PILAR CELESTE con su cueva (como en la ISLA VOLCÁNICA). La cueva mira al sur: se rodea el montículo;
+  - las 8 filas de arriba son mar, que es lo que se ve desde la RUTA 130 (tiene otros gráficos).
+- **VALLE DEL DRAGÓN** (40 × 40): la mitad de abajo de CIUDAD COLOSALIA, la de la gran cascada.
+  - Sin el Centro Pokémon (es hierba corta) ni los carteles; las flores de la izquierda son hierba alta (los salvajes).
+  - Se llega por la cueva de arriba (la de la CALLE VICTORIA), a la meseta con flores. Por las escaleras se baja al lago de arriba y la gran cascada cae al mar; para volver a subir hace falta CASCADA.
+  - Cada cosa va a la altura del suelo en el que está: el valle tiene varias.
+- **Guardián:** Haxorus (Miguel, 21/11/2026), en la meseta, frente a la cascada. Premio, Tabla Draco. `FLAG_DUALOCKE_GUARDIAN_DRAGON` (0x8FF).
+- **Zona de captura propia:** `MAPSEC_ISLA_DRAGON`, las dos partes (121 de 128).
+- **Salvajes** (tramo 8): en la hierba, Flygon, Altaria, Noivern, Tyrantrum, Duraludon, Drampa, Goodra, Kommo-o, Salamence, Garchomp y, raros, Dragapult y Dragonite. En el agua, Dragonair, Seadra, Dragalge, Kingdra y Gyarados; con caña, también Horsea, Dratini y Skrelp.
+- **Objetos:** Escama Dragón (0x905), Colmillo Dragón oculto (0x906) y un Ticket-Recuerdo (0x907).
+
 ### BOSQUE SINIESTRO (hecho, Miguel, 17/11/2026; falta probarlo)
 
 El primer bioma "por tipo". Miguel pidió que cada tipo tenga su bioma; el análisis de los salvajes sin semilla dio que el tipo **Siniestro** no tenía zona propia: solo salía Poochyena por las rutas normales. Era el sitio F del mapa de propuestas (`fotos_zonas/13_propuestas_biomas.png`).
@@ -571,11 +660,11 @@ El primer bioma "por tipo". Miguel pidió que cada tipo tenga su bioma; el anál
   - Cumbre: hielo, aire y dragón (Snorunt, Skarmory, Noibat, Bergmite, Cubchoo, Amaura, Rookidee, Altaria, Cryogonal…; raros, Frigibax y Bagon).
 - **Objetos:** Piedra Dura y un Ticket-Recuerdo en la ladera; Escama Dragón y Roca Helada (oculta) en la cumbre. `OBJETOS_CUMBRE`: flags normales 0x1DE-0x1E1, porque en la zona del sistema ya no quedan libres que no sean diarios. Los de la ladera se pusieron a mano (`colocar_objetos.py` no les encontró sitio).
 
-### PLAYA VOLCÁNICA (hecho, Miguel, 17/11/2026; falta probarlo)
+### PLAYA VOLCÁNICA (hecho, Miguel, 17/11/2026; con ceniza el 20/11/2026; falta probarlo)
 
 - **Dónde:** pegada al borde oeste de la RUTA 122 (la del MONTE PÍRICO). Se llega surfeando, sin pantalla de carga: **tramo 7** (cap 73).
 - **Paso:** la RUTA 122 está rodeada por un anillo de rocas sin huecos. Se quitó la roca de arriba a la izquierda (x 5-6, filas 4-5) y se sale por el noroeste (filas 0-7).
-- **Gráficos de LAVACALDA (General + Lavaridge),** distintos de los de la RUTA 122 (General + Lilycove).
+- **Gráficos de LAVACALDA (General + Lavaridge),** distintos de los de la RUTA 122 (General + Lilycove). Desde el 20/11/2026, una copia de los dos con los verdes en color ceniza (ver "Ceniza", abajo).
   - Una conexión entre mapas con gráficos distintos solo se ve bien si, desde cada lado, lo que se ve del otro mapa son gráficos generales. Lo comprueba `tools/dualocke/crear_playa_volcanica.py`, que hace todo.
   - Se cruza por arriba, donde el borde de la RUTA 122 solo tiene mar y rocas generales.
   - Las 8 columnas del este de la playa son solo mar y rocas generales, y desde la fila 8 una fila de rocas no deja acercarse al borde. Desde ahí se vería la orilla del monte, que es de Algaria.
@@ -586,7 +675,17 @@ El primer bioma "por tipo". Miguel pidió que cada tipo tenga su bioma; el anál
   - **Las termas:** el rincón de las aguas termales de LAVACALDA, con su poza y su arena, bajo el acantilado del volcán.
 - **Bordes (arreglo, 19/11/2026; lo vio Miguel jugando):** el borde del mapa era la roca rosa del MONTE CENIZO y se veía un relleno rosa al acercarse a los bordes, y la arena y el mar se cortaban de golpe arriba y abajo. Ahora el borde es de árboles, como la playa de la RUTA 104. Arriba, el acantilado del volcán sigue sobre la arena y el mar acaba en una fila de rocas; abajo, la playa acaba en árboles y el mar en rocas. Se sigue cruzando a la RUTA 122 por las filas 2-7.
   - Miguel dijo además que "las capturas en el agua rompen el personaje" y que hay "gráficos raros". No se ha podido reproducir: en el emulador se surfeó, se combatió, se huyó y se capturó en el agua de la playa y el personaje se ve bien. Falta que diga dónde le pasó (una foto o el `.sav`).
-  - El tiempo es **sequía** (`WEATHER_DROUGHT`, sol también en combate): aclara mucho los colores del mapa. Si son esos los "gráficos raros", con `WEATHER_SUNNY` se ve normal, pero no hay sol en combate. Lo decide Miguel.
+  - El tiempo era **sequía**, que aclara mucho los colores del mapa. Miguel eligió **sol normal** (`WEATHER_SUNNY`, sin sol en combate; 20/11/2026).
+  - Más tarde (20/11/2026) Miguel concretó que le pasó **al volver de capturar** un Pokémon en el agua.
+- **Ceniza (Miguel, 20/11/2026):** "solo cambiaría la hierba y el césped verde por el de ceniza", como en la RUTA 113. El mapa es el mismo; cambian los colores.
+  - Antes se probó un mapa nuevo con las piezas de ceniza de la RUTA 113 (gráficos de PARDA) y a Miguel no le gustó: prefiere la estructura de antes.
+  - Las piezas de ceniza de PARDA no se pueden mezclar con las termas, el acantilado ni la peña, que son de LAVACALDA. Además, muchas piezas mezclan hierba con otra cosa (bordes del camino, del risco, de las termas…), así que cambiar las piezas una a una dejaría bordes verdes.
+  - **Solución:** la playa usa `gTileset_GeneralCeniza` y `gTileset_LavaridgeCeniza`. Son copias de General y LAVACALDA con los mismos dibujos, piezas, comportamientos y animaciones, pero con otras paletas (`data/tilesets/primary/general_ceniza/` y `data/tilesets/secondary/lavaridge_ceniza/`).
+  - En esas paletas, los cuatro verdes del suelo y la hierba pasan a los cuatro colores de la ceniza de la RUTA 113. Los verdes de las hojas (árboles y flores) no cambian: en la RUTA 113 los árboles también son verdes.
+  - Lo hace `paletas_ceniza()` en `crear_playa_volcanica.py`: escribe las paletas y añade las dos copias a `src/data/tilesets/graphics.h` y `headers.h`.
+  - **La unión con la RUTA 122 no cambia:** desde la playa, la parte de la ruta que se ve se pinta con las paletas de la playa, pero allí solo hay mar y rocas, que no usan ninguno de los colores cambiados (comprobado pieza a pieza).
+  - `ver_mapa.py` y `ver_mundo.py` ahora usan las paletas de cada tileset (`carpetas_paletas()`), para que las fotos salgan con la ceniza.
+  - **Lo que no cambia de color:** las hojitas que salen al pasar por la hierba alta. Son un efecto aparte, con sus propios colores, y siguen verdes.
 - **Guardián** en la arena: sin semilla, Slither Wing a nivel 70 (regla `"tope"`); premio, Energía Potenciadora y su megapiedra si tiene. `FLAG_DUALOCKE_GUARDIAN_PLAYA` (0x917).
 - **Un bañista junto a las termas.** No hay entrenadores: ya no queda ninguno libre.
 - **Zona de captura propia:** `MAPSEC_PLAYA_VOLCANICA` (115 de 128).
@@ -599,18 +698,21 @@ El primer bioma "por tipo". Miguel pidió que cada tipo tenga su bioma; el anál
 
 Tres islas nuevas del **tramo 8** (cap 84), cada una pegada al borde de una ruta de mar. Se llega surfeando, sin pantalla de carga, y usan los gráficos de su ruta (si no, la conexión se vería rota). Todo lo hace `tools/dualocke/crear_islas_sur.py`.
 
-- **Paso abierto en la barrera de rocas (17/11/2026):** el borde de cada ruta por el que se entra a su isla estaba fuera de la barrera de rocas del mar, y no se llegaba (lo vio Jorge con `alcance.py`, #99). Se quita una roca suelta de 2 × 2 de la barrera en cada ruta: RUTA 129 (46, 24), RUTA 131 (7, 12) y RUTA 134 (9, 21). Es la que deja el paso más corto sin pasar por corrientes y lejos de las conexiones de los lados (`PASOS` y `quitar_rocas()` en `crear_islas_sur.py`). Con `alcance.py`, las tres islas se alcanzan surfeando.
+- **Cambios del 21/11/2026 (Miguel, quinta prueba):** la ISLA DE RUINAS pasa al sur de la RUTA 129 (encima de la 131 no se llegaba) y la ISLA VOLCÁNICA se deja de pegar a la RUTA 134: se va en barca desde PORTUAL. Ver cada una.
+- **Paso abierto en la barrera de rocas (17/11/2026):** el borde de cada ruta por el que se entra a su isla estaba fuera de la barrera de rocas del mar, y no se llegaba (lo vio Jorge con `alcance.py`, #99). Se quita una roca suelta de 2 × 2 de la barrera en cada ruta: RUTA 129 (46, 24), RUTA 131 (7, 12) y RUTA 134 (9, 21). **Desde el 21/11/2026** la de la RUTA 134 vuelve a su sitio (la isla ya no está ahí). La de la RUTA 131 se queda: por ese hueco se llega también a la parte norte de las RUTAS 128-131. Es la que deja el paso más corto sin pasar por corrientes y lejos de las conexiones de los lados (`PASOS` y `quitar_rocas()` en `crear_islas_sur.py`). Con `alcance.py`, las tres islas se alcanzan surfeando.
 - **Sitios elegidos mirando las corrientes:**
   - Las RUTAS 132-134 tienen sus bordes cerrados por rocas, y sus corrientes solo empujan al oeste: no se llega a los huecos.
   - El borde este de la RUTA 127 es una pared de roca.
   - Por eso dos islas no están donde decía ZONAS.md (ver cada una).
 - **Los islotes se copian con `isla()`:** solo las casillas que no son mar y están unidas al islote. Así no se cuelan rocas sueltas, corrientes ni trozos de otras islas.
 - **Rehechas el 17/11/2026 con `autotile.py`** (ver "Dibujar mapas como los del juego"). Antes eran trozos de islotes copiados tal cual: la arena de la ISLA DE RUINAS acababa cortada en recto contra el mar, la ISLA VOLCÁNICA era un montículo pegado sobre un bajío cuadrado y la ISLA ARENOSA eran tres islotes de la RUTA 127.
-- **ISLA DE RUINAS**, al norte de la RUTA 131 (en ZONAS.md, al sur de la RUTA 132), junto al PILAR CELESTE:
-  - El islote del PILAR CELESTE con su torre, con niebla (Campo de Niebla en combate). Abajo, la franja de arena acaba en una playa (antes se cortaba en recto) y hay rocas en el mar.
-  - El rellano de la torre está rodeado de acantilados: la cueva de la orilla de abajo es un túnel que sale por la cueva del montículo.
-  - La puerta de la torre, abierta, lleva a la **TORRE**: la planta 1 del PILAR CELESTE, sin la escalera, con el guardián delante.
-- **ISLA VOLCÁNICA**, al sur de la RUTA 134, donde el mar no tiene corriente (se llega desde PORTUAL):
+- **ISLA DE RUINAS**, al sur de la RUTA 129, desde su x 20 (hasta el 21/11/2026 estaba al norte de la RUTA 131, junto al PILAR CELESTE, y sus corrientes no dejaban llegar; Miguel no pudo entrar):
+  - **Por qué ahí:** todo el borde de abajo de la RUTA 129 es mar abierto y se alcanza en el tramo 8. Encima de la RUTA 130 aparece la ISLA ESPEJISMO (otros gráficos: desde la isla se vería rota), y a la izquierda de la RUTA 128 no se llega (solo se llegaba a través de la isla vieja, que hacía de puente sin querer).
+  - **Un templo en ruinas:** el islote del PILAR CELESTE con su torre, con niebla (Campo de Niebla en combate). Se ve desde la ruta y se rodea surfeando hasta una **playa grande** en su cara sur (8 filas de mar arriba dejan sitio para rodearla).
+  - De la playa sube una **escalinata de piedra** (antes, una cueva escondida que llevaba al montículo) a un **patio enlosado** con columnas de piedra, donde estaba el montículo; al fondo, la torre.
+  - La puerta de la torre, abierta, lleva a la **TORRE**: la planta 1 del PILAR CELESTE, sin la escalera, con el guardián delante. La puerta va **sin colisión** (22/11/2026): es una puerta sin animación, que se cruza al pisarla, y con colisión no se entraba (lo vio el bot de Jorge, #116). `comprobar_zonas.py` lo mira ahora en todos los mapas.
+- **ISLA VOLCÁNICA**, al sur de la RUTA 134. **Desde el 21/11/2026 se va en barca desde PORTUAL** (Miguel): ya no está pegada a la ruta, porque así se veía mal el borde de PORTUAL (el puerto aparecía y desaparecía) y se entraba desde toda la ruta.
+  - Un marinero al final del muelle de abajo de PORTUAL (37, 40), encima del otro marinero, lleva a la isla desde la 7.ª medalla (el tramo de la isla); antes dice que el mar está muy bravo. En la playa de abajo de la isla, junto a la barca, el mismo marinero trae de vuelta. `alcance.py` conoce el viaje (`VIAJES`), y desde el 22/11/2026 solo lo da por bueno si se llega a la casilla desde la que se habla al marinero. Antes estaba en (38, 34), en la punta de un trozo de muelle que no está unido a la ciudad: no se llegaba (lo vio el bot de Jorge, #116).
   - Una isla de arena con su anillo de bajío, tres peñas de la RUTA 127, rocas en el mar y, en medio, el montículo del PILAR CELESTE (con la cima de una peña: la suya tenía la sombra de la torre). Sol.
   - Su cueva baja al **CRÁTER**: la cima del MONTE CENIZO (lago de lava y terrazas, sin la estación del teleférico). Tiene manchas de ceniza con salvajes y una salida nueva: la entrada de la GUARIDA MAGMA del CAMINO ESCABROSO, puesta en un escalón.
 - **ISLA ARENOSA**, al este de la RUTA 129 (en ZONAS.md, al este de la RUTA 127):
@@ -695,9 +797,15 @@ Tres islas nuevas del **tramo 8** (cap 84), cada una pegada al borde de una ruta
 - **DESIERTO PROFUNDO** (24 × 68): el desierto de la RUTA 111 sin la TORRE ESPEJISMO ni los huecos de base secreta, con **tormenta de arena** (también en combate).
   - Abajo está la salida.
   - En el norte, otro montículo lleva a las ruinas.
+  - **Rehecho el 21/11/2026 (Miguel: era el mismo dibujo que el desierto y se avanzaba igual): dunas y arenas movedizas.**
+    - Todo es arena clara, y una fila de peñas corta el paso al norte: a las ruinas no se llega andando.
+    - Hay cuatro **arenas movedizas**, los únicos hoyos de arena honda (3 × 3): al pisar el centro, "¡La arena se hunde! ¡Es arena movediza!" y caes a la **CUEVA** de abajo, cada una a una sala.
+    - La **CUEVA** (`DesiertoProfundo_Cueva`, 40 × 23) es un trozo del PASO DESIERTO (la cueva de arena del juego) partido en tres salas con rocas. Las otras dos salas tienen una escalera que devuelve a la entrada del desierto. La sala buena tiene dos: una sale al norte, por la puerta de un montículo junto a las ruinas, y la otra vuelve a la entrada. El script comprueba que las salas no se tocan.
+    - **Vuelta del norte (22/11/2026; lo vio el bot de Jorge, #116):** antes la escalera buena te dejaba en la arena del norte y no se podía volver a bajar. Sin VUELO (tramo 5) era una trampa. Ahora en el norte se sale por la puerta de un montículo (`MONTICULO_NORTE`, puerta en (6, 16)), que es de ida y vuelta con la escalera buena, y la sala buena tiene una segunda escalera, en (33, 14), a la entrada.
+    - SOLEDAD da la pista después del combate. `alcance.py` conoce la caída (`VIAJES`).
 - **RUINAS ARENOSAS:** las cuatro plantas de la TORRE ESPEJISMO (17/11/2026; antes eran dos).
   - **Entrada:** un pasillo alrededor de un bloque central.
-  - **Plantas 2 y 3:** suelo agrietado, igual que en la torre: si se rompe, caes a la planta de abajo (`setholewarp`). En la 3, dos rocas de GOLPE ROCA.
+  - **Plantas 2 y 3: interruptores** (desde el 21/11/2026, Miguel; antes, suelo agrietado como en la torre). Dos puertas de piedra cierran el paso a la escalera siguiente por los dos lados del pasillo, y el interruptor (una losa morada en el suelo) está en la otra punta: hay que dar la vuelta. Al pisarlo, "¡Clac! Algo de piedra se ha movido en esta planta", y las puertas se abren y se quedan abiertas (`FLAG_DUALOCKE_RUINAS_2F_ABIERTA` 0x913 y `FLAG_DUALOCKE_RUINAS_3F_ABIERTA` 0x91B). Ya no hay suelo agrietado ni rocas de GOLPE ROCA.
   - **CÁMARA:** arriba del todo.
   - **Guardián:** en la CÁMARA hay un Pokémon fuerte que se puede capturar, como en las islas del ferry (`dualocke_islas.inc`). Sin semilla es Garchomp a nivel 47 (cap − 3, regla `"tope"`); con semilla, otro fuerte (`islas()` en `estaticos.py`).
   - **Premio:** Cascabel Concha y su megapiedra si tiene. Flag `FLAG_DUALOCKE_GUARDIAN_RUINAS` (0x886).
@@ -1136,10 +1244,13 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
 
 ### Pendiente para el próximo locke
 
+- **Fallos de la partida completa de Claude (22/11/2026)**, ver `registro/2026-11-22-jorge-bot-partida-completa.md`: Toxtricity Grave se vuelve Aguda al acabar cada combate (tabla de cambio de forma equivocada en `gen_8_families.h`), Balls delante de puertas (Museo Oceánico 2F, Ruta 122) y junto a entrenadores en la Calle Victoria, y textos en inglés (VEL. TEXTO pegado, TRAINER CARD/BADGES/MONEY, POKéNAV, SUMMARY/SWITCH/ITEM, PKMN DATA/PARTY POKéMON/CLOSE BOX). Recomendación para el randomizer: asegurar ataques de su tipo en los movimientos por nivel.
 - **Estadísticas mal leídas en el randomizer: ARREGLADO (Jorge, 11/11/2026).** `aleatorio/especies.py` cogía el primer número de las estadísticas que dependen de la generación (ya preprocesadas son, por ejemplo, `8 >= 1 ? 60 : 50`). Salían mal 189 estadísticas de unas 90 especies: Machoke con 8 de Def. Esp., a Charizard le faltaba el At. Esp… Ahora se evalúa la expresión con `evaluar`, que se ha movido de `guia_pokedex.py` a `aleatorio/especies.py` para que la usen los dos. Solo afecta a los jefes (tope y estrategia de los líderes, objetos): con la semilla de Jorge cambian 52 (líderes, rivales y BLASCO, sobre todo especies y movimientos); los salvajes, las habilidades, los iniciales y el resto de entrenadores salen igual. Se metió con las partidas ya empezadas: los jefes que aún no has visto simplemente salen distintos.
 
 ### Pendiente de decidir
 
+- ~~**Regla de la Liga**: ¿se mete dentro del juego?~~ **Decidido (Miguel, 22/11/2026): sí, entera.** Ver "Regla de la Liga dentro del juego" (sección 6).
+- **Recomendaciones del bot (#118), contestadas por Miguel el 22/11/2026:** los movimientos del randomizer se quedan totalmente al azar; los salvajes de la CALLE VICTORIA, a nivel 87; y los jefes de mitad de juego no se tocan hasta que los pruebe una persona.
 - ¿Se consigue la **ROM de Esmeralda española** para los diálogos oficiales?
 
 ### Orden de trabajo propuesto
@@ -1185,6 +1296,7 @@ Quién hace cada cosa y cómo se sube: sección 13.
 | Recuerdamovimientos de los Centros Pokémon | `data/scripts/dualocke_recuerda_movimientos.inc` |
 | Guía para jugar (walkthrough, caps, pistas de objetos, Pokédex, novedades) | `GUIA.html` (pistas: `tools/dualocke/guia.py`; fotos de las pistas: `tools/dualocke/emulador/fotos_guia.py`; Pokédex: `tools/dualocke/guia_pokedex.py`) |
 | Emulador sin pantalla y ROM de pruebas (`make DUALOCKE_PRUEBA=1`) | `tools/dualocke/emulador/`, `src/dualocke_prueba.c`, `include/dualocke_prueba.h`; ganchos con `#ifdef DUALOCKE_PRUEBA` en `main_menu.c`, `new_game.c`, `overworld.c`, `field_weather_effect.c` y `trainer_see.c` |
+| Bot que se pasa el juego con la ROM normal | `tools/dualocke/bot/` (`piloto.py`; ver su `README.md`) |
 | Evolución por nivel de los entrenadores normales | `tools/dualocke/evolucionar_entrenadores.py` |
 | Entrenadores | `src/data/trainers.party` |
 | Tiendas | scripts de cada mapa en `data/maps/*/scripts.inc` (`pokemart`) |

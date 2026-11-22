@@ -16,8 +16,16 @@ del mar de la RUTA 122.
 - **Risco:** una franja de roca separa la playa (abajo) de la meseta (arriba), con una escalera. En el
   juego la arena de playa nunca toca la hierba: siempre hay un risco o agua entre las dos.
 - **Meseta:** pradera con hierba alta, árboles, un camino de tierra hasta las termas, la peña volcánica y,
-  arriba, el acantilado del volcán. Sol (sol en combate).
+  arriba, el acantilado del volcán. Sol normal (sin sol en combate; Miguel, 20/11/2026).
 - **Guardián** en la playa y un bañista en las termas. **Tramo 7.**
+
+**La ceniza (Miguel, 20/11/2026).** Miguel quería la misma playa, pero con la hierba y el césped de ceniza,
+como la RUTA 113. Las piezas de ceniza de la RUTA 113 son de otros gráficos (PARDA), y con ellos no estarían
+las termas, el acantilado ni la peña, que son de LAVACALDA. Así que el mapa es el mismo y lo que cambia son
+los **colores**: la playa usa una copia de los gráficos General y LAVACALDA (`gTileset_GeneralCeniza` y
+`gTileset_LavaridgeCeniza`), con los mismos dibujos, piezas y animaciones, pero con los cuatro verdes del suelo
+y la hierba cambiados por los de la ceniza de la RUTA 113 (`VERDES`). Los árboles y las hojas de las flores
+siguen verdes, como en la RUTA 113. `paletas_ceniza()` escribe las paletas y añade los gráficos al código.
 
 **La unión con la RUTA 122** (gráficos General + Algaria; la playa es General + LAVACALDA). Una conexión entre
 mapas de gráficos distintos solo se ve bien si lo que se ve del otro mapa son gráficos generales:
@@ -41,6 +49,14 @@ PLAYA, MAPA, MAPSEC = "PlayaVolcanica", "MAP_PLAYA_VOLCANICA", "MAPSEC_PLAYA_VOL
 ROCA_RUTA122 = (5, 4)                     # la roca (2 × 2) que se quita del anillo de la RUTA 122
 FILAS_CRUCE = 8                           # filas 0-7: por aquí se pasa de un mapa a otro
 BANDA_GENERAL = 8                         # las últimas 8 columnas, solo gráficos generales
+# Los cuatro verdes del suelo y la hierba (de claro a oscuro) y el color de la ceniza de la RUTA 113 que los cambia
+VERDES = {(164, 213, 197): (205, 205, 164), (115, 197, 164): (172, 172, 139),
+          (65, 180, 131): (148, 139, 115), (24, 164, 106): (115, 115, 74)}
+# Gráficos originales -> (su carpeta, nombre de la copia con ceniza, carpeta de la copia)
+CENIZA = {
+    "gTileset_General": ("primary/general", "GeneralCeniza", "primary/general_ceniza"),
+    "gTileset_Lavaridge": ("secondary/lavaridge", "LavaridgeCeniza", "secondary/lavaridge_ceniza"),
+}
 ROCA = (0x175, 0x176, 0x17D, 0x17E)      # roca de mar (general): arriba izq., arriba der., abajo izq., abajo der.
 # L rincón de las termas   K acantilado del volcán   M peña volcánica   X roca de mar (2 × 2)
 # T árbol grande   . hierba   , hierba alta   * flores   c camino de tierra   s arena   b bajío   m mar
@@ -119,6 +135,7 @@ def con_nivel_actual(ruta, texto):
 
 
 LAYOUTS = co.cargar_layouts()
+CR, LF = chr(13), chr(10)
 
 
 def celdas_de(carpeta):
@@ -202,14 +219,66 @@ def crear_layout():
     if f'"{ident}"' not in texto:
         texto = co.insertar_en_lista(texto, "layouts", {
             "id": ident, "name": f"{PLAYA}_Layout", "width": ancho, "height": alto,
-            "primary_tileset": "gTileset_General", "secondary_tileset": "gTileset_Lavaridge",
+            "primary_tileset": "gTileset_GeneralCeniza", "secondary_tileset": "gTileset_LavaridgeCeniza",
             "border_filepath": f"data/layouts/{PLAYA}/border.bin",
             "blockdata_filepath": f"data/layouts/{PLAYA}/map.bin"})
-        json.loads(texto)
-        escribir("data/layouts/layouts.json", texto)
+    else:
+        # Los gráficos con ceniza (20/11/2026): se cambian en la entrada de la playa
+        i = texto.index(f'"{ident}"')
+        j = texto.index("}", i)
+        trozo = re.sub(r'("primary_tileset":\s*")\w+(")', r"\g<1>gTileset_GeneralCeniza\2", texto[i:j])
+        trozo = re.sub(r'("secondary_tileset":\s*")\w+(")', r"\g<1>gTileset_LavaridgeCeniza\2", trozo)
+        texto = texto[:i] + trozo + texto[j:]
+    json.loads(texto)
+    escribir("data/layouts/layouts.json", texto)
     raras = aprendiz.revisar(c, ancho, alto, "gTileset_Lavaridge")
     print(f"Dualocke: PLAYA VOLCÁNICA: parejas de piezas que el juego no usa: {len(raras)}")
     return ident
+
+
+def leer_pal(ruta):
+    lineas = leer(ruta).replace(CR + LF, LF).split(LF)
+    assert lineas[0] == "JASC-PAL" and lineas[2] == "16", ruta
+    return [tuple(int(v) for v in linea.split()) for linea in lineas[3:19]]
+
+
+def paletas_ceniza():
+    """Las paletas de los gráficos con ceniza (copias de las de General y LAVACALDA con los verdes cambiados) y
+    los gráficos en el código: las paletas en src/data/tilesets/graphics.h, después de las de LAVACALDA (las de
+    General están en src/graphics.c), y los gráficos en headers.h, después de los originales. Usan los dibujos,
+    las piezas y las animaciones de los originales."""
+    graficos = leer("src/data/tilesets/graphics.h").replace(CR + LF, LF)
+    cabeceras = leer("src/data/tilesets/headers.h").replace(CR + LF, LF)
+    for original, (origen, nombre, destino) in CENIZA.items():
+        os.makedirs(f"data/tilesets/{destino}/palettes", exist_ok=True)
+        cambiados = 0
+        for n in range(16):
+            colores = leer_pal(f"data/tilesets/{origen}/palettes/{n:02d}.pal")
+            nuevos = [VERDES.get(c, c) for c in colores]
+            cambiados += sum(a != b for a, b in zip(colores, nuevos))
+            escribir(f"data/tilesets/{destino}/palettes/{n:02d}.pal",
+                     "JASC-PAL" + CR + LF + "0100" + CR + LF + "16" + CR + LF
+                     + "".join(f"{r} {g} {b}" + CR + LF for r, g, b in nuevos))
+        print(f"Dualocke: {nombre}: {cambiados} colores verdes pasan a ceniza")
+        paletas = "gTilesetPalettes_" + original[len("gTileset_"):]
+        if f"gTilesetPalettes_{nombre}[]" not in graficos:
+            i = graficos.index("const u16 gTilesetPalettes_Lavaridge[][16] =")
+            j = graficos.index("};" + LF, i) + 3
+            graficos = (graficos[:j] + LF + "// Dualocke: la PLAYA VOLCÁNICA con ceniza (crear_playa_volcanica.py)" + LF
+                        + f"const u16 gTilesetPalettes_{nombre}[][16] =" + LF + "{" + LF
+                        + "".join(f'    INCGFX_U16("data/tilesets/{destino}/palettes/{n:02d}.pal", ".gbapal"),' + LF
+                                  for n in range(16))
+                        + "};" + LF + graficos[j:])
+        if f"gTileset_{nombre} =" not in cabeceras:
+            m = re.search(r"const struct Tileset " + original + r" =\s*\{(.*?)\};\n", cabeceras, re.S)
+            cuerpo = m.group(1).replace(f"= {paletas},", f"= gTilesetPalettes_{nombre},")
+            assert f"gTilesetPalettes_{nombre}" in cuerpo
+            cabeceras = (cabeceras[:m.end()] + LF + f"// Dualocke: {original} con los verdes del suelo y la hierba "
+                         + "de ceniza (la PLAYA VOLCÁNICA, crear_playa_volcanica.py)" + LF
+                         + f"const struct Tileset gTileset_{nombre} =" + LF + "{" + cuerpo + "};" + LF
+                         + cabeceras[m.end():])
+    escribir("src/data/tilesets/graphics.h", graficos)
+    escribir("src/data/tilesets/headers.h", cabeceras)
 
 
 def ruta122():
@@ -251,7 +320,7 @@ def crear_mapa(layout):
          "script": f"{PLAYA}_EventScript_Banista", "flag": "0"}]
     datos = {
         "id": MAPA, "name": PLAYA, "layout": layout, "music": "MUS_ROUTE119", "region": "REGION_HOENN",
-        "region_map_section": MAPSEC, "requires_flash": False, "weather": "WEATHER_DROUGHT",
+        "region_map_section": MAPSEC, "requires_flash": False, "weather": "WEATHER_SUNNY",
         "map_type": "MAP_TYPE_ROUTE", "allow_cycling": True, "allow_escaping": False, "allow_running": True,
         "show_map_name": True, "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
         "connections": [{"map": "MAP_ROUTE122", "offset": 0, "direction": "right"}],
@@ -330,6 +399,7 @@ SCRIPTS = f"""{PLAYA}_MapScripts::
 
 
 def main():
+    paletas_ceniza()
     crear_mapa(crear_layout())
     ruta122()
     print("Dualocke: PLAYA VOLCÁNICA creada")

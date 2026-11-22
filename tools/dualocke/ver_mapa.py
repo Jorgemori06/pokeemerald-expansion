@@ -35,8 +35,27 @@ def carpetas_tilesets():
     return resultado
 
 
+def carpetas_paletas():
+    """{gTileset_X: carpeta de sus paletas}. Casi siempre es la de sus dibujos, pero hay tilesets que usan los
+    dibujos de otro con otras paletas (los de ceniza de la PLAYA VOLCÁNICA, crear_playa_volcanica.py)."""
+    rutas = {}
+    for fuente in ('src/data/tilesets/graphics.h', 'src/graphics.c'):
+        with open(fuente, encoding='utf-8') as f:
+            for nombre, primera in re.findall(r'(gTilesetPalettes_\w+)\[\]\[16\]\s*=\s*\{\s*INCGFX_U16\("([^"]+)"', f.read()):
+                rutas[nombre] = os.path.dirname(primera)
+    with open('src/data/tilesets/headers.h', encoding='utf-8') as f:
+        cabeceras = f.read()
+    resultado = {}
+    for nombre, cuerpo in re.findall(r'const struct Tileset (gTileset_\w+)\s*=\s*\{(.*?)\};', cabeceras, re.S):
+        pal = re.search(r'\.palettes\s*=\s*(gTilesetPalettes_\w+)', cuerpo)
+        if pal and pal.group(1) in rutas:
+            resultado[nombre] = rutas[pal.group(1)]
+    return resultado
+
+
 class Tileset:
-    def __init__(self, carpeta):
+    def __init__(self, carpeta, paletas=None):
+        """paletas: la carpeta de las paletas, si no es carpeta/palettes (ver carpetas_paletas())."""
         self.carpeta = carpeta
         img = Image.open(os.path.join(carpeta, 'tiles.png'))
         assert img.mode == 'P', (carpeta, img.mode)
@@ -48,7 +67,7 @@ class Tileset:
         self.metatiles = struct.unpack(f'<{len(datos) // 2}H', datos)
         self.paletas = {}
         for n in range(16):
-            ruta = os.path.join(carpeta, 'palettes', f'{n:02d}.pal')
+            ruta = os.path.join(paletas or os.path.join(carpeta, 'palettes'), f'{n:02d}.pal')
             if os.path.exists(ruta):
                 lineas = open(ruta).read().split('\n')
                 self.paletas[n] = [tuple(int(v) for v in l.split()) for l in lineas[3:19] if l.strip()]
@@ -68,7 +87,8 @@ def dibujar(carpeta_mapa, salida, escala=1, rejilla=False, eventos=False):
     w, h = l['width'], l['height']
     celdas = struct.unpack(f'<{w * h}H', open(l['blockdata_filepath'], 'rb').read())
     carpetas = carpetas_tilesets()
-    prim, sec = Tileset(carpetas[l['primary_tileset']]), Tileset(carpetas[l['secondary_tileset']])
+    paletas = carpetas_paletas()
+    prim, sec = (Tileset(carpetas[l[k]], paletas.get(l[k])) for k in ('primary_tileset', 'secondary_tileset'))
 
     def paleta(n):
         ts = prim if n < PALETAS_PRIMARIO else sec

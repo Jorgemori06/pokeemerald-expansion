@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke.h"
 #include "bg.h"
 #include "blit.h"
 #include "decompress.h"
@@ -393,7 +394,9 @@ void DisplayYesNoMenuWithDefault(u8 initialCursorPos)
 u8 AddStartMenuWindow(u8 numActions)
 {
     if (sStartMenuWindowId == WINDOW_NONE)
-        sStartMenuWindowId = AddWindowParameterized(0, 22, 1, 7, (numActions * 2) + 2, 15, 0x139);
+        // Dualocke: 2 casillas más de ancho (9 en vez de 7), para que quepa el nombre largo del jugador (hasta 10
+        // letras). Sigue acabando antes de 0x200, donde empiezan los gráficos de los marcos.
+        sStartMenuWindowId = AddWindowParameterized(0, 20, 1, 9, (numActions * 2) + 2, 15, 0x139);
     return sStartMenuWindowId;
 }
 
@@ -1838,7 +1841,7 @@ void BufferSaveMenuText(u8 textId, u8 *dest, u8 color)
     switch (textId)
     {
     case SAVE_MENU_NAME:
-        StringCopy(string, gSaveBlock2Ptr->playerName);
+        StringCopy(string, Dualocke_NombreJugador()); // Dualocke: el nombre entero
         break;
     case SAVE_MENU_CAUGHT:
         if (IsNationalPokedexEnabled())

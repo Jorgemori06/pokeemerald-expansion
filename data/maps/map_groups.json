@@ -143,7 +143,11 @@
     "CumbreMeteoro_Ladera",
     "CumbreMeteoro",
     "BosqueSiniestro",
-    "CienagaToxica"
+    "CienagaToxica",
+    "Cantera",
+    "PradoHadas",
+    "IslaDragon",
+    "IslaDragon_Valle"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -493,7 +497,8 @@
     "MansionOlvidada",
     "MansionOlvidada_Desvan",
     "IslaDeRuinas_Torre",
-    "IslaVolcanica_Crater"
+    "IslaVolcanica_Crater",
+    "DesiertoProfundo_Cueva"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",

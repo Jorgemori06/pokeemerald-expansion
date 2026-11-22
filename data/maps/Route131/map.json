@@ -23,11 +23,6 @@
       "map": "MAP_ROUTE130",
       "offset": 0,
       "direction": "right"
-    },
-    {
-      "map": "MAP_ISLA_DE_RUINAS",
-      "offset": 15,
-      "direction": "up"
     }
   ],
   "object_events": [

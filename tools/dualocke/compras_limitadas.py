@@ -7,7 +7,8 @@ Uso (desde la raíz del repo), cada vez que cambien las listas de las tiendas:
 
 Lee las listas `pokemart` de los mapas de Hoenn y escribe src/data/dualocke_compras.h con
 cada pareja (mapa de la tienda, objeto) que solo se puede comprar una vez. Las Balls, los
-Repelentes, las Bayas, los Caramelos Raros y la Cuerda Huida se pueden comprar sin límite.
+Repelentes, las Bayas, los Caramelos Raros y la Cuerda Huida se pueden comprar sin límite, y los
+RESTAURAR TODO de la Liga también (regla de la Liga, 22/11/2026: EXENTOS_TIENDA).
 Cada pareja ocupa un bit de las variables VAR_DUALOCKE_COMPRAS_* (include/constants/vars.h).
 """
 
@@ -18,6 +19,8 @@ import re
 
 SALIDA = "src/data/dualocke_compras.h"
 EXENTOS = re.compile(r"_BALL$|REPEL$|^RARE_CANDY$|_BERRY$|^ESCAPE_ROPE$")
+# Objetos sin límite en una tienda concreta: (mapa de la tienda, objeto)
+EXENTOS_TIENDA = {("MAP_EVER_GRANDE_CITY_POKEMON_LEAGUE_1F", "FULL_RESTORE")}   # regla de la Liga
 
 
 def main():
@@ -39,7 +42,7 @@ def main():
             for objeto in re.findall(r"ITEM_(\w+)", lista.group(1)):
                 if not EXENTOS.search(objeto) and objeto not in objetos:
                     objetos.append(objeto)
-        parejas += [(mapa, objeto) for objeto in objetos]
+        parejas += [(mapa, objeto) for objeto in objetos if (mapa, objeto) not in EXENTOS_TIENDA]
 
     lineas = [
         "// Generado por tools/dualocke/compras_limitadas.py: no editar a mano.",

@@ -3,6 +3,7 @@
 #include "battle_anim.h"
 #include "battle_anim_scripts.h"
 #include "battle_arena.h"
+#include "dualocke_liga.h"
 #include "battle_environment.h"
 #include "battle_pyramid.h"
 #include "battle_util.h"
@@ -635,6 +636,7 @@ void HandleAction_UseItem(void)
     ClearVariousBattlerFlags(gBattlerAttacker);
 
     gLastUsedItem = gBattleResources->bufferB[gBattlerAttacker][1] | (gBattleResources->bufferB[gBattlerAttacker][2] << 8);
+    Dualocke_LigaObjetoUsado(gBattlerAttacker, gLastUsedItem); // Dualocke: regla de la Liga (cuenta los curativos)
     if (X_ITEM_FRIENDSHIP_INCREASE > 0
         && GetItemEffectType(gLastUsedItem) == ITEM_EFFECT_X_ITEM
         && !ShouldSkipFriendshipChange())

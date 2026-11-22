@@ -14,7 +14,17 @@
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 3,
+      "y": 11,
+      "elevation": 3,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "RuinasArenosas_2F_EventScript_Interruptor"
+    }
+  ],
   "warp_events": [
     {
       "x": 18,

@@ -41,6 +41,18 @@ const struct Tileset gTileset_General =
     .callback = InitTilesetAnim_General,
 };
 
+// Dualocke: gTileset_General con los verdes del suelo y la hierba de ceniza (la PLAYA VOLCÁNICA, crear_playa_volcanica.py)
+const struct Tileset gTileset_GeneralCeniza =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_General,
+    .palettes = gTilesetPalettes_GeneralCeniza,
+    .metatiles = gMetatiles_General,
+    .metatileAttributes = gMetatileAttributes_General,
+    .callback = InitTilesetAnim_General,
+};
+
 const struct Tileset gTileset_Petalburg =
 {
     .isCompressed = TRUE,
@@ -102,6 +114,18 @@ const struct Tileset gTileset_Lavaridge =
     .isSecondary = TRUE,
     .tiles = gTilesetTiles_Lavaridge,
     .palettes = gTilesetPalettes_Lavaridge,
+    .metatiles = gMetatiles_Lavaridge,
+    .metatileAttributes = gMetatileAttributes_Lavaridge,
+    .callback = InitTilesetAnim_Lavaridge,
+};
+
+// Dualocke: gTileset_Lavaridge con los verdes del suelo y la hierba de ceniza (la PLAYA VOLCÁNICA, crear_playa_volcanica.py)
+const struct Tileset gTileset_LavaridgeCeniza =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Lavaridge,
+    .palettes = gTilesetPalettes_LavaridgeCeniza,
     .metatiles = gMetatiles_Lavaridge,
     .metatileAttributes = gMetatileAttributes_Lavaridge,
     .callback = InitTilesetAnim_Lavaridge,

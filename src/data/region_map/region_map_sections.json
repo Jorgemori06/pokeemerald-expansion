@@ -1690,8 +1690,8 @@
     {
       "id": "MAPSEC_ISLA_DE_RUINAS",
       "name": "ISLA DE RUINAS",
-      "x": 19,
-      "y": 9,
+      "x": 25,
+      "y": 11,
       "width": 1,
       "height": 1
     },
@@ -1740,6 +1740,30 @@
       "name": "CIÉNAGA TÓXICA",
       "x": 6,
       "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_CANTERA",
+      "name": "CANTERA",
+      "x": 4,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_PRADO_HADAS",
+      "name": "PRADO DE HADAS",
+      "x": 10,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_ISLA_DRAGON",
+      "name": "ISLA DEL DRAGÓN",
+      "x": 21,
+      "y": 11,
       "width": 1,
       "height": 1
     }

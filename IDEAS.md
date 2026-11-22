@@ -163,6 +163,7 @@ Una sección por idea, con:
 
 - **Qué:** que quepan nombres más largos. Ahora el nombre del jugador tiene un máximo de 7 letras y "JORGEMORI" (9) no cabe. Para la versión general; en la personalizada (idea 5) el nombre ya vendría puesto.
 - **Propuesta de:** Jorge, 27/10/2026, al empezar el locke (se ha tenido que poner "JORGE").
+- **Miguel está de acuerdo (20/11/2026).** Entra en la próxima partida nueva: la versión 8 es de prueba y el locke de verdad empieza después (`PLAN.md`, sección 0).
 - **Notas (viabilidad, sin planificar):**
   - **Motes de los Pokémon: ya caben 12 letras** (`POKEMON_NAME_LENGTH` = 12 en la expansion; en el Esmeralda original eran 10). Subirlo más es difícil: el mote se guarda dentro de cada Pokémon y cambiaría el tamaño de todos los Pokémon guardados (equipo y cajas). No parece que haga falta.
   - **Nombre del jugador: dificultad media.**
@@ -171,7 +172,7 @@ Una sección por idea, con:
     - Hay que revisar que el nombre largo quepa en los textos (diálogos con `{PLAYER}`, ficha, menú de guardar) y en la pantalla de poner nombre.
     - Las estructuras de los juegos por cable y la mezcla de récords guardan el nombre con tamaño fijo. Como no jugamos por cable, se pueden dejar o recortar al copiar.
   - El nombre del rival (Aura/Bruno) y los de las cajas del PC no hace falta tocarlos.
-- **Estado:** Pendiente (para el siguiente locke).
+- **Estado:** **Hecho (20/11/2026), solo el nombre del jugador:** hasta 10 letras, guardado aparte; el EO de los Pokémon se queda con 7 (ver DUALOCKE.md, "Nombre del jugador de hasta 10 letras").
 
 ### 9. Las formas Gigamax como megaevoluciones
 
@@ -231,6 +232,6 @@ Una sección por idea, con:
 - **Propuesta de:** Jorge, 16/11/2026. Decidido por Jorge el 18/11/2026:
   - **Quién lo da:** amigos nuestros, que elegimos nosotros (nombre y ciudad de cada uno). Va junto con las ideas 4 y 7. Al principio, con un muñeco del juego y su nombre; que se parezcan a ellos, más adelante.
   - **El Pokémon:** a nivel 1 y completamente al azar con la semilla. No gasta la captura de la ruta, y los repetidos y legendarios van a VETADOS, como los demás regalos.
-  - Si Miguel prefiere que se ajuste a cómo va la partida (nivel o fuerza según las medallas), que su Claude se lo pregunte cuando se haga.
+  - **Miguel está de acuerdo (20/11/2026):** nivel 1 y al azar, sin depender de las medallas.
 - **Notas:** se sortea con su propio generador, para no mover el resto del randomizer. Necesita un flag por Centro (o una variable con un bit por ciudad).
 - **Estado:** Pendiente. Falta la lista de amigos y en qué ciudad va cada uno.

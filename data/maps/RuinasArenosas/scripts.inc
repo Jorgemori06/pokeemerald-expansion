@@ -17,3 +17,8 @@ RuinasArenosas_Text_RamiroDefeat:
 RuinasArenosas_Text_RamiroPostBattle:
 	.string "Arriba hay una sala sellada. Algo muy\n"
 	.string "fuerte la guarda desde hace siglos.$"
+
+@ Dualocke: al pisar un interruptor de las plantas 2 y 3 (crear_desierto_profundo.py)
+RuinasArenosas_Text_Interruptor:
+	.string "¡Clac! Algo de piedra se ha movido\n"
+	.string "en esta planta.$"

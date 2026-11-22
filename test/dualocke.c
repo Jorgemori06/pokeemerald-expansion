@@ -11,6 +11,7 @@
 #include "test/test.h"
 #include "naming_screen.h"
 #include "string_util.h"
+#include "constants/characters.h"
 #include "constants/region_map_sections.h"
 #include "constants/trade.h"
 
@@ -839,4 +840,56 @@ TEST("Dualocke: el fósil que se revive da su POKéMON (sin semilla, el original
     VarSet(VAR_WHICH_FOSSIL_REVIVED, 1);
     Dualocke_EspecieFosil();
     EXPECT_EQ(gSpecialVar_0x8004, SPECIES_NONE);
+}
+
+// Dualocke: nombre del jugador de hasta 10 letras (playerNameLong) y mochila más grande (20/11/2026).
+TEST("Dualocke: el nombre largo del jugador se enseña entero y playerName son sus 7 primeras letras")
+{
+    static const u8 sCorto[] = _("JORGE");
+    static const u8 sLargo[] = _("JORGEMORI");
+    static const u8 sSiete[] = _("JORGEMO");
+
+    // Partida de antes: el nombre largo está a cero y se usa el corto
+    memset(gSaveBlock2Ptr->playerNameLong, 0, sizeof(gSaveBlock2Ptr->playerNameLong));
+    StringCopy(gSaveBlock2Ptr->playerName, sCorto);
+    EXPECT_EQ(Dualocke_NombreJugador(), gSaveBlock2Ptr->playerName);
+
+    // Se escribe JORGEMORI en la pantalla de nombres
+    memset(gSaveBlock2Ptr->playerNameLong, EOS, sizeof(gSaveBlock2Ptr->playerNameLong));
+    StringCopy(gSaveBlock2Ptr->playerNameLong, sLargo);
+    Dualocke_GuardarNombreJugador();
+    EXPECT_EQ(StringCompare(Dualocke_NombreJugador(), sLargo), 0);
+    EXPECT_EQ(StringCompare(gSaveBlock2Ptr->playerName, sSiete), 0);
+
+    // No se escribe nada: se queda el nombre por defecto, también en el largo
+    memset(gSaveBlock2Ptr->playerNameLong, EOS, sizeof(gSaveBlock2Ptr->playerNameLong));
+    StringCopy(gSaveBlock2Ptr->playerName, sCorto);
+    Dualocke_GuardarNombreJugador();
+    EXPECT_EQ(StringCompare(Dualocke_NombreJugador(), sCorto), 0);
+    EXPECT_EQ(StringCompare(gSaveBlock2Ptr->playerName, sCorto), 0);
+}
+
+TEST("Dualocke: la mochila tiene los bolsillos más grandes")
+{
+    u32 i, metidos = 0;
+
+    EXPECT_EQ((u32)gBagPockets[POCKET_ITEMS].capacity, 150);
+    EXPECT_EQ((u32)gBagPockets[POCKET_KEY_ITEMS].capacity, 50);
+    EXPECT_EQ((u32)gBagPockets[POCKET_POKE_BALLS].capacity, 30);
+    EXPECT_EQ((u32)gBagPockets[POCKET_BERRIES].capacity, 70);
+    EXPECT_EQ((u32)gBagPockets[POCKET_MEDICINE].capacity, 70);
+    EXPECT_EQ(gBagPockets[POCKET_ITEMS].itemSlots, gSaveBlock3Ptr->bagItems);
+
+    // Caben 100 objetos distintos del bolsillo OBJETOS (antes, 30)
+    ClearBag();
+    for (i = ITEM_NONE + 1; i < ITEMS_COUNT && metidos < 100; i++)
+    {
+        if (GetItemPocket(i) != POCKET_ITEMS)
+            continue;
+        if (!AddBagItem(i, 1))
+            break;
+        metidos++;
+    }
+    EXPECT_EQ(metidos, 100);
+    ClearBag();
 }
