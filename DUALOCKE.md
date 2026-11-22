@@ -1160,7 +1160,7 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
 
 ## 9. Estado y siguientes pasos
 
-### Locke en curso (empezado de nuevo el 18/11/2026, con la versión 8; ahora la 8.2)
+### Locke en curso (empezado de nuevo el 22/11/2026, con la versión 9: la partida que cuenta)
 
 - ROMs hechas por Claude con `make release` (sin menús de depuración).
   - **Versión 1** (26/10/2026): commit `46ba7600` (con #36 y #37).
@@ -1216,8 +1216,16 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
     - **ISLA VOLCÁNICA:** 10 casillas a la derecha bajo la RUTA 134, para que no quede al lado del puerto de PORTUAL (al cruzar, el puerto aparecía y desaparecía).
     - **Combate con MÁXIMO PEÑAS en el CENTRO ESPACIAL:** su equipo se quedó a nivel 42-44 contra MAXI (84) y TATIANA (75-81). `tools/dualocke/companeros.py` lo pone al nivel del tramo (84): Metagross, Skarmory y Aggron, sin ataques que te den a ti. Lo revisa Miguel.
     - Pendiente: lo de Ferrocuello y el Campo de Niebla en la RUTA 124 (hace falta el `.sav` de Miguel para ver su equipo) y mejorar el dibujo de la ISLA VOLCÁNICA.
-- **Semillas actuales (versión 8):** Miguel `3632113266` (`Esmeralda Dualocke - Mikemine.gba`), Jorge `2425682645` (`Esmeralda Dualocke - Jorgemori.gba`).
+  - **Versión 9: la partida que cuenta** (22/11/2026): commit `e38ad8986f`, con **semillas nuevas**: Jorge y Miguel empiezan el locke de cero (el #115 cambia la partida guardada). Antes de fusionar, Claude lo probó todo junto con el bot y la ROM release (`registro/2026-11-22-jorge-prueba-todo-junto.md`). Añade:
+    - todo lo de Miguel desde la 8.5: respuestas a Jorge, PLAYA VOLCÁNICA con ceniza, los arreglos de la quinta prueba, los biomas CANTERA, PRADO DE HADAS e ISLA DEL DRAGÓN, y los arreglos de lo que vio el bot en las zonas nuevas (#112, #113, #116 y #117);
+    - la regla de la Liga dentro del juego (#122, Miguel) y su mensaje (#123);
+    - nombre del jugador de hasta 10 letras y mochila más grande (#115);
+    - el bot que se pasa el juego (#118);
+    - Toxtricity Grave ya no pasa a Aguda, y 12 Poké Balls que tapaban el paso movidas (#119);
+    - textos que seguían en inglés (opciones, menú del equipo, POKéNAV, PC, ficha, dinero, pantalla de datos, tipos, mote) y 108 descripciones de movimientos, objetos y habilidades que se saltaban (#120 y #121).
+- **Semillas actuales (versión 9):** Miguel `3483218843` (`Esmeralda Dualocke - Mikemine.gba`), Jorge `2635893558` (`Esmeralda Dualocke - Jorgemori.gba`).
 - Semillas de las versiones anteriores (partidas abandonadas):
+  - versión 8: Miguel `3632113266`, Jorge `2425682645`;
   - versiones 5-7: Miguel `2918696854`, Jorge `2780853751`;
   - versión 4: Miguel `1820821844`, Jorge `5966102869`;
   - versiones 1-3: Miguel `7044754226`, Jorge `6629063067`.
