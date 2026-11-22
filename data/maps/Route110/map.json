@@ -505,9 +505,9 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 17,
-      "y": 73,
-      "elevation": 4,
+      "x": 15,
+      "y": 3,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
@@ -518,9 +518,9 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 16,
-      "y": 74,
-      "elevation": 4,
+      "x": 7,
+      "y": 86,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
@@ -531,8 +531,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 4,
-      "y": 39,
+      "x": 35,
+      "y": 55,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -544,8 +544,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 3,
-      "y": 40,
+      "x": 34,
+      "y": 50,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -820,8 +820,8 @@
     },
     {
       "type": "hidden_item",
-      "x": 6,
-      "y": 39,
+      "x": 32,
+      "y": 95,
       "elevation": 3,
       "item": "ITEM_HEART_SCALE",
       "flag": "FLAG_ITEM_TICKET_RUTA_110_2"

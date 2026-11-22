@@ -7,6 +7,8 @@ Uso (desde la raíz del repo):
     python3 tools/dualocke/colocar_objetos.py            # coloca los que falten
     python3 tools/dualocke/colocar_objetos.py --resumen  # solo enseña dónde irían
     python3 tools/dualocke/colocar_objetos.py --mover    # mueve las Balls que tapan el paso (sin_salida.py)
+    python3 tools/dualocke/colocar_objetos.py --repartir # reparte los objetos de los mapas amontonados
+                                                         # (con --resumen, solo enseña cómo quedaría)
 
 Cada megapiedra va en un mapa de la tabla, como bola de objeto ("bola") o como objeto oculto
 ("oculta"). La casilla se busca automáticamente cerca de algo que seguro se puede alcanzar
@@ -629,7 +631,186 @@ def mover_las_que_tapan():
             print(f"{mid}: Ball {bola['flag']} de ({bx}, {by}) a ({x}, {y})")
 
 
+# Repartir (Jorge y Miguel, 22/11/2026): con buscar_casilla() todos los objetos de un mapa acababan en la misma ancla
+# (la primera que tenía sitio): hasta 11 en un cuadrado de 7x7 en la RUTA 119. --repartir los vuelve a colocar,
+# solo en los mapas amontonados, lo más lejos posible de los demás objetos del mapa. Cada objeto solo va a casillas a
+# las que se llega en el mismo tramo que a la suya (alcance.py): no se adelanta ni se retrasa ninguno. Y siguen en su
+# contexto (Jorge, 22/11/2026): con la pista de su tabla (las del desierto de la RUTA 111, junto a lo del desierto) y en el
+# mismo tipo de suelo que antes (arena, hierba alta, cueva…).
+TERRENOS = {"MB_SAND": "arena", "MB_DEEP_SAND": "arena", "MB_FOOTPRINTS": "arena", "MB_TALL_GRASS": "hierba",
+            "MB_LONG_GRASS": "hierba", "MB_ASHGRASS": "ceniza", "MB_CAVE": "cueva", "MB_SHALLOW_WATER": "agua"}
+NUESTROS = re.compile(r"^FLAG_ITEM_(MEGA|COMP|TICKET)_")
+AMONTONADO = 5  # objetos en un cuadrado de 7x7 a partir de los que se reparte el mapa
+
+
+def objetos_del_mapa(mapa):
+    """[(x, y, flag, "bola"/"oculta")] de las Balls y los objetos ocultos de un mapa."""
+    lista = [(o["x"], o["y"], str(o.get("flag", "")), "bola") for o in mapa.get("object_events", [])
+             if o.get("graphics_id") == "OBJ_EVENT_GFX_ITEM_BALL"]
+    return lista + [(b["x"], b["y"], b.get("flag", ""), "oculta") for b in mapa.get("bg_events", [])
+                    if b.get("type") == "hidden_item"]
+
+
+def montón(objetos):
+    """Cuántos objetos hay, como mucho, en un cuadrado de 7x7 alrededor de uno de ellos."""
+    return max((sum(1 for q in objetos if abs(q[0] - p[0]) <= 3 and abs(q[1] - p[1]) <= 3) for p in objetos), default=0)
+
+
+def _casillas_desde_anclas(anclas, info, ancho, alto, ok, distancia, ocupadas, solo_suelo):
+    """Todas las casillas buenas a distancia[0]-distancia[1] pasos de alguna ancla (como _buscar_desde_anclas,
+    pero sin quedarse con la primera)."""
+    sitios = {}
+    for ax, ay, _ in anclas:
+        if not (0 <= ax < ancho and 0 <= ay < alto):
+            continue
+        _, elev, comp_ancla = info(ax, ay)
+        if elev in (0, 15):
+            vecinas = [info(ax + dx, ay + dy)[1] for dx, dy in ((0, 1), (0, -1), (1, 0), (-1, 0))
+                       if 0 <= ax + dx < ancho and 0 <= ay + dy < alto and info(ax + dx, ay + dy)[0] == 0
+                       and info(ax + dx, ay + dy)[1] not in (0, 15)]
+            elev = vecinas[0] if vecinas else elev
+        vistos = {(ax, ay)}
+        cola = deque([(ax, ay, 0)])
+        while cola:
+            x, y, d = cola.popleft()
+            if distancia[0] <= d <= distancia[1] and (x, y) not in ocupadas and (x, y) not in sitios:
+                col, e, comp = info(x, y)
+                if col == 0 and e == elev and (comp in ok or (not solo_suelo and comp == comp_ancla)):
+                    sitios[(x, y)] = elev
+            if d >= distancia[1]:
+                continue
+            for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+                nx, ny = x + dx, y + dy
+                if 0 <= nx < ancho and 0 <= ny < alto and (nx, ny) not in vistos:
+                    col, e, _ = info(nx, ny)
+                    if col == 0 and e == elev:
+                        vistos.add((nx, ny))
+                        cola.append((nx, ny, d + 1))
+    return sitios
+
+
+def repartir(solo_resumen=False):
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import alcance  # noqa: E402
+    import sin_salida  # noqa: E402
+    mb, tilesets, layouts = comportamientos(), atributos_tilesets(), cargar_layouts()
+    ok = {mb[n] for n in COMPORTAMIENTOS_OK if n in mb}
+    terreno_de = {mb[n]: t for n, t in TERRENOS.items() if n in mb}
+    pistas = {prefijo + objeto: pista for lista, prefijo, *_ in GRUPOS for objeto, _, _, pista in lista}
+    mundo, llegadas = alcance.Mundo(), sin_salida.llegadas_por_script()
+    tramo_de = {}
+    for t in range(9, 0, -1):
+        for casilla in alcance.alcanzables(mundo, t):
+            tramo_de[casilla] = t
+    movidos = 0
+    for mid, m in sorted(mundo.mapas.items()):
+        carpeta = m["carpeta"]
+        if carpeta.endswith("_Frlg"):
+            continue
+        ruta = os.path.join(carpeta, "map.json")
+        with open(ruta, encoding="utf-8", newline="") as f:
+            crudo = f.read()
+        mapa = json.loads(crudo)
+        objetos = objetos_del_mapa(mapa)
+        antes = montón(objetos)
+        nuestros = [o for o in objetos if NUESTROS.match(o[2])]
+        if antes < AMONTONADO or not nuestros:
+            continue
+        flags = {o[2] for o in nuestros}
+        # El mapa sin nuestros objetos: de ahí salen las anclas, las casillas ocupadas y lo que tapa una Ball
+        trabajo = dict(mapa, object_events=[o for o in mapa.get("object_events", []) if str(o.get("flag", "")) not in flags],
+                       bg_events=[b for b in mapa.get("bg_events", []) if b.get("flag", "") not in flags])
+        fijos = [(o[0], o[1]) for o in objetos if o[2] not in flags]
+        ocupadas = {(e["x"], e["y"]) for k in ("object_events", "bg_events", "warp_events", "coord_events")
+                    for e in trabajo.get(k, [])}
+        anclas = [(o["x"], o["y"], str(o.get("flag", "")) + str(o.get("trainer_sight_or_berry_tree_id", "")))
+                  for o in trabajo.get("object_events", [])
+                  if o.get("graphics_id") == "OBJ_EVENT_GFX_ITEM_BALL" or o.get("trainer_type", "TRAINER_TYPE_NONE") != "TRAINER_TYPE_NONE"]
+        anclas += [(b["x"], b["y"], b.get("flag", "") + b.get("item", "")) for b in trabajo.get("bg_events", [])
+                   if b.get("type") == "hidden_item"]
+        anclas += [(w["x"], w["y"], "") for w in trabajo.get("warp_events", [])]
+        anclas += [(o["x"], o["y"], "") for o in trabajo.get("object_events", [])]
+        layout = layouts[mapa["layout"]]
+        ancho, alto = layout["width"], layout["height"]
+        celdas = struct.unpack(f"<{ancho * alto}H", open(layout["blockdata_filepath"], "rb").read())
+        prim, sec = tilesets.get(layout["primary_tileset"], []), tilesets.get(layout["secondary_tileset"], [])
+
+        def info(x, y):
+            v = celdas[y * ancho + x]
+            mt = v & 0x3FF
+            comp = (prim[mt] if mt < 512 and mt < len(prim) else
+                    sec[mt - 512] if mt >= 512 and mt - 512 < len(sec) else -1)
+            return (v >> 10) & 3, v >> 12, comp
+
+        puestos = []
+        nuevos = {}
+        # Primero las Balls (tienen menos sitios: no pueden tapar el paso), en el orden del map.json
+        for x0, y0, flag, tipo in sorted(nuestros, key=lambda o: o[3] != "bola"):
+            distancia = (1, 4) if tipo == "bola" else (3, 8)
+            tramo = tramo_de.get((mid, x0, y0))
+            terreno = terreno_de.get(info(x0, y0)[2], "suelo")
+            pista = pistas.get(flag)
+            suyas = [a for a in anclas if pista and re.search(pista, a[2])] or anclas
+            sitios = {}
+            for solo_suelo in (True, False):
+                sitios = _casillas_desde_anclas(suyas, info, ancho, alto, ok, distancia, ocupadas, solo_suelo)
+                sitios = {c: e for c, e in sitios.items() if tramo_de.get((mid,) + c) == tramo}
+                mismo = {c: e for c, e in sitios.items() if terreno_de.get(info(*c)[2], "suelo") == terreno}
+                sitios = mismo or sitios
+                if sitios:
+                    break
+            otros = fijos + puestos
+
+            def lejania(c):
+                return min(((c[0] - a) ** 2 + (c[1] - b) ** 2 for a, b in otros), default=10 ** 6)
+            elegido = None
+            mundo.mapas[mid] = dict(trabajo, carpeta=carpeta)
+            for c in sorted(sitios, key=lambda c: (-lejania(c), c[1], c[0])):
+                if tipo != "bola" or not sin_salida.bolas_que_tapan(mundo, mid, llegadas.get(mid, set()), [c]):
+                    elegido = c
+                    break
+            if not elegido:
+                print(f"{carpeta}: {flag} no tiene otro sitio, se queda en ({x0}, {y0})")
+                elegido, elev = (x0, y0), None
+            else:
+                elev = sitios[elegido]
+            puestos.append(elegido)
+            ocupadas.add(elegido)
+            nuevos[flag] = (elegido, elev)
+            # Para lo que tapa la siguiente Ball, esta ya cuenta
+            lista = "object_events" if tipo == "bola" else "bg_events"
+            original = next(e for e in mapa[lista] if str(e.get("flag", "")) == flag)
+            trabajo[lista] = trabajo[lista] + [dict(original, x=elegido[0], y=elegido[1])]
+        despues = montón(fijos + puestos)
+        print(f"{carpeta}: {len(nuestros)} objetos, montón de {antes} -> {despues}")
+        for flag, ((x, y), elev) in nuevos.items():
+            print(f"    {flag}: -> ({x}, {y}), tramo {tramo_de.get((mid, x, y))}, {terreno_de.get(info(x, y)[2], 'suelo')}")
+            # Solo se cambian x, y y altura dentro del bloque de este objeto (se busca por su flag, que es único)
+            i = crudo.index(f'"flag": "{flag}"')
+            ini, fin = crudo.rindex("{", 0, i), crudo.index("}", i)
+            bloque = crudo[ini:fin]
+            bloque = re.sub(r'"x": \d+', f'"x": {x}', bloque, count=1)
+            bloque = re.sub(r'"y": \d+', f'"y": {y}', bloque, count=1)
+            if elev is not None:
+                bloque = re.sub(r'"elevation": \d+', f'"elevation": {elev}', bloque, count=1)
+            crudo = crudo[:ini] + bloque + crudo[fin:]
+            movidos += 1
+        json.loads(crudo)
+        mundo.mapas[mid] = dict(json.loads(crudo), carpeta=carpeta)
+        if not solo_resumen:
+            with open(ruta, "w", encoding="utf-8", newline="") as f:
+                f.write(crudo)
+    print(f"Repartidos {movidos} objetos" + (" (solo resumen, no se ha escrito nada)" if solo_resumen else ""))
+
+
 def main():
+    if "--repartir" in sys.argv:
+        repartir("--resumen" in sys.argv)
+        todos = [(objeto, carpeta, tipo, pista, prefijo, fijo or objeto)
+                 for lista, prefijo, _, _, _, fijo in GRUPOS for objeto, carpeta, tipo, pista in lista]
+        if "--resumen" not in sys.argv:
+            ajustar_alturas(todos, cargar_layouts())
+        return
     if "--mover" in sys.argv:
         mover_las_que_tapan()
         todos = [(objeto, carpeta, tipo, pista, prefijo, fijo or objeto)

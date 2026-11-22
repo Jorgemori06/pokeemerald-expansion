@@ -643,8 +643,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 33,
-      "y": 103,
+      "x": 12,
+      "y": 58,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -656,8 +656,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 32,
-      "y": 103,
+      "x": 26,
+      "y": 66,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -669,8 +669,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 33,
-      "y": 102,
+      "x": 22,
+      "y": 70,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -682,8 +682,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 31,
-      "y": 102,
+      "x": 30,
+      "y": 70,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -695,8 +695,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 29,
-      "y": 51,
+      "x": 31,
+      "y": 35,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -708,8 +708,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 27,
-      "y": 51,
+      "x": 26,
+      "y": 88,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -1211,15 +1211,15 @@
     },
     {
       "type": "hidden_item",
-      "x": 32,
-      "y": 102,
+      "x": 26,
+      "y": 78,
       "elevation": 3,
       "item": "ITEM_SCOVILLAINITE",
       "flag": "FLAG_ITEM_MEGA_SCOVILLAINITE"
     },
     {
       "type": "hidden_item",
-      "x": 31,
+      "x": 34,
       "y": 51,
       "elevation": 3,
       "item": "ITEM_HEART_SCALE",
@@ -1228,7 +1228,7 @@
     {
       "type": "hidden_item",
       "x": 32,
-      "y": 101,
+      "y": 97,
       "elevation": 3,
       "item": "ITEM_SANDACONDITE",
       "flag": "FLAG_ITEM_MEGA_SANDACONDITE"
