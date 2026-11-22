@@ -254,8 +254,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 3,
-      "y": 6,
+      "x": 43,
+      "y": 4,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -490,24 +490,24 @@
     },
     {
       "type": "hidden_item",
-      "x": 93,
-      "y": 8,
+      "x": 0,
+      "y": 6,
       "elevation": 3,
       "item": "ITEM_WIDE_LENS",
       "flag": "FLAG_ITEM_COMP_WIDE_LENS"
     },
     {
       "type": "hidden_item",
-      "x": 42,
-      "y": 2,
+      "x": 26,
+      "y": 14,
       "elevation": 3,
       "item": "ITEM_HEART_SCALE",
       "flag": "FLAG_ITEM_TICKET_RUTA_113_2"
     },
     {
       "type": "hidden_item",
-      "x": 62,
-      "y": 13,
+      "x": 93,
+      "y": 8,
       "elevation": 3,
       "item": "ITEM_CINDERACITE",
       "flag": "FLAG_ITEM_MEGA_CINDERACITE"
