@@ -206,6 +206,23 @@ OBJETOS_CIENAGA = [
 OBJETOS_CIENAGA_OCULTOS = [("TOXIC_PLATE", "CienagaToxica", "oculta", None)]
 TICKETS_CIENAGA = [("CIENAGA_TOXICA", "CienagaToxica", "bola", None)]
 
+# CANTERA (crear_cantera.py). Con semilla, al azar. crear_cantera.py los pone en su sitio (SITIO_OBJETOS).
+# Flags sueltos: un grupo por flag.
+OBJETOS_CANTERA = [("HARD_STONE", "Cantera", "bola", None)]
+OBJETOS_CANTERA_2 = [("METAL_COAT", "Cantera", "bola", None)]
+OBJETOS_CANTERA_OCULTOS = [("IRON_BALL", "Cantera", "oculta", None)]
+TICKETS_CANTERA = [("CANTERA", "Cantera", "bola", None)]
+
+# PRADO DE HADAS (crear_prado_hadas.py). Con semilla, al azar. crear_prado_hadas.py los pone en su sitio.
+OBJETOS_PRADO = [("SHINY_STONE", "PradoHadas", "bola", None), ("SACHET", "PradoHadas", "bola", None)]
+OBJETOS_PRADO_OCULTOS = [("FAIRY_FEATHER", "PradoHadas", "oculta", None)]
+TICKETS_PRADO = [("PRADO_HADAS", "PradoHadas", "bola", None)]
+
+# ISLA DEL DRAGÓN (crear_isla_dragon.py). Con semilla, al azar. crear_isla_dragon.py los pone en su sitio.
+OBJETOS_DRAGON = [("DRAGON_SCALE", "IslaDragon_Valle", "bola", None)]
+OBJETOS_DRAGON_OCULTOS = [("DRAGON_FANG", "IslaDragon_Valle", "oculta", None)]
+TICKETS_DRAGON = [("ISLA_DRAGON", "IslaDragon_Valle", "bola", None)]
+
 # PLAYA VOLCÁNICA (crear_playa_volcanica.py). Con semilla, al azar.
 # Al rehacer la playa (17/11/2026) se movieron a mano tres: el Ticket-Recuerdo (19,17, junto al risco),
 # la Perla oculta (22,4, en la arena de arriba) y la Piedra Agua (23,34, en la arena): habían quedado en el
@@ -377,7 +394,7 @@ TICKETS_OCULTOS = [
 GRUPOS = [
     (MEGAPIEDRAS, "FLAG_ITEM_MEGA_", 0x264, 0x2BB, "megapiedra en el mapa", None),
     (COMPETITIVOS, "FLAG_ITEM_COMP_", 0x493, 0x4C9, "objeto competitivo en el mapa", None),
-    (MEGAPIEDRAS_GIGAMAX, "FLAG_ITEM_MEGA_", 0x4CA, 0x4E4, "megapiedra de forma Gigamax en el mapa", None),
+    (MEGAPIEDRAS_GIGAMAX, "FLAG_ITEM_MEGA_", 0x4CA, 0x4E3, "megapiedra de forma Gigamax en el mapa", None),
     (TICKETS, "FLAG_ITEM_TICKET_", 0x021, 0x04F, "Ticket-Recuerdo en el mapa", "HEART_SCALE"),
     (TICKETS_OCULTOS, "FLAG_ITEM_TICKET_", 0x4E5, 0x4EF, "Ticket-Recuerdo oculto en el mapa", "HEART_SCALE"),
     (OBJETOS_ISLAS, "FLAG_ITEM_ISLA_", 0x8E5, 0x8EF, "objeto de las islas del ferry", None),
@@ -388,13 +405,13 @@ GRUPOS = [
     (TICKETS_PLAYA, "FLAG_ITEM_TICKET_", 0x91C, 0x91C, "Ticket-Recuerdo en la PLAYA VOLCÁNICA", "HEART_SCALE"),
     (OBJETOS_ISLAS_SUR, "FLAG_ITEM_SUR_", 0x90C, 0x912, "objeto de las islas de las rutas del sur", None),
     (TICKETS_ISLAS_SUR, "FLAG_ITEM_TICKET_", 0x914, 0x916, "Ticket-Recuerdo en las islas del sur", "HEART_SCALE"),
-    (OBJETOS_BOSQUE, "FLAG_ITEM_BOSQUE_", 0x900, 0x907, "objeto del BOSQUE FRONDOSO y la MANSIÓN OLVIDADA", None),
+    (OBJETOS_BOSQUE, "FLAG_ITEM_BOSQUE_", 0x900, 0x904, "objeto del BOSQUE FRONDOSO y la MANSIÓN OLVIDADA", None),
     (TICKETS_BOSQUE, "FLAG_ITEM_TICKET_", 0x908, 0x908, "Ticket-Recuerdo en el BOSQUE FRONDOSO", "HEART_SCALE"),
     (OBJETOS_MARISMA, "FLAG_ITEM_MARISMA_", 0x88F, 0x88F, "objeto de la MARISMA AZULIZA", None),
     (TICKETS_MARISMA, "FLAG_ITEM_TICKET_", 0x8E3, 0x8E3, "Ticket-Recuerdo en la MARISMA AZULIZA", "HEART_SCALE"),
-    (OBJETOS_DESIERTO, "FLAG_ITEM_DESIERTO_", 0x8F0, 0x8F5, "objeto del DESIERTO PROFUNDO y las RUINAS ARENOSAS", None),
+    (OBJETOS_DESIERTO, "FLAG_ITEM_DESIERTO_", 0x8F0, 0x8F3, "objeto del DESIERTO PROFUNDO y las RUINAS ARENOSAS", None),
     (OBJETOS_GRUTA, "FLAG_ITEM_GRUTA_", 0x8F6, 0x8F9, "objeto de la GRUTA ÍGNEA", None),
-    (OBJETOS_NEVADA, "FLAG_ITEM_NEVADA_", 0x8FA, 0x8FF, "objeto de la ISLA NEVADA", None),
+    (OBJETOS_NEVADA, "FLAG_ITEM_NEVADA_", 0x8FA, 0x8FC, "objeto de la ISLA NEVADA", None),
     (OBJETOS_SINIESTRO, "FLAG_ITEM_SINIESTRO_", 0x4F9, 0x4FA, "objeto del BOSQUE SINIESTRO", None),
     # Los ocultos necesitan un flag >= FLAG_HIDDEN_ITEMS_START (0x1F4)
     (OBJETOS_SINIESTRO_OCULTOS, "FLAG_ITEM_SINIESTRO_", 0x468, 0x468, "objeto del BOSQUE SINIESTRO", None),
@@ -403,6 +420,16 @@ GRUPOS = [
     (OBJETOS_CIENAGA, "FLAG_ITEM_CIENAGA_", 0x054, 0x055, "objeto de la CIÉNAGA TÓXICA", None),
     (OBJETOS_CIENAGA_OCULTOS, "FLAG_ITEM_CIENAGA_", 0x479, 0x479, "objeto de la CIÉNAGA TÓXICA", None),
     (TICKETS_CIENAGA, "FLAG_ITEM_TICKET_", 0x1AA, 0x1AA, "Ticket-Recuerdo en la CIÉNAGA TÓXICA", "HEART_SCALE"),
+    (OBJETOS_CANTERA, "FLAG_ITEM_CANTERA_", 0x068, 0x068, "objeto de la CANTERA", None),
+    (OBJETOS_CANTERA_2, "FLAG_ITEM_CANTERA_", 0x0E9, 0x0E9, "objeto de la CANTERA", None),
+    (OBJETOS_CANTERA_OCULTOS, "FLAG_ITEM_CANTERA_", 0x2D9, 0x2D9, "objeto de la CANTERA", None),
+    (TICKETS_CANTERA, "FLAG_ITEM_TICKET_", 0x1DA, 0x1DA, "Ticket-Recuerdo en la CANTERA", "HEART_SCALE"),
+    (OBJETOS_PRADO, "FLAG_ITEM_PRADO_", 0x8F4, 0x8F5, "objeto del PRADO DE HADAS", None),
+    (OBJETOS_PRADO_OCULTOS, "FLAG_ITEM_PRADO_", 0x8FD, 0x8FD, "objeto del PRADO DE HADAS", None),
+    (TICKETS_PRADO, "FLAG_ITEM_TICKET_", 0x8FE, 0x8FE, "Ticket-Recuerdo en el PRADO DE HADAS", "HEART_SCALE"),
+    (OBJETOS_DRAGON, "FLAG_ITEM_DRAGON_", 0x905, 0x905, "objeto de la ISLA DEL DRAGÓN", None),
+    (OBJETOS_DRAGON_OCULTOS, "FLAG_ITEM_DRAGON_", 0x906, 0x906, "objeto de la ISLA DEL DRAGÓN", None),
+    (TICKETS_DRAGON, "FLAG_ITEM_TICKET_", 0x907, 0x907, "Ticket-Recuerdo en la ISLA DEL DRAGÓN", "HEART_SCALE"),
 ]
 COMPORTAMIENTOS_OK = {"MB_NORMAL", "MB_TALL_GRASS", "MB_LONG_GRASS", "MB_SHORT_GRASS", "MB_DEEP_SAND",
                       "MB_SAND", "MB_CAVE", "MB_ASHGRASS", "MB_FOOTPRINTS",

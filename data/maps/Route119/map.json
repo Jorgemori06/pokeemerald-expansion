@@ -23,6 +23,11 @@
       "map": "MAP_FORTREE_CITY",
       "offset": 0,
       "direction": "right"
+    },
+    {
+      "map": "MAP_PRADO_HADAS",
+      "offset": -1,
+      "direction": "left"
     }
   ],
   "object_events": [

@@ -1,0 +1,35 @@
+{
+  "id": "MAP_ISLA_DRAGON",
+  "name": "IslaDragon",
+  "layout": "LAYOUT_ISLA_DRAGON",
+  "region": "REGION_HOENN",
+  "requires_flash": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "region_map_section": "MAPSEC_ISLA_DRAGON",
+  "music": "MUS_ROUTE119",
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_OCEAN_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "connections": [
+    {
+      "map": "MAP_ROUTE130",
+      "offset": -33,
+      "direction": "up"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 20,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_ISLA_DRAGON_VALLE",
+      "dest_warp_id": "0"
+    }
+  ],
+  "object_events": [],
+  "bg_events": [],
+  "coord_events": []
+}

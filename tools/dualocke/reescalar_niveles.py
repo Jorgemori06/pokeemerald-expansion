@@ -62,7 +62,9 @@ TRAMOS = {
         "SLATEPORT_CITY_OCEANIC_MUSEUM_*", "ROUTE110", "MAUVILLE_CITY", "ROUTE117",
         "MAUVILLE_CITY_GYM", "ROUTE110_TRICK_HOUSE_PUZZLE1",
         # CIÉNAGA TÓXICA, al sur de la RUTA 117 (crear_cienaga_toxica.py; Miguel, 17/11/2026)
-        "CIENAGA_TOXICA"],
+        "CIENAGA_TOXICA",
+        # CANTERA, por una cueva de la RUTA 116 junto al TÚNEL FERVERGAL (crear_cantera.py; Miguel, 21/11/2026)
+        "CANTERA"],
     4: ["ROUTE111", "ROUTE112", "FIERY_PATH", "ROUTE113", "ROUTE114", "METEOR_FALLS_1F_1R",
         "ROUTE115", "MT_CHIMNEY", "JAGGED_PASS", "LAVARIDGE_TOWN_GYM_*", "ROUTE110_TRICK_HOUSE_PUZZLE2",
         # CUMBRE METEORO, por una cueva de la RUTA 115 (crear_cumbre_meteoro.py; Miguel, 17/11/2026)
@@ -74,7 +76,9 @@ TRAMOS = {
         "RUINAS_ARENOSAS_CAMARA"],
     6: ["PETALBURG_CITY", "ROUTE105", "ROUTE107", "ROUTE108", "ABANDONED_SHIP_*",
         "NEW_MAUVILLE_*", "MIRAGE_TOWER_*", "ROUTE118", "ROUTE123", "ROUTE119",
-        "ROUTE119_WEATHER_INSTITUTE_*", "ROUTE120", "FORTREE_CITY_GYM", "ROUTE110_TRICK_HOUSE_PUZZLE4",
+        "ROUTE119_WEATHER_INSTITUTE_*",
+        # PRADO DE HADAS, al oeste del INSTITUTO METEOROLÓGICO (crear_prado_hadas.py; Miguel, 21/11/2026)
+        "PRADO_HADAS", "ROUTE120", "FORTREE_CITY_GYM", "ROUTE110_TRICK_HOUSE_PUZZLE4",
         # BOSQUE SINIESTRO, al sur de la RUTA 123 (crear_bosque_siniestro.py; Miguel, 17/11/2026)
         "BOSQUE_SINIESTRO"],
     7: ["ROUTE121", "SAFARI_ZONE_*", "LILYCOVE_CITY", "MT_PYRE_*", "ROUTE122",
@@ -92,7 +96,9 @@ TRAMOS = {
         "SOOTOPOLIS_CITY_GYM_*", "ROUTE110_TRICK_HOUSE_PUZZLE6",
         "FARAWAY_ISLAND_ENTRANCE", "FARAWAY_ISLAND_INTERIOR",
         # Islas de las rutas del sur (crear_islas_sur.py; Miguel, 17/11/2026)
-        "ISLA_DE_RUINAS", "ISLA_DE_RUINAS_TORRE", "ISLA_VOLCANICA", "ISLA_VOLCANICA_CRATER", "ISLA_ARENOSA"],
+        "ISLA_DE_RUINAS", "ISLA_DE_RUINAS_TORRE", "ISLA_VOLCANICA", "ISLA_VOLCANICA_CRATER", "ISLA_ARENOSA",
+        # ISLA DEL DRAGÓN, al sur de la RUTA 130 (crear_isla_dragon.py; Miguel, 21/11/2026)
+        "ISLA_DRAGON", "ISLA_DRAGON_VALLE"],
     9: ["EVER_GRANDE_CITY", "VICTORY_ROAD_*", "METEOR_FALLS_1F_2R", "METEOR_FALLS_B1F_*",
         "EVER_GRANDE_CITY_*S_ROOM", "ROUTE110_TRICK_HOUSE_PUZZLE7", "ROUTE110_TRICK_HOUSE_PUZZLE8",
         # (los nombres exactos: NAVEL_ROCK_* también cogería los mapas de Rojo Fuego, _FRLG)
@@ -444,6 +450,9 @@ ESTATICOS = [
     ("data/maps/CumbreMeteoro/scripts.inc", "MAP_CUMBRE_METEORO", "tope"),
     ("data/maps/BosqueSiniestro/scripts.inc", "MAP_BOSQUE_SINIESTRO", "tope"),
     ("data/maps/CienagaToxica/scripts.inc", "MAP_CIENAGA_TOXICA", "tope"),
+    ("data/maps/Cantera/scripts.inc", "MAP_CANTERA", "tope"),
+    ("data/maps/PradoHadas/scripts.inc", "MAP_PRADO_HADAS", "tope"),
+    ("data/maps/IslaDragon_Valle/scripts.inc", "MAP_ISLA_DRAGON_VALLE", "tope"),
     # Dondozo y Tatsugiri de la MARISMA AZULIZA: la cala solo se alcanza con SURF (tramo 6)
     ("data/maps/MarismaAzuliza/scripts.inc", None, ("tope", 6)),
 ]

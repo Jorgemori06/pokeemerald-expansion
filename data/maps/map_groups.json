@@ -143,7 +143,11 @@
     "CumbreMeteoro_Ladera",
     "CumbreMeteoro",
     "BosqueSiniestro",
-    "CienagaToxica"
+    "CienagaToxica",
+    "Cantera",
+    "PradoHadas",
+    "IslaDragon",
+    "IslaDragon_Valle"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
