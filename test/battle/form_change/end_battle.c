@@ -311,3 +311,27 @@ SINGLE_BATTLE_TEST("Power Construct Zygarde reverts to its original form upon ba
         EXPECT_EQ(GetMonData(&gParties[B_TRAINER_PLAYER][0], MON_DATA_SPECIES), baseSpecies);
     }
 }
+
+SINGLE_BATTLE_TEST("Dualocke: Toxtricity Low Key stays Low Key upon battle end")
+{
+    GIVEN {
+        PLAYER(SPECIES_TOXTRICITY_LOW_KEY);
+        OPPONENT(SPECIES_WOBBUFFET);
+    } WHEN {
+        TURN { MOVE(player, MOVE_CELEBRATE); }
+    } THEN {
+        EXPECT_EQ(GetMonData(&gParties[B_TRAINER_PLAYER][0], MON_DATA_SPECIES), SPECIES_TOXTRICITY_LOW_KEY);
+    }
+}
+
+SINGLE_BATTLE_TEST("Dualocke: Toxtricity Amped stays Amped upon battle end")
+{
+    GIVEN {
+        PLAYER(SPECIES_TOXTRICITY_AMPED);
+        OPPONENT(SPECIES_WOBBUFFET);
+    } WHEN {
+        TURN { MOVE(player, MOVE_CELEBRATE); }
+    } THEN {
+        EXPECT_EQ(GetMonData(&gParties[B_TRAINER_PLAYER][0], MON_DATA_SPECIES), SPECIES_TOXTRICITY_AMPED);
+    }
+}

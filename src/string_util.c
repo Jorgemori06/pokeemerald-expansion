@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke.h"
 #include "string_util.h"
 #include "text.h"
 #include "strings.h"
@@ -439,7 +440,7 @@ static const u8 *ExpandPlaceholder_UnknownStringVar(void)
 
 static const u8 *ExpandPlaceholder_PlayerName(void)
 {
-    return gSaveBlock2Ptr->playerName;
+    return Dualocke_NombreJugador(); // Dualocke: el nombre entero, hasta 10 letras
 }
 
 static const u8 *ExpandPlaceholder_StringVar1(void)

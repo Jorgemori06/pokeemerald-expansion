@@ -484,6 +484,7 @@ gStdScripts_End::
 	.include "data/maps/RuinasArenosas_Camara/scripts.inc" @ Dualocke: zona nueva
 	.include "data/maps/RuinasArenosas_2F/scripts.inc" @ Dualocke: zona nueva
 	.include "data/maps/RuinasArenosas_3F/scripts.inc" @ Dualocke: zona nueva
+	.include "data/maps/DesiertoProfundo_Cueva/scripts.inc" @ Dualocke: zona nueva
 	.include "data/maps/GrutaIgnea_Camara/scripts.inc" @ Dualocke: zona nueva
 	.include "data/maps/MarismaAzuliza/scripts.inc" @ Dualocke: zona nueva
 	.include "data/maps/BosqueFrondoso/scripts.inc" @ Dualocke: zona nueva
@@ -499,6 +500,10 @@ gStdScripts_End::
 	.include "data/maps/CumbreMeteoro/scripts.inc" @ Dualocke: zona nueva
 	.include "data/maps/BosqueSiniestro/scripts.inc" @ Dualocke: zona nueva
 	.include "data/maps/CienagaToxica/scripts.inc" @ Dualocke: zona nueva
+	.include "data/maps/Cantera/scripts.inc" @ Dualocke: zona nueva
+	.include "data/maps/PradoHadas/scripts.inc" @ Dualocke: zona nueva
+	.include "data/maps/IslaDragon/scripts.inc" @ Dualocke: zona nueva
+	.include "data/maps/IslaDragon_Valle/scripts.inc" @ Dualocke: zona nueva
 	.include "data/scripts/shared_secret_base.inc"
 	.include "data/maps/BattleColosseum_2P/scripts.inc"
 	.include "data/maps/TradeCenter/scripts.inc"
@@ -1359,6 +1364,7 @@ Common_EventScript_FerryDepartIsland::
 	.include "data/scripts/dualocke_recuerda_movimientos.inc"
 	.include "data/scripts/dualocke_islas.inc"
 	.include "data/scripts/dualocke_fosiles.inc"
+	.include "data/scripts/dualocke_liga.inc"
 
 Common_EventScript_NameReceivedPartyMon::
 	fadescreen FADE_TO_BLACK

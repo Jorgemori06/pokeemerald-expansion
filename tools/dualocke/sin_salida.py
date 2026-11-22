@@ -21,10 +21,19 @@ bordes y los sitios a los que te lleva un script, como el barco) se tiene que po
 que sin ellos. Cuentan las personas que no se mueven y no desaparecen nunca (flag "0"); los objetos y
 las rocas, árboles y peñas de MO no.
 
+Y que **ninguna Poké Ball del suelo tape el paso**: ni entre dos salidas, ni delante de una puerta (la
+única casilla para entrar), ni a una persona, un entrenador o un cartel. Detrás de una Ball sí puede
+haber otra (coges la primera y pasas). Esto se mira en todos los mapas, pero solo con las Balls que pone
+colocar_objetos.py (FLAG_ITEM_MEGA_, FLAG_ITEM_COMP_ y FLAG_ITEM_TICKET_) y las de las zonas nuevas: las
+de Esmeralda que tapan algo lo hacen a propósito (detrás de un árbol de CORTE, por ejemplo).
+
 Por qué: en la ISLA SUR, TERRY estaba en la única casilla del sendero y no dejaba llegar a la cueva
 (Miguel, 19/11/2026). Y en la CUMBRE METEORO se bajaba al guardián por una cuesta de barro y solo se podía volver con la
 bici de carreras. Miguel se quedó encerrado jugando (18/11/2026). Con la cumbre de antes, esto da 92
 casillas sin vuelta.
+La Ball de las GAFAS ESPECIALES tapaba la escalera del MUSEO OCEÁNICO 2F, y la del TICKET-RECUERDO, la
+puerta del MONTE PÍRICO, la de la casa de la RUTA 124 y las escaleras del PILAR CELESTE (las vio el bot,
+22/11/2026).
 """
 
 import argparse
@@ -148,6 +157,66 @@ def tapados(mundo, mid, llegadas):
     return malos
 
 
+BOLAS_NUESTRAS = re.compile(r"FLAG_ITEM_(MEGA|COMP|TICKET)_")
+
+
+def salidas(mundo, mid, llegadas):
+    """(puertas, salidas): las puertas del mapa, y además los bordes con conexión y las llegadas por script."""
+    m = mundo.mapas[mid]
+    w, h, c = mundo.rejilla(mid)
+    puertas = {(p["x"], p["y"]) for p in m.get("warp_events", [])}
+    todas = set(puertas) | {p for p in llegadas if 0 <= p[0] < w and 0 <= p[1] < h}
+    for con in m.get("connections") or []:
+        borde = {"up": [(x, 0) for x in range(w)], "down": [(x, h - 1) for x in range(w)],
+                 "left": [(0, y) for y in range(h)], "right": [(w - 1, y) for y in range(h)]}.get(con["direction"], [])
+        todas |= {p for p in borde if not c[p[1] * w + p[0]][0]}
+    return puertas, todas
+
+
+def bolas_que_tapan(mundo, mid, llegadas, casillas=None):
+    """[(casilla de la Ball, [lo que tapa])] de las Balls de este mapa que tapan algo.
+    casillas: las Balls que se miran (por defecto, las nuestras); sirve también para probar una casilla en la
+    que todavía no hay Ball (colocar_objetos.py)."""
+    m = mundo.mapas[mid]
+    puertas, sal = salidas(mundo, mid, llegadas)
+    fijas = personas_fijas(m)
+    sal -= fijas
+    objetos = m.get("object_events", []) + m.get("bg_events", [])
+    if casillas is None:
+        nueva = zonas.es_nueva(os.path.basename(m["carpeta"]))
+        casillas = [(o["x"], o["y"]) for o in m.get("object_events", []) if "ITEM_BALL" in o["graphics_id"]
+                    and (nueva or BOLAS_NUESTRAS.match(str(o.get("flag", ""))))]
+    # Lo que no se puede quedar detrás de una Ball: personas, entrenadores y carteles (se habla desde al lado)
+    importan = {(o["x"], o["y"]) for o in objetos
+                if "ITEM_BALL" not in o.get("graphics_id", "") and o.get("type") != "hidden_item"}
+
+    def alcanzables(ini, tapadas):
+        vistos, cola = {ini}, deque([ini])
+        while cola:
+            for n in pasos(mundo, mid, puertas, *cola.popleft(), tapadas=tapadas):
+                if n not in vistos:
+                    vistos.add(n)
+                    cola.append(n)
+        return vistos
+
+    def al_lado(p):
+        return {(p[0] + 1, p[1]), (p[0] - 1, p[1]), (p[0], p[1] + 1), (p[0], p[1] - 1)}
+
+    malos = []
+    for b in casillas:
+        sin_bola, con_bola = frozenset(fijas), frozenset(fijas | {b})
+        tapa = set()
+        for s in sorted(sal - {b}):
+            sin, con = alcanzables(s, sin_bola), alcanzables(s, con_bola)
+            if s in puertas and con == {s} and len(sin) > 1:
+                tapa.add(f"la puerta {s}")
+            tapa |= {f"la salida {t}" for t in sal if t in sin and t not in con and t != b}
+            tapa |= {f"el objeto {p}" for p in importan if p != b and al_lado(p) & sin and not (al_lado(p) - {b}) & con}
+        if tapa:
+            malos.append((b, sorted(tapa)))
+    return malos
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     p.add_argument("--comprobar", action="store_true")
@@ -167,7 +236,13 @@ def main():
         if cortes:
             malos += 1
             print(f"{mid}: una persona tapa el paso entre {len(cortes)} parejas de salidas, por ejemplo {cortes[:3]}")
-    print(f"{malos} problemas en los mapas de zonas nuevas (sitios sin vuelta o paso tapado).")
+    for mid, m in sorted(mundo.mapas.items()):
+        if os.path.basename(m["carpeta"]).endswith("_Frlg"):
+            continue
+        for b, tapa in bolas_que_tapan(mundo, mid, llegadas.get(mid, set())):
+            malos += 1
+            print(f"{mid}: la Ball de {b} tapa {', '.join(tapa[:3])}")
+    print(f"{malos} problemas (sitios sin vuelta en las zonas nuevas, o paso tapado por una persona o una Ball).")
     if args.comprobar and malos:
         sys.exit(1)
 

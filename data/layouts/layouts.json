@@ -9458,7 +9458,7 @@
       "id": "LAYOUT_ISLA_DE_RUINAS",
       "name": "IslaDeRuinas_Layout",
       "width": 40,
-      "height": 30,
+      "height": 38,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Pacifidlog",
       "border_filepath": "data/layouts/IslaDeRuinas/border.bin",
@@ -9509,8 +9509,8 @@
       "name": "PlayaVolcanica_Layout",
       "width": 40,
       "height": 40,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Lavaridge",
+      "primary_tileset": "gTileset_GeneralCeniza",
+      "secondary_tileset": "gTileset_LavaridgeCeniza",
       "border_filepath": "data/layouts/PlayaVolcanica/border.bin",
       "blockdata_filepath": "data/layouts/PlayaVolcanica/map.bin"
     },
@@ -9553,6 +9553,56 @@
       "secondary_tileset": "gTileset_Mauville",
       "border_filepath": "data/layouts/CienagaToxica/border.bin",
       "blockdata_filepath": "data/layouts/CienagaToxica/map.bin"
+    },
+    {
+      "id": "LAYOUT_DESIERTO_PROFUNDO_CUEVA",
+      "name": "DesiertoProfundo_Cueva_Layout",
+      "width": 40,
+      "height": 23,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/DesiertoProfundo_Cueva/border.bin",
+      "blockdata_filepath": "data/layouts/DesiertoProfundo_Cueva/map.bin"
+    },
+    {
+      "id": "LAYOUT_CANTERA",
+      "name": "Cantera_Layout",
+      "width": 40,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/Cantera/border.bin",
+      "blockdata_filepath": "data/layouts/Cantera/map.bin"
+    },
+    {
+      "id": "LAYOUT_PRADO_HADAS",
+      "name": "PradoHadas_Layout",
+      "width": 40,
+      "height": 36,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/PradoHadas/border.bin",
+      "blockdata_filepath": "data/layouts/PradoHadas/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLA_DRAGON",
+      "name": "IslaDragon_Layout",
+      "width": 40,
+      "height": 34,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Pacifidlog",
+      "border_filepath": "data/layouts/IslaDragon/border.bin",
+      "blockdata_filepath": "data/layouts/IslaDragon/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLA_DRAGON_VALLE",
+      "name": "IslaDragon_Valle_Layout",
+      "width": 40,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_EverGrande",
+      "border_filepath": "data/layouts/IslaDragon_Valle/border.bin",
+      "blockdata_filepath": "data/layouts/IslaDragon_Valle/map.bin"
     }
   ]
 }

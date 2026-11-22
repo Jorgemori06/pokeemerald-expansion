@@ -24,6 +24,7 @@ EverGrandeCity_ChampionsRoom_EventScript_EnterRoom::
 	lockall
 	applymovement LOCALID_PLAYER, Common_Movement_WalkUp4
 	waitmovement 0
+	call Dualocke_EventScript_CuraLiga  @ Dualocke: regla de la Liga (cura al entrar en cada sala)
 	delay 40
 	applymovement LOCALID_PLAYER, EverGrandeCity_ChampionsRoom_Movement_PlayerApproachWallace
 	waitmovement 0

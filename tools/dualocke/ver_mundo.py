@@ -68,12 +68,13 @@ W, H = maxx - minx, maxy - miny
 print('mapas', len(pos), 'tamaño en casillas', W, H)
 
 carpetas = vm.carpetas_tilesets()
+paletas = vm.carpetas_paletas()
 cache_ts = {}
 
 
 def ts(n):
     if n not in cache_ts:
-        cache_ts[n] = vm.Tileset(carpetas[n])
+        cache_ts[n] = vm.Tileset(carpetas[n], paletas.get(n))
     return cache_ts[n]
 
 

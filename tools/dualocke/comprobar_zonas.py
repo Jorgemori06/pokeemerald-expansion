@@ -14,7 +14,12 @@ Qué mira en cada mapa (los de Rojo Fuego, _Frlg, se saltan):
 - scripts de los objetos, carteles y casillas: la etiqueta existe;
 - puertas (warps): el mapa de destino existe, el número de puerta de destino existe y la puerta
   está dentro del mapa (en el juego original hay muchas en casillas con colisión: es normal);
-- conexiones: el otro mapa tiene la conexión de vuelta;
+- conexiones: el otro mapa tiene la conexión de vuelta y, en las zonas nuevas, las casillas que se
+  pisan a los dos lados del borde tienen la misma altura (si no, no se pasa: PRADO DE HADAS, 22/11/2026), y
+  un mapa de arriba o de abajo no llega a las 7 columnas de un lado con otro mapa al lado (ISLA DEL DRAGÓN,
+  22/11/2026: al cruzar desde el mapa de al lado, el juego copia lo que se veía allí y lo tapa);
+- puertas sin animación (MB_NON_ANIMATED_DOOR): sin colisión, porque se cruzan al pisarlas (TORRE de la
+  ISLA DE RUINAS, 22/11/2026);
 - objetos: en casillas que se pueden pisar, sin dos en la misma casilla, con constantes que
   existen (gráfico, flag, objeto);
 - entrenadores: la constante existe, tiene equipo en trainers.party y no pasa de MAX_TRAINERS_COUNT;
@@ -88,7 +93,7 @@ def valores_flags():
 
 
 # Prefijos de las carpetas de las zonas nuevas (los mismos que NUEVOS de autotile.py)
-NUEVOS = ("Marisma", "Playa", "Bosque", "Isla", "Cumbre", "Desierto", "Ruinas", "Gruta", "Mansion", "Cienaga")
+NUEVOS = ("Marisma", "Playa", "Bosque", "Isla", "Cumbre", "Desierto", "Ruinas", "Gruta", "Mansion", "Cienaga", "Cantera", "Prado")
 
 
 def alturas_alrededor(info, x, y, w, h, con_la_suya=False):
@@ -101,6 +106,40 @@ def alturas_alrededor(info, x, y, w, h, con_la_suya=False):
             if not colision and alt not in (0, 15):
                 alturas.add(alt)
     return alturas
+
+
+def rejilla_de(l, atributos, mb):
+    """(ancho, alto, info) de un layout; info(x, y) = (colisión, altura, comportamiento)."""
+    w, h = l["width"], l["height"]
+    celdas = struct.unpack(f"<{w * h}H", open(l["blockdata_filepath"], "rb").read())
+    prim, sec = atributos.get(l["primary_tileset"], []), atributos.get(l["secondary_tileset"], [])
+
+    def info(x, y):
+        v = celdas[y * w + x]
+        mt = v & 0x3FF
+        tabla, i = (prim, mt) if mt < 512 else (sec, mt - 512)
+        return (v >> 10) & 3, v >> 12, mb.get(tabla[i] & 0xFF, "?") if i < len(tabla) else "?"
+    return w, h, info
+
+
+def alturas_en_el_borde(info, w, h, otra, con):
+    """Casillas del borde (de este mapa) que se pisan, con la de enfrente también pisable y otra altura.
+    El juego no deja pasar de una altura a otra (salvo 0 y 15). Fuera queda el agua (altura 1), porque se
+    sale del agua a la orilla (altura 3) al dejar de surfear."""
+    ow, oh, oinfo = otra
+    d, off = con["direction"], con["offset"]
+    if d in ("up", "down"):
+        pares = [((x, 0 if d == "up" else h - 1), (x - off, oh - 1 if d == "up" else 0)) for x in range(w)]
+    else:
+        pares = [((0 if d == "left" else w - 1, y), (ow - 1 if d == "left" else 0, y - off)) for y in range(h)]
+    malas = []
+    for (x, y), (ox, oy) in pares:
+        if not (0 <= ox < ow and 0 <= oy < oh):
+            continue
+        (c1, a1, _), (c2, a2, _) = info(x, y), oinfo(ox, oy)
+        if not c1 and not c2 and a1 != a2 and not {a1, a2} & {0, 1, 15}:
+            malas.append((x, y))
+    return malas
 
 
 def etiquetas():
@@ -206,6 +245,11 @@ def main():
                 if alturas and wp["elevation"] not in alturas:
                     fallo("altura", c, f"la puerta {n} está a altura {wp['elevation']} y el suelo de al lado a "
                                        f"{sorted(alturas)}: no se puede usar (pon 0)")
+            if 0 <= wp["x"] < w and 0 <= wp["y"] < h and info(wp["x"], wp["y"])[2] == "MB_NON_ANIMATED_DOOR"                     and info(wp["x"], wp["y"])[0]:
+                # Se cruzan al pisarlas (TryStartWarpEventScript): con colisión no se entra. Pasó en la TORRE
+                # de la ISLA DE RUINAS (lo vio el bot de Jorge, #116, 22/11/2026).
+                fallo("puerta", c, f"la puerta {n} ({wp['x']}, {wp['y']}) es una puerta sin animación con "
+                                   "colisión: no se puede entrar (quítale la colisión)")
         # objetos con una altura que no es la del suelo: no se pueden coger ni hablarles
         if c.startswith(NUEVOS):
             for o in m.get("object_events", []) + m.get("bg_events", []):
@@ -226,6 +270,33 @@ def main():
             otras = mapas[por_id[con["map"]]].get("connections") or []
             if not any(o["map"] == m["id"] and o["direction"] == vuelta.get(con["direction"]) for o in otras):
                 fallo("conexión", c, f"{con['direction']} con {con['map']}, pero ese mapa no conecta de vuelta")
+            otro = por_id[con["map"]]
+            if con["direction"] in ("up", "down", "left", "right") and (c.startswith(NUEVOS) or otro.startswith(NUEVOS)):
+                lo = layouts.get(mapas[otro].get("layout"))
+                if lo:
+                    malas = alturas_en_el_borde(info, w, h, rejilla_de(lo, atributos, mb), con)
+                    if malas:
+                        fallo("altura", c, f"{con['direction']} con {con['map']}: en {malas[:4]} las casillas de los "
+                                           "dos lados tienen distinta altura y no se pasa")
+            if con["direction"] in ("up", "down") and (c.startswith(NUEVOS) or otro.startswith(NUEVOS)):
+                # Al cruzar desde el mapa de la izquierda o de la derecha, MoveMapViewToBackup (src/fieldmap.c)
+                # copia lo que se veía en ese mapa, 7 columnas hacia dentro. Si ese mapa no tiene nada arriba o
+                # abajo ahí, el mapa de arriba o de abajo queda tapado y no se pasa (ISLA DEL DRAGÓN, #117).
+                # Solo importa si en esas columnas se puede cruzar el borde (en la CIÉNAGA TÓXICA y la ISLA NEVADA
+                # hay árboles o rocas a un lado).
+                lo = layouts.get(mapas[otro].get("layout"))
+                lados = {o["direction"] for o in m.get("connections") or []}
+                if lo:
+                    ow, oh, oinfo = rejilla_de(lo, atributos, mb)
+                    off = con["offset"]
+                    xs = [x for x in range(max(off, 0), min(off + ow, w))
+                          if ("right" in lados and x >= w - 7) or ("left" in lados and x < 7)]
+                    y, oy = (h - 1, 0) if con["direction"] == "down" else (0, oh - 1)
+                    cruzan = [x for x in xs if not info(x, y)[0] and not oinfo(x - off, oy)[0]]
+                    if cruzan:
+                        fallo("conexión", c, f"{con['direction']} con {con['map']}: en las x {cruzan[0]}-{cruzan[-1]}, "
+                                             "a menos de 7 columnas de un lado con otro mapa al lado, se cruza el "
+                                             "borde; al llegar desde ese mapa se tapa y no se pasa (apártalo)")
         # objetos
         vistos = {}
         for o in m.get("object_events", []):

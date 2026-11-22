@@ -13,6 +13,8 @@
 #define DUALOCKE_BANNED_BOX (TOTAL_BOXES_COUNT - 2)
 
 void Dualocke_InitNewGame(void);
+const u8 *Dualocke_NombreJugador(void);
+void Dualocke_GuardarNombreJugador(void);
 void Dualocke_OnBattleEnd(bool32 playerDefeated);
 u32 Dualocke_GetLives(void);
 bool32 Dualocke_IsLockeLost(void);

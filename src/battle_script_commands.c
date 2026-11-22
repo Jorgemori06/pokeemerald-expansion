@@ -9331,7 +9331,12 @@ void BS_ItemRestoreHP(void)
             healAmount = maxHP - hp;
 
         gBattleScripting.battler = battler;
-        PREPARE_SPECIES_BUFFER(gBattleTextBuff1, GetMonData(&party[gBattleStruct->itemPartyIndex[gBattlerAttacker]], MON_DATA_SPECIES));
+        // Dualocke (Nick Clause): "Gus ha recuperado PS.", con el mote, y no el nombre de la especie (lo vio
+        // Jorge con el bot, 22/11/2026). En los tests de la expansion, como en el original.
+        if (TESTING)
+            PREPARE_SPECIES_BUFFER(gBattleTextBuff1, GetMonData(&party[gBattleStruct->itemPartyIndex[gBattlerAttacker]], MON_DATA_SPECIES))
+        else
+            PREPARE_MON_NICK_WITH_PREFIX_BUFFER(gBattleTextBuff1, gBattlerAttacker, gBattleStruct->itemPartyIndex[gBattlerAttacker])
 
         // Heal is applied as move damage if battler is active.
         if (battler != MAX_BATTLERS_COUNT && hp != 0)

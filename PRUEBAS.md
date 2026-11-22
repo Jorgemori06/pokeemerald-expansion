@@ -45,7 +45,12 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 
 - [ ] **Entrada:** en la RUTA 122, por el hueco nuevo del anillo de rocas de arriba a la izquierda, se surfea hacia el oeste hasta la playa (sin pantalla de carga), y se vuelve igual.
 - [ ] **La unión:** que no se vea nada raro en el borde, ni desde la playa ni desde la RUTA 122. Es lo más delicado: los dos mapas tienen gráficos distintos.
-- [ ] **Sol fuera y en combate.** Cartel "PLAYA VOLCÁNICA". Salvajes en la ceniza; pesca y surf en el mar.
+- [ ] **Sol normal** fuera, **sin sol en combate** (Miguel, 20/11/2026). Cartel "PLAYA VOLCÁNICA". Salvajes en la hierba alta; pesca y surf en el mar.
+- [ ] **La ceniza (20/11/2026):** la hierba alta y el césped de la meseta se ven de color ceniza, como en la RUTA 113, y los árboles y las hojas de las flores siguen verdes.
+  - Que no quede ningún trozo verde suelto (bordes del camino, del risco, de las termas y de la peña).
+  - Que la unión con la RUTA 122 se siga viendo bien (ahí solo hay mar y rocas, que no cambian de color).
+  - Al pasar por la hierba alta salen las hojitas verdes de siempre (son un efecto aparte, con sus propios colores, no del mapa): mirar si quedan raras.
+- [ ] **El personaje al capturar surfeando:** a Miguel se le rompió **al volver de capturar** un Pokémon en el agua (20/11/2026). Probarlo varias veces y hacer foto si pasa.
 - [ ] **Termas:** se ven bien (sin trozos de acantilado ni de hierba raros).
 - [ ] **Guardián** en la arena (Slither Wing sin semilla): da premio y no vuelve a salir.
 - [ ] **Mapa rehecho (17/11/2026):** se baja de la meseta a la playa saltando el risco o por la escalera, y se sube solo por la escalera. Que no se vea ninguna pieza rara (orillas, risco, árboles, la charca de marea).
@@ -58,6 +63,29 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 - [ ] **Salvajes** en la hierba alta (Veneno, nivel 27-31) y con caña en las charcas. La científica habla.
 - [ ] **Guardián** del islote (Dragalge sin semilla): da el Lodo Negro y no vuelve a salir.
 
+### CANTERA (desde el 21/11/2026)
+
+- [ ] **Entrada:** en la RUTA 116, la cueva nueva a la derecha de la salida este del TÚNEL FERVERGAL lleva a la cantera, y se vuelve igual. Que las dos bocas se vean bien juntas.
+- [ ] **El mapa:** la pared de arriba con la boca, las tres terrazas con sus escaleras y los riscos. Que no se vea ninguna pieza rara.
+- [ ] **GOLPE ROCA** rompe las seis rocas; vuelven al salir y entrar.
+- [ ] **Cartel** "CANTERA" y zona de captura propia. Salvajes de Acero en la hierba alta (nivel 27-31). La persona de la entrada habla.
+- [ ] **Guardián** del fondo (Aggron sin semilla): da la Tabla Acero y no vuelve a salir.
+
+### PRADO DE HADAS (desde el 21/11/2026)
+
+- [ ] **Entrada:** junto al INSTITUTO METEOROLÓGICO, por el oeste (borde izquierdo de la RUTA 119), se pasa al prado sin pantalla de carga, y se vuelve igual (22/11/2026: antes no se entraba, por la altura). Que los árboles del borde y el pie del árbol de encima de la entrada se vean bien.
+- [ ] **El prado:** las flores, las charcas (con su orilla) y la hierba alta y muy alta. Que no haya copas de árbol sueltas.
+- [ ] **Cartel** "PRADO DE HADAS" y zona de captura propia. Salvajes de Hada; SURF y caña en las charcas. La florista habla.
+- [ ] **Guardián** del claro del norte (Gardevoir sin semilla): da la Tabla Duende y no vuelve a salir.
+
+### ISLA DEL DRAGÓN (desde el 21/11/2026)
+
+- [ ] **Entrada:** surfeando hacia el sur desde el borde de abajo de la RUTA 130 (de la x 33 a la 72) se llega a la isla. Que la unión se vea bien. Que también se baje después de llegar a la RUTA 130 desde la 129 (22/11/2026: antes, en la esquina de la derecha no se bajaba).
+- [ ] **La isla:** se rodea el montículo hasta su cueva (mira al sur), que baja al VALLE DEL DRAGÓN.
+- [ ] **El valle:** sin el Centro Pokémon ni carteles. Salvajes de Dragón en la hierba alta de la izquierda. Se baja al lago y por la cascada surfeando; se vuelve a subir con CASCADA.
+- [ ] **Cartel** "ISLA DEL DRAGÓN" (las dos partes son una zona de captura).
+- [ ] **Guardián** de la meseta (Haxorus sin semilla): da la Tabla Draco y no vuelve a salir.
+
 ### BOSQUE SINIESTRO (desde el 17/11/2026)
 
 - [ ] **Entrada:** bajando por el borde sur de la RUTA 123 (x 103-106) se pasa al bosque sin cortes. Que no se vean copas de árbol sueltas ni troncos cortados en la unión. Al cruzar se oscurece (sombra) y cambia la música.
@@ -68,12 +96,15 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 
 ### Islas de las rutas del sur (desde el 17/11/2026)
 
-- [ ] **Se llega a las tres islas surfeando (17/11/2026):** por el hueco nuevo en las rocas de la RUTA 129 (46, 24), de la RUTA 131 (7, 12) y de la RUTA 134 (9, 21). Que el hueco se vea como un paso normal entre rocas.
-- [ ] **ISLA DE RUINAS:** desde el norte de la RUTA 131, surfeando hacia arriba.
-  - La cueva de la orilla de abajo sale por la del montículo, y se vuelve igual.
-  - La puerta de la torre lleva a la TORRE; la escalera de arriba ya no está.
+- [ ] **Se llega surfeando a la ISLA ARENOSA y a la ISLA DE RUINAS:** por el hueco de las rocas de la RUTA 129 (46, 24).
+- [ ] **ISLA DE RUINAS (rehecha el 21/11/2026):** desde el borde de abajo de la RUTA 129 se ve la isla; se rodea surfeando hasta la playa grande del sur.
+  - De la playa, la escalinata de piedra sube al patio enlosado con columnas, y al fondo está la torre. Que la escalinata, el patio y la sombra de la torre se vean bien, y la torre por arriba.
+  - La puerta de la torre lleva a la TORRE (22/11/2026: antes no se entraba); la escalera de arriba ya no está.
   - Niebla fuera y Campo de Niebla en combate.
-- [ ] **ISLA VOLCÁNICA:** desde el sur de la RUTA 134 (la parte sin corriente, cerca de PORTUAL).
+  - Desde el norte de la RUTA 131 ya no se va a ninguna isla.
+- [ ] **ISLA VOLCÁNICA (cambiada el 21/11/2026): en barca desde PORTUAL.**
+  - El marinero del final del muelle de abajo de PORTUAL (22/11/2026: antes estaba en un muelle al que no se llegaba), encima del otro marinero, dice que el mar está bravo hasta la 7.ª medalla; con ella, te lleva a la playa de abajo de la isla. El de la isla te trae de vuelta al muelle.
+  - En la RUTA 134 ya no se pasa a la isla, y la roca de (9, 21) está otra vez. Que el borde de PORTUAL ya no aparezca ni desaparezca.
   - La cueva del montículo baja al CRÁTER y la cueva nueva del escalón sube.
   - En la ceniza salen salvajes. Sol fuera y en combate.
 - [ ] **ISLA ARENOSA:** desde el este de la RUTA 129. Tormenta de arena. Salvajes en la hierba alta del islote de hierba (al oeste). DARÍO lucha.
@@ -110,12 +141,20 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 
 ### DESIERTO PROFUNDO y RUINAS ARENOSAS (desde el 16/11/2026)
 
-- [ ] **Entrada:** el montículo nuevo del desierto de la RUTA 111 (al este, abajo) lleva al DESIERTO PROFUNDO, y su salida devuelve al mismo sitio.
+- [ ] **Entrada:** el montículo nuevo del desierto de la RUTA 111 lleva al DESIERTO PROFUNDO, y su salida devuelve al mismo sitio.
+  - **Dónde está:** unas 8 casillas más arriba y a la derecha de la puerta de las RUINAS DESIERTO (lo midió Jorge en el emulador, 19/11/2026). Hacen falta las Gafas Aisladoras.
+  - Miguel no lo encontró jugando (20/11/2026): mirar si se distingue bien del resto de la arena.
 - [ ] **El mapa:** que no quede nada de la TORRE ESPEJISMO, y que los bordes (sobre todo el oeste, que es arena cortada) no queden raros.
+- [ ] **Dunas y arenas movedizas (21/11/2026):**
+  - Una fila de peñas corta el paso: a las ruinas no se llega andando.
+  - Las 4 arenas movedizas (cuadrados de arena honda): al pisar el centro sale el mensaje y caes a la CUEVA, cada una a una sala.
+  - En la sala buena (la arena movediza de abajo a la derecha), una escalera sale por la puerta del montículo de junto a las ruinas y la otra devuelve a la entrada; en las otras salas, la escalera devuelve a la entrada.
+  - **Vuelta del norte (22/11/2026):** desde el norte, entrando por la puerta del montículo de la izquierda (no el de las ruinas) se baja a la sala buena, y por su otra escalera se vuelve a la entrada sin VUELO.
+  - Que las rocas que separan las salas se vean bien.
 - [ ] **Tormenta de arena** fuera y en combate, y carteles "DESIERTO PROFUNDO" y "RUINAS ARENOSAS". Cada uno es una zona de captura.
 - [ ] **Ruinas:** el montículo del norte lleva a la entrada; las escaleras suben por las plantas 2 y 3 hasta la CÁMARA.
-  - En las plantas 2 y 3, el suelo agrietado se rompe y caes a la de abajo.
-  - En la 3, GOLPE ROCA rompe las dos rocas. El guardián tiene el sprite del Pokémon que sale y da premio al vencerlo o capturarlo.
+  - **Interruptores (21/11/2026):** en las plantas 2 y 3, las puertas de piedra no dejan llegar a la escalera; al pisar la losa morada de la otra punta se abren y se quedan abiertas (también al salir y volver).
+  - El guardián tiene el sprite del Pokémon que sale y da premio al vencerlo o capturarlo.
 - [ ] **Entrenadores:** SOLEDAD en el desierto y RAMIRO en las ruinas, a nivel 46-47.
 - [ ] **Salvajes y objetos** de las dos zonas.
 
@@ -182,6 +221,15 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 - [ ] Habilidades, MT, tutores, intercambios y objetos del suelo cambian, y las MO no.
 - [ ] Los movimientos que se aprenden al subir de nivel son al azar: los de tu inicial, los de los salvajes y los de los entrenadores. Que al principio siempre haya algún ataque y que no salgan ataques muy fuertes a nivel bajo.
 - [ ] `make nueva-partida` da otra semilla y `make` repite la misma.
+
+### Regla de la Liga (desde el 22/11/2026)
+
+- [ ] **Tienda de la Liga:** el dependiente recuerda la regla y vende RESTAURAR TODO (3000 ₽). Se pueden comprar varios, también después de salir y volver.
+- [ ] **En combate con el Alto Mando y el Campeón:**
+  - Antes de que el rival cure, un curativo de la mochila no se puede usar: sale "Regla de la Liga: no puedes curar más veces que el rival." y no se gasta.
+  - Cuando el rival usa un RESTAURAR TODO, se puede usar uno (y solo uno); si usa otro, otro más.
+  - En los demás combates (entrenadores normales, gimnasios) los curativos se usan como siempre.
+- [ ] **Cura entre combates:** al entrar en la sala de SIXTO, FÁTIMA, NÍVEA, DRACÓN y PLUBIO suena la música del Centro, sale el mensaje y el equipo tiene la vida, los PP y el estado a tope.
 
 ### Equilibrio
 - [ ] Primeros gimnasios (desde el 11/11/2026):

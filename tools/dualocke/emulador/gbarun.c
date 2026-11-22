@@ -5,6 +5,7 @@
 //   w8/w16/w32 ADDR V escribe memoria
 //   shot FILE        guarda la pantalla en PPM
 //   save FILE / load FILE   estado
+//   sacar_sav FILE / meter_sav FILE   partida guardada del juego (meter_sav reinicia la consola)
 #include <mgba/core/core.h>
 #include <mgba/core/serialize.h>
 #include <mgba-util/vfs.h>
@@ -50,6 +51,9 @@ int main(int argc, char **argv) {
         }
         else if (!strcmp(cmd, "save")) { struct VFile *vf = VFileOpen(arg, O_CREAT | O_TRUNC | O_RDWR); mCoreSaveStateNamed(core, vf, SAVESTATE_ALL); vf->close(vf); puts("ok"); }
         else if (!strcmp(cmd, "load")) { struct VFile *vf = VFileOpen(arg, O_RDONLY); mCoreLoadStateNamed(core, vf, SAVESTATE_ALL); vf->close(vf); puts("ok"); }
+        // partida guardada del juego (la de la batería), para pasarla de una ROM a otra
+        else if (!strcmp(cmd, "sacar_sav")) { void *d = NULL; size_t n = core->savedataClone(core, &d); FILE *f = fopen(arg, "wb"); if (f) { fwrite(d, 1, n, f); fclose(f); } free(d); printf("%zu\n", n); }
+        else if (!strcmp(cmd, "meter_sav")) { struct VFile *vf = VFileOpen(arg, O_RDWR); int ok = vf && core->loadSave(core, vf); core->reset(core); printf("%d\n", ok); }
         else if (!strcmp(cmd, "hasta_pc")) {
             // ejecuta hasta llegar a la dirección V (o A pasos) y dice las últimas 256 instrucciones
             struct ARMCore *cpu = core->cpu; unsigned ult[8192] = {0}, n = 0; unsigned long i;
