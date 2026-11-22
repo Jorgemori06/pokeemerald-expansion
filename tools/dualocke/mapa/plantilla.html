@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mapa del Dualocke · Hoenn</title>
+<!-- Lo genera tools/dualocke/mapa_interactivo.py desde tools/dualocke/mapa/plantilla.html: no se edita a mano -->
+<style>/*LEAFLET_CSS*/</style>
+<style>
+:root{--panel:rgba(22,26,34,.92);--borde:rgba(255,255,255,.12);--texto:#e9edf3;--suave:#9aa6b5;--acento:#f2c14e;--rojo:#e5534b;--verde:#57c27a}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:#0d1a2b;color:var(--texto);font:14px/1.35 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+#mapa{position:absolute;inset:0;background:#0d1a2b}
+.leaflet-container{background:#0d1a2b;font:inherit}
+.leaflet-image-layer{image-rendering:pixelated;image-rendering:crisp-edges}
+.panel{background:var(--panel);border:1px solid var(--borde);border-radius:12px;box-shadow:0 6px 24px rgba(0,0,0,.35);backdrop-filter:blur(6px)}
+button{font:inherit;color:inherit;cursor:pointer}
+/* Barra de arriba */
+#barra{position:absolute;top:10px;left:10px;right:10px;z-index:1000;display:flex;gap:8px;align-items:flex-start;pointer-events:none}
+#barra>*{pointer-events:auto}
+#titulo{padding:8px 12px;font-weight:700;white-space:nowrap}
+#titulo small{display:block;font-weight:400;color:var(--suave);font-size:12px}
+#buscador{position:relative;flex:0 1 420px;margin:0 auto}
+#busqueda{width:100%;padding:10px 14px;border-radius:999px;border:1px solid var(--borde);background:var(--panel);color:var(--texto);font:inherit;outline:none}
+#busqueda:focus{border-color:var(--acento)}
+#resultados{position:absolute;top:44px;left:0;right:0;max-height:60vh;overflow:auto;display:none;padding:4px}
+#resultados.abierto{display:block}
+#resultados div{padding:7px 10px;border-radius:8px;cursor:pointer;display:flex;gap:8px;align-items:baseline}
+#resultados div:hover,#resultados div.sel{background:rgba(255,255,255,.08)}
+#resultados small{color:var(--suave);margin-left:auto;white-space:nowrap}
+.boton{background:var(--panel);border:1px solid var(--borde);border-radius:999px;padding:9px 13px;white-space:nowrap}
+.boton:hover{border-color:var(--acento)}
+/* Menú de capas y zonas */
+#menu{position:absolute;top:58px;right:10px;z-index:1001;width:300px;max-height:calc(100% - 70px);overflow:auto;padding:12px;display:none}
+#menu.abierto{display:block}
+#menu h4{margin:12px 0 6px;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--suave)}
+#menu h4:first-child{margin-top:0}
+#menu label{display:flex;gap:8px;align-items:center;padding:4px 2px;cursor:pointer}
+#menu label .ic{width:20px;text-align:center}
+#menu .nota{color:var(--suave);font-size:12px;margin:2px 0 6px}
+.seg{display:flex;border:1px solid var(--borde);border-radius:999px;overflow:hidden}
+.seg button{flex:1;background:none;border:0;padding:6px 8px}
+.seg button.on{background:var(--acento);color:#111;font-weight:600}
+#zonas-lista{max-height:260px;overflow:auto;margin-top:6px;border-top:1px solid var(--borde)}
+#zonas-lista div{display:flex;align-items:center;gap:6px;padding:4px 2px;border-bottom:1px solid rgba(255,255,255,.05)}
+#zonas-lista span{flex:1;cursor:pointer}
+#zonas-lista span:hover{color:var(--acento)}
+.estado{display:inline-flex;gap:2px}
+.estado button{background:none;border:1px solid var(--borde);border-radius:6px;padding:1px 6px;font-size:12px;color:var(--suave)}
+.estado button.on.c{background:var(--verde);color:#111;border-color:var(--verde)}
+.estado button.on.f{background:#777;color:#fff;border-color:#777}
+/* Controles de la derecha */
+#lado{position:absolute;right:10px;bottom:30px;z-index:1000;display:flex;flex-direction:column;gap:8px;align-items:flex-end}
+.grupo{display:flex;flex-direction:column;overflow:hidden;padding:0}
+.grupo button{background:none;border:0;padding:8px 12px;min-width:38px;border-bottom:1px solid var(--borde)}
+.grupo button:last-child{border-bottom:0}
+.grupo button:hover{background:rgba(255,255,255,.08)}
+.grupo button.on{color:var(--acento);font-weight:700}
+#plantas{max-height:45vh;overflow:auto}
+#plantas button{text-align:right}
+/* Abajo a la izquierda: dónde estás */
+#donde{position:absolute;left:10px;bottom:30px;z-index:1000;padding:8px 12px;max-width:min(520px,calc(100% - 160px))}
+#donde b{display:block}
+#donde .acciones{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap}
+#donde .acciones button{padding:5px 10px;font-size:13px}
+#aviso{position:absolute;left:50%;bottom:30px;transform:translateX(-50%);z-index:1002;padding:8px 14px;display:none}
+/* Puntos y etiquetas */
+.pt{white-space:nowrap}
+.et{color:#fff;font-weight:800;letter-spacing:.03em;text-shadow:0 0 3px #000,0 0 3px #000,0 1px 2px #000;transform:translate(-50%,-50%);display:inline-block;font-size:13px;cursor:pointer}
+.et.ciudad{font-size:16px;color:#fff6d8}
+#mapa.lz1 .et,#mapa.lz2 .et,#mapa.lz3 .et{font-size:11px}
+#mapa.lz1 .pill,#mapa.lz2 .pill,#mapa.lz3 .pill{font-size:10px;padding:1px 6px 1px 4px}
+.et.nueva{color:var(--acento)}
+.et.zona-c::after{content:" ✓";color:var(--verde)}
+.et.zona-f{opacity:.55;text-decoration:line-through}
+.pill{display:inline-flex;gap:4px;align-items:center;transform:translate(-50%,-50%);background:rgba(15,20,28,.85);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:2px 8px 2px 5px;font-size:12px;font-weight:600;cursor:pointer}
+.pill:hover{border-color:var(--acento)}
+.pill.nueva{border-color:var(--acento);color:var(--acento)}
+.pill.zona-c::after{content:"✓";color:var(--verde)}
+.pill.zona-f{opacity:.55}
+.sitio{display:inline-flex;gap:3px;align-items:center;transform:translate(-50%,-110%);font-size:11px;font-weight:700;text-shadow:0 0 3px #000,0 0 3px #000;cursor:pointer}
+.sitio .ic{font-size:15px}
+.puerta{display:block;width:10px;height:10px;transform:translate(-50%,-50%);border:2px solid #fff;background:#b04ad6;border-radius:3px;box-shadow:0 0 3px #000;cursor:pointer}
+.puerta.volver{background:#4a8bd6}
+.punto{transform:translate(-50%,-50%);display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;font-size:11px;box-shadow:0 0 0 2px rgba(0,0,0,.6);cursor:pointer}
+.punto.entrenador{background:#f08c2c}
+.punto.objeto{background:linear-gradient(#e5534b 0 48%,#222 48% 56%,#fff 56%)}
+.punto.objeto.oculto{opacity:.75;border:2px dashed #fff}
+.punto.mega{background:#9b59d0}
+.punto.ticket{background:#2fa7a0}
+.punto.fuerte{background:#e5534b}
+.marca{width:30px;height:30px;border-radius:50%;border:3px solid var(--acento);transform:translate(-50%,-50%);animation:latido 1.2s ease-in-out 4}
+@keyframes latido{50%{transform:translate(-50%,-50%) scale(1.6);opacity:.4}}
+.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:var(--panel);color:var(--texto);border:1px solid var(--borde)}
+.leaflet-popup-content{margin:10px 14px;font-size:13px;min-width:180px}
+.leaflet-popup-content h3{margin:0 0 4px;font-size:15px}
+.leaflet-popup-content p{margin:4px 0}
+.leaflet-popup-content .chip{display:inline-block;background:var(--acento);color:#111;border-radius:6px;padding:0 6px;font-size:11px;font-weight:700;margin-bottom:4px}
+.leaflet-popup-content button{margin-top:6px}
+.leaflet-container a.leaflet-popup-close-button{color:var(--suave)}
+.leaflet-tooltip{background:var(--panel);color:var(--texto);border:1px solid var(--borde);box-shadow:none}
+.leaflet-tooltip:before{display:none}
+.leaflet-control-attribution{background:rgba(0,0,0,.4)!important;color:var(--suave)!important}
+@media (max-width:640px){#titulo small{display:none}#titulo{display:none}#menu{left:10px;width:auto}#donde{max-width:calc(100% - 90px)}}
+</style>
+</head>
+<body>
+<div id="mapa"></div>
+<div id="barra">
+  <div id="titulo" class="panel">Mapa del Dualocke<small>Hoenn · <a href="GUIA.html" style="color:var(--acento)">abrir la guía</a></small></div>
+  <div id="buscador">
+    <input id="busqueda" type="search" placeholder="Buscar zonas, megapiedras, entrenadores…" autocomplete="off">
+    <div id="resultados" class="panel"></div>
+  </div>
+  <button id="b-menu" class="boton" title="Capas y zonas de captura">☰ Capas</button>
+</div>
+<div id="menu" class="panel">
+  <h4>Capas</h4>
+  <div id="capas"></div>
+  <p class="nota">Las que destripan sitios (objetos, megapiedras, tickets, POKéMON fuertes) empiezan apagadas.</p>
+  <h4>Zonas de captura</h4>
+  <p class="nota">Marca las zonas que ya has gastado (primera captura). Se guarda en este navegador.</p>
+  <div class="seg" id="jugadores"><button data-j="Jorge">Jorge</button><button data-j="Miguel">Miguel</button></div>
+  <p class="nota" id="zonas-cuenta"></p>
+  <label><input type="checkbox" id="solo-libres"> Ver solo las libres</label>
+  <div id="zonas-lista"></div>
+</div>
+<div id="lado">
+  <div id="niveles" class="panel grupo"></div>
+  <div id="plantas" class="panel grupo"></div>
+  <div class="panel grupo"><button id="b-mas" title="Acercar">+</button><button id="b-menos" title="Alejar">−</button></div>
+</div>
+<div id="donde" class="panel"></div>
+<div id="aviso" class="panel"></div>
+
+<script>/*LEAFLET_JS*/</script>
+<script id="datos" type="application/json">/*DATOS*/</script>
+<script id="imagenes" type="application/json">/*IMAGENES*/</script>
+<script>
+(function () {
+  "use strict";
+  var D = JSON.parse(document.getElementById("datos").textContent);
+  var IMG = JSON.parse(document.getElementById("imagenes").textContent);
+  var M = D.mapas;
+
+  // ---------------------------------------------------------------- utilidades
+  function el(tag, cls, txt) { var e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; }
+  function norm(s) { return (s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, ""); }
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function guardar(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+  function leer(k, def) { try { var v = localStorage.getItem(k); return v ? JSON.parse(v) : def; } catch (e) { return def; } }
+  function aviso(t) { var a = document.getElementById("aviso"); a.textContent = t; a.style.display = "block"; clearTimeout(aviso.t); aviso.t = setTimeout(function () { a.style.display = "none"; }, 2500); }
+  function nombreMapa(c) { var m = M[c]; return m.n + (m.p ? " · " + m.p : ""); }
+
+  // ---------------------------------------------------------------- capas
+  var CAPAS = [
+    ["nombres", "Nombres de zonas", "🏷", true],
+    ["sitios", "Sitios (Centro POKéMON, tienda, gimnasio…)", "🏥", true],
+    ["lugares", "Cuevas y lugares", "⛰", true],
+    ["puertas", "Puertas", "🚪", true],
+    ["nuevas", "Zonas nuevas", "★", true],
+    ["entrenadores", "Entrenadores", "👤", false],
+    ["objetos", "Objetos del suelo (al azar)", "●", false],
+    ["mega", "Megapiedras", "💎", false],
+    ["ticket", "Ticket-Recuerdo", "🎟", false],
+    ["fuerte", "POKéMON fuertes", "★", false]
+  ];
+  var capasOn = leer("mapa-capas", null) || {};
+  CAPAS.forEach(function (c) { if (!(c[0] in capasOn)) capasOn[c[0]] = c[3]; });
+  var cont = document.getElementById("capas");
+  CAPAS.forEach(function (c) {
+    var l = el("label"), i = el("input");
+    i.type = "checkbox"; i.checked = capasOn[c[0]];
+    i.onchange = function () { capasOn[c[0]] = i.checked; guardar("mapa-capas", capasOn); aplicarCapas(); };
+    l.appendChild(i); l.appendChild(el("span", "ic", c[2])); l.appendChild(el("span", null, c[1]));
+    l.dataset.capa = c[0];
+    cont.appendChild(l);
+  });
+  function aplicarCapas() {
+    var root = document.getElementById("mapa");
+    CAPAS.forEach(function (c) { root.classList.toggle("sin-" + c[0], !capasOn[c[0]]); });
+    cont.querySelectorAll("input").forEach(function (i, k) { i.checked = capasOn[CAPAS[k][0]]; });
+  }
+  function encenderCapa(c) { if (!capasOn[c]) { capasOn[c] = true; guardar("mapa-capas", capasOn); aplicarCapas(); } }
+  (function () {
+    var css = "";
+    CAPAS.forEach(function (c) { css += "#mapa.sin-" + c[0] + " .c-" + c[0] + "{display:none!important}"; });
+    // Lo que sale según el zoom (mz2 = a partir del zoom 2, en el mundo)
+    for (var z = -2; z <= 7; z++) for (var n = z + 1; n <= 7; n++) css += "#mapa.lz" + (z + 3) + " .mz" + n + "{display:none}";
+    var s = el("style"); s.textContent = css; document.head.appendChild(s);
+  })();
+  document.getElementById("b-menu").onclick = function () { document.getElementById("menu").classList.toggle("abierto"); };
+
+  // ---------------------------------------------------------------- zonas de captura
+  var jugador = leer("mapa-jugador", "Jorge");
+  var marcas = {};
+  function claveMarcas() { return "mapa-zonas-" + jugador; }
+  function cargarMarcas() { marcas = leer(claveMarcas(), {}); }
+  function ponerMarca(sec, v) {
+    if (marcas[sec] === v) delete marcas[sec]; else marcas[sec] = v;
+    guardar(claveMarcas(), marcas); pintarZonas();
+  }
+  var esCaptura = {}; D.captura.forEach(function (s) { esCaptura[s] = true; });
+  function htmlEstado(sec) {
+    if (!esCaptura[sec]) return "";
+    var v = marcas[sec] || "";
+    return '<p>Zona de captura (' + esc(jugador) + '):</p><span class="estado" data-sec="' + sec + '">' +
+      '<button class="c' + (v === "c" ? " on" : "") + '" data-v="c">Capturado</button>' +
+      '<button class="f' + (v === "f" ? " on" : "") + '" data-v="f">Fallado</button></span>';
+  }
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest(".estado button");
+    if (!b) return;
+    var sec = b.parentNode.dataset.sec;
+    ponerMarca(sec, b.dataset.v);
+    b.parentNode.querySelectorAll("button").forEach(function (x) { x.classList.toggle("on", marcas[sec] === x.dataset.v); });
+  });
+  function claseZona(sec) { return marcas[sec] === "c" ? " zona-c" : marcas[sec] === "f" ? " zona-f" : ""; }
+  function pintarZonas() {
+    document.querySelectorAll("[data-sec-z]").forEach(function (e) {
+      e.classList.remove("zona-c", "zona-f");
+      var v = marcas[e.dataset.secZ]; if (v) e.classList.add("zona-" + v);
+    });
+    var lista = document.getElementById("zonas-lista"), solo = document.getElementById("solo-libres").checked;
+    lista.innerHTML = "";
+    var libres = 0;
+    D.captura.forEach(function (sec) {
+      if (!marcas[sec]) libres++;
+      if (solo && marcas[sec]) return;
+      var fila = el("div"), n = el("span", null, D.nombresSec[sec] || sec);
+      n.onclick = function () { irAZona(sec); };
+      fila.appendChild(n);
+      var est = el("span", "estado"); est.dataset.sec = sec;
+      [["c", "✓"], ["f", "✗"]].forEach(function (o) {
+        var b = el("button", o[0] + (marcas[sec] === o[0] ? " on" : ""), o[1]); b.dataset.v = o[0];
+        b.title = o[0] === "c" ? "Capturado" : "Fallado"; est.appendChild(b);
+      });
+      fila.appendChild(est);
+      lista.appendChild(fila);
+    });
+    document.getElementById("zonas-cuenta").textContent = "Libres: " + libres + " de " + D.captura.length + ".";
+  }
+  document.getElementById("solo-libres").onchange = pintarZonas;
+  document.querySelectorAll("#jugadores button").forEach(function (b) {
+    b.onclick = function () {
+      jugador = b.dataset.j; guardar("mapa-jugador", jugador); cargarMarcas();
+      document.querySelectorAll("#jugadores button").forEach(function (x) { x.classList.toggle("on", x === b); });
+      pintarZonas();
+    };
+    b.classList.toggle("on", b.dataset.j === jugador);
+  });
+  cargarMarcas();
+
+  // ---------------------------------------------------------------- el mapa
+  var mapa = L.map("mapa", { crs: L.CRS.Simple, minZoom: -2, maxZoom: 6, zoomSnap: 0.5, zoomDelta: 0.5, wheelPxPerZoomLevel: 90,
+    zoomControl: false, attributionControl: true, maxBoundsViscosity: 0.6 });
+  mapa.attributionControl.setPrefix(false).addAttribution("Dualocke · Jorge y Miguel · Leaflet");
+  document.getElementById("b-mas").onclick = function () { mapa.zoomIn(); };
+  document.getElementById("b-menos").onclick = function () { mapa.zoomOut(); };
+  function ll(x, y) { return L.latLng(-y, x); }
+  var capaImg = L.layerGroup().addTo(mapa), capaPts = L.layerGroup().addTo(mapa), capaMarca = L.layerGroup().addTo(mapa);
+  var root = document.getElementById("mapa");
+  function actualizarZoom() {
+    var z = Math.floor(mapa.getZoom()) + 3;
+    for (var k = 0; k <= 10; k++) root.classList.remove("lz" + k);
+    root.classList.add("lz" + (vista.tipo === "mundo" ? z : 10));
+  }
+  mapa.on("zoomend", function () { actualizarZoom(); guardarHash(); });
+  mapa.on("moveend", guardarHash);
+
+  function icono(html, cls) { return L.divIcon({ html: html, className: "pt " + (cls || ""), iconSize: null }); }
+  function marcador(x, y, html, cls, z) {
+    var m = L.marker(ll(x, y), { icon: icono(html, cls), riseOnHover: true, zIndexOffset: z || 0, keyboard: false });
+    capaPts.addLayer(m); return m;
+  }
+
+  // Vista actual: {tipo:"mundo", nivel:0|-1} o {tipo:"mapa", c:carpeta}
+  var vista = null, historial = [];
+
+  var puntosPorMapa = {};
+  D.puntos.forEach(function (p) { (puntosPorMapa[p.m] = puntosPorMapa[p.m] || []).push(p); });
+
+  function popupZona(sec, extra) {
+    var h = "<h3>" + esc(D.nombresSec[sec] || sec) + "</h3>";
+    if (D.nuevas[sec] !== undefined) h += '<span class="chip">Zona nueva</span>' + (D.nuevas[sec] ? "<p>" + esc(D.nuevas[sec]) + "</p>" : "");
+    return h + (extra || "") + htmlEstado(sec);
+  }
+
+  function ponerPunto(p, ox, oy) {
+    var x = p.x + ox + 0.5, y = p.y + oy + 0.5, m, tip;
+    if (p.t === "puerta") {
+      var dest = p.a === "__volver" ? null : M[p.a];
+      if (p.a !== "__volver" && !dest) return;
+      var enMundo = vista.tipo === "mundo";
+      // Una etiqueta por sitio y mapa (los edificios y cuevas con varias puertas: el resto, puertas normales)
+      var clave = dest ? p.m + ">" + (dest.grupo || p.a) : "";
+      var primera = dest && !etiquetados[clave];
+      if (primera) etiquetados[clave] = true;
+      if (primera && enMundo && dest.ic) {
+        var principal = /CENTRO POKéMON|TIENDA$|GIMNASIO|PUERTO|LIGA/.test(dest.n.split(" · ")[0]);
+        m = marcador(x, y, '<span class="sitio"><span class="ic">' + dest.ic + "</span>" + esc(dest.n.split(" · ")[0]) + "</span>", "c-sitios " + (principal ? "mz2" : "mz3"), 50);
+      } else if (primera && enMundo && !dest.e && !dest.mundo) {
+        var sec = dest.sec, nueva = D.nuevas[sec] !== undefined;
+        m = marcador(x, y, '<span class="pill' + (nueva ? " nueva" : "") + claseZona(sec) + '" data-sec-z="' + sec + '">' + (nueva ? "★" : "⛰") + " " + esc(dest.n) + "</span>",
+          (nueva ? "c-nuevas c-lugares" : "c-lugares") + (nueva ? " mz-2" : " mz1"), 100);
+      } else {
+        m = marcador(x, y, '<span class="puerta' + (dest ? "" : " volver") + '"></span>', "c-puertas" + (enMundo ? " mz3" : ""), 10);
+      }
+      tip = dest ? "→ " + nombreMapa(p.a) : "Salida (vuelve por donde entraste)";
+      m.bindTooltip(tip, { direction: "top", offset: [0, -8] });
+      m.on("click", function () {
+        if (!dest) { atras(); return; }
+        if (dest.mundo && dest.mundo[2] === 0) { irAlMundo(0, dest.mundo[0] + p.ax + 0.5, dest.mundo[1] + p.ay + 0.5, Math.max(mapa.getZoom(), 3)); return; }
+        abrirMapa(p.a, p.ax, p.ay);
+      });
+      return;
+    }
+    var html = { entrenador: "👤", objeto: "", mega: "💎", ticket: "🎟", fuerte: "★" }[p.t];
+    m = marcador(x, y, '<span class="punto ' + p.t + (p.o ? " oculto" : "") + '">' + html + "</span>", "c-" + (p.t === "entrenador" ? "entrenadores" : p.t === "objeto" ? "objetos" : p.t) + (vista.tipo === "mundo" ? " mz2" : ""), 200);
+    var cuerpo = "<h3>" + esc(p.n) + "</h3>" + (p.d ? "<p>" + esc(p.d) + "</p>" : "") +
+      (p.o ? "<p>Escondido: hay que pulsar A en la casilla.</p>" : "") + "<p style=\"color:var(--suave)\">" + esc(nombreMapa(p.m)) + "</p>";
+    m.bindPopup(cuerpo);
+    m.bindTooltip(p.n, { direction: "top", offset: [0, -8] });
+  }
+
+  var etiquetados = {};
+  function limpiar() { etiquetados = {}; capaImg.clearLayers(); capaPts.clearLayers(); capaMarca.clearLayers(); mapa.closePopup(); }
+
+  function irAlMundo(nivel, x, y, z, sinHistorial) {
+    if (vista && !sinHistorial) historial.push(estadoActual());
+    vista = { tipo: "mundo", nivel: nivel || 0 };
+    limpiar();
+    var T = D.tamMundo;
+    mapa.setMaxBounds(L.latLngBounds(ll(-60, -60), ll(T[0] + 60, T[1] + 60)));
+    Object.keys(M).forEach(function (c) {
+      var w = M[c].mundo; if (!w || w[2] !== vista.nivel) return;
+      var b = L.latLngBounds(ll(w[0], w[1]), ll(w[0] + M[c].w, w[1] + M[c].h));
+      var img = L.imageOverlay(IMG[c], b, { interactive: true });
+      img.on("click", function (e) { popupTerreno(c, e.latlng); });
+      capaImg.addLayer(img);
+      if (D.nuevas[M[c].sec] !== undefined)
+        capaPts.addLayer(L.rectangle(b, { color: "#f2c14e", weight: 2, dashArray: "6 6", fill: false, interactive: false, className: "c-nuevas" }));
+    });
+    // Nombres: uno por zona, en el centro de su mapa más grande
+    var porSec = {};
+    Object.keys(M).forEach(function (c) {
+      var w = M[c].mundo; if (!w || w[2] !== vista.nivel) return;
+      var s = M[c].sec, a = M[c].w * M[c].h;
+      if (!porSec[s] || porSec[s].a < a) porSec[s] = { c: c, a: a };
+    });
+    Object.keys(porSec).forEach(function (s) {
+      var c = porSec[s].c, w = M[c].mundo, t = (M[c].tipo || "");
+      var ciudad = /TOWN|CITY/.test(t), nueva = D.nuevas[s] !== undefined;
+      var m = marcador(w[0] + M[c].w / 2, w[1] + M[c].h / 2,
+        '<span class="et' + (ciudad ? " ciudad" : "") + (nueva ? " nueva" : "") + claseZona(s) + '" data-sec-z="' + s + '">' + esc(M[c].n) + "</span>",
+        "c-nombres " + (ciudad || nueva ? "mz-2" : "mz1"), 300);
+      m.on("click", function (e) { L.popup().setLatLng(e.latlng).setContent(popupZona(s)).openOn(mapa); });
+    });
+    Object.keys(M).forEach(function (c) {
+      var w = M[c].mundo; if (!w || w[2] !== vista.nivel) return;
+      (puntosPorMapa[c] || []).forEach(function (p) { ponerPunto(p, w[0], w[1]); });
+    });
+    if (vista.nivel === 0) D.sueltos.forEach(function (s) {
+      var d = M[s.a], nueva = D.nuevas[d.sec] !== undefined;
+      var m = marcador(s.x, s.y, '<span class="pill' + (nueva ? " nueva" : "") + claseZona(d.sec) + '" data-sec-z="' + d.sec + '">⛵ ' + esc(d.n) + "</span>",
+        (nueva ? "c-nuevas c-lugares" : "c-lugares") + (nueva ? " mz-2" : " mz0"), 100);
+      m.bindTooltip("No se llega andando: en barco, buceando o volando", { direction: "top", offset: [0, -10] });
+      m.on("click", function () { abrirMapa(s.a); });
+    });
+    if (x == null) mapa.fitBounds(L.latLngBounds(ll(0, 0), ll(T[0], T[1])));
+    else mapa.setView(ll(x, y), z == null ? 3 : z);
+    pintarLado(); actualizarZoom(); pintarDonde(); pintarZonas(); guardarHash();
+  }
+
+  function popupTerreno(c, latlng) {
+    var m = M[c];
+    var extra = vista.tipo === "mundo" ? "" : (m.p ? "<p>" + esc(m.p) + "</p>" : "");
+    L.popup().setLatLng(latlng).setContent(popupZona(m.sec, extra)).openOn(mapa);
+  }
+
+  function abrirMapa(c, x, y, z, sinHistorial) {
+    if (!M[c]) return;
+    if (M[c].mundo && M[c].mundo[2] === 0 && x != null) { irAlMundo(0, M[c].mundo[0] + x + 0.5, M[c].mundo[1] + y + 0.5, z || 3, sinHistorial); return; }
+    if (vista && !sinHistorial) historial.push(estadoActual());
+    vista = { tipo: "mapa", c: c };
+    limpiar();
+    var m = M[c], b = L.latLngBounds(ll(0, 0), ll(m.w, m.h));
+    mapa.setMaxBounds(b.pad(0.5));
+    var img = L.imageOverlay(IMG[c], b, { interactive: true });
+    img.on("click", function (e) { popupTerreno(c, e.latlng); });
+    capaImg.addLayer(img);
+    (puntosPorMapa[c] || []).forEach(function (p) { ponerPunto(p, 0, 0); });
+    if (z != null && x != null) mapa.setView(ll(x, y), z);
+    else {
+      mapa.fitBounds(b, { padding: [60, 60], maxZoom: 5 });
+      if (x != null && (m.w > 50 || m.h > 50)) mapa.setView(ll(x + 0.5, y + 0.5), Math.max(mapa.getZoom(), 3));
+    }
+    pintarLado(); actualizarZoom(); pintarDonde(); pintarZonas(); guardarHash();
+  }
+
+  function estadoActual() {
+    var c = mapa.getCenter();
+    return { v: vista.tipo === "mundo" ? (vista.nivel ? "agua" : "mundo") : vista.c, x: +c.lng.toFixed(1), y: +(-c.lat).toFixed(1), z: mapa.getZoom() };
+  }
+  function irA(e, sinHistorial) {
+    if (e.v === "mundo" || e.v === "agua") irAlMundo(e.v === "agua" ? -1 : 0, e.x, e.y, e.z, sinHistorial);
+    else abrirMapa(e.v, e.x, e.y, e.z, sinHistorial);
+  }
+  function atras() { var e = historial.pop(); if (e) irA(e, true); else irAlMundo(0, null, null, null, true); }
+
+  // ---------------------------------------------------------------- paneles
+  function pintarLado() {
+    var niv = document.getElementById("niveles"), pl = document.getElementById("plantas");
+    niv.innerHTML = ""; pl.innerHTML = "";
+    if (vista.tipo === "mundo") {
+      niv.style.display = ""; pl.style.display = "none";
+      [[0, "Superficie"], [-1, "Bajo el agua"]].forEach(function (n) {
+        var b = el("button", vista.nivel === n[0] ? "on" : "", n[1]);
+        b.onclick = function () {
+          if (vista.nivel === n[0]) return;
+          var c = mapa.getCenter(), x = c.lng, y = -c.lat, hay = false, caja = null;
+          Object.keys(M).forEach(function (k) {
+            var w = M[k].mundo; if (!w || w[2] !== n[0]) return;
+            var b2 = L.latLngBounds(ll(w[0], w[1]), ll(w[0] + M[k].w, w[1] + M[k].h));
+            caja = caja ? caja.extend(b2) : b2;
+            if (x >= w[0] && x <= w[0] + M[k].w && y >= w[1] && y <= w[1] + M[k].h) hay = true;
+          });
+          irAlMundo(n[0], x, y, mapa.getZoom());
+          if (!hay && caja) mapa.fitBounds(caja, { padding: [40, 40] });
+        };
+        niv.appendChild(b);
+      });
+      return;
+    }
+    niv.style.display = "none";
+    var g = M[vista.c].grupo, lista = (g && D.grupos[g]) || [];
+    if (lista.length < 2) { pl.style.display = "none"; return; }
+    pl.style.display = "";
+    lista.forEach(function (c) {
+      var b = el("button", c === vista.c ? "on" : "", M[c].p || M[c].n);
+      b.onclick = function () { if (c !== vista.c) abrirMapa(c); };
+      pl.appendChild(b);
+    });
+  }
+  function pintarDonde() {
+    var d = document.getElementById("donde");
+    d.innerHTML = "";
+    var t = vista.tipo === "mundo" ? (vista.nivel ? "Hoenn · bajo el agua" : "Hoenn") : M[vista.c].n;
+    d.appendChild(el("b", null, t));
+    if (vista.tipo === "mapa" && M[vista.c].p) d.appendChild(el("span", null, M[vista.c].p));
+    var acc = el("div", "acciones");
+    if (vista.tipo !== "mundo" || historial.length) {
+      var b1 = el("button", "boton", "← Atrás"); b1.onclick = atras; acc.appendChild(b1);
+    }
+    if (vista.tipo !== "mundo") {
+      var b2 = el("button", "boton", "🗺 Mundo"); b2.onclick = function () { irAlMundo(0); }; acc.appendChild(b2);
+    }
+    var b3 = el("button", "boton", "🔗 Enlace");
+    b3.title = "Copia un enlace a este sitio";
+    b3.onclick = function () {
+      guardarHash();
+      var url = location.href;
+      if (navigator.clipboard) navigator.clipboard.writeText(url).then(function () { aviso("Enlace copiado"); }, function () { aviso(url); });
+      else aviso(url);
+    };
+    acc.appendChild(b3);
+    d.appendChild(acc);
+  }
+
+  // ---------------------------------------------------------------- enlace (#v=…&x=…&y=…&z=…)
+  var hashListo = false;
+  function guardarHash() {
+    if (!vista || !hashListo) return;
+    var e = estadoActual();
+    var h = "#v=" + encodeURIComponent(e.v) + "&x=" + e.x + "&y=" + e.y + "&z=" + e.z;
+    if (location.hash !== h) history.replaceState(null, "", h);
+  }
+  function leerHash() {
+    var h = {}; location.hash.replace(/^#/, "").split("&").forEach(function (p) { var kv = p.split("="); if (kv[0]) h[kv[0]] = decodeURIComponent(kv[1] || ""); });
+    if (!h.v || (h.v !== "mundo" && h.v !== "agua" && !M[h.v])) return null;
+    return { v: h.v, x: parseFloat(h.x), y: parseFloat(h.y), z: parseFloat(h.z) };
+  }
+
+  // ---------------------------------------------------------------- buscador
+  var indice = [];
+  var vistosSec = {};
+  Object.keys(M).forEach(function (c) {
+    var m = M[c];
+    if (!vistosSec[m.sec] && (!m.e)) { vistosSec[m.sec] = 1; indice.push({ t: m.n, s: D.nuevas[m.sec] !== undefined ? "zona nueva" : "zona", f: function () { irAZona(m.sec); } }); }
+  });
+  D.puntos.forEach(function (p) {
+    if (p.t === "mega" || p.t === "ticket" || p.t === "entrenador" || p.t === "fuerte")
+      indice.push({ t: p.n, s: ({ mega: "megapiedra", ticket: "ticket", entrenador: "entrenador", fuerte: "POKéMON fuerte" })[p.t] + " · " + M[p.m].n,
+        f: function () { encenderCapa(p.t === "entrenador" ? "entrenadores" : p.t); irAPunto(p); } });
+  });
+  indice.forEach(function (i) { i.k = norm(i.t + " " + i.s); });
+  var inp = document.getElementById("busqueda"), res = document.getElementById("resultados"), sel = 0, actuales = [];
+  function buscar() {
+    var q = norm(inp.value).trim();
+    res.innerHTML = ""; actuales = [];
+    if (!q) { res.classList.remove("abierto"); return; }
+    var palabras = q.split(/\s+/);
+    actuales = indice.filter(function (i) { return palabras.every(function (w) { return i.k.indexOf(w) >= 0; }); })
+      .sort(function (a, b) { return (norm(a.t).indexOf(q) === 0 ? 0 : 1) - (norm(b.t).indexOf(q) === 0 ? 0 : 1) || a.t.localeCompare(b.t); }).slice(0, 15);
+    if (!actuales.length) res.appendChild(el("div", null, "Nada con ese nombre"));
+    actuales.forEach(function (i, k) {
+      var d = el("div", k === sel ? "sel" : ""); d.appendChild(el("span", null, i.t)); d.appendChild(el("small", null, i.s));
+      d.onclick = function () { elegir(k); }; res.appendChild(d);
+    });
+    res.classList.add("abierto");
+  }
+  function elegir(k) { var i = actuales[k]; if (!i) return; res.classList.remove("abierto"); inp.blur(); i.f(); }
+  inp.addEventListener("input", function () { sel = 0; buscar(); });
+  inp.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowDown") { sel = Math.min(sel + 1, actuales.length - 1); buscar(); e.preventDefault(); }
+    else if (e.key === "ArrowUp") { sel = Math.max(sel - 1, 0); buscar(); e.preventDefault(); }
+    else if (e.key === "Enter") elegir(sel);
+    else if (e.key === "Escape") { res.classList.remove("abierto"); inp.blur(); }
+  });
+  document.addEventListener("click", function (e) { if (!e.target.closest("#buscador")) res.classList.remove("abierto"); });
+
+  function resaltar(x, y) {
+    capaMarca.clearLayers();
+    capaMarca.addLayer(L.marker(ll(x, y), { icon: L.divIcon({ html: '<div class="marca"></div>', className: "pt", iconSize: null }), interactive: false }));
+    setTimeout(function () { capaMarca.clearLayers(); }, 5200);
+  }
+  function irAPunto(p) {
+    var w = M[p.m].mundo;
+    if (w && w[2] === 0) { irAlMundo(0, w[0] + p.x + 0.5, w[1] + p.y + 0.5, 4); resaltar(w[0] + p.x + 0.5, w[1] + p.y + 0.5); }
+    else if (w) { irAlMundo(-1, w[0] + p.x + 0.5, w[1] + p.y + 0.5, 4); resaltar(w[0] + p.x + 0.5, w[1] + p.y + 0.5); }
+    else { abrirMapa(p.m, p.x + 0.5, p.y + 0.5, 4); resaltar(p.x + 0.5, p.y + 0.5); }
+  }
+  function irAZona(sec) {
+    // En el mundo: el centro de su mapa más grande. Si no: su entrada en el mundo o su sitio suelto. Si no, el mapa.
+    var mejor = null;
+    Object.keys(M).forEach(function (c) { var m = M[c]; if (m.sec === sec && m.mundo && (!mejor || m.w * m.h > M[mejor].w * M[mejor].h)) mejor = c; });
+    if (mejor) { var w = M[mejor].mundo, x = w[0] + M[mejor].w / 2, y = w[1] + M[mejor].h / 2; irAlMundo(w[2], x, y, 2); resaltar(x, y); return; }
+    var ent = D.puntos.find(function (p) { return p.t === "puerta" && M[p.a] && M[p.a].sec === sec && M[p.m].mundo && M[p.m].mundo[2] === 0; });
+    if (ent) { var w2 = M[ent.m].mundo, x2 = w2[0] + ent.x + 0.5, y2 = w2[1] + ent.y + 0.5; irAlMundo(0, x2, y2, 3); resaltar(x2, y2); return; }
+    var s = D.sueltos.find(function (s) { return M[s.a].sec === sec; });
+    if (s) { irAlMundo(0, s.x, s.y, 2); resaltar(s.x, s.y); return; }
+    var c = Object.keys(M).find(function (c) { return M[c].sec === sec; });
+    if (c) abrirMapa(c);
+  }
+
+  // ---------------------------------------------------------------- arranque
+  aplicarCapas();
+  var inicio = leerHash();
+  if (inicio) irA(inicio, true); else irAlMundo(0, null, null, null, true);
+  hashListo = true; guardarHash();
+  window.addEventListener("hashchange", function () { var e = leerHash(); if (e) { var a = estadoActual(); if (a.v !== e.v || Math.abs(a.x - e.x) > 1 || Math.abs(a.y - e.y) > 1) irA(e, true); } });
+})();
+</script>
+</body>
+</html>
