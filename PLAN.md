@@ -65,10 +65,11 @@ Contestadas por Miguel el 20/11/2026:
    - **Propuesta:** que se note más. Por ejemplo, un cartel o una pista junto a la puerta de las RUINAS DESIERTO, o una pista en la guía con foto. Está sin decidir quién lo hace.
 2. **PLAYA VOLCÁNICA, el personaje roto:** le pasó **al volver de capturar** un Pokémon en el agua (al acabar el combate, surfeando).
    - Jorge no lo reproduce en el emulador. Lo siguiente es probar justo eso varias veces: capturar surfeando en la PLAYA VOLCÁNICA y mirar el personaje al volver al mapa.
-3. **PLAYA VOLCÁNICA, el tiempo:** **sol normal** (`WEATHER_SUNNY`), como propone Jorge.
+3. **PLAYA VOLCÁNICA, el tiempo:** **sol normal** (`WEATHER_SUNNY`), como propone Jorge. **Hecho** (rama `miguel/playa-ceniza`).
 4. **PLAYA VOLCÁNICA, el estilo:** **rehacerla entera** con `autotile.py`, como las islas del sur.
    - En vez de la piedra rojiza, Miguel quiere **un paisaje en el que la playa se mezcle con una zona de ceniza**, como la RUTA 113 (la de encima del volcán).
    - Lo hace Miguel con su Claude, en una rama aparte, conservando el cruce con la RUTA 122 y el cierre arriba y abajo de la #111.
+   - **Cambio (20/11/2026):** se probó un mapa nuevo con ceniza y a Miguel no le gustó: prefiere **la estructura de antes, cambiando solo la hierba y el césped verdes por ceniza**. Es lo que se ha hecho (rama `miguel/playa-ceniza`): el mismo mapa con los verdes en color ceniza. Ver `DUALOCKE.md`, PLAYA VOLCÁNICA.
 
 **Para Jorge y para su Claude.** Este es el punto de partida para seguir con el trabajo de las zonas sin tener que leer toda la conversación de Miguel. Está escrito para que Claude lo siga paso a paso.
 
