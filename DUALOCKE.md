@@ -1161,7 +1161,7 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
 
 ## 9. Estado y siguientes pasos
 
-### Locke en curso (empezado de nuevo el 22/11/2026, con la versión 9: la partida que cuenta)
+### Locke en curso (empezado de nuevo el 22/11/2026, con la versión 9: la partida que cuenta; ahora con la 9.1)
 
 - ROMs hechas por Claude con `make release` (sin menús de depuración).
   - **Versión 1** (26/10/2026): commit `46ba7600` (con #36 y #37).
@@ -1224,7 +1224,8 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
     - el bot que se pasa el juego (#118);
     - Toxtricity Grave ya no pasa a Aguda, y 12 Poké Balls que tapaban el paso movidas (#119);
     - textos que seguían en inglés (opciones, menú del equipo, POKéNAV, PC, ficha, dinero, pantalla de datos, tipos, mote) y 108 descripciones de movimientos, objetos y habilidades que se saltaban (#120 y #121).
-- **Semillas actuales (versión 9):** Miguel `3483218843` (`Esmeralda Dualocke - Mikemine.gba`), Jorge `2635893558` (`Esmeralda Dualocke - Jorgemori.gba`).
+  - **Versión 9.1** (22/11/2026, misma partida y **mismas semillas**): commit `a198bc1aa2`. Añade el mapa interactivo (`MAPA.html`, #125), la guía sin la casilla exacta cuando hay foto (#124) y los **objetos amontonados repartidos**, cada uno en su tramo y su tipo de suelo (#126). Comprobado que las dos semillas barajan **exactamente igual** que en la versión 9 (misma salida del randomizer), así que la partida sigue igual: solo cambian de sitio 70 objetos, y lo ya cogido no vuelve a salir. Si se guardó dentro de uno de esos mapas, la Ball puede verse en su sitio viejo hasta que se sale y se vuelve a entrar.
+- **Semillas actuales (versión 9 y 9.1):** Miguel `3483218843` (`Esmeralda Dualocke - Mikemine.gba`), Jorge `2635893558` (`Esmeralda Dualocke - Jorgemori.gba`).
 - Semillas de las versiones anteriores (partidas abandonadas):
   - versión 8: Miguel `3632113266`, Jorge `2425682645`;
   - versiones 5-7: Miguel `2918696854`, Jorge `2780853751`;
