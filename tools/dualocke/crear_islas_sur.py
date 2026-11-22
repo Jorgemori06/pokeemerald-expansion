@@ -11,10 +11,12 @@ pantalla de carga. Usan los mismos gráficos que su ruta (si no, la conexión se
 cerrados por rocas y corrientes que solo empujan al oeste, y el borde este de la RUTA 127 es una pared de
 roca, así que dos islas cambian de sitio respecto a ZONAS.md (ver abajo).
 
-- **ISLA DE RUINAS**, al norte de la RUTA 131 (junto al PILAR CELESTE): el islote del PILAR CELESTE
-  (SkyPillar_Outside) con su torre, con niebla (Campo de Niebla en combate). La franja de arena de abajo acaba
-  en una playa. La puerta de la torre (abierta) lleva a la **TORRE**: la planta 1 del PILAR CELESTE, sin la
-  escalera, con el guardián delante.
+- **ISLA DE RUINAS**, al sur de la RUTA 129 (hasta el 21/11/2026, al norte de la RUTA 131, junto al PILAR
+  CELESTE, donde sus corrientes no dejaban llegar). Un templo en ruinas: el islote del PILAR CELESTE
+  (SkyPillar_Outside) con su torre, con niebla (Campo de Niebla en combate). Desde la RUTA 129 se ve la isla
+  y se rodea surfeando, por cualquiera de los dos lados, hasta una playa grande en su cara sur; de la playa sube una escalinata de piedra (antes era una cueva escondida que llevaba al montículo) a
+  un patio enlosado con columnas de piedra, y al fondo está la torre. La puerta de la torre (abierta) lleva a la
+  **TORRE**: la planta 1 del PILAR CELESTE, sin la escalera, con el guardián delante.
 - **ISLA VOLCÁNICA**, al sur de la RUTA 134 (donde el mar no tiene corriente): una isla de arena con su bajío,
   peñas y, en medio, el montículo de la cueva del PILAR CELESTE. La cueva baja al **CRÁTER**: la cima del
   MONTE CENIZO (lava y terrazas) con ceniza que tiene salvajes, una salida nueva y el guardián. Sol.
@@ -74,21 +76,44 @@ PENA_LARGA = ("Route127", (64, 61, 70, 64))
 BASE_SECRETA, PIE_PENA = 0x1A8, 0x079
 
 # --- ISLA DE RUINAS ------------------------------------------------------------------------------
-RUINAS_TAM = (40, 30)
-RUINAS_ISLOTE = ("SkyPillar_Outside", (0, 0, 28, 22), (14, 10), (6, 0))  # mapa, caja, semilla, dónde
+RUINAS_TAM = (40, 38)
+RUINAS_ISLOTE = ("SkyPillar_Outside", (0, 0, 28, 22), (14, 10), (6, 8))  # mapa, caja, semilla, dónde
+# Las 8 filas de arriba son mar: es lo que se ve desde la RUTA 129, y deja sitio para rodear la isla
 PUERTA_TORRE = (14, 5)                       # en SkyPillar_Outside; se abre con los metatiles de la torre abierta
 PUERTA_ABIERTA = {(14, 4): 0x2AA, (14, 5): 0x2B2}
 # El rellano de la torre está rodeado de acantilados (en el juego se llega por la cueva del montículo).
 # Aquí la cueva de la orilla de abajo y la del montículo son un túnel: se entra por una y se sale por la otra.
 CUEVA_PILAR, CUEVA_ORILLA = (17, 13), (15, 20)
-RUINAS_RUTA, RUINAS_DESPLAZAMIENTO = "MAP_ROUTE131", 15   # la isla empieza en la x 15 de la RUTA 131
-# La ISLA VOLCÁNICA empieza en la x 10 de la RUTA 134. Antes empezaba en la 0 y quedaba justo al lado del
-# puerto de PORTUAL, pero los dos mapas no se conocen: al pasar de la RUTA 134 a la isla, el puerto
-# desaparecía de golpe de la pantalla, y al volver aparecía (lo vio Miguel, 20/11/2026). Desde 8 casillas
-# de distancia ya no se ve PORTUAL desde la isla, ni la isla desde PORTUAL.
-VOLCAN_DESPLAZAMIENTO = 10
+# La isla está debajo de la RUTA 129, desde la x 20 (Miguel, 21/11/2026). Todo el borde de abajo de la ruta es
+# mar abierto y se alcanza en el tramo 8 (alcance.py). Otros sitios que se miraron:
+# - encima de la RUTA 130: ahí aparece la ISLA ESPEJISMO, con otros gráficos, y desde la isla se vería rota;
+# - a la izquierda de la RUTA 128: en el juego no se llega (está tras las rocas y corrientes del PILAR CELESTE).
+#   Solo se llegaba a través de la isla vieja, que hacía de puente sin querer.
+RUINAS_RUTA, RUINAS_DESPLAZAMIENTO = "MAP_ROUTE129", 20
+# El templo (coordenadas del islote copiado, SkyPillar_Outside):
+# - la escalinata de piedra de la playa al patio, en lugar de la cueva de la orilla (x 15-16, filas 18-20);
+# - el patio enlosado, en lugar del montículo de la cueva (x 13-18, filas 9-15), con la sombra de la torre a
+#   su derecha (x 19-20, filas 9-13);
+# - columnas de piedra a los lados del patio.
+ESCALINATA = {(x, y): (0x329D, 0x329E)[x - 15] for x in (15, 16) for y in (18, 19, 20)}
+PATIO = [(x, y) for x in range(13, 19) for y in range(9, 16)]
+LOSA, SOMBRA, COLUMNA = 0x3234, 0x32BA, 0x34E2
+SOMBRA_PATIO = [(x, y) for x in (19, 20) for y in range(9, 14)]
+COLUMNAS = [(12, 10), (12, 12), (12, 14), (19, 14)]
+# La ISLA VOLCÁNICA ya no está pegada a la RUTA 134: se va en barco desde el muelle de PORTUAL (Miguel,
+# 21/11/2026). Pegada a la ruta se veía mal el borde de PORTUAL (el puerto aparecía y desaparecía al cruzar,
+# también después de apartarla 10 casillas en la #114) y se entraba desde cualquier punto de la ruta.
+# - En PORTUAL, un marinero en el muelle de abajo, junto al otro marinero: lleva a la isla desde el tramo 8
+#   (7.ª medalla, la de la isla). En la isla, junto a la barca, el mismo marinero trae de vuelta.
+#   Antes estaba en (38, 34), en la punta de un trozo de muelle que no está unido a la ciudad: no se
+#   llegaba ni andando ni surfeando (lo vio el bot de Jorge, #116, 22/11/2026).
+# - La roca de la RUTA 134 que se había quitado para llegar a la isla vuelve a su sitio (ROCAS_DEVUELTAS).
+BARQUERO_PORTUAL = (37, 40)                 # al final del muelle de abajo, encima del marinero de (37, 41)
+LLEGADA_PORTUAL = (36, 40)                  # donde te deja al volver (y desde donde se le habla)
+BARCA_VOLCAN, BARQUERO_VOLCAN, LLEGADA_VOLCAN = (20, 25), (21, 24), (20, 24)   # en la playa de abajo
+MEDALLA_VOLCAN = "FLAG_BADGE07_GET"
 # En el PILAR CELESTE la franja de arena de abajo sigue fuera del mapa: aquí acaba en una playa (filas 22-29).
-RUINAS_FILA_PLAYA = 22
+RUINAS_FILA_PLAYA = 30
 # La roca con remolino de la orilla (x 20-21 del PILAR CELESTE) tiene su mitad de abajo en la fila 22: se copia
 RUINAS_ROCA_ORILLA = [(20, 22), (21, 22)]
 RUINAS_PLAYA = """
@@ -204,6 +229,9 @@ SITIO_DARIO = (21, 14)                           # mira a la izquierda, a donde 
 
 # Dónde va cada objeto (los pone colocar_objetos.py; aquí se mueven al sitio que les toca en el dibujo nuevo)
 SITIO_OBJETOS = {
+    # ISLA DE RUINAS: los dos del rellano de la torre (8 filas más abajo desde que la isla tiene mar arriba)
+    "FLAG_ITEM_SUR_PP_UP": (22, 14),
+    "FLAG_ITEM_TICKET_ISLA_DE_RUINAS": (23, 14),
     "FLAG_ITEM_SUR_BIG_PEARL": (30, 19),
     "FLAG_ITEM_SUR_SAFETY_GOGGLES": (44, 9),
     "FLAG_ITEM_TICKET_ISLA_ARENOSA": (6, 28),
@@ -249,8 +277,15 @@ def guardar_layout(carpeta, ancho, alto, celdas, base):
             "primary_tileset": base["primary_tileset"], "secondary_tileset": base["secondary_tileset"],
             "border_filepath": f"data/layouts/{carpeta}/border.bin",
             "blockdata_filepath": f"data/layouts/{carpeta}/map.bin"})
-        json.loads(texto)
-        escribir("data/layouts/layouts.json", texto)
+    else:
+        # Si el mapa cambió de tamaño (la ISLA DE RUINAS, 21/11/2026), también en su entrada
+        i = texto.index(f'"{ident}"')
+        j = texto.index("}", i)
+        trozo = re.sub(r'("width":\s*)\d+', rf"\g<1>{ancho}", texto[i:j], count=1)
+        trozo = re.sub(r'("height":\s*)\d+', rf"\g<1>{alto}", trozo, count=1)
+        texto = texto[:i] + trozo + texto[j:]
+    json.loads(texto)
+    escribir("data/layouts/layouts.json", texto)
     return ident
 
 
@@ -382,6 +417,10 @@ def crear_ruinas():
     wp = LAYOUTS[json.loads(leer(f"data/maps/{origen}/map.json"))["layout"]]["width"]
     for (x, y), m in PUERTA_ABIERTA.items():
         c[(sitio[1] + y) * ancho + sitio[0] + x] = (cp[y * wp + x] & ~0x3FF) | m
+    # La puerta sin animación se cruza al pisarla: sin colisión, como hace el juego con setmetatile ..., FALSE
+    # en SkyPillar_Outside. Con colisión no se entraba en la torre (lo vio el bot de Jorge, #116, 22/11/2026).
+    px, py = sitio[0] + PUERTA_TORRE[0], sitio[1] + PUERTA_TORRE[1]
+    c[py * ancho + px] &= ~(3 << 10)
     # La playa de abajo: se pinta el plano entero y se ponen solo sus filas. Arriba, las rocas del islote copiado
     # cuentan como pared; su arena y su mar, como el terreno de al lado.
     playa = RUINAS_PLAYA.strip().splitlines()
@@ -396,6 +435,14 @@ def crear_ruinas():
         nx, ny = sitio[0] + x, sitio[1] + y
         assert playa[ny - RUINAS_FILA_PLAYA][nx] == "m", "la roca de la orilla no va en el mar"
         c[ny * ancho + nx] = cp[y * wp + x]
+    # El templo: escalinata, patio, sombra y columnas
+    for (x, y), v in list(ESCALINATA.items()) + [(xy, LOSA) for xy in PATIO] + [(xy, SOMBRA) for xy in SOMBRA_PATIO] \
+            + [(xy, COLUMNA) for xy in COLUMNAS]:
+        c[(sitio[1] + y) * ancho + sitio[0] + x] = v
+    for x, y in [(15, 17), (16, 17), (15, 21), (16, 21)]:   # arriba y abajo de la escalinata se pisa
+        assert not (c[(sitio[1] + y) * ancho + sitio[0] + x] >> 10) & 3, ("la escalinata no lleva a ningún sitio", x, y)
+    # Lo que se ve desde la RUTA 129 (las 8 filas de arriba) son piezas generales
+    assert all(c[y * ancho + x] & 0x3FF < 0x200 for y in range(8) for x in range(ancho))
     base = LAYOUTS[json.loads(leer("data/maps/Route131/map.json"))["layout"]]
     return guardar_layout(RUINAS, ancho, alto, c, base)
 
@@ -582,14 +629,10 @@ def crear_mapas(l_ruinas, l_torre, l_volcan, l_crater, l_arenosa):
     puerta = (sx + PUERTA_TORRE[0], sy + PUERTA_TORRE[1])
     mapa_json(RUINAS, {"id": MAPAS[RUINAS], "name": RUINAS, "layout": l_ruinas, **mar, **comun,
                        "region_map_section": MAPSEC[RUINAS], "weather": "WEATHER_FOG_HORIZONTAL",
-                       "connections": [{"map": RUINAS_RUTA, "offset": -RUINAS_DESPLAZAMIENTO, "direction": "down"}],
-                       # 0: la torre; 1 y 2: el túnel entre la cueva de la orilla y la del montículo
+                       "connections": [{"map": RUINAS_RUTA, "offset": -RUINAS_DESPLAZAMIENTO, "direction": "up"}],
+                       # La torre (el túnel de las dos cuevas ya no está: ahora se sube por la escalinata)
                        "warp_events": [{"x": puerta[0], "y": puerta[1], "elevation": 3, "dest_map": MAPAS[TORRE],
-                                        "dest_warp_id": "0"},
-                                       {"x": sx + CUEVA_ORILLA[0], "y": sy + CUEVA_ORILLA[1], "elevation": 3,
-                                        "dest_map": MAPAS[RUINAS], "dest_warp_id": "2"},
-                                       {"x": sx + CUEVA_PILAR[0], "y": sy + CUEVA_PILAR[1], "elevation": 3,
-                                        "dest_map": MAPAS[RUINAS], "dest_warp_id": "1"}]}, [])
+                                        "dest_warp_id": "0"}]}, [])
     mapa_json(TORRE, {"id": MAPAS[TORRE], "name": TORRE, "layout": l_torre, **dentro, **comun,
                       "region_map_section": MAPSEC[TORRE], "weather": "WEATHER_NONE", "connections": None,
                       "warp_events": [{"x": x, "y": y, "elevation": 3, "dest_map": MAPAS[RUINAS], "dest_warp_id": "0"}
@@ -597,9 +640,9 @@ def crear_mapas(l_ruinas, l_torre, l_volcan, l_crater, l_arenosa):
     cueva = cueva_volcan()
     mapa_json(VOLCAN, {"id": MAPAS[VOLCAN], "name": VOLCAN, "layout": l_volcan, **mar, **comun,
                        "region_map_section": MAPSEC[VOLCAN], "weather": "WEATHER_DROUGHT",
-                       "connections": [{"map": "MAP_ROUTE134", "offset": -VOLCAN_DESPLAZAMIENTO, "direction": "up"}],
+                       "connections": None,
                        "warp_events": [{"x": cueva[0], "y": cueva[1], "elevation": 3, "dest_map": MAPAS[CRATER],
-                                        "dest_warp_id": "0"}]}, [])
+                                        "dest_warp_id": "0"}]}, barca_volcan(l_volcan))
     mapa_json(CRATER, {"id": MAPAS[CRATER], "name": CRATER, "layout": l_crater, **comun,
                        "music": "MUS_MT_CHIMNEY", "map_type": "MAP_TYPE_ROUTE", "allow_cycling": True,
                        "allow_escaping": True,
@@ -616,7 +659,7 @@ def crear_mapas(l_ruinas, l_torre, l_volcan, l_crater, l_arenosa):
                          "trainer_type": "TRAINER_TYPE_NORMAL", "trainer_sight_or_berry_tree_id": "4",
                          "script": "IslaArenosa_EventScript_Dario", "flag": "0"}])
     escribir(f"data/maps/{RUINAS}/scripts.inc", f"{RUINAS}_MapScripts::\n\t.byte 0\n")
-    escribir(f"data/maps/{VOLCAN}/scripts.inc", f"{VOLCAN}_MapScripts::\n\t.byte 0\n")
+    escribir(f"data/maps/{VOLCAN}/scripts.inc", f"{VOLCAN}_MapScripts::\n\t.byte 0\n" + BARQUERO)
     escribir(f"data/maps/{TORRE}/scripts.inc", cabecera_guardian(TORRE) + script_guardian(TORRE, "la ISLA DE RUINAS"))
     escribir(f"data/maps/{CRATER}/scripts.inc", cabecera_guardian(CRATER) + script_guardian(CRATER, "la ISLA VOLCÁNICA"))
     escribir(f"data/maps/{ARENOSA}/scripts.inc", cabecera_guardian(ARENOSA) + script_guardian(ARENOSA, "la ISLA ARENOSA")
@@ -638,8 +681,7 @@ def crear_mapas(l_ruinas, l_torre, l_volcan, l_crater, l_arenosa):
     escribir("data/maps/map_groups.json", grupos)
 
     # Las rutas se conectan con su isla
-    for ruta_mapa, isla_mapa, direccion, desplazamiento in (("Route131", RUINAS, "up", RUINAS_DESPLAZAMIENTO),
-                                                           ("Route134", VOLCAN, "down", VOLCAN_DESPLAZAMIENTO),
+    for ruta_mapa, isla_mapa, direccion, desplazamiento in (("Route129", RUINAS, "down", RUINAS_DESPLAZAMIENTO),
                                                            ("Route129", ARENOSA, "right", 0)):
         ruta = f"data/maps/{ruta_mapa}/map.json"
         texto = leer(ruta)
@@ -648,6 +690,134 @@ def crear_mapas(l_ruinas, l_torre, l_volcan, l_crater, l_arenosa):
                                                                 "direction": direccion})
             json.loads(texto)
             escribir(ruta, texto)
+
+
+def barca_volcan(l_volcan):
+    """La barca y el marinero de la playa de la ISLA VOLCÁNICA, a la altura del suelo en el que están."""
+    l = LAYOUTS[l_volcan]
+    c = struct.unpack(f"<{l['width'] * l['height']}H", open(l["blockdata_filepath"], "rb").read())
+    altura = lambda x, y: c[y * l["width"] + x] >> 12  # noqa: E731
+    for x, y in (BARCA_VOLCAN, BARQUERO_VOLCAN, LLEGADA_VOLCAN):
+        assert not (c[y * l["width"] + x] >> 10) & 3, ("la barca o el marinero no están en el suelo", x, y)
+    return [{"graphics_id": "OBJ_EVENT_GFX_MR_BRINEYS_BOAT", "x": BARCA_VOLCAN[0], "y": BARCA_VOLCAN[1],
+             "elevation": altura(*BARCA_VOLCAN), "movement_type": "MOVEMENT_TYPE_FACE_LEFT", "movement_range_x": 0,
+             "movement_range_y": 0, "trainer_type": "TRAINER_TYPE_NONE", "trainer_sight_or_berry_tree_id": "0",
+             "script": "0x0", "flag": "0"},
+            {"graphics_id": "OBJ_EVENT_GFX_SAILOR", "x": BARQUERO_VOLCAN[0], "y": BARQUERO_VOLCAN[1],
+             "elevation": altura(*BARQUERO_VOLCAN), "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+             "movement_range_x": 0, "movement_range_y": 0, "trainer_type": "TRAINER_TYPE_NONE",
+             "trainer_sight_or_berry_tree_id": "0", "script": "IslaVolcanica_EventScript_BarqueroVuelta",
+             "flag": "0"}]
+
+
+def portual_y_ruta134():
+    """El marinero del muelle de PORTUAL; la RUTA 134 deja de estar pegada a la isla y recupera su roca."""
+    ruta = "data/maps/SlateportCity/map.json"
+    texto = leer(ruta)
+    if "IslaVolcanica_EventScript_BarqueroIda" in texto:
+        # Ya estaba: se lleva a su sitio (BARQUERO_PORTUAL cambió el 22/11/2026)
+        m = json.loads(texto)
+        for o in m["object_events"]:
+            if o["script"] == "IslaVolcanica_EventScript_BarqueroIda":
+                o["x"], o["y"], o["movement_type"] = *BARQUERO_PORTUAL, "MOVEMENT_TYPE_FACE_LEFT"
+        escribir(ruta, json.dumps(m, indent=2, ensure_ascii=False) + chr(10))
+    else:
+        m = json.loads(texto)
+        assert all((o["x"], o["y"]) != BARQUERO_PORTUAL for o in m["object_events"]), "ahí ya hay alguien"
+        texto = co.insertar_en_lista(texto, "object_events", {
+            "graphics_id": "OBJ_EVENT_GFX_SAILOR", "x": BARQUERO_PORTUAL[0], "y": BARQUERO_PORTUAL[1],
+            "elevation": 3, "movement_type": "MOVEMENT_TYPE_FACE_LEFT", "movement_range_x": 0,
+            "movement_range_y": 0, "trainer_type": "TRAINER_TYPE_NONE", "trainer_sight_or_berry_tree_id": "0",
+            "script": "IslaVolcanica_EventScript_BarqueroIda", "flag": "0"})
+        json.loads(texto)
+        escribir(ruta, texto)
+    # La RUTA 134 ya no lleva a la ISLA VOLCÁNICA, ni la RUTA 131 a la ISLA DE RUINAS (que está en la 129)
+    for ruta_carpeta, isla_mapa in (("Route134", VOLCAN), ("Route131", RUINAS), ("Route128", RUINAS)):
+        ruta = f"data/maps/{ruta_carpeta}/map.json"
+        m = json.loads(leer(ruta))
+        if any(con["map"] == MAPAS[isla_mapa] for con in m.get("connections") or []):
+            m["connections"] = [con for con in m["connections"] if con["map"] != MAPAS[isla_mapa]]
+            escribir(ruta, json.dumps(m, indent=2, ensure_ascii=False) + "\n")
+    # Lo que se ve de la RUTA 129 desde la isla (sus 8 filas de abajo) son piezas generales
+    for ident in variantes.layouts_de("Route129"):
+        l = LAYOUTS[ident]
+        c = struct.unpack(f"<{l['width'] * l['height']}H", open(l["blockdata_filepath"], "rb").read())
+        assert all(c[y * l["width"] + x] & 0x3FF < 0x200 for y in range(l["height"] - 8, l["height"])
+                   for x in range(RUINAS_DESPLAZAMIENTO, RUINAS_DESPLAZAMIENTO + RUINAS_TAM[0])), ident
+    for carpeta, rocas in ROCAS_DEVUELTAS.items():
+        for ident in variantes.layouts_de(carpeta):
+            l = LAYOUTS[ident]
+            w = l["width"]
+            c = list(struct.unpack(f"<{w * l['height']}H", open(l["blockdata_filepath"], "rb").read()))
+            for (x0, y0), valores in rocas.items():
+                for k, v in enumerate(valores):
+                    x, y = x0 + k % 2, y0 + k // 2
+                    assert c[y * w + x] in (v,) or comportamiento(l, c[y * w + x] & 0x3FF) == "MB_OCEAN_WATER"
+                    c[y * w + x] = v
+            with open(l["blockdata_filepath"], "wb") as f:
+                f.write(struct.pack(f"<{w * l['height']}H", *c))
+
+
+# La roca de la RUTA 134 que se quitó para llegar a la isla (#100), con sus valores del juego original
+ROCAS_DEVUELTAS = {"Route134": {(9, 21): (0x550, 0x551, 0x558, 0x559)}}
+
+BARQUERO = f"""
+@ La barca a la ISLA VOLCÁNICA (Miguel, 21/11/2026): sale del muelle de PORTUAL desde la 7.ª medalla
+IslaVolcanica_EventScript_BarqueroIda::
+	lock
+	faceplayer
+	goto_if_unset {MEDALLA_VOLCAN}, IslaVolcanica_EventScript_BarqueroTodavia
+	msgbox IslaVolcanica_Text_BarqueroIda, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, IslaVolcanica_EventScript_BarqueroNo
+	msgbox IslaVolcanica_Text_BarqueroVamos, MSGBOX_DEFAULT
+	closemessage
+	warp MAP_ISLA_VOLCANICA, {LLEGADA_VOLCAN[0]}, {LLEGADA_VOLCAN[1]}
+	waitstate
+	release
+	end
+
+IslaVolcanica_EventScript_BarqueroTodavia::
+	msgbox IslaVolcanica_Text_BarqueroTodavia, MSGBOX_DEFAULT
+	release
+	end
+
+IslaVolcanica_EventScript_BarqueroNo::
+	msgbox IslaVolcanica_Text_BarqueroNo, MSGBOX_DEFAULT
+	release
+	end
+
+IslaVolcanica_EventScript_BarqueroVuelta::
+	lock
+	faceplayer
+	msgbox IslaVolcanica_Text_BarqueroVuelta, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, IslaVolcanica_EventScript_BarqueroNo
+	msgbox IslaVolcanica_Text_BarqueroVamos, MSGBOX_DEFAULT
+	closemessage
+	warp MAP_SLATEPORT_CITY, {LLEGADA_PORTUAL[0]}, {LLEGADA_PORTUAL[1]}
+	waitstate
+	release
+	end
+
+IslaVolcanica_Text_BarqueroIda:
+	.string "Llevo la barca a la ISLA VOLCÁNICA,\\n"
+	.string "al sur de la RUTA 134.\\p"
+	.string "¿Quieres ir?$"
+
+IslaVolcanica_Text_BarqueroTodavia:
+	.string "Llevo la barca a la ISLA VOLCÁNICA,\\n"
+	.string "pero ahora el mar está muy bravo.\\p"
+	.string "Vuelve cuando tengas siete\\n"
+	.string "medallas.$"
+
+IslaVolcanica_Text_BarqueroNo:
+	.string "Aquí estaré cuando quieras.$"
+
+IslaVolcanica_Text_BarqueroVamos:
+	.string "¡Pues allá vamos!$"
+
+IslaVolcanica_Text_BarqueroVuelta:
+	.string "¿Volvemos a CIUDAD PORTUAL?$"
+"""
 
 
 DARIO = """
@@ -674,15 +844,21 @@ def zonas_region():
     ruta = "src/data/region_map/region_map_sections.json"
     texto = leer(ruta)
     secciones = {s["id"]: s for s in json.loads(texto)["map_sections"]}
-    r131, r134, r129 = (secciones[f"MAPSEC_ROUTE_{n}"] for n in (131, 134, 129))
+    r134, r129 = (secciones[f"MAPSEC_ROUTE_{n}"] for n in (134, 129))
     for mapsec, nombre, x, y in (
-            ("MAPSEC_ISLA_DE_RUINAS", "ISLA DE RUINAS", r131["x"] + 1, r131["y"] - 1),
+            ("MAPSEC_ISLA_DE_RUINAS", "ISLA DE RUINAS", r129["x"] + 1, r129["y"] + 1),
             ("MAPSEC_ISLA_VOLCANICA", "ISLA VOLCÁNICA", r134["x"], r134["y"] + 1),
             ("MAPSEC_ISLA_ARENOSA", "ISLA ARENOSA", r129["x"] + r129["width"], r129["y"])):
         assert len(nombre) <= 16, nombre
         if f'"{mapsec}"' not in texto:
             texto = co.insertar_en_lista(texto, "map_sections", {"id": mapsec, "name": nombre, "x": x, "y": y,
                                                                  "width": 1, "height": 1})
+        else:   # si la isla cambió de sitio, su cuadro del mapa de la región también
+            i = texto.index(f'"{mapsec}"')
+            j = texto.index("}", i)
+            trozo = re.sub(r'("x":\s*)\d+', rf"\g<1>{x}", texto[i:j], count=1)
+            trozo = re.sub(r'("y":\s*)\d+', rf"\g<1>{y}", trozo, count=1)
+            texto = texto[:i] + trozo + texto[j:]
     json.loads(texto)
     escribir(ruta, texto)
 
@@ -690,13 +866,16 @@ def zonas_region():
 # El borde de cada ruta por el que se entra a su isla estaba fuera de la barrera de rocas: no se llegaba (lo vio
 # Jorge con alcance.py, #97/#99). Se quita una roca suelta de la barrera, por dentro (lejos de las conexiones
 # de los lados): la que deja el paso más corto sin pasar por corrientes.
-PASOS = {"Route129": [(46, 24)], "Route131": [(7, 12)], "Route134": [(9, 21)]}
+# El de la RUTA 131 se queda aunque la ISLA DE RUINAS ya no esté ahí: por ese hueco se llega también a la parte
+# norte de las RUTAS 128 a 131, y con él a la isla nueva (comprobado con alcance.py, 21/11/2026).
+PASOS = {"Route129": [(46, 24)], "Route131": [(7, 12)]}
 
 
 def main():
     crear_mapas(crear_ruinas(), crear_torre(), crear_volcan(), crear_crater(), crear_arenosa())
     for ruta, rocas in PASOS.items():
         quitar_rocas(ruta, rocas)
+    portual_y_ruta134()
     zonas_region()
     print("Dualocke: ISLA DE RUINAS, ISLA VOLCÁNICA e ISLA ARENOSA creadas")
 

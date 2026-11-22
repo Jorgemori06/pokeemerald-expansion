@@ -14,7 +14,44 @@
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 44,
+      "elevation": 3,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "DesiertoProfundo_EventScript_Arena0"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 27,
+      "elevation": 3,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "DesiertoProfundo_EventScript_Arena1"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 33,
+      "elevation": 3,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "DesiertoProfundo_EventScript_Arena2"
+    },
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 40,
+      "elevation": 3,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "DesiertoProfundo_EventScript_Arena3"
+    }
+  ],
   "warp_events": [
     {
       "x": 13,
@@ -28,6 +65,20 @@
       "y": 11,
       "elevation": 0,
       "dest_map": "MAP_RUINAS_ARENOSAS",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 13,
+      "y": 50,
+      "elevation": 0,
+      "dest_map": "MAP_DESIERTO_PROFUNDO_CUEVA",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 6,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_DESIERTO_PROFUNDO_CUEVA",
       "dest_warp_id": "0"
     }
   ],

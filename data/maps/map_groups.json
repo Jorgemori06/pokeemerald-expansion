@@ -493,7 +493,8 @@
     "MansionOlvidada",
     "MansionOlvidada_Desvan",
     "IslaDeRuinas_Torre",
-    "IslaVolcanica_Crater"
+    "IslaVolcanica_Crater",
+    "DesiertoProfundo_Cueva"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",
