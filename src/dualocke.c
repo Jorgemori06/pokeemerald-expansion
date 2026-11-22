@@ -3,7 +3,6 @@
 #include "battle_pike.h"
 #include "battle_pyramid.h"
 #include "dualocke.h"
-#include "dualocke_liga.h"
 #include "event_data.h"
 #include "global.fieldmap.h"
 #include "item.h"
@@ -19,6 +18,7 @@
 #include "constants/battle.h"
 #include "constants/region_map_sections.h"
 #include "dualocke_aleatorio.h"
+#include "dualocke_liga.h"
 #include "data/dualocke_fosiles.h"
 
 // Dualocke: sistema de vidas y caja de muertos.
