@@ -172,7 +172,7 @@ Una sección por idea, con:
     - Hay que revisar que el nombre largo quepa en los textos (diálogos con `{PLAYER}`, ficha, menú de guardar) y en la pantalla de poner nombre.
     - Las estructuras de los juegos por cable y la mezcla de récords guardan el nombre con tamaño fijo. Como no jugamos por cable, se pueden dejar o recortar al copiar.
   - El nombre del rival (Aura/Bruno) y los de las cajas del PC no hace falta tocarlos.
-- **Estado:** Pendiente (para el siguiente locke).
+- **Estado:** **Hecho (20/11/2026), solo el nombre del jugador:** hasta 10 letras, guardado aparte; el EO de los Pokémon se queda con 7 (ver DUALOCKE.md, "Nombre del jugador de hasta 10 letras").
 
 ### 9. Las formas Gigamax como megaevoluciones
 

@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke.h"
 #include "battle_main.h"
 #include "battle_util.h"
 #include "bg.h"
@@ -4491,7 +4492,7 @@ bool32 TryLoadSizeScreen_HGSS(u8 taskId)
         u8 string[64];
 
         StringCopy(string, gText_SizeComparedTo);
-        StringAppend(string, gSaveBlock2Ptr->playerName);
+        StringAppend(string, Dualocke_NombreJugador()); // Dualocke: el nombre entero
         PrintInfoScreenText(string, GetStringCenterAlignXOffset(FONT_NORMAL, string, 0xF0), 0x79);
         gMain.state++;
         break;

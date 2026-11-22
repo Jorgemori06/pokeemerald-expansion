@@ -110,12 +110,14 @@ enum Language
 #define ROAMER_COUNT 1 // Number of maximum concurrent active roamers
 
 // Bag constants
-#define BAG_ITEMS_COUNT 30
-#define BAG_KEYITEMS_COUNT 30
-#define BAG_POKEBALLS_COUNT 16
+// Dualocke: mochila más grande (Miguel, 20/11/2026; rompe las partidas guardadas). En el original: 30, 30,
+// 16, 64 y 46. OBJETOS, MEDICINAS y MEGAPIEDRAS van en SaveBlock3; el resto, en SaveBlock1.
+#define BAG_ITEMS_COUNT 150       // salen unos 370 objetos distintos de este bolsillo
+#define BAG_KEYITEMS_COUNT 50     // salen 37
+#define BAG_POKEBALLS_COUNT 30    // hay 28
 #define BAG_TMHM_COUNT 64
-#define BAG_BERRIES_COUNT 46
-#define BAG_MEDICINE_COUNT 60     // Dualocke: bolsillo MEDICINAS
+#define BAG_BERRIES_COUNT 70      // hay 68
+#define BAG_MEDICINE_COUNT 70     // Dualocke: bolsillo MEDICINAS (salen 62)
 #define BAG_MEGASTONES_COUNT 130 // Dualocke: bolsillo MEGAPIEDRAS (caben todas, también las de las formas Gigamax)
 
 // Number of facilities for Ranking Hall.
@@ -159,6 +161,10 @@ enum ContestCategories
 #define VANILLA_POKEMON_NAME_LENGTH 10
 #define POKEMON_NAME_BUFFER_SIZE max(20, POKEMON_NAME_LENGTH + 1) // Frequently used buffer size. Larger than necessary
 #define PLAYER_NAME_LENGTH 7
+// Dualocke: el nombre del jugador puede tener hasta 10 letras (para que quepa "JORGEMORI"). Se guarda entero
+// aparte (SaveBlock2, playerNameLong) y se usa para enseñarlo; todo lo demás, también el EO de cada Pokémon,
+// sigue con las 7 primeras, porque agrandarlo cambiaría el tamaño de los Pokémon guardados.
+#define PLAYER_NAME_LENGTH_LONG 10
 #define MAIL_WORDS_COUNT 9
 #define EASY_CHAT_BATTLE_WORDS_COUNT 6
 #define MOVE_NAME_LENGTH 16

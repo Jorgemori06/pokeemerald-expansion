@@ -411,6 +411,24 @@ Miguel: "interfaces más chulas, actualizadas". Son cosas que la expansion ya tr
 - **No se puede huir de un entrenador** (`B_RUN_TRAINER_BATTLE` = `FALSE`). Estaba activado, y huir cuenta como perder el combate (`B_OUTCOME_FORFEITED`), o sea, perder el locke. Así no pasa por error.
 - **Siguen apagados:** el Pokémon que te sigue (idea 6) y el DexNav, que piden más trabajo.
 
+### Mochila más grande (hecho, Jorge, 20/11/2026; lo pidió Miguel). **Rompe las partidas guardadas**
+
+- **Por qué:** salen unos 370 objetos distintos del bolsillo OBJETOS y cabían 30; 37 objetos clave para 30 casillas (si se llena, no se puede recibir uno); 28 tipos de Poké Ball para 16; 68 bayas para 46.
+- **Casillas:** OBJETOS 150 (antes 30), OBJ. CLAVE 50 (30), POKé BALLS 30 (16), BAYAS 70 (46), MEDICINAS 70 (60). MT Y MO (64) y MEGAPIEDRAS (130) igual. `include/constants/global.h`.
+- **OBJETOS pasa a `SaveBlock3`** (`bagItems`), con MEDICINAS y MEGAPIEDRAS: con 150 casillas no cabe en `SaveBlock1`. Los demás siguen en `struct Bag` (`SaveBlock1`).
+- **Espacio que queda:** `SaveBlock1` 192 bytes, `SaveBlock2` 72, `SaveBlock3` 220.
+- Se mueve todo lo que va detrás en la partida guardada: **hace falta empezar partida nueva.** Va con el nombre largo y los entrenadores nuevos, para el locke de verdad (Miguel, #112).
+- Tests en `test/dualocke.c` ("la mochila tiene los bolsillos más grandes").
+
+### Nombre del jugador de hasta 10 letras (hecho, Jorge, 20/11/2026; idea 8 de `IDEAS.md`)
+
+- **Por qué:** "JORGEMORI" (9 letras) no cabía en las 7 de siempre.
+- **Cómo:** el nombre entero se guarda aparte, al final de `SaveBlock2` (`playerNameLong`, `PLAYER_NAME_LENGTH_LONG` = 10). `playerName` se queda con las 7 primeras letras para todo lo que guarda el nombre con tamaño fijo: el EO de cada Pokémon (no caben más letras sin cambiar el tamaño de todos los Pokémon guardados), bases secretas, programas de la tele, juegos por cable… Así no cambia el tamaño de nada.
+- **La pantalla de nombres** escribe en `playerNameLong` (hasta 10) y al salir `Dualocke_GuardarNombreJugador` copia las 7 primeras a `playerName` (`src/naming_screen.c`).
+- **Dónde se ve entero** (`Dualocke_NombreJugador`, en `src/dualocke.c`): diálogos (`{PLAYER}`), combates, menú de pausa (ahora 2 casillas más ancho), ficha de entrenador, menú de guardar, menú de continuar, Salón de la Fama, Pokédex y el EO en los datos de tus Pokémon.
+- **Partidas de antes:** `playerNameLong` está a cero y se usa `playerName`. El nombre largo no rompe nada por sí solo; lo que obliga a empezar de nuevo es la mochila.
+- Probado en el emulador con "JORGEMORI" (la ROM de pruebas ya empieza con ese nombre). Tests en `test/dualocke.c`.
+
 ### Mochila: bolsillos Medicinas y Megapiedras (hecho, Jorge, 26/10/2026)
 
 Lo pidió Jorge al probar: las megapiedras y las pociones se mezclaban con todo en Objetos.

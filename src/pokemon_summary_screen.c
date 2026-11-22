@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke.h"
 #include "dualocke_es.h"
 #include "main.h"
 #include "battle.h"
@@ -3517,10 +3518,12 @@ static void PrintMonOTName(void)
         windowId = AddWindowFromTemplateList(sPageInfoTemplate, PSS_DATA_WINDOW_INFO_ORIGINAL_TRAINER);
         PrintTextOnWindow(windowId, gText_OTSlash, 0, 1, 0, 1);
         x = GetStringWidth(FONT_NORMAL, gText_OTSlash, 0);
+        // Dualocke: si es tuyo, el nombre entero (en el Pokémon solo caben las 7 primeras letras)
+        const u8 *otName = DoesMonOTMatchOwner() ? Dualocke_NombreJugador() : sMonSummaryScreen->summary.OTName;
         if (sMonSummaryScreen->summary.OTGender == 0)
-            PrintTextOnWindow(windowId, sMonSummaryScreen->summary.OTName, x, 1, 0, 5);
+            PrintTextOnWindow(windowId, otName, x, 1, 0, 5);
         else
-            PrintTextOnWindow(windowId, sMonSummaryScreen->summary.OTName, x, 1, 0, 6);
+            PrintTextOnWindow(windowId, otName, x, 1, 0, 6);
     }
 }
 
