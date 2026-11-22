@@ -381,8 +381,8 @@ VIAJES = {   # mapa -> [(destino, x, y, (x, y) de con quién hablar)]
     "MAP_ROUTE112_CABLE_CAR_STATION": [("MAP_MT_CHIMNEY_CABLE_CAR_STATION", 6, 7, (6, 6))],
     "MAP_MT_CHIMNEY_CABLE_CAR_STATION": [("MAP_ROUTE112_CABLE_CAR_STATION", 6, 7, (6, 6))],
     # barca de la ISLA VOLCÁNICA (desde la 7.ª medalla)
-    "MAP_SLATEPORT_CITY": [("MAP_ISLA_VOLCANICA", 20, 24, (38, 34))],
-    "MAP_ISLA_VOLCANICA": [("MAP_SLATEPORT_CITY", 38, 33, (21, 24))],
+    "MAP_SLATEPORT_CITY": [("MAP_ISLA_VOLCANICA", 20, 24, (37, 40))],  # barquero nuevo (Miguel, #116)
+    "MAP_ISLA_VOLCANICA": [("MAP_SLATEPORT_CITY", 36, 40, (21, 24))],
 }
 
 
