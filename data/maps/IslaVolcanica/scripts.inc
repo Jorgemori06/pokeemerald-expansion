@@ -32,7 +32,7 @@ IslaVolcanica_EventScript_BarqueroVuelta::
 	goto_if_eq VAR_RESULT, NO, IslaVolcanica_EventScript_BarqueroNo
 	msgbox IslaVolcanica_Text_BarqueroVamos, MSGBOX_DEFAULT
 	closemessage
-	warp MAP_SLATEPORT_CITY, 38, 33
+	warp MAP_SLATEPORT_CITY, 36, 40
 	waitstate
 	release
 	end

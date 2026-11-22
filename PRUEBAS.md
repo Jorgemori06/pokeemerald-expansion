@@ -99,11 +99,11 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 - [ ] **Se llega surfeando a la ISLA ARENOSA y a la ISLA DE RUINAS:** por el hueco de las rocas de la RUTA 129 (46, 24).
 - [ ] **ISLA DE RUINAS (rehecha el 21/11/2026):** desde el borde de abajo de la RUTA 129 se ve la isla; se rodea surfeando hasta la playa grande del sur.
   - De la playa, la escalinata de piedra sube al patio enlosado con columnas, y al fondo está la torre. Que la escalinata, el patio y la sombra de la torre se vean bien, y la torre por arriba.
-  - La puerta de la torre lleva a la TORRE; la escalera de arriba ya no está.
+  - La puerta de la torre lleva a la TORRE (22/11/2026: antes no se entraba); la escalera de arriba ya no está.
   - Niebla fuera y Campo de Niebla en combate.
   - Desde el norte de la RUTA 131 ya no se va a ninguna isla.
 - [ ] **ISLA VOLCÁNICA (cambiada el 21/11/2026): en barca desde PORTUAL.**
-  - El marinero de la punta del muelle de PORTUAL dice que el mar está bravo hasta la 7.ª medalla; con ella, te lleva a la playa de abajo de la isla. El de la isla te trae de vuelta al muelle.
+  - El marinero del final del muelle de abajo de PORTUAL (22/11/2026: antes estaba en un muelle al que no se llegaba), encima del otro marinero, dice que el mar está bravo hasta la 7.ª medalla; con ella, te lleva a la playa de abajo de la isla. El de la isla te trae de vuelta al muelle.
   - En la RUTA 134 ya no se pasa a la isla, y la roca de (9, 21) está otra vez. Que el borde de PORTUAL ya no aparezca ni desaparezca.
   - La cueva del montículo baja al CRÁTER y la cueva nueva del escalón sube.
   - En la ceniza salen salvajes. Sol fuera y en combate.
@@ -148,7 +148,8 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 - [ ] **Dunas y arenas movedizas (21/11/2026):**
   - Una fila de peñas corta el paso: a las ruinas no se llega andando.
   - Las 4 arenas movedizas (cuadrados de arena honda): al pisar el centro sale el mensaje y caes a la CUEVA, cada una a una sala.
-  - En la sala buena (la arena movediza de abajo a la derecha), la escalera sale junto a las ruinas; en las otras, la escalera devuelve a la entrada.
+  - En la sala buena (la arena movediza de abajo a la derecha), una escalera sale por la puerta del montículo de junto a las ruinas y la otra devuelve a la entrada; en las otras salas, la escalera devuelve a la entrada.
+  - **Vuelta del norte (22/11/2026):** desde el norte, entrando por la puerta del montículo de la izquierda (no el de las ruinas) se baja a la sala buena, y por su otra escalera se vuelve a la entrada sin VUELO.
   - Que las rocas que separan las salas se vean bien.
 - [ ] **Tormenta de arena** fuera y en combate, y carteles "DESIERTO PROFUNDO" y "RUINAS ARENOSAS". Cada uno es una zona de captura.
 - [ ] **Ruinas:** el montículo del norte lleva a la entrada; las escaleras suben por las plantas 2 y 3 hasta la CÁMARA.

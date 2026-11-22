@@ -103,11 +103,13 @@ COLUMNAS = [(12, 10), (12, 12), (12, 14), (19, 14)]
 # La ISLA VOLCÁNICA ya no está pegada a la RUTA 134: se va en barco desde el muelle de PORTUAL (Miguel,
 # 21/11/2026). Pegada a la ruta se veía mal el borde de PORTUAL (el puerto aparecía y desaparecía al cruzar,
 # también después de apartarla 10 casillas en la #114) y se entraba desde cualquier punto de la ruta.
-# - En PORTUAL, un marinero en la punta del muelle: lleva a la isla desde el tramo 8 (7.ª medalla, la de
-#   la isla). En la isla, junto a la barca, el mismo marinero trae de vuelta.
+# - En PORTUAL, un marinero en el muelle de abajo, junto al otro marinero: lleva a la isla desde el tramo 8
+#   (7.ª medalla, la de la isla). En la isla, junto a la barca, el mismo marinero trae de vuelta.
+#   Antes estaba en (38, 34), en la punta de un trozo de muelle que no está unido a la ciudad: no se
+#   llegaba ni andando ni surfeando (lo vio el bot de Jorge, #116, 22/11/2026).
 # - La roca de la RUTA 134 que se había quitado para llegar a la isla vuelve a su sitio (ROCAS_DEVUELTAS).
-BARQUERO_PORTUAL = (38, 34)                 # en la punta del muelle, junto al mar (se le habla desde arriba)
-LLEGADA_PORTUAL = (38, 33)                  # donde te deja al volver
+BARQUERO_PORTUAL = (37, 40)                 # al final del muelle de abajo, encima del marinero de (37, 41)
+LLEGADA_PORTUAL = (36, 40)                  # donde te deja al volver (y desde donde se le habla)
 BARCA_VOLCAN, BARQUERO_VOLCAN, LLEGADA_VOLCAN = (20, 25), (21, 24), (20, 24)   # en la playa de abajo
 MEDALLA_VOLCAN = "FLAG_BADGE07_GET"
 # En el PILAR CELESTE la franja de arena de abajo sigue fuera del mapa: aquí acaba en una playa (filas 22-29).
@@ -415,6 +417,10 @@ def crear_ruinas():
     wp = LAYOUTS[json.loads(leer(f"data/maps/{origen}/map.json"))["layout"]]["width"]
     for (x, y), m in PUERTA_ABIERTA.items():
         c[(sitio[1] + y) * ancho + sitio[0] + x] = (cp[y * wp + x] & ~0x3FF) | m
+    # La puerta sin animación se cruza al pisarla: sin colisión, como hace el juego con setmetatile ..., FALSE
+    # en SkyPillar_Outside. Con colisión no se entraba en la torre (lo vio el bot de Jorge, #116, 22/11/2026).
+    px, py = sitio[0] + PUERTA_TORRE[0], sitio[1] + PUERTA_TORRE[1]
+    c[py * ancho + px] &= ~(3 << 10)
     # La playa de abajo: se pinta el plano entero y se ponen solo sus filas. Arriba, las rocas del islote copiado
     # cuentan como pared; su arena y su mar, como el terreno de al lado.
     playa = RUINAS_PLAYA.strip().splitlines()
@@ -708,12 +714,19 @@ def portual_y_ruta134():
     """El marinero del muelle de PORTUAL; la RUTA 134 deja de estar pegada a la isla y recupera su roca."""
     ruta = "data/maps/SlateportCity/map.json"
     texto = leer(ruta)
-    if "IslaVolcanica_EventScript_BarqueroIda" not in texto:
+    if "IslaVolcanica_EventScript_BarqueroIda" in texto:
+        # Ya estaba: se lleva a su sitio (BARQUERO_PORTUAL cambió el 22/11/2026)
+        m = json.loads(texto)
+        for o in m["object_events"]:
+            if o["script"] == "IslaVolcanica_EventScript_BarqueroIda":
+                o["x"], o["y"], o["movement_type"] = *BARQUERO_PORTUAL, "MOVEMENT_TYPE_FACE_LEFT"
+        escribir(ruta, json.dumps(m, indent=2, ensure_ascii=False) + chr(10))
+    else:
         m = json.loads(texto)
         assert all((o["x"], o["y"]) != BARQUERO_PORTUAL for o in m["object_events"]), "ahí ya hay alguien"
         texto = co.insertar_en_lista(texto, "object_events", {
             "graphics_id": "OBJ_EVENT_GFX_SAILOR", "x": BARQUERO_PORTUAL[0], "y": BARQUERO_PORTUAL[1],
-            "elevation": 3, "movement_type": "MOVEMENT_TYPE_FACE_UP", "movement_range_x": 0,
+            "elevation": 3, "movement_type": "MOVEMENT_TYPE_FACE_LEFT", "movement_range_x": 0,
             "movement_range_y": 0, "trainer_type": "TRAINER_TYPE_NONE", "trainer_sight_or_berry_tree_id": "0",
             "script": "IslaVolcanica_EventScript_BarqueroIda", "flag": "0"})
         json.loads(texto)

@@ -18,8 +18,13 @@ Uso (desde la raíz del repo; se puede volver a lanzar):
   - las **arenas movedizas** son los únicos hoyos de arena honda (HOYOS): al pisar el centro te traga y
     caes a la **CUEVA** de abajo, cada una a una sala distinta;
   - la **CUEVA** (DesiertoProfundo_Cueva) es un trozo del PASO DESIERTO, la cueva de arena del juego,
-    partida en tres salas con rocas. Cada sala tiene una escalera: dos te devuelven a la entrada del
-    desierto y solo una (la de la arena movediza buena) sale al norte, junto a las ruinas.
+    partida en tres salas con rocas. Dos salas tienen una escalera que te devuelve a la entrada del
+    desierto. La sala buena (la de la arena movediza buena) tiene dos: una sale al norte, por la puerta
+    de un montículo junto a las ruinas, y la otra vuelve a la entrada.
+  - **Vuelta del norte (22/11/2026).** Antes la escalera buena te dejaba en la arena del norte y no se
+    podía volver a bajar: sin VUELO (tramo 5) era una trampa (lo vio el bot de Jorge, #116). Ahora sales
+    por la puerta del montículo del norte (MONTICULO_NORTE), que es de ida y vuelta, y la sala buena
+    tiene una segunda escalera a la entrada.
 - **RUINAS ARENOSAS:** las cuatro plantas de la TORRE ESPEJISMO: la entrada, dos plantas con
   **interruptores** y la CÁMARA, la sala del fósil, donde está el guardián: un Pokémon fuerte que se puede
   capturar (como en las islas del ferry, data/scripts/dualocke_islas.inc).
@@ -57,12 +62,14 @@ BARRERA_FILAS = (22, 23)                 # la fila de peñas que corta el paso a
 # Centro de cada arena movediza -> dónde caes en la CUEVA. La buena es la primera: su sala sale al norte.
 HOYOS = {(17, 44): (33, 10), (5, 27): (5, 10), (14, 33): (17, 10), (9, 40): (8, 12)}
 LLEGADA_INICIO, LLEGADA_RUINAS = (13, 50), (6, 16)   # dónde sales al subir por las escaleras de la cueva
+MONTICULO_NORTE = (4, 13)    # montículo con puerta del norte (22/11/2026): su puerta es LLEGADA_RUINAS
 CUEVA_TROZO = ("DesertUnderpass", 99, 40)            # mapa, x de inicio y ancho (todo el alto)
 ROCA_CUEVA = 0x0602                                  # rocas que separan las salas
 CUEVA_ROCAS = [(12, 10), (12, 11), (12, 12), (26, 9), (26, 10), (0, 10), (0, 11), (0, 12), (0, 13)]
 ESCALERA = 0x323E
-# Escaleras de la cueva: la de la sala buena (warp 0) sale junto a las ruinas; las otras, a la entrada
-ESCALERAS = [((34, 8), "ruinas"), ((3, 4), "inicio"), ((21, 14), "inicio")]
+# Escaleras de la cueva: la de la sala buena (warp 0) sale junto a las ruinas; las otras, a la entrada.
+# La última (22/11/2026) está en la sala buena: para volver del norte sin VUELO.
+ESCALERAS = [((34, 8), "ruinas"), ((3, 4), "inicio"), ((21, 14), "inicio"), ((33, 14), "inicio")]
 # Interruptores de las plantas 2 y 3 (Miguel, 21/11/2026): planta -> flag, su valor, el interruptor y las
 # puertas de piedra que abre
 INTERRUPTORES = {
@@ -150,6 +157,8 @@ def crear_desierto():
         elif (v & 0x3FF) == BASE_SECRETA:
             celdas[i] = celdas[i - 1]
     estampar(celdas, ancho, monticulo(c111, w111), *SITIO_RUINAS)
+    estampar(celdas, ancho, monticulo(c111, w111), *MONTICULO_NORTE)
+    assert puerta_en(*MONTICULO_NORTE) == LLEGADA_RUINAS
     dunas(celdas, ancho, alto)
     return guardar_layout(DESIERTO, ancho, alto, celdas, l111), (ancho, alto)
 
@@ -188,8 +197,8 @@ def dunas(celdas, ancho, alto):
                 x, y = cx - 1 + dx, cy - 1 + dy
                 assert arena(x, y), ("la arena movediza no cabe ahí", cx, cy)
                 celdas[y * ancho + x] = 0x3000 | HOYO[dy][dx]
-    for x, y in (LLEGADA_INICIO, LLEGADA_RUINAS):
-        assert arena(x, y), ("la llegada desde la cueva no está en la arena", x, y)
+    x, y = LLEGADA_INICIO
+    assert arena(x, y), ("la llegada desde la cueva no está en la arena", x, y)
 
 
 def crear_cueva():
@@ -218,7 +227,7 @@ def crear_cueva():
         s = sala(caida)
         llega = {destino for (xy, destino) in ESCALERAS if xy in s}
         buena = caida == next(iter(HOYOS.values()))
-        assert llega == ({"ruinas"} if buena else {"inicio"}), ("salas mal separadas", caida, llega)
+        assert llega == ({"ruinas", "inicio"} if buena else {"inicio"}), ("salas mal separadas", caida, llega)
     return guardar_layout(CUEVA, ancho, alto, celdas, l)
 
 
@@ -255,7 +264,8 @@ def crear_mapas(layout_desierto, layout_ruinas, layout_camara, layout_2f, layout
         "warp_events": [
             {"x": salida[0], "y": salida[1], "elevation": 0, "dest_map": "MAP_ROUTE111", "dest_warp_id": "5"},
             {"x": a_ruinas[0], "y": a_ruinas[1], "elevation": 0, "dest_map": MAPAS[RUINAS], "dest_warp_id": "0"},
-            # 2 y 3: donde sales al subir por las escaleras de la cueva (en la arena: no te mandan a ningún sitio)
+            # 2: donde sales al subir por las escaleras de la entrada (en la arena: no te manda a ningún sitio).
+            # 3: la puerta del montículo del norte, de ida y vuelta con la escalera buena de la cueva.
             {"x": LLEGADA_INICIO[0], "y": LLEGADA_INICIO[1], "elevation": 0, "dest_map": MAPAS[CUEVA],
              "dest_warp_id": "1"},
             {"x": LLEGADA_RUINAS[0], "y": LLEGADA_RUINAS[1], "elevation": 0, "dest_map": MAPAS[CUEVA],
