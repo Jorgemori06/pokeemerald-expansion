@@ -435,6 +435,12 @@ static u8 TextSpeed_ProcessInput(u8 selection)
     return selection;
 }
 
+#if TESTING
+#define TEXTSPEED_X 104
+#else
+#define TEXTSPEED_X 76
+#endif
+
 static void TextSpeed_DrawChoices(u8 selection)
 {
     u8 styles[3];
@@ -445,14 +451,16 @@ static void TextSpeed_DrawChoices(u8 selection)
     styles[2] = 0;
     styles[selection] = 1;
 
-    DrawOptionMenuChoice(gText_TextSpeedSlow, 104, YPOS_TEXTSPEED, styles[0]);
+    // Dualocke: en español, LENTA, MEDIA y RÁPIDA no caben entre 104 y 198 y salían pegadas
+    // ("LENTAMEDIARÁPIDA"). Esta fila empieza más a la izquierda (VEL. TEXTO acaba en 62).
+    DrawOptionMenuChoice(gText_TextSpeedSlow, TEXTSPEED_X, YPOS_TEXTSPEED, styles[0]);
 
     widthSlow = GetStringWidth(FONT_NORMAL, gText_TextSpeedSlow, 0);
     widthMid = GetStringWidth(FONT_NORMAL, gText_TextSpeedMid, 0);
     widthFast = GetStringWidth(FONT_NORMAL, gText_TextSpeedFast, 0);
 
-    widthMid -= 94;
-    xMid = (widthSlow - widthMid - widthFast) / 2 + 104;
+    widthMid -= 198 - TEXTSPEED_X;
+    xMid = (widthSlow - widthMid - widthFast) / 2 + TEXTSPEED_X;
     DrawOptionMenuChoice(gText_TextSpeedMid, xMid, YPOS_TEXTSPEED, styles[1]);
 
     DrawOptionMenuChoice(gText_TextSpeedFast, GetStringRightAlignXOffset(FONT_NORMAL, gText_TextSpeedFast, 198), YPOS_TEXTSPEED, styles[2]);

@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke_es.h"
 #include "battle_setup.h"
 #include "data.h"
 #include "event_data.h"
@@ -181,8 +182,8 @@ static const struct MatchCallStructNPC sMrStoneMatchCallHeader =
     .type = MC_TYPE_NPC,
     .mapSec = MAPSEC_RUSTBORO_CITY,
     .flag = 0xFFFF,
-    .desc = COMPOUND_STRING("DEVON PRES"),
-    .name = COMPOUND_STRING("MR. STONE"),
+    .desc = ES(COMPOUND_STRING("DEVON PRES"), COMPOUND_STRING("PRES. DEVON")),
+    .name = ES(COMPOUND_STRING("MR. STONE"), COMPOUND_STRING("SR. PEÑA")),
     .textData = (const match_call_text_data_t[]) {
         { MatchCall_Text_MrStone1,  ALWAYS_AVAILABLE,                    FLAG_ENABLE_MR_STONE_POKENAV },
         { MatchCall_Text_MrStone2,  FLAG_ENABLE_MR_STONE_POKENAV,        NO_FLAG_TO_SET },
@@ -205,8 +206,8 @@ static const struct MatchCallStructTrainer sNormanMatchCallHeader =
     .mapSec = MAPSEC_PETALBURG_CITY,
     .flag = FLAG_ENABLE_NORMAN_MATCH_CALL,
     .rematchTableIdx = REMATCH_NORMAN,
-    .desc = COMPOUND_STRING("RELIABLE ONE"),
-    .name = COMPOUND_STRING("DAD"),
+    .desc = ES(COMPOUND_STRING("RELIABLE ONE"), COMPOUND_STRING("MUY FIABLE")),
+    .name = ES(COMPOUND_STRING("DAD"), COMPOUND_STRING("PAPÁ")),
     .textData = (const match_call_text_data_t[]) {
         { MatchCall_Text_Norman1,                  FLAG_ENABLE_NORMAN_MATCH_CALL, NO_FLAG_TO_SET },
         { MatchCall_Text_Norman2,                  FLAG_DEFEATED_DEWFORD_GYM,     NO_FLAG_TO_SET },
@@ -226,8 +227,8 @@ static const struct MatchCallBirch sProfBirchMatchCallHeader =
     .type = MC_TYPE_BIRCH,
     .mapSec = 0,
     .flag = FLAG_ENABLE_PROF_BIRCH_MATCH_CALL,
-    .desc = COMPOUND_STRING("{PKMN} PROF."),
-    .name = COMPOUND_STRING("PROF. BIRCH")
+    .desc = ES(COMPOUND_STRING("{PKMN} PROF."), COMPOUND_STRING("PROF. {PKMN}")),
+    .name = ES(COMPOUND_STRING("PROF. BIRCH"), COMPOUND_STRING("PROF. ABEDUL"))
 };
 
 static const match_call_text_data_t sMomTextScripts[] = {
@@ -242,8 +243,8 @@ static const struct MatchCallStructNPC sMomMatchCallHeader =
     .type = MC_TYPE_NPC,
     .mapSec = MAPSEC_LITTLEROOT_TOWN,
     .flag = FLAG_ENABLE_MOM_MATCH_CALL,
-    .desc = COMPOUND_STRING("CALM & KIND"),
-    .name = COMPOUND_STRING("MOM"),
+    .desc = ES(COMPOUND_STRING("CALM & KIND"), COMPOUND_STRING("CARIÑOSA")),
+    .name = ES(COMPOUND_STRING("MOM"), COMPOUND_STRING("MAMÁ")),
     .textData = (const match_call_text_data_t[]) {
         { MatchCall_Text_Mom1, ALWAYS_AVAILABLE,            NO_FLAG_TO_SET },
         { MatchCall_Text_Mom2, FLAG_DEFEATED_PETALBURG_GYM, NO_FLAG_TO_SET },
@@ -257,8 +258,8 @@ static const struct MatchCallStructNPC sStevenMatchCallHeader =
     .type = MC_TYPE_NPC,
     .mapSec = MAPSEC_NONE,
     .flag = FLAG_REGISTERED_STEVEN_POKENAV,
-    .desc = COMPOUND_STRING("HARD AS ROCK"),
-    .name = COMPOUND_STRING("STEVEN"),
+    .desc = ES(COMPOUND_STRING("HARD AS ROCK"), COMPOUND_STRING("PURA ROCA")),
+    .name = ES(COMPOUND_STRING("STEVEN"), COMPOUND_STRING("MÁXIMO")),
     .textData = (const match_call_text_data_t[]) {
         { MatchCall_Text_Steven1, ALWAYS_AVAILABLE,                    NO_FLAG_TO_SET },
         { MatchCall_Text_Steven2, FLAG_RUSTURF_TUNNEL_OPENED,          NO_FLAG_TO_SET },
@@ -271,7 +272,7 @@ static const struct MatchCallStructNPC sStevenMatchCallHeader =
     }
 };
 
-static const u8 gText_MayBrendanMatchCallDesc[] = _("RAD NEIGHBOR");
+static const u8 gText_MayBrendanMatchCallDesc[] = ES(_("RAD NEIGHBOR"), _("DE AL LADO"));
 
 static const struct MatchCallRival sMayMatchCallHeader =
 {
@@ -333,7 +334,7 @@ static const struct MatchCallWally sWallyMatchCallHeader =
     .mapSec = 0,
     .flag = FLAG_ENABLE_WALLY_MATCH_CALL,
     .rematchTableIdx = REMATCH_WALLY_VR,
-    .desc = COMPOUND_STRING("{PKMN} LOVER"),
+    .desc = ES(COMPOUND_STRING("{PKMN} LOVER"), COMPOUND_STRING("FAN DE {PKMN}")),
     .textData = (const match_call_text_data_t[]) {
         { MatchCall_Text_Wally1, ALWAYS_AVAILABLE,                    NO_FLAG_TO_SET },
         { MatchCall_Text_Wally2, FLAG_RUSTURF_TUNNEL_OPENED,          NO_FLAG_TO_SET },
@@ -357,7 +358,7 @@ static const struct MatchCallStructNPC sScottMatchCallHeader =
     .type = 0,
     .mapSec = MAPSEC_NONE,
     .flag = FLAG_ENABLE_SCOTT_MATCH_CALL,
-    .desc = COMPOUND_STRING("ELUSIVE EYES"),
+    .desc = ES(COMPOUND_STRING("ELUSIVE EYES"), COMPOUND_STRING("OJO ESQUIVO")),
     .name = COMPOUND_STRING("SCOTT"),
     .textData = (const match_call_text_data_t[]) {
         { MatchCall_Text_Scott1, ALWAYS_AVAILABLE,                    NO_FLAG_TO_SET },
@@ -377,7 +378,7 @@ static const struct MatchCallStructTrainer sRoxanneMatchCallHeader =
     .mapSec = MAPSEC_RUSTBORO_CITY,
     .flag = FLAG_ENABLE_ROXANNE_MATCH_CALL,
     .rematchTableIdx = REMATCH_ROXANNE,
-    .desc = COMPOUND_STRING("ROCKIN' WHIZ"),
+    .desc = ES(COMPOUND_STRING("ROCKIN' WHIZ"), COMPOUND_STRING("EXPERTA ROCA")),
     .name = NULL,
     .textData = (const match_call_text_data_t[]) {
         { MatchCall_Text_Roxanne_Preparing,         REMATCH_CALL_START,  NO_FLAG_TO_SET },
@@ -394,7 +395,7 @@ static const struct MatchCallStructTrainer sBrawlyMatchCallHeader =
     .mapSec = MAPSEC_DEWFORD_TOWN,
     .flag = FLAG_ENABLE_BRAWLY_MATCH_CALL,
     .rematchTableIdx = REMATCH_BRAWLY,
-    .desc = COMPOUND_STRING("THE BIG HIT"),
+    .desc = ES(COMPOUND_STRING("THE BIG HIT"), COMPOUND_STRING("GRAN GOLPE")),
     .name = NULL,
     .textData = (const match_call_text_data_t[]) {
         { MatchCall_Text_Brawly_Preparing,         REMATCH_CALL_START,  NO_FLAG_TO_SET },
@@ -411,7 +412,7 @@ static const struct MatchCallStructTrainer sWattsonMatchCallHeader =
     .mapSec = MAPSEC_MAUVILLE_CITY,
     .flag = FLAG_ENABLE_WATTSON_MATCH_CALL,
     .rematchTableIdx = REMATCH_WATTSON,
-    .desc = COMPOUND_STRING("SWELL SHOCK"),
+    .desc = ES(COMPOUND_STRING("SWELL SHOCK"), COMPOUND_STRING("GRAN CHISPA")),
     .name = NULL,
     .textData = (const match_call_text_data_t[]) {
         { MatchCall_Text_Wattson_Preparing,         REMATCH_CALL_START,  NO_FLAG_TO_SET },
@@ -428,7 +429,7 @@ static const struct MatchCallStructTrainer sFlanneryMatchCallHeader =
     .mapSec = MAPSEC_LAVARIDGE_TOWN,
     .flag = FLAG_ENABLE_FLANNERY_MATCH_CALL,
     .rematchTableIdx = REMATCH_FLANNERY,
-    .desc = COMPOUND_STRING("PASSION BURN"),
+    .desc = ES(COMPOUND_STRING("PASSION BURN"), COMPOUND_STRING("FUEGO PASIÓN")),
     .name = NULL,
     .textData = (const match_call_text_data_t[]) {
         { MatchCall_Text_Flannery_Preparing,         REMATCH_CALL_START,  NO_FLAG_TO_SET },
@@ -445,7 +446,7 @@ static const struct MatchCallStructTrainer sWinonaMatchCallHeader =
     .mapSec = MAPSEC_FORTREE_CITY,
     .flag = FLAG_ENABLE_WINONA_MATCH_CALL,
     .rematchTableIdx = REMATCH_WINONA,
-    .desc = COMPOUND_STRING("SKY TAMER"),
+    .desc = ES(COMPOUND_STRING("SKY TAMER"), COMPOUND_STRING("REINA CIELO")),
     .name = NULL,
     .textData = (const match_call_text_data_t[]) {
         { MatchCall_Text_Winona_Preparing,         REMATCH_CALL_START,  NO_FLAG_TO_SET },
@@ -462,7 +463,7 @@ static const struct MatchCallStructTrainer sTateLizaMatchCallHeader =
     .mapSec = MAPSEC_MOSSDEEP_CITY,
     .flag = FLAG_ENABLE_TATE_AND_LIZA_MATCH_CALL,
     .rematchTableIdx = REMATCH_TATE_AND_LIZA,
-    .desc = COMPOUND_STRING("MYSTIC DUO"),
+    .desc = ES(COMPOUND_STRING("MYSTIC DUO"), COMPOUND_STRING("DÚO MÍSTICO")),
     .name = NULL,
     .textData = (const match_call_text_data_t[]) {
         { MatchCall_Text_TateLiza_Preparing,         REMATCH_CALL_START,  NO_FLAG_TO_SET },
@@ -479,7 +480,7 @@ static const struct MatchCallStructTrainer sJuanMatchCallHeader =
     .mapSec = MAPSEC_SOOTOPOLIS_CITY,
     .flag = FLAG_ENABLE_JUAN_MATCH_CALL,
     .rematchTableIdx = REMATCH_JUAN,
-    .desc = COMPOUND_STRING("DANDY CHARM"),
+    .desc = ES(COMPOUND_STRING("DANDY CHARM"), COMPOUND_STRING("PURO ENCANTO")),
     .name = NULL,
     .textData = (const match_call_text_data_t[]) {
         { MatchCall_Text_Juan_Preparing,         REMATCH_CALL_START,  NO_FLAG_TO_SET },
@@ -490,7 +491,7 @@ static const struct MatchCallStructTrainer sJuanMatchCallHeader =
     }
 };
 
-static const u8 gText_EliteFourMatchCallDesc[] = _("ELITE FOUR");
+static const u8 gText_EliteFourMatchCallDesc[] = ES(_("ELITE FOUR"), _("ALTO MANDO"));
 
 static const struct MatchCallStructTrainer sSidneyMatchCallHeader =
 {
@@ -554,7 +555,7 @@ static const struct MatchCallStructTrainer sWallaceMatchCallHeader =
     .mapSec = MAPSEC_EVER_GRANDE_CITY,
     .flag = FLAG_REGISTERED_WALLACE,
     .rematchTableIdx = REMATCH_WALLACE,
-    .desc = COMPOUND_STRING("CHAMPION"),
+    .desc = ES(COMPOUND_STRING("CHAMPION"), COMPOUND_STRING("CAMPEÓN")),
     .name = NULL,
     .textData = (const match_call_text_data_t[]) {
         { MatchCall_Text_Wallace, ALWAYS_AVAILABLE, NO_FLAG_TO_SET },
@@ -642,18 +643,18 @@ static void (*const sMatchCall_GetNameAndDescFunctions[])(match_call_t, const u8
     MatchCall_GetNameAndDesc_Birch
 };
 
-static const u8 gText_MatchCallSteven_Strategy[] = _("Attack the weak points!");
-static const u8 gText_MatchCallSteven_Pokemon[] = _("Ultimate STEEL POKéMON.");
+static const u8 gText_MatchCallSteven_Strategy[] = ES(_("Attack the weak points!"), _("¡Ataca los puntos débiles!"));
+static const u8 gText_MatchCallSteven_Pokemon[] = ES(_("Ultimate STEEL POKéMON."), _("Lo mejor del tipo ACERO."));
 
-static const u8 gText_MatchCallBrendan_Strategy[] = _("Battle with knowledge!");
-static const u8 gText_MatchCallBrendan_Pokemon[] = _("I will use various POKéMON.");
-static const u8 gText_MatchCallBrendan_Intro1[] = _("I'll be a better POKéMON");
-static const u8 gText_MatchCallBrendan_Intro2[] = _("prof than my father is!");
+static const u8 gText_MatchCallBrendan_Strategy[] = ES(_("Battle with knowledge!"), _("¡Lucha con cabeza!"));
+static const u8 gText_MatchCallBrendan_Pokemon[] = ES(_("I will use various POKéMON."), _("Uso POKéMON muy variados."));
+static const u8 gText_MatchCallBrendan_Intro1[] = ES(_("I'll be a better POKéMON"), _("¡Seré mejor PROFESOR"));
+static const u8 gText_MatchCallBrendan_Intro2[] = ES(_("prof than my father is!"), _("POKéMON que mi padre!"));
 
-static const u8 gText_MatchCallMay_Strategy[] = _("I'm not so good at battles.");
-static const u8 gText_MatchCallMay_Pokemon[] = _("I'll use any POKéMON!");
-static const u8 gText_MatchCallMay_Intro1[] = _("My POKéMON and I help");
-static const u8 gText_MatchCallMay_Intro2[] = _("my father's research.");
+static const u8 gText_MatchCallMay_Strategy[] = ES(_("I'm not so good at battles."), _("No se me da bien luchar."));
+static const u8 gText_MatchCallMay_Pokemon[] = ES(_("I'll use any POKéMON!"), _("¡Uso cualquier POKéMON!"));
+static const u8 gText_MatchCallMay_Intro1[] = ES(_("My POKéMON and I help"), _("Mis POKéMON y yo ayudamos"));
+static const u8 gText_MatchCallMay_Intro2[] = ES(_("my father's research."), _("a mi padre a investigar."));
 
 static const struct MatchCallCheckPageOverride sCheckPageOverrides[] = {
     {
@@ -663,8 +664,8 @@ static const struct MatchCallCheckPageOverride sCheckPageOverrides[] = {
         .flavorTexts = {
             [CHECK_PAGE_STRATEGY] = gText_MatchCallSteven_Strategy,
             [CHECK_PAGE_POKEMON]  = gText_MatchCallSteven_Pokemon,
-            [CHECK_PAGE_INTRO_1]  = COMPOUND_STRING("I'd climb even waterfalls"),
-            [CHECK_PAGE_INTRO_2]  = COMPOUND_STRING("to find a rare stone!")
+            [CHECK_PAGE_INTRO_1]  = ES(COMPOUND_STRING("I'd climb even waterfalls"), COMPOUND_STRING("¡Subiría hasta cascadas")),
+            [CHECK_PAGE_INTRO_2]  = ES(COMPOUND_STRING("to find a rare stone!"), COMPOUND_STRING("por una piedra rara!"))
         }
     },
     {
@@ -674,8 +675,8 @@ static const struct MatchCallCheckPageOverride sCheckPageOverrides[] = {
         .flavorTexts = {
             [CHECK_PAGE_STRATEGY] = gText_MatchCallSteven_Strategy,
             [CHECK_PAGE_POKEMON]  = gText_MatchCallSteven_Pokemon,
-            [CHECK_PAGE_INTRO_1]  = COMPOUND_STRING("I'm the strongest and most"),
-            [CHECK_PAGE_INTRO_2]  = COMPOUND_STRING("energetic after all!")
+            [CHECK_PAGE_INTRO_1]  = ES(COMPOUND_STRING("I'm the strongest and most"), COMPOUND_STRING("¡Al fin y al cabo, soy el")),
+            [CHECK_PAGE_INTRO_2]  = ES(COMPOUND_STRING("energetic after all!"), COMPOUND_STRING("más fuerte y enérgico!"))
         }
     },
     {

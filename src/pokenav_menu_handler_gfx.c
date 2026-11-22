@@ -1,4 +1,5 @@
 #include "global.h"
+#include "dualocke_es.h"
 #include "malloc.h"
 #include "decompress.h"
 #include "bg.h"
@@ -108,7 +109,7 @@ static const u32 sPokenavDeviceBgTilemap[] = INCGFX_U32("graphics/pokenav/device
 static const u16 sMatchCallBlueLightPal[] = INCGFX_U16("graphics/pokenav/blue_light.png", ".gbapal");
 static const u32 sMatchCallBlueLightTiles[] = INCGFX_U32("graphics/pokenav/blue_light.png", ".4bpp.smol");
 
-static const u8 gText_NoRibbonWinners[] = _("There are no RIBBON winners.");
+static const u8 gText_NoRibbonWinners[] = ES(_("There are no RIBBON winners."), _("Nadie tiene CINTAS."));
 
 static const struct BgTemplate sPokenavMainMenuBgTemplates[] = {
     {
@@ -269,20 +270,20 @@ static const struct WindowTemplate sOptionDescWindowTemplate =
 
 static const u8 *const sPageDescriptions[] =
 {
-    [POKENAV_MENUITEM_MAP]                     = COMPOUND_STRING("Check the map of the HOENN region"),
-    [POKENAV_MENUITEM_CONDITION]               = COMPOUND_STRING("Check POKéMON in detail."),
-    [POKENAV_MENUITEM_MATCH_CALL]              = COMPOUND_STRING("Call a registered TRAINER."),
-    [POKENAV_MENUITEM_RIBBONS]                 = COMPOUND_STRING("Check obtained RIBBONS."),
-    [POKENAV_MENUITEM_SWITCH_OFF]              = COMPOUND_STRING("Put away the POKéNAV."),
-    [POKENAV_MENUITEM_CONDITION_PARTY]         = COMPOUND_STRING("Check party POKéMON in detail."),
-    [POKENAV_MENUITEM_CONDITION_SEARCH]        = COMPOUND_STRING("Check all POKéMON in detail."),
-    [POKENAV_MENUITEM_CONDITION_CANCEL]        = COMPOUND_STRING("Return to the POKéNAV menu."),
-    [POKENAV_MENUITEM_CONDITION_SEARCH_COOL]   = COMPOUND_STRING("Find cool POKéMON."),
-    [POKENAV_MENUITEM_CONDITION_SEARCH_BEAUTY] = COMPOUND_STRING("Find beautiful POKéMON."),
-    [POKENAV_MENUITEM_CONDITION_SEARCH_CUTE]   = COMPOUND_STRING("Find cute POKéMON."),
-    [POKENAV_MENUITEM_CONDITION_SEARCH_SMART]  = COMPOUND_STRING("Find smart POKéMON."),
-    [POKENAV_MENUITEM_CONDITION_SEARCH_TOUGH]  = COMPOUND_STRING("Find tough POKéMON."),
-    [POKENAV_MENUITEM_CONDITION_SEARCH_CANCEL] = COMPOUND_STRING("Return to the CONDITION menu.")
+    [POKENAV_MENUITEM_MAP]                     = ES(COMPOUND_STRING("Check the map of the HOENN region"), COMPOUND_STRING("Mira el mapa de la región de HOENN.")),
+    [POKENAV_MENUITEM_CONDITION]               = ES(COMPOUND_STRING("Check POKéMON in detail."), COMPOUND_STRING("Mira tus POKéMON en detalle.")),
+    [POKENAV_MENUITEM_MATCH_CALL]              = ES(COMPOUND_STRING("Call a registered TRAINER."), COMPOUND_STRING("Llama a un ENTRENADOR registrado.")),
+    [POKENAV_MENUITEM_RIBBONS]                 = ES(COMPOUND_STRING("Check obtained RIBBONS."), COMPOUND_STRING("Mira las CINTAS conseguidas.")),
+    [POKENAV_MENUITEM_SWITCH_OFF]              = ES(COMPOUND_STRING("Put away the POKéNAV."), COMPOUND_STRING("Guarda el POKéNAV.")),
+    [POKENAV_MENUITEM_CONDITION_PARTY]         = ES(COMPOUND_STRING("Check party POKéMON in detail."), COMPOUND_STRING("Mira tu equipo en detalle.")),
+    [POKENAV_MENUITEM_CONDITION_SEARCH]        = ES(COMPOUND_STRING("Check all POKéMON in detail."), COMPOUND_STRING("Mira todos tus POKéMON en detalle.")),
+    [POKENAV_MENUITEM_CONDITION_CANCEL]        = ES(COMPOUND_STRING("Return to the POKéNAV menu."), COMPOUND_STRING("Vuelve al menú del POKéNAV.")),
+    [POKENAV_MENUITEM_CONDITION_SEARCH_COOL]   = ES(COMPOUND_STRING("Find cool POKéMON."), COMPOUND_STRING("Busca POKéMON con CARISMA.")),
+    [POKENAV_MENUITEM_CONDITION_SEARCH_BEAUTY] = ES(COMPOUND_STRING("Find beautiful POKéMON."), COMPOUND_STRING("Busca POKéMON con BELLEZA.")),
+    [POKENAV_MENUITEM_CONDITION_SEARCH_CUTE]   = ES(COMPOUND_STRING("Find cute POKéMON."), COMPOUND_STRING("Busca POKéMON con DULZURA.")),
+    [POKENAV_MENUITEM_CONDITION_SEARCH_SMART]  = ES(COMPOUND_STRING("Find smart POKéMON."), COMPOUND_STRING("Busca POKéMON con INGENIO.")),
+    [POKENAV_MENUITEM_CONDITION_SEARCH_TOUGH]  = ES(COMPOUND_STRING("Find tough POKéMON."), COMPOUND_STRING("Busca POKéMON con DUREZA.")),
+    [POKENAV_MENUITEM_CONDITION_SEARCH_CANCEL] = ES(COMPOUND_STRING("Return to the CONDITION menu."), COMPOUND_STRING("Vuelve al menú de CONDICIÓN."))
 };
 
 static const u8 sOptionDescTextColors[]  = {TEXT_COLOR_GREEN, TEXT_COLOR_BLUE, TEXT_COLOR_LIGHT_GREEN};
