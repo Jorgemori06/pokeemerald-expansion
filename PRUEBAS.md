@@ -222,6 +222,15 @@ Todo lo grande ya está en `master`: reglas del locke, randomizer, equilibrio y 
 - [ ] Los movimientos que se aprenden al subir de nivel son al azar: los de tu inicial, los de los salvajes y los de los entrenadores. Que al principio siempre haya algún ataque y que no salgan ataques muy fuertes a nivel bajo.
 - [ ] `make nueva-partida` da otra semilla y `make` repite la misma.
 
+### Regla de la Liga (desde el 22/11/2026)
+
+- [ ] **Tienda de la Liga:** el dependiente recuerda la regla y vende RESTAURAR TODO (3000 ₽). Se pueden comprar varios, también después de salir y volver.
+- [ ] **En combate con el Alto Mando y el Campeón:**
+  - Antes de que el rival cure, un curativo de la mochila no se puede usar: sale "Regla de la Liga: no puedes curar más veces que el rival." y no se gasta.
+  - Cuando el rival usa un RESTAURAR TODO, se puede usar uno (y solo uno); si usa otro, otro más.
+  - En los demás combates (entrenadores normales, gimnasios) los curativos se usan como siempre.
+- [ ] **Cura entre combates:** al entrar en la sala de SIXTO, FÁTIMA, NÍVEA, DRACÓN y PLUBIO suena la música del Centro, sale el mensaje y el equipo tiene la vida, los PP y el estado a tope.
+
 ### Equilibrio
 - [ ] Primeros gimnasios (desde el 11/11/2026):
   - PETRA con 4 Pokémon (14-16), MARCIAL con 4 (21-23) y ERICO con 5 (30-32), una cura cada uno.

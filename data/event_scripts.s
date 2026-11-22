@@ -1364,6 +1364,7 @@ Common_EventScript_FerryDepartIsland::
 	.include "data/scripts/dualocke_recuerda_movimientos.inc"
 	.include "data/scripts/dualocke_islas.inc"
 	.include "data/scripts/dualocke_fosiles.inc"
+	.include "data/scripts/dualocke_liga.inc"
 
 Common_EventScript_NameReceivedPartyMon::
 	fadescreen FADE_TO_BLACK

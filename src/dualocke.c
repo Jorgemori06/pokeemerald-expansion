@@ -19,6 +19,7 @@
 #include "constants/battle.h"
 #include "constants/region_map_sections.h"
 #include "dualocke_aleatorio.h"
+#include "dualocke_liga.h"
 #include "data/dualocke_fosiles.h"
 
 // Dualocke: sistema de vidas y caja de muertos.
@@ -556,6 +557,7 @@ void Dualocke_SetRandomEncounter(void)
 void Dualocke_OnBattleStart(void)
 {
     sCurrentEncounter = DUALOCKE_ENCOUNTER_NO_RULE;
+    Dualocke_LigaEmpiezaCombate();
     if (sRandomEncounterPending && !(gBattleTypeFlags & (BATTLE_TYPE_TRAINER | BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED)))
     {
         sCurrentEncounter = Dualocke_GetWildEncounterStatus(&gParties[B_TRAINER_OPPONENT_A][0], gMapHeader.regionMapSectionId);

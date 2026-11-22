@@ -28,6 +28,7 @@ PokemonLeague_EliteFour_EventScript_WalkInCloseDoor::
 	setmetatile 6, 13, METATILE_EliteFour_EntryDoor_ClosedBottom, TRUE
 	setmetatile 7, 13, METATILE_EliteFour_EntryDoor_ClosedBottom, TRUE
 	special DrawWholeMapView
+	call Dualocke_EventScript_CuraLiga  @ Dualocke: regla de la Liga (cura al entrar en cada sala)
 	return
 
 @ Essentially unused, only necessary when re-entering an Elite Four room after defeating the member, which isnt normally possible
