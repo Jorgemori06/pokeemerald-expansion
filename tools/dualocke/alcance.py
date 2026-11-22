@@ -69,8 +69,10 @@ VIAJES = [
     ("MAP_MT_CHIMNEY_CABLE_CAR_STATION", "MAP_ROUTE112_CABLE_CAR_STATION", 4),
     # Barca del muelle de PORTUAL a la ISLA VOLCÁNICA, desde la 7.ª medalla (crear_islas_sur.py; Miguel,
     # 21/11/2026). La isla ya no está pegada a la RUTA 134.
-    ("MAP_SLATEPORT_CITY", "MAP_ISLA_VOLCANICA", 8),
-    ("MAP_ISLA_VOLCANICA", "MAP_SLATEPORT_CITY", 8),
+    # Con la casilla desde la que se habla al barquero: si no se llega a ella, no hay viaje (el 21/11/2026
+    # estaba en un trozo de muelle suelto y esta tabla lo daba por bueno; lo vio el bot de Jorge, #116).
+    ("MAP_SLATEPORT_CITY", "MAP_ISLA_VOLCANICA", 8, (36, 40)),
+    ("MAP_ISLA_VOLCANICA", "MAP_SLATEPORT_CITY", 8, (20, 24)),
     # Arenas movedizas del DESIERTO PROFUNDO: caes a la CUEVA de abajo (crear_desierto_profundo.py; Miguel,
     # 21/11/2026). Se llega a la sala buena (su escalera es el warp 0), que sale junto a las ruinas.
     ("MAP_DESIERTO_PROFUNDO", "MAP_DESIERTO_PROFUNDO_CUEVA", 5),
@@ -231,10 +233,10 @@ def alcanzables(mundo, tramo):
             for trozo, t in SCRIPTS_QUE_BLOQUEAN:
                 if trozo in e.get("script", "") and tramo < t:
                     bloqueos[(mid, e["x"], e["y"])] = True
-    viajes = {}
-    for desde, hasta, t in VIAJES:
+    viajes = {}  # mapa: [(destino, casilla desde la que se sale o None si da igual)]
+    for desde, hasta, t, *casilla in VIAJES:
         if tramo >= t:
-            viajes.setdefault(desde, []).append(hasta)
+            viajes.setdefault(desde, []).append((hasta, casilla[0] if casilla else None))
 
     def warp_destino(mid, idx):
         m = mundo.mapas.get(mid)
@@ -274,7 +276,10 @@ def alcanzables(mundo, tramo):
                 d = warp_destino(w["dest_map"], w["dest_warp_id"])
                 if d:
                     llegar(*d, 0, False)
-        for hasta in viajes.pop(mid, []):  # una vez por mapa basta
+        for hasta, casilla in list(viajes.get(mid, [])):  # una vez por viaje basta
+            if casilla not in (None, (x, y)):
+                continue
+            viajes[mid].remove((hasta, casilla))
             d = warp_destino(hasta, 0)
             if d:
                 llegar(*d, 0, False)

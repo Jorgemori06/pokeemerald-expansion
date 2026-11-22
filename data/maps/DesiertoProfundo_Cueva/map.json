@@ -36,6 +36,13 @@
       "elevation": 0,
       "dest_map": "MAP_DESIERTO_PROFUNDO",
       "dest_warp_id": "2"
+    },
+    {
+      "x": 33,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_DESIERTO_PROFUNDO",
+      "dest_warp_id": "2"
     }
   ],
   "object_events": [],
