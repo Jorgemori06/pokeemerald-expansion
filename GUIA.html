@@ -609,7 +609,7 @@ dialog.dex-ficha::backdrop { background: rgba(8, 16, 12, .55); backdrop-filter: 
     <!-- 6. Megapiedras -->
     <section id="megapiedras">
       <h2><span class="num">6</span>Pistas: megapiedras</h2>
-      <p class="intro">Cada tarjeta dice la zona. Si no la encuentras, abre "Más pistas" (parte del mapa y lo que hay cerca), luego "Foto del sitio" (una foto del juego con el sitio marcado) y, como último recurso, "Solución" (la casilla exacta). Las <b>ocultas</b> no se ven: pulsa A en la casilla o usa el BUSCAOBJETOS. Marca las que vayas cogiendo: se guarda en este navegador.</p>
+      <p class="intro">Cada tarjeta dice la zona. Si no la encuentras, abre "Más pistas" (parte del mapa y lo que hay cerca) y, como último recurso, "Foto del sitio" (una foto del juego con el sitio marcado). Las <b>ocultas</b> no se ven: pulsa A en la casilla o usa el BUSCAOBJETOS. Marca las que vayas cogiendo: se guarda en este navegador.</p>
       <div class="controles" data-lista="megapiedras">
         <label>Voy por <select class="filtro-tramo"></select></label>
         <input type="search" class="filtro-texto" placeholder="Buscar megapiedra o zona…" aria-label="Buscar">
@@ -661,6 +661,7 @@ dialog.dex-ficha::backdrop { background: rgba(8, 16, 12, .55); backdrop-filter: 
       <div class="novedades">
         <div class="tarjeta"><h3><span class="icono">⚖</span>Reglas dentro del juego</h3><ul>
           <li>20 vidas, caja de muertos (14) y aviso "ha muerto" con las vidas que quedan. Los objetos que llevaban los muertos vuelven solos a la mochila.</li>
+          <li>Regla de la Liga dentro del juego: la tienda de la Liga vende RESTAURAR TODO sin límite, contra el ALTO MANDO y PLUBIO solo puedes curar si el rival ya ha curado (y no más veces que él), y el equipo se cura al entrar en cada sala.</li>
           <li>Primera captura por zona, con repetidos por rama evolutiva, legendarios fuera y shiny libres. Aviso al empezar el combate; las Balls no se gastan si no se puede capturar.</li>
           <li>Un Pokémon no evoluciona a una rama que ya tienes viva.</li>
           <li>Caja de prohibidos (13) para regalos, huevos, fósiles, estáticos e intercambios repetidos o legendarios.</li>
@@ -788,6 +789,8 @@ dialog.dex-ficha::backdrop { background: rgba(8, 16, 12, .55); backdrop-filter: 
         </ul></div>
         <div class="tarjeta"><h3><span class="icono">✨</span>Comodidad</h3><ul>
           <li>Correr sin DEPORTIVAS desde el principio.</li>
+          <li>Nombre del jugador de hasta 10 letras.</li>
+          <li>Mochila más grande: 150 huecos en OBJETOS, 70 en MEDICINAS y en BAYAS, 50 en OBJ. CLAVE y 30 en POKé BALLS.</li>
           <li>POKéDEX Nacional desde el principio.</li>
           <li>Pokémon de las 9 generaciones.</li>
           <li>La partida de verdad va sin los menús de depuración (trucos).</li>
@@ -795,6 +798,7 @@ dialog.dex-ficha::backdrop { background: rgba(8, 16, 12, .55); backdrop-filter: 
         <div class="tarjeta"><h3><span class="icono">🇪🇸</span>Traducción</h3><ul>
           <li>Toda la historia en español, de VILLA RAÍZ a la LIGA, con los nombres oficiales.</li>
           <li>Objetos, movimientos, habilidades, Pokédex, menús y mensajes de combate.</li>
+          <li>También lo que estaba dibujado en inglés: POKéNAV, PC, ficha de entrenador, pantalla de datos, iconos de los tipos, el botón de la descripción en combate, la pantalla del mote y el dinero de las tiendas.</li>
           <li>Quedan en inglés cosas fuera de la historia: la tele, el postgame y alguna casa suelta.</li>
         </ul></div>
       </div>
@@ -955,10 +959,13 @@ dialog.dex-ficha::backdrop { background: rgba(8, 16, 12, .55); backdrop-filter: 
           verFoto.appendChild(el("p", null, p.tipo === "oculto" ? "Está en el círculo rojo, sin bola: pulsa A ahí." : "Es la bola del círculo rojo."));
           tarjeta.appendChild(verFoto);
         }
-        var sol = el("details");
-        sol.appendChild(el("summary", null, "Solución"));
-        sol.appendChild(el("p", null, "Casilla (" + p.x + ", " + p.y + ") del mapa, contando desde la esquina de arriba a la izquierda. Es la que se ve en Porymap."));
-        tarjeta.appendChild(sol);
+        if (!foto) {
+          // Solo si no hay foto: con la foto se ve el sitio y la casilla no hace falta
+          var sol = el("details");
+          sol.appendChild(el("summary", null, "Solución"));
+          sol.appendChild(el("p", null, "Casilla (" + p.x + ", " + p.y + ") del mapa, contando desde la esquina de arriba a la izquierda. Es la que se ve en Porymap."));
+          tarjeta.appendChild(sol);
+        }
         contenedor.appendChild(tarjeta);
       });
       if (!visibles) contenedor.appendChild(el("div", "vacio", items.length ? "No hay nada con estos filtros." : "Faltan los datos: lanza python3 tools/dualocke/guia.py."));
