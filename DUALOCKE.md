@@ -73,6 +73,10 @@ powershell -ExecutionPolicy Bypass -File tools\dualocke\instalar_windows.ps1
   También sabe si estás en combate, huir, capturar con Master Ball (con el mote obligatorio) y guardar o cargar el estado.
 - Con él se comprobó (19/11/2026) que la puerta del DESIERTO PROFUNDO funciona, y que surfear, combatir y capturar en la PLAYA VOLCÁNICA no rompe al personaje.
 
+### Bot que se pasa el juego (Jorge con Claude, 22/11/2026)
+
+`tools/dualocke/bot/` juega el Dualocke con la **ROM normal** (`make release`), sin atajos: planea caminos por todo Hoenn, combate, captura, cura, resuelve los puzles de los gimnasios, bucea, usa la Bici Carrera… Con él Claude se pasó el juego entero (semilla 777000111) y apuntó los fallos en `registro/2026-11-22-jorge-bot-partida-completa.md`. Cómo prepararlo y usarlo: `tools/dualocke/bot/README.md`. Sirve para comprobar que la historia se puede terminar, **no** para medir la dificultad (combate peor que una persona, no usa curas y, cuando se atasca, recarga o usa una ayuda declarada que queda apuntada).
+
 ### Entorno (Windows), paso a paso
 
 1. WSL con Ubuntu: en PowerShell como administrador, `wsl --install`, y reiniciar si lo pide.
@@ -167,6 +171,7 @@ Estas son las reglas que usaban en Platino. La idea es mantenerlas lo más parec
   - No se pueden usar Objetos X en combate.
   - Solo se puede comprar una unidad de cada objeto por tienda, salvo Balls, Repelentes y Bayas (y los Caramelos Raros, ver sección 6).
   - No se pueden farmear objetos.
+- **Liga (contada por Jorge el 22/11/2026):** al llegar a la Liga se pueden comprar todos los RESTAURAR TODO que se quiera. En combate solo se pueden usar **si el rival ya ha usado uno**, y como mucho **tantos como haya usado él** (si usa 2, tú puedes usar 2). **Entre combates se cura el equipo entero.** Ahora mismo no está en el juego (ver la tabla de abajo).
 - **Win Clause:**
   - Gana quien venza al Campeón sin perder todas las vidas y sin perder ningún combate (6 Pokémon debilitados).
   - Empate (los dos ganan o los dos pierden): decide el marcador de los combates entre ellos.
@@ -187,6 +192,7 @@ Estas son las reglas que usaban en Platino. La idea es mantenerlas lo más parec
 | Primera captura por ruta + dupes + sin legendarios + shiny libre + caja de prohibidos | El juego bloquea lanzar Balls cuando no se puede capturar; los regalos repetidos/legendarios van a la caja de prohibidos | Medio | **Hecho** |
 | Victoria, combates en Showdown, capturas extra | Fuera del juego, por honor | — | — |
 | No farmear | Por honor | — | — |
+| Regla de la Liga (RESTAURAR TODO solo si el rival cura, curar entre combates) | Tienda en la Liga, contador en combate y cura al pasar de sala | Medio | Decidida; por ahora se cumple de palabra. Falta que Miguel diga si se mete en el juego (sección 9) |
 
 ## 5. Curva de niveles y level caps
 
@@ -1220,10 +1226,12 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
 
 ### Pendiente para el próximo locke
 
+- **Fallos de la partida completa de Claude (22/11/2026)**, ver `registro/2026-11-22-jorge-bot-partida-completa.md`: Toxtricity Grave se vuelve Aguda al acabar cada combate (tabla de cambio de forma equivocada en `gen_8_families.h`), Balls delante de puertas (Museo Oceánico 2F, Ruta 122) y junto a entrenadores en la Calle Victoria, y textos en inglés (VEL. TEXTO pegado, TRAINER CARD/BADGES/MONEY, POKéNAV, SUMMARY/SWITCH/ITEM, PKMN DATA/PARTY POKéMON/CLOSE BOX). Recomendación para el randomizer: asegurar ataques de su tipo en los movimientos por nivel.
 - **Estadísticas mal leídas en el randomizer: ARREGLADO (Jorge, 11/11/2026).** `aleatorio/especies.py` cogía el primer número de las estadísticas que dependen de la generación (ya preprocesadas son, por ejemplo, `8 >= 1 ? 60 : 50`). Salían mal 189 estadísticas de unas 90 especies: Machoke con 8 de Def. Esp., a Charizard le faltaba el At. Esp… Ahora se evalúa la expresión con `evaluar`, que se ha movido de `guia_pokedex.py` a `aleatorio/especies.py` para que la usen los dos. Solo afecta a los jefes (tope y estrategia de los líderes, objetos): con la semilla de Jorge cambian 52 (líderes, rivales y BLASCO, sobre todo especies y movimientos); los salvajes, las habilidades, los iniciales y el resto de entrenadores salen igual. Se metió con las partidas ya empezadas: los jefes que aún no has visto simplemente salen distintos.
 
 ### Pendiente de decidir
 
+- **Regla de la Liga** (sección 4, ya decidida por Jorge): ¿se mete dentro del juego o se sigue cumpliendo de palabra? Si se mete, le toca a Miguel decir: qué vende la tienda de la Liga (RESTAURAR TODO y a qué precio; ahora no vende curativos), si cuenta cualquier curativo que use el rival o solo sus RESTAURAR TODO, y si la cura entre combates es al entrar en cada sala del Alto Mando.
 - ¿Se consigue la **ROM de Esmeralda española** para los diálogos oficiales?
 
 ### Orden de trabajo propuesto
@@ -1268,6 +1276,7 @@ Quién hace cada cosa y cómo se sube: sección 13.
 | Recuerdamovimientos de los Centros Pokémon | `data/scripts/dualocke_recuerda_movimientos.inc` |
 | Guía para jugar (walkthrough, caps, pistas de objetos, Pokédex, novedades) | `GUIA.html` (pistas: `tools/dualocke/guia.py`; fotos de las pistas: `tools/dualocke/emulador/fotos_guia.py`; Pokédex: `tools/dualocke/guia_pokedex.py`) |
 | Emulador sin pantalla y ROM de pruebas (`make DUALOCKE_PRUEBA=1`) | `tools/dualocke/emulador/`, `src/dualocke_prueba.c`, `include/dualocke_prueba.h`; ganchos con `#ifdef DUALOCKE_PRUEBA` en `main_menu.c`, `new_game.c`, `overworld.c`, `field_weather_effect.c` y `trainer_see.c` |
+| Bot que se pasa el juego con la ROM normal | `tools/dualocke/bot/` (`piloto.py`; ver su `README.md`) |
 | Evolución por nivel de los entrenadores normales | `tools/dualocke/evolucionar_entrenadores.py` |
 | Entrenadores | `src/data/trainers.party` |
 | Tiendas | scripts de cada mapa en `data/maps/*/scripts.inc` (`pokemart`) |
