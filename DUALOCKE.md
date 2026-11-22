@@ -173,7 +173,7 @@ Estas son las reglas que usaban en Platino. La idea es mantenerlas lo más parec
   - No se pueden usar Objetos X en combate.
   - Solo se puede comprar una unidad de cada objeto por tienda, salvo Balls, Repelentes y Bayas (y los Caramelos Raros, ver sección 6).
   - No se pueden farmear objetos.
-- **Liga (contada por Jorge el 22/11/2026):** al llegar a la Liga se pueden comprar todos los RESTAURAR TODO que se quiera. En combate solo se pueden usar **si el rival ya ha usado uno**, y como mucho **tantos como haya usado él** (si usa 2, tú puedes usar 2). **Entre combates se cura el equipo entero.** Ahora mismo no está en el juego (ver la tabla de abajo).
+- **Liga (contada por Jorge el 22/11/2026):** al llegar a la Liga se pueden comprar todos los RESTAURAR TODO que se quiera. En combate solo se pueden usar **si el rival ya ha usado uno**, y como mucho **tantos como haya usado él** (si usa 2, tú puedes usar 2). **Entre combates se cura el equipo entero.** **Desde el 22/11/2026 está dentro del juego** (Miguel; ver "Regla de la Liga dentro del juego", en la sección 6).
 - **Win Clause:**
   - Gana quien venza al Campeón sin perder todas las vidas y sin perder ningún combate (6 Pokémon debilitados).
   - Empate (los dos ganan o los dos pierden): decide el marcador de los combates entre ellos.
@@ -194,7 +194,7 @@ Estas son las reglas que usaban en Platino. La idea es mantenerlas lo más parec
 | Primera captura por ruta + dupes + sin legendarios + shiny libre + caja de prohibidos | El juego bloquea lanzar Balls cuando no se puede capturar; los regalos repetidos/legendarios van a la caja de prohibidos | Medio | **Hecho** |
 | Victoria, combates en Showdown, capturas extra | Fuera del juego, por honor | — | — |
 | No farmear | Por honor | — | — |
-| Regla de la Liga (RESTAURAR TODO solo si el rival cura, curar entre combates) | Tienda en la Liga, contador en combate y cura al pasar de sala | Medio | Decidida; por ahora se cumple de palabra. Falta que Miguel diga si se mete en el juego (sección 9) |
+| Regla de la Liga (RESTAURAR TODO solo si el rival cura, curar entre combates) | Tienda en la Liga, contador en combate y cura al pasar de sala | Medio | **Hecho** (Miguel, 22/11/2026) |
 
 ## 5. Curva de niveles y level caps
 
@@ -348,6 +348,20 @@ Regla de compra: una unidad de cada objeto por tienda, salvo Balls, Repelentes, 
 - `tools/dualocke/compras_limitadas.py` genera la tabla de parejas (tienda, objeto) en `src/data/dualocke_compras.h` a partir de las listas de las tiendas. Ahora son 86 en 15 tiendas. **Hay que relanzarlo si se cambian las listas.**
 - Lo comprado se guarda en 6 variables (`VAR_DUALOCKE_COMPRAS_0`-`5`, 0x4083-0x40A1), un bit por pareja.
 - Código: `src/dualocke_compras.c` y tres enganches en `src/shop.c` (al elegir, en la cantidad y al pagar).
+
+**Regla de la Liga dentro del juego (hecho, Miguel, 22/11/2026):** la regla que contó Jorge (sección 4).
+
+- **Tienda de la Liga** (`EverGrandeCity_PokemonLeague_1F`): vende **RESTAURAR TODO** a su precio normal (3000 ₽) y **sin límite**: es la única excepción a "una compra por objeto" (`EXENTOS_TIENDA` en `compras_limitadas.py`; la tabla de compras no cambia, así que las partidas guardadas siguen bien). Antes de abrirla, el dependiente recuerda la regla.
+- **En combate contra el Alto Mando y el Campeón** (SIXTO, FÁTIMA, NÍVEA, DRACÓN y PLUBIO): un curativo de la mochila solo se puede usar si el rival ya ha usado uno, y como mucho tantos como él. Si no, sale "Regla de la Liga: no puedes curar más veces que el rival." y no se gasta.
+  - Cuentan todos los curativos: PS, estados, PP y la Flauta (el rival solo lleva RESTAURAR TODO). Los Objetos X y Revivir ya estaban prohibidos.
+  - Los dos contadores empiezan a 0 en cada combate. Se suma al usarse, no al elegirlo.
+- **Cura entre combates:** al entrar en cada sala del Alto Mando y en la del Campeón, el equipo se cura entero, con la música del Centro Pokémon y el mensaje "Regla de la Liga: ¡tu equipo se ha recuperado por completo!".
+- Código:
+  - `src/dualocke_liga.c` (contadores y qué combate es de la Liga);
+  - `CannotUseItemsInBattle` en `src/item_use.c` (no deja usar el curativo);
+  - `HandleAction_UseItem` en `src/battle_util.c` (cuenta los curativos);
+  - `Dualocke_OnBattleStart` en `src/dualocke.c` (pone los contadores a 0);
+  - `data/scripts/dualocke_liga.inc` (cura y textos), llamado desde `data/scripts/elite_four.inc` y la sala del Campeón.
 
 **Contenido del dependiente principal (hecho, Miguel, 23/10/2026):**
 
@@ -1145,7 +1159,8 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
 
 ### Pendiente de decidir
 
-- **Regla de la Liga** (sección 4, ya decidida por Jorge): ¿se mete dentro del juego o se sigue cumpliendo de palabra? Si se mete, le toca a Miguel decir: qué vende la tienda de la Liga (RESTAURAR TODO y a qué precio; ahora no vende curativos), si cuenta cualquier curativo que use el rival o solo sus RESTAURAR TODO, y si la cura entre combates es al entrar en cada sala del Alto Mando.
+- ~~**Regla de la Liga**: ¿se mete dentro del juego?~~ **Decidido (Miguel, 22/11/2026): sí, entera.** Ver "Regla de la Liga dentro del juego" (sección 6).
+- **Recomendaciones del bot (#118), contestadas por Miguel el 22/11/2026:** los movimientos del randomizer se quedan totalmente al azar; los salvajes de la CALLE VICTORIA, a nivel 87; y los jefes de mitad de juego no se tocan hasta que los pruebe una persona.
 - ¿Se consigue la **ROM de Esmeralda española** para los diálogos oficiales?
 
 ### Orden de trabajo propuesto

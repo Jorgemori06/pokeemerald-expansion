@@ -25,6 +25,7 @@ EverGrandeCity_PokemonLeague_1F_EventScript_Nurse::
 EverGrandeCity_PokemonLeague_1F_EventScript_Clerk::
 	lock
 	faceplayer
+	msgbox Dualocke_Text_TiendaLiga, MSGBOX_DEFAULT  @ Dualocke: regla de la Liga
 	message gText_HowMayIServeYou
 	waitmessage
 	pokemart EverGrandeCity_PokemonLeague_1F_Pokemart
@@ -42,6 +43,7 @@ EverGrandeCity_PokemonLeague_1F_Pokemart:
 	.2byte ITEM_MAX_REPEL
 	.2byte ITEM_ESCAPE_ROPE
 	.2byte ITEM_RARE_CANDY
+	.2byte ITEM_FULL_RESTORE  @ Dualocke: regla de la Liga (sin límite: compras_limitadas.py)
 	pokemartlistend
 
 @ The door guards only check for FLAG_BADGE06_GET because Winonas badge is the only one that can be skipped

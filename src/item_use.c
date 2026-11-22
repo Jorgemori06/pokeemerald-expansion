@@ -12,6 +12,7 @@
 #include "coins.h"
 #include "data.h"
 #include "dualocke.h"
+#include "dualocke_liga.h"
 #include "event_data.h"
 #include "event_object_lock.h"
 #include "event_object_movement.h"
@@ -1151,6 +1152,7 @@ static const u8 sText_CantThrowPokeBall_Disabled[] = ES(_("POKé BALLS cannot be
 static const u8 sText_CantThrowPokeBall_ZoneUsed[] = ES(_("You already had this area's\nencounter! You can't catch it.\p"), _("¡Ya tuviste el encuentro de esta\nzona! No puedes capturarlo.\p"));
 static const u8 sText_CantThrowPokeBall_NotCounted[] = ES(_("This Pokémon doesn't count for\nthis area. You can't catch it.\p"), _("Este Pokémon no cuenta para esta\nzona. No puedes capturarlo.\p"));
 static const u8 sText_XItemsBanned[] = ES(_("The locke rules don't allow\nusing this item in battle!{PAUSE_UNTIL_PRESS}"), _("¡Las reglas del locke no dejan\nusar este objeto en combate!{PAUSE_UNTIL_PRESS}"));
+static const u8 sText_LigaSinCurar[] = ES(_("League rule: you can't heal\nmore times than your foe!{PAUSE_UNTIL_PRESS}"), _("Regla de la Liga: no puedes\ncurar más veces que el rival.{PAUSE_UNTIL_PRESS}"));
 
 static void ItemUseInBattle_ShowPartyMenu(u8 taskId)
 {
@@ -1231,6 +1233,14 @@ bool32 CannotUseItemsInBattle(enum Item itemId, struct Pokemon *mon)
      || (battleUsage == EFFECT_ITEM_REVIVE && !TESTING)) // Dualocke: un Pokémon debilitado está muerto (en los tests de la expansion se deja como en el original)
     {
         StringExpandPlaceholders(gStringVar4, sText_XItemsBanned);
+        return TRUE;
+    }
+
+    // Dualocke (regla de la Liga, 22/11/2026): con el Alto Mando y el Campeón, un curativo solo si el rival
+    // ya ha usado uno, y como mucho tantos como él (src/dualocke_liga.c)
+    if (Dualocke_EsCombateLiga() && Dualocke_EsCurativo(itemId) && !Dualocke_LigaPuedeCurar())
+    {
+        StringExpandPlaceholders(gStringVar4, sText_LigaSinCurar);
         return TRUE;
     }
 

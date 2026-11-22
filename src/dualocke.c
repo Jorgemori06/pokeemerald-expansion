@@ -3,6 +3,7 @@
 #include "battle_pike.h"
 #include "battle_pyramid.h"
 #include "dualocke.h"
+#include "dualocke_liga.h"
 #include "event_data.h"
 #include "global.fieldmap.h"
 #include "item.h"
@@ -519,6 +520,7 @@ void Dualocke_SetRandomEncounter(void)
 void Dualocke_OnBattleStart(void)
 {
     sCurrentEncounter = DUALOCKE_ENCOUNTER_NO_RULE;
+    Dualocke_LigaEmpiezaCombate();
     if (sRandomEncounterPending && !(gBattleTypeFlags & (BATTLE_TYPE_TRAINER | BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED)))
     {
         sCurrentEncounter = Dualocke_GetWildEncounterStatus(&gParties[B_TRAINER_OPPONENT_A][0], gMapHeader.regionMapSectionId);
