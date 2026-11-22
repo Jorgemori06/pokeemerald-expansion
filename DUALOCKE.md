@@ -1161,7 +1161,7 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
 
 ## 9. Estado y siguientes pasos
 
-### Locke en curso (empezado de nuevo el 18/11/2026, con la versión 8; ahora la 8.2)
+### Locke en curso (empezado de nuevo el 22/11/2026, con la versión 9: la partida que cuenta)
 
 - ROMs hechas por Claude con `make release` (sin menús de depuración).
   - **Versión 1** (26/10/2026): commit `46ba7600` (con #36 y #37).
@@ -1217,8 +1217,16 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
     - **ISLA VOLCÁNICA:** 10 casillas a la derecha bajo la RUTA 134, para que no quede al lado del puerto de PORTUAL (al cruzar, el puerto aparecía y desaparecía).
     - **Combate con MÁXIMO PEÑAS en el CENTRO ESPACIAL:** su equipo se quedó a nivel 42-44 contra MAXI (84) y TATIANA (75-81). `tools/dualocke/companeros.py` lo pone al nivel del tramo (84): Metagross, Skarmory y Aggron, sin ataques que te den a ti. Lo revisa Miguel.
     - Pendiente: lo de Ferrocuello y el Campo de Niebla en la RUTA 124 (hace falta el `.sav` de Miguel para ver su equipo) y mejorar el dibujo de la ISLA VOLCÁNICA.
-- **Semillas actuales (versión 8):** Miguel `3632113266` (`Esmeralda Dualocke - Mikemine.gba`), Jorge `2425682645` (`Esmeralda Dualocke - Jorgemori.gba`).
+  - **Versión 9: la partida que cuenta** (22/11/2026): commit `e38ad8986f`, con **semillas nuevas**: Jorge y Miguel empiezan el locke de cero (el #115 cambia la partida guardada). Antes de fusionar, Claude lo probó todo junto con el bot y la ROM release (`registro/2026-11-22-jorge-prueba-todo-junto.md`). Añade:
+    - todo lo de Miguel desde la 8.5: respuestas a Jorge, PLAYA VOLCÁNICA con ceniza, los arreglos de la quinta prueba, los biomas CANTERA, PRADO DE HADAS e ISLA DEL DRAGÓN, y los arreglos de lo que vio el bot en las zonas nuevas (#112, #113, #116 y #117);
+    - la regla de la Liga dentro del juego (#122, Miguel) y su mensaje (#123);
+    - nombre del jugador de hasta 10 letras y mochila más grande (#115);
+    - el bot que se pasa el juego (#118);
+    - Toxtricity Grave ya no pasa a Aguda, y 12 Poké Balls que tapaban el paso movidas (#119);
+    - textos que seguían en inglés (opciones, menú del equipo, POKéNAV, PC, ficha, dinero, pantalla de datos, tipos, mote) y 108 descripciones de movimientos, objetos y habilidades que se saltaban (#120 y #121).
+- **Semillas actuales (versión 9):** Miguel `3483218843` (`Esmeralda Dualocke - Mikemine.gba`), Jorge `2635893558` (`Esmeralda Dualocke - Jorgemori.gba`).
 - Semillas de las versiones anteriores (partidas abandonadas):
+  - versión 8: Miguel `3632113266`, Jorge `2425682645`;
   - versiones 5-7: Miguel `2918696854`, Jorge `2780853751`;
   - versión 4: Miguel `1820821844`, Jorge `5966102869`;
   - versiones 1-3: Miguel `7044754226`, Jorge `6629063067`.
@@ -1252,7 +1260,13 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
 - Bolsillos Medicinas y Megapiedras en la mochila (Jorge, sección 6).
 - Recuerdamovimientos en los Centros Pokémon y Ticket-Recuerdo por las rutas (Miguel, sección 6).
 - **Guía para jugar** en `GUIA.html` (se abre con el navegador): cómo avanzar, caps y niveles de los jefes, objetos nuevos, pistas de megapiedras y Ticket-Recuerdo, y novedades. Tiene también una **Pokédex** (estadísticas base, tipos, debilidades, evoluciones y megas, con sprites). Las pistas salen de los mapas con `python3 tools/dualocke/guia.py` y la Pokédex del código con `python3 tools/dualocke/guia_pokedex.py`; el resto se edita a mano.
-  - **Fotos de las pistas** (pedidas por Miguel, 19/11/2026): cada megapiedra y cada Ticket-Recuerdo tiene, entre "Más pistas" y "Solución", una **foto del juego** con el sitio marcado con un círculo rojo. Las saca `python3 tools/dualocke/emulador/fotos_guia.py` con el emulador sin pantalla (ver la sección 3), poniendo al jugador al lado; van dentro de `GUIA.html` (WebP, unos 2,7 MB las 161). Si se mueve un objeto: `guia.py` y después `fotos_guia.py`. Las evoluciones raras salen explicadas: Tandemaus (nivel 25 subiendo en combate, no con Caramelo Raro fuera de combate), Shedinja, Sirfetch'd y las que no se pueden hacer en Hoenn (Runerigus, Urshifu).
+  - **Fotos de las pistas** (pedidas por Miguel, 19/11/2026): cada megapiedra y cada Ticket-Recuerdo tiene, después de "Más pistas", una **foto del juego** con el sitio marcado con un círculo rojo. Desde el 22/11/2026 la "Solución" (la casilla exacta) solo sale si el objeto no tiene foto (Jorge: con la foto no hace falta). Las saca `python3 tools/dualocke/emulador/fotos_guia.py` con el emulador sin pantalla (ver la sección 3), poniendo al jugador al lado; van dentro de `GUIA.html` (WebP, unos 2,7 MB las 161). Si se mueve un objeto: `guia.py` y después `fotos_guia.py`. Las evoluciones raras salen explicadas: Tandemaus (nivel 25 subiendo en combate, no con Caramelo Raro fuera de combate), Shedinja, Sirfetch'd y las que no se pueden hacer en Hoenn (Runerigus, Urshifu).
+- **Mapa interactivo** en `MAPA.html` (Jorge, 22/11/2026; idea sacada de los mapas web de Project Zomboid). Se abre con el navegador, en la misma carpeta que la guía (se enlazan entre sí). Lo genera entero `python3 tools/dualocke/mapa_interactivo.py` desde los mapas del juego (plantilla en `tools/dualocke/mapa/plantilla.html`, con Leaflet 1.9.4 dentro; un solo archivo de unos 6 MB, como la guía). Hay que volver a lanzarlo cuando se toque un mapa o un objeto.
+  - **Mundo:** todos los mapas exteriores dibujados con sus tilesets (como Porymap) y unidos por sus conexiones, con zoom y arrastre. Nivel **Bajo el agua** con los mapas de buceo encima de su ruta. Lo que no se alcanza andando (ARRECÍPOLIS, las islas del ferry, ISLA VOLCÁNICA, FRENTE BATALLA…) sale como un botón en su sitio del mapa de la región; las islas del ferry que no salen en él, en fila debajo de Hoenn.
+  - **Cuevas y edificios:** se abren pinchando su puerta (o su nombre) y tienen **selector de plantas** (como los pisos del mapa de Zomboid). Las puertas llevan de un mapa a otro; "Atrás" vuelve.
+  - **Capas:** nombres de zonas, sitios (Centro POKéMON, tienda, gimnasio, puerto…), cuevas y lugares, puertas y zonas nuevas (con el texto de su tarjeta de Novedades de la guía). Apagadas de inicio por ser destripes: entrenadores (clase, nombre y nivel máximo), objetos del suelo (salen al azar con la semilla; las MT, MT al azar), megapiedras, Ticket-Recuerdo y POKéMON fuertes (guardianes y estáticos: nivel; la especie sale al azar con la semilla).
+  - **Buscador** de zonas, megapiedras, entrenadores y POKéMON fuertes. **Enlace** a cualquier sitio (`#v=<mapa>&x=&y=&z=`) para mandárselo al otro.
+  - **Zonas de captura:** las zonas con salvajes (una por nombre de zona, como en el juego: 85). Cada uno marca las suyas (Capturado / Fallado) desde la lista del menú o pinchando en la zona; se guarda en el navegador, aparte para Jorge y para Miguel.
 - **Arreglos de lo que encontró el bot jugando (Jorge, 22/11/2026):** Toxtricity Grave ya no pasa a Aguda al acabar cada combate (usaba la tabla de cambios de forma de la Aguda; fallo heredado de la expansion, con test en `test/battle/form_change/end_battle.c`), y 12 Poké Balls nuevas que tapaban el paso se han movido (sección 6, "Que ninguna Poké Ball tape el paso").
 - **Siguiente: jugar y probarlo todo junto.** Lista de qué mirar en `PRUEBAS.md`.
 
@@ -1310,6 +1324,7 @@ Quién hace cada cosa y cómo se sube: sección 13.
 | Que nadie se quede encerrado y que ninguna persona ni Ball tape el paso | `tools/dualocke/sin_salida.py` (en el CI; las Balls, `bolas_que_tapan`) |
 | Recuerdamovimientos de los Centros Pokémon | `data/scripts/dualocke_recuerda_movimientos.inc` |
 | Guía para jugar (walkthrough, caps, pistas de objetos, Pokédex, novedades) | `GUIA.html` (pistas: `tools/dualocke/guia.py`; fotos de las pistas: `tools/dualocke/emulador/fotos_guia.py`; Pokédex: `tools/dualocke/guia_pokedex.py`) |
+| Mapa interactivo (mundo, plantas, capas, buscador, zonas de captura) | `MAPA.html` (`tools/dualocke/mapa_interactivo.py` y `tools/dualocke/mapa/plantilla.html`) |
 | Emulador sin pantalla y ROM de pruebas (`make DUALOCKE_PRUEBA=1`) | `tools/dualocke/emulador/`, `src/dualocke_prueba.c`, `include/dualocke_prueba.h`; ganchos con `#ifdef DUALOCKE_PRUEBA` en `main_menu.c`, `new_game.c`, `overworld.c`, `field_weather_effect.c` y `trainer_see.c` |
 | Bot que se pasa el juego con la ROM normal | `tools/dualocke/bot/` (`piloto.py`; ver su `README.md`) |
 | Evolución por nivel de los entrenadores normales | `tools/dualocke/evolucionar_entrenadores.py` |
