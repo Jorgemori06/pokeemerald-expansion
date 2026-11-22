@@ -194,7 +194,7 @@ Estas son las reglas que usaban en Platino. La idea es mantenerlas lo más parec
 | Primera captura por ruta + dupes + sin legendarios + shiny libre + caja de prohibidos | El juego bloquea lanzar Balls cuando no se puede capturar; los regalos repetidos/legendarios van a la caja de prohibidos | Medio | **Hecho** |
 | Victoria, combates en Showdown, capturas extra | Fuera del juego, por honor | — | — |
 | No farmear | Por honor | — | — |
-| Regla de la Liga (RESTAURAR TODO solo si el rival cura, curar entre combates) | Tienda en la Liga, contador en combate y cura al pasar de sala | Medio | Pendiente de decidir |
+| Regla de la Liga (RESTAURAR TODO solo si el rival cura, curar entre combates) | Tienda en la Liga, contador en combate y cura al pasar de sala | Medio | Decidida; por ahora se cumple de palabra. Falta que Miguel diga si se mete en el juego (sección 9) |
 
 ## 5. Curva de niveles y level caps
 
@@ -1145,7 +1145,7 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
 
 ### Pendiente de decidir
 
-- ¿Se hace la **regla de la Liga** dentro del juego (sección 4)?
+- **Regla de la Liga** (sección 4, ya decidida por Jorge): ¿se mete dentro del juego o se sigue cumpliendo de palabra? Si se mete, le toca a Miguel decir: qué vende la tienda de la Liga (RESTAURAR TODO y a qué precio; ahora no vende curativos), si cuenta cualquier curativo que use el rival o solo sus RESTAURAR TODO, y si la cura entre combates es al entrar en cada sala del Alto Mando.
 - ¿Se consigue la **ROM de Esmeralda española** para los diálogos oficiales?
 
 ### Orden de trabajo propuesto
