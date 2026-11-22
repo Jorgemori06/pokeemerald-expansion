@@ -27,6 +27,12 @@ Miguel probó la versión 8.5 (#114). **Las partidas de prueba siguen; el locke 
 5. **Los amigos de los Centros Pokémon** (`IDEAS.md`, idea 12): ir añadiéndolos, cada uno con su regalo (nivel 1, al azar). Falta la lista de amigos y en qué ciudad va cada uno.
 6. **Los entrenadores de las zonas nuevas** (para el locke de verdad): Miguel dirá en qué zonas y con qué equipos.
 
+### Lo que dejó Jorge el 22/11/2026 (bot, #118-#121)
+
+- **Fallos de las zonas nuevas que vio el bot (5): arreglados el 22/11/2026.** Tres en la #116 (barquero de PORTUAL, puerta de la TORRE, vuelta del norte del DESIERTO PROFUNDO) y dos en la #117 (entrada del PRADO, esquina de la ISLA DEL DRAGÓN). `comprobar_zonas.py` avisa ahora de esos tipos de fallo. Ver `registro/2026-11-22-miguel-arreglos-bot.md`.
+- **Regla de la Liga: dentro del juego** (Miguel: "sí, entera"). Rama `miguel/regla-liga`, encima de la #118. Ver `registro/2026-11-22-miguel-regla-liga.md`.
+- **Las demás recomendaciones del bot (Miguel, 22/11/2026):** movimientos del randomizer, totalmente al azar; salvajes de la CALLE VICTORIA, a 87; jefes de mitad de juego, sin tocar hasta que los pruebe una persona.
+
 ## 0 bis. Preguntas de Jorge para Miguel (18/11/2026)
 
 **Contestadas por Miguel el 20/11/2026** (ver "Respuesta de Miguel" en cada una).
