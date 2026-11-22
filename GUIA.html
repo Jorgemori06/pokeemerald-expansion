@@ -90,6 +90,8 @@ nav.indice li a { display: flex; gap: 10px; padding: 7px 10px; border-radius: 9p
 nav.indice li a:hover, nav.indice li a.activo { background: var(--accent-soft); color: var(--accent-text); }
 nav.indice li a span { color: var(--muted); width: 18px; text-align: right; font-variant-numeric: tabular-nums; }
 nav.indice .tema { margin-top: 16px; width: 100%; }
+nav.indice .enlace-mapa { display: block; margin-top: 12px; padding: 9px 10px; border-radius: 9px; border: 1px solid var(--line); color: var(--accent-text); text-decoration: none; font-weight: 700; text-align: center; }
+nav.indice .enlace-mapa:hover { background: var(--accent-soft); }
 main { min-width: 0; }
 header.portada {
   background: linear-gradient(135deg, #0b6b49, #0f8a5f 45%, #19b37c);
@@ -329,6 +331,7 @@ dialog.dex-ficha::backdrop { background: rgba(8, 16, 12, .55); backdrop-filter: 
       <li><a href="#pokedex"><span>8</span>Pokédex</a></li>
       <li><a href="#novedades"><span>9</span>Novedades</a></li>
     </ol>
+    <a class="enlace-mapa" href="MAPA.html" title="Abre MAPA.html (tiene que estar en la misma carpeta que la guía)">🗺 Mapa interactivo</a>
     <button class="tema" type="button" id="boton-tema">Cambiar tema claro/oscuro</button>
   </nav>
 
