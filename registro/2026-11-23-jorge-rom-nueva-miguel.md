@@ -10,11 +10,11 @@ El equipo de MARCIAL con esa semilla:
 |---|---|---|---|
 | Greavard | 21 | Baya Lichi | Terremoto, Brillo Mágico, Viento Afín, Bomba Lodo |
 | Dwebble | 22 | Cinta Fuerte | Zumbido, Simún de Arena, Onda Trueno, Pulso Cura |
-| **Pawmo** | 22 | Baya Zidra | **Fuerza Bruta** (120, STAB), **Ataque Fusión** (100, STAB), Canto Helado (prioridad), Onda Trueno |
-| Crabrawler | 23 | Pañuelo Seda | Patada Giro, Fuerza, Cara Susto, Amnesia |
+| **Pawmo** | 22 | Baya Zidra | **Fuerza Bruta** (120, STAB), **Rayo Fusión** (100, STAB), Esquirla Helada (prioridad), Onda Trueno |
+| Crabrawler | 23 | Pañuelo de Seda | Patada Giro, Fuerza, Cara Susto, Amnesia |
 
 - El Pawmo tiene 24 IVs. Su habilidad con esa semilla es Llovizna, Defensa Hoja o Capa Tóxica.
-- Fuerza Bruta y Ataque Fusión llevan STAB, con 85 de Velocidad base. Además tiene Canto Helado con prioridad y Onda Trueno para paralizar.
+- Fuerza Bruta y Rayo Fusión llevan STAB, con 85 de Velocidad base. Además tiene Esquirla Helada con prioridad y Onda Trueno para paralizar.
 - Contra un equipo de nivel 20, cada golpe hace un roto.
 
 ## ROM nueva
@@ -28,8 +28,8 @@ No es mala suerte de una semilla: el randomizer da a los jefes movimientos muy f
 
 | Semilla | PETRA | MARCIAL | ERICO |
 |---|---|---|---|
-| Miguel, vieja | 130 (Martillo Hielo, Llama Azul, Infierno…) | 120 (Fuerza Bruta, Ataque Fusión, Terremoto) | 150 (Erupción, Flor Brillante…) |
+| Miguel, vieja | 130 (Martillo Hielo, Llama Azul, Infierno…) | 120 (Fuerza Bruta, Rayo Fusión, Terremoto) | 150 (Estallido, Danza Pétalo…) |
 | Miguel, nueva | 120 (Asalto Espadón, Llama Fusión) | 100 (Llama Fusión, Terremoto…) | 130 (Patada Salto Alta, Placaje Eléctrico…) |
-| Jorge | 130 (Patada Salto Alta, Cabezazo Racial) | 120 (Megacuerno) | 125 (Onda Mental, Onda Certera…) |
+| Jorge | 130 (Patada Salto Alta, Ariete) | 120 (Megacuerno) | 125 (Onda Mental, Onda Certera…) |
 
-El tope por tramo de los jefes solo limita la suma de estadísticas base, no la potencia de los movimientos. Una idea sería poner también un tope de potencia por tramo, sobre todo para los movimientos con STAB, o quitar los movimientos exclusivos de legendarios (Ataque Fusión, Llama Azul, Onda Mental…) en los primeros gimnasios.
+El tope por tramo de los jefes solo limita la suma de estadísticas base, no la potencia de los movimientos. Una idea sería poner también un tope de potencia por tramo, sobre todo para los movimientos con STAB, o quitar los movimientos exclusivos de legendarios (Rayo Fusión, Llama Azul, Onda Mental…) en los primeros gimnasios.
