@@ -1275,6 +1275,15 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
 
 ### Pendiente para el próximo locke
 
+- **Mejoras apuntadas el 23/11/2026 (Jorge).** Este locke es el definitivo y no se toca: estas mejoras van para la versión siguiente.
+  - **Tope de potencia en los movimientos de los jefes** (equilibrio, Miguel). El tope por tramo solo limita la suma de estadísticas base, y los jefes llevan movimientos de 100 a 150 de potencia desde el primer gimnasio en todas las semillas. Miguel perdió a todo el equipo contra el Pawmo de MARCIAL (Fuerza Bruta y Rayo Fusión con STAB a nivel 22). Ideas: un tope de potencia por tramo, sobre todo para los movimientos con STAB, o quitar los exclusivos de legendarios en los primeros gimnasios. Ver `registro/2026-11-23-jorge-rom-nueva-miguel.md`.
+  - **Ordenar la mochila.** Ya existe en el juego, de la expansion: en la mochila, **START** pregunta "¿Cómo ordenar?" (por nombre, tipo, cantidad o número) y ordena el bolsillo abierto; **SELECT** mueve un objeto a mano. Falta mirar si con eso basta o si se quiere algo más (que se ordene solo, ordenar todos los bolsillos a la vez…).
+  - **Quitar objetos desde el PC.** Ya hay dos cosas en el juego:
+    - en el PC de POKéMON, **MOVER OBJETOS** quita y cambia los objetos de los POKéMON de las cajas y del equipo;
+    - en el PC de objetos, **TIRAR** tira objetos guardados.
+
+    Falta concretar qué más se quiere (por ejemplo, quitar el objeto a un POKéMON de la caja desde el menú normal de la caja).
+
 - **Fallos de la partida completa de Claude (22/11/2026)**, ver `registro/2026-11-22-jorge-bot-partida-completa.md`: Toxtricity Grave se vuelve Aguda al acabar cada combate (tabla de cambio de forma equivocada en `gen_8_families.h`), Balls delante de puertas (Museo Oceánico 2F, Ruta 122) y junto a entrenadores en la Calle Victoria, y textos en inglés (VEL. TEXTO pegado, TRAINER CARD/BADGES/MONEY, POKéNAV, SUMMARY/SWITCH/ITEM, PKMN DATA/PARTY POKéMON/CLOSE BOX). Recomendación para el randomizer: asegurar ataques de su tipo en los movimientos por nivel.
 - **Estadísticas mal leídas en el randomizer: ARREGLADO (Jorge, 11/11/2026).** `aleatorio/especies.py` cogía el primer número de las estadísticas que dependen de la generación (ya preprocesadas son, por ejemplo, `8 >= 1 ? 60 : 50`). Salían mal 189 estadísticas de unas 90 especies: Machoke con 8 de Def. Esp., a Charizard le faltaba el At. Esp… Ahora se evalúa la expresión con `evaluar`, que se ha movido de `guia_pokedex.py` a `aleatorio/especies.py` para que la usen los dos. Solo afecta a los jefes (tope y estrategia de los líderes, objetos): con la semilla de Jorge cambian 52 (líderes, rivales y BLASCO, sobre todo especies y movimientos); los salvajes, las habilidades, los iniciales y el resto de entrenadores salen igual. Se metió con las partidas ya empezadas: los jefes que aún no has visto simplemente salen distintos.
 
