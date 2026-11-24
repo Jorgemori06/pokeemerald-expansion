@@ -175,7 +175,7 @@ Estas son las reglas que usaban en Platino. La idea es mantenerlas lo más parec
 - **Win Clause:**
   - Gana quien venza al Campeón sin perder todas las vidas y sin perder ningún combate (6 Pokémon debilitados).
   - Empate (los dos ganan o los dos pierden): decide el marcador de los combates entre ellos.
-  - **Combates:** 3 tandas al mejor de 3 a lo largo de la aventura, en **Showdown**, con equipos legales (solo Pokémon y objetos conseguidos en la partida), idénticos a los de la partida (habilidad, movimientos, naturaleza…) pero con **EVs e IVs a 0**.
+  - **Combates:** 3 tandas al mejor de 3 a lo largo de la aventura, en **Showdown**, con equipos legales (solo Pokémon y objetos conseguidos en la partida), idénticos a los de la partida (habilidad, movimientos, naturaleza…). **EVs e IVs:** en este juego, **los de la partida**, porque se ven en la pantalla de datos (Jorge, 24/11/2026). En los juegos donde no se ven, a 0.
     - **Al montar el equipo en Showdown** (Jorge, 24/11/2026, primer combate):
       - El formato es **[Gen 9] Custom Game**, porque las habilidades y los movimientos de la semilla no son legales en los otros.
       - Hay habilidades que en Showdown no funcionan igual que en el juego. **Evocarrecuerdos** (Embody Aspect) solo se activa con Ogerpon: en el juego, el Armaldo de Jorge subía Velocidad al entrar, y en Showdown no. Hay que tenerlo en cuenta al elegir el equipo.
