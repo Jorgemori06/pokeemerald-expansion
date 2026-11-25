@@ -1019,6 +1019,13 @@ Al jugar, los líderes eran difíciles por desequilibrio, no por cómo jugaban: 
     - **El resto:** ningún movimiento de estrategia, solo sus mejores ataques y uno al azar.
     - **Hasta el gimnasio 3:** como antes, un solo movimiento de estrategia por Pokémon.
     - **Comprobado con la semilla de Jorge:** solo cambian los movimientos de los 36 jefes con estrategia. Las especies, los salvajes, los iniciales y todo lo demás salen igual. Ejemplo de CANDELA: Rabsca pone el sol con Meteorobola; Farigiraf y Tauros de Paldea (Fuego) llevan Meteorobola y Rayo Solar; Sableye, Medicham y Crawdaunt van con sus ataques.
+  - **Tope de potencia (Jorge, 25/11/2026; para la versión siguiente).**
+    - **El tope:** los ataques de los jefes con estrategia no pasan de **40 + 1,5 × nivel**. A nivel 22 eso es 73; a nivel 43, 104; a nivel 70, 145. Se cambia en `lideres.potencia_maxima` de `randomizer_config.json`.
+    - **Por qué:** Miguel perdió a todo el equipo contra el Pawmo de MARCIAL (Fuerza Bruta y Rayo Fusión con STAB a nivel 22). El tope por tramo solo limitaba la suma de estadísticas base, no la potencia de los ataques.
+    - **Los entrenadores normales** siguen sin tope, como se decidió el 31/10 (`potencia_maxima_del_cuarto`).
+    - **Si a un jefe no le cabe nada de lo que aprende por nivel,** los ataques que faltan salen al azar entre los que caben, mejor de su tipo. Sin esto, el Wartortle de ERICO se quedaba con Restricción.
+    - **Comprobado con tres semillas** (Jorge, la vieja de Miguel y la de Luis): ningún jefe pasa del tope y las especies no cambian. Con la semilla vieja de Miguel, el Pawmo lleva Llave Corsé, Dracoflechas, Fortaleza y Viento Plata.
+    - **Ya va en la ROM de Luis** (semilla `2121598288`), junto con los papeles. Ver `registro/2026-11-25-jorge-tope-potencia-jefes.md`.
   - **Comprobado con tests (Jorge, 16/11/2026; `test/dualocke_ia_estilos.c`):** un test por estilo, con la IA de `ia`, mira que el jefe usa de verdad sus movimientos. Si se cambia `ia` en el config, hay que cambiar `IA_JEFES` en el test.
     - Trampas, Espacio Raro (el lento), chetarse, estados, velocidad y aguante: los usa desde el primer turno.
     - **Pantallas:** el primer turno ataca y pone la pantalla cuando ha visto un ataque tuyo. Sin `Omniscient` no sabe si pegas físico o especial. Con `Assume Stab` (supone que llevas ataques de tu tipo) la pondría de entrada; no se ha puesto.
