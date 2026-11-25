@@ -222,14 +222,21 @@ def _de_estrategia(datos, plan, papel, rng):
     raise ValueError(f"Dualocke: estilo desconocido '{estilo}'")
 
 
-def elegir(especie, nivel, pokedex, movimientos, todos, rng, plan, papel="normal"):
+def elegir(especie, nivel, pokedex, movimientos, todos, rng, plan, papel="normal", tope=None):
     """Los 4 movimientos de un Pokémon de un jefe: los de estrategia de su estilo y su papel
-    (papeles()), los mejores ataques de los que aprende por nivel y uno al azar."""
+    (papeles()), los mejores ataques de los que aprende por nivel y uno al azar.
+    `tope`: (base, por nivel) de la potencia máxima de sus ataques (lideres.potencia_maxima)."""
     datos = pokedex.especies[especie]
     tipos = list(datos.tipos)
+    maxima = tope[0] + tope[1] * nivel if tope else 999
+
+    def cabe(m):
+        d = movimientos[m]
+        return not d.de_dano or mov.potencia(d) <= maxima
+
     estrategia = []
     for m in _de_estrategia(datos, plan, papel, rng):
-        if len(estrategia) < plan["n"] and m in movimientos and m not in estrategia:
+        if len(estrategia) < plan["n"] and m in movimientos and m not in estrategia and cabe(m):
             estrategia.append(m)
 
     def valor(m):
@@ -238,7 +245,8 @@ def elegir(especie, nivel, pokedex, movimientos, todos, rng, plan, papel="normal
 
     # Los mejores ataques de los que aprende hasta su nivel, de tipos distintos si se puede
     aprendidos = sorted({m for nv, m in datos.por_nivel if nv <= nivel and m in movimientos
-                         and movimientos[m].de_dano and m not in estrategia and m not in NO_CONVIENEN},
+                         and movimientos[m].de_dano and m not in estrategia and m not in NO_CONVIENEN
+                         and cabe(m)},
                         key=lambda m: (-valor(m), m))
     de_nivel = 4 - len(estrategia) - 1  # el último hueco es para el movimiento al azar
     ataques = []
@@ -255,7 +263,19 @@ def elegir(especie, nivel, pokedex, movimientos, todos, rng, plan, papel="normal
 
     # El resto, al azar entre todos (como el cuarto de cualquier entrenador). Si todavía no lleva
     # ningún ataque, el primero al azar es de daño
-    libres = [t for t in todos if t not in NO_CONVIENEN and t not in TRAMPAS]
+    libres = [t for t in todos if t not in NO_CONVIENEN and t not in TRAMPAS and cabe(t)]
+    # Con tope, si lo que aprende por nivel no llega (todo pasaba del tope), los ataques que faltan
+    # salen al azar entre los que caben, mejor de su tipo (el Wartortle de ERICO se quedaba con
+    # Restricción)
+    if tope:
+        de_su_tipo = [t for t in libres if movimientos[t].de_dano and movimientos[t].tipo in tipos]
+        de_dano = [t for t in libres if movimientos[t].de_dano]
+        while len(ataques) < de_nivel:
+            m = mov._sacar(de_su_tipo, ataques + estrategia, movimientos, rng) \
+                or mov._sacar(de_dano, ataques + estrategia, movimientos, rng)
+            if m is None:
+                break
+            ataques.append(m)
     elegidos = ataques + estrategia
     while len(elegidos) < 4:
         sin_ataque = not any(movimientos[e].de_dano for e in elegidos)
