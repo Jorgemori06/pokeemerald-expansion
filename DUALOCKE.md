@@ -998,6 +998,30 @@ Al jugar, los líderes eran difíciles por desequilibrio, no por cómo jugaban: 
   - **Clima:** el del tipo del jefe (Agua y Eléctrico, lluvia; Fuego y Planta, sol; Roca, Tierra y Acero, arena; Hielo, nieve) o uno al azar si no tiene.
   - **Mejoras:** los que pegan físico, Danza Espada, Corpulencia o Danza Dragón; los especiales, Maquinación, Paz Mental o Danza Aleteo.
   - Los estilos de cada partida salen en el solucionario (`estilos_de_los_jefes`).
+  - **Papeles dentro del equipo (Jorge y Miguel, 24/11/2026; para la versión siguiente, el locke en curso sigue con lo de arriba).** Con la tabla de arriba, "los demás" eran todos los demás. Con el estilo Clima, CANDELA y MAGNO llevaban Día Soleado y Meteorobola en los seis ("es que le mete a la fuerza esos 2 movimientos a todos"). Ahora cada Pokémon tiene un papel (`papeles()` en `aleatorio/estrategia.py`):
+    - **El que la pone:** el primero del equipo. Lleva lo de la columna "El primero del equipo", como antes.
+    - **Los que la aprovechan:** 1 en equipos de hasta 4 y 2 en equipos de 5 o 6. Son los que mejor le sacan partido:
+      - Clima: los del tipo de ese clima y, después, los de más Ataque Especial.
+      - Espacio Raro: los más lentos.
+      - Aguante: los más duros.
+      - Chetarse, Pantallas y Velocidad: los que más pegan.
+      - Trampas y Estados: al azar.
+    - **Qué llevan los que la aprovechan:**
+
+      | Estilo | Lo que llevan |
+      | --- | --- |
+      | Clima | Meteorobola y un ataque que pega más con ese clima: Rayo Solar con sol, Trueno con lluvia, Ventisca con nieve y la tormenta de arena con arena |
+      | Trampas | Rugido o Remolino, y otra trampa |
+      | Espacio Raro | Una mejora (Maldición, si son lentos y físicos) y Espacio Raro |
+      | Chetarse | Una mejora y Sustituto, Protección o Agilidad |
+      | Estados | Un estado y Infortunio |
+      | Pantallas | Una mejora y Sustituto o Protección |
+      | Aguante | Una cura y un desgaste |
+      | Velocidad | Un freno y Agilidad |
+
+    - **El resto:** ningún movimiento de estrategia, solo sus mejores ataques y uno al azar.
+    - **Hasta el gimnasio 3:** como antes, un solo movimiento de estrategia por Pokémon.
+    - **Comprobado con la semilla de Jorge:** solo cambian los movimientos de los 36 jefes con estrategia. Las especies, los salvajes, los iniciales y todo lo demás salen igual. Ejemplo de CANDELA: Rabsca pone el sol con Meteorobola; Farigiraf y Tauros de Paldea (Fuego) llevan Meteorobola y Rayo Solar; Sableye, Medicham y Crawdaunt van con sus ataques.
   - **Comprobado con tests (Jorge, 16/11/2026; `test/dualocke_ia_estilos.c`):** un test por estilo, con la IA de `ia`, mira que el jefe usa de verdad sus movimientos. Si se cambia `ia` en el config, hay que cambiar `IA_JEFES` en el test.
     - Trampas, Espacio Raro (el lento), chetarse, estados, velocidad y aguante: los usa desde el primer turno.
     - **Pantallas:** el primer turno ataca y pone la pantalla cuando ha visto un ataque tuyo. Sin `Omniscient` no sabe si pegas físico o especial. Con `Assume Stab` (supone que llevas ataques de tu tipo) la pondría de entrada; no se ha puesto.

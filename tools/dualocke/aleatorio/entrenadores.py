@@ -230,7 +230,7 @@ class Generador:
 
     def _equipar(self, trainer, i, especie, nivel, objeto, jefe, usados, estrategia=None):
         """Movimientos (todos los entrenadores) y objeto (los jefes, menos las megapiedras).
-        `estrategia`: (plan del equipo, va primero) para los jefes con estrategia."""
+        `estrategia`: (plan del equipo, papel de este Pokémon) para los jefes con estrategia."""
         if not self.movs:
             return None, objeto
         rng = random.Random(f"{self.semilla}|movimientos|{trainer}|{i}")
@@ -349,6 +349,10 @@ class Generador:
             nuevas[i] = (self.pokedex.evolucionar(raiz, nivel, random.Random(f"{self.semilla}|RIVAL|{raiz}")), None)
         cambios = []
         usados = set()
+        con_especie = [d for d in datos if d[0] in nuevas]
+        papel = est.papeles(plan, [nuevas[d[0]][0] for d in con_especie], self.pokedex,
+                            random.Random(f"{self.semilla}|papeles|{trainer}")) if plan else []
+        papel_de = {d[0]: papel[k] for k, d in enumerate(con_especie)} if plan else {}
         for i, lineas, original, objeto, nivel in datos:
             if i not in nuevas:
                 cambios.append(original)
@@ -356,7 +360,7 @@ class Generador:
             especie, objeto_nuevo = nuevas[i]
             objeto = objeto_nuevo or ("" if objeto_nuevo is None and _es_megapiedra(objeto) else objeto)
             movimientos, objeto = self._equipar(trainer, i, especie, nivel, objeto, True, usados,
-                                                (plan, i == datos[0][0]) if plan else None)
+                                                (plan, papel_de[i]) if plan else None)
             trozos[i] = _reescribir(lineas, especie, objeto, movimientos)
             cambios.append(especie)
         return "\n\n".join(trozos), cambios
@@ -405,6 +409,7 @@ class Generador:
             usadas = set()
             usados = set()
             cambios = []
+            elegidos = []
             for n, i in enumerate(indices):
                 lineas, primera = _linea_especie(trozos[i])
                 nombre, objeto = _especie_y_objeto(primera)
@@ -427,8 +432,13 @@ class Generador:
                     raiz = self._raiz_para(familia, original, raices, usadas, rng, nivel, tope)
                     nueva = self.pokedex.evolucionar(raiz, nivel, random.Random(f"{self.semilla}|{familia}|{raiz}"))
                 usadas.add(raiz)
+                elegidos.append((i, lineas, nueva, nivel, objeto))
+            # Los movimientos, cuando ya se sabe todo el equipo: cada uno con su papel en la estrategia
+            papel = est.papeles(plan, [e[2] for e in elegidos], self.pokedex,
+                                random.Random(f"{self.semilla}|papeles|{trainer}")) if plan else []
+            for k, (i, lineas, nueva, nivel, objeto) in enumerate(elegidos):
                 movimientos, objeto = self._equipar(trainer, i, nueva, nivel, objeto, jefe, usados,
-                                                    (plan, n == 0) if plan else None)
+                                                    (plan, papel[k]) if plan else None)
                 trozos[i] = _reescribir(lineas, nueva, objeto, movimientos)
                 cambios.append(nueva)
             solucionario[trainer] = cambios

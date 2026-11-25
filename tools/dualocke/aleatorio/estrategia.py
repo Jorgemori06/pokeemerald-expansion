@@ -123,55 +123,112 @@ def _refuerzos(datos, rng):
     return lista
 
 
-def _de_estrategia(datos, plan, primero, rng):
-    """Los movimientos de estrategia que le tocan a este Pokémon, por orden de preferencia."""
+# Papeles dentro del equipo (Jorge, 24/11/2026: "es que le mete a la fuerza esos 2 movimientos a todos";
+# con el estilo Clima, CANDELA y MAGNO llevaban Día Soleado y Meteorobola en los seis). Ahora el primero
+# pone la estrategia, uno o dos la aprovechan y el resto pega con lo suyo:
+#  - "lanzador": el primero del equipo, el que la pone (como antes).
+#  - "aprovecha": 1 (equipos de hasta 4) o 2 (de 5 o 6), los que mejor le sacan partido al estilo.
+#  - "normal": el resto, sin movimientos de estrategia (sus ataques y uno al azar).
+CLIMA_TIPOS = {}
+for _t, _c in CLIMA_POR_TIPO.items():
+    CLIMA_TIPOS.setdefault(_c, set()).add(_t)
+# Lo que lleva el que aprovecha el clima, además de Meteorobola: un ataque que pega más con ese clima
+APROVECHA_CLIMA = {
+    "MOVE_SUNNY_DAY": ["MOVE_WEATHER_BALL", "MOVE_SOLAR_BEAM"],
+    "MOVE_RAIN_DANCE": ["MOVE_WEATHER_BALL", "MOVE_THUNDER"],
+    "MOVE_SANDSTORM": ["MOVE_WEATHER_BALL", "MOVE_SANDSTORM"],
+    "MOVE_SNOWSCAPE": ["MOVE_BLIZZARD", "MOVE_WEATHER_BALL"],
+}
+
+
+def _ataque(datos):
+    return max(datos.stats.get("Attack", 0), datos.stats.get("SpAttack", 0))
+
+
+def papeles(plan, especies, pokedex, rng):
+    """El papel de cada Pokémon del equipo (en orden): el primero, "lanzador"; los que mejor
+    aprovechan el estilo, "aprovecha"; el resto, "normal"."""
+    if not especies:
+        return []
+    papel = ["lanzador"] + ["normal"] * (len(especies) - 1)
+    cuantos = 0 if len(especies) == 1 else 1 if len(especies) <= 4 else 2
+    estilo = plan["estilo"]
+
+    def nota(i):
+        d = pokedex.especies[especies[i]]
+        st = d.stats
+        if estilo == "clima":
+            return (len(set(d.tipos) & CLIMA_TIPOS.get(plan["clima"], set())), st.get("SpAttack", 0))
+        if estilo == "espacio_raro":
+            return (-st.get("Speed", 0), _ataque(d))
+        if estilo == "aguante":
+            return (st.get("HP", 0) + st.get("Defense", 0) + st.get("SpDefense", 0),)
+        if estilo in ("chetarse", "pantallas", "velocidad"):
+            return (_ataque(d), st.get("Speed", 0))
+        return (0,)  # trampas y estados: cualquiera
+
+    resto = list(range(1, len(especies)))
+    rng.shuffle(resto)  # los empates, al azar con la semilla
+    for i in sorted(resto, key=nota, reverse=True)[:cuantos]:
+        papel[i] = "aprovecha"
+    return papel
+
+
+def _de_estrategia(datos, plan, papel, rng):
+    """Los movimientos de estrategia que le tocan a este Pokémon según su papel, por orden de preferencia."""
+    if papel == "normal":
+        return []
+    lanza = papel == "lanzador"
     estilo = plan["estilo"]
     tipos = list(datos.tipos)
     lento = datos.stats.get("Speed", 0) <= VELOCIDAD_LENTO
     refuerzos = _refuerzos(datos, rng)
     if estilo == "trampas":
-        if primero:
-            trampa = next((TRAMPA_POR_TIPO[t] for t in tipos if t in TRAMPA_POR_TIPO), rng.choice(TRAMPAS))
+        trampa = next((TRAMPA_POR_TIPO[t] for t in tipos if t in TRAMPA_POR_TIPO), rng.choice(TRAMPAS))
+        if lanza:
             return [trampa, rng.choice(ARRASTRE)]
-        return [rng.choice(ARRASTRE), rng.choice(["MOVE_PROTECT", "MOVE_TOXIC", "MOVE_TAUNT"])]
+        otra = rng.choice([t for t in TRAMPAS if t != trampa])
+        return [rng.choice(ARRASTRE), otra]
     if estilo == "espacio_raro":
         if lento and datos.stats.get("Attack", 0) >= datos.stats.get("SpAttack", 0):
             refuerzos = ["MOVE_CURSE"] + refuerzos
-        if primero or lento:
+        if lanza:
             return ["MOVE_TRICK_ROOM", refuerzos[0]]
         return [refuerzos[0], "MOVE_TRICK_ROOM"]
     if estilo == "chetarse":
         return [refuerzos[0], rng.choice(["MOVE_SUBSTITUTE", "MOVE_PROTECT", "MOVE_AGILITY"])]
     if estilo == "clima":
-        if primero:
+        if lanza:
             # La IA solo pone el clima si le sirve al que está en el campo (BenefitsFromSun y
             # compañía, en src/battle_ai_field_statuses.c): con Meteorobola o Velo Aurora le sirve
             # siempre. Con Protección, el primero atacaba y el clima lo ponía el segundo
             # (test/dualocke_ia_estilos.c).
             return [plan["clima"], "MOVE_AURORA_VEIL" if plan["clima"] == "MOVE_SNOWSCAPE" else "MOVE_WEATHER_BALL"]
-        return ["MOVE_WEATHER_BALL", plan["clima"]]
+        return APROVECHA_CLIMA[plan["clima"]]
     if estilo == "estados":
-        return rng.sample(ESTADOS, 2)
+        if lanza:
+            return rng.sample(ESTADOS, 2)
+        return [rng.choice(ESTADOS), "MOVE_HEX"]
     if estilo == "pantallas":
-        if primero:
+        if lanza:
             return ["MOVE_REFLECT", "MOVE_LIGHT_SCREEN"]
-        return [refuerzos[0], rng.choice(["MOVE_REFLECT", "MOVE_LIGHT_SCREEN"])]
+        return [refuerzos[0], rng.choice(["MOVE_SUBSTITUTE", "MOVE_PROTECT"])]
     if estilo == "aguante":
-        return [rng.choice(DESGASTE), rng.choice(CURAS)]
+        return [rng.choice(DESGASTE), rng.choice(CURAS)] if lanza else [rng.choice(CURAS), rng.choice(DESGASTE)]
     if estilo == "velocidad":
-        if primero:
+        if lanza:
             return ["MOVE_TAILWIND", rng.choice(FRENOS)]
-        return [rng.choice(FRENOS), rng.choice(["MOVE_AGILITY", "MOVE_TAILWIND"])]
+        return [rng.choice(FRENOS), "MOVE_AGILITY"]
     raise ValueError(f"Dualocke: estilo desconocido '{estilo}'")
 
 
-def elegir(especie, nivel, pokedex, movimientos, todos, rng, plan, primero=False):
-    """Los 4 movimientos de un Pokémon de un jefe: los de estrategia de su estilo, el mejor
-    ataque (o los dos mejores) de los que aprende por nivel y uno al azar."""
+def elegir(especie, nivel, pokedex, movimientos, todos, rng, plan, papel="normal"):
+    """Los 4 movimientos de un Pokémon de un jefe: los de estrategia de su estilo y su papel
+    (papeles()), los mejores ataques de los que aprende por nivel y uno al azar."""
     datos = pokedex.especies[especie]
     tipos = list(datos.tipos)
     estrategia = []
-    for m in _de_estrategia(datos, plan, primero, rng):
+    for m in _de_estrategia(datos, plan, papel, rng):
         if len(estrategia) < plan["n"] and m in movimientos and m not in estrategia:
             estrategia.append(m)
 
