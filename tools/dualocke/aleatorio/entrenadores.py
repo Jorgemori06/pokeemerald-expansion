@@ -195,6 +195,8 @@ class Generador:
         self.ia_lideres = cfg_lideres.get("ia")
         self.estilos = {}   # personaje -> estilo, para el solucionario
         self.limites = cfg_lideres.get("limite_salvajes", {})
+        tope_jefes = cfg_lideres.get("potencia_maxima")
+        self.tope_jefes = (tope_jefes["base"], tope_jefes["por_nivel"]) if tope_jefes else None
         self.topes = topes or {}   # {tramo: tope de estadísticas base de los salvajes}
 
     def _es_estratega(self, trainer):
@@ -239,7 +241,8 @@ class Generador:
         tope = (tope["base"], tope["por_nivel"]) if tope else None
         if estrategia:
             movimientos = est.elegir(especie, nivel, self.pokedex, self.movs, self.todos,
-                                     est.generar_rng(self.semilla, trainer, i), *estrategia)
+                                     est.generar_rng(self.semilla, trainer, i), *estrategia,
+                                     tope=self.tope_jefes)
         else:
             movimientos = mov.elegir(especie, nivel, self.pokedex, self.movs, self.todos, rng,
                                      cfg.get("garantizados", 3), tope)

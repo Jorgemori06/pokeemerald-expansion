@@ -71,6 +71,8 @@
     "_con_estrategia": "Admite comodines. Miguel (15/11/2026): también los jefes de mitad de tramo desde el gimnasio 3 (MAGNO, AQUILES, los admins, el rival desde la Ruta 119, BLASCO en la Calle Victoria). Antes de ERICO (rival en las rutas 103 y 110 y en Férrica, BLASCO en Malvalona) se quedan con la IA básica. MÁXIMO en la Ruta 120 tiene el equipo fijo: solo se le pone la IA.",
     "ia": "Basic Trainer / Smart Switching / Smart Mon Choices / PP Stall Prevention / Randomize Switchin / Know Opponent Party / Hp Aware / Ace Pokemon",
     "_ia": "IA de los de con_estrategia: piensa sus movimientos, cambia de Pokémon con cabeza, está atenta a los PS y deja el as para el final. En combates dobles, Double Ace Pokemon. Miguel (15/11/2026): sin trampa. Es Smart Trainer sin Omniscient: sabe qué especies llevas (Know Opponent Party), pero tus movimientos, tu objeto y tu habilidad solo cuando los ve en el combate.",
+    "potencia_maxima": {"base": 40, "por_nivel": 1.5},
+    "_potencia_maxima": "Tope de potencia de los ataques de los jefes con estrategia (Jorge, 25/11/2026, para la versión siguiente): 40 + 1,5 x nivel (nivel 22: 73; nivel 43: 104; nivel 70: 145). Miguel perdió a todo el equipo contra el Pawmo de MARCIAL (Fuerza Bruta y Rayo Fusión con STAB a nivel 22). Los entrenadores normales siguen sin tope (potencia_maxima_del_cuarto). null para quitarlo.",
     "limite_salvajes": {
       "TRAINER_ROXANNE_1": 1, "TRAINER_BRAWLY_1": 2, "TRAINER_WATTSON_1": 3,
       "TRAINER_MAY_ROUTE_103_*": 1, "TRAINER_BRENDAN_ROUTE_103_*": 1,
