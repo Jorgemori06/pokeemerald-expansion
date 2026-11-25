@@ -175,7 +175,10 @@ Estas son las reglas que usaban en Platino. La idea es mantenerlas lo más parec
 - **Win Clause:**
   - Gana quien venza al Campeón sin perder todas las vidas y sin perder ningún combate (6 Pokémon debilitados).
   - Empate (los dos ganan o los dos pierden): decide el marcador de los combates entre ellos.
-  - **Combates:** 3 tandas al mejor de 3 a lo largo de la aventura, en **Showdown**, con equipos legales (solo Pokémon y objetos conseguidos en la partida), idénticos a los de la partida (habilidad, movimientos, naturaleza…) pero con **EVs e IVs a 0**.
+  - **Combates:** 3 tandas al mejor de 3 a lo largo de la aventura, en **Showdown**, con equipos legales (solo Pokémon y objetos conseguidos en la partida), idénticos a los de la partida (habilidad, movimientos, naturaleza…). **EVs e IVs:** en este juego, **los de la partida**, porque se ven en la pantalla de datos (Jorge, 24/11/2026). En los juegos donde no se ven, a 0.
+    - **Al montar el equipo en Showdown** (Jorge, 24/11/2026, primer combate):
+      - El formato es **[Gen 9] Custom Game**, porque las habilidades y los movimientos de la semilla no son legales en los otros.
+      - Hay habilidades que en Showdown no funcionan igual que en el juego. **Evocarrecuerdos** (Embody Aspect) solo se activa con Ogerpon: en el juego, el Armaldo de Jorge subía Velocidad al entrar, y en Showdown no. Hay que tenerlo en cuenta al elegir el equipo.
   - El ganador de cada tanda tiene **2 capturas extra** en la siguiente ruta no visitada (+ un objeto evolutivo si no es obtenible antes del postgame). El perdedor, **1 captura extra** con las mismas condiciones.
 
 ### Qué regla se hace dentro del juego y cuál no
@@ -1161,7 +1164,7 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
 
 ## 9. Estado y siguientes pasos
 
-### Locke en curso (empezado de nuevo el 22/11/2026, con la versión 9: la partida que cuenta)
+### Locke en curso (empezado de nuevo el 22/11/2026, con la versión 9: la partida que cuenta; ahora con la 9.1)
 
 - ROMs hechas por Claude con `make release` (sin menús de depuración).
   - **Versión 1** (26/10/2026): commit `46ba7600` (con #36 y #37).
@@ -1224,8 +1227,11 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
     - el bot que se pasa el juego (#118);
     - Toxtricity Grave ya no pasa a Aguda, y 12 Poké Balls que tapaban el paso movidas (#119);
     - textos que seguían en inglés (opciones, menú del equipo, POKéNAV, PC, ficha, dinero, pantalla de datos, tipos, mote) y 108 descripciones de movimientos, objetos y habilidades que se saltaban (#120 y #121).
-- **Semillas actuales (versión 9):** Miguel `3483218843` (`Esmeralda Dualocke - Mikemine.gba`), Jorge `2635893558` (`Esmeralda Dualocke - Jorgemori.gba`).
+  - **Versión 9.1** (22/11/2026, misma partida y **mismas semillas**): commit `a198bc1aa2`. Añade el mapa interactivo (`MAPA.html`, #125), la guía sin la casilla exacta cuando hay foto (#124) y los **objetos amontonados repartidos**, cada uno en su tramo y su tipo de suelo (#126). Comprobado que las dos semillas barajan **exactamente igual** que en la versión 9 (misma salida del randomizer), así que la partida sigue igual: solo cambian de sitio 70 objetos, y lo ya cogido no vuelve a salir. Si se guardó dentro de uno de esos mapas, la Ball puede verse en su sitio viejo hasta que se sale y se vuelve a entrar.
+  - **Miguel vuelve a empezar** (23/11/2026, versión 9.1): perdió a todo el equipo en el segundo gimnasio contra el Pawmo de MARCIAL (nivel 22, Fuerza Bruta y Rayo Fusión con STAB, Esquirla Helada y Onda Trueno, con Baya Zidra). Semilla nueva `1649870500`. Jorge sigue con la suya. Ver `registro/2026-11-23-jorge-rom-nueva-miguel.md`.
+- **Semillas actuales:** Miguel `1649870500` (versión 9.1, desde el 23/11/2026; `Esmeralda Dualocke - Mikemine.gba`), Jorge `2635893558` (versión 9 y 9.1; `Esmeralda Dualocke - Jorgemori.gba`).
 - Semillas de las versiones anteriores (partidas abandonadas):
+  - Miguel, versión 9: `3483218843` (wipe en el segundo gimnasio, 23/11/2026);
   - versión 8: Miguel `3632113266`, Jorge `2425682645`;
   - versiones 5-7: Miguel `2918696854`, Jorge `2780853751`;
   - versión 4: Miguel `1820821844`, Jorge `5966102869`;
@@ -1271,6 +1277,15 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
 - **Siguiente: jugar y probarlo todo junto.** Lista de qué mirar en `PRUEBAS.md`.
 
 ### Pendiente para el próximo locke
+
+- **Mejoras apuntadas el 23/11/2026 (Jorge).** Este locke es el definitivo y no se toca: estas mejoras van para la versión siguiente.
+  - **Tope de potencia en los movimientos de los jefes** (equilibrio, Miguel). El tope por tramo solo limita la suma de estadísticas base, y los jefes llevan movimientos de 100 a 150 de potencia desde el primer gimnasio en todas las semillas. Miguel perdió a todo el equipo contra el Pawmo de MARCIAL (Fuerza Bruta y Rayo Fusión con STAB a nivel 22). Ideas: un tope de potencia por tramo, sobre todo para los movimientos con STAB, o quitar los exclusivos de legendarios en los primeros gimnasios. Ver `registro/2026-11-23-jorge-rom-nueva-miguel.md`.
+  - **Ordenar la mochila.** Ya existe en el juego, de la expansion: en la mochila, **START** pregunta "¿Cómo ordenar?" (por nombre, tipo, cantidad o número) y ordena el bolsillo abierto; **SELECT** mueve un objeto a mano. Falta mirar si con eso basta o si se quiere algo más (que se ordene solo, ordenar todos los bolsillos a la vez…).
+  - **Quitar objetos desde el PC.** Ya hay dos cosas en el juego:
+    - en el PC de POKéMON, **MOVER OBJETOS** quita y cambia los objetos de los POKéMON de las cajas y del equipo;
+    - en el PC de objetos, **TIRAR** tira objetos guardados.
+
+    Falta concretar qué más se quiere (por ejemplo, quitar el objeto a un POKéMON de la caja desde el menú normal de la caja).
 
 - **Fallos de la partida completa de Claude (22/11/2026)**, ver `registro/2026-11-22-jorge-bot-partida-completa.md`: Toxtricity Grave se vuelve Aguda al acabar cada combate (tabla de cambio de forma equivocada en `gen_8_families.h`), Balls delante de puertas (Museo Oceánico 2F, Ruta 122) y junto a entrenadores en la Calle Victoria, y textos en inglés (VEL. TEXTO pegado, TRAINER CARD/BADGES/MONEY, POKéNAV, SUMMARY/SWITCH/ITEM, PKMN DATA/PARTY POKéMON/CLOSE BOX). Recomendación para el randomizer: asegurar ataques de su tipo en los movimientos por nivel.
 - **Estadísticas mal leídas en el randomizer: ARREGLADO (Jorge, 11/11/2026).** `aleatorio/especies.py` cogía el primer número de las estadísticas que dependen de la generación (ya preprocesadas son, por ejemplo, `8 >= 1 ? 60 : 50`). Salían mal 189 estadísticas de unas 90 especies: Machoke con 8 de Def. Esp., a Charizard le faltaba el At. Esp… Ahora se evalúa la expresión con `evaluar`, que se ha movido de `guia_pokedex.py` a `aleatorio/especies.py` para que la usen los dos. Solo afecta a los jefes (tope y estrategia de los líderes, objetos): con la semilla de Jorge cambian 52 (líderes, rivales y BLASCO, sobre todo especies y movimientos); los salvajes, las habilidades, los iniciales y el resto de entrenadores salen igual. Se metió con las partidas ya empezadas: los jefes que aún no has visto simplemente salen distintos.

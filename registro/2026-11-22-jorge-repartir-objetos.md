@@ -61,3 +61,16 @@ Lo que había que tener en cuenta:
 
 - `GUIA.html` choca con el #124, que también regenera las pistas y las fotos. Se arregla volviendo a lanzar `guia.py` y `fotos_guia.py` sobre `master`.
 - Cuando estén el #125 y este, hay que volver a lanzar `mapa_interactivo.py`.
+
+## ROMs (versión 9.1)
+
+`make release` sobre `master` (`a198bc1aa2`), con las semillas de la versión 9:
+
+- **Jorge** `2635893558`: md5 `5b17919bf8bfb773de7df1ca34148c3a`.
+- **Miguel** `3483218843`: md5 `566aeda82d188ff127d65879df645d71`.
+
+Comprobaciones:
+
+- **Mismo barajado:** la salida del randomizer con cada semilla es idéntica a la del commit de la versión 9 (`e38ad8986f`). Salvajes, entrenadores, objetos y estáticos son los mismos.
+- **Mismo md5 al compilar otra vez:** las dos ROMs salen igual.
+- **Partida nueva:** con las dos ROMs se llega hasta el camión con el bot (nombres JORGEMORI y MIKEMINE).
