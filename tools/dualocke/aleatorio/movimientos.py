@@ -32,6 +32,14 @@ class Movimiento:
         self.categoria = _texto(campos.get("category", "DAMAGE_CATEGORY_STATUS"))
         self.potencia = _valor(campos.get("power", "0"))
         self.vetado = _valor(campos.get("metronomeBanned", "0")) != 0
+        # Golpes que da, para el tope de potencia de los jefes (estrategia.potencia_real): los de 2 a 5
+        # golpes, 3; los de golpes fijos, los suyos; Triple Patada y Triple Axel, 1 + 2 + 3 veces
+        golpes = _valor(campos.get("strikeCount", "1")) or 1
+        if campos.get("multiHit", "").strip() == "TRUE":
+            golpes = 3
+        if campos.get("effect", "").strip() == "EFFECT_TRIPLE_KICK":
+            golpes = golpes * (golpes + 1) // 2
+        self.golpes = golpes
 
     @property
     def de_dano(self):

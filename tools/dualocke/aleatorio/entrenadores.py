@@ -350,23 +350,21 @@ class Generador:
             raiz = self._raiz_para("RIVAL", original, self.raices, usadas, rng, nivel, self._tope(trainer))
             usadas.add(raiz)
             nuevas[i] = (self.pokedex.evolucionar(raiz, nivel, random.Random(f"{self.semilla}|RIVAL|{raiz}")), None)
-        cambios = []
         usados = set()
         con_especie = [d for d in datos if d[0] in nuevas]
         papel = est.papeles(plan, [nuevas[d[0]][0] for d in con_especie], self.pokedex,
                             random.Random(f"{self.semilla}|papeles|{trainer}")) if plan else []
-        papel_de = {d[0]: papel[k] for k, d in enumerate(con_especie)} if plan else {}
-        for i, lineas, original, objeto, nivel in datos:
-            if i not in nuevas:
-                cambios.append(original)
-                continue
+        cambios = {d[0]: d[2] for d in datos}
+        for k in _orden_por_papel(papel, len(con_especie)):
+            i, lineas, original, objeto, nivel = con_especie[k]
             especie, objeto_nuevo = nuevas[i]
             objeto = objeto_nuevo or ("" if objeto_nuevo is None and _es_megapiedra(objeto) else objeto)
             movimientos, objeto = self._equipar(trainer, i, especie, nivel, objeto, True, usados,
-                                                (plan, papel_de[i]) if plan else None)
+                                                (plan, papel[k]) if plan else None)
             trozos[i] = _reescribir(lineas, especie, objeto, movimientos)
-            cambios.append(especie)
-        return "\n\n".join(trozos), cambios
+            cambios[i] = especie
+        _el_que_pone_primero(trozos, cambios, [d[0] for d in con_especie], papel)
+        return "\n\n".join(trozos), [cambios[d[0]] for d in datos]
 
     def randomizar(self, texto):
         cfg_jefes = self.config.get("jefes", {})
@@ -436,17 +434,47 @@ class Generador:
                     nueva = self.pokedex.evolucionar(raiz, nivel, random.Random(f"{self.semilla}|{familia}|{raiz}"))
                 usadas.add(raiz)
                 elegidos.append((i, lineas, nueva, nivel, objeto))
-            # Los movimientos, cuando ya se sabe todo el equipo: cada uno con su papel en la estrategia
+            # Los movimientos, cuando ya se sabe todo el equipo: cada uno con su papel en la estrategia,
+            # empezando por el que la pone (para que nadie le quite sus movimientos) y al final él, el primero
             papel = est.papeles(plan, [e[2] for e in elegidos], self.pokedex,
                                 random.Random(f"{self.semilla}|papeles|{trainer}")) if plan else []
-            for k, (i, lineas, nueva, nivel, objeto) in enumerate(elegidos):
+            por_hueco = {}
+            for k in _orden_por_papel(papel, len(elegidos)):
+                i, lineas, nueva, nivel, objeto = elegidos[k]
                 movimientos, objeto = self._equipar(trainer, i, nueva, nivel, objeto, jefe, usados,
                                                     (plan, papel[k]) if plan else None)
                 trozos[i] = _reescribir(lineas, nueva, objeto, movimientos)
-                cambios.append(nueva)
+                por_hueco[i] = nueva
+            _el_que_pone_primero(trozos, por_hueco, [e[0] for e in elegidos], papel)
+            cambios = [por_hueco[e[0]] for e in elegidos]
             solucionario[trainer] = cambios
             salida.append(cabecera + "\n\n".join(trozos))
         return "".join(salida), solucionario
+
+
+# Orden en el que se eligen los movimientos de un equipo con estrategia (papeles de estrategia.py)
+ORDEN_PAPELES = {"pone": 0, "aprovecha": 1, "tanque": 2, "libre": 3}
+
+
+def _orden_por_papel(papel, cuantos):
+    """Los índices del equipo en el orden en que se eligen sus movimientos. Sin papeles (jefes sin
+    estrategia), el de siempre."""
+    if not papel:
+        return list(range(cuantos))
+    return sorted(range(cuantos), key=lambda k: (ORDEN_PAPELES.get(papel[k], 3), k))
+
+
+def _el_que_pone_primero(trozos, especies, huecos, papel):
+    """El que pone la estrategia pasa a ser el primero del equipo (Miguel, 26/11/2026), con su nivel: la
+    IA saca primero al primero. `huecos`: los trozos del equipo, en orden; `especies`: {hueco: especie}."""
+    if "pone" not in papel:
+        return
+    k = papel.index("pone")
+    if k == 0:
+        return
+    a, b = huecos[0], huecos[k]
+    trozos[a], trozos[b] = trozos[b], trozos[a]
+    especies[a], especies[b] = especies[b], especies[a]
 
 
 def _es_de_linea(pokedex, especie, raiz):
