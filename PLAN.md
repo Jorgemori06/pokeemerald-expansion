@@ -33,6 +33,11 @@ Miguel probó la versión 8.5 (#114). **Las partidas de prueba siguen; el locke 
 - **Regla de la Liga: dentro del juego** (Miguel: "sí, entera"). Rama `miguel/regla-liga`, encima de la #118. Ver `registro/2026-11-22-miguel-regla-liga.md`.
 - **Las demás recomendaciones del bot (Miguel, 22/11/2026):** movimientos del randomizer, totalmente al azar; salvajes de la CALLE VICTORIA, a 87; jefes de mitad de juego, sin tocar hasta que los pruebe una persona.
 
+### Estilos de los jefes (Jorge y Miguel, 24-26/11/2026; para la versión siguiente)
+
+- **Papeles (#128) y tope de potencia (#129):** de Jorge, fusionados el 25/11/2026.
+- **Papeles mejorados (Miguel, 26/11/2026), rama `miguel/papeles-jefes`:** uno pone la estrategia (el que mejor encaja, y va el primero), uno o dos la aprovechan, uno hace de tanque y el resto va libre. Sin movimientos repetidos en el equipo, y el tope cuenta los golpes. Falta que Jorge lo compile con una semilla. Ver `registro/2026-11-26-miguel-papeles-jefes.md`.
+
 ## 0 bis. Preguntas de Jorge para Miguel (18/11/2026)
 
 **Contestadas por Miguel el 20/11/2026** (ver "Respuesta de Miguel" en cada una).

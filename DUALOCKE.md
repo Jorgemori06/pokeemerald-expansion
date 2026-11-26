@@ -1022,6 +1022,52 @@ Al jugar, los líderes eran difíciles por desequilibrio, no por cómo jugaban: 
     - **El resto:** ningún movimiento de estrategia, solo sus mejores ataques y uno al azar.
     - **Hasta el gimnasio 3:** como antes, un solo movimiento de estrategia por Pokémon.
     - **Comprobado con la semilla de Jorge:** solo cambian los movimientos de los 36 jefes con estrategia. Las especies, los salvajes, los iniciales y todo lo demás salen igual. Ejemplo de CANDELA: Rabsca pone el sol con Meteorobola; Farigiraf y Tauros de Paldea (Fuego) llevan Meteorobola y Rayo Solar; Sableye, Medicham y Crawdaunt van con sus ataques.
+  - **Papeles mejorados (Miguel, 26/11/2026; para la versión siguiente). Sustituye a lo de arriba desde "Los que la aprovechan".**
+    - **Por qué:** en la 6.ª medalla, ALANA jugó con nieve: Paisaje Nevado, Viento Hielo y Velo Aurora en todo el equipo, también en un atacante físico y rápido. Miguel quiere que cada jefe tenga su estrategia, pero con papeles: "uno que ponga el clima, o lo que use esa estrategia, otro que sea el que golpea fuerte y aproveche esos cambios, otro que sea más tanky", y otros al azar "que le den la gracia de que sea un randomlocke". Y que no se repitan los movimientos ni sean demasiado fuertes para ese punto.
+    - **Los papeles** (`papeles()` en `aleatorio/estrategia.py`):
+
+      | Tamaño del equipo | Pone | Aprovecha | Tanque | Libre |
+      | --- | --- | --- | --- | --- |
+      | 1 | 1 | — | — | — |
+      | 2 | 1 | 1 | — | — |
+      | 3 | 1 | 1 | — | 1 |
+      | 4 | 1 | 1 | 1 | 1 |
+      | 5 | 1 | 1 o 2 | 1 | 1 o 2 |
+      | 6 | 1 | 2 | 1 | 2 |
+
+    - **Quién hace cada papel:** el que mejor encaja según sus estadísticas y su tipo, con un poco de azar con la semilla (cada nota se multiplica por un número entre 0,85 y 1,15), para que no salga siempre igual.
+      - **Pone:** el que aguanta y pega menos. Con Espacio Raro, además, lento; con Clima, mejor del tipo del clima; con Trampas, mejor de Roca, Tierra, Acero, Veneno o Bicho; con Velocidad, rápido. Con Chetarse, el que más pega y más corre. **Nunca es el as** (el último).
+      - **Aprovecha:** los que más pegan. Con Clima, sobre todo los del tipo del clima; con Espacio Raro, los lentos; con Velocidad, Chetarse y Pantallas, también los rápidos.
+      - **Tanque:** el que más aguanta (PS + Defensa + Defensa Especial), nunca el as.
+      - **Libre:** el resto.
+    - **El que pone, el primero del equipo.** La IA saca primero al primero, así que pasa a ese hueco con su nivel, y el que estaba ahí va a su sitio. El as sigue el último.
+    - **Qué lleva cada uno.** Son huecos con un fin distinto, cada uno con alternativas por si la primera no cabe en el tope o ya la lleva un compañero. Así nadie lleva dos mejoras ni dos curas.
+
+      | Estilo | Pone | Aprovecha | Tanque |
+      | --- | --- | --- | --- |
+      | Clima | Su clima y algo que le sirva a él (si no, la IA no lo pone): Velo Aurora con nieve; Meteorobola si es especial; si es físico, un ataque del tipo del clima | Un ataque que pega más con ese clima, de su categoría (Llamarada o Envite Ígneo con sol, Trueno o Hidroariete con lluvia, Ventisca o Chuzos con nieve, Tierra Viva o Roca Afilada con arena), y Meteorobola si es especial o una mejora si es físico | Una cura (Sol Matinal o Síntesis con sol, Recogearena con arena) y el clima otra vez, por si cae el primero |
+      | Trampas | Una trampa (la de su tipo) y Rugido o Remolino | Una mejora y Protección o Sustituto | Otra trampa, y arrastre o una cura |
+      | Espacio Raro | Espacio Raro y una cura | Maldición (lentos y físicos) o una mejora, y Protección | Una cura y Espacio Raro otra vez |
+      | Chetarse | Una mejora y Sustituto o Protección | Una mejora y Agilidad (si no es rápido) | Una mejora defensiva (Paz Mental, Corpulencia, Defensa Férrea o Masa Cósmica) y una cura |
+      | Estados | Dos estados distintos | Infortunio si es especial, o una mejora si es físico, y un estado | Drenadoras o Tóxico, y una cura |
+      | Pantallas | Reflejo y Pantalla de Luz | Una mejora y Sustituto o Protección | Una cura y un freno |
+      | Aguante | Un desgaste y una cura | Una mejora y una cura | Una cura y un desgaste |
+      | Velocidad | Viento Afín y un freno | Una mejora y Agilidad (Protección si ya es rápido) | Un freno y una cura |
+
+    - **Sin repetir en el equipo:** cada movimiento de estrategia sale **una vez** por equipo. Meteorobola, el clima, Espacio Raro, Viento Afín y Protección pueden salir dos veces (el que pone y el tanque). Los ataques de su tabla que ya lleva un compañero solo se usan si no queda otra, y el movimiento al azar nunca repite uno del equipo.
+    - **Movimientos al azar de los jefes:** nunca Velo Aurora (sin nieve falla) ni una segunda mejora.
+    - **Libres:** sin movimientos de estrategia. Sus mejores ataques y uno al azar, como cualquier entrenador del randomlocke.
+    - **El tope cuenta los golpes:** Dracoflechas (2 × 50) cuenta 100; Semilladora, Ataque Óseo y compañía (de 2 a 5 golpes), 3 veces su potencia; Triple Axel, 20 + 40 + 60. Antes el Pawmo de nivel 22 (tope 73) podía llevar Dracoflechas.
+    - **Con el tope, los ataques del clima** que no caben se cambian por otros más flojos del mismo tipo. Con los papeles de la #128, CANDELA (nivel 43, tope 104) nunca llevaba Rayo Solar (120); ahora lleva Lanzallamas, Onda Ígnea o, si es físico, Látigo Ígneo.
+    - **Hasta el gimnasio 3:** igual que antes, un movimiento de estrategia por Pokémon (el primero de su lista).
+    - **Comprobado** (sin compilar, aquí no hay preprocesador; `registro/2026-11-26-miguel-papeles-jefes.md`): con las especies y los movimientos reales y los equipos de 15 jefes de `trainers.party`, en 14.400 equipos (8 estilos, 60 semillas, 1 y 2 movimientos de estrategia):
+      - siempre hay uno solo que pone, y nunca es el as;
+      - el que pone siempre lleva su estrategia, y con Clima, algo para que la IA la use;
+      - todos llevan 4 movimientos distintos y al menos un ataque, y ninguno pasa del tope;
+      - ningún movimiento se repite en el equipo más de lo permitido;
+      - nadie lleva dos mejoras, y Velo Aurora solo lo lleva el que pone la nieve;
+      - los físicos que aprovechan el clima no llevan ataques especiales de clima.
+      - Los jefes sin estrategia y los entrenadores normales salen igual que antes.
   - **Tope de potencia (Jorge, 25/11/2026; para la versión siguiente).**
     - **El tope:** los ataques de los jefes con estrategia no pasan de **40 + 1,5 × nivel**. A nivel 22 eso es 73; a nivel 43, 104; a nivel 70, 145. Se cambia en `lideres.potencia_maxima` de `randomizer_config.json`.
     - **Por qué:** Miguel perdió a todo el equipo contra el Pawmo de MARCIAL (Fuerza Bruta y Rayo Fusión con STAB a nivel 22). El tope por tramo solo limitaba la suma de estadísticas base, no la potencia de los ataques.
