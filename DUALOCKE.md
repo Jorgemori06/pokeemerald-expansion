@@ -1323,6 +1323,13 @@ Para comprobar una tanda antes de subirla: que cada traducción tenga los mismos
     2. **Dojo de los seis maestros:** seis salas, una por estadística, cada una con un maestro y su "Pokémon de prácticas", que solo aguanta un golpe y da muchos EVs de su estadística. Entrar, golpe y fuera; se repite las veces que quieras.
     3. **Contrarreloj en el CARRIL BICI:** cuanto mejor tiempo, más EVs de Velocidad. Se podrían hacer pruebas parecidas para cada estadística: romper rocas con Golpe Roca para Ataque, empujar rocas con Fuerza para Defensa…
     - **Falta elegir la forma** y cuántos EVs da cada vez.
+  - **Pokévial, a discutir** (Jorge y Miguel, 27/11/2026). Es un objeto que cura al equipo en cualquier sitio, para no tener que volver al Centro POKéMON. Es cómodo, pero puede estar muy roto: ahora no se pueden comprar curativos y los encontrados solo se usan en combate.
+    - **Para que no rompa nada se podría:**
+      - darle pocas cargas (1 o 2), que solo se recargan en un Centro POKéMON;
+      - no dejar usarlo en combate;
+      - que cure PS y estados, pero no los PP;
+      - darle una carga más con algunas medallas.
+    - **Si se mete, cuenta como curativo** para la regla de la Liga.
 
 
 - **Fallos de la partida completa de Claude (22/11/2026)**, ver `registro/2026-11-22-jorge-bot-partida-completa.md`: Toxtricity Grave se vuelve Aguda al acabar cada combate (tabla de cambio de forma equivocada en `gen_8_families.h`), Balls delante de puertas (Museo Oceánico 2F, Ruta 122) y junto a entrenadores en la Calle Victoria, y textos en inglés (VEL. TEXTO pegado, TRAINER CARD/BADGES/MONEY, POKéNAV, SUMMARY/SWITCH/ITEM, PKMN DATA/PARTY POKéMON/CLOSE BOX). Recomendación para el randomizer: asegurar ataques de su tipo en los movimientos por nivel.
